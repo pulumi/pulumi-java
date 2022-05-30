@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.certificateauthority.inputs.GetAuthorityArgs;
+import com.pulumi.gcp.certificateauthority.inputs.GetAuthorityPlainArgs;
 import com.pulumi.gcp.certificateauthority.outputs.GetAuthorityResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class CertificateauthorityFunctions {
     /**
@@ -75,6 +77,39 @@ public final class CertificateauthorityFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetAuthorityResult> getAuthorityPlain() {
+        return getAuthorityPlain(GetAuthorityPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Get info about a Google Cloud IAP Client.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(CertificateauthorityFunctions.getAuthority(GetAuthorityArgs.builder()
+     *             .location(&#34;us-west1&#34;)
+     *             .pool(&#34;pool-name&#34;)
+     *             .certificateAuthorityId(&#34;ca-id&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;csr&#34;, default_.getPemCsr());
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAuthorityResult> getAuthority(GetAuthorityArgs args) {
         return getAuthority(args, InvokeOptions.Empty);
     }
@@ -108,7 +143,73 @@ public final class CertificateauthorityFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetAuthorityResult> getAuthorityPlain(GetAuthorityPlainArgs args) {
+        return getAuthorityPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get info about a Google Cloud IAP Client.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(CertificateauthorityFunctions.getAuthority(GetAuthorityArgs.builder()
+     *             .location(&#34;us-west1&#34;)
+     *             .pool(&#34;pool-name&#34;)
+     *             .certificateAuthorityId(&#34;ca-id&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;csr&#34;, default_.getPemCsr());
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAuthorityResult> getAuthority(GetAuthorityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("gcp:certificateauthority/getAuthority:getAuthority", TypeShape.of(GetAuthorityResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get info about a Google Cloud IAP Client.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(CertificateauthorityFunctions.getAuthority(GetAuthorityArgs.builder()
+     *             .location(&#34;us-west1&#34;)
+     *             .pool(&#34;pool-name&#34;)
+     *             .certificateAuthorityId(&#34;ca-id&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;csr&#34;, default_.getPemCsr());
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetAuthorityResult> getAuthorityPlain(GetAuthorityPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("gcp:certificateauthority/getAuthority:getAuthority", TypeShape.of(GetAuthorityResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.memcache_v1beta2.inputs.GetInstanceArgs;
+import com.pulumi.googlenative.memcache_v1beta2.inputs.GetInstancePlainArgs;
 import com.pulumi.googlenative.memcache_v1beta2.outputs.GetInstanceResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Memcache_v1beta2Functions {
     /**
@@ -23,7 +25,21 @@ public final class Memcache_v1beta2Functions {
      * Gets details of a single Instance.
      * 
      */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args) {
+        return getInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets details of a single Instance.
+     * 
+     */
     public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:memcache/v1beta2:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets details of a single Instance.
+     * 
+     */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:memcache/v1beta2:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

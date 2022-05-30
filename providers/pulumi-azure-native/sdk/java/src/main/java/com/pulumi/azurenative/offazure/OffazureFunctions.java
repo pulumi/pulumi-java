@@ -5,8 +5,11 @@ package com.pulumi.azurenative.offazure;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.offazure.inputs.GetHyperVSiteArgs;
+import com.pulumi.azurenative.offazure.inputs.GetHyperVSitePlainArgs;
 import com.pulumi.azurenative.offazure.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.offazure.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.offazure.inputs.GetSiteArgs;
+import com.pulumi.azurenative.offazure.inputs.GetSitePlainArgs;
 import com.pulumi.azurenative.offazure.outputs.GetHyperVSiteResult;
 import com.pulumi.azurenative.offazure.outputs.GetPrivateEndpointConnectionResult;
 import com.pulumi.azurenative.offazure.outputs.GetSiteResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class OffazureFunctions {
     /**
@@ -29,8 +33,24 @@ public final class OffazureFunctions {
      * API Version: 2020-01-01.
      * 
      */
+    public static CompletableFuture<GetHyperVSiteResult> getHyperVSitePlain(GetHyperVSitePlainArgs args) {
+        return getHyperVSitePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Site REST Resource.
+     * API Version: 2020-01-01.
+     * 
+     */
     public static Output<GetHyperVSiteResult> getHyperVSite(GetHyperVSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:offazure:getHyperVSite", TypeShape.of(GetHyperVSiteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Site REST Resource.
+     * API Version: 2020-01-01.
+     * 
+     */
+    public static CompletableFuture<GetHyperVSiteResult> getHyperVSitePlain(GetHyperVSitePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:offazure:getHyperVSite", TypeShape.of(GetHyperVSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * REST model used to encapsulate the user visible state of a PrivateEndpoint.
@@ -45,8 +65,24 @@ public final class OffazureFunctions {
      * API Version: 2020-07-07.
      * 
      */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * REST model used to encapsulate the user visible state of a PrivateEndpoint.
+     * API Version: 2020-07-07.
+     * 
+     */
     public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:offazure:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * REST model used to encapsulate the user visible state of a PrivateEndpoint.
+     * API Version: 2020-07-07.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:offazure:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Site REST Resource.
@@ -61,7 +97,23 @@ public final class OffazureFunctions {
      * API Version: 2020-01-01.
      * 
      */
+    public static CompletableFuture<GetSiteResult> getSitePlain(GetSitePlainArgs args) {
+        return getSitePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Site REST Resource.
+     * API Version: 2020-01-01.
+     * 
+     */
     public static Output<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:offazure:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Site REST Resource.
+     * API Version: 2020-01-01.
+     * 
+     */
+    public static CompletableFuture<GetSiteResult> getSitePlain(GetSitePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:offazure:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }
 }

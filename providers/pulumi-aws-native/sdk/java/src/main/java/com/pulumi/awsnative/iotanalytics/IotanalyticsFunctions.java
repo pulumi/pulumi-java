@@ -5,9 +5,13 @@ package com.pulumi.awsnative.iotanalytics;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.iotanalytics.inputs.GetChannelArgs;
+import com.pulumi.awsnative.iotanalytics.inputs.GetChannelPlainArgs;
 import com.pulumi.awsnative.iotanalytics.inputs.GetDatasetArgs;
+import com.pulumi.awsnative.iotanalytics.inputs.GetDatasetPlainArgs;
 import com.pulumi.awsnative.iotanalytics.inputs.GetDatastoreArgs;
+import com.pulumi.awsnative.iotanalytics.inputs.GetDatastorePlainArgs;
 import com.pulumi.awsnative.iotanalytics.inputs.GetPipelineArgs;
+import com.pulumi.awsnative.iotanalytics.inputs.GetPipelinePlainArgs;
 import com.pulumi.awsnative.iotanalytics.outputs.GetChannelResult;
 import com.pulumi.awsnative.iotanalytics.outputs.GetDatasetResult;
 import com.pulumi.awsnative.iotanalytics.outputs.GetDatastoreResult;
@@ -16,6 +20,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class IotanalyticsFunctions {
     /**
@@ -29,8 +34,22 @@ public final class IotanalyticsFunctions {
      * Resource Type definition for AWS::IoTAnalytics::Channel
      * 
      */
+    public static CompletableFuture<GetChannelResult> getChannelPlain(GetChannelPlainArgs args) {
+        return getChannelPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::IoTAnalytics::Channel
+     * 
+     */
     public static Output<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotanalytics:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::IoTAnalytics::Channel
+     * 
+     */
+    public static CompletableFuture<GetChannelResult> getChannelPlain(GetChannelPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotanalytics:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::IoTAnalytics::Dataset
@@ -43,8 +62,22 @@ public final class IotanalyticsFunctions {
      * Resource Type definition for AWS::IoTAnalytics::Dataset
      * 
      */
+    public static CompletableFuture<GetDatasetResult> getDatasetPlain(GetDatasetPlainArgs args) {
+        return getDatasetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::IoTAnalytics::Dataset
+     * 
+     */
     public static Output<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotanalytics:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::IoTAnalytics::Dataset
+     * 
+     */
+    public static CompletableFuture<GetDatasetResult> getDatasetPlain(GetDatasetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotanalytics:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::IoTAnalytics::Datastore
@@ -57,8 +90,22 @@ public final class IotanalyticsFunctions {
      * Resource Type definition for AWS::IoTAnalytics::Datastore
      * 
      */
+    public static CompletableFuture<GetDatastoreResult> getDatastorePlain(GetDatastorePlainArgs args) {
+        return getDatastorePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::IoTAnalytics::Datastore
+     * 
+     */
     public static Output<GetDatastoreResult> getDatastore(GetDatastoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotanalytics:getDatastore", TypeShape.of(GetDatastoreResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::IoTAnalytics::Datastore
+     * 
+     */
+    public static CompletableFuture<GetDatastoreResult> getDatastorePlain(GetDatastorePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotanalytics:getDatastore", TypeShape.of(GetDatastoreResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::IoTAnalytics::Pipeline
@@ -71,7 +118,21 @@ public final class IotanalyticsFunctions {
      * Resource Type definition for AWS::IoTAnalytics::Pipeline
      * 
      */
+    public static CompletableFuture<GetPipelineResult> getPipelinePlain(GetPipelinePlainArgs args) {
+        return getPipelinePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::IoTAnalytics::Pipeline
+     * 
+     */
     public static Output<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotanalytics:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::IoTAnalytics::Pipeline
+     * 
+     */
+    public static CompletableFuture<GetPipelineResult> getPipelinePlain(GetPipelinePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotanalytics:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
 }

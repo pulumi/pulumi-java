@@ -5,11 +5,13 @@ package com.pulumi.awsnative.workspaces;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.workspaces.inputs.GetConnectionAliasArgs;
+import com.pulumi.awsnative.workspaces.inputs.GetConnectionAliasPlainArgs;
 import com.pulumi.awsnative.workspaces.outputs.GetConnectionAliasResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class WorkspacesFunctions {
     /**
@@ -23,7 +25,21 @@ public final class WorkspacesFunctions {
      * Resource Type definition for AWS::WorkSpaces::ConnectionAlias
      * 
      */
+    public static CompletableFuture<GetConnectionAliasResult> getConnectionAliasPlain(GetConnectionAliasPlainArgs args) {
+        return getConnectionAliasPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::WorkSpaces::ConnectionAlias
+     * 
+     */
     public static Output<GetConnectionAliasResult> getConnectionAlias(GetConnectionAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:workspaces:getConnectionAlias", TypeShape.of(GetConnectionAliasResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::WorkSpaces::ConnectionAlias
+     * 
+     */
+    public static CompletableFuture<GetConnectionAliasResult> getConnectionAliasPlain(GetConnectionAliasPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:workspaces:getConnectionAlias", TypeShape.of(GetConnectionAliasResult.class), args, Utilities.withVersion(options));
     }
 }

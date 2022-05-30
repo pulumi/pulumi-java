@@ -5,9 +5,13 @@ package com.pulumi.awsnative.lambda;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.lambda.inputs.GetCodeSigningConfigArgs;
+import com.pulumi.awsnative.lambda.inputs.GetCodeSigningConfigPlainArgs;
 import com.pulumi.awsnative.lambda.inputs.GetEventSourceMappingArgs;
+import com.pulumi.awsnative.lambda.inputs.GetEventSourceMappingPlainArgs;
 import com.pulumi.awsnative.lambda.inputs.GetFunctionArgs;
+import com.pulumi.awsnative.lambda.inputs.GetFunctionPlainArgs;
 import com.pulumi.awsnative.lambda.inputs.GetUrlArgs;
+import com.pulumi.awsnative.lambda.inputs.GetUrlPlainArgs;
 import com.pulumi.awsnative.lambda.outputs.GetCodeSigningConfigResult;
 import com.pulumi.awsnative.lambda.outputs.GetEventSourceMappingResult;
 import com.pulumi.awsnative.lambda.outputs.GetFunctionResult;
@@ -16,6 +20,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class LambdaFunctions {
     /**
@@ -29,8 +34,22 @@ public final class LambdaFunctions {
      * Resource Type definition for AWS::Lambda::CodeSigningConfig.
      * 
      */
+    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfigPlain(GetCodeSigningConfigPlainArgs args) {
+        return getCodeSigningConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lambda::CodeSigningConfig.
+     * 
+     */
     public static Output<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:lambda:getCodeSigningConfig", TypeShape.of(GetCodeSigningConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lambda::CodeSigningConfig.
+     * 
+     */
+    public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfigPlain(GetCodeSigningConfigPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:lambda:getCodeSigningConfig", TypeShape.of(GetCodeSigningConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lambda::EventSourceMapping
@@ -43,8 +62,22 @@ public final class LambdaFunctions {
      * Resource Type definition for AWS::Lambda::EventSourceMapping
      * 
      */
+    public static CompletableFuture<GetEventSourceMappingResult> getEventSourceMappingPlain(GetEventSourceMappingPlainArgs args) {
+        return getEventSourceMappingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lambda::EventSourceMapping
+     * 
+     */
     public static Output<GetEventSourceMappingResult> getEventSourceMapping(GetEventSourceMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:lambda:getEventSourceMapping", TypeShape.of(GetEventSourceMappingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lambda::EventSourceMapping
+     * 
+     */
+    public static CompletableFuture<GetEventSourceMappingResult> getEventSourceMappingPlain(GetEventSourceMappingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:lambda:getEventSourceMapping", TypeShape.of(GetEventSourceMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lambda::Function
@@ -57,8 +90,22 @@ public final class LambdaFunctions {
      * Resource Type definition for AWS::Lambda::Function
      * 
      */
+    public static CompletableFuture<GetFunctionResult> getFunctionPlain(GetFunctionPlainArgs args) {
+        return getFunctionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lambda::Function
+     * 
+     */
     public static Output<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:lambda:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lambda::Function
+     * 
+     */
+    public static CompletableFuture<GetFunctionResult> getFunctionPlain(GetFunctionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:lambda:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lambda::Url
@@ -71,7 +118,21 @@ public final class LambdaFunctions {
      * Resource Type definition for AWS::Lambda::Url
      * 
      */
+    public static CompletableFuture<GetUrlResult> getUrlPlain(GetUrlPlainArgs args) {
+        return getUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lambda::Url
+     * 
+     */
     public static Output<GetUrlResult> getUrl(GetUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:lambda:getUrl", TypeShape.of(GetUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lambda::Url
+     * 
+     */
+    public static CompletableFuture<GetUrlResult> getUrlPlain(GetUrlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:lambda:getUrl", TypeShape.of(GetUrlResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -9,13 +9,18 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.cloudiot_v1.inputs.GetDeviceArgs;
+import com.pulumi.googlenative.cloudiot_v1.inputs.GetDevicePlainArgs;
 import com.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryArgs;
 import com.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryGroupIamPolicyArgs;
+import com.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryGroupIamPolicyPlainArgs;
 import com.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryIamPolicyArgs;
+import com.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryIamPolicyPlainArgs;
+import com.pulumi.googlenative.cloudiot_v1.inputs.GetRegistryPlainArgs;
 import com.pulumi.googlenative.cloudiot_v1.outputs.GetDeviceResult;
 import com.pulumi.googlenative.cloudiot_v1.outputs.GetRegistryGroupIamPolicyResult;
 import com.pulumi.googlenative.cloudiot_v1.outputs.GetRegistryIamPolicyResult;
 import com.pulumi.googlenative.cloudiot_v1.outputs.GetRegistryResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Cloudiot_v1Functions {
     /**
@@ -29,8 +34,22 @@ public final class Cloudiot_v1Functions {
      * Gets details about a device.
      * 
      */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args) {
+        return getDevicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets details about a device.
+     * 
+     */
     public static Output<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudiot/v1:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets details about a device.
+     * 
+     */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a device registry configuration.
@@ -43,8 +62,22 @@ public final class Cloudiot_v1Functions {
      * Gets a device registry configuration.
      * 
      */
+    public static CompletableFuture<GetRegistryResult> getRegistryPlain(GetRegistryPlainArgs args) {
+        return getRegistryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a device registry configuration.
+     * 
+     */
     public static Output<GetRegistryResult> getRegistry(GetRegistryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudiot/v1:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a device registry configuration.
+     * 
+     */
+    public static CompletableFuture<GetRegistryResult> getRegistryPlain(GetRegistryPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -57,8 +90,22 @@ public final class Cloudiot_v1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetRegistryGroupIamPolicyResult> getRegistryGroupIamPolicyPlain(GetRegistryGroupIamPolicyPlainArgs args) {
+        return getRegistryGroupIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetRegistryGroupIamPolicyResult> getRegistryGroupIamPolicy(GetRegistryGroupIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudiot/v1:getRegistryGroupIamPolicy", TypeShape.of(GetRegistryGroupIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetRegistryGroupIamPolicyResult> getRegistryGroupIamPolicyPlain(GetRegistryGroupIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getRegistryGroupIamPolicy", TypeShape.of(GetRegistryGroupIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -71,7 +118,21 @@ public final class Cloudiot_v1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetRegistryIamPolicyResult> getRegistryIamPolicyPlain(GetRegistryIamPolicyPlainArgs args) {
+        return getRegistryIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetRegistryIamPolicyResult> getRegistryIamPolicy(GetRegistryIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudiot/v1:getRegistryIamPolicy", TypeShape.of(GetRegistryIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetRegistryIamPolicyResult> getRegistryIamPolicyPlain(GetRegistryIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getRegistryIamPolicy", TypeShape.of(GetRegistryIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

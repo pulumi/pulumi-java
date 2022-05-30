@@ -5,27 +5,49 @@ package com.pulumi.azurenative.security;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.security.inputs.GetAdaptiveApplicationControlArgs;
+import com.pulumi.azurenative.security.inputs.GetAdaptiveApplicationControlPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetAdvancedThreatProtectionArgs;
+import com.pulumi.azurenative.security.inputs.GetAdvancedThreatProtectionPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetAlertsSuppressionRuleArgs;
+import com.pulumi.azurenative.security.inputs.GetAlertsSuppressionRulePlainArgs;
 import com.pulumi.azurenative.security.inputs.GetAssessmentArgs;
 import com.pulumi.azurenative.security.inputs.GetAssessmentMetadataInSubscriptionArgs;
+import com.pulumi.azurenative.security.inputs.GetAssessmentMetadataInSubscriptionPlainArgs;
+import com.pulumi.azurenative.security.inputs.GetAssessmentPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetAssignmentArgs;
+import com.pulumi.azurenative.security.inputs.GetAssignmentPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetAutomationArgs;
+import com.pulumi.azurenative.security.inputs.GetAutomationPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetConnectorArgs;
+import com.pulumi.azurenative.security.inputs.GetConnectorPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetCustomAssessmentAutomationArgs;
+import com.pulumi.azurenative.security.inputs.GetCustomAssessmentAutomationPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetCustomEntityStoreAssignmentArgs;
+import com.pulumi.azurenative.security.inputs.GetCustomEntityStoreAssignmentPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetDeviceSecurityGroupArgs;
+import com.pulumi.azurenative.security.inputs.GetDeviceSecurityGroupPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetIngestionSettingArgs;
+import com.pulumi.azurenative.security.inputs.GetIngestionSettingPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetIotSecuritySolutionArgs;
+import com.pulumi.azurenative.security.inputs.GetIotSecuritySolutionPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetJitNetworkAccessPolicyArgs;
+import com.pulumi.azurenative.security.inputs.GetJitNetworkAccessPolicyPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetSecurityConnectorArgs;
+import com.pulumi.azurenative.security.inputs.GetSecurityConnectorPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetSecurityContactArgs;
+import com.pulumi.azurenative.security.inputs.GetSecurityContactPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetServerVulnerabilityAssessmentArgs;
+import com.pulumi.azurenative.security.inputs.GetServerVulnerabilityAssessmentPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetSqlVulnerabilityAssessmentBaselineRuleArgs;
+import com.pulumi.azurenative.security.inputs.GetSqlVulnerabilityAssessmentBaselineRulePlainArgs;
 import com.pulumi.azurenative.security.inputs.GetStandardArgs;
+import com.pulumi.azurenative.security.inputs.GetStandardPlainArgs;
 import com.pulumi.azurenative.security.inputs.GetWorkspaceSettingArgs;
+import com.pulumi.azurenative.security.inputs.GetWorkspaceSettingPlainArgs;
 import com.pulumi.azurenative.security.inputs.ListIngestionSettingConnectionStringsArgs;
+import com.pulumi.azurenative.security.inputs.ListIngestionSettingConnectionStringsPlainArgs;
 import com.pulumi.azurenative.security.inputs.ListIngestionSettingTokensArgs;
+import com.pulumi.azurenative.security.inputs.ListIngestionSettingTokensPlainArgs;
 import com.pulumi.azurenative.security.outputs.GetAdaptiveApplicationControlResult;
 import com.pulumi.azurenative.security.outputs.GetAdvancedThreatProtectionResult;
 import com.pulumi.azurenative.security.outputs.GetAlertsSuppressionRuleResult;
@@ -52,6 +74,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class SecurityFunctions {
     /**
@@ -65,8 +88,22 @@ public final class SecurityFunctions {
      * API Version: 2020-01-01.
      * 
      */
+    public static CompletableFuture<GetAdaptiveApplicationControlResult> getAdaptiveApplicationControlPlain(GetAdaptiveApplicationControlPlainArgs args) {
+        return getAdaptiveApplicationControlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * API Version: 2020-01-01.
+     * 
+     */
     public static Output<GetAdaptiveApplicationControlResult> getAdaptiveApplicationControl(GetAdaptiveApplicationControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getAdaptiveApplicationControl", TypeShape.of(GetAdaptiveApplicationControlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * API Version: 2020-01-01.
+     * 
+     */
+    public static CompletableFuture<GetAdaptiveApplicationControlResult> getAdaptiveApplicationControlPlain(GetAdaptiveApplicationControlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getAdaptiveApplicationControl", TypeShape.of(GetAdaptiveApplicationControlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Advanced Threat Protection resource.
@@ -81,8 +118,24 @@ public final class SecurityFunctions {
      * API Version: 2019-01-01.
      * 
      */
+    public static CompletableFuture<GetAdvancedThreatProtectionResult> getAdvancedThreatProtectionPlain(GetAdvancedThreatProtectionPlainArgs args) {
+        return getAdvancedThreatProtectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The Advanced Threat Protection resource.
+     * API Version: 2019-01-01.
+     * 
+     */
     public static Output<GetAdvancedThreatProtectionResult> getAdvancedThreatProtection(GetAdvancedThreatProtectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getAdvancedThreatProtection", TypeShape.of(GetAdvancedThreatProtectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Advanced Threat Protection resource.
+     * API Version: 2019-01-01.
+     * 
+     */
+    public static CompletableFuture<GetAdvancedThreatProtectionResult> getAdvancedThreatProtectionPlain(GetAdvancedThreatProtectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getAdvancedThreatProtection", TypeShape.of(GetAdvancedThreatProtectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Describes the suppression rule
@@ -97,8 +150,24 @@ public final class SecurityFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
+    public static CompletableFuture<GetAlertsSuppressionRuleResult> getAlertsSuppressionRulePlain(GetAlertsSuppressionRulePlainArgs args) {
+        return getAlertsSuppressionRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Describes the suppression rule
+     * API Version: 2019-01-01-preview.
+     * 
+     */
     public static Output<GetAlertsSuppressionRuleResult> getAlertsSuppressionRule(GetAlertsSuppressionRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getAlertsSuppressionRule", TypeShape.of(GetAlertsSuppressionRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Describes the suppression rule
+     * API Version: 2019-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetAlertsSuppressionRuleResult> getAlertsSuppressionRulePlain(GetAlertsSuppressionRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getAlertsSuppressionRule", TypeShape.of(GetAlertsSuppressionRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Security assessment on a resource
@@ -113,8 +182,24 @@ public final class SecurityFunctions {
      * API Version: 2020-01-01.
      * 
      */
+    public static CompletableFuture<GetAssessmentResult> getAssessmentPlain(GetAssessmentPlainArgs args) {
+        return getAssessmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Security assessment on a resource
+     * API Version: 2020-01-01.
+     * 
+     */
     public static Output<GetAssessmentResult> getAssessment(GetAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getAssessment", TypeShape.of(GetAssessmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Security assessment on a resource
+     * API Version: 2020-01-01.
+     * 
+     */
+    public static CompletableFuture<GetAssessmentResult> getAssessmentPlain(GetAssessmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getAssessment", TypeShape.of(GetAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Security assessment metadata
@@ -129,8 +214,24 @@ public final class SecurityFunctions {
      * API Version: 2020-01-01.
      * 
      */
+    public static CompletableFuture<GetAssessmentMetadataInSubscriptionResult> getAssessmentMetadataInSubscriptionPlain(GetAssessmentMetadataInSubscriptionPlainArgs args) {
+        return getAssessmentMetadataInSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Security assessment metadata
+     * API Version: 2020-01-01.
+     * 
+     */
     public static Output<GetAssessmentMetadataInSubscriptionResult> getAssessmentMetadataInSubscription(GetAssessmentMetadataInSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getAssessmentMetadataInSubscription", TypeShape.of(GetAssessmentMetadataInSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Security assessment metadata
+     * API Version: 2020-01-01.
+     * 
+     */
+    public static CompletableFuture<GetAssessmentMetadataInSubscriptionResult> getAssessmentMetadataInSubscriptionPlain(GetAssessmentMetadataInSubscriptionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getAssessmentMetadataInSubscription", TypeShape.of(GetAssessmentMetadataInSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Security Assignment on a resource group over a given scope
@@ -145,8 +246,24 @@ public final class SecurityFunctions {
      * API Version: 2021-08-01-preview.
      * 
      */
+    public static CompletableFuture<GetAssignmentResult> getAssignmentPlain(GetAssignmentPlainArgs args) {
+        return getAssignmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Security Assignment on a resource group over a given scope
+     * API Version: 2021-08-01-preview.
+     * 
+     */
     public static Output<GetAssignmentResult> getAssignment(GetAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getAssignment", TypeShape.of(GetAssignmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Security Assignment on a resource group over a given scope
+     * API Version: 2021-08-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetAssignmentResult> getAssignmentPlain(GetAssignmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getAssignment", TypeShape.of(GetAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The security automation resource.
@@ -161,8 +278,24 @@ public final class SecurityFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
+    public static CompletableFuture<GetAutomationResult> getAutomationPlain(GetAutomationPlainArgs args) {
+        return getAutomationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The security automation resource.
+     * API Version: 2019-01-01-preview.
+     * 
+     */
     public static Output<GetAutomationResult> getAutomation(GetAutomationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getAutomation", TypeShape.of(GetAutomationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The security automation resource.
+     * API Version: 2019-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetAutomationResult> getAutomationPlain(GetAutomationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getAutomation", TypeShape.of(GetAutomationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The connector setting
@@ -177,8 +310,24 @@ public final class SecurityFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
+    public static CompletableFuture<GetConnectorResult> getConnectorPlain(GetConnectorPlainArgs args) {
+        return getConnectorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The connector setting
+     * API Version: 2020-01-01-preview.
+     * 
+     */
     public static Output<GetConnectorResult> getConnector(GetConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The connector setting
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetConnectorResult> getConnectorPlain(GetConnectorPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Custom Assessment Automation
@@ -193,8 +342,24 @@ public final class SecurityFunctions {
      * API Version: 2021-07-01-preview.
      * 
      */
+    public static CompletableFuture<GetCustomAssessmentAutomationResult> getCustomAssessmentAutomationPlain(GetCustomAssessmentAutomationPlainArgs args) {
+        return getCustomAssessmentAutomationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Custom Assessment Automation
+     * API Version: 2021-07-01-preview.
+     * 
+     */
     public static Output<GetCustomAssessmentAutomationResult> getCustomAssessmentAutomation(GetCustomAssessmentAutomationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getCustomAssessmentAutomation", TypeShape.of(GetCustomAssessmentAutomationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Custom Assessment Automation
+     * API Version: 2021-07-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetCustomAssessmentAutomationResult> getCustomAssessmentAutomationPlain(GetCustomAssessmentAutomationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getCustomAssessmentAutomation", TypeShape.of(GetCustomAssessmentAutomationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Custom entity store assignment
@@ -209,8 +374,24 @@ public final class SecurityFunctions {
      * API Version: 2021-07-01-preview.
      * 
      */
+    public static CompletableFuture<GetCustomEntityStoreAssignmentResult> getCustomEntityStoreAssignmentPlain(GetCustomEntityStoreAssignmentPlainArgs args) {
+        return getCustomEntityStoreAssignmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Custom entity store assignment
+     * API Version: 2021-07-01-preview.
+     * 
+     */
     public static Output<GetCustomEntityStoreAssignmentResult> getCustomEntityStoreAssignment(GetCustomEntityStoreAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getCustomEntityStoreAssignment", TypeShape.of(GetCustomEntityStoreAssignmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Custom entity store assignment
+     * API Version: 2021-07-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetCustomEntityStoreAssignmentResult> getCustomEntityStoreAssignmentPlain(GetCustomEntityStoreAssignmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getCustomEntityStoreAssignment", TypeShape.of(GetCustomEntityStoreAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The device security group resource
@@ -225,8 +406,24 @@ public final class SecurityFunctions {
      * API Version: 2019-08-01.
      * 
      */
+    public static CompletableFuture<GetDeviceSecurityGroupResult> getDeviceSecurityGroupPlain(GetDeviceSecurityGroupPlainArgs args) {
+        return getDeviceSecurityGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The device security group resource
+     * API Version: 2019-08-01.
+     * 
+     */
     public static Output<GetDeviceSecurityGroupResult> getDeviceSecurityGroup(GetDeviceSecurityGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getDeviceSecurityGroup", TypeShape.of(GetDeviceSecurityGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The device security group resource
+     * API Version: 2019-08-01.
+     * 
+     */
+    public static CompletableFuture<GetDeviceSecurityGroupResult> getDeviceSecurityGroupPlain(GetDeviceSecurityGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getDeviceSecurityGroup", TypeShape.of(GetDeviceSecurityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Configures how to correlate scan data and logs with resources associated with the subscription.
@@ -241,8 +438,24 @@ public final class SecurityFunctions {
      * API Version: 2021-01-15-preview.
      * 
      */
+    public static CompletableFuture<GetIngestionSettingResult> getIngestionSettingPlain(GetIngestionSettingPlainArgs args) {
+        return getIngestionSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Configures how to correlate scan data and logs with resources associated with the subscription.
+     * API Version: 2021-01-15-preview.
+     * 
+     */
     public static Output<GetIngestionSettingResult> getIngestionSetting(GetIngestionSettingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getIngestionSetting", TypeShape.of(GetIngestionSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Configures how to correlate scan data and logs with resources associated with the subscription.
+     * API Version: 2021-01-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetIngestionSettingResult> getIngestionSettingPlain(GetIngestionSettingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getIngestionSetting", TypeShape.of(GetIngestionSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * IoT Security solution configuration and resource information.
@@ -257,8 +470,24 @@ public final class SecurityFunctions {
      * API Version: 2019-08-01.
      * 
      */
+    public static CompletableFuture<GetIotSecuritySolutionResult> getIotSecuritySolutionPlain(GetIotSecuritySolutionPlainArgs args) {
+        return getIotSecuritySolutionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * IoT Security solution configuration and resource information.
+     * API Version: 2019-08-01.
+     * 
+     */
     public static Output<GetIotSecuritySolutionResult> getIotSecuritySolution(GetIotSecuritySolutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getIotSecuritySolution", TypeShape.of(GetIotSecuritySolutionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * IoT Security solution configuration and resource information.
+     * API Version: 2019-08-01.
+     * 
+     */
+    public static CompletableFuture<GetIotSecuritySolutionResult> getIotSecuritySolutionPlain(GetIotSecuritySolutionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getIotSecuritySolution", TypeShape.of(GetIotSecuritySolutionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-01-01.
@@ -271,8 +500,22 @@ public final class SecurityFunctions {
      * API Version: 2020-01-01.
      * 
      */
+    public static CompletableFuture<GetJitNetworkAccessPolicyResult> getJitNetworkAccessPolicyPlain(GetJitNetworkAccessPolicyPlainArgs args) {
+        return getJitNetworkAccessPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * API Version: 2020-01-01.
+     * 
+     */
     public static Output<GetJitNetworkAccessPolicyResult> getJitNetworkAccessPolicy(GetJitNetworkAccessPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getJitNetworkAccessPolicy", TypeShape.of(GetJitNetworkAccessPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * API Version: 2020-01-01.
+     * 
+     */
+    public static CompletableFuture<GetJitNetworkAccessPolicyResult> getJitNetworkAccessPolicyPlain(GetJitNetworkAccessPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getJitNetworkAccessPolicy", TypeShape.of(GetJitNetworkAccessPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The security connector resource.
@@ -287,8 +530,24 @@ public final class SecurityFunctions {
      * API Version: 2021-07-01-preview.
      * 
      */
+    public static CompletableFuture<GetSecurityConnectorResult> getSecurityConnectorPlain(GetSecurityConnectorPlainArgs args) {
+        return getSecurityConnectorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The security connector resource.
+     * API Version: 2021-07-01-preview.
+     * 
+     */
     public static Output<GetSecurityConnectorResult> getSecurityConnector(GetSecurityConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getSecurityConnector", TypeShape.of(GetSecurityConnectorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The security connector resource.
+     * API Version: 2021-07-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSecurityConnectorResult> getSecurityConnectorPlain(GetSecurityConnectorPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getSecurityConnector", TypeShape.of(GetSecurityConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Contact details and configurations for notifications coming from Microsoft Defender for Cloud.
@@ -303,8 +562,24 @@ public final class SecurityFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
+    public static CompletableFuture<GetSecurityContactResult> getSecurityContactPlain(GetSecurityContactPlainArgs args) {
+        return getSecurityContactPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Contact details and configurations for notifications coming from Microsoft Defender for Cloud.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
     public static Output<GetSecurityContactResult> getSecurityContact(GetSecurityContactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getSecurityContact", TypeShape.of(GetSecurityContactResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Contact details and configurations for notifications coming from Microsoft Defender for Cloud.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSecurityContactResult> getSecurityContactPlain(GetSecurityContactPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getSecurityContact", TypeShape.of(GetSecurityContactResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Describes the server vulnerability assessment details on a resource
@@ -319,8 +594,24 @@ public final class SecurityFunctions {
      * API Version: 2020-01-01.
      * 
      */
+    public static CompletableFuture<GetServerVulnerabilityAssessmentResult> getServerVulnerabilityAssessmentPlain(GetServerVulnerabilityAssessmentPlainArgs args) {
+        return getServerVulnerabilityAssessmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Describes the server vulnerability assessment details on a resource
+     * API Version: 2020-01-01.
+     * 
+     */
     public static Output<GetServerVulnerabilityAssessmentResult> getServerVulnerabilityAssessment(GetServerVulnerabilityAssessmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getServerVulnerabilityAssessment", TypeShape.of(GetServerVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Describes the server vulnerability assessment details on a resource
+     * API Version: 2020-01-01.
+     * 
+     */
+    public static CompletableFuture<GetServerVulnerabilityAssessmentResult> getServerVulnerabilityAssessmentPlain(GetServerVulnerabilityAssessmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getServerVulnerabilityAssessment", TypeShape.of(GetServerVulnerabilityAssessmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Rule results.
@@ -335,8 +626,24 @@ public final class SecurityFunctions {
      * API Version: 2020-07-01-preview.
      * 
      */
+    public static CompletableFuture<GetSqlVulnerabilityAssessmentBaselineRuleResult> getSqlVulnerabilityAssessmentBaselineRulePlain(GetSqlVulnerabilityAssessmentBaselineRulePlainArgs args) {
+        return getSqlVulnerabilityAssessmentBaselineRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Rule results.
+     * API Version: 2020-07-01-preview.
+     * 
+     */
     public static Output<GetSqlVulnerabilityAssessmentBaselineRuleResult> getSqlVulnerabilityAssessmentBaselineRule(GetSqlVulnerabilityAssessmentBaselineRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getSqlVulnerabilityAssessmentBaselineRule", TypeShape.of(GetSqlVulnerabilityAssessmentBaselineRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Rule results.
+     * API Version: 2020-07-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSqlVulnerabilityAssessmentBaselineRuleResult> getSqlVulnerabilityAssessmentBaselineRulePlain(GetSqlVulnerabilityAssessmentBaselineRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getSqlVulnerabilityAssessmentBaselineRule", TypeShape.of(GetSqlVulnerabilityAssessmentBaselineRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Security Standard on a resource
@@ -351,8 +658,24 @@ public final class SecurityFunctions {
      * API Version: 2021-08-01-preview.
      * 
      */
+    public static CompletableFuture<GetStandardResult> getStandardPlain(GetStandardPlainArgs args) {
+        return getStandardPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Security Standard on a resource
+     * API Version: 2021-08-01-preview.
+     * 
+     */
     public static Output<GetStandardResult> getStandard(GetStandardArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getStandard", TypeShape.of(GetStandardResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Security Standard on a resource
+     * API Version: 2021-08-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetStandardResult> getStandardPlain(GetStandardPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getStandard", TypeShape.of(GetStandardResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Configures where to store the OMS agent data for workspaces under a scope
@@ -367,8 +690,24 @@ public final class SecurityFunctions {
      * API Version: 2017-08-01-preview.
      * 
      */
+    public static CompletableFuture<GetWorkspaceSettingResult> getWorkspaceSettingPlain(GetWorkspaceSettingPlainArgs args) {
+        return getWorkspaceSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Configures where to store the OMS agent data for workspaces under a scope
+     * API Version: 2017-08-01-preview.
+     * 
+     */
     public static Output<GetWorkspaceSettingResult> getWorkspaceSetting(GetWorkspaceSettingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:getWorkspaceSetting", TypeShape.of(GetWorkspaceSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Configures where to store the OMS agent data for workspaces under a scope
+     * API Version: 2017-08-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetWorkspaceSettingResult> getWorkspaceSettingPlain(GetWorkspaceSettingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:getWorkspaceSetting", TypeShape.of(GetWorkspaceSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Connection string for ingesting security data and logs
@@ -383,8 +722,24 @@ public final class SecurityFunctions {
      * API Version: 2021-01-15-preview.
      * 
      */
+    public static CompletableFuture<ListIngestionSettingConnectionStringsResult> listIngestionSettingConnectionStringsPlain(ListIngestionSettingConnectionStringsPlainArgs args) {
+        return listIngestionSettingConnectionStringsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Connection string for ingesting security data and logs
+     * API Version: 2021-01-15-preview.
+     * 
+     */
     public static Output<ListIngestionSettingConnectionStringsResult> listIngestionSettingConnectionStrings(ListIngestionSettingConnectionStringsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:listIngestionSettingConnectionStrings", TypeShape.of(ListIngestionSettingConnectionStringsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Connection string for ingesting security data and logs
+     * API Version: 2021-01-15-preview.
+     * 
+     */
+    public static CompletableFuture<ListIngestionSettingConnectionStringsResult> listIngestionSettingConnectionStringsPlain(ListIngestionSettingConnectionStringsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:listIngestionSettingConnectionStrings", TypeShape.of(ListIngestionSettingConnectionStringsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Configures how to correlate scan data and logs with resources associated with the subscription.
@@ -399,7 +754,23 @@ public final class SecurityFunctions {
      * API Version: 2021-01-15-preview.
      * 
      */
+    public static CompletableFuture<ListIngestionSettingTokensResult> listIngestionSettingTokensPlain(ListIngestionSettingTokensPlainArgs args) {
+        return listIngestionSettingTokensPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Configures how to correlate scan data and logs with resources associated with the subscription.
+     * API Version: 2021-01-15-preview.
+     * 
+     */
     public static Output<ListIngestionSettingTokensResult> listIngestionSettingTokens(ListIngestionSettingTokensArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:security:listIngestionSettingTokens", TypeShape.of(ListIngestionSettingTokensResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Configures how to correlate scan data and logs with resources associated with the subscription.
+     * API Version: 2021-01-15-preview.
+     * 
+     */
+    public static CompletableFuture<ListIngestionSettingTokensResult> listIngestionSettingTokensPlain(ListIngestionSettingTokensPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:security:listIngestionSettingTokens", TypeShape.of(ListIngestionSettingTokensResult.class), args, Utilities.withVersion(options));
     }
 }

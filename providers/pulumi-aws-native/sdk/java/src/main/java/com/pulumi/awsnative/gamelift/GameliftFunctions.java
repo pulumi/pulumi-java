@@ -5,8 +5,11 @@ package com.pulumi.awsnative.gamelift;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.gamelift.inputs.GetAliasArgs;
+import com.pulumi.awsnative.gamelift.inputs.GetAliasPlainArgs;
 import com.pulumi.awsnative.gamelift.inputs.GetFleetArgs;
+import com.pulumi.awsnative.gamelift.inputs.GetFleetPlainArgs;
 import com.pulumi.awsnative.gamelift.inputs.GetGameServerGroupArgs;
+import com.pulumi.awsnative.gamelift.inputs.GetGameServerGroupPlainArgs;
 import com.pulumi.awsnative.gamelift.outputs.GetAliasResult;
 import com.pulumi.awsnative.gamelift.outputs.GetFleetResult;
 import com.pulumi.awsnative.gamelift.outputs.GetGameServerGroupResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class GameliftFunctions {
     /**
@@ -27,8 +31,22 @@ public final class GameliftFunctions {
      * The AWS::GameLift::Alias resource creates an alias for an Amazon GameLift (GameLift) fleet destination.
      * 
      */
+    public static CompletableFuture<GetAliasResult> getAliasPlain(GetAliasPlainArgs args) {
+        return getAliasPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::GameLift::Alias resource creates an alias for an Amazon GameLift (GameLift) fleet destination.
+     * 
+     */
     public static Output<GetAliasResult> getAlias(GetAliasArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:gamelift:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::GameLift::Alias resource creates an alias for an Amazon GameLift (GameLift) fleet destination.
+     * 
+     */
+    public static CompletableFuture<GetAliasResult> getAliasPlain(GetAliasPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:gamelift:getAlias", TypeShape.of(GetAliasResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::GameLift::Fleet resource creates an Amazon GameLift (GameLift) fleet to host game servers.  A fleet is a set of EC2 instances, each of which can host multiple game sessions.
@@ -41,8 +59,22 @@ public final class GameliftFunctions {
      * The AWS::GameLift::Fleet resource creates an Amazon GameLift (GameLift) fleet to host game servers.  A fleet is a set of EC2 instances, each of which can host multiple game sessions.
      * 
      */
+    public static CompletableFuture<GetFleetResult> getFleetPlain(GetFleetPlainArgs args) {
+        return getFleetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::GameLift::Fleet resource creates an Amazon GameLift (GameLift) fleet to host game servers.  A fleet is a set of EC2 instances, each of which can host multiple game sessions.
+     * 
+     */
     public static Output<GetFleetResult> getFleet(GetFleetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:gamelift:getFleet", TypeShape.of(GetFleetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::GameLift::Fleet resource creates an Amazon GameLift (GameLift) fleet to host game servers.  A fleet is a set of EC2 instances, each of which can host multiple game sessions.
+     * 
+     */
+    public static CompletableFuture<GetFleetResult> getFleetPlain(GetFleetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:gamelift:getFleet", TypeShape.of(GetFleetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::GameLift::GameServerGroup resource creates an Amazon GameLift (GameLift) GameServerGroup.
@@ -55,7 +87,21 @@ public final class GameliftFunctions {
      * The AWS::GameLift::GameServerGroup resource creates an Amazon GameLift (GameLift) GameServerGroup.
      * 
      */
+    public static CompletableFuture<GetGameServerGroupResult> getGameServerGroupPlain(GetGameServerGroupPlainArgs args) {
+        return getGameServerGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::GameLift::GameServerGroup resource creates an Amazon GameLift (GameLift) GameServerGroup.
+     * 
+     */
     public static Output<GetGameServerGroupResult> getGameServerGroup(GetGameServerGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:gamelift:getGameServerGroup", TypeShape.of(GetGameServerGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::GameLift::GameServerGroup resource creates an Amazon GameLift (GameLift) GameServerGroup.
+     * 
+     */
+    public static CompletableFuture<GetGameServerGroupResult> getGameServerGroupPlain(GetGameServerGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:gamelift:getGameServerGroup", TypeShape.of(GetGameServerGroupResult.class), args, Utilities.withVersion(options));
     }
 }

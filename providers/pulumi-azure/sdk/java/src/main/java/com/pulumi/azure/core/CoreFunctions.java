@@ -5,12 +5,19 @@ package com.pulumi.azure.core;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.core.inputs.GetExtendedLocationsArgs;
+import com.pulumi.azure.core.inputs.GetExtendedLocationsPlainArgs;
 import com.pulumi.azure.core.inputs.GetResourceGroupArgs;
+import com.pulumi.azure.core.inputs.GetResourceGroupPlainArgs;
 import com.pulumi.azure.core.inputs.GetResourcesArgs;
+import com.pulumi.azure.core.inputs.GetResourcesPlainArgs;
 import com.pulumi.azure.core.inputs.GetSubscriptionArgs;
+import com.pulumi.azure.core.inputs.GetSubscriptionPlainArgs;
 import com.pulumi.azure.core.inputs.GetSubscriptionsArgs;
+import com.pulumi.azure.core.inputs.GetSubscriptionsPlainArgs;
 import com.pulumi.azure.core.inputs.GetTemplateSpecVersionArgs;
+import com.pulumi.azure.core.inputs.GetTemplateSpecVersionPlainArgs;
 import com.pulumi.azure.core.inputs.GetUserAssignedIdentityArgs;
+import com.pulumi.azure.core.inputs.GetUserAssignedIdentityPlainArgs;
 import com.pulumi.azure.core.outputs.GetClientConfigResult;
 import com.pulumi.azure.core.outputs.GetExtendedLocationsResult;
 import com.pulumi.azure.core.outputs.GetResourceGroupResult;
@@ -24,6 +31,7 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.InvokeArgs;
+import java.util.concurrent.CompletableFuture;
 
 public final class CoreFunctions {
     /**
@@ -81,6 +89,35 @@ public final class CoreFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetClientConfigResult> getClientConfigPlain() {
+        return getClientConfigPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access the configuration of the AzureRM provider.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(CoreFunctions.getClientConfig());
+     * 
+     *         ctx.export(&#34;accountId&#34;, current.apply(getClientConfigResult -&gt; getClientConfigResult.getClientId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetClientConfigResult> getClientConfig(InvokeArgs args) {
         return getClientConfig(args, InvokeOptions.Empty);
     }
@@ -110,8 +147,66 @@ public final class CoreFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetClientConfigResult> getClientConfigPlain(InvokeArgs args) {
+        return getClientConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access the configuration of the AzureRM provider.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(CoreFunctions.getClientConfig());
+     * 
+     *         ctx.export(&#34;accountId&#34;, current.apply(getClientConfigResult -&gt; getClientConfigResult.getClientId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:core/getClientConfig:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access the configuration of the AzureRM provider.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(CoreFunctions.getClientConfig());
+     * 
+     *         ctx.export(&#34;accountId&#34;, current.apply(getClientConfigResult -&gt; getClientConfigResult.getClientId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetClientConfigResult> getClientConfigPlain(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:core/getClientConfig:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source return the available Extended Locations for a specific Azure Region.
@@ -170,8 +265,68 @@ public final class CoreFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetExtendedLocationsResult> getExtendedLocationsPlain(GetExtendedLocationsPlainArgs args) {
+        return getExtendedLocationsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source return the available Extended Locations for a specific Azure Region.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CoreFunctions.getExtendedLocations(GetExtendedLocationsArgs.builder()
+     *             .location(&#34;West Europe&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetExtendedLocationsResult> getExtendedLocations(GetExtendedLocationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:core/getExtendedLocations:getExtendedLocations", TypeShape.of(GetExtendedLocationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source return the available Extended Locations for a specific Azure Region.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CoreFunctions.getExtendedLocations(GetExtendedLocationsArgs.builder()
+     *             .location(&#34;West Europe&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetExtendedLocationsResult> getExtendedLocationsPlain(GetExtendedLocationsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:core/getExtendedLocations:getExtendedLocations", TypeShape.of(GetExtendedLocationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Resource Group.
@@ -232,8 +387,70 @@ public final class CoreFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetResourceGroupResult> getResourceGroupPlain(GetResourceGroupPlainArgs args) {
+        return getResourceGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Resource Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CoreFunctions.getResourceGroup(GetBudgetResourceGroupArgs.builder()
+     *             .name(&#34;existing&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getBudgetResourceGroupResult -&gt; getBudgetResourceGroupResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetResourceGroupResult> getResourceGroup(GetResourceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:core/getResourceGroup:getResourceGroup", TypeShape.of(GetResourceGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Resource Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CoreFunctions.getResourceGroup(GetBudgetResourceGroupArgs.builder()
+     *             .name(&#34;existing&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getBudgetResourceGroupResult -&gt; getBudgetResourceGroupResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetResourceGroupResult> getResourceGroupPlain(GetResourceGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:core/getResourceGroup:getResourceGroup", TypeShape.of(GetResourceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about existing resources.
@@ -246,6 +463,13 @@ public final class CoreFunctions {
      * Use this data source to access information about existing resources.
      * 
      */
+    public static CompletableFuture<GetResourcesResult> getResourcesPlain() {
+        return getResourcesPlain(GetResourcesPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about existing resources.
+     * 
+     */
     public static Output<GetResourcesResult> getResources(GetResourcesArgs args) {
         return getResources(args, InvokeOptions.Empty);
     }
@@ -253,8 +477,22 @@ public final class CoreFunctions {
      * Use this data source to access information about existing resources.
      * 
      */
+    public static CompletableFuture<GetResourcesResult> getResourcesPlain(GetResourcesPlainArgs args) {
+        return getResourcesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about existing resources.
+     * 
+     */
     public static Output<GetResourcesResult> getResources(GetResourcesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:core/getResources:getResources", TypeShape.of(GetResourcesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about existing resources.
+     * 
+     */
+    public static CompletableFuture<GetResourcesResult> getResourcesPlain(GetResourcesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:core/getResources:getResources", TypeShape.of(GetResourcesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Subscription.
@@ -311,6 +549,35 @@ public final class CoreFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetSubscriptionResult> getSubscriptionPlain() {
+        return getSubscriptionPlain(GetSubscriptionPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Subscription.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(CoreFunctions.getSubscription());
+     * 
+     *         ctx.export(&#34;currentSubscriptionDisplayName&#34;, current.apply(getBudgetSubscriptionResult -&gt; getBudgetSubscriptionResult.getDisplayName()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args) {
         return getSubscription(args, InvokeOptions.Empty);
     }
@@ -340,8 +607,66 @@ public final class CoreFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetSubscriptionResult> getSubscriptionPlain(GetSubscriptionPlainArgs args) {
+        return getSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Subscription.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(CoreFunctions.getSubscription());
+     * 
+     *         ctx.export(&#34;currentSubscriptionDisplayName&#34;, current.apply(getBudgetSubscriptionResult -&gt; getBudgetSubscriptionResult.getDisplayName()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:core/getSubscription:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Subscription.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(CoreFunctions.getSubscription());
+     * 
+     *         ctx.export(&#34;currentSubscriptionDisplayName&#34;, current.apply(getBudgetSubscriptionResult -&gt; getBudgetSubscriptionResult.getDisplayName()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionResult> getSubscriptionPlain(GetSubscriptionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:core/getSubscription:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about all the Subscriptions currently available.
@@ -400,6 +725,36 @@ public final class CoreFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetSubscriptionsResult> getSubscriptionsPlain() {
+        return getSubscriptionsPlain(GetSubscriptionsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about all the Subscriptions currently available.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var available = Output.of(CoreFunctions.getSubscriptions());
+     * 
+     *         ctx.export(&#34;availableSubscriptions&#34;, available.apply(getSubscriptionsResult -&gt; getSubscriptionsResult.getSubscriptions()));
+     *         ctx.export(&#34;firstAvailableSubscriptionDisplayName&#34;, available.apply(getSubscriptionsResult -&gt; getSubscriptionsResult.getSubscriptions()[0].getDisplayName()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args) {
         return getSubscriptions(args, InvokeOptions.Empty);
     }
@@ -430,8 +785,68 @@ public final class CoreFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetSubscriptionsResult> getSubscriptionsPlain(GetSubscriptionsPlainArgs args) {
+        return getSubscriptionsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about all the Subscriptions currently available.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var available = Output.of(CoreFunctions.getSubscriptions());
+     * 
+     *         ctx.export(&#34;availableSubscriptions&#34;, available.apply(getSubscriptionsResult -&gt; getSubscriptionsResult.getSubscriptions()));
+     *         ctx.export(&#34;firstAvailableSubscriptionDisplayName&#34;, available.apply(getSubscriptionsResult -&gt; getSubscriptionsResult.getSubscriptions()[0].getDisplayName()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSubscriptionsResult> getSubscriptions(GetSubscriptionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:core/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about all the Subscriptions currently available.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var available = Output.of(CoreFunctions.getSubscriptions());
+     * 
+     *         ctx.export(&#34;availableSubscriptions&#34;, available.apply(getSubscriptionsResult -&gt; getSubscriptionsResult.getSubscriptions()));
+     *         ctx.export(&#34;firstAvailableSubscriptionDisplayName&#34;, available.apply(getSubscriptionsResult -&gt; getSubscriptionsResult.getSubscriptions()[0].getDisplayName()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionsResult> getSubscriptionsPlain(GetSubscriptionsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:core/getSubscriptions:getSubscriptions", TypeShape.of(GetSubscriptionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Template Spec Version.
@@ -496,8 +911,74 @@ public final class CoreFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetTemplateSpecVersionResult> getTemplateSpecVersionPlain(GetTemplateSpecVersionPlainArgs args) {
+        return getTemplateSpecVersionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Template Spec Version.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CoreFunctions.getTemplateSpecVersion(GetTemplateSpecVersionArgs.builder()
+     *             .name(&#34;exampleTemplateSpec&#34;)
+     *             .resourceGroupName(&#34;MyResourceGroup&#34;)
+     *             .version(&#34;v1.0.4&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getTemplateSpecVersionResult -&gt; getTemplateSpecVersionResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetTemplateSpecVersionResult> getTemplateSpecVersion(GetTemplateSpecVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:core/getTemplateSpecVersion:getTemplateSpecVersion", TypeShape.of(GetTemplateSpecVersionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Template Spec Version.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CoreFunctions.getTemplateSpecVersion(GetTemplateSpecVersionArgs.builder()
+     *             .name(&#34;exampleTemplateSpec&#34;)
+     *             .resourceGroupName(&#34;MyResourceGroup&#34;)
+     *             .version(&#34;v1.0.4&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getTemplateSpecVersionResult -&gt; getTemplateSpecVersionResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetTemplateSpecVersionResult> getTemplateSpecVersionPlain(GetTemplateSpecVersionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:core/getTemplateSpecVersion:getTemplateSpecVersion", TypeShape.of(GetTemplateSpecVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing User Assigned Identity.
@@ -574,7 +1055,85 @@ public final class CoreFunctions {
      * 
      */
     @Deprecated /* azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authorization.getUserAssignedIdentity */
+    public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentityPlain(GetUserAssignedIdentityPlainArgs args) {
+        return getUserAssignedIdentityPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing User Assigned Identity.
+     * 
+     * ## Example Usage
+     * ### Reference An Existing)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AuthorizationFunctions.getUserAssignedIdentity(GetUserAssignedIdentityArgs.builder()
+     *             .name(&#34;name_of_user_assigned_identity&#34;)
+     *             .resourceGroupName(&#34;name_of_resource_group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;uaiClientId&#34;, example.apply(getUserAssignedIdentityResult -&gt; getUserAssignedIdentityResult.getClientId()));
+     *         ctx.export(&#34;uaiPrincipalId&#34;, example.apply(getUserAssignedIdentityResult -&gt; getUserAssignedIdentityResult.getPrincipalId()));
+     *         ctx.export(&#34;uaiTenantId&#34;, example.apply(getUserAssignedIdentityResult -&gt; getUserAssignedIdentityResult.getTenantId()));
+     *         }
+     * }
+     * ```
+     * 
+     * @deprecated
+     * azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authorization.getUserAssignedIdentity
+     * 
+     */
+    @Deprecated /* azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authorization.getUserAssignedIdentity */
     public static Output<GetUserAssignedIdentityResult> getUserAssignedIdentity(GetUserAssignedIdentityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:core/getUserAssignedIdentity:getUserAssignedIdentity", TypeShape.of(GetUserAssignedIdentityResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing User Assigned Identity.
+     * 
+     * ## Example Usage
+     * ### Reference An Existing)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AuthorizationFunctions.getUserAssignedIdentity(GetUserAssignedIdentityArgs.builder()
+     *             .name(&#34;name_of_user_assigned_identity&#34;)
+     *             .resourceGroupName(&#34;name_of_resource_group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;uaiClientId&#34;, example.apply(getUserAssignedIdentityResult -&gt; getUserAssignedIdentityResult.getClientId()));
+     *         ctx.export(&#34;uaiPrincipalId&#34;, example.apply(getUserAssignedIdentityResult -&gt; getUserAssignedIdentityResult.getPrincipalId()));
+     *         ctx.export(&#34;uaiTenantId&#34;, example.apply(getUserAssignedIdentityResult -&gt; getUserAssignedIdentityResult.getTenantId()));
+     *         }
+     * }
+     * ```
+     * 
+     * @deprecated
+     * azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authorization.getUserAssignedIdentity
+     * 
+     */
+    @Deprecated /* azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authorization.getUserAssignedIdentity */
+    public static CompletableFuture<GetUserAssignedIdentityResult> getUserAssignedIdentityPlain(GetUserAssignedIdentityPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:core/getUserAssignedIdentity:getUserAssignedIdentity", TypeShape.of(GetUserAssignedIdentityResult.class), args, Utilities.withVersion(options));
     }
 }

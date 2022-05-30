@@ -5,10 +5,15 @@ package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.cloudwatch.inputs.GetEventBusArgs;
+import com.pulumi.aws.cloudwatch.inputs.GetEventBusPlainArgs;
 import com.pulumi.aws.cloudwatch.inputs.GetEventConnectionArgs;
+import com.pulumi.aws.cloudwatch.inputs.GetEventConnectionPlainArgs;
 import com.pulumi.aws.cloudwatch.inputs.GetEventSourceArgs;
+import com.pulumi.aws.cloudwatch.inputs.GetEventSourcePlainArgs;
 import com.pulumi.aws.cloudwatch.inputs.GetLogGroupArgs;
+import com.pulumi.aws.cloudwatch.inputs.GetLogGroupPlainArgs;
 import com.pulumi.aws.cloudwatch.inputs.GetLogGroupsArgs;
+import com.pulumi.aws.cloudwatch.inputs.GetLogGroupsPlainArgs;
 import com.pulumi.aws.cloudwatch.outputs.GetEventBusResult;
 import com.pulumi.aws.cloudwatch.outputs.GetEventConnectionResult;
 import com.pulumi.aws.cloudwatch.outputs.GetEventSourceResult;
@@ -18,6 +23,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class CloudwatchFunctions {
     /**
@@ -81,8 +87,72 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetEventBusResult> getEventBusPlain(GetEventBusPlainArgs args) {
+        return getEventBusPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can be used to fetch information about a specific
+     * EventBridge event bus. Use this data source to compute the ARN of
+     * an event bus, given the name of the bus.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getEventBus(GetEventBusArgs.builder()
+     *             .name(&#34;example-bus-name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetEventBusResult> getEventBus(GetEventBusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:cloudwatch/getEventBus:getEventBus", TypeShape.of(GetEventBusResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can be used to fetch information about a specific
+     * EventBridge event bus. Use this data source to compute the ARN of
+     * an event bus, given the name of the bus.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getEventBus(GetEventBusArgs.builder()
+     *             .name(&#34;example-bus-name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetEventBusResult> getEventBusPlain(GetEventBusPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventBus:getEventBus", TypeShape.of(GetEventBusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to retrieve information about an EventBridge connection.
@@ -145,8 +215,72 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetEventConnectionResult> getEventConnectionPlain(GetEventConnectionPlainArgs args) {
+        return getEventConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to retrieve information about an EventBridge connection.
+     * 
+     * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(CloudwatchFunctions.getEventConnection(GetEventConnectionArgs.builder()
+     *             .name(&#34;test&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetEventConnectionResult> getEventConnection(GetEventConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:cloudwatch/getEventConnection:getEventConnection", TypeShape.of(GetEventConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to retrieve information about an EventBridge connection.
+     * 
+     * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(CloudwatchFunctions.getEventConnection(GetEventConnectionArgs.builder()
+     *             .name(&#34;test&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetEventConnectionResult> getEventConnectionPlain(GetEventConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventConnection:getEventConnection", TypeShape.of(GetEventConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about an EventBridge Partner Event Source. This data source will only return one partner event source. An error will be returned if multiple sources match the same name prefix.
@@ -209,6 +343,38 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetEventSourceResult> getEventSourcePlain() {
+        return getEventSourcePlain(GetEventSourcePlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get information about an EventBridge Partner Event Source. This data source will only return one partner event source. An error will be returned if multiple sources match the same name prefix.
+     * 
+     * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var examplepartner = Output.of(CloudwatchFunctions.getEventSource(GetEventSourceArgs.builder()
+     *             .namePrefix(&#34;aws.partner/examplepartner.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetEventSourceResult> getEventSource(GetEventSourceArgs args) {
         return getEventSource(args, InvokeOptions.Empty);
     }
@@ -241,8 +407,72 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetEventSourceResult> getEventSourcePlain(GetEventSourcePlainArgs args) {
+        return getEventSourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get information about an EventBridge Partner Event Source. This data source will only return one partner event source. An error will be returned if multiple sources match the same name prefix.
+     * 
+     * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var examplepartner = Output.of(CloudwatchFunctions.getEventSource(GetEventSourceArgs.builder()
+     *             .namePrefix(&#34;aws.partner/examplepartner.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetEventSourceResult> getEventSource(GetEventSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:cloudwatch/getEventSource:getEventSource", TypeShape.of(GetEventSourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get information about an EventBridge Partner Event Source. This data source will only return one partner event source. An error will be returned if multiple sources match the same name prefix.
+     * 
+     * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var examplepartner = Output.of(CloudwatchFunctions.getEventSource(GetEventSourceArgs.builder()
+     *             .namePrefix(&#34;aws.partner/examplepartner.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetEventSourceResult> getEventSourcePlain(GetEventSourcePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventSource:getEventSource", TypeShape.of(GetEventSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get information about an AWS Cloudwatch Log Group
@@ -301,8 +531,68 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetLogGroupResult> getLogGroupPlain(GetLogGroupPlainArgs args) {
+        return getLogGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get information about an AWS Cloudwatch Log Group
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getLogGroup(GetLogGroupArgs.builder()
+     *             .name(&#34;MyImportantLogs&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLogGroupResult> getLogGroup(GetLogGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:cloudwatch/getLogGroup:getLogGroup", TypeShape.of(GetLogGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get information about an AWS Cloudwatch Log Group
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getLogGroup(GetLogGroupArgs.builder()
+     *             .name(&#34;MyImportantLogs&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetLogGroupResult> getLogGroupPlain(GetLogGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:cloudwatch/getLogGroup:getLogGroup", TypeShape.of(GetLogGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to get a list of AWS Cloudwatch Log Groups
@@ -361,7 +651,67 @@ public final class CloudwatchFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetLogGroupsResult> getLogGroupsPlain(GetLogGroupsPlainArgs args) {
+        return getLogGroupsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get a list of AWS Cloudwatch Log Groups
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getLogGroups(GetLogGroupsArgs.builder()
+     *             .logGroupNamePrefix(&#34;/MyImportantLogs&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:cloudwatch/getLogGroups:getLogGroups", TypeShape.of(GetLogGroupsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get a list of AWS Cloudwatch Log Groups
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getLogGroups(GetLogGroupsArgs.builder()
+     *             .logGroupNamePrefix(&#34;/MyImportantLogs&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetLogGroupsResult> getLogGroupsPlain(GetLogGroupsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:cloudwatch/getLogGroups:getLogGroups", TypeShape.of(GetLogGroupsResult.class), args, Utilities.withVersion(options));
     }
 }

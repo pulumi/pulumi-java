@@ -5,8 +5,11 @@ package com.pulumi.azurenative.operationsmanagement;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.operationsmanagement.inputs.GetManagementAssociationArgs;
+import com.pulumi.azurenative.operationsmanagement.inputs.GetManagementAssociationPlainArgs;
 import com.pulumi.azurenative.operationsmanagement.inputs.GetManagementConfigurationArgs;
+import com.pulumi.azurenative.operationsmanagement.inputs.GetManagementConfigurationPlainArgs;
 import com.pulumi.azurenative.operationsmanagement.inputs.GetSolutionArgs;
+import com.pulumi.azurenative.operationsmanagement.inputs.GetSolutionPlainArgs;
 import com.pulumi.azurenative.operationsmanagement.outputs.GetManagementAssociationResult;
 import com.pulumi.azurenative.operationsmanagement.outputs.GetManagementConfigurationResult;
 import com.pulumi.azurenative.operationsmanagement.outputs.GetSolutionResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class OperationsmanagementFunctions {
     /**
@@ -29,8 +33,24 @@ public final class OperationsmanagementFunctions {
      * API Version: 2015-11-01-preview.
      * 
      */
+    public static CompletableFuture<GetManagementAssociationResult> getManagementAssociationPlain(GetManagementAssociationPlainArgs args) {
+        return getManagementAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The container for solution.
+     * API Version: 2015-11-01-preview.
+     * 
+     */
     public static Output<GetManagementAssociationResult> getManagementAssociation(GetManagementAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:operationsmanagement:getManagementAssociation", TypeShape.of(GetManagementAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The container for solution.
+     * API Version: 2015-11-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetManagementAssociationResult> getManagementAssociationPlain(GetManagementAssociationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:operationsmanagement:getManagementAssociation", TypeShape.of(GetManagementAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The container for solution.
@@ -45,8 +65,24 @@ public final class OperationsmanagementFunctions {
      * API Version: 2015-11-01-preview.
      * 
      */
+    public static CompletableFuture<GetManagementConfigurationResult> getManagementConfigurationPlain(GetManagementConfigurationPlainArgs args) {
+        return getManagementConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The container for solution.
+     * API Version: 2015-11-01-preview.
+     * 
+     */
     public static Output<GetManagementConfigurationResult> getManagementConfiguration(GetManagementConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:operationsmanagement:getManagementConfiguration", TypeShape.of(GetManagementConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The container for solution.
+     * API Version: 2015-11-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetManagementConfigurationResult> getManagementConfigurationPlain(GetManagementConfigurationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:operationsmanagement:getManagementConfiguration", TypeShape.of(GetManagementConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The container for solution.
@@ -61,7 +97,23 @@ public final class OperationsmanagementFunctions {
      * API Version: 2015-11-01-preview.
      * 
      */
+    public static CompletableFuture<GetSolutionResult> getSolutionPlain(GetSolutionPlainArgs args) {
+        return getSolutionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The container for solution.
+     * API Version: 2015-11-01-preview.
+     * 
+     */
     public static Output<GetSolutionResult> getSolution(GetSolutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:operationsmanagement:getSolution", TypeShape.of(GetSolutionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The container for solution.
+     * API Version: 2015-11-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSolutionResult> getSolutionPlain(GetSolutionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:operationsmanagement:getSolution", TypeShape.of(GetSolutionResult.class), args, Utilities.withVersion(options));
     }
 }

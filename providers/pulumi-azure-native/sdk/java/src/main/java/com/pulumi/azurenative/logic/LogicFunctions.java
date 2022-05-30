@@ -5,32 +5,59 @@ package com.pulumi.azurenative.logic;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountAgreementArgs;
+import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountAgreementPlainArgs;
 import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountArgs;
 import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountAssemblyArgs;
+import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountAssemblyPlainArgs;
 import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountBatchConfigurationArgs;
+import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountBatchConfigurationPlainArgs;
 import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountCertificateArgs;
+import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountCertificatePlainArgs;
 import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountMapArgs;
+import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountMapPlainArgs;
 import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountPartnerArgs;
+import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountPartnerPlainArgs;
+import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountPlainArgs;
 import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountSchemaArgs;
+import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountSchemaPlainArgs;
 import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountSessionArgs;
+import com.pulumi.azurenative.logic.inputs.GetIntegrationAccountSessionPlainArgs;
 import com.pulumi.azurenative.logic.inputs.GetIntegrationServiceEnvironmentArgs;
 import com.pulumi.azurenative.logic.inputs.GetIntegrationServiceEnvironmentManagedApiArgs;
+import com.pulumi.azurenative.logic.inputs.GetIntegrationServiceEnvironmentManagedApiPlainArgs;
+import com.pulumi.azurenative.logic.inputs.GetIntegrationServiceEnvironmentPlainArgs;
 import com.pulumi.azurenative.logic.inputs.GetRosettaNetProcessConfigurationArgs;
+import com.pulumi.azurenative.logic.inputs.GetRosettaNetProcessConfigurationPlainArgs;
 import com.pulumi.azurenative.logic.inputs.GetWorkflowAccessKeyArgs;
+import com.pulumi.azurenative.logic.inputs.GetWorkflowAccessKeyPlainArgs;
 import com.pulumi.azurenative.logic.inputs.GetWorkflowArgs;
+import com.pulumi.azurenative.logic.inputs.GetWorkflowPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountAgreementContentCallbackUrlArgs;
+import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountAgreementContentCallbackUrlPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountAssemblyContentCallbackUrlArgs;
+import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountAssemblyContentCallbackUrlPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountCallbackUrlArgs;
+import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountCallbackUrlPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountKeyVaultKeysArgs;
+import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountKeyVaultKeysPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountMapContentCallbackUrlArgs;
+import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountMapContentCallbackUrlPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountPartnerContentCallbackUrlArgs;
+import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountPartnerContentCallbackUrlPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountSchemaContentCallbackUrlArgs;
+import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountSchemaContentCallbackUrlPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListWorkflowAccessKeySecretKeysArgs;
+import com.pulumi.azurenative.logic.inputs.ListWorkflowAccessKeySecretKeysPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListWorkflowCallbackUrlArgs;
+import com.pulumi.azurenative.logic.inputs.ListWorkflowCallbackUrlPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListWorkflowRunActionExpressionTracesArgs;
+import com.pulumi.azurenative.logic.inputs.ListWorkflowRunActionExpressionTracesPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListWorkflowRunActionRepetitionExpressionTracesArgs;
+import com.pulumi.azurenative.logic.inputs.ListWorkflowRunActionRepetitionExpressionTracesPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListWorkflowTriggerCallbackUrlArgs;
+import com.pulumi.azurenative.logic.inputs.ListWorkflowTriggerCallbackUrlPlainArgs;
 import com.pulumi.azurenative.logic.inputs.ListWorkflowVersionTriggerCallbackUrlArgs;
+import com.pulumi.azurenative.logic.inputs.ListWorkflowVersionTriggerCallbackUrlPlainArgs;
 import com.pulumi.azurenative.logic.outputs.GetIntegrationAccountAgreementResult;
 import com.pulumi.azurenative.logic.outputs.GetIntegrationAccountAssemblyResult;
 import com.pulumi.azurenative.logic.outputs.GetIntegrationAccountBatchConfigurationResult;
@@ -62,6 +89,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class LogicFunctions {
     /**
@@ -77,8 +105,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationAccountResult> getIntegrationAccountPlain(GetIntegrationAccountPlainArgs args) {
+        return getIntegrationAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The integration account.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetIntegrationAccountResult> getIntegrationAccount(GetIntegrationAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getIntegrationAccount", TypeShape.of(GetIntegrationAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The integration account.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationAccountResult> getIntegrationAccountPlain(GetIntegrationAccountPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccount", TypeShape.of(GetIntegrationAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The integration account agreement.
@@ -93,8 +137,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationAccountAgreementResult> getIntegrationAccountAgreementPlain(GetIntegrationAccountAgreementPlainArgs args) {
+        return getIntegrationAccountAgreementPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The integration account agreement.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetIntegrationAccountAgreementResult> getIntegrationAccountAgreement(GetIntegrationAccountAgreementArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getIntegrationAccountAgreement", TypeShape.of(GetIntegrationAccountAgreementResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The integration account agreement.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationAccountAgreementResult> getIntegrationAccountAgreementPlain(GetIntegrationAccountAgreementPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountAgreement", TypeShape.of(GetIntegrationAccountAgreementResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The assembly definition.
@@ -109,8 +169,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationAccountAssemblyResult> getIntegrationAccountAssemblyPlain(GetIntegrationAccountAssemblyPlainArgs args) {
+        return getIntegrationAccountAssemblyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The assembly definition.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetIntegrationAccountAssemblyResult> getIntegrationAccountAssembly(GetIntegrationAccountAssemblyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getIntegrationAccountAssembly", TypeShape.of(GetIntegrationAccountAssemblyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The assembly definition.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationAccountAssemblyResult> getIntegrationAccountAssemblyPlain(GetIntegrationAccountAssemblyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountAssembly", TypeShape.of(GetIntegrationAccountAssemblyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The batch configuration resource definition.
@@ -125,8 +201,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationAccountBatchConfigurationResult> getIntegrationAccountBatchConfigurationPlain(GetIntegrationAccountBatchConfigurationPlainArgs args) {
+        return getIntegrationAccountBatchConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The batch configuration resource definition.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetIntegrationAccountBatchConfigurationResult> getIntegrationAccountBatchConfiguration(GetIntegrationAccountBatchConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getIntegrationAccountBatchConfiguration", TypeShape.of(GetIntegrationAccountBatchConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The batch configuration resource definition.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationAccountBatchConfigurationResult> getIntegrationAccountBatchConfigurationPlain(GetIntegrationAccountBatchConfigurationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountBatchConfiguration", TypeShape.of(GetIntegrationAccountBatchConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The integration account certificate.
@@ -141,8 +233,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationAccountCertificateResult> getIntegrationAccountCertificatePlain(GetIntegrationAccountCertificatePlainArgs args) {
+        return getIntegrationAccountCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The integration account certificate.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetIntegrationAccountCertificateResult> getIntegrationAccountCertificate(GetIntegrationAccountCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getIntegrationAccountCertificate", TypeShape.of(GetIntegrationAccountCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The integration account certificate.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationAccountCertificateResult> getIntegrationAccountCertificatePlain(GetIntegrationAccountCertificatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountCertificate", TypeShape.of(GetIntegrationAccountCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The integration account map.
@@ -157,8 +265,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationAccountMapResult> getIntegrationAccountMapPlain(GetIntegrationAccountMapPlainArgs args) {
+        return getIntegrationAccountMapPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The integration account map.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetIntegrationAccountMapResult> getIntegrationAccountMap(GetIntegrationAccountMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getIntegrationAccountMap", TypeShape.of(GetIntegrationAccountMapResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The integration account map.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationAccountMapResult> getIntegrationAccountMapPlain(GetIntegrationAccountMapPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountMap", TypeShape.of(GetIntegrationAccountMapResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The integration account partner.
@@ -173,8 +297,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationAccountPartnerResult> getIntegrationAccountPartnerPlain(GetIntegrationAccountPartnerPlainArgs args) {
+        return getIntegrationAccountPartnerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The integration account partner.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetIntegrationAccountPartnerResult> getIntegrationAccountPartner(GetIntegrationAccountPartnerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getIntegrationAccountPartner", TypeShape.of(GetIntegrationAccountPartnerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The integration account partner.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationAccountPartnerResult> getIntegrationAccountPartnerPlain(GetIntegrationAccountPartnerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountPartner", TypeShape.of(GetIntegrationAccountPartnerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The integration account schema.
@@ -189,8 +329,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationAccountSchemaResult> getIntegrationAccountSchemaPlain(GetIntegrationAccountSchemaPlainArgs args) {
+        return getIntegrationAccountSchemaPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The integration account schema.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetIntegrationAccountSchemaResult> getIntegrationAccountSchema(GetIntegrationAccountSchemaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getIntegrationAccountSchema", TypeShape.of(GetIntegrationAccountSchemaResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The integration account schema.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationAccountSchemaResult> getIntegrationAccountSchemaPlain(GetIntegrationAccountSchemaPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountSchema", TypeShape.of(GetIntegrationAccountSchemaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The integration account session.
@@ -205,8 +361,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationAccountSessionResult> getIntegrationAccountSessionPlain(GetIntegrationAccountSessionPlainArgs args) {
+        return getIntegrationAccountSessionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The integration account session.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetIntegrationAccountSessionResult> getIntegrationAccountSession(GetIntegrationAccountSessionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getIntegrationAccountSession", TypeShape.of(GetIntegrationAccountSessionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The integration account session.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationAccountSessionResult> getIntegrationAccountSessionPlain(GetIntegrationAccountSessionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountSession", TypeShape.of(GetIntegrationAccountSessionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The integration service environment.
@@ -221,8 +393,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationServiceEnvironmentResult> getIntegrationServiceEnvironmentPlain(GetIntegrationServiceEnvironmentPlainArgs args) {
+        return getIntegrationServiceEnvironmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The integration service environment.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetIntegrationServiceEnvironmentResult> getIntegrationServiceEnvironment(GetIntegrationServiceEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getIntegrationServiceEnvironment", TypeShape.of(GetIntegrationServiceEnvironmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The integration service environment.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationServiceEnvironmentResult> getIntegrationServiceEnvironmentPlain(GetIntegrationServiceEnvironmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationServiceEnvironment", TypeShape.of(GetIntegrationServiceEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The integration service environment managed api.
@@ -237,8 +425,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationServiceEnvironmentManagedApiResult> getIntegrationServiceEnvironmentManagedApiPlain(GetIntegrationServiceEnvironmentManagedApiPlainArgs args) {
+        return getIntegrationServiceEnvironmentManagedApiPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The integration service environment managed api.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetIntegrationServiceEnvironmentManagedApiResult> getIntegrationServiceEnvironmentManagedApi(GetIntegrationServiceEnvironmentManagedApiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getIntegrationServiceEnvironmentManagedApi", TypeShape.of(GetIntegrationServiceEnvironmentManagedApiResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The integration service environment managed api.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationServiceEnvironmentManagedApiResult> getIntegrationServiceEnvironmentManagedApiPlain(GetIntegrationServiceEnvironmentManagedApiPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationServiceEnvironmentManagedApi", TypeShape.of(GetIntegrationServiceEnvironmentManagedApiResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The integration account RosettaNet process configuration.
@@ -253,8 +457,24 @@ public final class LogicFunctions {
      * API Version: 2016-06-01.
      * 
      */
+    public static CompletableFuture<GetRosettaNetProcessConfigurationResult> getRosettaNetProcessConfigurationPlain(GetRosettaNetProcessConfigurationPlainArgs args) {
+        return getRosettaNetProcessConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The integration account RosettaNet process configuration.
+     * API Version: 2016-06-01.
+     * 
+     */
     public static Output<GetRosettaNetProcessConfigurationResult> getRosettaNetProcessConfiguration(GetRosettaNetProcessConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getRosettaNetProcessConfiguration", TypeShape.of(GetRosettaNetProcessConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The integration account RosettaNet process configuration.
+     * API Version: 2016-06-01.
+     * 
+     */
+    public static CompletableFuture<GetRosettaNetProcessConfigurationResult> getRosettaNetProcessConfigurationPlain(GetRosettaNetProcessConfigurationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getRosettaNetProcessConfiguration", TypeShape.of(GetRosettaNetProcessConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The workflow type.
@@ -269,8 +489,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<GetWorkflowResult> getWorkflowPlain(GetWorkflowPlainArgs args) {
+        return getWorkflowPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The workflow type.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<GetWorkflowResult> getWorkflow(GetWorkflowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getWorkflow", TypeShape.of(GetWorkflowResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The workflow type.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<GetWorkflowResult> getWorkflowPlain(GetWorkflowPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getWorkflow", TypeShape.of(GetWorkflowResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2015-02-01-preview.
@@ -283,8 +519,22 @@ public final class LogicFunctions {
      * API Version: 2015-02-01-preview.
      * 
      */
+    public static CompletableFuture<GetWorkflowAccessKeyResult> getWorkflowAccessKeyPlain(GetWorkflowAccessKeyPlainArgs args) {
+        return getWorkflowAccessKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * API Version: 2015-02-01-preview.
+     * 
+     */
     public static Output<GetWorkflowAccessKeyResult> getWorkflowAccessKey(GetWorkflowAccessKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:getWorkflowAccessKey", TypeShape.of(GetWorkflowAccessKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * API Version: 2015-02-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetWorkflowAccessKeyResult> getWorkflowAccessKeyPlain(GetWorkflowAccessKeyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:getWorkflowAccessKey", TypeShape.of(GetWorkflowAccessKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The workflow trigger callback URL.
@@ -299,8 +549,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListIntegrationAccountAgreementContentCallbackUrlResult> listIntegrationAccountAgreementContentCallbackUrlPlain(ListIntegrationAccountAgreementContentCallbackUrlPlainArgs args) {
+        return listIntegrationAccountAgreementContentCallbackUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListIntegrationAccountAgreementContentCallbackUrlResult> listIntegrationAccountAgreementContentCallbackUrl(ListIntegrationAccountAgreementContentCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountAgreementContentCallbackUrl", TypeShape.of(ListIntegrationAccountAgreementContentCallbackUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListIntegrationAccountAgreementContentCallbackUrlResult> listIntegrationAccountAgreementContentCallbackUrlPlain(ListIntegrationAccountAgreementContentCallbackUrlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountAgreementContentCallbackUrl", TypeShape.of(ListIntegrationAccountAgreementContentCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The workflow trigger callback URL.
@@ -315,8 +581,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListIntegrationAccountAssemblyContentCallbackUrlResult> listIntegrationAccountAssemblyContentCallbackUrlPlain(ListIntegrationAccountAssemblyContentCallbackUrlPlainArgs args) {
+        return listIntegrationAccountAssemblyContentCallbackUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListIntegrationAccountAssemblyContentCallbackUrlResult> listIntegrationAccountAssemblyContentCallbackUrl(ListIntegrationAccountAssemblyContentCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountAssemblyContentCallbackUrl", TypeShape.of(ListIntegrationAccountAssemblyContentCallbackUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListIntegrationAccountAssemblyContentCallbackUrlResult> listIntegrationAccountAssemblyContentCallbackUrlPlain(ListIntegrationAccountAssemblyContentCallbackUrlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountAssemblyContentCallbackUrl", TypeShape.of(ListIntegrationAccountAssemblyContentCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The callback url.
@@ -331,8 +613,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListIntegrationAccountCallbackUrlResult> listIntegrationAccountCallbackUrlPlain(ListIntegrationAccountCallbackUrlPlainArgs args) {
+        return listIntegrationAccountCallbackUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The callback url.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListIntegrationAccountCallbackUrlResult> listIntegrationAccountCallbackUrl(ListIntegrationAccountCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountCallbackUrl", TypeShape.of(ListIntegrationAccountCallbackUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The callback url.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListIntegrationAccountCallbackUrlResult> listIntegrationAccountCallbackUrlPlain(ListIntegrationAccountCallbackUrlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountCallbackUrl", TypeShape.of(ListIntegrationAccountCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Collection of key vault keys.
@@ -347,8 +645,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeysPlain(ListIntegrationAccountKeyVaultKeysPlainArgs args) {
+        return listIntegrationAccountKeyVaultKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Collection of key vault keys.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Collection of key vault keys.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeysPlain(ListIntegrationAccountKeyVaultKeysPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The workflow trigger callback URL.
@@ -363,8 +677,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListIntegrationAccountMapContentCallbackUrlResult> listIntegrationAccountMapContentCallbackUrlPlain(ListIntegrationAccountMapContentCallbackUrlPlainArgs args) {
+        return listIntegrationAccountMapContentCallbackUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListIntegrationAccountMapContentCallbackUrlResult> listIntegrationAccountMapContentCallbackUrl(ListIntegrationAccountMapContentCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountMapContentCallbackUrl", TypeShape.of(ListIntegrationAccountMapContentCallbackUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListIntegrationAccountMapContentCallbackUrlResult> listIntegrationAccountMapContentCallbackUrlPlain(ListIntegrationAccountMapContentCallbackUrlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountMapContentCallbackUrl", TypeShape.of(ListIntegrationAccountMapContentCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The workflow trigger callback URL.
@@ -379,8 +709,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListIntegrationAccountPartnerContentCallbackUrlResult> listIntegrationAccountPartnerContentCallbackUrlPlain(ListIntegrationAccountPartnerContentCallbackUrlPlainArgs args) {
+        return listIntegrationAccountPartnerContentCallbackUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListIntegrationAccountPartnerContentCallbackUrlResult> listIntegrationAccountPartnerContentCallbackUrl(ListIntegrationAccountPartnerContentCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountPartnerContentCallbackUrl", TypeShape.of(ListIntegrationAccountPartnerContentCallbackUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListIntegrationAccountPartnerContentCallbackUrlResult> listIntegrationAccountPartnerContentCallbackUrlPlain(ListIntegrationAccountPartnerContentCallbackUrlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountPartnerContentCallbackUrl", TypeShape.of(ListIntegrationAccountPartnerContentCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The workflow trigger callback URL.
@@ -395,8 +741,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListIntegrationAccountSchemaContentCallbackUrlResult> listIntegrationAccountSchemaContentCallbackUrlPlain(ListIntegrationAccountSchemaContentCallbackUrlPlainArgs args) {
+        return listIntegrationAccountSchemaContentCallbackUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListIntegrationAccountSchemaContentCallbackUrlResult> listIntegrationAccountSchemaContentCallbackUrl(ListIntegrationAccountSchemaContentCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountSchemaContentCallbackUrl", TypeShape.of(ListIntegrationAccountSchemaContentCallbackUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListIntegrationAccountSchemaContentCallbackUrlResult> listIntegrationAccountSchemaContentCallbackUrlPlain(ListIntegrationAccountSchemaContentCallbackUrlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountSchemaContentCallbackUrl", TypeShape.of(ListIntegrationAccountSchemaContentCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2015-02-01-preview.
@@ -409,8 +771,22 @@ public final class LogicFunctions {
      * API Version: 2015-02-01-preview.
      * 
      */
+    public static CompletableFuture<ListWorkflowAccessKeySecretKeysResult> listWorkflowAccessKeySecretKeysPlain(ListWorkflowAccessKeySecretKeysPlainArgs args) {
+        return listWorkflowAccessKeySecretKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * API Version: 2015-02-01-preview.
+     * 
+     */
     public static Output<ListWorkflowAccessKeySecretKeysResult> listWorkflowAccessKeySecretKeys(ListWorkflowAccessKeySecretKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listWorkflowAccessKeySecretKeys", TypeShape.of(ListWorkflowAccessKeySecretKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * API Version: 2015-02-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListWorkflowAccessKeySecretKeysResult> listWorkflowAccessKeySecretKeysPlain(ListWorkflowAccessKeySecretKeysPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowAccessKeySecretKeys", TypeShape.of(ListWorkflowAccessKeySecretKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The workflow trigger callback URL.
@@ -425,8 +801,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListWorkflowCallbackUrlResult> listWorkflowCallbackUrlPlain(ListWorkflowCallbackUrlPlainArgs args) {
+        return listWorkflowCallbackUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListWorkflowCallbackUrlResult> listWorkflowCallbackUrl(ListWorkflowCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listWorkflowCallbackUrl", TypeShape.of(ListWorkflowCallbackUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListWorkflowCallbackUrlResult> listWorkflowCallbackUrlPlain(ListWorkflowCallbackUrlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowCallbackUrl", TypeShape.of(ListWorkflowCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The expression traces.
@@ -441,8 +833,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListWorkflowRunActionExpressionTracesResult> listWorkflowRunActionExpressionTracesPlain(ListWorkflowRunActionExpressionTracesPlainArgs args) {
+        return listWorkflowRunActionExpressionTracesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The expression traces.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListWorkflowRunActionExpressionTracesResult> listWorkflowRunActionExpressionTraces(ListWorkflowRunActionExpressionTracesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listWorkflowRunActionExpressionTraces", TypeShape.of(ListWorkflowRunActionExpressionTracesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The expression traces.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListWorkflowRunActionExpressionTracesResult> listWorkflowRunActionExpressionTracesPlain(ListWorkflowRunActionExpressionTracesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowRunActionExpressionTraces", TypeShape.of(ListWorkflowRunActionExpressionTracesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The expression traces.
@@ -457,8 +865,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListWorkflowRunActionRepetitionExpressionTracesResult> listWorkflowRunActionRepetitionExpressionTracesPlain(ListWorkflowRunActionRepetitionExpressionTracesPlainArgs args) {
+        return listWorkflowRunActionRepetitionExpressionTracesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The expression traces.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListWorkflowRunActionRepetitionExpressionTracesResult> listWorkflowRunActionRepetitionExpressionTraces(ListWorkflowRunActionRepetitionExpressionTracesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listWorkflowRunActionRepetitionExpressionTraces", TypeShape.of(ListWorkflowRunActionRepetitionExpressionTracesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The expression traces.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListWorkflowRunActionRepetitionExpressionTracesResult> listWorkflowRunActionRepetitionExpressionTracesPlain(ListWorkflowRunActionRepetitionExpressionTracesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowRunActionRepetitionExpressionTraces", TypeShape.of(ListWorkflowRunActionRepetitionExpressionTracesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The workflow trigger callback URL.
@@ -473,8 +897,24 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListWorkflowTriggerCallbackUrlResult> listWorkflowTriggerCallbackUrlPlain(ListWorkflowTriggerCallbackUrlPlainArgs args) {
+        return listWorkflowTriggerCallbackUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListWorkflowTriggerCallbackUrlResult> listWorkflowTriggerCallbackUrl(ListWorkflowTriggerCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listWorkflowTriggerCallbackUrl", TypeShape.of(ListWorkflowTriggerCallbackUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListWorkflowTriggerCallbackUrlResult> listWorkflowTriggerCallbackUrlPlain(ListWorkflowTriggerCallbackUrlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowTriggerCallbackUrl", TypeShape.of(ListWorkflowTriggerCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The workflow trigger callback URL.
@@ -489,7 +929,23 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
+    public static CompletableFuture<ListWorkflowVersionTriggerCallbackUrlResult> listWorkflowVersionTriggerCallbackUrlPlain(ListWorkflowVersionTriggerCallbackUrlPlainArgs args) {
+        return listWorkflowVersionTriggerCallbackUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static Output<ListWorkflowVersionTriggerCallbackUrlResult> listWorkflowVersionTriggerCallbackUrl(ListWorkflowVersionTriggerCallbackUrlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:logic:listWorkflowVersionTriggerCallbackUrl", TypeShape.of(ListWorkflowVersionTriggerCallbackUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListWorkflowVersionTriggerCallbackUrlResult> listWorkflowVersionTriggerCallbackUrlPlain(ListWorkflowVersionTriggerCallbackUrlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowVersionTriggerCallbackUrl", TypeShape.of(ListWorkflowVersionTriggerCallbackUrlResult.class), args, Utilities.withVersion(options));
     }
 }

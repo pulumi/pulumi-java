@@ -5,11 +5,13 @@ package com.pulumi.awsnative.codestarnotifications;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.codestarnotifications.inputs.GetNotificationRuleArgs;
+import com.pulumi.awsnative.codestarnotifications.inputs.GetNotificationRulePlainArgs;
 import com.pulumi.awsnative.codestarnotifications.outputs.GetNotificationRuleResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class CodestarnotificationsFunctions {
     /**
@@ -23,7 +25,21 @@ public final class CodestarnotificationsFunctions {
      * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
      * 
      */
+    public static CompletableFuture<GetNotificationRuleResult> getNotificationRulePlain(GetNotificationRulePlainArgs args) {
+        return getNotificationRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
+     * 
+     */
     public static Output<GetNotificationRuleResult> getNotificationRule(GetNotificationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:codestarnotifications:getNotificationRule", TypeShape.of(GetNotificationRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
+     * 
+     */
+    public static CompletableFuture<GetNotificationRuleResult> getNotificationRulePlain(GetNotificationRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:codestarnotifications:getNotificationRule", TypeShape.of(GetNotificationRuleResult.class), args, Utilities.withVersion(options));
     }
 }

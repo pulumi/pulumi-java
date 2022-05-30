@@ -5,9 +5,13 @@ package com.pulumi.awsnative.route53recoverycontrol;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.route53recoverycontrol.inputs.GetClusterArgs;
+import com.pulumi.awsnative.route53recoverycontrol.inputs.GetClusterPlainArgs;
 import com.pulumi.awsnative.route53recoverycontrol.inputs.GetControlPanelArgs;
+import com.pulumi.awsnative.route53recoverycontrol.inputs.GetControlPanelPlainArgs;
 import com.pulumi.awsnative.route53recoverycontrol.inputs.GetRoutingControlArgs;
+import com.pulumi.awsnative.route53recoverycontrol.inputs.GetRoutingControlPlainArgs;
 import com.pulumi.awsnative.route53recoverycontrol.inputs.GetSafetyRuleArgs;
+import com.pulumi.awsnative.route53recoverycontrol.inputs.GetSafetyRulePlainArgs;
 import com.pulumi.awsnative.route53recoverycontrol.outputs.GetClusterResult;
 import com.pulumi.awsnative.route53recoverycontrol.outputs.GetControlPanelResult;
 import com.pulumi.awsnative.route53recoverycontrol.outputs.GetRoutingControlResult;
@@ -16,6 +20,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class Route53recoverycontrolFunctions {
     /**
@@ -29,8 +34,22 @@ public final class Route53recoverycontrolFunctions {
      * AWS Route53 Recovery Control Cluster resource schema
      * 
      */
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args) {
+        return getClusterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * AWS Route53 Recovery Control Cluster resource schema
+     * 
+     */
     public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53recoverycontrol:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * AWS Route53 Recovery Control Cluster resource schema
+     * 
+     */
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53recoverycontrol:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AWS Route53 Recovery Control Control Panel resource schema .
@@ -43,8 +62,22 @@ public final class Route53recoverycontrolFunctions {
      * AWS Route53 Recovery Control Control Panel resource schema .
      * 
      */
+    public static CompletableFuture<GetControlPanelResult> getControlPanelPlain(GetControlPanelPlainArgs args) {
+        return getControlPanelPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * AWS Route53 Recovery Control Control Panel resource schema .
+     * 
+     */
     public static Output<GetControlPanelResult> getControlPanel(GetControlPanelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53recoverycontrol:getControlPanel", TypeShape.of(GetControlPanelResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * AWS Route53 Recovery Control Control Panel resource schema .
+     * 
+     */
+    public static CompletableFuture<GetControlPanelResult> getControlPanelPlain(GetControlPanelPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53recoverycontrol:getControlPanel", TypeShape.of(GetControlPanelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AWS Route53 Recovery Control Routing Control resource schema .
@@ -57,8 +90,22 @@ public final class Route53recoverycontrolFunctions {
      * AWS Route53 Recovery Control Routing Control resource schema .
      * 
      */
+    public static CompletableFuture<GetRoutingControlResult> getRoutingControlPlain(GetRoutingControlPlainArgs args) {
+        return getRoutingControlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * AWS Route53 Recovery Control Routing Control resource schema .
+     * 
+     */
     public static Output<GetRoutingControlResult> getRoutingControl(GetRoutingControlArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53recoverycontrol:getRoutingControl", TypeShape.of(GetRoutingControlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * AWS Route53 Recovery Control Routing Control resource schema .
+     * 
+     */
+    public static CompletableFuture<GetRoutingControlResult> getRoutingControlPlain(GetRoutingControlPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53recoverycontrol:getRoutingControl", TypeShape.of(GetRoutingControlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS Route53 Recovery Control basic constructs and validation rules.
@@ -71,7 +118,21 @@ public final class Route53recoverycontrolFunctions {
      * Resource schema for AWS Route53 Recovery Control basic constructs and validation rules.
      * 
      */
+    public static CompletableFuture<GetSafetyRuleResult> getSafetyRulePlain(GetSafetyRulePlainArgs args) {
+        return getSafetyRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS Route53 Recovery Control basic constructs and validation rules.
+     * 
+     */
     public static Output<GetSafetyRuleResult> getSafetyRule(GetSafetyRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53recoverycontrol:getSafetyRule", TypeShape.of(GetSafetyRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS Route53 Recovery Control basic constructs and validation rules.
+     * 
+     */
+    public static CompletableFuture<GetSafetyRuleResult> getSafetyRulePlain(GetSafetyRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53recoverycontrol:getSafetyRule", TypeShape.of(GetSafetyRuleResult.class), args, Utilities.withVersion(options));
     }
 }

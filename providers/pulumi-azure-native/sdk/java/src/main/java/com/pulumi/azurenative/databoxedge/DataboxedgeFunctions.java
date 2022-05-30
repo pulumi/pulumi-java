@@ -5,27 +5,49 @@ package com.pulumi.azurenative.databoxedge;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.databoxedge.inputs.GetAddonArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetAddonPlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetArcAddonArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetArcAddonPlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetBandwidthScheduleArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetBandwidthSchedulePlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetCloudEdgeManagementRoleArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetCloudEdgeManagementRolePlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetContainerArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetContainerPlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetDeviceArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetDeviceExtendedInformationArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetDeviceExtendedInformationPlainArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetDevicePlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetFileEventTriggerArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetFileEventTriggerPlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetIoTAddonArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetIoTAddonPlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetIoTRoleArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetIoTRolePlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetKubernetesRoleArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetKubernetesRolePlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetMECRoleArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetMECRolePlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetMonitoringConfigArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetMonitoringConfigPlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetOrderArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetOrderPlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetPeriodicTimerEventTriggerArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetPeriodicTimerEventTriggerPlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetRoleArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetRolePlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetShareArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetSharePlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetStorageAccountArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetStorageAccountCredentialArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetStorageAccountCredentialPlainArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetStorageAccountPlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetTriggerArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetTriggerPlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.GetUserArgs;
+import com.pulumi.azurenative.databoxedge.inputs.GetUserPlainArgs;
 import com.pulumi.azurenative.databoxedge.inputs.ListOrderDCAccessCodeArgs;
+import com.pulumi.azurenative.databoxedge.inputs.ListOrderDCAccessCodePlainArgs;
 import com.pulumi.azurenative.databoxedge.outputs.GetAddonResult;
 import com.pulumi.azurenative.databoxedge.outputs.GetArcAddonResult;
 import com.pulumi.azurenative.databoxedge.outputs.GetBandwidthScheduleResult;
@@ -52,6 +74,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class DataboxedgeFunctions {
     /**
@@ -75,8 +98,32 @@ public final class DataboxedgeFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: ArcAddon, IoTAddon. */
+    public static CompletableFuture<GetAddonResult> getAddonPlain(GetAddonPlainArgs args) {
+        return getAddonPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Role Addon
+     * API Version: 2020-12-01.
+     * 
+     * @deprecated
+     * Please use one of the variants: ArcAddon, IoTAddon.
+     * 
+     */
+    @Deprecated /* Please use one of the variants: ArcAddon, IoTAddon. */
     public static Output<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Role Addon
+     * API Version: 2020-12-01.
+     * 
+     * @deprecated
+     * Please use one of the variants: ArcAddon, IoTAddon.
+     * 
+     */
+    @Deprecated /* Please use one of the variants: ArcAddon, IoTAddon. */
+    public static CompletableFuture<GetAddonResult> getAddonPlain(GetAddonPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Arc Addon.
@@ -91,8 +138,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetArcAddonResult> getArcAddonPlain(GetArcAddonPlainArgs args) {
+        return getArcAddonPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Arc Addon.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetArcAddonResult> getArcAddon(GetArcAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getArcAddon", TypeShape.of(GetArcAddonResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Arc Addon.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetArcAddonResult> getArcAddonPlain(GetArcAddonPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getArcAddon", TypeShape.of(GetArcAddonResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The bandwidth schedule details.
@@ -107,8 +170,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetBandwidthScheduleResult> getBandwidthSchedulePlain(GetBandwidthSchedulePlainArgs args) {
+        return getBandwidthSchedulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The bandwidth schedule details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetBandwidthScheduleResult> getBandwidthSchedule(GetBandwidthScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getBandwidthSchedule", TypeShape.of(GetBandwidthScheduleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The bandwidth schedule details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetBandwidthScheduleResult> getBandwidthSchedulePlain(GetBandwidthSchedulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getBandwidthSchedule", TypeShape.of(GetBandwidthScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * CloudEdgeManagementRole role.
@@ -123,8 +202,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetCloudEdgeManagementRoleResult> getCloudEdgeManagementRolePlain(GetCloudEdgeManagementRolePlainArgs args) {
+        return getCloudEdgeManagementRolePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * CloudEdgeManagementRole role.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetCloudEdgeManagementRoleResult> getCloudEdgeManagementRole(GetCloudEdgeManagementRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getCloudEdgeManagementRole", TypeShape.of(GetCloudEdgeManagementRoleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * CloudEdgeManagementRole role.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetCloudEdgeManagementRoleResult> getCloudEdgeManagementRolePlain(GetCloudEdgeManagementRolePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getCloudEdgeManagementRole", TypeShape.of(GetCloudEdgeManagementRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a container on the  Data Box Edge/Gateway device.
@@ -139,8 +234,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetContainerResult> getContainerPlain(GetContainerPlainArgs args) {
+        return getContainerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Represents a container on the  Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetContainerResult> getContainer(GetContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getContainer", TypeShape.of(GetContainerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Represents a container on the  Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetContainerResult> getContainerPlain(GetContainerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getContainer", TypeShape.of(GetContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Data Box Edge/Gateway device.
@@ -155,8 +266,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args) {
+        return getDevicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The extended Info of the Data Box Edge/Gateway device.
@@ -171,8 +298,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetDeviceExtendedInformationResult> getDeviceExtendedInformationPlain(GetDeviceExtendedInformationPlainArgs args) {
+        return getDeviceExtendedInformationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The extended Info of the Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetDeviceExtendedInformationResult> getDeviceExtendedInformation(GetDeviceExtendedInformationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getDeviceExtendedInformation", TypeShape.of(GetDeviceExtendedInformationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The extended Info of the Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetDeviceExtendedInformationResult> getDeviceExtendedInformationPlain(GetDeviceExtendedInformationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getDeviceExtendedInformation", TypeShape.of(GetDeviceExtendedInformationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Trigger details.
@@ -187,8 +330,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetFileEventTriggerResult> getFileEventTriggerPlain(GetFileEventTriggerPlainArgs args) {
+        return getFileEventTriggerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Trigger details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetFileEventTriggerResult> getFileEventTrigger(GetFileEventTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getFileEventTrigger", TypeShape.of(GetFileEventTriggerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Trigger details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetFileEventTriggerResult> getFileEventTriggerPlain(GetFileEventTriggerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getFileEventTrigger", TypeShape.of(GetFileEventTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * IoT Addon.
@@ -203,8 +362,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetIoTAddonResult> getIoTAddonPlain(GetIoTAddonPlainArgs args) {
+        return getIoTAddonPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * IoT Addon.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetIoTAddonResult> getIoTAddon(GetIoTAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getIoTAddon", TypeShape.of(GetIoTAddonResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * IoT Addon.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetIoTAddonResult> getIoTAddonPlain(GetIoTAddonPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getIoTAddon", TypeShape.of(GetIoTAddonResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Compute role.
@@ -219,8 +394,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetIoTRoleResult> getIoTRolePlain(GetIoTRolePlainArgs args) {
+        return getIoTRolePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Compute role.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetIoTRoleResult> getIoTRole(GetIoTRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getIoTRole", TypeShape.of(GetIoTRoleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Compute role.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetIoTRoleResult> getIoTRolePlain(GetIoTRolePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getIoTRole", TypeShape.of(GetIoTRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Kubernetes role.
@@ -235,8 +426,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetKubernetesRoleResult> getKubernetesRolePlain(GetKubernetesRolePlainArgs args) {
+        return getKubernetesRolePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Kubernetes role.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetKubernetesRoleResult> getKubernetesRole(GetKubernetesRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getKubernetesRole", TypeShape.of(GetKubernetesRoleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Kubernetes role.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetKubernetesRoleResult> getKubernetesRolePlain(GetKubernetesRolePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getKubernetesRole", TypeShape.of(GetKubernetesRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * MEC role.
@@ -251,8 +458,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetMECRoleResult> getMECRolePlain(GetMECRolePlainArgs args) {
+        return getMECRolePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * MEC role.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetMECRoleResult> getMECRole(GetMECRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getMECRole", TypeShape.of(GetMECRoleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * MEC role.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetMECRoleResult> getMECRolePlain(GetMECRolePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getMECRole", TypeShape.of(GetMECRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The metric setting details for the role
@@ -267,8 +490,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetMonitoringConfigResult> getMonitoringConfigPlain(GetMonitoringConfigPlainArgs args) {
+        return getMonitoringConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The metric setting details for the role
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetMonitoringConfigResult> getMonitoringConfig(GetMonitoringConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getMonitoringConfig", TypeShape.of(GetMonitoringConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The metric setting details for the role
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetMonitoringConfigResult> getMonitoringConfigPlain(GetMonitoringConfigPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getMonitoringConfig", TypeShape.of(GetMonitoringConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The order details.
@@ -283,8 +522,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetOrderResult> getOrderPlain(GetOrderPlainArgs args) {
+        return getOrderPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The order details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetOrderResult> getOrder(GetOrderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getOrder", TypeShape.of(GetOrderResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The order details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetOrderResult> getOrderPlain(GetOrderPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getOrder", TypeShape.of(GetOrderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Trigger details.
@@ -299,8 +554,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetPeriodicTimerEventTriggerResult> getPeriodicTimerEventTriggerPlain(GetPeriodicTimerEventTriggerPlainArgs args) {
+        return getPeriodicTimerEventTriggerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Trigger details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetPeriodicTimerEventTriggerResult> getPeriodicTimerEventTrigger(GetPeriodicTimerEventTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getPeriodicTimerEventTrigger", TypeShape.of(GetPeriodicTimerEventTriggerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Trigger details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetPeriodicTimerEventTriggerResult> getPeriodicTimerEventTriggerPlain(GetPeriodicTimerEventTriggerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getPeriodicTimerEventTrigger", TypeShape.of(GetPeriodicTimerEventTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Compute role.
@@ -323,8 +594,32 @@ public final class DataboxedgeFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole. */
+    public static CompletableFuture<GetRoleResult> getRolePlain(GetRolePlainArgs args) {
+        return getRolePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Compute role.
+     * API Version: 2020-12-01.
+     * 
+     * @deprecated
+     * Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole.
+     * 
+     */
+    @Deprecated /* Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole. */
     public static Output<GetRoleResult> getRole(GetRoleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getRole", TypeShape.of(GetRoleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Compute role.
+     * API Version: 2020-12-01.
+     * 
+     * @deprecated
+     * Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole.
+     * 
+     */
+    @Deprecated /* Please use one of the variants: CloudEdgeManagementRole, IoTRole, KubernetesRole, MECRole. */
+    public static CompletableFuture<GetRoleResult> getRolePlain(GetRolePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getRole", TypeShape.of(GetRoleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a share on the  Data Box Edge/Gateway device.
@@ -339,8 +634,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetShareResult> getSharePlain(GetSharePlainArgs args) {
+        return getSharePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Represents a share on the  Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetShareResult> getShare(GetShareArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getShare", TypeShape.of(GetShareResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Represents a share on the  Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetShareResult> getSharePlain(GetSharePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getShare", TypeShape.of(GetShareResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a Storage Account on the  Data Box Edge/Gateway device.
@@ -355,8 +666,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetStorageAccountResult> getStorageAccountPlain(GetStorageAccountPlainArgs args) {
+        return getStorageAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Represents a Storage Account on the  Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetStorageAccountResult> getStorageAccount(GetStorageAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getStorageAccount", TypeShape.of(GetStorageAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Represents a Storage Account on the  Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetStorageAccountResult> getStorageAccountPlain(GetStorageAccountPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getStorageAccount", TypeShape.of(GetStorageAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The storage account credential.
@@ -371,8 +698,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetStorageAccountCredentialResult> getStorageAccountCredentialPlain(GetStorageAccountCredentialPlainArgs args) {
+        return getStorageAccountCredentialPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The storage account credential.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetStorageAccountCredentialResult> getStorageAccountCredential(GetStorageAccountCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getStorageAccountCredential", TypeShape.of(GetStorageAccountCredentialResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The storage account credential.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetStorageAccountCredentialResult> getStorageAccountCredentialPlain(GetStorageAccountCredentialPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getStorageAccountCredential", TypeShape.of(GetStorageAccountCredentialResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Trigger details.
@@ -395,8 +738,32 @@ public final class DataboxedgeFunctions {
      * 
      */
     @Deprecated /* Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger. */
+    public static CompletableFuture<GetTriggerResult> getTriggerPlain(GetTriggerPlainArgs args) {
+        return getTriggerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Trigger details.
+     * API Version: 2020-12-01.
+     * 
+     * @deprecated
+     * Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger.
+     * 
+     */
+    @Deprecated /* Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger. */
     public static Output<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Trigger details.
+     * API Version: 2020-12-01.
+     * 
+     * @deprecated
+     * Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger.
+     * 
+     */
+    @Deprecated /* Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger. */
+    public static CompletableFuture<GetTriggerResult> getTriggerPlain(GetTriggerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a user who has access to one or more shares on the Data Box Edge/Gateway device.
@@ -411,8 +778,24 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args) {
+        return getUserPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Represents a user who has access to one or more shares on the Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Represents a user who has access to one or more shares on the Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
      * DC Access code in the case of Self Managed Shipping.
@@ -427,7 +810,23 @@ public final class DataboxedgeFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<ListOrderDCAccessCodeResult> listOrderDCAccessCodePlain(ListOrderDCAccessCodePlainArgs args) {
+        return listOrderDCAccessCodePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * DC Access code in the case of Self Managed Shipping.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<ListOrderDCAccessCodeResult> listOrderDCAccessCode(ListOrderDCAccessCodeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databoxedge:listOrderDCAccessCode", TypeShape.of(ListOrderDCAccessCodeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * DC Access code in the case of Self Managed Shipping.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<ListOrderDCAccessCodeResult> listOrderDCAccessCodePlain(ListOrderDCAccessCodePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databoxedge:listOrderDCAccessCode", TypeShape.of(ListOrderDCAccessCodeResult.class), args, Utilities.withVersion(options));
     }
 }

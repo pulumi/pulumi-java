@@ -5,14 +5,23 @@ package com.pulumi.awsnative.cloudfront;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.cloudfront.inputs.GetCachePolicyArgs;
+import com.pulumi.awsnative.cloudfront.inputs.GetCachePolicyPlainArgs;
 import com.pulumi.awsnative.cloudfront.inputs.GetCloudFrontOriginAccessIdentityArgs;
+import com.pulumi.awsnative.cloudfront.inputs.GetCloudFrontOriginAccessIdentityPlainArgs;
 import com.pulumi.awsnative.cloudfront.inputs.GetDistributionArgs;
+import com.pulumi.awsnative.cloudfront.inputs.GetDistributionPlainArgs;
 import com.pulumi.awsnative.cloudfront.inputs.GetFunctionArgs;
+import com.pulumi.awsnative.cloudfront.inputs.GetFunctionPlainArgs;
 import com.pulumi.awsnative.cloudfront.inputs.GetKeyGroupArgs;
+import com.pulumi.awsnative.cloudfront.inputs.GetKeyGroupPlainArgs;
 import com.pulumi.awsnative.cloudfront.inputs.GetOriginRequestPolicyArgs;
+import com.pulumi.awsnative.cloudfront.inputs.GetOriginRequestPolicyPlainArgs;
 import com.pulumi.awsnative.cloudfront.inputs.GetPublicKeyArgs;
+import com.pulumi.awsnative.cloudfront.inputs.GetPublicKeyPlainArgs;
 import com.pulumi.awsnative.cloudfront.inputs.GetRealtimeLogConfigArgs;
+import com.pulumi.awsnative.cloudfront.inputs.GetRealtimeLogConfigPlainArgs;
 import com.pulumi.awsnative.cloudfront.inputs.GetResponseHeadersPolicyArgs;
+import com.pulumi.awsnative.cloudfront.inputs.GetResponseHeadersPolicyPlainArgs;
 import com.pulumi.awsnative.cloudfront.outputs.GetCachePolicyResult;
 import com.pulumi.awsnative.cloudfront.outputs.GetCloudFrontOriginAccessIdentityResult;
 import com.pulumi.awsnative.cloudfront.outputs.GetDistributionResult;
@@ -26,6 +35,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class CloudfrontFunctions {
     /**
@@ -39,8 +49,22 @@ public final class CloudfrontFunctions {
      * Resource Type definition for AWS::CloudFront::CachePolicy
      * 
      */
+    public static CompletableFuture<GetCachePolicyResult> getCachePolicyPlain(GetCachePolicyPlainArgs args) {
+        return getCachePolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::CachePolicy
+     * 
+     */
     public static Output<GetCachePolicyResult> getCachePolicy(GetCachePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:cloudfront:getCachePolicy", TypeShape.of(GetCachePolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::CachePolicy
+     * 
+     */
+    public static CompletableFuture<GetCachePolicyResult> getCachePolicyPlain(GetCachePolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getCachePolicy", TypeShape.of(GetCachePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
@@ -53,8 +77,22 @@ public final class CloudfrontFunctions {
      * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
      * 
      */
+    public static CompletableFuture<GetCloudFrontOriginAccessIdentityResult> getCloudFrontOriginAccessIdentityPlain(GetCloudFrontOriginAccessIdentityPlainArgs args) {
+        return getCloudFrontOriginAccessIdentityPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
+     * 
+     */
     public static Output<GetCloudFrontOriginAccessIdentityResult> getCloudFrontOriginAccessIdentity(GetCloudFrontOriginAccessIdentityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:cloudfront:getCloudFrontOriginAccessIdentity", TypeShape.of(GetCloudFrontOriginAccessIdentityResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
+     * 
+     */
+    public static CompletableFuture<GetCloudFrontOriginAccessIdentityResult> getCloudFrontOriginAccessIdentityPlain(GetCloudFrontOriginAccessIdentityPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getCloudFrontOriginAccessIdentity", TypeShape.of(GetCloudFrontOriginAccessIdentityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::Distribution
@@ -67,8 +105,22 @@ public final class CloudfrontFunctions {
      * Resource Type definition for AWS::CloudFront::Distribution
      * 
      */
+    public static CompletableFuture<GetDistributionResult> getDistributionPlain(GetDistributionPlainArgs args) {
+        return getDistributionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::Distribution
+     * 
+     */
     public static Output<GetDistributionResult> getDistribution(GetDistributionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:cloudfront:getDistribution", TypeShape.of(GetDistributionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::Distribution
+     * 
+     */
+    public static CompletableFuture<GetDistributionResult> getDistributionPlain(GetDistributionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getDistribution", TypeShape.of(GetDistributionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::Function
@@ -81,8 +133,22 @@ public final class CloudfrontFunctions {
      * Resource Type definition for AWS::CloudFront::Function
      * 
      */
+    public static CompletableFuture<GetFunctionResult> getFunctionPlain(GetFunctionPlainArgs args) {
+        return getFunctionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::Function
+     * 
+     */
     public static Output<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:cloudfront:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::Function
+     * 
+     */
+    public static CompletableFuture<GetFunctionResult> getFunctionPlain(GetFunctionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::KeyGroup
@@ -95,8 +161,22 @@ public final class CloudfrontFunctions {
      * Resource Type definition for AWS::CloudFront::KeyGroup
      * 
      */
+    public static CompletableFuture<GetKeyGroupResult> getKeyGroupPlain(GetKeyGroupPlainArgs args) {
+        return getKeyGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::KeyGroup
+     * 
+     */
     public static Output<GetKeyGroupResult> getKeyGroup(GetKeyGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:cloudfront:getKeyGroup", TypeShape.of(GetKeyGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::KeyGroup
+     * 
+     */
+    public static CompletableFuture<GetKeyGroupResult> getKeyGroupPlain(GetKeyGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getKeyGroup", TypeShape.of(GetKeyGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::OriginRequestPolicy
@@ -109,8 +189,22 @@ public final class CloudfrontFunctions {
      * Resource Type definition for AWS::CloudFront::OriginRequestPolicy
      * 
      */
+    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicyPlain(GetOriginRequestPolicyPlainArgs args) {
+        return getOriginRequestPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::OriginRequestPolicy
+     * 
+     */
     public static Output<GetOriginRequestPolicyResult> getOriginRequestPolicy(GetOriginRequestPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:cloudfront:getOriginRequestPolicy", TypeShape.of(GetOriginRequestPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::OriginRequestPolicy
+     * 
+     */
+    public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicyPlain(GetOriginRequestPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getOriginRequestPolicy", TypeShape.of(GetOriginRequestPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::PublicKey
@@ -123,8 +217,22 @@ public final class CloudfrontFunctions {
      * Resource Type definition for AWS::CloudFront::PublicKey
      * 
      */
+    public static CompletableFuture<GetPublicKeyResult> getPublicKeyPlain(GetPublicKeyPlainArgs args) {
+        return getPublicKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::PublicKey
+     * 
+     */
     public static Output<GetPublicKeyResult> getPublicKey(GetPublicKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:cloudfront:getPublicKey", TypeShape.of(GetPublicKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::PublicKey
+     * 
+     */
+    public static CompletableFuture<GetPublicKeyResult> getPublicKeyPlain(GetPublicKeyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getPublicKey", TypeShape.of(GetPublicKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
@@ -137,8 +245,22 @@ public final class CloudfrontFunctions {
      * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
      * 
      */
+    public static CompletableFuture<GetRealtimeLogConfigResult> getRealtimeLogConfigPlain(GetRealtimeLogConfigPlainArgs args) {
+        return getRealtimeLogConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
+     * 
+     */
     public static Output<GetRealtimeLogConfigResult> getRealtimeLogConfig(GetRealtimeLogConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:cloudfront:getRealtimeLogConfig", TypeShape.of(GetRealtimeLogConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
+     * 
+     */
+    public static CompletableFuture<GetRealtimeLogConfigResult> getRealtimeLogConfigPlain(GetRealtimeLogConfigPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getRealtimeLogConfig", TypeShape.of(GetRealtimeLogConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
@@ -151,7 +273,21 @@ public final class CloudfrontFunctions {
      * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
      * 
      */
+    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicyPlain(GetResponseHeadersPolicyPlainArgs args) {
+        return getResponseHeadersPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
+     * 
+     */
     public static Output<GetResponseHeadersPolicyResult> getResponseHeadersPolicy(GetResponseHeadersPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:cloudfront:getResponseHeadersPolicy", TypeShape.of(GetResponseHeadersPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::ResponseHeadersPolicy
+     * 
+     */
+    public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicyPlain(GetResponseHeadersPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getResponseHeadersPolicy", TypeShape.of(GetResponseHeadersPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

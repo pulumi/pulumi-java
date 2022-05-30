@@ -9,15 +9,21 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.GetBitbucketServerConfigArgs;
+import com.pulumi.googlenative.cloudbuild_v1.inputs.GetBitbucketServerConfigPlainArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.GetBuildArgs;
+import com.pulumi.googlenative.cloudbuild_v1.inputs.GetBuildPlainArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.GetGithubEnterpriseConfigArgs;
+import com.pulumi.googlenative.cloudbuild_v1.inputs.GetGithubEnterpriseConfigPlainArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.GetTriggerArgs;
+import com.pulumi.googlenative.cloudbuild_v1.inputs.GetTriggerPlainArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.GetWorkerPoolArgs;
+import com.pulumi.googlenative.cloudbuild_v1.inputs.GetWorkerPoolPlainArgs;
 import com.pulumi.googlenative.cloudbuild_v1.outputs.GetBitbucketServerConfigResult;
 import com.pulumi.googlenative.cloudbuild_v1.outputs.GetBuildResult;
 import com.pulumi.googlenative.cloudbuild_v1.outputs.GetGithubEnterpriseConfigResult;
 import com.pulumi.googlenative.cloudbuild_v1.outputs.GetTriggerResult;
 import com.pulumi.googlenative.cloudbuild_v1.outputs.GetWorkerPoolResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Cloudbuild_v1Functions {
     /**
@@ -31,8 +37,22 @@ public final class Cloudbuild_v1Functions {
      * Retrieve a `BitbucketServerConfig`. This API is experimental.
      * 
      */
+    public static CompletableFuture<GetBitbucketServerConfigResult> getBitbucketServerConfigPlain(GetBitbucketServerConfigPlainArgs args) {
+        return getBitbucketServerConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve a `BitbucketServerConfig`. This API is experimental.
+     * 
+     */
     public static Output<GetBitbucketServerConfigResult> getBitbucketServerConfig(GetBitbucketServerConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudbuild/v1:getBitbucketServerConfig", TypeShape.of(GetBitbucketServerConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve a `BitbucketServerConfig`. This API is experimental.
+     * 
+     */
+    public static CompletableFuture<GetBitbucketServerConfigResult> getBitbucketServerConfigPlain(GetBitbucketServerConfigPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getBitbucketServerConfig", TypeShape.of(GetBitbucketServerConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns information about a previously requested build. The `Build` that is returned includes its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
@@ -45,8 +65,22 @@ public final class Cloudbuild_v1Functions {
      * Returns information about a previously requested build. The `Build` that is returned includes its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
      * 
      */
+    public static CompletableFuture<GetBuildResult> getBuildPlain(GetBuildPlainArgs args) {
+        return getBuildPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns information about a previously requested build. The `Build` that is returned includes its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
+     * 
+     */
     public static Output<GetBuildResult> getBuild(GetBuildArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudbuild/v1:getBuild", TypeShape.of(GetBuildResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns information about a previously requested build. The `Build` that is returned includes its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
+     * 
+     */
+    public static CompletableFuture<GetBuildResult> getBuildPlain(GetBuildPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getBuild", TypeShape.of(GetBuildResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve a GitHubEnterpriseConfig.
@@ -59,8 +93,22 @@ public final class Cloudbuild_v1Functions {
      * Retrieve a GitHubEnterpriseConfig.
      * 
      */
+    public static CompletableFuture<GetGithubEnterpriseConfigResult> getGithubEnterpriseConfigPlain(GetGithubEnterpriseConfigPlainArgs args) {
+        return getGithubEnterpriseConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve a GitHubEnterpriseConfig.
+     * 
+     */
     public static Output<GetGithubEnterpriseConfigResult> getGithubEnterpriseConfig(GetGithubEnterpriseConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudbuild/v1:getGithubEnterpriseConfig", TypeShape.of(GetGithubEnterpriseConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve a GitHubEnterpriseConfig.
+     * 
+     */
+    public static CompletableFuture<GetGithubEnterpriseConfigResult> getGithubEnterpriseConfigPlain(GetGithubEnterpriseConfigPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getGithubEnterpriseConfig", TypeShape.of(GetGithubEnterpriseConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns information about a `BuildTrigger`. This API is experimental.
@@ -73,8 +121,22 @@ public final class Cloudbuild_v1Functions {
      * Returns information about a `BuildTrigger`. This API is experimental.
      * 
      */
+    public static CompletableFuture<GetTriggerResult> getTriggerPlain(GetTriggerPlainArgs args) {
+        return getTriggerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns information about a `BuildTrigger`. This API is experimental.
+     * 
+     */
     public static Output<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudbuild/v1:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns information about a `BuildTrigger`. This API is experimental.
+     * 
+     */
+    public static CompletableFuture<GetTriggerResult> getTriggerPlain(GetTriggerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns details of a `WorkerPool`.
@@ -87,7 +149,21 @@ public final class Cloudbuild_v1Functions {
      * Returns details of a `WorkerPool`.
      * 
      */
+    public static CompletableFuture<GetWorkerPoolResult> getWorkerPoolPlain(GetWorkerPoolPlainArgs args) {
+        return getWorkerPoolPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns details of a `WorkerPool`.
+     * 
+     */
     public static Output<GetWorkerPoolResult> getWorkerPool(GetWorkerPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudbuild/v1:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns details of a `WorkerPool`.
+     * 
+     */
+    public static CompletableFuture<GetWorkerPoolResult> getWorkerPoolPlain(GetWorkerPoolPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args, Utilities.withVersion(options));
     }
 }

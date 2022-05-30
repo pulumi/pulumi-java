@@ -8,10 +8,13 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Audit.inputs.GetConfigurationArgs;
+import com.pulumi.oci.Audit.inputs.GetConfigurationPlainArgs;
 import com.pulumi.oci.Audit.inputs.GetEventsArgs;
+import com.pulumi.oci.Audit.inputs.GetEventsPlainArgs;
 import com.pulumi.oci.Audit.outputs.GetConfigurationResult;
 import com.pulumi.oci.Audit.outputs.GetEventsResult;
 import com.pulumi.oci.Utilities;
+import java.util.concurrent.CompletableFuture;
 
 public final class AuditFunctions {
     /**
@@ -33,8 +36,30 @@ public final class AuditFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetConfigurationResult> getConfigurationPlain(GetConfigurationPlainArgs args) {
+        return getConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Configuration resource in Oracle Cloud Infrastructure Audit service.
+     * 
+     * Get the configuration
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Audit/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Configuration resource in Oracle Cloud Infrastructure Audit service.
+     * 
+     * Get the configuration
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetConfigurationResult> getConfigurationPlain(GetConfigurationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Audit/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Audit Events in Oracle Cloud Infrastructure Audit service.
@@ -57,7 +82,31 @@ public final class AuditFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetEventsResult> getEventsPlain(GetEventsPlainArgs args) {
+        return getEventsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Audit Events in Oracle Cloud Infrastructure Audit service.
+     * 
+     * Returns all the audit events processed for the specified compartment within the specified
+     * time range.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetEventsResult> getEvents(GetEventsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Audit/getEvents:getEvents", TypeShape.of(GetEventsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Audit Events in Oracle Cloud Infrastructure Audit service.
+     * 
+     * Returns all the audit events processed for the specified compartment within the specified
+     * time range.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetEventsResult> getEventsPlain(GetEventsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Audit/getEvents:getEvents", TypeShape.of(GetEventsResult.class), args, Utilities.withVersion(options));
     }
 }

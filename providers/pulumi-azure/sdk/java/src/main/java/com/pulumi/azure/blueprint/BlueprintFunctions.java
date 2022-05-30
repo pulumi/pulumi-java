@@ -5,13 +5,16 @@ package com.pulumi.azure.blueprint;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.blueprint.inputs.GetDefinitionArgs;
+import com.pulumi.azure.blueprint.inputs.GetDefinitionPlainArgs;
 import com.pulumi.azure.blueprint.inputs.GetPublishedVersionArgs;
+import com.pulumi.azure.blueprint.inputs.GetPublishedVersionPlainArgs;
 import com.pulumi.azure.blueprint.outputs.GetDefinitionResult;
 import com.pulumi.azure.blueprint.outputs.GetPublishedVersionResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class BlueprintFunctions {
     /**
@@ -89,8 +92,86 @@ public final class BlueprintFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetDefinitionResult> getDefinitionPlain(GetDefinitionPlainArgs args) {
+        return getDefinitionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Azure Blueprint Definition
+     * 
+     * &gt; **NOTE:** Azure Blueprints are in Preview and potentially subject to breaking change without notice.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(CoreFunctions.getClientConfig());
+     * 
+     *         final var root = Output.of(ManagementFunctions.getGroup(GetGroupArgs.builder()
+     *             .name(current.apply(getClientConfigResult -&gt; getClientConfigResult.getTenantId()))
+     *             .build()));
+     * 
+     *         final var example = Output.of(BlueprintFunctions.getDefinition(GetDefinitionArgs.builder()
+     *             .name(&#34;exampleManagementGroupBP&#34;)
+     *             .scopeId(root.apply(getGroupResult -&gt; getGroupResult.getId()))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetDefinitionResult> getDefinition(GetDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:blueprint/getDefinition:getDefinition", TypeShape.of(GetDefinitionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Azure Blueprint Definition
+     * 
+     * &gt; **NOTE:** Azure Blueprints are in Preview and potentially subject to breaking change without notice.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(CoreFunctions.getClientConfig());
+     * 
+     *         final var root = Output.of(ManagementFunctions.getGroup(GetGroupArgs.builder()
+     *             .name(current.apply(getClientConfigResult -&gt; getClientConfigResult.getTenantId()))
+     *             .build()));
+     * 
+     *         final var example = Output.of(BlueprintFunctions.getDefinition(GetDefinitionArgs.builder()
+     *             .name(&#34;exampleManagementGroupBP&#34;)
+     *             .scopeId(root.apply(getGroupResult -&gt; getGroupResult.getId()))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetDefinitionResult> getDefinitionPlain(GetDefinitionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:blueprint/getDefinition:getDefinition", TypeShape.of(GetDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Blueprint Published Version
@@ -161,7 +242,79 @@ public final class BlueprintFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetPublishedVersionResult> getPublishedVersionPlain(GetPublishedVersionPlainArgs args) {
+        return getPublishedVersionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Blueprint Published Version
+     * 
+     * &gt; **NOTE:** Azure Blueprints are in Preview and potentially subject to breaking change without notice.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(CoreFunctions.getSubscription());
+     * 
+     *         final var test = Output.of(BlueprintFunctions.getPublishedVersion(GetPublishedVersionArgs.builder()
+     *             .scopeId(current.apply(getBudgetSubscriptionResult -&gt; getBudgetSubscriptionResult.getId()))
+     *             .blueprintName(&#34;exampleBluePrint&#34;)
+     *             .version(&#34;dev_v2.3&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetPublishedVersionResult> getPublishedVersion(GetPublishedVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:blueprint/getPublishedVersion:getPublishedVersion", TypeShape.of(GetPublishedVersionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Blueprint Published Version
+     * 
+     * &gt; **NOTE:** Azure Blueprints are in Preview and potentially subject to breaking change without notice.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(CoreFunctions.getSubscription());
+     * 
+     *         final var test = Output.of(BlueprintFunctions.getPublishedVersion(GetPublishedVersionArgs.builder()
+     *             .scopeId(current.apply(getBudgetSubscriptionResult -&gt; getBudgetSubscriptionResult.getId()))
+     *             .blueprintName(&#34;exampleBluePrint&#34;)
+     *             .version(&#34;dev_v2.3&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetPublishedVersionResult> getPublishedVersionPlain(GetPublishedVersionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:blueprint/getPublishedVersion:getPublishedVersion", TypeShape.of(GetPublishedVersionResult.class), args, Utilities.withVersion(options));
     }
 }

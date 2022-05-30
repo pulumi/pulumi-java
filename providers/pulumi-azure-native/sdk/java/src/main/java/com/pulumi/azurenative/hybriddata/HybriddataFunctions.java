@@ -5,8 +5,11 @@ package com.pulumi.azurenative.hybriddata;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.hybriddata.inputs.GetDataManagerArgs;
+import com.pulumi.azurenative.hybriddata.inputs.GetDataManagerPlainArgs;
 import com.pulumi.azurenative.hybriddata.inputs.GetDataStoreArgs;
+import com.pulumi.azurenative.hybriddata.inputs.GetDataStorePlainArgs;
 import com.pulumi.azurenative.hybriddata.inputs.GetJobDefinitionArgs;
+import com.pulumi.azurenative.hybriddata.inputs.GetJobDefinitionPlainArgs;
 import com.pulumi.azurenative.hybriddata.outputs.GetDataManagerResult;
 import com.pulumi.azurenative.hybriddata.outputs.GetDataStoreResult;
 import com.pulumi.azurenative.hybriddata.outputs.GetJobDefinitionResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class HybriddataFunctions {
     /**
@@ -29,8 +33,24 @@ public final class HybriddataFunctions {
      * API Version: 2019-06-01.
      * 
      */
+    public static CompletableFuture<GetDataManagerResult> getDataManagerPlain(GetDataManagerPlainArgs args) {
+        return getDataManagerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The DataManager resource.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static Output<GetDataManagerResult> getDataManager(GetDataManagerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybriddata:getDataManager", TypeShape.of(GetDataManagerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The DataManager resource.
+     * API Version: 2019-06-01.
+     * 
+     */
+    public static CompletableFuture<GetDataManagerResult> getDataManagerPlain(GetDataManagerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getDataManager", TypeShape.of(GetDataManagerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Data store.
@@ -45,8 +65,24 @@ public final class HybriddataFunctions {
      * API Version: 2019-06-01.
      * 
      */
+    public static CompletableFuture<GetDataStoreResult> getDataStorePlain(GetDataStorePlainArgs args) {
+        return getDataStorePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Data store.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static Output<GetDataStoreResult> getDataStore(GetDataStoreArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybriddata:getDataStore", TypeShape.of(GetDataStoreResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Data store.
+     * API Version: 2019-06-01.
+     * 
+     */
+    public static CompletableFuture<GetDataStoreResult> getDataStorePlain(GetDataStorePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getDataStore", TypeShape.of(GetDataStoreResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Job Definition.
@@ -61,7 +97,23 @@ public final class HybriddataFunctions {
      * API Version: 2019-06-01.
      * 
      */
+    public static CompletableFuture<GetJobDefinitionResult> getJobDefinitionPlain(GetJobDefinitionPlainArgs args) {
+        return getJobDefinitionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Job Definition.
+     * API Version: 2019-06-01.
+     * 
+     */
     public static Output<GetJobDefinitionResult> getJobDefinition(GetJobDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybriddata:getJobDefinition", TypeShape.of(GetJobDefinitionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Job Definition.
+     * API Version: 2019-06-01.
+     * 
+     */
+    public static CompletableFuture<GetJobDefinitionResult> getJobDefinitionPlain(GetJobDefinitionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getJobDefinition", TypeShape.of(GetJobDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

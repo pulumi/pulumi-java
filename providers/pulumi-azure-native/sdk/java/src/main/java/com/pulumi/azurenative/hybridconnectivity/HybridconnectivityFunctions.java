@@ -5,8 +5,11 @@ package com.pulumi.azurenative.hybridconnectivity;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.hybridconnectivity.inputs.GetEndpointArgs;
+import com.pulumi.azurenative.hybridconnectivity.inputs.GetEndpointPlainArgs;
 import com.pulumi.azurenative.hybridconnectivity.inputs.ListEndpointCredentialsArgs;
+import com.pulumi.azurenative.hybridconnectivity.inputs.ListEndpointCredentialsPlainArgs;
 import com.pulumi.azurenative.hybridconnectivity.inputs.ListEndpointManagedProxyDetailsArgs;
+import com.pulumi.azurenative.hybridconnectivity.inputs.ListEndpointManagedProxyDetailsPlainArgs;
 import com.pulumi.azurenative.hybridconnectivity.outputs.GetEndpointResult;
 import com.pulumi.azurenative.hybridconnectivity.outputs.ListEndpointCredentialsResult;
 import com.pulumi.azurenative.hybridconnectivity.outputs.ListEndpointManagedProxyDetailsResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class HybridconnectivityFunctions {
     /**
@@ -29,8 +33,24 @@ public final class HybridconnectivityFunctions {
      * API Version: 2021-10-06-preview.
      * 
      */
+    public static CompletableFuture<GetEndpointResult> getEndpointPlain(GetEndpointPlainArgs args) {
+        return getEndpointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The endpoint for the target resource.
+     * API Version: 2021-10-06-preview.
+     * 
+     */
     public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybridconnectivity:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The endpoint for the target resource.
+     * API Version: 2021-10-06-preview.
+     * 
+     */
+    public static CompletableFuture<GetEndpointResult> getEndpointPlain(GetEndpointPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The endpoint access for the target resource.
@@ -45,8 +65,24 @@ public final class HybridconnectivityFunctions {
      * API Version: 2021-10-06-preview.
      * 
      */
+    public static CompletableFuture<ListEndpointCredentialsResult> listEndpointCredentialsPlain(ListEndpointCredentialsPlainArgs args) {
+        return listEndpointCredentialsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The endpoint access for the target resource.
+     * API Version: 2021-10-06-preview.
+     * 
+     */
     public static Output<ListEndpointCredentialsResult> listEndpointCredentials(ListEndpointCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybridconnectivity:listEndpointCredentials", TypeShape.of(ListEndpointCredentialsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The endpoint access for the target resource.
+     * API Version: 2021-10-06-preview.
+     * 
+     */
+    public static CompletableFuture<ListEndpointCredentialsResult> listEndpointCredentialsPlain(ListEndpointCredentialsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:listEndpointCredentials", TypeShape.of(ListEndpointCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Managed Proxy
@@ -61,7 +97,23 @@ public final class HybridconnectivityFunctions {
      * API Version: 2022-05-01-preview.
      * 
      */
+    public static CompletableFuture<ListEndpointManagedProxyDetailsResult> listEndpointManagedProxyDetailsPlain(ListEndpointManagedProxyDetailsPlainArgs args) {
+        return listEndpointManagedProxyDetailsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Managed Proxy
+     * API Version: 2022-05-01-preview.
+     * 
+     */
     public static Output<ListEndpointManagedProxyDetailsResult> listEndpointManagedProxyDetails(ListEndpointManagedProxyDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybridconnectivity:listEndpointManagedProxyDetails", TypeShape.of(ListEndpointManagedProxyDetailsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Managed Proxy
+     * API Version: 2022-05-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListEndpointManagedProxyDetailsResult> listEndpointManagedProxyDetailsPlain(ListEndpointManagedProxyDetailsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:listEndpointManagedProxyDetails", TypeShape.of(ListEndpointManagedProxyDetailsResult.class), args, Utilities.withVersion(options));
     }
 }

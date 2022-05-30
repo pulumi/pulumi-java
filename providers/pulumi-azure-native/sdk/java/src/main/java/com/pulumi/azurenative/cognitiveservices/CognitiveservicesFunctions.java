@@ -5,10 +5,15 @@ package com.pulumi.azurenative.cognitiveservices;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.cognitiveservices.inputs.GetAccountArgs;
+import com.pulumi.azurenative.cognitiveservices.inputs.GetAccountPlainArgs;
 import com.pulumi.azurenative.cognitiveservices.inputs.GetCommitmentPlanArgs;
+import com.pulumi.azurenative.cognitiveservices.inputs.GetCommitmentPlanPlainArgs;
 import com.pulumi.azurenative.cognitiveservices.inputs.GetDeploymentArgs;
+import com.pulumi.azurenative.cognitiveservices.inputs.GetDeploymentPlainArgs;
 import com.pulumi.azurenative.cognitiveservices.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.cognitiveservices.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.cognitiveservices.inputs.ListAccountKeysArgs;
+import com.pulumi.azurenative.cognitiveservices.inputs.ListAccountKeysPlainArgs;
 import com.pulumi.azurenative.cognitiveservices.outputs.GetAccountResult;
 import com.pulumi.azurenative.cognitiveservices.outputs.GetCommitmentPlanResult;
 import com.pulumi.azurenative.cognitiveservices.outputs.GetDeploymentResult;
@@ -18,6 +23,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class CognitiveservicesFunctions {
     /**
@@ -33,8 +39,24 @@ public final class CognitiveservicesFunctions {
      * API Version: 2017-04-18.
      * 
      */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args) {
+        return getAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Cognitive Services Account is an Azure resource representing the provisioned account, its type, location and SKU.
+     * API Version: 2017-04-18.
+     * 
+     */
     public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cognitiveservices:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Cognitive Services Account is an Azure resource representing the provisioned account, its type, location and SKU.
+     * API Version: 2017-04-18.
+     * 
+     */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Cognitive Services account commitment plan.
@@ -49,8 +71,24 @@ public final class CognitiveservicesFunctions {
      * API Version: 2021-10-01.
      * 
      */
+    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlanPlain(GetCommitmentPlanPlainArgs args) {
+        return getCommitmentPlanPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Cognitive Services account commitment plan.
+     * API Version: 2021-10-01.
+     * 
+     */
     public static Output<GetCommitmentPlanResult> getCommitmentPlan(GetCommitmentPlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cognitiveservices:getCommitmentPlan", TypeShape.of(GetCommitmentPlanResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Cognitive Services account commitment plan.
+     * API Version: 2021-10-01.
+     * 
+     */
+    public static CompletableFuture<GetCommitmentPlanResult> getCommitmentPlanPlain(GetCommitmentPlanPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getCommitmentPlan", TypeShape.of(GetCommitmentPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Cognitive Services account deployment.
@@ -65,8 +103,24 @@ public final class CognitiveservicesFunctions {
      * API Version: 2021-10-01.
      * 
      */
+    public static CompletableFuture<GetDeploymentResult> getDeploymentPlain(GetDeploymentPlainArgs args) {
+        return getDeploymentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Cognitive Services account deployment.
+     * API Version: 2021-10-01.
+     * 
+     */
     public static Output<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cognitiveservices:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Cognitive Services account deployment.
+     * API Version: 2021-10-01.
+     * 
+     */
+    public static CompletableFuture<GetDeploymentResult> getDeploymentPlain(GetDeploymentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
@@ -81,8 +135,24 @@ public final class CognitiveservicesFunctions {
      * API Version: 2017-04-18.
      * 
      */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2017-04-18.
+     * 
+     */
     public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cognitiveservices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2017-04-18.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The access keys for the cognitive services account.
@@ -97,7 +167,23 @@ public final class CognitiveservicesFunctions {
      * API Version: 2017-04-18.
      * 
      */
+    public static CompletableFuture<ListAccountKeysResult> listAccountKeysPlain(ListAccountKeysPlainArgs args) {
+        return listAccountKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The access keys for the cognitive services account.
+     * API Version: 2017-04-18.
+     * 
+     */
     public static Output<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cognitiveservices:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The access keys for the cognitive services account.
+     * API Version: 2017-04-18.
+     * 
+     */
+    public static CompletableFuture<ListAccountKeysResult> listAccountKeysPlain(ListAccountKeysPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args, Utilities.withVersion(options));
     }
 }

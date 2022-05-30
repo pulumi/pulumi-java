@@ -6,21 +6,38 @@ package com.pulumi.awsnative.sagemaker;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.sagemaker.inputs.GetAppArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetAppImageConfigArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetAppImageConfigPlainArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetAppPlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetDataQualityJobDefinitionArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetDataQualityJobDefinitionPlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetDeviceArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetDeviceFleetArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetDeviceFleetPlainArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetDevicePlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetDomainArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetDomainPlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetFeatureGroupArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetFeatureGroupPlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetImageArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetImagePlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetImageVersionArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetImageVersionPlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetModelBiasJobDefinitionArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetModelBiasJobDefinitionPlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetModelExplainabilityJobDefinitionArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetModelExplainabilityJobDefinitionPlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetModelPackageGroupArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetModelPackageGroupPlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetModelQualityJobDefinitionArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetModelQualityJobDefinitionPlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetMonitoringScheduleArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetMonitoringSchedulePlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetPipelineArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetPipelinePlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetProjectArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetProjectPlainArgs;
 import com.pulumi.awsnative.sagemaker.inputs.GetUserProfileArgs;
+import com.pulumi.awsnative.sagemaker.inputs.GetUserProfilePlainArgs;
 import com.pulumi.awsnative.sagemaker.outputs.GetAppImageConfigResult;
 import com.pulumi.awsnative.sagemaker.outputs.GetAppResult;
 import com.pulumi.awsnative.sagemaker.outputs.GetDataQualityJobDefinitionResult;
@@ -42,6 +59,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class SagemakerFunctions {
     /**
@@ -55,8 +73,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::App
      * 
      */
+    public static CompletableFuture<GetAppResult> getAppPlain(GetAppPlainArgs args) {
+        return getAppPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::App
+     * 
+     */
     public static Output<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::App
+     * 
+     */
+    public static CompletableFuture<GetAppResult> getAppPlain(GetAppPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::AppImageConfig
@@ -69,8 +101,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::AppImageConfig
      * 
      */
+    public static CompletableFuture<GetAppImageConfigResult> getAppImageConfigPlain(GetAppImageConfigPlainArgs args) {
+        return getAppImageConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::AppImageConfig
+     * 
+     */
     public static Output<GetAppImageConfigResult> getAppImageConfig(GetAppImageConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getAppImageConfig", TypeShape.of(GetAppImageConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::AppImageConfig
+     * 
+     */
+    public static CompletableFuture<GetAppImageConfigResult> getAppImageConfigPlain(GetAppImageConfigPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getAppImageConfig", TypeShape.of(GetAppImageConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::DataQualityJobDefinition
@@ -83,8 +129,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::DataQualityJobDefinition
      * 
      */
+    public static CompletableFuture<GetDataQualityJobDefinitionResult> getDataQualityJobDefinitionPlain(GetDataQualityJobDefinitionPlainArgs args) {
+        return getDataQualityJobDefinitionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::DataQualityJobDefinition
+     * 
+     */
     public static Output<GetDataQualityJobDefinitionResult> getDataQualityJobDefinition(GetDataQualityJobDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getDataQualityJobDefinition", TypeShape.of(GetDataQualityJobDefinitionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::DataQualityJobDefinition
+     * 
+     */
+    public static CompletableFuture<GetDataQualityJobDefinitionResult> getDataQualityJobDefinitionPlain(GetDataQualityJobDefinitionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDataQualityJobDefinition", TypeShape.of(GetDataQualityJobDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::SageMaker::Device
@@ -97,8 +157,22 @@ public final class SagemakerFunctions {
      * Resource schema for AWS::SageMaker::Device
      * 
      */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args) {
+        return getDevicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::SageMaker::Device
+     * 
+     */
     public static Output<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::SageMaker::Device
+     * 
+     */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::SageMaker::DeviceFleet
@@ -111,8 +185,22 @@ public final class SagemakerFunctions {
      * Resource schema for AWS::SageMaker::DeviceFleet
      * 
      */
+    public static CompletableFuture<GetDeviceFleetResult> getDeviceFleetPlain(GetDeviceFleetPlainArgs args) {
+        return getDeviceFleetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::SageMaker::DeviceFleet
+     * 
+     */
     public static Output<GetDeviceFleetResult> getDeviceFleet(GetDeviceFleetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getDeviceFleet", TypeShape.of(GetDeviceFleetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::SageMaker::DeviceFleet
+     * 
+     */
+    public static CompletableFuture<GetDeviceFleetResult> getDeviceFleetPlain(GetDeviceFleetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDeviceFleet", TypeShape.of(GetDeviceFleetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::Domain
@@ -125,8 +213,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::Domain
      * 
      */
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args) {
+        return getDomainPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::Domain
+     * 
+     */
     public static Output<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::Domain
+     * 
+     */
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::FeatureGroup
@@ -139,8 +241,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::FeatureGroup
      * 
      */
+    public static CompletableFuture<GetFeatureGroupResult> getFeatureGroupPlain(GetFeatureGroupPlainArgs args) {
+        return getFeatureGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::FeatureGroup
+     * 
+     */
     public static Output<GetFeatureGroupResult> getFeatureGroup(GetFeatureGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getFeatureGroup", TypeShape.of(GetFeatureGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::FeatureGroup
+     * 
+     */
+    public static CompletableFuture<GetFeatureGroupResult> getFeatureGroupPlain(GetFeatureGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getFeatureGroup", TypeShape.of(GetFeatureGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::Image
@@ -153,8 +269,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::Image
      * 
      */
+    public static CompletableFuture<GetImageResult> getImagePlain(GetImagePlainArgs args) {
+        return getImagePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::Image
+     * 
+     */
     public static Output<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::Image
+     * 
+     */
+    public static CompletableFuture<GetImageResult> getImagePlain(GetImagePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::ImageVersion
@@ -167,8 +297,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::ImageVersion
      * 
      */
+    public static CompletableFuture<GetImageVersionResult> getImageVersionPlain(GetImageVersionPlainArgs args) {
+        return getImageVersionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ImageVersion
+     * 
+     */
     public static Output<GetImageVersionResult> getImageVersion(GetImageVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getImageVersion", TypeShape.of(GetImageVersionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ImageVersion
+     * 
+     */
+    public static CompletableFuture<GetImageVersionResult> getImageVersionPlain(GetImageVersionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getImageVersion", TypeShape.of(GetImageVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::ModelBiasJobDefinition
@@ -181,8 +325,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::ModelBiasJobDefinition
      * 
      */
+    public static CompletableFuture<GetModelBiasJobDefinitionResult> getModelBiasJobDefinitionPlain(GetModelBiasJobDefinitionPlainArgs args) {
+        return getModelBiasJobDefinitionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ModelBiasJobDefinition
+     * 
+     */
     public static Output<GetModelBiasJobDefinitionResult> getModelBiasJobDefinition(GetModelBiasJobDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getModelBiasJobDefinition", TypeShape.of(GetModelBiasJobDefinitionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ModelBiasJobDefinition
+     * 
+     */
+    public static CompletableFuture<GetModelBiasJobDefinitionResult> getModelBiasJobDefinitionPlain(GetModelBiasJobDefinitionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelBiasJobDefinition", TypeShape.of(GetModelBiasJobDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::ModelExplainabilityJobDefinition
@@ -195,8 +353,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::ModelExplainabilityJobDefinition
      * 
      */
+    public static CompletableFuture<GetModelExplainabilityJobDefinitionResult> getModelExplainabilityJobDefinitionPlain(GetModelExplainabilityJobDefinitionPlainArgs args) {
+        return getModelExplainabilityJobDefinitionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ModelExplainabilityJobDefinition
+     * 
+     */
     public static Output<GetModelExplainabilityJobDefinitionResult> getModelExplainabilityJobDefinition(GetModelExplainabilityJobDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getModelExplainabilityJobDefinition", TypeShape.of(GetModelExplainabilityJobDefinitionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ModelExplainabilityJobDefinition
+     * 
+     */
+    public static CompletableFuture<GetModelExplainabilityJobDefinitionResult> getModelExplainabilityJobDefinitionPlain(GetModelExplainabilityJobDefinitionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelExplainabilityJobDefinition", TypeShape.of(GetModelExplainabilityJobDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::ModelPackageGroup
@@ -209,8 +381,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::ModelPackageGroup
      * 
      */
+    public static CompletableFuture<GetModelPackageGroupResult> getModelPackageGroupPlain(GetModelPackageGroupPlainArgs args) {
+        return getModelPackageGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ModelPackageGroup
+     * 
+     */
     public static Output<GetModelPackageGroupResult> getModelPackageGroup(GetModelPackageGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getModelPackageGroup", TypeShape.of(GetModelPackageGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ModelPackageGroup
+     * 
+     */
+    public static CompletableFuture<GetModelPackageGroupResult> getModelPackageGroupPlain(GetModelPackageGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelPackageGroup", TypeShape.of(GetModelPackageGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::ModelQualityJobDefinition
@@ -223,8 +409,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::ModelQualityJobDefinition
      * 
      */
+    public static CompletableFuture<GetModelQualityJobDefinitionResult> getModelQualityJobDefinitionPlain(GetModelQualityJobDefinitionPlainArgs args) {
+        return getModelQualityJobDefinitionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ModelQualityJobDefinition
+     * 
+     */
     public static Output<GetModelQualityJobDefinitionResult> getModelQualityJobDefinition(GetModelQualityJobDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getModelQualityJobDefinition", TypeShape.of(GetModelQualityJobDefinitionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ModelQualityJobDefinition
+     * 
+     */
+    public static CompletableFuture<GetModelQualityJobDefinitionResult> getModelQualityJobDefinitionPlain(GetModelQualityJobDefinitionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelQualityJobDefinition", TypeShape.of(GetModelQualityJobDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::MonitoringSchedule
@@ -237,8 +437,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::MonitoringSchedule
      * 
      */
+    public static CompletableFuture<GetMonitoringScheduleResult> getMonitoringSchedulePlain(GetMonitoringSchedulePlainArgs args) {
+        return getMonitoringSchedulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::MonitoringSchedule
+     * 
+     */
     public static Output<GetMonitoringScheduleResult> getMonitoringSchedule(GetMonitoringScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getMonitoringSchedule", TypeShape.of(GetMonitoringScheduleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::MonitoringSchedule
+     * 
+     */
+    public static CompletableFuture<GetMonitoringScheduleResult> getMonitoringSchedulePlain(GetMonitoringSchedulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getMonitoringSchedule", TypeShape.of(GetMonitoringScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::Pipeline
@@ -251,8 +465,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::Pipeline
      * 
      */
+    public static CompletableFuture<GetPipelineResult> getPipelinePlain(GetPipelinePlainArgs args) {
+        return getPipelinePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::Pipeline
+     * 
+     */
     public static Output<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::Pipeline
+     * 
+     */
+    public static CompletableFuture<GetPipelineResult> getPipelinePlain(GetPipelinePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::Project
@@ -265,8 +493,22 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::Project
      * 
      */
+    public static CompletableFuture<GetProjectResult> getProjectPlain(GetProjectPlainArgs args) {
+        return getProjectPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::Project
+     * 
+     */
     public static Output<GetProjectResult> getProject(GetProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::Project
+     * 
+     */
+    public static CompletableFuture<GetProjectResult> getProjectPlain(GetProjectPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getProject", TypeShape.of(GetProjectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::SageMaker::UserProfile
@@ -279,7 +521,21 @@ public final class SagemakerFunctions {
      * Resource Type definition for AWS::SageMaker::UserProfile
      * 
      */
+    public static CompletableFuture<GetUserProfileResult> getUserProfilePlain(GetUserProfilePlainArgs args) {
+        return getUserProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::UserProfile
+     * 
+     */
     public static Output<GetUserProfileResult> getUserProfile(GetUserProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:sagemaker:getUserProfile", TypeShape.of(GetUserProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::UserProfile
+     * 
+     */
+    public static CompletableFuture<GetUserProfileResult> getUserProfilePlain(GetUserProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getUserProfile", TypeShape.of(GetUserProfileResult.class), args, Utilities.withVersion(options));
     }
 }

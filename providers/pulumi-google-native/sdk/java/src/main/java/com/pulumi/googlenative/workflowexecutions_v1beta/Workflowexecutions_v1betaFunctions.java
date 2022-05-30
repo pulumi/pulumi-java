@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.workflowexecutions_v1beta.inputs.GetExecutionArgs;
+import com.pulumi.googlenative.workflowexecutions_v1beta.inputs.GetExecutionPlainArgs;
 import com.pulumi.googlenative.workflowexecutions_v1beta.outputs.GetExecutionResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Workflowexecutions_v1betaFunctions {
     /**
@@ -23,7 +25,21 @@ public final class Workflowexecutions_v1betaFunctions {
      * Returns an execution of the given name.
      * 
      */
+    public static CompletableFuture<GetExecutionResult> getExecutionPlain(GetExecutionPlainArgs args) {
+        return getExecutionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns an execution of the given name.
+     * 
+     */
     public static Output<GetExecutionResult> getExecution(GetExecutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:workflowexecutions/v1beta:getExecution", TypeShape.of(GetExecutionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns an execution of the given name.
+     * 
+     */
+    public static CompletableFuture<GetExecutionResult> getExecutionPlain(GetExecutionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:workflowexecutions/v1beta:getExecution", TypeShape.of(GetExecutionResult.class), args, Utilities.withVersion(options));
     }
 }

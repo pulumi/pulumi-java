@@ -5,13 +5,16 @@ package com.pulumi.azurenative.guestconfiguration;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.guestconfiguration.inputs.GetGuestConfigurationAssignmentArgs;
+import com.pulumi.azurenative.guestconfiguration.inputs.GetGuestConfigurationAssignmentPlainArgs;
 import com.pulumi.azurenative.guestconfiguration.inputs.GetGuestConfigurationHCRPAssignmentArgs;
+import com.pulumi.azurenative.guestconfiguration.inputs.GetGuestConfigurationHCRPAssignmentPlainArgs;
 import com.pulumi.azurenative.guestconfiguration.outputs.GetGuestConfigurationAssignmentResult;
 import com.pulumi.azurenative.guestconfiguration.outputs.GetGuestConfigurationHCRPAssignmentResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class GuestconfigurationFunctions {
     /**
@@ -27,8 +30,24 @@ public final class GuestconfigurationFunctions {
      * API Version: 2020-06-25.
      * 
      */
+    public static CompletableFuture<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignmentPlain(GetGuestConfigurationAssignmentPlainArgs args) {
+        return getGuestConfigurationAssignmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Guest configuration assignment is an association between a machine and guest configuration.
+     * API Version: 2020-06-25.
+     * 
+     */
     public static Output<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignment(GetGuestConfigurationAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:guestconfiguration:getGuestConfigurationAssignment", TypeShape.of(GetGuestConfigurationAssignmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Guest configuration assignment is an association between a machine and guest configuration.
+     * API Version: 2020-06-25.
+     * 
+     */
+    public static CompletableFuture<GetGuestConfigurationAssignmentResult> getGuestConfigurationAssignmentPlain(GetGuestConfigurationAssignmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:guestconfiguration:getGuestConfigurationAssignment", TypeShape.of(GetGuestConfigurationAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Guest configuration assignment is an association between a machine and guest configuration.
@@ -43,7 +62,23 @@ public final class GuestconfigurationFunctions {
      * API Version: 2020-06-25.
      * 
      */
+    public static CompletableFuture<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignmentPlain(GetGuestConfigurationHCRPAssignmentPlainArgs args) {
+        return getGuestConfigurationHCRPAssignmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Guest configuration assignment is an association between a machine and guest configuration.
+     * API Version: 2020-06-25.
+     * 
+     */
     public static Output<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignment(GetGuestConfigurationHCRPAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:guestconfiguration:getGuestConfigurationHCRPAssignment", TypeShape.of(GetGuestConfigurationHCRPAssignmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Guest configuration assignment is an association between a machine and guest configuration.
+     * API Version: 2020-06-25.
+     * 
+     */
+    public static CompletableFuture<GetGuestConfigurationHCRPAssignmentResult> getGuestConfigurationHCRPAssignmentPlain(GetGuestConfigurationHCRPAssignmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:guestconfiguration:getGuestConfigurationHCRPAssignment", TypeShape.of(GetGuestConfigurationHCRPAssignmentResult.class), args, Utilities.withVersion(options));
     }
 }

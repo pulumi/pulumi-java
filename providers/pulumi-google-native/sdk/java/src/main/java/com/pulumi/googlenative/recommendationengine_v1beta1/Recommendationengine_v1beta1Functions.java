@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.recommendationengine_v1beta1.inputs.GetCatalogItemArgs;
+import com.pulumi.googlenative.recommendationengine_v1beta1.inputs.GetCatalogItemPlainArgs;
 import com.pulumi.googlenative.recommendationengine_v1beta1.outputs.GetCatalogItemResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Recommendationengine_v1beta1Functions {
     /**
@@ -23,7 +25,21 @@ public final class Recommendationengine_v1beta1Functions {
      * Gets a specific catalog item.
      * 
      */
+    public static CompletableFuture<GetCatalogItemResult> getCatalogItemPlain(GetCatalogItemPlainArgs args) {
+        return getCatalogItemPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a specific catalog item.
+     * 
+     */
     public static Output<GetCatalogItemResult> getCatalogItem(GetCatalogItemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:recommendationengine/v1beta1:getCatalogItem", TypeShape.of(GetCatalogItemResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a specific catalog item.
+     * 
+     */
+    public static CompletableFuture<GetCatalogItemResult> getCatalogItemPlain(GetCatalogItemPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:recommendationengine/v1beta1:getCatalogItem", TypeShape.of(GetCatalogItemResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,11 +5,13 @@ package com.pulumi.azurenative.loadtestservice;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.loadtestservice.inputs.GetLoadTestArgs;
+import com.pulumi.azurenative.loadtestservice.inputs.GetLoadTestPlainArgs;
 import com.pulumi.azurenative.loadtestservice.outputs.GetLoadTestResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class LoadtestserviceFunctions {
     /**
@@ -25,7 +27,23 @@ public final class LoadtestserviceFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
+    public static CompletableFuture<GetLoadTestResult> getLoadTestPlain(GetLoadTestPlainArgs args) {
+        return getLoadTestPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * LoadTest details
+     * API Version: 2021-12-01-preview.
+     * 
+     */
     public static Output<GetLoadTestResult> getLoadTest(GetLoadTestArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:loadtestservice:getLoadTest", TypeShape.of(GetLoadTestResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * LoadTest details
+     * API Version: 2021-12-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetLoadTestResult> getLoadTestPlain(GetLoadTestPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:loadtestservice:getLoadTest", TypeShape.of(GetLoadTestResult.class), args, Utilities.withVersion(options));
     }
 }

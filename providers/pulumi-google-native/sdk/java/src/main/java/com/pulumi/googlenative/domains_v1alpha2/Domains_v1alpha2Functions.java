@@ -10,8 +10,11 @@ import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.domains_v1alpha2.inputs.GetRegistrationArgs;
 import com.pulumi.googlenative.domains_v1alpha2.inputs.GetRegistrationIamPolicyArgs;
+import com.pulumi.googlenative.domains_v1alpha2.inputs.GetRegistrationIamPolicyPlainArgs;
+import com.pulumi.googlenative.domains_v1alpha2.inputs.GetRegistrationPlainArgs;
 import com.pulumi.googlenative.domains_v1alpha2.outputs.GetRegistrationIamPolicyResult;
 import com.pulumi.googlenative.domains_v1alpha2.outputs.GetRegistrationResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Domains_v1alpha2Functions {
     /**
@@ -25,8 +28,22 @@ public final class Domains_v1alpha2Functions {
      * Gets the details of a `Registration` resource.
      * 
      */
+    public static CompletableFuture<GetRegistrationResult> getRegistrationPlain(GetRegistrationPlainArgs args) {
+        return getRegistrationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the details of a `Registration` resource.
+     * 
+     */
     public static Output<GetRegistrationResult> getRegistration(GetRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:domains/v1alpha2:getRegistration", TypeShape.of(GetRegistrationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the details of a `Registration` resource.
+     * 
+     */
+    public static CompletableFuture<GetRegistrationResult> getRegistrationPlain(GetRegistrationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:domains/v1alpha2:getRegistration", TypeShape.of(GetRegistrationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -39,7 +56,21 @@ public final class Domains_v1alpha2Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetRegistrationIamPolicyResult> getRegistrationIamPolicyPlain(GetRegistrationIamPolicyPlainArgs args) {
+        return getRegistrationIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetRegistrationIamPolicyResult> getRegistrationIamPolicy(GetRegistrationIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:domains/v1alpha2:getRegistrationIamPolicy", TypeShape.of(GetRegistrationIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetRegistrationIamPolicyResult> getRegistrationIamPolicyPlain(GetRegistrationIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:domains/v1alpha2:getRegistrationIamPolicy", TypeShape.of(GetRegistrationIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

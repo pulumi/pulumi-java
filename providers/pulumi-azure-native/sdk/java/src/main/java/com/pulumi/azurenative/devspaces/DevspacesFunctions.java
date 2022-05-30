@@ -5,13 +5,16 @@ package com.pulumi.azurenative.devspaces;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.devspaces.inputs.GetControllerArgs;
+import com.pulumi.azurenative.devspaces.inputs.GetControllerPlainArgs;
 import com.pulumi.azurenative.devspaces.inputs.ListControllerConnectionDetailsArgs;
+import com.pulumi.azurenative.devspaces.inputs.ListControllerConnectionDetailsPlainArgs;
 import com.pulumi.azurenative.devspaces.outputs.GetControllerResult;
 import com.pulumi.azurenative.devspaces.outputs.ListControllerConnectionDetailsResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class DevspacesFunctions {
     /**
@@ -25,8 +28,22 @@ public final class DevspacesFunctions {
      * API Version: 2019-04-01.
      * 
      */
+    public static CompletableFuture<GetControllerResult> getControllerPlain(GetControllerPlainArgs args) {
+        return getControllerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * API Version: 2019-04-01.
+     * 
+     */
     public static Output<GetControllerResult> getController(GetControllerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devspaces:getController", TypeShape.of(GetControllerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * API Version: 2019-04-01.
+     * 
+     */
+    public static CompletableFuture<GetControllerResult> getControllerPlain(GetControllerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devspaces:getController", TypeShape.of(GetControllerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2019-04-01.
@@ -39,7 +56,21 @@ public final class DevspacesFunctions {
      * API Version: 2019-04-01.
      * 
      */
+    public static CompletableFuture<ListControllerConnectionDetailsResult> listControllerConnectionDetailsPlain(ListControllerConnectionDetailsPlainArgs args) {
+        return listControllerConnectionDetailsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * API Version: 2019-04-01.
+     * 
+     */
     public static Output<ListControllerConnectionDetailsResult> listControllerConnectionDetails(ListControllerConnectionDetailsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devspaces:listControllerConnectionDetails", TypeShape.of(ListControllerConnectionDetailsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * API Version: 2019-04-01.
+     * 
+     */
+    public static CompletableFuture<ListControllerConnectionDetailsResult> listControllerConnectionDetailsPlain(ListControllerConnectionDetailsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devspaces:listControllerConnectionDetails", TypeShape.of(ListControllerConnectionDetailsResult.class), args, Utilities.withVersion(options));
     }
 }

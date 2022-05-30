@@ -5,9 +5,13 @@ package com.pulumi.azurenative.hdinsight;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.hdinsight.inputs.GetApplicationArgs;
+import com.pulumi.azurenative.hdinsight.inputs.GetApplicationPlainArgs;
 import com.pulumi.azurenative.hdinsight.inputs.GetClusterArgs;
 import com.pulumi.azurenative.hdinsight.inputs.GetClusterGatewaySettingsArgs;
+import com.pulumi.azurenative.hdinsight.inputs.GetClusterGatewaySettingsPlainArgs;
+import com.pulumi.azurenative.hdinsight.inputs.GetClusterPlainArgs;
 import com.pulumi.azurenative.hdinsight.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.hdinsight.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.hdinsight.outputs.GetApplicationResult;
 import com.pulumi.azurenative.hdinsight.outputs.GetClusterGatewaySettingsResult;
 import com.pulumi.azurenative.hdinsight.outputs.GetClusterResult;
@@ -16,6 +20,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class HdinsightFunctions {
     /**
@@ -31,8 +36,24 @@ public final class HdinsightFunctions {
      * API Version: 2018-06-01-preview.
      * 
      */
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args) {
+        return getApplicationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The HDInsight cluster application
+     * API Version: 2018-06-01-preview.
+     * 
+     */
     public static Output<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hdinsight:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The HDInsight cluster application
+     * API Version: 2018-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The HDInsight cluster.
@@ -47,8 +68,24 @@ public final class HdinsightFunctions {
      * API Version: 2018-06-01-preview.
      * 
      */
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args) {
+        return getClusterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The HDInsight cluster.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
     public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hdinsight:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The HDInsight cluster.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gateway settings.
@@ -63,8 +100,24 @@ public final class HdinsightFunctions {
      * API Version: 2018-06-01-preview.
      * 
      */
+    public static CompletableFuture<GetClusterGatewaySettingsResult> getClusterGatewaySettingsPlain(GetClusterGatewaySettingsPlainArgs args) {
+        return getClusterGatewaySettingsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gateway settings.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
     public static Output<GetClusterGatewaySettingsResult> getClusterGatewaySettings(GetClusterGatewaySettingsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hdinsight:getClusterGatewaySettings", TypeShape.of(GetClusterGatewaySettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gateway settings.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetClusterGatewaySettingsResult> getClusterGatewaySettingsPlain(GetClusterGatewaySettingsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getClusterGatewaySettings", TypeShape.of(GetClusterGatewaySettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The private endpoint connection.
@@ -79,7 +132,23 @@ public final class HdinsightFunctions {
      * API Version: 2021-06-01.
      * 
      */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The private endpoint connection.
+     * API Version: 2021-06-01.
+     * 
+     */
     public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hdinsight:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The private endpoint connection.
+     * API Version: 2021-06-01.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

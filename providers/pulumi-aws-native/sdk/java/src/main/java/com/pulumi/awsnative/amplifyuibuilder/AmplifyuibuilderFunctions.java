@@ -5,13 +5,16 @@ package com.pulumi.awsnative.amplifyuibuilder;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.GetComponentArgs;
+import com.pulumi.awsnative.amplifyuibuilder.inputs.GetComponentPlainArgs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.GetThemeArgs;
+import com.pulumi.awsnative.amplifyuibuilder.inputs.GetThemePlainArgs;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.GetComponentResult;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.GetThemeResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class AmplifyuibuilderFunctions {
     /**
@@ -25,8 +28,22 @@ public final class AmplifyuibuilderFunctions {
      * Definition of AWS::AmplifyUIBuilder::Component Resource Type
      * 
      */
+    public static CompletableFuture<GetComponentResult> getComponentPlain(GetComponentPlainArgs args) {
+        return getComponentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of AWS::AmplifyUIBuilder::Component Resource Type
+     * 
+     */
     public static Output<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:amplifyuibuilder:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of AWS::AmplifyUIBuilder::Component Resource Type
+     * 
+     */
+    public static CompletableFuture<GetComponentResult> getComponentPlain(GetComponentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:amplifyuibuilder:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
@@ -39,7 +56,21 @@ public final class AmplifyuibuilderFunctions {
      * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
      * 
      */
+    public static CompletableFuture<GetThemeResult> getThemePlain(GetThemePlainArgs args) {
+        return getThemePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
+     * 
+     */
     public static Output<GetThemeResult> getTheme(GetThemeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:amplifyuibuilder:getTheme", TypeShape.of(GetThemeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of AWS::AmplifyUIBuilder::Theme Resource Type
+     * 
+     */
+    public static CompletableFuture<GetThemeResult> getThemePlain(GetThemePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:amplifyuibuilder:getTheme", TypeShape.of(GetThemeResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,14 +5,23 @@ package com.pulumi.azurenative.cache;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.cache.inputs.GetDatabaseArgs;
+import com.pulumi.azurenative.cache.inputs.GetDatabasePlainArgs;
 import com.pulumi.azurenative.cache.inputs.GetFirewallRuleArgs;
+import com.pulumi.azurenative.cache.inputs.GetFirewallRulePlainArgs;
 import com.pulumi.azurenative.cache.inputs.GetLinkedServerArgs;
+import com.pulumi.azurenative.cache.inputs.GetLinkedServerPlainArgs;
 import com.pulumi.azurenative.cache.inputs.GetPatchScheduleArgs;
+import com.pulumi.azurenative.cache.inputs.GetPatchSchedulePlainArgs;
 import com.pulumi.azurenative.cache.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.cache.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.cache.inputs.GetRedisArgs;
 import com.pulumi.azurenative.cache.inputs.GetRedisEnterpriseArgs;
+import com.pulumi.azurenative.cache.inputs.GetRedisEnterprisePlainArgs;
+import com.pulumi.azurenative.cache.inputs.GetRedisPlainArgs;
 import com.pulumi.azurenative.cache.inputs.ListDatabaseKeysArgs;
+import com.pulumi.azurenative.cache.inputs.ListDatabaseKeysPlainArgs;
 import com.pulumi.azurenative.cache.inputs.ListRedisKeysArgs;
+import com.pulumi.azurenative.cache.inputs.ListRedisKeysPlainArgs;
 import com.pulumi.azurenative.cache.outputs.GetDatabaseResult;
 import com.pulumi.azurenative.cache.outputs.GetFirewallRuleResult;
 import com.pulumi.azurenative.cache.outputs.GetLinkedServerResult;
@@ -26,6 +35,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class CacheFunctions {
     /**
@@ -41,8 +51,24 @@ public final class CacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
+    public static CompletableFuture<GetDatabaseResult> getDatabasePlain(GetDatabasePlainArgs args) {
+        return getDatabasePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Describes a database on the RedisEnterprise cluster
+     * API Version: 2021-03-01.
+     * 
+     */
     public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cache:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Describes a database on the RedisEnterprise cluster
+     * API Version: 2021-03-01.
+     * 
+     */
+    public static CompletableFuture<GetDatabaseResult> getDatabasePlain(GetDatabasePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cache:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
@@ -57,8 +83,24 @@ public final class CacheFunctions {
      * API Version: 2020-06-01.
      * 
      */
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRulePlain(GetFirewallRulePlainArgs args) {
+        return getFirewallRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
+     * API Version: 2020-06-01.
+     * 
+     */
     public static Output<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cache:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRulePlain(GetFirewallRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cache:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response to put/get linked server (with properties) for Redis cache.
@@ -73,8 +115,24 @@ public final class CacheFunctions {
      * API Version: 2020-06-01.
      * 
      */
+    public static CompletableFuture<GetLinkedServerResult> getLinkedServerPlain(GetLinkedServerPlainArgs args) {
+        return getLinkedServerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Response to put/get linked server (with properties) for Redis cache.
+     * API Version: 2020-06-01.
+     * 
+     */
     public static Output<GetLinkedServerResult> getLinkedServer(GetLinkedServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cache:getLinkedServer", TypeShape.of(GetLinkedServerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Response to put/get linked server (with properties) for Redis cache.
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<GetLinkedServerResult> getLinkedServerPlain(GetLinkedServerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cache:getLinkedServer", TypeShape.of(GetLinkedServerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response to put/get patch schedules for Redis cache.
@@ -89,8 +147,24 @@ public final class CacheFunctions {
      * API Version: 2020-06-01.
      * 
      */
+    public static CompletableFuture<GetPatchScheduleResult> getPatchSchedulePlain(GetPatchSchedulePlainArgs args) {
+        return getPatchSchedulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Response to put/get patch schedules for Redis cache.
+     * API Version: 2020-06-01.
+     * 
+     */
     public static Output<GetPatchScheduleResult> getPatchSchedule(GetPatchScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cache:getPatchSchedule", TypeShape.of(GetPatchScheduleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Response to put/get patch schedules for Redis cache.
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<GetPatchScheduleResult> getPatchSchedulePlain(GetPatchSchedulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cache:getPatchSchedule", TypeShape.of(GetPatchScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
@@ -105,8 +179,24 @@ public final class CacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2021-03-01.
+     * 
+     */
     public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cache:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2021-03-01.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cache:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A single Redis item in List or Get Operation.
@@ -121,8 +211,24 @@ public final class CacheFunctions {
      * API Version: 2020-06-01.
      * 
      */
+    public static CompletableFuture<GetRedisResult> getRedisPlain(GetRedisPlainArgs args) {
+        return getRedisPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A single Redis item in List or Get Operation.
+     * API Version: 2020-06-01.
+     * 
+     */
     public static Output<GetRedisResult> getRedis(GetRedisArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cache:getRedis", TypeShape.of(GetRedisResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A single Redis item in List or Get Operation.
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<GetRedisResult> getRedisPlain(GetRedisPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cache:getRedis", TypeShape.of(GetRedisResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Describes the RedisEnterprise cluster
@@ -137,8 +243,24 @@ public final class CacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
+    public static CompletableFuture<GetRedisEnterpriseResult> getRedisEnterprisePlain(GetRedisEnterprisePlainArgs args) {
+        return getRedisEnterprisePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Describes the RedisEnterprise cluster
+     * API Version: 2021-03-01.
+     * 
+     */
     public static Output<GetRedisEnterpriseResult> getRedisEnterprise(GetRedisEnterpriseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cache:getRedisEnterprise", TypeShape.of(GetRedisEnterpriseResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Describes the RedisEnterprise cluster
+     * API Version: 2021-03-01.
+     * 
+     */
+    public static CompletableFuture<GetRedisEnterpriseResult> getRedisEnterprisePlain(GetRedisEnterprisePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cache:getRedisEnterprise", TypeShape.of(GetRedisEnterpriseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The secret access keys used for authenticating connections to redis
@@ -153,8 +275,24 @@ public final class CacheFunctions {
      * API Version: 2021-03-01.
      * 
      */
+    public static CompletableFuture<ListDatabaseKeysResult> listDatabaseKeysPlain(ListDatabaseKeysPlainArgs args) {
+        return listDatabaseKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The secret access keys used for authenticating connections to redis
+     * API Version: 2021-03-01.
+     * 
+     */
     public static Output<ListDatabaseKeysResult> listDatabaseKeys(ListDatabaseKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cache:listDatabaseKeys", TypeShape.of(ListDatabaseKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The secret access keys used for authenticating connections to redis
+     * API Version: 2021-03-01.
+     * 
+     */
+    public static CompletableFuture<ListDatabaseKeysResult> listDatabaseKeysPlain(ListDatabaseKeysPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cache:listDatabaseKeys", TypeShape.of(ListDatabaseKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Redis cache access keys.
@@ -169,7 +307,23 @@ public final class CacheFunctions {
      * API Version: 2020-06-01.
      * 
      */
+    public static CompletableFuture<ListRedisKeysResult> listRedisKeysPlain(ListRedisKeysPlainArgs args) {
+        return listRedisKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Redis cache access keys.
+     * API Version: 2020-06-01.
+     * 
+     */
     public static Output<ListRedisKeysResult> listRedisKeys(ListRedisKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:cache:listRedisKeys", TypeShape.of(ListRedisKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Redis cache access keys.
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<ListRedisKeysResult> listRedisKeysPlain(ListRedisKeysPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:cache:listRedisKeys", TypeShape.of(ListRedisKeysResult.class), args, Utilities.withVersion(options));
     }
 }

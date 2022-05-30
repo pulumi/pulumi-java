@@ -5,11 +5,13 @@ package com.pulumi.azure.role;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.role.inputs.GetRoleDefinitionArgs;
+import com.pulumi.azure.role.inputs.GetRoleDefinitionPlainArgs;
 import com.pulumi.azure.role.outputs.GetRoleDefinitionResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class RoleFunctions {
     /**
@@ -31,6 +33,17 @@ public final class RoleFunctions {
      * 
      */
     @Deprecated /* azure.role.getRoleDefinition has been deprecated in favor of azure.authorization.getRoleDefinition */
+    public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinitionPlain() {
+        return getRoleDefinitionPlain(GetRoleDefinitionPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Role Definition.
+     * 
+     * @deprecated
+     * azure.role.getRoleDefinition has been deprecated in favor of azure.authorization.getRoleDefinition
+     * 
+     */
+    @Deprecated /* azure.role.getRoleDefinition has been deprecated in favor of azure.authorization.getRoleDefinition */
     public static Output<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args) {
         return getRoleDefinition(args, InvokeOptions.Empty);
     }
@@ -42,7 +55,29 @@ public final class RoleFunctions {
      * 
      */
     @Deprecated /* azure.role.getRoleDefinition has been deprecated in favor of azure.authorization.getRoleDefinition */
+    public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinitionPlain(GetRoleDefinitionPlainArgs args) {
+        return getRoleDefinitionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Role Definition.
+     * 
+     * @deprecated
+     * azure.role.getRoleDefinition has been deprecated in favor of azure.authorization.getRoleDefinition
+     * 
+     */
+    @Deprecated /* azure.role.getRoleDefinition has been deprecated in favor of azure.authorization.getRoleDefinition */
     public static Output<GetRoleDefinitionResult> getRoleDefinition(GetRoleDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:role/getRoleDefinition:getRoleDefinition", TypeShape.of(GetRoleDefinitionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Role Definition.
+     * 
+     * @deprecated
+     * azure.role.getRoleDefinition has been deprecated in favor of azure.authorization.getRoleDefinition
+     * 
+     */
+    @Deprecated /* azure.role.getRoleDefinition has been deprecated in favor of azure.authorization.getRoleDefinition */
+    public static CompletableFuture<GetRoleDefinitionResult> getRoleDefinitionPlain(GetRoleDefinitionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:role/getRoleDefinition:getRoleDefinition", TypeShape.of(GetRoleDefinitionResult.class), args, Utilities.withVersion(options));
     }
 }

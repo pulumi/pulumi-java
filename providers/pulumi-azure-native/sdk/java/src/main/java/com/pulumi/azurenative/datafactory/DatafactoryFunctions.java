@@ -5,23 +5,41 @@ package com.pulumi.azurenative.datafactory;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.datafactory.inputs.GetDataFlowArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetDataFlowPlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetDatasetArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetDatasetPlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetExposureControlFeatureValueArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetExposureControlFeatureValueByFactoryArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetExposureControlFeatureValueByFactoryPlainArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetExposureControlFeatureValuePlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetFactoryArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetFactoryDataPlaneAccessArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetFactoryDataPlaneAccessPlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetFactoryGitHubAccessTokenArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetFactoryGitHubAccessTokenPlainArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetFactoryPlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeConnectionInfoArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeConnectionInfoPlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeObjectMetadatumArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeObjectMetadatumPlainArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimePlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeStatusArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetIntegrationRuntimeStatusPlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetLinkedServiceArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetLinkedServicePlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetManagedPrivateEndpointArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetManagedPrivateEndpointPlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetPipelineArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetPipelinePlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetTriggerArgs;
 import com.pulumi.azurenative.datafactory.inputs.GetTriggerEventSubscriptionStatusArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetTriggerEventSubscriptionStatusPlainArgs;
+import com.pulumi.azurenative.datafactory.inputs.GetTriggerPlainArgs;
 import com.pulumi.azurenative.datafactory.inputs.ListIntegrationRuntimeAuthKeysArgs;
+import com.pulumi.azurenative.datafactory.inputs.ListIntegrationRuntimeAuthKeysPlainArgs;
 import com.pulumi.azurenative.datafactory.outputs.GetDataFlowResult;
 import com.pulumi.azurenative.datafactory.outputs.GetDatasetResult;
 import com.pulumi.azurenative.datafactory.outputs.GetExposureControlFeatureValueByFactoryResult;
@@ -44,6 +62,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class DatafactoryFunctions {
     /**
@@ -59,8 +78,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetDataFlowResult> getDataFlowPlain(GetDataFlowPlainArgs args) {
+        return getDataFlowPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Data flow resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetDataFlowResult> getDataFlow(GetDataFlowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getDataFlow", TypeShape.of(GetDataFlowResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Data flow resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetDataFlowResult> getDataFlowPlain(GetDataFlowPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getDataFlow", TypeShape.of(GetDataFlowResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Dataset resource type.
@@ -75,8 +110,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetDatasetResult> getDatasetPlain(GetDatasetPlainArgs args) {
+        return getDatasetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Dataset resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Dataset resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetDatasetResult> getDatasetPlain(GetDatasetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The exposure control response.
@@ -91,8 +142,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetExposureControlFeatureValueResult> getExposureControlFeatureValuePlain(GetExposureControlFeatureValuePlainArgs args) {
+        return getExposureControlFeatureValuePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The exposure control response.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetExposureControlFeatureValueResult> getExposureControlFeatureValue(GetExposureControlFeatureValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getExposureControlFeatureValue", TypeShape.of(GetExposureControlFeatureValueResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The exposure control response.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetExposureControlFeatureValueResult> getExposureControlFeatureValuePlain(GetExposureControlFeatureValuePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getExposureControlFeatureValue", TypeShape.of(GetExposureControlFeatureValueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The exposure control response.
@@ -107,8 +174,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetExposureControlFeatureValueByFactoryResult> getExposureControlFeatureValueByFactoryPlain(GetExposureControlFeatureValueByFactoryPlainArgs args) {
+        return getExposureControlFeatureValueByFactoryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The exposure control response.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetExposureControlFeatureValueByFactoryResult> getExposureControlFeatureValueByFactory(GetExposureControlFeatureValueByFactoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getExposureControlFeatureValueByFactory", TypeShape.of(GetExposureControlFeatureValueByFactoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The exposure control response.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetExposureControlFeatureValueByFactoryResult> getExposureControlFeatureValueByFactoryPlain(GetExposureControlFeatureValueByFactoryPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getExposureControlFeatureValueByFactory", TypeShape.of(GetExposureControlFeatureValueByFactoryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Factory resource type.
@@ -123,8 +206,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetFactoryResult> getFactoryPlain(GetFactoryPlainArgs args) {
+        return getFactoryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Factory resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetFactoryResult> getFactory(GetFactoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getFactory", TypeShape.of(GetFactoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Factory resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetFactoryResult> getFactoryPlain(GetFactoryPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getFactory", TypeShape.of(GetFactoryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get Data Plane read only token response definition.
@@ -139,8 +238,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetFactoryDataPlaneAccessResult> getFactoryDataPlaneAccessPlain(GetFactoryDataPlaneAccessPlainArgs args) {
+        return getFactoryDataPlaneAccessPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get Data Plane read only token response definition.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetFactoryDataPlaneAccessResult> getFactoryDataPlaneAccess(GetFactoryDataPlaneAccessArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getFactoryDataPlaneAccess", TypeShape.of(GetFactoryDataPlaneAccessResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get Data Plane read only token response definition.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetFactoryDataPlaneAccessResult> getFactoryDataPlaneAccessPlain(GetFactoryDataPlaneAccessPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getFactoryDataPlaneAccess", TypeShape.of(GetFactoryDataPlaneAccessResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get GitHub access token response definition.
@@ -155,8 +270,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetFactoryGitHubAccessTokenResult> getFactoryGitHubAccessTokenPlain(GetFactoryGitHubAccessTokenPlainArgs args) {
+        return getFactoryGitHubAccessTokenPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get GitHub access token response definition.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetFactoryGitHubAccessTokenResult> getFactoryGitHubAccessToken(GetFactoryGitHubAccessTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getFactoryGitHubAccessToken", TypeShape.of(GetFactoryGitHubAccessTokenResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get GitHub access token response definition.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetFactoryGitHubAccessTokenResult> getFactoryGitHubAccessTokenPlain(GetFactoryGitHubAccessTokenPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getFactoryGitHubAccessToken", TypeShape.of(GetFactoryGitHubAccessTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Integration runtime resource type.
@@ -171,8 +302,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntimePlain(GetIntegrationRuntimePlainArgs args) {
+        return getIntegrationRuntimePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Integration runtime resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetIntegrationRuntimeResult> getIntegrationRuntime(GetIntegrationRuntimeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getIntegrationRuntime", TypeShape.of(GetIntegrationRuntimeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Integration runtime resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationRuntimeResult> getIntegrationRuntimePlain(GetIntegrationRuntimePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getIntegrationRuntime", TypeShape.of(GetIntegrationRuntimeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Connection information for encrypting the on-premises data source credentials.
@@ -187,8 +334,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfoPlain(GetIntegrationRuntimeConnectionInfoPlainArgs args) {
+        return getIntegrationRuntimeConnectionInfoPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Connection information for encrypting the on-premises data source credentials.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfo(GetIntegrationRuntimeConnectionInfoArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getIntegrationRuntimeConnectionInfo", TypeShape.of(GetIntegrationRuntimeConnectionInfoResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Connection information for encrypting the on-premises data source credentials.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationRuntimeConnectionInfoResult> getIntegrationRuntimeConnectionInfoPlain(GetIntegrationRuntimeConnectionInfoPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getIntegrationRuntimeConnectionInfo", TypeShape.of(GetIntegrationRuntimeConnectionInfoResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A list of SSIS object metadata.
@@ -203,8 +366,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatumPlain(GetIntegrationRuntimeObjectMetadatumPlainArgs args) {
+        return getIntegrationRuntimeObjectMetadatumPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A list of SSIS object metadata.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatum(GetIntegrationRuntimeObjectMetadatumArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A list of SSIS object metadata.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> getIntegrationRuntimeObjectMetadatumPlain(GetIntegrationRuntimeObjectMetadatumPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Integration runtime status response.
@@ -219,8 +398,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatusPlain(GetIntegrationRuntimeStatusPlainArgs args) {
+        return getIntegrationRuntimeStatusPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Integration runtime status response.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatus(GetIntegrationRuntimeStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getIntegrationRuntimeStatus", TypeShape.of(GetIntegrationRuntimeStatusResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Integration runtime status response.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetIntegrationRuntimeStatusResult> getIntegrationRuntimeStatusPlain(GetIntegrationRuntimeStatusPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getIntegrationRuntimeStatus", TypeShape.of(GetIntegrationRuntimeStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Linked service resource type.
@@ -235,8 +430,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetLinkedServiceResult> getLinkedServicePlain(GetLinkedServicePlainArgs args) {
+        return getLinkedServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Linked service resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetLinkedServiceResult> getLinkedService(GetLinkedServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getLinkedService", TypeShape.of(GetLinkedServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Linked service resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetLinkedServiceResult> getLinkedServicePlain(GetLinkedServicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getLinkedService", TypeShape.of(GetLinkedServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Managed private endpoint resource type.
@@ -251,8 +462,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpointPlain(GetManagedPrivateEndpointPlainArgs args) {
+        return getManagedPrivateEndpointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Managed private endpoint resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetManagedPrivateEndpointResult> getManagedPrivateEndpoint(GetManagedPrivateEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getManagedPrivateEndpoint", TypeShape.of(GetManagedPrivateEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Managed private endpoint resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetManagedPrivateEndpointResult> getManagedPrivateEndpointPlain(GetManagedPrivateEndpointPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getManagedPrivateEndpoint", TypeShape.of(GetManagedPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Pipeline resource type.
@@ -267,8 +494,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetPipelineResult> getPipelinePlain(GetPipelinePlainArgs args) {
+        return getPipelinePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Pipeline resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Pipeline resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetPipelineResult> getPipelinePlain(GetPipelinePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Private Endpoint Connection ARM resource.
@@ -283,8 +526,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Private Endpoint Connection ARM resource.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Private Endpoint Connection ARM resource.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Trigger resource type.
@@ -299,8 +558,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetTriggerResult> getTriggerPlain(GetTriggerPlainArgs args) {
+        return getTriggerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Trigger resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetTriggerResult> getTrigger(GetTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Trigger resource type.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetTriggerResult> getTriggerPlain(GetTriggerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getTrigger", TypeShape.of(GetTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Defines the response of a trigger subscription operation.
@@ -315,8 +590,24 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<GetTriggerEventSubscriptionStatusResult> getTriggerEventSubscriptionStatusPlain(GetTriggerEventSubscriptionStatusPlainArgs args) {
+        return getTriggerEventSubscriptionStatusPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Defines the response of a trigger subscription operation.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<GetTriggerEventSubscriptionStatusResult> getTriggerEventSubscriptionStatus(GetTriggerEventSubscriptionStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:getTriggerEventSubscriptionStatus", TypeShape.of(GetTriggerEventSubscriptionStatusResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Defines the response of a trigger subscription operation.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<GetTriggerEventSubscriptionStatusResult> getTriggerEventSubscriptionStatusPlain(GetTriggerEventSubscriptionStatusPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:getTriggerEventSubscriptionStatus", TypeShape.of(GetTriggerEventSubscriptionStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The integration runtime authentication keys.
@@ -331,7 +622,23 @@ public final class DatafactoryFunctions {
      * API Version: 2018-06-01.
      * 
      */
+    public static CompletableFuture<ListIntegrationRuntimeAuthKeysResult> listIntegrationRuntimeAuthKeysPlain(ListIntegrationRuntimeAuthKeysPlainArgs args) {
+        return listIntegrationRuntimeAuthKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The integration runtime authentication keys.
+     * API Version: 2018-06-01.
+     * 
+     */
     public static Output<ListIntegrationRuntimeAuthKeysResult> listIntegrationRuntimeAuthKeys(ListIntegrationRuntimeAuthKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datafactory:listIntegrationRuntimeAuthKeys", TypeShape.of(ListIntegrationRuntimeAuthKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The integration runtime authentication keys.
+     * API Version: 2018-06-01.
+     * 
+     */
+    public static CompletableFuture<ListIntegrationRuntimeAuthKeysResult> listIntegrationRuntimeAuthKeysPlain(ListIntegrationRuntimeAuthKeysPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datafactory:listIntegrationRuntimeAuthKeys", TypeShape.of(ListIntegrationRuntimeAuthKeysResult.class), args, Utilities.withVersion(options));
     }
 }

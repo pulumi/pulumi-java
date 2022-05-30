@@ -10,8 +10,11 @@ import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.firebase.inputs.GetWebAppArgs;
 import com.pulumi.gcp.firebase.inputs.GetWebAppConfigArgs;
+import com.pulumi.gcp.firebase.inputs.GetWebAppConfigPlainArgs;
+import com.pulumi.gcp.firebase.inputs.GetWebAppPlainArgs;
 import com.pulumi.gcp.firebase.outputs.GetWebAppConfigResult;
 import com.pulumi.gcp.firebase.outputs.GetWebAppResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class FirebaseFunctions {
     /**
@@ -25,8 +28,22 @@ public final class FirebaseFunctions {
      * A Google Cloud Firebase web application instance
      * 
      */
+    public static CompletableFuture<GetWebAppResult> getWebAppPlain(GetWebAppPlainArgs args) {
+        return getWebAppPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A Google Cloud Firebase web application instance
+     * 
+     */
     public static Output<GetWebAppResult> getWebApp(GetWebAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("gcp:firebase/getWebApp:getWebApp", TypeShape.of(GetWebAppResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A Google Cloud Firebase web application instance
+     * 
+     */
+    public static CompletableFuture<GetWebAppResult> getWebAppPlain(GetWebAppPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("gcp:firebase/getWebApp:getWebApp", TypeShape.of(GetWebAppResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A Google Cloud Firebase web application configuration
@@ -51,7 +68,33 @@ public final class FirebaseFunctions {
      *     * [Official Documentation](https://firebase.google.com/)
      * 
      */
+    public static CompletableFuture<GetWebAppConfigResult> getWebAppConfigPlain(GetWebAppConfigPlainArgs args) {
+        return getWebAppConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A Google Cloud Firebase web application configuration
+     * 
+     * To get more information about WebApp, see:
+     * 
+     * * [API documentation](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps)
+     * * How-to Guides
+     *     * [Official Documentation](https://firebase.google.com/)
+     * 
+     */
     public static Output<GetWebAppConfigResult> getWebAppConfig(GetWebAppConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("gcp:firebase/getWebAppConfig:getWebAppConfig", TypeShape.of(GetWebAppConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A Google Cloud Firebase web application configuration
+     * 
+     * To get more information about WebApp, see:
+     * 
+     * * [API documentation](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps)
+     * * How-to Guides
+     *     * [Official Documentation](https://firebase.google.com/)
+     * 
+     */
+    public static CompletableFuture<GetWebAppConfigResult> getWebAppConfigPlain(GetWebAppConfigPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("gcp:firebase/getWebAppConfig:getWebAppConfig", TypeShape.of(GetWebAppConfigResult.class), args, Utilities.withVersion(options));
     }
 }

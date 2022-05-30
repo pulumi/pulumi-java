@@ -5,11 +5,13 @@ package com.pulumi.awsnative.certificatemanager;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.certificatemanager.inputs.GetAccountArgs;
+import com.pulumi.awsnative.certificatemanager.inputs.GetAccountPlainArgs;
 import com.pulumi.awsnative.certificatemanager.outputs.GetAccountResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class CertificatemanagerFunctions {
     /**
@@ -23,7 +25,21 @@ public final class CertificatemanagerFunctions {
      * Resource schema for AWS::CertificateManager::Account.
      * 
      */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args) {
+        return getAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::CertificateManager::Account.
+     * 
+     */
     public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:certificatemanager:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::CertificateManager::Account.
+     * 
+     */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:certificatemanager:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
 }

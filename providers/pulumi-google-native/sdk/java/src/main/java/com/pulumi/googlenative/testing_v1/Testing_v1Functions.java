@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.testing_v1.inputs.GetTestMatrixArgs;
+import com.pulumi.googlenative.testing_v1.inputs.GetTestMatrixPlainArgs;
 import com.pulumi.googlenative.testing_v1.outputs.GetTestMatrixResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Testing_v1Functions {
     /**
@@ -23,7 +25,21 @@ public final class Testing_v1Functions {
      * Checks the status of a test matrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
      * 
      */
+    public static CompletableFuture<GetTestMatrixResult> getTestMatrixPlain(GetTestMatrixPlainArgs args) {
+        return getTestMatrixPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Checks the status of a test matrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
+     * 
+     */
     public static Output<GetTestMatrixResult> getTestMatrix(GetTestMatrixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:testing/v1:getTestMatrix", TypeShape.of(GetTestMatrixResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Checks the status of a test matrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
+     * 
+     */
+    public static CompletableFuture<GetTestMatrixResult> getTestMatrixPlain(GetTestMatrixPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:testing/v1:getTestMatrix", TypeShape.of(GetTestMatrixResult.class), args, Utilities.withVersion(options));
     }
 }

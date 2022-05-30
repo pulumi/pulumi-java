@@ -9,9 +9,12 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.runtimeconfig.inputs.GetConfigArgs;
+import com.pulumi.gcp.runtimeconfig.inputs.GetConfigPlainArgs;
 import com.pulumi.gcp.runtimeconfig.inputs.GetVariableArgs;
+import com.pulumi.gcp.runtimeconfig.inputs.GetVariablePlainArgs;
 import com.pulumi.gcp.runtimeconfig.outputs.GetConfigResult;
 import com.pulumi.gcp.runtimeconfig.outputs.GetVariableResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class RuntimeconfigFunctions {
     /**
@@ -67,8 +70,64 @@ public final class RuntimeconfigFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetConfigResult> getConfigPlain(GetConfigPlainArgs args) {
+        return getConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var run-service = Output.of(RuntimeconfigFunctions.getConfig(GetConfigArgs.builder()
+     *             .name(&#34;my-service&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("gcp:runtimeconfig/getConfig:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var run-service = Output.of(RuntimeconfigFunctions.getConfig(GetConfigArgs.builder()
+     *             .name(&#34;my-service&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetConfigResult> getConfigPlain(GetConfigPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("gcp:runtimeconfig/getConfig:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ## Example Usage
@@ -125,7 +184,65 @@ public final class RuntimeconfigFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetVariableResult> getVariablePlain(GetVariablePlainArgs args) {
+        return getVariablePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var run-service = Output.of(RuntimeconfigFunctions.getVariable(GetVariableArgs.builder()
+     *             .name(&#34;prod-variables/hostname&#34;)
+     *             .parent(&#34;my-service&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetVariableResult> getVariable(GetVariableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("gcp:runtimeconfig/getVariable:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var run-service = Output.of(RuntimeconfigFunctions.getVariable(GetVariableArgs.builder()
+     *             .name(&#34;prod-variables/hostname&#34;)
+     *             .parent(&#34;my-service&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetVariableResult> getVariablePlain(GetVariablePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("gcp:runtimeconfig/getVariable:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
     }
 }

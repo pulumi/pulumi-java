@@ -9,9 +9,12 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.osconfig_v1.inputs.GetOsPolicyAssignmentArgs;
+import com.pulumi.googlenative.osconfig_v1.inputs.GetOsPolicyAssignmentPlainArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.GetPatchDeploymentArgs;
+import com.pulumi.googlenative.osconfig_v1.inputs.GetPatchDeploymentPlainArgs;
 import com.pulumi.googlenative.osconfig_v1.outputs.GetOsPolicyAssignmentResult;
 import com.pulumi.googlenative.osconfig_v1.outputs.GetPatchDeploymentResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Osconfig_v1Functions {
     /**
@@ -25,8 +28,22 @@ public final class Osconfig_v1Functions {
      * Retrieve an existing OS policy assignment. This method always returns the latest revision. In order to retrieve a previous revision of the assignment, also provide the revision ID in the `name` parameter.
      * 
      */
+    public static CompletableFuture<GetOsPolicyAssignmentResult> getOsPolicyAssignmentPlain(GetOsPolicyAssignmentPlainArgs args) {
+        return getOsPolicyAssignmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve an existing OS policy assignment. This method always returns the latest revision. In order to retrieve a previous revision of the assignment, also provide the revision ID in the `name` parameter.
+     * 
+     */
     public static Output<GetOsPolicyAssignmentResult> getOsPolicyAssignment(GetOsPolicyAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:osconfig/v1:getOsPolicyAssignment", TypeShape.of(GetOsPolicyAssignmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve an existing OS policy assignment. This method always returns the latest revision. In order to retrieve a previous revision of the assignment, also provide the revision ID in the `name` parameter.
+     * 
+     */
+    public static CompletableFuture<GetOsPolicyAssignmentResult> getOsPolicyAssignmentPlain(GetOsPolicyAssignmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:osconfig/v1:getOsPolicyAssignment", TypeShape.of(GetOsPolicyAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get an OS Config patch deployment.
@@ -39,7 +56,21 @@ public final class Osconfig_v1Functions {
      * Get an OS Config patch deployment.
      * 
      */
+    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeploymentPlain(GetPatchDeploymentPlainArgs args) {
+        return getPatchDeploymentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get an OS Config patch deployment.
+     * 
+     */
     public static Output<GetPatchDeploymentResult> getPatchDeployment(GetPatchDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:osconfig/v1:getPatchDeployment", TypeShape.of(GetPatchDeploymentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get an OS Config patch deployment.
+     * 
+     */
+    public static CompletableFuture<GetPatchDeploymentResult> getPatchDeploymentPlain(GetPatchDeploymentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:osconfig/v1:getPatchDeployment", TypeShape.of(GetPatchDeploymentResult.class), args, Utilities.withVersion(options));
     }
 }

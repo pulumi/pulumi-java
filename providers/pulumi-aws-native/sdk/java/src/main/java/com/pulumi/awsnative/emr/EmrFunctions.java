@@ -5,13 +5,16 @@ package com.pulumi.awsnative.emr;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.emr.inputs.GetStudioArgs;
+import com.pulumi.awsnative.emr.inputs.GetStudioPlainArgs;
 import com.pulumi.awsnative.emr.inputs.GetStudioSessionMappingArgs;
+import com.pulumi.awsnative.emr.inputs.GetStudioSessionMappingPlainArgs;
 import com.pulumi.awsnative.emr.outputs.GetStudioResult;
 import com.pulumi.awsnative.emr.outputs.GetStudioSessionMappingResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class EmrFunctions {
     /**
@@ -25,8 +28,22 @@ public final class EmrFunctions {
      * Resource schema for AWS::EMR::Studio
      * 
      */
+    public static CompletableFuture<GetStudioResult> getStudioPlain(GetStudioPlainArgs args) {
+        return getStudioPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::EMR::Studio
+     * 
+     */
     public static Output<GetStudioResult> getStudio(GetStudioArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:emr:getStudio", TypeShape.of(GetStudioResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::EMR::Studio
+     * 
+     */
+    public static CompletableFuture<GetStudioResult> getStudioPlain(GetStudioPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:emr:getStudio", TypeShape.of(GetStudioResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
@@ -39,7 +56,21 @@ public final class EmrFunctions {
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
+    public static CompletableFuture<GetStudioSessionMappingResult> getStudioSessionMappingPlain(GetStudioSessionMappingPlainArgs args) {
+        return getStudioSessionMappingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static Output<GetStudioSessionMappingResult> getStudioSessionMapping(GetStudioSessionMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:emr:getStudioSessionMapping", TypeShape.of(GetStudioSessionMappingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
+    public static CompletableFuture<GetStudioSessionMappingResult> getStudioSessionMappingPlain(GetStudioSessionMappingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:emr:getStudioSessionMapping", TypeShape.of(GetStudioSessionMappingResult.class), args, Utilities.withVersion(options));
     }
 }

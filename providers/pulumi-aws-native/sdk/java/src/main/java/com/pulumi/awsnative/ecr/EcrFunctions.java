@@ -5,9 +5,13 @@ package com.pulumi.awsnative.ecr;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.ecr.inputs.GetPullThroughCacheRuleArgs;
+import com.pulumi.awsnative.ecr.inputs.GetPullThroughCacheRulePlainArgs;
 import com.pulumi.awsnative.ecr.inputs.GetRegistryPolicyArgs;
+import com.pulumi.awsnative.ecr.inputs.GetRegistryPolicyPlainArgs;
 import com.pulumi.awsnative.ecr.inputs.GetReplicationConfigurationArgs;
+import com.pulumi.awsnative.ecr.inputs.GetReplicationConfigurationPlainArgs;
 import com.pulumi.awsnative.ecr.inputs.GetRepositoryArgs;
+import com.pulumi.awsnative.ecr.inputs.GetRepositoryPlainArgs;
 import com.pulumi.awsnative.ecr.outputs.GetPullThroughCacheRuleResult;
 import com.pulumi.awsnative.ecr.outputs.GetRegistryPolicyResult;
 import com.pulumi.awsnative.ecr.outputs.GetReplicationConfigurationResult;
@@ -16,6 +20,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class EcrFunctions {
     /**
@@ -29,8 +34,22 @@ public final class EcrFunctions {
      * The AWS::ECR::PullThroughCacheRule resource configures the upstream registry configuration details for an Amazon Elastic Container Registry (Amazon Private ECR) pull-through cache.
      * 
      */
+    public static CompletableFuture<GetPullThroughCacheRuleResult> getPullThroughCacheRulePlain(GetPullThroughCacheRulePlainArgs args) {
+        return getPullThroughCacheRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::ECR::PullThroughCacheRule resource configures the upstream registry configuration details for an Amazon Elastic Container Registry (Amazon Private ECR) pull-through cache.
+     * 
+     */
     public static Output<GetPullThroughCacheRuleResult> getPullThroughCacheRule(GetPullThroughCacheRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:ecr:getPullThroughCacheRule", TypeShape.of(GetPullThroughCacheRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::ECR::PullThroughCacheRule resource configures the upstream registry configuration details for an Amazon Elastic Container Registry (Amazon Private ECR) pull-through cache.
+     * 
+     */
+    public static CompletableFuture<GetPullThroughCacheRuleResult> getPullThroughCacheRulePlain(GetPullThroughCacheRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:ecr:getPullThroughCacheRule", TypeShape.of(GetPullThroughCacheRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::ECR::RegistryPolicy is used to specify permissions for another AWS account and is used when configuring cross-account replication. For more information, see Registry permissions in the Amazon Elastic Container Registry User Guide: https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html
@@ -43,8 +62,22 @@ public final class EcrFunctions {
      * The AWS::ECR::RegistryPolicy is used to specify permissions for another AWS account and is used when configuring cross-account replication. For more information, see Registry permissions in the Amazon Elastic Container Registry User Guide: https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html
      * 
      */
+    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicyPlain(GetRegistryPolicyPlainArgs args) {
+        return getRegistryPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::ECR::RegistryPolicy is used to specify permissions for another AWS account and is used when configuring cross-account replication. For more information, see Registry permissions in the Amazon Elastic Container Registry User Guide: https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html
+     * 
+     */
     public static Output<GetRegistryPolicyResult> getRegistryPolicy(GetRegistryPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:ecr:getRegistryPolicy", TypeShape.of(GetRegistryPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::ECR::RegistryPolicy is used to specify permissions for another AWS account and is used when configuring cross-account replication. For more information, see Registry permissions in the Amazon Elastic Container Registry User Guide: https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html
+     * 
+     */
+    public static CompletableFuture<GetRegistryPolicyResult> getRegistryPolicyPlain(GetRegistryPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:ecr:getRegistryPolicy", TypeShape.of(GetRegistryPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::ECR::ReplicationConfiguration resource configures the replication destinations for an Amazon Elastic Container Registry (Amazon Private ECR). For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html
@@ -57,8 +90,22 @@ public final class EcrFunctions {
      * The AWS::ECR::ReplicationConfiguration resource configures the replication destinations for an Amazon Elastic Container Registry (Amazon Private ECR). For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html
      * 
      */
+    public static CompletableFuture<GetReplicationConfigurationResult> getReplicationConfigurationPlain(GetReplicationConfigurationPlainArgs args) {
+        return getReplicationConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::ECR::ReplicationConfiguration resource configures the replication destinations for an Amazon Elastic Container Registry (Amazon Private ECR). For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html
+     * 
+     */
     public static Output<GetReplicationConfigurationResult> getReplicationConfiguration(GetReplicationConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:ecr:getReplicationConfiguration", TypeShape.of(GetReplicationConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::ECR::ReplicationConfiguration resource configures the replication destinations for an Amazon Elastic Container Registry (Amazon Private ECR). For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html
+     * 
+     */
+    public static CompletableFuture<GetReplicationConfigurationResult> getReplicationConfigurationPlain(GetReplicationConfigurationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:ecr:getReplicationConfiguration", TypeShape.of(GetReplicationConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::ECR::Repository resource specifies an Amazon Elastic Container Registry (Amazon ECR) repository, where users can push and pull Docker images. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html
@@ -71,7 +118,21 @@ public final class EcrFunctions {
      * The AWS::ECR::Repository resource specifies an Amazon Elastic Container Registry (Amazon ECR) repository, where users can push and pull Docker images. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html
      * 
      */
+    public static CompletableFuture<GetRepositoryResult> getRepositoryPlain(GetRepositoryPlainArgs args) {
+        return getRepositoryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::ECR::Repository resource specifies an Amazon Elastic Container Registry (Amazon ECR) repository, where users can push and pull Docker images. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html
+     * 
+     */
     public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:ecr:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::ECR::Repository resource specifies an Amazon Elastic Container Registry (Amazon ECR) repository, where users can push and pull Docker images. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html
+     * 
+     */
+    public static CompletableFuture<GetRepositoryResult> getRepositoryPlain(GetRepositoryPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:ecr:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

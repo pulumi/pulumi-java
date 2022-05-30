@@ -5,11 +5,13 @@ package com.pulumi.azure.synapse;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.synapse.inputs.GetWorkspaceArgs;
+import com.pulumi.azure.synapse.inputs.GetWorkspacePlainArgs;
 import com.pulumi.azure.synapse.outputs.GetWorkspaceResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class SynapseFunctions {
     /**
@@ -73,7 +75,71 @@ public final class SynapseFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetWorkspaceResult> getWorkspacePlain(GetWorkspacePlainArgs args) {
+        return getWorkspacePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Synapse Workspace.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(SynapseFunctions.getWorkspace(GetWorkspaceArgs.builder()
+     *             .name(&#34;existing&#34;)
+     *             .resourceGroupName(&#34;example-resource-group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getWorkspaceResult -&gt; getWorkspaceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:synapse/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Synapse Workspace.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(SynapseFunctions.getWorkspace(GetWorkspaceArgs.builder()
+     *             .name(&#34;existing&#34;)
+     *             .resourceGroupName(&#34;example-resource-group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getWorkspaceResult -&gt; getWorkspaceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetWorkspaceResult> getWorkspacePlain(GetWorkspacePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:synapse/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

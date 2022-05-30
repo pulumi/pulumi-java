@@ -5,13 +5,16 @@ package com.pulumi.awsnative.s3objectlambda;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.s3objectlambda.inputs.GetAccessPointArgs;
+import com.pulumi.awsnative.s3objectlambda.inputs.GetAccessPointPlainArgs;
 import com.pulumi.awsnative.s3objectlambda.inputs.GetAccessPointPolicyArgs;
+import com.pulumi.awsnative.s3objectlambda.inputs.GetAccessPointPolicyPlainArgs;
 import com.pulumi.awsnative.s3objectlambda.outputs.GetAccessPointPolicyResult;
 import com.pulumi.awsnative.s3objectlambda.outputs.GetAccessPointResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class S3objectlambdaFunctions {
     /**
@@ -25,8 +28,22 @@ public final class S3objectlambdaFunctions {
      * The AWS::S3ObjectLambda::AccessPoint resource is an Amazon S3ObjectLambda resource type that you can use to add computation to S3 actions
      * 
      */
+    public static CompletableFuture<GetAccessPointResult> getAccessPointPlain(GetAccessPointPlainArgs args) {
+        return getAccessPointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::S3ObjectLambda::AccessPoint resource is an Amazon S3ObjectLambda resource type that you can use to add computation to S3 actions
+     * 
+     */
     public static Output<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:s3objectlambda:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::S3ObjectLambda::AccessPoint resource is an Amazon S3ObjectLambda resource type that you can use to add computation to S3 actions
+     * 
+     */
+    public static CompletableFuture<GetAccessPointResult> getAccessPointPlain(GetAccessPointPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:s3objectlambda:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AWS::S3ObjectLambda::AccessPointPolicy resource is an Amazon S3ObjectLambda policy type that you can use to control permissions for your S3ObjectLambda
@@ -39,7 +56,21 @@ public final class S3objectlambdaFunctions {
      * AWS::S3ObjectLambda::AccessPointPolicy resource is an Amazon S3ObjectLambda policy type that you can use to control permissions for your S3ObjectLambda
      * 
      */
+    public static CompletableFuture<GetAccessPointPolicyResult> getAccessPointPolicyPlain(GetAccessPointPolicyPlainArgs args) {
+        return getAccessPointPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * AWS::S3ObjectLambda::AccessPointPolicy resource is an Amazon S3ObjectLambda policy type that you can use to control permissions for your S3ObjectLambda
+     * 
+     */
     public static Output<GetAccessPointPolicyResult> getAccessPointPolicy(GetAccessPointPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:s3objectlambda:getAccessPointPolicy", TypeShape.of(GetAccessPointPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * AWS::S3ObjectLambda::AccessPointPolicy resource is an Amazon S3ObjectLambda policy type that you can use to control permissions for your S3ObjectLambda
+     * 
+     */
+    public static CompletableFuture<GetAccessPointPolicyResult> getAccessPointPolicyPlain(GetAccessPointPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:s3objectlambda:getAccessPointPolicy", TypeShape.of(GetAccessPointPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

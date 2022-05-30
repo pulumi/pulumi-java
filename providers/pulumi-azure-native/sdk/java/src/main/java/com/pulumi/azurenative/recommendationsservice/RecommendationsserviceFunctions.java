@@ -5,8 +5,11 @@ package com.pulumi.azurenative.recommendationsservice;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.recommendationsservice.inputs.GetAccountArgs;
+import com.pulumi.azurenative.recommendationsservice.inputs.GetAccountPlainArgs;
 import com.pulumi.azurenative.recommendationsservice.inputs.GetModelingArgs;
+import com.pulumi.azurenative.recommendationsservice.inputs.GetModelingPlainArgs;
 import com.pulumi.azurenative.recommendationsservice.inputs.GetServiceEndpointArgs;
+import com.pulumi.azurenative.recommendationsservice.inputs.GetServiceEndpointPlainArgs;
 import com.pulumi.azurenative.recommendationsservice.outputs.GetAccountResult;
 import com.pulumi.azurenative.recommendationsservice.outputs.GetModelingResult;
 import com.pulumi.azurenative.recommendationsservice.outputs.GetServiceEndpointResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class RecommendationsserviceFunctions {
     /**
@@ -29,8 +33,24 @@ public final class RecommendationsserviceFunctions {
      * API Version: 2022-02-01.
      * 
      */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args) {
+        return getAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Account resource details.
+     * API Version: 2022-02-01.
+     * 
+     */
     public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:recommendationsservice:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Account resource details.
+     * API Version: 2022-02-01.
+     * 
+     */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:recommendationsservice:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Modeling resource details.
@@ -45,8 +65,24 @@ public final class RecommendationsserviceFunctions {
      * API Version: 2022-02-01.
      * 
      */
+    public static CompletableFuture<GetModelingResult> getModelingPlain(GetModelingPlainArgs args) {
+        return getModelingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Modeling resource details.
+     * API Version: 2022-02-01.
+     * 
+     */
     public static Output<GetModelingResult> getModeling(GetModelingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:recommendationsservice:getModeling", TypeShape.of(GetModelingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Modeling resource details.
+     * API Version: 2022-02-01.
+     * 
+     */
+    public static CompletableFuture<GetModelingResult> getModelingPlain(GetModelingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:recommendationsservice:getModeling", TypeShape.of(GetModelingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ServiceEndpoint resource details.
@@ -61,7 +97,23 @@ public final class RecommendationsserviceFunctions {
      * API Version: 2022-02-01.
      * 
      */
+    public static CompletableFuture<GetServiceEndpointResult> getServiceEndpointPlain(GetServiceEndpointPlainArgs args) {
+        return getServiceEndpointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ServiceEndpoint resource details.
+     * API Version: 2022-02-01.
+     * 
+     */
     public static Output<GetServiceEndpointResult> getServiceEndpoint(GetServiceEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:recommendationsservice:getServiceEndpoint", TypeShape.of(GetServiceEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ServiceEndpoint resource details.
+     * API Version: 2022-02-01.
+     * 
+     */
+    public static CompletableFuture<GetServiceEndpointResult> getServiceEndpointPlain(GetServiceEndpointPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:recommendationsservice:getServiceEndpoint", TypeShape.of(GetServiceEndpointResult.class), args, Utilities.withVersion(options));
     }
 }

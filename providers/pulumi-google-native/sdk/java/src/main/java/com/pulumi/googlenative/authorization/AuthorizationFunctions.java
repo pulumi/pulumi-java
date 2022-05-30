@@ -11,6 +11,7 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.authorization.outputs.GetClientConfigResult;
 import com.pulumi.googlenative.authorization.outputs.GetClientTokenResult;
 import com.pulumi.resources.InvokeArgs;
+import java.util.concurrent.CompletableFuture;
 
 public final class AuthorizationFunctions {
     /**
@@ -24,6 +25,13 @@ public final class AuthorizationFunctions {
      * Use this function to access the current configuration of the native Google provider.
      * 
      */
+    public static CompletableFuture<GetClientConfigResult> getClientConfigPlain() {
+        return getClientConfigPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this function to access the current configuration of the native Google provider.
+     * 
+     */
     public static Output<GetClientConfigResult> getClientConfig(InvokeArgs args) {
         return getClientConfig(args, InvokeOptions.Empty);
     }
@@ -31,8 +39,22 @@ public final class AuthorizationFunctions {
      * Use this function to access the current configuration of the native Google provider.
      * 
      */
+    public static CompletableFuture<GetClientConfigResult> getClientConfigPlain(InvokeArgs args) {
+        return getClientConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this function to access the current configuration of the native Google provider.
+     * 
+     */
     public static Output<GetClientConfigResult> getClientConfig(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:authorization:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this function to access the current configuration of the native Google provider.
+     * 
+     */
+    public static CompletableFuture<GetClientConfigResult> getClientConfigPlain(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:authorization:getClientConfig", TypeShape.of(GetClientConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this function to get an Google authentication token for the current login context.
@@ -45,6 +67,13 @@ public final class AuthorizationFunctions {
      * Use this function to get an Google authentication token for the current login context.
      * 
      */
+    public static CompletableFuture<GetClientTokenResult> getClientTokenPlain() {
+        return getClientTokenPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this function to get an Google authentication token for the current login context.
+     * 
+     */
     public static Output<GetClientTokenResult> getClientToken(InvokeArgs args) {
         return getClientToken(args, InvokeOptions.Empty);
     }
@@ -52,7 +81,21 @@ public final class AuthorizationFunctions {
      * Use this function to get an Google authentication token for the current login context.
      * 
      */
+    public static CompletableFuture<GetClientTokenResult> getClientTokenPlain(InvokeArgs args) {
+        return getClientTokenPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this function to get an Google authentication token for the current login context.
+     * 
+     */
     public static Output<GetClientTokenResult> getClientToken(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:authorization:getClientToken", TypeShape.of(GetClientTokenResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this function to get an Google authentication token for the current login context.
+     * 
+     */
+    public static CompletableFuture<GetClientTokenResult> getClientTokenPlain(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:authorization:getClientToken", TypeShape.of(GetClientTokenResult.class), args, Utilities.withVersion(options));
     }
 }

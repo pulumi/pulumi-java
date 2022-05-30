@@ -5,9 +5,13 @@ package com.pulumi.azurenative.digitaltwins;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.digitaltwins.inputs.GetDigitalTwinArgs;
+import com.pulumi.azurenative.digitaltwins.inputs.GetDigitalTwinPlainArgs;
 import com.pulumi.azurenative.digitaltwins.inputs.GetDigitalTwinsEndpointArgs;
+import com.pulumi.azurenative.digitaltwins.inputs.GetDigitalTwinsEndpointPlainArgs;
 import com.pulumi.azurenative.digitaltwins.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.digitaltwins.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.digitaltwins.inputs.GetTimeSeriesDatabaseConnectionArgs;
+import com.pulumi.azurenative.digitaltwins.inputs.GetTimeSeriesDatabaseConnectionPlainArgs;
 import com.pulumi.azurenative.digitaltwins.outputs.GetDigitalTwinResult;
 import com.pulumi.azurenative.digitaltwins.outputs.GetDigitalTwinsEndpointResult;
 import com.pulumi.azurenative.digitaltwins.outputs.GetPrivateEndpointConnectionResult;
@@ -16,6 +20,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class DigitaltwinsFunctions {
     /**
@@ -31,8 +36,24 @@ public final class DigitaltwinsFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetDigitalTwinResult> getDigitalTwinPlain(GetDigitalTwinPlainArgs args) {
+        return getDigitalTwinPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The description of the DigitalTwins service.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetDigitalTwinResult> getDigitalTwin(GetDigitalTwinArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:digitaltwins:getDigitalTwin", TypeShape.of(GetDigitalTwinResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The description of the DigitalTwins service.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetDigitalTwinResult> getDigitalTwinPlain(GetDigitalTwinPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getDigitalTwin", TypeShape.of(GetDigitalTwinResult.class), args, Utilities.withVersion(options));
     }
     /**
      * DigitalTwinsInstance endpoint resource.
@@ -47,8 +68,24 @@ public final class DigitaltwinsFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetDigitalTwinsEndpointResult> getDigitalTwinsEndpointPlain(GetDigitalTwinsEndpointPlainArgs args) {
+        return getDigitalTwinsEndpointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * DigitalTwinsInstance endpoint resource.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetDigitalTwinsEndpointResult> getDigitalTwinsEndpoint(GetDigitalTwinsEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:digitaltwins:getDigitalTwinsEndpoint", TypeShape.of(GetDigitalTwinsEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * DigitalTwinsInstance endpoint resource.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetDigitalTwinsEndpointResult> getDigitalTwinsEndpointPlain(GetDigitalTwinsEndpointPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getDigitalTwinsEndpoint", TypeShape.of(GetDigitalTwinsEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The private endpoint connection of a Digital Twin.
@@ -63,8 +100,24 @@ public final class DigitaltwinsFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The private endpoint connection of a Digital Twin.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:digitaltwins:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The private endpoint connection of a Digital Twin.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Describes a time series database connection resource.
@@ -79,7 +132,23 @@ public final class DigitaltwinsFunctions {
      * API Version: 2021-06-30-preview.
      * 
      */
+    public static CompletableFuture<GetTimeSeriesDatabaseConnectionResult> getTimeSeriesDatabaseConnectionPlain(GetTimeSeriesDatabaseConnectionPlainArgs args) {
+        return getTimeSeriesDatabaseConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Describes a time series database connection resource.
+     * API Version: 2021-06-30-preview.
+     * 
+     */
     public static Output<GetTimeSeriesDatabaseConnectionResult> getTimeSeriesDatabaseConnection(GetTimeSeriesDatabaseConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:digitaltwins:getTimeSeriesDatabaseConnection", TypeShape.of(GetTimeSeriesDatabaseConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Describes a time series database connection resource.
+     * API Version: 2021-06-30-preview.
+     * 
+     */
+    public static CompletableFuture<GetTimeSeriesDatabaseConnectionResult> getTimeSeriesDatabaseConnectionPlain(GetTimeSeriesDatabaseConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getTimeSeriesDatabaseConnection", TypeShape.of(GetTimeSeriesDatabaseConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

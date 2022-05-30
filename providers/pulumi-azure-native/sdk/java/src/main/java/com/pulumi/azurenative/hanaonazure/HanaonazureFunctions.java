@@ -5,8 +5,11 @@ package com.pulumi.azurenative.hanaonazure;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.hanaonazure.inputs.GetHanaInstanceArgs;
+import com.pulumi.azurenative.hanaonazure.inputs.GetHanaInstancePlainArgs;
 import com.pulumi.azurenative.hanaonazure.inputs.GetProviderInstanceArgs;
+import com.pulumi.azurenative.hanaonazure.inputs.GetProviderInstancePlainArgs;
 import com.pulumi.azurenative.hanaonazure.inputs.GetSapMonitorArgs;
+import com.pulumi.azurenative.hanaonazure.inputs.GetSapMonitorPlainArgs;
 import com.pulumi.azurenative.hanaonazure.outputs.GetHanaInstanceResult;
 import com.pulumi.azurenative.hanaonazure.outputs.GetProviderInstanceResult;
 import com.pulumi.azurenative.hanaonazure.outputs.GetSapMonitorResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class HanaonazureFunctions {
     /**
@@ -29,8 +33,24 @@ public final class HanaonazureFunctions {
      * API Version: 2017-11-03-preview.
      * 
      */
+    public static CompletableFuture<GetHanaInstanceResult> getHanaInstancePlain(GetHanaInstancePlainArgs args) {
+        return getHanaInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * HANA instance info on Azure (ARM properties and HANA properties)
+     * API Version: 2017-11-03-preview.
+     * 
+     */
     public static Output<GetHanaInstanceResult> getHanaInstance(GetHanaInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hanaonazure:getHanaInstance", TypeShape.of(GetHanaInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * HANA instance info on Azure (ARM properties and HANA properties)
+     * API Version: 2017-11-03-preview.
+     * 
+     */
+    public static CompletableFuture<GetHanaInstanceResult> getHanaInstancePlain(GetHanaInstancePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hanaonazure:getHanaInstance", TypeShape.of(GetHanaInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A provider instance associated with a SAP monitor.
@@ -45,8 +65,24 @@ public final class HanaonazureFunctions {
      * API Version: 2020-02-07-preview.
      * 
      */
+    public static CompletableFuture<GetProviderInstanceResult> getProviderInstancePlain(GetProviderInstancePlainArgs args) {
+        return getProviderInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A provider instance associated with a SAP monitor.
+     * API Version: 2020-02-07-preview.
+     * 
+     */
     public static Output<GetProviderInstanceResult> getProviderInstance(GetProviderInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hanaonazure:getProviderInstance", TypeShape.of(GetProviderInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A provider instance associated with a SAP monitor.
+     * API Version: 2020-02-07-preview.
+     * 
+     */
+    public static CompletableFuture<GetProviderInstanceResult> getProviderInstancePlain(GetProviderInstancePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hanaonazure:getProviderInstance", TypeShape.of(GetProviderInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * SAP monitor info on Azure (ARM properties and SAP monitor properties)
@@ -61,7 +97,23 @@ public final class HanaonazureFunctions {
      * API Version: 2020-02-07-preview.
      * 
      */
+    public static CompletableFuture<GetSapMonitorResult> getSapMonitorPlain(GetSapMonitorPlainArgs args) {
+        return getSapMonitorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * SAP monitor info on Azure (ARM properties and SAP monitor properties)
+     * API Version: 2020-02-07-preview.
+     * 
+     */
     public static Output<GetSapMonitorResult> getSapMonitor(GetSapMonitorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hanaonazure:getSapMonitor", TypeShape.of(GetSapMonitorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * SAP monitor info on Azure (ARM properties and SAP monitor properties)
+     * API Version: 2020-02-07-preview.
+     * 
+     */
+    public static CompletableFuture<GetSapMonitorResult> getSapMonitorPlain(GetSapMonitorPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hanaonazure:getSapMonitor", TypeShape.of(GetSapMonitorResult.class), args, Utilities.withVersion(options));
     }
 }

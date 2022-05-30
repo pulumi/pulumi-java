@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.recaptchaenterprise_v1.inputs.GetKeyArgs;
+import com.pulumi.googlenative.recaptchaenterprise_v1.inputs.GetKeyPlainArgs;
 import com.pulumi.googlenative.recaptchaenterprise_v1.outputs.GetKeyResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Recaptchaenterprise_v1Functions {
     /**
@@ -23,7 +25,21 @@ public final class Recaptchaenterprise_v1Functions {
      * Returns the specified key.
      * 
      */
+    public static CompletableFuture<GetKeyResult> getKeyPlain(GetKeyPlainArgs args) {
+        return getKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified key.
+     * 
+     */
     public static Output<GetKeyResult> getKey(GetKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:recaptchaenterprise/v1:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified key.
+     * 
+     */
+    public static CompletableFuture<GetKeyResult> getKeyPlain(GetKeyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:recaptchaenterprise/v1:getKey", TypeShape.of(GetKeyResult.class), args, Utilities.withVersion(options));
     }
 }

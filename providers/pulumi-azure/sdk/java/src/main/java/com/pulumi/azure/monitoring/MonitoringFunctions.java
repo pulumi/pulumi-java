@@ -5,10 +5,15 @@ package com.pulumi.azure.monitoring;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.monitoring.inputs.GetActionGroupArgs;
+import com.pulumi.azure.monitoring.inputs.GetActionGroupPlainArgs;
 import com.pulumi.azure.monitoring.inputs.GetDiagnosticCategoriesArgs;
+import com.pulumi.azure.monitoring.inputs.GetDiagnosticCategoriesPlainArgs;
 import com.pulumi.azure.monitoring.inputs.GetLogProfileArgs;
+import com.pulumi.azure.monitoring.inputs.GetLogProfilePlainArgs;
 import com.pulumi.azure.monitoring.inputs.GetScheduledQueryRulesAlertArgs;
+import com.pulumi.azure.monitoring.inputs.GetScheduledQueryRulesAlertPlainArgs;
 import com.pulumi.azure.monitoring.inputs.GetScheduledQueryRulesLogArgs;
+import com.pulumi.azure.monitoring.inputs.GetScheduledQueryRulesLogPlainArgs;
 import com.pulumi.azure.monitoring.outputs.GetActionGroupResult;
 import com.pulumi.azure.monitoring.outputs.GetDiagnosticCategoriesResult;
 import com.pulumi.azure.monitoring.outputs.GetLogProfileResult;
@@ -18,6 +23,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class MonitoringFunctions {
     /**
@@ -81,8 +87,72 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetActionGroupResult> getActionGroupPlain(GetActionGroupPlainArgs args) {
+        return getActionGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access the properties of an Action Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MonitoringFunctions.getActionGroup(GetActionGroupArgs.builder()
+     *             .resourceGroupName(&#34;example-rg&#34;)
+     *             .name(&#34;tfex-actiongroup&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;actionGroupId&#34;, example.apply(getActionGroupResult -&gt; getActionGroupResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetActionGroupResult> getActionGroup(GetActionGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:monitoring/getActionGroup:getActionGroup", TypeShape.of(GetActionGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access the properties of an Action Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MonitoringFunctions.getActionGroup(GetActionGroupArgs.builder()
+     *             .resourceGroupName(&#34;example-rg&#34;)
+     *             .name(&#34;tfex-actiongroup&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;actionGroupId&#34;, example.apply(getActionGroupResult -&gt; getActionGroupResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetActionGroupResult> getActionGroupPlain(GetActionGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:monitoring/getActionGroup:getActionGroup", TypeShape.of(GetActionGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about the Monitor Diagnostics Categories supported by an existing Resource.
@@ -151,8 +221,78 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetDiagnosticCategoriesResult> getDiagnosticCategoriesPlain(GetDiagnosticCategoriesPlainArgs args) {
+        return getDiagnosticCategoriesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about the Monitor Diagnostics Categories supported by an existing Resource.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var exampleKeyVault = Output.of(KeyvaultFunctions.getKeyVault(GetKeyVaultArgs.builder()
+     *             .name(azurerm_key_vault.getExample().getName())
+     *             .resourceGroupName(azurerm_key_vault.getExample().getResource_group_name())
+     *             .build()));
+     * 
+     *         final var exampleDiagnosticCategories = Output.of(MonitoringFunctions.getDiagnosticCategories(GetDiagnosticCategoriesArgs.builder()
+     *             .resourceId(exampleKeyVault.apply(getKeyVaultResult -&gt; getKeyVaultResult.getId()))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetDiagnosticCategoriesResult> getDiagnosticCategories(GetDiagnosticCategoriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:monitoring/getDiagnosticCategories:getDiagnosticCategories", TypeShape.of(GetDiagnosticCategoriesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about the Monitor Diagnostics Categories supported by an existing Resource.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var exampleKeyVault = Output.of(KeyvaultFunctions.getKeyVault(GetKeyVaultArgs.builder()
+     *             .name(azurerm_key_vault.getExample().getName())
+     *             .resourceGroupName(azurerm_key_vault.getExample().getResource_group_name())
+     *             .build()));
+     * 
+     *         final var exampleDiagnosticCategories = Output.of(MonitoringFunctions.getDiagnosticCategories(GetDiagnosticCategoriesArgs.builder()
+     *             .resourceId(exampleKeyVault.apply(getKeyVaultResult -&gt; getKeyVaultResult.getId()))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetDiagnosticCategoriesResult> getDiagnosticCategoriesPlain(GetDiagnosticCategoriesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:monitoring/getDiagnosticCategories:getDiagnosticCategories", TypeShape.of(GetDiagnosticCategoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access the properties of a Log Profile.
@@ -213,8 +353,70 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetLogProfileResult> getLogProfilePlain(GetLogProfilePlainArgs args) {
+        return getLogProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access the properties of a Log Profile.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MonitoringFunctions.getLogProfile(GetLogProfileArgs.builder()
+     *             .name(&#34;test-logprofile&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;logProfileStorageAccountId&#34;, example.apply(getLogProfileResult -&gt; getLogProfileResult.getStorageAccountId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLogProfileResult> getLogProfile(GetLogProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:monitoring/getLogProfile:getLogProfile", TypeShape.of(GetLogProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access the properties of a Log Profile.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MonitoringFunctions.getLogProfile(GetLogProfileArgs.builder()
+     *             .name(&#34;test-logprofile&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;logProfileStorageAccountId&#34;, example.apply(getLogProfileResult -&gt; getLogProfileResult.getStorageAccountId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetLogProfileResult> getLogProfilePlain(GetLogProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:monitoring/getLogProfile:getLogProfile", TypeShape.of(GetLogProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access the properties of an AlertingAction scheduled query rule.
@@ -277,8 +479,72 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetScheduledQueryRulesAlertResult> getScheduledQueryRulesAlertPlain(GetScheduledQueryRulesAlertPlainArgs args) {
+        return getScheduledQueryRulesAlertPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access the properties of an AlertingAction scheduled query rule.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MonitoringFunctions.getScheduledQueryRulesAlert(GetScheduledQueryRulesAlertArgs.builder()
+     *             .resourceGroupName(&#34;example-rg&#34;)
+     *             .name(&#34;tfex-queryrule&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;queryRuleId&#34;, example.apply(getScheduledQueryRulesAlertResult -&gt; getScheduledQueryRulesAlertResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetScheduledQueryRulesAlertResult> getScheduledQueryRulesAlert(GetScheduledQueryRulesAlertArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:monitoring/getScheduledQueryRulesAlert:getScheduledQueryRulesAlert", TypeShape.of(GetScheduledQueryRulesAlertResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access the properties of an AlertingAction scheduled query rule.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MonitoringFunctions.getScheduledQueryRulesAlert(GetScheduledQueryRulesAlertArgs.builder()
+     *             .resourceGroupName(&#34;example-rg&#34;)
+     *             .name(&#34;tfex-queryrule&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;queryRuleId&#34;, example.apply(getScheduledQueryRulesAlertResult -&gt; getScheduledQueryRulesAlertResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetScheduledQueryRulesAlertResult> getScheduledQueryRulesAlertPlain(GetScheduledQueryRulesAlertPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:monitoring/getScheduledQueryRulesAlert:getScheduledQueryRulesAlert", TypeShape.of(GetScheduledQueryRulesAlertResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access the properties of a LogToMetricAction scheduled query rule.
@@ -341,7 +607,71 @@ public final class MonitoringFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetScheduledQueryRulesLogResult> getScheduledQueryRulesLogPlain(GetScheduledQueryRulesLogPlainArgs args) {
+        return getScheduledQueryRulesLogPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access the properties of a LogToMetricAction scheduled query rule.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MonitoringFunctions.getScheduledQueryRulesLog(GetScheduledQueryRulesLogArgs.builder()
+     *             .resourceGroupName(&#34;example-rg&#34;)
+     *             .name(&#34;tfex-queryrule&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;queryRuleId&#34;, example.apply(getScheduledQueryRulesLogResult -&gt; getScheduledQueryRulesLogResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetScheduledQueryRulesLogResult> getScheduledQueryRulesLog(GetScheduledQueryRulesLogArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure:monitoring/getScheduledQueryRulesLog:getScheduledQueryRulesLog", TypeShape.of(GetScheduledQueryRulesLogResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access the properties of a LogToMetricAction scheduled query rule.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MonitoringFunctions.getScheduledQueryRulesLog(GetScheduledQueryRulesLogArgs.builder()
+     *             .resourceGroupName(&#34;example-rg&#34;)
+     *             .name(&#34;tfex-queryrule&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;queryRuleId&#34;, example.apply(getScheduledQueryRulesLogResult -&gt; getScheduledQueryRulesLogResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetScheduledQueryRulesLogResult> getScheduledQueryRulesLogPlain(GetScheduledQueryRulesLogPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure:monitoring/getScheduledQueryRulesLog:getScheduledQueryRulesLog", TypeShape.of(GetScheduledQueryRulesLogResult.class), args, Utilities.withVersion(options));
     }
 }

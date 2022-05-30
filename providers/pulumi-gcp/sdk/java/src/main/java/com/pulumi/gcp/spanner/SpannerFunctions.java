@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.spanner.inputs.GetInstanceArgs;
+import com.pulumi.gcp.spanner.inputs.GetInstancePlainArgs;
 import com.pulumi.gcp.spanner.outputs.GetInstanceResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class SpannerFunctions {
     /**
@@ -69,7 +71,67 @@ public final class SpannerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args) {
+        return getInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get a spanner instance from Google Cloud by its name.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var foo = Output.of(SpannerFunctions.getInstance(GetInstanceArgs.builder()
+     *             .name(&#34;bar&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("gcp:spanner/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get a spanner instance from Google Cloud by its name.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var foo = Output.of(SpannerFunctions.getInstance(GetInstanceArgs.builder()
+     *             .name(&#34;bar&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("gcp:spanner/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

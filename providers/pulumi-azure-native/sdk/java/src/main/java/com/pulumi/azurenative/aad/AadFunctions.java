@@ -5,13 +5,16 @@ package com.pulumi.azurenative.aad;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.aad.inputs.GetDomainServiceArgs;
+import com.pulumi.azurenative.aad.inputs.GetDomainServicePlainArgs;
 import com.pulumi.azurenative.aad.inputs.GetOuContainerArgs;
+import com.pulumi.azurenative.aad.inputs.GetOuContainerPlainArgs;
 import com.pulumi.azurenative.aad.outputs.GetDomainServiceResult;
 import com.pulumi.azurenative.aad.outputs.GetOuContainerResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class AadFunctions {
     /**
@@ -27,8 +30,24 @@ public final class AadFunctions {
      * API Version: 2021-03-01.
      * 
      */
+    public static CompletableFuture<GetDomainServiceResult> getDomainServicePlain(GetDomainServicePlainArgs args) {
+        return getDomainServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Domain service.
+     * API Version: 2021-03-01.
+     * 
+     */
     public static Output<GetDomainServiceResult> getDomainService(GetDomainServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:aad:getDomainService", TypeShape.of(GetDomainServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Domain service.
+     * API Version: 2021-03-01.
+     * 
+     */
+    public static CompletableFuture<GetDomainServiceResult> getDomainServicePlain(GetDomainServicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:aad:getDomainService", TypeShape.of(GetDomainServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource for OuContainer.
@@ -43,7 +62,23 @@ public final class AadFunctions {
      * API Version: 2021-03-01.
      * 
      */
+    public static CompletableFuture<GetOuContainerResult> getOuContainerPlain(GetOuContainerPlainArgs args) {
+        return getOuContainerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource for OuContainer.
+     * API Version: 2021-03-01.
+     * 
+     */
     public static Output<GetOuContainerResult> getOuContainer(GetOuContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:aad:getOuContainer", TypeShape.of(GetOuContainerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource for OuContainer.
+     * API Version: 2021-03-01.
+     * 
+     */
+    public static CompletableFuture<GetOuContainerResult> getOuContainerPlain(GetOuContainerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:aad:getOuContainer", TypeShape.of(GetOuContainerResult.class), args, Utilities.withVersion(options));
     }
 }

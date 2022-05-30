@@ -9,15 +9,21 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheKeysetIamPolicyArgs;
+import com.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheKeysetIamPolicyPlainArgs;
 import com.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheOriginIamPolicyArgs;
+import com.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheOriginIamPolicyPlainArgs;
 import com.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheServiceIamPolicyArgs;
+import com.pulumi.googlenative.networkservices_v1.inputs.GetEdgeCacheServiceIamPolicyPlainArgs;
 import com.pulumi.googlenative.networkservices_v1.inputs.GetEndpointPolicyArgs;
 import com.pulumi.googlenative.networkservices_v1.inputs.GetEndpointPolicyIamPolicyArgs;
+import com.pulumi.googlenative.networkservices_v1.inputs.GetEndpointPolicyIamPolicyPlainArgs;
+import com.pulumi.googlenative.networkservices_v1.inputs.GetEndpointPolicyPlainArgs;
 import com.pulumi.googlenative.networkservices_v1.outputs.GetEdgeCacheKeysetIamPolicyResult;
 import com.pulumi.googlenative.networkservices_v1.outputs.GetEdgeCacheOriginIamPolicyResult;
 import com.pulumi.googlenative.networkservices_v1.outputs.GetEdgeCacheServiceIamPolicyResult;
 import com.pulumi.googlenative.networkservices_v1.outputs.GetEndpointPolicyIamPolicyResult;
 import com.pulumi.googlenative.networkservices_v1.outputs.GetEndpointPolicyResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Networkservices_v1Functions {
     /**
@@ -31,8 +37,22 @@ public final class Networkservices_v1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetEdgeCacheKeysetIamPolicyResult> getEdgeCacheKeysetIamPolicyPlain(GetEdgeCacheKeysetIamPolicyPlainArgs args) {
+        return getEdgeCacheKeysetIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetEdgeCacheKeysetIamPolicyResult> getEdgeCacheKeysetIamPolicy(GetEdgeCacheKeysetIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkservices/v1:getEdgeCacheKeysetIamPolicy", TypeShape.of(GetEdgeCacheKeysetIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetEdgeCacheKeysetIamPolicyResult> getEdgeCacheKeysetIamPolicyPlain(GetEdgeCacheKeysetIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1:getEdgeCacheKeysetIamPolicy", TypeShape.of(GetEdgeCacheKeysetIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -45,8 +65,22 @@ public final class Networkservices_v1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetEdgeCacheOriginIamPolicyResult> getEdgeCacheOriginIamPolicyPlain(GetEdgeCacheOriginIamPolicyPlainArgs args) {
+        return getEdgeCacheOriginIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetEdgeCacheOriginIamPolicyResult> getEdgeCacheOriginIamPolicy(GetEdgeCacheOriginIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkservices/v1:getEdgeCacheOriginIamPolicy", TypeShape.of(GetEdgeCacheOriginIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetEdgeCacheOriginIamPolicyResult> getEdgeCacheOriginIamPolicyPlain(GetEdgeCacheOriginIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1:getEdgeCacheOriginIamPolicy", TypeShape.of(GetEdgeCacheOriginIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -59,8 +93,22 @@ public final class Networkservices_v1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetEdgeCacheServiceIamPolicyResult> getEdgeCacheServiceIamPolicyPlain(GetEdgeCacheServiceIamPolicyPlainArgs args) {
+        return getEdgeCacheServiceIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetEdgeCacheServiceIamPolicyResult> getEdgeCacheServiceIamPolicy(GetEdgeCacheServiceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkservices/v1:getEdgeCacheServiceIamPolicy", TypeShape.of(GetEdgeCacheServiceIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetEdgeCacheServiceIamPolicyResult> getEdgeCacheServiceIamPolicyPlain(GetEdgeCacheServiceIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1:getEdgeCacheServiceIamPolicy", TypeShape.of(GetEdgeCacheServiceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details of a single EndpointPolicy.
@@ -73,8 +121,22 @@ public final class Networkservices_v1Functions {
      * Gets details of a single EndpointPolicy.
      * 
      */
+    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicyPlain(GetEndpointPolicyPlainArgs args) {
+        return getEndpointPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets details of a single EndpointPolicy.
+     * 
+     */
     public static Output<GetEndpointPolicyResult> getEndpointPolicy(GetEndpointPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkservices/v1:getEndpointPolicy", TypeShape.of(GetEndpointPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets details of a single EndpointPolicy.
+     * 
+     */
+    public static CompletableFuture<GetEndpointPolicyResult> getEndpointPolicyPlain(GetEndpointPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1:getEndpointPolicy", TypeShape.of(GetEndpointPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -87,7 +149,21 @@ public final class Networkservices_v1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicyPlain(GetEndpointPolicyIamPolicyPlainArgs args) {
+        return getEndpointPolicyIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicy(GetEndpointPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkservices/v1:getEndpointPolicyIamPolicy", TypeShape.of(GetEndpointPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetEndpointPolicyIamPolicyResult> getEndpointPolicyIamPolicyPlain(GetEndpointPolicyIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkservices/v1:getEndpointPolicyIamPolicy", TypeShape.of(GetEndpointPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

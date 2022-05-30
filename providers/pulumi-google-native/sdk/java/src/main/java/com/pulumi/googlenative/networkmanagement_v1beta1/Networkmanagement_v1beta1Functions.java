@@ -10,8 +10,11 @@ import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.networkmanagement_v1beta1.inputs.GetConnectivityTestArgs;
 import com.pulumi.googlenative.networkmanagement_v1beta1.inputs.GetConnectivityTestIamPolicyArgs;
+import com.pulumi.googlenative.networkmanagement_v1beta1.inputs.GetConnectivityTestIamPolicyPlainArgs;
+import com.pulumi.googlenative.networkmanagement_v1beta1.inputs.GetConnectivityTestPlainArgs;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.GetConnectivityTestIamPolicyResult;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.GetConnectivityTestResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Networkmanagement_v1beta1Functions {
     /**
@@ -25,8 +28,22 @@ public final class Networkmanagement_v1beta1Functions {
      * Gets the details of a specific Connectivity Test.
      * 
      */
+    public static CompletableFuture<GetConnectivityTestResult> getConnectivityTestPlain(GetConnectivityTestPlainArgs args) {
+        return getConnectivityTestPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the details of a specific Connectivity Test.
+     * 
+     */
     public static Output<GetConnectivityTestResult> getConnectivityTest(GetConnectivityTestArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkmanagement/v1beta1:getConnectivityTest", TypeShape.of(GetConnectivityTestResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the details of a specific Connectivity Test.
+     * 
+     */
+    public static CompletableFuture<GetConnectivityTestResult> getConnectivityTestPlain(GetConnectivityTestPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkmanagement/v1beta1:getConnectivityTest", TypeShape.of(GetConnectivityTestResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -39,7 +56,21 @@ public final class Networkmanagement_v1beta1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetConnectivityTestIamPolicyResult> getConnectivityTestIamPolicyPlain(GetConnectivityTestIamPolicyPlainArgs args) {
+        return getConnectivityTestIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetConnectivityTestIamPolicyResult> getConnectivityTestIamPolicy(GetConnectivityTestIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkmanagement/v1beta1:getConnectivityTestIamPolicy", TypeShape.of(GetConnectivityTestIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetConnectivityTestIamPolicyResult> getConnectivityTestIamPolicyPlain(GetConnectivityTestIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkmanagement/v1beta1:getConnectivityTestIamPolicy", TypeShape.of(GetConnectivityTestIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

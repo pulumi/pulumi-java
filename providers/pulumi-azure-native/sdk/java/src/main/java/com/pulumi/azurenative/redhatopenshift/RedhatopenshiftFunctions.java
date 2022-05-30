@@ -5,8 +5,11 @@ package com.pulumi.azurenative.redhatopenshift;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.redhatopenshift.inputs.GetOpenShiftClusterArgs;
+import com.pulumi.azurenative.redhatopenshift.inputs.GetOpenShiftClusterPlainArgs;
 import com.pulumi.azurenative.redhatopenshift.inputs.ListOpenShiftClusterAdminCredentialsArgs;
+import com.pulumi.azurenative.redhatopenshift.inputs.ListOpenShiftClusterAdminCredentialsPlainArgs;
 import com.pulumi.azurenative.redhatopenshift.inputs.ListOpenShiftClusterCredentialsArgs;
+import com.pulumi.azurenative.redhatopenshift.inputs.ListOpenShiftClusterCredentialsPlainArgs;
 import com.pulumi.azurenative.redhatopenshift.outputs.GetOpenShiftClusterResult;
 import com.pulumi.azurenative.redhatopenshift.outputs.ListOpenShiftClusterAdminCredentialsResult;
 import com.pulumi.azurenative.redhatopenshift.outputs.ListOpenShiftClusterCredentialsResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class RedhatopenshiftFunctions {
     /**
@@ -29,8 +33,24 @@ public final class RedhatopenshiftFunctions {
      * API Version: 2020-04-30.
      * 
      */
+    public static CompletableFuture<GetOpenShiftClusterResult> getOpenShiftClusterPlain(GetOpenShiftClusterPlainArgs args) {
+        return getOpenShiftClusterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
+     * API Version: 2020-04-30.
+     * 
+     */
     public static Output<GetOpenShiftClusterResult> getOpenShiftCluster(GetOpenShiftClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:redhatopenshift:getOpenShiftCluster", TypeShape.of(GetOpenShiftClusterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
+     * API Version: 2020-04-30.
+     * 
+     */
+    public static CompletableFuture<GetOpenShiftClusterResult> getOpenShiftClusterPlain(GetOpenShiftClusterPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:getOpenShiftCluster", TypeShape.of(GetOpenShiftClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster&#39;s admin kubeconfig.
@@ -45,8 +65,24 @@ public final class RedhatopenshiftFunctions {
      * API Version: 2021-09-01-preview.
      * 
      */
+    public static CompletableFuture<ListOpenShiftClusterAdminCredentialsResult> listOpenShiftClusterAdminCredentialsPlain(ListOpenShiftClusterAdminCredentialsPlainArgs args) {
+        return listOpenShiftClusterAdminCredentialsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster&#39;s admin kubeconfig.
+     * API Version: 2021-09-01-preview.
+     * 
+     */
     public static Output<ListOpenShiftClusterAdminCredentialsResult> listOpenShiftClusterAdminCredentials(ListOpenShiftClusterAdminCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:redhatopenshift:listOpenShiftClusterAdminCredentials", TypeShape.of(ListOpenShiftClusterAdminCredentialsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * OpenShiftClusterAdminKubeconfig represents an OpenShift cluster&#39;s admin kubeconfig.
+     * API Version: 2021-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListOpenShiftClusterAdminCredentialsResult> listOpenShiftClusterAdminCredentialsPlain(ListOpenShiftClusterAdminCredentialsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:listOpenShiftClusterAdminCredentials", TypeShape.of(ListOpenShiftClusterAdminCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * OpenShiftClusterCredentials represents an OpenShift cluster&#39;s credentials
@@ -61,7 +97,23 @@ public final class RedhatopenshiftFunctions {
      * API Version: 2020-04-30.
      * 
      */
+    public static CompletableFuture<ListOpenShiftClusterCredentialsResult> listOpenShiftClusterCredentialsPlain(ListOpenShiftClusterCredentialsPlainArgs args) {
+        return listOpenShiftClusterCredentialsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * OpenShiftClusterCredentials represents an OpenShift cluster&#39;s credentials
+     * API Version: 2020-04-30.
+     * 
+     */
     public static Output<ListOpenShiftClusterCredentialsResult> listOpenShiftClusterCredentials(ListOpenShiftClusterCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:redhatopenshift:listOpenShiftClusterCredentials", TypeShape.of(ListOpenShiftClusterCredentialsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * OpenShiftClusterCredentials represents an OpenShift cluster&#39;s credentials
+     * API Version: 2020-04-30.
+     * 
+     */
+    public static CompletableFuture<ListOpenShiftClusterCredentialsResult> listOpenShiftClusterCredentialsPlain(ListOpenShiftClusterCredentialsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:listOpenShiftClusterCredentials", TypeShape.of(ListOpenShiftClusterCredentialsResult.class), args, Utilities.withVersion(options));
     }
 }

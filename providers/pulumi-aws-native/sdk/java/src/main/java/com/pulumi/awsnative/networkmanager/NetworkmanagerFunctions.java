@@ -5,12 +5,19 @@ package com.pulumi.awsnative.networkmanager;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.networkmanager.inputs.GetCustomerGatewayAssociationArgs;
+import com.pulumi.awsnative.networkmanager.inputs.GetCustomerGatewayAssociationPlainArgs;
 import com.pulumi.awsnative.networkmanager.inputs.GetDeviceArgs;
+import com.pulumi.awsnative.networkmanager.inputs.GetDevicePlainArgs;
 import com.pulumi.awsnative.networkmanager.inputs.GetGlobalNetworkArgs;
+import com.pulumi.awsnative.networkmanager.inputs.GetGlobalNetworkPlainArgs;
 import com.pulumi.awsnative.networkmanager.inputs.GetLinkArgs;
 import com.pulumi.awsnative.networkmanager.inputs.GetLinkAssociationArgs;
+import com.pulumi.awsnative.networkmanager.inputs.GetLinkAssociationPlainArgs;
+import com.pulumi.awsnative.networkmanager.inputs.GetLinkPlainArgs;
 import com.pulumi.awsnative.networkmanager.inputs.GetSiteArgs;
+import com.pulumi.awsnative.networkmanager.inputs.GetSitePlainArgs;
 import com.pulumi.awsnative.networkmanager.inputs.GetTransitGatewayRegistrationArgs;
+import com.pulumi.awsnative.networkmanager.inputs.GetTransitGatewayRegistrationPlainArgs;
 import com.pulumi.awsnative.networkmanager.outputs.GetCustomerGatewayAssociationResult;
 import com.pulumi.awsnative.networkmanager.outputs.GetDeviceResult;
 import com.pulumi.awsnative.networkmanager.outputs.GetGlobalNetworkResult;
@@ -22,6 +29,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class NetworkmanagerFunctions {
     /**
@@ -35,8 +43,22 @@ public final class NetworkmanagerFunctions {
      * The AWS::NetworkManager::CustomerGatewayAssociation type associates a customer gateway with a device and optionally, with a link.
      * 
      */
+    public static CompletableFuture<GetCustomerGatewayAssociationResult> getCustomerGatewayAssociationPlain(GetCustomerGatewayAssociationPlainArgs args) {
+        return getCustomerGatewayAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::NetworkManager::CustomerGatewayAssociation type associates a customer gateway with a device and optionally, with a link.
+     * 
+     */
     public static Output<GetCustomerGatewayAssociationResult> getCustomerGatewayAssociation(GetCustomerGatewayAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:networkmanager:getCustomerGatewayAssociation", TypeShape.of(GetCustomerGatewayAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::NetworkManager::CustomerGatewayAssociation type associates a customer gateway with a device and optionally, with a link.
+     * 
+     */
+    public static CompletableFuture<GetCustomerGatewayAssociationResult> getCustomerGatewayAssociationPlain(GetCustomerGatewayAssociationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getCustomerGatewayAssociation", TypeShape.of(GetCustomerGatewayAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::NetworkManager::Device type describes a device.
@@ -49,8 +71,22 @@ public final class NetworkmanagerFunctions {
      * The AWS::NetworkManager::Device type describes a device.
      * 
      */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args) {
+        return getDevicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::NetworkManager::Device type describes a device.
+     * 
+     */
     public static Output<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:networkmanager:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::NetworkManager::Device type describes a device.
+     * 
+     */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user&#39;s account
@@ -63,8 +99,22 @@ public final class NetworkmanagerFunctions {
      * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user&#39;s account
      * 
      */
+    public static CompletableFuture<GetGlobalNetworkResult> getGlobalNetworkPlain(GetGlobalNetworkPlainArgs args) {
+        return getGlobalNetworkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user&#39;s account
+     * 
+     */
     public static Output<GetGlobalNetworkResult> getGlobalNetwork(GetGlobalNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:networkmanager:getGlobalNetwork", TypeShape.of(GetGlobalNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user&#39;s account
+     * 
+     */
+    public static CompletableFuture<GetGlobalNetworkResult> getGlobalNetworkPlain(GetGlobalNetworkPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getGlobalNetwork", TypeShape.of(GetGlobalNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::NetworkManager::Link type describes a link.
@@ -77,8 +127,22 @@ public final class NetworkmanagerFunctions {
      * The AWS::NetworkManager::Link type describes a link.
      * 
      */
+    public static CompletableFuture<GetLinkResult> getLinkPlain(GetLinkPlainArgs args) {
+        return getLinkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::NetworkManager::Link type describes a link.
+     * 
+     */
     public static Output<GetLinkResult> getLink(GetLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:networkmanager:getLink", TypeShape.of(GetLinkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::NetworkManager::Link type describes a link.
+     * 
+     */
+    public static CompletableFuture<GetLinkResult> getLinkPlain(GetLinkPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getLink", TypeShape.of(GetLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::NetworkManager::LinkAssociation type associates a link to a device. The device and link must be in the same global network and the same site.
@@ -91,8 +155,22 @@ public final class NetworkmanagerFunctions {
      * The AWS::NetworkManager::LinkAssociation type associates a link to a device. The device and link must be in the same global network and the same site.
      * 
      */
+    public static CompletableFuture<GetLinkAssociationResult> getLinkAssociationPlain(GetLinkAssociationPlainArgs args) {
+        return getLinkAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::NetworkManager::LinkAssociation type associates a link to a device. The device and link must be in the same global network and the same site.
+     * 
+     */
     public static Output<GetLinkAssociationResult> getLinkAssociation(GetLinkAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:networkmanager:getLinkAssociation", TypeShape.of(GetLinkAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::NetworkManager::LinkAssociation type associates a link to a device. The device and link must be in the same global network and the same site.
+     * 
+     */
+    public static CompletableFuture<GetLinkAssociationResult> getLinkAssociationPlain(GetLinkAssociationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getLinkAssociation", TypeShape.of(GetLinkAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::NetworkManager::Site type describes a site.
@@ -105,8 +183,22 @@ public final class NetworkmanagerFunctions {
      * The AWS::NetworkManager::Site type describes a site.
      * 
      */
+    public static CompletableFuture<GetSiteResult> getSitePlain(GetSitePlainArgs args) {
+        return getSitePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::NetworkManager::Site type describes a site.
+     * 
+     */
     public static Output<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:networkmanager:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::NetworkManager::Site type describes a site.
+     * 
+     */
+    public static CompletableFuture<GetSiteResult> getSitePlain(GetSitePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::NetworkManager::TransitGatewayRegistration type registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
@@ -119,7 +211,21 @@ public final class NetworkmanagerFunctions {
      * The AWS::NetworkManager::TransitGatewayRegistration type registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
      * 
      */
+    public static CompletableFuture<GetTransitGatewayRegistrationResult> getTransitGatewayRegistrationPlain(GetTransitGatewayRegistrationPlainArgs args) {
+        return getTransitGatewayRegistrationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::NetworkManager::TransitGatewayRegistration type registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
+     * 
+     */
     public static Output<GetTransitGatewayRegistrationResult> getTransitGatewayRegistration(GetTransitGatewayRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:networkmanager:getTransitGatewayRegistration", TypeShape.of(GetTransitGatewayRegistrationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::NetworkManager::TransitGatewayRegistration type registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than one global network.
+     * 
+     */
+    public static CompletableFuture<GetTransitGatewayRegistrationResult> getTransitGatewayRegistrationPlain(GetTransitGatewayRegistrationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getTransitGatewayRegistration", TypeShape.of(GetTransitGatewayRegistrationResult.class), args, Utilities.withVersion(options));
     }
 }

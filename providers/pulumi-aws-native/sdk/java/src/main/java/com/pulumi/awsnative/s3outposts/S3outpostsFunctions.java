@@ -5,9 +5,13 @@ package com.pulumi.awsnative.s3outposts;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.s3outposts.inputs.GetAccessPointArgs;
+import com.pulumi.awsnative.s3outposts.inputs.GetAccessPointPlainArgs;
 import com.pulumi.awsnative.s3outposts.inputs.GetBucketArgs;
+import com.pulumi.awsnative.s3outposts.inputs.GetBucketPlainArgs;
 import com.pulumi.awsnative.s3outposts.inputs.GetBucketPolicyArgs;
+import com.pulumi.awsnative.s3outposts.inputs.GetBucketPolicyPlainArgs;
 import com.pulumi.awsnative.s3outposts.inputs.GetEndpointArgs;
+import com.pulumi.awsnative.s3outposts.inputs.GetEndpointPlainArgs;
 import com.pulumi.awsnative.s3outposts.outputs.GetAccessPointResult;
 import com.pulumi.awsnative.s3outposts.outputs.GetBucketPolicyResult;
 import com.pulumi.awsnative.s3outposts.outputs.GetBucketResult;
@@ -16,6 +20,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class S3outpostsFunctions {
     /**
@@ -29,8 +34,22 @@ public final class S3outpostsFunctions {
      * Resource Type Definition for AWS::S3Outposts::AccessPoint
      * 
      */
+    public static CompletableFuture<GetAccessPointResult> getAccessPointPlain(GetAccessPointPlainArgs args) {
+        return getAccessPointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type Definition for AWS::S3Outposts::AccessPoint
+     * 
+     */
     public static Output<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:s3outposts:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type Definition for AWS::S3Outposts::AccessPoint
+     * 
+     */
+    public static CompletableFuture<GetAccessPointResult> getAccessPointPlain(GetAccessPointPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:s3outposts:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type Definition for AWS::S3Outposts::Bucket
@@ -43,8 +62,22 @@ public final class S3outpostsFunctions {
      * Resource Type Definition for AWS::S3Outposts::Bucket
      * 
      */
+    public static CompletableFuture<GetBucketResult> getBucketPlain(GetBucketPlainArgs args) {
+        return getBucketPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type Definition for AWS::S3Outposts::Bucket
+     * 
+     */
     public static Output<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:s3outposts:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type Definition for AWS::S3Outposts::Bucket
+     * 
+     */
+    public static CompletableFuture<GetBucketResult> getBucketPlain(GetBucketPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:s3outposts:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type Definition for AWS::S3Outposts::BucketPolicy
@@ -57,8 +90,22 @@ public final class S3outpostsFunctions {
      * Resource Type Definition for AWS::S3Outposts::BucketPolicy
      * 
      */
+    public static CompletableFuture<GetBucketPolicyResult> getBucketPolicyPlain(GetBucketPolicyPlainArgs args) {
+        return getBucketPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type Definition for AWS::S3Outposts::BucketPolicy
+     * 
+     */
     public static Output<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:s3outposts:getBucketPolicy", TypeShape.of(GetBucketPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type Definition for AWS::S3Outposts::BucketPolicy
+     * 
+     */
+    public static CompletableFuture<GetBucketPolicyResult> getBucketPolicyPlain(GetBucketPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:s3outposts:getBucketPolicy", TypeShape.of(GetBucketPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type Definition for AWS::S3Outposts::Endpoint
@@ -71,7 +118,21 @@ public final class S3outpostsFunctions {
      * Resource Type Definition for AWS::S3Outposts::Endpoint
      * 
      */
+    public static CompletableFuture<GetEndpointResult> getEndpointPlain(GetEndpointPlainArgs args) {
+        return getEndpointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type Definition for AWS::S3Outposts::Endpoint
+     * 
+     */
     public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:s3outposts:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type Definition for AWS::S3Outposts::Endpoint
+     * 
+     */
+    public static CompletableFuture<GetEndpointResult> getEndpointPlain(GetEndpointPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:s3outposts:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
 }

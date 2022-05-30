@@ -5,13 +5,16 @@ package com.pulumi.azurenative.azuredata;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.azuredata.inputs.GetSqlServerArgs;
+import com.pulumi.azurenative.azuredata.inputs.GetSqlServerPlainArgs;
 import com.pulumi.azurenative.azuredata.inputs.GetSqlServerRegistrationArgs;
+import com.pulumi.azurenative.azuredata.inputs.GetSqlServerRegistrationPlainArgs;
 import com.pulumi.azurenative.azuredata.outputs.GetSqlServerRegistrationResult;
 import com.pulumi.azurenative.azuredata.outputs.GetSqlServerResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class AzuredataFunctions {
     /**
@@ -27,8 +30,24 @@ public final class AzuredataFunctions {
      * API Version: 2019-07-24-preview.
      * 
      */
+    public static CompletableFuture<GetSqlServerResult> getSqlServerPlain(GetSqlServerPlainArgs args) {
+        return getSqlServerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A SQL server.
+     * API Version: 2019-07-24-preview.
+     * 
+     */
     public static Output<GetSqlServerResult> getSqlServer(GetSqlServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:azuredata:getSqlServer", TypeShape.of(GetSqlServerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A SQL server.
+     * API Version: 2019-07-24-preview.
+     * 
+     */
+    public static CompletableFuture<GetSqlServerResult> getSqlServerPlain(GetSqlServerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:azuredata:getSqlServer", TypeShape.of(GetSqlServerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A SQL server registration.
@@ -43,7 +62,23 @@ public final class AzuredataFunctions {
      * API Version: 2019-07-24-preview.
      * 
      */
+    public static CompletableFuture<GetSqlServerRegistrationResult> getSqlServerRegistrationPlain(GetSqlServerRegistrationPlainArgs args) {
+        return getSqlServerRegistrationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A SQL server registration.
+     * API Version: 2019-07-24-preview.
+     * 
+     */
     public static Output<GetSqlServerRegistrationResult> getSqlServerRegistration(GetSqlServerRegistrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:azuredata:getSqlServerRegistration", TypeShape.of(GetSqlServerRegistrationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A SQL server registration.
+     * API Version: 2019-07-24-preview.
+     * 
+     */
+    public static CompletableFuture<GetSqlServerRegistrationResult> getSqlServerRegistrationPlain(GetSqlServerRegistrationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:azuredata:getSqlServerRegistration", TypeShape.of(GetSqlServerRegistrationResult.class), args, Utilities.withVersion(options));
     }
 }

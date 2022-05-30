@@ -9,15 +9,21 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.servicedirectory_v1.inputs.GetEndpointArgs;
+import com.pulumi.googlenative.servicedirectory_v1.inputs.GetEndpointPlainArgs;
 import com.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespaceArgs;
 import com.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespaceIamPolicyArgs;
+import com.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespaceIamPolicyPlainArgs;
+import com.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespacePlainArgs;
 import com.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespaceServiceIamPolicyArgs;
+import com.pulumi.googlenative.servicedirectory_v1.inputs.GetNamespaceServiceIamPolicyPlainArgs;
 import com.pulumi.googlenative.servicedirectory_v1.inputs.GetServiceArgs;
+import com.pulumi.googlenative.servicedirectory_v1.inputs.GetServicePlainArgs;
 import com.pulumi.googlenative.servicedirectory_v1.outputs.GetEndpointResult;
 import com.pulumi.googlenative.servicedirectory_v1.outputs.GetNamespaceIamPolicyResult;
 import com.pulumi.googlenative.servicedirectory_v1.outputs.GetNamespaceResult;
 import com.pulumi.googlenative.servicedirectory_v1.outputs.GetNamespaceServiceIamPolicyResult;
 import com.pulumi.googlenative.servicedirectory_v1.outputs.GetServiceResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Servicedirectory_v1Functions {
     /**
@@ -31,8 +37,22 @@ public final class Servicedirectory_v1Functions {
      * Gets an endpoint.
      * 
      */
+    public static CompletableFuture<GetEndpointResult> getEndpointPlain(GetEndpointPlainArgs args) {
+        return getEndpointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets an endpoint.
+     * 
+     */
     public static Output<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:servicedirectory/v1:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets an endpoint.
+     * 
+     */
+    public static CompletableFuture<GetEndpointResult> getEndpointPlain(GetEndpointPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a namespace.
@@ -45,8 +65,22 @@ public final class Servicedirectory_v1Functions {
      * Gets a namespace.
      * 
      */
+    public static CompletableFuture<GetNamespaceResult> getNamespacePlain(GetNamespacePlainArgs args) {
+        return getNamespacePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a namespace.
+     * 
+     */
     public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:servicedirectory/v1:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a namespace.
+     * 
+     */
+    public static CompletableFuture<GetNamespaceResult> getNamespacePlain(GetNamespacePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the IAM Policy for a resource (namespace or service only).
@@ -59,8 +93,22 @@ public final class Servicedirectory_v1Functions {
      * Gets the IAM Policy for a resource (namespace or service only).
      * 
      */
+    public static CompletableFuture<GetNamespaceIamPolicyResult> getNamespaceIamPolicyPlain(GetNamespaceIamPolicyPlainArgs args) {
+        return getNamespaceIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the IAM Policy for a resource (namespace or service only).
+     * 
+     */
     public static Output<GetNamespaceIamPolicyResult> getNamespaceIamPolicy(GetNamespaceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:servicedirectory/v1:getNamespaceIamPolicy", TypeShape.of(GetNamespaceIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the IAM Policy for a resource (namespace or service only).
+     * 
+     */
+    public static CompletableFuture<GetNamespaceIamPolicyResult> getNamespaceIamPolicyPlain(GetNamespaceIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getNamespaceIamPolicy", TypeShape.of(GetNamespaceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the IAM Policy for a resource (namespace or service only).
@@ -73,8 +121,22 @@ public final class Servicedirectory_v1Functions {
      * Gets the IAM Policy for a resource (namespace or service only).
      * 
      */
+    public static CompletableFuture<GetNamespaceServiceIamPolicyResult> getNamespaceServiceIamPolicyPlain(GetNamespaceServiceIamPolicyPlainArgs args) {
+        return getNamespaceServiceIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the IAM Policy for a resource (namespace or service only).
+     * 
+     */
     public static Output<GetNamespaceServiceIamPolicyResult> getNamespaceServiceIamPolicy(GetNamespaceServiceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:servicedirectory/v1:getNamespaceServiceIamPolicy", TypeShape.of(GetNamespaceServiceIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the IAM Policy for a resource (namespace or service only).
+     * 
+     */
+    public static CompletableFuture<GetNamespaceServiceIamPolicyResult> getNamespaceServiceIamPolicyPlain(GetNamespaceServiceIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getNamespaceServiceIamPolicy", TypeShape.of(GetNamespaceServiceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a service.
@@ -87,7 +149,21 @@ public final class Servicedirectory_v1Functions {
      * Gets a service.
      * 
      */
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args) {
+        return getServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a service.
+     * 
+     */
     public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:servicedirectory/v1:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a service.
+     * 
+     */
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
 }

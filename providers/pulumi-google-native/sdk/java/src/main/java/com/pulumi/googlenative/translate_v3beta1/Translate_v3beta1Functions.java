@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.translate_v3beta1.inputs.GetGlossaryArgs;
+import com.pulumi.googlenative.translate_v3beta1.inputs.GetGlossaryPlainArgs;
 import com.pulumi.googlenative.translate_v3beta1.outputs.GetGlossaryResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Translate_v3beta1Functions {
     /**
@@ -23,7 +25,21 @@ public final class Translate_v3beta1Functions {
      * Gets a glossary. Returns NOT_FOUND, if the glossary doesn&#39;t exist.
      * 
      */
+    public static CompletableFuture<GetGlossaryResult> getGlossaryPlain(GetGlossaryPlainArgs args) {
+        return getGlossaryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a glossary. Returns NOT_FOUND, if the glossary doesn&#39;t exist.
+     * 
+     */
     public static Output<GetGlossaryResult> getGlossary(GetGlossaryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:translate/v3beta1:getGlossary", TypeShape.of(GetGlossaryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a glossary. Returns NOT_FOUND, if the glossary doesn&#39;t exist.
+     * 
+     */
+    public static CompletableFuture<GetGlossaryResult> getGlossaryPlain(GetGlossaryPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:translate/v3beta1:getGlossary", TypeShape.of(GetGlossaryResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,8 +5,11 @@ package com.pulumi.awsnative.elasticache;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.elasticache.inputs.GetGlobalReplicationGroupArgs;
+import com.pulumi.awsnative.elasticache.inputs.GetGlobalReplicationGroupPlainArgs;
 import com.pulumi.awsnative.elasticache.inputs.GetUserArgs;
 import com.pulumi.awsnative.elasticache.inputs.GetUserGroupArgs;
+import com.pulumi.awsnative.elasticache.inputs.GetUserGroupPlainArgs;
+import com.pulumi.awsnative.elasticache.inputs.GetUserPlainArgs;
 import com.pulumi.awsnative.elasticache.outputs.GetGlobalReplicationGroupResult;
 import com.pulumi.awsnative.elasticache.outputs.GetUserGroupResult;
 import com.pulumi.awsnative.elasticache.outputs.GetUserResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class ElasticacheFunctions {
     /**
@@ -27,8 +31,22 @@ public final class ElasticacheFunctions {
      * The AWS::ElastiCache::GlobalReplicationGroup resource creates an Amazon ElastiCache Global Replication Group.
      * 
      */
+    public static CompletableFuture<GetGlobalReplicationGroupResult> getGlobalReplicationGroupPlain(GetGlobalReplicationGroupPlainArgs args) {
+        return getGlobalReplicationGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::ElastiCache::GlobalReplicationGroup resource creates an Amazon ElastiCache Global Replication Group.
+     * 
+     */
     public static Output<GetGlobalReplicationGroupResult> getGlobalReplicationGroup(GetGlobalReplicationGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:elasticache:getGlobalReplicationGroup", TypeShape.of(GetGlobalReplicationGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::ElastiCache::GlobalReplicationGroup resource creates an Amazon ElastiCache Global Replication Group.
+     * 
+     */
+    public static CompletableFuture<GetGlobalReplicationGroupResult> getGlobalReplicationGroupPlain(GetGlobalReplicationGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:elasticache:getGlobalReplicationGroup", TypeShape.of(GetGlobalReplicationGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ElastiCache::User
@@ -41,8 +59,22 @@ public final class ElasticacheFunctions {
      * Resource Type definition for AWS::ElastiCache::User
      * 
      */
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args) {
+        return getUserPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::ElastiCache::User
+     * 
+     */
     public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:elasticache:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::ElastiCache::User
+     * 
+     */
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:elasticache:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::ElastiCache::UserGroup
@@ -55,7 +87,21 @@ public final class ElasticacheFunctions {
      * Resource Type definition for AWS::ElastiCache::UserGroup
      * 
      */
+    public static CompletableFuture<GetUserGroupResult> getUserGroupPlain(GetUserGroupPlainArgs args) {
+        return getUserGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::ElastiCache::UserGroup
+     * 
+     */
     public static Output<GetUserGroupResult> getUserGroup(GetUserGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:elasticache:getUserGroup", TypeShape.of(GetUserGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::ElastiCache::UserGroup
+     * 
+     */
+    public static CompletableFuture<GetUserGroupResult> getUserGroupPlain(GetUserGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:elasticache:getUserGroup", TypeShape.of(GetUserGroupResult.class), args, Utilities.withVersion(options));
     }
 }

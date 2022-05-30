@@ -9,9 +9,12 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.logging_v2.inputs.GetBillingAccountExclusionArgs;
+import com.pulumi.googlenative.logging_v2.inputs.GetBillingAccountExclusionPlainArgs;
 import com.pulumi.googlenative.logging_v2.inputs.GetBillingAccountSinkArgs;
+import com.pulumi.googlenative.logging_v2.inputs.GetBillingAccountSinkPlainArgs;
 import com.pulumi.googlenative.logging_v2.outputs.GetBillingAccountExclusionResult;
 import com.pulumi.googlenative.logging_v2.outputs.GetBillingAccountSinkResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Logging_v2Functions {
     /**
@@ -25,8 +28,22 @@ public final class Logging_v2Functions {
      * Gets the description of an exclusion in the _Default sink.
      * 
      */
+    public static CompletableFuture<GetBillingAccountExclusionResult> getBillingAccountExclusionPlain(GetBillingAccountExclusionPlainArgs args) {
+        return getBillingAccountExclusionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the description of an exclusion in the _Default sink.
+     * 
+     */
     public static Output<GetBillingAccountExclusionResult> getBillingAccountExclusion(GetBillingAccountExclusionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:logging/v2:getBillingAccountExclusion", TypeShape.of(GetBillingAccountExclusionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the description of an exclusion in the _Default sink.
+     * 
+     */
+    public static CompletableFuture<GetBillingAccountExclusionResult> getBillingAccountExclusionPlain(GetBillingAccountExclusionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:logging/v2:getBillingAccountExclusion", TypeShape.of(GetBillingAccountExclusionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a sink.
@@ -39,7 +56,21 @@ public final class Logging_v2Functions {
      * Gets a sink.
      * 
      */
+    public static CompletableFuture<GetBillingAccountSinkResult> getBillingAccountSinkPlain(GetBillingAccountSinkPlainArgs args) {
+        return getBillingAccountSinkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a sink.
+     * 
+     */
     public static Output<GetBillingAccountSinkResult> getBillingAccountSink(GetBillingAccountSinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:logging/v2:getBillingAccountSink", TypeShape.of(GetBillingAccountSinkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a sink.
+     * 
+     */
+    public static CompletableFuture<GetBillingAccountSinkResult> getBillingAccountSinkPlain(GetBillingAccountSinkPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:logging/v2:getBillingAccountSink", TypeShape.of(GetBillingAccountSinkResult.class), args, Utilities.withVersion(options));
     }
 }

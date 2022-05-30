@@ -9,11 +9,18 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Jms.inputs.GetFleetArgs;
 import com.pulumi.oci.Jms.inputs.GetFleetBlocklistsArgs;
+import com.pulumi.oci.Jms.inputs.GetFleetBlocklistsPlainArgs;
+import com.pulumi.oci.Jms.inputs.GetFleetPlainArgs;
 import com.pulumi.oci.Jms.inputs.GetFleetsArgs;
+import com.pulumi.oci.Jms.inputs.GetFleetsPlainArgs;
 import com.pulumi.oci.Jms.inputs.GetInstallationSiteArgs;
+import com.pulumi.oci.Jms.inputs.GetInstallationSitePlainArgs;
 import com.pulumi.oci.Jms.inputs.GetInstallationSitesArgs;
+import com.pulumi.oci.Jms.inputs.GetInstallationSitesPlainArgs;
 import com.pulumi.oci.Jms.inputs.GetListJreUsageArgs;
+import com.pulumi.oci.Jms.inputs.GetListJreUsagePlainArgs;
 import com.pulumi.oci.Jms.inputs.GetSummarizeResourceInventoryArgs;
+import com.pulumi.oci.Jms.inputs.GetSummarizeResourceInventoryPlainArgs;
 import com.pulumi.oci.Jms.outputs.GetFleetBlocklistsResult;
 import com.pulumi.oci.Jms.outputs.GetFleetResult;
 import com.pulumi.oci.Jms.outputs.GetFleetsResult;
@@ -22,6 +29,7 @@ import com.pulumi.oci.Jms.outputs.GetInstallationSitesResult;
 import com.pulumi.oci.Jms.outputs.GetListJreUsageResult;
 import com.pulumi.oci.Jms.outputs.GetSummarizeResourceInventoryResult;
 import com.pulumi.oci.Utilities;
+import java.util.concurrent.CompletableFuture;
 
 public final class JmsFunctions {
     /**
@@ -43,8 +51,30 @@ public final class JmsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetFleetResult> getFleetPlain(GetFleetPlainArgs args) {
+        return getFleetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Fleet resource in Oracle Cloud Infrastructure Jms service.
+     * 
+     * Retrieve a Fleet with the specified identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetFleetResult> getFleet(GetFleetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Jms/getFleet:getFleet", TypeShape.of(GetFleetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Fleet resource in Oracle Cloud Infrastructure Jms service.
+     * 
+     * Retrieve a Fleet with the specified identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetFleetResult> getFleetPlain(GetFleetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Jms/getFleet:getFleet", TypeShape.of(GetFleetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Fleet Blocklists in Oracle Cloud Infrastructure Jms service.
@@ -65,8 +95,30 @@ public final class JmsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetFleetBlocklistsResult> getFleetBlocklistsPlain(GetFleetBlocklistsPlainArgs args) {
+        return getFleetBlocklistsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Fleet Blocklists in Oracle Cloud Infrastructure Jms service.
+     * 
+     * Returns a list of blocklist entities contained by a fleet.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetFleetBlocklistsResult> getFleetBlocklists(GetFleetBlocklistsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Jms/getFleetBlocklists:getFleetBlocklists", TypeShape.of(GetFleetBlocklistsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Fleet Blocklists in Oracle Cloud Infrastructure Jms service.
+     * 
+     * Returns a list of blocklist entities contained by a fleet.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetFleetBlocklistsResult> getFleetBlocklistsPlain(GetFleetBlocklistsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Jms/getFleetBlocklists:getFleetBlocklists", TypeShape.of(GetFleetBlocklistsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Fleets in Oracle Cloud Infrastructure Jms service.
@@ -89,6 +141,18 @@ public final class JmsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetFleetsResult> getFleetsPlain() {
+        return getFleetsPlain(GetFleetsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Fleets in Oracle Cloud Infrastructure Jms service.
+     * 
+     * Returns a list of all the Fleets contained by a compartment. The query parameter `compartmentId`
+     * is required unless the query parameter `id` is specified.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetFleetsResult> getFleets(GetFleetsArgs args) {
         return getFleets(args, InvokeOptions.Empty);
     }
@@ -101,8 +165,32 @@ public final class JmsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetFleetsResult> getFleetsPlain(GetFleetsPlainArgs args) {
+        return getFleetsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Fleets in Oracle Cloud Infrastructure Jms service.
+     * 
+     * Returns a list of all the Fleets contained by a compartment. The query parameter `compartmentId`
+     * is required unless the query parameter `id` is specified.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetFleetsResult> getFleets(GetFleetsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Jms/getFleets:getFleets", TypeShape.of(GetFleetsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Fleets in Oracle Cloud Infrastructure Jms service.
+     * 
+     * Returns a list of all the Fleets contained by a compartment. The query parameter `compartmentId`
+     * is required unless the query parameter `id` is specified.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetFleetsResult> getFleetsPlain(GetFleetsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Jms/getFleets:getFleets", TypeShape.of(GetFleetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Fleet Installation Site resource in Oracle Cloud Infrastructure Jms service.
@@ -123,8 +211,30 @@ public final class JmsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetInstallationSiteResult> getInstallationSitePlain(GetInstallationSitePlainArgs args) {
+        return getInstallationSitePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Fleet Installation Site resource in Oracle Cloud Infrastructure Jms service.
+     * 
+     * List Java installation sites in a Fleet filtered by query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetInstallationSiteResult> getInstallationSite(GetInstallationSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Jms/getInstallationSite:getInstallationSite", TypeShape.of(GetInstallationSiteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Fleet Installation Site resource in Oracle Cloud Infrastructure Jms service.
+     * 
+     * List Java installation sites in a Fleet filtered by query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetInstallationSiteResult> getInstallationSitePlain(GetInstallationSitePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Jms/getInstallationSite:getInstallationSite", TypeShape.of(GetInstallationSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Fleet Installation Sites in Oracle Cloud Infrastructure Jms service.
@@ -145,8 +255,30 @@ public final class JmsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetInstallationSitesResult> getInstallationSitesPlain(GetInstallationSitesPlainArgs args) {
+        return getInstallationSitesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Fleet Installation Sites in Oracle Cloud Infrastructure Jms service.
+     * 
+     * List Java installation sites in a Fleet filtered by query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetInstallationSitesResult> getInstallationSites(GetInstallationSitesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Jms/getInstallationSites:getInstallationSites", TypeShape.of(GetInstallationSitesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Fleet Installation Sites in Oracle Cloud Infrastructure Jms service.
+     * 
+     * List Java installation sites in a Fleet filtered by query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetInstallationSitesResult> getInstallationSitesPlain(GetInstallationSitesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Jms/getInstallationSites:getInstallationSites", TypeShape.of(GetInstallationSitesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific List Jre Usage resource in Oracle Cloud Infrastructure Jms service.
@@ -167,6 +299,17 @@ public final class JmsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetListJreUsageResult> getListJreUsagePlain() {
+        return getListJreUsagePlain(GetListJreUsagePlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific List Jre Usage resource in Oracle Cloud Infrastructure Jms service.
+     * 
+     * List Java Runtime usage in a specified host filtered by query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetListJreUsageResult> getListJreUsage(GetListJreUsageArgs args) {
         return getListJreUsage(args, InvokeOptions.Empty);
     }
@@ -178,8 +321,30 @@ public final class JmsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetListJreUsageResult> getListJreUsagePlain(GetListJreUsagePlainArgs args) {
+        return getListJreUsagePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific List Jre Usage resource in Oracle Cloud Infrastructure Jms service.
+     * 
+     * List Java Runtime usage in a specified host filtered by query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetListJreUsageResult> getListJreUsage(GetListJreUsageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Jms/getListJreUsage:getListJreUsage", TypeShape.of(GetListJreUsageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific List Jre Usage resource in Oracle Cloud Infrastructure Jms service.
+     * 
+     * List Java Runtime usage in a specified host filtered by query parameters.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetListJreUsageResult> getListJreUsagePlain(GetListJreUsagePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Jms/getListJreUsage:getListJreUsage", TypeShape.of(GetListJreUsageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Summarize Resource Inventory resource in Oracle Cloud Infrastructure Jms service.
@@ -200,6 +365,17 @@ public final class JmsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetSummarizeResourceInventoryResult> getSummarizeResourceInventoryPlain() {
+        return getSummarizeResourceInventoryPlain(GetSummarizeResourceInventoryPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Summarize Resource Inventory resource in Oracle Cloud Infrastructure Jms service.
+     * 
+     * Retrieve the inventory of JMS resources in the specified compartment: a list of the number of _active_ fleets, managed instances, Java Runtimes, Java installations, and applications.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetSummarizeResourceInventoryResult> getSummarizeResourceInventory(GetSummarizeResourceInventoryArgs args) {
         return getSummarizeResourceInventory(args, InvokeOptions.Empty);
     }
@@ -211,7 +387,29 @@ public final class JmsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetSummarizeResourceInventoryResult> getSummarizeResourceInventoryPlain(GetSummarizeResourceInventoryPlainArgs args) {
+        return getSummarizeResourceInventoryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Summarize Resource Inventory resource in Oracle Cloud Infrastructure Jms service.
+     * 
+     * Retrieve the inventory of JMS resources in the specified compartment: a list of the number of _active_ fleets, managed instances, Java Runtimes, Java installations, and applications.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetSummarizeResourceInventoryResult> getSummarizeResourceInventory(GetSummarizeResourceInventoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Jms/getSummarizeResourceInventory:getSummarizeResourceInventory", TypeShape.of(GetSummarizeResourceInventoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Summarize Resource Inventory resource in Oracle Cloud Infrastructure Jms service.
+     * 
+     * Retrieve the inventory of JMS resources in the specified compartment: a list of the number of _active_ fleets, managed instances, Java Runtimes, Java installations, and applications.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSummarizeResourceInventoryResult> getSummarizeResourceInventoryPlain(GetSummarizeResourceInventoryPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Jms/getSummarizeResourceInventory:getSummarizeResourceInventory", TypeShape.of(GetSummarizeResourceInventoryResult.class), args, Utilities.withVersion(options));
     }
 }

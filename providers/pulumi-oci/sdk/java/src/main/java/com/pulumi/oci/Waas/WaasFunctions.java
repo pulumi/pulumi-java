@@ -9,18 +9,31 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Utilities;
 import com.pulumi.oci.Waas.inputs.GetAddressListArgs;
+import com.pulumi.oci.Waas.inputs.GetAddressListPlainArgs;
 import com.pulumi.oci.Waas.inputs.GetAddressListsArgs;
+import com.pulumi.oci.Waas.inputs.GetAddressListsPlainArgs;
 import com.pulumi.oci.Waas.inputs.GetCertificateArgs;
+import com.pulumi.oci.Waas.inputs.GetCertificatePlainArgs;
 import com.pulumi.oci.Waas.inputs.GetCertificatesArgs;
+import com.pulumi.oci.Waas.inputs.GetCertificatesPlainArgs;
 import com.pulumi.oci.Waas.inputs.GetCustomProtectionRuleArgs;
+import com.pulumi.oci.Waas.inputs.GetCustomProtectionRulePlainArgs;
 import com.pulumi.oci.Waas.inputs.GetCustomProtectionRulesArgs;
+import com.pulumi.oci.Waas.inputs.GetCustomProtectionRulesPlainArgs;
 import com.pulumi.oci.Waas.inputs.GetEdgeSubnetsArgs;
+import com.pulumi.oci.Waas.inputs.GetEdgeSubnetsPlainArgs;
 import com.pulumi.oci.Waas.inputs.GetHttpRedirectArgs;
+import com.pulumi.oci.Waas.inputs.GetHttpRedirectPlainArgs;
 import com.pulumi.oci.Waas.inputs.GetHttpRedirectsArgs;
+import com.pulumi.oci.Waas.inputs.GetHttpRedirectsPlainArgs;
 import com.pulumi.oci.Waas.inputs.GetProtectionRuleArgs;
+import com.pulumi.oci.Waas.inputs.GetProtectionRulePlainArgs;
 import com.pulumi.oci.Waas.inputs.GetProtectionRulesArgs;
+import com.pulumi.oci.Waas.inputs.GetProtectionRulesPlainArgs;
 import com.pulumi.oci.Waas.inputs.GetWaasPoliciesArgs;
+import com.pulumi.oci.Waas.inputs.GetWaasPoliciesPlainArgs;
 import com.pulumi.oci.Waas.inputs.GetWaasPolicyArgs;
+import com.pulumi.oci.Waas.inputs.GetWaasPolicyPlainArgs;
 import com.pulumi.oci.Waas.outputs.GetAddressListResult;
 import com.pulumi.oci.Waas.outputs.GetAddressListsResult;
 import com.pulumi.oci.Waas.outputs.GetCertificateResult;
@@ -34,6 +47,7 @@ import com.pulumi.oci.Waas.outputs.GetProtectionRuleResult;
 import com.pulumi.oci.Waas.outputs.GetProtectionRulesResult;
 import com.pulumi.oci.Waas.outputs.GetWaasPoliciesResult;
 import com.pulumi.oci.Waas.outputs.GetWaasPolicyResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class WaasFunctions {
     /**
@@ -55,8 +69,30 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetAddressListResult> getAddressListPlain(GetAddressListPlainArgs args) {
+        return getAddressListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Address List resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of an address list.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetAddressListResult> getAddressList(GetAddressListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getAddressList:getAddressList", TypeShape.of(GetAddressListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Address List resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of an address list.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAddressListResult> getAddressListPlain(GetAddressListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getAddressList:getAddressList", TypeShape.of(GetAddressListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Address Lists in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -77,8 +113,30 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetAddressListsResult> getAddressListsPlain(GetAddressListsPlainArgs args) {
+        return getAddressListsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Address Lists in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets a list of address lists that can be used in a WAAS policy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetAddressListsResult> getAddressLists(GetAddressListsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getAddressLists:getAddressLists", TypeShape.of(GetAddressListsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Address Lists in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets a list of address lists that can be used in a WAAS policy.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAddressListsResult> getAddressListsPlain(GetAddressListsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getAddressLists:getAddressLists", TypeShape.of(GetAddressListsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Certificate resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -99,8 +157,30 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args) {
+        return getCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Certificate resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of an SSL certificate.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Certificate resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of an SSL certificate.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Certificates in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -121,8 +201,30 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetCertificatesResult> getCertificatesPlain(GetCertificatesPlainArgs args) {
+        return getCertificatesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Certificates in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets a list of SSL certificates that can be used in a WAAS policy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetCertificatesResult> getCertificates(GetCertificatesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getCertificates:getCertificates", TypeShape.of(GetCertificatesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Certificates in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets a list of SSL certificates that can be used in a WAAS policy.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCertificatesResult> getCertificatesPlain(GetCertificatesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getCertificates:getCertificates", TypeShape.of(GetCertificatesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Custom Protection Rule resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -143,8 +245,30 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetCustomProtectionRuleResult> getCustomProtectionRulePlain(GetCustomProtectionRulePlainArgs args) {
+        return getCustomProtectionRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Custom Protection Rule resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of a custom protection rule.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetCustomProtectionRuleResult> getCustomProtectionRule(GetCustomProtectionRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getCustomProtectionRule:getCustomProtectionRule", TypeShape.of(GetCustomProtectionRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Custom Protection Rule resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of a custom protection rule.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCustomProtectionRuleResult> getCustomProtectionRulePlain(GetCustomProtectionRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getCustomProtectionRule:getCustomProtectionRule", TypeShape.of(GetCustomProtectionRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Custom Protection Rules in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -165,8 +289,30 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetCustomProtectionRulesResult> getCustomProtectionRulesPlain(GetCustomProtectionRulesPlainArgs args) {
+        return getCustomProtectionRulesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Custom Protection Rules in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets a list of custom protection rules for the specified Web Application Firewall.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetCustomProtectionRulesResult> getCustomProtectionRules(GetCustomProtectionRulesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getCustomProtectionRules:getCustomProtectionRules", TypeShape.of(GetCustomProtectionRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Custom Protection Rules in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets a list of custom protection rules for the specified Web Application Firewall.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCustomProtectionRulesResult> getCustomProtectionRulesPlain(GetCustomProtectionRulesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getCustomProtectionRules:getCustomProtectionRules", TypeShape.of(GetCustomProtectionRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Edge Subnets in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -187,6 +333,17 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetEdgeSubnetsResult> getEdgeSubnetsPlain() {
+        return getEdgeSubnetsPlain(GetEdgeSubnetsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Edge Subnets in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Return the list of the tenant&#39;s edge node subnets. Use these CIDR blocks to restrict incoming traffic to your origin. These subnets are owned by Oracle Cloud Infrastructure and forward traffic to customer origins. They are not associated with specific regions or compartments.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetEdgeSubnetsResult> getEdgeSubnets(GetEdgeSubnetsArgs args) {
         return getEdgeSubnets(args, InvokeOptions.Empty);
     }
@@ -198,8 +355,30 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetEdgeSubnetsResult> getEdgeSubnetsPlain(GetEdgeSubnetsPlainArgs args) {
+        return getEdgeSubnetsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Edge Subnets in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Return the list of the tenant&#39;s edge node subnets. Use these CIDR blocks to restrict incoming traffic to your origin. These subnets are owned by Oracle Cloud Infrastructure and forward traffic to customer origins. They are not associated with specific regions or compartments.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetEdgeSubnetsResult> getEdgeSubnets(GetEdgeSubnetsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getEdgeSubnets:getEdgeSubnets", TypeShape.of(GetEdgeSubnetsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Edge Subnets in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Return the list of the tenant&#39;s edge node subnets. Use these CIDR blocks to restrict incoming traffic to your origin. These subnets are owned by Oracle Cloud Infrastructure and forward traffic to customer origins. They are not associated with specific regions or compartments.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetEdgeSubnetsResult> getEdgeSubnetsPlain(GetEdgeSubnetsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getEdgeSubnets:getEdgeSubnets", TypeShape.of(GetEdgeSubnetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Http Redirect resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -220,8 +399,30 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetHttpRedirectResult> getHttpRedirectPlain(GetHttpRedirectPlainArgs args) {
+        return getHttpRedirectPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Http Redirect resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of a HTTP Redirect.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetHttpRedirectResult> getHttpRedirect(GetHttpRedirectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getHttpRedirect:getHttpRedirect", TypeShape.of(GetHttpRedirectResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Http Redirect resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of a HTTP Redirect.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetHttpRedirectResult> getHttpRedirectPlain(GetHttpRedirectPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getHttpRedirect:getHttpRedirect", TypeShape.of(GetHttpRedirectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Http Redirects in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -242,8 +443,30 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetHttpRedirectsResult> getHttpRedirectsPlain(GetHttpRedirectsPlainArgs args) {
+        return getHttpRedirectsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Http Redirects in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets a list of HTTP Redirects.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetHttpRedirectsResult> getHttpRedirects(GetHttpRedirectsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getHttpRedirects:getHttpRedirects", TypeShape.of(GetHttpRedirectsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Http Redirects in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets a list of HTTP Redirects.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetHttpRedirectsResult> getHttpRedirectsPlain(GetHttpRedirectsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getHttpRedirects:getHttpRedirects", TypeShape.of(GetHttpRedirectsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Protection Rule resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -264,8 +487,30 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetProtectionRuleResult> getProtectionRulePlain(GetProtectionRulePlainArgs args) {
+        return getProtectionRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Protection Rule resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of a protection rule in the Web Application Firewall configuration for a WAAS policy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetProtectionRuleResult> getProtectionRule(GetProtectionRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getProtectionRule:getProtectionRule", TypeShape.of(GetProtectionRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Protection Rule resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of a protection rule in the Web Application Firewall configuration for a WAAS policy.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetProtectionRuleResult> getProtectionRulePlain(GetProtectionRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getProtectionRule:getProtectionRule", TypeShape.of(GetProtectionRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Protection Rules in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -288,8 +533,32 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetProtectionRulesResult> getProtectionRulesPlain(GetProtectionRulesPlainArgs args) {
+        return getProtectionRulesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Protection Rules in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the list of available protection rules for a WAAS policy. Use the `GetWafConfig` operation to view a list of currently configured protection rules for the Web Application Firewall, or use the `ListRecommendations` operation to get a list of recommended protection rules for the Web Application Firewall.
+     * The list is sorted by `key`, in ascending order.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetProtectionRulesResult> getProtectionRules(GetProtectionRulesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getProtectionRules:getProtectionRules", TypeShape.of(GetProtectionRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Protection Rules in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the list of available protection rules for a WAAS policy. Use the `GetWafConfig` operation to view a list of currently configured protection rules for the Web Application Firewall, or use the `ListRecommendations` operation to get a list of recommended protection rules for the Web Application Firewall.
+     * The list is sorted by `key`, in ascending order.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetProtectionRulesResult> getProtectionRulesPlain(GetProtectionRulesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getProtectionRules:getProtectionRules", TypeShape.of(GetProtectionRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Waas Policies in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -310,8 +579,30 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetWaasPoliciesResult> getWaasPoliciesPlain(GetWaasPoliciesPlainArgs args) {
+        return getWaasPoliciesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Waas Policies in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets a list of WAAS policies.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetWaasPoliciesResult> getWaasPolicies(GetWaasPoliciesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getWaasPolicies:getWaasPolicies", TypeShape.of(GetWaasPoliciesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Waas Policies in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets a list of WAAS policies.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetWaasPoliciesResult> getWaasPoliciesPlain(GetWaasPoliciesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getWaasPolicies:getWaasPolicies", TypeShape.of(GetWaasPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Waas Policy resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
@@ -332,7 +623,29 @@ public final class WaasFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetWaasPolicyResult> getWaasPolicyPlain(GetWaasPolicyPlainArgs args) {
+        return getWaasPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Waas Policy resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of a WAAS policy.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetWaasPolicyResult> getWaasPolicy(GetWaasPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Waas/getWaasPolicy:getWaasPolicy", TypeShape.of(GetWaasPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Waas Policy resource in Oracle Cloud Infrastructure Web Application Acceleration and Security service.
+     * 
+     * Gets the details of a WAAS policy.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetWaasPolicyResult> getWaasPolicyPlain(GetWaasPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Waas/getWaasPolicy:getWaasPolicy", TypeShape.of(GetWaasPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

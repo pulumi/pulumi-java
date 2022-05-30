@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GetPipelineArgs;
+import com.pulumi.googlenative.datapipelines_v1.inputs.GetPipelinePlainArgs;
 import com.pulumi.googlenative.datapipelines_v1.outputs.GetPipelineResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Datapipelines_v1Functions {
     /**
@@ -23,7 +25,21 @@ public final class Datapipelines_v1Functions {
      * Looks up a single pipeline. Returns a &#34;NOT_FOUND&#34; error if no such pipeline exists. Returns a &#34;FORBIDDEN&#34; error if the caller doesn&#39;t have permission to access it.
      * 
      */
+    public static CompletableFuture<GetPipelineResult> getPipelinePlain(GetPipelinePlainArgs args) {
+        return getPipelinePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Looks up a single pipeline. Returns a &#34;NOT_FOUND&#34; error if no such pipeline exists. Returns a &#34;FORBIDDEN&#34; error if the caller doesn&#39;t have permission to access it.
+     * 
+     */
     public static Output<GetPipelineResult> getPipeline(GetPipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:datapipelines/v1:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Looks up a single pipeline. Returns a &#34;NOT_FOUND&#34; error if no such pipeline exists. Returns a &#34;FORBIDDEN&#34; error if the caller doesn&#39;t have permission to access it.
+     * 
+     */
+    public static CompletableFuture<GetPipelineResult> getPipelinePlain(GetPipelinePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:datapipelines/v1:getPipeline", TypeShape.of(GetPipelineResult.class), args, Utilities.withVersion(options));
     }
 }

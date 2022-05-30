@@ -5,8 +5,11 @@ package com.pulumi.awsnative.logs;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.logs.inputs.GetLogGroupArgs;
+import com.pulumi.awsnative.logs.inputs.GetLogGroupPlainArgs;
 import com.pulumi.awsnative.logs.inputs.GetQueryDefinitionArgs;
+import com.pulumi.awsnative.logs.inputs.GetQueryDefinitionPlainArgs;
 import com.pulumi.awsnative.logs.inputs.GetResourcePolicyArgs;
+import com.pulumi.awsnative.logs.inputs.GetResourcePolicyPlainArgs;
 import com.pulumi.awsnative.logs.outputs.GetLogGroupResult;
 import com.pulumi.awsnative.logs.outputs.GetQueryDefinitionResult;
 import com.pulumi.awsnative.logs.outputs.GetResourcePolicyResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class LogsFunctions {
     /**
@@ -27,8 +31,22 @@ public final class LogsFunctions {
      * Resource schema for AWS::Logs::LogGroup
      * 
      */
+    public static CompletableFuture<GetLogGroupResult> getLogGroupPlain(GetLogGroupPlainArgs args) {
+        return getLogGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::Logs::LogGroup
+     * 
+     */
     public static Output<GetLogGroupResult> getLogGroup(GetLogGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:logs:getLogGroup", TypeShape.of(GetLogGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::Logs::LogGroup
+     * 
+     */
+    public static CompletableFuture<GetLogGroupResult> getLogGroupPlain(GetLogGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:logs:getLogGroup", TypeShape.of(GetLogGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The resource schema for AWSLogs QueryDefinition
@@ -41,8 +59,22 @@ public final class LogsFunctions {
      * The resource schema for AWSLogs QueryDefinition
      * 
      */
+    public static CompletableFuture<GetQueryDefinitionResult> getQueryDefinitionPlain(GetQueryDefinitionPlainArgs args) {
+        return getQueryDefinitionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The resource schema for AWSLogs QueryDefinition
+     * 
+     */
     public static Output<GetQueryDefinitionResult> getQueryDefinition(GetQueryDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:logs:getQueryDefinition", TypeShape.of(GetQueryDefinitionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The resource schema for AWSLogs QueryDefinition
+     * 
+     */
+    public static CompletableFuture<GetQueryDefinitionResult> getQueryDefinitionPlain(GetQueryDefinitionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:logs:getQueryDefinition", TypeShape.of(GetQueryDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The resource schema for AWSLogs ResourcePolicy
@@ -55,7 +87,21 @@ public final class LogsFunctions {
      * The resource schema for AWSLogs ResourcePolicy
      * 
      */
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicyPlain(GetResourcePolicyPlainArgs args) {
+        return getResourcePolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The resource schema for AWSLogs ResourcePolicy
+     * 
+     */
     public static Output<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:logs:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The resource schema for AWSLogs ResourcePolicy
+     * 
+     */
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicyPlain(GetResourcePolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:logs:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args, Utilities.withVersion(options));
     }
 }

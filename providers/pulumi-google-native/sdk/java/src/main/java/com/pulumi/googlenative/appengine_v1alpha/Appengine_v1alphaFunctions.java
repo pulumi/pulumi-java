@@ -9,9 +9,12 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.appengine_v1alpha.inputs.GetAuthorizedCertificateArgs;
+import com.pulumi.googlenative.appengine_v1alpha.inputs.GetAuthorizedCertificatePlainArgs;
 import com.pulumi.googlenative.appengine_v1alpha.inputs.GetDomainMappingArgs;
+import com.pulumi.googlenative.appengine_v1alpha.inputs.GetDomainMappingPlainArgs;
 import com.pulumi.googlenative.appengine_v1alpha.outputs.GetAuthorizedCertificateResult;
 import com.pulumi.googlenative.appengine_v1alpha.outputs.GetDomainMappingResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Appengine_v1alphaFunctions {
     /**
@@ -25,8 +28,22 @@ public final class Appengine_v1alphaFunctions {
      * Gets the specified SSL certificate.
      * 
      */
+    public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificatePlain(GetAuthorizedCertificatePlainArgs args) {
+        return getAuthorizedCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the specified SSL certificate.
+     * 
+     */
     public static Output<GetAuthorizedCertificateResult> getAuthorizedCertificate(GetAuthorizedCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:appengine/v1alpha:getAuthorizedCertificate", TypeShape.of(GetAuthorizedCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the specified SSL certificate.
+     * 
+     */
+    public static CompletableFuture<GetAuthorizedCertificateResult> getAuthorizedCertificatePlain(GetAuthorizedCertificatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:appengine/v1alpha:getAuthorizedCertificate", TypeShape.of(GetAuthorizedCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified domain mapping.
@@ -39,7 +56,21 @@ public final class Appengine_v1alphaFunctions {
      * Gets the specified domain mapping.
      * 
      */
+    public static CompletableFuture<GetDomainMappingResult> getDomainMappingPlain(GetDomainMappingPlainArgs args) {
+        return getDomainMappingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the specified domain mapping.
+     * 
+     */
     public static Output<GetDomainMappingResult> getDomainMapping(GetDomainMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:appengine/v1alpha:getDomainMapping", TypeShape.of(GetDomainMappingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the specified domain mapping.
+     * 
+     */
+    public static CompletableFuture<GetDomainMappingResult> getDomainMappingPlain(GetDomainMappingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:appengine/v1alpha:getDomainMapping", TypeShape.of(GetDomainMappingResult.class), args, Utilities.withVersion(options));
     }
 }

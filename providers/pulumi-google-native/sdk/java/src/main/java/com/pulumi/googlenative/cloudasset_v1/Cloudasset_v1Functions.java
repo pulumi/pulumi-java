@@ -9,9 +9,12 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.cloudasset_v1.inputs.GetFeedArgs;
+import com.pulumi.googlenative.cloudasset_v1.inputs.GetFeedPlainArgs;
 import com.pulumi.googlenative.cloudasset_v1.inputs.GetSavedQueryArgs;
+import com.pulumi.googlenative.cloudasset_v1.inputs.GetSavedQueryPlainArgs;
 import com.pulumi.googlenative.cloudasset_v1.outputs.GetFeedResult;
 import com.pulumi.googlenative.cloudasset_v1.outputs.GetSavedQueryResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Cloudasset_v1Functions {
     /**
@@ -25,8 +28,22 @@ public final class Cloudasset_v1Functions {
      * Gets details about an asset feed.
      * 
      */
+    public static CompletableFuture<GetFeedResult> getFeedPlain(GetFeedPlainArgs args) {
+        return getFeedPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets details about an asset feed.
+     * 
+     */
     public static Output<GetFeedResult> getFeed(GetFeedArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudasset/v1:getFeed", TypeShape.of(GetFeedResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets details about an asset feed.
+     * 
+     */
+    public static CompletableFuture<GetFeedResult> getFeedPlain(GetFeedPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudasset/v1:getFeed", TypeShape.of(GetFeedResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details about a saved query.
@@ -39,7 +56,21 @@ public final class Cloudasset_v1Functions {
      * Gets details about a saved query.
      * 
      */
+    public static CompletableFuture<GetSavedQueryResult> getSavedQueryPlain(GetSavedQueryPlainArgs args) {
+        return getSavedQueryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets details about a saved query.
+     * 
+     */
     public static Output<GetSavedQueryResult> getSavedQuery(GetSavedQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudasset/v1:getSavedQuery", TypeShape.of(GetSavedQueryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets details about a saved query.
+     * 
+     */
+    public static CompletableFuture<GetSavedQueryResult> getSavedQueryPlain(GetSavedQueryPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudasset/v1:getSavedQuery", TypeShape.of(GetSavedQueryResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,11 +5,13 @@ package com.pulumi.azurenative.advisor;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.advisor.inputs.GetSuppressionArgs;
+import com.pulumi.azurenative.advisor.inputs.GetSuppressionPlainArgs;
 import com.pulumi.azurenative.advisor.outputs.GetSuppressionResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class AdvisorFunctions {
     /**
@@ -25,7 +27,23 @@ public final class AdvisorFunctions {
      * API Version: 2020-01-01.
      * 
      */
+    public static CompletableFuture<GetSuppressionResult> getSuppressionPlain(GetSuppressionPlainArgs args) {
+        return getSuppressionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
+     * API Version: 2020-01-01.
+     * 
+     */
     public static Output<GetSuppressionResult> getSuppression(GetSuppressionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:advisor:getSuppression", TypeShape.of(GetSuppressionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
+     * API Version: 2020-01-01.
+     * 
+     */
+    public static CompletableFuture<GetSuppressionResult> getSuppressionPlain(GetSuppressionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:advisor:getSuppression", TypeShape.of(GetSuppressionResult.class), args, Utilities.withVersion(options));
     }
 }

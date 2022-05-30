@@ -6,15 +6,26 @@ package com.pulumi.azurenative.policyinsights;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.policyinsights.inputs.GetAttestationAtResourceArgs;
 import com.pulumi.azurenative.policyinsights.inputs.GetAttestationAtResourceGroupArgs;
+import com.pulumi.azurenative.policyinsights.inputs.GetAttestationAtResourceGroupPlainArgs;
+import com.pulumi.azurenative.policyinsights.inputs.GetAttestationAtResourcePlainArgs;
 import com.pulumi.azurenative.policyinsights.inputs.GetAttestationAtSubscriptionArgs;
+import com.pulumi.azurenative.policyinsights.inputs.GetAttestationAtSubscriptionPlainArgs;
 import com.pulumi.azurenative.policyinsights.inputs.GetRemediationAtManagementGroupArgs;
+import com.pulumi.azurenative.policyinsights.inputs.GetRemediationAtManagementGroupPlainArgs;
 import com.pulumi.azurenative.policyinsights.inputs.GetRemediationAtResourceArgs;
 import com.pulumi.azurenative.policyinsights.inputs.GetRemediationAtResourceGroupArgs;
+import com.pulumi.azurenative.policyinsights.inputs.GetRemediationAtResourceGroupPlainArgs;
+import com.pulumi.azurenative.policyinsights.inputs.GetRemediationAtResourcePlainArgs;
 import com.pulumi.azurenative.policyinsights.inputs.GetRemediationAtSubscriptionArgs;
+import com.pulumi.azurenative.policyinsights.inputs.GetRemediationAtSubscriptionPlainArgs;
 import com.pulumi.azurenative.policyinsights.inputs.ListRemediationDeploymentsAtManagementGroupArgs;
+import com.pulumi.azurenative.policyinsights.inputs.ListRemediationDeploymentsAtManagementGroupPlainArgs;
 import com.pulumi.azurenative.policyinsights.inputs.ListRemediationDeploymentsAtResourceArgs;
 import com.pulumi.azurenative.policyinsights.inputs.ListRemediationDeploymentsAtResourceGroupArgs;
+import com.pulumi.azurenative.policyinsights.inputs.ListRemediationDeploymentsAtResourceGroupPlainArgs;
+import com.pulumi.azurenative.policyinsights.inputs.ListRemediationDeploymentsAtResourcePlainArgs;
 import com.pulumi.azurenative.policyinsights.inputs.ListRemediationDeploymentsAtSubscriptionArgs;
+import com.pulumi.azurenative.policyinsights.inputs.ListRemediationDeploymentsAtSubscriptionPlainArgs;
 import com.pulumi.azurenative.policyinsights.outputs.GetAttestationAtResourceGroupResult;
 import com.pulumi.azurenative.policyinsights.outputs.GetAttestationAtResourceResult;
 import com.pulumi.azurenative.policyinsights.outputs.GetAttestationAtSubscriptionResult;
@@ -30,6 +41,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class PolicyinsightsFunctions {
     /**
@@ -45,8 +57,24 @@ public final class PolicyinsightsFunctions {
      * API Version: 2021-01-01.
      * 
      */
+    public static CompletableFuture<GetAttestationAtResourceResult> getAttestationAtResourcePlain(GetAttestationAtResourcePlainArgs args) {
+        return getAttestationAtResourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An attestation resource.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static Output<GetAttestationAtResourceResult> getAttestationAtResource(GetAttestationAtResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:policyinsights:getAttestationAtResource", TypeShape.of(GetAttestationAtResourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An attestation resource.
+     * API Version: 2021-01-01.
+     * 
+     */
+    public static CompletableFuture<GetAttestationAtResourceResult> getAttestationAtResourcePlain(GetAttestationAtResourcePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:policyinsights:getAttestationAtResource", TypeShape.of(GetAttestationAtResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An attestation resource.
@@ -61,8 +89,24 @@ public final class PolicyinsightsFunctions {
      * API Version: 2021-01-01.
      * 
      */
+    public static CompletableFuture<GetAttestationAtResourceGroupResult> getAttestationAtResourceGroupPlain(GetAttestationAtResourceGroupPlainArgs args) {
+        return getAttestationAtResourceGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An attestation resource.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static Output<GetAttestationAtResourceGroupResult> getAttestationAtResourceGroup(GetAttestationAtResourceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:policyinsights:getAttestationAtResourceGroup", TypeShape.of(GetAttestationAtResourceGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An attestation resource.
+     * API Version: 2021-01-01.
+     * 
+     */
+    public static CompletableFuture<GetAttestationAtResourceGroupResult> getAttestationAtResourceGroupPlain(GetAttestationAtResourceGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:policyinsights:getAttestationAtResourceGroup", TypeShape.of(GetAttestationAtResourceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An attestation resource.
@@ -77,8 +121,24 @@ public final class PolicyinsightsFunctions {
      * API Version: 2021-01-01.
      * 
      */
+    public static CompletableFuture<GetAttestationAtSubscriptionResult> getAttestationAtSubscriptionPlain(GetAttestationAtSubscriptionPlainArgs args) {
+        return getAttestationAtSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An attestation resource.
+     * API Version: 2021-01-01.
+     * 
+     */
     public static Output<GetAttestationAtSubscriptionResult> getAttestationAtSubscription(GetAttestationAtSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:policyinsights:getAttestationAtSubscription", TypeShape.of(GetAttestationAtSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An attestation resource.
+     * API Version: 2021-01-01.
+     * 
+     */
+    public static CompletableFuture<GetAttestationAtSubscriptionResult> getAttestationAtSubscriptionPlain(GetAttestationAtSubscriptionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:policyinsights:getAttestationAtSubscription", TypeShape.of(GetAttestationAtSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The remediation definition.
@@ -93,8 +153,24 @@ public final class PolicyinsightsFunctions {
      * API Version: 2019-07-01.
      * 
      */
+    public static CompletableFuture<GetRemediationAtManagementGroupResult> getRemediationAtManagementGroupPlain(GetRemediationAtManagementGroupPlainArgs args) {
+        return getRemediationAtManagementGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The remediation definition.
+     * API Version: 2019-07-01.
+     * 
+     */
     public static Output<GetRemediationAtManagementGroupResult> getRemediationAtManagementGroup(GetRemediationAtManagementGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:policyinsights:getRemediationAtManagementGroup", TypeShape.of(GetRemediationAtManagementGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The remediation definition.
+     * API Version: 2019-07-01.
+     * 
+     */
+    public static CompletableFuture<GetRemediationAtManagementGroupResult> getRemediationAtManagementGroupPlain(GetRemediationAtManagementGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:policyinsights:getRemediationAtManagementGroup", TypeShape.of(GetRemediationAtManagementGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The remediation definition.
@@ -109,8 +185,24 @@ public final class PolicyinsightsFunctions {
      * API Version: 2019-07-01.
      * 
      */
+    public static CompletableFuture<GetRemediationAtResourceResult> getRemediationAtResourcePlain(GetRemediationAtResourcePlainArgs args) {
+        return getRemediationAtResourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The remediation definition.
+     * API Version: 2019-07-01.
+     * 
+     */
     public static Output<GetRemediationAtResourceResult> getRemediationAtResource(GetRemediationAtResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:policyinsights:getRemediationAtResource", TypeShape.of(GetRemediationAtResourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The remediation definition.
+     * API Version: 2019-07-01.
+     * 
+     */
+    public static CompletableFuture<GetRemediationAtResourceResult> getRemediationAtResourcePlain(GetRemediationAtResourcePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:policyinsights:getRemediationAtResource", TypeShape.of(GetRemediationAtResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The remediation definition.
@@ -125,8 +217,24 @@ public final class PolicyinsightsFunctions {
      * API Version: 2019-07-01.
      * 
      */
+    public static CompletableFuture<GetRemediationAtResourceGroupResult> getRemediationAtResourceGroupPlain(GetRemediationAtResourceGroupPlainArgs args) {
+        return getRemediationAtResourceGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The remediation definition.
+     * API Version: 2019-07-01.
+     * 
+     */
     public static Output<GetRemediationAtResourceGroupResult> getRemediationAtResourceGroup(GetRemediationAtResourceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:policyinsights:getRemediationAtResourceGroup", TypeShape.of(GetRemediationAtResourceGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The remediation definition.
+     * API Version: 2019-07-01.
+     * 
+     */
+    public static CompletableFuture<GetRemediationAtResourceGroupResult> getRemediationAtResourceGroupPlain(GetRemediationAtResourceGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:policyinsights:getRemediationAtResourceGroup", TypeShape.of(GetRemediationAtResourceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The remediation definition.
@@ -141,8 +249,24 @@ public final class PolicyinsightsFunctions {
      * API Version: 2019-07-01.
      * 
      */
+    public static CompletableFuture<GetRemediationAtSubscriptionResult> getRemediationAtSubscriptionPlain(GetRemediationAtSubscriptionPlainArgs args) {
+        return getRemediationAtSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The remediation definition.
+     * API Version: 2019-07-01.
+     * 
+     */
     public static Output<GetRemediationAtSubscriptionResult> getRemediationAtSubscription(GetRemediationAtSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:policyinsights:getRemediationAtSubscription", TypeShape.of(GetRemediationAtSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The remediation definition.
+     * API Version: 2019-07-01.
+     * 
+     */
+    public static CompletableFuture<GetRemediationAtSubscriptionResult> getRemediationAtSubscriptionPlain(GetRemediationAtSubscriptionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:policyinsights:getRemediationAtSubscription", TypeShape.of(GetRemediationAtSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List of deployments for a remediation.
@@ -157,8 +281,24 @@ public final class PolicyinsightsFunctions {
      * API Version: 2019-07-01.
      * 
      */
+    public static CompletableFuture<ListRemediationDeploymentsAtManagementGroupResult> listRemediationDeploymentsAtManagementGroupPlain(ListRemediationDeploymentsAtManagementGroupPlainArgs args) {
+        return listRemediationDeploymentsAtManagementGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * List of deployments for a remediation.
+     * API Version: 2019-07-01.
+     * 
+     */
     public static Output<ListRemediationDeploymentsAtManagementGroupResult> listRemediationDeploymentsAtManagementGroup(ListRemediationDeploymentsAtManagementGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:policyinsights:listRemediationDeploymentsAtManagementGroup", TypeShape.of(ListRemediationDeploymentsAtManagementGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List of deployments for a remediation.
+     * API Version: 2019-07-01.
+     * 
+     */
+    public static CompletableFuture<ListRemediationDeploymentsAtManagementGroupResult> listRemediationDeploymentsAtManagementGroupPlain(ListRemediationDeploymentsAtManagementGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:policyinsights:listRemediationDeploymentsAtManagementGroup", TypeShape.of(ListRemediationDeploymentsAtManagementGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List of deployments for a remediation.
@@ -173,8 +313,24 @@ public final class PolicyinsightsFunctions {
      * API Version: 2019-07-01.
      * 
      */
+    public static CompletableFuture<ListRemediationDeploymentsAtResourceResult> listRemediationDeploymentsAtResourcePlain(ListRemediationDeploymentsAtResourcePlainArgs args) {
+        return listRemediationDeploymentsAtResourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * List of deployments for a remediation.
+     * API Version: 2019-07-01.
+     * 
+     */
     public static Output<ListRemediationDeploymentsAtResourceResult> listRemediationDeploymentsAtResource(ListRemediationDeploymentsAtResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:policyinsights:listRemediationDeploymentsAtResource", TypeShape.of(ListRemediationDeploymentsAtResourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List of deployments for a remediation.
+     * API Version: 2019-07-01.
+     * 
+     */
+    public static CompletableFuture<ListRemediationDeploymentsAtResourceResult> listRemediationDeploymentsAtResourcePlain(ListRemediationDeploymentsAtResourcePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:policyinsights:listRemediationDeploymentsAtResource", TypeShape.of(ListRemediationDeploymentsAtResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List of deployments for a remediation.
@@ -189,8 +345,24 @@ public final class PolicyinsightsFunctions {
      * API Version: 2019-07-01.
      * 
      */
+    public static CompletableFuture<ListRemediationDeploymentsAtResourceGroupResult> listRemediationDeploymentsAtResourceGroupPlain(ListRemediationDeploymentsAtResourceGroupPlainArgs args) {
+        return listRemediationDeploymentsAtResourceGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * List of deployments for a remediation.
+     * API Version: 2019-07-01.
+     * 
+     */
     public static Output<ListRemediationDeploymentsAtResourceGroupResult> listRemediationDeploymentsAtResourceGroup(ListRemediationDeploymentsAtResourceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:policyinsights:listRemediationDeploymentsAtResourceGroup", TypeShape.of(ListRemediationDeploymentsAtResourceGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List of deployments for a remediation.
+     * API Version: 2019-07-01.
+     * 
+     */
+    public static CompletableFuture<ListRemediationDeploymentsAtResourceGroupResult> listRemediationDeploymentsAtResourceGroupPlain(ListRemediationDeploymentsAtResourceGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:policyinsights:listRemediationDeploymentsAtResourceGroup", TypeShape.of(ListRemediationDeploymentsAtResourceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List of deployments for a remediation.
@@ -205,7 +377,23 @@ public final class PolicyinsightsFunctions {
      * API Version: 2019-07-01.
      * 
      */
+    public static CompletableFuture<ListRemediationDeploymentsAtSubscriptionResult> listRemediationDeploymentsAtSubscriptionPlain(ListRemediationDeploymentsAtSubscriptionPlainArgs args) {
+        return listRemediationDeploymentsAtSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * List of deployments for a remediation.
+     * API Version: 2019-07-01.
+     * 
+     */
     public static Output<ListRemediationDeploymentsAtSubscriptionResult> listRemediationDeploymentsAtSubscription(ListRemediationDeploymentsAtSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:policyinsights:listRemediationDeploymentsAtSubscription", TypeShape.of(ListRemediationDeploymentsAtSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List of deployments for a remediation.
+     * API Version: 2019-07-01.
+     * 
+     */
+    public static CompletableFuture<ListRemediationDeploymentsAtSubscriptionResult> listRemediationDeploymentsAtSubscriptionPlain(ListRemediationDeploymentsAtSubscriptionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:policyinsights:listRemediationDeploymentsAtSubscription", TypeShape.of(ListRemediationDeploymentsAtSubscriptionResult.class), args, Utilities.withVersion(options));
     }
 }

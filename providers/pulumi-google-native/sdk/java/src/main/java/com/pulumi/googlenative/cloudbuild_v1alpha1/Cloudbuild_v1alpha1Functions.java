@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.cloudbuild_v1alpha1.inputs.GetWorkerPoolArgs;
+import com.pulumi.googlenative.cloudbuild_v1alpha1.inputs.GetWorkerPoolPlainArgs;
 import com.pulumi.googlenative.cloudbuild_v1alpha1.outputs.GetWorkerPoolResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Cloudbuild_v1alpha1Functions {
     /**
@@ -23,7 +25,21 @@ public final class Cloudbuild_v1alpha1Functions {
      * Returns information about a `WorkerPool`.
      * 
      */
+    public static CompletableFuture<GetWorkerPoolResult> getWorkerPoolPlain(GetWorkerPoolPlainArgs args) {
+        return getWorkerPoolPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns information about a `WorkerPool`.
+     * 
+     */
     public static Output<GetWorkerPoolResult> getWorkerPool(GetWorkerPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:cloudbuild/v1alpha1:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns information about a `WorkerPool`.
+     * 
+     */
+    public static CompletableFuture<GetWorkerPoolResult> getWorkerPoolPlain(GetWorkerPoolPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:cloudbuild/v1alpha1:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args, Utilities.withVersion(options));
     }
 }

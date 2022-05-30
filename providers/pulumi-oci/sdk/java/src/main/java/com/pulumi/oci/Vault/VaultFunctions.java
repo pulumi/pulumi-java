@@ -9,11 +9,15 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Utilities;
 import com.pulumi.oci.Vault.inputs.GetSecretArgs;
+import com.pulumi.oci.Vault.inputs.GetSecretPlainArgs;
 import com.pulumi.oci.Vault.inputs.GetSecretVersionArgs;
+import com.pulumi.oci.Vault.inputs.GetSecretVersionPlainArgs;
 import com.pulumi.oci.Vault.inputs.GetSecretsArgs;
+import com.pulumi.oci.Vault.inputs.GetSecretsPlainArgs;
 import com.pulumi.oci.Vault.outputs.GetSecretResult;
 import com.pulumi.oci.Vault.outputs.GetSecretVersionResult;
 import com.pulumi.oci.Vault.outputs.GetSecretsResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class VaultFunctions {
     /**
@@ -35,8 +39,30 @@ public final class VaultFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetSecretResult> getSecretPlain(GetSecretPlainArgs args) {
+        return getSecretPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Secret resource in Oracle Cloud Infrastructure Vault service.
+     * 
+     * Gets information about the specified secret.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Vault/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Secret resource in Oracle Cloud Infrastructure Vault service.
+     * 
+     * Gets information about the specified secret.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSecretResult> getSecretPlain(GetSecretPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Vault/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Secret Version resource in Oracle Cloud Infrastructure Vault service.
@@ -57,8 +83,30 @@ public final class VaultFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetSecretVersionResult> getSecretVersionPlain(GetSecretVersionPlainArgs args) {
+        return getSecretVersionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Secret Version resource in Oracle Cloud Infrastructure Vault service.
+     * 
+     * Gets information about the specified version of a secret.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Vault/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Secret Version resource in Oracle Cloud Infrastructure Vault service.
+     * 
+     * Gets information about the specified version of a secret.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSecretVersionResult> getSecretVersionPlain(GetSecretVersionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Vault/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Secrets in Oracle Cloud Infrastructure Vault service.
@@ -79,7 +127,29 @@ public final class VaultFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetSecretsResult> getSecretsPlain(GetSecretsPlainArgs args) {
+        return getSecretsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Secrets in Oracle Cloud Infrastructure Vault service.
+     * 
+     * Lists all secrets in the specified vault and compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetSecretsResult> getSecrets(GetSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Vault/getSecrets:getSecrets", TypeShape.of(GetSecretsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Secrets in Oracle Cloud Infrastructure Vault service.
+     * 
+     * Lists all secrets in the specified vault and compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSecretsResult> getSecretsPlain(GetSecretsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Vault/getSecrets:getSecrets", TypeShape.of(GetSecretsResult.class), args, Utilities.withVersion(options));
     }
 }

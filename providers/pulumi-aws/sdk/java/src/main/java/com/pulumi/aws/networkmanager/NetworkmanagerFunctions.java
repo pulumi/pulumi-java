@@ -5,15 +5,25 @@ package com.pulumi.aws.networkmanager;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.networkmanager.inputs.GetConnectionArgs;
+import com.pulumi.aws.networkmanager.inputs.GetConnectionPlainArgs;
 import com.pulumi.aws.networkmanager.inputs.GetConnectionsArgs;
+import com.pulumi.aws.networkmanager.inputs.GetConnectionsPlainArgs;
 import com.pulumi.aws.networkmanager.inputs.GetDeviceArgs;
+import com.pulumi.aws.networkmanager.inputs.GetDevicePlainArgs;
 import com.pulumi.aws.networkmanager.inputs.GetDevicesArgs;
+import com.pulumi.aws.networkmanager.inputs.GetDevicesPlainArgs;
 import com.pulumi.aws.networkmanager.inputs.GetGlobalNetworkArgs;
+import com.pulumi.aws.networkmanager.inputs.GetGlobalNetworkPlainArgs;
 import com.pulumi.aws.networkmanager.inputs.GetGlobalNetworksArgs;
+import com.pulumi.aws.networkmanager.inputs.GetGlobalNetworksPlainArgs;
 import com.pulumi.aws.networkmanager.inputs.GetLinkArgs;
+import com.pulumi.aws.networkmanager.inputs.GetLinkPlainArgs;
 import com.pulumi.aws.networkmanager.inputs.GetLinksArgs;
+import com.pulumi.aws.networkmanager.inputs.GetLinksPlainArgs;
 import com.pulumi.aws.networkmanager.inputs.GetSiteArgs;
+import com.pulumi.aws.networkmanager.inputs.GetSitePlainArgs;
 import com.pulumi.aws.networkmanager.inputs.GetSitesArgs;
+import com.pulumi.aws.networkmanager.inputs.GetSitesPlainArgs;
 import com.pulumi.aws.networkmanager.outputs.GetConnectionResult;
 import com.pulumi.aws.networkmanager.outputs.GetConnectionsResult;
 import com.pulumi.aws.networkmanager.outputs.GetDeviceResult;
@@ -28,6 +38,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class NetworkmanagerFunctions {
     /**
@@ -89,8 +100,70 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetConnectionResult> getConnectionPlain(GetConnectionPlainArgs args) {
+        return getConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve information about a connection.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getConnection(GetConnectionArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .connectionId(var_.getConnection_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:networkmanager/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve information about a connection.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getConnection(GetConnectionArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .connectionId(var_.getConnection_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetConnectionResult> getConnectionPlain(GetConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:networkmanager/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about connections.
@@ -151,8 +224,70 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetConnectionsResult> getConnectionsPlain(GetConnectionsPlainArgs args) {
+        return getConnectionsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve information about connections.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getConnections(GetConnectionsArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetConnectionsResult> getConnections(GetConnectionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:networkmanager/getConnections:getConnections", TypeShape.of(GetConnectionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve information about connections.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getConnections(GetConnectionsArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetConnectionsResult> getConnectionsPlain(GetConnectionsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:networkmanager/getConnections:getConnections", TypeShape.of(GetConnectionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a device.
@@ -213,8 +348,70 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args) {
+        return getDevicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve information about a device.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getDevice(GetDeviceArgs.builder()
+     *             .globalNetworkIdId(var_.getGlobal_network_id())
+     *             .deviceId(var_.getDevice_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:networkmanager/getDevice:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve information about a device.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getDevice(GetDeviceArgs.builder()
+     *             .globalNetworkIdId(var_.getGlobal_network_id())
+     *             .deviceId(var_.getDevice_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:networkmanager/getDevice:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about devices.
@@ -275,8 +472,70 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetDevicesResult> getDevicesPlain(GetDevicesPlainArgs args) {
+        return getDevicesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve information about devices.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getDevices(GetDevicesArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetDevicesResult> getDevices(GetDevicesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:networkmanager/getDevices:getDevices", TypeShape.of(GetDevicesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve information about devices.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getDevices(GetDevicesArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetDevicesResult> getDevicesPlain(GetDevicesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:networkmanager/getDevices:getDevices", TypeShape.of(GetDevicesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a global network.
@@ -335,8 +594,68 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetGlobalNetworkResult> getGlobalNetworkPlain(GetGlobalNetworkPlainArgs args) {
+        return getGlobalNetworkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve information about a global network.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getGlobalNetwork(GetGlobalNetworkArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetGlobalNetworkResult> getGlobalNetwork(GetGlobalNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:networkmanager/getGlobalNetwork:getGlobalNetwork", TypeShape.of(GetGlobalNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve information about a global network.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getGlobalNetwork(GetGlobalNetworkArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetGlobalNetworkResult> getGlobalNetworkPlain(GetGlobalNetworkPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:networkmanager/getGlobalNetwork:getGlobalNetwork", TypeShape.of(GetGlobalNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about global networks.
@@ -395,6 +714,36 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetGlobalNetworksResult> getGlobalNetworksPlain() {
+        return getGlobalNetworksPlain(GetGlobalNetworksPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve information about global networks.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getGlobalNetworks(GetGlobalNetworksArgs.builder()
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetGlobalNetworksResult> getGlobalNetworks(GetGlobalNetworksArgs args) {
         return getGlobalNetworks(args, InvokeOptions.Empty);
     }
@@ -425,8 +774,68 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetGlobalNetworksResult> getGlobalNetworksPlain(GetGlobalNetworksPlainArgs args) {
+        return getGlobalNetworksPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve information about global networks.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getGlobalNetworks(GetGlobalNetworksArgs.builder()
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetGlobalNetworksResult> getGlobalNetworks(GetGlobalNetworksArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:networkmanager/getGlobalNetworks:getGlobalNetworks", TypeShape.of(GetGlobalNetworksResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve information about global networks.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getGlobalNetworks(GetGlobalNetworksArgs.builder()
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetGlobalNetworksResult> getGlobalNetworksPlain(GetGlobalNetworksPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:networkmanager/getGlobalNetworks:getGlobalNetworks", TypeShape.of(GetGlobalNetworksResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a link.
@@ -487,8 +896,70 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetLinkResult> getLinkPlain(GetLinkPlainArgs args) {
+        return getLinkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve information about a link.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getLink(GetLinkArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .linkId(var_.getLink_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLinkResult> getLink(GetLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:networkmanager/getLink:getLink", TypeShape.of(GetLinkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve information about a link.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getLink(GetLinkArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .linkId(var_.getLink_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetLinkResult> getLinkPlain(GetLinkPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:networkmanager/getLink:getLink", TypeShape.of(GetLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about link.
@@ -549,8 +1020,70 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetLinksResult> getLinksPlain(GetLinksPlainArgs args) {
+        return getLinksPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve information about link.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getLinks(GetLinksArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLinksResult> getLinks(GetLinksArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:networkmanager/getLinks:getLinks", TypeShape.of(GetLinksResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve information about link.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getLinks(GetLinksArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetLinksResult> getLinksPlain(GetLinksPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:networkmanager/getLinks:getLinks", TypeShape.of(GetLinksResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about a site.
@@ -611,8 +1144,70 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetSiteResult> getSitePlain(GetSitePlainArgs args) {
+        return getSitePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve information about a site.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getSite(GetSiteArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .siteId(var_.getSite_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:networkmanager/getSite:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve information about a site.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getSite(GetSiteArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .siteId(var_.getSite_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetSiteResult> getSitePlain(GetSitePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:networkmanager/getSite:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about sites.
@@ -673,7 +1268,69 @@ public final class NetworkmanagerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetSitesResult> getSitesPlain(GetSitesPlainArgs args) {
+        return getSitesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieve information about sites.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getSites(GetSitesArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSitesResult> getSites(GetSitesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:networkmanager/getSites:getSites", TypeShape.of(GetSitesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve information about sites.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getSites(GetSitesArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetSitesResult> getSitesPlain(GetSitesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:networkmanager/getSites:getSites", TypeShape.of(GetSitesResult.class), args, Utilities.withVersion(options));
     }
 }

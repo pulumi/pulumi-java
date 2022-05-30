@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.firestore_v1beta1.inputs.GetIndexArgs;
+import com.pulumi.googlenative.firestore_v1beta1.inputs.GetIndexPlainArgs;
 import com.pulumi.googlenative.firestore_v1beta1.outputs.GetIndexResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Firestore_v1beta1Functions {
     /**
@@ -23,7 +25,21 @@ public final class Firestore_v1beta1Functions {
      * Gets an index.
      * 
      */
+    public static CompletableFuture<GetIndexResult> getIndexPlain(GetIndexPlainArgs args) {
+        return getIndexPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets an index.
+     * 
+     */
     public static Output<GetIndexResult> getIndex(GetIndexArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:firestore/v1beta1:getIndex", TypeShape.of(GetIndexResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets an index.
+     * 
+     */
+    public static CompletableFuture<GetIndexResult> getIndexPlain(GetIndexPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:firestore/v1beta1:getIndex", TypeShape.of(GetIndexResult.class), args, Utilities.withVersion(options));
     }
 }

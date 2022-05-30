@@ -6,19 +6,34 @@ package com.pulumi.azurenative.customerinsights;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.customerinsights.inputs.GetConnectorArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetConnectorMappingArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetConnectorMappingPlainArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetConnectorPlainArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetHubArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetHubPlainArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetImageUploadUrlForDataArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetImageUploadUrlForDataPlainArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetImageUploadUrlForEntityTypeArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetImageUploadUrlForEntityTypePlainArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetKpiArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetKpiPlainArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetLinkArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetLinkPlainArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetPredictionArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetPredictionModelStatusArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetPredictionModelStatusPlainArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetPredictionPlainArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetPredictionTrainingResultsArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetPredictionTrainingResultsPlainArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetProfileArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetProfilePlainArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetRelationshipArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetRelationshipLinkArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetRelationshipLinkPlainArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetRelationshipPlainArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetRoleAssignmentArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetRoleAssignmentPlainArgs;
 import com.pulumi.azurenative.customerinsights.inputs.GetViewArgs;
+import com.pulumi.azurenative.customerinsights.inputs.GetViewPlainArgs;
 import com.pulumi.azurenative.customerinsights.outputs.GetConnectorMappingResult;
 import com.pulumi.azurenative.customerinsights.outputs.GetConnectorResult;
 import com.pulumi.azurenative.customerinsights.outputs.GetHubResult;
@@ -38,6 +53,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class CustomerinsightsFunctions {
     /**
@@ -53,8 +69,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetConnectorResult> getConnectorPlain(GetConnectorPlainArgs args) {
+        return getConnectorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The connector resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetConnectorResult> getConnector(GetConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The connector resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetConnectorResult> getConnectorPlain(GetConnectorPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The connector mapping resource format.
@@ -69,8 +101,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetConnectorMappingResult> getConnectorMappingPlain(GetConnectorMappingPlainArgs args) {
+        return getConnectorMappingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The connector mapping resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetConnectorMappingResult> getConnectorMapping(GetConnectorMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getConnectorMapping", TypeShape.of(GetConnectorMappingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The connector mapping resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetConnectorMappingResult> getConnectorMappingPlain(GetConnectorMappingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getConnectorMapping", TypeShape.of(GetConnectorMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Hub resource.
@@ -85,8 +133,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetHubResult> getHubPlain(GetHubPlainArgs args) {
+        return getHubPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Hub resource.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetHubResult> getHub(GetHubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getHub", TypeShape.of(GetHubResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Hub resource.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetHubResult> getHubPlain(GetHubPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getHub", TypeShape.of(GetHubResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The image definition.
@@ -101,8 +165,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetImageUploadUrlForDataResult> getImageUploadUrlForDataPlain(GetImageUploadUrlForDataPlainArgs args) {
+        return getImageUploadUrlForDataPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The image definition.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetImageUploadUrlForDataResult> getImageUploadUrlForData(GetImageUploadUrlForDataArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getImageUploadUrlForData", TypeShape.of(GetImageUploadUrlForDataResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The image definition.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetImageUploadUrlForDataResult> getImageUploadUrlForDataPlain(GetImageUploadUrlForDataPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getImageUploadUrlForData", TypeShape.of(GetImageUploadUrlForDataResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The image definition.
@@ -117,8 +197,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetImageUploadUrlForEntityTypeResult> getImageUploadUrlForEntityTypePlain(GetImageUploadUrlForEntityTypePlainArgs args) {
+        return getImageUploadUrlForEntityTypePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The image definition.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetImageUploadUrlForEntityTypeResult> getImageUploadUrlForEntityType(GetImageUploadUrlForEntityTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getImageUploadUrlForEntityType", TypeShape.of(GetImageUploadUrlForEntityTypeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The image definition.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetImageUploadUrlForEntityTypeResult> getImageUploadUrlForEntityTypePlain(GetImageUploadUrlForEntityTypePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getImageUploadUrlForEntityType", TypeShape.of(GetImageUploadUrlForEntityTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The KPI resource format.
@@ -133,8 +229,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetKpiResult> getKpiPlain(GetKpiPlainArgs args) {
+        return getKpiPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The KPI resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetKpiResult> getKpi(GetKpiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getKpi", TypeShape.of(GetKpiResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The KPI resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetKpiResult> getKpiPlain(GetKpiPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getKpi", TypeShape.of(GetKpiResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The link resource format.
@@ -149,8 +261,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetLinkResult> getLinkPlain(GetLinkPlainArgs args) {
+        return getLinkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The link resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetLinkResult> getLink(GetLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getLink", TypeShape.of(GetLinkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The link resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetLinkResult> getLinkPlain(GetLinkPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getLink", TypeShape.of(GetLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The prediction resource format.
@@ -165,8 +293,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetPredictionResult> getPredictionPlain(GetPredictionPlainArgs args) {
+        return getPredictionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The prediction resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetPredictionResult> getPrediction(GetPredictionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getPrediction", TypeShape.of(GetPredictionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The prediction resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetPredictionResult> getPredictionPlain(GetPredictionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getPrediction", TypeShape.of(GetPredictionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The prediction model status.
@@ -181,8 +325,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetPredictionModelStatusResult> getPredictionModelStatusPlain(GetPredictionModelStatusPlainArgs args) {
+        return getPredictionModelStatusPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The prediction model status.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetPredictionModelStatusResult> getPredictionModelStatus(GetPredictionModelStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getPredictionModelStatus", TypeShape.of(GetPredictionModelStatusResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The prediction model status.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetPredictionModelStatusResult> getPredictionModelStatusPlain(GetPredictionModelStatusPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getPredictionModelStatus", TypeShape.of(GetPredictionModelStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The training results of the prediction.
@@ -197,8 +357,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetPredictionTrainingResultsResult> getPredictionTrainingResultsPlain(GetPredictionTrainingResultsPlainArgs args) {
+        return getPredictionTrainingResultsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The training results of the prediction.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetPredictionTrainingResultsResult> getPredictionTrainingResults(GetPredictionTrainingResultsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getPredictionTrainingResults", TypeShape.of(GetPredictionTrainingResultsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The training results of the prediction.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetPredictionTrainingResultsResult> getPredictionTrainingResultsPlain(GetPredictionTrainingResultsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getPredictionTrainingResults", TypeShape.of(GetPredictionTrainingResultsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The profile resource format.
@@ -213,8 +389,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetProfileResult> getProfilePlain(GetProfilePlainArgs args) {
+        return getProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The profile resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetProfileResult> getProfile(GetProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getProfile", TypeShape.of(GetProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The profile resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetProfileResult> getProfilePlain(GetProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getProfile", TypeShape.of(GetProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The relationship resource format.
@@ -229,8 +421,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetRelationshipResult> getRelationshipPlain(GetRelationshipPlainArgs args) {
+        return getRelationshipPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The relationship resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetRelationshipResult> getRelationship(GetRelationshipArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getRelationship", TypeShape.of(GetRelationshipResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The relationship resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetRelationshipResult> getRelationshipPlain(GetRelationshipPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getRelationship", TypeShape.of(GetRelationshipResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The relationship link resource format.
@@ -245,8 +453,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetRelationshipLinkResult> getRelationshipLinkPlain(GetRelationshipLinkPlainArgs args) {
+        return getRelationshipLinkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The relationship link resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetRelationshipLinkResult> getRelationshipLink(GetRelationshipLinkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getRelationshipLink", TypeShape.of(GetRelationshipLinkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The relationship link resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetRelationshipLinkResult> getRelationshipLinkPlain(GetRelationshipLinkPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getRelationshipLink", TypeShape.of(GetRelationshipLinkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Role Assignment resource format.
@@ -261,8 +485,24 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignmentPlain(GetRoleAssignmentPlainArgs args) {
+        return getRoleAssignmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The Role Assignment resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetRoleAssignmentResult> getRoleAssignment(GetRoleAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getRoleAssignment", TypeShape.of(GetRoleAssignmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Role Assignment resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetRoleAssignmentResult> getRoleAssignmentPlain(GetRoleAssignmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getRoleAssignment", TypeShape.of(GetRoleAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The view resource format.
@@ -277,7 +517,23 @@ public final class CustomerinsightsFunctions {
      * API Version: 2017-04-26.
      * 
      */
+    public static CompletableFuture<GetViewResult> getViewPlain(GetViewPlainArgs args) {
+        return getViewPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The view resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
     public static Output<GetViewResult> getView(GetViewArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:customerinsights:getView", TypeShape.of(GetViewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The view resource format.
+     * API Version: 2017-04-26.
+     * 
+     */
+    public static CompletableFuture<GetViewResult> getViewPlain(GetViewPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getView", TypeShape.of(GetViewResult.class), args, Utilities.withVersion(options));
     }
 }

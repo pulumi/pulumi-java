@@ -10,14 +10,20 @@ import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.GetFeatureArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.GetFeatureIamPolicyArgs;
+import com.pulumi.googlenative.gkehub_v1alpha.inputs.GetFeatureIamPolicyPlainArgs;
+import com.pulumi.googlenative.gkehub_v1alpha.inputs.GetFeaturePlainArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.GetFleetArgs;
+import com.pulumi.googlenative.gkehub_v1alpha.inputs.GetFleetPlainArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.GetMembershipArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.GetMembershipIamPolicyArgs;
+import com.pulumi.googlenative.gkehub_v1alpha.inputs.GetMembershipIamPolicyPlainArgs;
+import com.pulumi.googlenative.gkehub_v1alpha.inputs.GetMembershipPlainArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.outputs.GetFeatureIamPolicyResult;
 import com.pulumi.googlenative.gkehub_v1alpha.outputs.GetFeatureResult;
 import com.pulumi.googlenative.gkehub_v1alpha.outputs.GetFleetResult;
 import com.pulumi.googlenative.gkehub_v1alpha.outputs.GetMembershipIamPolicyResult;
 import com.pulumi.googlenative.gkehub_v1alpha.outputs.GetMembershipResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Gkehub_v1alphaFunctions {
     /**
@@ -31,8 +37,22 @@ public final class Gkehub_v1alphaFunctions {
      * Gets details of a single Feature.
      * 
      */
+    public static CompletableFuture<GetFeatureResult> getFeaturePlain(GetFeaturePlainArgs args) {
+        return getFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets details of a single Feature.
+     * 
+     */
     public static Output<GetFeatureResult> getFeature(GetFeatureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:gkehub/v1alpha:getFeature", TypeShape.of(GetFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets details of a single Feature.
+     * 
+     */
+    public static CompletableFuture<GetFeatureResult> getFeaturePlain(GetFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:gkehub/v1alpha:getFeature", TypeShape.of(GetFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -45,8 +65,22 @@ public final class Gkehub_v1alphaFunctions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicyPlain(GetFeatureIamPolicyPlainArgs args) {
+        return getFeatureIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetFeatureIamPolicyResult> getFeatureIamPolicy(GetFeatureIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:gkehub/v1alpha:getFeatureIamPolicy", TypeShape.of(GetFeatureIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetFeatureIamPolicyResult> getFeatureIamPolicyPlain(GetFeatureIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:gkehub/v1alpha:getFeatureIamPolicy", TypeShape.of(GetFeatureIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the details of a fleet.
@@ -59,8 +93,22 @@ public final class Gkehub_v1alphaFunctions {
      * Returns the details of a fleet.
      * 
      */
+    public static CompletableFuture<GetFleetResult> getFleetPlain(GetFleetPlainArgs args) {
+        return getFleetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the details of a fleet.
+     * 
+     */
     public static Output<GetFleetResult> getFleet(GetFleetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:gkehub/v1alpha:getFleet", TypeShape.of(GetFleetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the details of a fleet.
+     * 
+     */
+    public static CompletableFuture<GetFleetResult> getFleetPlain(GetFleetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:gkehub/v1alpha:getFleet", TypeShape.of(GetFleetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the details of a Membership.
@@ -73,8 +121,22 @@ public final class Gkehub_v1alphaFunctions {
      * Gets the details of a Membership.
      * 
      */
+    public static CompletableFuture<GetMembershipResult> getMembershipPlain(GetMembershipPlainArgs args) {
+        return getMembershipPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the details of a Membership.
+     * 
+     */
     public static Output<GetMembershipResult> getMembership(GetMembershipArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:gkehub/v1alpha:getMembership", TypeShape.of(GetMembershipResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the details of a Membership.
+     * 
+     */
+    public static CompletableFuture<GetMembershipResult> getMembershipPlain(GetMembershipPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:gkehub/v1alpha:getMembership", TypeShape.of(GetMembershipResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -87,7 +149,21 @@ public final class Gkehub_v1alphaFunctions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicyPlain(GetMembershipIamPolicyPlainArgs args) {
+        return getMembershipIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetMembershipIamPolicyResult> getMembershipIamPolicy(GetMembershipIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:gkehub/v1alpha:getMembershipIamPolicy", TypeShape.of(GetMembershipIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetMembershipIamPolicyResult> getMembershipIamPolicyPlain(GetMembershipIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:gkehub/v1alpha:getMembershipIamPolicy", TypeShape.of(GetMembershipIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

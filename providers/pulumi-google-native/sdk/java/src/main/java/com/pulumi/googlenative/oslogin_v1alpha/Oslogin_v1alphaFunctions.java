@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.oslogin_v1alpha.inputs.GetSshPublicKeyArgs;
+import com.pulumi.googlenative.oslogin_v1alpha.inputs.GetSshPublicKeyPlainArgs;
 import com.pulumi.googlenative.oslogin_v1alpha.outputs.GetSshPublicKeyResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Oslogin_v1alphaFunctions {
     /**
@@ -23,7 +25,21 @@ public final class Oslogin_v1alphaFunctions {
      * Retrieves an SSH public key.
      * 
      */
+    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKeyPlain(GetSshPublicKeyPlainArgs args) {
+        return getSshPublicKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves an SSH public key.
+     * 
+     */
     public static Output<GetSshPublicKeyResult> getSshPublicKey(GetSshPublicKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:oslogin/v1alpha:getSshPublicKey", TypeShape.of(GetSshPublicKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves an SSH public key.
+     * 
+     */
+    public static CompletableFuture<GetSshPublicKeyResult> getSshPublicKeyPlain(GetSshPublicKeyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:oslogin/v1alpha:getSshPublicKey", TypeShape.of(GetSshPublicKeyResult.class), args, Utilities.withVersion(options));
     }
 }

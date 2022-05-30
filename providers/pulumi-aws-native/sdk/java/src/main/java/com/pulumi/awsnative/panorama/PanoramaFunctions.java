@@ -5,8 +5,11 @@ package com.pulumi.awsnative.panorama;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.panorama.inputs.GetApplicationInstanceArgs;
+import com.pulumi.awsnative.panorama.inputs.GetApplicationInstancePlainArgs;
 import com.pulumi.awsnative.panorama.inputs.GetPackageArgs;
+import com.pulumi.awsnative.panorama.inputs.GetPackagePlainArgs;
 import com.pulumi.awsnative.panorama.inputs.GetPackageVersionArgs;
+import com.pulumi.awsnative.panorama.inputs.GetPackageVersionPlainArgs;
 import com.pulumi.awsnative.panorama.outputs.GetApplicationInstanceResult;
 import com.pulumi.awsnative.panorama.outputs.GetPackageResult;
 import com.pulumi.awsnative.panorama.outputs.GetPackageVersionResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class PanoramaFunctions {
     /**
@@ -27,8 +31,22 @@ public final class PanoramaFunctions {
      * Schema for ApplicationInstance CloudFormation Resource
      * 
      */
+    public static CompletableFuture<GetApplicationInstanceResult> getApplicationInstancePlain(GetApplicationInstancePlainArgs args) {
+        return getApplicationInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Schema for ApplicationInstance CloudFormation Resource
+     * 
+     */
     public static Output<GetApplicationInstanceResult> getApplicationInstance(GetApplicationInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:panorama:getApplicationInstance", TypeShape.of(GetApplicationInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Schema for ApplicationInstance CloudFormation Resource
+     * 
+     */
+    public static CompletableFuture<GetApplicationInstanceResult> getApplicationInstancePlain(GetApplicationInstancePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:panorama:getApplicationInstance", TypeShape.of(GetApplicationInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Schema for Package CloudFormation Resource
@@ -41,8 +59,22 @@ public final class PanoramaFunctions {
      * Schema for Package CloudFormation Resource
      * 
      */
+    public static CompletableFuture<GetPackageResult> getPackagePlain(GetPackagePlainArgs args) {
+        return getPackagePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Schema for Package CloudFormation Resource
+     * 
+     */
     public static Output<GetPackageResult> getPackage(GetPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:panorama:getPackage", TypeShape.of(GetPackageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Schema for Package CloudFormation Resource
+     * 
+     */
+    public static CompletableFuture<GetPackageResult> getPackagePlain(GetPackagePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:panorama:getPackage", TypeShape.of(GetPackageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Schema for PackageVersion Resource Type
@@ -55,7 +87,21 @@ public final class PanoramaFunctions {
      * Schema for PackageVersion Resource Type
      * 
      */
+    public static CompletableFuture<GetPackageVersionResult> getPackageVersionPlain(GetPackageVersionPlainArgs args) {
+        return getPackageVersionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Schema for PackageVersion Resource Type
+     * 
+     */
     public static Output<GetPackageVersionResult> getPackageVersion(GetPackageVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:panorama:getPackageVersion", TypeShape.of(GetPackageVersionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Schema for PackageVersion Resource Type
+     * 
+     */
+    public static CompletableFuture<GetPackageVersionResult> getPackageVersionPlain(GetPackageVersionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:panorama:getPackageVersion", TypeShape.of(GetPackageVersionResult.class), args, Utilities.withVersion(options));
     }
 }

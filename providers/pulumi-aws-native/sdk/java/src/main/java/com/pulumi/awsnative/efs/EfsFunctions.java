@@ -5,8 +5,11 @@ package com.pulumi.awsnative.efs;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.efs.inputs.GetAccessPointArgs;
+import com.pulumi.awsnative.efs.inputs.GetAccessPointPlainArgs;
 import com.pulumi.awsnative.efs.inputs.GetFileSystemArgs;
+import com.pulumi.awsnative.efs.inputs.GetFileSystemPlainArgs;
 import com.pulumi.awsnative.efs.inputs.GetMountTargetArgs;
+import com.pulumi.awsnative.efs.inputs.GetMountTargetPlainArgs;
 import com.pulumi.awsnative.efs.outputs.GetAccessPointResult;
 import com.pulumi.awsnative.efs.outputs.GetFileSystemResult;
 import com.pulumi.awsnative.efs.outputs.GetMountTargetResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class EfsFunctions {
     /**
@@ -27,8 +31,22 @@ public final class EfsFunctions {
      * Resource Type definition for AWS::EFS::AccessPoint
      * 
      */
+    public static CompletableFuture<GetAccessPointResult> getAccessPointPlain(GetAccessPointPlainArgs args) {
+        return getAccessPointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::EFS::AccessPoint
+     * 
+     */
     public static Output<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:efs:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::EFS::AccessPoint
+     * 
+     */
+    public static CompletableFuture<GetAccessPointResult> getAccessPointPlain(GetAccessPointPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:efs:getAccessPoint", TypeShape.of(GetAccessPointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::EFS::FileSystem
@@ -41,8 +59,22 @@ public final class EfsFunctions {
      * Resource Type definition for AWS::EFS::FileSystem
      * 
      */
+    public static CompletableFuture<GetFileSystemResult> getFileSystemPlain(GetFileSystemPlainArgs args) {
+        return getFileSystemPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::EFS::FileSystem
+     * 
+     */
     public static Output<GetFileSystemResult> getFileSystem(GetFileSystemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:efs:getFileSystem", TypeShape.of(GetFileSystemResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::EFS::FileSystem
+     * 
+     */
+    public static CompletableFuture<GetFileSystemResult> getFileSystemPlain(GetFileSystemPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:efs:getFileSystem", TypeShape.of(GetFileSystemResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::EFS::MountTarget
@@ -55,7 +87,21 @@ public final class EfsFunctions {
      * Resource Type definition for AWS::EFS::MountTarget
      * 
      */
+    public static CompletableFuture<GetMountTargetResult> getMountTargetPlain(GetMountTargetPlainArgs args) {
+        return getMountTargetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::EFS::MountTarget
+     * 
+     */
     public static Output<GetMountTargetResult> getMountTarget(GetMountTargetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:efs:getMountTarget", TypeShape.of(GetMountTargetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::EFS::MountTarget
+     * 
+     */
+    public static CompletableFuture<GetMountTargetResult> getMountTargetPlain(GetMountTargetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:efs:getMountTarget", TypeShape.of(GetMountTargetResult.class), args, Utilities.withVersion(options));
     }
 }

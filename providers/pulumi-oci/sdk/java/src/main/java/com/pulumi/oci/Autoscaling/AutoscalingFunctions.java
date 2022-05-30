@@ -8,10 +8,13 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Autoscaling.inputs.GetAutoScalingConfigurationArgs;
+import com.pulumi.oci.Autoscaling.inputs.GetAutoScalingConfigurationPlainArgs;
 import com.pulumi.oci.Autoscaling.inputs.GetAutoScalingConfigurationsArgs;
+import com.pulumi.oci.Autoscaling.inputs.GetAutoScalingConfigurationsPlainArgs;
 import com.pulumi.oci.Autoscaling.outputs.GetAutoScalingConfigurationResult;
 import com.pulumi.oci.Autoscaling.outputs.GetAutoScalingConfigurationsResult;
 import com.pulumi.oci.Utilities;
+import java.util.concurrent.CompletableFuture;
 
 public final class AutoscalingFunctions {
     /**
@@ -33,8 +36,30 @@ public final class AutoscalingFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetAutoScalingConfigurationResult> getAutoScalingConfigurationPlain(GetAutoScalingConfigurationPlainArgs args) {
+        return getAutoScalingConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Auto Scaling Configuration resource in Oracle Cloud Infrastructure Auto Scaling service.
+     * 
+     * Gets information about the specified autoscaling configuration.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetAutoScalingConfigurationResult> getAutoScalingConfiguration(GetAutoScalingConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Autoscaling/getAutoScalingConfiguration:getAutoScalingConfiguration", TypeShape.of(GetAutoScalingConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Auto Scaling Configuration resource in Oracle Cloud Infrastructure Auto Scaling service.
+     * 
+     * Gets information about the specified autoscaling configuration.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAutoScalingConfigurationResult> getAutoScalingConfigurationPlain(GetAutoScalingConfigurationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Autoscaling/getAutoScalingConfiguration:getAutoScalingConfiguration", TypeShape.of(GetAutoScalingConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Auto Scaling Configurations in Oracle Cloud Infrastructure Auto Scaling service.
@@ -55,7 +80,29 @@ public final class AutoscalingFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetAutoScalingConfigurationsResult> getAutoScalingConfigurationsPlain(GetAutoScalingConfigurationsPlainArgs args) {
+        return getAutoScalingConfigurationsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Auto Scaling Configurations in Oracle Cloud Infrastructure Auto Scaling service.
+     * 
+     * Lists autoscaling configurations in the specifed compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetAutoScalingConfigurationsResult> getAutoScalingConfigurations(GetAutoScalingConfigurationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Autoscaling/getAutoScalingConfigurations:getAutoScalingConfigurations", TypeShape.of(GetAutoScalingConfigurationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Auto Scaling Configurations in Oracle Cloud Infrastructure Auto Scaling service.
+     * 
+     * Lists autoscaling configurations in the specifed compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAutoScalingConfigurationsResult> getAutoScalingConfigurationsPlain(GetAutoScalingConfigurationsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Autoscaling/getAutoScalingConfigurations:getAutoScalingConfigurations", TypeShape.of(GetAutoScalingConfigurationsResult.class), args, Utilities.withVersion(options));
     }
 }

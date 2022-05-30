@@ -9,11 +9,15 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.pubsublite_v1.inputs.GetReservationArgs;
+import com.pulumi.googlenative.pubsublite_v1.inputs.GetReservationPlainArgs;
 import com.pulumi.googlenative.pubsublite_v1.inputs.GetSubscriptionArgs;
+import com.pulumi.googlenative.pubsublite_v1.inputs.GetSubscriptionPlainArgs;
 import com.pulumi.googlenative.pubsublite_v1.inputs.GetTopicArgs;
+import com.pulumi.googlenative.pubsublite_v1.inputs.GetTopicPlainArgs;
 import com.pulumi.googlenative.pubsublite_v1.outputs.GetReservationResult;
 import com.pulumi.googlenative.pubsublite_v1.outputs.GetSubscriptionResult;
 import com.pulumi.googlenative.pubsublite_v1.outputs.GetTopicResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Pubsublite_v1Functions {
     /**
@@ -27,8 +31,22 @@ public final class Pubsublite_v1Functions {
      * Returns the reservation configuration.
      * 
      */
+    public static CompletableFuture<GetReservationResult> getReservationPlain(GetReservationPlainArgs args) {
+        return getReservationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the reservation configuration.
+     * 
+     */
     public static Output<GetReservationResult> getReservation(GetReservationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:pubsublite/v1:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the reservation configuration.
+     * 
+     */
+    public static CompletableFuture<GetReservationResult> getReservationPlain(GetReservationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:pubsublite/v1:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the subscription configuration.
@@ -41,8 +59,22 @@ public final class Pubsublite_v1Functions {
      * Returns the subscription configuration.
      * 
      */
+    public static CompletableFuture<GetSubscriptionResult> getSubscriptionPlain(GetSubscriptionPlainArgs args) {
+        return getSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the subscription configuration.
+     * 
+     */
     public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:pubsublite/v1:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the subscription configuration.
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionResult> getSubscriptionPlain(GetSubscriptionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:pubsublite/v1:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the topic configuration.
@@ -55,7 +87,21 @@ public final class Pubsublite_v1Functions {
      * Returns the topic configuration.
      * 
      */
+    public static CompletableFuture<GetTopicResult> getTopicPlain(GetTopicPlainArgs args) {
+        return getTopicPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the topic configuration.
+     * 
+     */
     public static Output<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:pubsublite/v1:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the topic configuration.
+     * 
+     */
+    public static CompletableFuture<GetTopicResult> getTopicPlain(GetTopicPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:pubsublite/v1:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
 }

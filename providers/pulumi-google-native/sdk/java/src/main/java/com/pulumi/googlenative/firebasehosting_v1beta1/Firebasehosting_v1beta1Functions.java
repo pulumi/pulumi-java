@@ -9,11 +9,15 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetChannelArgs;
+import com.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetChannelPlainArgs;
 import com.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetDomainArgs;
+import com.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetDomainPlainArgs;
 import com.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetSiteArgs;
+import com.pulumi.googlenative.firebasehosting_v1beta1.inputs.GetSitePlainArgs;
 import com.pulumi.googlenative.firebasehosting_v1beta1.outputs.GetChannelResult;
 import com.pulumi.googlenative.firebasehosting_v1beta1.outputs.GetDomainResult;
 import com.pulumi.googlenative.firebasehosting_v1beta1.outputs.GetSiteResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Firebasehosting_v1beta1Functions {
     /**
@@ -27,8 +31,22 @@ public final class Firebasehosting_v1beta1Functions {
      * Retrieves information for the specified channel of the specified site.
      * 
      */
+    public static CompletableFuture<GetChannelResult> getChannelPlain(GetChannelPlainArgs args) {
+        return getChannelPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves information for the specified channel of the specified site.
+     * 
+     */
     public static Output<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:firebasehosting/v1beta1:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves information for the specified channel of the specified site.
+     * 
+     */
+    public static CompletableFuture<GetChannelResult> getChannelPlain(GetChannelPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a domain mapping on the specified site.
@@ -41,8 +59,22 @@ public final class Firebasehosting_v1beta1Functions {
      * Gets a domain mapping on the specified site.
      * 
      */
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args) {
+        return getDomainPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a domain mapping on the specified site.
+     * 
+     */
     public static Output<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:firebasehosting/v1beta1:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a domain mapping on the specified site.
+     * 
+     */
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the specified Hosting Site.
@@ -55,7 +87,21 @@ public final class Firebasehosting_v1beta1Functions {
      * Gets the specified Hosting Site.
      * 
      */
+    public static CompletableFuture<GetSiteResult> getSitePlain(GetSitePlainArgs args) {
+        return getSitePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the specified Hosting Site.
+     * 
+     */
     public static Output<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:firebasehosting/v1beta1:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the specified Hosting Site.
+     * 
+     */
+    public static CompletableFuture<GetSiteResult> getSitePlain(GetSitePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }
 }

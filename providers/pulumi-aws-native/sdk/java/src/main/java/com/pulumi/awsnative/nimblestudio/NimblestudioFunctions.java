@@ -5,9 +5,13 @@ package com.pulumi.awsnative.nimblestudio;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.nimblestudio.inputs.GetLaunchProfileArgs;
+import com.pulumi.awsnative.nimblestudio.inputs.GetLaunchProfilePlainArgs;
 import com.pulumi.awsnative.nimblestudio.inputs.GetStreamingImageArgs;
+import com.pulumi.awsnative.nimblestudio.inputs.GetStreamingImagePlainArgs;
 import com.pulumi.awsnative.nimblestudio.inputs.GetStudioArgs;
 import com.pulumi.awsnative.nimblestudio.inputs.GetStudioComponentArgs;
+import com.pulumi.awsnative.nimblestudio.inputs.GetStudioComponentPlainArgs;
+import com.pulumi.awsnative.nimblestudio.inputs.GetStudioPlainArgs;
 import com.pulumi.awsnative.nimblestudio.outputs.GetLaunchProfileResult;
 import com.pulumi.awsnative.nimblestudio.outputs.GetStreamingImageResult;
 import com.pulumi.awsnative.nimblestudio.outputs.GetStudioComponentResult;
@@ -16,6 +20,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class NimblestudioFunctions {
     /**
@@ -29,8 +34,22 @@ public final class NimblestudioFunctions {
      * Represents a launch profile which delegates access to a collection of studio components to studio users
      * 
      */
+    public static CompletableFuture<GetLaunchProfileResult> getLaunchProfilePlain(GetLaunchProfilePlainArgs args) {
+        return getLaunchProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Represents a launch profile which delegates access to a collection of studio components to studio users
+     * 
+     */
     public static Output<GetLaunchProfileResult> getLaunchProfile(GetLaunchProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:nimblestudio:getLaunchProfile", TypeShape.of(GetLaunchProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Represents a launch profile which delegates access to a collection of studio components to studio users
+     * 
+     */
+    public static CompletableFuture<GetLaunchProfileResult> getLaunchProfilePlain(GetLaunchProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getLaunchProfile", TypeShape.of(GetLaunchProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a streaming session machine image that can be used to launch a streaming session
@@ -43,8 +62,22 @@ public final class NimblestudioFunctions {
      * Represents a streaming session machine image that can be used to launch a streaming session
      * 
      */
+    public static CompletableFuture<GetStreamingImageResult> getStreamingImagePlain(GetStreamingImagePlainArgs args) {
+        return getStreamingImagePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Represents a streaming session machine image that can be used to launch a streaming session
+     * 
+     */
     public static Output<GetStreamingImageResult> getStreamingImage(GetStreamingImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:nimblestudio:getStreamingImage", TypeShape.of(GetStreamingImageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Represents a streaming session machine image that can be used to launch a streaming session
+     * 
+     */
+    public static CompletableFuture<GetStreamingImageResult> getStreamingImagePlain(GetStreamingImagePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getStreamingImage", TypeShape.of(GetStreamingImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a studio that contains other Nimble Studio resources
@@ -57,8 +90,22 @@ public final class NimblestudioFunctions {
      * Represents a studio that contains other Nimble Studio resources
      * 
      */
+    public static CompletableFuture<GetStudioResult> getStudioPlain(GetStudioPlainArgs args) {
+        return getStudioPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Represents a studio that contains other Nimble Studio resources
+     * 
+     */
     public static Output<GetStudioResult> getStudio(GetStudioArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:nimblestudio:getStudio", TypeShape.of(GetStudioResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Represents a studio that contains other Nimble Studio resources
+     * 
+     */
+    public static CompletableFuture<GetStudioResult> getStudioPlain(GetStudioPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getStudio", TypeShape.of(GetStudioResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents a studio component which connects a non-Nimble Studio resource in your account to your studio
@@ -71,7 +118,21 @@ public final class NimblestudioFunctions {
      * Represents a studio component which connects a non-Nimble Studio resource in your account to your studio
      * 
      */
+    public static CompletableFuture<GetStudioComponentResult> getStudioComponentPlain(GetStudioComponentPlainArgs args) {
+        return getStudioComponentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Represents a studio component which connects a non-Nimble Studio resource in your account to your studio
+     * 
+     */
     public static Output<GetStudioComponentResult> getStudioComponent(GetStudioComponentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:nimblestudio:getStudioComponent", TypeShape.of(GetStudioComponentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Represents a studio component which connects a non-Nimble Studio resource in your account to your studio
+     * 
+     */
+    public static CompletableFuture<GetStudioComponentResult> getStudioComponentPlain(GetStudioComponentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:nimblestudio:getStudioComponent", TypeShape.of(GetStudioComponentResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,13 +5,21 @@ package com.pulumi.awsnative.iotwireless;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.iotwireless.inputs.GetDestinationArgs;
+import com.pulumi.awsnative.iotwireless.inputs.GetDestinationPlainArgs;
 import com.pulumi.awsnative.iotwireless.inputs.GetDeviceProfileArgs;
+import com.pulumi.awsnative.iotwireless.inputs.GetDeviceProfilePlainArgs;
 import com.pulumi.awsnative.iotwireless.inputs.GetFuotaTaskArgs;
+import com.pulumi.awsnative.iotwireless.inputs.GetFuotaTaskPlainArgs;
 import com.pulumi.awsnative.iotwireless.inputs.GetMulticastGroupArgs;
+import com.pulumi.awsnative.iotwireless.inputs.GetMulticastGroupPlainArgs;
 import com.pulumi.awsnative.iotwireless.inputs.GetServiceProfileArgs;
+import com.pulumi.awsnative.iotwireless.inputs.GetServiceProfilePlainArgs;
 import com.pulumi.awsnative.iotwireless.inputs.GetTaskDefinitionArgs;
+import com.pulumi.awsnative.iotwireless.inputs.GetTaskDefinitionPlainArgs;
 import com.pulumi.awsnative.iotwireless.inputs.GetWirelessDeviceArgs;
+import com.pulumi.awsnative.iotwireless.inputs.GetWirelessDevicePlainArgs;
 import com.pulumi.awsnative.iotwireless.inputs.GetWirelessGatewayArgs;
+import com.pulumi.awsnative.iotwireless.inputs.GetWirelessGatewayPlainArgs;
 import com.pulumi.awsnative.iotwireless.outputs.GetDestinationResult;
 import com.pulumi.awsnative.iotwireless.outputs.GetDeviceProfileResult;
 import com.pulumi.awsnative.iotwireless.outputs.GetFuotaTaskResult;
@@ -24,6 +32,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class IotwirelessFunctions {
     /**
@@ -37,8 +46,22 @@ public final class IotwirelessFunctions {
      * Destination&#39;s resource schema demonstrating some basic constructs and validation rules.
      * 
      */
+    public static CompletableFuture<GetDestinationResult> getDestinationPlain(GetDestinationPlainArgs args) {
+        return getDestinationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Destination&#39;s resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static Output<GetDestinationResult> getDestination(GetDestinationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotwireless:getDestination", TypeShape.of(GetDestinationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Destination&#39;s resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
+    public static CompletableFuture<GetDestinationResult> getDestinationPlain(GetDestinationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getDestination", TypeShape.of(GetDestinationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Device Profile&#39;s resource schema demonstrating some basic constructs and validation rules.
@@ -51,8 +74,22 @@ public final class IotwirelessFunctions {
      * Device Profile&#39;s resource schema demonstrating some basic constructs and validation rules.
      * 
      */
+    public static CompletableFuture<GetDeviceProfileResult> getDeviceProfilePlain(GetDeviceProfilePlainArgs args) {
+        return getDeviceProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Device Profile&#39;s resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static Output<GetDeviceProfileResult> getDeviceProfile(GetDeviceProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotwireless:getDeviceProfile", TypeShape.of(GetDeviceProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Device Profile&#39;s resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
+    public static CompletableFuture<GetDeviceProfileResult> getDeviceProfilePlain(GetDeviceProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getDeviceProfile", TypeShape.of(GetDeviceProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Create and manage FUOTA tasks.
@@ -65,8 +102,22 @@ public final class IotwirelessFunctions {
      * Create and manage FUOTA tasks.
      * 
      */
+    public static CompletableFuture<GetFuotaTaskResult> getFuotaTaskPlain(GetFuotaTaskPlainArgs args) {
+        return getFuotaTaskPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Create and manage FUOTA tasks.
+     * 
+     */
     public static Output<GetFuotaTaskResult> getFuotaTask(GetFuotaTaskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotwireless:getFuotaTask", TypeShape.of(GetFuotaTaskResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Create and manage FUOTA tasks.
+     * 
+     */
+    public static CompletableFuture<GetFuotaTaskResult> getFuotaTaskPlain(GetFuotaTaskPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getFuotaTask", TypeShape.of(GetFuotaTaskResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Create and manage Multicast groups.
@@ -79,8 +130,22 @@ public final class IotwirelessFunctions {
      * Create and manage Multicast groups.
      * 
      */
+    public static CompletableFuture<GetMulticastGroupResult> getMulticastGroupPlain(GetMulticastGroupPlainArgs args) {
+        return getMulticastGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Create and manage Multicast groups.
+     * 
+     */
     public static Output<GetMulticastGroupResult> getMulticastGroup(GetMulticastGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotwireless:getMulticastGroup", TypeShape.of(GetMulticastGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Create and manage Multicast groups.
+     * 
+     */
+    public static CompletableFuture<GetMulticastGroupResult> getMulticastGroupPlain(GetMulticastGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getMulticastGroup", TypeShape.of(GetMulticastGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
@@ -93,8 +158,22 @@ public final class IotwirelessFunctions {
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
+    public static CompletableFuture<GetServiceProfileResult> getServiceProfilePlain(GetServiceProfilePlainArgs args) {
+        return getServiceProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static Output<GetServiceProfileResult> getServiceProfile(GetServiceProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotwireless:getServiceProfile", TypeShape.of(GetServiceProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
+    public static CompletableFuture<GetServiceProfileResult> getServiceProfilePlain(GetServiceProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getServiceProfile", TypeShape.of(GetServiceProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Creates a gateway task definition.
@@ -107,8 +186,22 @@ public final class IotwirelessFunctions {
      * Creates a gateway task definition.
      * 
      */
+    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinitionPlain(GetTaskDefinitionPlainArgs args) {
+        return getTaskDefinitionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Creates a gateway task definition.
+     * 
+     */
     public static Output<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotwireless:getTaskDefinition", TypeShape.of(GetTaskDefinitionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Creates a gateway task definition.
+     * 
+     */
+    public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinitionPlain(GetTaskDefinitionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getTaskDefinition", TypeShape.of(GetTaskDefinitionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Create and manage wireless gateways, including LoRa gateways.
@@ -121,8 +214,22 @@ public final class IotwirelessFunctions {
      * Create and manage wireless gateways, including LoRa gateways.
      * 
      */
+    public static CompletableFuture<GetWirelessDeviceResult> getWirelessDevicePlain(GetWirelessDevicePlainArgs args) {
+        return getWirelessDevicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Create and manage wireless gateways, including LoRa gateways.
+     * 
+     */
     public static Output<GetWirelessDeviceResult> getWirelessDevice(GetWirelessDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotwireless:getWirelessDevice", TypeShape.of(GetWirelessDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Create and manage wireless gateways, including LoRa gateways.
+     * 
+     */
+    public static CompletableFuture<GetWirelessDeviceResult> getWirelessDevicePlain(GetWirelessDevicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getWirelessDevice", TypeShape.of(GetWirelessDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Create and manage wireless gateways, including LoRa gateways.
@@ -135,7 +242,21 @@ public final class IotwirelessFunctions {
      * Create and manage wireless gateways, including LoRa gateways.
      * 
      */
+    public static CompletableFuture<GetWirelessGatewayResult> getWirelessGatewayPlain(GetWirelessGatewayPlainArgs args) {
+        return getWirelessGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Create and manage wireless gateways, including LoRa gateways.
+     * 
+     */
     public static Output<GetWirelessGatewayResult> getWirelessGateway(GetWirelessGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:iotwireless:getWirelessGateway", TypeShape.of(GetWirelessGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Create and manage wireless gateways, including LoRa gateways.
+     * 
+     */
+    public static CompletableFuture<GetWirelessGatewayResult> getWirelessGatewayPlain(GetWirelessGatewayPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getWirelessGateway", TypeShape.of(GetWirelessGatewayResult.class), args, Utilities.withVersion(options));
     }
 }

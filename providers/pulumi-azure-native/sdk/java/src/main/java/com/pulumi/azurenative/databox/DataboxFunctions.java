@@ -5,13 +5,16 @@ package com.pulumi.azurenative.databox;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.databox.inputs.GetJobArgs;
+import com.pulumi.azurenative.databox.inputs.GetJobPlainArgs;
 import com.pulumi.azurenative.databox.inputs.ListJobCredentialsArgs;
+import com.pulumi.azurenative.databox.inputs.ListJobCredentialsPlainArgs;
 import com.pulumi.azurenative.databox.outputs.GetJobResult;
 import com.pulumi.azurenative.databox.outputs.ListJobCredentialsResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class DataboxFunctions {
     /**
@@ -27,8 +30,24 @@ public final class DataboxFunctions {
      * API Version: 2020-11-01.
      * 
      */
+    public static CompletableFuture<GetJobResult> getJobPlain(GetJobPlainArgs args) {
+        return getJobPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Job Resource.
+     * API Version: 2020-11-01.
+     * 
+     */
     public static Output<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databox:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Job Resource.
+     * API Version: 2020-11-01.
+     * 
+     */
+    public static CompletableFuture<GetJobResult> getJobPlain(GetJobPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databox:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List of unencrypted credentials for accessing device.
@@ -43,7 +62,23 @@ public final class DataboxFunctions {
      * API Version: 2020-11-01.
      * 
      */
+    public static CompletableFuture<ListJobCredentialsResult> listJobCredentialsPlain(ListJobCredentialsPlainArgs args) {
+        return listJobCredentialsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * List of unencrypted credentials for accessing device.
+     * API Version: 2020-11-01.
+     * 
+     */
     public static Output<ListJobCredentialsResult> listJobCredentials(ListJobCredentialsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:databox:listJobCredentials", TypeShape.of(ListJobCredentialsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List of unencrypted credentials for accessing device.
+     * API Version: 2020-11-01.
+     * 
+     */
+    public static CompletableFuture<ListJobCredentialsResult> listJobCredentialsPlain(ListJobCredentialsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:databox:listJobCredentials", TypeShape.of(ListJobCredentialsResult.class), args, Utilities.withVersion(options));
     }
 }

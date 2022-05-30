@@ -5,19 +5,33 @@ package com.pulumi.azurenative.storsimple;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.storsimple.inputs.GetAccessControlRecordArgs;
+import com.pulumi.azurenative.storsimple.inputs.GetAccessControlRecordPlainArgs;
 import com.pulumi.azurenative.storsimple.inputs.GetBackupPolicyArgs;
+import com.pulumi.azurenative.storsimple.inputs.GetBackupPolicyPlainArgs;
 import com.pulumi.azurenative.storsimple.inputs.GetBackupScheduleArgs;
+import com.pulumi.azurenative.storsimple.inputs.GetBackupSchedulePlainArgs;
 import com.pulumi.azurenative.storsimple.inputs.GetBandwidthSettingArgs;
+import com.pulumi.azurenative.storsimple.inputs.GetBandwidthSettingPlainArgs;
 import com.pulumi.azurenative.storsimple.inputs.GetManagerArgs;
 import com.pulumi.azurenative.storsimple.inputs.GetManagerDevicePublicEncryptionKeyArgs;
+import com.pulumi.azurenative.storsimple.inputs.GetManagerDevicePublicEncryptionKeyPlainArgs;
 import com.pulumi.azurenative.storsimple.inputs.GetManagerExtendedInfoArgs;
+import com.pulumi.azurenative.storsimple.inputs.GetManagerExtendedInfoPlainArgs;
+import com.pulumi.azurenative.storsimple.inputs.GetManagerPlainArgs;
 import com.pulumi.azurenative.storsimple.inputs.GetStorageAccountCredentialArgs;
+import com.pulumi.azurenative.storsimple.inputs.GetStorageAccountCredentialPlainArgs;
 import com.pulumi.azurenative.storsimple.inputs.GetVolumeArgs;
 import com.pulumi.azurenative.storsimple.inputs.GetVolumeContainerArgs;
+import com.pulumi.azurenative.storsimple.inputs.GetVolumeContainerPlainArgs;
+import com.pulumi.azurenative.storsimple.inputs.GetVolumePlainArgs;
 import com.pulumi.azurenative.storsimple.inputs.ListDeviceFailoverSetsArgs;
+import com.pulumi.azurenative.storsimple.inputs.ListDeviceFailoverSetsPlainArgs;
 import com.pulumi.azurenative.storsimple.inputs.ListDeviceFailoverTarsArgs;
+import com.pulumi.azurenative.storsimple.inputs.ListDeviceFailoverTarsPlainArgs;
 import com.pulumi.azurenative.storsimple.inputs.ListManagerActivationKeyArgs;
+import com.pulumi.azurenative.storsimple.inputs.ListManagerActivationKeyPlainArgs;
 import com.pulumi.azurenative.storsimple.inputs.ListManagerPublicEncryptionKeyArgs;
+import com.pulumi.azurenative.storsimple.inputs.ListManagerPublicEncryptionKeyPlainArgs;
 import com.pulumi.azurenative.storsimple.outputs.GetAccessControlRecordResult;
 import com.pulumi.azurenative.storsimple.outputs.GetBackupPolicyResult;
 import com.pulumi.azurenative.storsimple.outputs.GetBackupScheduleResult;
@@ -36,6 +50,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class StorsimpleFunctions {
     /**
@@ -51,8 +66,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<GetAccessControlRecordResult> getAccessControlRecordPlain(GetAccessControlRecordPlainArgs args) {
+        return getAccessControlRecordPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The access control record.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<GetAccessControlRecordResult> getAccessControlRecord(GetAccessControlRecordArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:getAccessControlRecord", TypeShape.of(GetAccessControlRecordResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The access control record.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<GetAccessControlRecordResult> getAccessControlRecordPlain(GetAccessControlRecordPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:getAccessControlRecord", TypeShape.of(GetAccessControlRecordResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The backup policy.
@@ -67,8 +98,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<GetBackupPolicyResult> getBackupPolicyPlain(GetBackupPolicyPlainArgs args) {
+        return getBackupPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The backup policy.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<GetBackupPolicyResult> getBackupPolicy(GetBackupPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:getBackupPolicy", TypeShape.of(GetBackupPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The backup policy.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<GetBackupPolicyResult> getBackupPolicyPlain(GetBackupPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:getBackupPolicy", TypeShape.of(GetBackupPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The backup schedule.
@@ -83,8 +130,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<GetBackupScheduleResult> getBackupSchedulePlain(GetBackupSchedulePlainArgs args) {
+        return getBackupSchedulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The backup schedule.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<GetBackupScheduleResult> getBackupSchedule(GetBackupScheduleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:getBackupSchedule", TypeShape.of(GetBackupScheduleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The backup schedule.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<GetBackupScheduleResult> getBackupSchedulePlain(GetBackupSchedulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:getBackupSchedule", TypeShape.of(GetBackupScheduleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The bandwidth setting.
@@ -99,8 +162,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<GetBandwidthSettingResult> getBandwidthSettingPlain(GetBandwidthSettingPlainArgs args) {
+        return getBandwidthSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The bandwidth setting.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<GetBandwidthSettingResult> getBandwidthSetting(GetBandwidthSettingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:getBandwidthSetting", TypeShape.of(GetBandwidthSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The bandwidth setting.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<GetBandwidthSettingResult> getBandwidthSettingPlain(GetBandwidthSettingPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:getBandwidthSetting", TypeShape.of(GetBandwidthSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The StorSimple Manager.
@@ -115,8 +194,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<GetManagerResult> getManagerPlain(GetManagerPlainArgs args) {
+        return getManagerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The StorSimple Manager.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<GetManagerResult> getManager(GetManagerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:getManager", TypeShape.of(GetManagerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The StorSimple Manager.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<GetManagerResult> getManagerPlain(GetManagerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:getManager", TypeShape.of(GetManagerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The public key.
@@ -131,8 +226,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<GetManagerDevicePublicEncryptionKeyResult> getManagerDevicePublicEncryptionKeyPlain(GetManagerDevicePublicEncryptionKeyPlainArgs args) {
+        return getManagerDevicePublicEncryptionKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The public key.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<GetManagerDevicePublicEncryptionKeyResult> getManagerDevicePublicEncryptionKey(GetManagerDevicePublicEncryptionKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:getManagerDevicePublicEncryptionKey", TypeShape.of(GetManagerDevicePublicEncryptionKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The public key.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<GetManagerDevicePublicEncryptionKeyResult> getManagerDevicePublicEncryptionKeyPlain(GetManagerDevicePublicEncryptionKeyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:getManagerDevicePublicEncryptionKey", TypeShape.of(GetManagerDevicePublicEncryptionKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The extended info of the manager.
@@ -147,8 +258,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<GetManagerExtendedInfoResult> getManagerExtendedInfoPlain(GetManagerExtendedInfoPlainArgs args) {
+        return getManagerExtendedInfoPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The extended info of the manager.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<GetManagerExtendedInfoResult> getManagerExtendedInfo(GetManagerExtendedInfoArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:getManagerExtendedInfo", TypeShape.of(GetManagerExtendedInfoResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The extended info of the manager.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<GetManagerExtendedInfoResult> getManagerExtendedInfoPlain(GetManagerExtendedInfoPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:getManagerExtendedInfo", TypeShape.of(GetManagerExtendedInfoResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The storage account credential.
@@ -163,8 +290,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<GetStorageAccountCredentialResult> getStorageAccountCredentialPlain(GetStorageAccountCredentialPlainArgs args) {
+        return getStorageAccountCredentialPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The storage account credential.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<GetStorageAccountCredentialResult> getStorageAccountCredential(GetStorageAccountCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:getStorageAccountCredential", TypeShape.of(GetStorageAccountCredentialResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The storage account credential.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<GetStorageAccountCredentialResult> getStorageAccountCredentialPlain(GetStorageAccountCredentialPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:getStorageAccountCredential", TypeShape.of(GetStorageAccountCredentialResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The volume.
@@ -179,8 +322,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<GetVolumeResult> getVolumePlain(GetVolumePlainArgs args) {
+        return getVolumePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The volume.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The volume.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<GetVolumeResult> getVolumePlain(GetVolumePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The volume container.
@@ -195,8 +354,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<GetVolumeContainerResult> getVolumeContainerPlain(GetVolumeContainerPlainArgs args) {
+        return getVolumeContainerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The volume container.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<GetVolumeContainerResult> getVolumeContainer(GetVolumeContainerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:getVolumeContainer", TypeShape.of(GetVolumeContainerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The volume container.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<GetVolumeContainerResult> getVolumeContainerPlain(GetVolumeContainerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:getVolumeContainer", TypeShape.of(GetVolumeContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of failover sets.
@@ -211,8 +386,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<ListDeviceFailoverSetsResult> listDeviceFailoverSetsPlain(ListDeviceFailoverSetsPlainArgs args) {
+        return listDeviceFailoverSetsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The list of failover sets.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<ListDeviceFailoverSetsResult> listDeviceFailoverSets(ListDeviceFailoverSetsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:listDeviceFailoverSets", TypeShape.of(ListDeviceFailoverSetsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The list of failover sets.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<ListDeviceFailoverSetsResult> listDeviceFailoverSetsPlain(ListDeviceFailoverSetsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:listDeviceFailoverSets", TypeShape.of(ListDeviceFailoverSetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of all devices in a resource and their eligibility status as a failover target device.
@@ -227,8 +418,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<ListDeviceFailoverTarsResult> listDeviceFailoverTarsPlain(ListDeviceFailoverTarsPlainArgs args) {
+        return listDeviceFailoverTarsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The list of all devices in a resource and their eligibility status as a failover target device.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<ListDeviceFailoverTarsResult> listDeviceFailoverTars(ListDeviceFailoverTarsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:listDeviceFailoverTars", TypeShape.of(ListDeviceFailoverTarsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The list of all devices in a resource and their eligibility status as a failover target device.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<ListDeviceFailoverTarsResult> listDeviceFailoverTarsPlain(ListDeviceFailoverTarsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:listDeviceFailoverTars", TypeShape.of(ListDeviceFailoverTarsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The key.
@@ -243,8 +450,24 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<ListManagerActivationKeyResult> listManagerActivationKeyPlain(ListManagerActivationKeyPlainArgs args) {
+        return listManagerActivationKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The key.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<ListManagerActivationKeyResult> listManagerActivationKey(ListManagerActivationKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:listManagerActivationKey", TypeShape.of(ListManagerActivationKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The key.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<ListManagerActivationKeyResult> listManagerActivationKeyPlain(ListManagerActivationKeyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:listManagerActivationKey", TypeShape.of(ListManagerActivationKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Represents the secrets encrypted using Symmetric Encryption Key.
@@ -259,7 +482,23 @@ public final class StorsimpleFunctions {
      * API Version: 2017-06-01.
      * 
      */
+    public static CompletableFuture<ListManagerPublicEncryptionKeyResult> listManagerPublicEncryptionKeyPlain(ListManagerPublicEncryptionKeyPlainArgs args) {
+        return listManagerPublicEncryptionKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Represents the secrets encrypted using Symmetric Encryption Key.
+     * API Version: 2017-06-01.
+     * 
+     */
     public static Output<ListManagerPublicEncryptionKeyResult> listManagerPublicEncryptionKey(ListManagerPublicEncryptionKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:storsimple:listManagerPublicEncryptionKey", TypeShape.of(ListManagerPublicEncryptionKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Represents the secrets encrypted using Symmetric Encryption Key.
+     * API Version: 2017-06-01.
+     * 
+     */
+    public static CompletableFuture<ListManagerPublicEncryptionKeyResult> listManagerPublicEncryptionKeyPlain(ListManagerPublicEncryptionKeyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:storsimple:listManagerPublicEncryptionKey", TypeShape.of(ListManagerPublicEncryptionKeyResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -6,8 +6,12 @@ package com.pulumi.awsnative.acmpca;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.acmpca.inputs.GetCertificateArgs;
 import com.pulumi.awsnative.acmpca.inputs.GetCertificateAuthorityActivationArgs;
+import com.pulumi.awsnative.acmpca.inputs.GetCertificateAuthorityActivationPlainArgs;
 import com.pulumi.awsnative.acmpca.inputs.GetCertificateAuthorityArgs;
+import com.pulumi.awsnative.acmpca.inputs.GetCertificateAuthorityPlainArgs;
+import com.pulumi.awsnative.acmpca.inputs.GetCertificatePlainArgs;
 import com.pulumi.awsnative.acmpca.inputs.GetPermissionArgs;
+import com.pulumi.awsnative.acmpca.inputs.GetPermissionPlainArgs;
 import com.pulumi.awsnative.acmpca.outputs.GetCertificateAuthorityActivationResult;
 import com.pulumi.awsnative.acmpca.outputs.GetCertificateAuthorityResult;
 import com.pulumi.awsnative.acmpca.outputs.GetCertificateResult;
@@ -16,6 +20,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class AcmpcaFunctions {
     /**
@@ -29,8 +34,22 @@ public final class AcmpcaFunctions {
      * A certificate issued via a private certificate authority
      * 
      */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args) {
+        return getCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A certificate issued via a private certificate authority
+     * 
+     */
     public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:acmpca:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A certificate issued via a private certificate authority
+     * 
+     */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:acmpca:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Private certificate authority.
@@ -43,8 +62,22 @@ public final class AcmpcaFunctions {
      * Private certificate authority.
      * 
      */
+    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthorityPlain(GetCertificateAuthorityPlainArgs args) {
+        return getCertificateAuthorityPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Private certificate authority.
+     * 
+     */
     public static Output<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:acmpca:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Private certificate authority.
+     * 
+     */
+    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthorityPlain(GetCertificateAuthorityPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:acmpca:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Used to install the certificate authority certificate and update the certificate authority status.
@@ -57,8 +90,22 @@ public final class AcmpcaFunctions {
      * Used to install the certificate authority certificate and update the certificate authority status.
      * 
      */
+    public static CompletableFuture<GetCertificateAuthorityActivationResult> getCertificateAuthorityActivationPlain(GetCertificateAuthorityActivationPlainArgs args) {
+        return getCertificateAuthorityActivationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Used to install the certificate authority certificate and update the certificate authority status.
+     * 
+     */
     public static Output<GetCertificateAuthorityActivationResult> getCertificateAuthorityActivation(GetCertificateAuthorityActivationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:acmpca:getCertificateAuthorityActivation", TypeShape.of(GetCertificateAuthorityActivationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Used to install the certificate authority certificate and update the certificate authority status.
+     * 
+     */
+    public static CompletableFuture<GetCertificateAuthorityActivationResult> getCertificateAuthorityActivationPlain(GetCertificateAuthorityActivationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:acmpca:getCertificateAuthorityActivation", TypeShape.of(GetCertificateAuthorityActivationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Permission set on private certificate authority
@@ -71,7 +118,21 @@ public final class AcmpcaFunctions {
      * Permission set on private certificate authority
      * 
      */
+    public static CompletableFuture<GetPermissionResult> getPermissionPlain(GetPermissionPlainArgs args) {
+        return getPermissionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Permission set on private certificate authority
+     * 
+     */
     public static Output<GetPermissionResult> getPermission(GetPermissionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:acmpca:getPermission", TypeShape.of(GetPermissionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Permission set on private certificate authority
+     * 
+     */
+    public static CompletableFuture<GetPermissionResult> getPermissionPlain(GetPermissionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:acmpca:getPermission", TypeShape.of(GetPermissionResult.class), args, Utilities.withVersion(options));
     }
 }

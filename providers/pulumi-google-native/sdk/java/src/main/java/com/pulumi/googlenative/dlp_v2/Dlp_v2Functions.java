@@ -9,15 +9,21 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.dlp_v2.inputs.GetDeidentifyTemplateArgs;
+import com.pulumi.googlenative.dlp_v2.inputs.GetDeidentifyTemplatePlainArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GetDlpJobArgs;
+import com.pulumi.googlenative.dlp_v2.inputs.GetDlpJobPlainArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GetInspectTemplateArgs;
+import com.pulumi.googlenative.dlp_v2.inputs.GetInspectTemplatePlainArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GetJobTriggerArgs;
+import com.pulumi.googlenative.dlp_v2.inputs.GetJobTriggerPlainArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GetStoredInfoTypeArgs;
+import com.pulumi.googlenative.dlp_v2.inputs.GetStoredInfoTypePlainArgs;
 import com.pulumi.googlenative.dlp_v2.outputs.GetDeidentifyTemplateResult;
 import com.pulumi.googlenative.dlp_v2.outputs.GetDlpJobResult;
 import com.pulumi.googlenative.dlp_v2.outputs.GetInspectTemplateResult;
 import com.pulumi.googlenative.dlp_v2.outputs.GetJobTriggerResult;
 import com.pulumi.googlenative.dlp_v2.outputs.GetStoredInfoTypeResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Dlp_v2Functions {
     /**
@@ -31,8 +37,22 @@ public final class Dlp_v2Functions {
      * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
      * 
      */
+    public static CompletableFuture<GetDeidentifyTemplateResult> getDeidentifyTemplatePlain(GetDeidentifyTemplatePlainArgs args) {
+        return getDeidentifyTemplatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
+     * 
+     */
     public static Output<GetDeidentifyTemplateResult> getDeidentifyTemplate(GetDeidentifyTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:dlp/v2:getDeidentifyTemplate", TypeShape.of(GetDeidentifyTemplateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
+     * 
+     */
+    public static CompletableFuture<GetDeidentifyTemplateResult> getDeidentifyTemplatePlain(GetDeidentifyTemplatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getDeidentifyTemplate", TypeShape.of(GetDeidentifyTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -45,8 +65,22 @@ public final class Dlp_v2Functions {
      * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
      * 
      */
+    public static CompletableFuture<GetDlpJobResult> getDlpJobPlain(GetDlpJobPlainArgs args) {
+        return getDlpJobPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+     * 
+     */
     public static Output<GetDlpJobResult> getDlpJob(GetDlpJobArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:dlp/v2:getDlpJob", TypeShape.of(GetDlpJobResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+     * 
+     */
+    public static CompletableFuture<GetDlpJobResult> getDlpJobPlain(GetDlpJobPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getDlpJob", TypeShape.of(GetDlpJobResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
@@ -59,8 +93,22 @@ public final class Dlp_v2Functions {
      * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
      * 
      */
+    public static CompletableFuture<GetInspectTemplateResult> getInspectTemplatePlain(GetInspectTemplatePlainArgs args) {
+        return getInspectTemplatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+     * 
+     */
     public static Output<GetInspectTemplateResult> getInspectTemplate(GetInspectTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:dlp/v2:getInspectTemplate", TypeShape.of(GetInspectTemplateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+     * 
+     */
+    public static CompletableFuture<GetInspectTemplateResult> getInspectTemplatePlain(GetInspectTemplatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getInspectTemplate", TypeShape.of(GetInspectTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
@@ -73,8 +121,22 @@ public final class Dlp_v2Functions {
      * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
      * 
      */
+    public static CompletableFuture<GetJobTriggerResult> getJobTriggerPlain(GetJobTriggerPlainArgs args) {
+        return getJobTriggerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+     * 
+     */
     public static Output<GetJobTriggerResult> getJobTrigger(GetJobTriggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:dlp/v2:getJobTrigger", TypeShape.of(GetJobTriggerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+     * 
+     */
+    public static CompletableFuture<GetJobTriggerResult> getJobTriggerPlain(GetJobTriggerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getJobTrigger", TypeShape.of(GetJobTriggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
@@ -87,7 +149,21 @@ public final class Dlp_v2Functions {
      * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
      * 
      */
+    public static CompletableFuture<GetStoredInfoTypeResult> getStoredInfoTypePlain(GetStoredInfoTypePlainArgs args) {
+        return getStoredInfoTypePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+     * 
+     */
     public static Output<GetStoredInfoTypeResult> getStoredInfoType(GetStoredInfoTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:dlp/v2:getStoredInfoType", TypeShape.of(GetStoredInfoTypeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+     * 
+     */
+    public static CompletableFuture<GetStoredInfoTypeResult> getStoredInfoTypePlain(GetStoredInfoTypePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getStoredInfoType", TypeShape.of(GetStoredInfoTypeResult.class), args, Utilities.withVersion(options));
     }
 }

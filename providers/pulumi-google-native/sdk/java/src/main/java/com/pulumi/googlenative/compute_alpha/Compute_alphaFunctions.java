@@ -9,108 +9,211 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_alpha.inputs.GetAddressArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetAddressPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetAutoscalerArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetAutoscalerPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetBackendBucketArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetBackendBucketIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetBackendBucketIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetBackendBucketPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetBackendServiceArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetBackendServiceIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetBackendServiceIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetBackendServicePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetDiskArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetDiskIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetDiskIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetDiskPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetExternalVpnGatewayArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetExternalVpnGatewayPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetFirewallArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetFirewallPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetFirewallPolicyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetFirewallPolicyIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetFirewallPolicyIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetFirewallPolicyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetForwardingRuleArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetForwardingRulePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetFutureReservationArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetFutureReservationPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetGlobalAddressArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetGlobalAddressPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetGlobalForwardingRuleArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetGlobalForwardingRulePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetGlobalNetworkEndpointGroupArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetGlobalNetworkEndpointGroupPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetGlobalPublicDelegatedPrefixArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetGlobalPublicDelegatedPrefixPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetHealthCheckArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetHealthCheckPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetHttpHealthCheckArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetHttpHealthCheckPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetHttpsHealthCheckArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetHttpsHealthCheckPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetImageArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetImageIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetImageIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetImagePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInstanceArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInstanceGroupArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInstanceGroupManagerArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInstanceGroupManagerPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInstanceGroupPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInstanceIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInstanceIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInstancePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInstanceTemplateArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInstanceTemplateIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInstanceTemplateIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInstanceTemplatePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInstantSnapshotArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInstantSnapshotIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInstantSnapshotIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInstantSnapshotPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInterconnectArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInterconnectAttachmentArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInterconnectAttachmentIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInterconnectAttachmentIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInterconnectAttachmentPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetInterconnectIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInterconnectIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetInterconnectPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetLicenseArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetLicenseCodeIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetLicenseCodeIamPolicyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetLicenseIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetLicenseIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetLicensePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetMachineImageArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetMachineImageIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetMachineImageIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetMachineImagePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetNetworkArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetNetworkEdgeSecurityServiceArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetNetworkEdgeSecurityServicePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetNetworkEndpointGroupArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetNetworkEndpointGroupPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetNetworkFirewallPolicyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetNetworkFirewallPolicyIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetNetworkFirewallPolicyIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetNetworkFirewallPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetNetworkPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetNodeGroupArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetNodeGroupIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetNodeGroupIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetNodeGroupPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetNodeTemplateArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetNodeTemplateIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetNodeTemplateIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetNodeTemplatePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetOrganizationSecurityPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetOrganizationSecurityPolicyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetPacketMirroringArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetPacketMirroringPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetPublicAdvertisedPrefixArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetPublicAdvertisedPrefixPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetPublicDelegatedPrefixArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetPublicDelegatedPrefixPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionAutoscalerArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionAutoscalerPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionBackendServiceArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionBackendServiceIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionBackendServiceIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionBackendServicePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionCommitmentArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionCommitmentPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionDiskArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionDiskIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionDiskIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionDiskPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionHealthCheckArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionHealthCheckPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionHealthCheckServiceArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionHealthCheckServicePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionInstanceGroupManagerArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionInstanceGroupManagerPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionInstantSnapshotArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionInstantSnapshotIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionInstantSnapshotIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionInstantSnapshotPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNetworkArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNetworkEndpointGroupArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNetworkEndpointGroupPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNetworkFirewallPolicyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNetworkFirewallPolicyIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNetworkFirewallPolicyIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNetworkFirewallPolicyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNetworkIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNetworkIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNetworkPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNotificationEndpointArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionNotificationEndpointPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionSecurityPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionSecurityPolicyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionSslCertificateArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionSslCertificatePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionSslPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionSslPolicyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionTargetHttpProxyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionTargetHttpProxyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionTargetHttpsProxyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionTargetHttpsProxyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionTargetTcpProxyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionTargetTcpProxyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionUrlMapArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionUrlMapPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetReservationArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetReservationIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetReservationIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetReservationPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetResourcePolicyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetResourcePolicyIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetResourcePolicyIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetResourcePolicyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRouteArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRoutePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRouterArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRouterPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetSecurityPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetSecurityPolicyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetServiceAttachmentArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetServiceAttachmentIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetServiceAttachmentIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetServiceAttachmentPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetSnapshotArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetSnapshotIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetSnapshotIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetSnapshotPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetSslCertificateArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetSslCertificatePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetSslPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetSslPolicyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetSubnetworkArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetSubnetworkIamPolicyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetSubnetworkIamPolicyPlainArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetSubnetworkPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetTargetGrpcProxyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetTargetGrpcProxyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetTargetHttpProxyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetTargetHttpProxyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetTargetHttpsProxyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetTargetHttpsProxyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetTargetInstanceArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetTargetInstancePlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetTargetPoolArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetTargetPoolPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetTargetSslProxyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetTargetSslProxyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetTargetTcpProxyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetTargetTcpProxyPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetTargetVpnGatewayArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetTargetVpnGatewayPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetUrlMapArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetUrlMapPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetVpnGatewayArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetVpnGatewayPlainArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetVpnTunnelArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetVpnTunnelPlainArgs;
 import com.pulumi.googlenative.compute_alpha.outputs.GetAddressResult;
 import com.pulumi.googlenative.compute_alpha.outputs.GetAutoscalerResult;
 import com.pulumi.googlenative.compute_alpha.outputs.GetBackendBucketIamPolicyResult;
@@ -214,6 +317,7 @@ import com.pulumi.googlenative.compute_alpha.outputs.GetTargetVpnGatewayResult;
 import com.pulumi.googlenative.compute_alpha.outputs.GetUrlMapResult;
 import com.pulumi.googlenative.compute_alpha.outputs.GetVpnGatewayResult;
 import com.pulumi.googlenative.compute_alpha.outputs.GetVpnTunnelResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Compute_alphaFunctions {
     /**
@@ -227,8 +331,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified address resource.
      * 
      */
+    public static CompletableFuture<GetAddressResult> getAddressPlain(GetAddressPlainArgs args) {
+        return getAddressPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified address resource.
+     * 
+     */
     public static Output<GetAddressResult> getAddress(GetAddressArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getAddress", TypeShape.of(GetAddressResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified address resource.
+     * 
+     */
+    public static CompletableFuture<GetAddressResult> getAddressPlain(GetAddressPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getAddress", TypeShape.of(GetAddressResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified autoscaler resource. Gets a list of available autoscalers by making a list() request.
@@ -241,8 +359,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified autoscaler resource. Gets a list of available autoscalers by making a list() request.
      * 
      */
+    public static CompletableFuture<GetAutoscalerResult> getAutoscalerPlain(GetAutoscalerPlainArgs args) {
+        return getAutoscalerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified autoscaler resource. Gets a list of available autoscalers by making a list() request.
+     * 
+     */
     public static Output<GetAutoscalerResult> getAutoscaler(GetAutoscalerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getAutoscaler", TypeShape.of(GetAutoscalerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified autoscaler resource. Gets a list of available autoscalers by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetAutoscalerResult> getAutoscalerPlain(GetAutoscalerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getAutoscaler", TypeShape.of(GetAutoscalerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
@@ -255,8 +387,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
      * 
      */
+    public static CompletableFuture<GetBackendBucketResult> getBackendBucketPlain(GetBackendBucketPlainArgs args) {
+        return getBackendBucketPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
+     * 
+     */
     public static Output<GetBackendBucketResult> getBackendBucket(GetBackendBucketArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getBackendBucket", TypeShape.of(GetBackendBucketResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetBackendBucketResult> getBackendBucketPlain(GetBackendBucketPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getBackendBucket", TypeShape.of(GetBackendBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -269,8 +415,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetBackendBucketIamPolicyResult> getBackendBucketIamPolicyPlain(GetBackendBucketIamPolicyPlainArgs args) {
+        return getBackendBucketIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetBackendBucketIamPolicyResult> getBackendBucketIamPolicy(GetBackendBucketIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getBackendBucketIamPolicy", TypeShape.of(GetBackendBucketIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetBackendBucketIamPolicyResult> getBackendBucketIamPolicyPlain(GetBackendBucketIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getBackendBucketIamPolicy", TypeShape.of(GetBackendBucketIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified BackendService resource. Gets a list of available backend services.
@@ -283,8 +443,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified BackendService resource. Gets a list of available backend services.
      * 
      */
+    public static CompletableFuture<GetBackendServiceResult> getBackendServicePlain(GetBackendServicePlainArgs args) {
+        return getBackendServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified BackendService resource. Gets a list of available backend services.
+     * 
+     */
     public static Output<GetBackendServiceResult> getBackendService(GetBackendServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getBackendService", TypeShape.of(GetBackendServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified BackendService resource. Gets a list of available backend services.
+     * 
+     */
+    public static CompletableFuture<GetBackendServiceResult> getBackendServicePlain(GetBackendServicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getBackendService", TypeShape.of(GetBackendServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -297,8 +471,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetBackendServiceIamPolicyResult> getBackendServiceIamPolicyPlain(GetBackendServiceIamPolicyPlainArgs args) {
+        return getBackendServiceIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetBackendServiceIamPolicyResult> getBackendServiceIamPolicy(GetBackendServiceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getBackendServiceIamPolicy", TypeShape.of(GetBackendServiceIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetBackendServiceIamPolicyResult> getBackendServiceIamPolicyPlain(GetBackendServiceIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getBackendServiceIamPolicy", TypeShape.of(GetBackendServiceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns a specified persistent disk. Gets a list of available persistent disks by making a list() request.
@@ -311,8 +499,22 @@ public final class Compute_alphaFunctions {
      * Returns a specified persistent disk. Gets a list of available persistent disks by making a list() request.
      * 
      */
+    public static CompletableFuture<GetDiskResult> getDiskPlain(GetDiskPlainArgs args) {
+        return getDiskPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns a specified persistent disk. Gets a list of available persistent disks by making a list() request.
+     * 
+     */
     public static Output<GetDiskResult> getDisk(GetDiskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getDisk", TypeShape.of(GetDiskResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns a specified persistent disk. Gets a list of available persistent disks by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetDiskResult> getDiskPlain(GetDiskPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getDisk", TypeShape.of(GetDiskResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -325,8 +527,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetDiskIamPolicyResult> getDiskIamPolicyPlain(GetDiskIamPolicyPlainArgs args) {
+        return getDiskIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetDiskIamPolicyResult> getDiskIamPolicy(GetDiskIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getDiskIamPolicy", TypeShape.of(GetDiskIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetDiskIamPolicyResult> getDiskIamPolicyPlain(GetDiskIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getDiskIamPolicy", TypeShape.of(GetDiskIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
@@ -339,8 +555,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
      * 
      */
+    public static CompletableFuture<GetExternalVpnGatewayResult> getExternalVpnGatewayPlain(GetExternalVpnGatewayPlainArgs args) {
+        return getExternalVpnGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
+     * 
+     */
     public static Output<GetExternalVpnGatewayResult> getExternalVpnGateway(GetExternalVpnGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getExternalVpnGateway", TypeShape.of(GetExternalVpnGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetExternalVpnGatewayResult> getExternalVpnGatewayPlain(GetExternalVpnGatewayPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getExternalVpnGateway", TypeShape.of(GetExternalVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified firewall.
@@ -353,8 +583,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified firewall.
      * 
      */
+    public static CompletableFuture<GetFirewallResult> getFirewallPlain(GetFirewallPlainArgs args) {
+        return getFirewallPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified firewall.
+     * 
+     */
     public static Output<GetFirewallResult> getFirewall(GetFirewallArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getFirewall", TypeShape.of(GetFirewallResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified firewall.
+     * 
+     */
+    public static CompletableFuture<GetFirewallResult> getFirewallPlain(GetFirewallPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getFirewall", TypeShape.of(GetFirewallResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified firewall policy.
@@ -367,8 +611,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified firewall policy.
      * 
      */
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicyPlain(GetFirewallPolicyPlainArgs args) {
+        return getFirewallPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified firewall policy.
+     * 
+     */
     public static Output<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified firewall policy.
+     * 
+     */
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicyPlain(GetFirewallPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -381,8 +639,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetFirewallPolicyIamPolicyResult> getFirewallPolicyIamPolicyPlain(GetFirewallPolicyIamPolicyPlainArgs args) {
+        return getFirewallPolicyIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetFirewallPolicyIamPolicyResult> getFirewallPolicyIamPolicy(GetFirewallPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getFirewallPolicyIamPolicy", TypeShape.of(GetFirewallPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetFirewallPolicyIamPolicyResult> getFirewallPolicyIamPolicyPlain(GetFirewallPolicyIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getFirewallPolicyIamPolicy", TypeShape.of(GetFirewallPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified ForwardingRule resource.
@@ -395,8 +667,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified ForwardingRule resource.
      * 
      */
+    public static CompletableFuture<GetForwardingRuleResult> getForwardingRulePlain(GetForwardingRulePlainArgs args) {
+        return getForwardingRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified ForwardingRule resource.
+     * 
+     */
     public static Output<GetForwardingRuleResult> getForwardingRule(GetForwardingRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getForwardingRule", TypeShape.of(GetForwardingRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified ForwardingRule resource.
+     * 
+     */
+    public static CompletableFuture<GetForwardingRuleResult> getForwardingRulePlain(GetForwardingRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getForwardingRule", TypeShape.of(GetForwardingRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves information about the specified future reservation.
@@ -409,8 +695,22 @@ public final class Compute_alphaFunctions {
      * Retrieves information about the specified future reservation.
      * 
      */
+    public static CompletableFuture<GetFutureReservationResult> getFutureReservationPlain(GetFutureReservationPlainArgs args) {
+        return getFutureReservationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves information about the specified future reservation.
+     * 
+     */
     public static Output<GetFutureReservationResult> getFutureReservation(GetFutureReservationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getFutureReservation", TypeShape.of(GetFutureReservationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves information about the specified future reservation.
+     * 
+     */
+    public static CompletableFuture<GetFutureReservationResult> getFutureReservationPlain(GetFutureReservationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getFutureReservation", TypeShape.of(GetFutureReservationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified address resource. Gets a list of available addresses by making a list() request.
@@ -423,8 +723,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified address resource. Gets a list of available addresses by making a list() request.
      * 
      */
+    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddressPlain(GetGlobalAddressPlainArgs args) {
+        return getGlobalAddressPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified address resource. Gets a list of available addresses by making a list() request.
+     * 
+     */
     public static Output<GetGlobalAddressResult> getGlobalAddress(GetGlobalAddressArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getGlobalAddress", TypeShape.of(GetGlobalAddressResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified address resource. Gets a list of available addresses by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetGlobalAddressResult> getGlobalAddressPlain(GetGlobalAddressPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getGlobalAddress", TypeShape.of(GetGlobalAddressResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
@@ -437,8 +751,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
      * 
      */
+    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRulePlain(GetGlobalForwardingRulePlainArgs args) {
+        return getGlobalForwardingRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
+     * 
+     */
     public static Output<GetGlobalForwardingRuleResult> getGlobalForwardingRule(GetGlobalForwardingRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getGlobalForwardingRule", TypeShape.of(GetGlobalForwardingRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetGlobalForwardingRuleResult> getGlobalForwardingRulePlain(GetGlobalForwardingRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getGlobalForwardingRule", TypeShape.of(GetGlobalForwardingRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
@@ -451,8 +779,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
      * 
      */
+    public static CompletableFuture<GetGlobalNetworkEndpointGroupResult> getGlobalNetworkEndpointGroupPlain(GetGlobalNetworkEndpointGroupPlainArgs args) {
+        return getGlobalNetworkEndpointGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+     * 
+     */
     public static Output<GetGlobalNetworkEndpointGroupResult> getGlobalNetworkEndpointGroup(GetGlobalNetworkEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getGlobalNetworkEndpointGroup", TypeShape.of(GetGlobalNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetGlobalNetworkEndpointGroupResult> getGlobalNetworkEndpointGroupPlain(GetGlobalNetworkEndpointGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getGlobalNetworkEndpointGroup", TypeShape.of(GetGlobalNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified global PublicDelegatedPrefix resource.
@@ -465,8 +807,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified global PublicDelegatedPrefix resource.
      * 
      */
+    public static CompletableFuture<GetGlobalPublicDelegatedPrefixResult> getGlobalPublicDelegatedPrefixPlain(GetGlobalPublicDelegatedPrefixPlainArgs args) {
+        return getGlobalPublicDelegatedPrefixPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified global PublicDelegatedPrefix resource.
+     * 
+     */
     public static Output<GetGlobalPublicDelegatedPrefixResult> getGlobalPublicDelegatedPrefix(GetGlobalPublicDelegatedPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getGlobalPublicDelegatedPrefix", TypeShape.of(GetGlobalPublicDelegatedPrefixResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified global PublicDelegatedPrefix resource.
+     * 
+     */
+    public static CompletableFuture<GetGlobalPublicDelegatedPrefixResult> getGlobalPublicDelegatedPrefixPlain(GetGlobalPublicDelegatedPrefixPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getGlobalPublicDelegatedPrefix", TypeShape.of(GetGlobalPublicDelegatedPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
@@ -479,8 +835,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
      * 
      */
+    public static CompletableFuture<GetHealthCheckResult> getHealthCheckPlain(GetHealthCheckPlainArgs args) {
+        return getHealthCheckPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
+     * 
+     */
     public static Output<GetHealthCheckResult> getHealthCheck(GetHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetHealthCheckResult> getHealthCheckPlain(GetHealthCheckPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified HttpHealthCheck resource. Gets a list of available HTTP health checks by making a list() request.
@@ -493,8 +863,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified HttpHealthCheck resource. Gets a list of available HTTP health checks by making a list() request.
      * 
      */
+    public static CompletableFuture<GetHttpHealthCheckResult> getHttpHealthCheckPlain(GetHttpHealthCheckPlainArgs args) {
+        return getHttpHealthCheckPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified HttpHealthCheck resource. Gets a list of available HTTP health checks by making a list() request.
+     * 
+     */
     public static Output<GetHttpHealthCheckResult> getHttpHealthCheck(GetHttpHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getHttpHealthCheck", TypeShape.of(GetHttpHealthCheckResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified HttpHealthCheck resource. Gets a list of available HTTP health checks by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetHttpHealthCheckResult> getHttpHealthCheckPlain(GetHttpHealthCheckPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getHttpHealthCheck", TypeShape.of(GetHttpHealthCheckResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified HttpsHealthCheck resource. Gets a list of available HTTPS health checks by making a list() request.
@@ -507,8 +891,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified HttpsHealthCheck resource. Gets a list of available HTTPS health checks by making a list() request.
      * 
      */
+    public static CompletableFuture<GetHttpsHealthCheckResult> getHttpsHealthCheckPlain(GetHttpsHealthCheckPlainArgs args) {
+        return getHttpsHealthCheckPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified HttpsHealthCheck resource. Gets a list of available HTTPS health checks by making a list() request.
+     * 
+     */
     public static Output<GetHttpsHealthCheckResult> getHttpsHealthCheck(GetHttpsHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getHttpsHealthCheck", TypeShape.of(GetHttpsHealthCheckResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified HttpsHealthCheck resource. Gets a list of available HTTPS health checks by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetHttpsHealthCheckResult> getHttpsHealthCheckPlain(GetHttpsHealthCheckPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getHttpsHealthCheck", TypeShape.of(GetHttpsHealthCheckResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified image. Gets a list of available images by making a list() request.
@@ -521,8 +919,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified image. Gets a list of available images by making a list() request.
      * 
      */
+    public static CompletableFuture<GetImageResult> getImagePlain(GetImagePlainArgs args) {
+        return getImagePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified image. Gets a list of available images by making a list() request.
+     * 
+     */
     public static Output<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified image. Gets a list of available images by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetImageResult> getImagePlain(GetImagePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -535,8 +947,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetImageIamPolicyResult> getImageIamPolicyPlain(GetImageIamPolicyPlainArgs args) {
+        return getImageIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetImageIamPolicyResult> getImageIamPolicy(GetImageIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getImageIamPolicy", TypeShape.of(GetImageIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetImageIamPolicyResult> getImageIamPolicyPlain(GetImageIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getImageIamPolicy", TypeShape.of(GetImageIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified Instance resource. Gets a list of available instances by making a list() request.
@@ -549,8 +975,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified Instance resource. Gets a list of available instances by making a list() request.
      * 
      */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args) {
+        return getInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified Instance resource. Gets a list of available instances by making a list() request.
+     * 
+     */
     public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified Instance resource. Gets a list of available instances by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
@@ -563,8 +1003,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
      * 
      */
+    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroupPlain(GetInstanceGroupPlainArgs args) {
+        return getInstanceGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+     * 
+     */
     public static Output<GetInstanceGroupResult> getInstanceGroup(GetInstanceGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInstanceGroup", TypeShape.of(GetInstanceGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
+     * 
+     */
+    public static CompletableFuture<GetInstanceGroupResult> getInstanceGroupPlain(GetInstanceGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInstanceGroup", TypeShape.of(GetInstanceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns all of the details about the specified managed instance group. Gets a list of available managed instance groups by making a list() request.
@@ -577,8 +1031,22 @@ public final class Compute_alphaFunctions {
      * Returns all of the details about the specified managed instance group. Gets a list of available managed instance groups by making a list() request.
      * 
      */
+    public static CompletableFuture<GetInstanceGroupManagerResult> getInstanceGroupManagerPlain(GetInstanceGroupManagerPlainArgs args) {
+        return getInstanceGroupManagerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns all of the details about the specified managed instance group. Gets a list of available managed instance groups by making a list() request.
+     * 
+     */
     public static Output<GetInstanceGroupManagerResult> getInstanceGroupManager(GetInstanceGroupManagerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInstanceGroupManager", TypeShape.of(GetInstanceGroupManagerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns all of the details about the specified managed instance group. Gets a list of available managed instance groups by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetInstanceGroupManagerResult> getInstanceGroupManagerPlain(GetInstanceGroupManagerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInstanceGroupManager", TypeShape.of(GetInstanceGroupManagerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -591,8 +1059,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicyPlain(GetInstanceIamPolicyPlainArgs args) {
+        return getInstanceIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetInstanceIamPolicyResult> getInstanceIamPolicy(GetInstanceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInstanceIamPolicy", TypeShape.of(GetInstanceIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetInstanceIamPolicyResult> getInstanceIamPolicyPlain(GetInstanceIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInstanceIamPolicy", TypeShape.of(GetInstanceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified instance template. Gets a list of available instance templates by making a list() request.
@@ -605,8 +1087,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified instance template. Gets a list of available instance templates by making a list() request.
      * 
      */
+    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplatePlain(GetInstanceTemplatePlainArgs args) {
+        return getInstanceTemplatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+     * 
+     */
     public static Output<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInstanceTemplate", TypeShape.of(GetInstanceTemplateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplatePlain(GetInstanceTemplatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInstanceTemplate", TypeShape.of(GetInstanceTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -619,8 +1115,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetInstanceTemplateIamPolicyResult> getInstanceTemplateIamPolicyPlain(GetInstanceTemplateIamPolicyPlainArgs args) {
+        return getInstanceTemplateIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetInstanceTemplateIamPolicyResult> getInstanceTemplateIamPolicy(GetInstanceTemplateIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInstanceTemplateIamPolicy", TypeShape.of(GetInstanceTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetInstanceTemplateIamPolicyResult> getInstanceTemplateIamPolicyPlain(GetInstanceTemplateIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInstanceTemplateIamPolicy", TypeShape.of(GetInstanceTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified InstantSnapshot resource in the specified zone.
@@ -633,8 +1143,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified InstantSnapshot resource in the specified zone.
      * 
      */
+    public static CompletableFuture<GetInstantSnapshotResult> getInstantSnapshotPlain(GetInstantSnapshotPlainArgs args) {
+        return getInstantSnapshotPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified InstantSnapshot resource in the specified zone.
+     * 
+     */
     public static Output<GetInstantSnapshotResult> getInstantSnapshot(GetInstantSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInstantSnapshot", TypeShape.of(GetInstantSnapshotResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified InstantSnapshot resource in the specified zone.
+     * 
+     */
+    public static CompletableFuture<GetInstantSnapshotResult> getInstantSnapshotPlain(GetInstantSnapshotPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInstantSnapshot", TypeShape.of(GetInstantSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -647,8 +1171,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetInstantSnapshotIamPolicyResult> getInstantSnapshotIamPolicyPlain(GetInstantSnapshotIamPolicyPlainArgs args) {
+        return getInstantSnapshotIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetInstantSnapshotIamPolicyResult> getInstantSnapshotIamPolicy(GetInstantSnapshotIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInstantSnapshotIamPolicy", TypeShape.of(GetInstantSnapshotIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetInstantSnapshotIamPolicyResult> getInstantSnapshotIamPolicyPlain(GetInstantSnapshotIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInstantSnapshotIamPolicy", TypeShape.of(GetInstantSnapshotIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified interconnect. Get a list of available interconnects by making a list() request.
@@ -661,8 +1199,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified interconnect. Get a list of available interconnects by making a list() request.
      * 
      */
+    public static CompletableFuture<GetInterconnectResult> getInterconnectPlain(GetInterconnectPlainArgs args) {
+        return getInterconnectPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified interconnect. Get a list of available interconnects by making a list() request.
+     * 
+     */
     public static Output<GetInterconnectResult> getInterconnect(GetInterconnectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInterconnect", TypeShape.of(GetInterconnectResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified interconnect. Get a list of available interconnects by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetInterconnectResult> getInterconnectPlain(GetInterconnectPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInterconnect", TypeShape.of(GetInterconnectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified interconnect attachment.
@@ -675,8 +1227,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified interconnect attachment.
      * 
      */
+    public static CompletableFuture<GetInterconnectAttachmentResult> getInterconnectAttachmentPlain(GetInterconnectAttachmentPlainArgs args) {
+        return getInterconnectAttachmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified interconnect attachment.
+     * 
+     */
     public static Output<GetInterconnectAttachmentResult> getInterconnectAttachment(GetInterconnectAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInterconnectAttachment", TypeShape.of(GetInterconnectAttachmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified interconnect attachment.
+     * 
+     */
+    public static CompletableFuture<GetInterconnectAttachmentResult> getInterconnectAttachmentPlain(GetInterconnectAttachmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInterconnectAttachment", TypeShape.of(GetInterconnectAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -689,8 +1255,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetInterconnectAttachmentIamPolicyResult> getInterconnectAttachmentIamPolicyPlain(GetInterconnectAttachmentIamPolicyPlainArgs args) {
+        return getInterconnectAttachmentIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetInterconnectAttachmentIamPolicyResult> getInterconnectAttachmentIamPolicy(GetInterconnectAttachmentIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInterconnectAttachmentIamPolicy", TypeShape.of(GetInterconnectAttachmentIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetInterconnectAttachmentIamPolicyResult> getInterconnectAttachmentIamPolicyPlain(GetInterconnectAttachmentIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInterconnectAttachmentIamPolicy", TypeShape.of(GetInterconnectAttachmentIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -703,8 +1283,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetInterconnectIamPolicyResult> getInterconnectIamPolicyPlain(GetInterconnectIamPolicyPlainArgs args) {
+        return getInterconnectIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetInterconnectIamPolicyResult> getInterconnectIamPolicy(GetInterconnectIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getInterconnectIamPolicy", TypeShape.of(GetInterconnectIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetInterconnectIamPolicyResult> getInterconnectIamPolicyPlain(GetInterconnectIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInterconnectIamPolicy", TypeShape.of(GetInterconnectIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified License resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
@@ -717,8 +1311,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified License resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
      * 
      */
+    public static CompletableFuture<GetLicenseResult> getLicensePlain(GetLicensePlainArgs args) {
+        return getLicensePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified License resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+     * 
+     */
     public static Output<GetLicenseResult> getLicense(GetLicenseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getLicense", TypeShape.of(GetLicenseResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified License resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+     * 
+     */
+    public static CompletableFuture<GetLicenseResult> getLicensePlain(GetLicensePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getLicense", TypeShape.of(GetLicenseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
@@ -731,8 +1339,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
      * 
      */
+    public static CompletableFuture<GetLicenseCodeIamPolicyResult> getLicenseCodeIamPolicyPlain(GetLicenseCodeIamPolicyPlainArgs args) {
+        return getLicenseCodeIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+     * 
+     */
     public static Output<GetLicenseCodeIamPolicyResult> getLicenseCodeIamPolicy(GetLicenseCodeIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getLicenseCodeIamPolicy", TypeShape.of(GetLicenseCodeIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+     * 
+     */
+    public static CompletableFuture<GetLicenseCodeIamPolicyResult> getLicenseCodeIamPolicyPlain(GetLicenseCodeIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getLicenseCodeIamPolicy", TypeShape.of(GetLicenseCodeIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
@@ -745,8 +1367,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
      * 
      */
+    public static CompletableFuture<GetLicenseIamPolicyResult> getLicenseIamPolicyPlain(GetLicenseIamPolicyPlainArgs args) {
+        return getLicenseIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+     * 
+     */
     public static Output<GetLicenseIamPolicyResult> getLicenseIamPolicy(GetLicenseIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getLicenseIamPolicy", TypeShape.of(GetLicenseIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+     * 
+     */
+    public static CompletableFuture<GetLicenseIamPolicyResult> getLicenseIamPolicyPlain(GetLicenseIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getLicenseIamPolicy", TypeShape.of(GetLicenseIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified machine image. Gets a list of available machine images by making a list() request.
@@ -759,8 +1395,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified machine image. Gets a list of available machine images by making a list() request.
      * 
      */
+    public static CompletableFuture<GetMachineImageResult> getMachineImagePlain(GetMachineImagePlainArgs args) {
+        return getMachineImagePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified machine image. Gets a list of available machine images by making a list() request.
+     * 
+     */
     public static Output<GetMachineImageResult> getMachineImage(GetMachineImageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getMachineImage", TypeShape.of(GetMachineImageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified machine image. Gets a list of available machine images by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetMachineImageResult> getMachineImagePlain(GetMachineImagePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getMachineImage", TypeShape.of(GetMachineImageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -773,8 +1423,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetMachineImageIamPolicyResult> getMachineImageIamPolicyPlain(GetMachineImageIamPolicyPlainArgs args) {
+        return getMachineImageIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetMachineImageIamPolicyResult> getMachineImageIamPolicy(GetMachineImageIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getMachineImageIamPolicy", TypeShape.of(GetMachineImageIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetMachineImageIamPolicyResult> getMachineImageIamPolicyPlain(GetMachineImageIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getMachineImageIamPolicy", TypeShape.of(GetMachineImageIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified network. Gets a list of available networks by making a list() request.
@@ -787,8 +1451,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified network. Gets a list of available networks by making a list() request.
      * 
      */
+    public static CompletableFuture<GetNetworkResult> getNetworkPlain(GetNetworkPlainArgs args) {
+        return getNetworkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified network. Gets a list of available networks by making a list() request.
+     * 
+     */
     public static Output<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified network. Gets a list of available networks by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetNetworkResult> getNetworkPlain(GetNetworkPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a specified NetworkEdgeSecurityService.
@@ -801,8 +1479,22 @@ public final class Compute_alphaFunctions {
      * Gets a specified NetworkEdgeSecurityService.
      * 
      */
+    public static CompletableFuture<GetNetworkEdgeSecurityServiceResult> getNetworkEdgeSecurityServicePlain(GetNetworkEdgeSecurityServicePlainArgs args) {
+        return getNetworkEdgeSecurityServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a specified NetworkEdgeSecurityService.
+     * 
+     */
     public static Output<GetNetworkEdgeSecurityServiceResult> getNetworkEdgeSecurityService(GetNetworkEdgeSecurityServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getNetworkEdgeSecurityService", TypeShape.of(GetNetworkEdgeSecurityServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a specified NetworkEdgeSecurityService.
+     * 
+     */
+    public static CompletableFuture<GetNetworkEdgeSecurityServiceResult> getNetworkEdgeSecurityServicePlain(GetNetworkEdgeSecurityServicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNetworkEdgeSecurityService", TypeShape.of(GetNetworkEdgeSecurityServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
@@ -815,8 +1507,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
      * 
      */
+    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroupPlain(GetNetworkEndpointGroupPlainArgs args) {
+        return getNetworkEndpointGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+     * 
+     */
     public static Output<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getNetworkEndpointGroup", TypeShape.of(GetNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroupPlain(GetNetworkEndpointGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNetworkEndpointGroup", TypeShape.of(GetNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified network firewall policy.
@@ -829,8 +1535,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified network firewall policy.
      * 
      */
+    public static CompletableFuture<GetNetworkFirewallPolicyResult> getNetworkFirewallPolicyPlain(GetNetworkFirewallPolicyPlainArgs args) {
+        return getNetworkFirewallPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified network firewall policy.
+     * 
+     */
     public static Output<GetNetworkFirewallPolicyResult> getNetworkFirewallPolicy(GetNetworkFirewallPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getNetworkFirewallPolicy", TypeShape.of(GetNetworkFirewallPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified network firewall policy.
+     * 
+     */
+    public static CompletableFuture<GetNetworkFirewallPolicyResult> getNetworkFirewallPolicyPlain(GetNetworkFirewallPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNetworkFirewallPolicy", TypeShape.of(GetNetworkFirewallPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -843,8 +1563,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetNetworkFirewallPolicyIamPolicyResult> getNetworkFirewallPolicyIamPolicyPlain(GetNetworkFirewallPolicyIamPolicyPlainArgs args) {
+        return getNetworkFirewallPolicyIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetNetworkFirewallPolicyIamPolicyResult> getNetworkFirewallPolicyIamPolicy(GetNetworkFirewallPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getNetworkFirewallPolicyIamPolicy", TypeShape.of(GetNetworkFirewallPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetNetworkFirewallPolicyIamPolicyResult> getNetworkFirewallPolicyIamPolicyPlain(GetNetworkFirewallPolicyIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNetworkFirewallPolicyIamPolicy", TypeShape.of(GetNetworkFirewallPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the &#34;nodes&#34; field should not be used. Use nodeGroups.listNodes instead.
@@ -857,8 +1591,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the &#34;nodes&#34; field should not be used. Use nodeGroups.listNodes instead.
      * 
      */
+    public static CompletableFuture<GetNodeGroupResult> getNodeGroupPlain(GetNodeGroupPlainArgs args) {
+        return getNodeGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the &#34;nodes&#34; field should not be used. Use nodeGroups.listNodes instead.
+     * 
+     */
     public static Output<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getNodeGroup", TypeShape.of(GetNodeGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the &#34;nodes&#34; field should not be used. Use nodeGroups.listNodes instead.
+     * 
+     */
+    public static CompletableFuture<GetNodeGroupResult> getNodeGroupPlain(GetNodeGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNodeGroup", TypeShape.of(GetNodeGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -871,8 +1619,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetNodeGroupIamPolicyResult> getNodeGroupIamPolicyPlain(GetNodeGroupIamPolicyPlainArgs args) {
+        return getNodeGroupIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetNodeGroupIamPolicyResult> getNodeGroupIamPolicy(GetNodeGroupIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getNodeGroupIamPolicy", TypeShape.of(GetNodeGroupIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetNodeGroupIamPolicyResult> getNodeGroupIamPolicyPlain(GetNodeGroupIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNodeGroupIamPolicy", TypeShape.of(GetNodeGroupIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified node template. Gets a list of available node templates by making a list() request.
@@ -885,8 +1647,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified node template. Gets a list of available node templates by making a list() request.
      * 
      */
+    public static CompletableFuture<GetNodeTemplateResult> getNodeTemplatePlain(GetNodeTemplatePlainArgs args) {
+        return getNodeTemplatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified node template. Gets a list of available node templates by making a list() request.
+     * 
+     */
     public static Output<GetNodeTemplateResult> getNodeTemplate(GetNodeTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getNodeTemplate", TypeShape.of(GetNodeTemplateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified node template. Gets a list of available node templates by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetNodeTemplateResult> getNodeTemplatePlain(GetNodeTemplatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNodeTemplate", TypeShape.of(GetNodeTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -899,8 +1675,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetNodeTemplateIamPolicyResult> getNodeTemplateIamPolicyPlain(GetNodeTemplateIamPolicyPlainArgs args) {
+        return getNodeTemplateIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetNodeTemplateIamPolicyResult> getNodeTemplateIamPolicy(GetNodeTemplateIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getNodeTemplateIamPolicy", TypeShape.of(GetNodeTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetNodeTemplateIamPolicyResult> getNodeTemplateIamPolicyPlain(GetNodeTemplateIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNodeTemplateIamPolicy", TypeShape.of(GetNodeTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List all of the ordered rules present in a single specified policy.
@@ -913,8 +1703,22 @@ public final class Compute_alphaFunctions {
      * List all of the ordered rules present in a single specified policy.
      * 
      */
+    public static CompletableFuture<GetOrganizationSecurityPolicyResult> getOrganizationSecurityPolicyPlain(GetOrganizationSecurityPolicyPlainArgs args) {
+        return getOrganizationSecurityPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * List all of the ordered rules present in a single specified policy.
+     * 
+     */
     public static Output<GetOrganizationSecurityPolicyResult> getOrganizationSecurityPolicy(GetOrganizationSecurityPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getOrganizationSecurityPolicy", TypeShape.of(GetOrganizationSecurityPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List all of the ordered rules present in a single specified policy.
+     * 
+     */
+    public static CompletableFuture<GetOrganizationSecurityPolicyResult> getOrganizationSecurityPolicyPlain(GetOrganizationSecurityPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getOrganizationSecurityPolicy", TypeShape.of(GetOrganizationSecurityPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified PacketMirroring resource.
@@ -927,8 +1731,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified PacketMirroring resource.
      * 
      */
+    public static CompletableFuture<GetPacketMirroringResult> getPacketMirroringPlain(GetPacketMirroringPlainArgs args) {
+        return getPacketMirroringPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified PacketMirroring resource.
+     * 
+     */
     public static Output<GetPacketMirroringResult> getPacketMirroring(GetPacketMirroringArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getPacketMirroring", TypeShape.of(GetPacketMirroringResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified PacketMirroring resource.
+     * 
+     */
+    public static CompletableFuture<GetPacketMirroringResult> getPacketMirroringPlain(GetPacketMirroringPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getPacketMirroring", TypeShape.of(GetPacketMirroringResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified PublicAdvertisedPrefix resource.
@@ -941,8 +1759,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified PublicAdvertisedPrefix resource.
      * 
      */
+    public static CompletableFuture<GetPublicAdvertisedPrefixResult> getPublicAdvertisedPrefixPlain(GetPublicAdvertisedPrefixPlainArgs args) {
+        return getPublicAdvertisedPrefixPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified PublicAdvertisedPrefix resource.
+     * 
+     */
     public static Output<GetPublicAdvertisedPrefixResult> getPublicAdvertisedPrefix(GetPublicAdvertisedPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getPublicAdvertisedPrefix", TypeShape.of(GetPublicAdvertisedPrefixResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified PublicAdvertisedPrefix resource.
+     * 
+     */
+    public static CompletableFuture<GetPublicAdvertisedPrefixResult> getPublicAdvertisedPrefixPlain(GetPublicAdvertisedPrefixPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getPublicAdvertisedPrefix", TypeShape.of(GetPublicAdvertisedPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified PublicDelegatedPrefix resource in the given region.
@@ -955,8 +1787,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified PublicDelegatedPrefix resource in the given region.
      * 
      */
+    public static CompletableFuture<GetPublicDelegatedPrefixResult> getPublicDelegatedPrefixPlain(GetPublicDelegatedPrefixPlainArgs args) {
+        return getPublicDelegatedPrefixPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified PublicDelegatedPrefix resource in the given region.
+     * 
+     */
     public static Output<GetPublicDelegatedPrefixResult> getPublicDelegatedPrefix(GetPublicDelegatedPrefixArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getPublicDelegatedPrefix", TypeShape.of(GetPublicDelegatedPrefixResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified PublicDelegatedPrefix resource in the given region.
+     * 
+     */
+    public static CompletableFuture<GetPublicDelegatedPrefixResult> getPublicDelegatedPrefixPlain(GetPublicDelegatedPrefixPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getPublicDelegatedPrefix", TypeShape.of(GetPublicDelegatedPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified autoscaler.
@@ -969,8 +1815,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified autoscaler.
      * 
      */
+    public static CompletableFuture<GetRegionAutoscalerResult> getRegionAutoscalerPlain(GetRegionAutoscalerPlainArgs args) {
+        return getRegionAutoscalerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified autoscaler.
+     * 
+     */
     public static Output<GetRegionAutoscalerResult> getRegionAutoscaler(GetRegionAutoscalerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionAutoscaler", TypeShape.of(GetRegionAutoscalerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified autoscaler.
+     * 
+     */
+    public static CompletableFuture<GetRegionAutoscalerResult> getRegionAutoscalerPlain(GetRegionAutoscalerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionAutoscaler", TypeShape.of(GetRegionAutoscalerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified regional BackendService resource.
@@ -983,8 +1843,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified regional BackendService resource.
      * 
      */
+    public static CompletableFuture<GetRegionBackendServiceResult> getRegionBackendServicePlain(GetRegionBackendServicePlainArgs args) {
+        return getRegionBackendServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified regional BackendService resource.
+     * 
+     */
     public static Output<GetRegionBackendServiceResult> getRegionBackendService(GetRegionBackendServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionBackendService", TypeShape.of(GetRegionBackendServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified regional BackendService resource.
+     * 
+     */
+    public static CompletableFuture<GetRegionBackendServiceResult> getRegionBackendServicePlain(GetRegionBackendServicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionBackendService", TypeShape.of(GetRegionBackendServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -997,8 +1871,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetRegionBackendServiceIamPolicyResult> getRegionBackendServiceIamPolicyPlain(GetRegionBackendServiceIamPolicyPlainArgs args) {
+        return getRegionBackendServiceIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetRegionBackendServiceIamPolicyResult> getRegionBackendServiceIamPolicy(GetRegionBackendServiceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionBackendServiceIamPolicy", TypeShape.of(GetRegionBackendServiceIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetRegionBackendServiceIamPolicyResult> getRegionBackendServiceIamPolicyPlain(GetRegionBackendServiceIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionBackendServiceIamPolicy", TypeShape.of(GetRegionBackendServiceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified commitment resource. Gets a list of available commitments by making a list() request.
@@ -1011,8 +1899,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified commitment resource. Gets a list of available commitments by making a list() request.
      * 
      */
+    public static CompletableFuture<GetRegionCommitmentResult> getRegionCommitmentPlain(GetRegionCommitmentPlainArgs args) {
+        return getRegionCommitmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified commitment resource. Gets a list of available commitments by making a list() request.
+     * 
+     */
     public static Output<GetRegionCommitmentResult> getRegionCommitment(GetRegionCommitmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionCommitment", TypeShape.of(GetRegionCommitmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified commitment resource. Gets a list of available commitments by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetRegionCommitmentResult> getRegionCommitmentPlain(GetRegionCommitmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionCommitment", TypeShape.of(GetRegionCommitmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns a specified regional persistent disk.
@@ -1025,8 +1927,22 @@ public final class Compute_alphaFunctions {
      * Returns a specified regional persistent disk.
      * 
      */
+    public static CompletableFuture<GetRegionDiskResult> getRegionDiskPlain(GetRegionDiskPlainArgs args) {
+        return getRegionDiskPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns a specified regional persistent disk.
+     * 
+     */
     public static Output<GetRegionDiskResult> getRegionDisk(GetRegionDiskArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionDisk", TypeShape.of(GetRegionDiskResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns a specified regional persistent disk.
+     * 
+     */
+    public static CompletableFuture<GetRegionDiskResult> getRegionDiskPlain(GetRegionDiskPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionDisk", TypeShape.of(GetRegionDiskResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -1039,8 +1955,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetRegionDiskIamPolicyResult> getRegionDiskIamPolicyPlain(GetRegionDiskIamPolicyPlainArgs args) {
+        return getRegionDiskIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetRegionDiskIamPolicyResult> getRegionDiskIamPolicy(GetRegionDiskIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionDiskIamPolicy", TypeShape.of(GetRegionDiskIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetRegionDiskIamPolicyResult> getRegionDiskIamPolicyPlain(GetRegionDiskIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionDiskIamPolicy", TypeShape.of(GetRegionDiskIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
@@ -1053,8 +1983,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
      * 
      */
+    public static CompletableFuture<GetRegionHealthCheckResult> getRegionHealthCheckPlain(GetRegionHealthCheckPlainArgs args) {
+        return getRegionHealthCheckPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
+     * 
+     */
     public static Output<GetRegionHealthCheckResult> getRegionHealthCheck(GetRegionHealthCheckArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionHealthCheck", TypeShape.of(GetRegionHealthCheckResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetRegionHealthCheckResult> getRegionHealthCheckPlain(GetRegionHealthCheckPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionHealthCheck", TypeShape.of(GetRegionHealthCheckResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified regional HealthCheckService resource.
@@ -1067,8 +2011,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified regional HealthCheckService resource.
      * 
      */
+    public static CompletableFuture<GetRegionHealthCheckServiceResult> getRegionHealthCheckServicePlain(GetRegionHealthCheckServicePlainArgs args) {
+        return getRegionHealthCheckServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified regional HealthCheckService resource.
+     * 
+     */
     public static Output<GetRegionHealthCheckServiceResult> getRegionHealthCheckService(GetRegionHealthCheckServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionHealthCheckService", TypeShape.of(GetRegionHealthCheckServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified regional HealthCheckService resource.
+     * 
+     */
+    public static CompletableFuture<GetRegionHealthCheckServiceResult> getRegionHealthCheckServicePlain(GetRegionHealthCheckServicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionHealthCheckService", TypeShape.of(GetRegionHealthCheckServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns all of the details about the specified managed instance group.
@@ -1081,8 +2039,22 @@ public final class Compute_alphaFunctions {
      * Returns all of the details about the specified managed instance group.
      * 
      */
+    public static CompletableFuture<GetRegionInstanceGroupManagerResult> getRegionInstanceGroupManagerPlain(GetRegionInstanceGroupManagerPlainArgs args) {
+        return getRegionInstanceGroupManagerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns all of the details about the specified managed instance group.
+     * 
+     */
     public static Output<GetRegionInstanceGroupManagerResult> getRegionInstanceGroupManager(GetRegionInstanceGroupManagerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionInstanceGroupManager", TypeShape.of(GetRegionInstanceGroupManagerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns all of the details about the specified managed instance group.
+     * 
+     */
+    public static CompletableFuture<GetRegionInstanceGroupManagerResult> getRegionInstanceGroupManagerPlain(GetRegionInstanceGroupManagerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionInstanceGroupManager", TypeShape.of(GetRegionInstanceGroupManagerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified InstantSnapshot resource in the specified region.
@@ -1095,8 +2067,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified InstantSnapshot resource in the specified region.
      * 
      */
+    public static CompletableFuture<GetRegionInstantSnapshotResult> getRegionInstantSnapshotPlain(GetRegionInstantSnapshotPlainArgs args) {
+        return getRegionInstantSnapshotPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified InstantSnapshot resource in the specified region.
+     * 
+     */
     public static Output<GetRegionInstantSnapshotResult> getRegionInstantSnapshot(GetRegionInstantSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionInstantSnapshot", TypeShape.of(GetRegionInstantSnapshotResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified InstantSnapshot resource in the specified region.
+     * 
+     */
+    public static CompletableFuture<GetRegionInstantSnapshotResult> getRegionInstantSnapshotPlain(GetRegionInstantSnapshotPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionInstantSnapshot", TypeShape.of(GetRegionInstantSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -1109,8 +2095,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetRegionInstantSnapshotIamPolicyResult> getRegionInstantSnapshotIamPolicyPlain(GetRegionInstantSnapshotIamPolicyPlainArgs args) {
+        return getRegionInstantSnapshotIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetRegionInstantSnapshotIamPolicyResult> getRegionInstantSnapshotIamPolicy(GetRegionInstantSnapshotIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionInstantSnapshotIamPolicy", TypeShape.of(GetRegionInstantSnapshotIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetRegionInstantSnapshotIamPolicyResult> getRegionInstantSnapshotIamPolicyPlain(GetRegionInstantSnapshotIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionInstantSnapshotIamPolicy", TypeShape.of(GetRegionInstantSnapshotIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified network.
@@ -1123,8 +2123,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified network.
      * 
      */
+    public static CompletableFuture<GetRegionNetworkResult> getRegionNetworkPlain(GetRegionNetworkPlainArgs args) {
+        return getRegionNetworkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified network.
+     * 
+     */
     public static Output<GetRegionNetworkResult> getRegionNetwork(GetRegionNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionNetwork", TypeShape.of(GetRegionNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified network.
+     * 
+     */
+    public static CompletableFuture<GetRegionNetworkResult> getRegionNetworkPlain(GetRegionNetworkPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionNetwork", TypeShape.of(GetRegionNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
@@ -1137,8 +2151,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
      * 
      */
+    public static CompletableFuture<GetRegionNetworkEndpointGroupResult> getRegionNetworkEndpointGroupPlain(GetRegionNetworkEndpointGroupPlainArgs args) {
+        return getRegionNetworkEndpointGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+     * 
+     */
     public static Output<GetRegionNetworkEndpointGroupResult> getRegionNetworkEndpointGroup(GetRegionNetworkEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionNetworkEndpointGroup", TypeShape.of(GetRegionNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetRegionNetworkEndpointGroupResult> getRegionNetworkEndpointGroupPlain(GetRegionNetworkEndpointGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionNetworkEndpointGroup", TypeShape.of(GetRegionNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified network firewall policy.
@@ -1151,8 +2179,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified network firewall policy.
      * 
      */
+    public static CompletableFuture<GetRegionNetworkFirewallPolicyResult> getRegionNetworkFirewallPolicyPlain(GetRegionNetworkFirewallPolicyPlainArgs args) {
+        return getRegionNetworkFirewallPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified network firewall policy.
+     * 
+     */
     public static Output<GetRegionNetworkFirewallPolicyResult> getRegionNetworkFirewallPolicy(GetRegionNetworkFirewallPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionNetworkFirewallPolicy", TypeShape.of(GetRegionNetworkFirewallPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified network firewall policy.
+     * 
+     */
+    public static CompletableFuture<GetRegionNetworkFirewallPolicyResult> getRegionNetworkFirewallPolicyPlain(GetRegionNetworkFirewallPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionNetworkFirewallPolicy", TypeShape.of(GetRegionNetworkFirewallPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -1165,8 +2207,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetRegionNetworkFirewallPolicyIamPolicyResult> getRegionNetworkFirewallPolicyIamPolicyPlain(GetRegionNetworkFirewallPolicyIamPolicyPlainArgs args) {
+        return getRegionNetworkFirewallPolicyIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetRegionNetworkFirewallPolicyIamPolicyResult> getRegionNetworkFirewallPolicyIamPolicy(GetRegionNetworkFirewallPolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionNetworkFirewallPolicyIamPolicy", TypeShape.of(GetRegionNetworkFirewallPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetRegionNetworkFirewallPolicyIamPolicyResult> getRegionNetworkFirewallPolicyIamPolicyPlain(GetRegionNetworkFirewallPolicyIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionNetworkFirewallPolicyIamPolicy", TypeShape.of(GetRegionNetworkFirewallPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -1179,8 +2235,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetRegionNetworkIamPolicyResult> getRegionNetworkIamPolicyPlain(GetRegionNetworkIamPolicyPlainArgs args) {
+        return getRegionNetworkIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetRegionNetworkIamPolicyResult> getRegionNetworkIamPolicy(GetRegionNetworkIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionNetworkIamPolicy", TypeShape.of(GetRegionNetworkIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetRegionNetworkIamPolicyResult> getRegionNetworkIamPolicyPlain(GetRegionNetworkIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionNetworkIamPolicy", TypeShape.of(GetRegionNetworkIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified NotificationEndpoint resource in the given region.
@@ -1193,8 +2263,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified NotificationEndpoint resource in the given region.
      * 
      */
+    public static CompletableFuture<GetRegionNotificationEndpointResult> getRegionNotificationEndpointPlain(GetRegionNotificationEndpointPlainArgs args) {
+        return getRegionNotificationEndpointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified NotificationEndpoint resource in the given region.
+     * 
+     */
     public static Output<GetRegionNotificationEndpointResult> getRegionNotificationEndpoint(GetRegionNotificationEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionNotificationEndpoint", TypeShape.of(GetRegionNotificationEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified NotificationEndpoint resource in the given region.
+     * 
+     */
+    public static CompletableFuture<GetRegionNotificationEndpointResult> getRegionNotificationEndpointPlain(GetRegionNotificationEndpointPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionNotificationEndpoint", TypeShape.of(GetRegionNotificationEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List all of the ordered rules present in a single specified policy.
@@ -1207,8 +2291,22 @@ public final class Compute_alphaFunctions {
      * List all of the ordered rules present in a single specified policy.
      * 
      */
+    public static CompletableFuture<GetRegionSecurityPolicyResult> getRegionSecurityPolicyPlain(GetRegionSecurityPolicyPlainArgs args) {
+        return getRegionSecurityPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * List all of the ordered rules present in a single specified policy.
+     * 
+     */
     public static Output<GetRegionSecurityPolicyResult> getRegionSecurityPolicy(GetRegionSecurityPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionSecurityPolicy", TypeShape.of(GetRegionSecurityPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List all of the ordered rules present in a single specified policy.
+     * 
+     */
+    public static CompletableFuture<GetRegionSecurityPolicyResult> getRegionSecurityPolicyPlain(GetRegionSecurityPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionSecurityPolicy", TypeShape.of(GetRegionSecurityPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
@@ -1221,8 +2319,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
      * 
      */
+    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificatePlain(GetRegionSslCertificatePlainArgs args) {
+        return getRegionSslCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
+     * 
+     */
     public static Output<GetRegionSslCertificateResult> getRegionSslCertificate(GetRegionSslCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionSslCertificate", TypeShape.of(GetRegionSslCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetRegionSslCertificateResult> getRegionSslCertificatePlain(GetRegionSslCertificatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionSslCertificate", TypeShape.of(GetRegionSslCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Lists all of the ordered rules present in a single specified policy.
@@ -1235,8 +2347,22 @@ public final class Compute_alphaFunctions {
      * Lists all of the ordered rules present in a single specified policy.
      * 
      */
+    public static CompletableFuture<GetRegionSslPolicyResult> getRegionSslPolicyPlain(GetRegionSslPolicyPlainArgs args) {
+        return getRegionSslPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Lists all of the ordered rules present in a single specified policy.
+     * 
+     */
     public static Output<GetRegionSslPolicyResult> getRegionSslPolicy(GetRegionSslPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionSslPolicy", TypeShape.of(GetRegionSslPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Lists all of the ordered rules present in a single specified policy.
+     * 
+     */
+    public static CompletableFuture<GetRegionSslPolicyResult> getRegionSslPolicyPlain(GetRegionSslPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionSslPolicy", TypeShape.of(GetRegionSslPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
@@ -1249,8 +2375,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
      * 
      */
+    public static CompletableFuture<GetRegionTargetHttpProxyResult> getRegionTargetHttpProxyPlain(GetRegionTargetHttpProxyPlainArgs args) {
+        return getRegionTargetHttpProxyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
+     * 
+     */
     public static Output<GetRegionTargetHttpProxyResult> getRegionTargetHttpProxy(GetRegionTargetHttpProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionTargetHttpProxy", TypeShape.of(GetRegionTargetHttpProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetRegionTargetHttpProxyResult> getRegionTargetHttpProxyPlain(GetRegionTargetHttpProxyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionTargetHttpProxy", TypeShape.of(GetRegionTargetHttpProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetHttpsProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
@@ -1263,8 +2403,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified TargetHttpsProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
      * 
      */
+    public static CompletableFuture<GetRegionTargetHttpsProxyResult> getRegionTargetHttpsProxyPlain(GetRegionTargetHttpsProxyPlainArgs args) {
+        return getRegionTargetHttpsProxyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified TargetHttpsProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
+     * 
+     */
     public static Output<GetRegionTargetHttpsProxyResult> getRegionTargetHttpsProxy(GetRegionTargetHttpsProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionTargetHttpsProxy", TypeShape.of(GetRegionTargetHttpsProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified TargetHttpsProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetRegionTargetHttpsProxyResult> getRegionTargetHttpsProxyPlain(GetRegionTargetHttpsProxyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionTargetHttpsProxy", TypeShape.of(GetRegionTargetHttpsProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetTcpProxy resource.
@@ -1277,8 +2431,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified TargetTcpProxy resource.
      * 
      */
+    public static CompletableFuture<GetRegionTargetTcpProxyResult> getRegionTargetTcpProxyPlain(GetRegionTargetTcpProxyPlainArgs args) {
+        return getRegionTargetTcpProxyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified TargetTcpProxy resource.
+     * 
+     */
     public static Output<GetRegionTargetTcpProxyResult> getRegionTargetTcpProxy(GetRegionTargetTcpProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionTargetTcpProxy", TypeShape.of(GetRegionTargetTcpProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified TargetTcpProxy resource.
+     * 
+     */
+    public static CompletableFuture<GetRegionTargetTcpProxyResult> getRegionTargetTcpProxyPlain(GetRegionTargetTcpProxyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionTargetTcpProxy", TypeShape.of(GetRegionTargetTcpProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
@@ -1291,8 +2459,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
      * 
      */
+    public static CompletableFuture<GetRegionUrlMapResult> getRegionUrlMapPlain(GetRegionUrlMapPlainArgs args) {
+        return getRegionUrlMapPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
+     * 
+     */
     public static Output<GetRegionUrlMapResult> getRegionUrlMap(GetRegionUrlMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRegionUrlMap", TypeShape.of(GetRegionUrlMapResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetRegionUrlMapResult> getRegionUrlMapPlain(GetRegionUrlMapPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionUrlMap", TypeShape.of(GetRegionUrlMapResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves information about the specified reservation.
@@ -1305,8 +2487,22 @@ public final class Compute_alphaFunctions {
      * Retrieves information about the specified reservation.
      * 
      */
+    public static CompletableFuture<GetReservationResult> getReservationPlain(GetReservationPlainArgs args) {
+        return getReservationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves information about the specified reservation.
+     * 
+     */
     public static Output<GetReservationResult> getReservation(GetReservationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves information about the specified reservation.
+     * 
+     */
+    public static CompletableFuture<GetReservationResult> getReservationPlain(GetReservationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getReservation", TypeShape.of(GetReservationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -1319,8 +2515,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetReservationIamPolicyResult> getReservationIamPolicyPlain(GetReservationIamPolicyPlainArgs args) {
+        return getReservationIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetReservationIamPolicyResult> getReservationIamPolicy(GetReservationIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getReservationIamPolicy", TypeShape.of(GetReservationIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetReservationIamPolicyResult> getReservationIamPolicyPlain(GetReservationIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getReservationIamPolicy", TypeShape.of(GetReservationIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves all information of the specified resource policy.
@@ -1333,8 +2543,22 @@ public final class Compute_alphaFunctions {
      * Retrieves all information of the specified resource policy.
      * 
      */
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicyPlain(GetResourcePolicyPlainArgs args) {
+        return getResourcePolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves all information of the specified resource policy.
+     * 
+     */
     public static Output<GetResourcePolicyResult> getResourcePolicy(GetResourcePolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves all information of the specified resource policy.
+     * 
+     */
+    public static CompletableFuture<GetResourcePolicyResult> getResourcePolicyPlain(GetResourcePolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -1347,8 +2571,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetResourcePolicyIamPolicyResult> getResourcePolicyIamPolicyPlain(GetResourcePolicyIamPolicyPlainArgs args) {
+        return getResourcePolicyIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetResourcePolicyIamPolicyResult> getResourcePolicyIamPolicy(GetResourcePolicyIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getResourcePolicyIamPolicy", TypeShape.of(GetResourcePolicyIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetResourcePolicyIamPolicyResult> getResourcePolicyIamPolicyPlain(GetResourcePolicyIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getResourcePolicyIamPolicy", TypeShape.of(GetResourcePolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified Route resource. Gets a list of available routes by making a list() request.
@@ -1361,8 +2599,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified Route resource. Gets a list of available routes by making a list() request.
      * 
      */
+    public static CompletableFuture<GetRouteResult> getRoutePlain(GetRoutePlainArgs args) {
+        return getRoutePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified Route resource. Gets a list of available routes by making a list() request.
+     * 
+     */
     public static Output<GetRouteResult> getRoute(GetRouteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified Route resource. Gets a list of available routes by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetRouteResult> getRoutePlain(GetRoutePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified Router resource. Gets a list of available routers by making a list() request.
@@ -1375,8 +2627,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified Router resource. Gets a list of available routers by making a list() request.
      * 
      */
+    public static CompletableFuture<GetRouterResult> getRouterPlain(GetRouterPlainArgs args) {
+        return getRouterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified Router resource. Gets a list of available routers by making a list() request.
+     * 
+     */
     public static Output<GetRouterResult> getRouter(GetRouterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getRouter", TypeShape.of(GetRouterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified Router resource. Gets a list of available routers by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetRouterResult> getRouterPlain(GetRouterPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRouter", TypeShape.of(GetRouterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List all of the ordered rules present in a single specified policy.
@@ -1389,8 +2655,22 @@ public final class Compute_alphaFunctions {
      * List all of the ordered rules present in a single specified policy.
      * 
      */
+    public static CompletableFuture<GetSecurityPolicyResult> getSecurityPolicyPlain(GetSecurityPolicyPlainArgs args) {
+        return getSecurityPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * List all of the ordered rules present in a single specified policy.
+     * 
+     */
     public static Output<GetSecurityPolicyResult> getSecurityPolicy(GetSecurityPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getSecurityPolicy", TypeShape.of(GetSecurityPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List all of the ordered rules present in a single specified policy.
+     * 
+     */
+    public static CompletableFuture<GetSecurityPolicyResult> getSecurityPolicyPlain(GetSecurityPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getSecurityPolicy", TypeShape.of(GetSecurityPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified ServiceAttachment resource in the given scope.
@@ -1403,8 +2683,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified ServiceAttachment resource in the given scope.
      * 
      */
+    public static CompletableFuture<GetServiceAttachmentResult> getServiceAttachmentPlain(GetServiceAttachmentPlainArgs args) {
+        return getServiceAttachmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified ServiceAttachment resource in the given scope.
+     * 
+     */
     public static Output<GetServiceAttachmentResult> getServiceAttachment(GetServiceAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getServiceAttachment", TypeShape.of(GetServiceAttachmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified ServiceAttachment resource in the given scope.
+     * 
+     */
+    public static CompletableFuture<GetServiceAttachmentResult> getServiceAttachmentPlain(GetServiceAttachmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getServiceAttachment", TypeShape.of(GetServiceAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -1417,8 +2711,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetServiceAttachmentIamPolicyResult> getServiceAttachmentIamPolicyPlain(GetServiceAttachmentIamPolicyPlainArgs args) {
+        return getServiceAttachmentIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetServiceAttachmentIamPolicyResult> getServiceAttachmentIamPolicy(GetServiceAttachmentIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getServiceAttachmentIamPolicy", TypeShape.of(GetServiceAttachmentIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetServiceAttachmentIamPolicyResult> getServiceAttachmentIamPolicyPlain(GetServiceAttachmentIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getServiceAttachmentIamPolicy", TypeShape.of(GetServiceAttachmentIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified Snapshot resource. Gets a list of available snapshots by making a list() request.
@@ -1431,8 +2739,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified Snapshot resource. Gets a list of available snapshots by making a list() request.
      * 
      */
+    public static CompletableFuture<GetSnapshotResult> getSnapshotPlain(GetSnapshotPlainArgs args) {
+        return getSnapshotPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified Snapshot resource. Gets a list of available snapshots by making a list() request.
+     * 
+     */
     public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified Snapshot resource. Gets a list of available snapshots by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetSnapshotResult> getSnapshotPlain(GetSnapshotPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -1445,8 +2767,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetSnapshotIamPolicyResult> getSnapshotIamPolicyPlain(GetSnapshotIamPolicyPlainArgs args) {
+        return getSnapshotIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetSnapshotIamPolicyResult> getSnapshotIamPolicy(GetSnapshotIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getSnapshotIamPolicy", TypeShape.of(GetSnapshotIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetSnapshotIamPolicyResult> getSnapshotIamPolicyPlain(GetSnapshotIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getSnapshotIamPolicy", TypeShape.of(GetSnapshotIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified SslCertificate resource. Gets a list of available SSL certificates by making a list() request.
@@ -1459,8 +2795,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified SslCertificate resource. Gets a list of available SSL certificates by making a list() request.
      * 
      */
+    public static CompletableFuture<GetSslCertificateResult> getSslCertificatePlain(GetSslCertificatePlainArgs args) {
+        return getSslCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified SslCertificate resource. Gets a list of available SSL certificates by making a list() request.
+     * 
+     */
     public static Output<GetSslCertificateResult> getSslCertificate(GetSslCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getSslCertificate", TypeShape.of(GetSslCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified SslCertificate resource. Gets a list of available SSL certificates by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetSslCertificateResult> getSslCertificatePlain(GetSslCertificatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getSslCertificate", TypeShape.of(GetSslCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Lists all of the ordered rules present in a single specified policy.
@@ -1473,8 +2823,22 @@ public final class Compute_alphaFunctions {
      * Lists all of the ordered rules present in a single specified policy.
      * 
      */
+    public static CompletableFuture<GetSslPolicyResult> getSslPolicyPlain(GetSslPolicyPlainArgs args) {
+        return getSslPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Lists all of the ordered rules present in a single specified policy.
+     * 
+     */
     public static Output<GetSslPolicyResult> getSslPolicy(GetSslPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getSslPolicy", TypeShape.of(GetSslPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Lists all of the ordered rules present in a single specified policy.
+     * 
+     */
+    public static CompletableFuture<GetSslPolicyResult> getSslPolicyPlain(GetSslPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getSslPolicy", TypeShape.of(GetSslPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified subnetwork. Gets a list of available subnetworks list() request.
@@ -1487,8 +2851,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified subnetwork. Gets a list of available subnetworks list() request.
      * 
      */
+    public static CompletableFuture<GetSubnetworkResult> getSubnetworkPlain(GetSubnetworkPlainArgs args) {
+        return getSubnetworkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified subnetwork. Gets a list of available subnetworks list() request.
+     * 
+     */
     public static Output<GetSubnetworkResult> getSubnetwork(GetSubnetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getSubnetwork", TypeShape.of(GetSubnetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified subnetwork. Gets a list of available subnetworks list() request.
+     * 
+     */
+    public static CompletableFuture<GetSubnetworkResult> getSubnetworkPlain(GetSubnetworkPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getSubnetwork", TypeShape.of(GetSubnetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
@@ -1501,8 +2879,22 @@ public final class Compute_alphaFunctions {
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * 
      */
+    public static CompletableFuture<GetSubnetworkIamPolicyResult> getSubnetworkIamPolicyPlain(GetSubnetworkIamPolicyPlainArgs args) {
+        return getSubnetworkIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static Output<GetSubnetworkIamPolicyResult> getSubnetworkIamPolicy(GetSubnetworkIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getSubnetworkIamPolicy", TypeShape.of(GetSubnetworkIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetSubnetworkIamPolicyResult> getSubnetworkIamPolicyPlain(GetSubnetworkIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getSubnetworkIamPolicy", TypeShape.of(GetSubnetworkIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetGrpcProxy resource in the given scope.
@@ -1515,8 +2907,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified TargetGrpcProxy resource in the given scope.
      * 
      */
+    public static CompletableFuture<GetTargetGrpcProxyResult> getTargetGrpcProxyPlain(GetTargetGrpcProxyPlainArgs args) {
+        return getTargetGrpcProxyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified TargetGrpcProxy resource in the given scope.
+     * 
+     */
     public static Output<GetTargetGrpcProxyResult> getTargetGrpcProxy(GetTargetGrpcProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getTargetGrpcProxy", TypeShape.of(GetTargetGrpcProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified TargetGrpcProxy resource in the given scope.
+     * 
+     */
+    public static CompletableFuture<GetTargetGrpcProxyResult> getTargetGrpcProxyPlain(GetTargetGrpcProxyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getTargetGrpcProxy", TypeShape.of(GetTargetGrpcProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetHttpProxy resource. Gets a list of available target HTTP proxies by making a list() request.
@@ -1529,8 +2935,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified TargetHttpProxy resource. Gets a list of available target HTTP proxies by making a list() request.
      * 
      */
+    public static CompletableFuture<GetTargetHttpProxyResult> getTargetHttpProxyPlain(GetTargetHttpProxyPlainArgs args) {
+        return getTargetHttpProxyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified TargetHttpProxy resource. Gets a list of available target HTTP proxies by making a list() request.
+     * 
+     */
     public static Output<GetTargetHttpProxyResult> getTargetHttpProxy(GetTargetHttpProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getTargetHttpProxy", TypeShape.of(GetTargetHttpProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified TargetHttpProxy resource. Gets a list of available target HTTP proxies by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetTargetHttpProxyResult> getTargetHttpProxyPlain(GetTargetHttpProxyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getTargetHttpProxy", TypeShape.of(GetTargetHttpProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
@@ -1543,8 +2963,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
      * 
      */
+    public static CompletableFuture<GetTargetHttpsProxyResult> getTargetHttpsProxyPlain(GetTargetHttpsProxyPlainArgs args) {
+        return getTargetHttpsProxyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
+     * 
+     */
     public static Output<GetTargetHttpsProxyResult> getTargetHttpsProxy(GetTargetHttpsProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getTargetHttpsProxy", TypeShape.of(GetTargetHttpsProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetTargetHttpsProxyResult> getTargetHttpsProxyPlain(GetTargetHttpsProxyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getTargetHttpsProxy", TypeShape.of(GetTargetHttpsProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetInstance resource. Gets a list of available target instances by making a list() request.
@@ -1557,8 +2991,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified TargetInstance resource. Gets a list of available target instances by making a list() request.
      * 
      */
+    public static CompletableFuture<GetTargetInstanceResult> getTargetInstancePlain(GetTargetInstancePlainArgs args) {
+        return getTargetInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified TargetInstance resource. Gets a list of available target instances by making a list() request.
+     * 
+     */
     public static Output<GetTargetInstanceResult> getTargetInstance(GetTargetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getTargetInstance", TypeShape.of(GetTargetInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified TargetInstance resource. Gets a list of available target instances by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetTargetInstanceResult> getTargetInstancePlain(GetTargetInstancePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getTargetInstance", TypeShape.of(GetTargetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified target pool. Gets a list of available target pools by making a list() request.
@@ -1571,8 +3019,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified target pool. Gets a list of available target pools by making a list() request.
      * 
      */
+    public static CompletableFuture<GetTargetPoolResult> getTargetPoolPlain(GetTargetPoolPlainArgs args) {
+        return getTargetPoolPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified target pool. Gets a list of available target pools by making a list() request.
+     * 
+     */
     public static Output<GetTargetPoolResult> getTargetPool(GetTargetPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getTargetPool", TypeShape.of(GetTargetPoolResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified target pool. Gets a list of available target pools by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetTargetPoolResult> getTargetPoolPlain(GetTargetPoolPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getTargetPool", TypeShape.of(GetTargetPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetSslProxy resource. Gets a list of available target SSL proxies by making a list() request.
@@ -1585,8 +3047,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified TargetSslProxy resource. Gets a list of available target SSL proxies by making a list() request.
      * 
      */
+    public static CompletableFuture<GetTargetSslProxyResult> getTargetSslProxyPlain(GetTargetSslProxyPlainArgs args) {
+        return getTargetSslProxyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified TargetSslProxy resource. Gets a list of available target SSL proxies by making a list() request.
+     * 
+     */
     public static Output<GetTargetSslProxyResult> getTargetSslProxy(GetTargetSslProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getTargetSslProxy", TypeShape.of(GetTargetSslProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified TargetSslProxy resource. Gets a list of available target SSL proxies by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetTargetSslProxyResult> getTargetSslProxyPlain(GetTargetSslProxyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getTargetSslProxy", TypeShape.of(GetTargetSslProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified TargetTcpProxy resource. Gets a list of available target TCP proxies by making a list() request.
@@ -1599,8 +3075,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified TargetTcpProxy resource. Gets a list of available target TCP proxies by making a list() request.
      * 
      */
+    public static CompletableFuture<GetTargetTcpProxyResult> getTargetTcpProxyPlain(GetTargetTcpProxyPlainArgs args) {
+        return getTargetTcpProxyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified TargetTcpProxy resource. Gets a list of available target TCP proxies by making a list() request.
+     * 
+     */
     public static Output<GetTargetTcpProxyResult> getTargetTcpProxy(GetTargetTcpProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getTargetTcpProxy", TypeShape.of(GetTargetTcpProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified TargetTcpProxy resource. Gets a list of available target TCP proxies by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetTargetTcpProxyResult> getTargetTcpProxyPlain(GetTargetTcpProxyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getTargetTcpProxy", TypeShape.of(GetTargetTcpProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified target VPN gateway. Gets a list of available target VPN gateways by making a list() request.
@@ -1613,8 +3103,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified target VPN gateway. Gets a list of available target VPN gateways by making a list() request.
      * 
      */
+    public static CompletableFuture<GetTargetVpnGatewayResult> getTargetVpnGatewayPlain(GetTargetVpnGatewayPlainArgs args) {
+        return getTargetVpnGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified target VPN gateway. Gets a list of available target VPN gateways by making a list() request.
+     * 
+     */
     public static Output<GetTargetVpnGatewayResult> getTargetVpnGateway(GetTargetVpnGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getTargetVpnGateway", TypeShape.of(GetTargetVpnGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified target VPN gateway. Gets a list of available target VPN gateways by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetTargetVpnGatewayResult> getTargetVpnGatewayPlain(GetTargetVpnGatewayPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getTargetVpnGateway", TypeShape.of(GetTargetVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
@@ -1627,8 +3131,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
      * 
      */
+    public static CompletableFuture<GetUrlMapResult> getUrlMapPlain(GetUrlMapPlainArgs args) {
+        return getUrlMapPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
+     * 
+     */
     public static Output<GetUrlMapResult> getUrlMap(GetUrlMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getUrlMap", TypeShape.of(GetUrlMapResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetUrlMapResult> getUrlMapPlain(GetUrlMapPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getUrlMap", TypeShape.of(GetUrlMapResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified VPN gateway. Gets a list of available VPN gateways by making a list() request.
@@ -1641,8 +3159,22 @@ public final class Compute_alphaFunctions {
      * Returns the specified VPN gateway. Gets a list of available VPN gateways by making a list() request.
      * 
      */
+    public static CompletableFuture<GetVpnGatewayResult> getVpnGatewayPlain(GetVpnGatewayPlainArgs args) {
+        return getVpnGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified VPN gateway. Gets a list of available VPN gateways by making a list() request.
+     * 
+     */
     public static Output<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified VPN gateway. Gets a list of available VPN gateways by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetVpnGatewayResult> getVpnGatewayPlain(GetVpnGatewayPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
@@ -1655,7 +3187,21 @@ public final class Compute_alphaFunctions {
      * Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
      * 
      */
+    public static CompletableFuture<GetVpnTunnelResult> getVpnTunnelPlain(GetVpnTunnelPlainArgs args) {
+        return getVpnTunnelPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
+     * 
+     */
     public static Output<GetVpnTunnelResult> getVpnTunnel(GetVpnTunnelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:compute/alpha:getVpnTunnel", TypeShape.of(GetVpnTunnelResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
+     * 
+     */
+    public static CompletableFuture<GetVpnTunnelResult> getVpnTunnelPlain(GetVpnTunnelPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getVpnTunnel", TypeShape.of(GetVpnTunnelResult.class), args, Utilities.withVersion(options));
     }
 }

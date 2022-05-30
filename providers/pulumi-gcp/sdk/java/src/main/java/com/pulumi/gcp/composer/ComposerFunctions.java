@@ -9,9 +9,12 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.composer.inputs.GetEnvironmentArgs;
+import com.pulumi.gcp.composer.inputs.GetEnvironmentPlainArgs;
 import com.pulumi.gcp.composer.inputs.GetImageVersionsArgs;
+import com.pulumi.gcp.composer.inputs.GetImageVersionsPlainArgs;
 import com.pulumi.gcp.composer.outputs.GetEnvironmentResult;
 import com.pulumi.gcp.composer.outputs.GetImageVersionsResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class ComposerFunctions {
     /**
@@ -25,8 +28,22 @@ public final class ComposerFunctions {
      * Provides access to Cloud Composer environment configuration in a region for a given project.
      * 
      */
+    public static CompletableFuture<GetEnvironmentResult> getEnvironmentPlain(GetEnvironmentPlainArgs args) {
+        return getEnvironmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides access to Cloud Composer environment configuration in a region for a given project.
+     * 
+     */
     public static Output<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("gcp:composer/getEnvironment:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides access to Cloud Composer environment configuration in a region for a given project.
+     * 
+     */
+    public static CompletableFuture<GetEnvironmentResult> getEnvironmentPlain(GetEnvironmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("gcp:composer/getEnvironment:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides access to available Cloud Composer versions in a region for a given project.
@@ -99,6 +116,43 @@ public final class ComposerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetImageVersionsResult> getImageVersionsPlain() {
+        return getImageVersionsPlain(GetImageVersionsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Provides access to available Cloud Composer versions in a region for a given project.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(ComposerFunctions.getImageVersions());
+     * 
+     *         var test = new Environment(&#34;test&#34;, EnvironmentArgs.builder()        
+     *             .region(&#34;us-central1&#34;)
+     *             .config(EnvironmentConfig.builder()
+     *                 .softwareConfig(EnvironmentConfigSoftwareConfig.builder()
+     *                     .imageVersion(all.apply(getImageVersionsResult -&gt; getImageVersionsResult.getImageVersions()[0].getImageVersionId()))
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetImageVersionsResult> getImageVersions(GetImageVersionsArgs args) {
         return getImageVersions(args, InvokeOptions.Empty);
     }
@@ -136,7 +190,81 @@ public final class ComposerFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetImageVersionsResult> getImageVersionsPlain(GetImageVersionsPlainArgs args) {
+        return getImageVersionsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides access to available Cloud Composer versions in a region for a given project.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(ComposerFunctions.getImageVersions());
+     * 
+     *         var test = new Environment(&#34;test&#34;, EnvironmentArgs.builder()        
+     *             .region(&#34;us-central1&#34;)
+     *             .config(EnvironmentConfig.builder()
+     *                 .softwareConfig(EnvironmentConfigSoftwareConfig.builder()
+     *                     .imageVersion(all.apply(getImageVersionsResult -&gt; getImageVersionsResult.getImageVersions()[0].getImageVersionId()))
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetImageVersionsResult> getImageVersions(GetImageVersionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("gcp:composer/getImageVersions:getImageVersions", TypeShape.of(GetImageVersionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides access to available Cloud Composer versions in a region for a given project.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(ComposerFunctions.getImageVersions());
+     * 
+     *         var test = new Environment(&#34;test&#34;, EnvironmentArgs.builder()        
+     *             .region(&#34;us-central1&#34;)
+     *             .config(EnvironmentConfig.builder()
+     *                 .softwareConfig(EnvironmentConfigSoftwareConfig.builder()
+     *                     .imageVersion(all.apply(getImageVersionsResult -&gt; getImageVersionsResult.getImageVersions()[0].getImageVersionId()))
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetImageVersionsResult> getImageVersionsPlain(GetImageVersionsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("gcp:composer/getImageVersions:getImageVersions", TypeShape.of(GetImageVersionsResult.class), args, Utilities.withVersion(options));
     }
 }

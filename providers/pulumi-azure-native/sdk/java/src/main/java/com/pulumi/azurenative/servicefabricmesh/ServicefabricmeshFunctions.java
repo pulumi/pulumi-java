@@ -5,12 +5,19 @@ package com.pulumi.azurenative.servicefabricmesh;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.servicefabricmesh.inputs.GetApplicationArgs;
+import com.pulumi.azurenative.servicefabricmesh.inputs.GetApplicationPlainArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.GetGatewayArgs;
+import com.pulumi.azurenative.servicefabricmesh.inputs.GetGatewayPlainArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.GetNetworkArgs;
+import com.pulumi.azurenative.servicefabricmesh.inputs.GetNetworkPlainArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.GetSecretArgs;
+import com.pulumi.azurenative.servicefabricmesh.inputs.GetSecretPlainArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.GetSecretValueArgs;
+import com.pulumi.azurenative.servicefabricmesh.inputs.GetSecretValuePlainArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.GetVolumeArgs;
+import com.pulumi.azurenative.servicefabricmesh.inputs.GetVolumePlainArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.ListSecretValueArgs;
+import com.pulumi.azurenative.servicefabricmesh.inputs.ListSecretValuePlainArgs;
 import com.pulumi.azurenative.servicefabricmesh.outputs.GetApplicationResult;
 import com.pulumi.azurenative.servicefabricmesh.outputs.GetGatewayResult;
 import com.pulumi.azurenative.servicefabricmesh.outputs.GetNetworkResult;
@@ -22,6 +29,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class ServicefabricmeshFunctions {
     /**
@@ -37,8 +45,24 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args) {
+        return getApplicationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This type describes an application resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static Output<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:servicefabricmesh:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This type describes an application resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This type describes a gateway resource.
@@ -53,8 +77,24 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
+    public static CompletableFuture<GetGatewayResult> getGatewayPlain(GetGatewayPlainArgs args) {
+        return getGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This type describes a gateway resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static Output<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:servicefabricmesh:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This type describes a gateway resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetGatewayResult> getGatewayPlain(GetGatewayPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This type describes a network resource.
@@ -69,8 +109,24 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
+    public static CompletableFuture<GetNetworkResult> getNetworkPlain(GetNetworkPlainArgs args) {
+        return getNetworkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This type describes a network resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static Output<GetNetworkResult> getNetwork(GetNetworkArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:servicefabricmesh:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This type describes a network resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetNetworkResult> getNetworkPlain(GetNetworkPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This type describes a secret resource.
@@ -85,8 +141,24 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
+    public static CompletableFuture<GetSecretResult> getSecretPlain(GetSecretPlainArgs args) {
+        return getSecretPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This type describes a secret resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static Output<GetSecretResult> getSecret(GetSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:servicefabricmesh:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This type describes a secret resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSecretResult> getSecretPlain(GetSecretPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getSecret", TypeShape.of(GetSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
@@ -101,8 +173,24 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
+    public static CompletableFuture<GetSecretValueResult> getSecretValuePlain(GetSecretValuePlainArgs args) {
+        return getSecretValuePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static Output<GetSecretValueResult> getSecretValue(GetSecretValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:servicefabricmesh:getSecretValue", TypeShape.of(GetSecretValueResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSecretValueResult> getSecretValuePlain(GetSecretValuePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getSecretValue", TypeShape.of(GetSecretValueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This type describes a volume resource.
@@ -117,8 +205,24 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
+    public static CompletableFuture<GetVolumeResult> getVolumePlain(GetVolumePlainArgs args) {
+        return getVolumePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This type describes a volume resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static Output<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:servicefabricmesh:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This type describes a volume resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetVolumeResult> getVolumePlain(GetVolumePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This type represents the unencrypted value of the secret.
@@ -133,7 +237,23 @@ public final class ServicefabricmeshFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
+    public static CompletableFuture<ListSecretValueResult> listSecretValuePlain(ListSecretValuePlainArgs args) {
+        return listSecretValuePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This type represents the unencrypted value of the secret.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
     public static Output<ListSecretValueResult> listSecretValue(ListSecretValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:servicefabricmesh:listSecretValue", TypeShape.of(ListSecretValueResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This type represents the unencrypted value of the secret.
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListSecretValueResult> listSecretValuePlain(ListSecretValuePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:listSecretValue", TypeShape.of(ListSecretValueResult.class), args, Utilities.withVersion(options));
     }
 }

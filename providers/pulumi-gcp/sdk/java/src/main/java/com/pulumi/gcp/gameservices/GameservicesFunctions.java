@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.gameservices.inputs.GetGameServerDeploymentRolloutArgs;
+import com.pulumi.gcp.gameservices.inputs.GetGameServerDeploymentRolloutPlainArgs;
 import com.pulumi.gcp.gameservices.outputs.GetGameServerDeploymentRolloutResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class GameservicesFunctions {
     /**
@@ -73,7 +75,71 @@ public final class GameservicesFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetGameServerDeploymentRolloutResult> getGameServerDeploymentRolloutPlain(GetGameServerDeploymentRolloutPlainArgs args) {
+        return getGameServerDeploymentRolloutPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the rollout state.
+     * 
+     * https://cloud.google.com/game-servers/docs/reference/rest/v1beta/GameServerDeploymentRollout
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var qa = Output.of(GameservicesFunctions.getGameServerDeploymentRollout(GetGameServerDeploymentRolloutArgs.builder()
+     *             .deploymentId(&#34;tf-test-deployment-s8sn12jt2c&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetGameServerDeploymentRolloutResult> getGameServerDeploymentRollout(GetGameServerDeploymentRolloutArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("gcp:gameservices/getGameServerDeploymentRollout:getGameServerDeploymentRollout", TypeShape.of(GetGameServerDeploymentRolloutResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the rollout state.
+     * 
+     * https://cloud.google.com/game-servers/docs/reference/rest/v1beta/GameServerDeploymentRollout
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var qa = Output.of(GameservicesFunctions.getGameServerDeploymentRollout(GetGameServerDeploymentRolloutArgs.builder()
+     *             .deploymentId(&#34;tf-test-deployment-s8sn12jt2c&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetGameServerDeploymentRolloutResult> getGameServerDeploymentRolloutPlain(GetGameServerDeploymentRolloutPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("gcp:gameservices/getGameServerDeploymentRollout:getGameServerDeploymentRollout", TypeShape.of(GetGameServerDeploymentRolloutResult.class), args, Utilities.withVersion(options));
     }
 }

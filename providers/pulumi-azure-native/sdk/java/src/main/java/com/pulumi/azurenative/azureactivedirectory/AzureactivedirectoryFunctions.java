@@ -5,13 +5,16 @@ package com.pulumi.azurenative.azureactivedirectory;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.azureactivedirectory.inputs.GetB2CTenantArgs;
+import com.pulumi.azurenative.azureactivedirectory.inputs.GetB2CTenantPlainArgs;
 import com.pulumi.azurenative.azureactivedirectory.inputs.GetGuestUsageArgs;
+import com.pulumi.azurenative.azureactivedirectory.inputs.GetGuestUsagePlainArgs;
 import com.pulumi.azurenative.azureactivedirectory.outputs.GetB2CTenantResult;
 import com.pulumi.azurenative.azureactivedirectory.outputs.GetGuestUsageResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class AzureactivedirectoryFunctions {
     /**
@@ -25,8 +28,22 @@ public final class AzureactivedirectoryFunctions {
      * API Version: 2019-01-01-preview.
      * 
      */
+    public static CompletableFuture<GetB2CTenantResult> getB2CTenantPlain(GetB2CTenantPlainArgs args) {
+        return getB2CTenantPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * API Version: 2019-01-01-preview.
+     * 
+     */
     public static Output<GetB2CTenantResult> getB2CTenant(GetB2CTenantArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:azureactivedirectory:getB2CTenant", TypeShape.of(GetB2CTenantResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * API Version: 2019-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetB2CTenantResult> getB2CTenantPlain(GetB2CTenantPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:azureactivedirectory:getB2CTenant", TypeShape.of(GetB2CTenantResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Guest Usages Resource
@@ -41,7 +58,23 @@ public final class AzureactivedirectoryFunctions {
      * API Version: 2020-05-01-preview.
      * 
      */
+    public static CompletableFuture<GetGuestUsageResult> getGuestUsagePlain(GetGuestUsagePlainArgs args) {
+        return getGuestUsagePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Guest Usages Resource
+     * API Version: 2020-05-01-preview.
+     * 
+     */
     public static Output<GetGuestUsageResult> getGuestUsage(GetGuestUsageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:azureactivedirectory:getGuestUsage", TypeShape.of(GetGuestUsageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Guest Usages Resource
+     * API Version: 2020-05-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetGuestUsageResult> getGuestUsagePlain(GetGuestUsagePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:azureactivedirectory:getGuestUsage", TypeShape.of(GetGuestUsageResult.class), args, Utilities.withVersion(options));
     }
 }

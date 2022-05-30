@@ -5,16 +5,27 @@ package com.pulumi.azurenative.devices;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.devices.inputs.GetCertificateArgs;
+import com.pulumi.azurenative.devices.inputs.GetCertificatePlainArgs;
 import com.pulumi.azurenative.devices.inputs.GetDpsCertificateArgs;
+import com.pulumi.azurenative.devices.inputs.GetDpsCertificatePlainArgs;
 import com.pulumi.azurenative.devices.inputs.GetIotDpsResourceArgs;
+import com.pulumi.azurenative.devices.inputs.GetIotDpsResourcePlainArgs;
 import com.pulumi.azurenative.devices.inputs.GetIotDpsResourcePrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.devices.inputs.GetIotDpsResourcePrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.devices.inputs.GetIotHubResourceArgs;
 import com.pulumi.azurenative.devices.inputs.GetIotHubResourceEventHubConsumerGroupArgs;
+import com.pulumi.azurenative.devices.inputs.GetIotHubResourceEventHubConsumerGroupPlainArgs;
+import com.pulumi.azurenative.devices.inputs.GetIotHubResourcePlainArgs;
 import com.pulumi.azurenative.devices.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.devices.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.devices.inputs.ListIotDpsResourceKeysArgs;
 import com.pulumi.azurenative.devices.inputs.ListIotDpsResourceKeysForKeyNameArgs;
+import com.pulumi.azurenative.devices.inputs.ListIotDpsResourceKeysForKeyNamePlainArgs;
+import com.pulumi.azurenative.devices.inputs.ListIotDpsResourceKeysPlainArgs;
 import com.pulumi.azurenative.devices.inputs.ListIotHubResourceKeysArgs;
 import com.pulumi.azurenative.devices.inputs.ListIotHubResourceKeysForKeyNameArgs;
+import com.pulumi.azurenative.devices.inputs.ListIotHubResourceKeysForKeyNamePlainArgs;
+import com.pulumi.azurenative.devices.inputs.ListIotHubResourceKeysPlainArgs;
 import com.pulumi.azurenative.devices.outputs.GetCertificateResult;
 import com.pulumi.azurenative.devices.outputs.GetDpsCertificateResult;
 import com.pulumi.azurenative.devices.outputs.GetIotDpsResourcePrivateEndpointConnectionResult;
@@ -30,6 +41,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class DevicesFunctions {
     /**
@@ -45,8 +57,24 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args) {
+        return getCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The X509 Certificate.
+     * API Version: 2020-08-31.
+     * 
+     */
     public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devices:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The X509 Certificate.
+     * API Version: 2020-08-31.
+     * 
+     */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devices:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The X509 Certificate.
@@ -61,8 +89,24 @@ public final class DevicesFunctions {
      * API Version: 2020-03-01.
      * 
      */
+    public static CompletableFuture<GetDpsCertificateResult> getDpsCertificatePlain(GetDpsCertificatePlainArgs args) {
+        return getDpsCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The X509 Certificate.
+     * API Version: 2020-03-01.
+     * 
+     */
     public static Output<GetDpsCertificateResult> getDpsCertificate(GetDpsCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devices:getDpsCertificate", TypeShape.of(GetDpsCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The X509 Certificate.
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static CompletableFuture<GetDpsCertificateResult> getDpsCertificatePlain(GetDpsCertificatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devices:getDpsCertificate", TypeShape.of(GetDpsCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The description of the provisioning service.
@@ -77,8 +121,24 @@ public final class DevicesFunctions {
      * API Version: 2020-03-01.
      * 
      */
+    public static CompletableFuture<GetIotDpsResourceResult> getIotDpsResourcePlain(GetIotDpsResourcePlainArgs args) {
+        return getIotDpsResourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The description of the provisioning service.
+     * API Version: 2020-03-01.
+     * 
+     */
     public static Output<GetIotDpsResourceResult> getIotDpsResource(GetIotDpsResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devices:getIotDpsResource", TypeShape.of(GetIotDpsResourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The description of the provisioning service.
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static CompletableFuture<GetIotDpsResourceResult> getIotDpsResourcePlain(GetIotDpsResourcePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devices:getIotDpsResource", TypeShape.of(GetIotDpsResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The private endpoint connection of a provisioning service
@@ -93,8 +153,24 @@ public final class DevicesFunctions {
      * API Version: 2020-03-01.
      * 
      */
+    public static CompletableFuture<GetIotDpsResourcePrivateEndpointConnectionResult> getIotDpsResourcePrivateEndpointConnectionPlain(GetIotDpsResourcePrivateEndpointConnectionPlainArgs args) {
+        return getIotDpsResourcePrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The private endpoint connection of a provisioning service
+     * API Version: 2020-03-01.
+     * 
+     */
     public static Output<GetIotDpsResourcePrivateEndpointConnectionResult> getIotDpsResourcePrivateEndpointConnection(GetIotDpsResourcePrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devices:getIotDpsResourcePrivateEndpointConnection", TypeShape.of(GetIotDpsResourcePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The private endpoint connection of a provisioning service
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static CompletableFuture<GetIotDpsResourcePrivateEndpointConnectionResult> getIotDpsResourcePrivateEndpointConnectionPlain(GetIotDpsResourcePrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devices:getIotDpsResourcePrivateEndpointConnection", TypeShape.of(GetIotDpsResourcePrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The description of the IoT hub.
@@ -109,8 +185,24 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
+    public static CompletableFuture<GetIotHubResourceResult> getIotHubResourcePlain(GetIotHubResourcePlainArgs args) {
+        return getIotHubResourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The description of the IoT hub.
+     * API Version: 2020-08-31.
+     * 
+     */
     public static Output<GetIotHubResourceResult> getIotHubResource(GetIotHubResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devices:getIotHubResource", TypeShape.of(GetIotHubResourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The description of the IoT hub.
+     * API Version: 2020-08-31.
+     * 
+     */
+    public static CompletableFuture<GetIotHubResourceResult> getIotHubResourcePlain(GetIotHubResourcePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devices:getIotHubResource", TypeShape.of(GetIotHubResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The properties of the EventHubConsumerGroupInfo object.
@@ -125,8 +217,24 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
+    public static CompletableFuture<GetIotHubResourceEventHubConsumerGroupResult> getIotHubResourceEventHubConsumerGroupPlain(GetIotHubResourceEventHubConsumerGroupPlainArgs args) {
+        return getIotHubResourceEventHubConsumerGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The properties of the EventHubConsumerGroupInfo object.
+     * API Version: 2020-08-31.
+     * 
+     */
     public static Output<GetIotHubResourceEventHubConsumerGroupResult> getIotHubResourceEventHubConsumerGroup(GetIotHubResourceEventHubConsumerGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devices:getIotHubResourceEventHubConsumerGroup", TypeShape.of(GetIotHubResourceEventHubConsumerGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The properties of the EventHubConsumerGroupInfo object.
+     * API Version: 2020-08-31.
+     * 
+     */
+    public static CompletableFuture<GetIotHubResourceEventHubConsumerGroupResult> getIotHubResourceEventHubConsumerGroupPlain(GetIotHubResourceEventHubConsumerGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devices:getIotHubResourceEventHubConsumerGroup", TypeShape.of(GetIotHubResourceEventHubConsumerGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The private endpoint connection of an IotHub
@@ -141,8 +249,24 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The private endpoint connection of an IotHub
+     * API Version: 2020-08-31.
+     * 
+     */
     public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The private endpoint connection of an IotHub
+     * API Version: 2020-08-31.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devices:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * List of shared access keys.
@@ -157,8 +281,24 @@ public final class DevicesFunctions {
      * API Version: 2020-03-01.
      * 
      */
+    public static CompletableFuture<ListIotDpsResourceKeysResult> listIotDpsResourceKeysPlain(ListIotDpsResourceKeysPlainArgs args) {
+        return listIotDpsResourceKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * List of shared access keys.
+     * API Version: 2020-03-01.
+     * 
+     */
     public static Output<ListIotDpsResourceKeysResult> listIotDpsResourceKeys(ListIotDpsResourceKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devices:listIotDpsResourceKeys", TypeShape.of(ListIotDpsResourceKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List of shared access keys.
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static CompletableFuture<ListIotDpsResourceKeysResult> listIotDpsResourceKeysPlain(ListIotDpsResourceKeysPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devices:listIotDpsResourceKeys", TypeShape.of(ListIotDpsResourceKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Description of the shared access key.
@@ -173,8 +313,24 @@ public final class DevicesFunctions {
      * API Version: 2020-03-01.
      * 
      */
+    public static CompletableFuture<ListIotDpsResourceKeysForKeyNameResult> listIotDpsResourceKeysForKeyNamePlain(ListIotDpsResourceKeysForKeyNamePlainArgs args) {
+        return listIotDpsResourceKeysForKeyNamePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Description of the shared access key.
+     * API Version: 2020-03-01.
+     * 
+     */
     public static Output<ListIotDpsResourceKeysForKeyNameResult> listIotDpsResourceKeysForKeyName(ListIotDpsResourceKeysForKeyNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devices:listIotDpsResourceKeysForKeyName", TypeShape.of(ListIotDpsResourceKeysForKeyNameResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Description of the shared access key.
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static CompletableFuture<ListIotDpsResourceKeysForKeyNameResult> listIotDpsResourceKeysForKeyNamePlain(ListIotDpsResourceKeysForKeyNamePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devices:listIotDpsResourceKeysForKeyName", TypeShape.of(ListIotDpsResourceKeysForKeyNameResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The list of shared access policies with a next link.
@@ -189,8 +345,24 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
+    public static CompletableFuture<ListIotHubResourceKeysResult> listIotHubResourceKeysPlain(ListIotHubResourceKeysPlainArgs args) {
+        return listIotHubResourceKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The list of shared access policies with a next link.
+     * API Version: 2020-08-31.
+     * 
+     */
     public static Output<ListIotHubResourceKeysResult> listIotHubResourceKeys(ListIotHubResourceKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devices:listIotHubResourceKeys", TypeShape.of(ListIotHubResourceKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The list of shared access policies with a next link.
+     * API Version: 2020-08-31.
+     * 
+     */
+    public static CompletableFuture<ListIotHubResourceKeysResult> listIotHubResourceKeysPlain(ListIotHubResourceKeysPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devices:listIotHubResourceKeys", TypeShape.of(ListIotHubResourceKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The properties of an IoT hub shared access policy.
@@ -205,7 +377,23 @@ public final class DevicesFunctions {
      * API Version: 2020-08-31.
      * 
      */
+    public static CompletableFuture<ListIotHubResourceKeysForKeyNameResult> listIotHubResourceKeysForKeyNamePlain(ListIotHubResourceKeysForKeyNamePlainArgs args) {
+        return listIotHubResourceKeysForKeyNamePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The properties of an IoT hub shared access policy.
+     * API Version: 2020-08-31.
+     * 
+     */
     public static Output<ListIotHubResourceKeysForKeyNameResult> listIotHubResourceKeysForKeyName(ListIotHubResourceKeysForKeyNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:devices:listIotHubResourceKeysForKeyName", TypeShape.of(ListIotHubResourceKeysForKeyNameResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The properties of an IoT hub shared access policy.
+     * API Version: 2020-08-31.
+     * 
+     */
+    public static CompletableFuture<ListIotHubResourceKeysForKeyNameResult> listIotHubResourceKeysForKeyNamePlain(ListIotHubResourceKeysForKeyNamePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:devices:listIotHubResourceKeysForKeyName", TypeShape.of(ListIotHubResourceKeysForKeyNameResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,11 +5,13 @@ package com.pulumi.awsnative.mediatailor;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.mediatailor.inputs.GetPlaybackConfigurationArgs;
+import com.pulumi.awsnative.mediatailor.inputs.GetPlaybackConfigurationPlainArgs;
 import com.pulumi.awsnative.mediatailor.outputs.GetPlaybackConfigurationResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class MediatailorFunctions {
     /**
@@ -23,7 +25,21 @@ public final class MediatailorFunctions {
      * Resource schema for AWS::MediaTailor::PlaybackConfiguration
      * 
      */
+    public static CompletableFuture<GetPlaybackConfigurationResult> getPlaybackConfigurationPlain(GetPlaybackConfigurationPlainArgs args) {
+        return getPlaybackConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::MediaTailor::PlaybackConfiguration
+     * 
+     */
     public static Output<GetPlaybackConfigurationResult> getPlaybackConfiguration(GetPlaybackConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:mediatailor:getPlaybackConfiguration", TypeShape.of(GetPlaybackConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::MediaTailor::PlaybackConfiguration
+     * 
+     */
+    public static CompletableFuture<GetPlaybackConfigurationResult> getPlaybackConfigurationPlain(GetPlaybackConfigurationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:mediatailor:getPlaybackConfiguration", TypeShape.of(GetPlaybackConfigurationResult.class), args, Utilities.withVersion(options));
     }
 }

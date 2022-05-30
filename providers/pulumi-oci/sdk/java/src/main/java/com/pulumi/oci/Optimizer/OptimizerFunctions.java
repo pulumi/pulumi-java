@@ -8,20 +8,35 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Optimizer.inputs.GetCategoriesArgs;
+import com.pulumi.oci.Optimizer.inputs.GetCategoriesPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetCategoryArgs;
+import com.pulumi.oci.Optimizer.inputs.GetCategoryPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetEnrollmentStatusArgs;
+import com.pulumi.oci.Optimizer.inputs.GetEnrollmentStatusPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetEnrollmentStatusesArgs;
+import com.pulumi.oci.Optimizer.inputs.GetEnrollmentStatusesPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetHistoriesArgs;
+import com.pulumi.oci.Optimizer.inputs.GetHistoriesPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetProfileArgs;
 import com.pulumi.oci.Optimizer.inputs.GetProfileLevelArgs;
+import com.pulumi.oci.Optimizer.inputs.GetProfileLevelPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetProfileLevelsArgs;
+import com.pulumi.oci.Optimizer.inputs.GetProfileLevelsPlainArgs;
+import com.pulumi.oci.Optimizer.inputs.GetProfilePlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetProfilesArgs;
+import com.pulumi.oci.Optimizer.inputs.GetProfilesPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetRecommendationArgs;
+import com.pulumi.oci.Optimizer.inputs.GetRecommendationPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetRecommendationStrategiesArgs;
+import com.pulumi.oci.Optimizer.inputs.GetRecommendationStrategiesPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetRecommendationStrategyArgs;
+import com.pulumi.oci.Optimizer.inputs.GetRecommendationStrategyPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetRecommendationsArgs;
+import com.pulumi.oci.Optimizer.inputs.GetRecommendationsPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetResourceActionArgs;
+import com.pulumi.oci.Optimizer.inputs.GetResourceActionPlainArgs;
 import com.pulumi.oci.Optimizer.inputs.GetResourceActionsArgs;
+import com.pulumi.oci.Optimizer.inputs.GetResourceActionsPlainArgs;
 import com.pulumi.oci.Optimizer.outputs.GetCategoriesResult;
 import com.pulumi.oci.Optimizer.outputs.GetCategoryResult;
 import com.pulumi.oci.Optimizer.outputs.GetEnrollmentStatusResult;
@@ -38,6 +53,7 @@ import com.pulumi.oci.Optimizer.outputs.GetRecommendationsResult;
 import com.pulumi.oci.Optimizer.outputs.GetResourceActionResult;
 import com.pulumi.oci.Optimizer.outputs.GetResourceActionsResult;
 import com.pulumi.oci.Utilities;
+import java.util.concurrent.CompletableFuture;
 
 public final class OptimizerFunctions {
     /**
@@ -59,8 +75,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetCategoriesResult> getCategoriesPlain(GetCategoriesPlainArgs args) {
+        return getCategoriesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Categories in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the supported Cloud Advisor categories.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetCategoriesResult> getCategories(GetCategoriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getCategories:getCategories", TypeShape.of(GetCategoriesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Categories in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the supported Cloud Advisor categories.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCategoriesResult> getCategoriesPlain(GetCategoriesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getCategories:getCategories", TypeShape.of(GetCategoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Category resource in Oracle Cloud Infrastructure Optimizer service.
@@ -81,8 +119,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetCategoryResult> getCategoryPlain(GetCategoryPlainArgs args) {
+        return getCategoryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Category resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Gets the category that corresponds to the specified OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetCategoryResult> getCategory(GetCategoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getCategory:getCategory", TypeShape.of(GetCategoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Category resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Gets the category that corresponds to the specified OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCategoryResult> getCategoryPlain(GetCategoryPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getCategory:getCategory", TypeShape.of(GetCategoryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Enrollment Status resource in Oracle Cloud Infrastructure Optimizer service.
@@ -103,8 +163,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetEnrollmentStatusResult> getEnrollmentStatusPlain(GetEnrollmentStatusPlainArgs args) {
+        return getEnrollmentStatusPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Enrollment Status resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Gets the Cloud Advisor enrollment status.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetEnrollmentStatusResult> getEnrollmentStatus(GetEnrollmentStatusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getEnrollmentStatus:getEnrollmentStatus", TypeShape.of(GetEnrollmentStatusResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Enrollment Status resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Gets the Cloud Advisor enrollment status.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetEnrollmentStatusResult> getEnrollmentStatusPlain(GetEnrollmentStatusPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getEnrollmentStatus:getEnrollmentStatus", TypeShape.of(GetEnrollmentStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Enrollment Statuses in Oracle Cloud Infrastructure Optimizer service.
@@ -125,8 +207,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetEnrollmentStatusesResult> getEnrollmentStatusesPlain(GetEnrollmentStatusesPlainArgs args) {
+        return getEnrollmentStatusesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Enrollment Statuses in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the Cloud Advisor enrollment statuses.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetEnrollmentStatusesResult> getEnrollmentStatuses(GetEnrollmentStatusesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getEnrollmentStatuses:getEnrollmentStatuses", TypeShape.of(GetEnrollmentStatusesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Enrollment Statuses in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the Cloud Advisor enrollment statuses.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetEnrollmentStatusesResult> getEnrollmentStatusesPlain(GetEnrollmentStatusesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getEnrollmentStatuses:getEnrollmentStatuses", TypeShape.of(GetEnrollmentStatusesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Histories in Oracle Cloud Infrastructure Optimizer service.
@@ -149,8 +253,32 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetHistoriesResult> getHistoriesPlain(GetHistoriesPlainArgs args) {
+        return getHistoriesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Histories in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists changes to the recommendations based on user activity.
+     * For example, lists when recommendations have been implemented, dismissed, postponed, or reactivated.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetHistoriesResult> getHistories(GetHistoriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getHistories:getHistories", TypeShape.of(GetHistoriesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Histories in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists changes to the recommendations based on user activity.
+     * For example, lists when recommendations have been implemented, dismissed, postponed, or reactivated.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetHistoriesResult> getHistoriesPlain(GetHistoriesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getHistories:getHistories", TypeShape.of(GetHistoriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Profile resource in Oracle Cloud Infrastructure Optimizer service.
@@ -171,8 +299,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetProfileResult> getProfilePlain(GetProfilePlainArgs args) {
+        return getProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Profile resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Gets the specified profile&#39;s information. Uses the profile&#39;s OCID to determine which profile to retrieve.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetProfileResult> getProfile(GetProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getProfile:getProfile", TypeShape.of(GetProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Profile resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Gets the specified profile&#39;s information. Uses the profile&#39;s OCID to determine which profile to retrieve.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetProfileResult> getProfilePlain(GetProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getProfile:getProfile", TypeShape.of(GetProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Profile Level resource in Oracle Cloud Infrastructure Optimizer service.
@@ -193,8 +343,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetProfileLevelResult> getProfileLevelPlain(GetProfileLevelPlainArgs args) {
+        return getProfileLevelPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Profile Level resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the existing profile levels.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetProfileLevelResult> getProfileLevel(GetProfileLevelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getProfileLevel:getProfileLevel", TypeShape.of(GetProfileLevelResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Profile Level resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the existing profile levels.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetProfileLevelResult> getProfileLevelPlain(GetProfileLevelPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getProfileLevel:getProfileLevel", TypeShape.of(GetProfileLevelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Profile Levels in Oracle Cloud Infrastructure Optimizer service.
@@ -215,8 +387,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetProfileLevelsResult> getProfileLevelsPlain(GetProfileLevelsPlainArgs args) {
+        return getProfileLevelsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Profile Levels in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the existing profile levels.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetProfileLevelsResult> getProfileLevels(GetProfileLevelsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getProfileLevels:getProfileLevels", TypeShape.of(GetProfileLevelsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Profile Levels in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the existing profile levels.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetProfileLevelsResult> getProfileLevelsPlain(GetProfileLevelsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getProfileLevels:getProfileLevels", TypeShape.of(GetProfileLevelsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Profiles in Oracle Cloud Infrastructure Optimizer service.
@@ -237,8 +431,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetProfilesResult> getProfilesPlain(GetProfilesPlainArgs args) {
+        return getProfilesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Profiles in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the existing profiles.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetProfilesResult> getProfiles(GetProfilesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getProfiles:getProfiles", TypeShape.of(GetProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Profiles in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the existing profiles.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetProfilesResult> getProfilesPlain(GetProfilesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getProfiles:getProfiles", TypeShape.of(GetProfilesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Recommendation resource in Oracle Cloud Infrastructure Optimizer service.
@@ -259,8 +475,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRecommendationResult> getRecommendationPlain(GetRecommendationPlainArgs args) {
+        return getRecommendationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Recommendation resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Gets the recommendation for the specified OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRecommendationResult> getRecommendation(GetRecommendationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getRecommendation:getRecommendation", TypeShape.of(GetRecommendationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Recommendation resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Gets the recommendation for the specified OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRecommendationResult> getRecommendationPlain(GetRecommendationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getRecommendation:getRecommendation", TypeShape.of(GetRecommendationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Recommendation Strategies in Oracle Cloud Infrastructure Optimizer service.
@@ -281,8 +519,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRecommendationStrategiesResult> getRecommendationStrategiesPlain(GetRecommendationStrategiesPlainArgs args) {
+        return getRecommendationStrategiesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Recommendation Strategies in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the existing strategies.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRecommendationStrategiesResult> getRecommendationStrategies(GetRecommendationStrategiesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getRecommendationStrategies:getRecommendationStrategies", TypeShape.of(GetRecommendationStrategiesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Recommendation Strategies in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the existing strategies.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRecommendationStrategiesResult> getRecommendationStrategiesPlain(GetRecommendationStrategiesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getRecommendationStrategies:getRecommendationStrategies", TypeShape.of(GetRecommendationStrategiesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Recommendation Strategy resource in Oracle Cloud Infrastructure Optimizer service.
@@ -303,8 +563,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRecommendationStrategyResult> getRecommendationStrategyPlain(GetRecommendationStrategyPlainArgs args) {
+        return getRecommendationStrategyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Recommendation Strategy resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the existing strategies.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRecommendationStrategyResult> getRecommendationStrategy(GetRecommendationStrategyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getRecommendationStrategy:getRecommendationStrategy", TypeShape.of(GetRecommendationStrategyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Recommendation Strategy resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the existing strategies.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRecommendationStrategyResult> getRecommendationStrategyPlain(GetRecommendationStrategyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getRecommendationStrategy:getRecommendationStrategy", TypeShape.of(GetRecommendationStrategyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Recommendations in Oracle Cloud Infrastructure Optimizer service.
@@ -325,8 +607,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRecommendationsResult> getRecommendationsPlain(GetRecommendationsPlainArgs args) {
+        return getRecommendationsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Recommendations in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the Cloud Advisor recommendations that are currently supported in the specified category.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRecommendationsResult> getRecommendations(GetRecommendationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getRecommendations:getRecommendations", TypeShape.of(GetRecommendationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Recommendations in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the Cloud Advisor recommendations that are currently supported in the specified category.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRecommendationsResult> getRecommendationsPlain(GetRecommendationsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getRecommendations:getRecommendations", TypeShape.of(GetRecommendationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Resource Action resource in Oracle Cloud Infrastructure Optimizer service.
@@ -347,8 +651,30 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetResourceActionResult> getResourceActionPlain(GetResourceActionPlainArgs args) {
+        return getResourceActionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Resource Action resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Gets the resource action that corresponds to the specified OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetResourceActionResult> getResourceAction(GetResourceActionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getResourceAction:getResourceAction", TypeShape.of(GetResourceActionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Resource Action resource in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Gets the resource action that corresponds to the specified OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetResourceActionResult> getResourceActionPlain(GetResourceActionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getResourceAction:getResourceAction", TypeShape.of(GetResourceActionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Resource Actions in Oracle Cloud Infrastructure Optimizer service.
@@ -369,7 +695,29 @@ public final class OptimizerFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetResourceActionsResult> getResourceActionsPlain(GetResourceActionsPlainArgs args) {
+        return getResourceActionsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Resource Actions in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the Cloud Advisor resource actions that are supported by the specified recommendation.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetResourceActionsResult> getResourceActions(GetResourceActionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Optimizer/getResourceActions:getResourceActions", TypeShape.of(GetResourceActionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Resource Actions in Oracle Cloud Infrastructure Optimizer service.
+     * 
+     * Lists the Cloud Advisor resource actions that are supported by the specified recommendation.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetResourceActionsResult> getResourceActionsPlain(GetResourceActionsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Optimizer/getResourceActions:getResourceActions", TypeShape.of(GetResourceActionsResult.class), args, Utilities.withVersion(options));
     }
 }

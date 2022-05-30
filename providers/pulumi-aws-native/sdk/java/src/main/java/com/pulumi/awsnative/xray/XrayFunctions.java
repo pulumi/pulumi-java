@@ -5,13 +5,16 @@ package com.pulumi.awsnative.xray;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.xray.inputs.GetGroupArgs;
+import com.pulumi.awsnative.xray.inputs.GetGroupPlainArgs;
 import com.pulumi.awsnative.xray.inputs.GetSamplingRuleArgs;
+import com.pulumi.awsnative.xray.inputs.GetSamplingRulePlainArgs;
 import com.pulumi.awsnative.xray.outputs.GetGroupResult;
 import com.pulumi.awsnative.xray.outputs.GetSamplingRuleResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class XrayFunctions {
     /**
@@ -25,8 +28,22 @@ public final class XrayFunctions {
      * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
      * 
      */
+    public static CompletableFuture<GetGroupResult> getGroupPlain(GetGroupPlainArgs args) {
+        return getGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
+     * 
+     */
     public static Output<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:xray:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
+     * 
+     */
+    public static CompletableFuture<GetGroupResult> getGroupPlain(GetGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:xray:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
@@ -39,7 +56,21 @@ public final class XrayFunctions {
      * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
      * 
      */
+    public static CompletableFuture<GetSamplingRuleResult> getSamplingRulePlain(GetSamplingRulePlainArgs args) {
+        return getSamplingRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
+     * 
+     */
     public static Output<GetSamplingRuleResult> getSamplingRule(GetSamplingRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:xray:getSamplingRule", TypeShape.of(GetSamplingRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
+     * 
+     */
+    public static CompletableFuture<GetSamplingRuleResult> getSamplingRulePlain(GetSamplingRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:xray:getSamplingRule", TypeShape.of(GetSamplingRuleResult.class), args, Utilities.withVersion(options));
     }
 }

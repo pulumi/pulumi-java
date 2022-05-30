@@ -5,9 +5,13 @@ package com.pulumi.awsnative.networkfirewall;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.networkfirewall.inputs.GetFirewallArgs;
+import com.pulumi.awsnative.networkfirewall.inputs.GetFirewallPlainArgs;
 import com.pulumi.awsnative.networkfirewall.inputs.GetFirewallPolicyArgs;
+import com.pulumi.awsnative.networkfirewall.inputs.GetFirewallPolicyPlainArgs;
 import com.pulumi.awsnative.networkfirewall.inputs.GetLoggingConfigurationArgs;
+import com.pulumi.awsnative.networkfirewall.inputs.GetLoggingConfigurationPlainArgs;
 import com.pulumi.awsnative.networkfirewall.inputs.GetRuleGroupArgs;
+import com.pulumi.awsnative.networkfirewall.inputs.GetRuleGroupPlainArgs;
 import com.pulumi.awsnative.networkfirewall.outputs.GetFirewallPolicyResult;
 import com.pulumi.awsnative.networkfirewall.outputs.GetFirewallResult;
 import com.pulumi.awsnative.networkfirewall.outputs.GetLoggingConfigurationResult;
@@ -16,6 +20,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class NetworkfirewallFunctions {
     /**
@@ -29,8 +34,22 @@ public final class NetworkfirewallFunctions {
      * Resource type definition for AWS::NetworkFirewall::Firewall
      * 
      */
+    public static CompletableFuture<GetFirewallResult> getFirewallPlain(GetFirewallPlainArgs args) {
+        return getFirewallPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource type definition for AWS::NetworkFirewall::Firewall
+     * 
+     */
     public static Output<GetFirewallResult> getFirewall(GetFirewallArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:networkfirewall:getFirewall", TypeShape.of(GetFirewallResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource type definition for AWS::NetworkFirewall::Firewall
+     * 
+     */
+    public static CompletableFuture<GetFirewallResult> getFirewallPlain(GetFirewallPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getFirewall", TypeShape.of(GetFirewallResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource type definition for AWS::NetworkFirewall::FirewallPolicy
@@ -43,8 +62,22 @@ public final class NetworkfirewallFunctions {
      * Resource type definition for AWS::NetworkFirewall::FirewallPolicy
      * 
      */
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicyPlain(GetFirewallPolicyPlainArgs args) {
+        return getFirewallPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource type definition for AWS::NetworkFirewall::FirewallPolicy
+     * 
+     */
     public static Output<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:networkfirewall:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource type definition for AWS::NetworkFirewall::FirewallPolicy
+     * 
+     */
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicyPlain(GetFirewallPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource type definition for AWS::NetworkFirewall::LoggingConfiguration
@@ -57,8 +90,22 @@ public final class NetworkfirewallFunctions {
      * Resource type definition for AWS::NetworkFirewall::LoggingConfiguration
      * 
      */
+    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfigurationPlain(GetLoggingConfigurationPlainArgs args) {
+        return getLoggingConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource type definition for AWS::NetworkFirewall::LoggingConfiguration
+     * 
+     */
     public static Output<GetLoggingConfigurationResult> getLoggingConfiguration(GetLoggingConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:networkfirewall:getLoggingConfiguration", TypeShape.of(GetLoggingConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource type definition for AWS::NetworkFirewall::LoggingConfiguration
+     * 
+     */
+    public static CompletableFuture<GetLoggingConfigurationResult> getLoggingConfigurationPlain(GetLoggingConfigurationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getLoggingConfiguration", TypeShape.of(GetLoggingConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource type definition for AWS::NetworkFirewall::RuleGroup
@@ -71,7 +118,21 @@ public final class NetworkfirewallFunctions {
      * Resource type definition for AWS::NetworkFirewall::RuleGroup
      * 
      */
+    public static CompletableFuture<GetRuleGroupResult> getRuleGroupPlain(GetRuleGroupPlainArgs args) {
+        return getRuleGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource type definition for AWS::NetworkFirewall::RuleGroup
+     * 
+     */
     public static Output<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:networkfirewall:getRuleGroup", TypeShape.of(GetRuleGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource type definition for AWS::NetworkFirewall::RuleGroup
+     * 
+     */
+    public static CompletableFuture<GetRuleGroupResult> getRuleGroupPlain(GetRuleGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getRuleGroup", TypeShape.of(GetRuleGroupResult.class), args, Utilities.withVersion(options));
     }
 }

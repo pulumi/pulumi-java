@@ -9,9 +9,12 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.firebaserules_v1.inputs.GetReleaseArgs;
+import com.pulumi.googlenative.firebaserules_v1.inputs.GetReleasePlainArgs;
 import com.pulumi.googlenative.firebaserules_v1.inputs.GetRulesetArgs;
+import com.pulumi.googlenative.firebaserules_v1.inputs.GetRulesetPlainArgs;
 import com.pulumi.googlenative.firebaserules_v1.outputs.GetReleaseResult;
 import com.pulumi.googlenative.firebaserules_v1.outputs.GetRulesetResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Firebaserules_v1Functions {
     /**
@@ -25,8 +28,22 @@ public final class Firebaserules_v1Functions {
      * Get a `Release` by name.
      * 
      */
+    public static CompletableFuture<GetReleaseResult> getReleasePlain(GetReleasePlainArgs args) {
+        return getReleasePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get a `Release` by name.
+     * 
+     */
     public static Output<GetReleaseResult> getRelease(GetReleaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:firebaserules/v1:getRelease", TypeShape.of(GetReleaseResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get a `Release` by name.
+     * 
+     */
+    public static CompletableFuture<GetReleaseResult> getReleasePlain(GetReleasePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:firebaserules/v1:getRelease", TypeShape.of(GetReleaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get a `Ruleset` by name including the full `Source` contents.
@@ -39,7 +56,21 @@ public final class Firebaserules_v1Functions {
      * Get a `Ruleset` by name including the full `Source` contents.
      * 
      */
+    public static CompletableFuture<GetRulesetResult> getRulesetPlain(GetRulesetPlainArgs args) {
+        return getRulesetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get a `Ruleset` by name including the full `Source` contents.
+     * 
+     */
     public static Output<GetRulesetResult> getRuleset(GetRulesetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:firebaserules/v1:getRuleset", TypeShape.of(GetRulesetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get a `Ruleset` by name including the full `Source` contents.
+     * 
+     */
+    public static CompletableFuture<GetRulesetResult> getRulesetPlain(GetRulesetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:firebaserules/v1:getRuleset", TypeShape.of(GetRulesetResult.class), args, Utilities.withVersion(options));
     }
 }

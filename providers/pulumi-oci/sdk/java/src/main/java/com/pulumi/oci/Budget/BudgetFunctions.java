@@ -8,14 +8,19 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Budget.inputs.GetAlertRuleArgs;
+import com.pulumi.oci.Budget.inputs.GetAlertRulePlainArgs;
 import com.pulumi.oci.Budget.inputs.GetAlertRulesArgs;
+import com.pulumi.oci.Budget.inputs.GetAlertRulesPlainArgs;
 import com.pulumi.oci.Budget.inputs.GetBudgetArgs;
+import com.pulumi.oci.Budget.inputs.GetBudgetPlainArgs;
 import com.pulumi.oci.Budget.inputs.GetBudgetsArgs;
+import com.pulumi.oci.Budget.inputs.GetBudgetsPlainArgs;
 import com.pulumi.oci.Budget.outputs.GetAlertRuleResult;
 import com.pulumi.oci.Budget.outputs.GetAlertRulesResult;
 import com.pulumi.oci.Budget.outputs.GetBudgetResult;
 import com.pulumi.oci.Budget.outputs.GetBudgetsResult;
 import com.pulumi.oci.Utilities;
+import java.util.concurrent.CompletableFuture;
 
 public final class BudgetFunctions {
     /**
@@ -37,8 +42,30 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetAlertRuleResult> getAlertRulePlain(GetAlertRulePlainArgs args) {
+        return getAlertRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Alert Rule resource in Oracle Cloud Infrastructure Budget service.
+     * 
+     * Gets an Alert Rule for a specified Budget.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Budget/getAlertRule:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Alert Rule resource in Oracle Cloud Infrastructure Budget service.
+     * 
+     * Gets an Alert Rule for a specified Budget.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAlertRuleResult> getAlertRulePlain(GetAlertRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Budget/getAlertRule:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Alert Rules in Oracle Cloud Infrastructure Budget service.
@@ -59,8 +86,30 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetAlertRulesResult> getAlertRulesPlain(GetAlertRulesPlainArgs args) {
+        return getAlertRulesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Alert Rules in Oracle Cloud Infrastructure Budget service.
+     * 
+     * Returns a list of Alert Rules for a specified Budget.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetAlertRulesResult> getAlertRules(GetAlertRulesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Budget/getAlertRules:getAlertRules", TypeShape.of(GetAlertRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Alert Rules in Oracle Cloud Infrastructure Budget service.
+     * 
+     * Returns a list of Alert Rules for a specified Budget.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAlertRulesResult> getAlertRulesPlain(GetAlertRulesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Budget/getAlertRules:getAlertRules", TypeShape.of(GetAlertRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Budget resource in Oracle Cloud Infrastructure Budget service.
@@ -81,8 +130,30 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetBudgetResult> getBudgetPlain(GetBudgetPlainArgs args) {
+        return getBudgetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Budget resource in Oracle Cloud Infrastructure Budget service.
+     * 
+     * Gets a Budget by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetBudgetResult> getBudget(GetBudgetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Budget/getBudget:getBudget", TypeShape.of(GetBudgetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Budget resource in Oracle Cloud Infrastructure Budget service.
+     * 
+     * Gets a Budget by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetBudgetResult> getBudgetPlain(GetBudgetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Budget/getBudget:getBudget", TypeShape.of(GetBudgetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Budgets in Oracle Cloud Infrastructure Budget service.
@@ -121,7 +192,47 @@ public final class BudgetFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetBudgetsResult> getBudgetsPlain(GetBudgetsPlainArgs args) {
+        return getBudgetsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Budgets in Oracle Cloud Infrastructure Budget service.
+     * 
+     * Gets a list of Budgets in a compartment.
+     * 
+     * By default, ListBudgets returns budgets of &#39;COMPARTMENT&#39; target type and the budget records with only ONE target compartment OCID.
+     * 
+     * To list ALL budgets, set the targetType query parameter to ALL.
+     * Example:
+     *   &#39;targetType=ALL&#39;
+     * 
+     * Additional targetTypes would be available in future releases. Clients should ignore new targetType
+     * or upgrade to latest version of client SDK to handle new targetType.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetBudgetsResult> getBudgets(GetBudgetsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Budget/getBudgets:getBudgets", TypeShape.of(GetBudgetsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Budgets in Oracle Cloud Infrastructure Budget service.
+     * 
+     * Gets a list of Budgets in a compartment.
+     * 
+     * By default, ListBudgets returns budgets of &#39;COMPARTMENT&#39; target type and the budget records with only ONE target compartment OCID.
+     * 
+     * To list ALL budgets, set the targetType query parameter to ALL.
+     * Example:
+     *   &#39;targetType=ALL&#39;
+     * 
+     * Additional targetTypes would be available in future releases. Clients should ignore new targetType
+     * or upgrade to latest version of client SDK to handle new targetType.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetBudgetsResult> getBudgetsPlain(GetBudgetsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Budget/getBudgets:getBudgets", TypeShape.of(GetBudgetsResult.class), args, Utilities.withVersion(options));
     }
 }

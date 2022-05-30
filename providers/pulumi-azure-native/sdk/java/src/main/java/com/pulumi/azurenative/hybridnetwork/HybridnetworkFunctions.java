@@ -5,12 +5,19 @@ package com.pulumi.azurenative.hybridnetwork;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.hybridnetwork.inputs.GetDeviceArgs;
+import com.pulumi.azurenative.hybridnetwork.inputs.GetDevicePlainArgs;
 import com.pulumi.azurenative.hybridnetwork.inputs.GetNetworkFunctionArgs;
+import com.pulumi.azurenative.hybridnetwork.inputs.GetNetworkFunctionPlainArgs;
 import com.pulumi.azurenative.hybridnetwork.inputs.GetVendorArgs;
+import com.pulumi.azurenative.hybridnetwork.inputs.GetVendorPlainArgs;
 import com.pulumi.azurenative.hybridnetwork.inputs.GetVendorSkuPreviewArgs;
+import com.pulumi.azurenative.hybridnetwork.inputs.GetVendorSkuPreviewPlainArgs;
 import com.pulumi.azurenative.hybridnetwork.inputs.GetVendorSkusArgs;
+import com.pulumi.azurenative.hybridnetwork.inputs.GetVendorSkusPlainArgs;
 import com.pulumi.azurenative.hybridnetwork.inputs.ListDeviceRegistrationKeyArgs;
+import com.pulumi.azurenative.hybridnetwork.inputs.ListDeviceRegistrationKeyPlainArgs;
 import com.pulumi.azurenative.hybridnetwork.inputs.ListVendorSkusCredentialArgs;
+import com.pulumi.azurenative.hybridnetwork.inputs.ListVendorSkusCredentialPlainArgs;
 import com.pulumi.azurenative.hybridnetwork.outputs.GetDeviceResult;
 import com.pulumi.azurenative.hybridnetwork.outputs.GetNetworkFunctionResult;
 import com.pulumi.azurenative.hybridnetwork.outputs.GetVendorResult;
@@ -22,6 +29,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class HybridnetworkFunctions {
     /**
@@ -37,8 +45,24 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args) {
+        return getDevicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Device resource.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
     public static Output<GetDeviceResult> getDevice(GetDeviceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybridnetwork:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Device resource.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetDeviceResult> getDevicePlain(GetDevicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getDevice", TypeShape.of(GetDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Network function resource response.
@@ -53,8 +77,24 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
+    public static CompletableFuture<GetNetworkFunctionResult> getNetworkFunctionPlain(GetNetworkFunctionPlainArgs args) {
+        return getNetworkFunctionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Network function resource response.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
     public static Output<GetNetworkFunctionResult> getNetworkFunction(GetNetworkFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybridnetwork:getNetworkFunction", TypeShape.of(GetNetworkFunctionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Network function resource response.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetNetworkFunctionResult> getNetworkFunctionPlain(GetNetworkFunctionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getNetworkFunction", TypeShape.of(GetNetworkFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Vendor resource.
@@ -69,8 +109,24 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
+    public static CompletableFuture<GetVendorResult> getVendorPlain(GetVendorPlainArgs args) {
+        return getVendorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Vendor resource.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
     public static Output<GetVendorResult> getVendor(GetVendorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybridnetwork:getVendor", TypeShape.of(GetVendorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Vendor resource.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetVendorResult> getVendorPlain(GetVendorPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getVendor", TypeShape.of(GetVendorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Customer subscription which can use a sku.
@@ -85,8 +141,24 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
+    public static CompletableFuture<GetVendorSkuPreviewResult> getVendorSkuPreviewPlain(GetVendorSkuPreviewPlainArgs args) {
+        return getVendorSkuPreviewPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Customer subscription which can use a sku.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
     public static Output<GetVendorSkuPreviewResult> getVendorSkuPreview(GetVendorSkuPreviewArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybridnetwork:getVendorSkuPreview", TypeShape.of(GetVendorSkuPreviewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Customer subscription which can use a sku.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetVendorSkuPreviewResult> getVendorSkuPreviewPlain(GetVendorSkuPreviewPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getVendorSkuPreview", TypeShape.of(GetVendorSkuPreviewResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Sku sub resource.
@@ -101,8 +173,24 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
+    public static CompletableFuture<GetVendorSkusResult> getVendorSkusPlain(GetVendorSkusPlainArgs args) {
+        return getVendorSkusPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Sku sub resource.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
     public static Output<GetVendorSkusResult> getVendorSkus(GetVendorSkusArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybridnetwork:getVendorSkus", TypeShape.of(GetVendorSkusResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Sku sub resource.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetVendorSkusResult> getVendorSkusPlain(GetVendorSkusPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getVendorSkus", TypeShape.of(GetVendorSkusResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The device registration key.
@@ -117,8 +205,24 @@ public final class HybridnetworkFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
+    public static CompletableFuture<ListDeviceRegistrationKeyResult> listDeviceRegistrationKeyPlain(ListDeviceRegistrationKeyPlainArgs args) {
+        return listDeviceRegistrationKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The device registration key.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
     public static Output<ListDeviceRegistrationKeyResult> listDeviceRegistrationKey(ListDeviceRegistrationKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybridnetwork:listDeviceRegistrationKey", TypeShape.of(ListDeviceRegistrationKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The device registration key.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListDeviceRegistrationKeyResult> listDeviceRegistrationKeyPlain(ListDeviceRegistrationKeyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:listDeviceRegistrationKey", TypeShape.of(ListDeviceRegistrationKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Sku credential definition.
@@ -133,7 +237,23 @@ public final class HybridnetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
+    public static CompletableFuture<ListVendorSkusCredentialResult> listVendorSkusCredentialPlain(ListVendorSkusCredentialPlainArgs args) {
+        return listVendorSkusCredentialPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The Sku credential definition.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
     public static Output<ListVendorSkusCredentialResult> listVendorSkusCredential(ListVendorSkusCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:hybridnetwork:listVendorSkusCredential", TypeShape.of(ListVendorSkusCredentialResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Sku credential definition.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListVendorSkusCredentialResult> listVendorSkusCredentialPlain(ListVendorSkusCredentialPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:listVendorSkusCredential", TypeShape.of(ListVendorSkusCredentialResult.class), args, Utilities.withVersion(options));
     }
 }

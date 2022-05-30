@@ -6,59 +6,114 @@ package com.pulumi.azurenative.apimanagement;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiDiagnosticArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiDiagnosticPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiIssueArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiIssueAttachmentArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiIssueAttachmentPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiIssueCommentArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiIssueCommentPlainArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiIssuePlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceDomainOwnershipIdentifierArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceDomainOwnershipIdentifierPlainArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiManagementServicePlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceSsoTokenArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiManagementServiceSsoTokenPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiOperationArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiOperationPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiOperationPolicyArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiOperationPolicyPlainArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiPolicyArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiPolicyPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiReleaseArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiReleasePlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiSchemaArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiSchemaPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiTagDescriptionArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiTagDescriptionPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetApiVersionSetArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetApiVersionSetPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetAuthorizationServerArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetAuthorizationServerPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetBackendArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetBackendPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetCacheArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetCachePlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetCertificateArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetCertificatePlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetContentItemArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetContentItemPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetContentTypeArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetContentTypePlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetDiagnosticArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetDiagnosticPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetEmailTemplateArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetEmailTemplatePlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetGatewayArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetGatewayCertificateAuthorityArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetGatewayCertificateAuthorityPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetGatewayHostnameConfigurationArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetGatewayHostnameConfigurationPlainArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetGatewayPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetGroupArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetGroupPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetIdentityProviderArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetIdentityProviderPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetLoggerArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetLoggerPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetNamedValueArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetNamedValuePlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetOpenIdConnectProviderArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetOpenIdConnectProviderPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetPolicyArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetPolicyFragmentArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetPolicyFragmentPlainArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetPolicyPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetPrivateEndpointConnectionByNameArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetPrivateEndpointConnectionByNamePlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetProductArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetProductPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetProductPolicyArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetProductPolicyPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetPropertyArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetPropertyPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetSchemaArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetSchemaPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetSubscriptionArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetSubscriptionPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetTagArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetTagByApiArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetTagByApiPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetTagByOperationArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetTagByOperationPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetTagByProductArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetTagByProductPlainArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetTagPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetUserArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetUserPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.GetUserSharedAccessTokenArgs;
+import com.pulumi.azurenative.apimanagement.inputs.GetUserSharedAccessTokenPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListAuthorizationServerSecretsArgs;
+import com.pulumi.azurenative.apimanagement.inputs.ListAuthorizationServerSecretsPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListDelegationSettingSecretsArgs;
+import com.pulumi.azurenative.apimanagement.inputs.ListDelegationSettingSecretsPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListGatewayKeysArgs;
+import com.pulumi.azurenative.apimanagement.inputs.ListGatewayKeysPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListIdentityProviderSecretsArgs;
+import com.pulumi.azurenative.apimanagement.inputs.ListIdentityProviderSecretsPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListNamedValueArgs;
+import com.pulumi.azurenative.apimanagement.inputs.ListNamedValuePlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListOpenIdConnectProviderSecretsArgs;
+import com.pulumi.azurenative.apimanagement.inputs.ListOpenIdConnectProviderSecretsPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListPolicyFragmentReferencesArgs;
+import com.pulumi.azurenative.apimanagement.inputs.ListPolicyFragmentReferencesPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListSubscriptionSecretsArgs;
+import com.pulumi.azurenative.apimanagement.inputs.ListSubscriptionSecretsPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListTenantAccessGitSecretsArgs;
+import com.pulumi.azurenative.apimanagement.inputs.ListTenantAccessGitSecretsPlainArgs;
 import com.pulumi.azurenative.apimanagement.inputs.ListTenantAccessSecretsArgs;
+import com.pulumi.azurenative.apimanagement.inputs.ListTenantAccessSecretsPlainArgs;
 import com.pulumi.azurenative.apimanagement.outputs.GetApiDiagnosticResult;
 import com.pulumi.azurenative.apimanagement.outputs.GetApiIssueAttachmentResult;
 import com.pulumi.azurenative.apimanagement.outputs.GetApiIssueCommentResult;
@@ -118,6 +173,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class ApimanagementFunctions {
     /**
@@ -133,8 +189,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiResult> getApiPlain(GetApiPlainArgs args) {
+        return getApiPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Api details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiResult> getApi(GetApiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApi", TypeShape.of(GetApiResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Api details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiResult> getApiPlain(GetApiPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApi", TypeShape.of(GetApiResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Diagnostic details.
@@ -149,8 +221,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiDiagnosticResult> getApiDiagnosticPlain(GetApiDiagnosticPlainArgs args) {
+        return getApiDiagnosticPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Diagnostic details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiDiagnosticResult> getApiDiagnostic(GetApiDiagnosticArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiDiagnostic", TypeShape.of(GetApiDiagnosticResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Diagnostic details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiDiagnosticResult> getApiDiagnosticPlain(GetApiDiagnosticPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiDiagnostic", TypeShape.of(GetApiDiagnosticResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Issue Contract details.
@@ -165,8 +253,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiIssueResult> getApiIssuePlain(GetApiIssuePlainArgs args) {
+        return getApiIssuePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Issue Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiIssueResult> getApiIssue(GetApiIssueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiIssue", TypeShape.of(GetApiIssueResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Issue Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiIssueResult> getApiIssuePlain(GetApiIssuePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiIssue", TypeShape.of(GetApiIssueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Issue Attachment Contract details.
@@ -181,8 +285,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiIssueAttachmentResult> getApiIssueAttachmentPlain(GetApiIssueAttachmentPlainArgs args) {
+        return getApiIssueAttachmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Issue Attachment Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiIssueAttachmentResult> getApiIssueAttachment(GetApiIssueAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiIssueAttachment", TypeShape.of(GetApiIssueAttachmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Issue Attachment Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiIssueAttachmentResult> getApiIssueAttachmentPlain(GetApiIssueAttachmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiIssueAttachment", TypeShape.of(GetApiIssueAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Issue Comment Contract details.
@@ -197,8 +317,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiIssueCommentResult> getApiIssueCommentPlain(GetApiIssueCommentPlainArgs args) {
+        return getApiIssueCommentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Issue Comment Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiIssueCommentResult> getApiIssueComment(GetApiIssueCommentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiIssueComment", TypeShape.of(GetApiIssueCommentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Issue Comment Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiIssueCommentResult> getApiIssueCommentPlain(GetApiIssueCommentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiIssueComment", TypeShape.of(GetApiIssueCommentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A single API Management service resource in List or Get response.
@@ -213,8 +349,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiManagementServiceResult> getApiManagementServicePlain(GetApiManagementServicePlainArgs args) {
+        return getApiManagementServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A single API Management service resource in List or Get response.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiManagementServiceResult> getApiManagementService(GetApiManagementServiceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiManagementService", TypeShape.of(GetApiManagementServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A single API Management service resource in List or Get response.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiManagementServiceResult> getApiManagementServicePlain(GetApiManagementServicePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiManagementService", TypeShape.of(GetApiManagementServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Response of the GetDomainOwnershipIdentifier operation.
@@ -229,6 +381,14 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiManagementServiceDomainOwnershipIdentifierResult> getApiManagementServiceDomainOwnershipIdentifierPlain() {
+        return getApiManagementServiceDomainOwnershipIdentifierPlain(GetApiManagementServiceDomainOwnershipIdentifierPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Response of the GetDomainOwnershipIdentifier operation.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiManagementServiceDomainOwnershipIdentifierResult> getApiManagementServiceDomainOwnershipIdentifier(GetApiManagementServiceDomainOwnershipIdentifierArgs args) {
         return getApiManagementServiceDomainOwnershipIdentifier(args, InvokeOptions.Empty);
     }
@@ -237,8 +397,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiManagementServiceDomainOwnershipIdentifierResult> getApiManagementServiceDomainOwnershipIdentifierPlain(GetApiManagementServiceDomainOwnershipIdentifierPlainArgs args) {
+        return getApiManagementServiceDomainOwnershipIdentifierPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Response of the GetDomainOwnershipIdentifier operation.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiManagementServiceDomainOwnershipIdentifierResult> getApiManagementServiceDomainOwnershipIdentifier(GetApiManagementServiceDomainOwnershipIdentifierArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiManagementServiceDomainOwnershipIdentifier", TypeShape.of(GetApiManagementServiceDomainOwnershipIdentifierResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Response of the GetDomainOwnershipIdentifier operation.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiManagementServiceDomainOwnershipIdentifierResult> getApiManagementServiceDomainOwnershipIdentifierPlain(GetApiManagementServiceDomainOwnershipIdentifierPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiManagementServiceDomainOwnershipIdentifier", TypeShape.of(GetApiManagementServiceDomainOwnershipIdentifierResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The response of the GetSsoToken operation.
@@ -253,8 +429,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiManagementServiceSsoTokenResult> getApiManagementServiceSsoTokenPlain(GetApiManagementServiceSsoTokenPlainArgs args) {
+        return getApiManagementServiceSsoTokenPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The response of the GetSsoToken operation.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiManagementServiceSsoTokenResult> getApiManagementServiceSsoToken(GetApiManagementServiceSsoTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiManagementServiceSsoToken", TypeShape.of(GetApiManagementServiceSsoTokenResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The response of the GetSsoToken operation.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiManagementServiceSsoTokenResult> getApiManagementServiceSsoTokenPlain(GetApiManagementServiceSsoTokenPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiManagementServiceSsoToken", TypeShape.of(GetApiManagementServiceSsoTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Api Operation details.
@@ -269,8 +461,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiOperationResult> getApiOperationPlain(GetApiOperationPlainArgs args) {
+        return getApiOperationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Api Operation details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiOperationResult> getApiOperation(GetApiOperationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiOperation", TypeShape.of(GetApiOperationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Api Operation details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiOperationResult> getApiOperationPlain(GetApiOperationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiOperation", TypeShape.of(GetApiOperationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Policy Contract details.
@@ -285,8 +493,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiOperationPolicyResult> getApiOperationPolicyPlain(GetApiOperationPolicyPlainArgs args) {
+        return getApiOperationPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Policy Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiOperationPolicyResult> getApiOperationPolicy(GetApiOperationPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiOperationPolicy", TypeShape.of(GetApiOperationPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Policy Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiOperationPolicyResult> getApiOperationPolicyPlain(GetApiOperationPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiOperationPolicy", TypeShape.of(GetApiOperationPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Policy Contract details.
@@ -301,8 +525,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiPolicyResult> getApiPolicyPlain(GetApiPolicyPlainArgs args) {
+        return getApiPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Policy Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiPolicyResult> getApiPolicy(GetApiPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiPolicy", TypeShape.of(GetApiPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Policy Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiPolicyResult> getApiPolicyPlain(GetApiPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiPolicy", TypeShape.of(GetApiPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * ApiRelease details.
@@ -317,8 +557,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiReleaseResult> getApiReleasePlain(GetApiReleasePlainArgs args) {
+        return getApiReleasePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ApiRelease details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiReleaseResult> getApiRelease(GetApiReleaseArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiRelease", TypeShape.of(GetApiReleaseResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ApiRelease details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiReleaseResult> getApiReleasePlain(GetApiReleasePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiRelease", TypeShape.of(GetApiReleaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Schema Contract details.
@@ -333,8 +589,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiSchemaResult> getApiSchemaPlain(GetApiSchemaPlainArgs args) {
+        return getApiSchemaPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Schema Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiSchemaResult> getApiSchema(GetApiSchemaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiSchema", TypeShape.of(GetApiSchemaResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Schema Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiSchemaResult> getApiSchemaPlain(GetApiSchemaPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiSchema", TypeShape.of(GetApiSchemaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Contract details.
@@ -349,8 +621,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiTagDescriptionResult> getApiTagDescriptionPlain(GetApiTagDescriptionPlainArgs args) {
+        return getApiTagDescriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiTagDescriptionResult> getApiTagDescription(GetApiTagDescriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiTagDescription", TypeShape.of(GetApiTagDescriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiTagDescriptionResult> getApiTagDescriptionPlain(GetApiTagDescriptionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiTagDescription", TypeShape.of(GetApiTagDescriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Api Version Set Contract details.
@@ -365,8 +653,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetApiVersionSetResult> getApiVersionSetPlain(GetApiVersionSetPlainArgs args) {
+        return getApiVersionSetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Api Version Set Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetApiVersionSetResult> getApiVersionSet(GetApiVersionSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getApiVersionSet", TypeShape.of(GetApiVersionSetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Api Version Set Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetApiVersionSetResult> getApiVersionSetPlain(GetApiVersionSetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiVersionSet", TypeShape.of(GetApiVersionSetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * External OAuth authorization server settings.
@@ -381,8 +685,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetAuthorizationServerResult> getAuthorizationServerPlain(GetAuthorizationServerPlainArgs args) {
+        return getAuthorizationServerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * External OAuth authorization server settings.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetAuthorizationServerResult> getAuthorizationServer(GetAuthorizationServerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getAuthorizationServer", TypeShape.of(GetAuthorizationServerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * External OAuth authorization server settings.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetAuthorizationServerResult> getAuthorizationServerPlain(GetAuthorizationServerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getAuthorizationServer", TypeShape.of(GetAuthorizationServerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Backend details.
@@ -397,8 +717,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetBackendResult> getBackendPlain(GetBackendPlainArgs args) {
+        return getBackendPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Backend details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetBackendResult> getBackend(GetBackendArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getBackend", TypeShape.of(GetBackendResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Backend details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetBackendResult> getBackendPlain(GetBackendPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getBackend", TypeShape.of(GetBackendResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Cache details.
@@ -413,8 +749,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetCacheResult> getCachePlain(GetCachePlainArgs args) {
+        return getCachePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Cache details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetCacheResult> getCache(GetCacheArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getCache", TypeShape.of(GetCacheResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Cache details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetCacheResult> getCachePlain(GetCachePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getCache", TypeShape.of(GetCacheResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Certificate details.
@@ -429,8 +781,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args) {
+        return getCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Certificate details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Certificate details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Content type contract details.
@@ -445,8 +813,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetContentItemResult> getContentItemPlain(GetContentItemPlainArgs args) {
+        return getContentItemPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Content type contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetContentItemResult> getContentItem(GetContentItemArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getContentItem", TypeShape.of(GetContentItemResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Content type contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetContentItemResult> getContentItemPlain(GetContentItemPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getContentItem", TypeShape.of(GetContentItemResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Content type contract details.
@@ -461,8 +845,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetContentTypeResult> getContentTypePlain(GetContentTypePlainArgs args) {
+        return getContentTypePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Content type contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetContentTypeResult> getContentType(GetContentTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getContentType", TypeShape.of(GetContentTypeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Content type contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetContentTypeResult> getContentTypePlain(GetContentTypePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getContentType", TypeShape.of(GetContentTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Diagnostic details.
@@ -477,8 +877,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetDiagnosticResult> getDiagnosticPlain(GetDiagnosticPlainArgs args) {
+        return getDiagnosticPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Diagnostic details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetDiagnosticResult> getDiagnostic(GetDiagnosticArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getDiagnostic", TypeShape.of(GetDiagnosticResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Diagnostic details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetDiagnosticResult> getDiagnosticPlain(GetDiagnosticPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getDiagnostic", TypeShape.of(GetDiagnosticResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Email Template details.
@@ -493,8 +909,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetEmailTemplateResult> getEmailTemplatePlain(GetEmailTemplatePlainArgs args) {
+        return getEmailTemplatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Email Template details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetEmailTemplateResult> getEmailTemplate(GetEmailTemplateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getEmailTemplate", TypeShape.of(GetEmailTemplateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Email Template details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetEmailTemplateResult> getEmailTemplatePlain(GetEmailTemplatePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getEmailTemplate", TypeShape.of(GetEmailTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gateway details.
@@ -509,8 +941,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetGatewayResult> getGatewayPlain(GetGatewayPlainArgs args) {
+        return getGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gateway details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gateway details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetGatewayResult> getGatewayPlain(GetGatewayPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gateway certificate authority details.
@@ -525,8 +973,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetGatewayCertificateAuthorityResult> getGatewayCertificateAuthorityPlain(GetGatewayCertificateAuthorityPlainArgs args) {
+        return getGatewayCertificateAuthorityPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gateway certificate authority details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetGatewayCertificateAuthorityResult> getGatewayCertificateAuthority(GetGatewayCertificateAuthorityArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getGatewayCertificateAuthority", TypeShape.of(GetGatewayCertificateAuthorityResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gateway certificate authority details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetGatewayCertificateAuthorityResult> getGatewayCertificateAuthorityPlain(GetGatewayCertificateAuthorityPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGatewayCertificateAuthority", TypeShape.of(GetGatewayCertificateAuthorityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gateway hostname configuration details.
@@ -541,8 +1005,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetGatewayHostnameConfigurationResult> getGatewayHostnameConfigurationPlain(GetGatewayHostnameConfigurationPlainArgs args) {
+        return getGatewayHostnameConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gateway hostname configuration details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetGatewayHostnameConfigurationResult> getGatewayHostnameConfiguration(GetGatewayHostnameConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getGatewayHostnameConfiguration", TypeShape.of(GetGatewayHostnameConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gateway hostname configuration details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetGatewayHostnameConfigurationResult> getGatewayHostnameConfigurationPlain(GetGatewayHostnameConfigurationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGatewayHostnameConfiguration", TypeShape.of(GetGatewayHostnameConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Contract details.
@@ -557,8 +1037,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetGroupResult> getGroupPlain(GetGroupPlainArgs args) {
+        return getGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetGroupResult> getGroupPlain(GetGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Identity Provider details.
@@ -573,8 +1069,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetIdentityProviderResult> getIdentityProviderPlain(GetIdentityProviderPlainArgs args) {
+        return getIdentityProviderPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Identity Provider details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetIdentityProviderResult> getIdentityProvider(GetIdentityProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getIdentityProvider", TypeShape.of(GetIdentityProviderResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Identity Provider details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetIdentityProviderResult> getIdentityProviderPlain(GetIdentityProviderPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getIdentityProvider", TypeShape.of(GetIdentityProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Logger details.
@@ -589,8 +1101,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetLoggerResult> getLoggerPlain(GetLoggerPlainArgs args) {
+        return getLoggerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Logger details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetLoggerResult> getLogger(GetLoggerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getLogger", TypeShape.of(GetLoggerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Logger details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetLoggerResult> getLoggerPlain(GetLoggerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getLogger", TypeShape.of(GetLoggerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * NamedValue details.
@@ -605,8 +1133,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetNamedValueResult> getNamedValuePlain(GetNamedValuePlainArgs args) {
+        return getNamedValuePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * NamedValue details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetNamedValueResult> getNamedValue(GetNamedValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getNamedValue", TypeShape.of(GetNamedValueResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * NamedValue details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetNamedValueResult> getNamedValuePlain(GetNamedValuePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getNamedValue", TypeShape.of(GetNamedValueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * OpenId Connect Provider details.
@@ -621,8 +1165,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetOpenIdConnectProviderResult> getOpenIdConnectProviderPlain(GetOpenIdConnectProviderPlainArgs args) {
+        return getOpenIdConnectProviderPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * OpenId Connect Provider details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetOpenIdConnectProviderResult> getOpenIdConnectProvider(GetOpenIdConnectProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getOpenIdConnectProvider", TypeShape.of(GetOpenIdConnectProviderResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * OpenId Connect Provider details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetOpenIdConnectProviderResult> getOpenIdConnectProviderPlain(GetOpenIdConnectProviderPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getOpenIdConnectProvider", TypeShape.of(GetOpenIdConnectProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Policy Contract details.
@@ -637,8 +1197,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetPolicyResult> getPolicyPlain(GetPolicyPlainArgs args) {
+        return getPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Policy Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetPolicyResult> getPolicy(GetPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Policy Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetPolicyResult> getPolicyPlain(GetPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getPolicy", TypeShape.of(GetPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Policy fragment contract details.
@@ -653,8 +1229,24 @@ public final class ApimanagementFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
+    public static CompletableFuture<GetPolicyFragmentResult> getPolicyFragmentPlain(GetPolicyFragmentPlainArgs args) {
+        return getPolicyFragmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Policy fragment contract details.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
     public static Output<GetPolicyFragmentResult> getPolicyFragment(GetPolicyFragmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getPolicyFragment", TypeShape.of(GetPolicyFragmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Policy fragment contract details.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPolicyFragmentResult> getPolicyFragmentPlain(GetPolicyFragmentPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getPolicyFragment", TypeShape.of(GetPolicyFragmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The Private Endpoint Connection resource.
@@ -669,8 +1261,24 @@ public final class ApimanagementFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
+    public static CompletableFuture<GetPrivateEndpointConnectionByNameResult> getPrivateEndpointConnectionByNamePlain(GetPrivateEndpointConnectionByNamePlainArgs args) {
+        return getPrivateEndpointConnectionByNamePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2021-04-01-preview.
+     * 
+     */
     public static Output<GetPrivateEndpointConnectionByNameResult> getPrivateEndpointConnectionByName(GetPrivateEndpointConnectionByNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getPrivateEndpointConnectionByName", TypeShape.of(GetPrivateEndpointConnectionByNameResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2021-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionByNameResult> getPrivateEndpointConnectionByNamePlain(GetPrivateEndpointConnectionByNamePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getPrivateEndpointConnectionByName", TypeShape.of(GetPrivateEndpointConnectionByNameResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Product details.
@@ -685,8 +1293,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetProductResult> getProductPlain(GetProductPlainArgs args) {
+        return getProductPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Product details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Product details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetProductResult> getProductPlain(GetProductPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Policy Contract details.
@@ -701,8 +1325,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetProductPolicyResult> getProductPolicyPlain(GetProductPolicyPlainArgs args) {
+        return getProductPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Policy Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetProductPolicyResult> getProductPolicy(GetProductPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getProductPolicy", TypeShape.of(GetProductPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Policy Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetProductPolicyResult> getProductPolicyPlain(GetProductPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getProductPolicy", TypeShape.of(GetProductPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Property details.
@@ -717,8 +1357,24 @@ public final class ApimanagementFunctions {
      * API Version: 2019-01-01.
      * 
      */
+    public static CompletableFuture<GetPropertyResult> getPropertyPlain(GetPropertyPlainArgs args) {
+        return getPropertyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Property details.
+     * API Version: 2019-01-01.
+     * 
+     */
     public static Output<GetPropertyResult> getProperty(GetPropertyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getProperty", TypeShape.of(GetPropertyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Property details.
+     * API Version: 2019-01-01.
+     * 
+     */
+    public static CompletableFuture<GetPropertyResult> getPropertyPlain(GetPropertyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getProperty", TypeShape.of(GetPropertyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Schema Contract details.
@@ -733,8 +1389,24 @@ public final class ApimanagementFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
+    public static CompletableFuture<GetSchemaResult> getSchemaPlain(GetSchemaPlainArgs args) {
+        return getSchemaPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Schema Contract details.
+     * API Version: 2021-04-01-preview.
+     * 
+     */
     public static Output<GetSchemaResult> getSchema(GetSchemaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getSchema", TypeShape.of(GetSchemaResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Schema Contract details.
+     * API Version: 2021-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSchemaResult> getSchemaPlain(GetSchemaPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getSchema", TypeShape.of(GetSchemaResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Subscription details.
@@ -749,8 +1421,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetSubscriptionResult> getSubscriptionPlain(GetSubscriptionPlainArgs args) {
+        return getSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Subscription details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetSubscriptionResult> getSubscription(GetSubscriptionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Subscription details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionResult> getSubscriptionPlain(GetSubscriptionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getSubscription", TypeShape.of(GetSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Tag Contract details.
@@ -765,8 +1453,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetTagResult> getTagPlain(GetTagPlainArgs args) {
+        return getTagPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Tag Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetTagResult> getTag(GetTagArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getTag", TypeShape.of(GetTagResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Tag Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetTagResult> getTagPlain(GetTagPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getTag", TypeShape.of(GetTagResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Tag Contract details.
@@ -781,8 +1485,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetTagByApiResult> getTagByApiPlain(GetTagByApiPlainArgs args) {
+        return getTagByApiPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Tag Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetTagByApiResult> getTagByApi(GetTagByApiArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getTagByApi", TypeShape.of(GetTagByApiResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Tag Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetTagByApiResult> getTagByApiPlain(GetTagByApiPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getTagByApi", TypeShape.of(GetTagByApiResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Tag Contract details.
@@ -797,8 +1517,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetTagByOperationResult> getTagByOperationPlain(GetTagByOperationPlainArgs args) {
+        return getTagByOperationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Tag Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetTagByOperationResult> getTagByOperation(GetTagByOperationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getTagByOperation", TypeShape.of(GetTagByOperationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Tag Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetTagByOperationResult> getTagByOperationPlain(GetTagByOperationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getTagByOperation", TypeShape.of(GetTagByOperationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Tag Contract details.
@@ -813,8 +1549,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetTagByProductResult> getTagByProductPlain(GetTagByProductPlainArgs args) {
+        return getTagByProductPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Tag Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetTagByProductResult> getTagByProduct(GetTagByProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getTagByProduct", TypeShape.of(GetTagByProductResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Tag Contract details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetTagByProductResult> getTagByProductPlain(GetTagByProductPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getTagByProduct", TypeShape.of(GetTagByProductResult.class), args, Utilities.withVersion(options));
     }
     /**
      * User details.
@@ -829,8 +1581,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args) {
+        return getUserPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * User details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * User details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get User Token response details.
@@ -845,8 +1613,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<GetUserSharedAccessTokenResult> getUserSharedAccessTokenPlain(GetUserSharedAccessTokenPlainArgs args) {
+        return getUserSharedAccessTokenPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get User Token response details.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<GetUserSharedAccessTokenResult> getUserSharedAccessToken(GetUserSharedAccessTokenArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:getUserSharedAccessToken", TypeShape.of(GetUserSharedAccessTokenResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get User Token response details.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<GetUserSharedAccessTokenResult> getUserSharedAccessTokenPlain(GetUserSharedAccessTokenPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getUserSharedAccessToken", TypeShape.of(GetUserSharedAccessTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
      * OAuth Server Secrets Contract.
@@ -861,8 +1645,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<ListAuthorizationServerSecretsResult> listAuthorizationServerSecretsPlain(ListAuthorizationServerSecretsPlainArgs args) {
+        return listAuthorizationServerSecretsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * OAuth Server Secrets Contract.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<ListAuthorizationServerSecretsResult> listAuthorizationServerSecrets(ListAuthorizationServerSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:listAuthorizationServerSecrets", TypeShape.of(ListAuthorizationServerSecretsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * OAuth Server Secrets Contract.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<ListAuthorizationServerSecretsResult> listAuthorizationServerSecretsPlain(ListAuthorizationServerSecretsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listAuthorizationServerSecrets", TypeShape.of(ListAuthorizationServerSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
@@ -877,8 +1677,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<ListDelegationSettingSecretsResult> listDelegationSettingSecretsPlain(ListDelegationSettingSecretsPlainArgs args) {
+        return listDelegationSettingSecretsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<ListDelegationSettingSecretsResult> listDelegationSettingSecrets(ListDelegationSettingSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:listDelegationSettingSecrets", TypeShape.of(ListDelegationSettingSecretsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<ListDelegationSettingSecretsResult> listDelegationSettingSecretsPlain(ListDelegationSettingSecretsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listDelegationSettingSecrets", TypeShape.of(ListDelegationSettingSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gateway authentication keys.
@@ -893,8 +1709,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<ListGatewayKeysResult> listGatewayKeysPlain(ListGatewayKeysPlainArgs args) {
+        return listGatewayKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gateway authentication keys.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<ListGatewayKeysResult> listGatewayKeys(ListGatewayKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:listGatewayKeys", TypeShape.of(ListGatewayKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gateway authentication keys.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<ListGatewayKeysResult> listGatewayKeysPlain(ListGatewayKeysPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listGatewayKeys", TypeShape.of(ListGatewayKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
@@ -909,8 +1741,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<ListIdentityProviderSecretsResult> listIdentityProviderSecretsPlain(ListIdentityProviderSecretsPlainArgs args) {
+        return listIdentityProviderSecretsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<ListIdentityProviderSecretsResult> listIdentityProviderSecrets(ListIdentityProviderSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:listIdentityProviderSecrets", TypeShape.of(ListIdentityProviderSecretsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<ListIdentityProviderSecretsResult> listIdentityProviderSecretsPlain(ListIdentityProviderSecretsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listIdentityProviderSecrets", TypeShape.of(ListIdentityProviderSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
@@ -925,8 +1773,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<ListNamedValueResult> listNamedValuePlain(ListNamedValuePlainArgs args) {
+        return listNamedValuePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<ListNamedValueResult> listNamedValue(ListNamedValueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:listNamedValue", TypeShape.of(ListNamedValueResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<ListNamedValueResult> listNamedValuePlain(ListNamedValuePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listNamedValue", TypeShape.of(ListNamedValueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
@@ -941,8 +1805,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<ListOpenIdConnectProviderSecretsResult> listOpenIdConnectProviderSecretsPlain(ListOpenIdConnectProviderSecretsPlainArgs args) {
+        return listOpenIdConnectProviderSecretsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<ListOpenIdConnectProviderSecretsResult> listOpenIdConnectProviderSecrets(ListOpenIdConnectProviderSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:listOpenIdConnectProviderSecrets", TypeShape.of(ListOpenIdConnectProviderSecretsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<ListOpenIdConnectProviderSecretsResult> listOpenIdConnectProviderSecretsPlain(ListOpenIdConnectProviderSecretsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listOpenIdConnectProviderSecrets", TypeShape.of(ListOpenIdConnectProviderSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * A collection of resources.
@@ -957,8 +1837,24 @@ public final class ApimanagementFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
+    public static CompletableFuture<ListPolicyFragmentReferencesResult> listPolicyFragmentReferencesPlain(ListPolicyFragmentReferencesPlainArgs args) {
+        return listPolicyFragmentReferencesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A collection of resources.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
     public static Output<ListPolicyFragmentReferencesResult> listPolicyFragmentReferences(ListPolicyFragmentReferencesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:listPolicyFragmentReferences", TypeShape.of(ListPolicyFragmentReferencesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A collection of resources.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListPolicyFragmentReferencesResult> listPolicyFragmentReferencesPlain(ListPolicyFragmentReferencesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listPolicyFragmentReferences", TypeShape.of(ListPolicyFragmentReferencesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Subscription keys.
@@ -973,8 +1869,24 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<ListSubscriptionSecretsResult> listSubscriptionSecretsPlain(ListSubscriptionSecretsPlainArgs args) {
+        return listSubscriptionSecretsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Subscription keys.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<ListSubscriptionSecretsResult> listSubscriptionSecrets(ListSubscriptionSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:listSubscriptionSecrets", TypeShape.of(ListSubscriptionSecretsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Subscription keys.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<ListSubscriptionSecretsResult> listSubscriptionSecretsPlain(ListSubscriptionSecretsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listSubscriptionSecrets", TypeShape.of(ListSubscriptionSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Tenant access information contract of the API Management service.
@@ -989,8 +1901,24 @@ public final class ApimanagementFunctions {
      * API Version: 2019-12-01.
      * 
      */
+    public static CompletableFuture<ListTenantAccessGitSecretsResult> listTenantAccessGitSecretsPlain(ListTenantAccessGitSecretsPlainArgs args) {
+        return listTenantAccessGitSecretsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Tenant access information contract of the API Management service.
+     * API Version: 2019-12-01.
+     * 
+     */
     public static Output<ListTenantAccessGitSecretsResult> listTenantAccessGitSecrets(ListTenantAccessGitSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:listTenantAccessGitSecrets", TypeShape.of(ListTenantAccessGitSecretsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Tenant access information contract of the API Management service.
+     * API Version: 2019-12-01.
+     * 
+     */
+    public static CompletableFuture<ListTenantAccessGitSecretsResult> listTenantAccessGitSecretsPlain(ListTenantAccessGitSecretsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listTenantAccessGitSecrets", TypeShape.of(ListTenantAccessGitSecretsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Tenant access information contract of the API Management service.
@@ -1005,7 +1933,23 @@ public final class ApimanagementFunctions {
      * API Version: 2020-12-01.
      * 
      */
+    public static CompletableFuture<ListTenantAccessSecretsResult> listTenantAccessSecretsPlain(ListTenantAccessSecretsPlainArgs args) {
+        return listTenantAccessSecretsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Tenant access information contract of the API Management service.
+     * API Version: 2020-12-01.
+     * 
+     */
     public static Output<ListTenantAccessSecretsResult> listTenantAccessSecrets(ListTenantAccessSecretsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:apimanagement:listTenantAccessSecrets", TypeShape.of(ListTenantAccessSecretsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Tenant access information contract of the API Management service.
+     * API Version: 2020-12-01.
+     * 
+     */
+    public static CompletableFuture<ListTenantAccessSecretsResult> listTenantAccessSecretsPlain(ListTenantAccessSecretsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listTenantAccessSecrets", TypeShape.of(ListTenantAccessSecretsResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,11 +5,17 @@ package com.pulumi.aws.memorydb;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.memorydb.inputs.GetAclArgs;
+import com.pulumi.aws.memorydb.inputs.GetAclPlainArgs;
 import com.pulumi.aws.memorydb.inputs.GetClusterArgs;
+import com.pulumi.aws.memorydb.inputs.GetClusterPlainArgs;
 import com.pulumi.aws.memorydb.inputs.GetParameterGroupArgs;
+import com.pulumi.aws.memorydb.inputs.GetParameterGroupPlainArgs;
 import com.pulumi.aws.memorydb.inputs.GetSnapshotArgs;
+import com.pulumi.aws.memorydb.inputs.GetSnapshotPlainArgs;
 import com.pulumi.aws.memorydb.inputs.GetSubnetGroupArgs;
+import com.pulumi.aws.memorydb.inputs.GetSubnetGroupPlainArgs;
 import com.pulumi.aws.memorydb.inputs.GetUserArgs;
+import com.pulumi.aws.memorydb.inputs.GetUserPlainArgs;
 import com.pulumi.aws.memorydb.outputs.GetAclResult;
 import com.pulumi.aws.memorydb.outputs.GetClusterResult;
 import com.pulumi.aws.memorydb.outputs.GetParameterGroupResult;
@@ -20,6 +26,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class MemorydbFunctions {
     /**
@@ -79,8 +86,68 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetAclResult> getAclPlain(GetAclPlainArgs args) {
+        return getAclPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides information about a MemoryDB ACL.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getAcl(GetAclArgs.builder()
+     *             .name(&#34;my-acl&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetAclResult> getAcl(GetAclArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:memorydb/getAcl:getAcl", TypeShape.of(GetAclResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides information about a MemoryDB ACL.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getAcl(GetAclArgs.builder()
+     *             .name(&#34;my-acl&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetAclResult> getAclPlain(GetAclPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:memorydb/getAcl:getAcl", TypeShape.of(GetAclResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a MemoryDB Cluster.
@@ -139,8 +206,68 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args) {
+        return getClusterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides information about a MemoryDB Cluster.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getCluster(GetClusterArgs.builder()
+     *             .name(&#34;my-cluster&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:memorydb/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides information about a MemoryDB Cluster.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getCluster(GetClusterArgs.builder()
+     *             .name(&#34;my-cluster&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:memorydb/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a MemoryDB Parameter Group.
@@ -199,8 +326,68 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetParameterGroupResult> getParameterGroupPlain(GetParameterGroupPlainArgs args) {
+        return getParameterGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides information about a MemoryDB Parameter Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getParameterGroup(GetParameterGroupArgs.builder()
+     *             .name(&#34;my-parameter-group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:memorydb/getParameterGroup:getParameterGroup", TypeShape.of(GetParameterGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides information about a MemoryDB Parameter Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getParameterGroup(GetParameterGroupArgs.builder()
+     *             .name(&#34;my-parameter-group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetParameterGroupResult> getParameterGroupPlain(GetParameterGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:memorydb/getParameterGroup:getParameterGroup", TypeShape.of(GetParameterGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a MemoryDB Snapshot.
@@ -259,8 +446,68 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetSnapshotResult> getSnapshotPlain(GetSnapshotPlainArgs args) {
+        return getSnapshotPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides information about a MemoryDB Snapshot.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getSnapshot(GetSnapshotArgs.builder()
+     *             .name(&#34;my-snapshot&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:memorydb/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides information about a MemoryDB Snapshot.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getSnapshot(GetSnapshotArgs.builder()
+     *             .name(&#34;my-snapshot&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetSnapshotResult> getSnapshotPlain(GetSnapshotPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:memorydb/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a MemoryDB Subnet Group.
@@ -319,8 +566,68 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroupPlain(GetSubnetGroupPlainArgs args) {
+        return getSubnetGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides information about a MemoryDB Subnet Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getSubnetGroup(GetSubnetGroupArgs.builder()
+     *             .name(&#34;my-subnet-group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:memorydb/getSubnetGroup:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides information about a MemoryDB Subnet Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getSubnetGroup(GetSubnetGroupArgs.builder()
+     *             .name(&#34;my-subnet-group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetSubnetGroupResult> getSubnetGroupPlain(GetSubnetGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:memorydb/getSubnetGroup:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides information about a MemoryDB User.
@@ -379,7 +686,67 @@ public final class MemorydbFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args) {
+        return getUserPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides information about a MemoryDB User.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getUser(GetUserArgs.builder()
+     *             .userName(&#34;my-user&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:memorydb/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides information about a MemoryDB User.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getUser(GetUserArgs.builder()
+     *             .userName(&#34;my-user&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:memorydb/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
 }

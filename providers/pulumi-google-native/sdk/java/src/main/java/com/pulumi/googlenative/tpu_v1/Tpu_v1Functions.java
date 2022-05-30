@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.tpu_v1.inputs.GetNodeArgs;
+import com.pulumi.googlenative.tpu_v1.inputs.GetNodePlainArgs;
 import com.pulumi.googlenative.tpu_v1.outputs.GetNodeResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Tpu_v1Functions {
     /**
@@ -23,7 +25,21 @@ public final class Tpu_v1Functions {
      * Gets the details of a node.
      * 
      */
+    public static CompletableFuture<GetNodeResult> getNodePlain(GetNodePlainArgs args) {
+        return getNodePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the details of a node.
+     * 
+     */
     public static Output<GetNodeResult> getNode(GetNodeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:tpu/v1:getNode", TypeShape.of(GetNodeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the details of a node.
+     * 
+     */
+    public static CompletableFuture<GetNodeResult> getNodePlain(GetNodePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:tpu/v1:getNode", TypeShape.of(GetNodeResult.class), args, Utilities.withVersion(options));
     }
 }

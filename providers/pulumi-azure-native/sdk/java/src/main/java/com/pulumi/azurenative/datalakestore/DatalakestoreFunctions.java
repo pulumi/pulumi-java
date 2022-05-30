@@ -5,9 +5,13 @@ package com.pulumi.azurenative.datalakestore;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.datalakestore.inputs.GetAccountArgs;
+import com.pulumi.azurenative.datalakestore.inputs.GetAccountPlainArgs;
 import com.pulumi.azurenative.datalakestore.inputs.GetFirewallRuleArgs;
+import com.pulumi.azurenative.datalakestore.inputs.GetFirewallRulePlainArgs;
 import com.pulumi.azurenative.datalakestore.inputs.GetTrustedIdProviderArgs;
+import com.pulumi.azurenative.datalakestore.inputs.GetTrustedIdProviderPlainArgs;
 import com.pulumi.azurenative.datalakestore.inputs.GetVirtualNetworkRuleArgs;
+import com.pulumi.azurenative.datalakestore.inputs.GetVirtualNetworkRulePlainArgs;
 import com.pulumi.azurenative.datalakestore.outputs.GetAccountResult;
 import com.pulumi.azurenative.datalakestore.outputs.GetFirewallRuleResult;
 import com.pulumi.azurenative.datalakestore.outputs.GetTrustedIdProviderResult;
@@ -16,6 +20,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class DatalakestoreFunctions {
     /**
@@ -31,8 +36,24 @@ public final class DatalakestoreFunctions {
      * API Version: 2016-11-01.
      * 
      */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args) {
+        return getAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Data Lake Store account information.
+     * API Version: 2016-11-01.
+     * 
+     */
     public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datalakestore:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Data Lake Store account information.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Data Lake Store firewall rule information.
@@ -47,8 +68,24 @@ public final class DatalakestoreFunctions {
      * API Version: 2016-11-01.
      * 
      */
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRulePlain(GetFirewallRulePlainArgs args) {
+        return getFirewallRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Data Lake Store firewall rule information.
+     * API Version: 2016-11-01.
+     * 
+     */
     public static Output<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datalakestore:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Data Lake Store firewall rule information.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRulePlain(GetFirewallRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Data Lake Store trusted identity provider information.
@@ -63,8 +100,24 @@ public final class DatalakestoreFunctions {
      * API Version: 2016-11-01.
      * 
      */
+    public static CompletableFuture<GetTrustedIdProviderResult> getTrustedIdProviderPlain(GetTrustedIdProviderPlainArgs args) {
+        return getTrustedIdProviderPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Data Lake Store trusted identity provider information.
+     * API Version: 2016-11-01.
+     * 
+     */
     public static Output<GetTrustedIdProviderResult> getTrustedIdProvider(GetTrustedIdProviderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datalakestore:getTrustedIdProvider", TypeShape.of(GetTrustedIdProviderResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Data Lake Store trusted identity provider information.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static CompletableFuture<GetTrustedIdProviderResult> getTrustedIdProviderPlain(GetTrustedIdProviderPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getTrustedIdProvider", TypeShape.of(GetTrustedIdProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Data Lake Store virtual network rule information.
@@ -79,7 +132,23 @@ public final class DatalakestoreFunctions {
      * API Version: 2016-11-01.
      * 
      */
+    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRulePlain(GetVirtualNetworkRulePlainArgs args) {
+        return getVirtualNetworkRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Data Lake Store virtual network rule information.
+     * API Version: 2016-11-01.
+     * 
+     */
     public static Output<GetVirtualNetworkRuleResult> getVirtualNetworkRule(GetVirtualNetworkRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:datalakestore:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Data Lake Store virtual network rule information.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static CompletableFuture<GetVirtualNetworkRuleResult> getVirtualNetworkRulePlain(GetVirtualNetworkRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -9,9 +9,12 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GetInstanceArgs;
+import com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GetInstancePlainArgs;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GetWorkerPoolArgs;
+import com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GetWorkerPoolPlainArgs;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GetInstanceResult;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GetWorkerPoolResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Remotebuildexecution_v1alphaFunctions {
     /**
@@ -25,8 +28,22 @@ public final class Remotebuildexecution_v1alphaFunctions {
      * Returns the specified instance.
      * 
      */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args) {
+        return getInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified instance.
+     * 
+     */
     public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:remotebuildexecution/v1alpha:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified instance.
+     * 
+     */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:remotebuildexecution/v1alpha:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified worker pool.
@@ -39,7 +56,21 @@ public final class Remotebuildexecution_v1alphaFunctions {
      * Returns the specified worker pool.
      * 
      */
+    public static CompletableFuture<GetWorkerPoolResult> getWorkerPoolPlain(GetWorkerPoolPlainArgs args) {
+        return getWorkerPoolPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns the specified worker pool.
+     * 
+     */
     public static Output<GetWorkerPoolResult> getWorkerPool(GetWorkerPoolArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:remotebuildexecution/v1alpha:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified worker pool.
+     * 
+     */
+    public static CompletableFuture<GetWorkerPoolResult> getWorkerPoolPlain(GetWorkerPoolPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:remotebuildexecution/v1alpha:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args, Utilities.withVersion(options));
     }
 }

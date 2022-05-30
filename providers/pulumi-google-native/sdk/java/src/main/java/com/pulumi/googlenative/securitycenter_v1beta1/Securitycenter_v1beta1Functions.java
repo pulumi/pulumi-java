@@ -9,9 +9,12 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.securitycenter_v1beta1.inputs.GetOrganizationSourceIamPolicyArgs;
+import com.pulumi.googlenative.securitycenter_v1beta1.inputs.GetOrganizationSourceIamPolicyPlainArgs;
 import com.pulumi.googlenative.securitycenter_v1beta1.inputs.GetSourceArgs;
+import com.pulumi.googlenative.securitycenter_v1beta1.inputs.GetSourcePlainArgs;
 import com.pulumi.googlenative.securitycenter_v1beta1.outputs.GetOrganizationSourceIamPolicyResult;
 import com.pulumi.googlenative.securitycenter_v1beta1.outputs.GetSourceResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Securitycenter_v1beta1Functions {
     /**
@@ -25,8 +28,22 @@ public final class Securitycenter_v1beta1Functions {
      * Gets the access control policy on the specified Source.
      * 
      */
+    public static CompletableFuture<GetOrganizationSourceIamPolicyResult> getOrganizationSourceIamPolicyPlain(GetOrganizationSourceIamPolicyPlainArgs args) {
+        return getOrganizationSourceIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy on the specified Source.
+     * 
+     */
     public static Output<GetOrganizationSourceIamPolicyResult> getOrganizationSourceIamPolicy(GetOrganizationSourceIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:securitycenter/v1beta1:getOrganizationSourceIamPolicy", TypeShape.of(GetOrganizationSourceIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy on the specified Source.
+     * 
+     */
+    public static CompletableFuture<GetOrganizationSourceIamPolicyResult> getOrganizationSourceIamPolicyPlain(GetOrganizationSourceIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1beta1:getOrganizationSourceIamPolicy", TypeShape.of(GetOrganizationSourceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets a source.
@@ -39,7 +56,21 @@ public final class Securitycenter_v1beta1Functions {
      * Gets a source.
      * 
      */
+    public static CompletableFuture<GetSourceResult> getSourcePlain(GetSourcePlainArgs args) {
+        return getSourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a source.
+     * 
+     */
     public static Output<GetSourceResult> getSource(GetSourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:securitycenter/v1beta1:getSource", TypeShape.of(GetSourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a source.
+     * 
+     */
+    public static CompletableFuture<GetSourceResult> getSourcePlain(GetSourcePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1beta1:getSource", TypeShape.of(GetSourceResult.class), args, Utilities.withVersion(options));
     }
 }

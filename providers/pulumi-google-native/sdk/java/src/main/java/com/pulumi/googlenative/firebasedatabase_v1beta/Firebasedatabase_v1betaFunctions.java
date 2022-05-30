@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.firebasedatabase_v1beta.inputs.GetInstanceArgs;
+import com.pulumi.googlenative.firebasedatabase_v1beta.inputs.GetInstancePlainArgs;
 import com.pulumi.googlenative.firebasedatabase_v1beta.outputs.GetInstanceResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Firebasedatabase_v1betaFunctions {
     /**
@@ -23,7 +25,21 @@ public final class Firebasedatabase_v1betaFunctions {
      * Gets the DatabaseInstance identified by the specified resource name.
      * 
      */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args) {
+        return getInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the DatabaseInstance identified by the specified resource name.
+     * 
+     */
     public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:firebasedatabase/v1beta:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the DatabaseInstance identified by the specified resource name.
+     * 
+     */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:firebasedatabase/v1beta:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -10,14 +10,20 @@ import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.networkconnectivity_v1.inputs.GetHubArgs;
 import com.pulumi.googlenative.networkconnectivity_v1.inputs.GetHubIamPolicyArgs;
+import com.pulumi.googlenative.networkconnectivity_v1.inputs.GetHubIamPolicyPlainArgs;
+import com.pulumi.googlenative.networkconnectivity_v1.inputs.GetHubPlainArgs;
 import com.pulumi.googlenative.networkconnectivity_v1.inputs.GetPolicyBasedRouteIamPolicyArgs;
+import com.pulumi.googlenative.networkconnectivity_v1.inputs.GetPolicyBasedRouteIamPolicyPlainArgs;
 import com.pulumi.googlenative.networkconnectivity_v1.inputs.GetSpokeArgs;
 import com.pulumi.googlenative.networkconnectivity_v1.inputs.GetSpokeIamPolicyArgs;
+import com.pulumi.googlenative.networkconnectivity_v1.inputs.GetSpokeIamPolicyPlainArgs;
+import com.pulumi.googlenative.networkconnectivity_v1.inputs.GetSpokePlainArgs;
 import com.pulumi.googlenative.networkconnectivity_v1.outputs.GetHubIamPolicyResult;
 import com.pulumi.googlenative.networkconnectivity_v1.outputs.GetHubResult;
 import com.pulumi.googlenative.networkconnectivity_v1.outputs.GetPolicyBasedRouteIamPolicyResult;
 import com.pulumi.googlenative.networkconnectivity_v1.outputs.GetSpokeIamPolicyResult;
 import com.pulumi.googlenative.networkconnectivity_v1.outputs.GetSpokeResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Networkconnectivity_v1Functions {
     /**
@@ -31,8 +37,22 @@ public final class Networkconnectivity_v1Functions {
      * Gets details about the specified hub.
      * 
      */
+    public static CompletableFuture<GetHubResult> getHubPlain(GetHubPlainArgs args) {
+        return getHubPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets details about the specified hub.
+     * 
+     */
     public static Output<GetHubResult> getHub(GetHubArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkconnectivity/v1:getHub", TypeShape.of(GetHubResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets details about the specified hub.
+     * 
+     */
+    public static CompletableFuture<GetHubResult> getHubPlain(GetHubPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getHub", TypeShape.of(GetHubResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -45,8 +65,22 @@ public final class Networkconnectivity_v1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetHubIamPolicyResult> getHubIamPolicyPlain(GetHubIamPolicyPlainArgs args) {
+        return getHubIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetHubIamPolicyResult> getHubIamPolicy(GetHubIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkconnectivity/v1:getHubIamPolicy", TypeShape.of(GetHubIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetHubIamPolicyResult> getHubIamPolicyPlain(GetHubIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getHubIamPolicy", TypeShape.of(GetHubIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -59,8 +93,22 @@ public final class Networkconnectivity_v1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetPolicyBasedRouteIamPolicyResult> getPolicyBasedRouteIamPolicyPlain(GetPolicyBasedRouteIamPolicyPlainArgs args) {
+        return getPolicyBasedRouteIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetPolicyBasedRouteIamPolicyResult> getPolicyBasedRouteIamPolicy(GetPolicyBasedRouteIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkconnectivity/v1:getPolicyBasedRouteIamPolicy", TypeShape.of(GetPolicyBasedRouteIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetPolicyBasedRouteIamPolicyResult> getPolicyBasedRouteIamPolicyPlain(GetPolicyBasedRouteIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getPolicyBasedRouteIamPolicy", TypeShape.of(GetPolicyBasedRouteIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets details about the specified spoke.
@@ -73,8 +121,22 @@ public final class Networkconnectivity_v1Functions {
      * Gets details about the specified spoke.
      * 
      */
+    public static CompletableFuture<GetSpokeResult> getSpokePlain(GetSpokePlainArgs args) {
+        return getSpokePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets details about the specified spoke.
+     * 
+     */
     public static Output<GetSpokeResult> getSpoke(GetSpokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkconnectivity/v1:getSpoke", TypeShape.of(GetSpokeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets details about the specified spoke.
+     * 
+     */
+    public static CompletableFuture<GetSpokeResult> getSpokePlain(GetSpokePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getSpoke", TypeShape.of(GetSpokeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -87,7 +149,21 @@ public final class Networkconnectivity_v1Functions {
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
+    public static CompletableFuture<GetSpokeIamPolicyResult> getSpokeIamPolicyPlain(GetSpokeIamPolicyPlainArgs args) {
+        return getSpokeIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static Output<GetSpokeIamPolicyResult> getSpokeIamPolicy(GetSpokeIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:networkconnectivity/v1:getSpokeIamPolicy", TypeShape.of(GetSpokeIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetSpokeIamPolicyResult> getSpokeIamPolicyPlain(GetSpokeIamPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1:getSpokeIamPolicy", TypeShape.of(GetSpokeIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

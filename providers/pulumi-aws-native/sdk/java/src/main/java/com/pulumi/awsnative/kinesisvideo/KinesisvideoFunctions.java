@@ -5,13 +5,16 @@ package com.pulumi.awsnative.kinesisvideo;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.kinesisvideo.inputs.GetSignalingChannelArgs;
+import com.pulumi.awsnative.kinesisvideo.inputs.GetSignalingChannelPlainArgs;
 import com.pulumi.awsnative.kinesisvideo.inputs.GetStreamArgs;
+import com.pulumi.awsnative.kinesisvideo.inputs.GetStreamPlainArgs;
 import com.pulumi.awsnative.kinesisvideo.outputs.GetSignalingChannelResult;
 import com.pulumi.awsnative.kinesisvideo.outputs.GetStreamResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class KinesisvideoFunctions {
     /**
@@ -25,8 +28,22 @@ public final class KinesisvideoFunctions {
      * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
      * 
      */
+    public static CompletableFuture<GetSignalingChannelResult> getSignalingChannelPlain(GetSignalingChannelPlainArgs args) {
+        return getSignalingChannelPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
+     * 
+     */
     public static Output<GetSignalingChannelResult> getSignalingChannel(GetSignalingChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:kinesisvideo:getSignalingChannel", TypeShape.of(GetSignalingChannelResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type Definition for AWS::KinesisVideo::SignalingChannel
+     * 
+     */
+    public static CompletableFuture<GetSignalingChannelResult> getSignalingChannelPlain(GetSignalingChannelPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:kinesisvideo:getSignalingChannel", TypeShape.of(GetSignalingChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type Definition for AWS::KinesisVideo::Stream
@@ -39,7 +56,21 @@ public final class KinesisvideoFunctions {
      * Resource Type Definition for AWS::KinesisVideo::Stream
      * 
      */
+    public static CompletableFuture<GetStreamResult> getStreamPlain(GetStreamPlainArgs args) {
+        return getStreamPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type Definition for AWS::KinesisVideo::Stream
+     * 
+     */
     public static Output<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:kinesisvideo:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type Definition for AWS::KinesisVideo::Stream
+     * 
+     */
+    public static CompletableFuture<GetStreamResult> getStreamPlain(GetStreamPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:kinesisvideo:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }
 }

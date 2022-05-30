@@ -8,15 +8,25 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.DataConnectivity.inputs.GetRegistriesArgs;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistriesPlainArgs;
 import com.pulumi.oci.DataConnectivity.inputs.GetRegistryArgs;
 import com.pulumi.oci.DataConnectivity.inputs.GetRegistryConnectionArgs;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryConnectionPlainArgs;
 import com.pulumi.oci.DataConnectivity.inputs.GetRegistryConnectionsArgs;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryConnectionsPlainArgs;
 import com.pulumi.oci.DataConnectivity.inputs.GetRegistryDataAssetArgs;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryDataAssetPlainArgs;
 import com.pulumi.oci.DataConnectivity.inputs.GetRegistryDataAssetsArgs;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryDataAssetsPlainArgs;
 import com.pulumi.oci.DataConnectivity.inputs.GetRegistryFolderArgs;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryFolderPlainArgs;
 import com.pulumi.oci.DataConnectivity.inputs.GetRegistryFoldersArgs;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryFoldersPlainArgs;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryPlainArgs;
 import com.pulumi.oci.DataConnectivity.inputs.GetRegistryTypeArgs;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryTypePlainArgs;
 import com.pulumi.oci.DataConnectivity.inputs.GetRegistryTypesArgs;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryTypesPlainArgs;
 import com.pulumi.oci.DataConnectivity.outputs.GetRegistriesResult;
 import com.pulumi.oci.DataConnectivity.outputs.GetRegistryConnectionResult;
 import com.pulumi.oci.DataConnectivity.outputs.GetRegistryConnectionsResult;
@@ -28,6 +38,7 @@ import com.pulumi.oci.DataConnectivity.outputs.GetRegistryResult;
 import com.pulumi.oci.DataConnectivity.outputs.GetRegistryTypeResult;
 import com.pulumi.oci.DataConnectivity.outputs.GetRegistryTypesResult;
 import com.pulumi.oci.Utilities;
+import java.util.concurrent.CompletableFuture;
 
 public final class DataConnectivityFunctions {
     /**
@@ -49,8 +60,30 @@ public final class DataConnectivityFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRegistriesResult> getRegistriesPlain(GetRegistriesPlainArgs args) {
+        return getRegistriesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Registries in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Returns a list of Data Connectivity Management Registries.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRegistriesResult> getRegistries(GetRegistriesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:DataConnectivity/getRegistries:getRegistries", TypeShape.of(GetRegistriesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Registries in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Returns a list of Data Connectivity Management Registries.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegistriesResult> getRegistriesPlain(GetRegistriesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:DataConnectivity/getRegistries:getRegistries", TypeShape.of(GetRegistriesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Registry resource in Oracle Cloud Infrastructure Data Connectivity service.
@@ -71,8 +104,30 @@ public final class DataConnectivityFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRegistryResult> getRegistryPlain(GetRegistryPlainArgs args) {
+        return getRegistryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Registry resource in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Gets a Data Connectivity Management Registry by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRegistryResult> getRegistry(GetRegistryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:DataConnectivity/getRegistry:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Registry resource in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Gets a Data Connectivity Management Registry by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegistryResult> getRegistryPlain(GetRegistryPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:DataConnectivity/getRegistry:getRegistry", TypeShape.of(GetRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Registry Connection resource in Oracle Cloud Infrastructure Data Connectivity service.
@@ -93,8 +148,30 @@ public final class DataConnectivityFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRegistryConnectionResult> getRegistryConnectionPlain(GetRegistryConnectionPlainArgs args) {
+        return getRegistryConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Registry Connection resource in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves the connection details using the specified identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRegistryConnectionResult> getRegistryConnection(GetRegistryConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:DataConnectivity/getRegistryConnection:getRegistryConnection", TypeShape.of(GetRegistryConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Registry Connection resource in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves the connection details using the specified identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegistryConnectionResult> getRegistryConnectionPlain(GetRegistryConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:DataConnectivity/getRegistryConnection:getRegistryConnection", TypeShape.of(GetRegistryConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Registry Connections in Oracle Cloud Infrastructure Data Connectivity service.
@@ -115,8 +192,30 @@ public final class DataConnectivityFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRegistryConnectionsResult> getRegistryConnectionsPlain(GetRegistryConnectionsPlainArgs args) {
+        return getRegistryConnectionsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Registry Connections in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves a list of all connections.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRegistryConnectionsResult> getRegistryConnections(GetRegistryConnectionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:DataConnectivity/getRegistryConnections:getRegistryConnections", TypeShape.of(GetRegistryConnectionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Registry Connections in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves a list of all connections.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegistryConnectionsResult> getRegistryConnectionsPlain(GetRegistryConnectionsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:DataConnectivity/getRegistryConnections:getRegistryConnections", TypeShape.of(GetRegistryConnectionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Registry Data Asset resource in Oracle Cloud Infrastructure Data Connectivity service.
@@ -137,8 +236,30 @@ public final class DataConnectivityFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRegistryDataAssetResult> getRegistryDataAssetPlain(GetRegistryDataAssetPlainArgs args) {
+        return getRegistryDataAssetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Registry Data Asset resource in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves details of a data asset using the specified identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRegistryDataAssetResult> getRegistryDataAsset(GetRegistryDataAssetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:DataConnectivity/getRegistryDataAsset:getRegistryDataAsset", TypeShape.of(GetRegistryDataAssetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Registry Data Asset resource in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves details of a data asset using the specified identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegistryDataAssetResult> getRegistryDataAssetPlain(GetRegistryDataAssetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:DataConnectivity/getRegistryDataAsset:getRegistryDataAsset", TypeShape.of(GetRegistryDataAssetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Registry Data Assets in Oracle Cloud Infrastructure Data Connectivity service.
@@ -159,8 +280,30 @@ public final class DataConnectivityFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRegistryDataAssetsResult> getRegistryDataAssetsPlain(GetRegistryDataAssetsPlainArgs args) {
+        return getRegistryDataAssetsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Registry Data Assets in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves a list of all data asset summaries.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRegistryDataAssetsResult> getRegistryDataAssets(GetRegistryDataAssetsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:DataConnectivity/getRegistryDataAssets:getRegistryDataAssets", TypeShape.of(GetRegistryDataAssetsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Registry Data Assets in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves a list of all data asset summaries.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegistryDataAssetsResult> getRegistryDataAssetsPlain(GetRegistryDataAssetsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:DataConnectivity/getRegistryDataAssets:getRegistryDataAssets", TypeShape.of(GetRegistryDataAssetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Registry Folder resource in Oracle Cloud Infrastructure Data Connectivity service.
@@ -181,8 +324,30 @@ public final class DataConnectivityFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRegistryFolderResult> getRegistryFolderPlain(GetRegistryFolderPlainArgs args) {
+        return getRegistryFolderPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Registry Folder resource in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves the folder details using the specified identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRegistryFolderResult> getRegistryFolder(GetRegistryFolderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:DataConnectivity/getRegistryFolder:getRegistryFolder", TypeShape.of(GetRegistryFolderResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Registry Folder resource in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves the folder details using the specified identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegistryFolderResult> getRegistryFolderPlain(GetRegistryFolderPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:DataConnectivity/getRegistryFolder:getRegistryFolder", TypeShape.of(GetRegistryFolderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Registry Folders in Oracle Cloud Infrastructure Data Connectivity service.
@@ -203,8 +368,30 @@ public final class DataConnectivityFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRegistryFoldersResult> getRegistryFoldersPlain(GetRegistryFoldersPlainArgs args) {
+        return getRegistryFoldersPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Registry Folders in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves a list of all folders.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRegistryFoldersResult> getRegistryFolders(GetRegistryFoldersArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:DataConnectivity/getRegistryFolders:getRegistryFolders", TypeShape.of(GetRegistryFoldersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Registry Folders in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * Retrieves a list of all folders.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegistryFoldersResult> getRegistryFoldersPlain(GetRegistryFoldersPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:DataConnectivity/getRegistryFolders:getRegistryFolders", TypeShape.of(GetRegistryFoldersResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Registry Type resource in Oracle Cloud Infrastructure Data Connectivity service.
@@ -225,8 +412,30 @@ public final class DataConnectivityFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRegistryTypeResult> getRegistryTypePlain(GetRegistryTypePlainArgs args) {
+        return getRegistryTypePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Registry Type resource in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * This endpoint retrieves dataAsset and connection attributes from DataAssetRegistry
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRegistryTypeResult> getRegistryType(GetRegistryTypeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:DataConnectivity/getRegistryType:getRegistryType", TypeShape.of(GetRegistryTypeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Registry Type resource in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * This endpoint retrieves dataAsset and connection attributes from DataAssetRegistry
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegistryTypeResult> getRegistryTypePlain(GetRegistryTypePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:DataConnectivity/getRegistryType:getRegistryType", TypeShape.of(GetRegistryTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Registry Types in Oracle Cloud Infrastructure Data Connectivity service.
@@ -247,7 +456,29 @@ public final class DataConnectivityFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetRegistryTypesResult> getRegistryTypesPlain(GetRegistryTypesPlainArgs args) {
+        return getRegistryTypesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Registry Types in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * This endpoint retrieves list of all the supported connector types
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetRegistryTypesResult> getRegistryTypes(GetRegistryTypesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:DataConnectivity/getRegistryTypes:getRegistryTypes", TypeShape.of(GetRegistryTypesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Registry Types in Oracle Cloud Infrastructure Data Connectivity service.
+     * 
+     * This endpoint retrieves list of all the supported connector types
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegistryTypesResult> getRegistryTypesPlain(GetRegistryTypesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:DataConnectivity/getRegistryTypes:getRegistryTypes", TypeShape.of(GetRegistryTypesResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -8,13 +8,21 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.AiAnomalyDetection.inputs.GetAiPrivateEndpointArgs;
+import com.pulumi.oci.AiAnomalyDetection.inputs.GetAiPrivateEndpointPlainArgs;
 import com.pulumi.oci.AiAnomalyDetection.inputs.GetAiPrivateEndpointsArgs;
+import com.pulumi.oci.AiAnomalyDetection.inputs.GetAiPrivateEndpointsPlainArgs;
 import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionDataAssetArgs;
+import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionDataAssetPlainArgs;
 import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionDataAssetsArgs;
+import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionDataAssetsPlainArgs;
 import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionModelArgs;
+import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionModelPlainArgs;
 import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionModelsArgs;
+import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionModelsPlainArgs;
 import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionProjectArgs;
+import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionProjectPlainArgs;
 import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionProjectsArgs;
+import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionProjectsPlainArgs;
 import com.pulumi.oci.AiAnomalyDetection.outputs.GetAiPrivateEndpointResult;
 import com.pulumi.oci.AiAnomalyDetection.outputs.GetAiPrivateEndpointsResult;
 import com.pulumi.oci.AiAnomalyDetection.outputs.GetDetectionDataAssetResult;
@@ -24,6 +32,7 @@ import com.pulumi.oci.AiAnomalyDetection.outputs.GetDetectionModelsResult;
 import com.pulumi.oci.AiAnomalyDetection.outputs.GetDetectionProjectResult;
 import com.pulumi.oci.AiAnomalyDetection.outputs.GetDetectionProjectsResult;
 import com.pulumi.oci.Utilities;
+import java.util.concurrent.CompletableFuture;
 
 public final class AiAnomalyDetectionFunctions {
     /**
@@ -45,8 +54,30 @@ public final class AiAnomalyDetectionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetAiPrivateEndpointResult> getAiPrivateEndpointPlain(GetAiPrivateEndpointPlainArgs args) {
+        return getAiPrivateEndpointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Ai Private Endpoint resource in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Gets a specific private reverse connection by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetAiPrivateEndpointResult> getAiPrivateEndpoint(GetAiPrivateEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:AiAnomalyDetection/getAiPrivateEndpoint:getAiPrivateEndpoint", TypeShape.of(GetAiPrivateEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Ai Private Endpoint resource in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Gets a specific private reverse connection by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAiPrivateEndpointResult> getAiPrivateEndpointPlain(GetAiPrivateEndpointPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:AiAnomalyDetection/getAiPrivateEndpoint:getAiPrivateEndpoint", TypeShape.of(GetAiPrivateEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Ai Private Endpoints in Oracle Cloud Infrastructure Ai Anomaly Detection service.
@@ -67,8 +98,30 @@ public final class AiAnomalyDetectionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetAiPrivateEndpointsResult> getAiPrivateEndpointsPlain(GetAiPrivateEndpointsPlainArgs args) {
+        return getAiPrivateEndpointsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Ai Private Endpoints in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Returns a list of all the AI private endpoints in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetAiPrivateEndpointsResult> getAiPrivateEndpoints(GetAiPrivateEndpointsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:AiAnomalyDetection/getAiPrivateEndpoints:getAiPrivateEndpoints", TypeShape.of(GetAiPrivateEndpointsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Ai Private Endpoints in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Returns a list of all the AI private endpoints in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAiPrivateEndpointsResult> getAiPrivateEndpointsPlain(GetAiPrivateEndpointsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:AiAnomalyDetection/getAiPrivateEndpoints:getAiPrivateEndpoints", TypeShape.of(GetAiPrivateEndpointsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Data Asset resource in Oracle Cloud Infrastructure Ai Anomaly Detection service.
@@ -89,8 +142,30 @@ public final class AiAnomalyDetectionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetDetectionDataAssetResult> getDetectionDataAssetPlain(GetDetectionDataAssetPlainArgs args) {
+        return getDetectionDataAssetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Data Asset resource in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Gets a DataAsset by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetDetectionDataAssetResult> getDetectionDataAsset(GetDetectionDataAssetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:AiAnomalyDetection/getDetectionDataAsset:getDetectionDataAsset", TypeShape.of(GetDetectionDataAssetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Data Asset resource in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Gets a DataAsset by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDetectionDataAssetResult> getDetectionDataAssetPlain(GetDetectionDataAssetPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:AiAnomalyDetection/getDetectionDataAsset:getDetectionDataAsset", TypeShape.of(GetDetectionDataAssetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Data Assets in Oracle Cloud Infrastructure Ai Anomaly Detection service.
@@ -111,8 +186,30 @@ public final class AiAnomalyDetectionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetDetectionDataAssetsResult> getDetectionDataAssetsPlain(GetDetectionDataAssetsPlainArgs args) {
+        return getDetectionDataAssetsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Data Assets in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Returns a list of DataAssets.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetDetectionDataAssetsResult> getDetectionDataAssets(GetDetectionDataAssetsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:AiAnomalyDetection/getDetectionDataAssets:getDetectionDataAssets", TypeShape.of(GetDetectionDataAssetsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Data Assets in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Returns a list of DataAssets.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDetectionDataAssetsResult> getDetectionDataAssetsPlain(GetDetectionDataAssetsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:AiAnomalyDetection/getDetectionDataAssets:getDetectionDataAssets", TypeShape.of(GetDetectionDataAssetsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Model resource in Oracle Cloud Infrastructure Ai Anomaly Detection service.
@@ -133,8 +230,30 @@ public final class AiAnomalyDetectionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetDetectionModelResult> getDetectionModelPlain(GetDetectionModelPlainArgs args) {
+        return getDetectionModelPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Model resource in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Gets a Model by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetDetectionModelResult> getDetectionModel(GetDetectionModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:AiAnomalyDetection/getDetectionModel:getDetectionModel", TypeShape.of(GetDetectionModelResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Model resource in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Gets a Model by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDetectionModelResult> getDetectionModelPlain(GetDetectionModelPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:AiAnomalyDetection/getDetectionModel:getDetectionModel", TypeShape.of(GetDetectionModelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Models in Oracle Cloud Infrastructure Ai Anomaly Detection service.
@@ -155,8 +274,30 @@ public final class AiAnomalyDetectionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetDetectionModelsResult> getDetectionModelsPlain(GetDetectionModelsPlainArgs args) {
+        return getDetectionModelsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Models in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Returns a list of Models.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetDetectionModelsResult> getDetectionModels(GetDetectionModelsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:AiAnomalyDetection/getDetectionModels:getDetectionModels", TypeShape.of(GetDetectionModelsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Models in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Returns a list of Models.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDetectionModelsResult> getDetectionModelsPlain(GetDetectionModelsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:AiAnomalyDetection/getDetectionModels:getDetectionModels", TypeShape.of(GetDetectionModelsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Project resource in Oracle Cloud Infrastructure Ai Anomaly Detection service.
@@ -177,8 +318,30 @@ public final class AiAnomalyDetectionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetDetectionProjectResult> getDetectionProjectPlain(GetDetectionProjectPlainArgs args) {
+        return getDetectionProjectPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Project resource in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Gets a Project by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetDetectionProjectResult> getDetectionProject(GetDetectionProjectArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:AiAnomalyDetection/getDetectionProject:getDetectionProject", TypeShape.of(GetDetectionProjectResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Project resource in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Gets a Project by identifier
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDetectionProjectResult> getDetectionProjectPlain(GetDetectionProjectPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:AiAnomalyDetection/getDetectionProject:getDetectionProject", TypeShape.of(GetDetectionProjectResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Projects in Oracle Cloud Infrastructure Ai Anomaly Detection service.
@@ -199,7 +362,29 @@ public final class AiAnomalyDetectionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetDetectionProjectsResult> getDetectionProjectsPlain(GetDetectionProjectsPlainArgs args) {
+        return getDetectionProjectsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Projects in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Returns a list of  Projects.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetDetectionProjectsResult> getDetectionProjects(GetDetectionProjectsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:AiAnomalyDetection/getDetectionProjects:getDetectionProjects", TypeShape.of(GetDetectionProjectsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Projects in Oracle Cloud Infrastructure Ai Anomaly Detection service.
+     * 
+     * Returns a list of  Projects.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDetectionProjectsResult> getDetectionProjectsPlain(GetDetectionProjectsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:AiAnomalyDetection/getDetectionProjects:getDetectionProjects", TypeShape.of(GetDetectionProjectsResult.class), args, Utilities.withVersion(options));
     }
 }

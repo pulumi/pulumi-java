@@ -5,13 +5,16 @@ package com.pulumi.azurenative.resourceconnector;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.resourceconnector.inputs.GetApplianceArgs;
+import com.pulumi.azurenative.resourceconnector.inputs.GetAppliancePlainArgs;
 import com.pulumi.azurenative.resourceconnector.inputs.ListApplianceClusterUserCredentialArgs;
+import com.pulumi.azurenative.resourceconnector.inputs.ListApplianceClusterUserCredentialPlainArgs;
 import com.pulumi.azurenative.resourceconnector.outputs.GetApplianceResult;
 import com.pulumi.azurenative.resourceconnector.outputs.ListApplianceClusterUserCredentialResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class ResourceconnectorFunctions {
     /**
@@ -27,8 +30,24 @@ public final class ResourceconnectorFunctions {
      * API Version: 2021-10-31-preview.
      * 
      */
+    public static CompletableFuture<GetApplianceResult> getAppliancePlain(GetAppliancePlainArgs args) {
+        return getAppliancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Appliances definition.
+     * API Version: 2021-10-31-preview.
+     * 
+     */
     public static Output<GetApplianceResult> getAppliance(GetApplianceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:resourceconnector:getAppliance", TypeShape.of(GetApplianceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Appliances definition.
+     * API Version: 2021-10-31-preview.
+     * 
+     */
+    public static CompletableFuture<GetApplianceResult> getAppliancePlain(GetAppliancePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:resourceconnector:getAppliance", TypeShape.of(GetApplianceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The List Cluster User Credential appliance.
@@ -43,7 +62,23 @@ public final class ResourceconnectorFunctions {
      * API Version: 2021-10-31-preview.
      * 
      */
+    public static CompletableFuture<ListApplianceClusterUserCredentialResult> listApplianceClusterUserCredentialPlain(ListApplianceClusterUserCredentialPlainArgs args) {
+        return listApplianceClusterUserCredentialPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The List Cluster User Credential appliance.
+     * API Version: 2021-10-31-preview.
+     * 
+     */
     public static Output<ListApplianceClusterUserCredentialResult> listApplianceClusterUserCredential(ListApplianceClusterUserCredentialArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("azure-native:resourceconnector:listApplianceClusterUserCredential", TypeShape.of(ListApplianceClusterUserCredentialResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The List Cluster User Credential appliance.
+     * API Version: 2021-10-31-preview.
+     * 
+     */
+    public static CompletableFuture<ListApplianceClusterUserCredentialResult> listApplianceClusterUserCredentialPlain(ListApplianceClusterUserCredentialPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("azure-native:resourceconnector:listApplianceClusterUserCredential", TypeShape.of(ListApplianceClusterUserCredentialResult.class), args, Utilities.withVersion(options));
     }
 }

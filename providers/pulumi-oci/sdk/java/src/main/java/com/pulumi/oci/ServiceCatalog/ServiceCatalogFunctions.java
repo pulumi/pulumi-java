@@ -9,12 +9,20 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.ServiceCatalog.inputs.GetPrivateApplicationArgs;
 import com.pulumi.oci.ServiceCatalog.inputs.GetPrivateApplicationPackageArgs;
+import com.pulumi.oci.ServiceCatalog.inputs.GetPrivateApplicationPackagePlainArgs;
 import com.pulumi.oci.ServiceCatalog.inputs.GetPrivateApplicationPackagesArgs;
+import com.pulumi.oci.ServiceCatalog.inputs.GetPrivateApplicationPackagesPlainArgs;
+import com.pulumi.oci.ServiceCatalog.inputs.GetPrivateApplicationPlainArgs;
 import com.pulumi.oci.ServiceCatalog.inputs.GetPrivateApplicationsArgs;
+import com.pulumi.oci.ServiceCatalog.inputs.GetPrivateApplicationsPlainArgs;
 import com.pulumi.oci.ServiceCatalog.inputs.GetServiceCatalogArgs;
 import com.pulumi.oci.ServiceCatalog.inputs.GetServiceCatalogAssociationArgs;
+import com.pulumi.oci.ServiceCatalog.inputs.GetServiceCatalogAssociationPlainArgs;
 import com.pulumi.oci.ServiceCatalog.inputs.GetServiceCatalogAssociationsArgs;
+import com.pulumi.oci.ServiceCatalog.inputs.GetServiceCatalogAssociationsPlainArgs;
+import com.pulumi.oci.ServiceCatalog.inputs.GetServiceCatalogPlainArgs;
 import com.pulumi.oci.ServiceCatalog.inputs.GetServiceCatalogsArgs;
+import com.pulumi.oci.ServiceCatalog.inputs.GetServiceCatalogsPlainArgs;
 import com.pulumi.oci.ServiceCatalog.outputs.GetPrivateApplicationPackageResult;
 import com.pulumi.oci.ServiceCatalog.outputs.GetPrivateApplicationPackagesResult;
 import com.pulumi.oci.ServiceCatalog.outputs.GetPrivateApplicationResult;
@@ -24,6 +32,7 @@ import com.pulumi.oci.ServiceCatalog.outputs.GetServiceCatalogAssociationsResult
 import com.pulumi.oci.ServiceCatalog.outputs.GetServiceCatalogResult;
 import com.pulumi.oci.ServiceCatalog.outputs.GetServiceCatalogsResult;
 import com.pulumi.oci.Utilities;
+import java.util.concurrent.CompletableFuture;
 
 public final class ServiceCatalogFunctions {
     /**
@@ -45,8 +54,30 @@ public final class ServiceCatalogFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetPrivateApplicationResult> getPrivateApplicationPlain(GetPrivateApplicationPlainArgs args) {
+        return getPrivateApplicationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Private Application resource in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Gets the details of the specified private application.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetPrivateApplicationResult> getPrivateApplication(GetPrivateApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:ServiceCatalog/getPrivateApplication:getPrivateApplication", TypeShape.of(GetPrivateApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Private Application resource in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Gets the details of the specified private application.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetPrivateApplicationResult> getPrivateApplicationPlain(GetPrivateApplicationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:ServiceCatalog/getPrivateApplication:getPrivateApplication", TypeShape.of(GetPrivateApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Private Application Package resource in Oracle Cloud Infrastructure Service Catalog service.
@@ -67,8 +98,30 @@ public final class ServiceCatalogFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetPrivateApplicationPackageResult> getPrivateApplicationPackagePlain(GetPrivateApplicationPackagePlainArgs args) {
+        return getPrivateApplicationPackagePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Private Application Package resource in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Gets the details of a specific package within a given private application.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetPrivateApplicationPackageResult> getPrivateApplicationPackage(GetPrivateApplicationPackageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:ServiceCatalog/getPrivateApplicationPackage:getPrivateApplicationPackage", TypeShape.of(GetPrivateApplicationPackageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Private Application Package resource in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Gets the details of a specific package within a given private application.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetPrivateApplicationPackageResult> getPrivateApplicationPackagePlain(GetPrivateApplicationPackagePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:ServiceCatalog/getPrivateApplicationPackage:getPrivateApplicationPackage", TypeShape.of(GetPrivateApplicationPackageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Private Application Packages in Oracle Cloud Infrastructure Service Catalog service.
@@ -89,8 +142,30 @@ public final class ServiceCatalogFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetPrivateApplicationPackagesResult> getPrivateApplicationPackagesPlain(GetPrivateApplicationPackagesPlainArgs args) {
+        return getPrivateApplicationPackagesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Private Application Packages in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Lists the packages in the specified private application.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetPrivateApplicationPackagesResult> getPrivateApplicationPackages(GetPrivateApplicationPackagesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:ServiceCatalog/getPrivateApplicationPackages:getPrivateApplicationPackages", TypeShape.of(GetPrivateApplicationPackagesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Private Application Packages in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Lists the packages in the specified private application.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetPrivateApplicationPackagesResult> getPrivateApplicationPackagesPlain(GetPrivateApplicationPackagesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:ServiceCatalog/getPrivateApplicationPackages:getPrivateApplicationPackages", TypeShape.of(GetPrivateApplicationPackagesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Private Applications in Oracle Cloud Infrastructure Service Catalog service.
@@ -111,8 +186,30 @@ public final class ServiceCatalogFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetPrivateApplicationsResult> getPrivateApplicationsPlain(GetPrivateApplicationsPlainArgs args) {
+        return getPrivateApplicationsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Private Applications in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Lists all the private applications in a given compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetPrivateApplicationsResult> getPrivateApplications(GetPrivateApplicationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:ServiceCatalog/getPrivateApplications:getPrivateApplications", TypeShape.of(GetPrivateApplicationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Private Applications in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Lists all the private applications in a given compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetPrivateApplicationsResult> getPrivateApplicationsPlain(GetPrivateApplicationsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:ServiceCatalog/getPrivateApplications:getPrivateApplications", TypeShape.of(GetPrivateApplicationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Service Catalog resource in Oracle Cloud Infrastructure Service Catalog service.
@@ -133,8 +230,30 @@ public final class ServiceCatalogFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetServiceCatalogResult> getServiceCatalogPlain(GetServiceCatalogPlainArgs args) {
+        return getServiceCatalogPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Service Catalog resource in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Gets detailed information about the service catalog including name, compartmentId
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetServiceCatalogResult> getServiceCatalog(GetServiceCatalogArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:ServiceCatalog/getServiceCatalog:getServiceCatalog", TypeShape.of(GetServiceCatalogResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Service Catalog resource in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Gets detailed information about the service catalog including name, compartmentId
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetServiceCatalogResult> getServiceCatalogPlain(GetServiceCatalogPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:ServiceCatalog/getServiceCatalog:getServiceCatalog", TypeShape.of(GetServiceCatalogResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Service Catalog Association resource in Oracle Cloud Infrastructure Service Catalog service.
@@ -155,8 +274,30 @@ public final class ServiceCatalogFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetServiceCatalogAssociationResult> getServiceCatalogAssociationPlain(GetServiceCatalogAssociationPlainArgs args) {
+        return getServiceCatalogAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Service Catalog Association resource in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Gets detailed information about specific service catalog association.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetServiceCatalogAssociationResult> getServiceCatalogAssociation(GetServiceCatalogAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:ServiceCatalog/getServiceCatalogAssociation:getServiceCatalogAssociation", TypeShape.of(GetServiceCatalogAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Service Catalog Association resource in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Gets detailed information about specific service catalog association.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetServiceCatalogAssociationResult> getServiceCatalogAssociationPlain(GetServiceCatalogAssociationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:ServiceCatalog/getServiceCatalogAssociation:getServiceCatalogAssociation", TypeShape.of(GetServiceCatalogAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Service Catalog Associations in Oracle Cloud Infrastructure Service Catalog service.
@@ -177,6 +318,17 @@ public final class ServiceCatalogFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetServiceCatalogAssociationsResult> getServiceCatalogAssociationsPlain() {
+        return getServiceCatalogAssociationsPlain(GetServiceCatalogAssociationsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Service Catalog Associations in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Lists all the resource associations for a specific service catalog.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetServiceCatalogAssociationsResult> getServiceCatalogAssociations(GetServiceCatalogAssociationsArgs args) {
         return getServiceCatalogAssociations(args, InvokeOptions.Empty);
     }
@@ -188,8 +340,30 @@ public final class ServiceCatalogFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetServiceCatalogAssociationsResult> getServiceCatalogAssociationsPlain(GetServiceCatalogAssociationsPlainArgs args) {
+        return getServiceCatalogAssociationsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Service Catalog Associations in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Lists all the resource associations for a specific service catalog.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetServiceCatalogAssociationsResult> getServiceCatalogAssociations(GetServiceCatalogAssociationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:ServiceCatalog/getServiceCatalogAssociations:getServiceCatalogAssociations", TypeShape.of(GetServiceCatalogAssociationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Service Catalog Associations in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Lists all the resource associations for a specific service catalog.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetServiceCatalogAssociationsResult> getServiceCatalogAssociationsPlain(GetServiceCatalogAssociationsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:ServiceCatalog/getServiceCatalogAssociations:getServiceCatalogAssociations", TypeShape.of(GetServiceCatalogAssociationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Service Catalogs in Oracle Cloud Infrastructure Service Catalog service.
@@ -210,7 +384,29 @@ public final class ServiceCatalogFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetServiceCatalogsResult> getServiceCatalogsPlain(GetServiceCatalogsPlainArgs args) {
+        return getServiceCatalogsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Service Catalogs in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Lists all the service catalogs in the given compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetServiceCatalogsResult> getServiceCatalogs(GetServiceCatalogsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:ServiceCatalog/getServiceCatalogs:getServiceCatalogs", TypeShape.of(GetServiceCatalogsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Service Catalogs in Oracle Cloud Infrastructure Service Catalog service.
+     * 
+     * Lists all the service catalogs in the given compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetServiceCatalogsResult> getServiceCatalogsPlain(GetServiceCatalogsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:ServiceCatalog/getServiceCatalogs:getServiceCatalogs", TypeShape.of(GetServiceCatalogsResult.class), args, Utilities.withVersion(options));
     }
 }

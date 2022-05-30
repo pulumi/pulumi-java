@@ -5,11 +5,13 @@ package com.pulumi.awsx.ec2;
 
 import com.pulumi.awsx.Utilities;
 import com.pulumi.awsx.ec2.inputs.GetDefaultVpcArgs;
+import com.pulumi.awsx.ec2.inputs.GetDefaultVpcPlainArgs;
 import com.pulumi.awsx.ec2.outputs.GetDefaultVpcResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class Ec2Functions {
     /**
@@ -31,6 +33,17 @@ public final class Ec2Functions {
      * 
      */
     @Deprecated /* Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved. */
+    public static CompletableFuture<GetDefaultVpcResult> getDefaultVpcPlain() {
+        return getDefaultVpcPlain(GetDefaultVpcPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * [NOT YET IMPLEMENTED] Get the Default VPC for a region.
+     * 
+     * @deprecated
+     * Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved.
+     * 
+     */
+    @Deprecated /* Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved. */
     public static Output<GetDefaultVpcResult> getDefaultVpc(GetDefaultVpcArgs args) {
         return getDefaultVpc(args, InvokeOptions.Empty);
     }
@@ -42,7 +55,29 @@ public final class Ec2Functions {
      * 
      */
     @Deprecated /* Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved. */
+    public static CompletableFuture<GetDefaultVpcResult> getDefaultVpcPlain(GetDefaultVpcPlainArgs args) {
+        return getDefaultVpcPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * [NOT YET IMPLEMENTED] Get the Default VPC for a region.
+     * 
+     * @deprecated
+     * Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved.
+     * 
+     */
+    @Deprecated /* Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved. */
     public static Output<GetDefaultVpcResult> getDefaultVpc(GetDefaultVpcArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("awsx:ec2:getDefaultVpc", TypeShape.of(GetDefaultVpcResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * [NOT YET IMPLEMENTED] Get the Default VPC for a region.
+     * 
+     * @deprecated
+     * Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved.
+     * 
+     */
+    @Deprecated /* Waiting for https://github.com/pulumi/pulumi/issues/7583. Use the DefaultVpc resource until resolved. */
+    public static CompletableFuture<GetDefaultVpcResult> getDefaultVpcPlain(GetDefaultVpcPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("awsx:ec2:getDefaultVpc", TypeShape.of(GetDefaultVpcResult.class), args, Utilities.withVersion(options));
     }
 }

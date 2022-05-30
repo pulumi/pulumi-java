@@ -9,13 +9,18 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.datastream_v1.inputs.GetConnectionProfileArgs;
+import com.pulumi.googlenative.datastream_v1.inputs.GetConnectionProfilePlainArgs;
 import com.pulumi.googlenative.datastream_v1.inputs.GetPrivateConnectionArgs;
+import com.pulumi.googlenative.datastream_v1.inputs.GetPrivateConnectionPlainArgs;
 import com.pulumi.googlenative.datastream_v1.inputs.GetRouteArgs;
+import com.pulumi.googlenative.datastream_v1.inputs.GetRoutePlainArgs;
 import com.pulumi.googlenative.datastream_v1.inputs.GetStreamArgs;
+import com.pulumi.googlenative.datastream_v1.inputs.GetStreamPlainArgs;
 import com.pulumi.googlenative.datastream_v1.outputs.GetConnectionProfileResult;
 import com.pulumi.googlenative.datastream_v1.outputs.GetPrivateConnectionResult;
 import com.pulumi.googlenative.datastream_v1.outputs.GetRouteResult;
 import com.pulumi.googlenative.datastream_v1.outputs.GetStreamResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Datastream_v1Functions {
     /**
@@ -29,8 +34,22 @@ public final class Datastream_v1Functions {
      * Use this method to get details about a connection profile.
      * 
      */
+    public static CompletableFuture<GetConnectionProfileResult> getConnectionProfilePlain(GetConnectionProfilePlainArgs args) {
+        return getConnectionProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this method to get details about a connection profile.
+     * 
+     */
     public static Output<GetConnectionProfileResult> getConnectionProfile(GetConnectionProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:datastream/v1:getConnectionProfile", TypeShape.of(GetConnectionProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this method to get details about a connection profile.
+     * 
+     */
+    public static CompletableFuture<GetConnectionProfileResult> getConnectionProfilePlain(GetConnectionProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getConnectionProfile", TypeShape.of(GetConnectionProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this method to get details about a private connectivity configuration.
@@ -43,8 +62,22 @@ public final class Datastream_v1Functions {
      * Use this method to get details about a private connectivity configuration.
      * 
      */
+    public static CompletableFuture<GetPrivateConnectionResult> getPrivateConnectionPlain(GetPrivateConnectionPlainArgs args) {
+        return getPrivateConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this method to get details about a private connectivity configuration.
+     * 
+     */
     public static Output<GetPrivateConnectionResult> getPrivateConnection(GetPrivateConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:datastream/v1:getPrivateConnection", TypeShape.of(GetPrivateConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this method to get details about a private connectivity configuration.
+     * 
+     */
+    public static CompletableFuture<GetPrivateConnectionResult> getPrivateConnectionPlain(GetPrivateConnectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getPrivateConnection", TypeShape.of(GetPrivateConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this method to get details about a route.
@@ -57,8 +90,22 @@ public final class Datastream_v1Functions {
      * Use this method to get details about a route.
      * 
      */
+    public static CompletableFuture<GetRouteResult> getRoutePlain(GetRoutePlainArgs args) {
+        return getRoutePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this method to get details about a route.
+     * 
+     */
     public static Output<GetRouteResult> getRoute(GetRouteArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:datastream/v1:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this method to get details about a route.
+     * 
+     */
+    public static CompletableFuture<GetRouteResult> getRoutePlain(GetRoutePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getRoute", TypeShape.of(GetRouteResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this method to get details about a stream.
@@ -71,7 +118,21 @@ public final class Datastream_v1Functions {
      * Use this method to get details about a stream.
      * 
      */
+    public static CompletableFuture<GetStreamResult> getStreamPlain(GetStreamPlainArgs args) {
+        return getStreamPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this method to get details about a stream.
+     * 
+     */
     public static Output<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:datastream/v1:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this method to get details about a stream.
+     * 
+     */
+    public static CompletableFuture<GetStreamResult> getStreamPlain(GetStreamPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:datastream/v1:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }
 }

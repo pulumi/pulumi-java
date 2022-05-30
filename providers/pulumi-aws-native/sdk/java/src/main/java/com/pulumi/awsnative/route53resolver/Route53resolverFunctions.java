@@ -5,14 +5,23 @@ package com.pulumi.awsnative.route53resolver;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.route53resolver.inputs.GetFirewallDomainListArgs;
+import com.pulumi.awsnative.route53resolver.inputs.GetFirewallDomainListPlainArgs;
 import com.pulumi.awsnative.route53resolver.inputs.GetFirewallRuleGroupArgs;
 import com.pulumi.awsnative.route53resolver.inputs.GetFirewallRuleGroupAssociationArgs;
+import com.pulumi.awsnative.route53resolver.inputs.GetFirewallRuleGroupAssociationPlainArgs;
+import com.pulumi.awsnative.route53resolver.inputs.GetFirewallRuleGroupPlainArgs;
 import com.pulumi.awsnative.route53resolver.inputs.GetResolverConfigArgs;
+import com.pulumi.awsnative.route53resolver.inputs.GetResolverConfigPlainArgs;
 import com.pulumi.awsnative.route53resolver.inputs.GetResolverDNSSECConfigArgs;
+import com.pulumi.awsnative.route53resolver.inputs.GetResolverDNSSECConfigPlainArgs;
 import com.pulumi.awsnative.route53resolver.inputs.GetResolverQueryLoggingConfigArgs;
 import com.pulumi.awsnative.route53resolver.inputs.GetResolverQueryLoggingConfigAssociationArgs;
+import com.pulumi.awsnative.route53resolver.inputs.GetResolverQueryLoggingConfigAssociationPlainArgs;
+import com.pulumi.awsnative.route53resolver.inputs.GetResolverQueryLoggingConfigPlainArgs;
 import com.pulumi.awsnative.route53resolver.inputs.GetResolverRuleArgs;
 import com.pulumi.awsnative.route53resolver.inputs.GetResolverRuleAssociationArgs;
+import com.pulumi.awsnative.route53resolver.inputs.GetResolverRuleAssociationPlainArgs;
+import com.pulumi.awsnative.route53resolver.inputs.GetResolverRulePlainArgs;
 import com.pulumi.awsnative.route53resolver.outputs.GetFirewallDomainListResult;
 import com.pulumi.awsnative.route53resolver.outputs.GetFirewallRuleGroupAssociationResult;
 import com.pulumi.awsnative.route53resolver.outputs.GetFirewallRuleGroupResult;
@@ -26,6 +35,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class Route53resolverFunctions {
     /**
@@ -39,8 +49,22 @@ public final class Route53resolverFunctions {
      * Resource schema for AWS::Route53Resolver::FirewallDomainList.
      * 
      */
+    public static CompletableFuture<GetFirewallDomainListResult> getFirewallDomainListPlain(GetFirewallDomainListPlainArgs args) {
+        return getFirewallDomainListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::FirewallDomainList.
+     * 
+     */
     public static Output<GetFirewallDomainListResult> getFirewallDomainList(GetFirewallDomainListArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53resolver:getFirewallDomainList", TypeShape.of(GetFirewallDomainListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::FirewallDomainList.
+     * 
+     */
+    public static CompletableFuture<GetFirewallDomainListResult> getFirewallDomainListPlain(GetFirewallDomainListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getFirewallDomainList", TypeShape.of(GetFirewallDomainListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Route53Resolver::FirewallRuleGroup.
@@ -53,8 +77,22 @@ public final class Route53resolverFunctions {
      * Resource schema for AWS::Route53Resolver::FirewallRuleGroup.
      * 
      */
+    public static CompletableFuture<GetFirewallRuleGroupResult> getFirewallRuleGroupPlain(GetFirewallRuleGroupPlainArgs args) {
+        return getFirewallRuleGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::FirewallRuleGroup.
+     * 
+     */
     public static Output<GetFirewallRuleGroupResult> getFirewallRuleGroup(GetFirewallRuleGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53resolver:getFirewallRuleGroup", TypeShape.of(GetFirewallRuleGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::FirewallRuleGroup.
+     * 
+     */
+    public static CompletableFuture<GetFirewallRuleGroupResult> getFirewallRuleGroupPlain(GetFirewallRuleGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getFirewallRuleGroup", TypeShape.of(GetFirewallRuleGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Route53Resolver::FirewallRuleGroupAssociation.
@@ -67,8 +105,22 @@ public final class Route53resolverFunctions {
      * Resource schema for AWS::Route53Resolver::FirewallRuleGroupAssociation.
      * 
      */
+    public static CompletableFuture<GetFirewallRuleGroupAssociationResult> getFirewallRuleGroupAssociationPlain(GetFirewallRuleGroupAssociationPlainArgs args) {
+        return getFirewallRuleGroupAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::FirewallRuleGroupAssociation.
+     * 
+     */
     public static Output<GetFirewallRuleGroupAssociationResult> getFirewallRuleGroupAssociation(GetFirewallRuleGroupAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53resolver:getFirewallRuleGroupAssociation", TypeShape.of(GetFirewallRuleGroupAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::FirewallRuleGroupAssociation.
+     * 
+     */
+    public static CompletableFuture<GetFirewallRuleGroupAssociationResult> getFirewallRuleGroupAssociationPlain(GetFirewallRuleGroupAssociationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getFirewallRuleGroupAssociation", TypeShape.of(GetFirewallRuleGroupAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Route53Resolver::ResolverConfig.
@@ -81,8 +133,22 @@ public final class Route53resolverFunctions {
      * Resource schema for AWS::Route53Resolver::ResolverConfig.
      * 
      */
+    public static CompletableFuture<GetResolverConfigResult> getResolverConfigPlain(GetResolverConfigPlainArgs args) {
+        return getResolverConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::ResolverConfig.
+     * 
+     */
     public static Output<GetResolverConfigResult> getResolverConfig(GetResolverConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53resolver:getResolverConfig", TypeShape.of(GetResolverConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::ResolverConfig.
+     * 
+     */
+    public static CompletableFuture<GetResolverConfigResult> getResolverConfigPlain(GetResolverConfigPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverConfig", TypeShape.of(GetResolverConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Route53Resolver::ResolverDNSSECConfig.
@@ -95,8 +161,22 @@ public final class Route53resolverFunctions {
      * Resource schema for AWS::Route53Resolver::ResolverDNSSECConfig.
      * 
      */
+    public static CompletableFuture<GetResolverDNSSECConfigResult> getResolverDNSSECConfigPlain(GetResolverDNSSECConfigPlainArgs args) {
+        return getResolverDNSSECConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::ResolverDNSSECConfig.
+     * 
+     */
     public static Output<GetResolverDNSSECConfigResult> getResolverDNSSECConfig(GetResolverDNSSECConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53resolver:getResolverDNSSECConfig", TypeShape.of(GetResolverDNSSECConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::ResolverDNSSECConfig.
+     * 
+     */
+    public static CompletableFuture<GetResolverDNSSECConfigResult> getResolverDNSSECConfigPlain(GetResolverDNSSECConfigPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverDNSSECConfig", TypeShape.of(GetResolverDNSSECConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfig.
@@ -109,8 +189,22 @@ public final class Route53resolverFunctions {
      * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfig.
      * 
      */
+    public static CompletableFuture<GetResolverQueryLoggingConfigResult> getResolverQueryLoggingConfigPlain(GetResolverQueryLoggingConfigPlainArgs args) {
+        return getResolverQueryLoggingConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfig.
+     * 
+     */
     public static Output<GetResolverQueryLoggingConfigResult> getResolverQueryLoggingConfig(GetResolverQueryLoggingConfigArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53resolver:getResolverQueryLoggingConfig", TypeShape.of(GetResolverQueryLoggingConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfig.
+     * 
+     */
+    public static CompletableFuture<GetResolverQueryLoggingConfigResult> getResolverQueryLoggingConfigPlain(GetResolverQueryLoggingConfigPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverQueryLoggingConfig", TypeShape.of(GetResolverQueryLoggingConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
@@ -123,8 +217,22 @@ public final class Route53resolverFunctions {
      * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
      * 
      */
+    public static CompletableFuture<GetResolverQueryLoggingConfigAssociationResult> getResolverQueryLoggingConfigAssociationPlain(GetResolverQueryLoggingConfigAssociationPlainArgs args) {
+        return getResolverQueryLoggingConfigAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
+     * 
+     */
     public static Output<GetResolverQueryLoggingConfigAssociationResult> getResolverQueryLoggingConfigAssociation(GetResolverQueryLoggingConfigAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53resolver:getResolverQueryLoggingConfigAssociation", TypeShape.of(GetResolverQueryLoggingConfigAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
+     * 
+     */
+    public static CompletableFuture<GetResolverQueryLoggingConfigAssociationResult> getResolverQueryLoggingConfigAssociationPlain(GetResolverQueryLoggingConfigAssociationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverQueryLoggingConfigAssociation", TypeShape.of(GetResolverQueryLoggingConfigAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Route53Resolver::ResolverRule
@@ -137,8 +245,22 @@ public final class Route53resolverFunctions {
      * Resource Type definition for AWS::Route53Resolver::ResolverRule
      * 
      */
+    public static CompletableFuture<GetResolverRuleResult> getResolverRulePlain(GetResolverRulePlainArgs args) {
+        return getResolverRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Route53Resolver::ResolverRule
+     * 
+     */
     public static Output<GetResolverRuleResult> getResolverRule(GetResolverRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53resolver:getResolverRule", TypeShape.of(GetResolverRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Route53Resolver::ResolverRule
+     * 
+     */
+    public static CompletableFuture<GetResolverRuleResult> getResolverRulePlain(GetResolverRulePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverRule", TypeShape.of(GetResolverRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Route53Resolver::ResolverRuleAssociation
@@ -151,7 +273,21 @@ public final class Route53resolverFunctions {
      * Resource Type definition for AWS::Route53Resolver::ResolverRuleAssociation
      * 
      */
+    public static CompletableFuture<GetResolverRuleAssociationResult> getResolverRuleAssociationPlain(GetResolverRuleAssociationPlainArgs args) {
+        return getResolverRuleAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Route53Resolver::ResolverRuleAssociation
+     * 
+     */
     public static Output<GetResolverRuleAssociationResult> getResolverRuleAssociation(GetResolverRuleAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:route53resolver:getResolverRuleAssociation", TypeShape.of(GetResolverRuleAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Route53Resolver::ResolverRuleAssociation
+     * 
+     */
+    public static CompletableFuture<GetResolverRuleAssociationResult> getResolverRuleAssociationPlain(GetResolverRuleAssociationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverRuleAssociation", TypeShape.of(GetResolverRuleAssociationResult.class), args, Utilities.withVersion(options));
     }
 }

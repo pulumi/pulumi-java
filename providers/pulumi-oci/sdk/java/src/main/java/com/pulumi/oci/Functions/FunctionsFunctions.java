@@ -8,14 +8,19 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Functions.inputs.GetApplicationArgs;
+import com.pulumi.oci.Functions.inputs.GetApplicationPlainArgs;
 import com.pulumi.oci.Functions.inputs.GetApplicationsArgs;
+import com.pulumi.oci.Functions.inputs.GetApplicationsPlainArgs;
 import com.pulumi.oci.Functions.inputs.GetFunctionArgs;
+import com.pulumi.oci.Functions.inputs.GetFunctionPlainArgs;
 import com.pulumi.oci.Functions.inputs.GetFunctionsArgs;
+import com.pulumi.oci.Functions.inputs.GetFunctionsPlainArgs;
 import com.pulumi.oci.Functions.outputs.GetApplicationResult;
 import com.pulumi.oci.Functions.outputs.GetApplicationsResult;
 import com.pulumi.oci.Functions.outputs.GetFunctionResult;
 import com.pulumi.oci.Functions.outputs.GetFunctionsResult;
 import com.pulumi.oci.Utilities;
+import java.util.concurrent.CompletableFuture;
 
 public final class FunctionsFunctions {
     /**
@@ -37,8 +42,30 @@ public final class FunctionsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args) {
+        return getApplicationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Application resource in Oracle Cloud Infrastructure Functions service.
+     * 
+     * Retrieves an application.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Functions/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Application resource in Oracle Cloud Infrastructure Functions service.
+     * 
+     * Retrieves an application.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Functions/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Applications in Oracle Cloud Infrastructure Functions service.
@@ -59,8 +86,30 @@ public final class FunctionsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetApplicationsResult> getApplicationsPlain(GetApplicationsPlainArgs args) {
+        return getApplicationsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Applications in Oracle Cloud Infrastructure Functions service.
+     * 
+     * Lists applications for a compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetApplicationsResult> getApplications(GetApplicationsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Functions/getApplications:getApplications", TypeShape.of(GetApplicationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Applications in Oracle Cloud Infrastructure Functions service.
+     * 
+     * Lists applications for a compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetApplicationsResult> getApplicationsPlain(GetApplicationsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Functions/getApplications:getApplications", TypeShape.of(GetApplicationsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Function resource in Oracle Cloud Infrastructure Functions service.
@@ -81,8 +130,30 @@ public final class FunctionsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetFunctionResult> getFunctionPlain(GetFunctionPlainArgs args) {
+        return getFunctionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Function resource in Oracle Cloud Infrastructure Functions service.
+     * 
+     * Retrieves a function.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Functions/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Function resource in Oracle Cloud Infrastructure Functions service.
+     * 
+     * Retrieves a function.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetFunctionResult> getFunctionPlain(GetFunctionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Functions/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Functions in Oracle Cloud Infrastructure Functions service.
@@ -103,7 +174,29 @@ public final class FunctionsFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetFunctionsResult> getFunctionsPlain(GetFunctionsPlainArgs args) {
+        return getFunctionsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Functions in Oracle Cloud Infrastructure Functions service.
+     * 
+     * Lists functions for an application.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetFunctionsResult> getFunctions(GetFunctionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Functions/getFunctions:getFunctions", TypeShape.of(GetFunctionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Functions in Oracle Cloud Infrastructure Functions service.
+     * 
+     * Lists functions for an application.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetFunctionsResult> getFunctionsPlain(GetFunctionsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Functions/getFunctions:getFunctions", TypeShape.of(GetFunctionsResult.class), args, Utilities.withVersion(options));
     }
 }

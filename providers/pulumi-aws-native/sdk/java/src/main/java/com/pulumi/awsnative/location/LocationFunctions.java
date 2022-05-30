@@ -5,11 +5,17 @@ package com.pulumi.awsnative.location;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.location.inputs.GetGeofenceCollectionArgs;
+import com.pulumi.awsnative.location.inputs.GetGeofenceCollectionPlainArgs;
 import com.pulumi.awsnative.location.inputs.GetMapArgs;
+import com.pulumi.awsnative.location.inputs.GetMapPlainArgs;
 import com.pulumi.awsnative.location.inputs.GetPlaceIndexArgs;
+import com.pulumi.awsnative.location.inputs.GetPlaceIndexPlainArgs;
 import com.pulumi.awsnative.location.inputs.GetRouteCalculatorArgs;
+import com.pulumi.awsnative.location.inputs.GetRouteCalculatorPlainArgs;
 import com.pulumi.awsnative.location.inputs.GetTrackerArgs;
 import com.pulumi.awsnative.location.inputs.GetTrackerConsumerArgs;
+import com.pulumi.awsnative.location.inputs.GetTrackerConsumerPlainArgs;
+import com.pulumi.awsnative.location.inputs.GetTrackerPlainArgs;
 import com.pulumi.awsnative.location.outputs.GetGeofenceCollectionResult;
 import com.pulumi.awsnative.location.outputs.GetMapResult;
 import com.pulumi.awsnative.location.outputs.GetPlaceIndexResult;
@@ -20,6 +26,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class LocationFunctions {
     /**
@@ -33,8 +40,22 @@ public final class LocationFunctions {
      * Definition of AWS::Location::GeofenceCollection Resource Type
      * 
      */
+    public static CompletableFuture<GetGeofenceCollectionResult> getGeofenceCollectionPlain(GetGeofenceCollectionPlainArgs args) {
+        return getGeofenceCollectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of AWS::Location::GeofenceCollection Resource Type
+     * 
+     */
     public static Output<GetGeofenceCollectionResult> getGeofenceCollection(GetGeofenceCollectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:location:getGeofenceCollection", TypeShape.of(GetGeofenceCollectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of AWS::Location::GeofenceCollection Resource Type
+     * 
+     */
+    public static CompletableFuture<GetGeofenceCollectionResult> getGeofenceCollectionPlain(GetGeofenceCollectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:location:getGeofenceCollection", TypeShape.of(GetGeofenceCollectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Location::Map Resource Type
@@ -47,8 +68,22 @@ public final class LocationFunctions {
      * Definition of AWS::Location::Map Resource Type
      * 
      */
+    public static CompletableFuture<GetMapResult> getMapPlain(GetMapPlainArgs args) {
+        return getMapPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of AWS::Location::Map Resource Type
+     * 
+     */
     public static Output<GetMapResult> getMap(GetMapArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:location:getMap", TypeShape.of(GetMapResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of AWS::Location::Map Resource Type
+     * 
+     */
+    public static CompletableFuture<GetMapResult> getMapPlain(GetMapPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:location:getMap", TypeShape.of(GetMapResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Location::PlaceIndex Resource Type
@@ -61,8 +96,22 @@ public final class LocationFunctions {
      * Definition of AWS::Location::PlaceIndex Resource Type
      * 
      */
+    public static CompletableFuture<GetPlaceIndexResult> getPlaceIndexPlain(GetPlaceIndexPlainArgs args) {
+        return getPlaceIndexPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of AWS::Location::PlaceIndex Resource Type
+     * 
+     */
     public static Output<GetPlaceIndexResult> getPlaceIndex(GetPlaceIndexArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:location:getPlaceIndex", TypeShape.of(GetPlaceIndexResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of AWS::Location::PlaceIndex Resource Type
+     * 
+     */
+    public static CompletableFuture<GetPlaceIndexResult> getPlaceIndexPlain(GetPlaceIndexPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:location:getPlaceIndex", TypeShape.of(GetPlaceIndexResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Location::RouteCalculator Resource Type
@@ -75,8 +124,22 @@ public final class LocationFunctions {
      * Definition of AWS::Location::RouteCalculator Resource Type
      * 
      */
+    public static CompletableFuture<GetRouteCalculatorResult> getRouteCalculatorPlain(GetRouteCalculatorPlainArgs args) {
+        return getRouteCalculatorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of AWS::Location::RouteCalculator Resource Type
+     * 
+     */
     public static Output<GetRouteCalculatorResult> getRouteCalculator(GetRouteCalculatorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:location:getRouteCalculator", TypeShape.of(GetRouteCalculatorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of AWS::Location::RouteCalculator Resource Type
+     * 
+     */
+    public static CompletableFuture<GetRouteCalculatorResult> getRouteCalculatorPlain(GetRouteCalculatorPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:location:getRouteCalculator", TypeShape.of(GetRouteCalculatorResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Location::Tracker Resource Type
@@ -89,8 +152,22 @@ public final class LocationFunctions {
      * Definition of AWS::Location::Tracker Resource Type
      * 
      */
+    public static CompletableFuture<GetTrackerResult> getTrackerPlain(GetTrackerPlainArgs args) {
+        return getTrackerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of AWS::Location::Tracker Resource Type
+     * 
+     */
     public static Output<GetTrackerResult> getTracker(GetTrackerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:location:getTracker", TypeShape.of(GetTrackerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of AWS::Location::Tracker Resource Type
+     * 
+     */
+    public static CompletableFuture<GetTrackerResult> getTrackerPlain(GetTrackerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:location:getTracker", TypeShape.of(GetTrackerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Definition of AWS::Location::TrackerConsumer Resource Type
@@ -103,7 +180,21 @@ public final class LocationFunctions {
      * Definition of AWS::Location::TrackerConsumer Resource Type
      * 
      */
+    public static CompletableFuture<GetTrackerConsumerResult> getTrackerConsumerPlain(GetTrackerConsumerPlainArgs args) {
+        return getTrackerConsumerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of AWS::Location::TrackerConsumer Resource Type
+     * 
+     */
     public static Output<GetTrackerConsumerResult> getTrackerConsumer(GetTrackerConsumerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:location:getTrackerConsumer", TypeShape.of(GetTrackerConsumerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of AWS::Location::TrackerConsumer Resource Type
+     * 
+     */
+    public static CompletableFuture<GetTrackerConsumerResult> getTrackerConsumerPlain(GetTrackerConsumerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:location:getTrackerConsumer", TypeShape.of(GetTrackerConsumerResult.class), args, Utilities.withVersion(options));
     }
 }

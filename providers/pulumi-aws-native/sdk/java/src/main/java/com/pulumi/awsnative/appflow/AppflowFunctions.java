@@ -5,13 +5,16 @@ package com.pulumi.awsnative.appflow;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.appflow.inputs.GetConnectorProfileArgs;
+import com.pulumi.awsnative.appflow.inputs.GetConnectorProfilePlainArgs;
 import com.pulumi.awsnative.appflow.inputs.GetFlowArgs;
+import com.pulumi.awsnative.appflow.inputs.GetFlowPlainArgs;
 import com.pulumi.awsnative.appflow.outputs.GetConnectorProfileResult;
 import com.pulumi.awsnative.appflow.outputs.GetFlowResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class AppflowFunctions {
     /**
@@ -25,8 +28,22 @@ public final class AppflowFunctions {
      * Resource Type definition for AWS::AppFlow::ConnectorProfile
      * 
      */
+    public static CompletableFuture<GetConnectorProfileResult> getConnectorProfilePlain(GetConnectorProfilePlainArgs args) {
+        return getConnectorProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::AppFlow::ConnectorProfile
+     * 
+     */
     public static Output<GetConnectorProfileResult> getConnectorProfile(GetConnectorProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:appflow:getConnectorProfile", TypeShape.of(GetConnectorProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::AppFlow::ConnectorProfile
+     * 
+     */
+    public static CompletableFuture<GetConnectorProfileResult> getConnectorProfilePlain(GetConnectorProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:appflow:getConnectorProfile", TypeShape.of(GetConnectorProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::AppFlow::Flow.
@@ -39,7 +56,21 @@ public final class AppflowFunctions {
      * Resource schema for AWS::AppFlow::Flow.
      * 
      */
+    public static CompletableFuture<GetFlowResult> getFlowPlain(GetFlowPlainArgs args) {
+        return getFlowPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::AppFlow::Flow.
+     * 
+     */
     public static Output<GetFlowResult> getFlow(GetFlowArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:appflow:getFlow", TypeShape.of(GetFlowResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::AppFlow::Flow.
+     * 
+     */
+    public static CompletableFuture<GetFlowResult> getFlowPlain(GetFlowPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:appflow:getFlow", TypeShape.of(GetFlowResult.class), args, Utilities.withVersion(options));
     }
 }

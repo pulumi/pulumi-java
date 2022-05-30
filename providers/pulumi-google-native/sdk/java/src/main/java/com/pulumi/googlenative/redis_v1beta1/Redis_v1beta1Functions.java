@@ -9,7 +9,9 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.redis_v1beta1.inputs.GetInstanceArgs;
+import com.pulumi.googlenative.redis_v1beta1.inputs.GetInstancePlainArgs;
 import com.pulumi.googlenative.redis_v1beta1.outputs.GetInstanceResult;
+import java.util.concurrent.CompletableFuture;
 
 public final class Redis_v1beta1Functions {
     /**
@@ -23,7 +25,21 @@ public final class Redis_v1beta1Functions {
      * Gets the details of a specific Redis instance.
      * 
      */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args) {
+        return getInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the details of a specific Redis instance.
+     * 
+     */
     public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("google-native:redis/v1beta1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the details of a specific Redis instance.
+     * 
+     */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:redis/v1beta1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

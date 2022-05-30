@@ -5,11 +5,13 @@ package com.pulumi.awsnative.accessanalyzer;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.accessanalyzer.inputs.GetAnalyzerArgs;
+import com.pulumi.awsnative.accessanalyzer.inputs.GetAnalyzerPlainArgs;
 import com.pulumi.awsnative.accessanalyzer.outputs.GetAnalyzerResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class AccessanalyzerFunctions {
     /**
@@ -23,7 +25,21 @@ public final class AccessanalyzerFunctions {
      * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user&#39;s account
      * 
      */
+    public static CompletableFuture<GetAnalyzerResult> getAnalyzerPlain(GetAnalyzerPlainArgs args) {
+        return getAnalyzerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user&#39;s account
+     * 
+     */
     public static Output<GetAnalyzerResult> getAnalyzer(GetAnalyzerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:accessanalyzer:getAnalyzer", TypeShape.of(GetAnalyzerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::AccessAnalyzer::Analyzer type specifies an analyzer of the user&#39;s account
+     * 
+     */
+    public static CompletableFuture<GetAnalyzerResult> getAnalyzerPlain(GetAnalyzerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:accessanalyzer:getAnalyzer", TypeShape.of(GetAnalyzerResult.class), args, Utilities.withVersion(options));
     }
 }

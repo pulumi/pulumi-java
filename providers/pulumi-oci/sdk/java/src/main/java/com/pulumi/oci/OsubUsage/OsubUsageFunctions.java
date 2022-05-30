@@ -8,12 +8,16 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.OsubUsage.inputs.GetCommitmentAggregatedsArgs;
+import com.pulumi.oci.OsubUsage.inputs.GetCommitmentAggregatedsPlainArgs;
 import com.pulumi.oci.OsubUsage.inputs.GetComputedUsageArgs;
+import com.pulumi.oci.OsubUsage.inputs.GetComputedUsagePlainArgs;
 import com.pulumi.oci.OsubUsage.inputs.GetComputedUsagesArgs;
+import com.pulumi.oci.OsubUsage.inputs.GetComputedUsagesPlainArgs;
 import com.pulumi.oci.OsubUsage.outputs.GetCommitmentAggregatedsResult;
 import com.pulumi.oci.OsubUsage.outputs.GetComputedUsageResult;
 import com.pulumi.oci.OsubUsage.outputs.GetComputedUsagesResult;
 import com.pulumi.oci.Utilities;
+import java.util.concurrent.CompletableFuture;
 
 public final class OsubUsageFunctions {
     /**
@@ -31,8 +35,26 @@ public final class OsubUsageFunctions {
      * This is a collection API which returns a list of aggregated computed usage details (there can be multiple Parent Products under a given SubID each of which is represented under Subscription Service Line # in SPM).
      * 
      */
+    public static CompletableFuture<GetCommitmentAggregatedsResult> getCommitmentAggregatedsPlain(GetCommitmentAggregatedsPlainArgs args) {
+        return getCommitmentAggregatedsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Computed Usage Aggregateds in Oracle Cloud Infrastructure Osub Usage service.
+     * 
+     * This is a collection API which returns a list of aggregated computed usage details (there can be multiple Parent Products under a given SubID each of which is represented under Subscription Service Line # in SPM).
+     * 
+     */
     public static Output<GetCommitmentAggregatedsResult> getCommitmentAggregateds(GetCommitmentAggregatedsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:OsubUsage/getCommitmentAggregateds:getCommitmentAggregateds", TypeShape.of(GetCommitmentAggregatedsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Computed Usage Aggregateds in Oracle Cloud Infrastructure Osub Usage service.
+     * 
+     * This is a collection API which returns a list of aggregated computed usage details (there can be multiple Parent Products under a given SubID each of which is represented under Subscription Service Line # in SPM).
+     * 
+     */
+    public static CompletableFuture<GetCommitmentAggregatedsResult> getCommitmentAggregatedsPlain(GetCommitmentAggregatedsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:OsubUsage/getCommitmentAggregateds:getCommitmentAggregateds", TypeShape.of(GetCommitmentAggregatedsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Computed Usage resource in Oracle Cloud Infrastructure Osub Usage service.
@@ -53,8 +75,30 @@ public final class OsubUsageFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetComputedUsageResult> getComputedUsagePlain(GetComputedUsagePlainArgs args) {
+        return getComputedUsagePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Computed Usage resource in Oracle Cloud Infrastructure Osub Usage service.
+     * 
+     * This is an API which returns Computed Usage corresponding to the id passed
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetComputedUsageResult> getComputedUsage(GetComputedUsageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:OsubUsage/getComputedUsage:getComputedUsage", TypeShape.of(GetComputedUsageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Computed Usage resource in Oracle Cloud Infrastructure Osub Usage service.
+     * 
+     * This is an API which returns Computed Usage corresponding to the id passed
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetComputedUsageResult> getComputedUsagePlain(GetComputedUsagePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:OsubUsage/getComputedUsage:getComputedUsage", TypeShape.of(GetComputedUsageResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Computed Usages in Oracle Cloud Infrastructure Osub Usage service.
@@ -71,7 +115,25 @@ public final class OsubUsageFunctions {
      * This is a collection API which returns a list of Computed Usages for given filters.
      * 
      */
+    public static CompletableFuture<GetComputedUsagesResult> getComputedUsagesPlain(GetComputedUsagesPlainArgs args) {
+        return getComputedUsagesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Computed Usages in Oracle Cloud Infrastructure Osub Usage service.
+     * 
+     * This is a collection API which returns a list of Computed Usages for given filters.
+     * 
+     */
     public static Output<GetComputedUsagesResult> getComputedUsages(GetComputedUsagesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:OsubUsage/getComputedUsages:getComputedUsages", TypeShape.of(GetComputedUsagesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Computed Usages in Oracle Cloud Infrastructure Osub Usage service.
+     * 
+     * This is a collection API which returns a list of Computed Usages for given filters.
+     * 
+     */
+    public static CompletableFuture<GetComputedUsagesResult> getComputedUsagesPlain(GetComputedUsagesPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:OsubUsage/getComputedUsages:getComputedUsages", TypeShape.of(GetComputedUsagesResult.class), args, Utilities.withVersion(options));
     }
 }

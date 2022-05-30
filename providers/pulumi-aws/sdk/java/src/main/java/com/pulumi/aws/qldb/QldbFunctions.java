@@ -5,11 +5,13 @@ package com.pulumi.aws.qldb;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.qldb.inputs.GetLedgerArgs;
+import com.pulumi.aws.qldb.inputs.GetLedgerPlainArgs;
 import com.pulumi.aws.qldb.outputs.GetLedgerResult;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class QldbFunctions {
     /**
@@ -69,7 +71,67 @@ public final class QldbFunctions {
      * ```
      * 
      */
+    public static CompletableFuture<GetLedgerResult> getLedgerPlain(GetLedgerPlainArgs args) {
+        return getLedgerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to fetch information about a Quantum Ledger Database.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(QldbFunctions.getLedger(GetLedgerArgs.builder()
+     *             .name(&#34;an_example_ledger&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static Output<GetLedgerResult> getLedger(GetLedgerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws:qldb/getLedger:getLedger", TypeShape.of(GetLedgerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to fetch information about a Quantum Ledger Database.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(QldbFunctions.getLedger(GetLedgerArgs.builder()
+     *             .name(&#34;an_example_ledger&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetLedgerResult> getLedgerPlain(GetLedgerPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:qldb/getLedger:getLedger", TypeShape.of(GetLedgerResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -5,8 +5,11 @@ package com.pulumi.awsnative.msk;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.msk.inputs.GetBatchScramSecretArgs;
+import com.pulumi.awsnative.msk.inputs.GetBatchScramSecretPlainArgs;
 import com.pulumi.awsnative.msk.inputs.GetClusterArgs;
+import com.pulumi.awsnative.msk.inputs.GetClusterPlainArgs;
 import com.pulumi.awsnative.msk.inputs.GetConfigurationArgs;
+import com.pulumi.awsnative.msk.inputs.GetConfigurationPlainArgs;
 import com.pulumi.awsnative.msk.outputs.GetBatchScramSecretResult;
 import com.pulumi.awsnative.msk.outputs.GetClusterResult;
 import com.pulumi.awsnative.msk.outputs.GetConfigurationResult;
@@ -14,6 +17,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import java.util.concurrent.CompletableFuture;
 
 public final class MskFunctions {
     /**
@@ -27,8 +31,22 @@ public final class MskFunctions {
      * Resource Type definition for AWS::MSK::BatchScramSecret
      * 
      */
+    public static CompletableFuture<GetBatchScramSecretResult> getBatchScramSecretPlain(GetBatchScramSecretPlainArgs args) {
+        return getBatchScramSecretPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::MSK::BatchScramSecret
+     * 
+     */
     public static Output<GetBatchScramSecretResult> getBatchScramSecret(GetBatchScramSecretArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:msk:getBatchScramSecret", TypeShape.of(GetBatchScramSecretResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::MSK::BatchScramSecret
+     * 
+     */
+    public static CompletableFuture<GetBatchScramSecretResult> getBatchScramSecretPlain(GetBatchScramSecretPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:msk:getBatchScramSecret", TypeShape.of(GetBatchScramSecretResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::MSK::Cluster
@@ -41,8 +59,22 @@ public final class MskFunctions {
      * Resource Type definition for AWS::MSK::Cluster
      * 
      */
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args) {
+        return getClusterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::MSK::Cluster
+     * 
+     */
     public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:msk:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::MSK::Cluster
+     * 
+     */
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:msk:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::MSK::Configuration
@@ -55,7 +87,21 @@ public final class MskFunctions {
      * Resource Type definition for AWS::MSK::Configuration
      * 
      */
+    public static CompletableFuture<GetConfigurationResult> getConfigurationPlain(GetConfigurationPlainArgs args) {
+        return getConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::MSK::Configuration
+     * 
+     */
     public static Output<GetConfigurationResult> getConfiguration(GetConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("aws-native:msk:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::MSK::Configuration
+     * 
+     */
+    public static CompletableFuture<GetConfigurationResult> getConfigurationPlain(GetConfigurationPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:msk:getConfiguration", TypeShape.of(GetConfigurationResult.class), args, Utilities.withVersion(options));
     }
 }

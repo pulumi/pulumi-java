@@ -8,14 +8,19 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Bastion.inputs.GetBastionArgs;
+import com.pulumi.oci.Bastion.inputs.GetBastionPlainArgs;
 import com.pulumi.oci.Bastion.inputs.GetBastionsArgs;
+import com.pulumi.oci.Bastion.inputs.GetBastionsPlainArgs;
 import com.pulumi.oci.Bastion.inputs.GetSessionArgs;
+import com.pulumi.oci.Bastion.inputs.GetSessionPlainArgs;
 import com.pulumi.oci.Bastion.inputs.GetSessionsArgs;
+import com.pulumi.oci.Bastion.inputs.GetSessionsPlainArgs;
 import com.pulumi.oci.Bastion.outputs.GetBastionResult;
 import com.pulumi.oci.Bastion.outputs.GetBastionsResult;
 import com.pulumi.oci.Bastion.outputs.GetSessionResult;
 import com.pulumi.oci.Bastion.outputs.GetSessionsResult;
 import com.pulumi.oci.Utilities;
+import java.util.concurrent.CompletableFuture;
 
 public final class BastionFunctions {
     /**
@@ -37,8 +42,30 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetBastionResult> getBastionPlain(GetBastionPlainArgs args) {
+        return getBastionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Bastion resource in Oracle Cloud Infrastructure Bastion service.
+     * 
+     * Retrieves a bastion identified by the bastion ID. A bastion provides secured, public access to target resources in the cloud that you cannot otherwise reach from the internet.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetBastionResult> getBastion(GetBastionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Bastion/getBastion:getBastion", TypeShape.of(GetBastionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Bastion resource in Oracle Cloud Infrastructure Bastion service.
+     * 
+     * Retrieves a bastion identified by the bastion ID. A bastion provides secured, public access to target resources in the cloud that you cannot otherwise reach from the internet.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetBastionResult> getBastionPlain(GetBastionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Bastion/getBastion:getBastion", TypeShape.of(GetBastionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Bastions in Oracle Cloud Infrastructure Bastion service.
@@ -59,8 +86,30 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetBastionsResult> getBastionsPlain(GetBastionsPlainArgs args) {
+        return getBastionsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Bastions in Oracle Cloud Infrastructure Bastion service.
+     * 
+     * Retrieves a list of BastionSummary objects in a compartment. Bastions provide secured, public access to target resources in the cloud that you cannot otherwise reach from the internet.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetBastionsResult> getBastions(GetBastionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Bastion/getBastions:getBastions", TypeShape.of(GetBastionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Bastions in Oracle Cloud Infrastructure Bastion service.
+     * 
+     * Retrieves a list of BastionSummary objects in a compartment. Bastions provide secured, public access to target resources in the cloud that you cannot otherwise reach from the internet.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetBastionsResult> getBastionsPlain(GetBastionsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Bastion/getBastions:getBastions", TypeShape.of(GetBastionsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides details about a specific Session resource in Oracle Cloud Infrastructure Bastion service.
@@ -81,8 +130,30 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetSessionResult> getSessionPlain(GetSessionPlainArgs args) {
+        return getSessionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Session resource in Oracle Cloud Infrastructure Bastion service.
+     * 
+     * Retrieves a session identified by the session ID. A bastion session lets authorized users connect to a target resource for a predetermined amount of time.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetSessionResult> getSession(GetSessionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Bastion/getSession:getSession", TypeShape.of(GetSessionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Session resource in Oracle Cloud Infrastructure Bastion service.
+     * 
+     * Retrieves a session identified by the session ID. A bastion session lets authorized users connect to a target resource for a predetermined amount of time.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSessionResult> getSessionPlain(GetSessionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Bastion/getSession:getSession", TypeShape.of(GetSessionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Sessions in Oracle Cloud Infrastructure Bastion service.
@@ -103,7 +174,29 @@ public final class BastionFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetSessionsResult> getSessionsPlain(GetSessionsPlainArgs args) {
+        return getSessionsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Sessions in Oracle Cloud Infrastructure Bastion service.
+     * 
+     * Retrieves a list of SessionSummary objects for an existing bastion. Bastion sessions let authorized users connect to a target resource for a predetermined amount of time.
+     * 
+     * ## Example Usage
+     * 
+     */
     public static Output<GetSessionsResult> getSessions(GetSessionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("oci:Bastion/getSessions:getSessions", TypeShape.of(GetSessionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Sessions in Oracle Cloud Infrastructure Bastion service.
+     * 
+     * Retrieves a list of SessionSummary objects for an existing bastion. Bastion sessions let authorized users connect to a target resource for a predetermined amount of time.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSessionsResult> getSessionsPlain(GetSessionsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:Bastion/getSessions:getSessions", TypeShape.of(GetSessionsResult.class), args, Utilities.withVersion(options));
     }
 }
