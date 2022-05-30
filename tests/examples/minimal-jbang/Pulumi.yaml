@@ -1,0 +1,5 @@
+name: minimal
+description: A minimal Pulumi program using a JAR.
+runtime:
+  name: java
+

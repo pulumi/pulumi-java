@@ -19,6 +19,7 @@ import com.pulumi.core.annotations.CustomType.Parameter;
 import com.pulumi.core.annotations.EnumType;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Constants;
+import com.pulumi.deployment.MockDeployment;
 import com.pulumi.deployment.MocksTest;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
@@ -226,7 +227,8 @@ class ConverterTests {
             DeploymentTests.DeploymentMockBuilder.builder()
                     .setMocks(new MocksTest.MyMocks())
                     .setOptions(new TestOptions(true))
-                    .setMockGlobalInstance();
+                    .deploymentFactory(MockDeployment::new)
+                    .build();
 
             var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
@@ -243,7 +245,8 @@ class ConverterTests {
             DeploymentTests.DeploymentMockBuilder.builder()
                     .setMocks(new MocksTest.MyMocks())
                     .setOptions(new TestOptions(false))
-                    .setMockGlobalInstance();
+                    .deploymentFactory(MockDeployment::new)
+                    .build();
 
             var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
