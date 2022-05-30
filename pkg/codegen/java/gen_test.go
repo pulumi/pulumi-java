@@ -78,6 +78,8 @@ func adaptTest(t *test.SDKTest) *test.SDKTest {
 		t.Skip = codegen.NewStringSet("java/any") // go-only
 	case "go-plain-ref-repro":
 		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "enum-reference-python":
+		t.Skip = codegen.NewStringSet("java/any") // python only
 	}
 	return t
 }
