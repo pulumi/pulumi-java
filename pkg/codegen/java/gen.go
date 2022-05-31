@@ -618,7 +618,9 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		propType := propTypes[propIndex]
 		fieldName := names.Ident(pt.mod.propertyName(prop)).AsProperty().Field()
 		propRef := fmt.Sprintf("$.%s", fieldName)
-		propInit, err := dg.defaultValueExpr(prop, propType, propRef)
+		propInit, err := dg.defaultValueExpr(
+			fmt.Sprintf("property of class %s", pt.name),
+			prop, propType, propRef)
 		if err != nil {
 			return err
 		}
@@ -1818,7 +1820,7 @@ func (mod *modContext) getConfigProperty(ctx *classFileContext, prop *schema.Pro
 
 	dg := &defaultsGen{mod, ctx}
 
-	code, err := dg.configExpr(prop, projectedType)
+	code, err := dg.configExpr("property of config", prop, projectedType)
 	if err != nil {
 		return TypeShape{}, "", err
 	}

@@ -31,18 +31,23 @@ type defaultsGen struct {
 // property. The expression assumes an environment where config is
 // bound to a Config instance. The type of the generated expression
 // must match targetType.
-func (dg *defaultsGen) configExpr(configProp *schema.Property, targetType TypeShape) (string, error) {
-	return dg.builderExpr(configProp, targetType, "config", "")
+func (dg *defaultsGen) configExpr(
+	propContext string,
+	configProp *schema.Property,
+	targetType TypeShape) (string, error) {
+	return dg.builderExpr(propContext, configProp, targetType, "config", "")
 }
 
 // Generates an expression that evaluates to the default value of the
 // desired type. The expression takes care of env var lookups and
 // hydrating the expected targetType. Optional arg, if given, points
 // to a user-provided value that takes priority over defaults.
-func (dg *defaultsGen) defaultValueExpr(prop *schema.Property,
+func (dg *defaultsGen) defaultValueExpr(
+	propContext string,
+	prop *schema.Property,
 	targetType TypeShape,
 	arg string) (string, error) {
-	return dg.builderExpr(prop, targetType, "", arg)
+	return dg.builderExpr(propContext, prop, targetType, "", arg)
 }
 
 // Utility to generates a builder expr against the
@@ -54,6 +59,7 @@ func (dg *defaultsGen) defaultValueExpr(prop *schema.Property,
 // user-provided nullable argument.
 
 func (dg *defaultsGen) builderExpr(
+	propContext string,
 	prop *schema.Property,
 	targetType TypeShape,
 	config string,
@@ -73,10 +79,10 @@ func (dg *defaultsGen) builderExpr(
 		} else {
 			builderTransformCode = ".output()"
 		}
-	} else {
+	} else if prop.Secret {
 		// TODO this should be handled or an error
-		fmt.Printf("WARN: secret propety does not have an Output type: %v\n",
-			prop.Name)
+		fmt.Printf("WARN: secret propety %s (%s) does not have an Output type\n",
+			prop.Name, propContext)
 	}
 
 	isOptional, t := t0.UnOptional()
