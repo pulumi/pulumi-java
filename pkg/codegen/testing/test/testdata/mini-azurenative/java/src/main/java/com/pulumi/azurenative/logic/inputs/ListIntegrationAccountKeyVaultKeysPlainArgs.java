@@ -4,29 +4,29 @@
 package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.azurenative.logic.inputs.KeyVaultReference;
-import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListIntegrationAccountKeyVaultKeysPlainArgs extends com.pulumi.resources.InvokeArgs {
 
-    public static final ListIntegrationAccountKeyVaultKeysArgs Empty = new ListIntegrationAccountKeyVaultKeysArgs();
+    public static final ListIntegrationAccountKeyVaultKeysPlainArgs Empty = new ListIntegrationAccountKeyVaultKeysPlainArgs();
 
     /**
      * The integration account name.
      * 
      */
     @Import(name="integrationAccountName", required=true)
-    private Output<String> integrationAccountName;
+    private String integrationAccountName;
 
     /**
      * @return The integration account name.
      * 
      */
-    public Output<String> integrationAccountName() {
+    public String integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -35,13 +35,13 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
      * 
      */
     @Import(name="keyVault", required=true)
-    private Output<KeyVaultReference> keyVault;
+    private KeyVaultReference keyVault;
 
     /**
      * @return The key vault reference.
      * 
      */
-    public Output<KeyVaultReference> keyVault() {
+    public KeyVaultReference keyVault() {
         return this.keyVault;
     }
 
@@ -50,13 +50,13 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private Output<String> resourceGroupName;
+    private String resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public Output<String> resourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,19 +65,19 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
      * 
      */
     @Import(name="skipToken")
-    private Output</* @Nullable */ String> skipToken;
+    private @Nullable String skipToken;
 
     /**
      * @return The skip token.
      * 
      */
-    public Output</* @Nullable */ String> skipToken() {
-        return this.skipToken;
+    public Optional<String> skipToken() {
+        return Optional.ofNullable(this.skipToken);
     }
 
-    private ListIntegrationAccountKeyVaultKeysArgs() {}
+    private ListIntegrationAccountKeyVaultKeysPlainArgs() {}
 
-    private ListIntegrationAccountKeyVaultKeysArgs(ListIntegrationAccountKeyVaultKeysArgs $) {
+    private ListIntegrationAccountKeyVaultKeysPlainArgs(ListIntegrationAccountKeyVaultKeysPlainArgs $) {
         this.integrationAccountName = $.integrationAccountName;
         this.keyVault = $.keyVault;
         this.resourceGroupName = $.resourceGroupName;
@@ -87,30 +87,19 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
     public static Builder builder() {
         return new Builder();
     }
-    public static Builder builder(ListIntegrationAccountKeyVaultKeysArgs defaults) {
+    public static Builder builder(ListIntegrationAccountKeyVaultKeysPlainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ListIntegrationAccountKeyVaultKeysArgs $;
+        private ListIntegrationAccountKeyVaultKeysPlainArgs $;
 
         public Builder() {
-            $ = new ListIntegrationAccountKeyVaultKeysArgs();
+            $ = new ListIntegrationAccountKeyVaultKeysPlainArgs();
         }
 
-        public Builder(ListIntegrationAccountKeyVaultKeysArgs defaults) {
-            $ = new ListIntegrationAccountKeyVaultKeysArgs(Objects.requireNonNull(defaults));
-        }
-
-        /**
-         * @param integrationAccountName The integration account name.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder integrationAccountName(Output<String> integrationAccountName) {
-            $.integrationAccountName = integrationAccountName;
-            return this;
+        public Builder(ListIntegrationAccountKeyVaultKeysPlainArgs defaults) {
+            $ = new ListIntegrationAccountKeyVaultKeysPlainArgs(Objects.requireNonNull(defaults));
         }
 
         /**
@@ -120,17 +109,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
          * 
          */
         public Builder integrationAccountName(String integrationAccountName) {
-            return integrationAccountName(Output.of(integrationAccountName));
-        }
-
-        /**
-         * @param keyVault The key vault reference.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder keyVault(Output<KeyVaultReference> keyVault) {
-            $.keyVault = keyVault;
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
 
@@ -141,17 +120,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
          * 
          */
         public Builder keyVault(KeyVaultReference keyVault) {
-            return keyVault(Output.of(keyVault));
-        }
-
-        /**
-         * @param resourceGroupName The resource group name.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder resourceGroupName(Output<String> resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            $.keyVault = keyVault;
             return this;
         }
 
@@ -162,17 +131,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            return resourceGroupName(Output.of(resourceGroupName));
-        }
-
-        /**
-         * @param skipToken The skip token.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
-            $.skipToken = skipToken;
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -183,10 +142,11 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
          * 
          */
         public Builder skipToken(@Nullable String skipToken) {
-            return skipToken(Output.of(skipToken));
+            $.skipToken = skipToken;
+            return this;
         }
 
-        public ListIntegrationAccountKeyVaultKeysArgs build() {
+        public ListIntegrationAccountKeyVaultKeysPlainArgs build() {
             $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
             $.keyVault = Objects.requireNonNull($.keyVault, "expected parameter 'keyVault' to be non-null");
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");

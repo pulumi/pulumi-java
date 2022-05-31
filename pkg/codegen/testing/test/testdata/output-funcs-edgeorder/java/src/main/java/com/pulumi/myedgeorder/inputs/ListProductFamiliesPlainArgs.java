@@ -3,7 +3,6 @@
 
 package com.pulumi.myedgeorder.inputs;
 
-import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.myedgeorder.inputs.CustomerSubscriptionDetails;
 import com.pulumi.myedgeorder.inputs.FilterableProperty;
@@ -11,26 +10,27 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListProductFamiliesPlainArgs extends com.pulumi.resources.InvokeArgs {
 
-    public static final ListProductFamiliesArgs Empty = new ListProductFamiliesArgs();
+    public static final ListProductFamiliesPlainArgs Empty = new ListProductFamiliesPlainArgs();
 
     /**
      * Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
      * 
      */
     @Import(name="customerSubscriptionDetails")
-    private Output</* @Nullable */ CustomerSubscriptionDetails> customerSubscriptionDetails;
+    private @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
     /**
      * @return Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
      * 
      */
-    public Output</* @Nullable */ CustomerSubscriptionDetails> customerSubscriptionDetails() {
-        return this.customerSubscriptionDetails;
+    public Optional<CustomerSubscriptionDetails> customerSubscriptionDetails() {
+        return Optional.ofNullable(this.customerSubscriptionDetails);
     }
 
     /**
@@ -38,14 +38,14 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="expand")
-    private Output</* @Nullable */ String> expand;
+    private @Nullable String expand;
 
     /**
      * @return $expand is supported on configurations parameter for product, which provides details on the configurations for the product.
      * 
      */
-    public Output</* @Nullable */ String> expand() {
-        return this.expand;
+    public Optional<String> expand() {
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -53,13 +53,13 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filterableProperties", required=true)
-    private Output<Map<String,List<FilterableProperty>>> filterableProperties;
+    private Map<String,List<FilterableProperty>> filterableProperties;
 
     /**
      * @return Dictionary of filterable properties on product family.
      * 
      */
-    public Output<Map<String,List<FilterableProperty>>> filterableProperties() {
+    public Map<String,List<FilterableProperty>> filterableProperties() {
         return this.filterableProperties;
     }
 
@@ -68,19 +68,19 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="skipToken")
-    private Output</* @Nullable */ String> skipToken;
+    private @Nullable String skipToken;
 
     /**
      * @return $skipToken is supported on list of product families, which provides the next page in the list of product families.
      * 
      */
-    public Output</* @Nullable */ String> skipToken() {
-        return this.skipToken;
+    public Optional<String> skipToken() {
+        return Optional.ofNullable(this.skipToken);
     }
 
-    private ListProductFamiliesArgs() {}
+    private ListProductFamiliesPlainArgs() {}
 
-    private ListProductFamiliesArgs(ListProductFamiliesArgs $) {
+    private ListProductFamiliesPlainArgs(ListProductFamiliesPlainArgs $) {
         this.customerSubscriptionDetails = $.customerSubscriptionDetails;
         this.expand = $.expand;
         this.filterableProperties = $.filterableProperties;
@@ -90,30 +90,19 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
     public static Builder builder() {
         return new Builder();
     }
-    public static Builder builder(ListProductFamiliesArgs defaults) {
+    public static Builder builder(ListProductFamiliesPlainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ListProductFamiliesArgs $;
+        private ListProductFamiliesPlainArgs $;
 
         public Builder() {
-            $ = new ListProductFamiliesArgs();
+            $ = new ListProductFamiliesPlainArgs();
         }
 
-        public Builder(ListProductFamiliesArgs defaults) {
-            $ = new ListProductFamiliesArgs(Objects.requireNonNull(defaults));
-        }
-
-        /**
-         * @param customerSubscriptionDetails Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
-         * 
-         * @return builder
-         * 
-         */
-        public Builder customerSubscriptionDetails(Output</* @Nullable */ CustomerSubscriptionDetails> customerSubscriptionDetails) {
-            $.customerSubscriptionDetails = customerSubscriptionDetails;
-            return this;
+        public Builder(ListProductFamiliesPlainArgs defaults) {
+            $ = new ListProductFamiliesPlainArgs(Objects.requireNonNull(defaults));
         }
 
         /**
@@ -123,17 +112,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder customerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
-            return customerSubscriptionDetails(Output.of(customerSubscriptionDetails));
-        }
-
-        /**
-         * @param expand $expand is supported on configurations parameter for product, which provides details on the configurations for the product.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder expand(Output</* @Nullable */ String> expand) {
-            $.expand = expand;
+            $.customerSubscriptionDetails = customerSubscriptionDetails;
             return this;
         }
 
@@ -144,17 +123,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder expand(@Nullable String expand) {
-            return expand(Output.of(expand));
-        }
-
-        /**
-         * @param filterableProperties Dictionary of filterable properties on product family.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder filterableProperties(Output<Map<String,List<FilterableProperty>>> filterableProperties) {
-            $.filterableProperties = filterableProperties;
+            $.expand = expand;
             return this;
         }
 
@@ -165,17 +134,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder filterableProperties(Map<String,List<FilterableProperty>> filterableProperties) {
-            return filterableProperties(Output.of(filterableProperties));
-        }
-
-        /**
-         * @param skipToken $skipToken is supported on list of product families, which provides the next page in the list of product families.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
-            $.skipToken = skipToken;
+            $.filterableProperties = filterableProperties;
             return this;
         }
 
@@ -186,10 +145,11 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder skipToken(@Nullable String skipToken) {
-            return skipToken(Output.of(skipToken));
+            $.skipToken = skipToken;
+            return this;
         }
 
-        public ListProductFamiliesArgs build() {
+        public ListProductFamiliesPlainArgs build() {
             $.filterableProperties = Objects.requireNonNull($.filterableProperties, "expected parameter 'filterableProperties' to be non-null");
             return $;
         }

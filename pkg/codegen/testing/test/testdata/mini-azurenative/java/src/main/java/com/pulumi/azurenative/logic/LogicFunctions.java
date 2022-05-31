@@ -5,7 +5,9 @@ package com.pulumi.azurenative.logic;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountKeyVaultKeysArgs;
+import com.pulumi.azurenative.logic.inputs.ListIntegrationAccountKeyVaultKeysPlainArgs;
 import com.pulumi.azurenative.logic.outputs.ListIntegrationAccountKeyVaultKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -17,7 +19,7 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args) {
+    public static Output<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args) {
         return listIntegrationAccountKeyVaultKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +27,23 @@ public final class LogicFunctions {
      * API Version: 2019-05-01.
      * 
      */
-    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeysPlain(ListIntegrationAccountKeyVaultKeysPlainArgs args) {
+        return listIntegrationAccountKeyVaultKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Collection of key vault keys.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static Output<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Collection of key vault keys.
+     * API Version: 2019-05-01.
+     * 
+     */
+    public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeysPlain(ListIntegrationAccountKeyVaultKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
     }
 }

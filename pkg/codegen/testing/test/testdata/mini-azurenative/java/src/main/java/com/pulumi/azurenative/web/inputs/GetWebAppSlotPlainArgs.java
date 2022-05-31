@@ -3,64 +3,52 @@
 
 package com.pulumi.azurenative.web.inputs;
 
-import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetWebAppSlotArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetWebAppSlotPlainArgs extends com.pulumi.resources.InvokeArgs {
 
-    public static final GetWebAppSlotArgs Empty = new GetWebAppSlotArgs();
+    public static final GetWebAppSlotPlainArgs Empty = new GetWebAppSlotPlainArgs();
 
     /**
      * Name of the deployment slot. By default, this API returns the production slot.
      * 
      */
     @Import(name="slot", required=true)
-    private Output<String> slot;
+    private String slot;
 
     /**
      * @return Name of the deployment slot. By default, this API returns the production slot.
      * 
      */
-    public Output<String> slot() {
+    public String slot() {
         return this.slot;
     }
 
-    private GetWebAppSlotArgs() {}
+    private GetWebAppSlotPlainArgs() {}
 
-    private GetWebAppSlotArgs(GetWebAppSlotArgs $) {
+    private GetWebAppSlotPlainArgs(GetWebAppSlotPlainArgs $) {
         this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-    public static Builder builder(GetWebAppSlotArgs defaults) {
+    public static Builder builder(GetWebAppSlotPlainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GetWebAppSlotArgs $;
+        private GetWebAppSlotPlainArgs $;
 
         public Builder() {
-            $ = new GetWebAppSlotArgs();
+            $ = new GetWebAppSlotPlainArgs();
         }
 
-        public Builder(GetWebAppSlotArgs defaults) {
-            $ = new GetWebAppSlotArgs(Objects.requireNonNull(defaults));
-        }
-
-        /**
-         * @param slot Name of the deployment slot. By default, this API returns the production slot.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder slot(Output<String> slot) {
-            $.slot = slot;
-            return this;
+        public Builder(GetWebAppSlotPlainArgs defaults) {
+            $ = new GetWebAppSlotPlainArgs(Objects.requireNonNull(defaults));
         }
 
         /**
@@ -70,10 +58,11 @@ public final class GetWebAppSlotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder slot(String slot) {
-            return slot(Output.of(slot));
+            $.slot = slot;
+            return this;
         }
 
-        public GetWebAppSlotArgs build() {
+        public GetWebAppSlotPlainArgs build() {
             $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
             return $;
         }

@@ -9,6 +9,7 @@
     "src/main/java/com/pulumi/azurenative/Utilities.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/AlertsmanagementFunctions.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/inputs/GetActionRuleByNameArgs.java",
+    "src/main/java/com/pulumi/azurenative/alertsmanagement/inputs/GetActionRuleByNamePlainArgs.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/outputs/ActionGroupResponse.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/outputs/DiagnosticsResponse.java",
     "src/main/java/com/pulumi/azurenative/alertsmanagement/outputs/GetActionRuleByNameResult.java",
@@ -19,6 +20,7 @@
     "src/main/java/com/pulumi/azurenative/logic/LogicFunctions.java",
     "src/main/java/com/pulumi/azurenative/logic/inputs/KeyVaultReference.java",
     "src/main/java/com/pulumi/azurenative/logic/inputs/ListIntegrationAccountKeyVaultKeysArgs.java",
+    "src/main/java/com/pulumi/azurenative/logic/inputs/ListIntegrationAccountKeyVaultKeysPlainArgs.java",
     "src/main/java/com/pulumi/azurenative/logic/outputs/ListIntegrationAccountKeyVaultKeysResult.java",
     "src/main/java/com/pulumi/azurenative/machinelearningservices/BatchDeployment.java",
     "src/main/java/com/pulumi/azurenative/machinelearningservices/BatchDeploymentArgs.java",
@@ -29,6 +31,7 @@
     "src/main/java/com/pulumi/azurenative/web/WebAppRelayServiceConnectionArgs.java",
     "src/main/java/com/pulumi/azurenative/web/WebFunctions.java",
     "src/main/java/com/pulumi/azurenative/web/inputs/GetWebAppSlotArgs.java",
+    "src/main/java/com/pulumi/azurenative/web/inputs/GetWebAppSlotPlainArgs.java",
     "src/main/java/com/pulumi/azurenative/web/outputs/GetWebAppSlotResult.java",
     "src/main/java/com/pulumi/azurenative/web/outputs/SiteConfigResponse.java"
   ]

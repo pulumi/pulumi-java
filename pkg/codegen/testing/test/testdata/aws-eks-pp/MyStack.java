@@ -66,7 +66,7 @@ public class App {
             .tags(Map.of("Name", "pulumi-vpc-rt"))
             .build());
 
-        final var zones = Output.of(AwsFunctions.getAvailabilityZones());
+        final var zones = AwsFunctions.getAvailabilityZones();
 
         final var vpcSubnet = zones.applyValue(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<Subnet>();

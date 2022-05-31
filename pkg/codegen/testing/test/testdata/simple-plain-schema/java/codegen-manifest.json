@@ -10,6 +10,7 @@
     "src/main/java/com/pulumi/example/ProviderArgs.java",
     "src/main/java/com/pulumi/example/Utilities.java",
     "src/main/java/com/pulumi/example/inputs/DoFooArgs.java",
+    "src/main/java/com/pulumi/example/inputs/DoFooPlainArgs.java",
     "src/main/java/com/pulumi/example/inputs/Foo.java",
     "src/main/java/com/pulumi/example/inputs/FooArgs.java",
     "src/main/java/com/pulumi/example/outputs/Foo.java"

@@ -3,57 +3,52 @@
 
 package com.pulumi.example.inputs;
 
-import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.example.inputs.Foo;
 import java.util.Objects;
 
 
-public final class DoFooArgs extends com.pulumi.resources.InvokeArgs {
+public final class DoFooPlainArgs extends com.pulumi.resources.InvokeArgs {
 
-    public static final DoFooArgs Empty = new DoFooArgs();
+    public static final DoFooPlainArgs Empty = new DoFooPlainArgs();
 
     @Import(name="foo", required=true)
-    private Output<Foo> foo;
+    private Foo foo;
 
-    public Output<Foo> foo() {
+    public Foo foo() {
         return this.foo;
     }
 
-    private DoFooArgs() {}
+    private DoFooPlainArgs() {}
 
-    private DoFooArgs(DoFooArgs $) {
+    private DoFooPlainArgs(DoFooPlainArgs $) {
         this.foo = $.foo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-    public static Builder builder(DoFooArgs defaults) {
+    public static Builder builder(DoFooPlainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DoFooArgs $;
+        private DoFooPlainArgs $;
 
         public Builder() {
-            $ = new DoFooArgs();
+            $ = new DoFooPlainArgs();
         }
 
-        public Builder(DoFooArgs defaults) {
-            $ = new DoFooArgs(Objects.requireNonNull(defaults));
+        public Builder(DoFooPlainArgs defaults) {
+            $ = new DoFooPlainArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder foo(Output<Foo> foo) {
+        public Builder foo(Foo foo) {
             $.foo = foo;
             return this;
         }
 
-        public Builder foo(Foo foo) {
-            return foo(Output.of(foo));
-        }
-
-        public DoFooArgs build() {
+        public DoFooPlainArgs build() {
             $.foo = Objects.requireNonNull($.foo, "expected parameter 'foo' to be non-null");
             return $;
         }

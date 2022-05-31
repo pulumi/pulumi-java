@@ -3,28 +3,27 @@
 
 package com.pulumi.azurenative.alertsmanagement.inputs;
 
-import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
 
-public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeArgs {
+public final class GetActionRuleByNamePlainArgs extends com.pulumi.resources.InvokeArgs {
 
-    public static final GetActionRuleByNameArgs Empty = new GetActionRuleByNameArgs();
+    public static final GetActionRuleByNamePlainArgs Empty = new GetActionRuleByNamePlainArgs();
 
     /**
      * The name of action rule that needs to be fetched
      * 
      */
     @Import(name="actionRuleName", required=true)
-    private Output<String> actionRuleName;
+    private String actionRuleName;
 
     /**
      * @return The name of action rule that needs to be fetched
      * 
      */
-    public Output<String> actionRuleName() {
+    public String actionRuleName() {
         return this.actionRuleName;
     }
 
@@ -33,19 +32,19 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private Output<String> resourceGroupName;
+    private String resourceGroupName;
 
     /**
      * @return Resource group name where the resource is created.
      * 
      */
-    public Output<String> resourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    private GetActionRuleByNameArgs() {}
+    private GetActionRuleByNamePlainArgs() {}
 
-    private GetActionRuleByNameArgs(GetActionRuleByNameArgs $) {
+    private GetActionRuleByNamePlainArgs(GetActionRuleByNamePlainArgs $) {
         this.actionRuleName = $.actionRuleName;
         this.resourceGroupName = $.resourceGroupName;
     }
@@ -53,30 +52,19 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
     public static Builder builder() {
         return new Builder();
     }
-    public static Builder builder(GetActionRuleByNameArgs defaults) {
+    public static Builder builder(GetActionRuleByNamePlainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GetActionRuleByNameArgs $;
+        private GetActionRuleByNamePlainArgs $;
 
         public Builder() {
-            $ = new GetActionRuleByNameArgs();
+            $ = new GetActionRuleByNamePlainArgs();
         }
 
-        public Builder(GetActionRuleByNameArgs defaults) {
-            $ = new GetActionRuleByNameArgs(Objects.requireNonNull(defaults));
-        }
-
-        /**
-         * @param actionRuleName The name of action rule that needs to be fetched
-         * 
-         * @return builder
-         * 
-         */
-        public Builder actionRuleName(Output<String> actionRuleName) {
-            $.actionRuleName = actionRuleName;
-            return this;
+        public Builder(GetActionRuleByNamePlainArgs defaults) {
+            $ = new GetActionRuleByNamePlainArgs(Objects.requireNonNull(defaults));
         }
 
         /**
@@ -86,17 +74,7 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder actionRuleName(String actionRuleName) {
-            return actionRuleName(Output.of(actionRuleName));
-        }
-
-        /**
-         * @param resourceGroupName Resource group name where the resource is created.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder resourceGroupName(Output<String> resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            $.actionRuleName = actionRuleName;
             return this;
         }
 
@@ -107,10 +85,11 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            return resourceGroupName(Output.of(resourceGroupName));
+            $.resourceGroupName = resourceGroupName;
+            return this;
         }
 
-        public GetActionRuleByNameArgs build() {
+        public GetActionRuleByNamePlainArgs build() {
             $.actionRuleName = Objects.requireNonNull($.actionRuleName, "expected parameter 'actionRuleName' to be non-null");
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
             return $;

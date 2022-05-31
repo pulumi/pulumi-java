@@ -32,14 +32,14 @@ public class App {
                 .build())
             .build());
 
-        final var ami = Output.of(AwsFunctions.getAmi(GetAmiArgs.builder()
+        final var ami = AwsFunctions.getAmi(GetAmiArgs.builder()
             .filters(GetAmiFilterArgs.builder()
                 .name("name")
                 .values("amzn-ami-hvm-*-x86_64-ebs")
                 .build())
             .owners("137112412989")
             .mostRecent(true)
-            .build()));
+            .build());
 
         var server = new Instance("server", InstanceArgs.builder()        
             .tags(Map.of("Name", "web-server-www"))
