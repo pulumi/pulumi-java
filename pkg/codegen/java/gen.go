@@ -31,6 +31,7 @@ type modContext struct {
 	mod                    string
 	propertyNames          map[*schema.Property]string
 	types                  []*schema.ObjectType
+	typesByName            map[string]*schema.ObjectType
 	enums                  []*schema.EnumType
 	resources              []*schema.Resource
 	functions              []*schema.Function
@@ -71,8 +72,21 @@ func tokenToFunctionName(tok string) string {
 	return names.LowerCamelCase(tokenToName(tok))
 }
 
-func tokenToFunctionResultClassName(tok string) names.Ident {
-	return names.Ident(fmt.Sprintf("%sResult", tokenToName(tok)))
+func tokenToFunctionResultClassName(mod *modContext, tok string) names.Ident {
+	suffixes := []string{"Result", "InvokeResult"}
+	name := tokenToName(tok)
+	for _, suffix := range suffixes {
+		conflict := false
+		if mod != nil {
+			_, conflict = mod.typesByName[name+suffix]
+		}
+		if !conflict {
+			return names.Ident(name + suffix)
+		}
+	}
+	contract.Failf("cannot find an unambigious class name for the %s"+
+		"function result: tried suffixing with %v", tok, suffixes)
+	return names.Ident("")
 }
 
 func (mod *modContext) tokenToPackage(tok string, qualifier qualifier) string {
@@ -1495,7 +1509,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		}
 
 		outputsPkg := javaPkg.Dot(names.Ident("outputs"))
-		resultClass := tokenToFunctionResultClassName(fun.Token)
+		resultClass := tokenToFunctionResultClassName(mod, fun.Token)
 		resultFQN := outputsPkg.Dot(resultClass)
 		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
 		argsClass := names.Ident(tokenToName(fun.Token) + "Args")
@@ -2197,6 +2211,10 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 		case *schema.ObjectType:
 			mod := getModFromToken(typ.Token, pkg)
 			mod.types = append(mod.types, typ)
+			if mod.typesByName == nil {
+				mod.typesByName = map[string]*schema.ObjectType{}
+			}
+			mod.typesByName[tokenToName(typ.Token)] = typ
 		case *schema.EnumType:
 			if !typ.IsOverlay {
 				mod := getModFromToken(typ.Token, pkg)

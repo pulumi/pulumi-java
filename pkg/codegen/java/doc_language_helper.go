@@ -50,7 +50,7 @@ func (d DocLanguageHelper) GetFunctionName(modName string, f *schema.Function) s
 }
 
 func (d DocLanguageHelper) GetResourceFunctionResultName(modName string, f *schema.Function) string {
-	return tokenToFunctionResultClassName(f.Token).String()
+	return tokenToFunctionResultClassName(nil, f.Token).String()
 }
 
 func (d DocLanguageHelper) GetMethodName(m *schema.Method) string {
@@ -61,7 +61,7 @@ func (d DocLanguageHelper) GetMethodName(m *schema.Method) string {
 func (d DocLanguageHelper) GetMethodResultName(
 	pkg *schema.Package, modName string, r *schema.Resource, m *schema.Method) string {
 	// TODO revise when method support is built, revise when output-versioned functions are built
-	return tokenToFunctionResultClassName(m.Function.Token).String()
+	return tokenToFunctionResultClassName(nil, m.Function.Token).String()
 }
 
 func (d DocLanguageHelper) GetEnumName(e *schema.Enum, typeName string) (string, error) {
