@@ -36,9 +36,7 @@ public interface Runner {
 
     <T> void registerTask(String description, CompletableFuture<T> task);
 
-    CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback);
+    CompletableFuture<Integer> runAsyncFuture(Supplier<Map<String, Output<?>>> callback);
 
-    CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options);
-
-    <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory);
+    CompletableFuture<Integer> runAsyncFuture(Supplier<Map<String, Output<?>>> callback, StackOptions options);
 }

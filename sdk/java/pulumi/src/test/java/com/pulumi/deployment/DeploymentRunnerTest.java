@@ -75,8 +75,7 @@ public class DeploymentRunnerTest {
             final var delay = 100L + i;
             mock.runner.registerTask(String.format("task%d", i), new CompletableFuture<Void>().completeOnTimeout(null, delay, TimeUnit.MILLISECONDS));
         }
-        Supplier<CompletableFuture<Map<String, Output<?>>>> supplier =
-                () -> CompletableFuture.completedFuture(Map.of());
+        Supplier<Map<String, Output<?>>> supplier = () -> Map.of();
         var code = mock.runner.runAsyncFuture(supplier).join();
         assertThat(code).isEqualTo(0);
 
