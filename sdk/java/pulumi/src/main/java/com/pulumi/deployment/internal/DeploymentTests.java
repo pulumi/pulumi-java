@@ -119,7 +119,7 @@ public class DeploymentTests {
             );
             return this.runner.runAsyncFuture(() -> {
                         stackCallback.accept(context);
-                        return CompletableFuture.completedFuture(context.exports());
+                        return context.exports();
                     })
                     .thenApply(exitCode -> new TestResult(
                             exitCode,

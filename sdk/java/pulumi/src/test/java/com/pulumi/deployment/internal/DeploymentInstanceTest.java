@@ -7,7 +7,6 @@ import java.util.concurrent.CompletionException;
 import java.util.logging.Level;
 
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
-import static com.pulumi.deployment.internal.DeploymentTests.defaultLogger;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 public class DeploymentInstanceTest {

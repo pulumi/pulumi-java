@@ -1705,38 +1705,26 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         @Override
-        public <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory) {
-            try {
-                var stack = stackFactory.get();
-                var stackInternal = Internal.from(stack);
-                // Stack doesn't call RegisterOutputs, so we register them on its behalf.
-                stackInternal.registerPropertyOutputs();
-                registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(stackInternal.getOutputs()).getDataAsync());
-            } catch (Exception ex) {
-                return handleExceptionAsync(ex);
-            }
-
-            return whileRunningAsync();
-        }
-
-        @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
+        public CompletableFuture<Integer> runAsyncFuture(Supplier<Map<String, Output<?>>> callback) {
             return runAsyncFuture(callback, StackOptions.Empty);
         }
 
         @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {
-            try {
-                var stack = StackInternal.of(callback, options);
-                // no outputs to register here
-                registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
-            } catch (Exception ex) {
-                return handleExceptionAsync(ex);
-            }
-
-            return whileRunningAsync();
+        public CompletableFuture<Integer> runAsyncFuture(Supplier<Map<String, Output<?>>> callback, StackOptions options) {
+            // Stack must be the first Resource created
+            var stack = CompletableFuture.supplyAsync(StackInternal.of(callback, options));
+            // run the callback asynchronously in the context of the error handler
+            registerTask("Stack", stack);
+            // loop starts after the callback
+            return stack
+                    .thenCompose(__ -> whileRunningAsync())
+                    .handle((code, throwable) -> {
+                        if (throwable != null) {
+                            return handleExceptionAsync(throwable);
+                        }
+                        return CompletableFuture.completedFuture(code);
+                    })
+                    .thenCompose(Function.identity()); // we return a future from logging, and we need to flat-map here
         }
 
         @Override
@@ -1836,6 +1824,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return CompletableFuture.supplyAsync(loopUntilDone).thenCompose(f -> f);
         }
 
+        private CompletableFuture<Integer> handleExceptionAsync(Throwable throwable) {
+            if (throwable instanceof Exception) {
+                return handleExceptionAsync((Exception) throwable);
+            }
+            return handleExceptionAsync(new RunException("unexpected throwable", throwable));
+        }
+
         private CompletableFuture<Integer> handleExceptionAsync(Exception exception) {
             this.swallowedExceptions.add(exception);
 
@@ -1867,7 +1862,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // problem to the error stream.
             //
             // Note: if these logging calls fail, they will just
-            // end up bubbling up an exception that will be caught
+            // end up bubbling an exception that will be caught
             // by nothing. This will tear down the actual process
             // with a non-zero error which our host will handle
             // properly.
@@ -1890,7 +1885,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return this.engineLogger
                     .errorAsync(String.format(
                             "Running program [PID: %d](%s) failed with an unhandled exception:\n%s",
-                            pid, command, Exceptions.getStackTrace(exception)))
+                            pid, command, getStackTrace(exception)))
                     .thenApply(exitMessageAndCode);
 
         }

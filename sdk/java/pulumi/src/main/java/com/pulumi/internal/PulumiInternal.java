@@ -55,15 +55,11 @@ public class PulumiInternal implements Pulumi {
 
     @InternalUse
     public CompletableFuture<Integer> runAsync(Consumer<Context> stack) {
-        return runner.runAsyncFuture(
-                () -> CompletableFuture.supplyAsync(
-                        () -> {
-                            // before user code was executed
-                            stack.accept(stackContext); // MUST run before accessing mutable variables
-                            // after user code was executed
-                            return stackContext.exports();
-                        }
-                )
-        );
+        return runner.runAsyncFuture(() -> {
+            // before user code was executed
+            stack.accept(stackContext); // MUST run before accessing mutable variables
+            // after user code was executed
+            return stackContext.exports();
+        });
     }
 }

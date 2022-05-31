@@ -23,17 +23,12 @@ public class MockRunner implements Runner {
     }
 
     @Override
-    public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
+    public CompletableFuture<Integer> runAsyncFuture(Supplier<Map<String, Output<?>>> callback) {
         return null;
     }
 
     @Override
-    public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {
-        return null;
-    }
-
-    @Override
-    public <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory) {
+    public CompletableFuture<Integer> runAsyncFuture(Supplier<Map<String, Output<?>>> callback, StackOptions options) {
         return null;
     }
 }
