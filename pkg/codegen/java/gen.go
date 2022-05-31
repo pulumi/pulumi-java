@@ -385,6 +385,9 @@ type plainType struct {
 	propertyTypeQualifier qualifier
 	properties            []*schema.Property
 	args                  bool
+	// determines whether the properties should be wrapped in outputs.
+	// for example, PropType becomes Output<PropType> if PropType is not already an output
+	propertiesAsOutputs bool
 }
 
 type propJavadocOptions struct {
@@ -507,6 +510,11 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			false,               // outer optional
 			false,               // inputless overload
 		)
+
+		if isOutput, _ := propTypes[i].UnOutput(); !isOutput && pt.propertiesAsOutputs {
+			// wrap the property as an output
+			propTypes[i] = propTypes[i].Output()
+		}
 	}
 
 	w := ctx.writer
@@ -1498,14 +1506,25 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		resultClass := tokenToFunctionResultClassName(fun.Token)
 		resultFQN := outputsPkg.Dot(resultClass)
 		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
+
+		// Generating "{Function}Args" class for invokes that return Output<T>
+		// builders for this class allow outputs as inputs for their properties
 		argsClass := names.Ident(tokenToName(fun.Token) + "Args")
 		argsFQN := inputsPkg.Dot(argsClass)
 
+		// Generating "{Function}PlainArgs" class for invokes that return CompletableFuture<T>
+		// builders for this class only allow non-outputs as inputs for their properties
+		plainArgsClass := names.Ident(tokenToName(fun.Token) + "PlainArgs")
+		plainArgsFQN := inputsPkg.Dot(plainArgsClass)
+
 		var argsType string
+		var plainArgsType string
 		if fun.Inputs == nil {
 			argsType = ctx.ref(names.InvokeArgs)
+			plainArgsType = ctx.ref(names.InvokeArgs)
 		} else {
 			argsType = ctx.ref(argsFQN)
+			plainArgsType = ctx.ref(plainArgsFQN)
 		}
 
 		var returnType string
@@ -1515,36 +1534,68 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			returnType = ctx.imports.Ref(names.Void)
 		}
 
+		// default method name returns Output<ReturnType>
 		methodName := tokenToFunctionName(fun.Token)
+
+		// another "plain" overload will return CompletableFuture<ReturnType>
+		plainMethodName := methodName + "Plain"
 
 		// Emit datasource inputs method
 		invokeOptions := ctx.ref(names.InvokeOptions)
 
 		if hasAllOptionalInputs(fun) {
+			// Generate invoke that return Output<T>
 			printCommentFunction(ctx, fun, indent)
-			// Add no args invoke
+			// Add no args invoke (returns Output<T>)
 			fprintf(w, "    public static %s<%s> %s() {\n",
-				ctx.ref(names.CompletableFuture), returnType, methodName)
+				ctx.ref(names.Output), returnType, methodName)
 			fprintf(w,
 				"        return %s(%s.Empty, %s.Empty);\n",
 				methodName, argsType, invokeOptions)
 			fprintf(w, "    }\n")
 
+			// Generate invoke that return CompletableFuture<T>
+			printCommentFunction(ctx, fun, indent)
+			fprintf(w, "    public static %s<%s> %s() {\n",
+				ctx.ref(names.CompletableFuture), returnType, plainMethodName)
+			fprintf(w,
+				"        return %s(%s.Empty, %s.Empty);\n",
+				plainMethodName, plainArgsType, invokeOptions)
+			fprintf(w, "    }\n")
 		}
 
-		// Add args only invoke
+		// Output version: add args only invoke
 		printCommentFunction(ctx, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s args) {\n",
-			ctx.ref(names.CompletableFuture), returnType, methodName, argsType)
+			ctx.ref(names.Output), returnType, methodName, argsType)
 		fprintf(w,
 			"        return %s(args, %s.Empty);\n",
 			methodName, invokeOptions)
 		fprintf(w, "    }\n")
 
-		// Add full invoke
+		// CompletableFuture version: add args only invoke
+		printCommentFunction(ctx, fun, indent)
+		fprintf(w, "    public static %s<%s> %s(%s args) {\n",
+			ctx.ref(names.CompletableFuture), returnType, plainMethodName, plainArgsType)
+		fprintf(w,
+			"        return %s(args, %s.Empty);\n",
+			plainMethodName, invokeOptions)
+		fprintf(w, "    }\n")
+
+		// Output version: add full invoke
 		printCommentFunction(ctx, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
-			ctx.ref(names.CompletableFuture), returnType, methodName, argsType, invokeOptions)
+			ctx.ref(names.Output), returnType, methodName, argsType, invokeOptions)
+		fprintf(w,
+			"        return %s.getInstance().invoke(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
+			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
+		fprintf(w, "    }\n")
+
+		// CompletableFuture version: add full invoke
+		// notice how the implementation now uses `invokeAsync` instead of `invoke`
+		printCommentFunction(ctx, fun, indent)
+		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
+			ctx.ref(names.CompletableFuture), returnType, plainMethodName, plainArgsType, invokeOptions)
 		fprintf(w,
 			"        return %s.getInstance().invokeAsync(\"%s\", %s.of(%s.class), args, %s.withVersion(options));\n",
 			ctx.ref(names.Deployment), fun.Token, ctx.ref(names.TypeShape), returnType, mod.utilitiesRef(ctx))
@@ -1552,6 +1603,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 
 		// Emit the args and result types, if any.
 		if fun.Inputs != nil {
+			// Generate "{Function}Args" class for invokes that return Output<T>
 			if err := addClass(inputsPkg, argsClass, func(ctx *classFileContext) error {
 				args := &plainType{
 					mod:                   mod,
@@ -1559,6 +1611,24 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 					baseClass:             "com.pulumi.resources.InvokeArgs",
 					propertyTypeQualifier: inputsQualifier,
 					properties:            fun.Inputs.Properties,
+					propertiesAsOutputs:   true,
+				}
+				return args.genInputType(ctx)
+			}); err != nil {
+				return err
+			}
+
+			// Generate "{Function}PlainArgs" class for invokes that return CompletableFuture<T>
+			// notice here that `propertiesAsOutputs` is set to false because properties
+			// of a plain args class do not accept outputs as parameters
+			if err := addClass(inputsPkg, plainArgsClass, func(ctx *classFileContext) error {
+				args := &plainType{
+					mod:                   mod,
+					name:                  ctx.className.String(),
+					baseClass:             "com.pulumi.resources.InvokeArgs",
+					propertyTypeQualifier: inputsQualifier,
+					properties:            fun.Inputs.Properties,
+					propertiesAsOutputs:   false,
 				}
 				return args.genInputType(ctx)
 			}); err != nil {
