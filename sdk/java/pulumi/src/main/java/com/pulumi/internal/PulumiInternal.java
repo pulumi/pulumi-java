@@ -7,22 +7,19 @@ import com.pulumi.context.internal.ConfigContextInternal;
 import com.pulumi.context.internal.ContextInternal;
 import com.pulumi.context.internal.LoggingContextInternal;
 import com.pulumi.context.internal.OutputContextInternal;
-import com.pulumi.core.Output;
 import com.pulumi.core.internal.OutputFactory;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.Runner.Result;
-import com.pulumi.resources.Stack;
+import com.pulumi.resources.internal.Stack;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 import static java.util.Objects.requireNonNull;
 

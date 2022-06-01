@@ -43,7 +43,7 @@ import com.pulumi.resources.ProviderResource;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.ResourceOptions;
-import com.pulumi.resources.Stack;
+import com.pulumi.resources.internal.Stack;
 import com.pulumi.serialization.internal.Converter;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.JsonFormatter;
@@ -92,8 +92,7 @@ import static com.pulumi.core.internal.Environment.getBooleanEnvironmentVariable
 import static com.pulumi.core.internal.Environment.getEnvironmentVariable;
 import static com.pulumi.core.internal.Exceptions.getStackTrace;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
-import static com.pulumi.resources.Stack.RootPulumiStackTypeName;
-import static java.util.Objects.requireNonNull;
+import static com.pulumi.resources.internal.Stack.RootPulumiStackTypeName;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 

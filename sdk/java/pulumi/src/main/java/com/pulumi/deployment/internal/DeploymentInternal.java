@@ -6,7 +6,7 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.ResourceOptions;
-import com.pulumi.resources.Stack;
+import com.pulumi.resources.internal.Stack;
 
 import java.util.Map;
 import java.util.Optional;

@@ -12,7 +12,7 @@ import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.ResourceOptions;
-import com.pulumi.resources.Stack;
+import com.pulumi.resources.internal.Stack;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

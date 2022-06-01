@@ -30,7 +30,7 @@ import java.util.concurrent.CompletableFuture;
 import static com.pulumi.core.internal.Objects.exceptionSupplier;
 import static com.pulumi.core.internal.Objects.require;
 import static com.pulumi.resources.Resources.copyNullableList;
-import static com.pulumi.resources.Stack.RootPulumiStackTypeName;
+import static com.pulumi.resources.internal.Stack.RootPulumiStackTypeName;
 import static java.util.Objects.requireNonNull;
 
 /**
