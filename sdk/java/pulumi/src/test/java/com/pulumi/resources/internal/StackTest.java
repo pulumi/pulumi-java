@@ -1,4 +1,4 @@
-package com.pulumi.resources;
+package com.pulumi.resources.internal;
 
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
@@ -10,6 +10,8 @@ import com.pulumi.deployment.MockResourceArgs;
 import com.pulumi.deployment.Mocks;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.DeploymentTests;
+import com.pulumi.resources.Resource;
+import com.pulumi.resources.StackReference;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -26,7 +28,6 @@ import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuild
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.Mockito.times;

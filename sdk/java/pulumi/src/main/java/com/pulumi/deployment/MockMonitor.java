@@ -31,7 +31,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static com.pulumi.resources.Stack.RootPulumiStackTypeName;
+import static com.pulumi.resources.internal.Stack.RootPulumiStackTypeName;
 
 @InternalUse
 public class MockMonitor implements Monitor {
