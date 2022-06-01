@@ -1,6 +1,24 @@
 CHANGELOG
 =========
 
+## 0.3.0 (2022-06-01)
+
+### Improvements
+
+- [programgen] [#547](https://github.com/pulumi/pulumi-java/issues/547):
+  Generate fully qualified imports
+
+- [sdk] [#419](https://github.com/pulumi/pulumi-java/issues/419):
+  Remove SDK dependency on Mockito
+
+- [provider] Support for using [jbang](https://jbang.dev)
+
+### Bug Fixes
+
+- [codegen] [#627](https://github.com/pulumi/pulumi-java/issues/627):
+  Fix malformed versions in generated build files by sanitizing
+  version input in pulumi-java-gen
+
 ## 0.2.1 (2022-05-20)
 
 ### Improvements
