@@ -57,7 +57,9 @@ func (dg *defaultsGen) defaultValueExpr(
 //
 // arg if non-empty is an expr of type targetType pointing to a
 // user-provided nullable argument.
-
+//
+// propContext is free text only used in WARN statements to
+// contextualize the property.
 func (dg *defaultsGen) builderExpr(
 	propContext string,
 	prop *schema.Property,
@@ -69,20 +71,23 @@ func (dg *defaultsGen) builderExpr(
 		return code, nil
 	}
 
-	builderTransformCode := ""
-
 	isOutput, t0 := targetType.UnOutput()
 
+	var builderTransformCode string
 	if isOutput {
 		if prop.Secret {
 			builderTransformCode = ".secret()"
 		} else {
 			builderTransformCode = ".output()"
 		}
-	} else if prop.Secret {
-		// TODO this should be handled or an error
-		fmt.Printf("WARN: secret propety %s (%s) does not have an Output type\n",
-			prop.Name, propContext)
+	} else {
+		// TODO[pulumi/pulumi#9744]: Codegen for secret
+		// properties forgets the secret flag
+		if prop.Secret {
+			fmt.Printf("WARN: secret propety %s (%s) does not have an Output type\n",
+				prop.Name, propContext)
+		}
+		builderTransformCode = ""
 	}
 
 	isOptional, t := t0.UnOptional()
