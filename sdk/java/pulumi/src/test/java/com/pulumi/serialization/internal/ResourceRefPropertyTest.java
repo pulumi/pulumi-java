@@ -63,7 +63,7 @@ class ResourceRefPropertyTest {
 
         var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
-        var res = result.resources.stream()
+        var res = result.resources().stream()
                 .filter(r -> r instanceof MyCustomResource)
                 .map(r -> (MyCustomResource) r)
                 .findFirst()
@@ -88,7 +88,7 @@ class ResourceRefPropertyTest {
 
         var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
-        var res = result.resources.stream()
+        var res = result.resources().stream()
                 .filter(r -> r instanceof MyCustomResource)
                 .map(r -> (MyCustomResource) r)
                 .findFirst()
@@ -109,7 +109,7 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .build();
         var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeCustomResourceStack).join();
-        var values = waitForValue(result.stackOutput("values", ValuesClass));
+        var values = waitForValue(result.output("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
         assertThat(values.get("expectedId")).isEqualTo(values.get("actualId"));
@@ -123,7 +123,7 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .build();
         var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeMissingCustomResourceStack).join();
-        var values = waitForValue(result.stackOutput("values", ValuesClass));
+        var values = waitForValue(result.output("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
     }
@@ -138,7 +138,7 @@ class ResourceRefPropertyTest {
 
         var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
-        var res = result.resources.stream()
+        var res = result.resources().stream()
                 .filter(r -> r instanceof MyComponentResource)
                 .map(r -> (MyComponentResource) r)
                 .findFirst()
@@ -161,7 +161,7 @@ class ResourceRefPropertyTest {
 
         var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
-        var res = result.resources.stream()
+        var res = result.resources().stream()
                 .filter(r -> r instanceof MyComponentResource)
                 .map(r -> (MyComponentResource) r)
                 .findFirst()
@@ -183,7 +183,7 @@ class ResourceRefPropertyTest {
                 .build();
 
         var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeComponentResourceStack).join();
-        var values = waitForValue(result.stackOutput("values", ValuesClass));
+        var values = waitForValue(result.output("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
     }
@@ -196,7 +196,7 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .build();
         var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeMissingComponentResourceStack).join();
-        var values = waitForValue(result.stackOutput("values", ValuesClass));
+        var values = waitForValue(result.output("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
     }

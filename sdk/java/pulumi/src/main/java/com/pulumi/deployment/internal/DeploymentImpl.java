@@ -17,7 +17,6 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.CompletableFutures;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.core.internal.Environment;
-import com.pulumi.core.internal.Exceptions;
 import com.pulumi.core.internal.GlobalLogging;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.Maps;
@@ -45,8 +44,6 @@ import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.ResourceOptions;
 import com.pulumi.resources.Stack;
-import com.pulumi.resources.Stack.StackInternal;
-import com.pulumi.resources.StackOptions;
 import com.pulumi.serialization.internal.Converter;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.JsonFormatter;
@@ -95,6 +92,8 @@ import static com.pulumi.core.internal.Environment.getBooleanEnvironmentVariable
 import static com.pulumi.core.internal.Environment.getEnvironmentVariable;
 import static com.pulumi.core.internal.Exceptions.getStackTrace;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
+import static com.pulumi.resources.Stack.RootPulumiStackTypeName;
+import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
@@ -211,7 +210,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @Nullable
-    private Stack stack; // TODO: get rid of mutability, somehow
+    private Stack stack;
 
     @InternalUse
     @Override
@@ -222,6 +221,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         return this.stack;
     }
 
+    // TODO: remove when refactoring deployment initialization
     @InternalUse
     @Override
     public void setStack(Stack stack) {
@@ -1561,7 +1561,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          */
         CompletableFuture<Optional<String>> getRootResourceAsync(String type) {
             // If we're calling this while creating the stack itself. No way to know its urn at this point.
-            if (StackInternal.RootPulumiStackTypeName.equals(type)) {
+            if (RootPulumiStackTypeName.equals(type)) {
                 return CompletableFuture.completedFuture(Optional.empty());
             }
 
@@ -1700,29 +1700,29 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.engineLogger = Objects.requireNonNull(engineLogger);
         }
 
-        public List<Exception> getSwallowedExceptions() {
-            return ImmutableList.copyOf(this.swallowedExceptions);
-        }
-
         @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<Map<String, Output<?>>> callback) {
-            return runAsyncFuture(callback, StackOptions.Empty);
-        }
-
-        @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<Map<String, Output<?>>> callback, StackOptions options) {
-            // Stack must be the first Resource created
-            var stack = CompletableFuture.supplyAsync(StackInternal.of(callback, options));
+        public <T> CompletableFuture<Result<T>> runAsync(Supplier<T> callback) {
+            var valueFuture = CompletableFuture.supplyAsync(callback);
             // run the callback asynchronously in the context of the error handler
-            registerTask("Stack", stack);
+            registerTask("DefaultRunner#runAsync", valueFuture);
             // loop starts after the callback
-            return stack
+            return valueFuture
                     .thenCompose(__ -> whileRunningAsync())
                     .handle((code, throwable) -> {
                         if (throwable != null) {
-                            return handleExceptionAsync(throwable);
+                            return handleExceptionAsync(throwable).thenApply(errorCode ->
+                                    new Result<>(
+                                            errorCode,
+                                            ImmutableList.copyOf(this.swallowedExceptions),
+                                            Optional.ofNullable(valueFuture.join()) // the future is already complete
+                                    )
+                            );
                         }
-                        return CompletableFuture.completedFuture(code);
+                        return CompletableFuture.completedFuture(new Result<>(
+                                code,
+                                ImmutableList.copyOf(this.swallowedExceptions),
+                                Optional.ofNullable(valueFuture.join()) // the future is already complete
+                        ));
                     })
                     .thenCompose(Function.identity()); // we return a future from logging, and we need to flat-map here
         }

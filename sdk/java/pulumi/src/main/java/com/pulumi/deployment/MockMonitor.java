@@ -6,9 +6,9 @@ import com.google.protobuf.Struct;
 import com.pulumi.Log;
 import com.pulumi.core.internal.Maps;
 import com.pulumi.core.internal.Urn;
+import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.resources.Resource;
-import com.pulumi.resources.Stack.StackInternal;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.Serializer;
 import pulumirpc.Provider.CallRequest;
@@ -31,6 +31,9 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
+import static com.pulumi.resources.Stack.RootPulumiStackTypeName;
+
+@InternalUse
 public class MockMonitor implements Monitor {
 
     private final Mocks mocks;
@@ -131,7 +134,7 @@ public class MockMonitor implements Monitor {
     public CompletableFuture<RegisterResourceResponse> registerResourceAsync(Resource resource, RegisterResourceRequest request) {
         this.resources.add(resource);
 
-        if (StackInternal.RootPulumiStackTypeName.equals(request.getType())) {
+        if (RootPulumiStackTypeName.equals(request.getType())) {
             return CompletableFuture.completedFuture(
                     RegisterResourceResponse.newBuilder()
                             .setUrn(Urn.create(
