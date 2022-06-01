@@ -30,15 +30,14 @@ public class ContextInternal implements Context {
             String stackName,
             LoggingContextInternal logging,
             ConfigContextInternal config,
-            OutputContextInternal outputs,
-            Map<String, Output<?>> exports
+            OutputContextInternal outputs
     ) {
         this.projectName = require(Strings::isNonEmptyOrNull, projectName, () -> "expected a project name, got empty string or null");
         this.stackName = require(Strings::isNonEmptyOrNull, stackName, () -> "expected a stack name, got empty string or null");
         this.logging = requireNonNull(logging);
         this.config = requireNonNull(config);
         this.outputs = requireNonNull(outputs);
-        this.exports = ImmutableMap.<String, Output<?>>builder().putAll(requireNonNull(exports));
+        this.exports = ImmutableMap.builder();
     }
 
     @Override

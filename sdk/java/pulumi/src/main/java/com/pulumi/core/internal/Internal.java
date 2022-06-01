@@ -19,8 +19,6 @@ import com.pulumi.resources.ProviderResource;
 import com.pulumi.resources.ProviderResource.ProviderResourceInternal;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.Resource.ResourceInternal;
-import com.pulumi.resources.Stack;
-import com.pulumi.resources.Stack.StackInternal;
 
 public class Internal {
 
@@ -46,10 +44,6 @@ public class Internal {
 
     public static InputArgsInternal from(InputArgs a) {
         return InputArgsInternal.from(a);
-    }
-
-    public static StackInternal from(Stack s) {
-        return StackInternal.from(s);
     }
 
     public static ProviderResourceInternal from(ProviderResource r) {

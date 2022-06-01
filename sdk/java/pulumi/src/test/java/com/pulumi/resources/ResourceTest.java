@@ -44,7 +44,7 @@ public class ResourceTest {
         var result = mock.runTestAsync(MyStack::init).join()
                 .throwOnError();
 
-        var resource = result.resources.stream()
+        var resource = result.resources().stream()
                 .filter(r -> r.getResourceName().equals("testResource"))
                 .findFirst()
                 .orElse(null);

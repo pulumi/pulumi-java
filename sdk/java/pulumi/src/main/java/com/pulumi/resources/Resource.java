@@ -13,7 +13,6 @@ import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.internal.DeploymentInternal;
 import com.pulumi.exceptions.ResourceException;
-import com.pulumi.resources.Stack.StackInternal;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -31,6 +30,7 @@ import java.util.concurrent.CompletableFuture;
 import static com.pulumi.core.internal.Objects.exceptionSupplier;
 import static com.pulumi.core.internal.Objects.require;
 import static com.pulumi.resources.Resources.copyNullableList;
+import static com.pulumi.resources.Stack.RootPulumiStackTypeName;
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -127,9 +127,11 @@ public abstract class Resource {
                 exceptionSupplier
         );
 
+        // TODO: C# initializes OutputCompletionSource fields here, the fact that we don't might be a bug
+
         // Before anything else - if there are transformations registered, invoke them in order
         // to transform the properties and options assigned to this resource.
-        var parent = Objects.equals(type, StackInternal.RootPulumiStackTypeName)
+        var parent = Objects.equals(type, RootPulumiStackTypeName)
                 ? null
                 : (options.parent == null ? DeploymentInternal.getInstance().getStack() : options.parent);
 

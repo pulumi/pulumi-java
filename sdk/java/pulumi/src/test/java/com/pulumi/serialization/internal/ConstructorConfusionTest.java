@@ -47,7 +47,7 @@ public class ConstructorConfusionTest {
                         )
                 ).join()
                 .throwOnError();
-        assertThat(result.resources).isNotEmpty();
+        assertThat(result.resources()).isNotEmpty();
     }
 
     public static class ConfusionMocks implements Mocks {

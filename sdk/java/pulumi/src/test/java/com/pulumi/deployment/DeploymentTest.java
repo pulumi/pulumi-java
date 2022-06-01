@@ -40,7 +40,7 @@ public class DeploymentTest {
             //noinspection unused
             var ignore = config.require("name");
         }).join();
-        assertThat(result.exitCode).isEqualTo(Runner.ProcessExitedSuccessfully);
+        assertThat(result.exitCode()).isEqualTo(Runner.ProcessExitedSuccessfully);
     }
 
     @Test
@@ -51,7 +51,7 @@ public class DeploymentTest {
             //noinspection unused
             var ignore = config.require("missing");
         }).join();
-        assertThat(result.exitCode).isEqualTo(Runner.ProcessExitedAfterLoggingUserActionableMessage);
+        assertThat(result.exitCode()).isEqualTo(Runner.ProcessExitedAfterLoggingUserActionableMessage);
     }
 
     @Test

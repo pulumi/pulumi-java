@@ -40,6 +40,7 @@ import static com.pulumi.core.OutputTests.waitForValue;
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
+import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MocksTest {
@@ -59,7 +60,7 @@ public class MocksTest {
         var result = mock.runTestAsync(MocksTest::myStack).join()
                 .throwOnError();
 
-        var instance = result.resources.stream()
+        var instance = result.resources().stream()
                 .filter(r -> r instanceof Instance)
                 .map(r -> (Instance) r)
                 .findFirst();
@@ -96,7 +97,7 @@ public class MocksTest {
         var result = mock.runTestAsync(MocksTest::myStack).join()
                 .throwOnError();
 
-        var myCustom = result.resources.stream()
+        var myCustom = result.resources().stream()
                 .filter(r -> r instanceof MyCustom)
                 .map(r -> (MyCustom) r)
                 .findFirst();
@@ -118,7 +119,7 @@ public class MocksTest {
                 .build();
 
         var result = mock.runTestAsync(MocksTest::myStack).join();
-        var publicIp = waitForValue(result.stackOutput("publicIp", String.class));
+        var publicIp = waitForValue(result.output("publicIp", String.class));
         assertThat(publicIp).isEqualTo("203.0.113.12");
     }
 
@@ -150,9 +151,9 @@ public class MocksTest {
             ctx.export("instance", publicIp);
         }).join();
 
-        var resources = result.resources;
-        var exceptions = result.exceptions;
-        var errors = result.errors;
+        var resources = result.resources();
+        var exceptions = result.exceptions();
+        var errors = result.errors();
 
         assertThat(resources).isNotEmpty();
         assertThat(exceptions).isNotEmpty();
@@ -191,15 +192,15 @@ public class MocksTest {
                 .build();
 
         var result = mock.runTestAsync(MocksTest::myStack).join();
-        var resources = result.resources;
+        var resources = result.resources();
         assertThat(resources).isNotEmpty();
 
-        var exceptions = result.exceptions;
+        var exceptions = result.exceptions();
         assertThat(exceptions).isNotEmpty();
-        assertThat(exceptions.stream().map(Throwable::getMessage).collect(Collectors.toList()))
+        assertThat(exceptions.stream().map(Throwable::getMessage).collect(toList()))
                 .haveAtLeastOne(containsString("Instance.publicIp; Expected 'java.lang.String' but got 'java.lang.Double' while deserializing."));
 
-        var publicIp = result.stackOutput("publicIp");
+        var publicIp = result.output("publicIp");
         var ipFuture = Internal.of(publicIp).getDataAsync();
         assertThat(ipFuture).isCompletedExceptionally();
 
