@@ -16,6 +16,9 @@ import java.util.function.Supplier;
 
 import static java.util.Objects.requireNonNull;
 
+/**
+ * An internal Resource subclass that represent the Pulumi root resource a.k.a. the Stack
+ */
 @InternalUse
 @ParametersAreNonnullByDefault
 public final class Stack extends ComponentResource {
@@ -28,13 +31,10 @@ public final class Stack extends ComponentResource {
     @InternalUse
     public static final String RootPulumiStackTypeName = "pulumi:pulumi:Stack";
 
-    /**
-     * The outputs of this stack, if the <code>callback</code> callback exited normally.
-     */
     private final Output<Map<String, Output<?>>> outputs;
 
     /**
-     * Create a Stack with stack outputs defined in derived class constructor.
+     * Create and register a Stack.
      *
      * @param projectName             the current project name
      * @param stackName               the current stack name
@@ -63,39 +63,64 @@ public final class Stack extends ComponentResource {
         return String.format("%s-%s", requireNonNull(projectName), requireNonNull(stackName));
     }
 
+    /**
+     * @return the outputs of this {@link Stack}
+     */
     @InternalUse
     public Output<Map<String, Output<?>>> getOutputs() {
         return this.outputs;
     }
 
+    /**
+     * A factory of a fully initialized {@link Stack}.
+     *
+     * @param projectName             the project name associated with this {@link Stack}
+     * @param stackName               the stack name associated with this {@link Stack}
+     * @param resourceTransformations the {@link Stack} transformations to apply
+     * @return a new fully initialized {@link Stack} instance factory
+     * that when called will return a new and ready to use instance.
+     */
     @InternalUse
     public static Function<Supplier<Map<String, Output<?>>>, Stack> factory(
             String projectName,
             String stackName,
             List<ResourceTransformation> resourceTransformations
     ) {
-        // Stack initialization requires specific sequence of events:
-        // - create a Stack instance (note that the super constructor calls readOrRegisterResource)
-        // - set the Stack instance in the global state (user code will try to reach it via Resource constructor)
-        // - register the Stack outputs in the Pulumi engine
-        // - call the user code callback (asynchronously to avoid any additional cyclic dependency problems)
-        // - complete the Stack initialization (by completing the lazyFuture)
+        /*
+         * Stack initialization requires specific sequence of events because of cyclic dependencies.
+         * We break the cycles using lazy initialization of the future that backs the Stack outputs Output.
+         *
+         * Cycles:
+         * 1. Stack outputs depend on (get their values from) the user code (callback) that will provide the outputs.
+         * 2. User code (callback) will attempt to create new Resource subclasses and that will require Stack instance.
+         *
+         * Sequence:
+         * 1. Create a Stack instance (note that the super constructor calls readOrRegisterResource).
+         *    Stack must be the first Resource to be constructed,
+         *    before any user code attempts to construct any Resource object.
+         *
+         * 2. Set the Stack instance in the global state. User code will try to reach it via Resource constructor.
+         *    Since Stack is the "universal parent" any time a Resource has no parent the stack will be used.
+         *
+         * 3. Register the Stack outputs in the Pulumi engine. The Stack itself was registered in
+         *    the Resource super-constructor. Registering outputs completes registering a Stack resource.
+         *    This operation will complete asynchronously, after the Stack lazy outputs are completed.
+         *
+         * 4. Call the user code callback (asynchronously to avoid any additional cyclic dependency problems).
+         *    At this point the Stack instance must be available from the global state.
+         *
+         * 5. Complete the Stack initialization (by completing the lazyFuture).
+         *    This makes sure we provide a completed future to the Stack outputs.
+         */
         return (Supplier<Map<String, Output<?>>> callback) -> {
-            // incomplete future that will be completed after the Stack is constructed
             var lazyFuture = new CompletableFuture<Map<String, Output<?>>>();
-            // incomplete outputs that will be completed when lazyFuture completes
             var lazyOutputs = Output.of(lazyFuture);
-            // Stack must be the first Resource to be constructed,
-            // before any user code attempts to construct any Resource
             var stack = new Stack(projectName, stackName, resourceTransformations, lazyOutputs);
-            // register the new Stack with the engine
             DeploymentInternal.getInstance().setStack(stack);
-            // register the Stack outputs with the engine
             DeploymentInternal.getInstance().registerResourceOutputs(stack, lazyOutputs);
-            // run the user code callback wrapped in a future (note that future is eager)
+            // run the user code callback after Stack was set globally, (note that future is eager)
             var callbackFuture = CompletableFuture.supplyAsync(callback);
             DeploymentInternal.getInstance().getRunner().registerTask("callback", callbackFuture);
-            // complete the lazyFuture (and lazyOutputs) when user callback future completes
             callbackFuture.whenComplete((value, throwable) -> {
                 if (throwable != null) {
                     lazyFuture.completeExceptionally(throwable);
