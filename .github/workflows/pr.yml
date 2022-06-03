@@ -101,7 +101,7 @@ jobs:
           path: bin/
       - name: Publish Pulumi Java SDK
         run: make sdk.publish
-        if: ${{ env.GPR_TOKEN != 0 }}
+        if: ${{ secrets.GPR_TOKEN != 0 }}
     strategy:
       fail-fast: true
 
@@ -169,7 +169,7 @@ jobs:
 
   providers:
     # See Note 1.
-    if: ${{ env.GPR_TOKEN != 0 }}
+    if: ${{ secrets.GPR_TOKEN != 0 }}
     needs: prerequisites
     runs-on: ubuntu-latest
     timeout-minutes: 15
