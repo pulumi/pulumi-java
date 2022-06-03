@@ -5,6 +5,7 @@ import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.InMemoryLogger;
 import com.pulumi.exceptions.RunException;
+import com.pulumi.resources.internal.Stack;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -28,12 +29,64 @@ public class DeploymentRunnerTest {
     }
 
     @Test
-    void testTerminatesEarlyOnException() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setMocks(new MocksTest.MyMocks())
-                .build();
-
+    void testVeryEarlyExceptionShortCircuitsBeforeMainLoopStarts() {
+        var mock = DeploymentTests.DeploymentMockBuilder.builder().build();
         mock.standardLogger.setLevel(Level.OFF);
+
+        mock.runner.registerTask("exceptionThatShouldNotBe", CompletableFuture.completedFuture(
+                new RuntimeException("test exception before the loop")
+        ));
+        var result = mock.runTestAsync(ctx -> {
+            throw new RuntimeException("very early deliberate exception");
+        }).join();
+
+        assertThat(result.exceptions()).hasSize(2);
+        assertThat(result.exceptions().get(0)).isExactlyInstanceOf(CompletionException.class);
+        assertThat(result.exceptions().get(1)).isExactlyInstanceOf(RuntimeException.class);
+        assertThat(result.exceptions().get(1)).hasMessage("very early deliberate exception");
+
+        assertThat(result.resources())
+                .isNotNull()
+                .hasSize(1)
+                .hasExactlyElementsOfTypes(Stack.class);
+        assertThat(Internal.of(result.output("slowOutput")).getDataAsync()).isNotCompleted();
+        assertThat(Internal.of(result.output("slowOutput")).getValueNullable()).isNotCompleted();
+        assertThat(result.exitCode()).isEqualTo(ProcessExitedAfterLoggingUserActionableMessage);
+    }
+
+    @Test
+    void testTerminatesEarlyOnFirstException() {
+        var mock = DeploymentTests.DeploymentMockBuilder.builder().build();
+        mock.standardLogger.setLevel(Level.OFF);
+
+        var exceptionThatShouldNotBe = new CompletableFuture<Void>();
+        exceptionThatShouldNotBe.completeExceptionally(
+                new RuntimeException("test exception before the loop")
+        );
+        mock.runner.registerTask("exceptionThatShouldNotBe", exceptionThatShouldNotBe);
+        var userCodeWasCalled = new AtomicBoolean(false);
+        var result = mock.runTestAsync(ctx -> userCodeWasCalled.set(true)).join();
+        assertThat(userCodeWasCalled).isTrue();
+
+        assertThat(result.exceptions()).hasSize(2);
+        assertThat(result.exceptions().get(0)).isExactlyInstanceOf(CompletionException.class);
+        assertThat(result.exceptions().get(1)).isExactlyInstanceOf(RuntimeException.class);
+        assertThat(result.exceptions().get(1)).hasMessage("test exception before the loop");
+
+        assertThat(result.resources())
+                .isNotNull()
+                .hasSize(1)
+                .hasExactlyElementsOfTypes(Stack.class);
+        assertThat(Internal.of(result.output("slowOutput")).getDataAsync()).isNotCompleted();
+        assertThat(Internal.of(result.output("slowOutput")).getValueNullable()).isNotCompleted();
+        assertThat(result.exitCode()).isEqualTo(ProcessExitedAfterLoggingUserActionableMessage);
+    }
+
+    @Test
+    void testTerminatesEarlyOnExceptionInOutput() {
+        var mock = DeploymentTests.DeploymentMockBuilder.builder().build();
+        mock.standardLogger.setLevel(Level.OFF);
+
         var result = mock.runTestAsync(ctx -> {
             Output.of(CompletableFuture.failedFuture(new RunException("Deliberate test error")));
             ctx.export("slowOutput", Output.of(
@@ -50,11 +103,12 @@ public class DeploymentRunnerTest {
         assertThat(result.exceptions()).hasSize(2);
         assertThat(result.exceptions().get(0)).isExactlyInstanceOf(CompletionException.class);
         assertThat(result.exceptions().get(1)).isExactlyInstanceOf(RunException.class);
-        assertThat(result.exceptions().get(1)).hasMessageContaining("Deliberate test error");
+        assertThat(result.exceptions().get(1)).hasMessage("Deliberate test error");
 
-        assertThat(result.resources()).isNotNull();
-        assertThat(result.resources()).isNotEmpty();
-        assertThat(result.resources()).hasSize(1);
+        assertThat(result.resources())
+                .isNotNull()
+                .hasSize(1)
+                .hasExactlyElementsOfTypes(Stack.class);
         assertThat(Internal.of(result.output("slowOutput")).getDataAsync()).isNotCompleted();
         assertThat(Internal.of(result.output("slowOutput")).getValueNullable()).isNotCompleted();
         assertThat(result.exitCode()).isEqualTo(ProcessExitedAfterLoggingUserActionableMessage);
@@ -88,9 +142,8 @@ public class DeploymentRunnerTest {
 
         var taskWasCalled = new AtomicBoolean(false);
         mock.runner.registerTask("testRunnerRuns", CompletableFuture.runAsync(() -> taskWasCalled.set(true)));
-        var resultFuture = mock.runner.runAsync(() -> "foo");
+        var result = mock.runner.runAsync(() -> "foo").join();
 
-        var result = resultFuture.join();
         assertThat(taskWasCalled).isTrue();
         assertThat(result.exitCode()).isEqualTo(ProcessExitedSuccessfully);
         assertThat(result.exceptions()).isEmpty();
