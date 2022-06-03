@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -65,14 +66,14 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="volumeContainers")
-    private Output</* @Nullable */ List<String>> volumeContainers;
+    private @Nullable Output<List<String>> volumeContainers;
 
     /**
      * @return The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
      * 
      */
-    public Output</* @Nullable */ List<String>> volumeContainers() {
-        return this.volumeContainers;
+    public Optional<Output<List<String>>> volumeContainers() {
+        return Optional.ofNullable(this.volumeContainers);
     }
 
     private ListDeviceFailoverTarsArgs() {}
@@ -171,7 +172,7 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder volumeContainers(Output</* @Nullable */ List<String>> volumeContainers) {
+        public Builder volumeContainers(@Nullable Output<List<String>> volumeContainers) {
             $.volumeContainers = volumeContainers;
             return this;
         }
@@ -182,7 +183,7 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder volumeContainers(@Nullable List<String> volumeContainers) {
+        public Builder volumeContainers(List<String> volumeContainers) {
             return volumeContainers(Output.of(volumeContainers));
         }
 

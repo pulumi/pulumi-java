@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetSubnetFilter;
+import com.pulumi.aws.ec2.inputs.GetSubnetFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -11,6 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +24,14 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZone")
-    private Output</* @Nullable */ String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
     /**
      * @return Availability zone where the subnet must reside.
      * 
      */
-    public Output</* @Nullable */ String> availabilityZone() {
-        return this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -38,14 +39,14 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZoneId")
-    private Output</* @Nullable */ String> availabilityZoneId;
+    private @Nullable Output<String> availabilityZoneId;
 
     /**
      * @return ID of the Availability Zone for the subnet. This argument is not supported in all regions or partitions. If necessary, use `availability_zone` instead.
      * 
      */
-    public Output</* @Nullable */ String> availabilityZoneId() {
-        return this.availabilityZoneId;
+    public Optional<Output<String>> availabilityZoneId() {
+        return Optional.ofNullable(this.availabilityZoneId);
     }
 
     /**
@@ -53,14 +54,14 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cidrBlock")
-    private Output</* @Nullable */ String> cidrBlock;
+    private @Nullable Output<String> cidrBlock;
 
     /**
      * @return CIDR block of the desired subnet.
      * 
      */
-    public Output</* @Nullable */ String> cidrBlock() {
-        return this.cidrBlock;
+    public Optional<Output<String>> cidrBlock() {
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -68,14 +69,14 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultForAz")
-    private Output</* @Nullable */ Boolean> defaultForAz;
+    private @Nullable Output<Boolean> defaultForAz;
 
     /**
      * @return Whether the desired subnet must be the default subnet for its associated availability zone.
      * 
      */
-    public Output</* @Nullable */ Boolean> defaultForAz() {
-        return this.defaultForAz;
+    public Optional<Output<Boolean>> defaultForAz() {
+        return Optional.ofNullable(this.defaultForAz);
     }
 
     /**
@@ -83,14 +84,14 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSubnetFilter>> filters;
+    private @Nullable Output<List<GetSubnetFilterArgs>> filters;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<GetSubnetFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSubnetFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -98,14 +99,14 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return ID of the specific subnet to retrieve.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -113,14 +114,14 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipv6CidrBlock")
-    private Output</* @Nullable */ String> ipv6CidrBlock;
+    private @Nullable Output<String> ipv6CidrBlock;
 
     /**
      * @return IPv6 CIDR block of the desired subnet.
      * 
      */
-    public Output</* @Nullable */ String> ipv6CidrBlock() {
-        return this.ipv6CidrBlock;
+    public Optional<Output<String>> ipv6CidrBlock() {
+        return Optional.ofNullable(this.ipv6CidrBlock);
     }
 
     /**
@@ -128,14 +129,14 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return State that the desired subnet must have.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -143,14 +144,14 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Map of tags, each pair of which must exactly match a pair on the desired subnet.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -158,14 +159,14 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId")
-    private Output</* @Nullable */ String> vpcId;
+    private @Nullable Output<String> vpcId;
 
     /**
      * @return ID of the VPC that the desired subnet belongs to.
      * 
      */
-    public Output</* @Nullable */ String> vpcId() {
-        return this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
     private GetSubnetArgs() {}
@@ -207,7 +208,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityZone(Output</* @Nullable */ String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
@@ -218,7 +219,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
@@ -228,7 +229,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityZoneId(Output</* @Nullable */ String> availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
             $.availabilityZoneId = availabilityZoneId;
             return this;
         }
@@ -239,7 +240,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
+        public Builder availabilityZoneId(String availabilityZoneId) {
             return availabilityZoneId(Output.of(availabilityZoneId));
         }
 
@@ -249,7 +250,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder cidrBlock(Output</* @Nullable */ String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
@@ -260,7 +261,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder cidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             return cidrBlock(Output.of(cidrBlock));
         }
 
@@ -270,7 +271,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder defaultForAz(Output</* @Nullable */ Boolean> defaultForAz) {
+        public Builder defaultForAz(@Nullable Output<Boolean> defaultForAz) {
             $.defaultForAz = defaultForAz;
             return this;
         }
@@ -281,7 +282,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder defaultForAz(@Nullable Boolean defaultForAz) {
+        public Builder defaultForAz(Boolean defaultForAz) {
             return defaultForAz(Output.of(defaultForAz));
         }
 
@@ -291,7 +292,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetSubnetFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSubnetFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -302,7 +303,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetSubnetFilter> filters) {
+        public Builder filters(List<GetSubnetFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -312,7 +313,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetSubnetFilter... filters) {
+        public Builder filters(GetSubnetFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -322,7 +323,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -333,7 +334,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -343,7 +344,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipv6CidrBlock(Output</* @Nullable */ String> ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
             $.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
@@ -354,7 +355,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             return ipv6CidrBlock(Output.of(ipv6CidrBlock));
         }
 
@@ -364,7 +365,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -375,7 +376,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -385,7 +386,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -396,7 +397,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
@@ -406,7 +407,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vpcId(Output</* @Nullable */ String> vpcId) {
+        public Builder vpcId(@Nullable Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
@@ -417,7 +418,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vpcId(@Nullable String vpcId) {
+        public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }
 

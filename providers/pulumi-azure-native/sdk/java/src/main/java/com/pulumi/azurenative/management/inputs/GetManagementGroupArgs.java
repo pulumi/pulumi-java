@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expand")
-    private Output</* @Nullable */ String> expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return The $expand=children query string parameter allows clients to request inclusion of children in the response payload.  $expand=path includes the path from the root group to the current group.
      * 
      */
-    public Output</* @Nullable */ String> expand() {
-        return this.expand;
+    public Optional<Output<String>> expand() {
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="filter")
-    private Output</* @Nullable */ String> filter;
+    private @Nullable Output<String> filter;
 
     /**
      * @return A filter which allows the exclusion of subscriptions from results (i.e. &#39;$filter=children.childType ne Subscription&#39;)
      * 
      */
-    public Output</* @Nullable */ String> filter() {
-        return this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="recurse")
-    private Output</* @Nullable */ Boolean> recurse;
+    private @Nullable Output<Boolean> recurse;
 
     /**
      * @return The $recurse=true query string parameter allows clients to request inclusion of entire hierarchy in the response payload. Note that  $expand=children must be passed up if $recurse is set to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> recurse() {
-        return this.recurse;
+    public Optional<Output<Boolean>> recurse() {
+        return Optional.ofNullable(this.recurse);
     }
 
     private GetManagementGroupArgs() {}
@@ -108,7 +109,7 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder expand(Output</* @Nullable */ String> expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(String expand) {
             return expand(Output.of(expand));
         }
 
@@ -129,7 +130,7 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder filter(Output</* @Nullable */ String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
@@ -140,7 +141,7 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder filter(@Nullable String filter) {
+        public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
@@ -171,7 +172,7 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder recurse(Output</* @Nullable */ Boolean> recurse) {
+        public Builder recurse(@Nullable Output<Boolean> recurse) {
             $.recurse = recurse;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder recurse(@Nullable Boolean recurse) {
+        public Builder recurse(Boolean recurse) {
             return recurse(Output.of(recurse));
         }
 

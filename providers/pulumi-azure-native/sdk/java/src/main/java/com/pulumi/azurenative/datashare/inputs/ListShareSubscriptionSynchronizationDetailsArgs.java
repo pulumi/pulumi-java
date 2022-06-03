@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
      * 
      */
     @Import(name="filter")
-    private Output</* @Nullable */ String> filter;
+    private @Nullable Output<String> filter;
 
     /**
      * @return Filters the results using OData syntax.
      * 
      */
-    public Output</* @Nullable */ String> filter() {
-        return this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
      * 
      */
     @Import(name="orderby")
-    private Output</* @Nullable */ String> orderby;
+    private @Nullable Output<String> orderby;
 
     /**
      * @return Sorts the results using OData syntax.
      * 
      */
-    public Output</* @Nullable */ String> orderby() {
-        return this.orderby;
+    public Optional<Output<String>> orderby() {
+        return Optional.ofNullable(this.orderby);
     }
 
     /**
@@ -94,14 +95,14 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
      * 
      */
     @Import(name="skipToken")
-    private Output</* @Nullable */ String> skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return Continuation token
      * 
      */
-    public Output</* @Nullable */ String> skipToken() {
-        return this.skipToken;
+    public Optional<Output<String>> skipToken() {
+        return Optional.ofNullable(this.skipToken);
     }
 
     /**
@@ -176,7 +177,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * @return builder
          * 
          */
-        public Builder filter(Output</* @Nullable */ String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
@@ -187,7 +188,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * @return builder
          * 
          */
-        public Builder filter(@Nullable String filter) {
+        public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
@@ -197,7 +198,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * @return builder
          * 
          */
-        public Builder orderby(Output</* @Nullable */ String> orderby) {
+        public Builder orderby(@Nullable Output<String> orderby) {
             $.orderby = orderby;
             return this;
         }
@@ -208,7 +209,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * @return builder
          * 
          */
-        public Builder orderby(@Nullable String orderby) {
+        public Builder orderby(String orderby) {
             return orderby(Output.of(orderby));
         }
 
@@ -260,7 +261,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * @return builder
          * 
          */
-        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+        public Builder skipToken(@Nullable Output<String> skipToken) {
             $.skipToken = skipToken;
             return this;
         }
@@ -271,7 +272,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
+        public Builder skipToken(String skipToken) {
             return skipToken(Output.of(skipToken));
         }
 

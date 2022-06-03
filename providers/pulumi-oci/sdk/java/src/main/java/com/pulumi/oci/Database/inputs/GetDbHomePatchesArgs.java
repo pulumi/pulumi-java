@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDbHomePatchesFilter;
+import com.pulumi.oci.Database.inputs.GetDbHomePatchesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetDbHomePatchesArgs extends com.pulumi.resources.InvokeArgs 
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDbHomePatchesFilter>> filters;
+    private @Nullable Output<List<GetDbHomePatchesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDbHomePatchesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDbHomePatchesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetDbHomePatchesArgs() {}
@@ -84,16 +85,16 @@ public final class GetDbHomePatchesArgs extends com.pulumi.resources.InvokeArgs 
             return dbHomeId(Output.of(dbHomeId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDbHomePatchesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDbHomePatchesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbHomePatchesFilter> filters) {
+        public Builder filters(List<GetDbHomePatchesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDbHomePatchesFilter... filters) {
+        public Builder filters(GetDbHomePatchesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accepts")
-    private Output</* @Nullable */ String> accepts;
+    private @Nullable Output<String> accepts;
 
     /**
      * @return The content-type of the export. Valid values are `application/json` and `application/yaml` are supported for `export_type` `ofoas30` and `swagger`.
      * 
      */
-    public Output</* @Nullable */ String> accepts() {
-        return this.accepts;
+    public Optional<Output<String>> accepts() {
+        return Optional.ofNullable(this.accepts);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameters")
-    private Output</* @Nullable */ Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
     /**
      * @return A key-value map of query string parameters that specify properties of the export. the following parameters are supported: `extensions=&#39;integrations&#39;` or `extensions=&#39;apigateway&#39;` will export the API with x-amazon-apigateway-integration extensions. `extensions=&#39;authorizers&#39;` will export the API with x-amazon-apigateway-authorizer extensions.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> parameters() {
-        return this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -124,7 +125,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accepts(Output</* @Nullable */ String> accepts) {
+        public Builder accepts(@Nullable Output<String> accepts) {
             $.accepts = accepts;
             return this;
         }
@@ -135,7 +136,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accepts(@Nullable String accepts) {
+        public Builder accepts(String accepts) {
             return accepts(Output.of(accepts));
         }
 
@@ -166,7 +167,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder parameters(Output</* @Nullable */ Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -177,7 +178,7 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }
 

@@ -3,14 +3,15 @@
 
 package com.pulumi.azurenative.edgeorder.inputs;
 
-import com.pulumi.azurenative.edgeorder.inputs.CustomerSubscriptionDetails;
-import com.pulumi.azurenative.edgeorder.inputs.FilterableProperty;
+import com.pulumi.azurenative.edgeorder.inputs.CustomerSubscriptionDetailsArgs;
+import com.pulumi.azurenative.edgeorder.inputs.FilterablePropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +24,14 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="customerSubscriptionDetails")
-    private Output</* @Nullable */ CustomerSubscriptionDetails> customerSubscriptionDetails;
+    private @Nullable Output<CustomerSubscriptionDetailsArgs> customerSubscriptionDetails;
 
     /**
      * @return Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
      * 
      */
-    public Output</* @Nullable */ CustomerSubscriptionDetails> customerSubscriptionDetails() {
-        return this.customerSubscriptionDetails;
+    public Optional<Output<CustomerSubscriptionDetailsArgs>> customerSubscriptionDetails() {
+        return Optional.ofNullable(this.customerSubscriptionDetails);
     }
 
     /**
@@ -38,14 +39,14 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="expand")
-    private Output</* @Nullable */ String> expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return $expand is supported on configurations parameter for product, which provides details on the configurations for the product.
      * 
      */
-    public Output</* @Nullable */ String> expand() {
-        return this.expand;
+    public Optional<Output<String>> expand() {
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -53,13 +54,13 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filterableProperties", required=true)
-    private Output<Map<String,List<FilterableProperty>>> filterableProperties;
+    private Output<Map<String,List<FilterablePropertyArgs>>> filterableProperties;
 
     /**
      * @return Dictionary of filterable properties on product family.
      * 
      */
-    public Output<Map<String,List<FilterableProperty>>> filterableProperties() {
+    public Output<Map<String,List<FilterablePropertyArgs>>> filterableProperties() {
         return this.filterableProperties;
     }
 
@@ -68,14 +69,14 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="skipToken")
-    private Output</* @Nullable */ String> skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return $skipToken is supported on list of product families, which provides the next page in the list of product families.
      * 
      */
-    public Output</* @Nullable */ String> skipToken() {
-        return this.skipToken;
+    public Optional<Output<String>> skipToken() {
+        return Optional.ofNullable(this.skipToken);
     }
 
     private ListProductFamiliesArgs() {}
@@ -111,7 +112,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder customerSubscriptionDetails(Output</* @Nullable */ CustomerSubscriptionDetails> customerSubscriptionDetails) {
+        public Builder customerSubscriptionDetails(@Nullable Output<CustomerSubscriptionDetailsArgs> customerSubscriptionDetails) {
             $.customerSubscriptionDetails = customerSubscriptionDetails;
             return this;
         }
@@ -122,7 +123,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder customerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
+        public Builder customerSubscriptionDetails(CustomerSubscriptionDetailsArgs customerSubscriptionDetails) {
             return customerSubscriptionDetails(Output.of(customerSubscriptionDetails));
         }
 
@@ -132,7 +133,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder expand(Output</* @Nullable */ String> expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
             return this;
         }
@@ -143,7 +144,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(String expand) {
             return expand(Output.of(expand));
         }
 
@@ -153,7 +154,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filterableProperties(Output<Map<String,List<FilterableProperty>>> filterableProperties) {
+        public Builder filterableProperties(Output<Map<String,List<FilterablePropertyArgs>>> filterableProperties) {
             $.filterableProperties = filterableProperties;
             return this;
         }
@@ -164,7 +165,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filterableProperties(Map<String,List<FilterableProperty>> filterableProperties) {
+        public Builder filterableProperties(Map<String,List<FilterablePropertyArgs>> filterableProperties) {
             return filterableProperties(Output.of(filterableProperties));
         }
 
@@ -174,7 +175,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+        public Builder skipToken(@Nullable Output<String> skipToken) {
             $.skipToken = skipToken;
             return this;
         }
@@ -185,7 +186,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
+        public Builder skipToken(String skipToken) {
             return skipToken(Output.of(skipToken));
         }
 

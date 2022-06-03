@@ -5,11 +5,12 @@ package com.pulumi.oci.Artifacts.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Artifacts.inputs.GetContainerRepositoriesFilter;
+import com.pulumi.oci.Artifacts.inputs.GetContainerRepositoriesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,14 +38,14 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are inspected depending on the the setting of `accessLevel`. Default is false. Can only be set to true when calling the API on the tenancy (root compartment).
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     /**
@@ -52,21 +53,21 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetContainerRepositoriesFilter>> filters;
+    private @Nullable Output<List<GetContainerRepositoriesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetContainerRepositoriesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetContainerRepositoriesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="isPublic")
-    private Output</* @Nullable */ Boolean> isPublic;
+    private @Nullable Output<Boolean> isPublic;
 
     /**
      * @return A filter to return resources that match the isPublic value.
      * 
      */
-    public Output</* @Nullable */ Boolean> isPublic() {
-        return this.isPublic;
+    public Optional<Output<Boolean>> isPublic() {
+        return Optional.ofNullable(this.isPublic);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="repositoryId")
-    private Output</* @Nullable */ String> repositoryId;
+    private @Nullable Output<String> repositoryId;
 
     /**
      * @return A filter to return container images only for the specified container repository OCID.
      * 
      */
-    public Output</* @Nullable */ String> repositoryId() {
-        return this.repositoryId;
+    public Optional<Output<String>> repositoryId() {
+        return Optional.ofNullable(this.repositoryId);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state name exactly.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetContainerRepositoriesArgs() {}
@@ -171,7 +172,7 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
@@ -192,7 +193,7 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -203,20 +204,20 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetContainerRepositoriesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetContainerRepositoriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetContainerRepositoriesFilter> filters) {
+        public Builder filters(List<GetContainerRepositoriesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetContainerRepositoriesFilter... filters) {
+        public Builder filters(GetContainerRepositoriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -226,7 +227,7 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder isPublic(Output</* @Nullable */ Boolean> isPublic) {
+        public Builder isPublic(@Nullable Output<Boolean> isPublic) {
             $.isPublic = isPublic;
             return this;
         }
@@ -237,7 +238,7 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder isPublic(@Nullable Boolean isPublic) {
+        public Builder isPublic(Boolean isPublic) {
             return isPublic(Output.of(isPublic));
         }
 
@@ -247,7 +248,7 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder repositoryId(Output</* @Nullable */ String> repositoryId) {
+        public Builder repositoryId(@Nullable Output<String> repositoryId) {
             $.repositoryId = repositoryId;
             return this;
         }
@@ -258,7 +259,7 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder repositoryId(@Nullable String repositoryId) {
+        public Builder repositoryId(String repositoryId) {
             return repositoryId(Output.of(repositoryId));
         }
 
@@ -268,7 +269,7 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -279,7 +280,7 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

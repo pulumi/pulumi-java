@@ -5,10 +5,11 @@ package com.pulumi.oci.Ocvp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Ocvp.inputs.GetSupportedVmwareSoftwareVersionsFilter;
+import com.pulumi.oci.Ocvp.inputs.GetSupportedVmwareSoftwareVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetSupportedVmwareSoftwareVersionsArgs extends com.pulumi.res
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSupportedVmwareSoftwareVersionsFilter>> filters;
+    private @Nullable Output<List<GetSupportedVmwareSoftwareVersionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetSupportedVmwareSoftwareVersionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSupportedVmwareSoftwareVersionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetSupportedVmwareSoftwareVersionsArgs() {}
@@ -84,16 +85,16 @@ public final class GetSupportedVmwareSoftwareVersionsArgs extends com.pulumi.res
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetSupportedVmwareSoftwareVersionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSupportedVmwareSoftwareVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSupportedVmwareSoftwareVersionsFilter> filters) {
+        public Builder filters(List<GetSupportedVmwareSoftwareVersionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetSupportedVmwareSoftwareVersionsFilter... filters) {
+        public Builder filters(GetSupportedVmwareSoftwareVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetDrgRouteTablesFilter;
+import com.pulumi.oci.Core.inputs.GetDrgRouteTablesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDrgRouteTablesFilter>> filters;
+    private @Nullable Output<List<GetDrgRouteTablesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDrgRouteTablesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDrgRouteTablesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="importDrgRouteDistributionId")
-    private Output</* @Nullable */ String> importDrgRouteDistributionId;
+    private @Nullable Output<String> importDrgRouteDistributionId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the import route distribution.
      * 
      */
-    public Output</* @Nullable */ String> importDrgRouteDistributionId() {
-        return this.importDrgRouteDistributionId;
+    public Optional<Output<String>> importDrgRouteDistributionId() {
+        return Optional.ofNullable(this.importDrgRouteDistributionId);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter that only returns matches for the specified lifecycle state. The value is case insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetDrgRouteTablesArgs() {}
@@ -117,7 +118,7 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -128,7 +129,7 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -153,16 +154,16 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
             return drgId(Output.of(drgId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDrgRouteTablesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDrgRouteTablesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDrgRouteTablesFilter> filters) {
+        public Builder filters(List<GetDrgRouteTablesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDrgRouteTablesFilter... filters) {
+        public Builder filters(GetDrgRouteTablesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder importDrgRouteDistributionId(Output</* @Nullable */ String> importDrgRouteDistributionId) {
+        public Builder importDrgRouteDistributionId(@Nullable Output<String> importDrgRouteDistributionId) {
             $.importDrgRouteDistributionId = importDrgRouteDistributionId;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder importDrgRouteDistributionId(@Nullable String importDrgRouteDistributionId) {
+        public Builder importDrgRouteDistributionId(String importDrgRouteDistributionId) {
             return importDrgRouteDistributionId(Output.of(importDrgRouteDistributionId));
         }
 
@@ -193,7 +194,7 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

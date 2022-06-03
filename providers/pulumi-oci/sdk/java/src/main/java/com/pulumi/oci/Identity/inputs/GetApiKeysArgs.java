@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetApiKeysFilter;
+import com.pulumi.oci.Identity.inputs.GetApiKeysFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetApiKeysArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetApiKeysArgs Empty = new GetApiKeysArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetApiKeysFilter>> filters;
+    private @Nullable Output<List<GetApiKeysFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetApiKeysFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetApiKeysFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetApiKeysArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApiKeysArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetApiKeysFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetApiKeysFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetApiKeysFilter> filters) {
+        public Builder filters(List<GetApiKeysFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetApiKeysFilter... filters) {
+        public Builder filters(GetApiKeysFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

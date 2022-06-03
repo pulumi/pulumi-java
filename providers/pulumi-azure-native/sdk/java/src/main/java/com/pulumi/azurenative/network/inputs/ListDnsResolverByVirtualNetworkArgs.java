@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class ListDnsResolverByVirtualNetworkArgs extends com.pulumi.resour
      * 
      */
     @Import(name="top")
-    private Output</* @Nullable */ Integer> top;
+    private @Nullable Output<Integer> top;
 
     /**
      * @return The maximum number of results to return. If not specified, returns up to 100 results.
      * 
      */
-    public Output</* @Nullable */ Integer> top() {
-        return this.top;
+    public Optional<Output<Integer>> top() {
+        return Optional.ofNullable(this.top);
     }
 
     /**
@@ -113,7 +114,7 @@ public final class ListDnsResolverByVirtualNetworkArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder top(Output</* @Nullable */ Integer> top) {
+        public Builder top(@Nullable Output<Integer> top) {
             $.top = top;
             return this;
         }
@@ -124,7 +125,7 @@ public final class ListDnsResolverByVirtualNetworkArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder top(@Nullable Integer top) {
+        public Builder top(Integer top) {
             return top(Output.of(top));
         }
 

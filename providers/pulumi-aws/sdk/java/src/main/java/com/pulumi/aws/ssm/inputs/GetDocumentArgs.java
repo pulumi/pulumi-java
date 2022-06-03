@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="documentFormat")
-    private Output</* @Nullable */ String> documentFormat;
+    private @Nullable Output<String> documentFormat;
 
     /**
      * @return Returns the document in the specified format. The document format can be either `JSON`, `YAML` and `TEXT`. JSON is the default format.
      * 
      */
-    public Output</* @Nullable */ String> documentFormat() {
-        return this.documentFormat;
+    public Optional<Output<String>> documentFormat() {
+        return Optional.ofNullable(this.documentFormat);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="documentVersion")
-    private Output</* @Nullable */ String> documentVersion;
+    private @Nullable Output<String> documentVersion;
 
     /**
      * @return The document version for which you want information.
      * 
      */
-    public Output</* @Nullable */ String> documentVersion() {
-        return this.documentVersion;
+    public Optional<Output<String>> documentVersion() {
+        return Optional.ofNullable(this.documentVersion);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder documentFormat(Output</* @Nullable */ String> documentFormat) {
+        public Builder documentFormat(@Nullable Output<String> documentFormat) {
             $.documentFormat = documentFormat;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder documentFormat(@Nullable String documentFormat) {
+        public Builder documentFormat(String documentFormat) {
             return documentFormat(Output.of(documentFormat));
         }
 
@@ -112,7 +113,7 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder documentVersion(Output</* @Nullable */ String> documentVersion) {
+        public Builder documentVersion(@Nullable Output<String> documentVersion) {
             $.documentVersion = documentVersion;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder documentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(String documentVersion) {
             return documentVersion(Output.of(documentVersion));
         }
 

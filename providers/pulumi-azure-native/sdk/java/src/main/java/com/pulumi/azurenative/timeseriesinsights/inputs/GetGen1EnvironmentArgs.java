@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetGen1EnvironmentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expand")
-    private Output</* @Nullable */ String> expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return Setting $expand=status will include the status of the internal services of the environment in the Time Series Insights service.
      * 
      */
-    public Output</* @Nullable */ String> expand() {
-        return this.expand;
+    public Optional<Output<String>> expand() {
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -112,7 +113,7 @@ public final class GetGen1EnvironmentArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder expand(Output</* @Nullable */ String> expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetGen1EnvironmentArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(String expand) {
             return expand(Output.of(expand));
         }
 

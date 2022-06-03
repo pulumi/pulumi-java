@@ -3,15 +3,16 @@
 
 package com.pulumi.aws.lakeformation.inputs;
 
-import com.pulumi.aws.lakeformation.inputs.GetPermissionsDataLocation;
-import com.pulumi.aws.lakeformation.inputs.GetPermissionsDatabase;
-import com.pulumi.aws.lakeformation.inputs.GetPermissionsTable;
-import com.pulumi.aws.lakeformation.inputs.GetPermissionsTableWithColumns;
+import com.pulumi.aws.lakeformation.inputs.GetPermissionsDataLocationArgs;
+import com.pulumi.aws.lakeformation.inputs.GetPermissionsDatabaseArgs;
+import com.pulumi.aws.lakeformation.inputs.GetPermissionsTableArgs;
+import com.pulumi.aws.lakeformation.inputs.GetPermissionsTableWithColumnsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,14 +25,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogId")
-    private Output</* @Nullable */ String> catalogId;
+    private @Nullable Output<String> catalogId;
 
     /**
      * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    public Output</* @Nullable */ String> catalogId() {
-        return this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -39,14 +40,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogResource")
-    private Output</* @Nullable */ Boolean> catalogResource;
+    private @Nullable Output<Boolean> catalogResource;
 
     /**
      * @return Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> catalogResource() {
-        return this.catalogResource;
+    public Optional<Output<Boolean>> catalogResource() {
+        return Optional.ofNullable(this.catalogResource);
     }
 
     /**
@@ -54,14 +55,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataLocation")
-    private Output</* @Nullable */ GetPermissionsDataLocation> dataLocation;
+    private @Nullable Output<GetPermissionsDataLocationArgs> dataLocation;
 
     /**
      * @return Configuration block for a data location resource. Detailed below.
      * 
      */
-    public Output</* @Nullable */ GetPermissionsDataLocation> dataLocation() {
-        return this.dataLocation;
+    public Optional<Output<GetPermissionsDataLocationArgs>> dataLocation() {
+        return Optional.ofNullable(this.dataLocation);
     }
 
     /**
@@ -69,14 +70,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="database")
-    private Output</* @Nullable */ GetPermissionsDatabase> database;
+    private @Nullable Output<GetPermissionsDatabaseArgs> database;
 
     /**
      * @return Configuration block for a database resource. Detailed below.
      * 
      */
-    public Output</* @Nullable */ GetPermissionsDatabase> database() {
-        return this.database;
+    public Optional<Output<GetPermissionsDatabaseArgs>> database() {
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -99,14 +100,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="table")
-    private Output</* @Nullable */ GetPermissionsTable> table;
+    private @Nullable Output<GetPermissionsTableArgs> table;
 
     /**
      * @return Configuration block for a table resource. Detailed below.
      * 
      */
-    public Output</* @Nullable */ GetPermissionsTable> table() {
-        return this.table;
+    public Optional<Output<GetPermissionsTableArgs>> table() {
+        return Optional.ofNullable(this.table);
     }
 
     /**
@@ -114,14 +115,14 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableWithColumns")
-    private Output</* @Nullable */ GetPermissionsTableWithColumns> tableWithColumns;
+    private @Nullable Output<GetPermissionsTableWithColumnsArgs> tableWithColumns;
 
     /**
      * @return Configuration block for a table with columns resource. Detailed below.
      * 
      */
-    public Output</* @Nullable */ GetPermissionsTableWithColumns> tableWithColumns() {
-        return this.tableWithColumns;
+    public Optional<Output<GetPermissionsTableWithColumnsArgs>> tableWithColumns() {
+        return Optional.ofNullable(this.tableWithColumns);
     }
 
     private GetPermissionsArgs() {}
@@ -160,7 +161,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder catalogId(Output</* @Nullable */ String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
@@ -171,7 +172,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder catalogId(@Nullable String catalogId) {
+        public Builder catalogId(String catalogId) {
             return catalogId(Output.of(catalogId));
         }
 
@@ -181,7 +182,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder catalogResource(Output</* @Nullable */ Boolean> catalogResource) {
+        public Builder catalogResource(@Nullable Output<Boolean> catalogResource) {
             $.catalogResource = catalogResource;
             return this;
         }
@@ -192,7 +193,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder catalogResource(@Nullable Boolean catalogResource) {
+        public Builder catalogResource(Boolean catalogResource) {
             return catalogResource(Output.of(catalogResource));
         }
 
@@ -202,7 +203,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dataLocation(Output</* @Nullable */ GetPermissionsDataLocation> dataLocation) {
+        public Builder dataLocation(@Nullable Output<GetPermissionsDataLocationArgs> dataLocation) {
             $.dataLocation = dataLocation;
             return this;
         }
@@ -213,7 +214,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dataLocation(@Nullable GetPermissionsDataLocation dataLocation) {
+        public Builder dataLocation(GetPermissionsDataLocationArgs dataLocation) {
             return dataLocation(Output.of(dataLocation));
         }
 
@@ -223,7 +224,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder database(Output</* @Nullable */ GetPermissionsDatabase> database) {
+        public Builder database(@Nullable Output<GetPermissionsDatabaseArgs> database) {
             $.database = database;
             return this;
         }
@@ -234,7 +235,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder database(@Nullable GetPermissionsDatabase database) {
+        public Builder database(GetPermissionsDatabaseArgs database) {
             return database(Output.of(database));
         }
 
@@ -265,7 +266,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder table(Output</* @Nullable */ GetPermissionsTable> table) {
+        public Builder table(@Nullable Output<GetPermissionsTableArgs> table) {
             $.table = table;
             return this;
         }
@@ -276,7 +277,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder table(@Nullable GetPermissionsTable table) {
+        public Builder table(GetPermissionsTableArgs table) {
             return table(Output.of(table));
         }
 
@@ -286,7 +287,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tableWithColumns(Output</* @Nullable */ GetPermissionsTableWithColumns> tableWithColumns) {
+        public Builder tableWithColumns(@Nullable Output<GetPermissionsTableWithColumnsArgs> tableWithColumns) {
             $.tableWithColumns = tableWithColumns;
             return this;
         }
@@ -297,7 +298,7 @@ public final class GetPermissionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tableWithColumns(@Nullable GetPermissionsTableWithColumns tableWithColumns) {
+        public Builder tableWithColumns(GetPermissionsTableWithColumnsArgs tableWithColumns) {
             return tableWithColumns(Output.of(tableWithColumns));
         }
 

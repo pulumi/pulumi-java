@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="format")
-    private Output</* @Nullable */ String> format;
+    private @Nullable Output<String> format;
 
     /**
      * @return The archive format query parameter for downloading repository endpoint.
      * 
      */
-    public Output</* @Nullable */ String> format() {
-        return this.format;
+    public Optional<Output<String>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="refName")
-    private Output</* @Nullable */ String> refName;
+    private @Nullable Output<String> refName;
 
     /**
      * @return A filter to return only resources that match the given reference name.
      * 
      */
-    public Output</* @Nullable */ String> refName() {
-        return this.refName;
+    public Optional<Output<String>> refName() {
+        return Optional.ofNullable(this.refName);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder format(Output</* @Nullable */ String> format) {
+        public Builder format(@Nullable Output<String> format) {
             $.format = format;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder format(@Nullable String format) {
+        public Builder format(String format) {
             return format(Output.of(format));
         }
 
@@ -112,7 +113,7 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder refName(Output</* @Nullable */ String> refName) {
+        public Builder refName(@Nullable Output<String> refName) {
             $.refName = refName;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetRepositoryArchiveContentArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder refName(@Nullable String refName) {
+        public Builder refName(String refName) {
             return refName(Output.of(refName));
         }
 

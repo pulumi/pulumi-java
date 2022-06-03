@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetGiVersionsFilter;
+import com.pulumi.oci.Database.inputs.GetGiVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetGiVersionsArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetGiVersionsFilter>> filters;
+    private @Nullable Output<List<GetGiVersionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetGiVersionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetGiVersionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetGiVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shape")
-    private Output</* @Nullable */ String> shape;
+    private @Nullable Output<String> shape;
 
     /**
      * @return If provided, filters the results for the given shape.
      * 
      */
-    public Output</* @Nullable */ String> shape() {
-        return this.shape;
+    public Optional<Output<String>> shape() {
+        return Optional.ofNullable(this.shape);
     }
 
     private GetGiVersionsArgs() {}
@@ -100,16 +101,16 @@ public final class GetGiVersionsArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetGiVersionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetGiVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetGiVersionsFilter> filters) {
+        public Builder filters(List<GetGiVersionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetGiVersionsFilter... filters) {
+        public Builder filters(GetGiVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -119,7 +120,7 @@ public final class GetGiVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder shape(Output</* @Nullable */ String> shape) {
+        public Builder shape(@Nullable Output<String> shape) {
             $.shape = shape;
             return this;
         }
@@ -130,7 +131,7 @@ public final class GetGiVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder shape(@Nullable String shape) {
+        public Builder shape(String shape) {
             return shape(Output.of(shape));
         }
 

@@ -3,12 +3,13 @@
 
 package com.pulumi.aws.identitystore.inputs;
 
-import com.pulumi.aws.identitystore.inputs.GetGroupFilter;
+import com.pulumi.aws.identitystore.inputs.GetGroupFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +22,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters", required=true)
-    private Output<List<GetGroupFilter>> filters;
+    private Output<List<GetGroupFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
      * 
      */
-    public Output<List<GetGroupFilter>> filters() {
+    public Output<List<GetGroupFilterArgs>> filters() {
         return this.filters;
     }
 
@@ -36,14 +37,14 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupId")
-    private Output</* @Nullable */ String> groupId;
+    private @Nullable Output<String> groupId;
 
     /**
      * @return The identifier for a group in the Identity Store.
      * 
      */
-    public Output</* @Nullable */ String> groupId() {
-        return this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -93,7 +94,7 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output<List<GetGroupFilter>> filters) {
+        public Builder filters(Output<List<GetGroupFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -104,7 +105,7 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(List<GetGroupFilter> filters) {
+        public Builder filters(List<GetGroupFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -114,7 +115,7 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetGroupFilter... filters) {
+        public Builder filters(GetGroupFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -124,7 +125,7 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder groupId(Output</* @Nullable */ String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
@@ -135,7 +136,7 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder groupId(@Nullable String groupId) {
+        public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 

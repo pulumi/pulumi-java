@@ -5,10 +5,11 @@ package com.pulumi.oci.Waf.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Waf.inputs.GetWebAppFirewallPoliciesFilter;
+import com.pulumi.oci.Waf.inputs.GetWebAppFirewallPoliciesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetWebAppFirewallPoliciesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetWebAppFirewallPoliciesFilter>> filters;
+    private @Nullable Output<List<GetWebAppFirewallPoliciesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetWebAppFirewallPoliciesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetWebAppFirewallPoliciesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetWebAppFirewallPoliciesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return A filter to return only the WebAppFirewallPolicy with the given [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetWebAppFirewallPoliciesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="states")
-    private Output</* @Nullable */ List<String>> states;
+    private @Nullable Output<List<String>> states;
 
     /**
      * @return A filter to return only resources that match the given lifecycleState.
      * 
      */
-    public Output</* @Nullable */ List<String>> states() {
-        return this.states;
+    public Optional<Output<List<String>>> states() {
+        return Optional.ofNullable(this.states);
     }
 
     private GetWebAppFirewallPoliciesArgs() {}
@@ -138,7 +139,7 @@ public final class GetWebAppFirewallPoliciesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,20 +150,20 @@ public final class GetWebAppFirewallPoliciesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetWebAppFirewallPoliciesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetWebAppFirewallPoliciesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetWebAppFirewallPoliciesFilter> filters) {
+        public Builder filters(List<GetWebAppFirewallPoliciesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetWebAppFirewallPoliciesFilter... filters) {
+        public Builder filters(GetWebAppFirewallPoliciesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetWebAppFirewallPoliciesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetWebAppFirewallPoliciesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -193,7 +194,7 @@ public final class GetWebAppFirewallPoliciesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder states(Output</* @Nullable */ List<String>> states) {
+        public Builder states(@Nullable Output<List<String>> states) {
             $.states = states;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetWebAppFirewallPoliciesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder states(@Nullable List<String> states) {
+        public Builder states(List<String> states) {
             return states(Output.of(states));
         }
 

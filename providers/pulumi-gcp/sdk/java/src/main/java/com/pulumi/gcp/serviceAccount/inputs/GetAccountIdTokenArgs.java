@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="delegates")
-    private Output</* @Nullable */ List<String>> delegates;
+    private @Nullable Output<List<String>> delegates;
 
     /**
      * @return Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
      * 
      */
-    public Output</* @Nullable */ List<String>> delegates() {
-        return this.delegates;
+    public Optional<Output<List<String>>> delegates() {
+        return Optional.ofNullable(this.delegates);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="includeEmail")
-    private Output</* @Nullable */ Boolean> includeEmail;
+    private @Nullable Output<Boolean> includeEmail;
 
     /**
      * @return Include the verified email in the claim. Used only when using impersonation mode.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeEmail() {
-        return this.includeEmail;
+    public Optional<Output<Boolean>> includeEmail() {
+        return Optional.ofNullable(this.includeEmail);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="targetServiceAccount")
-    private Output</* @Nullable */ String> targetServiceAccount;
+    private @Nullable Output<String> targetServiceAccount;
 
     /**
      * @return The email of the service account being impersonated.  Used only when using impersonation mode.
      * 
      */
-    public Output</* @Nullable */ String> targetServiceAccount() {
-        return this.targetServiceAccount;
+    public Optional<Output<String>> targetServiceAccount() {
+        return Optional.ofNullable(this.targetServiceAccount);
     }
 
     private GetAccountIdTokenArgs() {}
@@ -109,7 +110,7 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder delegates(Output</* @Nullable */ List<String>> delegates) {
+        public Builder delegates(@Nullable Output<List<String>> delegates) {
             $.delegates = delegates;
             return this;
         }
@@ -120,7 +121,7 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder delegates(@Nullable List<String> delegates) {
+        public Builder delegates(List<String> delegates) {
             return delegates(Output.of(delegates));
         }
 
@@ -140,7 +141,7 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder includeEmail(Output</* @Nullable */ Boolean> includeEmail) {
+        public Builder includeEmail(@Nullable Output<Boolean> includeEmail) {
             $.includeEmail = includeEmail;
             return this;
         }
@@ -151,7 +152,7 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder includeEmail(@Nullable Boolean includeEmail) {
+        public Builder includeEmail(Boolean includeEmail) {
             return includeEmail(Output.of(includeEmail));
         }
 
@@ -182,7 +183,7 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder targetServiceAccount(Output</* @Nullable */ String> targetServiceAccount) {
+        public Builder targetServiceAccount(@Nullable Output<String> targetServiceAccount) {
             $.targetServiceAccount = targetServiceAccount;
             return this;
         }
@@ -193,7 +194,7 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder targetServiceAccount(@Nullable String targetServiceAccount) {
+        public Builder targetServiceAccount(String targetServiceAccount) {
             return targetServiceAccount(Output.of(targetServiceAccount));
         }
 

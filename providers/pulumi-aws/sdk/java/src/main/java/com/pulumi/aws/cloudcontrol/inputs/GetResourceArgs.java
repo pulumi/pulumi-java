@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="roleArn")
-    private Output</* @Nullable */ String> roleArn;
+    private @Nullable Output<String> roleArn;
 
     /**
      * @return Amazon Resource Name (ARN) of the IAM Role to assume for operations.
      * 
      */
-    public Output</* @Nullable */ String> roleArn() {
-        return this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -64,14 +65,14 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="typeVersionId")
-    private Output</* @Nullable */ String> typeVersionId;
+    private @Nullable Output<String> typeVersionId;
 
     /**
      * @return Identifier of the CloudFormation resource type version.
      * 
      */
-    public Output</* @Nullable */ String> typeVersionId() {
-        return this.typeVersionId;
+    public Optional<Output<String>> typeVersionId() {
+        return Optional.ofNullable(this.typeVersionId);
     }
 
     private GetResourceArgs() {}
@@ -128,7 +129,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder roleArn(Output</* @Nullable */ String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder roleArn(@Nullable String roleArn) {
+        public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
@@ -170,7 +171,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder typeVersionId(Output</* @Nullable */ String> typeVersionId) {
+        public Builder typeVersionId(@Nullable Output<String> typeVersionId) {
             $.typeVersionId = typeVersionId;
             return this;
         }
@@ -181,7 +182,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder typeVersionId(@Nullable String typeVersionId) {
+        public Builder typeVersionId(String typeVersionId) {
             return typeVersionId(Output.of(typeVersionId));
         }
 

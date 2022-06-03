@@ -3,11 +3,12 @@
 
 package com.pulumi.aws.ec2transitgateway.inputs;
 
-import com.pulumi.aws.ec2transitgateway.inputs.GetVpcAttachmentsFilter;
+import com.pulumi.aws.ec2transitgateway.inputs.GetVpcAttachmentsFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetVpcAttachmentsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetVpcAttachmentsFilter>> filters;
+    private @Nullable Output<List<GetVpcAttachmentsFilterArgs>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<GetVpcAttachmentsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetVpcAttachmentsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetVpcAttachmentsArgs() {}
@@ -60,7 +61,7 @@ public final class GetVpcAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetVpcAttachmentsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetVpcAttachmentsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -71,7 +72,7 @@ public final class GetVpcAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetVpcAttachmentsFilter> filters) {
+        public Builder filters(List<GetVpcAttachmentsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -81,7 +82,7 @@ public final class GetVpcAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder filters(GetVpcAttachmentsFilter... filters) {
+        public Builder filters(GetVpcAttachmentsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

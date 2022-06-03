@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,17 +30,17 @@ public final class GetEdgeCacheOriginIamPolicyArgs extends com.pulumi.resources.
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private Output</* @Nullable */ String> optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Output</* @Nullable */ String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion;
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     private GetEdgeCacheOriginIamPolicyArgs() {}
@@ -87,21 +88,21 @@ public final class GetEdgeCacheOriginIamPolicyArgs extends com.pulumi.resources.
             return location(Output.of(location));
         }
 
-        public Builder optionsRequestedPolicyVersion(Output</* @Nullable */ String> optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
             return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
         }
 
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 

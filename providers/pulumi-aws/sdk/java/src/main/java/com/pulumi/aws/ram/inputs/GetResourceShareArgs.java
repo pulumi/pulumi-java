@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.ram.inputs;
 
-import com.pulumi.aws.ram.inputs.GetResourceShareFilter;
+import com.pulumi.aws.ram.inputs.GetResourceShareFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetResourceShareFilter>> filters;
+    private @Nullable Output<List<GetResourceShareFilterArgs>> filters;
 
     /**
      * @return A filter used to scope the list e.g., by tags. See [related docs] (https://docs.aws.amazon.com/ram/latest/APIReference/API_TagFilter.html).
      * 
      */
-    public Output</* @Nullable */ List<GetResourceShareFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetResourceShareFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -67,14 +68,14 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return The Tags attached to the RAM share
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetResourceShareArgs() {}
@@ -110,7 +111,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetResourceShareFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetResourceShareFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -121,7 +122,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetResourceShareFilter> filters) {
+        public Builder filters(List<GetResourceShareFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -131,7 +132,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(GetResourceShareFilter... filters) {
+        public Builder filters(GetResourceShareFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -183,7 +184,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -194,7 +195,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

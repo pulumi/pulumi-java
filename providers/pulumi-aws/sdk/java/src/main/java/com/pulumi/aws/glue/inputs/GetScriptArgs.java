@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.glue.inputs;
 
-import com.pulumi.aws.glue.inputs.GetScriptDagEdge;
-import com.pulumi.aws.glue.inputs.GetScriptDagNode;
+import com.pulumi.aws.glue.inputs.GetScriptDagEdgeArgs;
+import com.pulumi.aws.glue.inputs.GetScriptDagNodeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +23,13 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dagEdges", required=true)
-    private Output<List<GetScriptDagEdge>> dagEdges;
+    private Output<List<GetScriptDagEdgeArgs>> dagEdges;
 
     /**
      * @return A list of the edges in the DAG. Defined below.
      * 
      */
-    public Output<List<GetScriptDagEdge>> dagEdges() {
+    public Output<List<GetScriptDagEdgeArgs>> dagEdges() {
         return this.dagEdges;
     }
 
@@ -37,13 +38,13 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dagNodes", required=true)
-    private Output<List<GetScriptDagNode>> dagNodes;
+    private Output<List<GetScriptDagNodeArgs>> dagNodes;
 
     /**
      * @return A list of the nodes in the DAG. Defined below.
      * 
      */
-    public Output<List<GetScriptDagNode>> dagNodes() {
+    public Output<List<GetScriptDagNodeArgs>> dagNodes() {
         return this.dagNodes;
     }
 
@@ -52,14 +53,14 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="language")
-    private Output</* @Nullable */ String> language;
+    private @Nullable Output<String> language;
 
     /**
      * @return The programming language of the resulting code from the DAG. Defaults to `PYTHON`. Valid values are `PYTHON` and `SCALA`.
      * 
      */
-    public Output</* @Nullable */ String> language() {
-        return this.language;
+    public Optional<Output<String>> language() {
+        return Optional.ofNullable(this.language);
     }
 
     private GetScriptArgs() {}
@@ -94,7 +95,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dagEdges(Output<List<GetScriptDagEdge>> dagEdges) {
+        public Builder dagEdges(Output<List<GetScriptDagEdgeArgs>> dagEdges) {
             $.dagEdges = dagEdges;
             return this;
         }
@@ -105,7 +106,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dagEdges(List<GetScriptDagEdge> dagEdges) {
+        public Builder dagEdges(List<GetScriptDagEdgeArgs> dagEdges) {
             return dagEdges(Output.of(dagEdges));
         }
 
@@ -115,7 +116,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dagEdges(GetScriptDagEdge... dagEdges) {
+        public Builder dagEdges(GetScriptDagEdgeArgs... dagEdges) {
             return dagEdges(List.of(dagEdges));
         }
 
@@ -125,7 +126,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dagNodes(Output<List<GetScriptDagNode>> dagNodes) {
+        public Builder dagNodes(Output<List<GetScriptDagNodeArgs>> dagNodes) {
             $.dagNodes = dagNodes;
             return this;
         }
@@ -136,7 +137,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dagNodes(List<GetScriptDagNode> dagNodes) {
+        public Builder dagNodes(List<GetScriptDagNodeArgs> dagNodes) {
             return dagNodes(Output.of(dagNodes));
         }
 
@@ -146,7 +147,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dagNodes(GetScriptDagNode... dagNodes) {
+        public Builder dagNodes(GetScriptDagNodeArgs... dagNodes) {
             return dagNodes(List.of(dagNodes));
         }
 
@@ -156,7 +157,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder language(Output</* @Nullable */ String> language) {
+        public Builder language(@Nullable Output<String> language) {
             $.language = language;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetScriptArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder language(@Nullable String language) {
+        public Builder language(String language) {
             return language(Output.of(language));
         }
 

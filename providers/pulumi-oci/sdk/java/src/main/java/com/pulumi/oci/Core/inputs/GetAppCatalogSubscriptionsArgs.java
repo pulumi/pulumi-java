@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetAppCatalogSubscriptionsFilter;
+import com.pulumi.oci.Core.inputs.GetAppCatalogSubscriptionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetAppCatalogSubscriptionsArgs extends com.pulumi.resources.I
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAppCatalogSubscriptionsFilter>> filters;
+    private @Nullable Output<List<GetAppCatalogSubscriptionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAppCatalogSubscriptionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAppCatalogSubscriptionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetAppCatalogSubscriptionsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="listingId")
-    private Output</* @Nullable */ String> listingId;
+    private @Nullable Output<String> listingId;
 
     /**
      * @return A filter to return only the listings that matches the given listing id.
      * 
      */
-    public Output</* @Nullable */ String> listingId() {
-        return this.listingId;
+    public Optional<Output<String>> listingId() {
+        return Optional.ofNullable(this.listingId);
     }
 
     private GetAppCatalogSubscriptionsArgs() {}
@@ -100,16 +101,16 @@ public final class GetAppCatalogSubscriptionsArgs extends com.pulumi.resources.I
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAppCatalogSubscriptionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAppCatalogSubscriptionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAppCatalogSubscriptionsFilter> filters) {
+        public Builder filters(List<GetAppCatalogSubscriptionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAppCatalogSubscriptionsFilter... filters) {
+        public Builder filters(GetAppCatalogSubscriptionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -119,7 +120,7 @@ public final class GetAppCatalogSubscriptionsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder listingId(Output</* @Nullable */ String> listingId) {
+        public Builder listingId(@Nullable Output<String> listingId) {
             $.listingId = listingId;
             return this;
         }
@@ -130,7 +131,7 @@ public final class GetAppCatalogSubscriptionsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder listingId(@Nullable String listingId) {
+        public Builder listingId(String listingId) {
             return listingId(Output.of(listingId));
         }
 

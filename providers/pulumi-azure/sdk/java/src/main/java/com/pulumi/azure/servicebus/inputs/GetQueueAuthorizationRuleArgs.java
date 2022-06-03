@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,21 +35,21 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="namespaceName")
-    private Output</* @Nullable */ String> namespaceName;
+    private @Nullable Output<String> namespaceName;
 
     /**
      * @return The name of the ServiceBus Namespace.
      * 
      */
-    public Output</* @Nullable */ String> namespaceName() {
-        return this.namespaceName;
+    public Optional<Output<String>> namespaceName() {
+        return Optional.ofNullable(this.namespaceName);
     }
 
     @Import(name="queueId")
-    private Output</* @Nullable */ String> queueId;
+    private @Nullable Output<String> queueId;
 
-    public Output</* @Nullable */ String> queueId() {
-        return this.queueId;
+    public Optional<Output<String>> queueId() {
+        return Optional.ofNullable(this.queueId);
     }
 
     /**
@@ -56,14 +57,14 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="queueName")
-    private Output</* @Nullable */ String> queueName;
+    private @Nullable Output<String> queueName;
 
     /**
      * @return The name of the ServiceBus Queue.
      * 
      */
-    public Output</* @Nullable */ String> queueName() {
-        return this.queueName;
+    public Optional<Output<String>> queueName() {
+        return Optional.ofNullable(this.queueName);
     }
 
     /**
@@ -71,14 +72,14 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName")
-    private Output</* @Nullable */ String> resourceGroupName;
+    private @Nullable Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource Group where the ServiceBus Queue Authorisation Rule exists.
      * 
      */
-    public Output</* @Nullable */ String> resourceGroupName() {
-        return this.resourceGroupName;
+    public Optional<Output<String>> resourceGroupName() {
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     private GetQueueAuthorizationRuleArgs() {}
@@ -136,7 +137,7 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder namespaceName(Output</* @Nullable */ String> namespaceName) {
+        public Builder namespaceName(@Nullable Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
@@ -147,16 +148,16 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder namespaceName(@Nullable String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
-        public Builder queueId(Output</* @Nullable */ String> queueId) {
+        public Builder queueId(@Nullable Output<String> queueId) {
             $.queueId = queueId;
             return this;
         }
 
-        public Builder queueId(@Nullable String queueId) {
+        public Builder queueId(String queueId) {
             return queueId(Output.of(queueId));
         }
 
@@ -166,7 +167,7 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder queueName(Output</* @Nullable */ String> queueName) {
+        public Builder queueName(@Nullable Output<String> queueName) {
             $.queueName = queueName;
             return this;
         }
@@ -177,7 +178,7 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder queueName(@Nullable String queueName) {
+        public Builder queueName(String queueName) {
             return queueName(Output.of(queueName));
         }
 
@@ -187,7 +188,7 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder resourceGroupName(Output</* @Nullable */ String> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
@@ -198,7 +199,7 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder resourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 

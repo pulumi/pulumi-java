@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -51,14 +52,14 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A mapping of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="trafficViewEnabled")
-    private Output</* @Nullable */ Boolean> trafficViewEnabled;
+    private @Nullable Output<Boolean> trafficViewEnabled;
 
     /**
      * @return Indicates whether Traffic View is enabled for the Traffic Manager profile.
      * 
      */
-    public Output</* @Nullable */ Boolean> trafficViewEnabled() {
-        return this.trafficViewEnabled;
+    public Optional<Output<Boolean>> trafficViewEnabled() {
+        return Optional.ofNullable(this.trafficViewEnabled);
     }
 
     private GetTrafficManagerProfileArgs() {}
@@ -151,7 +152,7 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -162,7 +163,7 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
@@ -172,7 +173,7 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder trafficViewEnabled(Output</* @Nullable */ Boolean> trafficViewEnabled) {
+        public Builder trafficViewEnabled(@Nullable Output<Boolean> trafficViewEnabled) {
             $.trafficViewEnabled = trafficViewEnabled;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetTrafficManagerProfileArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder trafficViewEnabled(@Nullable Boolean trafficViewEnabled) {
+        public Builder trafficViewEnabled(Boolean trafficViewEnabled) {
             return trafficViewEnabled(Output.of(trafficViewEnabled));
         }
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minTlsVersion")
-    private Output</* @Nullable */ String> minTlsVersion;
+    private @Nullable Output<String> minTlsVersion;
 
     /**
      * @return The minimum supported TLS version for this storage account.
      * 
      */
-    public Output</* @Nullable */ String> minTlsVersion() {
-        return this.minTlsVersion;
+    public Optional<Output<String>> minTlsVersion() {
+        return Optional.ofNullable(this.minTlsVersion);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName")
-    private Output</* @Nullable */ String> resourceGroupName;
+    private @Nullable Output<String> resourceGroupName;
 
     /**
      * @return Specifies the name of the resource group the Storage Account is located in.
      * 
      */
-    public Output</* @Nullable */ String> resourceGroupName() {
-        return this.resourceGroupName;
+    public Optional<Output<String>> resourceGroupName() {
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     private GetAccountArgs() {}
@@ -91,7 +92,7 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder minTlsVersion(Output</* @Nullable */ String> minTlsVersion) {
+        public Builder minTlsVersion(@Nullable Output<String> minTlsVersion) {
             $.minTlsVersion = minTlsVersion;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder minTlsVersion(@Nullable String minTlsVersion) {
+        public Builder minTlsVersion(String minTlsVersion) {
             return minTlsVersion(Output.of(minTlsVersion));
         }
 
@@ -133,7 +134,7 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(Output</* @Nullable */ String> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 

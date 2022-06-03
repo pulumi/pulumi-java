@@ -5,11 +5,12 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetLibraryMaskingFormatsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetLibraryMaskingFormatsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="accessLevel")
-    private Output</* @Nullable */ String> accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Output</* @Nullable */ String> accessLevel() {
-        return this.accessLevel;
+    public Optional<Output<String>> accessLevel() {
+        return Optional.ofNullable(this.accessLevel);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     /**
@@ -67,21 +68,21 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the specified display name.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetLibraryMaskingFormatsFilter>> filters;
+    private @Nullable Output<List<GetLibraryMaskingFormatsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetLibraryMaskingFormatsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetLibraryMaskingFormatsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="libraryMaskingFormatId")
-    private Output</* @Nullable */ String> libraryMaskingFormatId;
+    private @Nullable Output<String> libraryMaskingFormatId;
 
     /**
      * @return A filter to return only the resources that match the specified library masking format OCID.
      * 
      */
-    public Output</* @Nullable */ String> libraryMaskingFormatId() {
-        return this.libraryMaskingFormatId;
+    public Optional<Output<String>> libraryMaskingFormatId() {
+        return Optional.ofNullable(this.libraryMaskingFormatId);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="libraryMaskingFormatSource")
-    private Output</* @Nullable */ String> libraryMaskingFormatSource;
+    private @Nullable Output<String> libraryMaskingFormatSource;
 
     /**
      * @return A filter to return the library masking format resources based on the value of their source attribute.
      * 
      */
-    public Output</* @Nullable */ String> libraryMaskingFormatSource() {
-        return this.libraryMaskingFormatSource;
+    public Optional<Output<String>> libraryMaskingFormatSource() {
+        return Optional.ofNullable(this.libraryMaskingFormatSource);
     }
 
     /**
@@ -119,14 +120,14 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only the resources that match the specified lifecycle states.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -134,14 +135,14 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return only the resources that were created after the specified date and time, as defined by [RFC3339](https://tools.ietf.org/html/rfc3339). Using TimeCreatedGreaterThanOrEqualToQueryParam parameter retrieves all resources created after that date.
      * 
      */
-    public Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo() {
-        return this.timeCreatedGreaterThanOrEqualTo;
+    public Optional<Output<String>> timeCreatedGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
     }
 
     /**
@@ -149,14 +150,14 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private Output</* @Nullable */ String> timeCreatedLessThan;
+    private @Nullable Output<String> timeCreatedLessThan;
 
     /**
      * @return Search for resources that were created before a specific date. Specifying this parameter corresponding `timeCreatedLessThan` parameter will retrieve all resources created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Output</* @Nullable */ String> timeCreatedLessThan() {
-        return this.timeCreatedLessThan;
+    public Optional<Output<String>> timeCreatedLessThan() {
+        return Optional.ofNullable(this.timeCreatedLessThan);
     }
 
     private GetLibraryMaskingFormatsArgs() {}
@@ -198,7 +199,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
             return this;
         }
@@ -209,7 +210,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(String accessLevel) {
             return accessLevel(Output.of(accessLevel));
         }
 
@@ -240,7 +241,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -251,7 +252,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
@@ -261,7 +262,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -272,20 +273,20 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetLibraryMaskingFormatsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetLibraryMaskingFormatsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetLibraryMaskingFormatsFilter> filters) {
+        public Builder filters(List<GetLibraryMaskingFormatsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetLibraryMaskingFormatsFilter... filters) {
+        public Builder filters(GetLibraryMaskingFormatsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -295,7 +296,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder libraryMaskingFormatId(Output</* @Nullable */ String> libraryMaskingFormatId) {
+        public Builder libraryMaskingFormatId(@Nullable Output<String> libraryMaskingFormatId) {
             $.libraryMaskingFormatId = libraryMaskingFormatId;
             return this;
         }
@@ -306,7 +307,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder libraryMaskingFormatId(@Nullable String libraryMaskingFormatId) {
+        public Builder libraryMaskingFormatId(String libraryMaskingFormatId) {
             return libraryMaskingFormatId(Output.of(libraryMaskingFormatId));
         }
 
@@ -316,7 +317,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder libraryMaskingFormatSource(Output</* @Nullable */ String> libraryMaskingFormatSource) {
+        public Builder libraryMaskingFormatSource(@Nullable Output<String> libraryMaskingFormatSource) {
             $.libraryMaskingFormatSource = libraryMaskingFormatSource;
             return this;
         }
@@ -327,7 +328,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder libraryMaskingFormatSource(@Nullable String libraryMaskingFormatSource) {
+        public Builder libraryMaskingFormatSource(String libraryMaskingFormatSource) {
             return libraryMaskingFormatSource(Output.of(libraryMaskingFormatSource));
         }
 
@@ -337,7 +338,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -348,7 +349,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -358,7 +359,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable Output<String> timeCreatedGreaterThanOrEqualTo) {
             $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
             return this;
         }
@@ -369,7 +370,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(String timeCreatedGreaterThanOrEqualTo) {
             return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
         }
 
@@ -379,7 +380,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(Output</* @Nullable */ String> timeCreatedLessThan) {
+        public Builder timeCreatedLessThan(@Nullable Output<String> timeCreatedLessThan) {
             $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
@@ -390,7 +391,7 @@ public final class GetLibraryMaskingFormatsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
+        public Builder timeCreatedLessThan(String timeCreatedLessThan) {
             return timeCreatedLessThan(Output.of(timeCreatedLessThan));
         }
 

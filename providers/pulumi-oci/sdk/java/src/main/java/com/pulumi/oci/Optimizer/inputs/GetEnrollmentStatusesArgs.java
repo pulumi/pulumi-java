@@ -5,10 +5,11 @@ package com.pulumi.oci.Optimizer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Optimizer.inputs.GetEnrollmentStatusesFilter;
+import com.pulumi.oci.Optimizer.inputs.GetEnrollmentStatusesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetEnrollmentStatusesFilter>> filters;
+    private @Nullable Output<List<GetEnrollmentStatusesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetEnrollmentStatusesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetEnrollmentStatusesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter that returns results that match the lifecycle state specified.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="status")
-    private Output</* @Nullable */ String> status;
+    private @Nullable Output<String> status;
 
     /**
      * @return A filter that returns results that match the Cloud Advisor enrollment status specified.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     private GetEnrollmentStatusesArgs() {}
@@ -116,16 +117,16 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetEnrollmentStatusesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetEnrollmentStatusesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetEnrollmentStatusesFilter> filters) {
+        public Builder filters(List<GetEnrollmentStatusesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetEnrollmentStatusesFilter... filters) {
+        public Builder filters(GetEnrollmentStatusesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -156,7 +157,7 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder status(Output</* @Nullable */ String> status) {
+        public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetEnrollmentStatusesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder status(@Nullable String status) {
+        public Builder status(String status) {
             return status(Output.of(status));
         }
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -50,14 +51,14 @@ public final class GetProfileLevelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Optional. A filter that returns results that match the name specified.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetProfileLevelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recommendationName")
-    private Output</* @Nullable */ String> recommendationName;
+    private @Nullable Output<String> recommendationName;
 
     /**
      * @return Optional. A filter that returns results that match the recommendation name specified.
      * 
      */
-    public Output</* @Nullable */ String> recommendationName() {
-        return this.recommendationName;
+    public Optional<Output<String>> recommendationName() {
+        return Optional.ofNullable(this.recommendationName);
     }
 
     private GetProfileLevelArgs() {}
@@ -150,7 +151,7 @@ public final class GetProfileLevelArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetProfileLevelArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -171,7 +172,7 @@ public final class GetProfileLevelArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder recommendationName(Output</* @Nullable */ String> recommendationName) {
+        public Builder recommendationName(@Nullable Output<String> recommendationName) {
             $.recommendationName = recommendationName;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetProfileLevelArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder recommendationName(@Nullable String recommendationName) {
+        public Builder recommendationName(String recommendationName) {
             return recommendationName(Output.of(recommendationName));
         }
 

@@ -3,12 +3,13 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
-import com.pulumi.aws.imagebuilder.inputs.GetComponentsFilter;
+import com.pulumi.aws.imagebuilder.inputs.GetComponentsFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetComponentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetComponentsFilter>> filters;
+    private @Nullable Output<List<GetComponentsFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<GetComponentsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetComponentsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetComponentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owner")
-    private Output</* @Nullable */ String> owner;
+    private @Nullable Output<String> owner;
 
     /**
      * @return The owner of the image recipes. Valid values are `Self`, `Shared` and `Amazon`. Defaults to `Self`.
      * 
      */
-    public Output</* @Nullable */ String> owner() {
-        return this.owner;
+    public Optional<Output<String>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     private GetComponentsArgs() {}
@@ -77,7 +78,7 @@ public final class GetComponentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetComponentsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetComponentsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -88,7 +89,7 @@ public final class GetComponentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetComponentsFilter> filters) {
+        public Builder filters(List<GetComponentsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -98,7 +99,7 @@ public final class GetComponentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetComponentsFilter... filters) {
+        public Builder filters(GetComponentsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -108,7 +109,7 @@ public final class GetComponentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder owner(Output</* @Nullable */ String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             $.owner = owner;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetComponentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder owner(@Nullable String owner) {
+        public Builder owner(String owner) {
             return owner(Output.of(owner));
         }
 

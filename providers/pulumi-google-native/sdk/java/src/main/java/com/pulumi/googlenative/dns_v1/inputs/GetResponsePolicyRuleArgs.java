@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,17 +16,17 @@ public final class GetResponsePolicyRuleArgs extends com.pulumi.resources.Invoke
     public static final GetResponsePolicyRuleArgs Empty = new GetResponsePolicyRuleArgs();
 
     @Import(name="clientOperationId")
-    private Output</* @Nullable */ String> clientOperationId;
+    private @Nullable Output<String> clientOperationId;
 
-    public Output</* @Nullable */ String> clientOperationId() {
-        return this.clientOperationId;
+    public Optional<Output<String>> clientOperationId() {
+        return Optional.ofNullable(this.clientOperationId);
     }
 
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="responsePolicy", required=true)
@@ -69,21 +70,21 @@ public final class GetResponsePolicyRuleArgs extends com.pulumi.resources.Invoke
             $ = new GetResponsePolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder clientOperationId(Output</* @Nullable */ String> clientOperationId) {
+        public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             $.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder clientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(String clientOperationId) {
             return clientOperationId(Output.of(clientOperationId));
         }
 
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 

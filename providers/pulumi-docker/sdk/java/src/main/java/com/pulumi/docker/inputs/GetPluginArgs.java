@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alias")
-    private Output</* @Nullable */ String> alias;
+    private @Nullable Output<String> alias;
 
     /**
      * @return The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
      * 
      */
-    public Output</* @Nullable */ String> alias() {
-        return this.alias;
+    public Optional<Output<String>> alias() {
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The ID of the plugin, which has precedence over the `alias` of both are given
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     private GetPluginArgs() {}
@@ -75,7 +76,7 @@ public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder alias(Output</* @Nullable */ String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
@@ -86,7 +87,7 @@ public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder alias(@Nullable String alias) {
+        public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
@@ -96,7 +97,7 @@ public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -107,7 +108,7 @@ public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 

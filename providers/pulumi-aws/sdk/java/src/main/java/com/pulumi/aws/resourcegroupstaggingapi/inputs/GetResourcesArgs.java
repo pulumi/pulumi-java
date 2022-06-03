@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.resourcegroupstaggingapi.inputs;
 
-import com.pulumi.aws.resourcegroupstaggingapi.inputs.GetResourcesTagFilter;
+import com.pulumi.aws.resourcegroupstaggingapi.inputs.GetResourcesTagFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="excludeCompliantResources")
-    private Output</* @Nullable */ Boolean> excludeCompliantResources;
+    private @Nullable Output<Boolean> excludeCompliantResources;
 
     /**
      * @return Specifies whether to exclude resources that are compliant with the tag policy. You can use this parameter only if the `include_compliance_details` argument is also set to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> excludeCompliantResources() {
-        return this.excludeCompliantResources;
+    public Optional<Output<Boolean>> excludeCompliantResources() {
+        return Optional.ofNullable(this.excludeCompliantResources);
     }
 
     /**
@@ -37,14 +38,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeComplianceDetails")
-    private Output</* @Nullable */ Boolean> includeComplianceDetails;
+    private @Nullable Output<Boolean> includeComplianceDetails;
 
     /**
      * @return Specifies whether to include details regarding the compliance with the effective tag policy.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeComplianceDetails() {
-        return this.includeComplianceDetails;
+    public Optional<Output<Boolean>> includeComplianceDetails() {
+        return Optional.ofNullable(this.includeComplianceDetails);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceArnLists")
-    private Output</* @Nullable */ List<String>> resourceArnLists;
+    private @Nullable Output<List<String>> resourceArnLists;
 
     /**
      * @return Specifies a list of ARNs of resources for which you want to retrieve tag data. Conflicts with `filter`.
      * 
      */
-    public Output</* @Nullable */ List<String>> resourceArnLists() {
-        return this.resourceArnLists;
+    public Optional<Output<List<String>>> resourceArnLists() {
+        return Optional.ofNullable(this.resourceArnLists);
     }
 
     /**
@@ -67,14 +68,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceTypeFilters")
-    private Output</* @Nullable */ List<String>> resourceTypeFilters;
+    private @Nullable Output<List<String>> resourceTypeFilters;
 
     /**
      * @return The constraints on the resources that you want returned. The format of each resource type is `service:resourceType`. For example, specifying a resource type of `ec2` returns all Amazon EC2 resources (which includes EC2 instances). Specifying a resource type of `ec2:instance` returns only EC2 instances.
      * 
      */
-    public Output</* @Nullable */ List<String>> resourceTypeFilters() {
-        return this.resourceTypeFilters;
+    public Optional<Output<List<String>>> resourceTypeFilters() {
+        return Optional.ofNullable(this.resourceTypeFilters);
     }
 
     /**
@@ -82,14 +83,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagFilters")
-    private Output</* @Nullable */ List<GetResourcesTagFilter>> tagFilters;
+    private @Nullable Output<List<GetResourcesTagFilterArgs>> tagFilters;
 
     /**
      * @return Specifies a list of Tag Filters (keys and values) to restrict the output to only those resources that have the specified tag and, if included, the specified value. See Tag Filter below. Conflicts with `resource_arn_list`.
      * 
      */
-    public Output</* @Nullable */ List<GetResourcesTagFilter>> tagFilters() {
-        return this.tagFilters;
+    public Optional<Output<List<GetResourcesTagFilterArgs>>> tagFilters() {
+        return Optional.ofNullable(this.tagFilters);
     }
 
     private GetResourcesArgs() {}
@@ -126,7 +127,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder excludeCompliantResources(Output</* @Nullable */ Boolean> excludeCompliantResources) {
+        public Builder excludeCompliantResources(@Nullable Output<Boolean> excludeCompliantResources) {
             $.excludeCompliantResources = excludeCompliantResources;
             return this;
         }
@@ -137,7 +138,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder excludeCompliantResources(@Nullable Boolean excludeCompliantResources) {
+        public Builder excludeCompliantResources(Boolean excludeCompliantResources) {
             return excludeCompliantResources(Output.of(excludeCompliantResources));
         }
 
@@ -147,7 +148,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeComplianceDetails(Output</* @Nullable */ Boolean> includeComplianceDetails) {
+        public Builder includeComplianceDetails(@Nullable Output<Boolean> includeComplianceDetails) {
             $.includeComplianceDetails = includeComplianceDetails;
             return this;
         }
@@ -158,7 +159,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeComplianceDetails(@Nullable Boolean includeComplianceDetails) {
+        public Builder includeComplianceDetails(Boolean includeComplianceDetails) {
             return includeComplianceDetails(Output.of(includeComplianceDetails));
         }
 
@@ -168,7 +169,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceArnLists(Output</* @Nullable */ List<String>> resourceArnLists) {
+        public Builder resourceArnLists(@Nullable Output<List<String>> resourceArnLists) {
             $.resourceArnLists = resourceArnLists;
             return this;
         }
@@ -179,7 +180,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceArnLists(@Nullable List<String> resourceArnLists) {
+        public Builder resourceArnLists(List<String> resourceArnLists) {
             return resourceArnLists(Output.of(resourceArnLists));
         }
 
@@ -199,7 +200,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceTypeFilters(Output</* @Nullable */ List<String>> resourceTypeFilters) {
+        public Builder resourceTypeFilters(@Nullable Output<List<String>> resourceTypeFilters) {
             $.resourceTypeFilters = resourceTypeFilters;
             return this;
         }
@@ -210,7 +211,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
+        public Builder resourceTypeFilters(List<String> resourceTypeFilters) {
             return resourceTypeFilters(Output.of(resourceTypeFilters));
         }
 
@@ -230,7 +231,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tagFilters(Output</* @Nullable */ List<GetResourcesTagFilter>> tagFilters) {
+        public Builder tagFilters(@Nullable Output<List<GetResourcesTagFilterArgs>> tagFilters) {
             $.tagFilters = tagFilters;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tagFilters(@Nullable List<GetResourcesTagFilter> tagFilters) {
+        public Builder tagFilters(List<GetResourcesTagFilterArgs> tagFilters) {
             return tagFilters(Output.of(tagFilters));
         }
 
@@ -251,7 +252,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tagFilters(GetResourcesTagFilter... tagFilters) {
+        public Builder tagFilters(GetResourcesTagFilterArgs... tagFilters) {
             return tagFilters(List.of(tagFilters));
         }
 

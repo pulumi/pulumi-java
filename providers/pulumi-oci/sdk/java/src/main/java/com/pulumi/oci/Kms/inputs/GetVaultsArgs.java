@@ -5,10 +5,11 @@ package com.pulumi.oci.Kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Kms.inputs.GetVaultsFilter;
+import com.pulumi.oci.Kms.inputs.GetVaultsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetVaultsArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetVaultsFilter>> filters;
+    private @Nullable Output<List<GetVaultsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetVaultsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetVaultsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetVaultsArgs() {}
@@ -84,16 +85,16 @@ public final class GetVaultsArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetVaultsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetVaultsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetVaultsFilter> filters) {
+        public Builder filters(List<GetVaultsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetVaultsFilter... filters) {
+        public Builder filters(GetVaultsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

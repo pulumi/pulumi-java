@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The display name of this Sentinel Alert Rule Template. Either `display_name` or `name` have to be specified.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of this Sentinel Alert Rule Template. Either `display_name` or `name` have to be specified.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetAlertRuleTemplateArgs() {}
@@ -91,7 +92,7 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -133,7 +134,7 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetAlertRuleTemplateArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

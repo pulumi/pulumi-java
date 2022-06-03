@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,10 +16,10 @@ public final class GetGithubEnterpriseConfigArgs extends com.pulumi.resources.In
     public static final GetGithubEnterpriseConfigArgs Empty = new GetGithubEnterpriseConfigArgs();
 
     @Import(name="configId")
-    private Output</* @Nullable */ String> configId;
+    private @Nullable Output<String> configId;
 
-    public Output</* @Nullable */ String> configId() {
-        return this.configId;
+    public Optional<Output<String>> configId() {
+        return Optional.ofNullable(this.configId);
     }
 
     @Import(name="githubEnterpriseConfigId", required=true)
@@ -36,17 +37,17 @@ public final class GetGithubEnterpriseConfigArgs extends com.pulumi.resources.In
     }
 
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="projectId")
-    private Output</* @Nullable */ String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output</* @Nullable */ String> projectId() {
-        return this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     private GetGithubEnterpriseConfigArgs() {}
@@ -77,12 +78,12 @@ public final class GetGithubEnterpriseConfigArgs extends com.pulumi.resources.In
             $ = new GetGithubEnterpriseConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder configId(Output</* @Nullable */ String> configId) {
+        public Builder configId(@Nullable Output<String> configId) {
             $.configId = configId;
             return this;
         }
 
-        public Builder configId(@Nullable String configId) {
+        public Builder configId(String configId) {
             return configId(Output.of(configId));
         }
 
@@ -104,21 +105,21 @@ public final class GetGithubEnterpriseConfigArgs extends com.pulumi.resources.In
             return location(Output.of(location));
         }
 
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
-        public Builder projectId(Output</* @Nullable */ String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
-        public Builder projectId(@Nullable String projectId) {
+        public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 

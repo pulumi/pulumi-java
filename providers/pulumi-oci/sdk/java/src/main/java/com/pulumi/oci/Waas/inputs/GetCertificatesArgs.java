@@ -5,10 +5,11 @@ package com.pulumi.oci.Waas.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Waas.inputs.GetCertificatesFilter;
+import com.pulumi.oci.Waas.inputs.GetCertificatesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNames")
-    private Output</* @Nullable */ List<String>> displayNames;
+    private @Nullable Output<List<String>> displayNames;
 
     /**
      * @return Filter certificates using a list of display names.
      * 
      */
-    public Output</* @Nullable */ List<String>> displayNames() {
-        return this.displayNames;
+    public Optional<Output<List<String>>> displayNames() {
+        return Optional.ofNullable(this.displayNames);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetCertificatesFilter>> filters;
+    private @Nullable Output<List<GetCertificatesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetCertificatesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetCertificatesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ids")
-    private Output</* @Nullable */ List<String>> ids;
+    private @Nullable Output<List<String>> ids;
 
     /**
      * @return Filter certificates using a list of certificates OCIDs.
      * 
      */
-    public Output</* @Nullable */ List<String>> ids() {
-        return this.ids;
+    public Optional<Output<List<String>>> ids() {
+        return Optional.ofNullable(this.ids);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="states")
-    private Output</* @Nullable */ List<String>> states;
+    private @Nullable Output<List<String>> states;
 
     /**
      * @return Filter certificates using a list of lifecycle states.
      * 
      */
-    public Output</* @Nullable */ List<String>> states() {
-        return this.states;
+    public Optional<Output<List<String>>> states() {
+        return Optional.ofNullable(this.states);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return A filter that matches certificates created on or after the specified date-time.
      * 
      */
-    public Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo() {
-        return this.timeCreatedGreaterThanOrEqualTo;
+    public Optional<Output<String>> timeCreatedGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private Output</* @Nullable */ String> timeCreatedLessThan;
+    private @Nullable Output<String> timeCreatedLessThan;
 
     /**
      * @return A filter that matches certificates created before the specified date-time.
      * 
      */
-    public Output</* @Nullable */ String> timeCreatedLessThan() {
-        return this.timeCreatedLessThan;
+    public Optional<Output<String>> timeCreatedLessThan() {
+        return Optional.ofNullable(this.timeCreatedLessThan);
     }
 
     private GetCertificatesArgs() {}
@@ -170,7 +171,7 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNames(Output</* @Nullable */ List<String>> displayNames) {
+        public Builder displayNames(@Nullable Output<List<String>> displayNames) {
             $.displayNames = displayNames;
             return this;
         }
@@ -181,7 +182,7 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNames(@Nullable List<String> displayNames) {
+        public Builder displayNames(List<String> displayNames) {
             return displayNames(Output.of(displayNames));
         }
 
@@ -195,16 +196,16 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
             return displayNames(List.of(displayNames));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetCertificatesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetCertificatesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCertificatesFilter> filters) {
+        public Builder filters(List<GetCertificatesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetCertificatesFilter... filters) {
+        public Builder filters(GetCertificatesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -214,7 +215,7 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ids(Output</* @Nullable */ List<String>> ids) {
+        public Builder ids(@Nullable Output<List<String>> ids) {
             $.ids = ids;
             return this;
         }
@@ -225,7 +226,7 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ids(@Nullable List<String> ids) {
+        public Builder ids(List<String> ids) {
             return ids(Output.of(ids));
         }
 
@@ -245,7 +246,7 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder states(Output</* @Nullable */ List<String>> states) {
+        public Builder states(@Nullable Output<List<String>> states) {
             $.states = states;
             return this;
         }
@@ -256,7 +257,7 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder states(@Nullable List<String> states) {
+        public Builder states(List<String> states) {
             return states(Output.of(states));
         }
 
@@ -276,7 +277,7 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable Output<String> timeCreatedGreaterThanOrEqualTo) {
             $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
             return this;
         }
@@ -287,7 +288,7 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(String timeCreatedGreaterThanOrEqualTo) {
             return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
         }
 
@@ -297,7 +298,7 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(Output</* @Nullable */ String> timeCreatedLessThan) {
+        public Builder timeCreatedLessThan(@Nullable Output<String> timeCreatedLessThan) {
             $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
@@ -308,7 +309,7 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
+        public Builder timeCreatedLessThan(String timeCreatedLessThan) {
             return timeCreatedLessThan(Output.of(timeCreatedLessThan));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetNetworkSecurityGroupsFilter;
+import com.pulumi.oci.Core.inputs.GetNetworkSecurityGroupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId")
-    private Output</* @Nullable */ String> compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Output</* @Nullable */ String> compartmentId() {
-        return this.compartmentId;
+    public Optional<Output<String>> compartmentId() {
+        return Optional.ofNullable(this.compartmentId);
     }
 
     /**
@@ -36,21 +37,21 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetNetworkSecurityGroupsFilter>> filters;
+    private @Nullable Output<List<GetNetworkSecurityGroupsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetNetworkSecurityGroupsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetNetworkSecurityGroupsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="vcnId")
-    private Output</* @Nullable */ String> vcnId;
+    private @Nullable Output<String> vcnId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
      * 
      */
-    public Output</* @Nullable */ String> vcnId() {
-        return this.vcnId;
+    public Optional<Output<String>> vcnId() {
+        return Optional.ofNullable(this.vcnId);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="vlanId")
-    private Output</* @Nullable */ String> vlanId;
+    private @Nullable Output<String> vlanId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN.
      * 
      */
-    public Output</* @Nullable */ String> vlanId() {
-        return this.vlanId;
+    public Optional<Output<String>> vlanId() {
+        return Optional.ofNullable(this.vlanId);
     }
 
     private GetNetworkSecurityGroupsArgs() {}
@@ -133,7 +134,7 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(String compartmentId) {
             return compartmentId(Output.of(compartmentId));
         }
 
@@ -154,7 +155,7 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -165,20 +166,20 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetNetworkSecurityGroupsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetNetworkSecurityGroupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetNetworkSecurityGroupsFilter> filters) {
+        public Builder filters(List<GetNetworkSecurityGroupsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetNetworkSecurityGroupsFilter... filters) {
+        public Builder filters(GetNetworkSecurityGroupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -188,7 +189,7 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -199,7 +200,7 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -209,7 +210,7 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder vcnId(Output</* @Nullable */ String> vcnId) {
+        public Builder vcnId(@Nullable Output<String> vcnId) {
             $.vcnId = vcnId;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder vcnId(@Nullable String vcnId) {
+        public Builder vcnId(String vcnId) {
             return vcnId(Output.of(vcnId));
         }
 
@@ -230,7 +231,7 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder vlanId(Output</* @Nullable */ String> vlanId) {
+        public Builder vlanId(@Nullable Output<String> vlanId) {
             $.vlanId = vlanId;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder vlanId(@Nullable String vlanId) {
+        public Builder vlanId(String vlanId) {
             return vlanId(Output.of(vlanId));
         }
 

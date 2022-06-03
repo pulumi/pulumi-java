@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The API name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protocolType")
-    private Output</* @Nullable */ String> protocolType;
+    private @Nullable Output<String> protocolType;
 
     /**
      * @return The API protocol.
      * 
      */
-    public Output</* @Nullable */ String> protocolType() {
-        return this.protocolType;
+    public Optional<Output<String>> protocolType() {
+        return Optional.ofNullable(this.protocolType);
     }
 
     /**
@@ -51,15 +52,15 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags, each pair of which must exactly match
      * a pair on the desired APIs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetApisArgs() {}
@@ -94,7 +95,7 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -105,7 +106,7 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -115,7 +116,7 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder protocolType(Output</* @Nullable */ String> protocolType) {
+        public Builder protocolType(@Nullable Output<String> protocolType) {
             $.protocolType = protocolType;
             return this;
         }
@@ -126,7 +127,7 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder protocolType(@Nullable String protocolType) {
+        public Builder protocolType(String protocolType) {
             return protocolType(Output.of(protocolType));
         }
 
@@ -137,7 +138,7 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -149,7 +150,7 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

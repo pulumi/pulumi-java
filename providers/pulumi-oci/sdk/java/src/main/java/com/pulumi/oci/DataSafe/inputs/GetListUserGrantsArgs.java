@@ -5,11 +5,12 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetListUserGrantsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetListUserGrantsFilterArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="depthLevel")
-    private Output</* @Nullable */ Integer> depthLevel;
+    private @Nullable Output<Integer> depthLevel;
 
     /**
      * @return A filter to return only items that match the specified user grant depth level.
      * 
      */
-    public Output</* @Nullable */ Integer> depthLevel() {
-        return this.depthLevel;
+    public Optional<Output<Integer>> depthLevel() {
+        return Optional.ofNullable(this.depthLevel);
     }
 
     /**
@@ -37,14 +38,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="depthLevelGreaterThanOrEqualTo")
-    private Output</* @Nullable */ Integer> depthLevelGreaterThanOrEqualTo;
+    private @Nullable Output<Integer> depthLevelGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return only items that are at a level greater than or equal to the specified user grant depth level.
      * 
      */
-    public Output</* @Nullable */ Integer> depthLevelGreaterThanOrEqualTo() {
-        return this.depthLevelGreaterThanOrEqualTo;
+    public Optional<Output<Integer>> depthLevelGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.depthLevelGreaterThanOrEqualTo);
     }
 
     /**
@@ -52,21 +53,21 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="depthLevelLessThan")
-    private Output</* @Nullable */ Integer> depthLevelLessThan;
+    private @Nullable Output<Integer> depthLevelLessThan;
 
     /**
      * @return A filter to return only items that are at a level less than the specified user grant depth level.
      * 
      */
-    public Output</* @Nullable */ Integer> depthLevelLessThan() {
-        return this.depthLevelLessThan;
+    public Optional<Output<Integer>> depthLevelLessThan() {
+        return Optional.ofNullable(this.depthLevelLessThan);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetListUserGrantsFilter>> filters;
+    private @Nullable Output<List<GetListUserGrantsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetListUserGrantsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetListUserGrantsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="grantKey")
-    private Output</* @Nullable */ String> grantKey;
+    private @Nullable Output<String> grantKey;
 
     /**
      * @return A filter to return only items that match the specified user grant key.
      * 
      */
-    public Output</* @Nullable */ String> grantKey() {
-        return this.grantKey;
+    public Optional<Output<String>> grantKey() {
+        return Optional.ofNullable(this.grantKey);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="grantName")
-    private Output</* @Nullable */ String> grantName;
+    private @Nullable Output<String> grantName;
 
     /**
      * @return A filter to return only items that match the specified user grant name.
      * 
      */
-    public Output</* @Nullable */ String> grantName() {
-        return this.grantName;
+    public Optional<Output<String>> grantName() {
+        return Optional.ofNullable(this.grantName);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="privilegeCategory")
-    private Output</* @Nullable */ String> privilegeCategory;
+    private @Nullable Output<String> privilegeCategory;
 
     /**
      * @return A filter to return only items that match the specified user privilege category.
      * 
      */
-    public Output</* @Nullable */ String> privilegeCategory() {
-        return this.privilegeCategory;
+    public Optional<Output<String>> privilegeCategory() {
+        return Optional.ofNullable(this.privilegeCategory);
     }
 
     /**
@@ -119,14 +120,14 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="privilegeType")
-    private Output</* @Nullable */ String> privilegeType;
+    private @Nullable Output<String> privilegeType;
 
     /**
      * @return A filter to return only items that match the specified privilege grant type.
      * 
      */
-    public Output</* @Nullable */ String> privilegeType() {
-        return this.privilegeType;
+    public Optional<Output<String>> privilegeType() {
+        return Optional.ofNullable(this.privilegeType);
     }
 
     /**
@@ -198,7 +199,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder depthLevel(Output</* @Nullable */ Integer> depthLevel) {
+        public Builder depthLevel(@Nullable Output<Integer> depthLevel) {
             $.depthLevel = depthLevel;
             return this;
         }
@@ -209,7 +210,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder depthLevel(@Nullable Integer depthLevel) {
+        public Builder depthLevel(Integer depthLevel) {
             return depthLevel(Output.of(depthLevel));
         }
 
@@ -219,7 +220,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder depthLevelGreaterThanOrEqualTo(Output</* @Nullable */ Integer> depthLevelGreaterThanOrEqualTo) {
+        public Builder depthLevelGreaterThanOrEqualTo(@Nullable Output<Integer> depthLevelGreaterThanOrEqualTo) {
             $.depthLevelGreaterThanOrEqualTo = depthLevelGreaterThanOrEqualTo;
             return this;
         }
@@ -230,7 +231,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder depthLevelGreaterThanOrEqualTo(@Nullable Integer depthLevelGreaterThanOrEqualTo) {
+        public Builder depthLevelGreaterThanOrEqualTo(Integer depthLevelGreaterThanOrEqualTo) {
             return depthLevelGreaterThanOrEqualTo(Output.of(depthLevelGreaterThanOrEqualTo));
         }
 
@@ -240,7 +241,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder depthLevelLessThan(Output</* @Nullable */ Integer> depthLevelLessThan) {
+        public Builder depthLevelLessThan(@Nullable Output<Integer> depthLevelLessThan) {
             $.depthLevelLessThan = depthLevelLessThan;
             return this;
         }
@@ -251,20 +252,20 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder depthLevelLessThan(@Nullable Integer depthLevelLessThan) {
+        public Builder depthLevelLessThan(Integer depthLevelLessThan) {
             return depthLevelLessThan(Output.of(depthLevelLessThan));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetListUserGrantsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetListUserGrantsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetListUserGrantsFilter> filters) {
+        public Builder filters(List<GetListUserGrantsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetListUserGrantsFilter... filters) {
+        public Builder filters(GetListUserGrantsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -274,7 +275,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder grantKey(Output</* @Nullable */ String> grantKey) {
+        public Builder grantKey(@Nullable Output<String> grantKey) {
             $.grantKey = grantKey;
             return this;
         }
@@ -285,7 +286,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder grantKey(@Nullable String grantKey) {
+        public Builder grantKey(String grantKey) {
             return grantKey(Output.of(grantKey));
         }
 
@@ -295,7 +296,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder grantName(Output</* @Nullable */ String> grantName) {
+        public Builder grantName(@Nullable Output<String> grantName) {
             $.grantName = grantName;
             return this;
         }
@@ -306,7 +307,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder grantName(@Nullable String grantName) {
+        public Builder grantName(String grantName) {
             return grantName(Output.of(grantName));
         }
 
@@ -316,7 +317,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder privilegeCategory(Output</* @Nullable */ String> privilegeCategory) {
+        public Builder privilegeCategory(@Nullable Output<String> privilegeCategory) {
             $.privilegeCategory = privilegeCategory;
             return this;
         }
@@ -327,7 +328,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder privilegeCategory(@Nullable String privilegeCategory) {
+        public Builder privilegeCategory(String privilegeCategory) {
             return privilegeCategory(Output.of(privilegeCategory));
         }
 
@@ -337,7 +338,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder privilegeType(Output</* @Nullable */ String> privilegeType) {
+        public Builder privilegeType(@Nullable Output<String> privilegeType) {
             $.privilegeType = privilegeType;
             return this;
         }
@@ -348,7 +349,7 @@ public final class GetListUserGrantsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder privilegeType(@Nullable String privilegeType) {
+        public Builder privilegeType(String privilegeType) {
             return privilegeType(Output.of(privilegeType));
         }
 

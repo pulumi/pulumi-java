@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="grantTokens")
-    private Output</* @Nullable */ List<String>> grantTokens;
+    private @Nullable Output<List<String>> grantTokens;
 
     /**
      * @return List of grant tokens
      * 
      */
-    public Output</* @Nullable */ List<String>> grantTokens() {
-        return this.grantTokens;
+    public Optional<Output<List<String>>> grantTokens() {
+        return Optional.ofNullable(this.grantTokens);
     }
 
     /**
@@ -84,7 +85,7 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder grantTokens(Output</* @Nullable */ List<String>> grantTokens) {
+        public Builder grantTokens(@Nullable Output<List<String>> grantTokens) {
             $.grantTokens = grantTokens;
             return this;
         }
@@ -95,7 +96,7 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder grantTokens(@Nullable List<String> grantTokens) {
+        public Builder grantTokens(List<String> grantTokens) {
             return grantTokens(Output.of(grantTokens));
         }
 

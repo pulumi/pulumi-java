@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabasesFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabasesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="deploymentType")
-    private Output</* @Nullable */ String> deploymentType;
+    private @Nullable Output<String> deploymentType;
 
     /**
      * @return A filter to return Managed Databases of the specified deployment type.
      * 
      */
-    public Output</* @Nullable */ String> deploymentType() {
-        return this.deploymentType;
+    public Optional<Output<String>> deploymentType() {
+        return Optional.ofNullable(this.deploymentType);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagedDatabasesFilter>> filters;
+    private @Nullable Output<List<GetManagedDatabasesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagedDatabasesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagedDatabasesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The identifier of the resource.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="managementOption")
-    private Output</* @Nullable */ String> managementOption;
+    private @Nullable Output<String> managementOption;
 
     /**
      * @return A filter to return Managed Databases with the specified management option.
      * 
      */
-    public Output</* @Nullable */ String> managementOption() {
-        return this.managementOption;
+    public Optional<Output<String>> managementOption() {
+        return Optional.ofNullable(this.managementOption);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetManagedDatabasesArgs() {}
@@ -154,7 +155,7 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder deploymentType(Output</* @Nullable */ String> deploymentType) {
+        public Builder deploymentType(@Nullable Output<String> deploymentType) {
             $.deploymentType = deploymentType;
             return this;
         }
@@ -165,20 +166,20 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder deploymentType(@Nullable String deploymentType) {
+        public Builder deploymentType(String deploymentType) {
             return deploymentType(Output.of(deploymentType));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagedDatabasesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedDatabasesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabasesFilter> filters) {
+        public Builder filters(List<GetManagedDatabasesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagedDatabasesFilter... filters) {
+        public Builder filters(GetManagedDatabasesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -188,7 +189,7 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -199,7 +200,7 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -209,7 +210,7 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder managementOption(Output</* @Nullable */ String> managementOption) {
+        public Builder managementOption(@Nullable Output<String> managementOption) {
             $.managementOption = managementOption;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder managementOption(@Nullable String managementOption) {
+        public Builder managementOption(String managementOption) {
             return managementOption(Output.of(managementOption));
         }
 
@@ -230,7 +231,7 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetManagedDatabasesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

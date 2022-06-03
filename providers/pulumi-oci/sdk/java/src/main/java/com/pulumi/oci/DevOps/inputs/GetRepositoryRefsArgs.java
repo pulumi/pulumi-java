@@ -5,10 +5,11 @@ package com.pulumi.oci.DevOps.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DevOps.inputs.GetRepositoryRefsFilter;
+import com.pulumi.oci.DevOps.inputs.GetRepositoryRefsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +22,21 @@ public final class GetRepositoryRefsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="commitId")
-    private Output</* @Nullable */ String> commitId;
+    private @Nullable Output<String> commitId;
 
     /**
      * @return Commit ID in a repository.
      * 
      */
-    public Output</* @Nullable */ String> commitId() {
-        return this.commitId;
+    public Optional<Output<String>> commitId() {
+        return Optional.ofNullable(this.commitId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetRepositoryRefsFilter>> filters;
+    private @Nullable Output<List<GetRepositoryRefsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetRepositoryRefsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetRepositoryRefsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetRepositoryRefsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="refName")
-    private Output</* @Nullable */ String> refName;
+    private @Nullable Output<String> refName;
 
     /**
      * @return A filter to return only resources that match the given reference name.
      * 
      */
-    public Output</* @Nullable */ String> refName() {
-        return this.refName;
+    public Optional<Output<String>> refName() {
+        return Optional.ofNullable(this.refName);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetRepositoryRefsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="refType")
-    private Output</* @Nullable */ String> refType;
+    private @Nullable Output<String> refType;
 
     /**
      * @return Reference type to distinguish between branch and tag. If it is not specified, all references are returned.
      * 
      */
-    public Output</* @Nullable */ String> refType() {
-        return this.refType;
+    public Optional<Output<String>> refType() {
+        return Optional.ofNullable(this.refType);
     }
 
     /**
@@ -117,7 +118,7 @@ public final class GetRepositoryRefsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder commitId(Output</* @Nullable */ String> commitId) {
+        public Builder commitId(@Nullable Output<String> commitId) {
             $.commitId = commitId;
             return this;
         }
@@ -128,20 +129,20 @@ public final class GetRepositoryRefsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder commitId(@Nullable String commitId) {
+        public Builder commitId(String commitId) {
             return commitId(Output.of(commitId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetRepositoryRefsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetRepositoryRefsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRepositoryRefsFilter> filters) {
+        public Builder filters(List<GetRepositoryRefsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetRepositoryRefsFilter... filters) {
+        public Builder filters(GetRepositoryRefsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -151,7 +152,7 @@ public final class GetRepositoryRefsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder refName(Output</* @Nullable */ String> refName) {
+        public Builder refName(@Nullable Output<String> refName) {
             $.refName = refName;
             return this;
         }
@@ -162,7 +163,7 @@ public final class GetRepositoryRefsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder refName(@Nullable String refName) {
+        public Builder refName(String refName) {
             return refName(Output.of(refName));
         }
 
@@ -172,7 +173,7 @@ public final class GetRepositoryRefsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder refType(Output</* @Nullable */ String> refType) {
+        public Builder refType(@Nullable Output<String> refType) {
             $.refType = refType;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetRepositoryRefsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder refType(@Nullable String refType) {
+        public Builder refType(String refType) {
             return refType(Output.of(refType));
         }
 

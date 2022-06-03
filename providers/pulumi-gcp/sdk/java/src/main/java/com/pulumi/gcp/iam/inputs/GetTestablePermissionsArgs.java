@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="customSupportLevel")
-    private Output</* @Nullable */ String> customSupportLevel;
+    private @Nullable Output<String> customSupportLevel;
 
     /**
      * @return The level of support for custom roles. Can be one of `&#34;NOT_SUPPORTED&#34;`, `&#34;SUPPORTED&#34;`, `&#34;TESTING&#34;`. Default is `&#34;SUPPORTED&#34;`
      * 
      */
-    public Output</* @Nullable */ String> customSupportLevel() {
-        return this.customSupportLevel;
+    public Optional<Output<String>> customSupportLevel() {
+        return Optional.ofNullable(this.customSupportLevel);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="stages")
-    private Output</* @Nullable */ List<String>> stages;
+    private @Nullable Output<List<String>> stages;
 
     /**
      * @return The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `[&#34;GA&#34;, &#34;BETA&#34;]` for example. Can be a list of `&#34;ALPHA&#34;`, `&#34;BETA&#34;`, `&#34;GA&#34;`, `&#34;DEPRECATED&#34;`. Default is `[&#34;GA&#34;]`.
      * 
      */
-    public Output</* @Nullable */ List<String>> stages() {
-        return this.stages;
+    public Optional<Output<List<String>>> stages() {
+        return Optional.ofNullable(this.stages);
     }
 
     private GetTestablePermissionsArgs() {}
@@ -92,7 +93,7 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder customSupportLevel(Output</* @Nullable */ String> customSupportLevel) {
+        public Builder customSupportLevel(@Nullable Output<String> customSupportLevel) {
             $.customSupportLevel = customSupportLevel;
             return this;
         }
@@ -103,7 +104,7 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder customSupportLevel(@Nullable String customSupportLevel) {
+        public Builder customSupportLevel(String customSupportLevel) {
             return customSupportLevel(Output.of(customSupportLevel));
         }
 
@@ -134,7 +135,7 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder stages(Output</* @Nullable */ List<String>> stages) {
+        public Builder stages(@Nullable Output<List<String>> stages) {
             $.stages = stages;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetTestablePermissionsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder stages(@Nullable List<String> stages) {
+        public Builder stages(List<String> stages) {
             return stages(Output.of(stages));
         }
 

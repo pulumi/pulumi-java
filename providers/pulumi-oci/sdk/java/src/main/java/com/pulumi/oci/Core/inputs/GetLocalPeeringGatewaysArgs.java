@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetLocalPeeringGatewaysFilter;
+import com.pulumi.oci.Core.inputs.GetLocalPeeringGatewaysFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetLocalPeeringGatewaysArgs extends com.pulumi.resources.Invo
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetLocalPeeringGatewaysFilter>> filters;
+    private @Nullable Output<List<GetLocalPeeringGatewaysFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetLocalPeeringGatewaysFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetLocalPeeringGatewaysFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetLocalPeeringGatewaysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vcnId")
-    private Output</* @Nullable */ String> vcnId;
+    private @Nullable Output<String> vcnId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
      * 
      */
-    public Output</* @Nullable */ String> vcnId() {
-        return this.vcnId;
+    public Optional<Output<String>> vcnId() {
+        return Optional.ofNullable(this.vcnId);
     }
 
     private GetLocalPeeringGatewaysArgs() {}
@@ -100,16 +101,16 @@ public final class GetLocalPeeringGatewaysArgs extends com.pulumi.resources.Invo
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetLocalPeeringGatewaysFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetLocalPeeringGatewaysFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetLocalPeeringGatewaysFilter> filters) {
+        public Builder filters(List<GetLocalPeeringGatewaysFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetLocalPeeringGatewaysFilter... filters) {
+        public Builder filters(GetLocalPeeringGatewaysFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -119,7 +120,7 @@ public final class GetLocalPeeringGatewaysArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder vcnId(Output</* @Nullable */ String> vcnId) {
+        public Builder vcnId(@Nullable Output<String> vcnId) {
             $.vcnId = vcnId;
             return this;
         }
@@ -130,7 +131,7 @@ public final class GetLocalPeeringGatewaysArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder vcnId(@Nullable String vcnId) {
+        public Builder vcnId(String vcnId) {
             return vcnId(Output.of(vcnId));
         }
 

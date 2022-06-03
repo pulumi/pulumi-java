@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="deviceId")
-    private Output</* @Nullable */ String> deviceId;
+    private @Nullable Output<String> deviceId;
 
     /**
      * @return Unique identifier of the edge device.
      * 
      */
-    public Output</* @Nullable */ String> deviceId() {
-        return this.deviceId;
+    public Optional<Output<String>> deviceId() {
+        return Optional.ofNullable(this.deviceId);
     }
 
     /**
@@ -112,7 +113,7 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder deviceId(Output</* @Nullable */ String> deviceId) {
+        public Builder deviceId(@Nullable Output<String> deviceId) {
             $.deviceId = deviceId;
             return this;
         }
@@ -123,7 +124,7 @@ public final class ListMediaServiceEdgePoliciesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder deviceId(@Nullable String deviceId) {
+        public Builder deviceId(String deviceId) {
             return deviceId(Output.of(deviceId));
         }
 

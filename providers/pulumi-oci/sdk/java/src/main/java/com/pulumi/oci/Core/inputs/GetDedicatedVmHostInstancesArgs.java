@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetDedicatedVmHostInstancesFilter;
+import com.pulumi.oci.Core.inputs.GetDedicatedVmHostInstancesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetDedicatedVmHostInstancesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class GetDedicatedVmHostInstancesArgs extends com.pulumi.resources.
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDedicatedVmHostInstancesFilter>> filters;
+    private @Nullable Output<List<GetDedicatedVmHostInstancesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDedicatedVmHostInstancesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDedicatedVmHostInstancesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetDedicatedVmHostInstancesArgs() {}
@@ -101,7 +102,7 @@ public final class GetDedicatedVmHostInstancesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -112,7 +113,7 @@ public final class GetDedicatedVmHostInstancesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -158,16 +159,16 @@ public final class GetDedicatedVmHostInstancesArgs extends com.pulumi.resources.
             return dedicatedVmHostId(Output.of(dedicatedVmHostId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDedicatedVmHostInstancesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDedicatedVmHostInstancesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDedicatedVmHostInstancesFilter> filters) {
+        public Builder filters(List<GetDedicatedVmHostInstancesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDedicatedVmHostInstancesFilter... filters) {
+        public Builder filters(GetDedicatedVmHostInstancesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

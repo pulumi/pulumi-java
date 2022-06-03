@@ -5,10 +5,11 @@ package com.pulumi.oci.ContainerEngine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ContainerEngine.inputs.GetWorkRequestErrorsFilter;
+import com.pulumi.oci.ContainerEngine.inputs.GetWorkRequestErrorsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetWorkRequestErrorsArgs extends com.pulumi.resources.InvokeA
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetWorkRequestErrorsFilter>> filters;
+    private @Nullable Output<List<GetWorkRequestErrorsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetWorkRequestErrorsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetWorkRequestErrorsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -100,16 +101,16 @@ public final class GetWorkRequestErrorsArgs extends com.pulumi.resources.InvokeA
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetWorkRequestErrorsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetWorkRequestErrorsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetWorkRequestErrorsFilter> filters) {
+        public Builder filters(List<GetWorkRequestErrorsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetWorkRequestErrorsFilter... filters) {
+        public Builder filters(GetWorkRequestErrorsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

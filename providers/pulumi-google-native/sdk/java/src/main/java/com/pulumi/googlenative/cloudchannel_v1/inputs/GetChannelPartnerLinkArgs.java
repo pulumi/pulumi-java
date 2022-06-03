@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class GetChannelPartnerLinkArgs extends com.pulumi.resources.Invoke
     }
 
     @Import(name="view")
-    private Output</* @Nullable */ String> view;
+    private @Nullable Output<String> view;
 
-    public Output</* @Nullable */ String> view() {
-        return this.view;
+    public Optional<Output<String>> view() {
+        return Optional.ofNullable(this.view);
     }
 
     private GetChannelPartnerLinkArgs() {}
@@ -79,12 +80,12 @@ public final class GetChannelPartnerLinkArgs extends com.pulumi.resources.Invoke
             return channelPartnerLinkId(Output.of(channelPartnerLinkId));
         }
 
-        public Builder view(Output</* @Nullable */ String> view) {
+        public Builder view(@Nullable Output<String> view) {
             $.view = view;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder view(String view) {
             return view(Output.of(view));
         }
 

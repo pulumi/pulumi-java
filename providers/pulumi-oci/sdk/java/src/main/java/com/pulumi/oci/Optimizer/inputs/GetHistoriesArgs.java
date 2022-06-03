@@ -5,11 +5,12 @@ package com.pulumi.oci.Optimizer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Optimizer.inputs.GetHistoriesFilter;
+import com.pulumi.oci.Optimizer.inputs.GetHistoriesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -48,10 +49,10 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetHistoriesFilter>> filters;
+    private @Nullable Output<List<GetHistoriesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetHistoriesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetHistoriesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Optional. A filter that returns results that match the name specified.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recommendationId")
-    private Output</* @Nullable */ String> recommendationId;
+    private @Nullable Output<String> recommendationId;
 
     /**
      * @return The unique OCID associated with the recommendation.
      * 
      */
-    public Output</* @Nullable */ String> recommendationId() {
-        return this.recommendationId;
+    public Optional<Output<String>> recommendationId() {
+        return Optional.ofNullable(this.recommendationId);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recommendationName")
-    private Output</* @Nullable */ String> recommendationName;
+    private @Nullable Output<String> recommendationName;
 
     /**
      * @return Optional. A filter that returns results that match the recommendation name specified.
      * 
      */
-    public Output</* @Nullable */ String> recommendationName() {
-        return this.recommendationName;
+    public Optional<Output<String>> recommendationName() {
+        return Optional.ofNullable(this.recommendationName);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceType")
-    private Output</* @Nullable */ String> resourceType;
+    private @Nullable Output<String> resourceType;
 
     /**
      * @return Optional. A filter that returns results that match the resource type specified.
      * 
      */
-    public Output</* @Nullable */ String> resourceType() {
-        return this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -119,14 +120,14 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter that returns results that match the lifecycle state specified.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -134,14 +135,14 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-    private Output</* @Nullable */ String> status;
+    private @Nullable Output<String> status;
 
     /**
      * @return A filter that returns recommendations that match the status specified.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     private GetHistoriesArgs() {}
@@ -218,16 +219,16 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetHistoriesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetHistoriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetHistoriesFilter> filters) {
+        public Builder filters(List<GetHistoriesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetHistoriesFilter... filters) {
+        public Builder filters(GetHistoriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -237,7 +238,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -248,7 +249,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -258,7 +259,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder recommendationId(Output</* @Nullable */ String> recommendationId) {
+        public Builder recommendationId(@Nullable Output<String> recommendationId) {
             $.recommendationId = recommendationId;
             return this;
         }
@@ -269,7 +270,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder recommendationId(@Nullable String recommendationId) {
+        public Builder recommendationId(String recommendationId) {
             return recommendationId(Output.of(recommendationId));
         }
 
@@ -279,7 +280,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder recommendationName(Output</* @Nullable */ String> recommendationName) {
+        public Builder recommendationName(@Nullable Output<String> recommendationName) {
             $.recommendationName = recommendationName;
             return this;
         }
@@ -290,7 +291,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder recommendationName(@Nullable String recommendationName) {
+        public Builder recommendationName(String recommendationName) {
             return recommendationName(Output.of(recommendationName));
         }
 
@@ -300,7 +301,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceType(Output</* @Nullable */ String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
@@ -311,7 +312,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceType(@Nullable String resourceType) {
+        public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
@@ -321,7 +322,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -332,7 +333,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -342,7 +343,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder status(Output</* @Nullable */ String> status) {
+        public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
@@ -353,7 +354,7 @@ public final class GetHistoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder status(@Nullable String status) {
+        public Builder status(String status) {
             return status(Output.of(status));
         }
 

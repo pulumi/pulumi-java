@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointType")
-    private Output</* @Nullable */ String> endpointType;
+    private @Nullable Output<String> endpointType;
 
     /**
      * @return Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Jobs`.
      * 
      */
-    public Output</* @Nullable */ String> endpointType() {
-        return this.endpointType;
+    public Optional<Output<String>> endpointType() {
+        return Optional.ofNullable(this.endpointType);
     }
 
     private GetEndpointArgs() {}
@@ -59,7 +60,7 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endpointType(Output</* @Nullable */ String> endpointType) {
+        public Builder endpointType(@Nullable Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
@@ -70,7 +71,7 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endpointType(@Nullable String endpointType) {
+        public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 

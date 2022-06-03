@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dbClusterIdentifier")
-    private Output</* @Nullable */ String> dbClusterIdentifier;
+    private @Nullable Output<String> dbClusterIdentifier;
 
     /**
      * @return Returns the list of snapshots created by the specific db_cluster
      * 
      */
-    public Output</* @Nullable */ String> dbClusterIdentifier() {
-        return this.dbClusterIdentifier;
+    public Optional<Output<String>> dbClusterIdentifier() {
+        return Optional.ofNullable(this.dbClusterIdentifier);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dbClusterSnapshotIdentifier")
-    private Output</* @Nullable */ String> dbClusterSnapshotIdentifier;
+    private @Nullable Output<String> dbClusterSnapshotIdentifier;
 
     /**
      * @return Returns information on a specific snapshot_id.
      * 
      */
-    public Output</* @Nullable */ String> dbClusterSnapshotIdentifier() {
-        return this.dbClusterSnapshotIdentifier;
+    public Optional<Output<String>> dbClusterSnapshotIdentifier() {
+        return Optional.ofNullable(this.dbClusterSnapshotIdentifier);
     }
 
     /**
@@ -52,15 +53,15 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includePublic")
-    private Output</* @Nullable */ Boolean> includePublic;
+    private @Nullable Output<Boolean> includePublic;
 
     /**
      * @return Set this value to true to include manual DB Cluster Snapshots that are public and can be
      * copied or restored by any AWS account, otherwise set this value to false. The default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> includePublic() {
-        return this.includePublic;
+    public Optional<Output<Boolean>> includePublic() {
+        return Optional.ofNullable(this.includePublic);
     }
 
     /**
@@ -70,7 +71,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includeShared")
-    private Output</* @Nullable */ Boolean> includeShared;
+    private @Nullable Output<Boolean> includeShared;
 
     /**
      * @return Set this value to true to include shared manual DB Cluster Snapshots from other
@@ -78,8 +79,8 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * The default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeShared() {
-        return this.includeShared;
+    public Optional<Output<Boolean>> includeShared() {
+        return Optional.ofNullable(this.includeShared);
     }
 
     /**
@@ -87,14 +88,14 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="mostRecent")
-    private Output</* @Nullable */ Boolean> mostRecent;
+    private @Nullable Output<Boolean> mostRecent;
 
     /**
      * @return If more than one result is returned, use the most recent Snapshot.
      * 
      */
-    public Output</* @Nullable */ Boolean> mostRecent() {
-        return this.mostRecent;
+    public Optional<Output<Boolean>> mostRecent() {
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -104,7 +105,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="snapshotType")
-    private Output</* @Nullable */ String> snapshotType;
+    private @Nullable Output<String> snapshotType;
 
     /**
      * @return The type of snapshots to be returned. If you don&#39;t specify a SnapshotType
@@ -112,8 +113,8 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * included in the returned results by default. Possible values are, `automated`, `manual`, `shared`, `public` and `awsbackup`.
      * 
      */
-    public Output</* @Nullable */ String> snapshotType() {
-        return this.snapshotType;
+    public Optional<Output<String>> snapshotType() {
+        return Optional.ofNullable(this.snapshotType);
     }
 
     /**
@@ -121,14 +122,14 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags for the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetClusterSnapshotArgs() {}
@@ -167,7 +168,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder dbClusterIdentifier(Output</* @Nullable */ String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable Output<String> dbClusterIdentifier) {
             $.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
@@ -178,7 +179,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(String dbClusterIdentifier) {
             return dbClusterIdentifier(Output.of(dbClusterIdentifier));
         }
 
@@ -188,7 +189,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder dbClusterSnapshotIdentifier(Output</* @Nullable */ String> dbClusterSnapshotIdentifier) {
+        public Builder dbClusterSnapshotIdentifier(@Nullable Output<String> dbClusterSnapshotIdentifier) {
             $.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
             return this;
         }
@@ -199,7 +200,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder dbClusterSnapshotIdentifier(@Nullable String dbClusterSnapshotIdentifier) {
+        public Builder dbClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
             return dbClusterSnapshotIdentifier(Output.of(dbClusterSnapshotIdentifier));
         }
 
@@ -210,7 +211,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder includePublic(Output</* @Nullable */ Boolean> includePublic) {
+        public Builder includePublic(@Nullable Output<Boolean> includePublic) {
             $.includePublic = includePublic;
             return this;
         }
@@ -222,7 +223,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder includePublic(@Nullable Boolean includePublic) {
+        public Builder includePublic(Boolean includePublic) {
             return includePublic(Output.of(includePublic));
         }
 
@@ -234,7 +235,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder includeShared(Output</* @Nullable */ Boolean> includeShared) {
+        public Builder includeShared(@Nullable Output<Boolean> includeShared) {
             $.includeShared = includeShared;
             return this;
         }
@@ -247,7 +248,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder includeShared(@Nullable Boolean includeShared) {
+        public Builder includeShared(Boolean includeShared) {
             return includeShared(Output.of(includeShared));
         }
 
@@ -257,7 +258,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder mostRecent(Output</* @Nullable */ Boolean> mostRecent) {
+        public Builder mostRecent(@Nullable Output<Boolean> mostRecent) {
             $.mostRecent = mostRecent;
             return this;
         }
@@ -268,7 +269,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(Boolean mostRecent) {
             return mostRecent(Output.of(mostRecent));
         }
 
@@ -280,7 +281,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder snapshotType(Output</* @Nullable */ String> snapshotType) {
+        public Builder snapshotType(@Nullable Output<String> snapshotType) {
             $.snapshotType = snapshotType;
             return this;
         }
@@ -293,7 +294,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder snapshotType(@Nullable String snapshotType) {
+        public Builder snapshotType(String snapshotType) {
             return snapshotType(Output.of(snapshotType));
         }
 
@@ -303,7 +304,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -314,7 +315,7 @@ public final class GetClusterSnapshotArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

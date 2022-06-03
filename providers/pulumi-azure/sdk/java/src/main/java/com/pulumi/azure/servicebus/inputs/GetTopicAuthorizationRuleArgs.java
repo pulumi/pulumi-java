@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,21 +35,21 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="namespaceName")
-    private Output</* @Nullable */ String> namespaceName;
+    private @Nullable Output<String> namespaceName;
 
     /**
      * @return The name of the ServiceBus Namespace.
      * 
      */
-    public Output</* @Nullable */ String> namespaceName() {
-        return this.namespaceName;
+    public Optional<Output<String>> namespaceName() {
+        return Optional.ofNullable(this.namespaceName);
     }
 
     @Import(name="queueName")
-    private Output</* @Nullable */ String> queueName;
+    private @Nullable Output<String> queueName;
 
-    public Output</* @Nullable */ String> queueName() {
-        return this.queueName;
+    public Optional<Output<String>> queueName() {
+        return Optional.ofNullable(this.queueName);
     }
 
     /**
@@ -56,21 +57,21 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName")
-    private Output</* @Nullable */ String> resourceGroupName;
+    private @Nullable Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group in which the ServiceBus Namespace exists.
      * 
      */
-    public Output</* @Nullable */ String> resourceGroupName() {
-        return this.resourceGroupName;
+    public Optional<Output<String>> resourceGroupName() {
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     @Import(name="topicId")
-    private Output</* @Nullable */ String> topicId;
+    private @Nullable Output<String> topicId;
 
-    public Output</* @Nullable */ String> topicId() {
-        return this.topicId;
+    public Optional<Output<String>> topicId() {
+        return Optional.ofNullable(this.topicId);
     }
 
     /**
@@ -78,14 +79,14 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="topicName")
-    private Output</* @Nullable */ String> topicName;
+    private @Nullable Output<String> topicName;
 
     /**
      * @return The name of the ServiceBus Topic.
      * 
      */
-    public Output</* @Nullable */ String> topicName() {
-        return this.topicName;
+    public Optional<Output<String>> topicName() {
+        return Optional.ofNullable(this.topicName);
     }
 
     private GetTopicAuthorizationRuleArgs() {}
@@ -144,7 +145,7 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder namespaceName(Output</* @Nullable */ String> namespaceName) {
+        public Builder namespaceName(@Nullable Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
@@ -155,16 +156,16 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder namespaceName(@Nullable String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
-        public Builder queueName(Output</* @Nullable */ String> queueName) {
+        public Builder queueName(@Nullable Output<String> queueName) {
             $.queueName = queueName;
             return this;
         }
 
-        public Builder queueName(@Nullable String queueName) {
+        public Builder queueName(String queueName) {
             return queueName(Output.of(queueName));
         }
 
@@ -174,7 +175,7 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder resourceGroupName(Output</* @Nullable */ String> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
@@ -185,16 +186,16 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder resourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
-        public Builder topicId(Output</* @Nullable */ String> topicId) {
+        public Builder topicId(@Nullable Output<String> topicId) {
             $.topicId = topicId;
             return this;
         }
 
-        public Builder topicId(@Nullable String topicId) {
+        public Builder topicId(String topicId) {
             return topicId(Output.of(topicId));
         }
 
@@ -204,7 +205,7 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder topicName(Output</* @Nullable */ String> topicName) {
+        public Builder topicName(@Nullable Output<String> topicName) {
             $.topicName = topicName;
             return this;
         }
@@ -215,7 +216,7 @@ public final class GetTopicAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder topicName(@Nullable String topicName) {
+        public Builder topicName(String topicName) {
             return topicName(Output.of(topicName));
         }
 

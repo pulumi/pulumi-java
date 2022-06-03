@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetCrossConnectPortSpeedShapeFilter;
+import com.pulumi.oci.Core.inputs.GetCrossConnectPortSpeedShapeFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetCrossConnectPortSpeedShapeArgs extends com.pulumi.resource
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetCrossConnectPortSpeedShapeFilter>> filters;
+    private @Nullable Output<List<GetCrossConnectPortSpeedShapeFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetCrossConnectPortSpeedShapeFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetCrossConnectPortSpeedShapeFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetCrossConnectPortSpeedShapeArgs() {}
@@ -84,16 +85,16 @@ public final class GetCrossConnectPortSpeedShapeArgs extends com.pulumi.resource
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetCrossConnectPortSpeedShapeFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetCrossConnectPortSpeedShapeFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCrossConnectPortSpeedShapeFilter> filters) {
+        public Builder filters(List<GetCrossConnectPortSpeedShapeFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetCrossConnectPortSpeedShapeFilter... filters) {
+        public Builder filters(GetCrossConnectPortSpeedShapeFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

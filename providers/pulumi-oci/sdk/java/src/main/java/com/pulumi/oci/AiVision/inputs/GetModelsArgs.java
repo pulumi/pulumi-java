@@ -5,10 +5,11 @@ package com.pulumi.oci.AiVision.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.AiVision.inputs.GetModelsFilter;
+import com.pulumi.oci.AiVision.inputs.GetModelsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private Output</* @Nullable */ String> compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public Output</* @Nullable */ String> compartmentId() {
-        return this.compartmentId;
+    public Optional<Output<String>> compartmentId() {
+        return Optional.ofNullable(this.compartmentId);
     }
 
     /**
@@ -36,21 +37,21 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetModelsFilter>> filters;
+    private @Nullable Output<List<GetModelsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetModelsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetModelsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return unique Model identifier
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectId")
-    private Output</* @Nullable */ String> projectId;
+    private @Nullable Output<String> projectId;
 
     /**
      * @return The ID of the project for which to list the objects.
      * 
      */
-    public Output</* @Nullable */ String> projectId() {
-        return this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources their lifecycleState matches the given lifecycleState.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetModelsArgs() {}
@@ -133,7 +134,7 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(String compartmentId) {
             return compartmentId(Output.of(compartmentId));
         }
 
@@ -154,7 +155,7 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -165,20 +166,20 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetModelsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetModelsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetModelsFilter> filters) {
+        public Builder filters(List<GetModelsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetModelsFilter... filters) {
+        public Builder filters(GetModelsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -188,7 +189,7 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -199,7 +200,7 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -209,7 +210,7 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder projectId(Output</* @Nullable */ String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder projectId(@Nullable String projectId) {
+        public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
@@ -230,7 +231,7 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetModelsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

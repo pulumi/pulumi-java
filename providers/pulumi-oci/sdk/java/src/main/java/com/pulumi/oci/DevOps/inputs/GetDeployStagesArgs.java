@@ -5,10 +5,11 @@ package com.pulumi.oci.DevOps.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DevOps.inputs.GetDeployStagesFilter;
+import com.pulumi.oci.DevOps.inputs.GetDeployStagesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private Output</* @Nullable */ String> compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment in which to list resources.
      * 
      */
-    public Output</* @Nullable */ String> compartmentId() {
-        return this.compartmentId;
+    public Optional<Output<String>> compartmentId() {
+        return Optional.ofNullable(this.compartmentId);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deployPipelineId")
-    private Output</* @Nullable */ String> deployPipelineId;
+    private @Nullable Output<String> deployPipelineId;
 
     /**
      * @return The ID of the parent pipeline.
      * 
      */
-    public Output</* @Nullable */ String> deployPipelineId() {
-        return this.deployPipelineId;
+    public Optional<Output<String>> deployPipelineId() {
+        return Optional.ofNullable(this.deployPipelineId);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDeployStagesFilter>> filters;
+    private @Nullable Output<List<GetDeployStagesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDeployStagesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDeployStagesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Unique identifier or OCID for listing a single resource by ID.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only deployment stages that matches the given lifecycle state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetDeployStagesArgs() {}
@@ -133,7 +134,7 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(String compartmentId) {
             return compartmentId(Output.of(compartmentId));
         }
 
@@ -154,7 +155,7 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder deployPipelineId(Output</* @Nullable */ String> deployPipelineId) {
+        public Builder deployPipelineId(@Nullable Output<String> deployPipelineId) {
             $.deployPipelineId = deployPipelineId;
             return this;
         }
@@ -165,7 +166,7 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder deployPipelineId(@Nullable String deployPipelineId) {
+        public Builder deployPipelineId(String deployPipelineId) {
             return deployPipelineId(Output.of(deployPipelineId));
         }
 
@@ -175,7 +176,7 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -186,20 +187,20 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDeployStagesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDeployStagesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDeployStagesFilter> filters) {
+        public Builder filters(List<GetDeployStagesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDeployStagesFilter... filters) {
+        public Builder filters(GetDeployStagesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -209,7 +210,7 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -230,7 +231,7 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetDeployStagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

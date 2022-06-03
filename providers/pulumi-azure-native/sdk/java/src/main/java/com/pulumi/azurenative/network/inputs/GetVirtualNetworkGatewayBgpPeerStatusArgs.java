@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
      * 
      */
     @Import(name="peer")
-    private Output</* @Nullable */ String> peer;
+    private @Nullable Output<String> peer;
 
     /**
      * @return The IP address of the peer to retrieve the status of.
      * 
      */
-    public Output</* @Nullable */ String> peer() {
-        return this.peer;
+    public Optional<Output<String>> peer() {
+        return Optional.ofNullable(this.peer);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder peer(Output</* @Nullable */ String> peer) {
+        public Builder peer(@Nullable Output<String> peer) {
             $.peer = peer;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder peer(@Nullable String peer) {
+        public Builder peer(String peer) {
             return peer(Output.of(peer));
         }
 

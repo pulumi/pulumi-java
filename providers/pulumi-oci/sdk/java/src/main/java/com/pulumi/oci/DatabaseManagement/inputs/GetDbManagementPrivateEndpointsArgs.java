@@ -5,11 +5,12 @@ package com.pulumi.oci.DatabaseManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetDbManagementPrivateEndpointsFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetDbManagementPrivateEndpointsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDbManagementPrivateEndpointsFilter>> filters;
+    private @Nullable Output<List<GetDbManagementPrivateEndpointsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDbManagementPrivateEndpointsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDbManagementPrivateEndpointsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -44,14 +45,14 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="isCluster")
-    private Output</* @Nullable */ Boolean> isCluster;
+    private @Nullable Output<Boolean> isCluster;
 
     /**
      * @return The option to filter Database Management private endpoints that can used for Oracle Databases in a cluster. This should be used along with the vcnId query parameter.
      * 
      */
-    public Output</* @Nullable */ Boolean> isCluster() {
-        return this.isCluster;
+    public Optional<Output<Boolean>> isCluster() {
+        return Optional.ofNullable(this.isCluster);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The lifecycle state of a resource.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="vcnId")
-    private Output</* @Nullable */ String> vcnId;
+    private @Nullable Output<String> vcnId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
      * 
      */
-    public Output</* @Nullable */ String> vcnId() {
-        return this.vcnId;
+    public Optional<Output<String>> vcnId() {
+        return Optional.ofNullable(this.vcnId);
     }
 
     private GetDbManagementPrivateEndpointsArgs() {}
@@ -149,16 +150,16 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDbManagementPrivateEndpointsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDbManagementPrivateEndpointsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbManagementPrivateEndpointsFilter> filters) {
+        public Builder filters(List<GetDbManagementPrivateEndpointsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDbManagementPrivateEndpointsFilter... filters) {
+        public Builder filters(GetDbManagementPrivateEndpointsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -168,7 +169,7 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder isCluster(Output</* @Nullable */ Boolean> isCluster) {
+        public Builder isCluster(@Nullable Output<Boolean> isCluster) {
             $.isCluster = isCluster;
             return this;
         }
@@ -179,7 +180,7 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder isCluster(@Nullable Boolean isCluster) {
+        public Builder isCluster(Boolean isCluster) {
             return isCluster(Output.of(isCluster));
         }
 
@@ -189,7 +190,7 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -200,7 +201,7 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -210,7 +211,7 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -221,7 +222,7 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -231,7 +232,7 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder vcnId(Output</* @Nullable */ String> vcnId) {
+        public Builder vcnId(@Nullable Output<String> vcnId) {
             $.vcnId = vcnId;
             return this;
         }
@@ -242,7 +243,7 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder vcnId(@Nullable String vcnId) {
+        public Builder vcnId(String vcnId) {
             return vcnId(Output.of(vcnId));
         }
 

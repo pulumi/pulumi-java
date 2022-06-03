@@ -5,10 +5,11 @@ package com.pulumi.gcp.organizations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.gcp.organizations.inputs.GetIAMPolicyAuditConfig;
-import com.pulumi.gcp.organizations.inputs.GetIAMPolicyBinding;
+import com.pulumi.gcp.organizations.inputs.GetIAMPolicyAuditConfigArgs;
+import com.pulumi.gcp.organizations.inputs.GetIAMPolicyBindingArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="auditConfigs")
-    private Output</* @Nullable */ List<GetIAMPolicyAuditConfig>> auditConfigs;
+    private @Nullable Output<List<GetIAMPolicyAuditConfigArgs>> auditConfigs;
 
     /**
      * @return A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
      * 
      */
-    public Output</* @Nullable */ List<GetIAMPolicyAuditConfig>> auditConfigs() {
-        return this.auditConfigs;
+    public Optional<Output<List<GetIAMPolicyAuditConfigArgs>>> auditConfigs() {
+        return Optional.ofNullable(this.auditConfigs);
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bindings")
-    private Output</* @Nullable */ List<GetIAMPolicyBinding>> bindings;
+    private @Nullable Output<List<GetIAMPolicyBindingArgs>> bindings;
 
     /**
      * @return A nested configuration block (described below)
@@ -46,8 +47,8 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * `binding` arguments are supported.
      * 
      */
-    public Output</* @Nullable */ List<GetIAMPolicyBinding>> bindings() {
-        return this.bindings;
+    public Optional<Output<List<GetIAMPolicyBindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     private GetIAMPolicyArgs() {}
@@ -81,7 +82,7 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder auditConfigs(Output</* @Nullable */ List<GetIAMPolicyAuditConfig>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Output<List<GetIAMPolicyAuditConfigArgs>> auditConfigs) {
             $.auditConfigs = auditConfigs;
             return this;
         }
@@ -92,7 +93,7 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder auditConfigs(@Nullable List<GetIAMPolicyAuditConfig> auditConfigs) {
+        public Builder auditConfigs(List<GetIAMPolicyAuditConfigArgs> auditConfigs) {
             return auditConfigs(Output.of(auditConfigs));
         }
 
@@ -102,7 +103,7 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder auditConfigs(GetIAMPolicyAuditConfig... auditConfigs) {
+        public Builder auditConfigs(GetIAMPolicyAuditConfigArgs... auditConfigs) {
             return auditConfigs(List.of(auditConfigs));
         }
 
@@ -114,7 +115,7 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bindings(Output</* @Nullable */ List<GetIAMPolicyBinding>> bindings) {
+        public Builder bindings(@Nullable Output<List<GetIAMPolicyBindingArgs>> bindings) {
             $.bindings = bindings;
             return this;
         }
@@ -127,7 +128,7 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bindings(@Nullable List<GetIAMPolicyBinding> bindings) {
+        public Builder bindings(List<GetIAMPolicyBindingArgs> bindings) {
             return bindings(Output.of(bindings));
         }
 
@@ -139,7 +140,7 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bindings(GetIAMPolicyBinding... bindings) {
+        public Builder bindings(GetIAMPolicyBindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
 

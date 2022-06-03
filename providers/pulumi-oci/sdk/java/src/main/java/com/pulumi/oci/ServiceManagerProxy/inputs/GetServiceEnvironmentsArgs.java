@@ -5,10 +5,11 @@ package com.pulumi.oci.ServiceManagerProxy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ServiceManagerProxy.inputs.GetServiceEnvironmentsFilter;
+import com.pulumi.oci.ServiceManagerProxy.inputs.GetServiceEnvironmentsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The display name of the resource.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetServiceEnvironmentsFilter>> filters;
+    private @Nullable Output<List<GetServiceEnvironmentsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetServiceEnvironmentsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetServiceEnvironmentsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serviceEnvironmentId")
-    private Output</* @Nullable */ String> serviceEnvironmentId;
+    private @Nullable Output<String> serviceEnvironmentId;
 
     /**
      * @return The unique identifier associated with the service environment.
      * 
      */
-    public Output</* @Nullable */ String> serviceEnvironmentId() {
-        return this.serviceEnvironmentId;
+    public Optional<Output<String>> serviceEnvironmentId() {
+        return Optional.ofNullable(this.serviceEnvironmentId);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serviceEnvironmentType")
-    private Output</* @Nullable */ String> serviceEnvironmentType;
+    private @Nullable Output<String> serviceEnvironmentType;
 
     /**
      * @return The environment&#39;s service definition type.  For example, &#34;RGBUOROMS&#34; is the service definition type for &#34;Oracle Retail Order Management Cloud Service&#34;.
      * 
      */
-    public Output</* @Nullable */ String> serviceEnvironmentType() {
-        return this.serviceEnvironmentType;
+    public Optional<Output<String>> serviceEnvironmentType() {
+        return Optional.ofNullable(this.serviceEnvironmentType);
     }
 
     private GetServiceEnvironmentsArgs() {}
@@ -138,7 +139,7 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,20 +150,20 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetServiceEnvironmentsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetServiceEnvironmentsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetServiceEnvironmentsFilter> filters) {
+        public Builder filters(List<GetServiceEnvironmentsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetServiceEnvironmentsFilter... filters) {
+        public Builder filters(GetServiceEnvironmentsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder serviceEnvironmentId(Output</* @Nullable */ String> serviceEnvironmentId) {
+        public Builder serviceEnvironmentId(@Nullable Output<String> serviceEnvironmentId) {
             $.serviceEnvironmentId = serviceEnvironmentId;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder serviceEnvironmentId(@Nullable String serviceEnvironmentId) {
+        public Builder serviceEnvironmentId(String serviceEnvironmentId) {
             return serviceEnvironmentId(Output.of(serviceEnvironmentId));
         }
 
@@ -193,7 +194,7 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder serviceEnvironmentType(Output</* @Nullable */ String> serviceEnvironmentType) {
+        public Builder serviceEnvironmentType(@Nullable Output<String> serviceEnvironmentType) {
             $.serviceEnvironmentType = serviceEnvironmentType;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetServiceEnvironmentsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder serviceEnvironmentType(@Nullable String serviceEnvironmentType) {
+        public Builder serviceEnvironmentType(String serviceEnvironmentType) {
             return serviceEnvironmentType(Output.of(serviceEnvironmentType));
         }
 

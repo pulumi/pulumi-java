@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accessLevel")
-    private Output</* @Nullable */ String> accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Output</* @Nullable */ String> accessLevel() {
-        return this.accessLevel;
+    public Optional<Output<String>> accessLevel() {
+        return Optional.ofNullable(this.accessLevel);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="groupBies")
-    private Output</* @Nullable */ List<String>> groupBies;
+    private @Nullable Output<List<String>> groupBies;
 
     /**
      * @return A groupBy can only be used in combination with summaryField parameter. A groupBy value has to be a subset of the values mentioned in summaryField parameter.
      * 
      */
-    public Output</* @Nullable */ List<String>> groupBies() {
-        return this.groupBies;
+    public Optional<Output<List<String>>> groupBies() {
+        return Optional.ofNullable(this.groupBies);
     }
 
     /**
@@ -81,14 +82,14 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="queryTimeZone")
-    private Output</* @Nullable */ String> queryTimeZone;
+    private @Nullable Output<String> queryTimeZone;
 
     /**
      * @return Default time zone is UTC if no time zone provided. The date-time considerations of the resource will be in accordance with the specified time zone.
      * 
      */
-    public Output</* @Nullable */ String> queryTimeZone() {
-        return this.queryTimeZone;
+    public Optional<Output<String>> queryTimeZone() {
+        return Optional.ofNullable(this.queryTimeZone);
     }
 
     /**
@@ -96,14 +97,14 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="scimQuery")
-    private Output</* @Nullable */ String> scimQuery;
+    private @Nullable Output<String> scimQuery;
 
     /**
      * @return The scimQuery query parameter accepts filter expressions that use the syntax described in Section 3.2.2.2 of the System for Cross-Domain Identity Management (SCIM) specification, which is available at [RFC3339](https://tools.ietf.org/html/draft-ietf-scim-api-12). In SCIM filtering expressions, text, date, and time values must be enclosed in quotation marks, with date and time values using ISO-8601 format. (Numeric and boolean values should not be quoted.)
      * 
      */
-    public Output</* @Nullable */ String> scimQuery() {
-        return this.scimQuery;
+    public Optional<Output<String>> scimQuery() {
+        return Optional.ofNullable(this.scimQuery);
     }
 
     /**
@@ -111,14 +112,14 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="summaryFields")
-    private Output</* @Nullable */ List<String>> summaryFields;
+    private @Nullable Output<List<String>> summaryFields;
 
     /**
      * @return Specifies a subset of summarized fields to be returned in the response.
      * 
      */
-    public Output</* @Nullable */ List<String>> summaryFields() {
-        return this.summaryFields;
+    public Optional<Output<List<String>>> summaryFields() {
+        return Optional.ofNullable(this.summaryFields);
     }
 
     /**
@@ -126,14 +127,14 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="timeEnded")
-    private Output</* @Nullable */ String> timeEnded;
+    private @Nullable Output<String> timeEnded;
 
     /**
      * @return An optional filter to return audit events whose creation time in the database is less than and equal to the date-time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
      * 
      */
-    public Output</* @Nullable */ String> timeEnded() {
-        return this.timeEnded;
+    public Optional<Output<String>> timeEnded() {
+        return Optional.ofNullable(this.timeEnded);
     }
 
     /**
@@ -141,14 +142,14 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="timeStarted")
-    private Output</* @Nullable */ String> timeStarted;
+    private @Nullable Output<String> timeStarted;
 
     /**
      * @return An optional filter to return audit events whose creation time in the database is greater than and equal to the date-time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
      * 
      */
-    public Output</* @Nullable */ String> timeStarted() {
-        return this.timeStarted;
+    public Optional<Output<String>> timeStarted() {
+        return Optional.ofNullable(this.timeStarted);
     }
 
     private GetAuditEventAnalyticArgs() {}
@@ -189,7 +190,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
             return this;
         }
@@ -200,7 +201,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(String accessLevel) {
             return accessLevel(Output.of(accessLevel));
         }
 
@@ -231,7 +232,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -242,7 +243,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
@@ -252,7 +253,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder groupBies(Output</* @Nullable */ List<String>> groupBies) {
+        public Builder groupBies(@Nullable Output<List<String>> groupBies) {
             $.groupBies = groupBies;
             return this;
         }
@@ -263,7 +264,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder groupBies(@Nullable List<String> groupBies) {
+        public Builder groupBies(List<String> groupBies) {
             return groupBies(Output.of(groupBies));
         }
 
@@ -283,7 +284,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder queryTimeZone(Output</* @Nullable */ String> queryTimeZone) {
+        public Builder queryTimeZone(@Nullable Output<String> queryTimeZone) {
             $.queryTimeZone = queryTimeZone;
             return this;
         }
@@ -294,7 +295,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder queryTimeZone(@Nullable String queryTimeZone) {
+        public Builder queryTimeZone(String queryTimeZone) {
             return queryTimeZone(Output.of(queryTimeZone));
         }
 
@@ -304,7 +305,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder scimQuery(Output</* @Nullable */ String> scimQuery) {
+        public Builder scimQuery(@Nullable Output<String> scimQuery) {
             $.scimQuery = scimQuery;
             return this;
         }
@@ -315,7 +316,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder scimQuery(@Nullable String scimQuery) {
+        public Builder scimQuery(String scimQuery) {
             return scimQuery(Output.of(scimQuery));
         }
 
@@ -325,7 +326,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder summaryFields(Output</* @Nullable */ List<String>> summaryFields) {
+        public Builder summaryFields(@Nullable Output<List<String>> summaryFields) {
             $.summaryFields = summaryFields;
             return this;
         }
@@ -336,7 +337,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder summaryFields(@Nullable List<String> summaryFields) {
+        public Builder summaryFields(List<String> summaryFields) {
             return summaryFields(Output.of(summaryFields));
         }
 
@@ -356,7 +357,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder timeEnded(Output</* @Nullable */ String> timeEnded) {
+        public Builder timeEnded(@Nullable Output<String> timeEnded) {
             $.timeEnded = timeEnded;
             return this;
         }
@@ -367,7 +368,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder timeEnded(@Nullable String timeEnded) {
+        public Builder timeEnded(String timeEnded) {
             return timeEnded(Output.of(timeEnded));
         }
 
@@ -377,7 +378,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder timeStarted(Output</* @Nullable */ String> timeStarted) {
+        public Builder timeStarted(@Nullable Output<String> timeStarted) {
             $.timeStarted = timeStarted;
             return this;
         }
@@ -388,7 +389,7 @@ public final class GetAuditEventAnalyticArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder timeStarted(@Nullable String timeStarted) {
+        public Builder timeStarted(String timeStarted) {
             return timeStarted(Output.of(timeStarted));
         }
 

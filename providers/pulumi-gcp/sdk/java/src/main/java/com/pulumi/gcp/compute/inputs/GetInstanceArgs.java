@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the instance. One of `name` or `self_link` must be provided.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,7 +37,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The ID of the project in which the resource belongs.
@@ -44,8 +45,8 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * nor `project` are provided, the provider project is used.
      * 
      */
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -53,14 +54,14 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selfLink")
-    private Output</* @Nullable */ String> selfLink;
+    private @Nullable Output<String> selfLink;
 
     /**
      * @return The self link of the instance. One of `name` or `self_link` must be provided.
      * 
      */
-    public Output</* @Nullable */ String> selfLink() {
-        return this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -70,7 +71,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zone")
-    private Output</* @Nullable */ String> zone;
+    private @Nullable Output<String> zone;
 
     /**
      * @return The zone of the instance. If `self_link` is provided, this
@@ -78,8 +79,8 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * provider zone is used.
      * 
      */
-    public Output</* @Nullable */ String> zone() {
-        return this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
     private GetInstanceArgs() {}
@@ -115,7 +116,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -126,7 +127,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -138,7 +139,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
@@ -151,7 +152,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
@@ -161,7 +162,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder selfLink(Output</* @Nullable */ String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
@@ -172,7 +173,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder selfLink(@Nullable String selfLink) {
+        public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
@@ -184,7 +185,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder zone(Output</* @Nullable */ String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
@@ -197,7 +198,7 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder zone(@Nullable String zone) {
+        public Builder zone(String zone) {
             return zone(Output.of(zone));
         }
 

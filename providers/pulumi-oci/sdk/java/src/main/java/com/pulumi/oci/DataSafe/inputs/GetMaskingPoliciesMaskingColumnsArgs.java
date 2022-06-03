@@ -5,11 +5,12 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetMaskingPoliciesMaskingColumnsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetMaskingPoliciesMaskingColumnsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="columnNames")
-    private Output</* @Nullable */ List<String>> columnNames;
+    private @Nullable Output<List<String>> columnNames;
 
     /**
      * @return A filter to return only a specific column based on column name.
      * 
      */
-    public Output</* @Nullable */ List<String>> columnNames() {
-        return this.columnNames;
+    public Optional<Output<List<String>>> columnNames() {
+        return Optional.ofNullable(this.columnNames);
     }
 
     /**
@@ -37,21 +38,21 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="dataTypes")
-    private Output</* @Nullable */ List<String>> dataTypes;
+    private @Nullable Output<List<String>> dataTypes;
 
     /**
      * @return A filter to return only resources that match the specified data types.
      * 
      */
-    public Output</* @Nullable */ List<String>> dataTypes() {
-        return this.dataTypes;
+    public Optional<Output<List<String>>> dataTypes() {
+        return Optional.ofNullable(this.dataTypes);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetMaskingPoliciesMaskingColumnsFilter>> filters;
+    private @Nullable Output<List<GetMaskingPoliciesMaskingColumnsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetMaskingPoliciesMaskingColumnsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetMaskingPoliciesMaskingColumnsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="isMaskingEnabled")
-    private Output</* @Nullable */ Boolean> isMaskingEnabled;
+    private @Nullable Output<Boolean> isMaskingEnabled;
 
     /**
      * @return A filter to return the masking column resources based on the value of their isMaskingEnabled attribute. A value of true returns only those columns for which masking is enabled. A value of false returns only those columns for which masking is disabled. Omitting this parameter returns all the masking columns in a masking policy.
      * 
      */
-    public Output</* @Nullable */ Boolean> isMaskingEnabled() {
-        return this.isMaskingEnabled;
+    public Optional<Output<Boolean>> isMaskingEnabled() {
+        return Optional.ofNullable(this.isMaskingEnabled);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="isSeedRequired")
-    private Output</* @Nullable */ Boolean> isSeedRequired;
+    private @Nullable Output<Boolean> isSeedRequired;
 
     /**
      * @return A filter to return masking columns based on whether the assigned masking formats need a seed value for masking. A value of true returns those masking columns that are using  Deterministic Encryption or Deterministic Substitution masking format.
      * 
      */
-    public Output</* @Nullable */ Boolean> isSeedRequired() {
-        return this.isSeedRequired;
+    public Optional<Output<Boolean>> isSeedRequired() {
+        return Optional.ofNullable(this.isSeedRequired);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maskingColumnGroups")
-    private Output</* @Nullable */ List<String>> maskingColumnGroups;
+    private @Nullable Output<List<String>> maskingColumnGroups;
 
     /**
      * @return A filter to return only the resources that match the specified masking column group.
      * 
      */
-    public Output</* @Nullable */ List<String>> maskingColumnGroups() {
-        return this.maskingColumnGroups;
+    public Optional<Output<List<String>>> maskingColumnGroups() {
+        return Optional.ofNullable(this.maskingColumnGroups);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maskingColumnLifecycleState")
-    private Output</* @Nullable */ String> maskingColumnLifecycleState;
+    private @Nullable Output<String> maskingColumnLifecycleState;
 
     /**
      * @return A filter to return only the resources that match the specified lifecycle states.
      * 
      */
-    public Output</* @Nullable */ String> maskingColumnLifecycleState() {
-        return this.maskingColumnLifecycleState;
+    public Optional<Output<String>> maskingColumnLifecycleState() {
+        return Optional.ofNullable(this.maskingColumnLifecycleState);
     }
 
     /**
@@ -134,14 +135,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="objectTypes")
-    private Output</* @Nullable */ List<String>> objectTypes;
+    private @Nullable Output<List<String>> objectTypes;
 
     /**
      * @return A filter to return only items related to a specific object type.
      * 
      */
-    public Output</* @Nullable */ List<String>> objectTypes() {
-        return this.objectTypes;
+    public Optional<Output<List<String>>> objectTypes() {
+        return Optional.ofNullable(this.objectTypes);
     }
 
     /**
@@ -149,14 +150,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="objects")
-    private Output</* @Nullable */ List<String>> objects;
+    private @Nullable Output<List<String>> objects;
 
     /**
      * @return A filter to return only items related to a specific object name.
      * 
      */
-    public Output</* @Nullable */ List<String>> objects() {
-        return this.objects;
+    public Optional<Output<List<String>>> objects() {
+        return Optional.ofNullable(this.objects);
     }
 
     /**
@@ -164,14 +165,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="schemaNames")
-    private Output</* @Nullable */ List<String>> schemaNames;
+    private @Nullable Output<List<String>> schemaNames;
 
     /**
      * @return A filter to return only items related to specific schema name.
      * 
      */
-    public Output</* @Nullable */ List<String>> schemaNames() {
-        return this.schemaNames;
+    public Optional<Output<List<String>>> schemaNames() {
+        return Optional.ofNullable(this.schemaNames);
     }
 
     /**
@@ -179,14 +180,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="sensitiveTypeId")
-    private Output</* @Nullable */ String> sensitiveTypeId;
+    private @Nullable Output<String> sensitiveTypeId;
 
     /**
      * @return A filter to return only items related to a specific sensitive type OCID.
      * 
      */
-    public Output</* @Nullable */ String> sensitiveTypeId() {
-        return this.sensitiveTypeId;
+    public Optional<Output<String>> sensitiveTypeId() {
+        return Optional.ofNullable(this.sensitiveTypeId);
     }
 
     /**
@@ -194,14 +195,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return only the resources that were created after the specified date and time, as defined by [RFC3339](https://tools.ietf.org/html/rfc3339). Using TimeCreatedGreaterThanOrEqualToQueryParam parameter retrieves all resources created after that date.
      * 
      */
-    public Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo() {
-        return this.timeCreatedGreaterThanOrEqualTo;
+    public Optional<Output<String>> timeCreatedGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
     }
 
     /**
@@ -209,14 +210,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private Output</* @Nullable */ String> timeCreatedLessThan;
+    private @Nullable Output<String> timeCreatedLessThan;
 
     /**
      * @return Search for resources that were created before a specific date. Specifying this parameter corresponding `timeCreatedLessThan` parameter will retrieve all resources created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Output</* @Nullable */ String> timeCreatedLessThan() {
-        return this.timeCreatedLessThan;
+    public Optional<Output<String>> timeCreatedLessThan() {
+        return Optional.ofNullable(this.timeCreatedLessThan);
     }
 
     /**
@@ -224,14 +225,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="timeUpdatedGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> timeUpdatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeUpdatedGreaterThanOrEqualTo;
 
     /**
      * @return Search for resources that were updated after a specific date. Specifying this parameter corresponding `timeUpdatedGreaterThanOrEqualTo` parameter will retrieve all resources updated after the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Output</* @Nullable */ String> timeUpdatedGreaterThanOrEqualTo() {
-        return this.timeUpdatedGreaterThanOrEqualTo;
+    public Optional<Output<String>> timeUpdatedGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.timeUpdatedGreaterThanOrEqualTo);
     }
 
     /**
@@ -239,14 +240,14 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="timeUpdatedLessThan")
-    private Output</* @Nullable */ String> timeUpdatedLessThan;
+    private @Nullable Output<String> timeUpdatedLessThan;
 
     /**
      * @return Search for resources that were updated before a specific date. Specifying this parameter corresponding `timeUpdatedLessThan` parameter will retrieve all resources updated before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Output</* @Nullable */ String> timeUpdatedLessThan() {
-        return this.timeUpdatedLessThan;
+    public Optional<Output<String>> timeUpdatedLessThan() {
+        return Optional.ofNullable(this.timeUpdatedLessThan);
     }
 
     private GetMaskingPoliciesMaskingColumnsArgs() {}
@@ -294,7 +295,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder columnNames(Output</* @Nullable */ List<String>> columnNames) {
+        public Builder columnNames(@Nullable Output<List<String>> columnNames) {
             $.columnNames = columnNames;
             return this;
         }
@@ -305,7 +306,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder columnNames(@Nullable List<String> columnNames) {
+        public Builder columnNames(List<String> columnNames) {
             return columnNames(Output.of(columnNames));
         }
 
@@ -325,7 +326,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder dataTypes(Output</* @Nullable */ List<String>> dataTypes) {
+        public Builder dataTypes(@Nullable Output<List<String>> dataTypes) {
             $.dataTypes = dataTypes;
             return this;
         }
@@ -336,7 +337,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder dataTypes(@Nullable List<String> dataTypes) {
+        public Builder dataTypes(List<String> dataTypes) {
             return dataTypes(Output.of(dataTypes));
         }
 
@@ -350,16 +351,16 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
             return dataTypes(List.of(dataTypes));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetMaskingPoliciesMaskingColumnsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetMaskingPoliciesMaskingColumnsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetMaskingPoliciesMaskingColumnsFilter> filters) {
+        public Builder filters(List<GetMaskingPoliciesMaskingColumnsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetMaskingPoliciesMaskingColumnsFilter... filters) {
+        public Builder filters(GetMaskingPoliciesMaskingColumnsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -369,7 +370,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder isMaskingEnabled(Output</* @Nullable */ Boolean> isMaskingEnabled) {
+        public Builder isMaskingEnabled(@Nullable Output<Boolean> isMaskingEnabled) {
             $.isMaskingEnabled = isMaskingEnabled;
             return this;
         }
@@ -380,7 +381,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder isMaskingEnabled(@Nullable Boolean isMaskingEnabled) {
+        public Builder isMaskingEnabled(Boolean isMaskingEnabled) {
             return isMaskingEnabled(Output.of(isMaskingEnabled));
         }
 
@@ -390,7 +391,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder isSeedRequired(Output</* @Nullable */ Boolean> isSeedRequired) {
+        public Builder isSeedRequired(@Nullable Output<Boolean> isSeedRequired) {
             $.isSeedRequired = isSeedRequired;
             return this;
         }
@@ -401,7 +402,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder isSeedRequired(@Nullable Boolean isSeedRequired) {
+        public Builder isSeedRequired(Boolean isSeedRequired) {
             return isSeedRequired(Output.of(isSeedRequired));
         }
 
@@ -411,7 +412,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder maskingColumnGroups(Output</* @Nullable */ List<String>> maskingColumnGroups) {
+        public Builder maskingColumnGroups(@Nullable Output<List<String>> maskingColumnGroups) {
             $.maskingColumnGroups = maskingColumnGroups;
             return this;
         }
@@ -422,7 +423,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder maskingColumnGroups(@Nullable List<String> maskingColumnGroups) {
+        public Builder maskingColumnGroups(List<String> maskingColumnGroups) {
             return maskingColumnGroups(Output.of(maskingColumnGroups));
         }
 
@@ -442,7 +443,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder maskingColumnLifecycleState(Output</* @Nullable */ String> maskingColumnLifecycleState) {
+        public Builder maskingColumnLifecycleState(@Nullable Output<String> maskingColumnLifecycleState) {
             $.maskingColumnLifecycleState = maskingColumnLifecycleState;
             return this;
         }
@@ -453,7 +454,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder maskingColumnLifecycleState(@Nullable String maskingColumnLifecycleState) {
+        public Builder maskingColumnLifecycleState(String maskingColumnLifecycleState) {
             return maskingColumnLifecycleState(Output.of(maskingColumnLifecycleState));
         }
 
@@ -484,7 +485,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder objectTypes(Output</* @Nullable */ List<String>> objectTypes) {
+        public Builder objectTypes(@Nullable Output<List<String>> objectTypes) {
             $.objectTypes = objectTypes;
             return this;
         }
@@ -495,7 +496,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder objectTypes(@Nullable List<String> objectTypes) {
+        public Builder objectTypes(List<String> objectTypes) {
             return objectTypes(Output.of(objectTypes));
         }
 
@@ -515,7 +516,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder objects(Output</* @Nullable */ List<String>> objects) {
+        public Builder objects(@Nullable Output<List<String>> objects) {
             $.objects = objects;
             return this;
         }
@@ -526,7 +527,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder objects(@Nullable List<String> objects) {
+        public Builder objects(List<String> objects) {
             return objects(Output.of(objects));
         }
 
@@ -546,7 +547,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder schemaNames(Output</* @Nullable */ List<String>> schemaNames) {
+        public Builder schemaNames(@Nullable Output<List<String>> schemaNames) {
             $.schemaNames = schemaNames;
             return this;
         }
@@ -557,7 +558,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder schemaNames(@Nullable List<String> schemaNames) {
+        public Builder schemaNames(List<String> schemaNames) {
             return schemaNames(Output.of(schemaNames));
         }
 
@@ -577,7 +578,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder sensitiveTypeId(Output</* @Nullable */ String> sensitiveTypeId) {
+        public Builder sensitiveTypeId(@Nullable Output<String> sensitiveTypeId) {
             $.sensitiveTypeId = sensitiveTypeId;
             return this;
         }
@@ -588,7 +589,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder sensitiveTypeId(@Nullable String sensitiveTypeId) {
+        public Builder sensitiveTypeId(String sensitiveTypeId) {
             return sensitiveTypeId(Output.of(sensitiveTypeId));
         }
 
@@ -598,7 +599,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable Output<String> timeCreatedGreaterThanOrEqualTo) {
             $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
             return this;
         }
@@ -609,7 +610,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(String timeCreatedGreaterThanOrEqualTo) {
             return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
         }
 
@@ -619,7 +620,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(Output</* @Nullable */ String> timeCreatedLessThan) {
+        public Builder timeCreatedLessThan(@Nullable Output<String> timeCreatedLessThan) {
             $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
@@ -630,7 +631,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
+        public Builder timeCreatedLessThan(String timeCreatedLessThan) {
             return timeCreatedLessThan(Output.of(timeCreatedLessThan));
         }
 
@@ -640,7 +641,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder timeUpdatedGreaterThanOrEqualTo(Output</* @Nullable */ String> timeUpdatedGreaterThanOrEqualTo) {
+        public Builder timeUpdatedGreaterThanOrEqualTo(@Nullable Output<String> timeUpdatedGreaterThanOrEqualTo) {
             $.timeUpdatedGreaterThanOrEqualTo = timeUpdatedGreaterThanOrEqualTo;
             return this;
         }
@@ -651,7 +652,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder timeUpdatedGreaterThanOrEqualTo(@Nullable String timeUpdatedGreaterThanOrEqualTo) {
+        public Builder timeUpdatedGreaterThanOrEqualTo(String timeUpdatedGreaterThanOrEqualTo) {
             return timeUpdatedGreaterThanOrEqualTo(Output.of(timeUpdatedGreaterThanOrEqualTo));
         }
 
@@ -661,7 +662,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder timeUpdatedLessThan(Output</* @Nullable */ String> timeUpdatedLessThan) {
+        public Builder timeUpdatedLessThan(@Nullable Output<String> timeUpdatedLessThan) {
             $.timeUpdatedLessThan = timeUpdatedLessThan;
             return this;
         }
@@ -672,7 +673,7 @@ public final class GetMaskingPoliciesMaskingColumnsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder timeUpdatedLessThan(@Nullable String timeUpdatedLessThan) {
+        public Builder timeUpdatedLessThan(String timeUpdatedLessThan) {
             return timeUpdatedLessThan(Output.of(timeUpdatedLessThan));
         }
 

@@ -3,7 +3,7 @@
 
 package com.pulumi.azurenative.orbital.inputs;
 
-import com.pulumi.azurenative.orbital.inputs.ResourceReference;
+import com.pulumi.azurenative.orbital.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -19,13 +19,13 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="contactProfile", required=true)
-    private Output<ResourceReference> contactProfile;
+    private Output<ResourceReferenceArgs> contactProfile;
 
     /**
      * @return The reference to the contact profile resource.
      * 
      */
-    public Output<ResourceReference> contactProfile() {
+    public Output<ResourceReferenceArgs> contactProfile() {
         return this.contactProfile;
     }
 
@@ -139,7 +139,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder contactProfile(Output<ResourceReference> contactProfile) {
+        public Builder contactProfile(Output<ResourceReferenceArgs> contactProfile) {
             $.contactProfile = contactProfile;
             return this;
         }
@@ -150,7 +150,7 @@ public final class ListSpacecraftAvailableContactsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder contactProfile(ResourceReference contactProfile) {
+        public Builder contactProfile(ResourceReferenceArgs contactProfile) {
             return contactProfile(Output.of(contactProfile));
         }
 

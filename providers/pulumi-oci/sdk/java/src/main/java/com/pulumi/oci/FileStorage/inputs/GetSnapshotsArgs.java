@@ -5,10 +5,11 @@ package com.pulumi.oci.FileStorage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.FileStorage.inputs.GetSnapshotsFilter;
+import com.pulumi.oci.FileStorage.inputs.GetSnapshotsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetSnapshotsArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSnapshotsFilter>> filters;
+    private @Nullable Output<List<GetSnapshotsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetSnapshotsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSnapshotsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetSnapshotsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Filter results by [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for the resouce type.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetSnapshotsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Filter results by the specified lifecycle state. Must be a valid state for the resource type.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetSnapshotsArgs() {}
@@ -116,16 +117,16 @@ public final class GetSnapshotsArgs extends com.pulumi.resources.InvokeArgs {
             return fileSystemId(Output.of(fileSystemId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetSnapshotsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSnapshotsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSnapshotsFilter> filters) {
+        public Builder filters(List<GetSnapshotsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetSnapshotsFilter... filters) {
+        public Builder filters(GetSnapshotsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetSnapshotsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetSnapshotsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -156,7 +157,7 @@ public final class GetSnapshotsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetSnapshotsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

@@ -5,13 +5,14 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetVmClusterRecommendedNetworkNetwork;
+import com.pulumi.oci.Database.inputs.GetVmClusterRecommendedNetworkNetworkArgs;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -39,14 +40,14 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="definedTags")
-    private Output</* @Nullable */ Map<String,Object>> definedTags;
+    private @Nullable Output<Map<String,Object>> definedTags;
 
     /**
      * @return Defined tags for this resource. Each key is predefined and scoped to a namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> definedTags() {
-        return this.definedTags;
+    public Optional<Output<Map<String,Object>>> definedTags() {
+        return Optional.ofNullable(this.definedTags);
     }
 
     /**
@@ -69,14 +70,14 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="dns")
-    private Output</* @Nullable */ List<String>> dns;
+    private @Nullable Output<List<String>> dns;
 
     /**
      * @return The list of DNS server IP addresses. Maximum of 3 allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> dns() {
-        return this.dns;
+    public Optional<Output<List<String>>> dns() {
+        return Optional.ofNullable(this.dns);
     }
 
     /**
@@ -99,14 +100,14 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="freeformTags")
-    private Output</* @Nullable */ Map<String,Object>> freeformTags;
+    private @Nullable Output<Map<String,Object>> freeformTags;
 
     /**
      * @return Free-form tags for this resource. Each tag is a simple key-value pair with no predefined name, type, or namespace. For more information, see [Resource Tags](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/resourcetags.htm).  Example: `{&#34;Department&#34;: &#34;Finance&#34;}`
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> freeformTags() {
-        return this.freeformTags;
+    public Optional<Output<Map<String,Object>>> freeformTags() {
+        return Optional.ofNullable(this.freeformTags);
     }
 
     /**
@@ -114,13 +115,13 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="networks", required=true)
-    private Output<List<GetVmClusterRecommendedNetworkNetwork>> networks;
+    private Output<List<GetVmClusterRecommendedNetworkNetworkArgs>> networks;
 
     /**
      * @return List of parameters for generation of the client and backup networks.
      * 
      */
-    public Output<List<GetVmClusterRecommendedNetworkNetwork>> networks() {
+    public Output<List<GetVmClusterRecommendedNetworkNetworkArgs>> networks() {
         return this.networks;
     }
 
@@ -129,14 +130,14 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ntps")
-    private Output</* @Nullable */ List<String>> ntps;
+    private @Nullable Output<List<String>> ntps;
 
     /**
      * @return The list of NTP server IP addresses. Maximum of 3 allowed.
      * 
      */
-    public Output</* @Nullable */ List<String>> ntps() {
-        return this.ntps;
+    public Optional<Output<List<String>>> ntps() {
+        return Optional.ofNullable(this.ntps);
     }
 
     /**
@@ -144,14 +145,14 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="scanListenerPortTcp")
-    private Output</* @Nullable */ Integer> scanListenerPortTcp;
+    private @Nullable Output<Integer> scanListenerPortTcp;
 
     /**
      * @return The SCAN TCPIP port. Default is 1521.
      * 
      */
-    public Output</* @Nullable */ Integer> scanListenerPortTcp() {
-        return this.scanListenerPortTcp;
+    public Optional<Output<Integer>> scanListenerPortTcp() {
+        return Optional.ofNullable(this.scanListenerPortTcp);
     }
 
     /**
@@ -159,14 +160,14 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="scanListenerPortTcpSsl")
-    private Output</* @Nullable */ Integer> scanListenerPortTcpSsl;
+    private @Nullable Output<Integer> scanListenerPortTcpSsl;
 
     /**
      * @return The SCAN TCPIP SSL port. Default is 2484.
      * 
      */
-    public Output</* @Nullable */ Integer> scanListenerPortTcpSsl() {
-        return this.scanListenerPortTcpSsl;
+    public Optional<Output<Integer>> scanListenerPortTcpSsl() {
+        return Optional.ofNullable(this.scanListenerPortTcpSsl);
     }
 
     private GetVmClusterRecommendedNetworkArgs() {}
@@ -229,7 +230,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder definedTags(Output</* @Nullable */ Map<String,Object>> definedTags) {
+        public Builder definedTags(@Nullable Output<Map<String,Object>> definedTags) {
             $.definedTags = definedTags;
             return this;
         }
@@ -240,7 +241,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder definedTags(@Nullable Map<String,Object> definedTags) {
+        public Builder definedTags(Map<String,Object> definedTags) {
             return definedTags(Output.of(definedTags));
         }
 
@@ -271,7 +272,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder dns(Output</* @Nullable */ List<String>> dns) {
+        public Builder dns(@Nullable Output<List<String>> dns) {
             $.dns = dns;
             return this;
         }
@@ -282,7 +283,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder dns(@Nullable List<String> dns) {
+        public Builder dns(List<String> dns) {
             return dns(Output.of(dns));
         }
 
@@ -323,7 +324,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder freeformTags(Output</* @Nullable */ Map<String,Object>> freeformTags) {
+        public Builder freeformTags(@Nullable Output<Map<String,Object>> freeformTags) {
             $.freeformTags = freeformTags;
             return this;
         }
@@ -334,7 +335,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder freeformTags(@Nullable Map<String,Object> freeformTags) {
+        public Builder freeformTags(Map<String,Object> freeformTags) {
             return freeformTags(Output.of(freeformTags));
         }
 
@@ -344,7 +345,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder networks(Output<List<GetVmClusterRecommendedNetworkNetwork>> networks) {
+        public Builder networks(Output<List<GetVmClusterRecommendedNetworkNetworkArgs>> networks) {
             $.networks = networks;
             return this;
         }
@@ -355,7 +356,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder networks(List<GetVmClusterRecommendedNetworkNetwork> networks) {
+        public Builder networks(List<GetVmClusterRecommendedNetworkNetworkArgs> networks) {
             return networks(Output.of(networks));
         }
 
@@ -365,7 +366,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder networks(GetVmClusterRecommendedNetworkNetwork... networks) {
+        public Builder networks(GetVmClusterRecommendedNetworkNetworkArgs... networks) {
             return networks(List.of(networks));
         }
 
@@ -375,7 +376,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder ntps(Output</* @Nullable */ List<String>> ntps) {
+        public Builder ntps(@Nullable Output<List<String>> ntps) {
             $.ntps = ntps;
             return this;
         }
@@ -386,7 +387,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder ntps(@Nullable List<String> ntps) {
+        public Builder ntps(List<String> ntps) {
             return ntps(Output.of(ntps));
         }
 
@@ -406,7 +407,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder scanListenerPortTcp(Output</* @Nullable */ Integer> scanListenerPortTcp) {
+        public Builder scanListenerPortTcp(@Nullable Output<Integer> scanListenerPortTcp) {
             $.scanListenerPortTcp = scanListenerPortTcp;
             return this;
         }
@@ -417,7 +418,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder scanListenerPortTcp(@Nullable Integer scanListenerPortTcp) {
+        public Builder scanListenerPortTcp(Integer scanListenerPortTcp) {
             return scanListenerPortTcp(Output.of(scanListenerPortTcp));
         }
 
@@ -427,7 +428,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder scanListenerPortTcpSsl(Output</* @Nullable */ Integer> scanListenerPortTcpSsl) {
+        public Builder scanListenerPortTcpSsl(@Nullable Output<Integer> scanListenerPortTcpSsl) {
             $.scanListenerPortTcpSsl = scanListenerPortTcpSsl;
             return this;
         }
@@ -438,7 +439,7 @@ public final class GetVmClusterRecommendedNetworkArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder scanListenerPortTcpSsl(@Nullable Integer scanListenerPortTcpSsl) {
+        public Builder scanListenerPortTcpSsl(Integer scanListenerPortTcpSsl) {
             return scanListenerPortTcpSsl(Output.of(scanListenerPortTcpSsl));
         }
 

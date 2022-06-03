@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="creationToken")
-    private Output</* @Nullable */ String> creationToken;
+    private @Nullable Output<String> creationToken;
 
     /**
      * @return Restricts the list to the file system with this creation token.
      * 
      */
-    public Output</* @Nullable */ String> creationToken() {
-        return this.creationToken;
+    public Optional<Output<String>> creationToken() {
+        return Optional.ofNullable(this.creationToken);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileSystemId")
-    private Output</* @Nullable */ String> fileSystemId;
+    private @Nullable Output<String> fileSystemId;
 
     /**
      * @return The ID that identifies the file system (e.g., fs-ccfc0d65).
      * 
      */
-    public Output</* @Nullable */ String> fileSystemId() {
-        return this.fileSystemId;
+    public Optional<Output<String>> fileSystemId() {
+        return Optional.ofNullable(this.fileSystemId);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Restricts the list to the file system with these tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetFileSystemArgs() {}
@@ -92,7 +93,7 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder creationToken(Output</* @Nullable */ String> creationToken) {
+        public Builder creationToken(@Nullable Output<String> creationToken) {
             $.creationToken = creationToken;
             return this;
         }
@@ -103,7 +104,7 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder creationToken(@Nullable String creationToken) {
+        public Builder creationToken(String creationToken) {
             return creationToken(Output.of(creationToken));
         }
 
@@ -113,7 +114,7 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fileSystemId(Output</* @Nullable */ String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
         }
@@ -124,7 +125,7 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             return fileSystemId(Output.of(fileSystemId));
         }
 
@@ -134,7 +135,7 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

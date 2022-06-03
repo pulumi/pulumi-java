@@ -5,10 +5,11 @@ package com.pulumi.oci.DataScience.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataScience.inputs.GetJobShapesFilter;
+import com.pulumi.oci.DataScience.inputs.GetJobShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetJobShapesArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetJobShapesFilter>> filters;
+    private @Nullable Output<List<GetJobShapesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetJobShapesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetJobShapesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetJobShapesArgs() {}
@@ -84,16 +85,16 @@ public final class GetJobShapesArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetJobShapesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetJobShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetJobShapesFilter> filters) {
+        public Builder filters(List<GetJobShapesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetJobShapesFilter... filters) {
+        public Builder filters(GetJobShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.ContainerEngine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ContainerEngine.inputs.GetNodePoolsFilter;
+import com.pulumi.oci.ContainerEngine.inputs.GetNodePoolsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterId")
-    private Output</* @Nullable */ String> clusterId;
+    private @Nullable Output<String> clusterId;
 
     /**
      * @return The OCID of the cluster.
      * 
      */
-    public Output</* @Nullable */ String> clusterId() {
-        return this.clusterId;
+    public Optional<Output<String>> clusterId() {
+        return Optional.ofNullable(this.clusterId);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetNodePoolsFilter>> filters;
+    private @Nullable Output<List<GetNodePoolsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetNodePoolsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetNodePoolsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name to filter on.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetNodePoolsArgs() {}
@@ -101,7 +102,7 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterId(Output</* @Nullable */ String> clusterId) {
+        public Builder clusterId(@Nullable Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
@@ -112,7 +113,7 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterId(@Nullable String clusterId) {
+        public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }
 
@@ -137,16 +138,16 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetNodePoolsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetNodePoolsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetNodePoolsFilter> filters) {
+        public Builder filters(List<GetNodePoolsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetNodePoolsFilter... filters) {
+        public Builder filters(GetNodePoolsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -156,7 +157,7 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetNodePoolsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

@@ -5,11 +5,12 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetAuditProfilesFilter;
+import com.pulumi.oci.DataSafe.inputs.GetAuditProfilesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accessLevel")
-    private Output</* @Nullable */ String> accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Output</* @Nullable */ String> accessLevel() {
-        return this.accessLevel;
+    public Optional<Output<String>> accessLevel() {
+        return Optional.ofNullable(this.accessLevel);
     }
 
     /**
@@ -37,14 +38,14 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="auditCollectedVolumeGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> auditCollectedVolumeGreaterThanOrEqualTo;
+    private @Nullable Output<String> auditCollectedVolumeGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return only items that have count of audit records collected greater than or equal to the specified value.
      * 
      */
-    public Output</* @Nullable */ String> auditCollectedVolumeGreaterThanOrEqualTo() {
-        return this.auditCollectedVolumeGreaterThanOrEqualTo;
+    public Optional<Output<String>> auditCollectedVolumeGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.auditCollectedVolumeGreaterThanOrEqualTo);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="auditProfileId")
-    private Output</* @Nullable */ String> auditProfileId;
+    private @Nullable Output<String> auditProfileId;
 
     /**
      * @return A optional filter to return only resources that match the specified id.
      * 
      */
-    public Output</* @Nullable */ String> auditProfileId() {
-        return this.auditProfileId;
+    public Optional<Output<String>> auditProfileId() {
+        return Optional.ofNullable(this.auditProfileId);
     }
 
     /**
@@ -82,14 +83,14 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     /**
@@ -97,21 +98,21 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the specified display name.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAuditProfilesFilter>> filters;
+    private @Nullable Output<List<GetAuditProfilesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAuditProfilesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAuditProfilesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -119,14 +120,14 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="isOverrideGlobalRetentionSetting")
-    private Output</* @Nullable */ Boolean> isOverrideGlobalRetentionSetting;
+    private @Nullable Output<Boolean> isOverrideGlobalRetentionSetting;
 
     /**
      * @return A optional filter to return only resources that match the specified retention configured value.
      * 
      */
-    public Output</* @Nullable */ Boolean> isOverrideGlobalRetentionSetting() {
-        return this.isOverrideGlobalRetentionSetting;
+    public Optional<Output<Boolean>> isOverrideGlobalRetentionSetting() {
+        return Optional.ofNullable(this.isOverrideGlobalRetentionSetting);
     }
 
     /**
@@ -134,14 +135,14 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="isPaidUsageEnabled")
-    private Output</* @Nullable */ Boolean> isPaidUsageEnabled;
+    private @Nullable Output<Boolean> isPaidUsageEnabled;
 
     /**
      * @return Indicates if you want to continue audit record collection beyond the free limit of one million audit records per month per target database, incurring additional charges. The default value is inherited from the global settings. You can change at the global level or at the target level.
      * 
      */
-    public Output</* @Nullable */ Boolean> isPaidUsageEnabled() {
-        return this.isPaidUsageEnabled;
+    public Optional<Output<Boolean>> isPaidUsageEnabled() {
+        return Optional.ofNullable(this.isPaidUsageEnabled);
     }
 
     /**
@@ -149,14 +150,14 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A optional filter to return only resources that match the specified lifecycle state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -164,14 +165,14 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="targetId")
-    private Output</* @Nullable */ String> targetId;
+    private @Nullable Output<String> targetId;
 
     /**
      * @return A filter to return only items related to a specific target OCID.
      * 
      */
-    public Output</* @Nullable */ String> targetId() {
-        return this.targetId;
+    public Optional<Output<String>> targetId() {
+        return Optional.ofNullable(this.targetId);
     }
 
     private GetAuditProfilesArgs() {}
@@ -214,7 +215,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
             return this;
         }
@@ -225,7 +226,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(String accessLevel) {
             return accessLevel(Output.of(accessLevel));
         }
 
@@ -235,7 +236,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder auditCollectedVolumeGreaterThanOrEqualTo(Output</* @Nullable */ String> auditCollectedVolumeGreaterThanOrEqualTo) {
+        public Builder auditCollectedVolumeGreaterThanOrEqualTo(@Nullable Output<String> auditCollectedVolumeGreaterThanOrEqualTo) {
             $.auditCollectedVolumeGreaterThanOrEqualTo = auditCollectedVolumeGreaterThanOrEqualTo;
             return this;
         }
@@ -246,7 +247,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder auditCollectedVolumeGreaterThanOrEqualTo(@Nullable String auditCollectedVolumeGreaterThanOrEqualTo) {
+        public Builder auditCollectedVolumeGreaterThanOrEqualTo(String auditCollectedVolumeGreaterThanOrEqualTo) {
             return auditCollectedVolumeGreaterThanOrEqualTo(Output.of(auditCollectedVolumeGreaterThanOrEqualTo));
         }
 
@@ -256,7 +257,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder auditProfileId(Output</* @Nullable */ String> auditProfileId) {
+        public Builder auditProfileId(@Nullable Output<String> auditProfileId) {
             $.auditProfileId = auditProfileId;
             return this;
         }
@@ -267,7 +268,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder auditProfileId(@Nullable String auditProfileId) {
+        public Builder auditProfileId(String auditProfileId) {
             return auditProfileId(Output.of(auditProfileId));
         }
 
@@ -298,7 +299,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -309,7 +310,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
@@ -319,7 +320,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -330,20 +331,20 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAuditProfilesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAuditProfilesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAuditProfilesFilter> filters) {
+        public Builder filters(List<GetAuditProfilesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAuditProfilesFilter... filters) {
+        public Builder filters(GetAuditProfilesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -353,7 +354,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder isOverrideGlobalRetentionSetting(Output</* @Nullable */ Boolean> isOverrideGlobalRetentionSetting) {
+        public Builder isOverrideGlobalRetentionSetting(@Nullable Output<Boolean> isOverrideGlobalRetentionSetting) {
             $.isOverrideGlobalRetentionSetting = isOverrideGlobalRetentionSetting;
             return this;
         }
@@ -364,7 +365,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder isOverrideGlobalRetentionSetting(@Nullable Boolean isOverrideGlobalRetentionSetting) {
+        public Builder isOverrideGlobalRetentionSetting(Boolean isOverrideGlobalRetentionSetting) {
             return isOverrideGlobalRetentionSetting(Output.of(isOverrideGlobalRetentionSetting));
         }
 
@@ -374,7 +375,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder isPaidUsageEnabled(Output</* @Nullable */ Boolean> isPaidUsageEnabled) {
+        public Builder isPaidUsageEnabled(@Nullable Output<Boolean> isPaidUsageEnabled) {
             $.isPaidUsageEnabled = isPaidUsageEnabled;
             return this;
         }
@@ -385,7 +386,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder isPaidUsageEnabled(@Nullable Boolean isPaidUsageEnabled) {
+        public Builder isPaidUsageEnabled(Boolean isPaidUsageEnabled) {
             return isPaidUsageEnabled(Output.of(isPaidUsageEnabled));
         }
 
@@ -395,7 +396,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -406,7 +407,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -416,7 +417,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder targetId(Output</* @Nullable */ String> targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             $.targetId = targetId;
             return this;
         }
@@ -427,7 +428,7 @@ public final class GetAuditProfilesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder targetId(@Nullable String targetId) {
+        public Builder targetId(String targetId) {
             return targetId(Output.of(targetId));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetAutonomousDbPreviewVersionsFilter;
+import com.pulumi.oci.Database.inputs.GetAutonomousDbPreviewVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetAutonomousDbPreviewVersionsArgs extends com.pulumi.resourc
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAutonomousDbPreviewVersionsFilter>> filters;
+    private @Nullable Output<List<GetAutonomousDbPreviewVersionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAutonomousDbPreviewVersionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAutonomousDbPreviewVersionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetAutonomousDbPreviewVersionsArgs() {}
@@ -84,16 +85,16 @@ public final class GetAutonomousDbPreviewVersionsArgs extends com.pulumi.resourc
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAutonomousDbPreviewVersionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAutonomousDbPreviewVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAutonomousDbPreviewVersionsFilter> filters) {
+        public Builder filters(List<GetAutonomousDbPreviewVersionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAutonomousDbPreviewVersionsFilter... filters) {
+        public Builder filters(GetAutonomousDbPreviewVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -3,11 +3,12 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
-import com.pulumi.azurenative.datafactory.inputs.GitHubClientSecret;
+import com.pulumi.azurenative.datafactory.inputs.GitHubClientSecretArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -65,14 +66,14 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="gitHubClientId")
-    private Output</* @Nullable */ String> gitHubClientId;
+    private @Nullable Output<String> gitHubClientId;
 
     /**
      * @return GitHub application client ID.
      * 
      */
-    public Output</* @Nullable */ String> gitHubClientId() {
-        return this.gitHubClientId;
+    public Optional<Output<String>> gitHubClientId() {
+        return Optional.ofNullable(this.gitHubClientId);
     }
 
     /**
@@ -80,14 +81,14 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="gitHubClientSecret")
-    private Output</* @Nullable */ GitHubClientSecret> gitHubClientSecret;
+    private @Nullable Output<GitHubClientSecretArgs> gitHubClientSecret;
 
     /**
      * @return GitHub bring your own app client secret information.
      * 
      */
-    public Output</* @Nullable */ GitHubClientSecret> gitHubClientSecret() {
-        return this.gitHubClientSecret;
+    public Optional<Output<GitHubClientSecretArgs>> gitHubClientSecret() {
+        return Optional.ofNullable(this.gitHubClientSecret);
     }
 
     /**
@@ -203,7 +204,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder gitHubClientId(Output</* @Nullable */ String> gitHubClientId) {
+        public Builder gitHubClientId(@Nullable Output<String> gitHubClientId) {
             $.gitHubClientId = gitHubClientId;
             return this;
         }
@@ -214,7 +215,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder gitHubClientId(@Nullable String gitHubClientId) {
+        public Builder gitHubClientId(String gitHubClientId) {
             return gitHubClientId(Output.of(gitHubClientId));
         }
 
@@ -224,7 +225,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder gitHubClientSecret(Output</* @Nullable */ GitHubClientSecret> gitHubClientSecret) {
+        public Builder gitHubClientSecret(@Nullable Output<GitHubClientSecretArgs> gitHubClientSecret) {
             $.gitHubClientSecret = gitHubClientSecret;
             return this;
         }
@@ -235,7 +236,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder gitHubClientSecret(@Nullable GitHubClientSecret gitHubClientSecret) {
+        public Builder gitHubClientSecret(GitHubClientSecretArgs gitHubClientSecret) {
             return gitHubClientSecret(Output.of(gitHubClientSecret));
         }
 

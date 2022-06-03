@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="regions")
-    private Output</* @Nullable */ List<String>> regions;
+    private @Nullable Output<List<String>> regions;
 
     /**
      * @return List of regions.
      * 
      */
-    public Output</* @Nullable */ List<String>> regions() {
-        return this.regions;
+    public Optional<Output<List<String>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="skipToken")
-    private Output</* @Nullable */ String> skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
      */
-    public Output</* @Nullable */ String> skipToken() {
-        return this.skipToken;
+    public Optional<Output<String>> skipToken() {
+        return Optional.ofNullable(this.skipToken);
     }
 
     private ListActiveConnectivityConfigurationArgs() {}
@@ -129,7 +130,7 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder regions(Output</* @Nullable */ List<String>> regions) {
+        public Builder regions(@Nullable Output<List<String>> regions) {
             $.regions = regions;
             return this;
         }
@@ -140,7 +141,7 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder regions(@Nullable List<String> regions) {
+        public Builder regions(List<String> regions) {
             return regions(Output.of(regions));
         }
 
@@ -181,7 +182,7 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+        public Builder skipToken(@Nullable Output<String> skipToken) {
             $.skipToken = skipToken;
             return this;
         }
@@ -192,7 +193,7 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
+        public Builder skipToken(String skipToken) {
             return skipToken(Output.of(skipToken));
         }
 

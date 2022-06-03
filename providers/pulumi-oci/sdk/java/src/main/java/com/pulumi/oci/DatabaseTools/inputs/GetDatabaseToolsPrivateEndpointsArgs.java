@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseTools.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseTools.inputs.GetDatabaseToolsPrivateEndpointsFilter;
+import com.pulumi.oci.DatabaseTools.inputs.GetDatabaseToolsPrivateEndpointsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="endpointServiceId")
-    private Output</* @Nullable */ String> endpointServiceId;
+    private @Nullable Output<String> endpointServiceId;
 
     /**
      * @return A filter to return only resources their type matches the given type.
      * 
      */
-    public Output</* @Nullable */ String> endpointServiceId() {
-        return this.endpointServiceId;
+    public Optional<Output<String>> endpointServiceId() {
+        return Optional.ofNullable(this.endpointServiceId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDatabaseToolsPrivateEndpointsFilter>> filters;
+    private @Nullable Output<List<GetDatabaseToolsPrivateEndpointsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDatabaseToolsPrivateEndpointsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDatabaseToolsPrivateEndpointsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources their lifecycleState matches the given lifecycleState.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="subnetId")
-    private Output</* @Nullable */ String> subnetId;
+    private @Nullable Output<String> subnetId;
 
     /**
      * @return A filter to return only resources their subnetId matches the given subnetId.
      * 
      */
-    public Output</* @Nullable */ String> subnetId() {
-        return this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     private GetDatabaseToolsPrivateEndpointsArgs() {}
@@ -154,7 +155,7 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -165,7 +166,7 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -175,7 +176,7 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder endpointServiceId(Output</* @Nullable */ String> endpointServiceId) {
+        public Builder endpointServiceId(@Nullable Output<String> endpointServiceId) {
             $.endpointServiceId = endpointServiceId;
             return this;
         }
@@ -186,20 +187,20 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder endpointServiceId(@Nullable String endpointServiceId) {
+        public Builder endpointServiceId(String endpointServiceId) {
             return endpointServiceId(Output.of(endpointServiceId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDatabaseToolsPrivateEndpointsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabaseToolsPrivateEndpointsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDatabaseToolsPrivateEndpointsFilter> filters) {
+        public Builder filters(List<GetDatabaseToolsPrivateEndpointsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDatabaseToolsPrivateEndpointsFilter... filters) {
+        public Builder filters(GetDatabaseToolsPrivateEndpointsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -209,7 +210,7 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -230,7 +231,7 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder subnetId(Output</* @Nullable */ String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder subnetId(@Nullable String subnetId) {
+        public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 

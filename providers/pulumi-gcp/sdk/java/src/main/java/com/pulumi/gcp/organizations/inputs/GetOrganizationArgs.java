@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domain")
-    private Output</* @Nullable */ String> domain;
+    private @Nullable Output<String> domain;
 
     /**
      * @return The domain name of the Organization.
      * 
      */
-    public Output</* @Nullable */ String> domain() {
-        return this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="organization")
-    private Output</* @Nullable */ String> organization;
+    private @Nullable Output<String> organization;
 
     /**
      * @return The Organization&#39;s numeric ID, including an optional `organizations/` prefix.
      * 
      */
-    public Output</* @Nullable */ String> organization() {
-        return this.organization;
+    public Optional<Output<String>> organization() {
+        return Optional.ofNullable(this.organization);
     }
 
     private GetOrganizationArgs() {}
@@ -75,7 +76,7 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domain(Output</* @Nullable */ String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
@@ -86,7 +87,7 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domain(@Nullable String domain) {
+        public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
@@ -96,7 +97,7 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder organization(Output</* @Nullable */ String> organization) {
+        public Builder organization(@Nullable Output<String> organization) {
             $.organization = organization;
             return this;
         }
@@ -107,7 +108,7 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder organization(@Nullable String organization) {
+        public Builder organization(String organization) {
             return organization(Output.of(organization));
         }
 

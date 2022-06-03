@@ -5,10 +5,11 @@ package com.pulumi.oci.LogAnalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.LogAnalytics.inputs.GetNamespaceScheduledTasksFilter;
+import com.pulumi.oci.LogAnalytics.inputs.GetNamespaceScheduledTasksFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetNamespaceScheduledTasksArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetNamespaceScheduledTasksFilter>> filters;
+    private @Nullable Output<List<GetNamespaceScheduledTasksFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetNamespaceScheduledTasksFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetNamespaceScheduledTasksFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -138,7 +139,7 @@ public final class GetNamespaceScheduledTasksArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,20 +150,20 @@ public final class GetNamespaceScheduledTasksArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetNamespaceScheduledTasksFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetNamespaceScheduledTasksFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetNamespaceScheduledTasksFilter> filters) {
+        public Builder filters(List<GetNamespaceScheduledTasksFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetNamespaceScheduledTasksFilter... filters) {
+        public Builder filters(GetNamespaceScheduledTasksFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

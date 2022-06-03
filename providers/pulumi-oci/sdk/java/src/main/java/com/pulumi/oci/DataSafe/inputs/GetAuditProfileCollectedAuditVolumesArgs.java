@@ -5,10 +5,11 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetAuditProfileCollectedAuditVolumesFilter;
+import com.pulumi.oci.DataSafe.inputs.GetAuditProfileCollectedAuditVolumesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetAuditProfileCollectedAuditVolumesArgs extends com.pulumi.r
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAuditProfileCollectedAuditVolumesFilter>> filters;
+    private @Nullable Output<List<GetAuditProfileCollectedAuditVolumesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAuditProfileCollectedAuditVolumesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAuditProfileCollectedAuditVolumesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetAuditProfileCollectedAuditVolumesArgs extends com.pulumi.r
      * 
      */
     @Import(name="monthInConsiderationGreaterThan")
-    private Output</* @Nullable */ String> monthInConsiderationGreaterThan;
+    private @Nullable Output<String> monthInConsiderationGreaterThan;
 
     /**
      * @return Specifying `monthInConsiderationGreaterThan` parameter will retrieve all items for which the event month is greater than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
      * 
      */
-    public Output</* @Nullable */ String> monthInConsiderationGreaterThan() {
-        return this.monthInConsiderationGreaterThan;
+    public Optional<Output<String>> monthInConsiderationGreaterThan() {
+        return Optional.ofNullable(this.monthInConsiderationGreaterThan);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetAuditProfileCollectedAuditVolumesArgs extends com.pulumi.r
      * 
      */
     @Import(name="monthInConsiderationLessThan")
-    private Output</* @Nullable */ String> monthInConsiderationLessThan;
+    private @Nullable Output<String> monthInConsiderationLessThan;
 
     /**
      * @return Specifying `monthInConsiderationLessThan` parameter will retrieve all items for which the event month is less than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
      * 
      */
-    public Output</* @Nullable */ String> monthInConsiderationLessThan() {
-        return this.monthInConsiderationLessThan;
+    public Optional<Output<String>> monthInConsiderationLessThan() {
+        return Optional.ofNullable(this.monthInConsiderationLessThan);
     }
 
     /**
@@ -132,16 +133,16 @@ public final class GetAuditProfileCollectedAuditVolumesArgs extends com.pulumi.r
             return auditProfileId(Output.of(auditProfileId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAuditProfileCollectedAuditVolumesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAuditProfileCollectedAuditVolumesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAuditProfileCollectedAuditVolumesFilter> filters) {
+        public Builder filters(List<GetAuditProfileCollectedAuditVolumesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAuditProfileCollectedAuditVolumesFilter... filters) {
+        public Builder filters(GetAuditProfileCollectedAuditVolumesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -151,7 +152,7 @@ public final class GetAuditProfileCollectedAuditVolumesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder monthInConsiderationGreaterThan(Output</* @Nullable */ String> monthInConsiderationGreaterThan) {
+        public Builder monthInConsiderationGreaterThan(@Nullable Output<String> monthInConsiderationGreaterThan) {
             $.monthInConsiderationGreaterThan = monthInConsiderationGreaterThan;
             return this;
         }
@@ -162,7 +163,7 @@ public final class GetAuditProfileCollectedAuditVolumesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder monthInConsiderationGreaterThan(@Nullable String monthInConsiderationGreaterThan) {
+        public Builder monthInConsiderationGreaterThan(String monthInConsiderationGreaterThan) {
             return monthInConsiderationGreaterThan(Output.of(monthInConsiderationGreaterThan));
         }
 
@@ -172,7 +173,7 @@ public final class GetAuditProfileCollectedAuditVolumesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder monthInConsiderationLessThan(Output</* @Nullable */ String> monthInConsiderationLessThan) {
+        public Builder monthInConsiderationLessThan(@Nullable Output<String> monthInConsiderationLessThan) {
             $.monthInConsiderationLessThan = monthInConsiderationLessThan;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetAuditProfileCollectedAuditVolumesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder monthInConsiderationLessThan(@Nullable String monthInConsiderationLessThan) {
+        public Builder monthInConsiderationLessThan(String monthInConsiderationLessThan) {
             return monthInConsiderationLessThan(Output.of(monthInConsiderationLessThan));
         }
 

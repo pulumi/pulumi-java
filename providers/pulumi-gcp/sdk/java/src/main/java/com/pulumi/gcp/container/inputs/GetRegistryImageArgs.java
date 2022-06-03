@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,10 +16,10 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetRegistryImageArgs Empty = new GetRegistryImageArgs();
 
     @Import(name="digest")
-    private Output</* @Nullable */ String> digest;
+    private @Nullable Output<String> digest;
 
-    public Output</* @Nullable */ String> digest() {
-        return this.digest;
+    public Optional<Output<String>> digest() {
+        return Optional.ofNullable(this.digest);
     }
 
     @Import(name="name", required=true)
@@ -29,24 +30,24 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
     }
 
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-    private Output</* @Nullable */ String> region;
+    private @Nullable Output<String> region;
 
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     @Import(name="tag")
-    private Output</* @Nullable */ String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output</* @Nullable */ String> tag() {
-        return this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
     private GetRegistryImageArgs() {}
@@ -77,12 +78,12 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetRegistryImageArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder digest(Output</* @Nullable */ String> digest) {
+        public Builder digest(@Nullable Output<String> digest) {
             $.digest = digest;
             return this;
         }
 
-        public Builder digest(@Nullable String digest) {
+        public Builder digest(String digest) {
             return digest(Output.of(digest));
         }
 
@@ -95,30 +96,30 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
             return name(Output.of(name));
         }
 
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
-        public Builder region(Output</* @Nullable */ String> region) {
+        public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
-        public Builder region(@Nullable String region) {
+        public Builder region(String region) {
             return region(Output.of(region));
         }
 
-        public Builder tag(Output</* @Nullable */ String> tag) {
+        public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
         }
 
-        public Builder tag(@Nullable String tag) {
+        public Builder tag(String tag) {
             return tag(Output.of(tag));
         }
 

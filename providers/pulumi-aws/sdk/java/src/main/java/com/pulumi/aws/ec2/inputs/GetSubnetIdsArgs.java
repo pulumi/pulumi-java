@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetSubnetIdsFilter;
+import com.pulumi.aws.ec2.inputs.GetSubnetIdsFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSubnetIdsFilter>> filters;
+    private @Nullable Output<List<GetSubnetIdsFilterArgs>> filters;
 
     /**
      * @return Custom filter block as described below.
      * 
      */
-    public Output</* @Nullable */ List<GetSubnetIdsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSubnetIdsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -38,15 +39,15 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags, each pair of which must exactly match
      * a pair on the desired subnets.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -96,7 +97,7 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetSubnetIdsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSubnetIdsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -107,7 +108,7 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetSubnetIdsFilter> filters) {
+        public Builder filters(List<GetSubnetIdsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -117,7 +118,7 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetSubnetIdsFilter... filters) {
+        public Builder filters(GetSubnetIdsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -128,7 +129,7 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -140,7 +141,7 @@ public final class GetSubnetIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

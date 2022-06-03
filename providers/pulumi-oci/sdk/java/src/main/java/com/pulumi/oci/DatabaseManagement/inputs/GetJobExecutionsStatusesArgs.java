@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetJobExecutionsStatusesFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetJobExecutionsStatusesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,10 +48,10 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetJobExecutionsStatusesFilter>> filters;
+    private @Nullable Output<List<GetJobExecutionsStatusesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetJobExecutionsStatusesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetJobExecutionsStatusesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The identifier of the resource.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="managedDatabaseGroupId")
-    private Output</* @Nullable */ String> managedDatabaseGroupId;
+    private @Nullable Output<String> managedDatabaseGroupId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database Group.
      * 
      */
-    public Output</* @Nullable */ String> managedDatabaseGroupId() {
-        return this.managedDatabaseGroupId;
+    public Optional<Output<String>> managedDatabaseGroupId() {
+        return Optional.ofNullable(this.managedDatabaseGroupId);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="managedDatabaseId")
-    private Output</* @Nullable */ String> managedDatabaseId;
+    private @Nullable Output<String> managedDatabaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
      * 
      */
-    public Output</* @Nullable */ String> managedDatabaseId() {
-        return this.managedDatabaseId;
+    public Optional<Output<String>> managedDatabaseId() {
+        return Optional.ofNullable(this.managedDatabaseId);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -201,16 +202,16 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
             return endTime(Output.of(endTime));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetJobExecutionsStatusesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetJobExecutionsStatusesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetJobExecutionsStatusesFilter> filters) {
+        public Builder filters(List<GetJobExecutionsStatusesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetJobExecutionsStatusesFilter... filters) {
+        public Builder filters(GetJobExecutionsStatusesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -220,7 +221,7 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -231,7 +232,7 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -241,7 +242,7 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder managedDatabaseGroupId(Output</* @Nullable */ String> managedDatabaseGroupId) {
+        public Builder managedDatabaseGroupId(@Nullable Output<String> managedDatabaseGroupId) {
             $.managedDatabaseGroupId = managedDatabaseGroupId;
             return this;
         }
@@ -252,7 +253,7 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder managedDatabaseGroupId(@Nullable String managedDatabaseGroupId) {
+        public Builder managedDatabaseGroupId(String managedDatabaseGroupId) {
             return managedDatabaseGroupId(Output.of(managedDatabaseGroupId));
         }
 
@@ -262,7 +263,7 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder managedDatabaseId(Output</* @Nullable */ String> managedDatabaseId) {
+        public Builder managedDatabaseId(@Nullable Output<String> managedDatabaseId) {
             $.managedDatabaseId = managedDatabaseId;
             return this;
         }
@@ -273,7 +274,7 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder managedDatabaseId(@Nullable String managedDatabaseId) {
+        public Builder managedDatabaseId(String managedDatabaseId) {
             return managedDatabaseId(Output.of(managedDatabaseId));
         }
 
@@ -283,7 +284,7 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -294,7 +295,7 @@ public final class GetJobExecutionsStatusesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

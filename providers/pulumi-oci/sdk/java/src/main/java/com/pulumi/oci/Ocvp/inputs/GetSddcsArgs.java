@@ -5,10 +5,11 @@ package com.pulumi.oci.Ocvp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Ocvp.inputs.GetSddcsFilter;
+import com.pulumi.oci.Ocvp.inputs.GetSddcsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computeAvailabilityDomain")
-    private Output</* @Nullable */ String> computeAvailabilityDomain;
+    private @Nullable Output<String> computeAvailabilityDomain;
 
     /**
      * @return The name of the availability domain that the Compute instances are running in.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Output</* @Nullable */ String> computeAvailabilityDomain() {
-        return this.computeAvailabilityDomain;
+    public Optional<Output<String>> computeAvailabilityDomain() {
+        return Optional.ofNullable(this.computeAvailabilityDomain);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSddcsFilter>> filters;
+    private @Nullable Output<List<GetSddcsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetSddcsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSddcsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The lifecycle state of the resource.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetSddcsArgs() {}
@@ -138,7 +139,7 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder computeAvailabilityDomain(Output</* @Nullable */ String> computeAvailabilityDomain) {
+        public Builder computeAvailabilityDomain(@Nullable Output<String> computeAvailabilityDomain) {
             $.computeAvailabilityDomain = computeAvailabilityDomain;
             return this;
         }
@@ -149,7 +150,7 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder computeAvailabilityDomain(@Nullable String computeAvailabilityDomain) {
+        public Builder computeAvailabilityDomain(String computeAvailabilityDomain) {
             return computeAvailabilityDomain(Output.of(computeAvailabilityDomain));
         }
 
@@ -159,7 +160,7 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -170,20 +171,20 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetSddcsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSddcsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSddcsFilter> filters) {
+        public Builder filters(List<GetSddcsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetSddcsFilter... filters) {
+        public Builder filters(GetSddcsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -193,7 +194,7 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

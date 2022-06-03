@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,10 +16,10 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
     @Import(name="customer")
-    private Output</* @Nullable */ String> customer;
+    private @Nullable Output<String> customer;
 
-    public Output</* @Nullable */ String> customer() {
-        return this.customer;
+    public Optional<Output<String>> customer() {
+        return Optional.ofNullable(this.customer);
     }
 
     @Import(name="deviceId", required=true)
@@ -53,12 +54,12 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDeviceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder customer(Output</* @Nullable */ String> customer) {
+        public Builder customer(@Nullable Output<String> customer) {
             $.customer = customer;
             return this;
         }
 
-        public Builder customer(@Nullable String customer) {
+        public Builder customer(String customer) {
             return customer(Output.of(customer));
         }
 

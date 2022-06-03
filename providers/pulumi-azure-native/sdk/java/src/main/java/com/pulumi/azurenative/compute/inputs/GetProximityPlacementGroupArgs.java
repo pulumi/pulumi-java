@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="includeColocationStatus")
-    private Output</* @Nullable */ String> includeColocationStatus;
+    private @Nullable Output<String> includeColocationStatus;
 
     /**
      * @return includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.
      * 
      */
-    public Output</* @Nullable */ String> includeColocationStatus() {
-        return this.includeColocationStatus;
+    public Optional<Output<String>> includeColocationStatus() {
+        return Optional.ofNullable(this.includeColocationStatus);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder includeColocationStatus(Output</* @Nullable */ String> includeColocationStatus) {
+        public Builder includeColocationStatus(@Nullable Output<String> includeColocationStatus) {
             $.includeColocationStatus = includeColocationStatus;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder includeColocationStatus(@Nullable String includeColocationStatus) {
+        public Builder includeColocationStatus(String includeColocationStatus) {
             return includeColocationStatus(Output.of(includeColocationStatus));
         }
 

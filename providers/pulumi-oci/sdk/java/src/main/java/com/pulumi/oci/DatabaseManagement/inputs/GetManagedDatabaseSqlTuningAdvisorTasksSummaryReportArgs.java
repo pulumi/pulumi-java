@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="beginExecIdGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> beginExecIdGreaterThanOrEqualTo;
+    private @Nullable Output<String> beginExecIdGreaterThanOrEqualTo;
 
     /**
      * @return The optional greater than or equal to filter on the execution ID related to a specific SQL Tuning Advisor task. This is applicable only for Auto SQL Tuning tasks.
      * 
      */
-    public Output</* @Nullable */ String> beginExecIdGreaterThanOrEqualTo() {
-        return this.beginExecIdGreaterThanOrEqualTo;
+    public Optional<Output<String>> beginExecIdGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.beginExecIdGreaterThanOrEqualTo);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="endExecIdLessThanOrEqualTo")
-    private Output</* @Nullable */ String> endExecIdLessThanOrEqualTo;
+    private @Nullable Output<String> endExecIdLessThanOrEqualTo;
 
     /**
      * @return The optional less than or equal to query parameter to filter on the execution ID related to a specific SQL Tuning Advisor task. This is applicable only for Auto SQL Tuning tasks.
      * 
      */
-    public Output</* @Nullable */ String> endExecIdLessThanOrEqualTo() {
-        return this.endExecIdLessThanOrEqualTo;
+    public Optional<Output<String>> endExecIdLessThanOrEqualTo() {
+        return Optional.ofNullable(this.endExecIdLessThanOrEqualTo);
     }
 
     /**
@@ -64,14 +65,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="searchPeriod")
-    private Output</* @Nullable */ String> searchPeriod;
+    private @Nullable Output<String> searchPeriod;
 
     /**
      * @return How far back the API will search for begin and end exec id. Unused if neither exec ids nor time filter query params are supplied. This is applicable only for Auto SQL Tuning tasks.
      * 
      */
-    public Output</* @Nullable */ String> searchPeriod() {
-        return this.searchPeriod;
+    public Optional<Output<String>> searchPeriod() {
+        return Optional.ofNullable(this.searchPeriod);
     }
 
     /**
@@ -94,14 +95,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="timeGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> timeGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeGreaterThanOrEqualTo;
 
     /**
      * @return The optional greater than or equal to query parameter to filter the timestamp. This is applicable only for Auto SQL Tuning tasks.
      * 
      */
-    public Output</* @Nullable */ String> timeGreaterThanOrEqualTo() {
-        return this.timeGreaterThanOrEqualTo;
+    public Optional<Output<String>> timeGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.timeGreaterThanOrEqualTo);
     }
 
     /**
@@ -109,14 +110,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="timeLessThanOrEqualTo")
-    private Output</* @Nullable */ String> timeLessThanOrEqualTo;
+    private @Nullable Output<String> timeLessThanOrEqualTo;
 
     /**
      * @return The optional less than or equal to query parameter to filter the timestamp. This is applicable only for Auto SQL Tuning tasks.
      * 
      */
-    public Output</* @Nullable */ String> timeLessThanOrEqualTo() {
-        return this.timeLessThanOrEqualTo;
+    public Optional<Output<String>> timeLessThanOrEqualTo() {
+        return Optional.ofNullable(this.timeLessThanOrEqualTo);
     }
 
     private GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs() {}
@@ -155,7 +156,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder beginExecIdGreaterThanOrEqualTo(Output</* @Nullable */ String> beginExecIdGreaterThanOrEqualTo) {
+        public Builder beginExecIdGreaterThanOrEqualTo(@Nullable Output<String> beginExecIdGreaterThanOrEqualTo) {
             $.beginExecIdGreaterThanOrEqualTo = beginExecIdGreaterThanOrEqualTo;
             return this;
         }
@@ -166,7 +167,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder beginExecIdGreaterThanOrEqualTo(@Nullable String beginExecIdGreaterThanOrEqualTo) {
+        public Builder beginExecIdGreaterThanOrEqualTo(String beginExecIdGreaterThanOrEqualTo) {
             return beginExecIdGreaterThanOrEqualTo(Output.of(beginExecIdGreaterThanOrEqualTo));
         }
 
@@ -176,7 +177,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder endExecIdLessThanOrEqualTo(Output</* @Nullable */ String> endExecIdLessThanOrEqualTo) {
+        public Builder endExecIdLessThanOrEqualTo(@Nullable Output<String> endExecIdLessThanOrEqualTo) {
             $.endExecIdLessThanOrEqualTo = endExecIdLessThanOrEqualTo;
             return this;
         }
@@ -187,7 +188,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder endExecIdLessThanOrEqualTo(@Nullable String endExecIdLessThanOrEqualTo) {
+        public Builder endExecIdLessThanOrEqualTo(String endExecIdLessThanOrEqualTo) {
             return endExecIdLessThanOrEqualTo(Output.of(endExecIdLessThanOrEqualTo));
         }
 
@@ -218,7 +219,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder searchPeriod(Output</* @Nullable */ String> searchPeriod) {
+        public Builder searchPeriod(@Nullable Output<String> searchPeriod) {
             $.searchPeriod = searchPeriod;
             return this;
         }
@@ -229,7 +230,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder searchPeriod(@Nullable String searchPeriod) {
+        public Builder searchPeriod(String searchPeriod) {
             return searchPeriod(Output.of(searchPeriod));
         }
 
@@ -260,7 +261,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder timeGreaterThanOrEqualTo(Output</* @Nullable */ String> timeGreaterThanOrEqualTo) {
+        public Builder timeGreaterThanOrEqualTo(@Nullable Output<String> timeGreaterThanOrEqualTo) {
             $.timeGreaterThanOrEqualTo = timeGreaterThanOrEqualTo;
             return this;
         }
@@ -271,7 +272,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder timeGreaterThanOrEqualTo(@Nullable String timeGreaterThanOrEqualTo) {
+        public Builder timeGreaterThanOrEqualTo(String timeGreaterThanOrEqualTo) {
             return timeGreaterThanOrEqualTo(Output.of(timeGreaterThanOrEqualTo));
         }
 
@@ -281,7 +282,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder timeLessThanOrEqualTo(Output</* @Nullable */ String> timeLessThanOrEqualTo) {
+        public Builder timeLessThanOrEqualTo(@Nullable Output<String> timeLessThanOrEqualTo) {
             $.timeLessThanOrEqualTo = timeLessThanOrEqualTo;
             return this;
         }
@@ -292,7 +293,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder timeLessThanOrEqualTo(@Nullable String timeLessThanOrEqualTo) {
+        public Builder timeLessThanOrEqualTo(String timeLessThanOrEqualTo) {
             return timeLessThanOrEqualTo(Output.of(timeLessThanOrEqualTo));
         }
 

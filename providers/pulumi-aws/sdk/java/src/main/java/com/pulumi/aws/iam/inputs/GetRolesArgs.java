@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +22,7 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameRegex")
-    private Output</* @Nullable */ String> nameRegex;
+    private @Nullable Output<String> nameRegex;
 
     /**
      * @return A regex string to apply to the IAM roles list returned by AWS. This allows more advanced filtering not supported from the AWS API.
@@ -29,8 +30,8 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
      * options to narrow down the list AWS returns.
      * 
      */
-    public Output</* @Nullable */ String> nameRegex() {
-        return this.nameRegex;
+    public Optional<Output<String>> nameRegex() {
+        return Optional.ofNullable(this.nameRegex);
     }
 
     /**
@@ -38,14 +39,14 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pathPrefix")
-    private Output</* @Nullable */ String> pathPrefix;
+    private @Nullable Output<String> pathPrefix;
 
     /**
      * @return The path prefix for filtering the results. For example, the prefix `/application_abc/component_xyz/` gets all roles whose path starts with `/application_abc/component_xyz/`. If it is not included, it defaults to a slash (`/`), listing all roles. For more details, check out [list-roles in the AWS CLI reference][1].
      * 
      */
-    public Output</* @Nullable */ String> pathPrefix() {
-        return this.pathPrefix;
+    public Optional<Output<String>> pathPrefix() {
+        return Optional.ofNullable(this.pathPrefix);
     }
 
     private GetRolesArgs() {}
@@ -81,7 +82,7 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameRegex(Output</* @Nullable */ String> nameRegex) {
+        public Builder nameRegex(@Nullable Output<String> nameRegex) {
             $.nameRegex = nameRegex;
             return this;
         }
@@ -94,7 +95,7 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameRegex(@Nullable String nameRegex) {
+        public Builder nameRegex(String nameRegex) {
             return nameRegex(Output.of(nameRegex));
         }
 
@@ -104,7 +105,7 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder pathPrefix(Output</* @Nullable */ String> pathPrefix) {
+        public Builder pathPrefix(@Nullable Output<String> pathPrefix) {
             $.pathPrefix = pathPrefix;
             return this;
         }
@@ -115,7 +116,7 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder pathPrefix(@Nullable String pathPrefix) {
+        public Builder pathPrefix(String pathPrefix) {
             return pathPrefix(Output.of(pathPrefix));
         }
 

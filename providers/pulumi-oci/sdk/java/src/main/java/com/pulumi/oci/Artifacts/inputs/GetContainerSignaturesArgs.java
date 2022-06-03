@@ -5,11 +5,12 @@ package com.pulumi.oci.Artifacts.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Artifacts.inputs.GetContainerSignaturesFilter;
+import com.pulumi.oci.Artifacts.inputs.GetContainerSignaturesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,14 +38,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are inspected depending on the the setting of `accessLevel`. Default is false. Can only be set to true when calling the API on the tenancy (root compartment).
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     /**
@@ -52,21 +53,21 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetContainerSignaturesFilter>> filters;
+    private @Nullable Output<List<GetContainerSignaturesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetContainerSignaturesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetContainerSignaturesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="imageDigest")
-    private Output</* @Nullable */ String> imageDigest;
+    private @Nullable Output<String> imageDigest;
 
     /**
      * @return The digest of the container image.  Example: `sha256:e7d38b3517548a1c71e41bffe9c8ae6d6d29546ce46bf62159837aad072c90aa`
      * 
      */
-    public Output</* @Nullable */ String> imageDigest() {
-        return this.imageDigest;
+    public Optional<Output<String>> imageDigest() {
+        return Optional.ofNullable(this.imageDigest);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="imageId")
-    private Output</* @Nullable */ String> imageId;
+    private @Nullable Output<String> imageId;
 
     /**
      * @return A filter to return a container image summary only for the specified container image OCID.
      * 
      */
-    public Output</* @Nullable */ String> imageId() {
-        return this.imageId;
+    public Optional<Output<String>> imageId() {
+        return Optional.ofNullable(this.imageId);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kmsKeyId")
-    private Output</* @Nullable */ String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the kmsKeyVersionId used to sign the container image.  Example: `ocid1.keyversion.oc1..exampleuniqueID`
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -119,14 +120,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kmsKeyVersionId")
-    private Output</* @Nullable */ String> kmsKeyVersionId;
+    private @Nullable Output<String> kmsKeyVersionId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the kmsKeyVersionId used to sign the container image.  Example: `ocid1.keyversion.oc1..exampleuniqueID`
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyVersionId() {
-        return this.kmsKeyVersionId;
+    public Optional<Output<String>> kmsKeyVersionId() {
+        return Optional.ofNullable(this.kmsKeyVersionId);
     }
 
     /**
@@ -134,14 +135,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="repositoryId")
-    private Output</* @Nullable */ String> repositoryId;
+    private @Nullable Output<String> repositoryId;
 
     /**
      * @return A filter to return container images only for the specified container repository OCID.
      * 
      */
-    public Output</* @Nullable */ String> repositoryId() {
-        return this.repositoryId;
+    public Optional<Output<String>> repositoryId() {
+        return Optional.ofNullable(this.repositoryId);
     }
 
     /**
@@ -149,14 +150,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="repositoryName")
-    private Output</* @Nullable */ String> repositoryName;
+    private @Nullable Output<String> repositoryName;
 
     /**
      * @return A filter to return container images or container image signatures that match the repository name.  Example: `foo` or `foo*`
      * 
      */
-    public Output</* @Nullable */ String> repositoryName() {
-        return this.repositoryName;
+    public Optional<Output<String>> repositoryName() {
+        return Optional.ofNullable(this.repositoryName);
     }
 
     /**
@@ -164,14 +165,14 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="signingAlgorithm")
-    private Output</* @Nullable */ String> signingAlgorithm;
+    private @Nullable Output<String> signingAlgorithm;
 
     /**
      * @return The algorithm to be used for signing. These are the only supported signing algorithms for container images.
      * 
      */
-    public Output</* @Nullable */ String> signingAlgorithm() {
-        return this.signingAlgorithm;
+    public Optional<Output<String>> signingAlgorithm() {
+        return Optional.ofNullable(this.signingAlgorithm);
     }
 
     private GetContainerSignaturesArgs() {}
@@ -235,7 +236,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -246,7 +247,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
@@ -256,7 +257,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -267,20 +268,20 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetContainerSignaturesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetContainerSignaturesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetContainerSignaturesFilter> filters) {
+        public Builder filters(List<GetContainerSignaturesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetContainerSignaturesFilter... filters) {
+        public Builder filters(GetContainerSignaturesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -290,7 +291,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder imageDigest(Output</* @Nullable */ String> imageDigest) {
+        public Builder imageDigest(@Nullable Output<String> imageDigest) {
             $.imageDigest = imageDigest;
             return this;
         }
@@ -301,7 +302,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder imageDigest(@Nullable String imageDigest) {
+        public Builder imageDigest(String imageDigest) {
             return imageDigest(Output.of(imageDigest));
         }
 
@@ -311,7 +312,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder imageId(Output</* @Nullable */ String> imageId) {
+        public Builder imageId(@Nullable Output<String> imageId) {
             $.imageId = imageId;
             return this;
         }
@@ -322,7 +323,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder imageId(@Nullable String imageId) {
+        public Builder imageId(String imageId) {
             return imageId(Output.of(imageId));
         }
 
@@ -332,7 +333,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder kmsKeyId(Output</* @Nullable */ String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
@@ -343,7 +344,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }
 
@@ -353,7 +354,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder kmsKeyVersionId(Output</* @Nullable */ String> kmsKeyVersionId) {
+        public Builder kmsKeyVersionId(@Nullable Output<String> kmsKeyVersionId) {
             $.kmsKeyVersionId = kmsKeyVersionId;
             return this;
         }
@@ -364,7 +365,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder kmsKeyVersionId(@Nullable String kmsKeyVersionId) {
+        public Builder kmsKeyVersionId(String kmsKeyVersionId) {
             return kmsKeyVersionId(Output.of(kmsKeyVersionId));
         }
 
@@ -374,7 +375,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder repositoryId(Output</* @Nullable */ String> repositoryId) {
+        public Builder repositoryId(@Nullable Output<String> repositoryId) {
             $.repositoryId = repositoryId;
             return this;
         }
@@ -385,7 +386,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder repositoryId(@Nullable String repositoryId) {
+        public Builder repositoryId(String repositoryId) {
             return repositoryId(Output.of(repositoryId));
         }
 
@@ -395,7 +396,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder repositoryName(Output</* @Nullable */ String> repositoryName) {
+        public Builder repositoryName(@Nullable Output<String> repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
@@ -406,7 +407,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder repositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             return repositoryName(Output.of(repositoryName));
         }
 
@@ -416,7 +417,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder signingAlgorithm(Output</* @Nullable */ String> signingAlgorithm) {
+        public Builder signingAlgorithm(@Nullable Output<String> signingAlgorithm) {
             $.signingAlgorithm = signingAlgorithm;
             return this;
         }
@@ -427,7 +428,7 @@ public final class GetContainerSignaturesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
+        public Builder signingAlgorithm(String signingAlgorithm) {
             return signingAlgorithm(Output.of(signingAlgorithm));
         }
 

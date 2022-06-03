@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="delimiter")
-    private Output</* @Nullable */ String> delimiter;
+    private @Nullable Output<String> delimiter;
 
     /**
      * @return A character used to group keys (Default: none)
      * 
      */
-    public Output</* @Nullable */ String> delimiter() {
-        return this.delimiter;
+    public Optional<Output<String>> delimiter() {
+        return Optional.ofNullable(this.delimiter);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encodingType")
-    private Output</* @Nullable */ String> encodingType;
+    private @Nullable Output<String> encodingType;
 
     /**
      * @return Encodes keys using this method (Default: none; besides none, only &#34;url&#34; can be used)
      * 
      */
-    public Output</* @Nullable */ String> encodingType() {
-        return this.encodingType;
+    public Optional<Output<String>> encodingType() {
+        return Optional.ofNullable(this.encodingType);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fetchOwner")
-    private Output</* @Nullable */ Boolean> fetchOwner;
+    private @Nullable Output<Boolean> fetchOwner;
 
     /**
      * @return Boolean specifying whether to populate the owner list (Default: false)
      * 
      */
-    public Output</* @Nullable */ Boolean> fetchOwner() {
-        return this.fetchOwner;
+    public Optional<Output<Boolean>> fetchOwner() {
+        return Optional.ofNullable(this.fetchOwner);
     }
 
     /**
@@ -81,14 +82,14 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxKeys")
-    private Output</* @Nullable */ Integer> maxKeys;
+    private @Nullable Output<Integer> maxKeys;
 
     /**
      * @return Maximum object keys to return (Default: 1000)
      * 
      */
-    public Output</* @Nullable */ Integer> maxKeys() {
-        return this.maxKeys;
+    public Optional<Output<Integer>> maxKeys() {
+        return Optional.ofNullable(this.maxKeys);
     }
 
     /**
@@ -96,14 +97,14 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prefix")
-    private Output</* @Nullable */ String> prefix;
+    private @Nullable Output<String> prefix;
 
     /**
      * @return Limits results to object keys with this prefix (Default: none)
      * 
      */
-    public Output</* @Nullable */ String> prefix() {
-        return this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -111,14 +112,14 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startAfter")
-    private Output</* @Nullable */ String> startAfter;
+    private @Nullable Output<String> startAfter;
 
     /**
      * @return Returns key names lexicographically after a specific object key in your bucket (Default: none; S3 lists object keys in UTF-8 character encoding in lexicographical order)
      * 
      */
-    public Output</* @Nullable */ String> startAfter() {
-        return this.startAfter;
+    public Optional<Output<String>> startAfter() {
+        return Optional.ofNullable(this.startAfter);
     }
 
     private GetObjectsArgs() {}
@@ -178,7 +179,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder delimiter(Output</* @Nullable */ String> delimiter) {
+        public Builder delimiter(@Nullable Output<String> delimiter) {
             $.delimiter = delimiter;
             return this;
         }
@@ -189,7 +190,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder delimiter(@Nullable String delimiter) {
+        public Builder delimiter(String delimiter) {
             return delimiter(Output.of(delimiter));
         }
 
@@ -199,7 +200,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder encodingType(Output</* @Nullable */ String> encodingType) {
+        public Builder encodingType(@Nullable Output<String> encodingType) {
             $.encodingType = encodingType;
             return this;
         }
@@ -210,7 +211,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder encodingType(@Nullable String encodingType) {
+        public Builder encodingType(String encodingType) {
             return encodingType(Output.of(encodingType));
         }
 
@@ -220,7 +221,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fetchOwner(Output</* @Nullable */ Boolean> fetchOwner) {
+        public Builder fetchOwner(@Nullable Output<Boolean> fetchOwner) {
             $.fetchOwner = fetchOwner;
             return this;
         }
@@ -231,7 +232,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fetchOwner(@Nullable Boolean fetchOwner) {
+        public Builder fetchOwner(Boolean fetchOwner) {
             return fetchOwner(Output.of(fetchOwner));
         }
 
@@ -241,7 +242,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder maxKeys(Output</* @Nullable */ Integer> maxKeys) {
+        public Builder maxKeys(@Nullable Output<Integer> maxKeys) {
             $.maxKeys = maxKeys;
             return this;
         }
@@ -252,7 +253,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder maxKeys(@Nullable Integer maxKeys) {
+        public Builder maxKeys(Integer maxKeys) {
             return maxKeys(Output.of(maxKeys));
         }
 
@@ -262,7 +263,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder prefix(Output</* @Nullable */ String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
@@ -273,7 +274,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder prefix(@Nullable String prefix) {
+        public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
@@ -283,7 +284,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder startAfter(Output</* @Nullable */ String> startAfter) {
+        public Builder startAfter(@Nullable Output<String> startAfter) {
             $.startAfter = startAfter;
             return this;
         }
@@ -294,7 +295,7 @@ public final class GetObjectsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder startAfter(@Nullable String startAfter) {
+        public Builder startAfter(String startAfter) {
             return startAfter(Output.of(startAfter));
         }
 

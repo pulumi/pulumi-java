@@ -5,10 +5,11 @@ package com.pulumi.oci.Email.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Email.inputs.GetDkimsFilter;
+import com.pulumi.oci.Email.inputs.GetDkimsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDkimsFilter>> filters;
+    private @Nullable Output<List<GetDkimsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDkimsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDkimsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return A filter to only return resources that match the given id exactly.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to only return resources that match the given name exactly.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Filter returned list by specified lifecycle state. This parameter is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetDkimsArgs() {}
@@ -132,16 +133,16 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
             return emailDomainId(Output.of(emailDomainId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDkimsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDkimsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDkimsFilter> filters) {
+        public Builder filters(List<GetDkimsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDkimsFilter... filters) {
+        public Builder filters(GetDkimsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -151,7 +152,7 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -162,7 +163,7 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -172,7 +173,7 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -193,7 +194,7 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetDkimsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

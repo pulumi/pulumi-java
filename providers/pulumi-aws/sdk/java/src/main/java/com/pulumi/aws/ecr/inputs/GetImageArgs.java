@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageDigest")
-    private Output</* @Nullable */ String> imageDigest;
+    private @Nullable Output<String> imageDigest;
 
     /**
      * @return The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
      * 
      */
-    public Output</* @Nullable */ String> imageDigest() {
-        return this.imageDigest;
+    public Optional<Output<String>> imageDigest() {
+        return Optional.ofNullable(this.imageDigest);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageTag")
-    private Output</* @Nullable */ String> imageTag;
+    private @Nullable Output<String> imageTag;
 
     /**
      * @return The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
      * 
      */
-    public Output</* @Nullable */ String> imageTag() {
-        return this.imageTag;
+    public Optional<Output<String>> imageTag() {
+        return Optional.ofNullable(this.imageTag);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryId")
-    private Output</* @Nullable */ String> registryId;
+    private @Nullable Output<String> registryId;
 
     /**
      * @return The ID of the Registry where the repository resides.
      * 
      */
-    public Output</* @Nullable */ String> registryId() {
-        return this.registryId;
+    public Optional<Output<String>> registryId() {
+        return Optional.ofNullable(this.registryId);
     }
 
     /**
@@ -107,7 +108,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder imageDigest(Output</* @Nullable */ String> imageDigest) {
+        public Builder imageDigest(@Nullable Output<String> imageDigest) {
             $.imageDigest = imageDigest;
             return this;
         }
@@ -118,7 +119,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder imageDigest(@Nullable String imageDigest) {
+        public Builder imageDigest(String imageDigest) {
             return imageDigest(Output.of(imageDigest));
         }
 
@@ -128,7 +129,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder imageTag(Output</* @Nullable */ String> imageTag) {
+        public Builder imageTag(@Nullable Output<String> imageTag) {
             $.imageTag = imageTag;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder imageTag(@Nullable String imageTag) {
+        public Builder imageTag(String imageTag) {
             return imageTag(Output.of(imageTag));
         }
 
@@ -149,7 +150,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder registryId(Output</* @Nullable */ String> registryId) {
+        public Builder registryId(@Nullable Output<String> registryId) {
             $.registryId = registryId;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder registryId(@Nullable String registryId) {
+        public Builder registryId(String registryId) {
             return registryId(Output.of(registryId));
         }
 

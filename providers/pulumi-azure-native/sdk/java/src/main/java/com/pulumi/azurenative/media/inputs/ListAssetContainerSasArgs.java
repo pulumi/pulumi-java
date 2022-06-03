@@ -9,6 +9,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -51,14 +52,14 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="expiryTime")
-    private Output</* @Nullable */ String> expiryTime;
+    private @Nullable Output<String> expiryTime;
 
     /**
      * @return The SAS URL expiration time.  This must be less than 24 hours from the current time.
      * 
      */
-    public Output</* @Nullable */ String> expiryTime() {
-        return this.expiryTime;
+    public Optional<Output<String>> expiryTime() {
+        return Optional.ofNullable(this.expiryTime);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="permissions")
-    private Output</* @Nullable */ Either<String,AssetContainerPermission>> permissions;
+    private @Nullable Output<Either<String,AssetContainerPermission>> permissions;
 
     /**
      * @return The permissions to set on the SAS URL.
      * 
      */
-    public Output</* @Nullable */ Either<String,AssetContainerPermission>> permissions() {
-        return this.permissions;
+    public Optional<Output<Either<String,AssetContainerPermission>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -167,7 +168,7 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder expiryTime(Output</* @Nullable */ String> expiryTime) {
+        public Builder expiryTime(@Nullable Output<String> expiryTime) {
             $.expiryTime = expiryTime;
             return this;
         }
@@ -178,7 +179,7 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder expiryTime(@Nullable String expiryTime) {
+        public Builder expiryTime(String expiryTime) {
             return expiryTime(Output.of(expiryTime));
         }
 
@@ -188,7 +189,7 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder permissions(Output</* @Nullable */ Either<String,AssetContainerPermission>> permissions) {
+        public Builder permissions(@Nullable Output<Either<String,AssetContainerPermission>> permissions) {
             $.permissions = permissions;
             return this;
         }
@@ -199,7 +200,7 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder permissions(@Nullable Either<String,AssetContainerPermission> permissions) {
+        public Builder permissions(Either<String,AssetContainerPermission> permissions) {
             return permissions(Output.of(permissions));
         }
 

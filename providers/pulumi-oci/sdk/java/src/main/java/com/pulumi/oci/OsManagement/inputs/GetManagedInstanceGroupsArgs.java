@@ -5,10 +5,11 @@ package com.pulumi.oci.OsManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OsManagement.inputs.GetManagedInstanceGroupsFilter;
+import com.pulumi.oci.OsManagement.inputs.GetManagedInstanceGroupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagedInstanceGroupsFilter>> filters;
+    private @Nullable Output<List<GetManagedInstanceGroupsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagedInstanceGroupsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagedInstanceGroupsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="osFamily")
-    private Output</* @Nullable */ String> osFamily;
+    private @Nullable Output<String> osFamily;
 
     /**
      * @return The OS family for which to list resources.
      * 
      */
-    public Output</* @Nullable */ String> osFamily() {
-        return this.osFamily;
+    public Optional<Output<String>> osFamily() {
+        return Optional.ofNullable(this.osFamily);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The current lifecycle state for the object.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetManagedInstanceGroupsArgs() {}
@@ -138,7 +139,7 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,20 +150,20 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagedInstanceGroupsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedInstanceGroupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedInstanceGroupsFilter> filters) {
+        public Builder filters(List<GetManagedInstanceGroupsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagedInstanceGroupsFilter... filters) {
+        public Builder filters(GetManagedInstanceGroupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder osFamily(Output</* @Nullable */ String> osFamily) {
+        public Builder osFamily(@Nullable Output<String> osFamily) {
             $.osFamily = osFamily;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder osFamily(@Nullable String osFamily) {
+        public Builder osFamily(String osFamily) {
             return osFamily(Output.of(osFamily));
         }
 
@@ -193,7 +194,7 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

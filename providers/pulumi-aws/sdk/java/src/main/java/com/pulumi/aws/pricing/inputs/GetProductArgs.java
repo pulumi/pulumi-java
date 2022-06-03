@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.pricing.inputs;
 
-import com.pulumi.aws.pricing.inputs.GetProductFilter;
+import com.pulumi.aws.pricing.inputs.GetProductFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -20,13 +20,13 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters", required=true)
-    private Output<List<GetProductFilter>> filters;
+    private Output<List<GetProductFilterArgs>> filters;
 
     /**
      * @return A list of filters. Passed directly to the API (see GetProducts API reference). These filters must describe a single product, this resource will fail if more than one product is returned by the API.
      * 
      */
-    public Output<List<GetProductFilter>> filters() {
+    public Output<List<GetProductFilterArgs>> filters() {
         return this.filters;
     }
 
@@ -76,7 +76,7 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output<List<GetProductFilter>> filters) {
+        public Builder filters(Output<List<GetProductFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -87,7 +87,7 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(List<GetProductFilter> filters) {
+        public Builder filters(List<GetProductFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -97,7 +97,7 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetProductFilter... filters) {
+        public Builder filters(GetProductFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

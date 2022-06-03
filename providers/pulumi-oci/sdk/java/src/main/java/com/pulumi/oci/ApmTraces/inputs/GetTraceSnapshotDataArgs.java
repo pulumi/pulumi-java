@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="isSummarized")
-    private Output</* @Nullable */ Boolean> isSummarized;
+    private @Nullable Output<Boolean> isSummarized;
 
     /**
      * @return If enabled, then only span level details will be sent.
      * 
      */
-    public Output</* @Nullable */ Boolean> isSummarized() {
-        return this.isSummarized;
+    public Optional<Output<Boolean>> isSummarized() {
+        return Optional.ofNullable(this.isSummarized);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="snapshotTime")
-    private Output</* @Nullable */ String> snapshotTime;
+    private @Nullable Output<String> snapshotTime;
 
     /**
      * @return Epoch time of snapshot.
      * 
      */
-    public Output</* @Nullable */ String> snapshotTime() {
-        return this.snapshotTime;
+    public Optional<Output<String>> snapshotTime() {
+        return Optional.ofNullable(this.snapshotTime);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="threadId")
-    private Output</* @Nullable */ String> threadId;
+    private @Nullable Output<String> threadId;
 
     /**
      * @return Thread id for which snapshots needs to be retrieved. This is an identifier of a thread, and is a positive long number generated when when a thread is created.
      * 
      */
-    public Output</* @Nullable */ String> threadId() {
-        return this.threadId;
+    public Optional<Output<String>> threadId() {
+        return Optional.ofNullable(this.threadId);
     }
 
     /**
@@ -145,7 +146,7 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder isSummarized(Output</* @Nullable */ Boolean> isSummarized) {
+        public Builder isSummarized(@Nullable Output<Boolean> isSummarized) {
             $.isSummarized = isSummarized;
             return this;
         }
@@ -156,7 +157,7 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder isSummarized(@Nullable Boolean isSummarized) {
+        public Builder isSummarized(Boolean isSummarized) {
             return isSummarized(Output.of(isSummarized));
         }
 
@@ -166,7 +167,7 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder snapshotTime(Output</* @Nullable */ String> snapshotTime) {
+        public Builder snapshotTime(@Nullable Output<String> snapshotTime) {
             $.snapshotTime = snapshotTime;
             return this;
         }
@@ -177,7 +178,7 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder snapshotTime(@Nullable String snapshotTime) {
+        public Builder snapshotTime(String snapshotTime) {
             return snapshotTime(Output.of(snapshotTime));
         }
 
@@ -187,7 +188,7 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder threadId(Output</* @Nullable */ String> threadId) {
+        public Builder threadId(@Nullable Output<String> threadId) {
             $.threadId = threadId;
             return this;
         }
@@ -198,7 +199,7 @@ public final class GetTraceSnapshotDataArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder threadId(@Nullable String threadId) {
+        public Builder threadId(String threadId) {
             return threadId(Output.of(threadId));
         }
 

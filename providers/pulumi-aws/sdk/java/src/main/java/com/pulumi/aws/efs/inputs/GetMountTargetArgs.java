@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessPointId")
-    private Output</* @Nullable */ String> accessPointId;
+    private @Nullable Output<String> accessPointId;
 
     /**
      * @return ID or ARN of the access point whose mount target that you want to find. It must be included if a `file_system_id` and `mount_target_id` are not included.
      * 
      */
-    public Output</* @Nullable */ String> accessPointId() {
-        return this.accessPointId;
+    public Optional<Output<String>> accessPointId() {
+        return Optional.ofNullable(this.accessPointId);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileSystemId")
-    private Output</* @Nullable */ String> fileSystemId;
+    private @Nullable Output<String> fileSystemId;
 
     /**
      * @return ID or ARN of the file system whose mount target that you want to find. It must be included if an `access_point_id` and `mount_target_id` are not included.
      * 
      */
-    public Output</* @Nullable */ String> fileSystemId() {
-        return this.fileSystemId;
+    public Optional<Output<String>> fileSystemId() {
+        return Optional.ofNullable(this.fileSystemId);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mountTargetId")
-    private Output</* @Nullable */ String> mountTargetId;
+    private @Nullable Output<String> mountTargetId;
 
     /**
      * @return ID or ARN of the mount target that you want to find. It must be included in your request if an `access_point_id` and `file_system_id` are not included.
      * 
      */
-    public Output</* @Nullable */ String> mountTargetId() {
-        return this.mountTargetId;
+    public Optional<Output<String>> mountTargetId() {
+        return Optional.ofNullable(this.mountTargetId);
     }
 
     private GetMountTargetArgs() {}
@@ -91,7 +92,7 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessPointId(Output</* @Nullable */ String> accessPointId) {
+        public Builder accessPointId(@Nullable Output<String> accessPointId) {
             $.accessPointId = accessPointId;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessPointId(@Nullable String accessPointId) {
+        public Builder accessPointId(String accessPointId) {
             return accessPointId(Output.of(accessPointId));
         }
 
@@ -112,7 +113,7 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fileSystemId(Output</* @Nullable */ String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             return fileSystemId(Output.of(fileSystemId));
         }
 
@@ -133,7 +134,7 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mountTargetId(Output</* @Nullable */ String> mountTargetId) {
+        public Builder mountTargetId(@Nullable Output<String> mountTargetId) {
             $.mountTargetId = mountTargetId;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mountTargetId(@Nullable String mountTargetId) {
+        public Builder mountTargetId(String mountTargetId) {
             return mountTargetId(Output.of(mountTargetId));
         }
 

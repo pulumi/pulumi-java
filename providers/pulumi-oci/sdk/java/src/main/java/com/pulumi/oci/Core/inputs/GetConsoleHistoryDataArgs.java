@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="length")
-    private Output</* @Nullable */ Integer> length;
+    private @Nullable Output<Integer> length;
 
     /**
      * @return Length of the snapshot data to retrieve. Cannot be less than 10240.
      * 
      */
-    public Output</* @Nullable */ Integer> length() {
-        return this.length;
+    public Optional<Output<Integer>> length() {
+        return Optional.ofNullable(this.length);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="offset")
-    private Output</* @Nullable */ Integer> offset;
+    private @Nullable Output<Integer> offset;
 
     /**
      * @return Offset of the snapshot data to retrieve.
      * 
      */
-    public Output</* @Nullable */ Integer> offset() {
-        return this.offset;
+    public Optional<Output<Integer>> offset() {
+        return Optional.ofNullable(this.offset);
     }
 
     private GetConsoleHistoryDataArgs() {}
@@ -113,7 +114,7 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder length(Output</* @Nullable */ Integer> length) {
+        public Builder length(@Nullable Output<Integer> length) {
             $.length = length;
             return this;
         }
@@ -124,7 +125,7 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder length(@Nullable Integer length) {
+        public Builder length(Integer length) {
             return length(Output.of(length));
         }
 
@@ -134,7 +135,7 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder offset(Output</* @Nullable */ Integer> offset) {
+        public Builder offset(@Nullable Output<Integer> offset) {
             $.offset = offset;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder offset(@Nullable Integer offset) {
+        public Builder offset(Integer offset) {
             return offset(Output.of(offset));
         }
 

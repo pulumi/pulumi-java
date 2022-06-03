@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the Resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requiredTags")
-    private Output</* @Nullable */ Map<String,String>> requiredTags;
+    private @Nullable Output<Map<String,String>> requiredTags;
 
     /**
      * @return A mapping of tags which the resource has to have in order to be included in the result.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> requiredTags() {
-        return this.requiredTags;
+    public Optional<Output<Map<String,String>>> requiredTags() {
+        return Optional.ofNullable(this.requiredTags);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName")
-    private Output</* @Nullable */ String> resourceGroupName;
+    private @Nullable Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource group where the Resources are located.
      * 
      */
-    public Output</* @Nullable */ String> resourceGroupName() {
-        return this.resourceGroupName;
+    public Optional<Output<String>> resourceGroupName() {
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-    private Output</* @Nullable */ String> type;
+    private @Nullable Output<String> type;
 
     /**
      * @return The Resource Type of the Resources you want to list (e.g. `Microsoft.Network/virtualNetworks`). A full list of available Resource Types can be found [here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/azure-services-resource-providers).
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     private GetResourcesArgs() {}
@@ -108,7 +109,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -129,7 +130,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder requiredTags(Output</* @Nullable */ Map<String,String>> requiredTags) {
+        public Builder requiredTags(@Nullable Output<Map<String,String>> requiredTags) {
             $.requiredTags = requiredTags;
             return this;
         }
@@ -140,7 +141,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder requiredTags(@Nullable Map<String,String> requiredTags) {
+        public Builder requiredTags(Map<String,String> requiredTags) {
             return requiredTags(Output.of(requiredTags));
         }
 
@@ -150,7 +151,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(Output</* @Nullable */ String> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
@@ -171,7 +172,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder type(Output</* @Nullable */ String> type) {
+        public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
+        public Builder type(String type) {
             return type(Output.of(type));
         }
 

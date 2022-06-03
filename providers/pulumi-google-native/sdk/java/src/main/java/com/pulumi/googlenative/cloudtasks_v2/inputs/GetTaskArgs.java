@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +23,10 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="queueId", required=true)
@@ -36,10 +37,10 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="responseView")
-    private Output</* @Nullable */ String> responseView;
+    private @Nullable Output<String> responseView;
 
-    public Output</* @Nullable */ String> responseView() {
-        return this.responseView;
+    public Optional<Output<String>> responseView() {
+        return Optional.ofNullable(this.responseView);
     }
 
     @Import(name="taskId", required=true)
@@ -86,12 +87,12 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
             return location(Output.of(location));
         }
 
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
@@ -104,12 +105,12 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
             return queueId(Output.of(queueId));
         }
 
-        public Builder responseView(Output</* @Nullable */ String> responseView) {
+        public Builder responseView(@Nullable Output<String> responseView) {
             $.responseView = responseView;
             return this;
         }
 
-        public Builder responseView(@Nullable String responseView) {
+        public Builder responseView(String responseView) {
             return responseView(Output.of(responseView));
         }
 

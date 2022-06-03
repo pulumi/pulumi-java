@@ -12,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -84,14 +85,14 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regions")
-    private Output</* @Nullable */ List<String>> regions;
+    private @Nullable Output<List<String>> regions;
 
     /**
      * @return Optional, allows control of which region locations are permitted access to Azure Maps REST APIs with the SAS token. Example: &#34;eastus&#34;, &#34;westus2&#34;. Omitting this parameter will allow all region locations to be accessible.
      * 
      */
-    public Output</* @Nullable */ List<String>> regions() {
-        return this.regions;
+    public Optional<Output<List<String>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     /**
@@ -260,7 +261,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder regions(Output</* @Nullable */ List<String>> regions) {
+        public Builder regions(@Nullable Output<List<String>> regions) {
             $.regions = regions;
             return this;
         }
@@ -271,7 +272,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder regions(@Nullable List<String> regions) {
+        public Builder regions(List<String> regions) {
             return regions(Output.of(regions));
         }
 

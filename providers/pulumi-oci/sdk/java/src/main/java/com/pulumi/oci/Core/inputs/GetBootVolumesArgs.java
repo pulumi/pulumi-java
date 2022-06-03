@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetBootVolumesFilter;
+import com.pulumi.oci.Core.inputs.GetBootVolumesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,10 +48,10 @@ public final class GetBootVolumesArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetBootVolumesFilter>> filters;
+    private @Nullable Output<List<GetBootVolumesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetBootVolumesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetBootVolumesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetBootVolumesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeGroupId")
-    private Output</* @Nullable */ String> volumeGroupId;
+    private @Nullable Output<String> volumeGroupId;
 
     /**
      * @return The OCID of the volume group.
      * 
      */
-    public Output</* @Nullable */ String> volumeGroupId() {
-        return this.volumeGroupId;
+    public Optional<Output<String>> volumeGroupId() {
+        return Optional.ofNullable(this.volumeGroupId);
     }
 
     private GetBootVolumesArgs() {}
@@ -137,16 +138,16 @@ public final class GetBootVolumesArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetBootVolumesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetBootVolumesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBootVolumesFilter> filters) {
+        public Builder filters(List<GetBootVolumesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetBootVolumesFilter... filters) {
+        public Builder filters(GetBootVolumesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -156,7 +157,7 @@ public final class GetBootVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder volumeGroupId(Output</* @Nullable */ String> volumeGroupId) {
+        public Builder volumeGroupId(@Nullable Output<String> volumeGroupId) {
             $.volumeGroupId = volumeGroupId;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetBootVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder volumeGroupId(@Nullable String volumeGroupId) {
+        public Builder volumeGroupId(String volumeGroupId) {
             return volumeGroupId(Output.of(volumeGroupId));
         }
 

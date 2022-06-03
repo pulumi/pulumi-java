@@ -12,6 +12,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -39,14 +40,14 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="iPAddressOrRange")
-    private Output</* @Nullable */ String> iPAddressOrRange;
+    private @Nullable Output<String> iPAddressOrRange;
 
     /**
      * @return An IP address or a range of IP addresses from which to accept requests.
      * 
      */
-    public Output</* @Nullable */ String> iPAddressOrRange() {
-        return this.iPAddressOrRange;
+    public Optional<Output<String>> iPAddressOrRange() {
+        return Optional.ofNullable(this.iPAddressOrRange);
     }
 
     /**
@@ -54,14 +55,14 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keyToSign")
-    private Output</* @Nullable */ String> keyToSign;
+    private @Nullable Output<String> keyToSign;
 
     /**
      * @return The key to sign the account SAS token with.
      * 
      */
-    public Output</* @Nullable */ String> keyToSign() {
-        return this.keyToSign;
+    public Optional<Output<String>> keyToSign() {
+        return Optional.ofNullable(this.keyToSign);
     }
 
     /**
@@ -84,14 +85,14 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="protocols")
-    private Output</* @Nullable */ HttpProtocol> protocols;
+    private @Nullable Output<HttpProtocol> protocols;
 
     /**
      * @return The protocol permitted for a request made with the account SAS.
      * 
      */
-    public Output</* @Nullable */ HttpProtocol> protocols() {
-        return this.protocols;
+    public Optional<Output<HttpProtocol>> protocols() {
+        return Optional.ofNullable(this.protocols);
     }
 
     /**
@@ -159,14 +160,14 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sharedAccessStartTime")
-    private Output</* @Nullable */ String> sharedAccessStartTime;
+    private @Nullable Output<String> sharedAccessStartTime;
 
     /**
      * @return The time at which the SAS becomes valid.
      * 
      */
-    public Output</* @Nullable */ String> sharedAccessStartTime() {
-        return this.sharedAccessStartTime;
+    public Optional<Output<String>> sharedAccessStartTime() {
+        return Optional.ofNullable(this.sharedAccessStartTime);
     }
 
     private ListStorageAccountSASArgs() {}
@@ -229,7 +230,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder iPAddressOrRange(Output</* @Nullable */ String> iPAddressOrRange) {
+        public Builder iPAddressOrRange(@Nullable Output<String> iPAddressOrRange) {
             $.iPAddressOrRange = iPAddressOrRange;
             return this;
         }
@@ -240,7 +241,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder iPAddressOrRange(@Nullable String iPAddressOrRange) {
+        public Builder iPAddressOrRange(String iPAddressOrRange) {
             return iPAddressOrRange(Output.of(iPAddressOrRange));
         }
 
@@ -250,7 +251,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder keyToSign(Output</* @Nullable */ String> keyToSign) {
+        public Builder keyToSign(@Nullable Output<String> keyToSign) {
             $.keyToSign = keyToSign;
             return this;
         }
@@ -261,7 +262,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder keyToSign(@Nullable String keyToSign) {
+        public Builder keyToSign(String keyToSign) {
             return keyToSign(Output.of(keyToSign));
         }
 
@@ -312,7 +313,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder protocols(Output</* @Nullable */ HttpProtocol> protocols) {
+        public Builder protocols(@Nullable Output<HttpProtocol> protocols) {
             $.protocols = protocols;
             return this;
         }
@@ -323,7 +324,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder protocols(@Nullable HttpProtocol protocols) {
+        public Builder protocols(HttpProtocol protocols) {
             return protocols(Output.of(protocols));
         }
 
@@ -457,7 +458,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder sharedAccessStartTime(Output</* @Nullable */ String> sharedAccessStartTime) {
+        public Builder sharedAccessStartTime(@Nullable Output<String> sharedAccessStartTime) {
             $.sharedAccessStartTime = sharedAccessStartTime;
             return this;
         }
@@ -468,7 +469,7 @@ public final class ListStorageAccountSASArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder sharedAccessStartTime(@Nullable String sharedAccessStartTime) {
+        public Builder sharedAccessStartTime(String sharedAccessStartTime) {
             return sharedAccessStartTime(Output.of(sharedAccessStartTime));
         }
 

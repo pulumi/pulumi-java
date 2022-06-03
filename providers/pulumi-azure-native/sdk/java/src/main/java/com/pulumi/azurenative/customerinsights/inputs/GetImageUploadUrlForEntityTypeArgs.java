@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="entityType")
-    private Output</* @Nullable */ String> entityType;
+    private @Nullable Output<String> entityType;
 
     /**
      * @return Type of entity. Can be Profile or Interaction.
      * 
      */
-    public Output</* @Nullable */ String> entityType() {
-        return this.entityType;
+    public Optional<Output<String>> entityType() {
+        return Optional.ofNullable(this.entityType);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="entityTypeName")
-    private Output</* @Nullable */ String> entityTypeName;
+    private @Nullable Output<String> entityTypeName;
 
     /**
      * @return Name of the entity type.
      * 
      */
-    public Output</* @Nullable */ String> entityTypeName() {
-        return this.entityTypeName;
+    public Optional<Output<String>> entityTypeName() {
+        return Optional.ofNullable(this.entityTypeName);
     }
 
     /**
@@ -64,14 +65,14 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="relativePath")
-    private Output</* @Nullable */ String> relativePath;
+    private @Nullable Output<String> relativePath;
 
     /**
      * @return Relative path of the image.
      * 
      */
-    public Output</* @Nullable */ String> relativePath() {
-        return this.relativePath;
+    public Optional<Output<String>> relativePath() {
+        return Optional.ofNullable(this.relativePath);
     }
 
     /**
@@ -123,7 +124,7 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder entityType(Output</* @Nullable */ String> entityType) {
+        public Builder entityType(@Nullable Output<String> entityType) {
             $.entityType = entityType;
             return this;
         }
@@ -134,7 +135,7 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder entityType(@Nullable String entityType) {
+        public Builder entityType(String entityType) {
             return entityType(Output.of(entityType));
         }
 
@@ -144,7 +145,7 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder entityTypeName(Output</* @Nullable */ String> entityTypeName) {
+        public Builder entityTypeName(@Nullable Output<String> entityTypeName) {
             $.entityTypeName = entityTypeName;
             return this;
         }
@@ -155,7 +156,7 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder entityTypeName(@Nullable String entityTypeName) {
+        public Builder entityTypeName(String entityTypeName) {
             return entityTypeName(Output.of(entityTypeName));
         }
 
@@ -186,7 +187,7 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder relativePath(Output</* @Nullable */ String> relativePath) {
+        public Builder relativePath(@Nullable Output<String> relativePath) {
             $.relativePath = relativePath;
             return this;
         }
@@ -197,7 +198,7 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder relativePath(@Nullable String relativePath) {
+        public Builder relativePath(String relativePath) {
             return relativePath(Output.of(relativePath));
         }
 

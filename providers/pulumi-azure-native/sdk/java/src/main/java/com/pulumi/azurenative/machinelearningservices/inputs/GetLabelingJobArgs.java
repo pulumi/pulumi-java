@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeJobInstructions")
-    private Output</* @Nullable */ Boolean> includeJobInstructions;
+    private @Nullable Output<Boolean> includeJobInstructions;
 
     /**
      * @return Boolean value to indicate whether to include JobInstructions in response.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeJobInstructions() {
-        return this.includeJobInstructions;
+    public Optional<Output<Boolean>> includeJobInstructions() {
+        return Optional.ofNullable(this.includeJobInstructions);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeLabelCategories")
-    private Output</* @Nullable */ Boolean> includeLabelCategories;
+    private @Nullable Output<Boolean> includeLabelCategories;
 
     /**
      * @return Boolean value to indicate whether to include LabelCategories in response.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeLabelCategories() {
-        return this.includeLabelCategories;
+    public Optional<Output<Boolean>> includeLabelCategories() {
+        return Optional.ofNullable(this.includeLabelCategories);
     }
 
     /**
@@ -124,7 +125,7 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeJobInstructions(Output</* @Nullable */ Boolean> includeJobInstructions) {
+        public Builder includeJobInstructions(@Nullable Output<Boolean> includeJobInstructions) {
             $.includeJobInstructions = includeJobInstructions;
             return this;
         }
@@ -135,7 +136,7 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeJobInstructions(@Nullable Boolean includeJobInstructions) {
+        public Builder includeJobInstructions(Boolean includeJobInstructions) {
             return includeJobInstructions(Output.of(includeJobInstructions));
         }
 
@@ -145,7 +146,7 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeLabelCategories(Output</* @Nullable */ Boolean> includeLabelCategories) {
+        public Builder includeLabelCategories(@Nullable Output<Boolean> includeLabelCategories) {
             $.includeLabelCategories = includeLabelCategories;
             return this;
         }
@@ -156,7 +157,7 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeLabelCategories(@Nullable Boolean includeLabelCategories) {
+        public Builder includeLabelCategories(Boolean includeLabelCategories) {
             return includeLabelCategories(Output.of(includeLabelCategories));
         }
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domainOwner")
-    private Output</* @Nullable */ String> domainOwner;
+    private @Nullable Output<String> domainOwner;
 
     /**
      * @return The account number of the AWS account that owns the domain.
      * 
      */
-    public Output</* @Nullable */ String> domainOwner() {
-        return this.domainOwner;
+    public Optional<Output<String>> domainOwner() {
+        return Optional.ofNullable(this.domainOwner);
     }
 
     /**
@@ -128,7 +129,7 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder domainOwner(Output</* @Nullable */ String> domainOwner) {
+        public Builder domainOwner(@Nullable Output<String> domainOwner) {
             $.domainOwner = domainOwner;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder domainOwner(@Nullable String domainOwner) {
+        public Builder domainOwner(String domainOwner) {
             return domainOwner(Output.of(domainOwner));
         }
 

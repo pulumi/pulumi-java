@@ -5,11 +5,12 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDatabaseSoftwareImagesFilter;
+import com.pulumi.oci.Database.inputs.GetDatabaseSoftwareImagesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,21 +38,21 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDatabaseSoftwareImagesFilter>> filters;
+    private @Nullable Output<List<GetDatabaseSoftwareImagesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDatabaseSoftwareImagesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDatabaseSoftwareImagesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="imageShapeFamily")
-    private Output</* @Nullable */ String> imageShapeFamily;
+    private @Nullable Output<String> imageShapeFamily;
 
     /**
      * @return A filter to return only resources that match the given image shape family exactly.
      * 
      */
-    public Output</* @Nullable */ String> imageShapeFamily() {
-        return this.imageShapeFamily;
+    public Optional<Output<String>> imageShapeFamily() {
+        return Optional.ofNullable(this.imageShapeFamily);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="imageType")
-    private Output</* @Nullable */ String> imageType;
+    private @Nullable Output<String> imageType;
 
     /**
      * @return A filter to return only resources that match the given image type exactly.
      * 
      */
-    public Output</* @Nullable */ String> imageType() {
-        return this.imageType;
+    public Optional<Output<String>> imageType() {
+        return Optional.ofNullable(this.imageType);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="isUpgradeSupported")
-    private Output</* @Nullable */ Boolean> isUpgradeSupported;
+    private @Nullable Output<Boolean> isUpgradeSupported;
 
     /**
      * @return If provided, filters the results to the set of database versions which are supported for Upgrade.
      * 
      */
-    public Output</* @Nullable */ Boolean> isUpgradeSupported() {
-        return this.isUpgradeSupported;
+    public Optional<Output<Boolean>> isUpgradeSupported() {
+        return Optional.ofNullable(this.isUpgradeSupported);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetDatabaseSoftwareImagesArgs() {}
@@ -171,7 +172,7 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -182,20 +183,20 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDatabaseSoftwareImagesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabaseSoftwareImagesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDatabaseSoftwareImagesFilter> filters) {
+        public Builder filters(List<GetDatabaseSoftwareImagesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDatabaseSoftwareImagesFilter... filters) {
+        public Builder filters(GetDatabaseSoftwareImagesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -205,7 +206,7 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder imageShapeFamily(Output</* @Nullable */ String> imageShapeFamily) {
+        public Builder imageShapeFamily(@Nullable Output<String> imageShapeFamily) {
             $.imageShapeFamily = imageShapeFamily;
             return this;
         }
@@ -216,7 +217,7 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder imageShapeFamily(@Nullable String imageShapeFamily) {
+        public Builder imageShapeFamily(String imageShapeFamily) {
             return imageShapeFamily(Output.of(imageShapeFamily));
         }
 
@@ -226,7 +227,7 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder imageType(Output</* @Nullable */ String> imageType) {
+        public Builder imageType(@Nullable Output<String> imageType) {
             $.imageType = imageType;
             return this;
         }
@@ -237,7 +238,7 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder imageType(@Nullable String imageType) {
+        public Builder imageType(String imageType) {
             return imageType(Output.of(imageType));
         }
 
@@ -247,7 +248,7 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder isUpgradeSupported(Output</* @Nullable */ Boolean> isUpgradeSupported) {
+        public Builder isUpgradeSupported(@Nullable Output<Boolean> isUpgradeSupported) {
             $.isUpgradeSupported = isUpgradeSupported;
             return this;
         }
@@ -258,7 +259,7 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder isUpgradeSupported(@Nullable Boolean isUpgradeSupported) {
+        public Builder isUpgradeSupported(Boolean isUpgradeSupported) {
             return isUpgradeSupported(Output.of(isUpgradeSupported));
         }
 
@@ -268,7 +269,7 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -279,7 +280,7 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

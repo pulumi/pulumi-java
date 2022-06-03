@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="registryId")
-    private Output</* @Nullable */ String> registryId;
+    private @Nullable Output<String> registryId;
 
     /**
      * @return AWS account ID of the ECR Repository. If not specified the default account is assumed.
      * 
      */
-    public Output</* @Nullable */ String> registryId() {
-        return this.registryId;
+    public Optional<Output<String>> registryId() {
+        return Optional.ofNullable(this.registryId);
     }
 
     private GetAuthorizationTokenArgs() {}
@@ -59,7 +60,7 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder registryId(Output</* @Nullable */ String> registryId) {
+        public Builder registryId(@Nullable Output<String> registryId) {
             $.registryId = registryId;
             return this;
         }
@@ -70,7 +71,7 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder registryId(@Nullable String registryId) {
+        public Builder registryId(String registryId) {
             return registryId(Output.of(registryId));
         }
 

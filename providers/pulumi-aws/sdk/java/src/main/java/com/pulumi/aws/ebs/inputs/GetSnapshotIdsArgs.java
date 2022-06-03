@@ -3,12 +3,13 @@
 
 package com.pulumi.aws.ebs.inputs;
 
-import com.pulumi.aws.ebs.inputs.GetSnapshotIdsFilter;
+import com.pulumi.aws.ebs.inputs.GetSnapshotIdsFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +24,7 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSnapshotIdsFilter>> filters;
+    private @Nullable Output<List<GetSnapshotIdsFilterArgs>> filters;
 
     /**
      * @return One or more name/value pairs to filter off of. There are
@@ -31,8 +32,8 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
      * [describe-volumes in the AWS CLI reference][1].
      * 
      */
-    public Output</* @Nullable */ List<GetSnapshotIdsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSnapshotIdsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -40,14 +41,14 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owners")
-    private Output</* @Nullable */ List<String>> owners;
+    private @Nullable Output<List<String>> owners;
 
     /**
      * @return Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
      * 
      */
-    public Output</* @Nullable */ List<String>> owners() {
-        return this.owners;
+    public Optional<Output<List<String>>> owners() {
+        return Optional.ofNullable(this.owners);
     }
 
     /**
@@ -55,14 +56,14 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restorableByUserIds")
-    private Output</* @Nullable */ List<String>> restorableByUserIds;
+    private @Nullable Output<List<String>> restorableByUserIds;
 
     /**
      * @return One or more AWS accounts IDs that can create volumes from the snapshot.
      * 
      */
-    public Output</* @Nullable */ List<String>> restorableByUserIds() {
-        return this.restorableByUserIds;
+    public Optional<Output<List<String>>> restorableByUserIds() {
+        return Optional.ofNullable(this.restorableByUserIds);
     }
 
     private GetSnapshotIdsArgs() {}
@@ -99,7 +100,7 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetSnapshotIdsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSnapshotIdsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -112,7 +113,7 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetSnapshotIdsFilter> filters) {
+        public Builder filters(List<GetSnapshotIdsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -124,7 +125,7 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetSnapshotIdsFilter... filters) {
+        public Builder filters(GetSnapshotIdsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -134,7 +135,7 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder owners(Output</* @Nullable */ List<String>> owners) {
+        public Builder owners(@Nullable Output<List<String>> owners) {
             $.owners = owners;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder owners(@Nullable List<String> owners) {
+        public Builder owners(List<String> owners) {
             return owners(Output.of(owners));
         }
 
@@ -165,7 +166,7 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder restorableByUserIds(Output</* @Nullable */ List<String>> restorableByUserIds) {
+        public Builder restorableByUserIds(@Nullable Output<List<String>> restorableByUserIds) {
             $.restorableByUserIds = restorableByUserIds;
             return this;
         }
@@ -176,7 +177,7 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder restorableByUserIds(@Nullable List<String> restorableByUserIds) {
+        public Builder restorableByUserIds(List<String> restorableByUserIds) {
             return restorableByUserIds(Output.of(restorableByUserIds));
         }
 

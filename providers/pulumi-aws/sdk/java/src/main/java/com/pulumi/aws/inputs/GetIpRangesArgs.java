@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +23,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regions")
-    private Output</* @Nullable */ List<String>> regions;
+    private @Nullable Output<List<String>> regions;
 
     /**
      * @return Filter IP ranges by regions (or include all regions, if
@@ -30,8 +31,8 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
      * (e.g., `eu-central-1`)
      * 
      */
-    public Output</* @Nullable */ List<String>> regions() {
-        return this.regions;
+    public Optional<Output<List<String>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     /**
@@ -62,14 +63,14 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url")
-    private Output</* @Nullable */ String> url;
+    private @Nullable Output<String> url;
 
     /**
      * @return Custom URL for source JSON file. Syntax must match [AWS IP Address Ranges documentation](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html). Defaults to `https://ip-ranges.amazonaws.com/ip-ranges.json`.
      * 
      */
-    public Output</* @Nullable */ String> url() {
-        return this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
     private GetIpRangesArgs() {}
@@ -106,7 +107,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder regions(Output</* @Nullable */ List<String>> regions) {
+        public Builder regions(@Nullable Output<List<String>> regions) {
             $.regions = regions;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder regions(@Nullable List<String> regions) {
+        public Builder regions(List<String> regions) {
             return regions(Output.of(regions));
         }
 
@@ -184,7 +185,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder url(Output</* @Nullable */ String> url) {
+        public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
@@ -195,7 +196,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder url(@Nullable String url) {
+        public Builder url(String url) {
             return url(Output.of(url));
         }
 

@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetObjectArgs Empty = new GetObjectArgs();
 
     @Import(name="base64EncodeContent")
-    private Output</* @Nullable */ Boolean> base64EncodeContent;
+    private @Nullable Output<Boolean> base64EncodeContent;
 
-    public Output</* @Nullable */ Boolean> base64EncodeContent() {
-        return this.base64EncodeContent;
+    public Optional<Output<Boolean>> base64EncodeContent() {
+        return Optional.ofNullable(this.base64EncodeContent);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentLengthLimit")
-    private Output</* @Nullable */ Integer> contentLengthLimit;
+    private @Nullable Output<Integer> contentLengthLimit;
 
     /**
      * @return The limit of the content length of the object body to download from the object store. The default is 1Mb.
      * 
      */
-    public Output</* @Nullable */ Integer> contentLengthLimit() {
-        return this.contentLengthLimit;
+    public Optional<Output<Integer>> contentLengthLimit() {
+        return Optional.ofNullable(this.contentLengthLimit);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseCacheControl")
-    private Output</* @Nullable */ String> httpResponseCacheControl;
+    private @Nullable Output<String> httpResponseCacheControl;
 
     /**
      * @return Specify this query parameter to override the Cache-Control response header in the GetObject response.
      * 
      */
-    public Output</* @Nullable */ String> httpResponseCacheControl() {
-        return this.httpResponseCacheControl;
+    public Optional<Output<String>> httpResponseCacheControl() {
+        return Optional.ofNullable(this.httpResponseCacheControl);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseContentDisposition")
-    private Output</* @Nullable */ String> httpResponseContentDisposition;
+    private @Nullable Output<String> httpResponseContentDisposition;
 
     /**
      * @return Specify this query parameter to override the value of the Content-Disposition response header in the GetObject response.
      * 
      */
-    public Output</* @Nullable */ String> httpResponseContentDisposition() {
-        return this.httpResponseContentDisposition;
+    public Optional<Output<String>> httpResponseContentDisposition() {
+        return Optional.ofNullable(this.httpResponseContentDisposition);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseContentEncoding")
-    private Output</* @Nullable */ String> httpResponseContentEncoding;
+    private @Nullable Output<String> httpResponseContentEncoding;
 
     /**
      * @return Specify this query parameter to override the Content-Encoding response header in the GetObject response.
      * 
      */
-    public Output</* @Nullable */ String> httpResponseContentEncoding() {
-        return this.httpResponseContentEncoding;
+    public Optional<Output<String>> httpResponseContentEncoding() {
+        return Optional.ofNullable(this.httpResponseContentEncoding);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseContentLanguage")
-    private Output</* @Nullable */ String> httpResponseContentLanguage;
+    private @Nullable Output<String> httpResponseContentLanguage;
 
     /**
      * @return Specify this query parameter to override the Content-Language response header in the GetObject response.
      * 
      */
-    public Output</* @Nullable */ String> httpResponseContentLanguage() {
-        return this.httpResponseContentLanguage;
+    public Optional<Output<String>> httpResponseContentLanguage() {
+        return Optional.ofNullable(this.httpResponseContentLanguage);
     }
 
     /**
@@ -118,14 +119,14 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseContentType")
-    private Output</* @Nullable */ String> httpResponseContentType;
+    private @Nullable Output<String> httpResponseContentType;
 
     /**
      * @return Specify this query parameter to override the Content-Type response header in the GetObject response.
      * 
      */
-    public Output</* @Nullable */ String> httpResponseContentType() {
-        return this.httpResponseContentType;
+    public Optional<Output<String>> httpResponseContentType() {
+        return Optional.ofNullable(this.httpResponseContentType);
     }
 
     /**
@@ -133,14 +134,14 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseExpires")
-    private Output</* @Nullable */ String> httpResponseExpires;
+    private @Nullable Output<String> httpResponseExpires;
 
     /**
      * @return Specify this query parameter to override the Expires response header in the GetObject response.
      * 
      */
-    public Output</* @Nullable */ String> httpResponseExpires() {
-        return this.httpResponseExpires;
+    public Optional<Output<String>> httpResponseExpires() {
+        return Optional.ofNullable(this.httpResponseExpires);
     }
 
     /**
@@ -178,14 +179,14 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionId")
-    private Output</* @Nullable */ String> versionId;
+    private @Nullable Output<String> versionId;
 
     /**
      * @return VersionId used to identify a particular version of the object
      * 
      */
-    public Output</* @Nullable */ String> versionId() {
-        return this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
     private GetObjectArgs() {}
@@ -223,12 +224,12 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetObjectArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder base64EncodeContent(Output</* @Nullable */ Boolean> base64EncodeContent) {
+        public Builder base64EncodeContent(@Nullable Output<Boolean> base64EncodeContent) {
             $.base64EncodeContent = base64EncodeContent;
             return this;
         }
 
-        public Builder base64EncodeContent(@Nullable Boolean base64EncodeContent) {
+        public Builder base64EncodeContent(Boolean base64EncodeContent) {
             return base64EncodeContent(Output.of(base64EncodeContent));
         }
 
@@ -259,7 +260,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contentLengthLimit(Output</* @Nullable */ Integer> contentLengthLimit) {
+        public Builder contentLengthLimit(@Nullable Output<Integer> contentLengthLimit) {
             $.contentLengthLimit = contentLengthLimit;
             return this;
         }
@@ -270,7 +271,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contentLengthLimit(@Nullable Integer contentLengthLimit) {
+        public Builder contentLengthLimit(Integer contentLengthLimit) {
             return contentLengthLimit(Output.of(contentLengthLimit));
         }
 
@@ -280,7 +281,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseCacheControl(Output</* @Nullable */ String> httpResponseCacheControl) {
+        public Builder httpResponseCacheControl(@Nullable Output<String> httpResponseCacheControl) {
             $.httpResponseCacheControl = httpResponseCacheControl;
             return this;
         }
@@ -291,7 +292,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseCacheControl(@Nullable String httpResponseCacheControl) {
+        public Builder httpResponseCacheControl(String httpResponseCacheControl) {
             return httpResponseCacheControl(Output.of(httpResponseCacheControl));
         }
 
@@ -301,7 +302,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentDisposition(Output</* @Nullable */ String> httpResponseContentDisposition) {
+        public Builder httpResponseContentDisposition(@Nullable Output<String> httpResponseContentDisposition) {
             $.httpResponseContentDisposition = httpResponseContentDisposition;
             return this;
         }
@@ -312,7 +313,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentDisposition(@Nullable String httpResponseContentDisposition) {
+        public Builder httpResponseContentDisposition(String httpResponseContentDisposition) {
             return httpResponseContentDisposition(Output.of(httpResponseContentDisposition));
         }
 
@@ -322,7 +323,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentEncoding(Output</* @Nullable */ String> httpResponseContentEncoding) {
+        public Builder httpResponseContentEncoding(@Nullable Output<String> httpResponseContentEncoding) {
             $.httpResponseContentEncoding = httpResponseContentEncoding;
             return this;
         }
@@ -333,7 +334,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentEncoding(@Nullable String httpResponseContentEncoding) {
+        public Builder httpResponseContentEncoding(String httpResponseContentEncoding) {
             return httpResponseContentEncoding(Output.of(httpResponseContentEncoding));
         }
 
@@ -343,7 +344,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentLanguage(Output</* @Nullable */ String> httpResponseContentLanguage) {
+        public Builder httpResponseContentLanguage(@Nullable Output<String> httpResponseContentLanguage) {
             $.httpResponseContentLanguage = httpResponseContentLanguage;
             return this;
         }
@@ -354,7 +355,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentLanguage(@Nullable String httpResponseContentLanguage) {
+        public Builder httpResponseContentLanguage(String httpResponseContentLanguage) {
             return httpResponseContentLanguage(Output.of(httpResponseContentLanguage));
         }
 
@@ -364,7 +365,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentType(Output</* @Nullable */ String> httpResponseContentType) {
+        public Builder httpResponseContentType(@Nullable Output<String> httpResponseContentType) {
             $.httpResponseContentType = httpResponseContentType;
             return this;
         }
@@ -375,7 +376,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentType(@Nullable String httpResponseContentType) {
+        public Builder httpResponseContentType(String httpResponseContentType) {
             return httpResponseContentType(Output.of(httpResponseContentType));
         }
 
@@ -385,7 +386,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseExpires(Output</* @Nullable */ String> httpResponseExpires) {
+        public Builder httpResponseExpires(@Nullable Output<String> httpResponseExpires) {
             $.httpResponseExpires = httpResponseExpires;
             return this;
         }
@@ -396,7 +397,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseExpires(@Nullable String httpResponseExpires) {
+        public Builder httpResponseExpires(String httpResponseExpires) {
             return httpResponseExpires(Output.of(httpResponseExpires));
         }
 
@@ -448,7 +449,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder versionId(Output</* @Nullable */ String> versionId) {
+        public Builder versionId(@Nullable Output<String> versionId) {
             $.versionId = versionId;
             return this;
         }
@@ -459,7 +460,7 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder versionId(@Nullable String versionId) {
+        public Builder versionId(String versionId) {
             return versionId(Output.of(versionId));
         }
 

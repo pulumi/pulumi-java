@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseTools.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseTools.inputs.GetDatabaseToolsEndpointServicesFilter;
+import com.pulumi.oci.DatabaseTools.inputs.GetDatabaseToolsEndpointServicesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDatabaseToolsEndpointServicesFilter>> filters;
+    private @Nullable Output<List<GetDatabaseToolsEndpointServicesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDatabaseToolsEndpointServicesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDatabaseToolsEndpointServicesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name given.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources their lifecycleState matches the given lifecycleState.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetDatabaseToolsEndpointServicesArgs() {}
@@ -138,7 +139,7 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,20 +150,20 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDatabaseToolsEndpointServicesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabaseToolsEndpointServicesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDatabaseToolsEndpointServicesFilter> filters) {
+        public Builder filters(List<GetDatabaseToolsEndpointServicesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDatabaseToolsEndpointServicesFilter... filters) {
+        public Builder filters(GetDatabaseToolsEndpointServicesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -193,7 +194,7 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

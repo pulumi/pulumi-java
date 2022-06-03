@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="adNumber")
-    private Output</* @Nullable */ Integer> adNumber;
+    private @Nullable Output<Integer> adNumber;
 
     /**
      * @return The number of the Availability Domain. Required if `id` is not specified. This number corresponds to the integer in the Availability Domain `name`.
      * 
      */
-    public Output</* @Nullable */ Integer> adNumber() {
-        return this.adNumber;
+    public Optional<Output<Integer>> adNumber() {
+        return Optional.ofNullable(this.adNumber);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The OCID of the Availability Domain. Required if `ad_number` is not specified.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     private GetAvailabilityDomainArgs() {}
@@ -92,7 +93,7 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder adNumber(Output</* @Nullable */ Integer> adNumber) {
+        public Builder adNumber(@Nullable Output<Integer> adNumber) {
             $.adNumber = adNumber;
             return this;
         }
@@ -103,7 +104,7 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder adNumber(@Nullable Integer adNumber) {
+        public Builder adNumber(Integer adNumber) {
             return adNumber(Output.of(adNumber));
         }
 
@@ -134,7 +135,7 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetAvailabilityDomainArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 

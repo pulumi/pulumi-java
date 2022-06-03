@@ -5,10 +5,11 @@ package com.pulumi.oci.MeteringComputation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.MeteringComputation.inputs.GetQueriesFilter;
+import com.pulumi.oci.MeteringComputation.inputs.GetQueriesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetQueriesArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetQueriesFilter>> filters;
+    private @Nullable Output<List<GetQueriesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetQueriesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetQueriesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetQueriesArgs() {}
@@ -84,16 +85,16 @@ public final class GetQueriesArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetQueriesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetQueriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetQueriesFilter> filters) {
+        public Builder filters(List<GetQueriesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetQueriesFilter... filters) {
+        public Builder filters(GetQueriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

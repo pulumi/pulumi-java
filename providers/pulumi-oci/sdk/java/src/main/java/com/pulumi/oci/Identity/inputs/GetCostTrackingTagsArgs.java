@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetCostTrackingTagsFilter;
+import com.pulumi.oci.Identity.inputs.GetCostTrackingTagsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetCostTrackingTagsArgs extends com.pulumi.resources.InvokeAr
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetCostTrackingTagsFilter>> filters;
+    private @Nullable Output<List<GetCostTrackingTagsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetCostTrackingTagsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetCostTrackingTagsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetCostTrackingTagsArgs() {}
@@ -84,16 +85,16 @@ public final class GetCostTrackingTagsArgs extends com.pulumi.resources.InvokeAr
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetCostTrackingTagsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetCostTrackingTagsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCostTrackingTagsFilter> filters) {
+        public Builder filters(List<GetCostTrackingTagsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetCostTrackingTagsFilter... filters) {
+        public Builder filters(GetCostTrackingTagsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

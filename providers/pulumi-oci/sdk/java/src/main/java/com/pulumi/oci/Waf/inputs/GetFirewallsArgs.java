@@ -5,10 +5,11 @@ package com.pulumi.oci.Waf.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Waf.inputs.GetFirewallsFilter;
+import com.pulumi.oci.Waf.inputs.GetFirewallsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetFirewallsFilter>> filters;
+    private @Nullable Output<List<GetFirewallsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetFirewallsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetFirewallsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return A filter to return only the WebAppFirewall with the given [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="states")
-    private Output</* @Nullable */ List<String>> states;
+    private @Nullable Output<List<String>> states;
 
     /**
      * @return A filter to return only resources that match the given lifecycleState.
      * 
      */
-    public Output</* @Nullable */ List<String>> states() {
-        return this.states;
+    public Optional<Output<List<String>>> states() {
+        return Optional.ofNullable(this.states);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="webAppFirewallPolicyId")
-    private Output</* @Nullable */ String> webAppFirewallPolicyId;
+    private @Nullable Output<String> webAppFirewallPolicyId;
 
     /**
      * @return A filter to return only the WebAppFirewall with the given [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of related WebAppFirewallPolicy.
      * 
      */
-    public Output</* @Nullable */ String> webAppFirewallPolicyId() {
-        return this.webAppFirewallPolicyId;
+    public Optional<Output<String>> webAppFirewallPolicyId() {
+        return Optional.ofNullable(this.webAppFirewallPolicyId);
     }
 
     private GetFirewallsArgs() {}
@@ -154,7 +155,7 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -165,20 +166,20 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetFirewallsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetFirewallsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetFirewallsFilter> filters) {
+        public Builder filters(List<GetFirewallsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetFirewallsFilter... filters) {
+        public Builder filters(GetFirewallsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -188,7 +189,7 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -199,7 +200,7 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -209,7 +210,7 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder states(Output</* @Nullable */ List<String>> states) {
+        public Builder states(@Nullable Output<List<String>> states) {
             $.states = states;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder states(@Nullable List<String> states) {
+        public Builder states(List<String> states) {
             return states(Output.of(states));
         }
 
@@ -240,7 +241,7 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder webAppFirewallPolicyId(Output</* @Nullable */ String> webAppFirewallPolicyId) {
+        public Builder webAppFirewallPolicyId(@Nullable Output<String> webAppFirewallPolicyId) {
             $.webAppFirewallPolicyId = webAppFirewallPolicyId;
             return this;
         }
@@ -251,7 +252,7 @@ public final class GetFirewallsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder webAppFirewallPolicyId(@Nullable String webAppFirewallPolicyId) {
+        public Builder webAppFirewallPolicyId(String webAppFirewallPolicyId) {
             return webAppFirewallPolicyId(Output.of(webAppFirewallPolicyId));
         }
 

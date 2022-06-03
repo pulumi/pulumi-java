@@ -5,10 +5,11 @@ package com.pulumi.oci.ObjectStorage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ObjectStorage.inputs.GetPreauthrequestsFilter;
+import com.pulumi.oci.ObjectStorage.inputs.GetPreauthrequestsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetPreauthrequestsArgs extends com.pulumi.resources.InvokeArg
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetPreauthrequestsFilter>> filters;
+    private @Nullable Output<List<GetPreauthrequestsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetPreauthrequestsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetPreauthrequestsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetPreauthrequestsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="objectNamePrefix")
-    private Output</* @Nullable */ String> objectNamePrefix;
+    private @Nullable Output<String> objectNamePrefix;
 
     /**
      * @return User-specified object name prefixes can be used to query and return a list of pre-authenticated requests.
      * 
      */
-    public Output</* @Nullable */ String> objectNamePrefix() {
-        return this.objectNamePrefix;
+    public Optional<Output<String>> objectNamePrefix() {
+        return Optional.ofNullable(this.objectNamePrefix);
     }
 
     private GetPreauthrequestsArgs() {}
@@ -116,16 +117,16 @@ public final class GetPreauthrequestsArgs extends com.pulumi.resources.InvokeArg
             return bucket(Output.of(bucket));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetPreauthrequestsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetPreauthrequestsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPreauthrequestsFilter> filters) {
+        public Builder filters(List<GetPreauthrequestsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetPreauthrequestsFilter... filters) {
+        public Builder filters(GetPreauthrequestsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -156,7 +157,7 @@ public final class GetPreauthrequestsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder objectNamePrefix(Output</* @Nullable */ String> objectNamePrefix) {
+        public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
             $.objectNamePrefix = objectNamePrefix;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetPreauthrequestsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
+        public Builder objectNamePrefix(String objectNamePrefix) {
             return objectNamePrefix(Output.of(objectNamePrefix));
         }
 

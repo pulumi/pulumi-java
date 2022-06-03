@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetNetworkSecurityGroupSecurityRulesFilter;
+import com.pulumi.oci.Core.inputs.GetNetworkSecurityGroupSecurityRulesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +22,21 @@ public final class GetNetworkSecurityGroupSecurityRulesArgs extends com.pulumi.r
      * 
      */
     @Import(name="direction")
-    private Output</* @Nullable */ String> direction;
+    private @Nullable Output<String> direction;
 
     /**
      * @return Direction of the security rule. Set to `EGRESS` for rules that allow outbound IP packets, or `INGRESS` for rules that allow inbound IP packets.
      * 
      */
-    public Output</* @Nullable */ String> direction() {
-        return this.direction;
+    public Optional<Output<String>> direction() {
+        return Optional.ofNullable(this.direction);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetNetworkSecurityGroupSecurityRulesFilter>> filters;
+    private @Nullable Output<List<GetNetworkSecurityGroupSecurityRulesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetNetworkSecurityGroupSecurityRulesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetNetworkSecurityGroupSecurityRulesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -85,7 +86,7 @@ public final class GetNetworkSecurityGroupSecurityRulesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder direction(Output</* @Nullable */ String> direction) {
+        public Builder direction(@Nullable Output<String> direction) {
             $.direction = direction;
             return this;
         }
@@ -96,20 +97,20 @@ public final class GetNetworkSecurityGroupSecurityRulesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder direction(@Nullable String direction) {
+        public Builder direction(String direction) {
             return direction(Output.of(direction));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetNetworkSecurityGroupSecurityRulesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetNetworkSecurityGroupSecurityRulesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetNetworkSecurityGroupSecurityRulesFilter> filters) {
+        public Builder filters(List<GetNetworkSecurityGroupSecurityRulesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetNetworkSecurityGroupSecurityRulesFilter... filters) {
+        public Builder filters(GetNetworkSecurityGroupSecurityRulesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

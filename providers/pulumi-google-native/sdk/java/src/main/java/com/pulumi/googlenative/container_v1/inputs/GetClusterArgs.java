@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,24 +30,24 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="projectId")
-    private Output</* @Nullable */ String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output</* @Nullable */ String> projectId() {
-        return this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     @Import(name="zone")
-    private Output</* @Nullable */ String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output</* @Nullable */ String> zone() {
-        return this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
     private GetClusterArgs() {}
@@ -95,30 +96,30 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
             return location(Output.of(location));
         }
 
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
-        public Builder projectId(Output</* @Nullable */ String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
-        public Builder projectId(@Nullable String projectId) {
+        public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
-        public Builder zone(Output</* @Nullable */ String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
 
-        public Builder zone(@Nullable String zone) {
+        public Builder zone(String zone) {
             return zone(Output.of(zone));
         }
 

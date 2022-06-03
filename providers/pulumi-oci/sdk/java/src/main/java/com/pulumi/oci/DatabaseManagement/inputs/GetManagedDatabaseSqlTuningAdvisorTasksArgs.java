@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseSqlTuningAdvisorTasksFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseSqlTuningAdvisorTasksFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
     public static final GetManagedDatabaseSqlTuningAdvisorTasksArgs Empty = new GetManagedDatabaseSqlTuningAdvisorTasksArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksFilter>> filters;
+    private @Nullable Output<List<GetManagedDatabaseSqlTuningAdvisorTasksFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagedDatabaseSqlTuningAdvisorTasksFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The optional query parameter to filter the SQL Tuning Advisor task list by name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
      * 
      */
     @Import(name="status")
-    private Output</* @Nullable */ String> status;
+    private @Nullable Output<String> status;
 
     /**
      * @return The optional query parameter to filter the SQL Tuning Advisor task list by status.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
      * 
      */
     @Import(name="timeGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> timeGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeGreaterThanOrEqualTo;
 
     /**
      * @return The optional greater than or equal to query parameter to filter the timestamp.
      * 
      */
-    public Output</* @Nullable */ String> timeGreaterThanOrEqualTo() {
-        return this.timeGreaterThanOrEqualTo;
+    public Optional<Output<String>> timeGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.timeGreaterThanOrEqualTo);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
      * 
      */
     @Import(name="timeLessThanOrEqualTo")
-    private Output</* @Nullable */ String> timeLessThanOrEqualTo;
+    private @Nullable Output<String> timeLessThanOrEqualTo;
 
     /**
      * @return The optional less than or equal to query parameter to filter the timestamp.
      * 
      */
-    public Output</* @Nullable */ String> timeLessThanOrEqualTo() {
-        return this.timeLessThanOrEqualTo;
+    public Optional<Output<String>> timeLessThanOrEqualTo() {
+        return Optional.ofNullable(this.timeLessThanOrEqualTo);
     }
 
     private GetManagedDatabaseSqlTuningAdvisorTasksArgs() {}
@@ -127,16 +128,16 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
             $ = new GetManagedDatabaseSqlTuningAdvisorTasksArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedDatabaseSqlTuningAdvisorTasksFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabaseSqlTuningAdvisorTasksFilter> filters) {
+        public Builder filters(List<GetManagedDatabaseSqlTuningAdvisorTasksFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagedDatabaseSqlTuningAdvisorTasksFilter... filters) {
+        public Builder filters(GetManagedDatabaseSqlTuningAdvisorTasksFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -167,7 +168,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -178,7 +179,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -188,7 +189,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder status(Output</* @Nullable */ String> status) {
+        public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
@@ -199,7 +200,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder status(@Nullable String status) {
+        public Builder status(String status) {
             return status(Output.of(status));
         }
 
@@ -209,7 +210,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder timeGreaterThanOrEqualTo(Output</* @Nullable */ String> timeGreaterThanOrEqualTo) {
+        public Builder timeGreaterThanOrEqualTo(@Nullable Output<String> timeGreaterThanOrEqualTo) {
             $.timeGreaterThanOrEqualTo = timeGreaterThanOrEqualTo;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder timeGreaterThanOrEqualTo(@Nullable String timeGreaterThanOrEqualTo) {
+        public Builder timeGreaterThanOrEqualTo(String timeGreaterThanOrEqualTo) {
             return timeGreaterThanOrEqualTo(Output.of(timeGreaterThanOrEqualTo));
         }
 
@@ -230,7 +231,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder timeLessThanOrEqualTo(Output</* @Nullable */ String> timeLessThanOrEqualTo) {
+        public Builder timeLessThanOrEqualTo(@Nullable Output<String> timeLessThanOrEqualTo) {
             $.timeLessThanOrEqualTo = timeLessThanOrEqualTo;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder timeLessThanOrEqualTo(@Nullable String timeLessThanOrEqualTo) {
+        public Builder timeLessThanOrEqualTo(String timeLessThanOrEqualTo) {
             return timeLessThanOrEqualTo(Output.of(timeLessThanOrEqualTo));
         }
 

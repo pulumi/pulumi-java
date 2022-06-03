@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetVmClustersFilter;
+import com.pulumi.oci.Database.inputs.GetVmClustersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetVmClustersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetVmClustersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exadataInfrastructureId")
-    private Output</* @Nullable */ String> exadataInfrastructureId;
+    private @Nullable Output<String> exadataInfrastructureId;
 
     /**
      * @return If provided, filters the results for the given Exadata Infrastructure.
      * 
      */
-    public Output</* @Nullable */ String> exadataInfrastructureId() {
-        return this.exadataInfrastructureId;
+    public Optional<Output<String>> exadataInfrastructureId() {
+        return Optional.ofNullable(this.exadataInfrastructureId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetVmClustersFilter>> filters;
+    private @Nullable Output<List<GetVmClustersFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetVmClustersFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetVmClustersFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetVmClustersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetVmClustersArgs() {}
@@ -138,7 +139,7 @@ public final class GetVmClustersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,7 +150,7 @@ public final class GetVmClustersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -159,7 +160,7 @@ public final class GetVmClustersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder exadataInfrastructureId(Output</* @Nullable */ String> exadataInfrastructureId) {
+        public Builder exadataInfrastructureId(@Nullable Output<String> exadataInfrastructureId) {
             $.exadataInfrastructureId = exadataInfrastructureId;
             return this;
         }
@@ -170,20 +171,20 @@ public final class GetVmClustersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder exadataInfrastructureId(@Nullable String exadataInfrastructureId) {
+        public Builder exadataInfrastructureId(String exadataInfrastructureId) {
             return exadataInfrastructureId(Output.of(exadataInfrastructureId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetVmClustersFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetVmClustersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetVmClustersFilter> filters) {
+        public Builder filters(List<GetVmClustersFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetVmClustersFilter... filters) {
+        public Builder filters(GetVmClustersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -193,7 +194,7 @@ public final class GetVmClustersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetVmClustersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

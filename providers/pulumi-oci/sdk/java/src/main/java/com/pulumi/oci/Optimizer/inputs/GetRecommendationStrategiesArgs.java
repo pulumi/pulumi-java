@@ -5,11 +5,12 @@ package com.pulumi.oci.Optimizer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Optimizer.inputs.GetRecommendationStrategiesFilter;
+import com.pulumi.oci.Optimizer.inputs.GetRecommendationStrategiesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -48,10 +49,10 @@ public final class GetRecommendationStrategiesArgs extends com.pulumi.resources.
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetRecommendationStrategiesFilter>> filters;
+    private @Nullable Output<List<GetRecommendationStrategiesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetRecommendationStrategiesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetRecommendationStrategiesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetRecommendationStrategiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Optional. A filter that returns results that match the name specified.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetRecommendationStrategiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="recommendationName")
-    private Output</* @Nullable */ String> recommendationName;
+    private @Nullable Output<String> recommendationName;
 
     /**
      * @return Optional. A filter that returns results that match the recommendation name specified.
      * 
      */
-    public Output</* @Nullable */ String> recommendationName() {
-        return this.recommendationName;
+    public Optional<Output<String>> recommendationName() {
+        return Optional.ofNullable(this.recommendationName);
     }
 
     private GetRecommendationStrategiesArgs() {}
@@ -154,16 +155,16 @@ public final class GetRecommendationStrategiesArgs extends com.pulumi.resources.
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetRecommendationStrategiesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetRecommendationStrategiesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRecommendationStrategiesFilter> filters) {
+        public Builder filters(List<GetRecommendationStrategiesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetRecommendationStrategiesFilter... filters) {
+        public Builder filters(GetRecommendationStrategiesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -173,7 +174,7 @@ public final class GetRecommendationStrategiesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -184,7 +185,7 @@ public final class GetRecommendationStrategiesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -194,7 +195,7 @@ public final class GetRecommendationStrategiesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder recommendationName(Output</* @Nullable */ String> recommendationName) {
+        public Builder recommendationName(@Nullable Output<String> recommendationName) {
             $.recommendationName = recommendationName;
             return this;
         }
@@ -205,7 +206,7 @@ public final class GetRecommendationStrategiesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder recommendationName(@Nullable String recommendationName) {
+        public Builder recommendationName(String recommendationName) {
             return recommendationName(Output.of(recommendationName));
         }
 

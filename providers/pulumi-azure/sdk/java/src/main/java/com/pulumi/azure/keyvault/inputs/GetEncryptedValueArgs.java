@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="encryptedData")
-    private Output</* @Nullable */ String> encryptedData;
+    private @Nullable Output<String> encryptedData;
 
     /**
      * @return The Base64 URL Encoded Encrypted Data which should be decrypted into `plain_text_value`.
      * 
      */
-    public Output</* @Nullable */ String> encryptedData() {
-        return this.encryptedData;
+    public Optional<Output<String>> encryptedData() {
+        return Optional.ofNullable(this.encryptedData);
     }
 
     /**
@@ -64,14 +65,14 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="plainTextValue")
-    private Output</* @Nullable */ String> plainTextValue;
+    private @Nullable Output<String> plainTextValue;
 
     /**
      * @return The plain-text value which should be Encrypted into `encrypted_data`.
      * 
      */
-    public Output</* @Nullable */ String> plainTextValue() {
-        return this.plainTextValue;
+    public Optional<Output<String>> plainTextValue() {
+        return Optional.ofNullable(this.plainTextValue);
     }
 
     private GetEncryptedValueArgs() {}
@@ -128,7 +129,7 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder encryptedData(Output</* @Nullable */ String> encryptedData) {
+        public Builder encryptedData(@Nullable Output<String> encryptedData) {
             $.encryptedData = encryptedData;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder encryptedData(@Nullable String encryptedData) {
+        public Builder encryptedData(String encryptedData) {
             return encryptedData(Output.of(encryptedData));
         }
 
@@ -170,7 +171,7 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder plainTextValue(Output</* @Nullable */ String> plainTextValue) {
+        public Builder plainTextValue(@Nullable Output<String> plainTextValue) {
             $.plainTextValue = plainTextValue;
             return this;
         }
@@ -181,7 +182,7 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder plainTextValue(@Nullable String plainTextValue) {
+        public Builder plainTextValue(String plainTextValue) {
             return plainTextValue(Output.of(plainTextValue));
         }
 

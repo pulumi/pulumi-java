@@ -5,11 +5,12 @@ package com.pulumi.oci.CloudGuard.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.CloudGuard.inputs.GetDetectorRecipesFilter;
+import com.pulumi.oci.CloudGuard.inputs.GetDetectorRecipesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="accessLevel")
-    private Output</* @Nullable */ String> accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are `RESTRICTED` and `ACCESSIBLE`. Default is `RESTRICTED`. Setting this to `ACCESSIBLE` returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to `RESTRICTED` permissions are checked and no partial results are displayed.
      * 
      */
-    public Output</* @Nullable */ String> accessLevel() {
-        return this.accessLevel;
+    public Optional<Output<String>> accessLevel() {
+        return Optional.ofNullable(this.accessLevel);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned depending on the the setting of `accessLevel`.
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     /**
@@ -67,21 +68,21 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDetectorRecipesFilter>> filters;
+    private @Nullable Output<List<GetDetectorRecipesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDetectorRecipesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDetectorRecipesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceMetadataOnly")
-    private Output</* @Nullable */ Boolean> resourceMetadataOnly;
+    private @Nullable Output<Boolean> resourceMetadataOnly;
 
     /**
      * @return Default is false. When set to true, the list of all Oracle Managed Resources Metadata supported by Cloud Guard are returned.
      * 
      */
-    public Output</* @Nullable */ Boolean> resourceMetadataOnly() {
-        return this.resourceMetadataOnly;
+    public Optional<Output<Boolean>> resourceMetadataOnly() {
+        return Optional.ofNullable(this.resourceMetadataOnly);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The field life cycle state. Only one state can be provided. Default value for state is active. If no value is specified state is active.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetDetectorRecipesArgs() {}
@@ -150,7 +151,7 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(String accessLevel) {
             return accessLevel(Output.of(accessLevel));
         }
 
@@ -192,7 +193,7 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -203,7 +204,7 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
@@ -213,7 +214,7 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -224,20 +225,20 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDetectorRecipesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDetectorRecipesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDetectorRecipesFilter> filters) {
+        public Builder filters(List<GetDetectorRecipesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDetectorRecipesFilter... filters) {
+        public Builder filters(GetDetectorRecipesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -247,7 +248,7 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder resourceMetadataOnly(Output</* @Nullable */ Boolean> resourceMetadataOnly) {
+        public Builder resourceMetadataOnly(@Nullable Output<Boolean> resourceMetadataOnly) {
             $.resourceMetadataOnly = resourceMetadataOnly;
             return this;
         }
@@ -258,7 +259,7 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder resourceMetadataOnly(@Nullable Boolean resourceMetadataOnly) {
+        public Builder resourceMetadataOnly(Boolean resourceMetadataOnly) {
             return resourceMetadataOnly(Output.of(resourceMetadataOnly));
         }
 
@@ -268,7 +269,7 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -279,7 +280,7 @@ public final class GetDetectorRecipesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="parameterGroupFamily")
-    private Output</* @Nullable */ String> parameterGroupFamily;
+    private @Nullable Output<String> parameterGroupFamily;
 
     /**
      * @return The name of a specific DB parameter group family. Examples of parameter group families are `mysql8.0`, `mariadb10.4`, and `postgres12`.
      * 
      */
-    public Output</* @Nullable */ String> parameterGroupFamily() {
-        return this.parameterGroupFamily;
+    public Optional<Output<String>> parameterGroupFamily() {
+        return Optional.ofNullable(this.parameterGroupFamily);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="preferredVersions")
-    private Output</* @Nullable */ List<String>> preferredVersions;
+    private @Nullable Output<List<String>> preferredVersions;
 
     /**
      * @return Ordered list of preferred engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
      * 
      */
-    public Output</* @Nullable */ List<String>> preferredVersions() {
-        return this.preferredVersions;
+    public Optional<Output<List<String>>> preferredVersions() {
+        return Optional.ofNullable(this.preferredVersions);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="version")
-    private Output</* @Nullable */ String> version;
+    private @Nullable Output<String> version;
 
     /**
      * @return Version of the DB engine. For example, `5.7.22`, `10.1.34`, and `12.3`. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     private GetEngineVersionArgs() {}
@@ -129,7 +130,7 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder parameterGroupFamily(Output</* @Nullable */ String> parameterGroupFamily) {
+        public Builder parameterGroupFamily(@Nullable Output<String> parameterGroupFamily) {
             $.parameterGroupFamily = parameterGroupFamily;
             return this;
         }
@@ -140,7 +141,7 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder parameterGroupFamily(@Nullable String parameterGroupFamily) {
+        public Builder parameterGroupFamily(String parameterGroupFamily) {
             return parameterGroupFamily(Output.of(parameterGroupFamily));
         }
 
@@ -150,7 +151,7 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder preferredVersions(Output</* @Nullable */ List<String>> preferredVersions) {
+        public Builder preferredVersions(@Nullable Output<List<String>> preferredVersions) {
             $.preferredVersions = preferredVersions;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder preferredVersions(@Nullable List<String> preferredVersions) {
+        public Builder preferredVersions(List<String> preferredVersions) {
             return preferredVersions(Output.of(preferredVersions));
         }
 
@@ -181,7 +182,7 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder version(Output</* @Nullable */ String> version) {
+        public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
@@ -192,7 +193,7 @@ public final class GetEngineVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder version(@Nullable String version) {
+        public Builder version(String version) {
             return version(Output.of(version));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetVnicAttachmentsFilter;
+import com.pulumi.oci.Core.inputs.GetVnicAttachmentsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetVnicAttachmentsFilter>> filters;
+    private @Nullable Output<List<GetVnicAttachmentsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetVnicAttachmentsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetVnicAttachmentsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="instanceId")
-    private Output</* @Nullable */ String> instanceId;
+    private @Nullable Output<String> instanceId;
 
     /**
      * @return The OCID of the instance.
      * 
      */
-    public Output</* @Nullable */ String> instanceId() {
-        return this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="vnicId")
-    private Output</* @Nullable */ String> vnicId;
+    private @Nullable Output<String> vnicId;
 
     /**
      * @return The OCID of the VNIC.
      * 
      */
-    public Output</* @Nullable */ String> vnicId() {
-        return this.vnicId;
+    public Optional<Output<String>> vnicId() {
+        return Optional.ofNullable(this.vnicId);
     }
 
     private GetVnicAttachmentsArgs() {}
@@ -117,7 +118,7 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -128,7 +129,7 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -153,16 +154,16 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetVnicAttachmentsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetVnicAttachmentsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetVnicAttachmentsFilter> filters) {
+        public Builder filters(List<GetVnicAttachmentsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetVnicAttachmentsFilter... filters) {
+        public Builder filters(GetVnicAttachmentsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder instanceId(Output</* @Nullable */ String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder instanceId(@Nullable String instanceId) {
+        public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
@@ -193,7 +194,7 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder vnicId(Output</* @Nullable */ String> vnicId) {
+        public Builder vnicId(@Nullable Output<String> vnicId) {
             $.vnicId = vnicId;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetVnicAttachmentsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder vnicId(@Nullable String vnicId) {
+        public Builder vnicId(String vnicId) {
             return vnicId(Output.of(vnicId));
         }
 

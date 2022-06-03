@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetVirtualCircuitPublicPrefixesFilter;
+import com.pulumi.oci.Core.inputs.GetVirtualCircuitPublicPrefixesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetVirtualCircuitPublicPrefixesArgs extends com.pulumi.resour
     public static final GetVirtualCircuitPublicPrefixesArgs Empty = new GetVirtualCircuitPublicPrefixesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetVirtualCircuitPublicPrefixesFilter>> filters;
+    private @Nullable Output<List<GetVirtualCircuitPublicPrefixesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetVirtualCircuitPublicPrefixesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetVirtualCircuitPublicPrefixesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -28,14 +29,14 @@ public final class GetVirtualCircuitPublicPrefixesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="verificationState")
-    private Output</* @Nullable */ String> verificationState;
+    private @Nullable Output<String> verificationState;
 
     /**
      * @return A filter to only return resources that match the given verification state.
      * 
      */
-    public Output</* @Nullable */ String> verificationState() {
-        return this.verificationState;
+    public Optional<Output<String>> verificationState() {
+        return Optional.ofNullable(this.verificationState);
     }
 
     /**
@@ -79,16 +80,16 @@ public final class GetVirtualCircuitPublicPrefixesArgs extends com.pulumi.resour
             $ = new GetVirtualCircuitPublicPrefixesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetVirtualCircuitPublicPrefixesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetVirtualCircuitPublicPrefixesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetVirtualCircuitPublicPrefixesFilter> filters) {
+        public Builder filters(List<GetVirtualCircuitPublicPrefixesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetVirtualCircuitPublicPrefixesFilter... filters) {
+        public Builder filters(GetVirtualCircuitPublicPrefixesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -98,7 +99,7 @@ public final class GetVirtualCircuitPublicPrefixesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder verificationState(Output</* @Nullable */ String> verificationState) {
+        public Builder verificationState(@Nullable Output<String> verificationState) {
             $.verificationState = verificationState;
             return this;
         }
@@ -109,7 +110,7 @@ public final class GetVirtualCircuitPublicPrefixesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder verificationState(@Nullable String verificationState) {
+        public Builder verificationState(String verificationState) {
             return verificationState(Output.of(verificationState));
         }
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,15 +22,15 @@ public final class GetSolutionStackArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="mostRecent")
-    private Output</* @Nullable */ Boolean> mostRecent;
+    private @Nullable Output<Boolean> mostRecent;
 
     /**
      * @return If more than one result is returned, use the most
      * recent solution stack.
      * 
      */
-    public Output</* @Nullable */ Boolean> mostRecent() {
-        return this.mostRecent;
+    public Optional<Output<Boolean>> mostRecent() {
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -83,7 +84,7 @@ public final class GetSolutionStackArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder mostRecent(Output</* @Nullable */ Boolean> mostRecent) {
+        public Builder mostRecent(@Nullable Output<Boolean> mostRecent) {
             $.mostRecent = mostRecent;
             return this;
         }
@@ -95,7 +96,7 @@ public final class GetSolutionStackArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(Boolean mostRecent) {
             return mostRecent(Output.of(mostRecent));
         }
 

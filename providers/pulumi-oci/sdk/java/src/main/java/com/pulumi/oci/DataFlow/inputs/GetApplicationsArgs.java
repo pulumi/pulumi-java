@@ -5,10 +5,11 @@ package com.pulumi.oci.DataFlow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataFlow.inputs.GetApplicationsFilter;
+import com.pulumi.oci.DataFlow.inputs.GetApplicationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The query parameter for the Spark application name.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNameStartsWith")
-    private Output</* @Nullable */ String> displayNameStartsWith;
+    private @Nullable Output<String> displayNameStartsWith;
 
     /**
      * @return The displayName prefix.
      * 
      */
-    public Output</* @Nullable */ String> displayNameStartsWith() {
-        return this.displayNameStartsWith;
+    public Optional<Output<String>> displayNameStartsWith() {
+        return Optional.ofNullable(this.displayNameStartsWith);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetApplicationsFilter>> filters;
+    private @Nullable Output<List<GetApplicationsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetApplicationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetApplicationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ownerPrincipalId")
-    private Output</* @Nullable */ String> ownerPrincipalId;
+    private @Nullable Output<String> ownerPrincipalId;
 
     /**
      * @return The OCID of the user who created the resource.
      * 
      */
-    public Output</* @Nullable */ String> ownerPrincipalId() {
-        return this.ownerPrincipalId;
+    public Optional<Output<String>> ownerPrincipalId() {
+        return Optional.ofNullable(this.ownerPrincipalId);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sparkVersion")
-    private Output</* @Nullable */ String> sparkVersion;
+    private @Nullable Output<String> sparkVersion;
 
     /**
      * @return The Spark version utilized to run the application.
      * 
      */
-    public Output</* @Nullable */ String> sparkVersion() {
-        return this.sparkVersion;
+    public Optional<Output<String>> sparkVersion() {
+        return Optional.ofNullable(this.sparkVersion);
     }
 
     private GetApplicationsArgs() {}
@@ -154,7 +155,7 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -165,7 +166,7 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -175,7 +176,7 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNameStartsWith(Output</* @Nullable */ String> displayNameStartsWith) {
+        public Builder displayNameStartsWith(@Nullable Output<String> displayNameStartsWith) {
             $.displayNameStartsWith = displayNameStartsWith;
             return this;
         }
@@ -186,20 +187,20 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNameStartsWith(@Nullable String displayNameStartsWith) {
+        public Builder displayNameStartsWith(String displayNameStartsWith) {
             return displayNameStartsWith(Output.of(displayNameStartsWith));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetApplicationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetApplicationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetApplicationsFilter> filters) {
+        public Builder filters(List<GetApplicationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetApplicationsFilter... filters) {
+        public Builder filters(GetApplicationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -209,7 +210,7 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ownerPrincipalId(Output</* @Nullable */ String> ownerPrincipalId) {
+        public Builder ownerPrincipalId(@Nullable Output<String> ownerPrincipalId) {
             $.ownerPrincipalId = ownerPrincipalId;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ownerPrincipalId(@Nullable String ownerPrincipalId) {
+        public Builder ownerPrincipalId(String ownerPrincipalId) {
             return ownerPrincipalId(Output.of(ownerPrincipalId));
         }
 
@@ -230,7 +231,7 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sparkVersion(Output</* @Nullable */ String> sparkVersion) {
+        public Builder sparkVersion(@Nullable Output<String> sparkVersion) {
             $.sparkVersion = sparkVersion;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetApplicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sparkVersion(@Nullable String sparkVersion) {
+        public Builder sparkVersion(String sparkVersion) {
             return sparkVersion(Output.of(sparkVersion));
         }
 

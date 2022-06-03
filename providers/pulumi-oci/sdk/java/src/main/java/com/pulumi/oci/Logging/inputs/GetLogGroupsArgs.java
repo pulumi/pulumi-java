@@ -5,11 +5,12 @@ package com.pulumi.oci.Logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Logging.inputs.GetLogGroupsFilter;
+import com.pulumi.oci.Logging.inputs.GetLogGroupsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,21 +38,21 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Resource name
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetLogGroupsFilter>> filters;
+    private @Nullable Output<List<GetLogGroupsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetLogGroupsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetLogGroupsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isCompartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> isCompartmentIdInSubtree;
+    private @Nullable Output<Boolean> isCompartmentIdInSubtree;
 
     /**
      * @return Specifies whether or not nested compartments should be traversed. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> isCompartmentIdInSubtree() {
-        return this.isCompartmentIdInSubtree;
+    public Optional<Output<Boolean>> isCompartmentIdInSubtree() {
+        return Optional.ofNullable(this.isCompartmentIdInSubtree);
     }
 
     private GetLogGroupsArgs() {}
@@ -123,7 +124,7 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -134,20 +135,20 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetLogGroupsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetLogGroupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetLogGroupsFilter> filters) {
+        public Builder filters(List<GetLogGroupsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetLogGroupsFilter... filters) {
+        public Builder filters(GetLogGroupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -157,7 +158,7 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isCompartmentIdInSubtree(Output</* @Nullable */ Boolean> isCompartmentIdInSubtree) {
+        public Builder isCompartmentIdInSubtree(@Nullable Output<Boolean> isCompartmentIdInSubtree) {
             $.isCompartmentIdInSubtree = isCompartmentIdInSubtree;
             return this;
         }
@@ -168,7 +169,7 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isCompartmentIdInSubtree(@Nullable Boolean isCompartmentIdInSubtree) {
+        public Builder isCompartmentIdInSubtree(Boolean isCompartmentIdInSubtree) {
             return isCompartmentIdInSubtree(Output.of(isCompartmentIdInSubtree));
         }
 

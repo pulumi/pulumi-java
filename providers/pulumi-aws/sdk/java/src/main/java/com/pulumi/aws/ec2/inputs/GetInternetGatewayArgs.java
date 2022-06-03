@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetInternetGatewayFilter;
+import com.pulumi.aws.ec2.inputs.GetInternetGatewayFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetInternetGatewayFilter>> filters;
+    private @Nullable Output<List<GetInternetGatewayFilterArgs>> filters;
 
     /**
      * @return Custom filter block as described below.
      * 
      */
-    public Output</* @Nullable */ List<GetInternetGatewayFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetInternetGatewayFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -37,14 +38,14 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="internetGatewayId")
-    private Output</* @Nullable */ String> internetGatewayId;
+    private @Nullable Output<String> internetGatewayId;
 
     /**
      * @return The id of the specific Internet Gateway to retrieve.
      * 
      */
-    public Output</* @Nullable */ String> internetGatewayId() {
-        return this.internetGatewayId;
+    public Optional<Output<String>> internetGatewayId() {
+        return Optional.ofNullable(this.internetGatewayId);
     }
 
     /**
@@ -53,15 +54,15 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags, each pair of which must exactly match
      * a pair on the desired Internet Gateway.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetInternetGatewayArgs() {}
@@ -96,7 +97,7 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetInternetGatewayFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetInternetGatewayFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -107,7 +108,7 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetInternetGatewayFilter> filters) {
+        public Builder filters(List<GetInternetGatewayFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -117,7 +118,7 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder filters(GetInternetGatewayFilter... filters) {
+        public Builder filters(GetInternetGatewayFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -127,7 +128,7 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder internetGatewayId(Output</* @Nullable */ String> internetGatewayId) {
+        public Builder internetGatewayId(@Nullable Output<String> internetGatewayId) {
             $.internetGatewayId = internetGatewayId;
             return this;
         }
@@ -138,7 +139,7 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder internetGatewayId(@Nullable String internetGatewayId) {
+        public Builder internetGatewayId(String internetGatewayId) {
             return internetGatewayId(Output.of(internetGatewayId));
         }
 
@@ -149,7 +150,7 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

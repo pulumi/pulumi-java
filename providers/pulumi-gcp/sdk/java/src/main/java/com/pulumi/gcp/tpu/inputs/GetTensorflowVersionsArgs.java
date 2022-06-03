@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,15 +21,15 @@ public final class GetTensorflowVersionsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The project to list versions for. If it
      * is not provided, the provider project is used.
      * 
      */
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -37,15 +38,15 @@ public final class GetTensorflowVersionsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="zone")
-    private Output</* @Nullable */ String> zone;
+    private @Nullable Output<String> zone;
 
     /**
      * @return The zone to list versions for. If it
      * is not provided, the provider zone is used.
      * 
      */
-    public Output</* @Nullable */ String> zone() {
-        return this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
     private GetTensorflowVersionsArgs() {}
@@ -80,7 +81,7 @@ public final class GetTensorflowVersionsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
@@ -92,7 +93,7 @@ public final class GetTensorflowVersionsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
@@ -103,7 +104,7 @@ public final class GetTensorflowVersionsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder zone(Output</* @Nullable */ String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
@@ -115,7 +116,7 @@ public final class GetTensorflowVersionsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder zone(@Nullable String zone) {
+        public Builder zone(String zone) {
             return zone(Output.of(zone));
         }
 

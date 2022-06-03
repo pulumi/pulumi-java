@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
      * 
      */
     @Import(name="latestTimestampGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> latestTimestampGreaterThanOrEqualTo;
+    private @Nullable Output<String> latestTimestampGreaterThanOrEqualTo;
 
     /**
      * @return filter event occurrence. Selecting only those last occurred on or after given date in ISO 8601 format Example: 2017-07-14T02:40:00.000Z
      * 
      */
-    public Output</* @Nullable */ String> latestTimestampGreaterThanOrEqualTo() {
-        return this.latestTimestampGreaterThanOrEqualTo;
+    public Optional<Output<String>> latestTimestampGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.latestTimestampGreaterThanOrEqualTo);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
      * 
      */
     @Import(name="latestTimestampLessThan")
-    private Output</* @Nullable */ String> latestTimestampLessThan;
+    private @Nullable Output<String> latestTimestampLessThan;
 
     /**
      * @return filter event occurrence. Selecting only those last occurred before given date in ISO 8601 format Example: 2017-07-14T02:40:00.000Z
      * 
      */
-    public Output</* @Nullable */ String> latestTimestampLessThan() {
-        return this.latestTimestampLessThan;
+    public Optional<Output<String>> latestTimestampLessThan() {
+        return Optional.ofNullable(this.latestTimestampLessThan);
     }
 
     /**
@@ -128,7 +129,7 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder latestTimestampGreaterThanOrEqualTo(Output</* @Nullable */ String> latestTimestampGreaterThanOrEqualTo) {
+        public Builder latestTimestampGreaterThanOrEqualTo(@Nullable Output<String> latestTimestampGreaterThanOrEqualTo) {
             $.latestTimestampGreaterThanOrEqualTo = latestTimestampGreaterThanOrEqualTo;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder latestTimestampGreaterThanOrEqualTo(@Nullable String latestTimestampGreaterThanOrEqualTo) {
+        public Builder latestTimestampGreaterThanOrEqualTo(String latestTimestampGreaterThanOrEqualTo) {
             return latestTimestampGreaterThanOrEqualTo(Output.of(latestTimestampGreaterThanOrEqualTo));
         }
 
@@ -149,7 +150,7 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder latestTimestampLessThan(Output</* @Nullable */ String> latestTimestampLessThan) {
+        public Builder latestTimestampLessThan(@Nullable Output<String> latestTimestampLessThan) {
             $.latestTimestampLessThan = latestTimestampLessThan;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder latestTimestampLessThan(@Nullable String latestTimestampLessThan) {
+        public Builder latestTimestampLessThan(String latestTimestampLessThan) {
             return latestTimestampLessThan(Output.of(latestTimestampLessThan));
         }
 

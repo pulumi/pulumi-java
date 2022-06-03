@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expand")
-    private Output</* @Nullable */ String> expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return May be used to expand the properties within account&#39;s properties. By default, data is not included when fetching properties. Currently we only support geoReplicationStats and blobRestoreStatus.
      * 
      */
-    public Output</* @Nullable */ String> expand() {
-        return this.expand;
+    public Optional<Output<String>> expand() {
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -112,7 +113,7 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder expand(Output</* @Nullable */ String> expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(String expand) {
             return expand(Output.of(expand));
         }
 

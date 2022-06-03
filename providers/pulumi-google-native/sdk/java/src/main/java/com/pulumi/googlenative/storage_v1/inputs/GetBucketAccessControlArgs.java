@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class GetBucketAccessControlArgs extends com.pulumi.resources.Invok
     }
 
     @Import(name="userProject")
-    private Output</* @Nullable */ String> userProject;
+    private @Nullable Output<String> userProject;
 
-    public Output</* @Nullable */ String> userProject() {
-        return this.userProject;
+    public Optional<Output<String>> userProject() {
+        return Optional.ofNullable(this.userProject);
     }
 
     private GetBucketAccessControlArgs() {}
@@ -79,12 +80,12 @@ public final class GetBucketAccessControlArgs extends com.pulumi.resources.Invok
             return entity(Output.of(entity));
         }
 
-        public Builder userProject(Output</* @Nullable */ String> userProject) {
+        public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
         }
 
-        public Builder userProject(@Nullable String userProject) {
+        public Builder userProject(String userProject) {
             return userProject(Output.of(userProject));
         }
 

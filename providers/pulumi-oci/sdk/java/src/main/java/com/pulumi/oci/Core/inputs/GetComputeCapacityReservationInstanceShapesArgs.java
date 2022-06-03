@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetComputeCapacityReservationInstanceShapesFilter;
+import com.pulumi.oci.Core.inputs.GetComputeCapacityReservationInstanceShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetComputeCapacityReservationInstanceShapesArgs extends com.p
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetComputeCapacityReservationInstanceShapesArgs extends com.p
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetComputeCapacityReservationInstanceShapesFilter>> filters;
+    private @Nullable Output<List<GetComputeCapacityReservationInstanceShapesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetComputeCapacityReservationInstanceShapesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetComputeCapacityReservationInstanceShapesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetComputeCapacityReservationInstanceShapesArgs() {}
@@ -101,7 +102,7 @@ public final class GetComputeCapacityReservationInstanceShapesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -112,7 +113,7 @@ public final class GetComputeCapacityReservationInstanceShapesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -143,7 +144,7 @@ public final class GetComputeCapacityReservationInstanceShapesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -154,20 +155,20 @@ public final class GetComputeCapacityReservationInstanceShapesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetComputeCapacityReservationInstanceShapesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetComputeCapacityReservationInstanceShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetComputeCapacityReservationInstanceShapesFilter> filters) {
+        public Builder filters(List<GetComputeCapacityReservationInstanceShapesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetComputeCapacityReservationInstanceShapesFilter... filters) {
+        public Builder filters(GetComputeCapacityReservationInstanceShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -3,12 +3,13 @@
 
 package com.pulumi.aws.route53.inputs;
 
-import com.pulumi.aws.route53.inputs.GetResolverEndpointFilter;
+import com.pulumi.aws.route53.inputs.GetResolverEndpointFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +24,7 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetResolverEndpointFilter>> filters;
+    private @Nullable Output<List<GetResolverEndpointFilterArgs>> filters;
 
     /**
      * @return One or more name/value pairs to use as filters. There are
@@ -31,8 +32,8 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
      * [Route53resolver Filter value in the AWS API reference][1].
      * 
      */
-    public Output</* @Nullable */ List<GetResolverEndpointFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetResolverEndpointFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -40,14 +41,14 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resolverEndpointId")
-    private Output</* @Nullable */ String> resolverEndpointId;
+    private @Nullable Output<String> resolverEndpointId;
 
     /**
      * @return The ID of the Route53 Resolver Endpoint.
      * 
      */
-    public Output</* @Nullable */ String> resolverEndpointId() {
-        return this.resolverEndpointId;
+    public Optional<Output<String>> resolverEndpointId() {
+        return Optional.ofNullable(this.resolverEndpointId);
     }
 
     private GetResolverEndpointArgs() {}
@@ -83,7 +84,7 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetResolverEndpointFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetResolverEndpointFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -96,7 +97,7 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetResolverEndpointFilter> filters) {
+        public Builder filters(List<GetResolverEndpointFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -108,7 +109,7 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filters(GetResolverEndpointFilter... filters) {
+        public Builder filters(GetResolverEndpointFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -118,7 +119,7 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder resolverEndpointId(Output</* @Nullable */ String> resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable Output<String> resolverEndpointId) {
             $.resolverEndpointId = resolverEndpointId;
             return this;
         }
@@ -129,7 +130,7 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
+        public Builder resolverEndpointId(String resolverEndpointId) {
             return resolverEndpointId(Output.of(resolverEndpointId));
         }
 

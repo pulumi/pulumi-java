@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.inputs;
 
-import com.pulumi.aws.inputs.GetAmiIdsFilter;
+import com.pulumi.aws.inputs.GetAmiIdsFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,15 +24,15 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executableUsers")
-    private Output</* @Nullable */ List<String>> executableUsers;
+    private @Nullable Output<List<String>> executableUsers;
 
     /**
      * @return Limit search to users with *explicit* launch
      * permission on  the image. Valid items are the numeric account ID or `self`.
      * 
      */
-    public Output</* @Nullable */ List<String>> executableUsers() {
-        return this.executableUsers;
+    public Optional<Output<List<String>>> executableUsers() {
+        return Optional.ofNullable(this.executableUsers);
     }
 
     /**
@@ -41,7 +42,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAmiIdsFilter>> filters;
+    private @Nullable Output<List<GetAmiIdsFilterArgs>> filters;
 
     /**
      * @return One or more name/value pairs to filter off of. There
@@ -49,8 +50,8 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * [describe-images in the AWS CLI reference][1].
      * 
      */
-    public Output</* @Nullable */ List<GetAmiIdsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAmiIdsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -62,7 +63,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameRegex")
-    private Output</* @Nullable */ String> nameRegex;
+    private @Nullable Output<String> nameRegex;
 
     /**
      * @return A regex string to apply to the AMI list returned
@@ -72,8 +73,8 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * options to narrow down the list AWS returns.
      * 
      */
-    public Output</* @Nullable */ String> nameRegex() {
-        return this.nameRegex;
+    public Optional<Output<String>> nameRegex() {
+        return Optional.ofNullable(this.nameRegex);
     }
 
     /**
@@ -96,14 +97,14 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortAscending")
-    private Output</* @Nullable */ Boolean> sortAscending;
+    private @Nullable Output<Boolean> sortAscending;
 
     /**
      * @return Used to sort AMIs by creation time.
      * 
      */
-    public Output</* @Nullable */ Boolean> sortAscending() {
-        return this.sortAscending;
+    public Optional<Output<Boolean>> sortAscending() {
+        return Optional.ofNullable(this.sortAscending);
     }
 
     private GetAmiIdsArgs() {}
@@ -141,7 +142,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder executableUsers(Output</* @Nullable */ List<String>> executableUsers) {
+        public Builder executableUsers(@Nullable Output<List<String>> executableUsers) {
             $.executableUsers = executableUsers;
             return this;
         }
@@ -153,7 +154,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder executableUsers(@Nullable List<String> executableUsers) {
+        public Builder executableUsers(List<String> executableUsers) {
             return executableUsers(Output.of(executableUsers));
         }
 
@@ -176,7 +177,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetAmiIdsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAmiIdsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -189,7 +190,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
+        public Builder filters(List<GetAmiIdsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -201,7 +202,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetAmiIdsFilter... filters) {
+        public Builder filters(GetAmiIdsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -215,7 +216,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameRegex(Output</* @Nullable */ String> nameRegex) {
+        public Builder nameRegex(@Nullable Output<String> nameRegex) {
             $.nameRegex = nameRegex;
             return this;
         }
@@ -230,7 +231,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameRegex(@Nullable String nameRegex) {
+        public Builder nameRegex(String nameRegex) {
             return nameRegex(Output.of(nameRegex));
         }
 
@@ -271,7 +272,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sortAscending(Output</* @Nullable */ Boolean> sortAscending) {
+        public Builder sortAscending(@Nullable Output<Boolean> sortAscending) {
             $.sortAscending = sortAscending;
             return this;
         }
@@ -282,7 +283,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sortAscending(@Nullable Boolean sortAscending) {
+        public Builder sortAscending(Boolean sortAscending) {
             return sortAscending(Output.of(sortAscending));
         }
 

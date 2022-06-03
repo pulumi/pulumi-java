@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetAllowedDomainLicenseTypesFilter;
+import com.pulumi.oci.Identity.inputs.GetAllowedDomainLicenseTypesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +22,21 @@ public final class GetAllowedDomainLicenseTypesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="currentLicenseTypeName")
-    private Output</* @Nullable */ String> currentLicenseTypeName;
+    private @Nullable Output<String> currentLicenseTypeName;
 
     /**
      * @return The domain license type
      * 
      */
-    public Output</* @Nullable */ String> currentLicenseTypeName() {
-        return this.currentLicenseTypeName;
+    public Optional<Output<String>> currentLicenseTypeName() {
+        return Optional.ofNullable(this.currentLicenseTypeName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAllowedDomainLicenseTypesFilter>> filters;
+    private @Nullable Output<List<GetAllowedDomainLicenseTypesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAllowedDomainLicenseTypesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAllowedDomainLicenseTypesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetAllowedDomainLicenseTypesArgs() {}
@@ -69,7 +70,7 @@ public final class GetAllowedDomainLicenseTypesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder currentLicenseTypeName(Output</* @Nullable */ String> currentLicenseTypeName) {
+        public Builder currentLicenseTypeName(@Nullable Output<String> currentLicenseTypeName) {
             $.currentLicenseTypeName = currentLicenseTypeName;
             return this;
         }
@@ -80,20 +81,20 @@ public final class GetAllowedDomainLicenseTypesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder currentLicenseTypeName(@Nullable String currentLicenseTypeName) {
+        public Builder currentLicenseTypeName(String currentLicenseTypeName) {
             return currentLicenseTypeName(Output.of(currentLicenseTypeName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAllowedDomainLicenseTypesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAllowedDomainLicenseTypesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAllowedDomainLicenseTypesFilter> filters) {
+        public Builder filters(List<GetAllowedDomainLicenseTypesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAllowedDomainLicenseTypesFilter... filters) {
+        public Builder filters(GetAllowedDomainLicenseTypesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

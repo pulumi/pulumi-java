@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetComputeImageCapabilitySchemaArgs extends com.pulumi.resour
      * 
      */
     @Import(name="isMergeEnabled")
-    private Output</* @Nullable */ String> isMergeEnabled;
+    private @Nullable Output<String> isMergeEnabled;
 
     /**
      * @return Merge the image capability schema with the global image capability schema
      * 
      */
-    public Output</* @Nullable */ String> isMergeEnabled() {
-        return this.isMergeEnabled;
+    public Optional<Output<String>> isMergeEnabled() {
+        return Optional.ofNullable(this.isMergeEnabled);
     }
 
     private GetComputeImageCapabilitySchemaArgs() {}
@@ -96,7 +97,7 @@ public final class GetComputeImageCapabilitySchemaArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder isMergeEnabled(Output</* @Nullable */ String> isMergeEnabled) {
+        public Builder isMergeEnabled(@Nullable Output<String> isMergeEnabled) {
             $.isMergeEnabled = isMergeEnabled;
             return this;
         }
@@ -107,7 +108,7 @@ public final class GetComputeImageCapabilitySchemaArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder isMergeEnabled(@Nullable String isMergeEnabled) {
+        public Builder isMergeEnabled(String isMergeEnabled) {
             return isMergeEnabled(Output.of(isMergeEnabled));
         }
 

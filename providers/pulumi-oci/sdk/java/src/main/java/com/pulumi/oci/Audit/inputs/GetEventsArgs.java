@@ -5,10 +5,11 @@ package com.pulumi.oci.Audit.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Audit.inputs.GetEventsFilter;
+import com.pulumi.oci.Audit.inputs.GetEventsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,10 +48,10 @@ public final class GetEventsArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetEventsFilter>> filters;
+    private @Nullable Output<List<GetEventsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetEventsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetEventsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -137,16 +138,16 @@ public final class GetEventsArgs extends com.pulumi.resources.InvokeArgs {
             return endTime(Output.of(endTime));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetEventsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetEventsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetEventsFilter> filters) {
+        public Builder filters(List<GetEventsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetEventsFilter... filters) {
+        public Builder filters(GetEventsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

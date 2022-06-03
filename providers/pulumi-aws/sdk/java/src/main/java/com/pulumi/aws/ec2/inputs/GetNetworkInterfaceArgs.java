@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetNetworkInterfaceFilter;
+import com.pulumi.aws.ec2.inputs.GetNetworkInterfaceFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetNetworkInterfaceFilter>> filters;
+    private @Nullable Output<List<GetNetworkInterfaceFilterArgs>> filters;
 
     /**
      * @return One or more name/value pairs to filter off of. There are several valid keys, for a full reference, check out [describe-network-interfaces](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-network-interfaces.html) in the AWS CLI reference.
      * 
      */
-    public Output</* @Nullable */ List<GetNetworkInterfaceFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetNetworkInterfaceFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -37,14 +38,14 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The identifier for the network interface.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Any tags assigned to the network interface.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetNetworkInterfaceArgs() {}
@@ -94,7 +95,7 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetNetworkInterfaceFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetNetworkInterfaceFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -105,7 +106,7 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetNetworkInterfaceFilter> filters) {
+        public Builder filters(List<GetNetworkInterfaceFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -115,7 +116,7 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filters(GetNetworkInterfaceFilter... filters) {
+        public Builder filters(GetNetworkInterfaceFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -125,7 +126,7 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -136,7 +137,7 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -146,7 +147,7 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -157,7 +158,7 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

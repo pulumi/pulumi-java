@@ -5,10 +5,11 @@ package com.pulumi.oci.Events.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Events.inputs.GetRulesFilter;
+import com.pulumi.oci.Events.inputs.GetRulesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetRulesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only rules with descriptions that match the displayName string in this parameter.  Example: `&#34;This rule sends a notification upon completion of DbaaS backup.&#34;`
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetRulesFilter>> filters;
+    private @Nullable Output<List<GetRulesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetRulesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetRulesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetRulesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only rules that match the lifecycle state in this parameter.  Example: `Creating`
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetRulesArgs() {}
@@ -122,7 +123,7 @@ public final class GetRulesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -133,20 +134,20 @@ public final class GetRulesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetRulesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetRulesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRulesFilter> filters) {
+        public Builder filters(List<GetRulesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetRulesFilter... filters) {
+        public Builder filters(GetRulesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -156,7 +157,7 @@ public final class GetRulesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetRulesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

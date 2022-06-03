@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNamePrefix")
-    private Output</* @Nullable */ String> displayNamePrefix;
+    private @Nullable Output<String> displayNamePrefix;
 
     /**
      * @return A common display name prefix to match when returning groups.
      * 
      */
-    public Output</* @Nullable */ String> displayNamePrefix() {
-        return this.displayNamePrefix;
+    public Optional<Output<String>> displayNamePrefix() {
+        return Optional.ofNullable(this.displayNamePrefix);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNames")
-    private Output</* @Nullable */ List<String>> displayNames;
+    private @Nullable Output<List<String>> displayNames;
 
     /**
      * @return The display names of the groups.
      * 
      */
-    public Output</* @Nullable */ List<String>> displayNames() {
-        return this.displayNames;
+    public Optional<Output<List<String>>> displayNames() {
+        return Optional.ofNullable(this.displayNames);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ignoreMissing")
-    private Output</* @Nullable */ Boolean> ignoreMissing;
+    private @Nullable Output<Boolean> ignoreMissing;
 
     /**
      * @return Ignore missing groups and return groups that were found. The data source will still fail if no groups are found. Cannot be specified with `return_all`. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> ignoreMissing() {
-        return this.ignoreMissing;
+    public Optional<Output<Boolean>> ignoreMissing() {
+        return Optional.ofNullable(this.ignoreMissing);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mailEnabled")
-    private Output</* @Nullable */ Boolean> mailEnabled;
+    private @Nullable Output<Boolean> mailEnabled;
 
     /**
      * @return Whether the returned groups should be mail-enabled. By itself this does not exclude security-enabled groups. Setting this to `true` ensures all groups are mail-enabled, and setting to `false` ensures that all groups are _not_ mail-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
      * 
      */
-    public Output</* @Nullable */ Boolean> mailEnabled() {
-        return this.mailEnabled;
+    public Optional<Output<Boolean>> mailEnabled() {
+        return Optional.ofNullable(this.mailEnabled);
     }
 
     /**
@@ -81,14 +82,14 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectIds")
-    private Output</* @Nullable */ List<String>> objectIds;
+    private @Nullable Output<List<String>> objectIds;
 
     /**
      * @return The object IDs of the groups.
      * 
      */
-    public Output</* @Nullable */ List<String>> objectIds() {
-        return this.objectIds;
+    public Optional<Output<List<String>>> objectIds() {
+        return Optional.ofNullable(this.objectIds);
     }
 
     /**
@@ -96,14 +97,14 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="returnAll")
-    private Output</* @Nullable */ Boolean> returnAll;
+    private @Nullable Output<Boolean> returnAll;
 
     /**
      * @return A flag to denote if all groups should be fetched and returned. Cannot be specified wth `ignore_missing`. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> returnAll() {
-        return this.returnAll;
+    public Optional<Output<Boolean>> returnAll() {
+        return Optional.ofNullable(this.returnAll);
     }
 
     /**
@@ -111,14 +112,14 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityEnabled")
-    private Output</* @Nullable */ Boolean> securityEnabled;
+    private @Nullable Output<Boolean> securityEnabled;
 
     /**
      * @return Whether the returned groups should be security-enabled. By itself this does not exclude mail-enabled groups. Setting this to `true` ensures all groups are security-enabled, and setting to `false` ensures that all groups are _not_ security-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
      * 
      */
-    public Output</* @Nullable */ Boolean> securityEnabled() {
-        return this.securityEnabled;
+    public Optional<Output<Boolean>> securityEnabled() {
+        return Optional.ofNullable(this.securityEnabled);
     }
 
     private GetGroupsArgs() {}
@@ -157,7 +158,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNamePrefix(Output</* @Nullable */ String> displayNamePrefix) {
+        public Builder displayNamePrefix(@Nullable Output<String> displayNamePrefix) {
             $.displayNamePrefix = displayNamePrefix;
             return this;
         }
@@ -168,7 +169,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNamePrefix(@Nullable String displayNamePrefix) {
+        public Builder displayNamePrefix(String displayNamePrefix) {
             return displayNamePrefix(Output.of(displayNamePrefix));
         }
 
@@ -178,7 +179,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNames(Output</* @Nullable */ List<String>> displayNames) {
+        public Builder displayNames(@Nullable Output<List<String>> displayNames) {
             $.displayNames = displayNames;
             return this;
         }
@@ -189,7 +190,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNames(@Nullable List<String> displayNames) {
+        public Builder displayNames(List<String> displayNames) {
             return displayNames(Output.of(displayNames));
         }
 
@@ -209,7 +210,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ignoreMissing(Output</* @Nullable */ Boolean> ignoreMissing) {
+        public Builder ignoreMissing(@Nullable Output<Boolean> ignoreMissing) {
             $.ignoreMissing = ignoreMissing;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ignoreMissing(@Nullable Boolean ignoreMissing) {
+        public Builder ignoreMissing(Boolean ignoreMissing) {
             return ignoreMissing(Output.of(ignoreMissing));
         }
 
@@ -230,7 +231,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mailEnabled(Output</* @Nullable */ Boolean> mailEnabled) {
+        public Builder mailEnabled(@Nullable Output<Boolean> mailEnabled) {
             $.mailEnabled = mailEnabled;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mailEnabled(@Nullable Boolean mailEnabled) {
+        public Builder mailEnabled(Boolean mailEnabled) {
             return mailEnabled(Output.of(mailEnabled));
         }
 
@@ -251,7 +252,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder objectIds(Output</* @Nullable */ List<String>> objectIds) {
+        public Builder objectIds(@Nullable Output<List<String>> objectIds) {
             $.objectIds = objectIds;
             return this;
         }
@@ -262,7 +263,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder objectIds(@Nullable List<String> objectIds) {
+        public Builder objectIds(List<String> objectIds) {
             return objectIds(Output.of(objectIds));
         }
 
@@ -282,7 +283,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder returnAll(Output</* @Nullable */ Boolean> returnAll) {
+        public Builder returnAll(@Nullable Output<Boolean> returnAll) {
             $.returnAll = returnAll;
             return this;
         }
@@ -293,7 +294,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder returnAll(@Nullable Boolean returnAll) {
+        public Builder returnAll(Boolean returnAll) {
             return returnAll(Output.of(returnAll));
         }
 
@@ -303,7 +304,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder securityEnabled(Output</* @Nullable */ Boolean> securityEnabled) {
+        public Builder securityEnabled(@Nullable Output<Boolean> securityEnabled) {
             $.securityEnabled = securityEnabled;
             return this;
         }
@@ -314,7 +315,7 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder securityEnabled(@Nullable Boolean securityEnabled) {
+        public Builder securityEnabled(Boolean securityEnabled) {
             return securityEnabled(Output.of(securityEnabled));
         }
 

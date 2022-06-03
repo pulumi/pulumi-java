@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="accessLevel")
-    private Output</* @Nullable */ String> accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Output</* @Nullable */ String> accessLevel() {
-        return this.accessLevel;
+    public Optional<Output<String>> accessLevel() {
+        return Optional.ofNullable(this.accessLevel);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="groupBies")
-    private Output</* @Nullable */ List<String>> groupBies;
+    private @Nullable Output<List<String>> groupBies;
 
     /**
      * @return The group by parameter for summarize operation on audit.
      * 
      */
-    public Output</* @Nullable */ List<String>> groupBies() {
-        return this.groupBies;
+    public Optional<Output<List<String>>> groupBies() {
+        return Optional.ofNullable(this.groupBies);
     }
 
     private GetAuditProfileAnalyticArgs() {}
@@ -109,7 +110,7 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
             return this;
         }
@@ -120,7 +121,7 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(String accessLevel) {
             return accessLevel(Output.of(accessLevel));
         }
 
@@ -151,7 +152,7 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -162,7 +163,7 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
@@ -172,7 +173,7 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder groupBies(Output</* @Nullable */ List<String>> groupBies) {
+        public Builder groupBies(@Nullable Output<List<String>> groupBies) {
             $.groupBies = groupBies;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder groupBies(@Nullable List<String> groupBies) {
+        public Builder groupBies(List<String> groupBies) {
             return groupBies(Output.of(groupBies));
         }
 

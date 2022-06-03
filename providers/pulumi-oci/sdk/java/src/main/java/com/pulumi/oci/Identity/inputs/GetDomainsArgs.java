@@ -5,11 +5,12 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetDomainsFilter;
+import com.pulumi.oci.Identity.inputs.GetDomainsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,21 +38,21 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The mutable display name of the domain
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDomainsFilter>> filters;
+    private @Nullable Output<List<GetDomainsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDomainsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDomainsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="homeRegionUrl")
-    private Output</* @Nullable */ String> homeRegionUrl;
+    private @Nullable Output<String> homeRegionUrl;
 
     /**
      * @return The region specific domain URL
      * 
      */
-    public Output</* @Nullable */ String> homeRegionUrl() {
-        return this.homeRegionUrl;
+    public Optional<Output<String>> homeRegionUrl() {
+        return Optional.ofNullable(this.homeRegionUrl);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isHiddenOnLogin")
-    private Output</* @Nullable */ Boolean> isHiddenOnLogin;
+    private @Nullable Output<Boolean> isHiddenOnLogin;
 
     /**
      * @return Indicate if the domain is visible at login screen or not
      * 
      */
-    public Output</* @Nullable */ Boolean> isHiddenOnLogin() {
-        return this.isHiddenOnLogin;
+    public Optional<Output<Boolean>> isHiddenOnLogin() {
+        return Optional.ofNullable(this.isHiddenOnLogin);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="licenseType")
-    private Output</* @Nullable */ String> licenseType;
+    private @Nullable Output<String> licenseType;
 
     /**
      * @return The domain license type
      * 
      */
-    public Output</* @Nullable */ String> licenseType() {
-        return this.licenseType;
+    public Optional<Output<String>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to only return resources that match the given name exactly.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -119,14 +120,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -134,14 +135,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-    private Output</* @Nullable */ String> type;
+    private @Nullable Output<String> type;
 
     /**
      * @return The domain type
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -149,14 +150,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url")
-    private Output</* @Nullable */ String> url;
+    private @Nullable Output<String> url;
 
     /**
      * @return The region agnostic domain URL
      * 
      */
-    public Output</* @Nullable */ String> url() {
-        return this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
     private GetDomainsArgs() {}
@@ -219,7 +220,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -230,20 +231,20 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDomainsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDomainsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDomainsFilter> filters) {
+        public Builder filters(List<GetDomainsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDomainsFilter... filters) {
+        public Builder filters(GetDomainsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -253,7 +254,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder homeRegionUrl(Output</* @Nullable */ String> homeRegionUrl) {
+        public Builder homeRegionUrl(@Nullable Output<String> homeRegionUrl) {
             $.homeRegionUrl = homeRegionUrl;
             return this;
         }
@@ -264,7 +265,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder homeRegionUrl(@Nullable String homeRegionUrl) {
+        public Builder homeRegionUrl(String homeRegionUrl) {
             return homeRegionUrl(Output.of(homeRegionUrl));
         }
 
@@ -274,7 +275,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isHiddenOnLogin(Output</* @Nullable */ Boolean> isHiddenOnLogin) {
+        public Builder isHiddenOnLogin(@Nullable Output<Boolean> isHiddenOnLogin) {
             $.isHiddenOnLogin = isHiddenOnLogin;
             return this;
         }
@@ -285,7 +286,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isHiddenOnLogin(@Nullable Boolean isHiddenOnLogin) {
+        public Builder isHiddenOnLogin(Boolean isHiddenOnLogin) {
             return isHiddenOnLogin(Output.of(isHiddenOnLogin));
         }
 
@@ -295,7 +296,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder licenseType(Output</* @Nullable */ String> licenseType) {
+        public Builder licenseType(@Nullable Output<String> licenseType) {
             $.licenseType = licenseType;
             return this;
         }
@@ -306,7 +307,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder licenseType(@Nullable String licenseType) {
+        public Builder licenseType(String licenseType) {
             return licenseType(Output.of(licenseType));
         }
 
@@ -316,7 +317,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -327,7 +328,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -337,7 +338,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -348,7 +349,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -358,7 +359,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder type(Output</* @Nullable */ String> type) {
+        public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
@@ -369,7 +370,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
+        public Builder type(String type) {
             return type(Output.of(type));
         }
 
@@ -379,7 +380,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder url(Output</* @Nullable */ String> url) {
+        public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
@@ -390,7 +391,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder url(@Nullable String url) {
+        public Builder url(String url) {
             return url(Output.of(url));
         }
 

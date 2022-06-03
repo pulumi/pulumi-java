@@ -5,11 +5,12 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetReportsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetReportsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessLevel")
-    private Output</* @Nullable */ String> accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Output</* @Nullable */ String> accessLevel() {
-        return this.accessLevel;
+    public Optional<Output<String>> accessLevel() {
+        return Optional.ofNullable(this.accessLevel);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     /**
@@ -67,21 +68,21 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The name of the report definition to query.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetReportsFilter>> filters;
+    private @Nullable Output<List<GetReportsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetReportsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetReportsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reportDefinitionId")
-    private Output</* @Nullable */ String> reportDefinitionId;
+    private @Nullable Output<String> reportDefinitionId;
 
     /**
      * @return The ID of the report definition to filter the list of reports
      * 
      */
-    public Output</* @Nullable */ String> reportDefinitionId() {
-        return this.reportDefinitionId;
+    public Optional<Output<String>> reportDefinitionId() {
+        return Optional.ofNullable(this.reportDefinitionId);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return An optional filter to return only resources that match the specified lifecycle state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetReportsArgs() {}
@@ -150,7 +151,7 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(String accessLevel) {
             return accessLevel(Output.of(accessLevel));
         }
 
@@ -192,7 +193,7 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -203,7 +204,7 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
@@ -213,7 +214,7 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -224,20 +225,20 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetReportsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetReportsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetReportsFilter> filters) {
+        public Builder filters(List<GetReportsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetReportsFilter... filters) {
+        public Builder filters(GetReportsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -247,7 +248,7 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder reportDefinitionId(Output</* @Nullable */ String> reportDefinitionId) {
+        public Builder reportDefinitionId(@Nullable Output<String> reportDefinitionId) {
             $.reportDefinitionId = reportDefinitionId;
             return this;
         }
@@ -258,7 +259,7 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder reportDefinitionId(@Nullable String reportDefinitionId) {
+        public Builder reportDefinitionId(String reportDefinitionId) {
             return reportDefinitionId(Output.of(reportDefinitionId));
         }
 
@@ -268,7 +269,7 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -279,7 +280,7 @@ public final class GetReportsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

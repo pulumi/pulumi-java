@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetEventSourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namePrefix")
-    private Output</* @Nullable */ String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
     /**
      * @return Specifying this limits the results to only those partner event sources with names that start with the specified prefix
      * 
      */
-    public Output</* @Nullable */ String> namePrefix() {
-        return this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     private GetEventSourceArgs() {}
@@ -59,7 +60,7 @@ public final class GetEventSourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namePrefix(Output</* @Nullable */ String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
@@ -70,7 +71,7 @@ public final class GetEventSourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 

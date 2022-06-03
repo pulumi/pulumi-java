@@ -3,11 +3,12 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
-import com.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationsFilter;
+import com.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationsFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetDistributionConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDistributionConfigurationsFilter>> filters;
+    private @Nullable Output<List<GetDistributionConfigurationsFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<GetDistributionConfigurationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDistributionConfigurationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetDistributionConfigurationsArgs() {}
@@ -60,7 +61,7 @@ public final class GetDistributionConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetDistributionConfigurationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDistributionConfigurationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -71,7 +72,7 @@ public final class GetDistributionConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetDistributionConfigurationsFilter> filters) {
+        public Builder filters(List<GetDistributionConfigurationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -81,7 +82,7 @@ public final class GetDistributionConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder filters(GetDistributionConfigurationsFilter... filters) {
+        public Builder filters(GetDistributionConfigurationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

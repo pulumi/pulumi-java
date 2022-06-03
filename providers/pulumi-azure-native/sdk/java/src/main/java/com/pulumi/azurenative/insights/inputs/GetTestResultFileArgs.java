@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="continuationToken")
-    private Output</* @Nullable */ String> continuationToken;
+    private @Nullable Output<String> continuationToken;
 
     /**
      * @return The continuation token.
      * 
      */
-    public Output</* @Nullable */ String> continuationToken() {
-        return this.continuationToken;
+    public Optional<Output<String>> continuationToken() {
+        return Optional.ofNullable(this.continuationToken);
     }
 
     /**
@@ -81,14 +82,14 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="testSuccessfulCriteria")
-    private Output</* @Nullable */ Boolean> testSuccessfulCriteria;
+    private @Nullable Output<Boolean> testSuccessfulCriteria;
 
     /**
      * @return The success state criteria for the webtest result.
      * 
      */
-    public Output</* @Nullable */ Boolean> testSuccessfulCriteria() {
-        return this.testSuccessfulCriteria;
+    public Optional<Output<Boolean>> testSuccessfulCriteria() {
+        return Optional.ofNullable(this.testSuccessfulCriteria);
     }
 
     /**
@@ -157,7 +158,7 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder continuationToken(Output</* @Nullable */ String> continuationToken) {
+        public Builder continuationToken(@Nullable Output<String> continuationToken) {
             $.continuationToken = continuationToken;
             return this;
         }
@@ -168,7 +169,7 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder continuationToken(@Nullable String continuationToken) {
+        public Builder continuationToken(String continuationToken) {
             return continuationToken(Output.of(continuationToken));
         }
 
@@ -241,7 +242,7 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder testSuccessfulCriteria(Output</* @Nullable */ Boolean> testSuccessfulCriteria) {
+        public Builder testSuccessfulCriteria(@Nullable Output<Boolean> testSuccessfulCriteria) {
             $.testSuccessfulCriteria = testSuccessfulCriteria;
             return this;
         }
@@ -252,7 +253,7 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder testSuccessfulCriteria(@Nullable Boolean testSuccessfulCriteria) {
+        public Builder testSuccessfulCriteria(Boolean testSuccessfulCriteria) {
             return testSuccessfulCriteria(Output.of(testSuccessfulCriteria));
         }
 

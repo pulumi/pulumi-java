@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bundleId")
-    private Output</* @Nullable */ String> bundleId;
+    private @Nullable Output<String> bundleId;
 
     /**
      * @return The ID of the bundle.
      * 
      */
-    public Output</* @Nullable */ String> bundleId() {
-        return this.bundleId;
+    public Optional<Output<String>> bundleId() {
+        return Optional.ofNullable(this.bundleId);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the bundle. You cannot combine this parameter with `bundle_id`.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owner")
-    private Output</* @Nullable */ String> owner;
+    private @Nullable Output<String> owner;
 
     /**
      * @return The owner of the bundles. You have to leave it blank for own bundles. You cannot combine this parameter with `bundle_id`.
      * 
      */
-    public Output</* @Nullable */ String> owner() {
-        return this.owner;
+    public Optional<Output<String>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     private GetBundleArgs() {}
@@ -91,7 +92,7 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bundleId(Output</* @Nullable */ String> bundleId) {
+        public Builder bundleId(@Nullable Output<String> bundleId) {
             $.bundleId = bundleId;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bundleId(@Nullable String bundleId) {
+        public Builder bundleId(String bundleId) {
             return bundleId(Output.of(bundleId));
         }
 
@@ -112,7 +113,7 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -133,7 +134,7 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder owner(Output</* @Nullable */ String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             $.owner = owner;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetBundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder owner(@Nullable String owner) {
+        public Builder owner(String owner) {
             return owner(Output.of(owner));
         }
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -39,10 +40,10 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
     }
 
     @Import(name="base64EncodeContent")
-    private Output</* @Nullable */ Boolean> base64EncodeContent;
+    private @Nullable Output<Boolean> base64EncodeContent;
 
-    public Output</* @Nullable */ Boolean> base64EncodeContent() {
-        return this.base64EncodeContent;
+    public Optional<Output<Boolean>> base64EncodeContent() {
+        return Optional.ofNullable(this.base64EncodeContent);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="generateType")
-    private Output</* @Nullable */ String> generateType;
+    private @Nullable Output<String> generateType;
 
     /**
      * @return The type of wallet to generate.
      * 
      */
-    public Output</* @Nullable */ String> generateType() {
-        return this.generateType;
+    public Optional<Output<String>> generateType() {
+        return Optional.ofNullable(this.generateType);
     }
 
     /**
@@ -131,12 +132,12 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
             return autonomousDatabaseId(Output.of(autonomousDatabaseId));
         }
 
-        public Builder base64EncodeContent(Output</* @Nullable */ Boolean> base64EncodeContent) {
+        public Builder base64EncodeContent(@Nullable Output<Boolean> base64EncodeContent) {
             $.base64EncodeContent = base64EncodeContent;
             return this;
         }
 
-        public Builder base64EncodeContent(@Nullable Boolean base64EncodeContent) {
+        public Builder base64EncodeContent(Boolean base64EncodeContent) {
             return base64EncodeContent(Output.of(base64EncodeContent));
         }
 
@@ -146,7 +147,7 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder generateType(Output</* @Nullable */ String> generateType) {
+        public Builder generateType(@Nullable Output<String> generateType) {
             $.generateType = generateType;
             return this;
         }
@@ -157,7 +158,7 @@ public final class GetAutonomousDatabaseWalletArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder generateType(@Nullable String generateType) {
+        public Builder generateType(String generateType) {
             return generateType(Output.of(generateType));
         }
 

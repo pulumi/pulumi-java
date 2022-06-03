@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.acmpca.inputs;
 
-import com.pulumi.aws.acmpca.inputs.GetCertificateAuthorityRevocationConfiguration;
+import com.pulumi.aws.acmpca.inputs.GetCertificateAuthorityRevocationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -43,7 +44,7 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="revocationConfigurations")
-    private Output</* @Nullable */ List<GetCertificateAuthorityRevocationConfiguration>> revocationConfigurations;
+    private @Nullable Output<List<GetCertificateAuthorityRevocationConfigurationArgs>> revocationConfigurations;
 
     /**
      * @return Nested attribute containing revocation configuration.
@@ -55,8 +56,8 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
      * * `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
      * 
      */
-    public Output</* @Nullable */ List<GetCertificateAuthorityRevocationConfiguration>> revocationConfigurations() {
-        return this.revocationConfigurations;
+    public Optional<Output<List<GetCertificateAuthorityRevocationConfigurationArgs>>> revocationConfigurations() {
+        return Optional.ofNullable(this.revocationConfigurations);
     }
 
     /**
@@ -64,14 +65,14 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Specifies a key-value map of user-defined tags that are attached to the certificate authority.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetCertificateAuthorityArgs() {}
@@ -133,7 +134,7 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder revocationConfigurations(Output</* @Nullable */ List<GetCertificateAuthorityRevocationConfiguration>> revocationConfigurations) {
+        public Builder revocationConfigurations(@Nullable Output<List<GetCertificateAuthorityRevocationConfigurationArgs>> revocationConfigurations) {
             $.revocationConfigurations = revocationConfigurations;
             return this;
         }
@@ -150,7 +151,7 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder revocationConfigurations(@Nullable List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations) {
+        public Builder revocationConfigurations(List<GetCertificateAuthorityRevocationConfigurationArgs> revocationConfigurations) {
             return revocationConfigurations(Output.of(revocationConfigurations));
         }
 
@@ -166,7 +167,7 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder revocationConfigurations(GetCertificateAuthorityRevocationConfiguration... revocationConfigurations) {
+        public Builder revocationConfigurations(GetCertificateAuthorityRevocationConfigurationArgs... revocationConfigurations) {
             return revocationConfigurations(List.of(revocationConfigurations));
         }
 
@@ -176,7 +177,7 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -187,7 +188,7 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

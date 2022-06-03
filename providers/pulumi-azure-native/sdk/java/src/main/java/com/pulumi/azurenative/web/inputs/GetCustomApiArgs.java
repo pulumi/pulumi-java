@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -49,14 +50,14 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscriptionId")
-    private Output</* @Nullable */ String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
     /**
      * @return Subscription Id
      * 
      */
-    public Output</* @Nullable */ String> subscriptionId() {
-        return this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     private GetCustomApiArgs() {}
@@ -133,7 +134,7 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder subscriptionId(Output</* @Nullable */ String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetCustomApiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder subscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 

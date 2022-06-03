@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetAutonomousContainerPatchesFilter;
+import com.pulumi.oci.Database.inputs.GetAutonomousContainerPatchesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,10 +48,10 @@ public final class GetAutonomousContainerPatchesArgs extends com.pulumi.resource
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAutonomousContainerPatchesFilter>> filters;
+    private @Nullable Output<List<GetAutonomousContainerPatchesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAutonomousContainerPatchesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAutonomousContainerPatchesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetAutonomousContainerPatchesArgs() {}
@@ -121,16 +122,16 @@ public final class GetAutonomousContainerPatchesArgs extends com.pulumi.resource
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAutonomousContainerPatchesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAutonomousContainerPatchesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAutonomousContainerPatchesFilter> filters) {
+        public Builder filters(List<GetAutonomousContainerPatchesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAutonomousContainerPatchesFilter... filters) {
+        public Builder filters(GetAutonomousContainerPatchesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

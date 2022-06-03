@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetCloudAutonomousVmClustersFilter;
+import com.pulumi.oci.Database.inputs.GetCloudAutonomousVmClustersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return A filter to return only resources that match the given availability domain exactly.
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="cloudExadataInfrastructureId")
-    private Output</* @Nullable */ String> cloudExadataInfrastructureId;
+    private @Nullable Output<String> cloudExadataInfrastructureId;
 
     /**
      * @return If provided, filters the results for the specified cloud Exadata infrastructure.
      * 
      */
-    public Output</* @Nullable */ String> cloudExadataInfrastructureId() {
-        return this.cloudExadataInfrastructureId;
+    public Optional<Output<String>> cloudExadataInfrastructureId() {
+        return Optional.ofNullable(this.cloudExadataInfrastructureId);
     }
 
     /**
@@ -66,21 +67,21 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetCloudAutonomousVmClustersFilter>> filters;
+    private @Nullable Output<List<GetCloudAutonomousVmClustersFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetCloudAutonomousVmClustersFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetCloudAutonomousVmClustersFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetCloudAutonomousVmClustersArgs() {}
@@ -133,7 +134,7 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -154,7 +155,7 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder cloudExadataInfrastructureId(Output</* @Nullable */ String> cloudExadataInfrastructureId) {
+        public Builder cloudExadataInfrastructureId(@Nullable Output<String> cloudExadataInfrastructureId) {
             $.cloudExadataInfrastructureId = cloudExadataInfrastructureId;
             return this;
         }
@@ -165,7 +166,7 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder cloudExadataInfrastructureId(@Nullable String cloudExadataInfrastructureId) {
+        public Builder cloudExadataInfrastructureId(String cloudExadataInfrastructureId) {
             return cloudExadataInfrastructureId(Output.of(cloudExadataInfrastructureId));
         }
 
@@ -196,7 +197,7 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -207,20 +208,20 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetCloudAutonomousVmClustersFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetCloudAutonomousVmClustersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCloudAutonomousVmClustersFilter> filters) {
+        public Builder filters(List<GetCloudAutonomousVmClustersFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetCloudAutonomousVmClustersFilter... filters) {
+        public Builder filters(GetCloudAutonomousVmClustersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -230,7 +231,7 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetCloudAutonomousVmClustersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

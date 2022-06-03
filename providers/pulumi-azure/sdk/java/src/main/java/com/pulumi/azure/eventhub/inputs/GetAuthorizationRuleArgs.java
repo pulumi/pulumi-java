@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,17 +32,17 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
     }
 
     @Import(name="listen")
-    private Output</* @Nullable */ Boolean> listen;
+    private @Nullable Output<Boolean> listen;
 
-    public Output</* @Nullable */ Boolean> listen() {
-        return this.listen;
+    public Optional<Output<Boolean>> listen() {
+        return Optional.ofNullable(this.listen);
     }
 
     @Import(name="manage")
-    private Output</* @Nullable */ Boolean> manage;
+    private @Nullable Output<Boolean> manage;
 
-    public Output</* @Nullable */ Boolean> manage() {
-        return this.manage;
+    public Optional<Output<Boolean>> manage() {
+        return Optional.ofNullable(this.manage);
     }
 
     /**
@@ -90,10 +91,10 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
     }
 
     @Import(name="send")
-    private Output</* @Nullable */ Boolean> send;
+    private @Nullable Output<Boolean> send;
 
-    public Output</* @Nullable */ Boolean> send() {
-        return this.send;
+    public Optional<Output<Boolean>> send() {
+        return Optional.ofNullable(this.send);
     }
 
     private GetAuthorizationRuleArgs() {}
@@ -147,21 +148,21 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
             return eventhubName(Output.of(eventhubName));
         }
 
-        public Builder listen(Output</* @Nullable */ Boolean> listen) {
+        public Builder listen(@Nullable Output<Boolean> listen) {
             $.listen = listen;
             return this;
         }
 
-        public Builder listen(@Nullable Boolean listen) {
+        public Builder listen(Boolean listen) {
             return listen(Output.of(listen));
         }
 
-        public Builder manage(Output</* @Nullable */ Boolean> manage) {
+        public Builder manage(@Nullable Output<Boolean> manage) {
             $.manage = manage;
             return this;
         }
 
-        public Builder manage(@Nullable Boolean manage) {
+        public Builder manage(Boolean manage) {
             return manage(Output.of(manage));
         }
 
@@ -228,12 +229,12 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
-        public Builder send(Output</* @Nullable */ Boolean> send) {
+        public Builder send(@Nullable Output<Boolean> send) {
             $.send = send;
             return this;
         }
 
-        public Builder send(@Nullable Boolean send) {
+        public Builder send(Boolean send) {
             return send(Output.of(send));
         }
 

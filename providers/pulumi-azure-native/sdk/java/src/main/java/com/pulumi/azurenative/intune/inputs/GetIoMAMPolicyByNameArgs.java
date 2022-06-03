@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -49,14 +50,14 @@ public final class GetIoMAMPolicyByNameArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="select")
-    private Output</* @Nullable */ String> select;
+    private @Nullable Output<String> select;
 
     /**
      * @return select specific fields in entity.
      * 
      */
-    public Output</* @Nullable */ String> select() {
-        return this.select;
+    public Optional<Output<String>> select() {
+        return Optional.ofNullable(this.select);
     }
 
     private GetIoMAMPolicyByNameArgs() {}
@@ -133,7 +134,7 @@ public final class GetIoMAMPolicyByNameArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder select(Output</* @Nullable */ String> select) {
+        public Builder select(@Nullable Output<String> select) {
             $.select = select;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetIoMAMPolicyByNameArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder select(@Nullable String select) {
+        public Builder select(String select) {
             return select(Output.of(select));
         }
 

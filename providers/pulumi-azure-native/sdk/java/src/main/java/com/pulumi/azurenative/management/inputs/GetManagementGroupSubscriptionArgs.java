@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetManagementGroupSubscriptionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="subscriptionId")
-    private Output</* @Nullable */ String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
     /**
      * @return Subscription ID.
      * 
      */
-    public Output</* @Nullable */ String> subscriptionId() {
-        return this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     private GetManagementGroupSubscriptionArgs() {}
@@ -96,7 +97,7 @@ public final class GetManagementGroupSubscriptionArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder subscriptionId(Output</* @Nullable */ String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
@@ -107,7 +108,7 @@ public final class GetManagementGroupSubscriptionArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder subscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 

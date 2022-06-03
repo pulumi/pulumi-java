@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Returns information on a specific Queue by name
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queueId")
-    private Output</* @Nullable */ String> queueId;
+    private @Nullable Output<String> queueId;
 
     /**
      * @return Returns information on a specific Queue by Queue id
      * 
      */
-    public Output</* @Nullable */ String> queueId() {
-        return this.queueId;
+    public Optional<Output<String>> queueId() {
+        return Optional.ofNullable(this.queueId);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags assigned to the Queue.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetQueueArgs() {}
@@ -129,7 +130,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -140,7 +141,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -150,7 +151,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder queueId(Output</* @Nullable */ String> queueId) {
+        public Builder queueId(@Nullable Output<String> queueId) {
             $.queueId = queueId;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder queueId(@Nullable String queueId) {
+        public Builder queueId(String queueId) {
             return queueId(Output.of(queueId));
         }
 
@@ -171,7 +172,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

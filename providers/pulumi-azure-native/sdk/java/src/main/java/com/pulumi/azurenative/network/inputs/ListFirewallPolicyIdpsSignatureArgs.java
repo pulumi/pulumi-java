@@ -3,14 +3,15 @@
 
 package com.pulumi.azurenative.network.inputs;
 
-import com.pulumi.azurenative.network.inputs.FilterItems;
-import com.pulumi.azurenative.network.inputs.OrderBy;
+import com.pulumi.azurenative.network.inputs.FilterItemsArgs;
+import com.pulumi.azurenative.network.inputs.OrderByArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +24,14 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<FilterItems>> filters;
+    private @Nullable Output<List<FilterItemsArgs>> filters;
 
     /**
      * @return Contain all filters names and values
      * 
      */
-    public Output</* @Nullable */ List<FilterItems>> filters() {
-        return this.filters;
+    public Optional<Output<List<FilterItemsArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -53,14 +54,14 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="orderBy")
-    private Output</* @Nullable */ OrderBy> orderBy;
+    private @Nullable Output<OrderByArgs> orderBy;
 
     /**
      * @return Column to sort response by
      * 
      */
-    public Output</* @Nullable */ OrderBy> orderBy() {
-        return this.orderBy;
+    public Optional<Output<OrderByArgs>> orderBy() {
+        return Optional.ofNullable(this.orderBy);
     }
 
     /**
@@ -83,14 +84,14 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resultsPerPage")
-    private Output</* @Nullable */ Integer> resultsPerPage;
+    private @Nullable Output<Integer> resultsPerPage;
 
     /**
      * @return The number of the results to return in each page
      * 
      */
-    public Output</* @Nullable */ Integer> resultsPerPage() {
-        return this.resultsPerPage;
+    public Optional<Output<Integer>> resultsPerPage() {
+        return Optional.ofNullable(this.resultsPerPage);
     }
 
     /**
@@ -98,14 +99,14 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="search")
-    private Output</* @Nullable */ String> search;
+    private @Nullable Output<String> search;
 
     /**
      * @return Search term in all columns
      * 
      */
-    public Output</* @Nullable */ String> search() {
-        return this.search;
+    public Optional<Output<String>> search() {
+        return Optional.ofNullable(this.search);
     }
 
     /**
@@ -113,14 +114,14 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="skip")
-    private Output</* @Nullable */ Integer> skip;
+    private @Nullable Output<Integer> skip;
 
     /**
      * @return The number of records matching the filter to skip
      * 
      */
-    public Output</* @Nullable */ Integer> skip() {
-        return this.skip;
+    public Optional<Output<Integer>> skip() {
+        return Optional.ofNullable(this.skip);
     }
 
     private ListFirewallPolicyIdpsSignatureArgs() {}
@@ -159,7 +160,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<FilterItems>> filters) {
+        public Builder filters(@Nullable Output<List<FilterItemsArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -170,7 +171,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<FilterItems> filters) {
+        public Builder filters(List<FilterItemsArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -180,7 +181,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder filters(FilterItems... filters) {
+        public Builder filters(FilterItemsArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -211,7 +212,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder orderBy(Output</* @Nullable */ OrderBy> orderBy) {
+        public Builder orderBy(@Nullable Output<OrderByArgs> orderBy) {
             $.orderBy = orderBy;
             return this;
         }
@@ -222,7 +223,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder orderBy(@Nullable OrderBy orderBy) {
+        public Builder orderBy(OrderByArgs orderBy) {
             return orderBy(Output.of(orderBy));
         }
 
@@ -253,7 +254,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder resultsPerPage(Output</* @Nullable */ Integer> resultsPerPage) {
+        public Builder resultsPerPage(@Nullable Output<Integer> resultsPerPage) {
             $.resultsPerPage = resultsPerPage;
             return this;
         }
@@ -264,7 +265,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder resultsPerPage(@Nullable Integer resultsPerPage) {
+        public Builder resultsPerPage(Integer resultsPerPage) {
             return resultsPerPage(Output.of(resultsPerPage));
         }
 
@@ -274,7 +275,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder search(Output</* @Nullable */ String> search) {
+        public Builder search(@Nullable Output<String> search) {
             $.search = search;
             return this;
         }
@@ -285,7 +286,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder search(@Nullable String search) {
+        public Builder search(String search) {
             return search(Output.of(search));
         }
 
@@ -295,7 +296,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder skip(Output</* @Nullable */ Integer> skip) {
+        public Builder skip(@Nullable Output<Integer> skip) {
             $.skip = skip;
             return this;
         }
@@ -306,7 +307,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder skip(@Nullable Integer skip) {
+        public Builder skip(Integer skip) {
             return skip(Output.of(skip));
         }
 

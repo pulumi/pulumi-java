@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +23,17 @@ public final class GetHmacKeyArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="userProject")
-    private Output</* @Nullable */ String> userProject;
+    private @Nullable Output<String> userProject;
 
-    public Output</* @Nullable */ String> userProject() {
-        return this.userProject;
+    public Optional<Output<String>> userProject() {
+        return Optional.ofNullable(this.userProject);
     }
 
     private GetHmacKeyArgs() {}
@@ -70,21 +71,21 @@ public final class GetHmacKeyArgs extends com.pulumi.resources.InvokeArgs {
             return accessId(Output.of(accessId));
         }
 
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
-        public Builder userProject(Output</* @Nullable */ String> userProject) {
+        public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
         }
 
-        public Builder userProject(@Nullable String userProject) {
+        public Builder userProject(String userProject) {
             return userProject(Output.of(userProject));
         }
 

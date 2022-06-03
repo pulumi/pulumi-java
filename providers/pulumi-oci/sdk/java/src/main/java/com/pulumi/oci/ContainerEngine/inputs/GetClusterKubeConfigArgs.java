@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="endpoint")
-    private Output</* @Nullable */ String> endpoint;
+    private @Nullable Output<String> endpoint;
 
     /**
      * @return The endpoint to target. A cluster may have multiple endpoints exposed but the kubeconfig can only target one at a time.
      * 
      */
-    public Output</* @Nullable */ String> endpoint() {
-        return this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="expiration")
-    private Output</* @Nullable */ Integer> expiration;
+    private @Nullable Output<Integer> expiration;
 
     /**
      * @return Deprecated. This field is no longer used.
      * 
      */
-    public Output</* @Nullable */ Integer> expiration() {
-        return this.expiration;
+    public Optional<Output<Integer>> expiration() {
+        return Optional.ofNullable(this.expiration);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tokenVersion")
-    private Output</* @Nullable */ String> tokenVersion;
+    private @Nullable Output<String> tokenVersion;
 
     /**
      * @return The version of the kubeconfig token. Supported value 2.0.0
      * 
      */
-    public Output</* @Nullable */ String> tokenVersion() {
-        return this.tokenVersion;
+    public Optional<Output<String>> tokenVersion() {
+        return Optional.ofNullable(this.tokenVersion);
     }
 
     private GetClusterKubeConfigArgs() {}
@@ -129,7 +130,7 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder endpoint(Output</* @Nullable */ String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
@@ -140,7 +141,7 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder endpoint(@Nullable String endpoint) {
+        public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
@@ -150,7 +151,7 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder expiration(Output</* @Nullable */ Integer> expiration) {
+        public Builder expiration(@Nullable Output<Integer> expiration) {
             $.expiration = expiration;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder expiration(@Nullable Integer expiration) {
+        public Builder expiration(Integer expiration) {
             return expiration(Output.of(expiration));
         }
 
@@ -171,7 +172,7 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder tokenVersion(Output</* @Nullable */ String> tokenVersion) {
+        public Builder tokenVersion(@Nullable Output<String> tokenVersion) {
             $.tokenVersion = tokenVersion;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder tokenVersion(@Nullable String tokenVersion) {
+        public Builder tokenVersion(String tokenVersion) {
             return tokenVersion(Output.of(tokenVersion));
         }
 

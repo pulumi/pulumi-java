@@ -5,10 +5,11 @@ package com.pulumi.oci.Email.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Email.inputs.GetSendersFilter;
+import com.pulumi.oci.Email.inputs.GetSendersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetSendersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domain")
-    private Output</* @Nullable */ String> domain;
+    private @Nullable Output<String> domain;
 
     /**
      * @return A filter to only return resources that match the given domain exactly.
      * 
      */
-    public Output</* @Nullable */ String> domain() {
-        return this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetSendersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="emailAddress")
-    private Output</* @Nullable */ String> emailAddress;
+    private @Nullable Output<String> emailAddress;
 
     /**
      * @return The email address of the approved sender.
      * 
      */
-    public Output</* @Nullable */ String> emailAddress() {
-        return this.emailAddress;
+    public Optional<Output<String>> emailAddress() {
+        return Optional.ofNullable(this.emailAddress);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSendersFilter>> filters;
+    private @Nullable Output<List<GetSendersFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetSendersFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSendersFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetSendersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The current state of a sender.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetSendersArgs() {}
@@ -138,7 +139,7 @@ public final class GetSendersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domain(Output</* @Nullable */ String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
@@ -149,7 +150,7 @@ public final class GetSendersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domain(@Nullable String domain) {
+        public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
@@ -159,7 +160,7 @@ public final class GetSendersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder emailAddress(Output</* @Nullable */ String> emailAddress) {
+        public Builder emailAddress(@Nullable Output<String> emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
@@ -170,20 +171,20 @@ public final class GetSendersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder emailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(String emailAddress) {
             return emailAddress(Output.of(emailAddress));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetSendersFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSendersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSendersFilter> filters) {
+        public Builder filters(List<GetSendersFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetSendersFilter... filters) {
+        public Builder filters(GetSendersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -193,7 +194,7 @@ public final class GetSendersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetSendersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

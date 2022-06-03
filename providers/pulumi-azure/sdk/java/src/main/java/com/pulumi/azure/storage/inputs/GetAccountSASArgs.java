@@ -3,14 +3,15 @@
 
 package com.pulumi.azure.storage.inputs;
 
-import com.pulumi.azure.storage.inputs.GetAccountSASPermissions;
-import com.pulumi.azure.storage.inputs.GetAccountSASResourceTypes;
-import com.pulumi.azure.storage.inputs.GetAccountSASServices;
+import com.pulumi.azure.storage.inputs.GetAccountSASPermissionsArgs;
+import com.pulumi.azure.storage.inputs.GetAccountSASResourceTypesArgs;
+import com.pulumi.azure.storage.inputs.GetAccountSASServicesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -53,14 +54,14 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpsOnly")
-    private Output</* @Nullable */ Boolean> httpsOnly;
+    private @Nullable Output<Boolean> httpsOnly;
 
     /**
      * @return Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> httpsOnly() {
-        return this.httpsOnly;
+    public Optional<Output<Boolean>> httpsOnly() {
+        return Optional.ofNullable(this.httpsOnly);
     }
 
     /**
@@ -68,14 +69,14 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAddresses")
-    private Output</* @Nullable */ String> ipAddresses;
+    private @Nullable Output<String> ipAddresses;
 
     /**
      * @return IP address, or a range of IP addresses, from which to accept requests. When specifying a range, note that the range is inclusive.
      * 
      */
-    public Output</* @Nullable */ String> ipAddresses() {
-        return this.ipAddresses;
+    public Optional<Output<String>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
     /**
@@ -83,13 +84,13 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="permissions", required=true)
-    private Output<GetAccountSASPermissions> permissions;
+    private Output<GetAccountSASPermissionsArgs> permissions;
 
     /**
      * @return A `permissions` block as defined below.
      * 
      */
-    public Output<GetAccountSASPermissions> permissions() {
+    public Output<GetAccountSASPermissionsArgs> permissions() {
         return this.permissions;
     }
 
@@ -98,13 +99,13 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceTypes", required=true)
-    private Output<GetAccountSASResourceTypes> resourceTypes;
+    private Output<GetAccountSASResourceTypesArgs> resourceTypes;
 
     /**
      * @return A `resource_types` block as defined below.
      * 
      */
-    public Output<GetAccountSASResourceTypes> resourceTypes() {
+    public Output<GetAccountSASResourceTypesArgs> resourceTypes() {
         return this.resourceTypes;
     }
 
@@ -113,13 +114,13 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="services", required=true)
-    private Output<GetAccountSASServices> services;
+    private Output<GetAccountSASServicesArgs> services;
 
     /**
      * @return A `services` block as defined below.
      * 
      */
-    public Output<GetAccountSASServices> services() {
+    public Output<GetAccountSASServicesArgs> services() {
         return this.services;
     }
 
@@ -128,14 +129,14 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="signedVersion")
-    private Output</* @Nullable */ String> signedVersion;
+    private @Nullable Output<String> signedVersion;
 
     /**
      * @return Specifies the signed storage service version to use to authorize requests made with this account SAS. Defaults to `2017-07-29`.
      * 
      */
-    public Output</* @Nullable */ String> signedVersion() {
-        return this.signedVersion;
+    public Optional<Output<String>> signedVersion() {
+        return Optional.ofNullable(this.signedVersion);
     }
 
     /**
@@ -233,7 +234,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpsOnly(Output</* @Nullable */ Boolean> httpsOnly) {
+        public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
             $.httpsOnly = httpsOnly;
             return this;
         }
@@ -244,7 +245,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpsOnly(@Nullable Boolean httpsOnly) {
+        public Builder httpsOnly(Boolean httpsOnly) {
             return httpsOnly(Output.of(httpsOnly));
         }
 
@@ -254,7 +255,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipAddresses(Output</* @Nullable */ String> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<String> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
@@ -265,7 +266,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipAddresses(@Nullable String ipAddresses) {
+        public Builder ipAddresses(String ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
@@ -275,7 +276,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder permissions(Output<GetAccountSASPermissions> permissions) {
+        public Builder permissions(Output<GetAccountSASPermissionsArgs> permissions) {
             $.permissions = permissions;
             return this;
         }
@@ -286,7 +287,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder permissions(GetAccountSASPermissions permissions) {
+        public Builder permissions(GetAccountSASPermissionsArgs permissions) {
             return permissions(Output.of(permissions));
         }
 
@@ -296,7 +297,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceTypes(Output<GetAccountSASResourceTypes> resourceTypes) {
+        public Builder resourceTypes(Output<GetAccountSASResourceTypesArgs> resourceTypes) {
             $.resourceTypes = resourceTypes;
             return this;
         }
@@ -307,7 +308,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceTypes(GetAccountSASResourceTypes resourceTypes) {
+        public Builder resourceTypes(GetAccountSASResourceTypesArgs resourceTypes) {
             return resourceTypes(Output.of(resourceTypes));
         }
 
@@ -317,7 +318,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder services(Output<GetAccountSASServices> services) {
+        public Builder services(Output<GetAccountSASServicesArgs> services) {
             $.services = services;
             return this;
         }
@@ -328,7 +329,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder services(GetAccountSASServices services) {
+        public Builder services(GetAccountSASServicesArgs services) {
             return services(Output.of(services));
         }
 
@@ -338,7 +339,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder signedVersion(Output</* @Nullable */ String> signedVersion) {
+        public Builder signedVersion(@Nullable Output<String> signedVersion) {
             $.signedVersion = signedVersion;
             return this;
         }
@@ -349,7 +350,7 @@ public final class GetAccountSASArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder signedVersion(@Nullable String signedVersion) {
+        public Builder signedVersion(String signedVersion) {
             return signedVersion(Output.of(signedVersion));
         }
 

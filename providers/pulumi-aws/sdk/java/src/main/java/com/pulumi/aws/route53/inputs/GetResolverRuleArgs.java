@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainName")
-    private Output</* @Nullable */ String> domainName;
+    private @Nullable Output<String> domainName;
 
     /**
      * @return The domain name the desired resolver rule forwards DNS queries for. Conflicts with `resolver_rule_id`.
      * 
      */
-    public Output</* @Nullable */ String> domainName() {
-        return this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The friendly name of the desired resolver rule. Conflicts with `resolver_rule_id`.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resolverEndpointId")
-    private Output</* @Nullable */ String> resolverEndpointId;
+    private @Nullable Output<String> resolverEndpointId;
 
     /**
      * @return The ID of the outbound resolver endpoint of the desired resolver rule. Conflicts with `resolver_rule_id`.
      * 
      */
-    public Output</* @Nullable */ String> resolverEndpointId() {
-        return this.resolverEndpointId;
+    public Optional<Output<String>> resolverEndpointId() {
+        return Optional.ofNullable(this.resolverEndpointId);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resolverRuleId")
-    private Output</* @Nullable */ String> resolverRuleId;
+    private @Nullable Output<String> resolverRuleId;
 
     /**
      * @return The ID of the desired resolver rule. Conflicts with `domain_name`, `name`, `resolver_endpoint_id` and `rule_type`.
      * 
      */
-    public Output</* @Nullable */ String> resolverRuleId() {
-        return this.resolverRuleId;
+    public Optional<Output<String>> resolverRuleId() {
+        return Optional.ofNullable(this.resolverRuleId);
     }
 
     /**
@@ -80,14 +81,14 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleType")
-    private Output</* @Nullable */ String> ruleType;
+    private @Nullable Output<String> ruleType;
 
     /**
      * @return The rule type of the desired resolver rule. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`. Conflicts with `resolver_rule_id`.
      * 
      */
-    public Output</* @Nullable */ String> ruleType() {
-        return this.ruleType;
+    public Optional<Output<String>> ruleType() {
+        return Optional.ofNullable(this.ruleType);
     }
 
     /**
@@ -95,14 +96,14 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags assigned to the resolver rule.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetResolverRuleArgs() {}
@@ -140,7 +141,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domainName(Output</* @Nullable */ String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
@@ -151,7 +152,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domainName(@Nullable String domainName) {
+        public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
@@ -161,7 +162,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -172,7 +173,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -182,7 +183,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resolverEndpointId(Output</* @Nullable */ String> resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable Output<String> resolverEndpointId) {
             $.resolverEndpointId = resolverEndpointId;
             return this;
         }
@@ -193,7 +194,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
+        public Builder resolverEndpointId(String resolverEndpointId) {
             return resolverEndpointId(Output.of(resolverEndpointId));
         }
 
@@ -203,7 +204,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resolverRuleId(Output</* @Nullable */ String> resolverRuleId) {
+        public Builder resolverRuleId(@Nullable Output<String> resolverRuleId) {
             $.resolverRuleId = resolverRuleId;
             return this;
         }
@@ -214,7 +215,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resolverRuleId(@Nullable String resolverRuleId) {
+        public Builder resolverRuleId(String resolverRuleId) {
             return resolverRuleId(Output.of(resolverRuleId));
         }
 
@@ -224,7 +225,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ruleType(Output</* @Nullable */ String> ruleType) {
+        public Builder ruleType(@Nullable Output<String> ruleType) {
             $.ruleType = ruleType;
             return this;
         }
@@ -235,7 +236,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ruleType(@Nullable String ruleType) {
+        public Builder ruleType(String ruleType) {
             return ruleType(Output.of(ruleType));
         }
 
@@ -245,7 +246,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -256,7 +257,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

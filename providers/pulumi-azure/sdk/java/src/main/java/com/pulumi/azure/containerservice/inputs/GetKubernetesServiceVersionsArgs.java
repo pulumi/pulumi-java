@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="includePreview")
-    private Output</* @Nullable */ Boolean> includePreview;
+    private @Nullable Output<Boolean> includePreview;
 
     /**
      * @return Should Preview versions of Kubernetes in AKS be included? Defaults to `true`
      * 
      */
-    public Output</* @Nullable */ Boolean> includePreview() {
-        return this.includePreview;
+    public Optional<Output<Boolean>> includePreview() {
+        return Optional.ofNullable(this.includePreview);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="versionPrefix")
-    private Output</* @Nullable */ String> versionPrefix;
+    private @Nullable Output<String> versionPrefix;
 
     /**
      * @return A prefix filter for the versions of Kubernetes which should be returned; for example `1.` will return `1.9` to `1.14`, whereas `1.12` will return `1.12.2`.
      * 
      */
-    public Output</* @Nullable */ String> versionPrefix() {
-        return this.versionPrefix;
+    public Optional<Output<String>> versionPrefix() {
+        return Optional.ofNullable(this.versionPrefix);
     }
 
     private GetKubernetesServiceVersionsArgs() {}
@@ -92,7 +93,7 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder includePreview(Output</* @Nullable */ Boolean> includePreview) {
+        public Builder includePreview(@Nullable Output<Boolean> includePreview) {
             $.includePreview = includePreview;
             return this;
         }
@@ -103,7 +104,7 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder includePreview(@Nullable Boolean includePreview) {
+        public Builder includePreview(Boolean includePreview) {
             return includePreview(Output.of(includePreview));
         }
 
@@ -134,7 +135,7 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder versionPrefix(Output</* @Nullable */ String> versionPrefix) {
+        public Builder versionPrefix(@Nullable Output<String> versionPrefix) {
             $.versionPrefix = versionPrefix;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder versionPrefix(@Nullable String versionPrefix) {
+        public Builder versionPrefix(String versionPrefix) {
             return versionPrefix(Output.of(versionPrefix));
         }
 

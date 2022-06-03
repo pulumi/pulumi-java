@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime")
-    private Output</* @Nullable */ String> endTime;
+    private @Nullable Output<String> endTime;
 
     /**
      * @return UTC date and time specifying the end time of an interval. When not specified the service uses DateTime.UtcNow
      * 
      */
-    public Output</* @Nullable */ String> endTime() {
-        return this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -64,14 +65,14 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime")
-    private Output</* @Nullable */ String> startTime;
+    private @Nullable Output<String> startTime;
 
     /**
      * @return UTC date and time specifying the start time of an interval. When not specified the service uses DateTime.UtcNow - 10m
      * 
      */
-    public Output</* @Nullable */ String> startTime() {
-        return this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -123,7 +124,7 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endTime(Output</* @Nullable */ String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
@@ -134,7 +135,7 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endTime(@Nullable String endTime) {
+        public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
@@ -186,7 +187,7 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder startTime(Output</* @Nullable */ String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
@@ -197,7 +198,7 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder startTime(@Nullable String startTime) {
+        public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 

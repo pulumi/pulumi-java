@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
      * 
      */
     @Import(name="beginExecId")
-    private Output</* @Nullable */ String> beginExecId;
+    private @Nullable Output<String> beginExecId;
 
     /**
      * @return The optional greater than or equal to filter on the execution ID related to a specific SQL Tuning Advisor task.
      * 
      */
-    public Output</* @Nullable */ String> beginExecId() {
-        return this.beginExecId;
+    public Optional<Output<String>> beginExecId() {
+        return Optional.ofNullable(this.beginExecId);
     }
 
     /**
@@ -36,21 +37,21 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
      * 
      */
     @Import(name="endExecId")
-    private Output</* @Nullable */ String> endExecId;
+    private @Nullable Output<String> endExecId;
 
     /**
      * @return The optional less than or equal to query parameter to filter on the execution ID related to a specific SQL Tuning Advisor task.
      * 
      */
-    public Output</* @Nullable */ String> endExecId() {
-        return this.endExecId;
+    public Optional<Output<String>> endExecId() {
+        return Optional.ofNullable(this.endExecId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilter>> filters;
+    private @Nullable Output<List<GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
      * 
      */
     @Import(name="findingFilter")
-    private Output</* @Nullable */ String> findingFilter;
+    private @Nullable Output<String> findingFilter;
 
     /**
      * @return The filter used to display specific findings in the report.
      * 
      */
-    public Output</* @Nullable */ String> findingFilter() {
-        return this.findingFilter;
+    public Optional<Output<String>> findingFilter() {
+        return Optional.ofNullable(this.findingFilter);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
      * 
      */
     @Import(name="indexHashFilter")
-    private Output</* @Nullable */ String> indexHashFilter;
+    private @Nullable Output<String> indexHashFilter;
 
     /**
      * @return The hash value of the index table name.
      * 
      */
-    public Output</* @Nullable */ String> indexHashFilter() {
-        return this.indexHashFilter;
+    public Optional<Output<String>> indexHashFilter() {
+        return Optional.ofNullable(this.indexHashFilter);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
      * 
      */
     @Import(name="searchPeriod")
-    private Output</* @Nullable */ String> searchPeriod;
+    private @Nullable Output<String> searchPeriod;
 
     /**
      * @return The search period during which the API will search for begin and end exec id, if not supplied. Unused if beginExecId and endExecId optional query params are both supplied.
      * 
      */
-    public Output</* @Nullable */ String> searchPeriod() {
-        return this.searchPeriod;
+    public Optional<Output<String>> searchPeriod() {
+        return Optional.ofNullable(this.searchPeriod);
     }
 
     /**
@@ -133,14 +134,14 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
      * 
      */
     @Import(name="statsHashFilter")
-    private Output</* @Nullable */ String> statsHashFilter;
+    private @Nullable Output<String> statsHashFilter;
 
     /**
      * @return The hash value of the object for the statistic finding search.
      * 
      */
-    public Output</* @Nullable */ String> statsHashFilter() {
-        return this.statsHashFilter;
+    public Optional<Output<String>> statsHashFilter() {
+        return Optional.ofNullable(this.statsHashFilter);
     }
 
     private GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs() {}
@@ -181,7 +182,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder beginExecId(Output</* @Nullable */ String> beginExecId) {
+        public Builder beginExecId(@Nullable Output<String> beginExecId) {
             $.beginExecId = beginExecId;
             return this;
         }
@@ -192,7 +193,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder beginExecId(@Nullable String beginExecId) {
+        public Builder beginExecId(String beginExecId) {
             return beginExecId(Output.of(beginExecId));
         }
 
@@ -202,7 +203,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder endExecId(Output</* @Nullable */ String> endExecId) {
+        public Builder endExecId(@Nullable Output<String> endExecId) {
             $.endExecId = endExecId;
             return this;
         }
@@ -213,20 +214,20 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder endExecId(@Nullable String endExecId) {
+        public Builder endExecId(String endExecId) {
             return endExecId(Output.of(endExecId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilter> filters) {
+        public Builder filters(List<GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilter... filters) {
+        public Builder filters(GetManagedDatabaseSqlTuningAdvisorTasksFindingsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -236,7 +237,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder findingFilter(Output</* @Nullable */ String> findingFilter) {
+        public Builder findingFilter(@Nullable Output<String> findingFilter) {
             $.findingFilter = findingFilter;
             return this;
         }
@@ -247,7 +248,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder findingFilter(@Nullable String findingFilter) {
+        public Builder findingFilter(String findingFilter) {
             return findingFilter(Output.of(findingFilter));
         }
 
@@ -257,7 +258,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder indexHashFilter(Output</* @Nullable */ String> indexHashFilter) {
+        public Builder indexHashFilter(@Nullable Output<String> indexHashFilter) {
             $.indexHashFilter = indexHashFilter;
             return this;
         }
@@ -268,7 +269,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder indexHashFilter(@Nullable String indexHashFilter) {
+        public Builder indexHashFilter(String indexHashFilter) {
             return indexHashFilter(Output.of(indexHashFilter));
         }
 
@@ -299,7 +300,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder searchPeriod(Output</* @Nullable */ String> searchPeriod) {
+        public Builder searchPeriod(@Nullable Output<String> searchPeriod) {
             $.searchPeriod = searchPeriod;
             return this;
         }
@@ -310,7 +311,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder searchPeriod(@Nullable String searchPeriod) {
+        public Builder searchPeriod(String searchPeriod) {
             return searchPeriod(Output.of(searchPeriod));
         }
 
@@ -341,7 +342,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder statsHashFilter(Output</* @Nullable */ String> statsHashFilter) {
+        public Builder statsHashFilter(@Nullable Output<String> statsHashFilter) {
             $.statsHashFilter = statsHashFilter;
             return this;
         }
@@ -352,7 +353,7 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksFindingsArgs extends c
          * @return builder
          * 
          */
-        public Builder statsHashFilter(@Nullable String statsHashFilter) {
+        public Builder statsHashFilter(String statsHashFilter) {
             return statsHashFilter(Output.of(statsHashFilter));
         }
 

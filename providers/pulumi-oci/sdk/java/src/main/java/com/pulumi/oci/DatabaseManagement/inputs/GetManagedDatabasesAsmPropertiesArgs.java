@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabasesAsmPropertiesFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabasesAsmPropertiesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetManagedDatabasesAsmPropertiesArgs extends com.pulumi.resou
     public static final GetManagedDatabasesAsmPropertiesArgs Empty = new GetManagedDatabasesAsmPropertiesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagedDatabasesAsmPropertiesFilter>> filters;
+    private @Nullable Output<List<GetManagedDatabasesAsmPropertiesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagedDatabasesAsmPropertiesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagedDatabasesAsmPropertiesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetManagedDatabasesAsmPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetManagedDatabasesAsmPropertiesArgs() {}
@@ -79,16 +80,16 @@ public final class GetManagedDatabasesAsmPropertiesArgs extends com.pulumi.resou
             $ = new GetManagedDatabasesAsmPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagedDatabasesAsmPropertiesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedDatabasesAsmPropertiesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabasesAsmPropertiesFilter> filters) {
+        public Builder filters(List<GetManagedDatabasesAsmPropertiesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagedDatabasesAsmPropertiesFilter... filters) {
+        public Builder filters(GetManagedDatabasesAsmPropertiesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -119,7 +120,7 @@ public final class GetManagedDatabasesAsmPropertiesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -130,7 +131,7 @@ public final class GetManagedDatabasesAsmPropertiesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

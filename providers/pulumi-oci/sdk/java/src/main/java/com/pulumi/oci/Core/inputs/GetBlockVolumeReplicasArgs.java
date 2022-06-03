@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetBlockVolumeReplicasFilter;
+import com.pulumi.oci.Core.inputs.GetBlockVolumeReplicasFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -51,21 +52,21 @@ public final class GetBlockVolumeReplicasArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetBlockVolumeReplicasFilter>> filters;
+    private @Nullable Output<List<GetBlockVolumeReplicasFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetBlockVolumeReplicasFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetBlockVolumeReplicasFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetBlockVolumeReplicasArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetBlockVolumeReplicasArgs() {}
@@ -159,7 +160,7 @@ public final class GetBlockVolumeReplicasArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -170,20 +171,20 @@ public final class GetBlockVolumeReplicasArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetBlockVolumeReplicasFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetBlockVolumeReplicasFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBlockVolumeReplicasFilter> filters) {
+        public Builder filters(List<GetBlockVolumeReplicasFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetBlockVolumeReplicasFilter... filters) {
+        public Builder filters(GetBlockVolumeReplicasFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -193,7 +194,7 @@ public final class GetBlockVolumeReplicasArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetBlockVolumeReplicasArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

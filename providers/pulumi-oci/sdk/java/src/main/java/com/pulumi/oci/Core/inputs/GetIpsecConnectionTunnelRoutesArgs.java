@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetIpsecConnectionTunnelRoutesFilter;
+import com.pulumi.oci.Core.inputs.GetIpsecConnectionTunnelRoutesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +22,21 @@ public final class GetIpsecConnectionTunnelRoutesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="advertiser")
-    private Output</* @Nullable */ String> advertiser;
+    private @Nullable Output<String> advertiser;
 
     /**
      * @return Specifies the advertiser of the routes. If set to `ORACLE`, this returns only the routes advertised by Oracle. When set to `CUSTOMER`, this returns only the routes advertised by the CPE.
      * 
      */
-    public Output</* @Nullable */ String> advertiser() {
-        return this.advertiser;
+    public Optional<Output<String>> advertiser() {
+        return Optional.ofNullable(this.advertiser);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetIpsecConnectionTunnelRoutesFilter>> filters;
+    private @Nullable Output<List<GetIpsecConnectionTunnelRoutesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetIpsecConnectionTunnelRoutesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetIpsecConnectionTunnelRoutesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -101,7 +102,7 @@ public final class GetIpsecConnectionTunnelRoutesArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder advertiser(Output</* @Nullable */ String> advertiser) {
+        public Builder advertiser(@Nullable Output<String> advertiser) {
             $.advertiser = advertiser;
             return this;
         }
@@ -112,20 +113,20 @@ public final class GetIpsecConnectionTunnelRoutesArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder advertiser(@Nullable String advertiser) {
+        public Builder advertiser(String advertiser) {
             return advertiser(Output.of(advertiser));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetIpsecConnectionTunnelRoutesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetIpsecConnectionTunnelRoutesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetIpsecConnectionTunnelRoutesFilter> filters) {
+        public Builder filters(List<GetIpsecConnectionTunnelRoutesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetIpsecConnectionTunnelRoutesFilter... filters) {
+        public Builder filters(GetIpsecConnectionTunnelRoutesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

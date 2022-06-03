@@ -5,10 +5,11 @@ package com.pulumi.oci.Oce.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Oce.inputs.GetOceInstancesFilter;
+import com.pulumi.oci.Oce.inputs.GetOceInstancesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetOceInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetOceInstancesFilter>> filters;
+    private @Nullable Output<List<GetOceInstancesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetOceInstancesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetOceInstancesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetOceInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Filter results on lifecycleState.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetOceInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tenancyId")
-    private Output</* @Nullable */ String> tenancyId;
+    private @Nullable Output<String> tenancyId;
 
     /**
      * @return The ID of the tenancy in which to list resources.
      * 
      */
-    public Output</* @Nullable */ String> tenancyId() {
-        return this.tenancyId;
+    public Optional<Output<String>> tenancyId() {
+        return Optional.ofNullable(this.tenancyId);
     }
 
     private GetOceInstancesArgs() {}
@@ -138,7 +139,7 @@ public final class GetOceInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,20 +150,20 @@ public final class GetOceInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetOceInstancesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetOceInstancesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetOceInstancesFilter> filters) {
+        public Builder filters(List<GetOceInstancesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetOceInstancesFilter... filters) {
+        public Builder filters(GetOceInstancesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetOceInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetOceInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -193,7 +194,7 @@ public final class GetOceInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tenancyId(Output</* @Nullable */ String> tenancyId) {
+        public Builder tenancyId(@Nullable Output<String> tenancyId) {
             $.tenancyId = tenancyId;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetOceInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tenancyId(@Nullable String tenancyId) {
+        public Builder tenancyId(String tenancyId) {
             return tenancyId(Output.of(tenancyId));
         }
 

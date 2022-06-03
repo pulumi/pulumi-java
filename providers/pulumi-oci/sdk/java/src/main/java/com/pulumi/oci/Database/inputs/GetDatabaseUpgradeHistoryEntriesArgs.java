@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDatabaseUpgradeHistoryEntriesFilter;
+import com.pulumi.oci.Database.inputs.GetDatabaseUpgradeHistoryEntriesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDatabaseUpgradeHistoryEntriesFilter>> filters;
+    private @Nullable Output<List<GetDatabaseUpgradeHistoryEntriesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDatabaseUpgradeHistoryEntriesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDatabaseUpgradeHistoryEntriesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only upgradeHistoryEntries that match the given lifecycle state exactly.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="upgradeAction")
-    private Output</* @Nullable */ String> upgradeAction;
+    private @Nullable Output<String> upgradeAction;
 
     /**
      * @return A filter to return only upgradeHistoryEntries that match the specified Upgrade Action.
      * 
      */
-    public Output</* @Nullable */ String> upgradeAction() {
-        return this.upgradeAction;
+    public Optional<Output<String>> upgradeAction() {
+        return Optional.ofNullable(this.upgradeAction);
     }
 
     private GetDatabaseUpgradeHistoryEntriesArgs() {}
@@ -116,16 +117,16 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
             return databaseId(Output.of(databaseId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDatabaseUpgradeHistoryEntriesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabaseUpgradeHistoryEntriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDatabaseUpgradeHistoryEntriesFilter> filters) {
+        public Builder filters(List<GetDatabaseUpgradeHistoryEntriesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDatabaseUpgradeHistoryEntriesFilter... filters) {
+        public Builder filters(GetDatabaseUpgradeHistoryEntriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -156,7 +157,7 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder upgradeAction(Output</* @Nullable */ String> upgradeAction) {
+        public Builder upgradeAction(@Nullable Output<String> upgradeAction) {
             $.upgradeAction = upgradeAction;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetDatabaseUpgradeHistoryEntriesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder upgradeAction(@Nullable String upgradeAction) {
+        public Builder upgradeAction(String upgradeAction) {
             return upgradeAction(Output.of(upgradeAction));
         }
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The project the unique service account was created for. If it is not provided, the provider project is used.
      * 
      */
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -35,15 +36,15 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userProject")
-    private Output</* @Nullable */ String> userProject;
+    private @Nullable Output<String> userProject;
 
     /**
      * @return The project the lookup originates from. This field is used if you are making the request
      * from a different account than the one you are finding the service account for.
      * 
      */
-    public Output</* @Nullable */ String> userProject() {
-        return this.userProject;
+    public Optional<Output<String>> userProject() {
+        return Optional.ofNullable(this.userProject);
     }
 
     private GetProjectServiceAccountArgs() {}
@@ -77,7 +78,7 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
@@ -88,7 +89,7 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
@@ -99,7 +100,7 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder userProject(Output</* @Nullable */ String> userProject) {
+        public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
         }
@@ -111,7 +112,7 @@ public final class GetProjectServiceAccountArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder userProject(@Nullable String userProject) {
+        public Builder userProject(String userProject) {
             return userProject(Output.of(userProject));
         }
 

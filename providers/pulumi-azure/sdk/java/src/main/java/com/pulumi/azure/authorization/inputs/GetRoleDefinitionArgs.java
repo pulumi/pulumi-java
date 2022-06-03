@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Specifies the Name of either a built-in or custom Role Definition.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="roleDefinitionId")
-    private Output</* @Nullable */ String> roleDefinitionId;
+    private @Nullable Output<String> roleDefinitionId;
 
     /**
      * @return Specifies the ID of the Role Definition as a UUID/GUID.
      * 
      */
-    public Output</* @Nullable */ String> roleDefinitionId() {
-        return this.roleDefinitionId;
+    public Optional<Output<String>> roleDefinitionId() {
+        return Optional.ofNullable(this.roleDefinitionId);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scope")
-    private Output</* @Nullable */ String> scope;
+    private @Nullable Output<String> scope;
 
     /**
      * @return Specifies the Scope at which the Custom Role Definition exists.
      * 
      */
-    public Output</* @Nullable */ String> scope() {
-        return this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     private GetRoleDefinitionArgs() {}
@@ -91,7 +92,7 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -112,7 +113,7 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder roleDefinitionId(Output</* @Nullable */ String> roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
+        public Builder roleDefinitionId(String roleDefinitionId) {
             return roleDefinitionId(Output.of(roleDefinitionId));
         }
 
@@ -133,7 +134,7 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder scope(Output</* @Nullable */ String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder scope(@Nullable String scope) {
+        public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 

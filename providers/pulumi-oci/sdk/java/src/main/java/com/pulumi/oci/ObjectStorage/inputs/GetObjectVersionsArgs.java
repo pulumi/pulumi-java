@@ -5,10 +5,11 @@ package com.pulumi.oci.ObjectStorage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ObjectStorage.inputs.GetObjectVersionsFilter;
+import com.pulumi.oci.ObjectStorage.inputs.GetObjectVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="delimiter")
-    private Output</* @Nullable */ String> delimiter;
+    private @Nullable Output<String> delimiter;
 
     /**
      * @return When this parameter is set, only objects whose names do not contain the delimiter character (after an optionally specified prefix) are returned in the objects key of the response body. Scanned objects whose names contain the delimiter have the part of their name up to the first occurrence of the delimiter (including the optional prefix) returned as a set of prefixes. Note that only &#39;/&#39; is a supported delimiter character at this time.
      * 
      */
-    public Output</* @Nullable */ String> delimiter() {
-        return this.delimiter;
+    public Optional<Output<String>> delimiter() {
+        return Optional.ofNullable(this.delimiter);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="end")
-    private Output</* @Nullable */ String> end;
+    private @Nullable Output<String> end;
 
     /**
      * @return Object names returned by a list query must be strictly less than this parameter.
      * 
      */
-    public Output</* @Nullable */ String> end() {
-        return this.end;
+    public Optional<Output<String>> end() {
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -66,21 +67,21 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fields")
-    private Output</* @Nullable */ String> fields;
+    private @Nullable Output<String> fields;
 
     /**
      * @return Object summary by default includes only the &#39;name&#39; field. Use this parameter to also include &#39;size&#39; (object size in bytes), &#39;etag&#39;, &#39;md5&#39;, &#39;timeCreated&#39; (object creation date and time), &#39;timeModified&#39; (object modification date and time), &#39;storageTier&#39; and &#39;archivalState&#39; fields. Specify the value of this parameter as a comma-separated, case-insensitive list of those field names.  For example &#39;name,etag,timeCreated,md5,timeModified,storageTier,archivalState&#39;.
      * 
      */
-    public Output</* @Nullable */ String> fields() {
-        return this.fields;
+    public Optional<Output<String>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetObjectVersionsFilter>> filters;
+    private @Nullable Output<List<GetObjectVersionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetObjectVersionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetObjectVersionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="prefix")
-    private Output</* @Nullable */ String> prefix;
+    private @Nullable Output<String> prefix;
 
     /**
      * @return The string to use for matching against the start of object names in a list query.
      * 
      */
-    public Output</* @Nullable */ String> prefix() {
-        return this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -118,14 +119,14 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="start")
-    private Output</* @Nullable */ String> start;
+    private @Nullable Output<String> start;
 
     /**
      * @return Object names returned by a list query must be greater or equal to this parameter.
      * 
      */
-    public Output</* @Nullable */ String> start() {
-        return this.start;
+    public Optional<Output<String>> start() {
+        return Optional.ofNullable(this.start);
     }
 
     /**
@@ -133,14 +134,14 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="startAfter")
-    private Output</* @Nullable */ String> startAfter;
+    private @Nullable Output<String> startAfter;
 
     /**
      * @return Object names returned by a list query must be greater than this parameter.
      * 
      */
-    public Output</* @Nullable */ String> startAfter() {
-        return this.startAfter;
+    public Optional<Output<String>> startAfter() {
+        return Optional.ofNullable(this.startAfter);
     }
 
     private GetObjectVersionsArgs() {}
@@ -202,7 +203,7 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder delimiter(Output</* @Nullable */ String> delimiter) {
+        public Builder delimiter(@Nullable Output<String> delimiter) {
             $.delimiter = delimiter;
             return this;
         }
@@ -213,7 +214,7 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder delimiter(@Nullable String delimiter) {
+        public Builder delimiter(String delimiter) {
             return delimiter(Output.of(delimiter));
         }
 
@@ -223,7 +224,7 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder end(Output</* @Nullable */ String> end) {
+        public Builder end(@Nullable Output<String> end) {
             $.end = end;
             return this;
         }
@@ -234,7 +235,7 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder end(@Nullable String end) {
+        public Builder end(String end) {
             return end(Output.of(end));
         }
 
@@ -244,7 +245,7 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder fields(Output</* @Nullable */ String> fields) {
+        public Builder fields(@Nullable Output<String> fields) {
             $.fields = fields;
             return this;
         }
@@ -255,20 +256,20 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder fields(@Nullable String fields) {
+        public Builder fields(String fields) {
             return fields(Output.of(fields));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetObjectVersionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetObjectVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetObjectVersionsFilter> filters) {
+        public Builder filters(List<GetObjectVersionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetObjectVersionsFilter... filters) {
+        public Builder filters(GetObjectVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -299,7 +300,7 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder prefix(Output</* @Nullable */ String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
@@ -310,7 +311,7 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder prefix(@Nullable String prefix) {
+        public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
@@ -320,7 +321,7 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder start(Output</* @Nullable */ String> start) {
+        public Builder start(@Nullable Output<String> start) {
             $.start = start;
             return this;
         }
@@ -331,7 +332,7 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder start(@Nullable String start) {
+        public Builder start(String start) {
             return start(Output.of(start));
         }
 
@@ -341,7 +342,7 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder startAfter(Output</* @Nullable */ String> startAfter) {
+        public Builder startAfter(@Nullable Output<String> startAfter) {
             $.startAfter = startAfter;
             return this;
         }
@@ -352,7 +353,7 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder startAfter(@Nullable String startAfter) {
+        public Builder startAfter(String startAfter) {
             return startAfter(Output.of(startAfter));
         }
 

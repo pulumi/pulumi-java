@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -50,14 +51,14 @@ public final class GetGetLabArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeBudget")
-    private Output</* @Nullable */ Boolean> includeBudget;
+    private @Nullable Output<Boolean> includeBudget;
 
     /**
      * @return May be used to include budget information.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeBudget() {
-        return this.includeBudget;
+    public Optional<Output<Boolean>> includeBudget() {
+        return Optional.ofNullable(this.includeBudget);
     }
 
     /**
@@ -150,7 +151,7 @@ public final class GetGetLabArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeBudget(Output</* @Nullable */ Boolean> includeBudget) {
+        public Builder includeBudget(@Nullable Output<Boolean> includeBudget) {
             $.includeBudget = includeBudget;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetGetLabArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeBudget(@Nullable Boolean includeBudget) {
+        public Builder includeBudget(Boolean includeBudget) {
             return includeBudget(Output.of(includeBudget));
         }
 

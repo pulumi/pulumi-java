@@ -5,10 +5,11 @@ package com.pulumi.oci.Ocvp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Ocvp.inputs.GetExsiHostsFilter;
+import com.pulumi.oci.Ocvp.inputs.GetExsiHostsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computeInstanceId")
-    private Output</* @Nullable */ String> computeInstanceId;
+    private @Nullable Output<String> computeInstanceId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Compute instance.
      * 
      */
-    public Output</* @Nullable */ String> computeInstanceId() {
-        return this.computeInstanceId;
+    public Optional<Output<String>> computeInstanceId() {
+        return Optional.ofNullable(this.computeInstanceId);
     }
 
     /**
@@ -36,21 +37,21 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetExsiHostsFilter>> filters;
+    private @Nullable Output<List<GetExsiHostsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetExsiHostsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetExsiHostsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sddcId")
-    private Output</* @Nullable */ String> sddcId;
+    private @Nullable Output<String> sddcId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the SDDC.
      * 
      */
-    public Output</* @Nullable */ String> sddcId() {
-        return this.sddcId;
+    public Optional<Output<String>> sddcId() {
+        return Optional.ofNullable(this.sddcId);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The lifecycle state of the resource.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetExsiHostsArgs() {}
@@ -117,7 +118,7 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder computeInstanceId(Output</* @Nullable */ String> computeInstanceId) {
+        public Builder computeInstanceId(@Nullable Output<String> computeInstanceId) {
             $.computeInstanceId = computeInstanceId;
             return this;
         }
@@ -128,7 +129,7 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder computeInstanceId(@Nullable String computeInstanceId) {
+        public Builder computeInstanceId(String computeInstanceId) {
             return computeInstanceId(Output.of(computeInstanceId));
         }
 
@@ -138,7 +139,7 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,20 +150,20 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetExsiHostsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetExsiHostsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetExsiHostsFilter> filters) {
+        public Builder filters(List<GetExsiHostsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetExsiHostsFilter... filters) {
+        public Builder filters(GetExsiHostsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sddcId(Output</* @Nullable */ String> sddcId) {
+        public Builder sddcId(@Nullable Output<String> sddcId) {
             $.sddcId = sddcId;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sddcId(@Nullable String sddcId) {
+        public Builder sddcId(String sddcId) {
             return sddcId(Output.of(sddcId));
         }
 
@@ -193,7 +194,7 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetExsiHostsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

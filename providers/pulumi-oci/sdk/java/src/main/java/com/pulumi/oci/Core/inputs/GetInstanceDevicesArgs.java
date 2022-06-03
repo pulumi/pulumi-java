@@ -5,11 +5,12 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetInstanceDevicesFilter;
+import com.pulumi.oci.Core.inputs.GetInstanceDevicesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +19,10 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
     public static final GetInstanceDevicesArgs Empty = new GetInstanceDevicesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetInstanceDevicesFilter>> filters;
+    private @Nullable Output<List<GetInstanceDevicesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetInstanceDevicesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetInstanceDevicesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -44,14 +45,14 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isAvailable")
-    private Output</* @Nullable */ Boolean> isAvailable;
+    private @Nullable Output<Boolean> isAvailable;
 
     /**
      * @return A filter to return only available devices or only used devices.
      * 
      */
-    public Output</* @Nullable */ Boolean> isAvailable() {
-        return this.isAvailable;
+    public Optional<Output<Boolean>> isAvailable() {
+        return Optional.ofNullable(this.isAvailable);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only devices that match the given name exactly.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetInstanceDevicesArgs() {}
@@ -96,16 +97,16 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
             $ = new GetInstanceDevicesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetInstanceDevicesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetInstanceDevicesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetInstanceDevicesFilter> filters) {
+        public Builder filters(List<GetInstanceDevicesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetInstanceDevicesFilter... filters) {
+        public Builder filters(GetInstanceDevicesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -136,7 +137,7 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder isAvailable(Output</* @Nullable */ Boolean> isAvailable) {
+        public Builder isAvailable(@Nullable Output<Boolean> isAvailable) {
             $.isAvailable = isAvailable;
             return this;
         }
@@ -147,7 +148,7 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder isAvailable(@Nullable Boolean isAvailable) {
+        public Builder isAvailable(Boolean isAvailable) {
             return isAvailable(Output.of(isAvailable));
         }
 
@@ -157,7 +158,7 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -168,7 +169,7 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.DataScience.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataScience.inputs.GetNotebookSessionShapesFilter;
+import com.pulumi.oci.DataScience.inputs.GetNotebookSessionShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetNotebookSessionShapesArgs extends com.pulumi.resources.Inv
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetNotebookSessionShapesFilter>> filters;
+    private @Nullable Output<List<GetNotebookSessionShapesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetNotebookSessionShapesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetNotebookSessionShapesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetNotebookSessionShapesArgs() {}
@@ -84,16 +85,16 @@ public final class GetNotebookSessionShapesArgs extends com.pulumi.resources.Inv
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetNotebookSessionShapesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetNotebookSessionShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetNotebookSessionShapesFilter> filters) {
+        public Builder filters(List<GetNotebookSessionShapesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetNotebookSessionShapesFilter... filters) {
+        public Builder filters(GetNotebookSessionShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetImageShapesFilter;
+import com.pulumi.oci.Core.inputs.GetImageShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetImageShapesArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetImageShapesArgs Empty = new GetImageShapesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetImageShapesFilter>> filters;
+    private @Nullable Output<List<GetImageShapesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetImageShapesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetImageShapesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetImageShapesArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetImageShapesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetImageShapesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetImageShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetImageShapesFilter> filters) {
+        public Builder filters(List<GetImageShapesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetImageShapesFilter... filters) {
+        public Builder filters(GetImageShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

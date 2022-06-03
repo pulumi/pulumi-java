@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -49,14 +50,14 @@ public final class ListConfigurationStoreKeysArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="skipToken")
-    private Output</* @Nullable */ String> skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return A skip token is used to continue retrieving items after an operation returns a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.
      * 
      */
-    public Output</* @Nullable */ String> skipToken() {
-        return this.skipToken;
+    public Optional<Output<String>> skipToken() {
+        return Optional.ofNullable(this.skipToken);
     }
 
     private ListConfigurationStoreKeysArgs() {}
@@ -133,7 +134,7 @@ public final class ListConfigurationStoreKeysArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+        public Builder skipToken(@Nullable Output<String> skipToken) {
             $.skipToken = skipToken;
             return this;
         }
@@ -144,7 +145,7 @@ public final class ListConfigurationStoreKeysArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
+        public Builder skipToken(String skipToken) {
             return skipToken(Output.of(skipToken));
         }
 

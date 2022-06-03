@@ -5,10 +5,11 @@ package com.pulumi.oci.OsubUsage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OsubUsage.inputs.GetComputedUsagesFilter;
+import com.pulumi.oci.OsubUsage.inputs.GetComputedUsagesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="computedProduct")
-    private Output</* @Nullable */ String> computedProduct;
+    private @Nullable Output<String> computedProduct;
 
     /**
      * @return Product part number for Computed Usage .
      * 
      */
-    public Output</* @Nullable */ String> computedProduct() {
-        return this.computedProduct;
+    public Optional<Output<String>> computedProduct() {
+        return Optional.ofNullable(this.computedProduct);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetComputedUsagesFilter>> filters;
+    private @Nullable Output<List<GetComputedUsagesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetComputedUsagesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetComputedUsagesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="parentProduct")
-    private Output</* @Nullable */ String> parentProduct;
+    private @Nullable Output<String> parentProduct;
 
     /**
      * @return Product part number for subscribed service line, called parent product.
      * 
      */
-    public Output</* @Nullable */ String> parentProduct() {
-        return this.parentProduct;
+    public Optional<Output<String>> parentProduct() {
+        return Optional.ofNullable(this.parentProduct);
     }
 
     /**
@@ -118,14 +119,14 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="xOneOriginRegion")
-    private Output</* @Nullable */ String> xOneOriginRegion;
+    private @Nullable Output<String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Output</* @Nullable */ String> xOneOriginRegion() {
-        return this.xOneOriginRegion;
+    public Optional<Output<String>> xOneOriginRegion() {
+        return Optional.ofNullable(this.xOneOriginRegion);
     }
 
     private GetComputedUsagesArgs() {}
@@ -186,7 +187,7 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder computedProduct(Output</* @Nullable */ String> computedProduct) {
+        public Builder computedProduct(@Nullable Output<String> computedProduct) {
             $.computedProduct = computedProduct;
             return this;
         }
@@ -197,20 +198,20 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder computedProduct(@Nullable String computedProduct) {
+        public Builder computedProduct(String computedProduct) {
             return computedProduct(Output.of(computedProduct));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetComputedUsagesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetComputedUsagesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetComputedUsagesFilter> filters) {
+        public Builder filters(List<GetComputedUsagesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetComputedUsagesFilter... filters) {
+        public Builder filters(GetComputedUsagesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -220,7 +221,7 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder parentProduct(Output</* @Nullable */ String> parentProduct) {
+        public Builder parentProduct(@Nullable Output<String> parentProduct) {
             $.parentProduct = parentProduct;
             return this;
         }
@@ -231,7 +232,7 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder parentProduct(@Nullable String parentProduct) {
+        public Builder parentProduct(String parentProduct) {
             return parentProduct(Output.of(parentProduct));
         }
 
@@ -304,7 +305,7 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
+        public Builder xOneOriginRegion(@Nullable Output<String> xOneOriginRegion) {
             $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
@@ -315,7 +316,7 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
+        public Builder xOneOriginRegion(String xOneOriginRegion) {
             return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 

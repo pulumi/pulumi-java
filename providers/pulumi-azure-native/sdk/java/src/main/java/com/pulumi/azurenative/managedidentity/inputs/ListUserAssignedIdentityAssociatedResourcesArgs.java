@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="filter")
-    private Output</* @Nullable */ String> filter;
+    private @Nullable Output<String> filter;
 
     /**
      * @return OData filter expression to apply to the query.
      * 
      */
-    public Output</* @Nullable */ String> filter() {
-        return this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="orderby")
-    private Output</* @Nullable */ String> orderby;
+    private @Nullable Output<String> orderby;
 
     /**
      * @return OData orderBy expression to apply to the query.
      * 
      */
-    public Output</* @Nullable */ String> orderby() {
-        return this.orderby;
+    public Optional<Output<String>> orderby() {
+        return Optional.ofNullable(this.orderby);
     }
 
     /**
@@ -80,14 +81,14 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="skip")
-    private Output</* @Nullable */ Integer> skip;
+    private @Nullable Output<Integer> skip;
 
     /**
      * @return Number of records to skip.
      * 
      */
-    public Output</* @Nullable */ Integer> skip() {
-        return this.skip;
+    public Optional<Output<Integer>> skip() {
+        return Optional.ofNullable(this.skip);
     }
 
     /**
@@ -95,14 +96,14 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="skiptoken")
-    private Output</* @Nullable */ String> skiptoken;
+    private @Nullable Output<String> skiptoken;
 
     /**
      * @return A skip token is used to continue retrieving items after an operation returns a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.
      * 
      */
-    public Output</* @Nullable */ String> skiptoken() {
-        return this.skiptoken;
+    public Optional<Output<String>> skiptoken() {
+        return Optional.ofNullable(this.skiptoken);
     }
 
     /**
@@ -110,14 +111,14 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
      * 
      */
     @Import(name="top")
-    private Output</* @Nullable */ Integer> top;
+    private @Nullable Output<Integer> top;
 
     /**
      * @return Number of records to return.
      * 
      */
-    public Output</* @Nullable */ Integer> top() {
-        return this.top;
+    public Optional<Output<Integer>> top() {
+        return Optional.ofNullable(this.top);
     }
 
     private ListUserAssignedIdentityAssociatedResourcesArgs() {}
@@ -156,7 +157,7 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder filter(Output</* @Nullable */ String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
@@ -167,7 +168,7 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder filter(@Nullable String filter) {
+        public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
@@ -177,7 +178,7 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder orderby(Output</* @Nullable */ String> orderby) {
+        public Builder orderby(@Nullable Output<String> orderby) {
             $.orderby = orderby;
             return this;
         }
@@ -188,7 +189,7 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder orderby(@Nullable String orderby) {
+        public Builder orderby(String orderby) {
             return orderby(Output.of(orderby));
         }
 
@@ -240,7 +241,7 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder skip(Output</* @Nullable */ Integer> skip) {
+        public Builder skip(@Nullable Output<Integer> skip) {
             $.skip = skip;
             return this;
         }
@@ -251,7 +252,7 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder skip(@Nullable Integer skip) {
+        public Builder skip(Integer skip) {
             return skip(Output.of(skip));
         }
 
@@ -261,7 +262,7 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder skiptoken(Output</* @Nullable */ String> skiptoken) {
+        public Builder skiptoken(@Nullable Output<String> skiptoken) {
             $.skiptoken = skiptoken;
             return this;
         }
@@ -272,7 +273,7 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder skiptoken(@Nullable String skiptoken) {
+        public Builder skiptoken(String skiptoken) {
             return skiptoken(Output.of(skiptoken));
         }
 
@@ -282,7 +283,7 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder top(Output</* @Nullable */ Integer> top) {
+        public Builder top(@Nullable Output<Integer> top) {
             $.top = top;
             return this;
         }
@@ -293,7 +294,7 @@ public final class ListUserAssignedIdentityAssociatedResourcesArgs extends com.p
          * @return builder
          * 
          */
-        public Builder top(@Nullable Integer top) {
+        public Builder top(Integer top) {
             return top(Output.of(top));
         }
 

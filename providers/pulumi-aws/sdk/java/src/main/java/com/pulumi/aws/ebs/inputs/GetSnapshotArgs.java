@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ebs.inputs;
 
-import com.pulumi.aws.ebs.inputs.GetSnapshotFilter;
+import com.pulumi.aws.ebs.inputs.GetSnapshotFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -11,6 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSnapshotFilter>> filters;
+    private @Nullable Output<List<GetSnapshotFilterArgs>> filters;
 
     /**
      * @return One or more name/value pairs to filter off of. There are
@@ -33,8 +34,8 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * [describe-snapshots in the AWS CLI reference][1].
      * 
      */
-    public Output</* @Nullable */ List<GetSnapshotFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSnapshotFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -42,14 +43,14 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-    private Output</* @Nullable */ Boolean> mostRecent;
+    private @Nullable Output<Boolean> mostRecent;
 
     /**
      * @return If more than one result is returned, use the most recent snapshot.
      * 
      */
-    public Output</* @Nullable */ Boolean> mostRecent() {
-        return this.mostRecent;
+    public Optional<Output<Boolean>> mostRecent() {
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -57,14 +58,14 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owners")
-    private Output</* @Nullable */ List<String>> owners;
+    private @Nullable Output<List<String>> owners;
 
     /**
      * @return Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
      * 
      */
-    public Output</* @Nullable */ List<String>> owners() {
-        return this.owners;
+    public Optional<Output<List<String>>> owners() {
+        return Optional.ofNullable(this.owners);
     }
 
     /**
@@ -72,14 +73,14 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restorableByUserIds")
-    private Output</* @Nullable */ List<String>> restorableByUserIds;
+    private @Nullable Output<List<String>> restorableByUserIds;
 
     /**
      * @return One or more AWS accounts IDs that can create volumes from the snapshot.
      * 
      */
-    public Output</* @Nullable */ List<String>> restorableByUserIds() {
-        return this.restorableByUserIds;
+    public Optional<Output<List<String>>> restorableByUserIds() {
+        return Optional.ofNullable(this.restorableByUserIds);
     }
 
     /**
@@ -87,14 +88,14 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="snapshotIds")
-    private Output</* @Nullable */ List<String>> snapshotIds;
+    private @Nullable Output<List<String>> snapshotIds;
 
     /**
      * @return Returns information on a specific snapshot_id.
      * 
      */
-    public Output</* @Nullable */ List<String>> snapshotIds() {
-        return this.snapshotIds;
+    public Optional<Output<List<String>>> snapshotIds() {
+        return Optional.ofNullable(this.snapshotIds);
     }
 
     /**
@@ -102,14 +103,14 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags for the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetSnapshotArgs() {}
@@ -149,7 +150,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetSnapshotFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSnapshotFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -162,7 +163,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetSnapshotFilter> filters) {
+        public Builder filters(List<GetSnapshotFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -174,7 +175,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetSnapshotFilter... filters) {
+        public Builder filters(GetSnapshotFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -184,7 +185,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(Output</* @Nullable */ Boolean> mostRecent) {
+        public Builder mostRecent(@Nullable Output<Boolean> mostRecent) {
             $.mostRecent = mostRecent;
             return this;
         }
@@ -195,7 +196,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(Boolean mostRecent) {
             return mostRecent(Output.of(mostRecent));
         }
 
@@ -205,7 +206,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder owners(Output</* @Nullable */ List<String>> owners) {
+        public Builder owners(@Nullable Output<List<String>> owners) {
             $.owners = owners;
             return this;
         }
@@ -216,7 +217,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder owners(@Nullable List<String> owners) {
+        public Builder owners(List<String> owners) {
             return owners(Output.of(owners));
         }
 
@@ -236,7 +237,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder restorableByUserIds(Output</* @Nullable */ List<String>> restorableByUserIds) {
+        public Builder restorableByUserIds(@Nullable Output<List<String>> restorableByUserIds) {
             $.restorableByUserIds = restorableByUserIds;
             return this;
         }
@@ -247,7 +248,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder restorableByUserIds(@Nullable List<String> restorableByUserIds) {
+        public Builder restorableByUserIds(List<String> restorableByUserIds) {
             return restorableByUserIds(Output.of(restorableByUserIds));
         }
 
@@ -267,7 +268,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder snapshotIds(Output</* @Nullable */ List<String>> snapshotIds) {
+        public Builder snapshotIds(@Nullable Output<List<String>> snapshotIds) {
             $.snapshotIds = snapshotIds;
             return this;
         }
@@ -278,7 +279,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder snapshotIds(@Nullable List<String> snapshotIds) {
+        public Builder snapshotIds(List<String> snapshotIds) {
             return snapshotIds(Output.of(snapshotIds));
         }
 
@@ -298,7 +299,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -309,7 +310,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

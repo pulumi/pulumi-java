@@ -5,10 +5,11 @@ package com.pulumi.oci.Limits.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Limits.inputs.GetLimitDefinitionsFilter;
+import com.pulumi.oci.Limits.inputs.GetLimitDefinitionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetLimitDefinitionsFilter>> filters;
+    private @Nullable Output<List<GetLimitDefinitionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetLimitDefinitionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetLimitDefinitionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Optional field, filter for a specific resource limit.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceName")
-    private Output</* @Nullable */ String> serviceName;
+    private @Nullable Output<String> serviceName;
 
     /**
      * @return The target service name.
      * 
      */
-    public Output</* @Nullable */ String> serviceName() {
-        return this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     private GetLimitDefinitionsArgs() {}
@@ -116,16 +117,16 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetLimitDefinitionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetLimitDefinitionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetLimitDefinitionsFilter> filters) {
+        public Builder filters(List<GetLimitDefinitionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetLimitDefinitionsFilter... filters) {
+        public Builder filters(GetLimitDefinitionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -156,7 +157,7 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder serviceName(Output</* @Nullable */ String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetLimitDefinitionsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder serviceName(@Nullable String serviceName) {
+        public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 

@@ -5,11 +5,12 @@ package com.pulumi.oci.Mysql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Mysql.inputs.GetMysqlDbSystemsFilter;
+import com.pulumi.oci.Mysql.inputs.GetMysqlDbSystemsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,14 +38,14 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="configurationId")
-    private Output</* @Nullable */ String> configurationId;
+    private @Nullable Output<String> configurationId;
 
     /**
      * @return The requested Configuration instance.
      * 
      */
-    public Output</* @Nullable */ String> configurationId() {
-        return this.configurationId;
+    public Optional<Output<String>> configurationId() {
+        return Optional.ofNullable(this.configurationId);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dbSystemId")
-    private Output</* @Nullable */ String> dbSystemId;
+    private @Nullable Output<String> dbSystemId;
 
     /**
      * @return The DB System [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Output</* @Nullable */ String> dbSystemId() {
-        return this.dbSystemId;
+    public Optional<Output<String>> dbSystemId() {
+        return Optional.ofNullable(this.dbSystemId);
     }
 
     /**
@@ -67,21 +68,21 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only the resource matching the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetMysqlDbSystemsFilter>> filters;
+    private @Nullable Output<List<GetMysqlDbSystemsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetMysqlDbSystemsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetMysqlDbSystemsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="isAnalyticsClusterAttached")
-    private Output</* @Nullable */ Boolean> isAnalyticsClusterAttached;
+    private @Nullable Output<Boolean> isAnalyticsClusterAttached;
 
     /**
      * @return DEPRECATED -- please use HeatWave API instead. If true, return only DB Systems with an Analytics Cluster attached, if false return only DB Systems with no Analytics Cluster attached. If not present, return all DB Systems.
      * 
      */
-    public Output</* @Nullable */ Boolean> isAnalyticsClusterAttached() {
-        return this.isAnalyticsClusterAttached;
+    public Optional<Output<Boolean>> isAnalyticsClusterAttached() {
+        return Optional.ofNullable(this.isAnalyticsClusterAttached);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="isHeatWaveClusterAttached")
-    private Output</* @Nullable */ Boolean> isHeatWaveClusterAttached;
+    private @Nullable Output<Boolean> isHeatWaveClusterAttached;
 
     /**
      * @return If true, return only DB Systems with a HeatWave cluster attached, if false return only DB Systems with no HeatWave cluster attached. If not present, return all DB Systems.
      * 
      */
-    public Output</* @Nullable */ Boolean> isHeatWaveClusterAttached() {
-        return this.isHeatWaveClusterAttached;
+    public Optional<Output<Boolean>> isHeatWaveClusterAttached() {
+        return Optional.ofNullable(this.isHeatWaveClusterAttached);
     }
 
     /**
@@ -119,14 +120,14 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="isUpToDate")
-    private Output</* @Nullable */ Boolean> isUpToDate;
+    private @Nullable Output<Boolean> isUpToDate;
 
     /**
      * @return Filter instances if they are using the latest revision of the Configuration they are associated with.
      * 
      */
-    public Output</* @Nullable */ Boolean> isUpToDate() {
-        return this.isUpToDate;
+    public Optional<Output<Boolean>> isUpToDate() {
+        return Optional.ofNullable(this.isUpToDate);
     }
 
     /**
@@ -134,14 +135,14 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return DbSystem Lifecycle State
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetMysqlDbSystemsArgs() {}
@@ -203,7 +204,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder configurationId(Output</* @Nullable */ String> configurationId) {
+        public Builder configurationId(@Nullable Output<String> configurationId) {
             $.configurationId = configurationId;
             return this;
         }
@@ -214,7 +215,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder configurationId(@Nullable String configurationId) {
+        public Builder configurationId(String configurationId) {
             return configurationId(Output.of(configurationId));
         }
 
@@ -224,7 +225,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder dbSystemId(Output</* @Nullable */ String> dbSystemId) {
+        public Builder dbSystemId(@Nullable Output<String> dbSystemId) {
             $.dbSystemId = dbSystemId;
             return this;
         }
@@ -235,7 +236,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder dbSystemId(@Nullable String dbSystemId) {
+        public Builder dbSystemId(String dbSystemId) {
             return dbSystemId(Output.of(dbSystemId));
         }
 
@@ -245,7 +246,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -256,20 +257,20 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetMysqlDbSystemsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetMysqlDbSystemsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetMysqlDbSystemsFilter> filters) {
+        public Builder filters(List<GetMysqlDbSystemsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetMysqlDbSystemsFilter... filters) {
+        public Builder filters(GetMysqlDbSystemsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -279,7 +280,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder isAnalyticsClusterAttached(Output</* @Nullable */ Boolean> isAnalyticsClusterAttached) {
+        public Builder isAnalyticsClusterAttached(@Nullable Output<Boolean> isAnalyticsClusterAttached) {
             $.isAnalyticsClusterAttached = isAnalyticsClusterAttached;
             return this;
         }
@@ -290,7 +291,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder isAnalyticsClusterAttached(@Nullable Boolean isAnalyticsClusterAttached) {
+        public Builder isAnalyticsClusterAttached(Boolean isAnalyticsClusterAttached) {
             return isAnalyticsClusterAttached(Output.of(isAnalyticsClusterAttached));
         }
 
@@ -300,7 +301,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder isHeatWaveClusterAttached(Output</* @Nullable */ Boolean> isHeatWaveClusterAttached) {
+        public Builder isHeatWaveClusterAttached(@Nullable Output<Boolean> isHeatWaveClusterAttached) {
             $.isHeatWaveClusterAttached = isHeatWaveClusterAttached;
             return this;
         }
@@ -311,7 +312,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder isHeatWaveClusterAttached(@Nullable Boolean isHeatWaveClusterAttached) {
+        public Builder isHeatWaveClusterAttached(Boolean isHeatWaveClusterAttached) {
             return isHeatWaveClusterAttached(Output.of(isHeatWaveClusterAttached));
         }
 
@@ -321,7 +322,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder isUpToDate(Output</* @Nullable */ Boolean> isUpToDate) {
+        public Builder isUpToDate(@Nullable Output<Boolean> isUpToDate) {
             $.isUpToDate = isUpToDate;
             return this;
         }
@@ -332,7 +333,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder isUpToDate(@Nullable Boolean isUpToDate) {
+        public Builder isUpToDate(Boolean isUpToDate) {
             return isUpToDate(Output.of(isUpToDate));
         }
 
@@ -342,7 +343,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -353,7 +354,7 @@ public final class GetMysqlDbSystemsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

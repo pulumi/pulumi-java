@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseGroupsFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseGroupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagedDatabaseGroupsFilter>> filters;
+    private @Nullable Output<List<GetManagedDatabaseGroupsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagedDatabaseGroupsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagedDatabaseGroupsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The identifier of the resource. Only one of the parameters, id or name should be provided.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name. Only one of the parameters, id or name should be provided
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The lifecycle state of a resource.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetManagedDatabaseGroupsArgs() {}
@@ -132,16 +133,16 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagedDatabaseGroupsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedDatabaseGroupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabaseGroupsFilter> filters) {
+        public Builder filters(List<GetManagedDatabaseGroupsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagedDatabaseGroupsFilter... filters) {
+        public Builder filters(GetManagedDatabaseGroupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -151,7 +152,7 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -162,7 +163,7 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -172,7 +173,7 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -193,7 +194,7 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

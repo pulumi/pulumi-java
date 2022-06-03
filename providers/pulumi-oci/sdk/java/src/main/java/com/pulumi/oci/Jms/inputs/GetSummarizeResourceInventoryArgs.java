@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
      * 
      */
     @Import(name="compartmentId")
-    private Output</* @Nullable */ String> compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
      * 
      */
-    public Output</* @Nullable */ String> compartmentId() {
-        return this.compartmentId;
+    public Optional<Output<String>> compartmentId() {
+        return Optional.ofNullable(this.compartmentId);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
      * 
      */
     @Import(name="timeEnd")
-    private Output</* @Nullable */ String> timeEnd;
+    private @Nullable Output<String> timeEnd;
 
     /**
      * @return The end of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
      * 
      */
-    public Output</* @Nullable */ String> timeEnd() {
-        return this.timeEnd;
+    public Optional<Output<String>> timeEnd() {
+        return Optional.ofNullable(this.timeEnd);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
      * 
      */
     @Import(name="timeStart")
-    private Output</* @Nullable */ String> timeStart;
+    private @Nullable Output<String> timeStart;
 
     /**
      * @return The start of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
      * 
      */
-    public Output</* @Nullable */ String> timeStart() {
-        return this.timeStart;
+    public Optional<Output<String>> timeStart() {
+        return Optional.ofNullable(this.timeStart);
     }
 
     private GetSummarizeResourceInventoryArgs() {}
@@ -91,7 +92,7 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(String compartmentId) {
             return compartmentId(Output.of(compartmentId));
         }
 
@@ -112,7 +113,7 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder timeEnd(Output</* @Nullable */ String> timeEnd) {
+        public Builder timeEnd(@Nullable Output<String> timeEnd) {
             $.timeEnd = timeEnd;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder timeEnd(@Nullable String timeEnd) {
+        public Builder timeEnd(String timeEnd) {
             return timeEnd(Output.of(timeEnd));
         }
 
@@ -133,7 +134,7 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder timeStart(Output</* @Nullable */ String> timeStart) {
+        public Builder timeStart(@Nullable Output<String> timeStart) {
             $.timeStart = timeStart;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder timeStart(@Nullable String timeStart) {
+        public Builder timeStart(String timeStart) {
             return timeStart(Output.of(timeStart));
         }
 

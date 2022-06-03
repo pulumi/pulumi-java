@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +17,10 @@ public final class GetRunLogArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRunLogArgs Empty = new GetRunLogArgs();
 
     @Import(name="base64EncodeContent")
-    private Output</* @Nullable */ Boolean> base64EncodeContent;
+    private @Nullable Output<Boolean> base64EncodeContent;
 
-    public Output</* @Nullable */ Boolean> base64EncodeContent() {
-        return this.base64EncodeContent;
+    public Optional<Output<Boolean>> base64EncodeContent() {
+        return Optional.ofNullable(this.base64EncodeContent);
     }
 
     /**
@@ -78,12 +79,12 @@ public final class GetRunLogArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRunLogArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder base64EncodeContent(Output</* @Nullable */ Boolean> base64EncodeContent) {
+        public Builder base64EncodeContent(@Nullable Output<Boolean> base64EncodeContent) {
             $.base64EncodeContent = base64EncodeContent;
             return this;
         }
 
-        public Builder base64EncodeContent(@Nullable Boolean base64EncodeContent) {
+        public Builder base64EncodeContent(Boolean base64EncodeContent) {
             return base64EncodeContent(Output.of(base64EncodeContent));
         }
 

@@ -5,11 +5,12 @@ package com.pulumi.oci.DataConnectivity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataConnectivity.inputs.GetRegistriesFilter;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistriesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetRegistriesFilter>> filters;
+    private @Nullable Output<List<GetRegistriesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetRegistriesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetRegistriesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -44,14 +45,14 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isDeepLookup")
-    private Output</* @Nullable */ Boolean> isDeepLookup;
+    private @Nullable Output<Boolean> isDeepLookup;
 
     /**
      * @return This parameter allows list registries to deep look at whole tenancy.
      * 
      */
-    public Output</* @Nullable */ Boolean> isDeepLookup() {
-        return this.isDeepLookup;
+    public Optional<Output<Boolean>> isDeepLookup() {
+        return Optional.ofNullable(this.isDeepLookup);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Used to filter by the name of the object.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Lifecycle state of the resource.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetRegistriesArgs() {}
@@ -133,16 +134,16 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetRegistriesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetRegistriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRegistriesFilter> filters) {
+        public Builder filters(List<GetRegistriesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetRegistriesFilter... filters) {
+        public Builder filters(GetRegistriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -152,7 +153,7 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isDeepLookup(Output</* @Nullable */ Boolean> isDeepLookup) {
+        public Builder isDeepLookup(@Nullable Output<Boolean> isDeepLookup) {
             $.isDeepLookup = isDeepLookup;
             return this;
         }
@@ -163,7 +164,7 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isDeepLookup(@Nullable Boolean isDeepLookup) {
+        public Builder isDeepLookup(Boolean isDeepLookup) {
             return isDeepLookup(Output.of(isDeepLookup));
         }
 
@@ -173,7 +174,7 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -184,7 +185,7 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -194,7 +195,7 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -205,7 +206,7 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

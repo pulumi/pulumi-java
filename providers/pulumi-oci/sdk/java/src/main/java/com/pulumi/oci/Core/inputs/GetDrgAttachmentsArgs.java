@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetDrgAttachmentsFilter;
+import com.pulumi.oci.Core.inputs.GetDrgAttachmentsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="attachmentType")
-    private Output</* @Nullable */ String> attachmentType;
+    private @Nullable Output<String> attachmentType;
 
     /**
      * @return The type for the network resource attached to the DRG.
      * 
      */
-    public Output</* @Nullable */ String> attachmentType() {
-        return this.attachmentType;
+    public Optional<Output<String>> attachmentType() {
+        return Optional.ofNullable(this.attachmentType);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="drgId")
-    private Output</* @Nullable */ String> drgId;
+    private @Nullable Output<String> drgId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG.
      * 
      */
-    public Output</* @Nullable */ String> drgId() {
-        return this.drgId;
+    public Optional<Output<String>> drgId() {
+        return Optional.ofNullable(this.drgId);
     }
 
     /**
@@ -81,21 +82,21 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="drgRouteTableId")
-    private Output</* @Nullable */ String> drgRouteTableId;
+    private @Nullable Output<String> drgRouteTableId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table assigned to the DRG attachment.
      * 
      */
-    public Output</* @Nullable */ String> drgRouteTableId() {
-        return this.drgRouteTableId;
+    public Optional<Output<String>> drgRouteTableId() {
+        return Optional.ofNullable(this.drgRouteTableId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDrgAttachmentsFilter>> filters;
+    private @Nullable Output<List<GetDrgAttachmentsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDrgAttachmentsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDrgAttachmentsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="networkId")
-    private Output</* @Nullable */ String> networkId;
+    private @Nullable Output<String> networkId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the resource (virtual circuit, VCN, IPSec tunnel, or remote peering connection) attached to the DRG.
      * 
      */
-    public Output</* @Nullable */ String> networkId() {
-        return this.networkId;
+    public Optional<Output<String>> networkId() {
+        return Optional.ofNullable(this.networkId);
     }
 
     /**
@@ -118,14 +119,14 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -133,14 +134,14 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vcnId")
-    private Output</* @Nullable */ String> vcnId;
+    private @Nullable Output<String> vcnId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
      * 
      */
-    public Output</* @Nullable */ String> vcnId() {
-        return this.vcnId;
+    public Optional<Output<String>> vcnId() {
+        return Optional.ofNullable(this.vcnId);
     }
 
     private GetDrgAttachmentsArgs() {}
@@ -181,7 +182,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder attachmentType(Output</* @Nullable */ String> attachmentType) {
+        public Builder attachmentType(@Nullable Output<String> attachmentType) {
             $.attachmentType = attachmentType;
             return this;
         }
@@ -192,7 +193,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder attachmentType(@Nullable String attachmentType) {
+        public Builder attachmentType(String attachmentType) {
             return attachmentType(Output.of(attachmentType));
         }
 
@@ -223,7 +224,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -234,7 +235,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -244,7 +245,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder drgId(Output</* @Nullable */ String> drgId) {
+        public Builder drgId(@Nullable Output<String> drgId) {
             $.drgId = drgId;
             return this;
         }
@@ -255,7 +256,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder drgId(@Nullable String drgId) {
+        public Builder drgId(String drgId) {
             return drgId(Output.of(drgId));
         }
 
@@ -265,7 +266,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder drgRouteTableId(Output</* @Nullable */ String> drgRouteTableId) {
+        public Builder drgRouteTableId(@Nullable Output<String> drgRouteTableId) {
             $.drgRouteTableId = drgRouteTableId;
             return this;
         }
@@ -276,20 +277,20 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder drgRouteTableId(@Nullable String drgRouteTableId) {
+        public Builder drgRouteTableId(String drgRouteTableId) {
             return drgRouteTableId(Output.of(drgRouteTableId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDrgAttachmentsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDrgAttachmentsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDrgAttachmentsFilter> filters) {
+        public Builder filters(List<GetDrgAttachmentsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDrgAttachmentsFilter... filters) {
+        public Builder filters(GetDrgAttachmentsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -299,7 +300,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder networkId(Output</* @Nullable */ String> networkId) {
+        public Builder networkId(@Nullable Output<String> networkId) {
             $.networkId = networkId;
             return this;
         }
@@ -310,7 +311,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder networkId(@Nullable String networkId) {
+        public Builder networkId(String networkId) {
             return networkId(Output.of(networkId));
         }
 
@@ -320,7 +321,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -331,7 +332,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -341,7 +342,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder vcnId(Output</* @Nullable */ String> vcnId) {
+        public Builder vcnId(@Nullable Output<String> vcnId) {
             $.vcnId = vcnId;
             return this;
         }
@@ -352,7 +353,7 @@ public final class GetDrgAttachmentsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder vcnId(@Nullable String vcnId) {
+        public Builder vcnId(String vcnId) {
             return vcnId(Output.of(vcnId));
         }
 

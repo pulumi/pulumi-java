@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetInternetGatewaysFilter;
+import com.pulumi.oci.Core.inputs.GetInternetGatewaysFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetInternetGatewaysArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetInternetGatewaysFilter>> filters;
+    private @Nullable Output<List<GetInternetGatewaysFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetInternetGatewaysFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetInternetGatewaysFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetInternetGatewaysArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetInternetGatewaysArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="vcnId")
-    private Output</* @Nullable */ String> vcnId;
+    private @Nullable Output<String> vcnId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
      * 
      */
-    public Output</* @Nullable */ String> vcnId() {
-        return this.vcnId;
+    public Optional<Output<String>> vcnId() {
+        return Optional.ofNullable(this.vcnId);
     }
 
     private GetInternetGatewaysArgs() {}
@@ -138,7 +139,7 @@ public final class GetInternetGatewaysArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,20 +150,20 @@ public final class GetInternetGatewaysArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetInternetGatewaysFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetInternetGatewaysFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetInternetGatewaysFilter> filters) {
+        public Builder filters(List<GetInternetGatewaysFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetInternetGatewaysFilter... filters) {
+        public Builder filters(GetInternetGatewaysFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetInternetGatewaysArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetInternetGatewaysArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -193,7 +194,7 @@ public final class GetInternetGatewaysArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder vcnId(Output</* @Nullable */ String> vcnId) {
+        public Builder vcnId(@Nullable Output<String> vcnId) {
             $.vcnId = vcnId;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetInternetGatewaysArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder vcnId(@Nullable String vcnId) {
+        public Builder vcnId(String vcnId) {
             return vcnId(Output.of(vcnId));
         }
 

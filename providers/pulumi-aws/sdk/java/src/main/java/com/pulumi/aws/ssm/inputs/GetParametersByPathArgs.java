@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="recursive")
-    private Output</* @Nullable */ Boolean> recursive;
+    private @Nullable Output<Boolean> recursive;
 
     /**
      * @return Whether to recursively return parameters under `path`. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> recursive() {
-        return this.recursive;
+    public Optional<Output<Boolean>> recursive() {
+        return Optional.ofNullable(this.recursive);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="withDecryption")
-    private Output</* @Nullable */ Boolean> withDecryption;
+    private @Nullable Output<Boolean> withDecryption;
 
     /**
      * @return Whether to return decrypted `SecureString` value. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> withDecryption() {
-        return this.withDecryption;
+    public Optional<Output<Boolean>> withDecryption() {
+        return Optional.ofNullable(this.withDecryption);
     }
 
     private GetParametersByPathArgs() {}
@@ -113,7 +114,7 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder recursive(Output</* @Nullable */ Boolean> recursive) {
+        public Builder recursive(@Nullable Output<Boolean> recursive) {
             $.recursive = recursive;
             return this;
         }
@@ -124,7 +125,7 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder recursive(@Nullable Boolean recursive) {
+        public Builder recursive(Boolean recursive) {
             return recursive(Output.of(recursive));
         }
 
@@ -134,7 +135,7 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder withDecryption(Output</* @Nullable */ Boolean> withDecryption) {
+        public Builder withDecryption(@Nullable Output<Boolean> withDecryption) {
             $.withDecryption = withDecryption;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder withDecryption(@Nullable Boolean withDecryption) {
+        public Builder withDecryption(Boolean withDecryption) {
             return withDecryption(Output.of(withDecryption));
         }
 

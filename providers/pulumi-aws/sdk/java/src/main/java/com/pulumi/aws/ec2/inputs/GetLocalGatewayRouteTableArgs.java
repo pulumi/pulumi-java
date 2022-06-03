@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetLocalGatewayRouteTableFilter;
+import com.pulumi.aws.ec2.inputs.GetLocalGatewayRouteTableFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +19,10 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
     public static final GetLocalGatewayRouteTableArgs Empty = new GetLocalGatewayRouteTableArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetLocalGatewayRouteTableFilter>> filters;
+    private @Nullable Output<List<GetLocalGatewayRouteTableFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetLocalGatewayRouteTableFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetLocalGatewayRouteTableFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -29,14 +30,14 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="localGatewayId")
-    private Output</* @Nullable */ String> localGatewayId;
+    private @Nullable Output<String> localGatewayId;
 
     /**
      * @return The id of the specific local gateway route table to retrieve.
      * 
      */
-    public Output</* @Nullable */ String> localGatewayId() {
-        return this.localGatewayId;
+    public Optional<Output<String>> localGatewayId() {
+        return Optional.ofNullable(this.localGatewayId);
     }
 
     /**
@@ -44,14 +45,14 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="localGatewayRouteTableId")
-    private Output</* @Nullable */ String> localGatewayRouteTableId;
+    private @Nullable Output<String> localGatewayRouteTableId;
 
     /**
      * @return Local Gateway Route Table Id assigned to desired local gateway route table
      * 
      */
-    public Output</* @Nullable */ String> localGatewayRouteTableId() {
-        return this.localGatewayRouteTableId;
+    public Optional<Output<String>> localGatewayRouteTableId() {
+        return Optional.ofNullable(this.localGatewayRouteTableId);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="outpostArn")
-    private Output</* @Nullable */ String> outpostArn;
+    private @Nullable Output<String> outpostArn;
 
     /**
      * @return The arn of the Outpost the local gateway route table is associated with.
      * 
      */
-    public Output</* @Nullable */ String> outpostArn() {
-        return this.outpostArn;
+    public Optional<Output<String>> outpostArn() {
+        return Optional.ofNullable(this.outpostArn);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The state of the local gateway route table.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -90,15 +91,15 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A mapping of tags, each pair of which must exactly match
      * a pair on the desired local gateway route table.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetLocalGatewayRouteTableArgs() {}
@@ -130,16 +131,16 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
             $ = new GetLocalGatewayRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetLocalGatewayRouteTableFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetLocalGatewayRouteTableFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetLocalGatewayRouteTableFilter> filters) {
+        public Builder filters(List<GetLocalGatewayRouteTableFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetLocalGatewayRouteTableFilter... filters) {
+        public Builder filters(GetLocalGatewayRouteTableFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -149,7 +150,7 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder localGatewayId(Output</* @Nullable */ String> localGatewayId) {
+        public Builder localGatewayId(@Nullable Output<String> localGatewayId) {
             $.localGatewayId = localGatewayId;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder localGatewayId(@Nullable String localGatewayId) {
+        public Builder localGatewayId(String localGatewayId) {
             return localGatewayId(Output.of(localGatewayId));
         }
 
@@ -170,7 +171,7 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder localGatewayRouteTableId(Output</* @Nullable */ String> localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(@Nullable Output<String> localGatewayRouteTableId) {
             $.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
@@ -181,7 +182,7 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             return localGatewayRouteTableId(Output.of(localGatewayRouteTableId));
         }
 
@@ -191,7 +192,7 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder outpostArn(Output</* @Nullable */ String> outpostArn) {
+        public Builder outpostArn(@Nullable Output<String> outpostArn) {
             $.outpostArn = outpostArn;
             return this;
         }
@@ -202,7 +203,7 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder outpostArn(@Nullable String outpostArn) {
+        public Builder outpostArn(String outpostArn) {
             return outpostArn(Output.of(outpostArn));
         }
 
@@ -212,7 +213,7 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -223,7 +224,7 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -234,7 +235,7 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -246,7 +247,7 @@ public final class GetLocalGatewayRouteTableArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

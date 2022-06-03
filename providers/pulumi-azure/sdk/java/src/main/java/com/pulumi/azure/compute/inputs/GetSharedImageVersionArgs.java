@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -80,14 +81,14 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sortVersionsBySemver")
-    private Output</* @Nullable */ Boolean> sortVersionsBySemver;
+    private @Nullable Output<Boolean> sortVersionsBySemver;
 
     /**
      * @return Sort available versions taking SemVer versioning scheme into account. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> sortVersionsBySemver() {
-        return this.sortVersionsBySemver;
+    public Optional<Output<Boolean>> sortVersionsBySemver() {
+        return Optional.ofNullable(this.sortVersionsBySemver);
     }
 
     private GetSharedImageVersionArgs() {}
@@ -208,7 +209,7 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder sortVersionsBySemver(Output</* @Nullable */ Boolean> sortVersionsBySemver) {
+        public Builder sortVersionsBySemver(@Nullable Output<Boolean> sortVersionsBySemver) {
             $.sortVersionsBySemver = sortVersionsBySemver;
             return this;
         }
@@ -219,7 +220,7 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder sortVersionsBySemver(@Nullable Boolean sortVersionsBySemver) {
+        public Builder sortVersionsBySemver(Boolean sortVersionsBySemver) {
             return sortVersionsBySemver(Output.of(sortVersionsBySemver));
         }
 

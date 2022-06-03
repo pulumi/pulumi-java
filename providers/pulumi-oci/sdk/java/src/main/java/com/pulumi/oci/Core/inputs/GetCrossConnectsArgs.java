@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetCrossConnectsFilter;
+import com.pulumi.oci.Core.inputs.GetCrossConnectsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetCrossConnectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="crossConnectGroupId")
-    private Output</* @Nullable */ String> crossConnectGroupId;
+    private @Nullable Output<String> crossConnectGroupId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the cross-connect group.
      * 
      */
-    public Output</* @Nullable */ String> crossConnectGroupId() {
-        return this.crossConnectGroupId;
+    public Optional<Output<String>> crossConnectGroupId() {
+        return Optional.ofNullable(this.crossConnectGroupId);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetCrossConnectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetCrossConnectsFilter>> filters;
+    private @Nullable Output<List<GetCrossConnectsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetCrossConnectsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetCrossConnectsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetCrossConnectsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetCrossConnectsArgs() {}
@@ -138,7 +139,7 @@ public final class GetCrossConnectsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder crossConnectGroupId(Output</* @Nullable */ String> crossConnectGroupId) {
+        public Builder crossConnectGroupId(@Nullable Output<String> crossConnectGroupId) {
             $.crossConnectGroupId = crossConnectGroupId;
             return this;
         }
@@ -149,7 +150,7 @@ public final class GetCrossConnectsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder crossConnectGroupId(@Nullable String crossConnectGroupId) {
+        public Builder crossConnectGroupId(String crossConnectGroupId) {
             return crossConnectGroupId(Output.of(crossConnectGroupId));
         }
 
@@ -159,7 +160,7 @@ public final class GetCrossConnectsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -170,20 +171,20 @@ public final class GetCrossConnectsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetCrossConnectsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetCrossConnectsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCrossConnectsFilter> filters) {
+        public Builder filters(List<GetCrossConnectsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetCrossConnectsFilter... filters) {
+        public Builder filters(GetCrossConnectsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -193,7 +194,7 @@ public final class GetCrossConnectsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetCrossConnectsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

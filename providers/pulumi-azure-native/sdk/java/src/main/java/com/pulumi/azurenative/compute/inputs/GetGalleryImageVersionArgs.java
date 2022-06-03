@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="expand")
-    private Output</* @Nullable */ String> expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return The expand expression to apply on the operation.
      * 
      */
-    public Output</* @Nullable */ String> expand() {
-        return this.expand;
+    public Optional<Output<String>> expand() {
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -123,7 +124,7 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder expand(Output</* @Nullable */ String> expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
             return this;
         }
@@ -134,7 +135,7 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(String expand) {
             return expand(Output.of(expand));
         }
 

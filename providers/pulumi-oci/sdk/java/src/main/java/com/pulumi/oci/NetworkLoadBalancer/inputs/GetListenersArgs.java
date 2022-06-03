@@ -5,10 +5,11 @@ package com.pulumi.oci.NetworkLoadBalancer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.NetworkLoadBalancer.inputs.GetListenersFilter;
+import com.pulumi.oci.NetworkLoadBalancer.inputs.GetListenersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetListenersArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetListenersArgs Empty = new GetListenersArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetListenersFilter>> filters;
+    private @Nullable Output<List<GetListenersFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetListenersFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetListenersFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetListenersArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetListenersArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetListenersFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetListenersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetListenersFilter> filters) {
+        public Builder filters(List<GetListenersFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetListenersFilter... filters) {
+        public Builder filters(GetListenersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -3,14 +3,15 @@
 
 package com.pulumi.azurenative.web.inputs;
 
-import com.pulumi.azurenative.web.inputs.BackupSchedule;
-import com.pulumi.azurenative.web.inputs.DatabaseBackupSetting;
+import com.pulumi.azurenative.web.inputs.BackupScheduleArgs;
+import com.pulumi.azurenative.web.inputs.DatabaseBackupSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -38,14 +39,14 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="backupName")
-    private Output</* @Nullable */ String> backupName;
+    private @Nullable Output<String> backupName;
 
     /**
      * @return Name of the backup.
      * 
      */
-    public Output</* @Nullable */ String> backupName() {
-        return this.backupName;
+    public Optional<Output<String>> backupName() {
+        return Optional.ofNullable(this.backupName);
     }
 
     /**
@@ -53,14 +54,14 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="backupSchedule")
-    private Output</* @Nullable */ BackupSchedule> backupSchedule;
+    private @Nullable Output<BackupScheduleArgs> backupSchedule;
 
     /**
      * @return Schedule for the backup if it is executed periodically.
      * 
      */
-    public Output</* @Nullable */ BackupSchedule> backupSchedule() {
-        return this.backupSchedule;
+    public Optional<Output<BackupScheduleArgs>> backupSchedule() {
+        return Optional.ofNullable(this.backupSchedule);
     }
 
     /**
@@ -68,14 +69,14 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="databases")
-    private Output</* @Nullable */ List<DatabaseBackupSetting>> databases;
+    private @Nullable Output<List<DatabaseBackupSettingArgs>> databases;
 
     /**
      * @return Databases included in the backup.
      * 
      */
-    public Output</* @Nullable */ List<DatabaseBackupSetting>> databases() {
-        return this.databases;
+    public Optional<Output<List<DatabaseBackupSettingArgs>>> databases() {
+        return Optional.ofNullable(this.databases);
     }
 
     /**
@@ -83,14 +84,14 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="enabled")
-    private Output</* @Nullable */ Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
     /**
      * @return True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -98,14 +99,14 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="kind")
-    private Output</* @Nullable */ String> kind;
+    private @Nullable Output<String> kind;
 
     /**
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -228,7 +229,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder backupName(Output</* @Nullable */ String> backupName) {
+        public Builder backupName(@Nullable Output<String> backupName) {
             $.backupName = backupName;
             return this;
         }
@@ -239,7 +240,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder backupName(@Nullable String backupName) {
+        public Builder backupName(String backupName) {
             return backupName(Output.of(backupName));
         }
 
@@ -249,7 +250,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder backupSchedule(Output</* @Nullable */ BackupSchedule> backupSchedule) {
+        public Builder backupSchedule(@Nullable Output<BackupScheduleArgs> backupSchedule) {
             $.backupSchedule = backupSchedule;
             return this;
         }
@@ -260,7 +261,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder backupSchedule(@Nullable BackupSchedule backupSchedule) {
+        public Builder backupSchedule(BackupScheduleArgs backupSchedule) {
             return backupSchedule(Output.of(backupSchedule));
         }
 
@@ -270,7 +271,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder databases(Output</* @Nullable */ List<DatabaseBackupSetting>> databases) {
+        public Builder databases(@Nullable Output<List<DatabaseBackupSettingArgs>> databases) {
             $.databases = databases;
             return this;
         }
@@ -281,7 +282,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder databases(@Nullable List<DatabaseBackupSetting> databases) {
+        public Builder databases(List<DatabaseBackupSettingArgs> databases) {
             return databases(Output.of(databases));
         }
 
@@ -291,7 +292,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder databases(DatabaseBackupSetting... databases) {
+        public Builder databases(DatabaseBackupSettingArgs... databases) {
             return databases(List.of(databases));
         }
 
@@ -301,7 +302,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder enabled(Output</* @Nullable */ Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
@@ -312,7 +313,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder enabled(@Nullable Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
@@ -322,7 +323,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder kind(Output</* @Nullable */ String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
@@ -333,7 +334,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder kind(@Nullable String kind) {
+        public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 

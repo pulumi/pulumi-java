@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +23,10 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="fieldMask")
-    private Output</* @Nullable */ String> fieldMask;
+    private @Nullable Output<String> fieldMask;
 
-    public Output</* @Nullable */ String> fieldMask() {
-        return this.fieldMask;
+    public Optional<Output<String>> fieldMask() {
+        return Optional.ofNullable(this.fieldMask);
     }
 
     @Import(name="location", required=true)
@@ -36,10 +37,10 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="registryId", required=true)
@@ -86,12 +87,12 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
             return deviceId(Output.of(deviceId));
         }
 
-        public Builder fieldMask(Output</* @Nullable */ String> fieldMask) {
+        public Builder fieldMask(@Nullable Output<String> fieldMask) {
             $.fieldMask = fieldMask;
             return this;
         }
 
-        public Builder fieldMask(@Nullable String fieldMask) {
+        public Builder fieldMask(String fieldMask) {
             return fieldMask(Output.of(fieldMask));
         }
 
@@ -104,12 +105,12 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
             return location(Output.of(location));
         }
 
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 

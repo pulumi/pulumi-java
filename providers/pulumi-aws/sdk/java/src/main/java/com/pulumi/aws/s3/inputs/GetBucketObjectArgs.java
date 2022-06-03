@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -54,10 +55,10 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="range")
-    private Output</* @Nullable */ String> range;
+    private @Nullable Output<String> range;
 
-    public Output</* @Nullable */ String> range() {
-        return this.range;
+    public Optional<Output<String>> range() {
+        return Optional.ofNullable(this.range);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags assigned to the object.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -80,14 +81,14 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionId")
-    private Output</* @Nullable */ String> versionId;
+    private @Nullable Output<String> versionId;
 
     /**
      * @return Specific version ID of the object returned (defaults to latest version)
      * 
      */
-    public Output</* @Nullable */ String> versionId() {
-        return this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
     private GetBucketObjectArgs() {}
@@ -168,12 +169,12 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
             return key(Output.of(key));
         }
 
-        public Builder range(Output</* @Nullable */ String> range) {
+        public Builder range(@Nullable Output<String> range) {
             $.range = range;
             return this;
         }
 
-        public Builder range(@Nullable String range) {
+        public Builder range(String range) {
             return range(Output.of(range));
         }
 
@@ -183,7 +184,7 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -194,7 +195,7 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
@@ -204,7 +205,7 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder versionId(Output</* @Nullable */ String> versionId) {
+        public Builder versionId(@Nullable Output<String> versionId) {
             $.versionId = versionId;
             return this;
         }
@@ -215,7 +216,7 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder versionId(@Nullable String versionId) {
+        public Builder versionId(String versionId) {
             return versionId(Output.of(versionId));
         }
 

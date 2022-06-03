@@ -5,10 +5,11 @@ package com.pulumi.oci.Kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Kms.inputs.GetKeyVersionsFilter;
+import com.pulumi.oci.Kms.inputs.GetKeyVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetKeyVersionsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeyVersionsArgs Empty = new GetKeyVersionsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetKeyVersionsFilter>> filters;
+    private @Nullable Output<List<GetKeyVersionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetKeyVersionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetKeyVersionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -79,16 +80,16 @@ public final class GetKeyVersionsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKeyVersionsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetKeyVersionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetKeyVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetKeyVersionsFilter> filters) {
+        public Builder filters(List<GetKeyVersionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetKeyVersionsFilter... filters) {
+        public Builder filters(GetKeyVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

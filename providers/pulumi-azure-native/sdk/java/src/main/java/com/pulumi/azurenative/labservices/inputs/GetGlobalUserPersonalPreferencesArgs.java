@@ -9,6 +9,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="addRemove")
-    private Output</* @Nullable */ Either<String,AddRemove>> addRemove;
+    private @Nullable Output<Either<String,AddRemove>> addRemove;
 
     /**
      * @return Enum indicating if user is adding or removing a favorite lab
      * 
      */
-    public Output</* @Nullable */ Either<String,AddRemove>> addRemove() {
-        return this.addRemove;
+    public Optional<Output<Either<String,AddRemove>>> addRemove() {
+        return Optional.ofNullable(this.addRemove);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="labAccountResourceId")
-    private Output</* @Nullable */ String> labAccountResourceId;
+    private @Nullable Output<String> labAccountResourceId;
 
     /**
      * @return Resource Id of the lab account
      * 
      */
-    public Output</* @Nullable */ String> labAccountResourceId() {
-        return this.labAccountResourceId;
+    public Optional<Output<String>> labAccountResourceId() {
+        return Optional.ofNullable(this.labAccountResourceId);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="labResourceId")
-    private Output</* @Nullable */ String> labResourceId;
+    private @Nullable Output<String> labResourceId;
 
     /**
      * @return Resource Id of the lab to add/remove from the favorites list
      * 
      */
-    public Output</* @Nullable */ String> labResourceId() {
-        return this.labResourceId;
+    public Optional<Output<String>> labResourceId() {
+        return Optional.ofNullable(this.labResourceId);
     }
 
     /**
@@ -109,7 +110,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder addRemove(Output</* @Nullable */ Either<String,AddRemove>> addRemove) {
+        public Builder addRemove(@Nullable Output<Either<String,AddRemove>> addRemove) {
             $.addRemove = addRemove;
             return this;
         }
@@ -120,7 +121,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder addRemove(@Nullable Either<String,AddRemove> addRemove) {
+        public Builder addRemove(Either<String,AddRemove> addRemove) {
             return addRemove(Output.of(addRemove));
         }
 
@@ -150,7 +151,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder labAccountResourceId(Output</* @Nullable */ String> labAccountResourceId) {
+        public Builder labAccountResourceId(@Nullable Output<String> labAccountResourceId) {
             $.labAccountResourceId = labAccountResourceId;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder labAccountResourceId(@Nullable String labAccountResourceId) {
+        public Builder labAccountResourceId(String labAccountResourceId) {
             return labAccountResourceId(Output.of(labAccountResourceId));
         }
 
@@ -171,7 +172,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder labResourceId(Output</* @Nullable */ String> labResourceId) {
+        public Builder labResourceId(@Nullable Output<String> labResourceId) {
             $.labResourceId = labResourceId;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder labResourceId(@Nullable String labResourceId) {
+        public Builder labResourceId(String labResourceId) {
             return labResourceId(Output.of(labResourceId));
         }
 

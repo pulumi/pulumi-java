@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="containerType")
-    private Output</* @Nullable */ Either<String,ContainerType>> containerType;
+    private @Nullable Output<Either<String,ContainerType>> containerType;
 
     /**
      * @return The type of container to retrieve logs from.
      * 
      */
-    public Output</* @Nullable */ Either<String,ContainerType>> containerType() {
-        return this.containerType;
+    public Optional<Output<Either<String,ContainerType>>> containerType() {
+        return Optional.ofNullable(this.containerType);
     }
 
     /**
@@ -82,14 +83,14 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tail")
-    private Output</* @Nullable */ Integer> tail;
+    private @Nullable Output<Integer> tail;
 
     /**
      * @return The maximum number of lines to tail.
      * 
      */
-    public Output</* @Nullable */ Integer> tail() {
-        return this.tail;
+    public Optional<Output<Integer>> tail() {
+        return Optional.ofNullable(this.tail);
     }
 
     /**
@@ -142,7 +143,7 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder containerType(Output</* @Nullable */ Either<String,ContainerType>> containerType) {
+        public Builder containerType(@Nullable Output<Either<String,ContainerType>> containerType) {
             $.containerType = containerType;
             return this;
         }
@@ -153,7 +154,7 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder containerType(@Nullable Either<String,ContainerType> containerType) {
+        public Builder containerType(Either<String,ContainerType> containerType) {
             return containerType(Output.of(containerType));
         }
 
@@ -246,7 +247,7 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder tail(Output</* @Nullable */ Integer> tail) {
+        public Builder tail(@Nullable Output<Integer> tail) {
             $.tail = tail;
             return this;
         }
@@ -257,7 +258,7 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder tail(@Nullable Integer tail) {
+        public Builder tail(Integer tail) {
             return tail(Output.of(tail));
         }
 

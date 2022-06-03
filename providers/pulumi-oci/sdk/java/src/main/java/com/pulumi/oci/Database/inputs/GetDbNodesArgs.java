@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDbNodesFilter;
+import com.pulumi.oci.Database.inputs.GetDbNodesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbServerId")
-    private Output</* @Nullable */ String> dbServerId;
+    private @Nullable Output<String> dbServerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Exacc Db server.
      * 
      */
-    public Output</* @Nullable */ String> dbServerId() {
-        return this.dbServerId;
+    public Optional<Output<String>> dbServerId() {
+        return Optional.ofNullable(this.dbServerId);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSystemId")
-    private Output</* @Nullable */ String> dbSystemId;
+    private @Nullable Output<String> dbSystemId;
 
     /**
      * @return The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). If provided, filters the results to the set of database versions which are supported for the DB system.
      * 
      */
-    public Output</* @Nullable */ String> dbSystemId() {
-        return this.dbSystemId;
+    public Optional<Output<String>> dbSystemId() {
+        return Optional.ofNullable(this.dbSystemId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDbNodesFilter>> filters;
+    private @Nullable Output<List<GetDbNodesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDbNodesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDbNodesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vmClusterId")
-    private Output</* @Nullable */ String> vmClusterId;
+    private @Nullable Output<String> vmClusterId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VM cluster.
      * 
      */
-    public Output</* @Nullable */ String> vmClusterId() {
-        return this.vmClusterId;
+    public Optional<Output<String>> vmClusterId() {
+        return Optional.ofNullable(this.vmClusterId);
     }
 
     private GetDbNodesArgs() {}
@@ -154,7 +155,7 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbServerId(Output</* @Nullable */ String> dbServerId) {
+        public Builder dbServerId(@Nullable Output<String> dbServerId) {
             $.dbServerId = dbServerId;
             return this;
         }
@@ -165,7 +166,7 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbServerId(@Nullable String dbServerId) {
+        public Builder dbServerId(String dbServerId) {
             return dbServerId(Output.of(dbServerId));
         }
 
@@ -175,7 +176,7 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbSystemId(Output</* @Nullable */ String> dbSystemId) {
+        public Builder dbSystemId(@Nullable Output<String> dbSystemId) {
             $.dbSystemId = dbSystemId;
             return this;
         }
@@ -186,20 +187,20 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbSystemId(@Nullable String dbSystemId) {
+        public Builder dbSystemId(String dbSystemId) {
             return dbSystemId(Output.of(dbSystemId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDbNodesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDbNodesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbNodesFilter> filters) {
+        public Builder filters(List<GetDbNodesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDbNodesFilter... filters) {
+        public Builder filters(GetDbNodesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -209,7 +210,7 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -230,7 +231,7 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vmClusterId(Output</* @Nullable */ String> vmClusterId) {
+        public Builder vmClusterId(@Nullable Output<String> vmClusterId) {
             $.vmClusterId = vmClusterId;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetDbNodesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vmClusterId(@Nullable String vmClusterId) {
+        public Builder vmClusterId(String vmClusterId) {
             return vmClusterId(Output.of(vmClusterId));
         }
 

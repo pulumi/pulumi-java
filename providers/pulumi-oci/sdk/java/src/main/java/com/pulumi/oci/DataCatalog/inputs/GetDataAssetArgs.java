@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -50,14 +51,14 @@ public final class GetDataAssetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields")
-    private Output</* @Nullable */ List<String>> fields;
+    private @Nullable Output<List<String>> fields;
 
     /**
      * @return Specifies the fields to return in a data asset response.
      * 
      */
-    public Output</* @Nullable */ List<String>> fields() {
-        return this.fields;
+    public Optional<Output<List<String>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     private GetDataAssetArgs() {}
@@ -134,7 +135,7 @@ public final class GetDataAssetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fields(Output</* @Nullable */ List<String>> fields) {
+        public Builder fields(@Nullable Output<List<String>> fields) {
             $.fields = fields;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetDataAssetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fields(@Nullable List<String> fields) {
+        public Builder fields(List<String> fields) {
             return fields(Output.of(fields));
         }
 

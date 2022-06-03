@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -64,14 +65,14 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncStatus")
-    private Output</* @Nullable */ String> syncStatus;
+    private @Nullable Output<String> syncStatus;
 
     /**
      * @return Indicates whether sync status
      * 
      */
-    public Output</* @Nullable */ String> syncStatus() {
-        return this.syncStatus;
+    public Optional<Output<String>> syncStatus() {
+        return Optional.ofNullable(this.syncStatus);
     }
 
     private GetAppArgs() {}
@@ -170,7 +171,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder syncStatus(Output</* @Nullable */ String> syncStatus) {
+        public Builder syncStatus(@Nullable Output<String> syncStatus) {
             $.syncStatus = syncStatus;
             return this;
         }
@@ -181,7 +182,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder syncStatus(@Nullable String syncStatus) {
+        public Builder syncStatus(String syncStatus) {
             return syncStatus(Output.of(syncStatus));
         }
 

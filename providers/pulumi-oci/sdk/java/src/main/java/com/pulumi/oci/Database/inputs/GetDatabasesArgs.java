@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDatabasesFilter;
+import com.pulumi.oci.Database.inputs.GetDatabasesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbHomeId")
-    private Output</* @Nullable */ String> dbHomeId;
+    private @Nullable Output<String> dbHomeId;
 
     /**
      * @return A Database Home [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). *Note: Either `db_home_id` or `system_id` is required to make the LIST API call.
      * 
      */
-    public Output</* @Nullable */ String> dbHomeId() {
-        return this.dbHomeId;
+    public Optional<Output<String>> dbHomeId() {
+        return Optional.ofNullable(this.dbHomeId);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbName")
-    private Output</* @Nullable */ String> dbName;
+    private @Nullable Output<String> dbName;
 
     /**
      * @return A filter to return only resources that match the entire database name given. The match is not case sensitive.
      * 
      */
-    public Output</* @Nullable */ String> dbName() {
-        return this.dbName;
+    public Optional<Output<String>> dbName() {
+        return Optional.ofNullable(this.dbName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDatabasesFilter>> filters;
+    private @Nullable Output<List<GetDatabasesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDatabasesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDatabasesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="systemId")
-    private Output</* @Nullable */ String> systemId;
+    private @Nullable Output<String> systemId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Exadata DB system that you want to filter the database results by. Applies only to Exadata DB systems.
      * 
      */
-    public Output</* @Nullable */ String> systemId() {
-        return this.systemId;
+    public Optional<Output<String>> systemId() {
+        return Optional.ofNullable(this.systemId);
     }
 
     private GetDatabasesArgs() {}
@@ -154,7 +155,7 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbHomeId(Output</* @Nullable */ String> dbHomeId) {
+        public Builder dbHomeId(@Nullable Output<String> dbHomeId) {
             $.dbHomeId = dbHomeId;
             return this;
         }
@@ -165,7 +166,7 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbHomeId(@Nullable String dbHomeId) {
+        public Builder dbHomeId(String dbHomeId) {
             return dbHomeId(Output.of(dbHomeId));
         }
 
@@ -175,7 +176,7 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbName(Output</* @Nullable */ String> dbName) {
+        public Builder dbName(@Nullable Output<String> dbName) {
             $.dbName = dbName;
             return this;
         }
@@ -186,20 +187,20 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbName(@Nullable String dbName) {
+        public Builder dbName(String dbName) {
             return dbName(Output.of(dbName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDatabasesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabasesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDatabasesFilter> filters) {
+        public Builder filters(List<GetDatabasesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDatabasesFilter... filters) {
+        public Builder filters(GetDatabasesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -209,7 +210,7 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -230,7 +231,7 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder systemId(Output</* @Nullable */ String> systemId) {
+        public Builder systemId(@Nullable Output<String> systemId) {
             $.systemId = systemId;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder systemId(@Nullable String systemId) {
+        public Builder systemId(String systemId) {
             return systemId(Output.of(systemId));
         }
 

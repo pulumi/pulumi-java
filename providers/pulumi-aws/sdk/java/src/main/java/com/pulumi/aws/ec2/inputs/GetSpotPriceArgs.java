@@ -3,12 +3,13 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetSpotPriceFilter;
+import com.pulumi.aws.ec2.inputs.GetSpotPriceFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZone")
-    private Output</* @Nullable */ String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
     /**
      * @return The availability zone in which to query Spot price information.
      * 
      */
-    public Output</* @Nullable */ String> availabilityZone() {
-        return this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSpotPriceFilter>> filters;
+    private @Nullable Output<List<GetSpotPriceFilterArgs>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSpotPriceHistory.html) for supported filters. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<GetSpotPriceFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSpotPriceFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceType")
-    private Output</* @Nullable */ String> instanceType;
+    private @Nullable Output<String> instanceType;
 
     /**
      * @return The type of instance for which to query Spot Price information.
      * 
      */
-    public Output</* @Nullable */ String> instanceType() {
-        return this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     private GetSpotPriceArgs() {}
@@ -93,7 +94,7 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityZone(Output</* @Nullable */ String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
@@ -104,7 +105,7 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
@@ -114,7 +115,7 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetSpotPriceFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSpotPriceFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -125,7 +126,7 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetSpotPriceFilter> filters) {
+        public Builder filters(List<GetSpotPriceFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetSpotPriceFilter... filters) {
+        public Builder filters(GetSpotPriceFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -145,7 +146,7 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceType(Output</* @Nullable */ String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
@@ -156,7 +157,7 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceType(@Nullable String instanceType) {
+        public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 

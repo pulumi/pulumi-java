@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetVmClusterPatchesFilter;
+import com.pulumi.oci.Database.inputs.GetVmClusterPatchesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetVmClusterPatchesArgs extends com.pulumi.resources.InvokeAr
     public static final GetVmClusterPatchesArgs Empty = new GetVmClusterPatchesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetVmClusterPatchesFilter>> filters;
+    private @Nullable Output<List<GetVmClusterPatchesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetVmClusterPatchesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetVmClusterPatchesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetVmClusterPatchesArgs extends com.pulumi.resources.InvokeAr
             $ = new GetVmClusterPatchesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetVmClusterPatchesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetVmClusterPatchesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetVmClusterPatchesFilter> filters) {
+        public Builder filters(List<GetVmClusterPatchesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetVmClusterPatchesFilter... filters) {
+        public Builder filters(GetVmClusterPatchesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

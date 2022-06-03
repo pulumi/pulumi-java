@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseUserObjectPrivilegesFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseUserObjectPrivilegesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetManagedDatabaseUserObjectPrivilegesArgs extends com.pulumi
     public static final GetManagedDatabaseUserObjectPrivilegesArgs Empty = new GetManagedDatabaseUserObjectPrivilegesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagedDatabaseUserObjectPrivilegesFilter>> filters;
+    private @Nullable Output<List<GetManagedDatabaseUserObjectPrivilegesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagedDatabaseUserObjectPrivilegesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagedDatabaseUserObjectPrivilegesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetManagedDatabaseUserObjectPrivilegesArgs extends com.pulumi
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -95,16 +96,16 @@ public final class GetManagedDatabaseUserObjectPrivilegesArgs extends com.pulumi
             $ = new GetManagedDatabaseUserObjectPrivilegesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagedDatabaseUserObjectPrivilegesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedDatabaseUserObjectPrivilegesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabaseUserObjectPrivilegesFilter> filters) {
+        public Builder filters(List<GetManagedDatabaseUserObjectPrivilegesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagedDatabaseUserObjectPrivilegesFilter... filters) {
+        public Builder filters(GetManagedDatabaseUserObjectPrivilegesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetManagedDatabaseUserObjectPrivilegesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetManagedDatabaseUserObjectPrivilegesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetCrossConnectLocationsFilter;
+import com.pulumi.oci.Core.inputs.GetCrossConnectLocationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetCrossConnectLocationsArgs extends com.pulumi.resources.Inv
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetCrossConnectLocationsFilter>> filters;
+    private @Nullable Output<List<GetCrossConnectLocationsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetCrossConnectLocationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetCrossConnectLocationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetCrossConnectLocationsArgs() {}
@@ -84,16 +85,16 @@ public final class GetCrossConnectLocationsArgs extends com.pulumi.resources.Inv
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetCrossConnectLocationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetCrossConnectLocationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCrossConnectLocationsFilter> filters) {
+        public Builder filters(List<GetCrossConnectLocationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetCrossConnectLocationsFilter... filters) {
+        public Builder filters(GetCrossConnectLocationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

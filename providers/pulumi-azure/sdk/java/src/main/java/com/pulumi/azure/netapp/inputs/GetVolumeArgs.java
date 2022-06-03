@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -79,14 +80,14 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityStyle")
-    private Output</* @Nullable */ String> securityStyle;
+    private @Nullable Output<String> securityStyle;
 
     /**
      * @return Volume security style
      * 
      */
-    public Output</* @Nullable */ String> securityStyle() {
-        return this.securityStyle;
+    public Optional<Output<String>> securityStyle() {
+        return Optional.ofNullable(this.securityStyle);
     }
 
     private GetVolumeArgs() {}
@@ -207,7 +208,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder securityStyle(Output</* @Nullable */ String> securityStyle) {
+        public Builder securityStyle(@Nullable Output<String> securityStyle) {
             $.securityStyle = securityStyle;
             return this;
         }
@@ -218,7 +219,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder securityStyle(@Nullable String securityStyle) {
+        public Builder securityStyle(String securityStyle) {
             return securityStyle(Output.of(securityStyle));
         }
 

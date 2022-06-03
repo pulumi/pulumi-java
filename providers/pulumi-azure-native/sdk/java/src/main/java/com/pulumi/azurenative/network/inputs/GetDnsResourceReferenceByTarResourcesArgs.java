@@ -3,11 +3,12 @@
 
 package com.pulumi.azurenative.network.inputs;
 
-import com.pulumi.azurenative.network.inputs.SubResource;
+import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends com.pulumi.
      * 
      */
     @Import(name="targetResources")
-    private Output</* @Nullable */ List<SubResource>> targetResources;
+    private @Nullable Output<List<SubResourceArgs>> targetResources;
 
     /**
      * @return A list of references to azure resources for which referencing dns records need to be queried.
      * 
      */
-    public Output</* @Nullable */ List<SubResource>> targetResources() {
-        return this.targetResources;
+    public Optional<Output<List<SubResourceArgs>>> targetResources() {
+        return Optional.ofNullable(this.targetResources);
     }
 
     private GetDnsResourceReferenceByTarResourcesArgs() {}
@@ -60,7 +61,7 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder targetResources(Output</* @Nullable */ List<SubResource>> targetResources) {
+        public Builder targetResources(@Nullable Output<List<SubResourceArgs>> targetResources) {
             $.targetResources = targetResources;
             return this;
         }
@@ -71,7 +72,7 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder targetResources(@Nullable List<SubResource> targetResources) {
+        public Builder targetResources(List<SubResourceArgs> targetResources) {
             return targetResources(Output.of(targetResources));
         }
 
@@ -81,7 +82,7 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder targetResources(SubResource... targetResources) {
+        public Builder targetResources(SubResourceArgs... targetResources) {
             return targetResources(List.of(targetResources));
         }
 

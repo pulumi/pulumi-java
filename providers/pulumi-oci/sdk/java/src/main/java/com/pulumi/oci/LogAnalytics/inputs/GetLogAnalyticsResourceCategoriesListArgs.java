@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceCategories")
-    private Output</* @Nullable */ String> resourceCategories;
+    private @Nullable Output<String> resourceCategories;
 
     /**
      * @return A comma-separated list of category names used for filtering
      * 
      */
-    public Output</* @Nullable */ String> resourceCategories() {
-        return this.resourceCategories;
+    public Optional<Output<String>> resourceCategories() {
+        return Optional.ofNullable(this.resourceCategories);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceIds")
-    private Output</* @Nullable */ String> resourceIds;
+    private @Nullable Output<String> resourceIds;
 
     /**
      * @return A comma-separated list of resource unique identifiers used for filtering. Only resources with matching unique identifiers will be returned.
      * 
      */
-    public Output</* @Nullable */ String> resourceIds() {
-        return this.resourceIds;
+    public Optional<Output<String>> resourceIds() {
+        return Optional.ofNullable(this.resourceIds);
     }
 
     /**
@@ -64,14 +65,14 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceTypes")
-    private Output</* @Nullable */ String> resourceTypes;
+    private @Nullable Output<String> resourceTypes;
 
     /**
      * @return A comma-separated list of resource types used for filtering. Only resources of the types specified will be returned. Examples include SOURCE, PARSER, LOOKUP, etc.
      * 
      */
-    public Output</* @Nullable */ String> resourceTypes() {
-        return this.resourceTypes;
+    public Optional<Output<String>> resourceTypes() {
+        return Optional.ofNullable(this.resourceTypes);
     }
 
     private GetLogAnalyticsResourceCategoriesListArgs() {}
@@ -128,7 +129,7 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder resourceCategories(Output</* @Nullable */ String> resourceCategories) {
+        public Builder resourceCategories(@Nullable Output<String> resourceCategories) {
             $.resourceCategories = resourceCategories;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder resourceCategories(@Nullable String resourceCategories) {
+        public Builder resourceCategories(String resourceCategories) {
             return resourceCategories(Output.of(resourceCategories));
         }
 
@@ -149,7 +150,7 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder resourceIds(Output</* @Nullable */ String> resourceIds) {
+        public Builder resourceIds(@Nullable Output<String> resourceIds) {
             $.resourceIds = resourceIds;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder resourceIds(@Nullable String resourceIds) {
+        public Builder resourceIds(String resourceIds) {
             return resourceIds(Output.of(resourceIds));
         }
 
@@ -170,7 +171,7 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder resourceTypes(Output</* @Nullable */ String> resourceTypes) {
+        public Builder resourceTypes(@Nullable Output<String> resourceTypes) {
             $.resourceTypes = resourceTypes;
             return this;
         }
@@ -181,7 +182,7 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder resourceTypes(@Nullable String resourceTypes) {
+        public Builder resourceTypes(String resourceTypes) {
             return resourceTypes(Output.of(resourceTypes));
         }
 

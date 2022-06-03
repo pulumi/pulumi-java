@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetVolumesFilter;
+import com.pulumi.oci.Core.inputs.GetVolumesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetVolumesFilter>> filters;
+    private @Nullable Output<List<GetVolumesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetVolumesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetVolumesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeGroupId")
-    private Output</* @Nullable */ String> volumeGroupId;
+    private @Nullable Output<String> volumeGroupId;
 
     /**
      * @return The OCID of the volume group.
      * 
      */
-    public Output</* @Nullable */ String> volumeGroupId() {
-        return this.volumeGroupId;
+    public Optional<Output<String>> volumeGroupId() {
+        return Optional.ofNullable(this.volumeGroupId);
     }
 
     private GetVolumesArgs() {}
@@ -133,7 +134,7 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -175,7 +176,7 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -186,20 +187,20 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetVolumesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetVolumesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetVolumesFilter> filters) {
+        public Builder filters(List<GetVolumesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetVolumesFilter... filters) {
+        public Builder filters(GetVolumesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -209,7 +210,7 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -230,7 +231,7 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder volumeGroupId(Output</* @Nullable */ String> volumeGroupId) {
+        public Builder volumeGroupId(@Nullable Output<String> volumeGroupId) {
             $.volumeGroupId = volumeGroupId;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetVolumesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder volumeGroupId(@Nullable String volumeGroupId) {
+        public Builder volumeGroupId(String volumeGroupId) {
             return volumeGroupId(Output.of(volumeGroupId));
         }
 

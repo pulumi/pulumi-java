@@ -5,10 +5,11 @@ package com.pulumi.oci.ApmSynthetics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ApmSynthetics.inputs.GetMonitorsFilter;
+import com.pulumi.oci.ApmSynthetics.inputs.GetMonitorsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetMonitorsFilter>> filters;
+    private @Nullable Output<List<GetMonitorsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetMonitorsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetMonitorsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="monitorType")
-    private Output</* @Nullable */ String> monitorType;
+    private @Nullable Output<String> monitorType;
 
     /**
      * @return A filter to return only monitors that match the given monitor type. Supported values are SCRIPTED_BROWSER, BROWSER, SCRIPTED_REST and REST.
      * 
      */
-    public Output</* @Nullable */ String> monitorType() {
-        return this.monitorType;
+    public Optional<Output<String>> monitorType() {
+        return Optional.ofNullable(this.monitorType);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scriptId")
-    private Output</* @Nullable */ String> scriptId;
+    private @Nullable Output<String> scriptId;
 
     /**
      * @return A filter to return only monitors using scriptId.
      * 
      */
-    public Output</* @Nullable */ String> scriptId() {
-        return this.scriptId;
+    public Optional<Output<String>> scriptId() {
+        return Optional.ofNullable(this.scriptId);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-    private Output</* @Nullable */ String> status;
+    private @Nullable Output<String> status;
 
     /**
      * @return A filter to return only monitors that match the status given.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     private GetMonitorsArgs() {}
@@ -154,7 +155,7 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -165,20 +166,20 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetMonitorsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetMonitorsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetMonitorsFilter> filters) {
+        public Builder filters(List<GetMonitorsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetMonitorsFilter... filters) {
+        public Builder filters(GetMonitorsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -188,7 +189,7 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder monitorType(Output</* @Nullable */ String> monitorType) {
+        public Builder monitorType(@Nullable Output<String> monitorType) {
             $.monitorType = monitorType;
             return this;
         }
@@ -199,7 +200,7 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder monitorType(@Nullable String monitorType) {
+        public Builder monitorType(String monitorType) {
             return monitorType(Output.of(monitorType));
         }
 
@@ -209,7 +210,7 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder scriptId(Output</* @Nullable */ String> scriptId) {
+        public Builder scriptId(@Nullable Output<String> scriptId) {
             $.scriptId = scriptId;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder scriptId(@Nullable String scriptId) {
+        public Builder scriptId(String scriptId) {
             return scriptId(Output.of(scriptId));
         }
 
@@ -230,7 +231,7 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder status(Output</* @Nullable */ String> status) {
+        public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder status(@Nullable String status) {
+        public Builder status(String status) {
             return status(Output.of(status));
         }
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,10 +16,10 @@ public final class GetDeveloperArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDeveloperArgs Empty = new GetDeveloperArgs();
 
     @Import(name="action")
-    private Output</* @Nullable */ String> action;
+    private @Nullable Output<String> action;
 
-    public Output</* @Nullable */ String> action() {
-        return this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     @Import(name="developerId", required=true)
@@ -61,12 +62,12 @@ public final class GetDeveloperArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDeveloperArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder action(Output</* @Nullable */ String> action) {
+        public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
-        public Builder action(@Nullable String action) {
+        public Builder action(String action) {
             return action(Output.of(action));
         }
 

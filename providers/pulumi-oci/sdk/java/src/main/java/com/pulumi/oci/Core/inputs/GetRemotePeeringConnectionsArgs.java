@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetRemotePeeringConnectionsFilter;
+import com.pulumi.oci.Core.inputs.GetRemotePeeringConnectionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetRemotePeeringConnectionsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="drgId")
-    private Output</* @Nullable */ String> drgId;
+    private @Nullable Output<String> drgId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG.
      * 
      */
-    public Output</* @Nullable */ String> drgId() {
-        return this.drgId;
+    public Optional<Output<String>> drgId() {
+        return Optional.ofNullable(this.drgId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetRemotePeeringConnectionsFilter>> filters;
+    private @Nullable Output<List<GetRemotePeeringConnectionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetRemotePeeringConnectionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetRemotePeeringConnectionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetRemotePeeringConnectionsArgs() {}
@@ -106,7 +107,7 @@ public final class GetRemotePeeringConnectionsArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder drgId(Output</* @Nullable */ String> drgId) {
+        public Builder drgId(@Nullable Output<String> drgId) {
             $.drgId = drgId;
             return this;
         }
@@ -117,20 +118,20 @@ public final class GetRemotePeeringConnectionsArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder drgId(@Nullable String drgId) {
+        public Builder drgId(String drgId) {
             return drgId(Output.of(drgId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetRemotePeeringConnectionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetRemotePeeringConnectionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRemotePeeringConnectionsFilter> filters) {
+        public Builder filters(List<GetRemotePeeringConnectionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetRemotePeeringConnectionsFilter... filters) {
+        public Builder filters(GetRemotePeeringConnectionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -5,9 +5,10 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetServicesFilter;
+import com.pulumi.oci.Core.inputs.GetServicesFilterArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +17,10 @@ public final class GetServicesArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetServicesArgs Empty = new GetServicesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetServicesFilter>> filters;
+    private @Nullable Output<List<GetServicesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetServicesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetServicesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetServicesArgs() {}
@@ -46,16 +47,16 @@ public final class GetServicesArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetServicesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetServicesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetServicesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetServicesFilter> filters) {
+        public Builder filters(List<GetServicesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetServicesFilter... filters) {
+        public Builder filters(GetServicesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

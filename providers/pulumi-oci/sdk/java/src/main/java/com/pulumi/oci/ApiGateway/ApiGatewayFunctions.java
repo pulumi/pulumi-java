@@ -14,6 +14,7 @@ import com.pulumi.oci.ApiGateway.inputs.GetApiDeploymentSpecificationArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApiDeploymentSpecificationPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApiPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApiValidationArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetApiValidationPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApisArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApisPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetCertificateArgs;
@@ -183,7 +184,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiValidationInvokeResult> getApiValidation(GetApiValidationArgs args) {
+    public static Output<GetApiValidationInvokeResult> getApiValidation(GetApiValidationArgs args) {
         return getApiValidation(args, InvokeOptions.Empty);
     }
     /**
@@ -194,7 +195,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiValidationInvokeResult> getApiValidation(GetApiValidationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiValidationInvokeResult> getApiValidationPlain(GetApiValidationPlainArgs args) {
+        return getApiValidationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Api Validation resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets the API validation results.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetApiValidationInvokeResult> getApiValidation(GetApiValidationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getApiValidation:getApiValidation", TypeShape.of(GetApiValidationInvokeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Api Validation resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets the API validation results.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetApiValidationInvokeResult> getApiValidationPlain(GetApiValidationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getApiValidation:getApiValidation", TypeShape.of(GetApiValidationInvokeResult.class), args, Utilities.withVersion(options));
     }
     /**

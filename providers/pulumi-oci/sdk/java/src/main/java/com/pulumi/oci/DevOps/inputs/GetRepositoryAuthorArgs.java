@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetRepositoryAuthorArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="refName")
-    private Output</* @Nullable */ String> refName;
+    private @Nullable Output<String> refName;
 
     /**
      * @return A filter to return only resources that match the given reference name.
      * 
      */
-    public Output</* @Nullable */ String> refName() {
-        return this.refName;
+    public Optional<Output<String>> refName() {
+        return Optional.ofNullable(this.refName);
     }
 
     /**
@@ -75,7 +76,7 @@ public final class GetRepositoryAuthorArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder refName(Output</* @Nullable */ String> refName) {
+        public Builder refName(@Nullable Output<String> refName) {
             $.refName = refName;
             return this;
         }
@@ -86,7 +87,7 @@ public final class GetRepositoryAuthorArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder refName(@Nullable String refName) {
+        public Builder refName(String refName) {
             return refName(Output.of(refName));
         }
 

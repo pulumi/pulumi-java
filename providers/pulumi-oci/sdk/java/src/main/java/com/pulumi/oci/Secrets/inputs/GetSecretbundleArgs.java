@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretVersionName")
-    private Output</* @Nullable */ String> secretVersionName;
+    private @Nullable Output<String> secretVersionName;
 
     /**
      * @return The name of the secret. (This might be referred to as the name of the secret version. Names are unique across the different versions of a secret.)
      * 
      */
-    public Output</* @Nullable */ String> secretVersionName() {
-        return this.secretVersionName;
+    public Optional<Output<String>> secretVersionName() {
+        return Optional.ofNullable(this.secretVersionName);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stage")
-    private Output</* @Nullable */ String> stage;
+    private @Nullable Output<String> stage;
 
     /**
      * @return The rotation state of the secret version.
      * 
      */
-    public Output</* @Nullable */ String> stage() {
-        return this.stage;
+    public Optional<Output<String>> stage() {
+        return Optional.ofNullable(this.stage);
     }
 
     /**
@@ -64,14 +65,14 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionNumber")
-    private Output</* @Nullable */ String> versionNumber;
+    private @Nullable Output<String> versionNumber;
 
     /**
      * @return The version number of the secret.
      * 
      */
-    public Output</* @Nullable */ String> versionNumber() {
-        return this.versionNumber;
+    public Optional<Output<String>> versionNumber() {
+        return Optional.ofNullable(this.versionNumber);
     }
 
     private GetSecretbundleArgs() {}
@@ -128,7 +129,7 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder secretVersionName(Output</* @Nullable */ String> secretVersionName) {
+        public Builder secretVersionName(@Nullable Output<String> secretVersionName) {
             $.secretVersionName = secretVersionName;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder secretVersionName(@Nullable String secretVersionName) {
+        public Builder secretVersionName(String secretVersionName) {
             return secretVersionName(Output.of(secretVersionName));
         }
 
@@ -149,7 +150,7 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder stage(Output</* @Nullable */ String> stage) {
+        public Builder stage(@Nullable Output<String> stage) {
             $.stage = stage;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder stage(@Nullable String stage) {
+        public Builder stage(String stage) {
             return stage(Output.of(stage));
         }
 
@@ -170,7 +171,7 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder versionNumber(Output</* @Nullable */ String> versionNumber) {
+        public Builder versionNumber(@Nullable Output<String> versionNumber) {
             $.versionNumber = versionNumber;
             return this;
         }
@@ -181,7 +182,7 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder versionNumber(@Nullable String versionNumber) {
+        public Builder versionNumber(String versionNumber) {
             return versionNumber(Output.of(versionNumber));
         }
 

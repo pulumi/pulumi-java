@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="conditionalMembers")
-    private Output</* @Nullable */ String> conditionalMembers;
+    private @Nullable Output<String> conditionalMembers;
 
     /**
      * @return Conditional Members.
      * 
      */
-    public Output</* @Nullable */ String> conditionalMembers() {
-        return this.conditionalMembers;
+    public Optional<Output<String>> conditionalMembers() {
+        return Optional.ofNullable(this.conditionalMembers);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="skipToken")
-    private Output</* @Nullable */ String> skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
      * 
      */
-    public Output</* @Nullable */ String> skipToken() {
-        return this.skipToken;
+    public Optional<Output<String>> skipToken() {
+        return Optional.ofNullable(this.skipToken);
     }
 
     /**
@@ -80,14 +81,14 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="top")
-    private Output</* @Nullable */ Integer> top;
+    private @Nullable Output<Integer> top;
 
     /**
      * @return An optional query parameter which specifies the maximum number of records to be returned by the server.
      * 
      */
-    public Output</* @Nullable */ Integer> top() {
-        return this.top;
+    public Optional<Output<Integer>> top() {
+        return Optional.ofNullable(this.top);
     }
 
     private ListEffectiveVirtualNetworkByNetworkManagerArgs() {}
@@ -124,7 +125,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
          * @return builder
          * 
          */
-        public Builder conditionalMembers(Output</* @Nullable */ String> conditionalMembers) {
+        public Builder conditionalMembers(@Nullable Output<String> conditionalMembers) {
             $.conditionalMembers = conditionalMembers;
             return this;
         }
@@ -135,7 +136,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
          * @return builder
          * 
          */
-        public Builder conditionalMembers(@Nullable String conditionalMembers) {
+        public Builder conditionalMembers(String conditionalMembers) {
             return conditionalMembers(Output.of(conditionalMembers));
         }
 
@@ -187,7 +188,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
          * @return builder
          * 
          */
-        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+        public Builder skipToken(@Nullable Output<String> skipToken) {
             $.skipToken = skipToken;
             return this;
         }
@@ -198,7 +199,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
+        public Builder skipToken(String skipToken) {
             return skipToken(Output.of(skipToken));
         }
 
@@ -208,7 +209,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
          * @return builder
          * 
          */
-        public Builder top(Output</* @Nullable */ Integer> top) {
+        public Builder top(@Nullable Output<Integer> top) {
             $.top = top;
             return this;
         }
@@ -219,7 +220,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
          * @return builder
          * 
          */
-        public Builder top(@Nullable Integer top) {
+        public Builder top(Integer top) {
             return top(Output.of(top));
         }
 

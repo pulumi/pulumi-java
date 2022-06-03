@@ -9,6 +9,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="disallowedCidrs")
-    private Output</* @Nullable */ List<String>> disallowedCidrs;
+    private @Nullable Output<List<String>> disallowedCidrs;
 
     /**
      * @return Exclude a particular CIDR range from being returned by the pool.
      * 
      */
-    public Output</* @Nullable */ List<String>> disallowedCidrs() {
-        return this.disallowedCidrs;
+    public Optional<Output<List<String>>> disallowedCidrs() {
+        return Optional.ofNullable(this.disallowedCidrs);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="netmaskLength")
-    private Output</* @Nullable */ Integer> netmaskLength;
+    private @Nullable Output<Integer> netmaskLength;
 
     /**
      * @return The netmask length of the CIDR you would like to preview from the IPAM pool.
      * 
      */
-    public Output</* @Nullable */ Integer> netmaskLength() {
-        return this.netmaskLength;
+    public Optional<Output<Integer>> netmaskLength() {
+        return Optional.ofNullable(this.netmaskLength);
     }
 
     private GetIpamPreviewNextCidrArgs() {}
@@ -93,7 +94,7 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder disallowedCidrs(Output</* @Nullable */ List<String>> disallowedCidrs) {
+        public Builder disallowedCidrs(@Nullable Output<List<String>> disallowedCidrs) {
             $.disallowedCidrs = disallowedCidrs;
             return this;
         }
@@ -104,7 +105,7 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
+        public Builder disallowedCidrs(List<String> disallowedCidrs) {
             return disallowedCidrs(Output.of(disallowedCidrs));
         }
 
@@ -145,7 +146,7 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder netmaskLength(Output</* @Nullable */ Integer> netmaskLength) {
+        public Builder netmaskLength(@Nullable Output<Integer> netmaskLength) {
             $.netmaskLength = netmaskLength;
             return this;
         }
@@ -156,7 +157,7 @@ public final class GetIpamPreviewNextCidrArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder netmaskLength(@Nullable Integer netmaskLength) {
+        public Builder netmaskLength(Integer netmaskLength) {
             return netmaskLength(Output.of(netmaskLength));
         }
 

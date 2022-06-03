@@ -3,12 +3,13 @@
 
 package com.pulumi.aws.iam.inputs;
 
-import com.pulumi.aws.iam.inputs.GetPolicyDocumentStatement;
+import com.pulumi.aws.iam.inputs.GetPolicyDocumentStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      */
     @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
     @Import(name="overrideJson")
-    private Output</* @Nullable */ String> overrideJson;
+    private @Nullable Output<String> overrideJson;
 
     /**
      * @return - IAM policy document whose statements with non-blank `sid`s will override statements with the same `sid` from documents assigned to the `source_json`, `source_policy_documents`, and `override_policy_documents` arguments. Non-overriding statements will be added to the exported document.
@@ -35,8 +36,8 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
-    public Output</* @Nullable */ String> overrideJson() {
-        return this.overrideJson;
+    public Optional<Output<String>> overrideJson() {
+        return Optional.ofNullable(this.overrideJson);
     }
 
     /**
@@ -44,14 +45,14 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="overridePolicyDocuments")
-    private Output</* @Nullable */ List<String>> overridePolicyDocuments;
+    private @Nullable Output<List<String>> overridePolicyDocuments;
 
     /**
      * @return List of IAM policy documents that are merged together into the exported document. In merging, statements with non-blank `sid`s will override statements with the same `sid` from earlier documents in the list. Statements with non-blank `sid`s will also override statements with the same `sid` from documents provided in the `source_json` and `source_policy_documents` arguments.  Non-overriding statements will be added to the exported document.
      * 
      */
-    public Output</* @Nullable */ List<String>> overridePolicyDocuments() {
-        return this.overridePolicyDocuments;
+    public Optional<Output<List<String>>> overridePolicyDocuments() {
+        return Optional.ofNullable(this.overridePolicyDocuments);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="policyId")
-    private Output</* @Nullable */ String> policyId;
+    private @Nullable Output<String> policyId;
 
     /**
      * @return ID for the policy document.
      * 
      */
-    public Output</* @Nullable */ String> policyId() {
-        return this.policyId;
+    public Optional<Output<String>> policyId() {
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -78,7 +79,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      */
     @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
     @Import(name="sourceJson")
-    private Output</* @Nullable */ String> sourceJson;
+    private @Nullable Output<String> sourceJson;
 
     /**
      * @return - IAM policy document used as a base for the exported policy document. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
@@ -88,8 +89,8 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
-    public Output</* @Nullable */ String> sourceJson() {
-        return this.sourceJson;
+    public Optional<Output<String>> sourceJson() {
+        return Optional.ofNullable(this.sourceJson);
     }
 
     /**
@@ -97,14 +98,14 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourcePolicyDocuments")
-    private Output</* @Nullable */ List<String>> sourcePolicyDocuments;
+    private @Nullable Output<List<String>> sourcePolicyDocuments;
 
     /**
      * @return List of IAM policy documents that are merged together into the exported document. Statements defined in `source_policy_documents` or `source_json` must have unique `sid`s. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
      * 
      */
-    public Output</* @Nullable */ List<String>> sourcePolicyDocuments() {
-        return this.sourcePolicyDocuments;
+    public Optional<Output<List<String>>> sourcePolicyDocuments() {
+        return Optional.ofNullable(this.sourcePolicyDocuments);
     }
 
     /**
@@ -112,14 +113,14 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="statements")
-    private Output</* @Nullable */ List<GetPolicyDocumentStatement>> statements;
+    private @Nullable Output<List<GetPolicyDocumentStatementArgs>> statements;
 
     /**
      * @return Configuration block for a policy statement. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<GetPolicyDocumentStatement>> statements() {
-        return this.statements;
+    public Optional<Output<List<GetPolicyDocumentStatementArgs>>> statements() {
+        return Optional.ofNullable(this.statements);
     }
 
     /**
@@ -127,14 +128,14 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="version")
-    private Output</* @Nullable */ String> version;
+    private @Nullable Output<String> version;
 
     /**
      * @return IAM policy document version. Valid values are `2008-10-17` and `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     private GetPolicyDocumentArgs() {}
@@ -177,7 +178,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
-        public Builder overrideJson(Output</* @Nullable */ String> overrideJson) {
+        public Builder overrideJson(@Nullable Output<String> overrideJson) {
             $.overrideJson = overrideJson;
             return this;
         }
@@ -192,7 +193,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
-        public Builder overrideJson(@Nullable String overrideJson) {
+        public Builder overrideJson(String overrideJson) {
             return overrideJson(Output.of(overrideJson));
         }
 
@@ -202,7 +203,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder overridePolicyDocuments(Output</* @Nullable */ List<String>> overridePolicyDocuments) {
+        public Builder overridePolicyDocuments(@Nullable Output<List<String>> overridePolicyDocuments) {
             $.overridePolicyDocuments = overridePolicyDocuments;
             return this;
         }
@@ -213,7 +214,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder overridePolicyDocuments(@Nullable List<String> overridePolicyDocuments) {
+        public Builder overridePolicyDocuments(List<String> overridePolicyDocuments) {
             return overridePolicyDocuments(Output.of(overridePolicyDocuments));
         }
 
@@ -233,7 +234,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder policyId(Output</* @Nullable */ String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
@@ -244,7 +245,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder policyId(@Nullable String policyId) {
+        public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }
 
@@ -258,7 +259,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
-        public Builder sourceJson(Output</* @Nullable */ String> sourceJson) {
+        public Builder sourceJson(@Nullable Output<String> sourceJson) {
             $.sourceJson = sourceJson;
             return this;
         }
@@ -273,7 +274,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
-        public Builder sourceJson(@Nullable String sourceJson) {
+        public Builder sourceJson(String sourceJson) {
             return sourceJson(Output.of(sourceJson));
         }
 
@@ -283,7 +284,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder sourcePolicyDocuments(Output</* @Nullable */ List<String>> sourcePolicyDocuments) {
+        public Builder sourcePolicyDocuments(@Nullable Output<List<String>> sourcePolicyDocuments) {
             $.sourcePolicyDocuments = sourcePolicyDocuments;
             return this;
         }
@@ -294,7 +295,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder sourcePolicyDocuments(@Nullable List<String> sourcePolicyDocuments) {
+        public Builder sourcePolicyDocuments(List<String> sourcePolicyDocuments) {
             return sourcePolicyDocuments(Output.of(sourcePolicyDocuments));
         }
 
@@ -314,7 +315,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder statements(Output</* @Nullable */ List<GetPolicyDocumentStatement>> statements) {
+        public Builder statements(@Nullable Output<List<GetPolicyDocumentStatementArgs>> statements) {
             $.statements = statements;
             return this;
         }
@@ -325,7 +326,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder statements(@Nullable List<GetPolicyDocumentStatement> statements) {
+        public Builder statements(List<GetPolicyDocumentStatementArgs> statements) {
             return statements(Output.of(statements));
         }
 
@@ -335,7 +336,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder statements(GetPolicyDocumentStatement... statements) {
+        public Builder statements(GetPolicyDocumentStatementArgs... statements) {
             return statements(List.of(statements));
         }
 
@@ -345,7 +346,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder version(Output</* @Nullable */ String> version) {
+        public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
@@ -356,7 +357,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder version(@Nullable String version) {
+        public Builder version(String version) {
             return version(Output.of(version));
         }
 

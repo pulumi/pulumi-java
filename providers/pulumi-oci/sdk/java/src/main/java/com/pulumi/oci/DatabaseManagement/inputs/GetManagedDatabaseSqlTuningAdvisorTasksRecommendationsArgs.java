@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs ex
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter>> filters;
+    private @Nullable Output<List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -132,16 +133,16 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsArgs ex
             return executionId(Output.of(executionId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter> filters) {
+        public Builder filters(List<GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilter... filters) {
+        public Builder filters(GetManagedDatabaseSqlTuningAdvisorTasksRecommendationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

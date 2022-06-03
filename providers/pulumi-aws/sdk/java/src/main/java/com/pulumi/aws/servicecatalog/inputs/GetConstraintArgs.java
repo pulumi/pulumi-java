@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceptLanguage")
-    private Output</* @Nullable */ String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
     /**
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> acceptLanguage() {
-        return this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-    private Output</* @Nullable */ String> description;
+    private @Nullable Output<String> description;
 
     /**
      * @return Description of the constraint.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder acceptLanguage(Output</* @Nullable */ String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             $.acceptLanguage = acceptLanguage;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(String acceptLanguage) {
             return acceptLanguage(Output.of(acceptLanguage));
         }
 
@@ -112,7 +113,7 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder description(Output</* @Nullable */ String> description) {
+        public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder description(@Nullable String description) {
+        public Builder description(String description) {
             return description(Output.of(description));
         }
 

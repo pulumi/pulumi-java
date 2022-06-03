@@ -5,10 +5,11 @@ package com.pulumi.oci.LoadBalancer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.LoadBalancer.inputs.GetListenerRulesFilter;
+import com.pulumi.oci.LoadBalancer.inputs.GetListenerRulesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetListenerRulesArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetListenerRulesArgs Empty = new GetListenerRulesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetListenerRulesFilter>> filters;
+    private @Nullable Output<List<GetListenerRulesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetListenerRulesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetListenerRulesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -79,16 +80,16 @@ public final class GetListenerRulesArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetListenerRulesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetListenerRulesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetListenerRulesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetListenerRulesFilter> filters) {
+        public Builder filters(List<GetListenerRulesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetListenerRulesFilter... filters) {
+        public Builder filters(GetListenerRulesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

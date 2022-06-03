@@ -5,11 +5,12 @@ package com.pulumi.oci.DevOps.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DevOps.inputs.GetRepositoryDiffsFilter;
+import com.pulumi.oci.DevOps.inputs.GetRepositoryDiffsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetRepositoryDiffsFilter>> filters;
+    private @Nullable Output<List<GetRepositoryDiffsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetRepositoryDiffsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetRepositoryDiffsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -44,14 +45,14 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isComparisonFromMergeBase")
-    private Output</* @Nullable */ Boolean> isComparisonFromMergeBase;
+    private @Nullable Output<Boolean> isComparisonFromMergeBase;
 
     /**
      * @return Boolean value to indicate whether to use merge base or most recent revision.
      * 
      */
-    public Output</* @Nullable */ Boolean> isComparisonFromMergeBase() {
-        return this.isComparisonFromMergeBase;
+    public Optional<Output<Boolean>> isComparisonFromMergeBase() {
+        return Optional.ofNullable(this.isComparisonFromMergeBase);
     }
 
     /**
@@ -133,16 +134,16 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
             return baseVersion(Output.of(baseVersion));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetRepositoryDiffsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetRepositoryDiffsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRepositoryDiffsFilter> filters) {
+        public Builder filters(List<GetRepositoryDiffsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetRepositoryDiffsFilter... filters) {
+        public Builder filters(GetRepositoryDiffsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -152,7 +153,7 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder isComparisonFromMergeBase(Output</* @Nullable */ Boolean> isComparisonFromMergeBase) {
+        public Builder isComparisonFromMergeBase(@Nullable Output<Boolean> isComparisonFromMergeBase) {
             $.isComparisonFromMergeBase = isComparisonFromMergeBase;
             return this;
         }
@@ -163,7 +164,7 @@ public final class GetRepositoryDiffsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder isComparisonFromMergeBase(@Nullable Boolean isComparisonFromMergeBase) {
+        public Builder isComparisonFromMergeBase(Boolean isComparisonFromMergeBase) {
             return isComparisonFromMergeBase(Output.of(isComparisonFromMergeBase));
         }
 

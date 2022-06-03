@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="location")
-    private Output</* @Nullable */ String> location;
+    private @Nullable Output<String> location;
 
     /**
      * @return The location to list versions for.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -35,15 +36,15 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
     /**
      * @return ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
      * Defaults to the project that the provider is authenticated with.
      * 
      */
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     private GetAzureVersionsArgs() {}
@@ -77,7 +78,7 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder location(Output</* @Nullable */ String> location) {
+        public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
@@ -88,7 +89,7 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder location(@Nullable String location) {
+        public Builder location(String location) {
             return location(Output.of(location));
         }
 
@@ -99,7 +100,7 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
@@ -111,7 +112,7 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 

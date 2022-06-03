@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetPolicyDefintionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Specifies the display name of the Policy Definition. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetPolicyDefintionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="managementGroupName")
-    private Output</* @Nullable */ String> managementGroupName;
+    private @Nullable Output<String> managementGroupName;
 
     /**
      * @return Only retrieve Policy Definitions from this Management Group.
      * 
      */
-    public Output</* @Nullable */ String> managementGroupName() {
-        return this.managementGroupName;
+    public Optional<Output<String>> managementGroupName() {
+        return Optional.ofNullable(this.managementGroupName);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetPolicyDefintionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Specifies the name of the Policy Definition. Conflicts with `display_name`.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetPolicyDefintionArgs() {}
@@ -91,7 +92,7 @@ public final class GetPolicyDefintionArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetPolicyDefintionArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -112,7 +113,7 @@ public final class GetPolicyDefintionArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder managementGroupName(Output</* @Nullable */ String> managementGroupName) {
+        public Builder managementGroupName(@Nullable Output<String> managementGroupName) {
             $.managementGroupName = managementGroupName;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetPolicyDefintionArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder managementGroupName(@Nullable String managementGroupName) {
+        public Builder managementGroupName(String managementGroupName) {
             return managementGroupName(Output.of(managementGroupName));
         }
 
@@ -133,7 +134,7 @@ public final class GetPolicyDefintionArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetPolicyDefintionArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

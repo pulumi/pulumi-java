@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expandRegistrationDefinition")
-    private Output</* @Nullable */ Boolean> expandRegistrationDefinition;
+    private @Nullable Output<Boolean> expandRegistrationDefinition;
 
     /**
      * @return Tells whether to return registration definition details also along with registration assignment details.
      * 
      */
-    public Output</* @Nullable */ Boolean> expandRegistrationDefinition() {
-        return this.expandRegistrationDefinition;
+    public Optional<Output<Boolean>> expandRegistrationDefinition() {
+        return Optional.ofNullable(this.expandRegistrationDefinition);
     }
 
     /**
@@ -92,7 +93,7 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder expandRegistrationDefinition(Output</* @Nullable */ Boolean> expandRegistrationDefinition) {
+        public Builder expandRegistrationDefinition(@Nullable Output<Boolean> expandRegistrationDefinition) {
             $.expandRegistrationDefinition = expandRegistrationDefinition;
             return this;
         }
@@ -103,7 +104,7 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder expandRegistrationDefinition(@Nullable Boolean expandRegistrationDefinition) {
+        public Builder expandRegistrationDefinition(Boolean expandRegistrationDefinition) {
             return expandRegistrationDefinition(Output.of(expandRegistrationDefinition));
         }
 

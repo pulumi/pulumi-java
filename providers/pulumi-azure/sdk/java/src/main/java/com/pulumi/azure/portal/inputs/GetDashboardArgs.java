@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dashboardProperties")
-    private Output</* @Nullable */ String> dashboardProperties;
+    private @Nullable Output<String> dashboardProperties;
 
     /**
      * @return JSON data representing dashboard body.
      * 
      */
-    public Output</* @Nullable */ String> dashboardProperties() {
-        return this.dashboardProperties;
+    public Optional<Output<String>> dashboardProperties() {
+        return Optional.ofNullable(this.dashboardProperties);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dashboardProperties(Output</* @Nullable */ String> dashboardProperties) {
+        public Builder dashboardProperties(@Nullable Output<String> dashboardProperties) {
             $.dashboardProperties = dashboardProperties;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dashboardProperties(@Nullable String dashboardProperties) {
+        public Builder dashboardProperties(String dashboardProperties) {
             return dashboardProperties(Output.of(dashboardProperties));
         }
 

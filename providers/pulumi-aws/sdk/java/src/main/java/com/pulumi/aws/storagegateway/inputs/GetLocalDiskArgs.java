@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskNode")
-    private Output</* @Nullable */ String> diskNode;
+    private @Nullable Output<String> diskNode;
 
     /**
      * @return The device node of the local disk to retrieve. For example, `/dev/sdb`.
      * 
      */
-    public Output</* @Nullable */ String> diskNode() {
-        return this.diskNode;
+    public Optional<Output<String>> diskNode() {
+        return Optional.ofNullable(this.diskNode);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskPath")
-    private Output</* @Nullable */ String> diskPath;
+    private @Nullable Output<String> diskPath;
 
     /**
      * @return The device path of the local disk to retrieve. For example, `/dev/xvdb` or `/dev/nvme1n1`.
      * 
      */
-    public Output</* @Nullable */ String> diskPath() {
-        return this.diskPath;
+    public Optional<Output<String>> diskPath() {
+        return Optional.ofNullable(this.diskPath);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder diskNode(Output</* @Nullable */ String> diskNode) {
+        public Builder diskNode(@Nullable Output<String> diskNode) {
             $.diskNode = diskNode;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder diskNode(@Nullable String diskNode) {
+        public Builder diskNode(String diskNode) {
             return diskNode(Output.of(diskNode));
         }
 
@@ -112,7 +113,7 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder diskPath(Output</* @Nullable */ String> diskPath) {
+        public Builder diskPath(@Nullable Output<String> diskPath) {
             $.diskPath = diskPath;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder diskPath(@Nullable String diskPath) {
+        public Builder diskPath(String diskPath) {
             return diskPath(Output.of(diskPath));
         }
 

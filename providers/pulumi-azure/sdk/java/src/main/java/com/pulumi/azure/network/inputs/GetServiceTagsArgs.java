@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetServiceTagsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locationFilter")
-    private Output</* @Nullable */ String> locationFilter;
+    private @Nullable Output<String> locationFilter;
 
     /**
      * @return Changes the scope of the service tags. Can be any value that is also valid for `location`. If this field is empty then all address prefixes are considered instead of only location specific ones.
      * 
      */
-    public Output</* @Nullable */ String> locationFilter() {
-        return this.locationFilter;
+    public Optional<Output<String>> locationFilter() {
+        return Optional.ofNullable(this.locationFilter);
     }
 
     /**
@@ -112,7 +113,7 @@ public final class GetServiceTagsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder locationFilter(Output</* @Nullable */ String> locationFilter) {
+        public Builder locationFilter(@Nullable Output<String> locationFilter) {
             $.locationFilter = locationFilter;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetServiceTagsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder locationFilter(@Nullable String locationFilter) {
+        public Builder locationFilter(String locationFilter) {
             return locationFilter(Output.of(locationFilter));
         }
 

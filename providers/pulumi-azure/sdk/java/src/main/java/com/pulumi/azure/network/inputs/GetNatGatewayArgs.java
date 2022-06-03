@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicIpAddressIds")
-    private Output</* @Nullable */ List<String>> publicIpAddressIds;
+    private @Nullable Output<List<String>> publicIpAddressIds;
 
     /**
      * @return A list of existing Public IP Address resource IDs which the NAT Gateway is using.
      * 
      */
-    public Output</* @Nullable */ List<String>> publicIpAddressIds() {
-        return this.publicIpAddressIds;
+    public Optional<Output<List<String>>> publicIpAddressIds() {
+        return Optional.ofNullable(this.publicIpAddressIds);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicIpPrefixIds")
-    private Output</* @Nullable */ List<String>> publicIpPrefixIds;
+    private @Nullable Output<List<String>> publicIpPrefixIds;
 
     /**
      * @return A list of existing Public IP Prefix resource IDs which the NAT Gateway is using.
      * 
      */
-    public Output</* @Nullable */ List<String>> publicIpPrefixIds() {
-        return this.publicIpPrefixIds;
+    public Optional<Output<List<String>>> publicIpPrefixIds() {
+        return Optional.ofNullable(this.publicIpPrefixIds);
     }
 
     /**
@@ -129,7 +130,7 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicIpAddressIds(Output</* @Nullable */ List<String>> publicIpAddressIds) {
+        public Builder publicIpAddressIds(@Nullable Output<List<String>> publicIpAddressIds) {
             $.publicIpAddressIds = publicIpAddressIds;
             return this;
         }
@@ -140,7 +141,7 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicIpAddressIds(@Nullable List<String> publicIpAddressIds) {
+        public Builder publicIpAddressIds(List<String> publicIpAddressIds) {
             return publicIpAddressIds(Output.of(publicIpAddressIds));
         }
 
@@ -160,7 +161,7 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicIpPrefixIds(Output</* @Nullable */ List<String>> publicIpPrefixIds) {
+        public Builder publicIpPrefixIds(@Nullable Output<List<String>> publicIpPrefixIds) {
             $.publicIpPrefixIds = publicIpPrefixIds;
             return this;
         }
@@ -171,7 +172,7 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicIpPrefixIds(@Nullable List<String> publicIpPrefixIds) {
+        public Builder publicIpPrefixIds(List<String> publicIpPrefixIds) {
             return publicIpPrefixIds(Output.of(publicIpPrefixIds));
         }
 

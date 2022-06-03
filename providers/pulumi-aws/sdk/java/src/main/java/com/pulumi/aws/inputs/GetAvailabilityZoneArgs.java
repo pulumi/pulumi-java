@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.inputs;
 
-import com.pulumi.aws.inputs.GetAvailabilityZoneFilter;
+import com.pulumi.aws.inputs.GetAvailabilityZoneFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="allAvailabilityZones")
-    private Output</* @Nullable */ Boolean> allAvailabilityZones;
+    private @Nullable Output<Boolean> allAvailabilityZones;
 
     /**
      * @return Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
      * 
      */
-    public Output</* @Nullable */ Boolean> allAvailabilityZones() {
-        return this.allAvailabilityZones;
+    public Optional<Output<Boolean>> allAvailabilityZones() {
+        return Optional.ofNullable(this.allAvailabilityZones);
     }
 
     /**
@@ -37,14 +38,14 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAvailabilityZoneFilter>> filters;
+    private @Nullable Output<List<GetAvailabilityZoneFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<GetAvailabilityZoneFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAvailabilityZoneFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,14 +68,14 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A specific availability zone state to require. May be any of `&#34;available&#34;`, `&#34;information&#34;` or `&#34;impaired&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -82,14 +83,14 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="zoneId")
-    private Output</* @Nullable */ String> zoneId;
+    private @Nullable Output<String> zoneId;
 
     /**
      * @return The zone ID of the availability zone to select.
      * 
      */
-    public Output</* @Nullable */ String> zoneId() {
-        return this.zoneId;
+    public Optional<Output<String>> zoneId() {
+        return Optional.ofNullable(this.zoneId);
     }
 
     private GetAvailabilityZoneArgs() {}
@@ -126,7 +127,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder allAvailabilityZones(Output</* @Nullable */ Boolean> allAvailabilityZones) {
+        public Builder allAvailabilityZones(@Nullable Output<Boolean> allAvailabilityZones) {
             $.allAvailabilityZones = allAvailabilityZones;
             return this;
         }
@@ -137,7 +138,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder allAvailabilityZones(@Nullable Boolean allAvailabilityZones) {
+        public Builder allAvailabilityZones(Boolean allAvailabilityZones) {
             return allAvailabilityZones(Output.of(allAvailabilityZones));
         }
 
@@ -147,7 +148,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetAvailabilityZoneFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAvailabilityZoneFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -158,7 +159,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetAvailabilityZoneFilter> filters) {
+        public Builder filters(List<GetAvailabilityZoneFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -168,7 +169,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filters(GetAvailabilityZoneFilter... filters) {
+        public Builder filters(GetAvailabilityZoneFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -178,7 +179,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -189,7 +190,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -199,7 +200,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -210,7 +211,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -220,7 +221,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder zoneId(Output</* @Nullable */ String> zoneId) {
+        public Builder zoneId(@Nullable Output<String> zoneId) {
             $.zoneId = zoneId;
             return this;
         }
@@ -231,7 +232,7 @@ public final class GetAvailabilityZoneArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder zoneId(@Nullable String zoneId) {
+        public Builder zoneId(String zoneId) {
             return zoneId(Output.of(zoneId));
         }
 

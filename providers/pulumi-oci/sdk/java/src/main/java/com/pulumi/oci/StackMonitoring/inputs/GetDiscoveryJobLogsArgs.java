@@ -5,10 +5,11 @@ package com.pulumi.oci.StackMonitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.StackMonitoring.inputs.GetDiscoveryJobLogsFilter;
+import com.pulumi.oci.StackMonitoring.inputs.GetDiscoveryJobLogsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetDiscoveryJobLogsArgs extends com.pulumi.resources.InvokeAr
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDiscoveryJobLogsFilter>> filters;
+    private @Nullable Output<List<GetDiscoveryJobLogsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDiscoveryJobLogsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDiscoveryJobLogsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetDiscoveryJobLogsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="logType")
-    private Output</* @Nullable */ String> logType;
+    private @Nullable Output<String> logType;
 
     /**
      * @return The log type like INFO, WARNING, ERROR, SUCCESS
      * 
      */
-    public Output</* @Nullable */ String> logType() {
-        return this.logType;
+    public Optional<Output<String>> logType() {
+        return Optional.ofNullable(this.logType);
     }
 
     private GetDiscoveryJobLogsArgs() {}
@@ -100,16 +101,16 @@ public final class GetDiscoveryJobLogsArgs extends com.pulumi.resources.InvokeAr
             return discoveryJobId(Output.of(discoveryJobId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDiscoveryJobLogsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDiscoveryJobLogsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDiscoveryJobLogsFilter> filters) {
+        public Builder filters(List<GetDiscoveryJobLogsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDiscoveryJobLogsFilter... filters) {
+        public Builder filters(GetDiscoveryJobLogsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -119,7 +120,7 @@ public final class GetDiscoveryJobLogsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder logType(Output</* @Nullable */ String> logType) {
+        public Builder logType(@Nullable Output<String> logType) {
             $.logType = logType;
             return this;
         }
@@ -130,7 +131,7 @@ public final class GetDiscoveryJobLogsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder logType(@Nullable String logType) {
+        public Builder logType(String logType) {
             return logType(Output.of(logType));
         }
 

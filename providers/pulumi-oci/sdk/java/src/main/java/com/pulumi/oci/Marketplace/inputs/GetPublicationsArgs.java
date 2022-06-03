@@ -5,10 +5,11 @@ package com.pulumi.oci.Marketplace.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Marketplace.inputs.GetPublicationsFilter;
+import com.pulumi.oci.Marketplace.inputs.GetPublicationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetPublicationsArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetPublicationsFilter>> filters;
+    private @Nullable Output<List<GetPublicationsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetPublicationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetPublicationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetPublicationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="names")
-    private Output</* @Nullable */ List<String>> names;
+    private @Nullable Output<List<String>> names;
 
     /**
      * @return The name of the publication.
      * 
      */
-    public Output</* @Nullable */ List<String>> names() {
-        return this.names;
+    public Optional<Output<List<String>>> names() {
+        return Optional.ofNullable(this.names);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetPublicationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operatingSystems")
-    private Output</* @Nullable */ List<String>> operatingSystems;
+    private @Nullable Output<List<String>> operatingSystems;
 
     /**
      * @return The operating system of the listing.
      * 
      */
-    public Output</* @Nullable */ List<String>> operatingSystems() {
-        return this.operatingSystems;
+    public Optional<Output<List<String>>> operatingSystems() {
+        return Optional.ofNullable(this.operatingSystems);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetPublicationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicationId")
-    private Output</* @Nullable */ String> publicationId;
+    private @Nullable Output<String> publicationId;
 
     /**
      * @return The unique identifier for the publication.
      * 
      */
-    public Output</* @Nullable */ String> publicationId() {
-        return this.publicationId;
+    public Optional<Output<String>> publicationId() {
+        return Optional.ofNullable(this.publicationId);
     }
 
     private GetPublicationsArgs() {}
@@ -148,16 +149,16 @@ public final class GetPublicationsArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetPublicationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetPublicationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPublicationsFilter> filters) {
+        public Builder filters(List<GetPublicationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetPublicationsFilter... filters) {
+        public Builder filters(GetPublicationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -188,7 +189,7 @@ public final class GetPublicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder names(Output</* @Nullable */ List<String>> names) {
+        public Builder names(@Nullable Output<List<String>> names) {
             $.names = names;
             return this;
         }
@@ -199,7 +200,7 @@ public final class GetPublicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder names(@Nullable List<String> names) {
+        public Builder names(List<String> names) {
             return names(Output.of(names));
         }
 
@@ -219,7 +220,7 @@ public final class GetPublicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder operatingSystems(Output</* @Nullable */ List<String>> operatingSystems) {
+        public Builder operatingSystems(@Nullable Output<List<String>> operatingSystems) {
             $.operatingSystems = operatingSystems;
             return this;
         }
@@ -230,7 +231,7 @@ public final class GetPublicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder operatingSystems(@Nullable List<String> operatingSystems) {
+        public Builder operatingSystems(List<String> operatingSystems) {
             return operatingSystems(Output.of(operatingSystems));
         }
 
@@ -250,7 +251,7 @@ public final class GetPublicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicationId(Output</* @Nullable */ String> publicationId) {
+        public Builder publicationId(@Nullable Output<String> publicationId) {
             $.publicationId = publicationId;
             return this;
         }
@@ -261,7 +262,7 @@ public final class GetPublicationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicationId(@Nullable String publicationId) {
+        public Builder publicationId(String publicationId) {
             return publicationId(Output.of(publicationId));
         }
 

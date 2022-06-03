@@ -3,12 +3,13 @@
 
 package com.pulumi.azure.storage.inputs;
 
-import com.pulumi.azure.storage.inputs.GetAccountBlobContainerSASPermissions;
+import com.pulumi.azure.storage.inputs.GetAccountBlobContainerSASPermissionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="cacheControl")
-    private Output</* @Nullable */ String> cacheControl;
+    private @Nullable Output<String> cacheControl;
 
     /**
      * @return The `Cache-Control` response header that is sent when this SAS token is used.
      * 
      */
-    public Output</* @Nullable */ String> cacheControl() {
-        return this.cacheControl;
+    public Optional<Output<String>> cacheControl() {
+        return Optional.ofNullable(this.cacheControl);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="contentDisposition")
-    private Output</* @Nullable */ String> contentDisposition;
+    private @Nullable Output<String> contentDisposition;
 
     /**
      * @return The `Content-Disposition` response header that is sent when this SAS token is used.
      * 
      */
-    public Output</* @Nullable */ String> contentDisposition() {
-        return this.contentDisposition;
+    public Optional<Output<String>> contentDisposition() {
+        return Optional.ofNullable(this.contentDisposition);
     }
 
     /**
@@ -81,14 +82,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="contentEncoding")
-    private Output</* @Nullable */ String> contentEncoding;
+    private @Nullable Output<String> contentEncoding;
 
     /**
      * @return The `Content-Encoding` response header that is sent when this SAS token is used.
      * 
      */
-    public Output</* @Nullable */ String> contentEncoding() {
-        return this.contentEncoding;
+    public Optional<Output<String>> contentEncoding() {
+        return Optional.ofNullable(this.contentEncoding);
     }
 
     /**
@@ -96,14 +97,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="contentLanguage")
-    private Output</* @Nullable */ String> contentLanguage;
+    private @Nullable Output<String> contentLanguage;
 
     /**
      * @return The `Content-Language` response header that is sent when this SAS token is used.
      * 
      */
-    public Output</* @Nullable */ String> contentLanguage() {
-        return this.contentLanguage;
+    public Optional<Output<String>> contentLanguage() {
+        return Optional.ofNullable(this.contentLanguage);
     }
 
     /**
@@ -111,14 +112,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="contentType")
-    private Output</* @Nullable */ String> contentType;
+    private @Nullable Output<String> contentType;
 
     /**
      * @return The `Content-Type` response header that is sent when this SAS token is used.
      * 
      */
-    public Output</* @Nullable */ String> contentType() {
-        return this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -141,14 +142,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="httpsOnly")
-    private Output</* @Nullable */ Boolean> httpsOnly;
+    private @Nullable Output<Boolean> httpsOnly;
 
     /**
      * @return Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> httpsOnly() {
-        return this.httpsOnly;
+    public Optional<Output<Boolean>> httpsOnly() {
+        return Optional.ofNullable(this.httpsOnly);
     }
 
     /**
@@ -156,14 +157,14 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="ipAddress")
-    private Output</* @Nullable */ String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
     /**
      * @return Single IPv4 address or range (connected with a dash) of IPv4 addresses.
      * 
      */
-    public Output</* @Nullable */ String> ipAddress() {
-        return this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -171,13 +172,13 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="permissions", required=true)
-    private Output<GetAccountBlobContainerSASPermissions> permissions;
+    private Output<GetAccountBlobContainerSASPermissionsArgs> permissions;
 
     /**
      * @return A `permissions` block as defined below.
      * 
      */
-    public Output<GetAccountBlobContainerSASPermissions> permissions() {
+    public Output<GetAccountBlobContainerSASPermissionsArgs> permissions() {
         return this.permissions;
     }
 
@@ -237,7 +238,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder cacheControl(Output</* @Nullable */ String> cacheControl) {
+        public Builder cacheControl(@Nullable Output<String> cacheControl) {
             $.cacheControl = cacheControl;
             return this;
         }
@@ -248,7 +249,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder cacheControl(@Nullable String cacheControl) {
+        public Builder cacheControl(String cacheControl) {
             return cacheControl(Output.of(cacheControl));
         }
 
@@ -300,7 +301,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder contentDisposition(Output</* @Nullable */ String> contentDisposition) {
+        public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
             $.contentDisposition = contentDisposition;
             return this;
         }
@@ -311,7 +312,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder contentDisposition(@Nullable String contentDisposition) {
+        public Builder contentDisposition(String contentDisposition) {
             return contentDisposition(Output.of(contentDisposition));
         }
 
@@ -321,7 +322,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder contentEncoding(Output</* @Nullable */ String> contentEncoding) {
+        public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             $.contentEncoding = contentEncoding;
             return this;
         }
@@ -332,7 +333,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder contentEncoding(@Nullable String contentEncoding) {
+        public Builder contentEncoding(String contentEncoding) {
             return contentEncoding(Output.of(contentEncoding));
         }
 
@@ -342,7 +343,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder contentLanguage(Output</* @Nullable */ String> contentLanguage) {
+        public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
             $.contentLanguage = contentLanguage;
             return this;
         }
@@ -353,7 +354,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder contentLanguage(@Nullable String contentLanguage) {
+        public Builder contentLanguage(String contentLanguage) {
             return contentLanguage(Output.of(contentLanguage));
         }
 
@@ -363,7 +364,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder contentType(Output</* @Nullable */ String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
@@ -374,7 +375,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder contentType(@Nullable String contentType) {
+        public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
@@ -405,7 +406,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder httpsOnly(Output</* @Nullable */ Boolean> httpsOnly) {
+        public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
             $.httpsOnly = httpsOnly;
             return this;
         }
@@ -416,7 +417,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder httpsOnly(@Nullable Boolean httpsOnly) {
+        public Builder httpsOnly(Boolean httpsOnly) {
             return httpsOnly(Output.of(httpsOnly));
         }
 
@@ -426,7 +427,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder ipAddress(Output</* @Nullable */ String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
@@ -437,7 +438,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder ipAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
@@ -447,7 +448,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder permissions(Output<GetAccountBlobContainerSASPermissions> permissions) {
+        public Builder permissions(Output<GetAccountBlobContainerSASPermissionsArgs> permissions) {
             $.permissions = permissions;
             return this;
         }
@@ -458,7 +459,7 @@ public final class GetAccountBlobContainerSASArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder permissions(GetAccountBlobContainerSASPermissions permissions) {
+        public Builder permissions(GetAccountBlobContainerSASPermissionsArgs permissions) {
             return permissions(Output.of(permissions));
         }
 

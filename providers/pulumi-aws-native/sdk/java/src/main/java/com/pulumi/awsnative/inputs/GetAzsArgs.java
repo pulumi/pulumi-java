@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,10 +16,10 @@ public final class GetAzsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAzsArgs Empty = new GetAzsArgs();
 
     @Import(name="region")
-    private Output</* @Nullable */ String> region;
+    private @Nullable Output<String> region;
 
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     private GetAzsArgs() {}
@@ -45,12 +46,12 @@ public final class GetAzsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAzsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder region(Output</* @Nullable */ String> region) {
+        public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
-        public Builder region(@Nullable String region) {
+        public Builder region(String region) {
             return region(Output.of(region));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetVirtualCircuitBandwidthShapesFilter;
+import com.pulumi.oci.Core.inputs.GetVirtualCircuitBandwidthShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetVirtualCircuitBandwidthShapesArgs extends com.pulumi.resou
     public static final GetVirtualCircuitBandwidthShapesArgs Empty = new GetVirtualCircuitBandwidthShapesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetVirtualCircuitBandwidthShapesFilter>> filters;
+    private @Nullable Output<List<GetVirtualCircuitBandwidthShapesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetVirtualCircuitBandwidthShapesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetVirtualCircuitBandwidthShapesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetVirtualCircuitBandwidthShapesArgs extends com.pulumi.resou
             $ = new GetVirtualCircuitBandwidthShapesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetVirtualCircuitBandwidthShapesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetVirtualCircuitBandwidthShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetVirtualCircuitBandwidthShapesFilter> filters) {
+        public Builder filters(List<GetVirtualCircuitBandwidthShapesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetVirtualCircuitBandwidthShapesFilter... filters) {
+        public Builder filters(GetVirtualCircuitBandwidthShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

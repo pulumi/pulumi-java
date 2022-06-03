@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Resource Id
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="kind")
-    private Output</* @Nullable */ String> kind;
+    private @Nullable Output<String> kind;
 
     /**
      * @return Kind of resource
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="location")
-    private Output</* @Nullable */ String> location;
+    private @Nullable Output<String> location;
 
     /**
      * @return Resource Location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -80,14 +81,14 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Resource Name
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -110,14 +111,14 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -125,14 +126,14 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type")
-    private Output</* @Nullable */ String> type;
+    private @Nullable Output<String> type;
 
     /**
      * @return Resource type
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -140,14 +141,14 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="validityTimeSpan")
-    private Output</* @Nullable */ String> validityTimeSpan;
+    private @Nullable Output<String> validityTimeSpan;
 
     /**
      * @return time span for how long the keys will be valid
      * 
      */
-    public Output</* @Nullable */ String> validityTimeSpan() {
-        return this.validityTimeSpan;
+    public Optional<Output<String>> validityTimeSpan() {
+        return Optional.ofNullable(this.validityTimeSpan);
     }
 
     private ListConnectionKeysArgs() {}
@@ -209,7 +210,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -220,7 +221,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -230,7 +231,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder kind(Output</* @Nullable */ String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
@@ -241,7 +242,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder kind(@Nullable String kind) {
+        public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
@@ -251,7 +252,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder location(Output</* @Nullable */ String> location) {
+        public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
@@ -262,7 +263,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder location(@Nullable String location) {
+        public Builder location(String location) {
             return location(Output.of(location));
         }
 
@@ -272,7 +273,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -283,7 +284,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -314,7 +315,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -325,7 +326,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
@@ -335,7 +336,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder type(Output</* @Nullable */ String> type) {
+        public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
@@ -346,7 +347,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
+        public Builder type(String type) {
             return type(Output.of(type));
         }
 
@@ -356,7 +357,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder validityTimeSpan(Output</* @Nullable */ String> validityTimeSpan) {
+        public Builder validityTimeSpan(@Nullable Output<String> validityTimeSpan) {
             $.validityTimeSpan = validityTimeSpan;
             return this;
         }
@@ -367,7 +368,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder validityTimeSpan(@Nullable String validityTimeSpan) {
+        public Builder validityTimeSpan(String validityTimeSpan) {
             return validityTimeSpan(Output.of(validityTimeSpan));
         }
 

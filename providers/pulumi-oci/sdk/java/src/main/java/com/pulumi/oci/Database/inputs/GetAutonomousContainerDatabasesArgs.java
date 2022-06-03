@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetAutonomousContainerDatabasesFilter;
+import com.pulumi.oci.Database.inputs.GetAutonomousContainerDatabasesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="autonomousExadataInfrastructureId")
-    private Output</* @Nullable */ String> autonomousExadataInfrastructureId;
+    private @Nullable Output<String> autonomousExadataInfrastructureId;
 
     /**
      * @return The Autonomous Exadata Infrastructure [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Output</* @Nullable */ String> autonomousExadataInfrastructureId() {
-        return this.autonomousExadataInfrastructureId;
+    public Optional<Output<String>> autonomousExadataInfrastructureId() {
+        return Optional.ofNullable(this.autonomousExadataInfrastructureId);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="autonomousVmClusterId")
-    private Output</* @Nullable */ String> autonomousVmClusterId;
+    private @Nullable Output<String> autonomousVmClusterId;
 
     /**
      * @return The Autonomous VM Cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Output</* @Nullable */ String> autonomousVmClusterId() {
-        return this.autonomousVmClusterId;
+    public Optional<Output<String>> autonomousVmClusterId() {
+        return Optional.ofNullable(this.autonomousVmClusterId);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return A filter to return only resources that match the given availability domain exactly.
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="cloudAutonomousVmClusterId")
-    private Output</* @Nullable */ String> cloudAutonomousVmClusterId;
+    private @Nullable Output<String> cloudAutonomousVmClusterId;
 
     /**
      * @return The cloud Autonomous VM Cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Output</* @Nullable */ String> cloudAutonomousVmClusterId() {
-        return this.cloudAutonomousVmClusterId;
+    public Optional<Output<String>> cloudAutonomousVmClusterId() {
+        return Optional.ofNullable(this.cloudAutonomousVmClusterId);
     }
 
     /**
@@ -96,21 +97,21 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAutonomousContainerDatabasesFilter>> filters;
+    private @Nullable Output<List<GetAutonomousContainerDatabasesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAutonomousContainerDatabasesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAutonomousContainerDatabasesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -118,14 +119,14 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="infrastructureType")
-    private Output</* @Nullable */ String> infrastructureType;
+    private @Nullable Output<String> infrastructureType;
 
     /**
      * @return A filter to return only resources that match the given Infrastructure Type.
      * 
      */
-    public Output</* @Nullable */ String> infrastructureType() {
-        return this.infrastructureType;
+    public Optional<Output<String>> infrastructureType() {
+        return Optional.ofNullable(this.infrastructureType);
     }
 
     /**
@@ -133,14 +134,14 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="serviceLevelAgreementType")
-    private Output</* @Nullable */ String> serviceLevelAgreementType;
+    private @Nullable Output<String> serviceLevelAgreementType;
 
     /**
      * @return A filter to return only resources that match the given service level agreement type exactly.
      * 
      */
-    public Output</* @Nullable */ String> serviceLevelAgreementType() {
-        return this.serviceLevelAgreementType;
+    public Optional<Output<String>> serviceLevelAgreementType() {
+        return Optional.ofNullable(this.serviceLevelAgreementType);
     }
 
     /**
@@ -148,14 +149,14 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetAutonomousContainerDatabasesArgs() {}
@@ -197,7 +198,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder autonomousExadataInfrastructureId(Output</* @Nullable */ String> autonomousExadataInfrastructureId) {
+        public Builder autonomousExadataInfrastructureId(@Nullable Output<String> autonomousExadataInfrastructureId) {
             $.autonomousExadataInfrastructureId = autonomousExadataInfrastructureId;
             return this;
         }
@@ -208,7 +209,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder autonomousExadataInfrastructureId(@Nullable String autonomousExadataInfrastructureId) {
+        public Builder autonomousExadataInfrastructureId(String autonomousExadataInfrastructureId) {
             return autonomousExadataInfrastructureId(Output.of(autonomousExadataInfrastructureId));
         }
 
@@ -218,7 +219,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder autonomousVmClusterId(Output</* @Nullable */ String> autonomousVmClusterId) {
+        public Builder autonomousVmClusterId(@Nullable Output<String> autonomousVmClusterId) {
             $.autonomousVmClusterId = autonomousVmClusterId;
             return this;
         }
@@ -229,7 +230,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder autonomousVmClusterId(@Nullable String autonomousVmClusterId) {
+        public Builder autonomousVmClusterId(String autonomousVmClusterId) {
             return autonomousVmClusterId(Output.of(autonomousVmClusterId));
         }
 
@@ -239,7 +240,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -250,7 +251,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -260,7 +261,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder cloudAutonomousVmClusterId(Output</* @Nullable */ String> cloudAutonomousVmClusterId) {
+        public Builder cloudAutonomousVmClusterId(@Nullable Output<String> cloudAutonomousVmClusterId) {
             $.cloudAutonomousVmClusterId = cloudAutonomousVmClusterId;
             return this;
         }
@@ -271,7 +272,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder cloudAutonomousVmClusterId(@Nullable String cloudAutonomousVmClusterId) {
+        public Builder cloudAutonomousVmClusterId(String cloudAutonomousVmClusterId) {
             return cloudAutonomousVmClusterId(Output.of(cloudAutonomousVmClusterId));
         }
 
@@ -302,7 +303,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -313,20 +314,20 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAutonomousContainerDatabasesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAutonomousContainerDatabasesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAutonomousContainerDatabasesFilter> filters) {
+        public Builder filters(List<GetAutonomousContainerDatabasesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAutonomousContainerDatabasesFilter... filters) {
+        public Builder filters(GetAutonomousContainerDatabasesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -336,7 +337,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder infrastructureType(Output</* @Nullable */ String> infrastructureType) {
+        public Builder infrastructureType(@Nullable Output<String> infrastructureType) {
             $.infrastructureType = infrastructureType;
             return this;
         }
@@ -347,7 +348,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder infrastructureType(@Nullable String infrastructureType) {
+        public Builder infrastructureType(String infrastructureType) {
             return infrastructureType(Output.of(infrastructureType));
         }
 
@@ -357,7 +358,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder serviceLevelAgreementType(Output</* @Nullable */ String> serviceLevelAgreementType) {
+        public Builder serviceLevelAgreementType(@Nullable Output<String> serviceLevelAgreementType) {
             $.serviceLevelAgreementType = serviceLevelAgreementType;
             return this;
         }
@@ -368,7 +369,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder serviceLevelAgreementType(@Nullable String serviceLevelAgreementType) {
+        public Builder serviceLevelAgreementType(String serviceLevelAgreementType) {
             return serviceLevelAgreementType(Output.of(serviceLevelAgreementType));
         }
 
@@ -378,7 +379,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -389,7 +390,7 @@ public final class GetAutonomousContainerDatabasesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

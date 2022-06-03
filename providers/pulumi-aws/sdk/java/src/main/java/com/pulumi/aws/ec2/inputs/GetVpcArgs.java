@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetVpcFilter;
+import com.pulumi.aws.ec2.inputs.GetVpcFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -11,6 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +24,14 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cidrBlock")
-    private Output</* @Nullable */ String> cidrBlock;
+    private @Nullable Output<String> cidrBlock;
 
     /**
      * @return The cidr block of the desired VPC.
      * 
      */
-    public Output</* @Nullable */ String> cidrBlock() {
-        return this.cidrBlock;
+    public Optional<Output<String>> cidrBlock() {
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -39,15 +40,15 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="default")
-    private Output</* @Nullable */ Boolean> default_;
+    private @Nullable Output<Boolean> default_;
 
     /**
      * @return Boolean constraint on whether the desired VPC is
      * the default VPC for the region.
      * 
      */
-    public Output</* @Nullable */ Boolean> default_() {
-        return this.default_;
+    public Optional<Output<Boolean>> default_() {
+        return Optional.ofNullable(this.default_);
     }
 
     /**
@@ -55,14 +56,14 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dhcpOptionsId")
-    private Output</* @Nullable */ String> dhcpOptionsId;
+    private @Nullable Output<String> dhcpOptionsId;
 
     /**
      * @return The DHCP options id of the desired VPC.
      * 
      */
-    public Output</* @Nullable */ String> dhcpOptionsId() {
-        return this.dhcpOptionsId;
+    public Optional<Output<String>> dhcpOptionsId() {
+        return Optional.ofNullable(this.dhcpOptionsId);
     }
 
     /**
@@ -70,14 +71,14 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetVpcFilter>> filters;
+    private @Nullable Output<List<GetVpcFilterArgs>> filters;
 
     /**
      * @return Custom filter block as described below.
      * 
      */
-    public Output</* @Nullable */ List<GetVpcFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetVpcFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -85,14 +86,14 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The id of the specific VPC to retrieve.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -101,15 +102,15 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The current state of the desired VPC.
      * Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -118,15 +119,15 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags, each pair of which must exactly match
      * a pair on the desired VPC.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetVpcArgs() {}
@@ -165,7 +166,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder cidrBlock(Output</* @Nullable */ String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
@@ -176,7 +177,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder cidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             return cidrBlock(Output.of(cidrBlock));
         }
 
@@ -187,7 +188,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder default_(Output</* @Nullable */ Boolean> default_) {
+        public Builder default_(@Nullable Output<Boolean> default_) {
             $.default_ = default_;
             return this;
         }
@@ -199,7 +200,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder default_(@Nullable Boolean default_) {
+        public Builder default_(Boolean default_) {
             return default_(Output.of(default_));
         }
 
@@ -209,7 +210,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dhcpOptionsId(Output</* @Nullable */ String> dhcpOptionsId) {
+        public Builder dhcpOptionsId(@Nullable Output<String> dhcpOptionsId) {
             $.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
+        public Builder dhcpOptionsId(String dhcpOptionsId) {
             return dhcpOptionsId(Output.of(dhcpOptionsId));
         }
 
@@ -230,7 +231,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetVpcFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetVpcFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetVpcFilter> filters) {
+        public Builder filters(List<GetVpcFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -251,7 +252,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetVpcFilter... filters) {
+        public Builder filters(GetVpcFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -261,7 +262,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -272,7 +273,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -283,7 +284,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -295,7 +296,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -306,7 +307,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -318,7 +319,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

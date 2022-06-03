@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetBackupDestinationsFilter;
+import com.pulumi.oci.Database.inputs.GetBackupDestinationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetBackupDestinationsArgs extends com.pulumi.resources.Invoke
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetBackupDestinationsFilter>> filters;
+    private @Nullable Output<List<GetBackupDestinationsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetBackupDestinationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetBackupDestinationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetBackupDestinationsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type")
-    private Output</* @Nullable */ String> type;
+    private @Nullable Output<String> type;
 
     /**
      * @return A filter to return only resources that match the given type of the Backup Destination.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     private GetBackupDestinationsArgs() {}
@@ -100,16 +101,16 @@ public final class GetBackupDestinationsArgs extends com.pulumi.resources.Invoke
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetBackupDestinationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetBackupDestinationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBackupDestinationsFilter> filters) {
+        public Builder filters(List<GetBackupDestinationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetBackupDestinationsFilter... filters) {
+        public Builder filters(GetBackupDestinationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -119,7 +120,7 @@ public final class GetBackupDestinationsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder type(Output</* @Nullable */ String> type) {
+        public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
@@ -130,7 +131,7 @@ public final class GetBackupDestinationsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
+        public Builder type(String type) {
             return type(Output.of(type));
         }
 

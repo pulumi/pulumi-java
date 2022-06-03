@@ -5,11 +5,12 @@ package com.pulumi.oci.Kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Kms.inputs.GetKeysFilter;
+import com.pulumi.oci.Kms.inputs.GetKeysFilterArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="algorithm")
-    private Output</* @Nullable */ String> algorithm;
+    private @Nullable Output<String> algorithm;
 
     /**
      * @return The algorithm used by a key&#39;s key versions to encrypt or decrypt data. Currently, support includes AES, RSA, and ECDSA algorithms.
      * 
      */
-    public Output</* @Nullable */ String> algorithm() {
-        return this.algorithm;
+    public Optional<Output<String>> algorithm() {
+        return Optional.ofNullable(this.algorithm);
     }
 
     /**
@@ -52,21 +53,21 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="curveId")
-    private Output</* @Nullable */ String> curveId;
+    private @Nullable Output<String> curveId;
 
     /**
      * @return The curve ID of the keys. (This pertains only to ECDSA keys.)
      * 
      */
-    public Output</* @Nullable */ String> curveId() {
-        return this.curveId;
+    public Optional<Output<String>> curveId() {
+        return Optional.ofNullable(this.curveId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetKeysFilter>> filters;
+    private @Nullable Output<List<GetKeysFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetKeysFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetKeysFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="length")
-    private Output</* @Nullable */ Integer> length;
+    private @Nullable Output<Integer> length;
 
     /**
      * @return The length of the key in bytes, expressed as an integer. Supported values include 16, 24, or 32.
      * 
      */
-    public Output</* @Nullable */ Integer> length() {
-        return this.length;
+    public Optional<Output<Integer>> length() {
+        return Optional.ofNullable(this.length);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protectionMode")
-    private Output</* @Nullable */ String> protectionMode;
+    private @Nullable Output<String> protectionMode;
 
     /**
      * @return A key&#39;s protection mode indicates how the key persists and where cryptographic operations that use the key are performed. A  protection mode of `HSM` means that the key persists on a hardware security module (HSM) and all cryptographic operations are  performed inside the HSM. A protection mode of `SOFTWARE` means that the key persists on the server, protected by the vault&#39;s  RSA wrapping key which persists on the HSM. All cryptographic operations that use a key with a protection mode of  `SOFTWARE` are performed on the server.
      * 
      */
-    public Output</* @Nullable */ String> protectionMode() {
-        return this.protectionMode;
+    public Optional<Output<String>> protectionMode() {
+        return Optional.ofNullable(this.protectionMode);
     }
 
     private GetKeysArgs() {}
@@ -150,7 +151,7 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder algorithm(Output</* @Nullable */ String> algorithm) {
+        public Builder algorithm(@Nullable Output<String> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder algorithm(@Nullable String algorithm) {
+        public Builder algorithm(String algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
@@ -192,7 +193,7 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder curveId(Output</* @Nullable */ String> curveId) {
+        public Builder curveId(@Nullable Output<String> curveId) {
             $.curveId = curveId;
             return this;
         }
@@ -203,20 +204,20 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder curveId(@Nullable String curveId) {
+        public Builder curveId(String curveId) {
             return curveId(Output.of(curveId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetKeysFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetKeysFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetKeysFilter> filters) {
+        public Builder filters(List<GetKeysFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetKeysFilter... filters) {
+        public Builder filters(GetKeysFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -226,7 +227,7 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder length(Output</* @Nullable */ Integer> length) {
+        public Builder length(@Nullable Output<Integer> length) {
             $.length = length;
             return this;
         }
@@ -237,7 +238,7 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder length(@Nullable Integer length) {
+        public Builder length(Integer length) {
             return length(Output.of(length));
         }
 
@@ -268,7 +269,7 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder protectionMode(Output</* @Nullable */ String> protectionMode) {
+        public Builder protectionMode(@Nullable Output<String> protectionMode) {
             $.protectionMode = protectionMode;
             return this;
         }
@@ -279,7 +280,7 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder protectionMode(@Nullable String protectionMode) {
+        public Builder protectionMode(String protectionMode) {
             return protectionMode(Output.of(protectionMode));
         }
 

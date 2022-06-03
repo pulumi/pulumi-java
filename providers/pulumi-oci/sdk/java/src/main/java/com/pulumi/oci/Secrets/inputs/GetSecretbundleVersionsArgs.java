@@ -5,10 +5,11 @@ package com.pulumi.oci.Secrets.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Secrets.inputs.GetSecretbundleVersionsFilter;
+import com.pulumi.oci.Secrets.inputs.GetSecretbundleVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetSecretbundleVersionsArgs extends com.pulumi.resources.Invo
     public static final GetSecretbundleVersionsArgs Empty = new GetSecretbundleVersionsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSecretbundleVersionsFilter>> filters;
+    private @Nullable Output<List<GetSecretbundleVersionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetSecretbundleVersionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSecretbundleVersionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetSecretbundleVersionsArgs extends com.pulumi.resources.Invo
             $ = new GetSecretbundleVersionsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetSecretbundleVersionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSecretbundleVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSecretbundleVersionsFilter> filters) {
+        public Builder filters(List<GetSecretbundleVersionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetSecretbundleVersionsFilter... filters) {
+        public Builder filters(GetSecretbundleVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

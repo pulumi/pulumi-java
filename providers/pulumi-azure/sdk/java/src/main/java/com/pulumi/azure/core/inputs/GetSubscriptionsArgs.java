@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayNameContains")
-    private Output</* @Nullable */ String> displayNameContains;
+    private @Nullable Output<String> displayNameContains;
 
     /**
      * @return A case-insensitive value which must be contained within the `display_name` field, used to filter the results
      * 
      */
-    public Output</* @Nullable */ String> displayNameContains() {
-        return this.displayNameContains;
+    public Optional<Output<String>> displayNameContains() {
+        return Optional.ofNullable(this.displayNameContains);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayNamePrefix")
-    private Output</* @Nullable */ String> displayNamePrefix;
+    private @Nullable Output<String> displayNamePrefix;
 
     /**
      * @return A case-insensitive prefix which can be used to filter on the `display_name` field
      * 
      */
-    public Output</* @Nullable */ String> displayNamePrefix() {
-        return this.displayNamePrefix;
+    public Optional<Output<String>> displayNamePrefix() {
+        return Optional.ofNullable(this.displayNamePrefix);
     }
 
     private GetSubscriptionsArgs() {}
@@ -75,7 +76,7 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayNameContains(Output</* @Nullable */ String> displayNameContains) {
+        public Builder displayNameContains(@Nullable Output<String> displayNameContains) {
             $.displayNameContains = displayNameContains;
             return this;
         }
@@ -86,7 +87,7 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayNameContains(@Nullable String displayNameContains) {
+        public Builder displayNameContains(String displayNameContains) {
             return displayNameContains(Output.of(displayNameContains));
         }
 
@@ -96,7 +97,7 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayNamePrefix(Output</* @Nullable */ String> displayNamePrefix) {
+        public Builder displayNamePrefix(@Nullable Output<String> displayNamePrefix) {
             $.displayNamePrefix = displayNamePrefix;
             return this;
         }
@@ -107,7 +108,7 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayNamePrefix(@Nullable String displayNamePrefix) {
+        public Builder displayNamePrefix(String displayNamePrefix) {
             return displayNamePrefix(Output.of(displayNamePrefix));
         }
 

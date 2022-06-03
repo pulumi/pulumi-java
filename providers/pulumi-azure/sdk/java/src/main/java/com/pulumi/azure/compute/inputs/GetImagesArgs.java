@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagsFilter")
-    private Output</* @Nullable */ Map<String,String>> tagsFilter;
+    private @Nullable Output<Map<String,String>> tagsFilter;
 
     /**
      * @return A mapping of tags to filter the list of images against.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tagsFilter() {
-        return this.tagsFilter;
+    public Optional<Output<Map<String,String>>> tagsFilter() {
+        return Optional.ofNullable(this.tagsFilter);
     }
 
     private GetImagesArgs() {}
@@ -97,7 +98,7 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tagsFilter(Output</* @Nullable */ Map<String,String>> tagsFilter) {
+        public Builder tagsFilter(@Nullable Output<Map<String,String>> tagsFilter) {
             $.tagsFilter = tagsFilter;
             return this;
         }
@@ -108,7 +109,7 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tagsFilter(@Nullable Map<String,String> tagsFilter) {
+        public Builder tagsFilter(Map<String,String> tagsFilter) {
             return tagsFilter(Output.of(tagsFilter));
         }
 

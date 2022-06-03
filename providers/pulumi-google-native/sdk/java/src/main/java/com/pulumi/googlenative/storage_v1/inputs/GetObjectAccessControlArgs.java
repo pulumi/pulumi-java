@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class GetObjectAccessControlArgs extends com.pulumi.resources.Invok
     }
 
     @Import(name="generation")
-    private Output</* @Nullable */ String> generation;
+    private @Nullable Output<String> generation;
 
-    public Output</* @Nullable */ String> generation() {
-        return this.generation;
+    public Optional<Output<String>> generation() {
+        return Optional.ofNullable(this.generation);
     }
 
     @Import(name="object", required=true)
@@ -43,10 +44,10 @@ public final class GetObjectAccessControlArgs extends com.pulumi.resources.Invok
     }
 
     @Import(name="userProject")
-    private Output</* @Nullable */ String> userProject;
+    private @Nullable Output<String> userProject;
 
-    public Output</* @Nullable */ String> userProject() {
-        return this.userProject;
+    public Optional<Output<String>> userProject() {
+        return Optional.ofNullable(this.userProject);
     }
 
     private GetObjectAccessControlArgs() {}
@@ -95,12 +96,12 @@ public final class GetObjectAccessControlArgs extends com.pulumi.resources.Invok
             return entity(Output.of(entity));
         }
 
-        public Builder generation(Output</* @Nullable */ String> generation) {
+        public Builder generation(@Nullable Output<String> generation) {
             $.generation = generation;
             return this;
         }
 
-        public Builder generation(@Nullable String generation) {
+        public Builder generation(String generation) {
             return generation(Output.of(generation));
         }
 
@@ -113,12 +114,12 @@ public final class GetObjectAccessControlArgs extends com.pulumi.resources.Invok
             return object(Output.of(object));
         }
 
-        public Builder userProject(Output</* @Nullable */ String> userProject) {
+        public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
         }
 
-        public Builder userProject(@Nullable String userProject) {
+        public Builder userProject(String userProject) {
             return userProject(Output.of(userProject));
         }
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,10 +16,10 @@ public final class GetAccessLevelArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAccessLevelArgs Empty = new GetAccessLevelArgs();
 
     @Import(name="accessLevelFormat")
-    private Output</* @Nullable */ String> accessLevelFormat;
+    private @Nullable Output<String> accessLevelFormat;
 
-    public Output</* @Nullable */ String> accessLevelFormat() {
-        return this.accessLevelFormat;
+    public Optional<Output<String>> accessLevelFormat() {
+        return Optional.ofNullable(this.accessLevelFormat);
     }
 
     @Import(name="accessLevelId", required=true)
@@ -61,12 +62,12 @@ public final class GetAccessLevelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccessLevelArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder accessLevelFormat(Output</* @Nullable */ String> accessLevelFormat) {
+        public Builder accessLevelFormat(@Nullable Output<String> accessLevelFormat) {
             $.accessLevelFormat = accessLevelFormat;
             return this;
         }
 
-        public Builder accessLevelFormat(@Nullable String accessLevelFormat) {
+        public Builder accessLevelFormat(String accessLevelFormat) {
             return accessLevelFormat(Output.of(accessLevelFormat));
         }
 

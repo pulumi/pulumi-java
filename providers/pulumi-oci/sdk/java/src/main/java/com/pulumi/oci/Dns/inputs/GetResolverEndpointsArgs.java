@@ -5,10 +5,11 @@ package com.pulumi.oci.Dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Dns.inputs.GetResolverEndpointsFilter;
+import com.pulumi.oci.Dns.inputs.GetResolverEndpointsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
     public static final GetResolverEndpointsArgs Empty = new GetResolverEndpointsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetResolverEndpointsFilter>> filters;
+    private @Nullable Output<List<GetResolverEndpointsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetResolverEndpointsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetResolverEndpointsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -28,14 +29,14 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of a resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The state of a resource.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetResolverEndpointsArgs() {}
@@ -111,16 +112,16 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
             $ = new GetResolverEndpointsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetResolverEndpointsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetResolverEndpointsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetResolverEndpointsFilter> filters) {
+        public Builder filters(List<GetResolverEndpointsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetResolverEndpointsFilter... filters) {
+        public Builder filters(GetResolverEndpointsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -130,7 +131,7 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -141,7 +142,7 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -193,7 +194,7 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetResolverEndpointsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

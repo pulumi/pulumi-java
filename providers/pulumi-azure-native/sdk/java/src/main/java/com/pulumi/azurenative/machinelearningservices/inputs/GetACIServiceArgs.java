@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetACIServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private Output</* @Nullable */ Boolean> expand;
+    private @Nullable Output<Boolean> expand;
 
     /**
      * @return Set to True to include Model details.
      * 
      */
-    public Output</* @Nullable */ Boolean> expand() {
-        return this.expand;
+    public Optional<Output<Boolean>> expand() {
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -108,7 +109,7 @@ public final class GetACIServiceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(Output</* @Nullable */ Boolean> expand) {
+        public Builder expand(@Nullable Output<Boolean> expand) {
             $.expand = expand;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetACIServiceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(@Nullable Boolean expand) {
+        public Builder expand(Boolean expand) {
             return expand(Output.of(expand));
         }
 

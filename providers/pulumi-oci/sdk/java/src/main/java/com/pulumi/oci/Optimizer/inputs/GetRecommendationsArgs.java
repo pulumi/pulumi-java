@@ -5,11 +5,12 @@ package com.pulumi.oci.Optimizer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Optimizer.inputs.GetRecommendationsFilter;
+import com.pulumi.oci.Optimizer.inputs.GetRecommendationsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -63,10 +64,10 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetRecommendationsFilter>> filters;
+    private @Nullable Output<List<GetRecommendationsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetRecommendationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetRecommendationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Optional. A filter that returns results that match the name specified.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter that returns results that match the lifecycle state specified.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="status")
-    private Output</* @Nullable */ String> status;
+    private @Nullable Output<String> status;
 
     /**
      * @return A filter that returns recommendations that match the status specified.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     private GetRecommendationsArgs() {}
@@ -207,16 +208,16 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetRecommendationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetRecommendationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRecommendationsFilter> filters) {
+        public Builder filters(List<GetRecommendationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetRecommendationsFilter... filters) {
+        public Builder filters(GetRecommendationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -226,7 +227,7 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -237,7 +238,7 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -247,7 +248,7 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -258,7 +259,7 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -268,7 +269,7 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder status(Output</* @Nullable */ String> status) {
+        public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
@@ -279,7 +280,7 @@ public final class GetRecommendationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder status(@Nullable String status) {
+        public Builder status(String status) {
             return status(Output.of(status));
         }
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +22,7 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
     /**
      * @return ID of the project to list available node types for.
@@ -29,8 +30,8 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
      * Defaults to the project that the provider is authenticated with.
      * 
      */
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -39,15 +40,15 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zone")
-    private Output</* @Nullable */ String> zone;
+    private @Nullable Output<String> zone;
 
     /**
      * @return The zone to list node types for. Should be in zone of intended node groups and region of referencing node template. If `zone` is not specified, the provider-level zone must be set and is used
      * instead.
      * 
      */
-    public Output</* @Nullable */ String> zone() {
-        return this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
     private GetNodeTypesArgs() {}
@@ -83,7 +84,7 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
@@ -96,7 +97,7 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
@@ -107,7 +108,7 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder zone(Output</* @Nullable */ String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             $.zone = zone;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder zone(@Nullable String zone) {
+        public Builder zone(String zone) {
             return zone(Output.of(zone));
         }
 

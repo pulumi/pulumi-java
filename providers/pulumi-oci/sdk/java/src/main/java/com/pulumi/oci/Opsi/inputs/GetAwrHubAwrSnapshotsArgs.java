@@ -5,10 +5,11 @@ package com.pulumi.oci.Opsi.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Opsi.inputs.GetAwrHubAwrSnapshotsFilter;
+import com.pulumi.oci.Opsi.inputs.GetAwrHubAwrSnapshotsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,10 +48,10 @@ public final class GetAwrHubAwrSnapshotsArgs extends com.pulumi.resources.Invoke
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAwrHubAwrSnapshotsFilter>> filters;
+    private @Nullable Output<List<GetAwrHubAwrSnapshotsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAwrHubAwrSnapshotsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAwrHubAwrSnapshotsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetAwrHubAwrSnapshotsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="timeGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> timeGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeGreaterThanOrEqualTo;
 
     /**
      * @return The optional greater than or equal to query parameter to filter the timestamp. The timestamp format to be followed is: YYYY-MM-DDTHH:MM:SSZ, example 2020-12-03T19:00:53Z
      * 
      */
-    public Output</* @Nullable */ String> timeGreaterThanOrEqualTo() {
-        return this.timeGreaterThanOrEqualTo;
+    public Optional<Output<String>> timeGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.timeGreaterThanOrEqualTo);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetAwrHubAwrSnapshotsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="timeLessThanOrEqualTo")
-    private Output</* @Nullable */ String> timeLessThanOrEqualTo;
+    private @Nullable Output<String> timeLessThanOrEqualTo;
 
     /**
      * @return The optional less than or equal to query parameter to filter the timestamp. The timestamp format to be followed is: YYYY-MM-DDTHH:MM:SSZ, example 2020-12-03T19:00:53Z
      * 
      */
-    public Output</* @Nullable */ String> timeLessThanOrEqualTo() {
-        return this.timeLessThanOrEqualTo;
+    public Optional<Output<String>> timeLessThanOrEqualTo() {
+        return Optional.ofNullable(this.timeLessThanOrEqualTo);
     }
 
     private GetAwrHubAwrSnapshotsArgs() {}
@@ -153,16 +154,16 @@ public final class GetAwrHubAwrSnapshotsArgs extends com.pulumi.resources.Invoke
             return awrSourceDatabaseIdentifier(Output.of(awrSourceDatabaseIdentifier));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAwrHubAwrSnapshotsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAwrHubAwrSnapshotsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAwrHubAwrSnapshotsFilter> filters) {
+        public Builder filters(List<GetAwrHubAwrSnapshotsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAwrHubAwrSnapshotsFilter... filters) {
+        public Builder filters(GetAwrHubAwrSnapshotsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetAwrHubAwrSnapshotsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder timeGreaterThanOrEqualTo(Output</* @Nullable */ String> timeGreaterThanOrEqualTo) {
+        public Builder timeGreaterThanOrEqualTo(@Nullable Output<String> timeGreaterThanOrEqualTo) {
             $.timeGreaterThanOrEqualTo = timeGreaterThanOrEqualTo;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetAwrHubAwrSnapshotsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder timeGreaterThanOrEqualTo(@Nullable String timeGreaterThanOrEqualTo) {
+        public Builder timeGreaterThanOrEqualTo(String timeGreaterThanOrEqualTo) {
             return timeGreaterThanOrEqualTo(Output.of(timeGreaterThanOrEqualTo));
         }
 
@@ -193,7 +194,7 @@ public final class GetAwrHubAwrSnapshotsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder timeLessThanOrEqualTo(Output</* @Nullable */ String> timeLessThanOrEqualTo) {
+        public Builder timeLessThanOrEqualTo(@Nullable Output<String> timeLessThanOrEqualTo) {
             $.timeLessThanOrEqualTo = timeLessThanOrEqualTo;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetAwrHubAwrSnapshotsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder timeLessThanOrEqualTo(@Nullable String timeLessThanOrEqualTo) {
+        public Builder timeLessThanOrEqualTo(String timeLessThanOrEqualTo) {
             return timeLessThanOrEqualTo(Output.of(timeLessThanOrEqualTo));
         }
 

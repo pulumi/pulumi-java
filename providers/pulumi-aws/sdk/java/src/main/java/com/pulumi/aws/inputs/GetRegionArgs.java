@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetRegionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpoint")
-    private Output</* @Nullable */ String> endpoint;
+    private @Nullable Output<String> endpoint;
 
     /**
      * @return The EC2 endpoint of the region to select.
      * 
      */
-    public Output</* @Nullable */ String> endpoint() {
-        return this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetRegionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The full name of the region to select.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetRegionArgs() {}
@@ -75,7 +76,7 @@ public final class GetRegionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endpoint(Output</* @Nullable */ String> endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
@@ -86,7 +87,7 @@ public final class GetRegionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endpoint(@Nullable String endpoint) {
+        public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
@@ -96,7 +97,7 @@ public final class GetRegionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -107,7 +108,7 @@ public final class GetRegionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

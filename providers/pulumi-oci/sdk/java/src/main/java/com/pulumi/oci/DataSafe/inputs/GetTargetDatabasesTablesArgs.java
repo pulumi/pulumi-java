@@ -5,10 +5,11 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetTargetDatabasesTablesFilter;
+import com.pulumi.oci.DataSafe.inputs.GetTargetDatabasesTablesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
     public static final GetTargetDatabasesTablesArgs Empty = new GetTargetDatabasesTablesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetTargetDatabasesTablesFilter>> filters;
+    private @Nullable Output<List<GetTargetDatabasesTablesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetTargetDatabasesTablesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetTargetDatabasesTablesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -28,14 +29,14 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="schemaNameContains")
-    private Output</* @Nullable */ String> schemaNameContains;
+    private @Nullable Output<String> schemaNameContains;
 
     /**
      * @return A filter to return only items if schema name contains a specific string.
      * 
      */
-    public Output</* @Nullable */ String> schemaNameContains() {
-        return this.schemaNameContains;
+    public Optional<Output<String>> schemaNameContains() {
+        return Optional.ofNullable(this.schemaNameContains);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="schemaNames")
-    private Output</* @Nullable */ List<String>> schemaNames;
+    private @Nullable Output<List<String>> schemaNames;
 
     /**
      * @return A filter to return only items related to specific schema name.
      * 
      */
-    public Output</* @Nullable */ List<String>> schemaNames() {
-        return this.schemaNames;
+    public Optional<Output<List<String>>> schemaNames() {
+        return Optional.ofNullable(this.schemaNames);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tableNameContains")
-    private Output</* @Nullable */ String> tableNameContains;
+    private @Nullable Output<String> tableNameContains;
 
     /**
      * @return A filter to return only items if table name contains a specific string.
      * 
      */
-    public Output</* @Nullable */ String> tableNameContains() {
-        return this.tableNameContains;
+    public Optional<Output<String>> tableNameContains() {
+        return Optional.ofNullable(this.tableNameContains);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tableNames")
-    private Output</* @Nullable */ List<String>> tableNames;
+    private @Nullable Output<List<String>> tableNames;
 
     /**
      * @return A filter to return only items related to specific table name.
      * 
      */
-    public Output</* @Nullable */ List<String>> tableNames() {
-        return this.tableNames;
+    public Optional<Output<List<String>>> tableNames() {
+        return Optional.ofNullable(this.tableNames);
     }
 
     /**
@@ -127,16 +128,16 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
             $ = new GetTargetDatabasesTablesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetTargetDatabasesTablesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetTargetDatabasesTablesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetTargetDatabasesTablesFilter> filters) {
+        public Builder filters(List<GetTargetDatabasesTablesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetTargetDatabasesTablesFilter... filters) {
+        public Builder filters(GetTargetDatabasesTablesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -146,7 +147,7 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder schemaNameContains(Output</* @Nullable */ String> schemaNameContains) {
+        public Builder schemaNameContains(@Nullable Output<String> schemaNameContains) {
             $.schemaNameContains = schemaNameContains;
             return this;
         }
@@ -157,7 +158,7 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder schemaNameContains(@Nullable String schemaNameContains) {
+        public Builder schemaNameContains(String schemaNameContains) {
             return schemaNameContains(Output.of(schemaNameContains));
         }
 
@@ -167,7 +168,7 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder schemaNames(Output</* @Nullable */ List<String>> schemaNames) {
+        public Builder schemaNames(@Nullable Output<List<String>> schemaNames) {
             $.schemaNames = schemaNames;
             return this;
         }
@@ -178,7 +179,7 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder schemaNames(@Nullable List<String> schemaNames) {
+        public Builder schemaNames(List<String> schemaNames) {
             return schemaNames(Output.of(schemaNames));
         }
 
@@ -198,7 +199,7 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder tableNameContains(Output</* @Nullable */ String> tableNameContains) {
+        public Builder tableNameContains(@Nullable Output<String> tableNameContains) {
             $.tableNameContains = tableNameContains;
             return this;
         }
@@ -209,7 +210,7 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder tableNameContains(@Nullable String tableNameContains) {
+        public Builder tableNameContains(String tableNameContains) {
             return tableNameContains(Output.of(tableNameContains));
         }
 
@@ -219,7 +220,7 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder tableNames(Output</* @Nullable */ List<String>> tableNames) {
+        public Builder tableNames(@Nullable Output<List<String>> tableNames) {
             $.tableNames = tableNames;
             return this;
         }
@@ -230,7 +231,7 @@ public final class GetTargetDatabasesTablesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder tableNames(@Nullable List<String> tableNames) {
+        public Builder tableNames(List<String> tableNames) {
             return tableNames(Output.of(tableNames));
         }
 

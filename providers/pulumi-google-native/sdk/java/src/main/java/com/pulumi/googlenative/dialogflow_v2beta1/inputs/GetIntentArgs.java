@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +23,17 @@ public final class GetIntentArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="intentView")
-    private Output</* @Nullable */ String> intentView;
+    private @Nullable Output<String> intentView;
 
-    public Output</* @Nullable */ String> intentView() {
-        return this.intentView;
+    public Optional<Output<String>> intentView() {
+        return Optional.ofNullable(this.intentView);
     }
 
     @Import(name="languageCode")
-    private Output</* @Nullable */ String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output</* @Nullable */ String> languageCode() {
-        return this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
     @Import(name="location", required=true)
@@ -43,10 +44,10 @@ public final class GetIntentArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     private GetIntentArgs() {}
@@ -86,21 +87,21 @@ public final class GetIntentArgs extends com.pulumi.resources.InvokeArgs {
             return intentId(Output.of(intentId));
         }
 
-        public Builder intentView(Output</* @Nullable */ String> intentView) {
+        public Builder intentView(@Nullable Output<String> intentView) {
             $.intentView = intentView;
             return this;
         }
 
-        public Builder intentView(@Nullable String intentView) {
+        public Builder intentView(String intentView) {
             return intentView(Output.of(intentView));
         }
 
-        public Builder languageCode(Output</* @Nullable */ String> languageCode) {
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
-        public Builder languageCode(@Nullable String languageCode) {
+        public Builder languageCode(String languageCode) {
             return languageCode(Output.of(languageCode));
         }
 
@@ -113,12 +114,12 @@ public final class GetIntentArgs extends com.pulumi.resources.InvokeArgs {
             return location(Output.of(location));
         }
 
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 

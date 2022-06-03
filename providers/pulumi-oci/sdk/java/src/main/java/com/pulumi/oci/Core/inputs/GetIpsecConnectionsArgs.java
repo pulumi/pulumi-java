@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetIpsecConnectionsFilter;
+import com.pulumi.oci.Core.inputs.GetIpsecConnectionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetIpsecConnectionsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="cpeId")
-    private Output</* @Nullable */ String> cpeId;
+    private @Nullable Output<String> cpeId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the CPE.
      * 
      */
-    public Output</* @Nullable */ String> cpeId() {
-        return this.cpeId;
+    public Optional<Output<String>> cpeId() {
+        return Optional.ofNullable(this.cpeId);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetIpsecConnectionsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="drgId")
-    private Output</* @Nullable */ String> drgId;
+    private @Nullable Output<String> drgId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG.
      * 
      */
-    public Output</* @Nullable */ String> drgId() {
-        return this.drgId;
+    public Optional<Output<String>> drgId() {
+        return Optional.ofNullable(this.drgId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetIpsecConnectionsFilter>> filters;
+    private @Nullable Output<List<GetIpsecConnectionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetIpsecConnectionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetIpsecConnectionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetIpsecConnectionsArgs() {}
@@ -122,7 +123,7 @@ public final class GetIpsecConnectionsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder cpeId(Output</* @Nullable */ String> cpeId) {
+        public Builder cpeId(@Nullable Output<String> cpeId) {
             $.cpeId = cpeId;
             return this;
         }
@@ -133,7 +134,7 @@ public final class GetIpsecConnectionsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder cpeId(@Nullable String cpeId) {
+        public Builder cpeId(String cpeId) {
             return cpeId(Output.of(cpeId));
         }
 
@@ -143,7 +144,7 @@ public final class GetIpsecConnectionsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder drgId(Output</* @Nullable */ String> drgId) {
+        public Builder drgId(@Nullable Output<String> drgId) {
             $.drgId = drgId;
             return this;
         }
@@ -154,20 +155,20 @@ public final class GetIpsecConnectionsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder drgId(@Nullable String drgId) {
+        public Builder drgId(String drgId) {
             return drgId(Output.of(drgId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetIpsecConnectionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetIpsecConnectionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetIpsecConnectionsFilter> filters) {
+        public Builder filters(List<GetIpsecConnectionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetIpsecConnectionsFilter... filters) {
+        public Builder filters(GetIpsecConnectionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

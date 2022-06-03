@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetIpsecConfigFilter;
+import com.pulumi.oci.Core.inputs.GetIpsecConfigFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetIpsecConfigArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIpsecConfigArgs Empty = new GetIpsecConfigArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetIpsecConfigFilter>> filters;
+    private @Nullable Output<List<GetIpsecConfigFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetIpsecConfigFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetIpsecConfigFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetIpsecConfigArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIpsecConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetIpsecConfigFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetIpsecConfigFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetIpsecConfigFilter> filters) {
+        public Builder filters(List<GetIpsecConfigFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetIpsecConfigFilter... filters) {
+        public Builder filters(GetIpsecConfigFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

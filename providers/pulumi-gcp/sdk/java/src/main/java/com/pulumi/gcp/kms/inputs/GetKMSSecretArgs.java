@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalAuthenticatedData")
-    private Output</* @Nullable */ String> additionalAuthenticatedData;
+    private @Nullable Output<String> additionalAuthenticatedData;
 
     /**
      * @return The [additional authenticated data](https://cloud.google.com/kms/docs/additional-authenticated-data) used for integrity checks during encryption and decryption.
      * 
      */
-    public Output</* @Nullable */ String> additionalAuthenticatedData() {
-        return this.additionalAuthenticatedData;
+    public Optional<Output<String>> additionalAuthenticatedData() {
+        return Optional.ofNullable(this.additionalAuthenticatedData);
     }
 
     /**
@@ -95,7 +96,7 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder additionalAuthenticatedData(Output</* @Nullable */ String> additionalAuthenticatedData) {
+        public Builder additionalAuthenticatedData(@Nullable Output<String> additionalAuthenticatedData) {
             $.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
@@ -106,7 +107,7 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
+        public Builder additionalAuthenticatedData(String additionalAuthenticatedData) {
             return additionalAuthenticatedData(Output.of(additionalAuthenticatedData));
         }
 

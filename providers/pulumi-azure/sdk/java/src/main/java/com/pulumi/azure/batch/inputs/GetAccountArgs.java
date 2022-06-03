@@ -3,11 +3,12 @@
 
 package com.pulumi.azure.batch.inputs;
 
-import com.pulumi.azure.batch.inputs.GetAccountEncryption;
+import com.pulumi.azure.batch.inputs.GetAccountEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +17,10 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAccountArgs Empty = new GetAccountArgs();
 
     @Import(name="encryption")
-    private Output</* @Nullable */ GetAccountEncryption> encryption;
+    private @Nullable Output<GetAccountEncryptionArgs> encryption;
 
-    public Output</* @Nullable */ GetAccountEncryption> encryption() {
-        return this.encryption;
+    public Optional<Output<GetAccountEncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -78,12 +79,12 @@ public final class GetAccountArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccountArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder encryption(Output</* @Nullable */ GetAccountEncryption> encryption) {
+        public Builder encryption(@Nullable Output<GetAccountEncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
-        public Builder encryption(@Nullable GetAccountEncryption encryption) {
+        public Builder encryption(GetAccountEncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 

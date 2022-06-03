@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -43,17 +44,17 @@ public final class GetMessageArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="view")
-    private Output</* @Nullable */ String> view;
+    private @Nullable Output<String> view;
 
-    public Output</* @Nullable */ String> view() {
-        return this.view;
+    public Optional<Output<String>> view() {
+        return Optional.ofNullable(this.view);
     }
 
     private GetMessageArgs() {}
@@ -121,21 +122,21 @@ public final class GetMessageArgs extends com.pulumi.resources.InvokeArgs {
             return messageId(Output.of(messageId));
         }
 
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
-        public Builder view(Output</* @Nullable */ String> view) {
+        public Builder view(@Nullable Output<String> view) {
             $.view = view;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder view(String view) {
             return view(Output.of(view));
         }
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="defaultBaseline")
-    private Output</* @Nullable */ Boolean> defaultBaseline;
+    private @Nullable Output<Boolean> defaultBaseline;
 
     /**
      * @return Filters the results against the baselines default_baseline field.
      * 
      */
-    public Output</* @Nullable */ Boolean> defaultBaseline() {
-        return this.defaultBaseline;
+    public Optional<Output<Boolean>> defaultBaseline() {
+        return Optional.ofNullable(this.defaultBaseline);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="namePrefix")
-    private Output</* @Nullable */ String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
     /**
      * @return Filter results by the baseline name prefix.
      * 
      */
-    public Output</* @Nullable */ String> namePrefix() {
-        return this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="operatingSystem")
-    private Output</* @Nullable */ String> operatingSystem;
+    private @Nullable Output<String> operatingSystem;
 
     /**
      * @return The specified OS for the baseline.
      * 
      */
-    public Output</* @Nullable */ String> operatingSystem() {
-        return this.operatingSystem;
+    public Optional<Output<String>> operatingSystem() {
+        return Optional.ofNullable(this.operatingSystem);
     }
 
     /**
@@ -108,7 +109,7 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder defaultBaseline(Output</* @Nullable */ Boolean> defaultBaseline) {
+        public Builder defaultBaseline(@Nullable Output<Boolean> defaultBaseline) {
             $.defaultBaseline = defaultBaseline;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder defaultBaseline(@Nullable Boolean defaultBaseline) {
+        public Builder defaultBaseline(Boolean defaultBaseline) {
             return defaultBaseline(Output.of(defaultBaseline));
         }
 
@@ -129,7 +130,7 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder namePrefix(Output</* @Nullable */ String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
@@ -140,7 +141,7 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder namePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
@@ -150,7 +151,7 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder operatingSystem(Output</* @Nullable */ String> operatingSystem) {
+        public Builder operatingSystem(@Nullable Output<String> operatingSystem) {
             $.operatingSystem = operatingSystem;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetPatchBaselineArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder operatingSystem(@Nullable String operatingSystem) {
+        public Builder operatingSystem(String operatingSystem) {
             return operatingSystem(Output.of(operatingSystem));
         }
 

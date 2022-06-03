@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetRepositoryObjectArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filePath")
-    private Output</* @Nullable */ String> filePath;
+    private @Nullable Output<String> filePath;
 
     /**
      * @return A filter to return only commits that affect any of the specified paths.
      * 
      */
-    public Output</* @Nullable */ String> filePath() {
-        return this.filePath;
+    public Optional<Output<String>> filePath() {
+        return Optional.ofNullable(this.filePath);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetRepositoryObjectArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="refName")
-    private Output</* @Nullable */ String> refName;
+    private @Nullable Output<String> refName;
 
     /**
      * @return A filter to return only resources that match the given reference name.
      * 
      */
-    public Output</* @Nullable */ String> refName() {
-        return this.refName;
+    public Optional<Output<String>> refName() {
+        return Optional.ofNullable(this.refName);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GetRepositoryObjectArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filePath(Output</* @Nullable */ String> filePath) {
+        public Builder filePath(@Nullable Output<String> filePath) {
             $.filePath = filePath;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetRepositoryObjectArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filePath(@Nullable String filePath) {
+        public Builder filePath(String filePath) {
             return filePath(Output.of(filePath));
         }
 
@@ -112,7 +113,7 @@ public final class GetRepositoryObjectArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder refName(Output</* @Nullable */ String> refName) {
+        public Builder refName(@Nullable Output<String> refName) {
             $.refName = refName;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetRepositoryObjectArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder refName(@Nullable String refName) {
+        public Builder refName(String refName) {
             return refName(Output.of(refName));
         }
 

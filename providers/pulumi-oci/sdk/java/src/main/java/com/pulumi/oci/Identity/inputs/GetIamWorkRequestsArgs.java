@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetIamWorkRequestsFilter;
+import com.pulumi.oci.Identity.inputs.GetIamWorkRequestsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetIamWorkRequestsArgs extends com.pulumi.resources.InvokeArg
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetIamWorkRequestsFilter>> filters;
+    private @Nullable Output<List<GetIamWorkRequestsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetIamWorkRequestsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetIamWorkRequestsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetIamWorkRequestsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceIdentifier")
-    private Output</* @Nullable */ String> resourceIdentifier;
+    private @Nullable Output<String> resourceIdentifier;
 
     /**
      * @return The identifier of the resource the work request affects.
      * 
      */
-    public Output</* @Nullable */ String> resourceIdentifier() {
-        return this.resourceIdentifier;
+    public Optional<Output<String>> resourceIdentifier() {
+        return Optional.ofNullable(this.resourceIdentifier);
     }
 
     private GetIamWorkRequestsArgs() {}
@@ -100,16 +101,16 @@ public final class GetIamWorkRequestsArgs extends com.pulumi.resources.InvokeArg
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetIamWorkRequestsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetIamWorkRequestsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetIamWorkRequestsFilter> filters) {
+        public Builder filters(List<GetIamWorkRequestsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetIamWorkRequestsFilter... filters) {
+        public Builder filters(GetIamWorkRequestsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -119,7 +120,7 @@ public final class GetIamWorkRequestsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder resourceIdentifier(Output</* @Nullable */ String> resourceIdentifier) {
+        public Builder resourceIdentifier(@Nullable Output<String> resourceIdentifier) {
             $.resourceIdentifier = resourceIdentifier;
             return this;
         }
@@ -130,7 +131,7 @@ public final class GetIamWorkRequestsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder resourceIdentifier(@Nullable String resourceIdentifier) {
+        public Builder resourceIdentifier(String resourceIdentifier) {
             return resourceIdentifier(Output.of(resourceIdentifier));
         }
 

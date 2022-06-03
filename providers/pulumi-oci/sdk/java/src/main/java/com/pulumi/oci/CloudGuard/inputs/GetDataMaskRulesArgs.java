@@ -5,10 +5,11 @@ package com.pulumi.oci.CloudGuard.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.CloudGuard.inputs.GetDataMaskRulesFilter;
+import com.pulumi.oci.CloudGuard.inputs.GetDataMaskRulesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accessLevel")
-    private Output</* @Nullable */ String> accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are `RESTRICTED` and `ACCESSIBLE`. Default is `RESTRICTED`. Setting this to `ACCESSIBLE` returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to `RESTRICTED` permissions are checked and no partial results are displayed.
      * 
      */
-    public Output</* @Nullable */ String> accessLevel() {
-        return this.accessLevel;
+    public Optional<Output<String>> accessLevel() {
+        return Optional.ofNullable(this.accessLevel);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dataMaskRuleStatus")
-    private Output</* @Nullable */ String> dataMaskRuleStatus;
+    private @Nullable Output<String> dataMaskRuleStatus;
 
     /**
      * @return The status of the dataMaskRule.
      * 
      */
-    public Output</* @Nullable */ String> dataMaskRuleStatus() {
-        return this.dataMaskRuleStatus;
+    public Optional<Output<String>> dataMaskRuleStatus() {
+        return Optional.ofNullable(this.dataMaskRuleStatus);
     }
 
     /**
@@ -66,21 +67,21 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDataMaskRulesFilter>> filters;
+    private @Nullable Output<List<GetDataMaskRulesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDataMaskRulesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDataMaskRulesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="iamGroupId")
-    private Output</* @Nullable */ String> iamGroupId;
+    private @Nullable Output<String> iamGroupId;
 
     /**
      * @return OCID of iamGroup
      * 
      */
-    public Output</* @Nullable */ String> iamGroupId() {
-        return this.iamGroupId;
+    public Optional<Output<String>> iamGroupId() {
+        return Optional.ofNullable(this.iamGroupId);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The field life cycle state. Only one state can be provided. Default value for state is active. If no value is specified state is active.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -118,14 +119,14 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="targetId")
-    private Output</* @Nullable */ String> targetId;
+    private @Nullable Output<String> targetId;
 
     /**
      * @return OCID of target
      * 
      */
-    public Output</* @Nullable */ String> targetId() {
-        return this.targetId;
+    public Optional<Output<String>> targetId() {
+        return Optional.ofNullable(this.targetId);
     }
 
     /**
@@ -133,14 +134,14 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="targetType")
-    private Output</* @Nullable */ String> targetType;
+    private @Nullable Output<String> targetType;
 
     /**
      * @return Type of target
      * 
      */
-    public Output</* @Nullable */ String> targetType() {
-        return this.targetType;
+    public Optional<Output<String>> targetType() {
+        return Optional.ofNullable(this.targetType);
     }
 
     private GetDataMaskRulesArgs() {}
@@ -181,7 +182,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
             return this;
         }
@@ -192,7 +193,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(String accessLevel) {
             return accessLevel(Output.of(accessLevel));
         }
 
@@ -223,7 +224,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder dataMaskRuleStatus(Output</* @Nullable */ String> dataMaskRuleStatus) {
+        public Builder dataMaskRuleStatus(@Nullable Output<String> dataMaskRuleStatus) {
             $.dataMaskRuleStatus = dataMaskRuleStatus;
             return this;
         }
@@ -234,7 +235,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder dataMaskRuleStatus(@Nullable String dataMaskRuleStatus) {
+        public Builder dataMaskRuleStatus(String dataMaskRuleStatus) {
             return dataMaskRuleStatus(Output.of(dataMaskRuleStatus));
         }
 
@@ -244,7 +245,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -255,20 +256,20 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDataMaskRulesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDataMaskRulesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDataMaskRulesFilter> filters) {
+        public Builder filters(List<GetDataMaskRulesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDataMaskRulesFilter... filters) {
+        public Builder filters(GetDataMaskRulesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -278,7 +279,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder iamGroupId(Output</* @Nullable */ String> iamGroupId) {
+        public Builder iamGroupId(@Nullable Output<String> iamGroupId) {
             $.iamGroupId = iamGroupId;
             return this;
         }
@@ -289,7 +290,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder iamGroupId(@Nullable String iamGroupId) {
+        public Builder iamGroupId(String iamGroupId) {
             return iamGroupId(Output.of(iamGroupId));
         }
 
@@ -299,7 +300,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -310,7 +311,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -320,7 +321,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder targetId(Output</* @Nullable */ String> targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             $.targetId = targetId;
             return this;
         }
@@ -331,7 +332,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder targetId(@Nullable String targetId) {
+        public Builder targetId(String targetId) {
             return targetId(Output.of(targetId));
         }
 
@@ -341,7 +342,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder targetType(Output</* @Nullable */ String> targetType) {
+        public Builder targetType(@Nullable Output<String> targetType) {
             $.targetType = targetType;
             return this;
         }
@@ -352,7 +353,7 @@ public final class GetDataMaskRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder targetType(@Nullable String targetType) {
+        public Builder targetType(String targetType) {
             return targetType(Output.of(targetType));
         }
 

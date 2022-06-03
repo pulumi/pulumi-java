@@ -5,10 +5,11 @@ package com.pulumi.oci.Dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Dns.inputs.GetSteeringPolicyAttachmentsFilter;
+import com.pulumi.oci.Dns.inputs.GetSteeringPolicyAttachmentsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The displayName of a resource.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="domain")
-    private Output</* @Nullable */ String> domain;
+    private @Nullable Output<String> domain;
 
     /**
      * @return Search by domain. Will match any record whose domain (case-insensitive) equals the provided value.
      * 
      */
-    public Output</* @Nullable */ String> domain() {
-        return this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -66,21 +67,21 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="domainContains")
-    private Output</* @Nullable */ String> domainContains;
+    private @Nullable Output<String> domainContains;
 
     /**
      * @return Search by domain. Will match any record whose domain (case-insensitive) contains the provided value.
      * 
      */
-    public Output</* @Nullable */ String> domainContains() {
-        return this.domainContains;
+    public Optional<Output<String>> domainContains() {
+        return Optional.ofNullable(this.domainContains);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSteeringPolicyAttachmentsFilter>> filters;
+    private @Nullable Output<List<GetSteeringPolicyAttachmentsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetSteeringPolicyAttachmentsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSteeringPolicyAttachmentsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The OCID of a resource.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The state of a resource.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -118,14 +119,14 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="steeringPolicyId")
-    private Output</* @Nullable */ String> steeringPolicyId;
+    private @Nullable Output<String> steeringPolicyId;
 
     /**
      * @return Search by steering policy OCID. Will match any resource whose steering policy ID matches the provided value.
      * 
      */
-    public Output</* @Nullable */ String> steeringPolicyId() {
-        return this.steeringPolicyId;
+    public Optional<Output<String>> steeringPolicyId() {
+        return Optional.ofNullable(this.steeringPolicyId);
     }
 
     /**
@@ -133,14 +134,14 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return An [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp that states all returned resources were created on or after the indicated time.
      * 
      */
-    public Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo() {
-        return this.timeCreatedGreaterThanOrEqualTo;
+    public Optional<Output<String>> timeCreatedGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
     }
 
     /**
@@ -148,14 +149,14 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private Output</* @Nullable */ String> timeCreatedLessThan;
+    private @Nullable Output<String> timeCreatedLessThan;
 
     /**
      * @return An [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp that states all returned resources were created before the indicated time.
      * 
      */
-    public Output</* @Nullable */ String> timeCreatedLessThan() {
-        return this.timeCreatedLessThan;
+    public Optional<Output<String>> timeCreatedLessThan() {
+        return Optional.ofNullable(this.timeCreatedLessThan);
     }
 
     /**
@@ -163,14 +164,14 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="zoneId")
-    private Output</* @Nullable */ String> zoneId;
+    private @Nullable Output<String> zoneId;
 
     /**
      * @return Search by zone OCID. Will match any resource whose zone ID matches the provided value.
      * 
      */
-    public Output</* @Nullable */ String> zoneId() {
-        return this.zoneId;
+    public Optional<Output<String>> zoneId() {
+        return Optional.ofNullable(this.zoneId);
     }
 
     private GetSteeringPolicyAttachmentsArgs() {}
@@ -234,7 +235,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -245,7 +246,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -255,7 +256,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder domain(Output</* @Nullable */ String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
@@ -266,7 +267,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder domain(@Nullable String domain) {
+        public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
@@ -276,7 +277,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder domainContains(Output</* @Nullable */ String> domainContains) {
+        public Builder domainContains(@Nullable Output<String> domainContains) {
             $.domainContains = domainContains;
             return this;
         }
@@ -287,20 +288,20 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder domainContains(@Nullable String domainContains) {
+        public Builder domainContains(String domainContains) {
             return domainContains(Output.of(domainContains));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetSteeringPolicyAttachmentsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSteeringPolicyAttachmentsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSteeringPolicyAttachmentsFilter> filters) {
+        public Builder filters(List<GetSteeringPolicyAttachmentsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetSteeringPolicyAttachmentsFilter... filters) {
+        public Builder filters(GetSteeringPolicyAttachmentsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -310,7 +311,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -321,7 +322,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -331,7 +332,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -342,7 +343,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -352,7 +353,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder steeringPolicyId(Output</* @Nullable */ String> steeringPolicyId) {
+        public Builder steeringPolicyId(@Nullable Output<String> steeringPolicyId) {
             $.steeringPolicyId = steeringPolicyId;
             return this;
         }
@@ -363,7 +364,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder steeringPolicyId(@Nullable String steeringPolicyId) {
+        public Builder steeringPolicyId(String steeringPolicyId) {
             return steeringPolicyId(Output.of(steeringPolicyId));
         }
 
@@ -373,7 +374,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable Output<String> timeCreatedGreaterThanOrEqualTo) {
             $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
             return this;
         }
@@ -384,7 +385,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(String timeCreatedGreaterThanOrEqualTo) {
             return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
         }
 
@@ -394,7 +395,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(Output</* @Nullable */ String> timeCreatedLessThan) {
+        public Builder timeCreatedLessThan(@Nullable Output<String> timeCreatedLessThan) {
             $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
@@ -405,7 +406,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
+        public Builder timeCreatedLessThan(String timeCreatedLessThan) {
             return timeCreatedLessThan(Output.of(timeCreatedLessThan));
         }
 
@@ -415,7 +416,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder zoneId(Output</* @Nullable */ String> zoneId) {
+        public Builder zoneId(@Nullable Output<String> zoneId) {
             $.zoneId = zoneId;
             return this;
         }
@@ -426,7 +427,7 @@ public final class GetSteeringPolicyAttachmentsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder zoneId(@Nullable String zoneId) {
+        public Builder zoneId(String zoneId) {
             return zoneId(Output.of(zoneId));
         }
 

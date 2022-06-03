@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetSubscriptionProductArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="producttype")
-    private Output</* @Nullable */ String> producttype;
+    private @Nullable Output<String> producttype;
 
     /**
      * @return The field to specify the type of product.
      * 
      */
-    public Output</* @Nullable */ String> producttype() {
-        return this.producttype;
+    public Optional<Output<String>> producttype() {
+        return Optional.ofNullable(this.producttype);
     }
 
     /**
@@ -107,7 +108,7 @@ public final class GetSubscriptionProductArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder producttype(Output</* @Nullable */ String> producttype) {
+        public Builder producttype(@Nullable Output<String> producttype) {
             $.producttype = producttype;
             return this;
         }
@@ -118,7 +119,7 @@ public final class GetSubscriptionProductArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder producttype(@Nullable String producttype) {
+        public Builder producttype(String producttype) {
             return producttype(Output.of(producttype));
         }
 

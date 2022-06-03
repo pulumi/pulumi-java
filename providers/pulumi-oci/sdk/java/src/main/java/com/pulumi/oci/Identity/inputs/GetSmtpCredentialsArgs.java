@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetSmtpCredentialsFilter;
+import com.pulumi.oci.Identity.inputs.GetSmtpCredentialsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetSmtpCredentialsArgs extends com.pulumi.resources.InvokeArg
     public static final GetSmtpCredentialsArgs Empty = new GetSmtpCredentialsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSmtpCredentialsFilter>> filters;
+    private @Nullable Output<List<GetSmtpCredentialsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetSmtpCredentialsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSmtpCredentialsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetSmtpCredentialsArgs extends com.pulumi.resources.InvokeArg
             $ = new GetSmtpCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetSmtpCredentialsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSmtpCredentialsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSmtpCredentialsFilter> filters) {
+        public Builder filters(List<GetSmtpCredentialsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetSmtpCredentialsFilter... filters) {
+        public Builder filters(GetSmtpCredentialsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

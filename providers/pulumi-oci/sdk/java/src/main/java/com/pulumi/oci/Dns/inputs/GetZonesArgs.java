@@ -5,10 +5,11 @@ package com.pulumi.oci.Dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Dns.inputs.GetZonesFilter;
+import com.pulumi.oci.Dns.inputs.GetZonesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetZonesFilter>> filters;
+    private @Nullable Output<List<GetZonesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetZonesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetZonesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A case-sensitive filter for zone names. Will match any zone with a name that equals the provided value.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameContains")
-    private Output</* @Nullable */ String> nameContains;
+    private @Nullable Output<String> nameContains;
 
     /**
      * @return Search by zone name. Will match any zone whose name (case-insensitive) contains the provided value.
      * 
      */
-    public Output</* @Nullable */ String> nameContains() {
-        return this.nameContains;
+    public Optional<Output<String>> nameContains() {
+        return Optional.ofNullable(this.nameContains);
     }
 
     /**
@@ -74,15 +75,15 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope")
-    private Output</* @Nullable */ String> scope;
+    private @Nullable Output<String> scope;
 
     /**
      * @return Specifies to operate only on resources that have a matching DNS scope. This value will be null
      * for zones in the global DNS and `PRIVATE` when listing private zones.
      * 
      */
-    public Output</* @Nullable */ String> scope() {
-        return this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -90,14 +91,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortBy")
-    private Output</* @Nullable */ String> sortBy;
+    private @Nullable Output<String> sortBy;
 
     /**
      * @return The field by which to sort zones. Allowed values are: name|zoneType|timeCreated
      * 
      */
-    public Output</* @Nullable */ String> sortBy() {
-        return this.sortBy;
+    public Optional<Output<String>> sortBy() {
+        return Optional.ofNullable(this.sortBy);
     }
 
     /**
@@ -105,14 +106,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortOrder")
-    private Output</* @Nullable */ String> sortOrder;
+    private @Nullable Output<String> sortOrder;
 
     /**
      * @return The order to sort the resources. Allowed values are: ASC|DESC
      * 
      */
-    public Output</* @Nullable */ String> sortOrder() {
-        return this.sortOrder;
+    public Optional<Output<String>> sortOrder() {
+        return Optional.ofNullable(this.sortOrder);
     }
 
     /**
@@ -120,14 +121,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The state of a resource.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -135,14 +136,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return An [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp that states all returned resources were created on or after the indicated time.
      * 
      */
-    public Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo() {
-        return this.timeCreatedGreaterThanOrEqualTo;
+    public Optional<Output<String>> timeCreatedGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
     }
 
     /**
@@ -150,14 +151,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private Output</* @Nullable */ String> timeCreatedLessThan;
+    private @Nullable Output<String> timeCreatedLessThan;
 
     /**
      * @return An [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp that states all returned resources were created before the indicated time.
      * 
      */
-    public Output</* @Nullable */ String> timeCreatedLessThan() {
-        return this.timeCreatedLessThan;
+    public Optional<Output<String>> timeCreatedLessThan() {
+        return Optional.ofNullable(this.timeCreatedLessThan);
     }
 
     /**
@@ -165,14 +166,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tsigKeyId")
-    private Output</* @Nullable */ String> tsigKeyId;
+    private @Nullable Output<String> tsigKeyId;
 
     /**
      * @return Search for zones that are associated with a TSIG key.
      * 
      */
-    public Output</* @Nullable */ String> tsigKeyId() {
-        return this.tsigKeyId;
+    public Optional<Output<String>> tsigKeyId() {
+        return Optional.ofNullable(this.tsigKeyId);
     }
 
     /**
@@ -180,14 +181,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="viewId")
-    private Output</* @Nullable */ String> viewId;
+    private @Nullable Output<String> viewId;
 
     /**
      * @return The OCID of the view the resource is associated with.
      * 
      */
-    public Output</* @Nullable */ String> viewId() {
-        return this.viewId;
+    public Optional<Output<String>> viewId() {
+        return Optional.ofNullable(this.viewId);
     }
 
     /**
@@ -195,14 +196,14 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zoneType")
-    private Output</* @Nullable */ String> zoneType;
+    private @Nullable Output<String> zoneType;
 
     /**
      * @return Search by zone type, `PRIMARY` or `SECONDARY`. Will match any zone whose type equals the provided value.
      * 
      */
-    public Output</* @Nullable */ String> zoneType() {
-        return this.zoneType;
+    public Optional<Output<String>> zoneType() {
+        return Optional.ofNullable(this.zoneType);
     }
 
     private GetZonesArgs() {}
@@ -262,16 +263,16 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetZonesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetZonesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetZonesFilter> filters) {
+        public Builder filters(List<GetZonesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetZonesFilter... filters) {
+        public Builder filters(GetZonesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -281,7 +282,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -292,7 +293,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -302,7 +303,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameContains(Output</* @Nullable */ String> nameContains) {
+        public Builder nameContains(@Nullable Output<String> nameContains) {
             $.nameContains = nameContains;
             return this;
         }
@@ -313,7 +314,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameContains(@Nullable String nameContains) {
+        public Builder nameContains(String nameContains) {
             return nameContains(Output.of(nameContains));
         }
 
@@ -324,7 +325,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder scope(Output</* @Nullable */ String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
@@ -336,7 +337,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder scope(@Nullable String scope) {
+        public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
@@ -346,7 +347,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sortBy(Output</* @Nullable */ String> sortBy) {
+        public Builder sortBy(@Nullable Output<String> sortBy) {
             $.sortBy = sortBy;
             return this;
         }
@@ -357,7 +358,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sortBy(@Nullable String sortBy) {
+        public Builder sortBy(String sortBy) {
             return sortBy(Output.of(sortBy));
         }
 
@@ -367,7 +368,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sortOrder(Output</* @Nullable */ String> sortOrder) {
+        public Builder sortOrder(@Nullable Output<String> sortOrder) {
             $.sortOrder = sortOrder;
             return this;
         }
@@ -378,7 +379,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sortOrder(@Nullable String sortOrder) {
+        public Builder sortOrder(String sortOrder) {
             return sortOrder(Output.of(sortOrder));
         }
 
@@ -388,7 +389,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -399,7 +400,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -409,7 +410,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(Output</* @Nullable */ String> timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable Output<String> timeCreatedGreaterThanOrEqualTo) {
             $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
             return this;
         }
@@ -420,7 +421,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(String timeCreatedGreaterThanOrEqualTo) {
             return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
         }
 
@@ -430,7 +431,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(Output</* @Nullable */ String> timeCreatedLessThan) {
+        public Builder timeCreatedLessThan(@Nullable Output<String> timeCreatedLessThan) {
             $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
@@ -441,7 +442,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
+        public Builder timeCreatedLessThan(String timeCreatedLessThan) {
             return timeCreatedLessThan(Output.of(timeCreatedLessThan));
         }
 
@@ -451,7 +452,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tsigKeyId(Output</* @Nullable */ String> tsigKeyId) {
+        public Builder tsigKeyId(@Nullable Output<String> tsigKeyId) {
             $.tsigKeyId = tsigKeyId;
             return this;
         }
@@ -462,7 +463,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tsigKeyId(@Nullable String tsigKeyId) {
+        public Builder tsigKeyId(String tsigKeyId) {
             return tsigKeyId(Output.of(tsigKeyId));
         }
 
@@ -472,7 +473,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder viewId(Output</* @Nullable */ String> viewId) {
+        public Builder viewId(@Nullable Output<String> viewId) {
             $.viewId = viewId;
             return this;
         }
@@ -483,7 +484,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder viewId(@Nullable String viewId) {
+        public Builder viewId(String viewId) {
             return viewId(Output.of(viewId));
         }
 
@@ -493,7 +494,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder zoneType(Output</* @Nullable */ String> zoneType) {
+        public Builder zoneType(@Nullable Output<String> zoneType) {
             $.zoneType = zoneType;
             return this;
         }
@@ -504,7 +505,7 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder zoneType(@Nullable String zoneType) {
+        public Builder zoneType(String zoneType) {
             return zoneType(Output.of(zoneType));
         }
 

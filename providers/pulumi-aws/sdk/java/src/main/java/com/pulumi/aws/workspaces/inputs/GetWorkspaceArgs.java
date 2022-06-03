@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="directoryId")
-    private Output</* @Nullable */ String> directoryId;
+    private @Nullable Output<String> directoryId;
 
     /**
      * @return The ID of the directory for the WorkSpace. You have to specify `user_name` along with `directory_id`. You cannot combine this parameter with `workspace_id`.
      * 
      */
-    public Output</* @Nullable */ String> directoryId() {
-        return this.directoryId;
+    public Optional<Output<String>> directoryId() {
+        return Optional.ofNullable(this.directoryId);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return The tags for the WorkSpace.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName")
-    private Output</* @Nullable */ String> userName;
+    private @Nullable Output<String> userName;
 
     /**
      * @return The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace. You cannot combine this parameter with `workspace_id`.
      * 
      */
-    public Output</* @Nullable */ String> userName() {
-        return this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceId")
-    private Output</* @Nullable */ String> workspaceId;
+    private @Nullable Output<String> workspaceId;
 
     /**
      * @return The ID of the WorkSpace. You cannot combine this parameter with `directory_id`.
      * 
      */
-    public Output</* @Nullable */ String> workspaceId() {
-        return this.workspaceId;
+    public Optional<Output<String>> workspaceId() {
+        return Optional.ofNullable(this.workspaceId);
     }
 
     private GetWorkspaceArgs() {}
@@ -108,7 +109,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder directoryId(Output</* @Nullable */ String> directoryId) {
+        public Builder directoryId(@Nullable Output<String> directoryId) {
             $.directoryId = directoryId;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder directoryId(@Nullable String directoryId) {
+        public Builder directoryId(String directoryId) {
             return directoryId(Output.of(directoryId));
         }
 
@@ -129,7 +130,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -140,7 +141,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
@@ -150,7 +151,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userName(Output</* @Nullable */ String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userName(@Nullable String userName) {
+        public Builder userName(String userName) {
             return userName(Output.of(userName));
         }
 
@@ -171,7 +172,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder workspaceId(Output</* @Nullable */ String> workspaceId) {
+        public Builder workspaceId(@Nullable Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder workspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             return workspaceId(Output.of(workspaceId));
         }
 

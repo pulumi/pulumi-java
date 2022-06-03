@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,14 +38,14 @@ public final class GetKMSCryptoKeyVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="version")
-    private Output</* @Nullable */ Integer> version;
+    private @Nullable Output<Integer> version;
 
     /**
      * @return The version number for this CryptoKeyVersion. Defaults to `1`.
      * 
      */
-    public Output</* @Nullable */ Integer> version() {
-        return this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     private GetKMSCryptoKeyVersionArgs() {}
@@ -101,7 +102,7 @@ public final class GetKMSCryptoKeyVersionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder version(Output</* @Nullable */ Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             $.version = version;
             return this;
         }
@@ -112,7 +113,7 @@ public final class GetKMSCryptoKeyVersionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder version(@Nullable Integer version) {
+        public Builder version(Integer version) {
             return version(Output.of(version));
         }
 

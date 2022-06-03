@@ -5,10 +5,11 @@ package com.pulumi.oci.OsManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OsManagement.inputs.GetManagedInstancesFilter;
+import com.pulumi.oci.OsManagement.inputs.GetManagedInstancesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagedInstancesFilter>> filters;
+    private @Nullable Output<List<GetManagedInstancesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagedInstancesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagedInstancesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="osFamily")
-    private Output</* @Nullable */ String> osFamily;
+    private @Nullable Output<String> osFamily;
 
     /**
      * @return The OS family for which to list resources.
      * 
      */
-    public Output</* @Nullable */ String> osFamily() {
-        return this.osFamily;
+    public Optional<Output<String>> osFamily() {
+        return Optional.ofNullable(this.osFamily);
     }
 
     private GetManagedInstancesArgs() {}
@@ -122,7 +123,7 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -133,20 +134,20 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagedInstancesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedInstancesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedInstancesFilter> filters) {
+        public Builder filters(List<GetManagedInstancesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagedInstancesFilter... filters) {
+        public Builder filters(GetManagedInstancesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -156,7 +157,7 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder osFamily(Output</* @Nullable */ String> osFamily) {
+        public Builder osFamily(@Nullable Output<String> osFamily) {
             $.osFamily = osFamily;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder osFamily(@Nullable String osFamily) {
+        public Builder osFamily(String osFamily) {
             return osFamily(Output.of(osFamily));
         }
 

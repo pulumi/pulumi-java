@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class ListContainerAppCustomHostNameAnalysisArgs extends com.pulumi
      * 
      */
     @Import(name="customHostname")
-    private Output</* @Nullable */ String> customHostname;
+    private @Nullable Output<String> customHostname;
 
     /**
      * @return Custom hostname.
      * 
      */
-    public Output</* @Nullable */ String> customHostname() {
-        return this.customHostname;
+    public Optional<Output<String>> customHostname() {
+        return Optional.ofNullable(this.customHostname);
     }
 
     /**
@@ -112,7 +113,7 @@ public final class ListContainerAppCustomHostNameAnalysisArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder customHostname(Output</* @Nullable */ String> customHostname) {
+        public Builder customHostname(@Nullable Output<String> customHostname) {
             $.customHostname = customHostname;
             return this;
         }
@@ -123,7 +124,7 @@ public final class ListContainerAppCustomHostNameAnalysisArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder customHostname(@Nullable String customHostname) {
+        public Builder customHostname(String customHostname) {
             return customHostname(Output.of(customHostname));
         }
 

@@ -10,6 +10,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,14 +38,14 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyTypes")
-    private Output</* @Nullable */ List<String>> keyTypes;
+    private @Nullable Output<List<String>> keyTypes;
 
     /**
      * @return A list of key algorithms to filter certificates. By default, ACM does not return all certificate types when searching. See the [ACM API Reference](https://docs.aws.amazon.com/acm/latest/APIReference/API_CertificateDetail.html#ACM-Type-CertificateDetail-KeyAlgorithm) for supported key algorithms.
      * 
      */
-    public Output</* @Nullable */ List<String>> keyTypes() {
-        return this.keyTypes;
+    public Optional<Output<List<String>>> keyTypes() {
+        return Optional.ofNullable(this.keyTypes);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-    private Output</* @Nullable */ Boolean> mostRecent;
+    private @Nullable Output<Boolean> mostRecent;
 
     /**
      * @return If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> mostRecent() {
-        return this.mostRecent;
+    public Optional<Output<Boolean>> mostRecent() {
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -69,7 +70,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="statuses")
-    private Output</* @Nullable */ List<String>> statuses;
+    private @Nullable Output<List<String>> statuses;
 
     /**
      * @return A list of statuses on which to filter the returned list. Valid values are `PENDING_VALIDATION`, `ISSUED`,
@@ -77,8 +78,8 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * are returned.
      * 
      */
-    public Output</* @Nullable */ List<String>> statuses() {
-        return this.statuses;
+    public Optional<Output<List<String>>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -86,14 +87,14 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A mapping of tags for the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -101,14 +102,14 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="types")
-    private Output</* @Nullable */ List<String>> types;
+    private @Nullable Output<List<String>> types;
 
     /**
      * @return A list of types on which to filter the returned list. Valid values are `AMAZON_ISSUED` and `IMPORTED`.
      * 
      */
-    public Output</* @Nullable */ List<String>> types() {
-        return this.types;
+    public Optional<Output<List<String>>> types() {
+        return Optional.ofNullable(this.types);
     }
 
     private GetCertificateArgs() {}
@@ -167,7 +168,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyTypes(Output</* @Nullable */ List<String>> keyTypes) {
+        public Builder keyTypes(@Nullable Output<List<String>> keyTypes) {
             $.keyTypes = keyTypes;
             return this;
         }
@@ -178,7 +179,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyTypes(@Nullable List<String> keyTypes) {
+        public Builder keyTypes(List<String> keyTypes) {
             return keyTypes(Output.of(keyTypes));
         }
 
@@ -198,7 +199,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(Output</* @Nullable */ Boolean> mostRecent) {
+        public Builder mostRecent(@Nullable Output<Boolean> mostRecent) {
             $.mostRecent = mostRecent;
             return this;
         }
@@ -209,7 +210,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(Boolean mostRecent) {
             return mostRecent(Output.of(mostRecent));
         }
 
@@ -221,7 +222,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder statuses(Output</* @Nullable */ List<String>> statuses) {
+        public Builder statuses(@Nullable Output<List<String>> statuses) {
             $.statuses = statuses;
             return this;
         }
@@ -234,7 +235,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable List<String> statuses) {
+        public Builder statuses(List<String> statuses) {
             return statuses(Output.of(statuses));
         }
 
@@ -256,7 +257,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -267,7 +268,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
@@ -277,7 +278,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder types(Output</* @Nullable */ List<String>> types) {
+        public Builder types(@Nullable Output<List<String>> types) {
             $.types = types;
             return this;
         }
@@ -288,7 +289,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder types(@Nullable List<String> types) {
+        public Builder types(List<String> types) {
             return types(Output.of(types));
         }
 

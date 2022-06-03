@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="crc32")
-    private Output</* @Nullable */ String> crc32;
+    private @Nullable Output<String> crc32;
 
     /**
      * @return The crc32 checksum of the `ciphertext` in hexadecimal notation. If not specified, it will be computed.
      * 
      */
-    public Output</* @Nullable */ String> crc32() {
-        return this.crc32;
+    public Optional<Output<String>> crc32() {
+        return Optional.ofNullable(this.crc32);
     }
 
     /**
@@ -116,7 +117,7 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder crc32(Output</* @Nullable */ String> crc32) {
+        public Builder crc32(@Nullable Output<String> crc32) {
             $.crc32 = crc32;
             return this;
         }
@@ -127,7 +128,7 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder crc32(@Nullable String crc32) {
+        public Builder crc32(String crc32) {
             return crc32(Output.of(crc32));
         }
 

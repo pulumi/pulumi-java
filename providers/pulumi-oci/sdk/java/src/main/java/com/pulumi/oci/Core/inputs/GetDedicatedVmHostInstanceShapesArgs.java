@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetDedicatedVmHostInstanceShapesFilter;
+import com.pulumi.oci.Core.inputs.GetDedicatedVmHostInstanceShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="dedicatedVmHostShape")
-    private Output</* @Nullable */ String> dedicatedVmHostShape;
+    private @Nullable Output<String> dedicatedVmHostShape;
 
     /**
      * @return Dedicated VM host shape name
      * 
      */
-    public Output</* @Nullable */ String> dedicatedVmHostShape() {
-        return this.dedicatedVmHostShape;
+    public Optional<Output<String>> dedicatedVmHostShape() {
+        return Optional.ofNullable(this.dedicatedVmHostShape);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDedicatedVmHostInstanceShapesFilter>> filters;
+    private @Nullable Output<List<GetDedicatedVmHostInstanceShapesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDedicatedVmHostInstanceShapesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDedicatedVmHostInstanceShapesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetDedicatedVmHostInstanceShapesArgs() {}
@@ -101,7 +102,7 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -112,7 +113,7 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -143,7 +144,7 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder dedicatedVmHostShape(Output</* @Nullable */ String> dedicatedVmHostShape) {
+        public Builder dedicatedVmHostShape(@Nullable Output<String> dedicatedVmHostShape) {
             $.dedicatedVmHostShape = dedicatedVmHostShape;
             return this;
         }
@@ -154,20 +155,20 @@ public final class GetDedicatedVmHostInstanceShapesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder dedicatedVmHostShape(@Nullable String dedicatedVmHostShape) {
+        public Builder dedicatedVmHostShape(String dedicatedVmHostShape) {
             return dedicatedVmHostShape(Output.of(dedicatedVmHostShape));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDedicatedVmHostInstanceShapesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDedicatedVmHostInstanceShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDedicatedVmHostInstanceShapesFilter> filters) {
+        public Builder filters(List<GetDedicatedVmHostInstanceShapesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDedicatedVmHostInstanceShapesFilter... filters) {
+        public Builder filters(GetDedicatedVmHostInstanceShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

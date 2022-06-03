@@ -3,12 +3,13 @@
 
 package com.pulumi.azurenative.network.inputs;
 
-import com.pulumi.azurenative.network.inputs.BastionShareableLink;
+import com.pulumi.azurenative.network.inputs.BastionShareableLinkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -51,14 +52,14 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vms")
-    private Output</* @Nullable */ List<BastionShareableLink>> vms;
+    private @Nullable Output<List<BastionShareableLinkArgs>> vms;
 
     /**
      * @return List of VM references.
      * 
      */
-    public Output</* @Nullable */ List<BastionShareableLink>> vms() {
-        return this.vms;
+    public Optional<Output<List<BastionShareableLinkArgs>>> vms() {
+        return Optional.ofNullable(this.vms);
     }
 
     private GetBastionShareableLinkArgs() {}
@@ -135,7 +136,7 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder vms(Output</* @Nullable */ List<BastionShareableLink>> vms) {
+        public Builder vms(@Nullable Output<List<BastionShareableLinkArgs>> vms) {
             $.vms = vms;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder vms(@Nullable List<BastionShareableLink> vms) {
+        public Builder vms(List<BastionShareableLinkArgs> vms) {
             return vms(Output.of(vms));
         }
 
@@ -156,7 +157,7 @@ public final class GetBastionShareableLinkArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder vms(BastionShareableLink... vms) {
+        public Builder vms(BastionShareableLinkArgs... vms) {
             return vms(List.of(vms));
         }
 

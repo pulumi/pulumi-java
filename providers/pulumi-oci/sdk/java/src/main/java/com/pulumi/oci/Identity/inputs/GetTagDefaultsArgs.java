@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetTagDefaultsFilter;
+import com.pulumi.oci.Identity.inputs.GetTagDefaultsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +22,21 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private Output</* @Nullable */ String> compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment (remember that the tenancy is simply the root compartment).
      * 
      */
-    public Output</* @Nullable */ String> compartmentId() {
-        return this.compartmentId;
+    public Optional<Output<String>> compartmentId() {
+        return Optional.ofNullable(this.compartmentId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetTagDefaultsFilter>> filters;
+    private @Nullable Output<List<GetTagDefaultsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetTagDefaultsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetTagDefaultsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return A filter to only return resources that match the specified OCID exactly.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagDefinitionId")
-    private Output</* @Nullable */ String> tagDefinitionId;
+    private @Nullable Output<String> tagDefinitionId;
 
     /**
      * @return The OCID of the tag definition.
      * 
      */
-    public Output</* @Nullable */ String> tagDefinitionId() {
-        return this.tagDefinitionId;
+    public Optional<Output<String>> tagDefinitionId() {
+        return Optional.ofNullable(this.tagDefinitionId);
     }
 
     private GetTagDefaultsArgs() {}
@@ -117,7 +118,7 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
@@ -128,20 +129,20 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(String compartmentId) {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetTagDefaultsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetTagDefaultsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetTagDefaultsFilter> filters) {
+        public Builder filters(List<GetTagDefaultsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetTagDefaultsFilter... filters) {
+        public Builder filters(GetTagDefaultsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -151,7 +152,7 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -162,7 +163,7 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -172,7 +173,7 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -193,7 +194,7 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tagDefinitionId(Output</* @Nullable */ String> tagDefinitionId) {
+        public Builder tagDefinitionId(@Nullable Output<String> tagDefinitionId) {
             $.tagDefinitionId = tagDefinitionId;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetTagDefaultsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tagDefinitionId(@Nullable String tagDefinitionId) {
+        public Builder tagDefinitionId(String tagDefinitionId) {
             return tagDefinitionId(Output.of(tagDefinitionId));
         }
 

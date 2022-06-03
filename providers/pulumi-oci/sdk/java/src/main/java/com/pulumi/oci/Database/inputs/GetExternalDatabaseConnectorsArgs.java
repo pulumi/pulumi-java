@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetExternalDatabaseConnectorsFilter;
+import com.pulumi.oci.Database.inputs.GetExternalDatabaseConnectorsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetExternalDatabaseConnectorsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class GetExternalDatabaseConnectorsArgs extends com.pulumi.resource
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetExternalDatabaseConnectorsFilter>> filters;
+    private @Nullable Output<List<GetExternalDatabaseConnectorsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetExternalDatabaseConnectorsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetExternalDatabaseConnectorsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetExternalDatabaseConnectorsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the specified lifecycle state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetExternalDatabaseConnectorsArgs() {}
@@ -138,7 +139,7 @@ public final class GetExternalDatabaseConnectorsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,7 +150,7 @@ public final class GetExternalDatabaseConnectorsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -174,16 +175,16 @@ public final class GetExternalDatabaseConnectorsArgs extends com.pulumi.resource
             return externalDatabaseId(Output.of(externalDatabaseId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetExternalDatabaseConnectorsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetExternalDatabaseConnectorsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetExternalDatabaseConnectorsFilter> filters) {
+        public Builder filters(List<GetExternalDatabaseConnectorsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetExternalDatabaseConnectorsFilter... filters) {
+        public Builder filters(GetExternalDatabaseConnectorsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -193,7 +194,7 @@ public final class GetExternalDatabaseConnectorsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetExternalDatabaseConnectorsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

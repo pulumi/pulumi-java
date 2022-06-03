@@ -5,10 +5,11 @@ package com.pulumi.oci.Blockchain.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Blockchain.inputs.GetPeersFilter;
+import com.pulumi.oci.Blockchain.inputs.GetPeersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetPeersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable. Example: `My new resource`
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetPeersFilter>> filters;
+    private @Nullable Output<List<GetPeersFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetPeersFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetPeersFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetPeersArgs() {}
@@ -106,7 +107,7 @@ public final class GetPeersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -117,20 +118,20 @@ public final class GetPeersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetPeersFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetPeersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPeersFilter> filters) {
+        public Builder filters(List<GetPeersFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetPeersFilter... filters) {
+        public Builder filters(GetPeersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

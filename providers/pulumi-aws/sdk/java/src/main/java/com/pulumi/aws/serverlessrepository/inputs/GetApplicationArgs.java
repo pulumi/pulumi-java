@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="semanticVersion")
-    private Output</* @Nullable */ String> semanticVersion;
+    private @Nullable Output<String> semanticVersion;
 
     /**
      * @return The requested version of the application. By default, retrieves the latest version.
      * 
      */
-    public Output</* @Nullable */ String> semanticVersion() {
-        return this.semanticVersion;
+    public Optional<Output<String>> semanticVersion() {
+        return Optional.ofNullable(this.semanticVersion);
     }
 
     private GetApplicationArgs() {}
@@ -96,7 +97,7 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder semanticVersion(Output</* @Nullable */ String> semanticVersion) {
+        public Builder semanticVersion(@Nullable Output<String> semanticVersion) {
             $.semanticVersion = semanticVersion;
             return this;
         }
@@ -107,7 +108,7 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder semanticVersion(@Nullable String semanticVersion) {
+        public Builder semanticVersion(String semanticVersion) {
             return semanticVersion(Output.of(semanticVersion));
         }
 

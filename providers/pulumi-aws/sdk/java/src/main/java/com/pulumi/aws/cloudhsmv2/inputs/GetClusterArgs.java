@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterState")
-    private Output</* @Nullable */ String> clusterState;
+    private @Nullable Output<String> clusterState;
 
     /**
      * @return The state of the cluster to be found.
      * 
      */
-    public Output</* @Nullable */ String> clusterState() {
-        return this.clusterState;
+    public Optional<Output<String>> clusterState() {
+        return Optional.ofNullable(this.clusterState);
     }
 
     private GetClusterArgs() {}
@@ -96,7 +97,7 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterState(Output</* @Nullable */ String> clusterState) {
+        public Builder clusterState(@Nullable Output<String> clusterState) {
             $.clusterState = clusterState;
             return this;
         }
@@ -107,7 +108,7 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterState(@Nullable String clusterState) {
+        public Builder clusterState(String clusterState) {
             return clusterState(Output.of(clusterState));
         }
 

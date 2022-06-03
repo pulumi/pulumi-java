@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetFunctionUrlArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="qualifier")
-    private Output</* @Nullable */ String> qualifier;
+    private @Nullable Output<String> qualifier;
 
     /**
      * @return The alias name or `&#34;$LATEST&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> qualifier() {
-        return this.qualifier;
+    public Optional<Output<String>> qualifier() {
+        return Optional.ofNullable(this.qualifier);
     }
 
     private GetFunctionUrlArgs() {}
@@ -96,7 +97,7 @@ public final class GetFunctionUrlArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder qualifier(Output</* @Nullable */ String> qualifier) {
+        public Builder qualifier(@Nullable Output<String> qualifier) {
             $.qualifier = qualifier;
             return this;
         }
@@ -107,7 +108,7 @@ public final class GetFunctionUrlArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder qualifier(@Nullable String qualifier) {
+        public Builder qualifier(String qualifier) {
             return qualifier(Output.of(qualifier));
         }
 

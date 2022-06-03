@@ -5,10 +5,11 @@ package com.pulumi.oci.ApmSynthetics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ApmSynthetics.inputs.GetScriptsFilter;
+import com.pulumi.oci.ApmSynthetics.inputs.GetScriptsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentType")
-    private Output</* @Nullable */ String> contentType;
+    private @Nullable Output<String> contentType;
 
     /**
      * @return A filter to return only resources that match the content type given.
      * 
      */
-    public Output</* @Nullable */ String> contentType() {
-        return this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetScriptsFilter>> filters;
+    private @Nullable Output<List<GetScriptsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetScriptsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetScriptsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetScriptsArgs() {}
@@ -122,7 +123,7 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contentType(Output</* @Nullable */ String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
@@ -133,7 +134,7 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contentType(@Nullable String contentType) {
+        public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
@@ -143,7 +144,7 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -154,20 +155,20 @@ public final class GetScriptsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetScriptsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetScriptsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetScriptsFilter> filters) {
+        public Builder filters(List<GetScriptsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetScriptsFilter... filters) {
+        public Builder filters(GetScriptsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

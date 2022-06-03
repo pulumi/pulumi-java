@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -53,7 +54,7 @@ public final class GetEnterpriseDatabaseArgs extends com.pulumi.resources.Invoke
      */
     @Deprecated /* This field is no longer used and will be removed in the next major version of the Azure Provider */
     @Import(name="resourceGroupName")
-    private Output</* @Nullable */ String> resourceGroupName;
+    private @Nullable Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group the Redis Enterprise Database instance is located in.
@@ -63,8 +64,8 @@ public final class GetEnterpriseDatabaseArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Deprecated /* This field is no longer used and will be removed in the next major version of the Azure Provider */
-    public Output</* @Nullable */ String> resourceGroupName() {
-        return this.resourceGroupName;
+    public Optional<Output<String>> resourceGroupName() {
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     private GetEnterpriseDatabaseArgs() {}
@@ -145,7 +146,7 @@ public final class GetEnterpriseDatabaseArgs extends com.pulumi.resources.Invoke
          * 
          */
         @Deprecated /* This field is no longer used and will be removed in the next major version of the Azure Provider */
-        public Builder resourceGroupName(Output</* @Nullable */ String> resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetEnterpriseDatabaseArgs extends com.pulumi.resources.Invoke
          * 
          */
         @Deprecated /* This field is no longer used and will be removed in the next major version of the Azure Provider */
-        public Builder resourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 

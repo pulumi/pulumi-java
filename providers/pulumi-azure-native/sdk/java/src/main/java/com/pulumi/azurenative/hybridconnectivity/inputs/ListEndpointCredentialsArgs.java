@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="expiresin")
-    private Output</* @Nullable */ Integer> expiresin;
+    private @Nullable Output<Integer> expiresin;
 
     /**
      * @return The is how long the endpoint access token is valid (in seconds).
      * 
      */
-    public Output</* @Nullable */ Integer> expiresin() {
-        return this.expiresin;
+    public Optional<Output<Integer>> expiresin() {
+        return Optional.ofNullable(this.expiresin);
     }
 
     /**
@@ -113,7 +114,7 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder expiresin(Output</* @Nullable */ Integer> expiresin) {
+        public Builder expiresin(@Nullable Output<Integer> expiresin) {
             $.expiresin = expiresin;
             return this;
         }
@@ -124,7 +125,7 @@ public final class ListEndpointCredentialsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder expiresin(@Nullable Integer expiresin) {
+        public Builder expiresin(Integer expiresin) {
             return expiresin(Output.of(expiresin));
         }
 

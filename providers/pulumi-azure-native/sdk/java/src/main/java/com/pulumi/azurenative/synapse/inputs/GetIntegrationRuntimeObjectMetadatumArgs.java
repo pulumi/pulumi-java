@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="metadataPath")
-    private Output</* @Nullable */ String> metadataPath;
+    private @Nullable Output<String> metadataPath;
 
     /**
      * @return Metadata path.
      * 
      */
-    public Output</* @Nullable */ String> metadataPath() {
-        return this.metadataPath;
+    public Optional<Output<String>> metadataPath() {
+        return Optional.ofNullable(this.metadataPath);
     }
 
     /**
@@ -128,7 +129,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder metadataPath(Output</* @Nullable */ String> metadataPath) {
+        public Builder metadataPath(@Nullable Output<String> metadataPath) {
             $.metadataPath = metadataPath;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder metadataPath(@Nullable String metadataPath) {
+        public Builder metadataPath(String metadataPath) {
             return metadataPath(Output.of(metadataPath));
         }
 

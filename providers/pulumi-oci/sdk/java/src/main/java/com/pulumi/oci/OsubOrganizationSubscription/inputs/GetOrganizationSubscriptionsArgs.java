@@ -5,10 +5,11 @@ package com.pulumi.oci.OsubOrganizationSubscription.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OsubOrganizationSubscription.inputs.GetOrganizationSubscriptionsFilter;
+import com.pulumi.oci.OsubOrganizationSubscription.inputs.GetOrganizationSubscriptionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetOrganizationSubscriptionsArgs extends com.pulumi.resources
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetOrganizationSubscriptionsFilter>> filters;
+    private @Nullable Output<List<GetOrganizationSubscriptionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetOrganizationSubscriptionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetOrganizationSubscriptionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetOrganizationSubscriptionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="xOneOriginRegion")
-    private Output</* @Nullable */ String> xOneOriginRegion;
+    private @Nullable Output<String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Output</* @Nullable */ String> xOneOriginRegion() {
-        return this.xOneOriginRegion;
+    public Optional<Output<String>> xOneOriginRegion() {
+        return Optional.ofNullable(this.xOneOriginRegion);
     }
 
     private GetOrganizationSubscriptionsArgs() {}
@@ -116,16 +117,16 @@ public final class GetOrganizationSubscriptionsArgs extends com.pulumi.resources
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetOrganizationSubscriptionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetOrganizationSubscriptionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetOrganizationSubscriptionsFilter> filters) {
+        public Builder filters(List<GetOrganizationSubscriptionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetOrganizationSubscriptionsFilter... filters) {
+        public Builder filters(GetOrganizationSubscriptionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -156,7 +157,7 @@ public final class GetOrganizationSubscriptionsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
+        public Builder xOneOriginRegion(@Nullable Output<String> xOneOriginRegion) {
             $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetOrganizationSubscriptionsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
+        public Builder xOneOriginRegion(String xOneOriginRegion) {
             return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 

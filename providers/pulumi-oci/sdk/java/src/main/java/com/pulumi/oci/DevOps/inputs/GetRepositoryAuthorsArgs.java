@@ -5,10 +5,11 @@ package com.pulumi.oci.DevOps.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DevOps.inputs.GetRepositoryAuthorsFilter;
+import com.pulumi.oci.DevOps.inputs.GetRepositoryAuthorsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetRepositoryAuthorsArgs extends com.pulumi.resources.InvokeA
     public static final GetRepositoryAuthorsArgs Empty = new GetRepositoryAuthorsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetRepositoryAuthorsFilter>> filters;
+    private @Nullable Output<List<GetRepositoryAuthorsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetRepositoryAuthorsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetRepositoryAuthorsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -28,14 +29,14 @@ public final class GetRepositoryAuthorsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="refName")
-    private Output</* @Nullable */ String> refName;
+    private @Nullable Output<String> refName;
 
     /**
      * @return A filter to return only resources that match the given reference name.
      * 
      */
-    public Output</* @Nullable */ String> refName() {
-        return this.refName;
+    public Optional<Output<String>> refName() {
+        return Optional.ofNullable(this.refName);
     }
 
     /**
@@ -79,16 +80,16 @@ public final class GetRepositoryAuthorsArgs extends com.pulumi.resources.InvokeA
             $ = new GetRepositoryAuthorsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetRepositoryAuthorsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetRepositoryAuthorsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRepositoryAuthorsFilter> filters) {
+        public Builder filters(List<GetRepositoryAuthorsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetRepositoryAuthorsFilter... filters) {
+        public Builder filters(GetRepositoryAuthorsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -98,7 +99,7 @@ public final class GetRepositoryAuthorsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder refName(Output</* @Nullable */ String> refName) {
+        public Builder refName(@Nullable Output<String> refName) {
             $.refName = refName;
             return this;
         }
@@ -109,7 +110,7 @@ public final class GetRepositoryAuthorsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder refName(@Nullable String refName) {
+        public Builder refName(String refName) {
             return refName(Output.of(refName));
         }
 

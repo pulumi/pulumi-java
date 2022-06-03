@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetVbInstanceApplicationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="idcsOpenId")
-    private Output</* @Nullable */ String> idcsOpenId;
+    private @Nullable Output<String> idcsOpenId;
 
     /**
      * @return Encrypted IDCS Open ID token which allows access to Visual Builder REST apis
      * 
      */
-    public Output</* @Nullable */ String> idcsOpenId() {
-        return this.idcsOpenId;
+    public Optional<Output<String>> idcsOpenId() {
+        return Optional.ofNullable(this.idcsOpenId);
     }
 
     /**
@@ -75,7 +76,7 @@ public final class GetVbInstanceApplicationsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder idcsOpenId(Output</* @Nullable */ String> idcsOpenId) {
+        public Builder idcsOpenId(@Nullable Output<String> idcsOpenId) {
             $.idcsOpenId = idcsOpenId;
             return this;
         }
@@ -86,7 +87,7 @@ public final class GetVbInstanceApplicationsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder idcsOpenId(@Nullable String idcsOpenId) {
+        public Builder idcsOpenId(String idcsOpenId) {
             return idcsOpenId(Output.of(idcsOpenId));
         }
 

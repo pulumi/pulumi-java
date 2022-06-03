@@ -5,10 +5,11 @@ package com.pulumi.oci.StackMonitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.StackMonitoring.inputs.GetDiscoveryJobsFilter;
+import com.pulumi.oci.StackMonitoring.inputs.GetDiscoveryJobsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetDiscoveryJobsArgs extends com.pulumi.resources.InvokeArgs 
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDiscoveryJobsFilter>> filters;
+    private @Nullable Output<List<GetDiscoveryJobsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDiscoveryJobsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDiscoveryJobsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetDiscoveryJobsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only discovery jobs that match the entire resource name given.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetDiscoveryJobsArgs() {}
@@ -100,16 +101,16 @@ public final class GetDiscoveryJobsArgs extends com.pulumi.resources.InvokeArgs 
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDiscoveryJobsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDiscoveryJobsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDiscoveryJobsFilter> filters) {
+        public Builder filters(List<GetDiscoveryJobsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDiscoveryJobsFilter... filters) {
+        public Builder filters(GetDiscoveryJobsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -119,7 +120,7 @@ public final class GetDiscoveryJobsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -130,7 +131,7 @@ public final class GetDiscoveryJobsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

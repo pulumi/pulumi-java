@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseUserRolesFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseUserRolesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetManagedDatabaseUserRolesArgs extends com.pulumi.resources.
     public static final GetManagedDatabaseUserRolesArgs Empty = new GetManagedDatabaseUserRolesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagedDatabaseUserRolesFilter>> filters;
+    private @Nullable Output<List<GetManagedDatabaseUserRolesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagedDatabaseUserRolesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagedDatabaseUserRolesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetManagedDatabaseUserRolesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -95,16 +96,16 @@ public final class GetManagedDatabaseUserRolesArgs extends com.pulumi.resources.
             $ = new GetManagedDatabaseUserRolesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagedDatabaseUserRolesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedDatabaseUserRolesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabaseUserRolesFilter> filters) {
+        public Builder filters(List<GetManagedDatabaseUserRolesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagedDatabaseUserRolesFilter... filters) {
+        public Builder filters(GetManagedDatabaseUserRolesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetManagedDatabaseUserRolesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetManagedDatabaseUserRolesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -39,15 +40,15 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The ID of the project that the service account will be created in.
      * Defaults to the provider project configuration.
      * 
      */
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -55,14 +56,14 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicKeyType")
-    private Output</* @Nullable */ String> publicKeyType;
+    private @Nullable Output<String> publicKeyType;
 
     /**
      * @return The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
      * 
      */
-    public Output</* @Nullable */ String> publicKeyType() {
-        return this.publicKeyType;
+    public Optional<Output<String>> publicKeyType() {
+        return Optional.ofNullable(this.publicKeyType);
     }
 
     private GetAccountKeyArgs() {}
@@ -123,7 +124,7 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
@@ -135,7 +136,7 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
@@ -145,7 +146,7 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicKeyType(Output</* @Nullable */ String> publicKeyType) {
+        public Builder publicKeyType(@Nullable Output<String> publicKeyType) {
             $.publicKeyType = publicKeyType;
             return this;
         }
@@ -156,7 +157,7 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicKeyType(@Nullable String publicKeyType) {
+        public Builder publicKeyType(String publicKeyType) {
             return publicKeyType(Output.of(publicKeyType));
         }
 

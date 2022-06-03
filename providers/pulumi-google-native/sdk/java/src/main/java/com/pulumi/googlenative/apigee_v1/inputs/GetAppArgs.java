@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="entity")
-    private Output</* @Nullable */ String> entity;
+    private @Nullable Output<String> entity;
 
-    public Output</* @Nullable */ String> entity() {
-        return this.entity;
+    public Optional<Output<String>> entity() {
+        return Optional.ofNullable(this.entity);
     }
 
     @Import(name="organizationId", required=true)
@@ -43,10 +44,10 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="query")
-    private Output</* @Nullable */ String> query;
+    private @Nullable Output<String> query;
 
-    public Output</* @Nullable */ String> query() {
-        return this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
     private GetAppArgs() {}
@@ -95,12 +96,12 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
             return developerId(Output.of(developerId));
         }
 
-        public Builder entity(Output</* @Nullable */ String> entity) {
+        public Builder entity(@Nullable Output<String> entity) {
             $.entity = entity;
             return this;
         }
 
-        public Builder entity(@Nullable String entity) {
+        public Builder entity(String entity) {
             return entity(Output.of(entity));
         }
 
@@ -113,12 +114,12 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
             return organizationId(Output.of(organizationId));
         }
 
-        public Builder query(Output</* @Nullable */ String> query) {
+        public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
         }
 
-        public Builder query(@Nullable String query) {
+        public Builder query(String query) {
             return query(Output.of(query));
         }
 

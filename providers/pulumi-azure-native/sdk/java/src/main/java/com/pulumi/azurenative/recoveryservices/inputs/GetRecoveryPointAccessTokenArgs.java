@@ -3,12 +3,13 @@
 
 package com.pulumi.azurenative.recoveryservices.inputs;
 
-import com.pulumi.azurenative.recoveryservices.inputs.AADProperties;
+import com.pulumi.azurenative.recoveryservices.inputs.AADPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="eTag")
-    private Output</* @Nullable */ String> eTag;
+    private @Nullable Output<String> eTag;
 
     /**
      * @return Optional ETag.
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location")
-    private Output</* @Nullable */ String> location;
+    private @Nullable Output<String> location;
 
     /**
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -81,14 +82,14 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="properties")
-    private Output</* @Nullable */ AADProperties> properties;
+    private @Nullable Output<AADPropertiesArgs> properties;
 
     /**
      * @return AADPropertiesResource properties
      * 
      */
-    public Output</* @Nullable */ AADProperties> properties() {
-        return this.properties;
+    public Optional<Output<AADPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -141,14 +142,14 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -226,7 +227,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder eTag(Output</* @Nullable */ String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
         }
@@ -237,7 +238,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder eTag(@Nullable String eTag) {
+        public Builder eTag(String eTag) {
             return eTag(Output.of(eTag));
         }
 
@@ -268,7 +269,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder location(Output</* @Nullable */ String> location) {
+        public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
@@ -279,7 +280,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder location(@Nullable String location) {
+        public Builder location(String location) {
             return location(Output.of(location));
         }
 
@@ -289,7 +290,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder properties(Output</* @Nullable */ AADProperties> properties) {
+        public Builder properties(@Nullable Output<AADPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
@@ -300,7 +301,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder properties(@Nullable AADProperties properties) {
+        public Builder properties(AADPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
@@ -373,7 +374,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -384,7 +385,7 @@ public final class GetRecoveryPointAccessTokenArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

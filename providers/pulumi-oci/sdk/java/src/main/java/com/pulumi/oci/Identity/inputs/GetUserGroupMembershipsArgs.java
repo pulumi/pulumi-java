@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetUserGroupMembershipsFilter;
+import com.pulumi.oci.Identity.inputs.GetUserGroupMembershipsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetUserGroupMembershipsFilter>> filters;
+    private @Nullable Output<List<GetUserGroupMembershipsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetUserGroupMembershipsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetUserGroupMembershipsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="groupId")
-    private Output</* @Nullable */ String> groupId;
+    private @Nullable Output<String> groupId;
 
     /**
      * @return The OCID of the group.
      * 
      */
-    public Output</* @Nullable */ String> groupId() {
-        return this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="userId")
-    private Output</* @Nullable */ String> userId;
+    private @Nullable Output<String> userId;
 
     /**
      * @return The OCID of the user.
      * 
      */
-    public Output</* @Nullable */ String> userId() {
-        return this.userId;
+    public Optional<Output<String>> userId() {
+        return Optional.ofNullable(this.userId);
     }
 
     private GetUserGroupMembershipsArgs() {}
@@ -116,16 +117,16 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetUserGroupMembershipsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetUserGroupMembershipsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetUserGroupMembershipsFilter> filters) {
+        public Builder filters(List<GetUserGroupMembershipsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetUserGroupMembershipsFilter... filters) {
+        public Builder filters(GetUserGroupMembershipsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder groupId(Output</* @Nullable */ String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder groupId(@Nullable String groupId) {
+        public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
@@ -156,7 +157,7 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder userId(Output</* @Nullable */ String> userId) {
+        public Builder userId(@Nullable Output<String> userId) {
             $.userId = userId;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetUserGroupMembershipsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder userId(@Nullable String userId) {
+        public Builder userId(String userId) {
             return userId(Output.of(userId));
         }
 

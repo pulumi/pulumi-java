@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="insecureSkipVerify")
-    private Output</* @Nullable */ Boolean> insecureSkipVerify;
+    private @Nullable Output<Boolean> insecureSkipVerify;
 
     /**
      * @return If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> insecureSkipVerify() {
-        return this.insecureSkipVerify;
+    public Optional<Output<Boolean>> insecureSkipVerify() {
+        return Optional.ofNullable(this.insecureSkipVerify);
     }
 
     /**
@@ -76,7 +77,7 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder insecureSkipVerify(Output</* @Nullable */ Boolean> insecureSkipVerify) {
+        public Builder insecureSkipVerify(@Nullable Output<Boolean> insecureSkipVerify) {
             $.insecureSkipVerify = insecureSkipVerify;
             return this;
         }
@@ -87,7 +88,7 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder insecureSkipVerify(@Nullable Boolean insecureSkipVerify) {
+        public Builder insecureSkipVerify(Boolean insecureSkipVerify) {
             return insecureSkipVerify(Output.of(insecureSkipVerify));
         }
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetApiIssueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expandCommentsAttachments")
-    private Output</* @Nullable */ Boolean> expandCommentsAttachments;
+    private @Nullable Output<Boolean> expandCommentsAttachments;
 
     /**
      * @return Expand the comment attachments.
      * 
      */
-    public Output</* @Nullable */ Boolean> expandCommentsAttachments() {
-        return this.expandCommentsAttachments;
+    public Optional<Output<Boolean>> expandCommentsAttachments() {
+        return Optional.ofNullable(this.expandCommentsAttachments);
     }
 
     /**
@@ -145,7 +146,7 @@ public final class GetApiIssueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expandCommentsAttachments(Output</* @Nullable */ Boolean> expandCommentsAttachments) {
+        public Builder expandCommentsAttachments(@Nullable Output<Boolean> expandCommentsAttachments) {
             $.expandCommentsAttachments = expandCommentsAttachments;
             return this;
         }
@@ -156,7 +157,7 @@ public final class GetApiIssueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expandCommentsAttachments(@Nullable Boolean expandCommentsAttachments) {
+        public Builder expandCommentsAttachments(Boolean expandCommentsAttachments) {
             return expandCommentsAttachments(Output.of(expandCommentsAttachments));
         }
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetPolicyFragmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="format")
-    private Output</* @Nullable */ String> format;
+    private @Nullable Output<String> format;
 
     /**
      * @return Policy fragment content format.
      * 
      */
-    public Output</* @Nullable */ String> format() {
-        return this.format;
+    public Optional<Output<String>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -107,7 +108,7 @@ public final class GetPolicyFragmentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder format(Output</* @Nullable */ String> format) {
+        public Builder format(@Nullable Output<String> format) {
             $.format = format;
             return this;
         }
@@ -118,7 +119,7 @@ public final class GetPolicyFragmentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder format(@Nullable String format) {
+        public Builder format(String format) {
             return format(Output.of(format));
         }
 

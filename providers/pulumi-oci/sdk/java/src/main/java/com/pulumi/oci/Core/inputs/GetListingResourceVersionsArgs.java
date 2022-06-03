@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetListingResourceVersionsFilter;
+import com.pulumi.oci.Core.inputs.GetListingResourceVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetListingResourceVersionsArgs extends com.pulumi.resources.I
     public static final GetListingResourceVersionsArgs Empty = new GetListingResourceVersionsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetListingResourceVersionsFilter>> filters;
+    private @Nullable Output<List<GetListingResourceVersionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetListingResourceVersionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetListingResourceVersionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     @Import(name="listingId", required=true)
@@ -55,16 +56,16 @@ public final class GetListingResourceVersionsArgs extends com.pulumi.resources.I
             $ = new GetListingResourceVersionsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetListingResourceVersionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetListingResourceVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetListingResourceVersionsFilter> filters) {
+        public Builder filters(List<GetListingResourceVersionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetListingResourceVersionsFilter... filters) {
+        public Builder filters(GetListingResourceVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

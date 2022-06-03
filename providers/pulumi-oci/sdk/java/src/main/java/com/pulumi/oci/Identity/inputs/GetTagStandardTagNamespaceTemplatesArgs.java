@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetTagStandardTagNamespaceTemplatesFilter;
+import com.pulumi.oci.Identity.inputs.GetTagStandardTagNamespaceTemplatesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetTagStandardTagNamespaceTemplatesArgs extends com.pulumi.re
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetTagStandardTagNamespaceTemplatesFilter>> filters;
+    private @Nullable Output<List<GetTagStandardTagNamespaceTemplatesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetTagStandardTagNamespaceTemplatesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetTagStandardTagNamespaceTemplatesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetTagStandardTagNamespaceTemplatesArgs() {}
@@ -84,16 +85,16 @@ public final class GetTagStandardTagNamespaceTemplatesArgs extends com.pulumi.re
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetTagStandardTagNamespaceTemplatesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetTagStandardTagNamespaceTemplatesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetTagStandardTagNamespaceTemplatesFilter> filters) {
+        public Builder filters(List<GetTagStandardTagNamespaceTemplatesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetTagStandardTagNamespaceTemplatesFilter... filters) {
+        public Builder filters(GetTagStandardTagNamespaceTemplatesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Analytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Analytics.inputs.GetAnalyticsInstancesFilter;
+import com.pulumi.oci.Analytics.inputs.GetAnalyticsInstancesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="capacityType")
-    private Output</* @Nullable */ String> capacityType;
+    private @Nullable Output<String> capacityType;
 
     /**
      * @return A filter to only return resources matching the capacity type enum. Values are case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> capacityType() {
-        return this.capacityType;
+    public Optional<Output<String>> capacityType() {
+        return Optional.ofNullable(this.capacityType);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="featureSet")
-    private Output</* @Nullable */ String> featureSet;
+    private @Nullable Output<String> featureSet;
 
     /**
      * @return A filter to only return resources matching the feature set. Values are case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> featureSet() {
-        return this.featureSet;
+    public Optional<Output<String>> featureSet() {
+        return Optional.ofNullable(this.featureSet);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAnalyticsInstancesFilter>> filters;
+    private @Nullable Output<List<GetAnalyticsInstancesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAnalyticsInstancesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAnalyticsInstancesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the given name exactly.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources matching the lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetAnalyticsInstancesArgs() {}
@@ -133,7 +134,7 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder capacityType(Output</* @Nullable */ String> capacityType) {
+        public Builder capacityType(@Nullable Output<String> capacityType) {
             $.capacityType = capacityType;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder capacityType(@Nullable String capacityType) {
+        public Builder capacityType(String capacityType) {
             return capacityType(Output.of(capacityType));
         }
 
@@ -175,7 +176,7 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder featureSet(Output</* @Nullable */ String> featureSet) {
+        public Builder featureSet(@Nullable Output<String> featureSet) {
             $.featureSet = featureSet;
             return this;
         }
@@ -186,20 +187,20 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder featureSet(@Nullable String featureSet) {
+        public Builder featureSet(String featureSet) {
             return featureSet(Output.of(featureSet));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAnalyticsInstancesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAnalyticsInstancesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAnalyticsInstancesFilter> filters) {
+        public Builder filters(List<GetAnalyticsInstancesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAnalyticsInstancesFilter... filters) {
+        public Builder filters(GetAnalyticsInstancesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -209,7 +210,7 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -230,7 +231,7 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetAnalyticsInstancesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetVmClusterUpdatesFilter;
+import com.pulumi.oci.Database.inputs.GetVmClusterUpdatesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetVmClusterUpdatesArgs extends com.pulumi.resources.InvokeAr
     public static final GetVmClusterUpdatesArgs Empty = new GetVmClusterUpdatesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetVmClusterUpdatesFilter>> filters;
+    private @Nullable Output<List<GetVmClusterUpdatesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetVmClusterUpdatesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetVmClusterUpdatesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -28,14 +29,14 @@ public final class GetVmClusterUpdatesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetVmClusterUpdatesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="updateType")
-    private Output</* @Nullable */ String> updateType;
+    private @Nullable Output<String> updateType;
 
     /**
      * @return A filter to return only resources that match the given update type exactly.
      * 
      */
-    public Output</* @Nullable */ String> updateType() {
-        return this.updateType;
+    public Optional<Output<String>> updateType() {
+        return Optional.ofNullable(this.updateType);
     }
 
     /**
@@ -95,16 +96,16 @@ public final class GetVmClusterUpdatesArgs extends com.pulumi.resources.InvokeAr
             $ = new GetVmClusterUpdatesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetVmClusterUpdatesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetVmClusterUpdatesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetVmClusterUpdatesFilter> filters) {
+        public Builder filters(List<GetVmClusterUpdatesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetVmClusterUpdatesFilter... filters) {
+        public Builder filters(GetVmClusterUpdatesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -114,7 +115,7 @@ public final class GetVmClusterUpdatesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -125,7 +126,7 @@ public final class GetVmClusterUpdatesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -135,7 +136,7 @@ public final class GetVmClusterUpdatesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder updateType(Output</* @Nullable */ String> updateType) {
+        public Builder updateType(@Nullable Output<String> updateType) {
             $.updateType = updateType;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetVmClusterUpdatesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder updateType(@Nullable String updateType) {
+        public Builder updateType(String updateType) {
             return updateType(Output.of(updateType));
         }
 

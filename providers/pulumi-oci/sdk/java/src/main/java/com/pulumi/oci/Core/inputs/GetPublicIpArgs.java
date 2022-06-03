@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The OCID of the public IP.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAddress")
-    private Output</* @Nullable */ String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
     /**
      * @return Gets the public IP based on the public IP address (for example, 129.146.2.1).
      * 
      */
-    public Output</* @Nullable */ String> ipAddress() {
-        return this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateIpId")
-    private Output</* @Nullable */ String> privateIpId;
+    private @Nullable Output<String> privateIpId;
 
     /**
      * @return Gets the public IP assigned to the specified private IP. You must specify the OCID of the private IP. If no public IP is assigned, a 404 is returned.
      * 
      */
-    public Output</* @Nullable */ String> privateIpId() {
-        return this.privateIpId;
+    public Optional<Output<String>> privateIpId() {
+        return Optional.ofNullable(this.privateIpId);
     }
 
     private GetPublicIpArgs() {}
@@ -91,7 +92,7 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -112,7 +113,7 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipAddress(Output</* @Nullable */ String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
@@ -133,7 +134,7 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder privateIpId(Output</* @Nullable */ String> privateIpId) {
+        public Builder privateIpId(@Nullable Output<String> privateIpId) {
             $.privateIpId = privateIpId;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetPublicIpArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder privateIpId(@Nullable String privateIpId) {
+        public Builder privateIpId(String privateIpId) {
             return privateIpId(Output.of(privateIpId));
         }
 

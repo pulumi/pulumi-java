@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetRepositoryObjectContentArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="filePath")
-    private Output</* @Nullable */ String> filePath;
+    private @Nullable Output<String> filePath;
 
     /**
      * @return A filter to return only commits that affect any of the specified paths.
      * 
      */
-    public Output</* @Nullable */ String> filePath() {
-        return this.filePath;
+    public Optional<Output<String>> filePath() {
+        return Optional.ofNullable(this.filePath);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GetRepositoryObjectContentArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder filePath(Output</* @Nullable */ String> filePath) {
+        public Builder filePath(@Nullable Output<String> filePath) {
             $.filePath = filePath;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetRepositoryObjectContentArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder filePath(@Nullable String filePath) {
+        public Builder filePath(String filePath) {
             return filePath(Output.of(filePath));
         }
 

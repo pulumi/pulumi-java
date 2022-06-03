@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetIpsecConnectionTunnelsFilter;
+import com.pulumi.oci.Core.inputs.GetIpsecConnectionTunnelsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetIpsecConnectionTunnelsArgs extends com.pulumi.resources.In
     public static final GetIpsecConnectionTunnelsArgs Empty = new GetIpsecConnectionTunnelsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetIpsecConnectionTunnelsFilter>> filters;
+    private @Nullable Output<List<GetIpsecConnectionTunnelsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetIpsecConnectionTunnelsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetIpsecConnectionTunnelsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetIpsecConnectionTunnelsArgs extends com.pulumi.resources.In
             $ = new GetIpsecConnectionTunnelsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetIpsecConnectionTunnelsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetIpsecConnectionTunnelsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetIpsecConnectionTunnelsFilter> filters) {
+        public Builder filters(List<GetIpsecConnectionTunnelsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetIpsecConnectionTunnelsFilter... filters) {
+        public Builder filters(GetIpsecConnectionTunnelsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

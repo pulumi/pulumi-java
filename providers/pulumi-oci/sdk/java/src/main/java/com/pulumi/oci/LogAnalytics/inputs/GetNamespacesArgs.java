@@ -5,10 +5,11 @@ package com.pulumi.oci.LogAnalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.LogAnalytics.inputs.GetNamespacesFilter;
+import com.pulumi.oci.LogAnalytics.inputs.GetNamespacesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetNamespacesArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetNamespacesFilter>> filters;
+    private @Nullable Output<List<GetNamespacesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetNamespacesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetNamespacesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetNamespacesArgs() {}
@@ -84,16 +85,16 @@ public final class GetNamespacesArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetNamespacesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetNamespacesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetNamespacesFilter> filters) {
+        public Builder filters(List<GetNamespacesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetNamespacesFilter... filters) {
+        public Builder filters(GetNamespacesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

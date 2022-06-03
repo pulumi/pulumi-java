@@ -9,6 +9,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="keyType")
-    private Output</* @Nullable */ Either<String,KeyType>> keyType;
+    private @Nullable Output<Either<String,KeyType>> keyType;
 
     /**
      * @return The key type.
      * 
      */
-    public Output</* @Nullable */ Either<String,KeyType>> keyType() {
-        return this.keyType;
+    public Optional<Output<Either<String,KeyType>>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="notAfter")
-    private Output</* @Nullable */ String> notAfter;
+    private @Nullable Output<String> notAfter;
 
     /**
      * @return The expiry time.
      * 
      */
-    public Output</* @Nullable */ String> notAfter() {
-        return this.notAfter;
+    public Optional<Output<String>> notAfter() {
+        return Optional.ofNullable(this.notAfter);
     }
 
     /**
@@ -109,7 +110,7 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder keyType(Output</* @Nullable */ Either<String,KeyType>> keyType) {
+        public Builder keyType(@Nullable Output<Either<String,KeyType>> keyType) {
             $.keyType = keyType;
             return this;
         }
@@ -120,7 +121,7 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder keyType(@Nullable Either<String,KeyType> keyType) {
+        public Builder keyType(Either<String,KeyType> keyType) {
             return keyType(Output.of(keyType));
         }
 
@@ -150,7 +151,7 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder notAfter(Output</* @Nullable */ String> notAfter) {
+        public Builder notAfter(@Nullable Output<String> notAfter) {
             $.notAfter = notAfter;
             return this;
         }
@@ -161,7 +162,7 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder notAfter(@Nullable String notAfter) {
+        public Builder notAfter(String notAfter) {
             return notAfter(Output.of(notAfter));
         }
 

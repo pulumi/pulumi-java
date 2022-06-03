@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,7 +38,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="contentMd5")
-    private Output</* @Nullable */ String> contentMd5;
+    private @Nullable Output<String> contentMd5;
 
     /**
      * @return The [MD5 digest](https://cloud.google.com/storage/docs/hashes-etags#_MD5) value in Base64.
@@ -45,8 +46,8 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * If you provide this in the datasource, the client (e.g. browser, curl) must provide the `Content-MD5` HTTP header with this same value in its request.
      * 
      */
-    public Output</* @Nullable */ String> contentMd5() {
-        return this.contentMd5;
+    public Optional<Output<String>> contentMd5() {
+        return Optional.ofNullable(this.contentMd5);
     }
 
     /**
@@ -54,14 +55,14 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="contentType")
-    private Output</* @Nullable */ String> contentType;
+    private @Nullable Output<String> contentType;
 
     /**
      * @return If you specify this in the datasource, the client must provide the `Content-Type` HTTP header with the same value in its request.
      * 
      */
-    public Output</* @Nullable */ String> contentType() {
-        return this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -70,15 +71,15 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="credentials")
-    private Output</* @Nullable */ String> credentials;
+    private @Nullable Output<String> credentials;
 
     /**
      * @return What Google service account credentials json should be used to sign the URL.
      * This data source checks the following locations for credentials, in order of preference: data source `credentials` attribute, provider `credentials` attribute and finally the GOOGLE_APPLICATION_CREDENTIALS environment variable.
      * 
      */
-    public Output</* @Nullable */ String> credentials() {
-        return this.credentials;
+    public Optional<Output<String>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -87,15 +88,15 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="duration")
-    private Output</* @Nullable */ String> duration;
+    private @Nullable Output<String> duration;
 
     /**
      * @return For how long shall the signed URL be valid (defaults to 1 hour - i.e. `1h`).
      * See [here](https://golang.org/pkg/time/#ParseDuration) for info on valid duration formats.
      * 
      */
-    public Output</* @Nullable */ String> duration() {
-        return this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -104,15 +105,15 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="extensionHeaders")
-    private Output</* @Nullable */ Map<String,String>> extensionHeaders;
+    private @Nullable Output<Map<String,String>> extensionHeaders;
 
     /**
      * @return As needed. The server checks to make sure that the client provides matching values in requests using the signed URL.
      * Any header starting with `x-goog-` is accepted but see the [Google Docs](https://cloud.google.com/storage/docs/xml-api/reference-headers) for list of headers that are supported by Google.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> extensionHeaders() {
-        return this.extensionHeaders;
+    public Optional<Output<Map<String,String>>> extensionHeaders() {
+        return Optional.ofNullable(this.extensionHeaders);
     }
 
     /**
@@ -120,14 +121,14 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="httpMethod")
-    private Output</* @Nullable */ String> httpMethod;
+    private @Nullable Output<String> httpMethod;
 
     /**
      * @return What HTTP Method will the signed URL allow (defaults to `GET`)
      * 
      */
-    public Output</* @Nullable */ String> httpMethod() {
-        return this.httpMethod;
+    public Optional<Output<String>> httpMethod() {
+        return Optional.ofNullable(this.httpMethod);
     }
 
     /**
@@ -205,7 +206,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder contentMd5(Output</* @Nullable */ String> contentMd5) {
+        public Builder contentMd5(@Nullable Output<String> contentMd5) {
             $.contentMd5 = contentMd5;
             return this;
         }
@@ -218,7 +219,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder contentMd5(@Nullable String contentMd5) {
+        public Builder contentMd5(String contentMd5) {
             return contentMd5(Output.of(contentMd5));
         }
 
@@ -228,7 +229,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder contentType(Output</* @Nullable */ String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
@@ -239,7 +240,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder contentType(@Nullable String contentType) {
+        public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
@@ -250,7 +251,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder credentials(Output</* @Nullable */ String> credentials) {
+        public Builder credentials(@Nullable Output<String> credentials) {
             $.credentials = credentials;
             return this;
         }
@@ -262,7 +263,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder credentials(@Nullable String credentials) {
+        public Builder credentials(String credentials) {
             return credentials(Output.of(credentials));
         }
 
@@ -273,7 +274,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder duration(Output</* @Nullable */ String> duration) {
+        public Builder duration(@Nullable Output<String> duration) {
             $.duration = duration;
             return this;
         }
@@ -285,7 +286,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder duration(@Nullable String duration) {
+        public Builder duration(String duration) {
             return duration(Output.of(duration));
         }
 
@@ -296,7 +297,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder extensionHeaders(Output</* @Nullable */ Map<String,String>> extensionHeaders) {
+        public Builder extensionHeaders(@Nullable Output<Map<String,String>> extensionHeaders) {
             $.extensionHeaders = extensionHeaders;
             return this;
         }
@@ -308,7 +309,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder extensionHeaders(@Nullable Map<String,String> extensionHeaders) {
+        public Builder extensionHeaders(Map<String,String> extensionHeaders) {
             return extensionHeaders(Output.of(extensionHeaders));
         }
 
@@ -318,7 +319,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder httpMethod(Output</* @Nullable */ String> httpMethod) {
+        public Builder httpMethod(@Nullable Output<String> httpMethod) {
             $.httpMethod = httpMethod;
             return this;
         }
@@ -329,7 +330,7 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder httpMethod(@Nullable String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             return httpMethod(Output.of(httpMethod));
         }
 

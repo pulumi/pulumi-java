@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetComputeCapacityReservationInstancesFilter;
+import com.pulumi.oci.Core.inputs.GetComputeCapacityReservationInstancesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
      * 
      */
     @Import(name="compartmentId")
-    private Output</* @Nullable */ String> compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Output</* @Nullable */ String> compartmentId() {
-        return this.compartmentId;
+    public Optional<Output<String>> compartmentId() {
+        return Optional.ofNullable(this.compartmentId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetComputeCapacityReservationInstancesFilter>> filters;
+    private @Nullable Output<List<GetComputeCapacityReservationInstancesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetComputeCapacityReservationInstancesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetComputeCapacityReservationInstancesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetComputeCapacityReservationInstancesArgs() {}
@@ -101,7 +102,7 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -112,7 +113,7 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -143,7 +144,7 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
@@ -154,20 +155,20 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(String compartmentId) {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetComputeCapacityReservationInstancesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetComputeCapacityReservationInstancesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetComputeCapacityReservationInstancesFilter> filters) {
+        public Builder filters(List<GetComputeCapacityReservationInstancesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetComputeCapacityReservationInstancesFilter... filters) {
+        public Builder filters(GetComputeCapacityReservationInstancesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

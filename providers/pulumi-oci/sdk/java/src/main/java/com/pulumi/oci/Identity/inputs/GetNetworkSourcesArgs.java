@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetNetworkSourcesFilter;
+import com.pulumi.oci.Identity.inputs.GetNetworkSourcesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetNetworkSourcesArgs extends com.pulumi.resources.InvokeArgs
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetNetworkSourcesFilter>> filters;
+    private @Nullable Output<List<GetNetworkSourcesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetNetworkSourcesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetNetworkSourcesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetNetworkSourcesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to only return resources that match the given name exactly.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetNetworkSourcesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetNetworkSourcesArgs() {}
@@ -116,16 +117,16 @@ public final class GetNetworkSourcesArgs extends com.pulumi.resources.InvokeArgs
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetNetworkSourcesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetNetworkSourcesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetNetworkSourcesFilter> filters) {
+        public Builder filters(List<GetNetworkSourcesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetNetworkSourcesFilter... filters) {
+        public Builder filters(GetNetworkSourcesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetNetworkSourcesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetNetworkSourcesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -156,7 +157,7 @@ public final class GetNetworkSourcesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetNetworkSourcesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

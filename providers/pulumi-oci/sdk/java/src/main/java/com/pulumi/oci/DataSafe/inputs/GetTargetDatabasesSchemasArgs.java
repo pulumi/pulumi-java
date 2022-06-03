@@ -5,11 +5,12 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetTargetDatabasesSchemasFilter;
+import com.pulumi.oci.DataSafe.inputs.GetTargetDatabasesSchemasFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +19,10 @@ public final class GetTargetDatabasesSchemasArgs extends com.pulumi.resources.In
     public static final GetTargetDatabasesSchemasArgs Empty = new GetTargetDatabasesSchemasArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetTargetDatabasesSchemasFilter>> filters;
+    private @Nullable Output<List<GetTargetDatabasesSchemasFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetTargetDatabasesSchemasFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetTargetDatabasesSchemasFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -29,14 +30,14 @@ public final class GetTargetDatabasesSchemasArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="isOracleMaintained")
-    private Output</* @Nullable */ Boolean> isOracleMaintained;
+    private @Nullable Output<Boolean> isOracleMaintained;
 
     /**
      * @return A filter to return only items related to specific type of schema.
      * 
      */
-    public Output</* @Nullable */ Boolean> isOracleMaintained() {
-        return this.isOracleMaintained;
+    public Optional<Output<Boolean>> isOracleMaintained() {
+        return Optional.ofNullable(this.isOracleMaintained);
     }
 
     /**
@@ -44,14 +45,14 @@ public final class GetTargetDatabasesSchemasArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="schemaNameContains")
-    private Output</* @Nullable */ String> schemaNameContains;
+    private @Nullable Output<String> schemaNameContains;
 
     /**
      * @return A filter to return only items if schema name contains a specific string.
      * 
      */
-    public Output</* @Nullable */ String> schemaNameContains() {
-        return this.schemaNameContains;
+    public Optional<Output<String>> schemaNameContains() {
+        return Optional.ofNullable(this.schemaNameContains);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetTargetDatabasesSchemasArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="schemaNames")
-    private Output</* @Nullable */ List<String>> schemaNames;
+    private @Nullable Output<List<String>> schemaNames;
 
     /**
      * @return A filter to return only items related to specific schema name.
      * 
      */
-    public Output</* @Nullable */ List<String>> schemaNames() {
-        return this.schemaNames;
+    public Optional<Output<List<String>>> schemaNames() {
+        return Optional.ofNullable(this.schemaNames);
     }
 
     /**
@@ -112,16 +113,16 @@ public final class GetTargetDatabasesSchemasArgs extends com.pulumi.resources.In
             $ = new GetTargetDatabasesSchemasArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetTargetDatabasesSchemasFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetTargetDatabasesSchemasFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetTargetDatabasesSchemasFilter> filters) {
+        public Builder filters(List<GetTargetDatabasesSchemasFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetTargetDatabasesSchemasFilter... filters) {
+        public Builder filters(GetTargetDatabasesSchemasFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -131,7 +132,7 @@ public final class GetTargetDatabasesSchemasArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder isOracleMaintained(Output</* @Nullable */ Boolean> isOracleMaintained) {
+        public Builder isOracleMaintained(@Nullable Output<Boolean> isOracleMaintained) {
             $.isOracleMaintained = isOracleMaintained;
             return this;
         }
@@ -142,7 +143,7 @@ public final class GetTargetDatabasesSchemasArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder isOracleMaintained(@Nullable Boolean isOracleMaintained) {
+        public Builder isOracleMaintained(Boolean isOracleMaintained) {
             return isOracleMaintained(Output.of(isOracleMaintained));
         }
 
@@ -152,7 +153,7 @@ public final class GetTargetDatabasesSchemasArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder schemaNameContains(Output</* @Nullable */ String> schemaNameContains) {
+        public Builder schemaNameContains(@Nullable Output<String> schemaNameContains) {
             $.schemaNameContains = schemaNameContains;
             return this;
         }
@@ -163,7 +164,7 @@ public final class GetTargetDatabasesSchemasArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder schemaNameContains(@Nullable String schemaNameContains) {
+        public Builder schemaNameContains(String schemaNameContains) {
             return schemaNameContains(Output.of(schemaNameContains));
         }
 
@@ -173,7 +174,7 @@ public final class GetTargetDatabasesSchemasArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder schemaNames(Output</* @Nullable */ List<String>> schemaNames) {
+        public Builder schemaNames(@Nullable Output<List<String>> schemaNames) {
             $.schemaNames = schemaNames;
             return this;
         }
@@ -184,7 +185,7 @@ public final class GetTargetDatabasesSchemasArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder schemaNames(@Nullable List<String> schemaNames) {
+        public Builder schemaNames(List<String> schemaNames) {
             return schemaNames(Output.of(schemaNames));
         }
 

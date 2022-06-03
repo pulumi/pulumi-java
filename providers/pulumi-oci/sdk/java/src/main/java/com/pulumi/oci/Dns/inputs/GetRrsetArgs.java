@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private Output</* @Nullable */ String> compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment the resource belongs to.
      * 
      */
-    public Output</* @Nullable */ String> compartmentId() {
-        return this.compartmentId;
+    public Optional<Output<String>> compartmentId() {
+        return Optional.ofNullable(this.compartmentId);
     }
 
     /**
@@ -65,15 +66,15 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope")
-    private Output</* @Nullable */ String> scope;
+    private @Nullable Output<String> scope;
 
     /**
      * @return Specifies to operate only on resources that have a matching DNS scope.
      * This value will be null for zones in the global DNS and `PRIVATE` when listing private Rrsets.
      * 
      */
-    public Output</* @Nullable */ String> scope() {
-        return this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -81,14 +82,14 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="viewId")
-    private Output</* @Nullable */ String> viewId;
+    private @Nullable Output<String> viewId;
 
     /**
      * @return The OCID of the view the resource is associated with.
      * 
      */
-    public Output</* @Nullable */ String> viewId() {
-        return this.viewId;
+    public Optional<Output<String>> viewId() {
+        return Optional.ofNullable(this.viewId);
     }
 
     /**
@@ -111,14 +112,14 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zoneVersion")
-    private Output</* @Nullable */ String> zoneVersion;
+    private @Nullable Output<String> zoneVersion;
 
     /**
      * @return The version of the zone for which data is requested.
      * 
      */
-    public Output</* @Nullable */ String> zoneVersion() {
-        return this.zoneVersion;
+    public Optional<Output<String>> zoneVersion() {
+        return Optional.ofNullable(this.zoneVersion);
     }
 
     private GetRrsetArgs() {}
@@ -157,7 +158,7 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
@@ -168,7 +169,7 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(String compartmentId) {
             return compartmentId(Output.of(compartmentId));
         }
 
@@ -221,7 +222,7 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder scope(Output</* @Nullable */ String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
@@ -233,7 +234,7 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder scope(@Nullable String scope) {
+        public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
@@ -243,7 +244,7 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder viewId(Output</* @Nullable */ String> viewId) {
+        public Builder viewId(@Nullable Output<String> viewId) {
             $.viewId = viewId;
             return this;
         }
@@ -254,7 +255,7 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder viewId(@Nullable String viewId) {
+        public Builder viewId(String viewId) {
             return viewId(Output.of(viewId));
         }
 
@@ -285,7 +286,7 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder zoneVersion(Output</* @Nullable */ String> zoneVersion) {
+        public Builder zoneVersion(@Nullable Output<String> zoneVersion) {
             $.zoneVersion = zoneVersion;
             return this;
         }
@@ -296,7 +297,7 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder zoneVersion(@Nullable String zoneVersion) {
+        public Builder zoneVersion(String zoneVersion) {
             return zoneVersion(Output.of(zoneVersion));
         }
 

@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="adminManaged")
-    private Output</* @Nullable */ Boolean> adminManaged;
+    private @Nullable Output<Boolean> adminManaged;
 
     /**
      * @return Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> adminManaged() {
-        return this.adminManaged;
+    public Optional<Output<Boolean>> adminManaged() {
+        return Optional.ofNullable(this.adminManaged);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeUnverified")
-    private Output</* @Nullable */ Boolean> includeUnverified;
+    private @Nullable Output<Boolean> includeUnverified;
 
     /**
      * @return Set to `true` if unverified Azure AD domains should be included. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeUnverified() {
-        return this.includeUnverified;
+    public Optional<Output<Boolean>> includeUnverified() {
+        return Optional.ofNullable(this.includeUnverified);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="onlyDefault")
-    private Output</* @Nullable */ Boolean> onlyDefault;
+    private @Nullable Output<Boolean> onlyDefault;
 
     /**
      * @return Set to `true` to only return the default domain.
      * 
      */
-    public Output</* @Nullable */ Boolean> onlyDefault() {
-        return this.onlyDefault;
+    public Optional<Output<Boolean>> onlyDefault() {
+        return Optional.ofNullable(this.onlyDefault);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="onlyInitial")
-    private Output</* @Nullable */ Boolean> onlyInitial;
+    private @Nullable Output<Boolean> onlyInitial;
 
     /**
      * @return Set to `true` to only return the initial domain, which is your primary Azure Active Directory tenant domain. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> onlyInitial() {
-        return this.onlyInitial;
+    public Optional<Output<Boolean>> onlyInitial() {
+        return Optional.ofNullable(this.onlyInitial);
     }
 
     /**
@@ -81,14 +82,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="onlyRoot")
-    private Output</* @Nullable */ Boolean> onlyRoot;
+    private @Nullable Output<Boolean> onlyRoot;
 
     /**
      * @return Set to `true` to only return verified root domains. Excludes subdomains and unverified domains.
      * 
      */
-    public Output</* @Nullable */ Boolean> onlyRoot() {
-        return this.onlyRoot;
+    public Optional<Output<Boolean>> onlyRoot() {
+        return Optional.ofNullable(this.onlyRoot);
     }
 
     /**
@@ -96,14 +97,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="supportsServices")
-    private Output</* @Nullable */ List<String>> supportsServices;
+    private @Nullable Output<List<String>> supportsServices;
 
     /**
      * @return A list of supported services that must be supported by a domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
      * 
      */
-    public Output</* @Nullable */ List<String>> supportsServices() {
-        return this.supportsServices;
+    public Optional<Output<List<String>>> supportsServices() {
+        return Optional.ofNullable(this.supportsServices);
     }
 
     private GetDomainsArgs() {}
@@ -141,7 +142,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder adminManaged(Output</* @Nullable */ Boolean> adminManaged) {
+        public Builder adminManaged(@Nullable Output<Boolean> adminManaged) {
             $.adminManaged = adminManaged;
             return this;
         }
@@ -152,7 +153,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder adminManaged(@Nullable Boolean adminManaged) {
+        public Builder adminManaged(Boolean adminManaged) {
             return adminManaged(Output.of(adminManaged));
         }
 
@@ -162,7 +163,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeUnverified(Output</* @Nullable */ Boolean> includeUnverified) {
+        public Builder includeUnverified(@Nullable Output<Boolean> includeUnverified) {
             $.includeUnverified = includeUnverified;
             return this;
         }
@@ -173,7 +174,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeUnverified(@Nullable Boolean includeUnverified) {
+        public Builder includeUnverified(Boolean includeUnverified) {
             return includeUnverified(Output.of(includeUnverified));
         }
 
@@ -183,7 +184,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder onlyDefault(Output</* @Nullable */ Boolean> onlyDefault) {
+        public Builder onlyDefault(@Nullable Output<Boolean> onlyDefault) {
             $.onlyDefault = onlyDefault;
             return this;
         }
@@ -194,7 +195,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder onlyDefault(@Nullable Boolean onlyDefault) {
+        public Builder onlyDefault(Boolean onlyDefault) {
             return onlyDefault(Output.of(onlyDefault));
         }
 
@@ -204,7 +205,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder onlyInitial(Output</* @Nullable */ Boolean> onlyInitial) {
+        public Builder onlyInitial(@Nullable Output<Boolean> onlyInitial) {
             $.onlyInitial = onlyInitial;
             return this;
         }
@@ -215,7 +216,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder onlyInitial(@Nullable Boolean onlyInitial) {
+        public Builder onlyInitial(Boolean onlyInitial) {
             return onlyInitial(Output.of(onlyInitial));
         }
 
@@ -225,7 +226,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder onlyRoot(Output</* @Nullable */ Boolean> onlyRoot) {
+        public Builder onlyRoot(@Nullable Output<Boolean> onlyRoot) {
             $.onlyRoot = onlyRoot;
             return this;
         }
@@ -236,7 +237,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder onlyRoot(@Nullable Boolean onlyRoot) {
+        public Builder onlyRoot(Boolean onlyRoot) {
             return onlyRoot(Output.of(onlyRoot));
         }
 
@@ -246,7 +247,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder supportsServices(Output</* @Nullable */ List<String>> supportsServices) {
+        public Builder supportsServices(@Nullable Output<List<String>> supportsServices) {
             $.supportsServices = supportsServices;
             return this;
         }
@@ -257,7 +258,7 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder supportsServices(@Nullable List<String> supportsServices) {
+        public Builder supportsServices(List<String> supportsServices) {
             return supportsServices(Output.of(supportsServices));
         }
 

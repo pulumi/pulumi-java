@@ -9,6 +9,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-    private Output</* @Nullable */ String> arn;
+    private @Nullable Output<String> arn;
 
     /**
      * @return ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
      * 
      */
-    public Output</* @Nullable */ String> arn() {
-        return this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancerArn")
-    private Output</* @Nullable */ String> loadBalancerArn;
+    private @Nullable Output<String> loadBalancerArn;
 
     /**
      * @return ARN of the load balancer. Required if `arn` is not set.
      * 
      */
-    public Output</* @Nullable */ String> loadBalancerArn() {
-        return this.loadBalancerArn;
+    public Optional<Output<String>> loadBalancerArn() {
+        return Optional.ofNullable(this.loadBalancerArn);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port")
-    private Output</* @Nullable */ Integer> port;
+    private @Nullable Output<Integer> port;
 
     /**
      * @return Port of the listener. Required if `arn` is not set.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetListenerArgs() {}
@@ -101,7 +102,7 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(Output</* @Nullable */ String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
@@ -112,7 +113,7 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
@@ -122,7 +123,7 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancerArn(Output</* @Nullable */ String> loadBalancerArn) {
+        public Builder loadBalancerArn(@Nullable Output<String> loadBalancerArn) {
             $.loadBalancerArn = loadBalancerArn;
             return this;
         }
@@ -133,7 +134,7 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancerArn(@Nullable String loadBalancerArn) {
+        public Builder loadBalancerArn(String loadBalancerArn) {
             return loadBalancerArn(Output.of(loadBalancerArn));
         }
 
@@ -143,7 +144,7 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder port(Output</* @Nullable */ Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
@@ -154,16 +155,16 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder port(@Nullable Integer port) {
+        public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

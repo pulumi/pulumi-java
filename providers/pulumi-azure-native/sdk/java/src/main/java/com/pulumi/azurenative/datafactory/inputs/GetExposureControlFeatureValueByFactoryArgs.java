@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
      * 
      */
     @Import(name="featureName")
-    private Output</* @Nullable */ String> featureName;
+    private @Nullable Output<String> featureName;
 
     /**
      * @return The feature name.
      * 
      */
-    public Output</* @Nullable */ String> featureName() {
-        return this.featureName;
+    public Optional<Output<String>> featureName() {
+        return Optional.ofNullable(this.featureName);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
      * 
      */
     @Import(name="featureType")
-    private Output</* @Nullable */ String> featureType;
+    private @Nullable Output<String> featureType;
 
     /**
      * @return The feature type.
      * 
      */
-    public Output</* @Nullable */ String> featureType() {
-        return this.featureType;
+    public Optional<Output<String>> featureType() {
+        return Optional.ofNullable(this.featureType);
     }
 
     /**
@@ -128,7 +129,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder featureName(Output</* @Nullable */ String> featureName) {
+        public Builder featureName(@Nullable Output<String> featureName) {
             $.featureName = featureName;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder featureName(@Nullable String featureName) {
+        public Builder featureName(String featureName) {
             return featureName(Output.of(featureName));
         }
 
@@ -149,7 +150,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder featureType(Output</* @Nullable */ String> featureType) {
+        public Builder featureType(@Nullable Output<String> featureType) {
             $.featureType = featureType;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder featureType(@Nullable String featureType) {
+        public Builder featureType(String featureType) {
             return featureType(Output.of(featureType));
         }
 

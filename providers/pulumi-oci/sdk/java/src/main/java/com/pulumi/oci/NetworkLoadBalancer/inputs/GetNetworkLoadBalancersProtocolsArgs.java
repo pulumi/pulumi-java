@@ -5,9 +5,10 @@ package com.pulumi.oci.NetworkLoadBalancer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.NetworkLoadBalancer.inputs.GetNetworkLoadBalancersProtocolsFilter;
+import com.pulumi.oci.NetworkLoadBalancer.inputs.GetNetworkLoadBalancersProtocolsFilterArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +17,10 @@ public final class GetNetworkLoadBalancersProtocolsArgs extends com.pulumi.resou
     public static final GetNetworkLoadBalancersProtocolsArgs Empty = new GetNetworkLoadBalancersProtocolsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetNetworkLoadBalancersProtocolsFilter>> filters;
+    private @Nullable Output<List<GetNetworkLoadBalancersProtocolsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetNetworkLoadBalancersProtocolsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetNetworkLoadBalancersProtocolsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetNetworkLoadBalancersProtocolsArgs() {}
@@ -46,16 +47,16 @@ public final class GetNetworkLoadBalancersProtocolsArgs extends com.pulumi.resou
             $ = new GetNetworkLoadBalancersProtocolsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetNetworkLoadBalancersProtocolsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetNetworkLoadBalancersProtocolsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetNetworkLoadBalancersProtocolsFilter> filters) {
+        public Builder filters(List<GetNetworkLoadBalancersProtocolsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetNetworkLoadBalancersProtocolsFilter... filters) {
+        public Builder filters(GetNetworkLoadBalancersProtocolsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

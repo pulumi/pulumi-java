@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="emailAddress")
-    private Output</* @Nullable */ String> emailAddress;
+    private @Nullable Output<String> emailAddress;
 
     /**
      * @return Email of the user used by Logz for contacting them if needed
      * 
      */
-    public Output</* @Nullable */ String> emailAddress() {
-        return this.emailAddress;
+    public Optional<Output<String>> emailAddress() {
+        return Optional.ofNullable(this.emailAddress);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder emailAddress(Output</* @Nullable */ String> emailAddress) {
+        public Builder emailAddress(@Nullable Output<String> emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
@@ -102,7 +103,7 @@ public final class ListMonitorUserRolesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder emailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(String emailAddress) {
             return emailAddress(Output.of(emailAddress));
         }
 

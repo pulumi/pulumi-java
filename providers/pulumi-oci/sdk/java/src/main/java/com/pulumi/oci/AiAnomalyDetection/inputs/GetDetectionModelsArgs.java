@@ -5,10 +5,11 @@ package com.pulumi.oci.AiAnomalyDetection.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionModelsFilter;
+import com.pulumi.oci.AiAnomalyDetection.inputs.GetDetectionModelsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetDetectionModelsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDetectionModelsFilter>> filters;
+    private @Nullable Output<List<GetDetectionModelsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDetectionModelsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDetectionModelsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetDetectionModelsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="projectId")
-    private Output</* @Nullable */ String> projectId;
+    private @Nullable Output<String> projectId;
 
     /**
      * @return The ID of the project for which to list the objects.
      * 
      */
-    public Output</* @Nullable */ String> projectId() {
-        return this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetDetectionModelsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return &lt;b&gt;Filter&lt;/b&gt; results by the specified lifecycle state. Must be a valid state for the resource type.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetDetectionModelsArgs() {}
@@ -138,7 +139,7 @@ public final class GetDetectionModelsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,20 +150,20 @@ public final class GetDetectionModelsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDetectionModelsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDetectionModelsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDetectionModelsFilter> filters) {
+        public Builder filters(List<GetDetectionModelsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDetectionModelsFilter... filters) {
+        public Builder filters(GetDetectionModelsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetDetectionModelsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder projectId(Output</* @Nullable */ String> projectId) {
+        public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetDetectionModelsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder projectId(@Nullable String projectId) {
+        public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }
 
@@ -193,7 +194,7 @@ public final class GetDetectionModelsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetDetectionModelsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

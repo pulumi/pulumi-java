@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="versionId")
-    private Output</* @Nullable */ String> versionId;
+    private @Nullable Output<String> versionId;
 
     /**
      * @return Specifies the unique identifier of the version of the secret that you want to retrieve. Overrides `version_stage`.
      * 
      */
-    public Output</* @Nullable */ String> versionId() {
-        return this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="versionStage")
-    private Output</* @Nullable */ String> versionStage;
+    private @Nullable Output<String> versionStage;
 
     /**
      * @return Specifies the secret version that you want to retrieve by the staging label attached to the version. Defaults to `AWSCURRENT`.
      * 
      */
-    public Output</* @Nullable */ String> versionStage() {
-        return this.versionStage;
+    public Optional<Output<String>> versionStage() {
+        return Optional.ofNullable(this.versionStage);
     }
 
     private GetSecretVersionArgs() {}
@@ -112,7 +113,7 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder versionId(Output</* @Nullable */ String> versionId) {
+        public Builder versionId(@Nullable Output<String> versionId) {
             $.versionId = versionId;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder versionId(@Nullable String versionId) {
+        public Builder versionId(String versionId) {
             return versionId(Output.of(versionId));
         }
 
@@ -133,7 +134,7 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder versionStage(Output</* @Nullable */ String> versionStage) {
+        public Builder versionStage(@Nullable Output<String> versionStage) {
             $.versionStage = versionStage;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder versionStage(@Nullable String versionStage) {
+        public Builder versionStage(String versionStage) {
             return versionStage(Output.of(versionStage));
         }
 

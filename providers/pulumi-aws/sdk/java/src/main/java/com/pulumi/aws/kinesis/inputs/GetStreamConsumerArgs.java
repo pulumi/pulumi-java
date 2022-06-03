@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="arn")
-    private Output</* @Nullable */ String> arn;
+    private @Nullable Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN) of the stream consumer.
      * 
      */
-    public Output</* @Nullable */ String> arn() {
-        return this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Name of the stream consumer.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder arn(Output</* @Nullable */ String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
@@ -112,7 +113,7 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

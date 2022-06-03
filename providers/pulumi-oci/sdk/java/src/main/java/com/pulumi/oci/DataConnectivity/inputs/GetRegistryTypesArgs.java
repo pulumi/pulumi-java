@@ -5,10 +5,11 @@ package com.pulumi.oci.DataConnectivity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataConnectivity.inputs.GetRegistryTypesFilter;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryTypesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetRegistryTypesArgs Empty = new GetRegistryTypesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetRegistryTypesFilter>> filters;
+    private @Nullable Output<List<GetRegistryTypesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetRegistryTypesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetRegistryTypesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -28,14 +29,14 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Used to filter by the name of the object.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type")
-    private Output</* @Nullable */ String> type;
+    private @Nullable Output<String> type;
 
     /**
      * @return Type of the object to filter the results with.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     private GetRegistryTypesArgs() {}
@@ -95,16 +96,16 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetRegistryTypesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetRegistryTypesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetRegistryTypesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRegistryTypesFilter> filters) {
+        public Builder filters(List<GetRegistryTypesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetRegistryTypesFilter... filters) {
+        public Builder filters(GetRegistryTypesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -114,7 +115,7 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -125,7 +126,7 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -156,7 +157,7 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder type(Output</* @Nullable */ String> type) {
+        public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
+        public Builder type(String type) {
             return type(Output.of(type));
         }
 

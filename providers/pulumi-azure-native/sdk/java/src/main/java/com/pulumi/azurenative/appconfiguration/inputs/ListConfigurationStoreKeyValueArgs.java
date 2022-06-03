@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -49,14 +50,14 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="label")
-    private Output</* @Nullable */ String> label;
+    private @Nullable Output<String> label;
 
     /**
      * @return The label of the key.
      * 
      */
-    public Output</* @Nullable */ String> label() {
-        return this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -149,7 +150,7 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder label(Output</* @Nullable */ String> label) {
+        public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
@@ -160,7 +161,7 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder label(@Nullable String label) {
+        public Builder label(String label) {
             return label(Output.of(label));
         }
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="context")
-    private Output</* @Nullable */ Map<String,String>> context;
+    private @Nullable Output<Map<String,String>> context;
 
     /**
      * @return An optional mapping that makes up the encryption context.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> context() {
-        return this.context;
+    public Optional<Output<Map<String,String>>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -92,7 +93,7 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder context(Output</* @Nullable */ Map<String,String>> context) {
+        public Builder context(@Nullable Output<Map<String,String>> context) {
             $.context = context;
             return this;
         }
@@ -103,7 +104,7 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder context(@Nullable Map<String,String> context) {
+        public Builder context(Map<String,String> context) {
             return context(Output.of(context));
         }
 

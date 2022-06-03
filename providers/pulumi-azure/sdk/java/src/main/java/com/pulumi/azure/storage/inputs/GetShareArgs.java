@@ -3,13 +3,14 @@
 
 package com.pulumi.azure.storage.inputs;
 
-import com.pulumi.azure.storage.inputs.GetShareAcl;
+import com.pulumi.azure.storage.inputs.GetShareAclArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acls")
-    private Output</* @Nullable */ List<GetShareAcl>> acls;
+    private @Nullable Output<List<GetShareAclArgs>> acls;
 
     /**
      * @return One or more acl blocks as defined below.
      * 
      */
-    public Output</* @Nullable */ List<GetShareAcl>> acls() {
-        return this.acls;
+    public Optional<Output<List<GetShareAclArgs>>> acls() {
+        return Optional.ofNullable(this.acls);
     }
 
     /**
@@ -37,14 +38,14 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadata")
-    private Output</* @Nullable */ Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
     /**
      * @return A map of custom file share metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -110,7 +111,7 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder acls(Output</* @Nullable */ List<GetShareAcl>> acls) {
+        public Builder acls(@Nullable Output<List<GetShareAclArgs>> acls) {
             $.acls = acls;
             return this;
         }
@@ -121,7 +122,7 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder acls(@Nullable List<GetShareAcl> acls) {
+        public Builder acls(List<GetShareAclArgs> acls) {
             return acls(Output.of(acls));
         }
 
@@ -131,7 +132,7 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder acls(GetShareAcl... acls) {
+        public Builder acls(GetShareAclArgs... acls) {
             return acls(List.of(acls));
         }
 
@@ -141,7 +142,7 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder metadata(Output</* @Nullable */ Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
@@ -152,7 +153,7 @@ public final class GetShareArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder metadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 

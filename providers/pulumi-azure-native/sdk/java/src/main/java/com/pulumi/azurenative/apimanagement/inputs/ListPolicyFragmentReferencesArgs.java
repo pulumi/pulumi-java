@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -65,14 +66,14 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="skip")
-    private Output</* @Nullable */ Integer> skip;
+    private @Nullable Output<Integer> skip;
 
     /**
      * @return Number of records to skip.
      * 
      */
-    public Output</* @Nullable */ Integer> skip() {
-        return this.skip;
+    public Optional<Output<Integer>> skip() {
+        return Optional.ofNullable(this.skip);
     }
 
     /**
@@ -80,14 +81,14 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="top")
-    private Output</* @Nullable */ Integer> top;
+    private @Nullable Output<Integer> top;
 
     /**
      * @return Number of records to return.
      * 
      */
-    public Output</* @Nullable */ Integer> top() {
-        return this.top;
+    public Optional<Output<Integer>> top() {
+        return Optional.ofNullable(this.top);
     }
 
     private ListPolicyFragmentReferencesArgs() {}
@@ -187,7 +188,7 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder skip(Output</* @Nullable */ Integer> skip) {
+        public Builder skip(@Nullable Output<Integer> skip) {
             $.skip = skip;
             return this;
         }
@@ -198,7 +199,7 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder skip(@Nullable Integer skip) {
+        public Builder skip(Integer skip) {
             return skip(Output.of(skip));
         }
 
@@ -208,7 +209,7 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder top(Output</* @Nullable */ Integer> top) {
+        public Builder top(@Nullable Output<Integer> top) {
             $.top = top;
             return this;
         }
@@ -219,7 +220,7 @@ public final class ListPolicyFragmentReferencesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder top(@Nullable Integer top) {
+        public Builder top(Integer top) {
             return top(Output.of(top));
         }
 

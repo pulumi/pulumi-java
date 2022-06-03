@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetManagedDatabasesDatabaseParameterArgs extends com.pulumi.r
      * 
      */
     @Import(name="isAllowedValuesIncluded")
-    private Output</* @Nullable */ Boolean> isAllowedValuesIncluded;
+    private @Nullable Output<Boolean> isAllowedValuesIncluded;
 
     /**
      * @return When true, results include a list of valid values for parameters (if applicable).
      * 
      */
-    public Output</* @Nullable */ Boolean> isAllowedValuesIncluded() {
-        return this.isAllowedValuesIncluded;
+    public Optional<Output<Boolean>> isAllowedValuesIncluded() {
+        return Optional.ofNullable(this.isAllowedValuesIncluded);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetManagedDatabasesDatabaseParameterArgs extends com.pulumi.r
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return all parameters that have the text given in their names.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetManagedDatabasesDatabaseParameterArgs extends com.pulumi.r
      * 
      */
     @Import(name="source")
-    private Output</* @Nullable */ String> source;
+    private @Nullable Output<String> source;
 
     /**
      * @return The source used to list database parameters. `CURRENT` is used to get the database parameters that are currently in effect for the database instance. `SPFILE` is used to list parameters from the server parameter file. Default is `CURRENT`.
      * 
      */
-    public Output</* @Nullable */ String> source() {
-        return this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     private GetManagedDatabasesDatabaseParameterArgs() {}
@@ -108,7 +109,7 @@ public final class GetManagedDatabasesDatabaseParameterArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder isAllowedValuesIncluded(Output</* @Nullable */ Boolean> isAllowedValuesIncluded) {
+        public Builder isAllowedValuesIncluded(@Nullable Output<Boolean> isAllowedValuesIncluded) {
             $.isAllowedValuesIncluded = isAllowedValuesIncluded;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetManagedDatabasesDatabaseParameterArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder isAllowedValuesIncluded(@Nullable Boolean isAllowedValuesIncluded) {
+        public Builder isAllowedValuesIncluded(Boolean isAllowedValuesIncluded) {
             return isAllowedValuesIncluded(Output.of(isAllowedValuesIncluded));
         }
 
@@ -150,7 +151,7 @@ public final class GetManagedDatabasesDatabaseParameterArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetManagedDatabasesDatabaseParameterArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -171,7 +172,7 @@ public final class GetManagedDatabasesDatabaseParameterArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder source(Output</* @Nullable */ String> source) {
+        public Builder source(@Nullable Output<String> source) {
             $.source = source;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetManagedDatabasesDatabaseParameterArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder source(@Nullable String source) {
+        public Builder source(String source) {
             return source(Output.of(source));
         }
 

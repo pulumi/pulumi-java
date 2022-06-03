@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="acceptLanguage")
-    private Output</* @Nullable */ String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
     /**
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> acceptLanguage() {
-        return this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="productId")
-    private Output</* @Nullable */ String> productId;
+    private @Nullable Output<String> productId;
 
     /**
      * @return Product identifier.
      * 
      */
-    public Output</* @Nullable */ String> productId() {
-        return this.productId;
+    public Optional<Output<String>> productId() {
+        return Optional.ofNullable(this.productId);
     }
 
     private GetPortfolioConstraintsArgs() {}
@@ -91,7 +92,7 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder acceptLanguage(Output</* @Nullable */ String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             $.acceptLanguage = acceptLanguage;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(String acceptLanguage) {
             return acceptLanguage(Output.of(acceptLanguage));
         }
 
@@ -133,7 +134,7 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder productId(Output</* @Nullable */ String> productId) {
+        public Builder productId(@Nullable Output<String> productId) {
             $.productId = productId;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder productId(@Nullable String productId) {
+        public Builder productId(String productId) {
             return productId(Output.of(productId));
         }
 

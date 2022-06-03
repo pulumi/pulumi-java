@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -65,14 +66,14 @@ public final class GetRepositoryFileLineArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="startLineNumber")
-    private Output</* @Nullable */ Integer> startLineNumber;
+    private @Nullable Output<Integer> startLineNumber;
 
     /**
      * @return Line number from where to start returning file lines.
      * 
      */
-    public Output</* @Nullable */ Integer> startLineNumber() {
-        return this.startLineNumber;
+    public Optional<Output<Integer>> startLineNumber() {
+        return Optional.ofNullable(this.startLineNumber);
     }
 
     private GetRepositoryFileLineArgs() {}
@@ -171,7 +172,7 @@ public final class GetRepositoryFileLineArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder startLineNumber(Output</* @Nullable */ Integer> startLineNumber) {
+        public Builder startLineNumber(@Nullable Output<Integer> startLineNumber) {
             $.startLineNumber = startLineNumber;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetRepositoryFileLineArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder startLineNumber(@Nullable Integer startLineNumber) {
+        public Builder startLineNumber(Integer startLineNumber) {
             return startLineNumber(Output.of(startLineNumber));
         }
 

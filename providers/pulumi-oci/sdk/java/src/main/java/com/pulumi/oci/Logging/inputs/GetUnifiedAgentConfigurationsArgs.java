@@ -5,11 +5,12 @@ package com.pulumi.oci.Logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Logging.inputs.GetUnifiedAgentConfigurationsFilter;
+import com.pulumi.oci.Logging.inputs.GetUnifiedAgentConfigurationsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,21 +38,21 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Resource name
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetUnifiedAgentConfigurationsFilter>> filters;
+    private @Nullable Output<List<GetUnifiedAgentConfigurationsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetUnifiedAgentConfigurationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetUnifiedAgentConfigurationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="groupId")
-    private Output</* @Nullable */ String> groupId;
+    private @Nullable Output<String> groupId;
 
     /**
      * @return The OCID of a group or a dynamic group.
      * 
      */
-    public Output</* @Nullable */ String> groupId() {
-        return this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="isCompartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> isCompartmentIdInSubtree;
+    private @Nullable Output<Boolean> isCompartmentIdInSubtree;
 
     /**
      * @return Specifies whether or not nested compartments should be traversed. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> isCompartmentIdInSubtree() {
-        return this.isCompartmentIdInSubtree;
+    public Optional<Output<Boolean>> isCompartmentIdInSubtree() {
+        return Optional.ofNullable(this.isCompartmentIdInSubtree);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="logId")
-    private Output</* @Nullable */ String> logId;
+    private @Nullable Output<String> logId;
 
     /**
      * @return Custom log OCID to list resources with the log as destination.
      * 
      */
-    public Output</* @Nullable */ String> logId() {
-        return this.logId;
+    public Optional<Output<String>> logId() {
+        return Optional.ofNullable(this.logId);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Lifecycle state of the log object
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetUnifiedAgentConfigurationsArgs() {}
@@ -171,7 +172,7 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -182,20 +183,20 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetUnifiedAgentConfigurationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetUnifiedAgentConfigurationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetUnifiedAgentConfigurationsFilter> filters) {
+        public Builder filters(List<GetUnifiedAgentConfigurationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetUnifiedAgentConfigurationsFilter... filters) {
+        public Builder filters(GetUnifiedAgentConfigurationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -205,7 +206,7 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder groupId(Output</* @Nullable */ String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
@@ -216,7 +217,7 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder groupId(@Nullable String groupId) {
+        public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
@@ -226,7 +227,7 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder isCompartmentIdInSubtree(Output</* @Nullable */ Boolean> isCompartmentIdInSubtree) {
+        public Builder isCompartmentIdInSubtree(@Nullable Output<Boolean> isCompartmentIdInSubtree) {
             $.isCompartmentIdInSubtree = isCompartmentIdInSubtree;
             return this;
         }
@@ -237,7 +238,7 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder isCompartmentIdInSubtree(@Nullable Boolean isCompartmentIdInSubtree) {
+        public Builder isCompartmentIdInSubtree(Boolean isCompartmentIdInSubtree) {
             return isCompartmentIdInSubtree(Output.of(isCompartmentIdInSubtree));
         }
 
@@ -247,7 +248,7 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder logId(Output</* @Nullable */ String> logId) {
+        public Builder logId(@Nullable Output<String> logId) {
             $.logId = logId;
             return this;
         }
@@ -258,7 +259,7 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder logId(@Nullable String logId) {
+        public Builder logId(String logId) {
             return logId(Output.of(logId));
         }
 
@@ -268,7 +269,7 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -279,7 +280,7 @@ public final class GetUnifiedAgentConfigurationsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

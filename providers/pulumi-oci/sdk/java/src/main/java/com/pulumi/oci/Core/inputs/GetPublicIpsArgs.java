@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetPublicIpsFilter;
+import com.pulumi.oci.Core.inputs.GetPublicIpsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetPublicIpsFilter>> filters;
+    private @Nullable Output<List<GetPublicIpsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetPublicIpsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetPublicIpsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lifetime")
-    private Output</* @Nullable */ String> lifetime;
+    private @Nullable Output<String> lifetime;
 
     /**
      * @return A filter to return only public IPs that match given lifetime.
      * 
      */
-    public Output</* @Nullable */ String> lifetime() {
-        return this.lifetime;
+    public Optional<Output<String>> lifetime() {
+        return Optional.ofNullable(this.lifetime);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicIpPoolId")
-    private Output</* @Nullable */ String> publicIpPoolId;
+    private @Nullable Output<String> publicIpPoolId;
 
     /**
      * @return A filter to return only resources that belong to the given public IP pool.
      * 
      */
-    public Output</* @Nullable */ String> publicIpPoolId() {
-        return this.publicIpPoolId;
+    public Optional<Output<String>> publicIpPoolId() {
+        return Optional.ofNullable(this.publicIpPoolId);
     }
 
     /**
@@ -137,7 +138,7 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -148,7 +149,7 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -173,16 +174,16 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetPublicIpsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetPublicIpsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPublicIpsFilter> filters) {
+        public Builder filters(List<GetPublicIpsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetPublicIpsFilter... filters) {
+        public Builder filters(GetPublicIpsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -192,7 +193,7 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder lifetime(Output</* @Nullable */ String> lifetime) {
+        public Builder lifetime(@Nullable Output<String> lifetime) {
             $.lifetime = lifetime;
             return this;
         }
@@ -203,7 +204,7 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder lifetime(@Nullable String lifetime) {
+        public Builder lifetime(String lifetime) {
             return lifetime(Output.of(lifetime));
         }
 
@@ -213,7 +214,7 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicIpPoolId(Output</* @Nullable */ String> publicIpPoolId) {
+        public Builder publicIpPoolId(@Nullable Output<String> publicIpPoolId) {
             $.publicIpPoolId = publicIpPoolId;
             return this;
         }
@@ -224,7 +225,7 @@ public final class GetPublicIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicIpPoolId(@Nullable String publicIpPoolId) {
+        public Builder publicIpPoolId(String publicIpPoolId) {
             return publicIpPoolId(Output.of(publicIpPoolId));
         }
 

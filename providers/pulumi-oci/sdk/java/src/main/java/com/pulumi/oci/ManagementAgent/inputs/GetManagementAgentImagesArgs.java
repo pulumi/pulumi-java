@@ -5,10 +5,11 @@ package com.pulumi.oci.ManagementAgent.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ManagementAgent.inputs.GetManagementAgentImagesFilter;
+import com.pulumi.oci.ManagementAgent.inputs.GetManagementAgentImagesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagementAgentImagesFilter>> filters;
+    private @Nullable Output<List<GetManagementAgentImagesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagementAgentImagesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagementAgentImagesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="installType")
-    private Output</* @Nullable */ String> installType;
+    private @Nullable Output<String> installType;
 
     /**
      * @return A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.
      * 
      */
-    public Output</* @Nullable */ String> installType() {
-        return this.installType;
+    public Optional<Output<String>> installType() {
+        return Optional.ofNullable(this.installType);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire platform name given.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Filter to return only Management Agents in the particular lifecycle state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetManagementAgentImagesArgs() {}
@@ -132,16 +133,16 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagementAgentImagesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagementAgentImagesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagementAgentImagesFilter> filters) {
+        public Builder filters(List<GetManagementAgentImagesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagementAgentImagesFilter... filters) {
+        public Builder filters(GetManagementAgentImagesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -151,7 +152,7 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder installType(Output</* @Nullable */ String> installType) {
+        public Builder installType(@Nullable Output<String> installType) {
             $.installType = installType;
             return this;
         }
@@ -162,7 +163,7 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder installType(@Nullable String installType) {
+        public Builder installType(String installType) {
             return installType(Output.of(installType));
         }
 
@@ -172,7 +173,7 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -193,7 +194,7 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetManagementAgentImagesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

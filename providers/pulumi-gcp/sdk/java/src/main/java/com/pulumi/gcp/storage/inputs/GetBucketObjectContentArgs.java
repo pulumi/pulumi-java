@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="content")
-    private Output</* @Nullable */ String> content;
+    private @Nullable Output<String> content;
 
     /**
      * @return (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
      * 
      */
-    public Output</* @Nullable */ String> content() {
-        return this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -112,7 +113,7 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder content(Output</* @Nullable */ String> content) {
+        public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder content(@Nullable String content) {
+        public Builder content(String content) {
             return content(Output.of(content));
         }
 

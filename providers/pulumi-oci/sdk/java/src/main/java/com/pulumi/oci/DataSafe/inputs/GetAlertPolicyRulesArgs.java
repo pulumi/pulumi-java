@@ -5,10 +5,11 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetAlertPolicyRulesFilter;
+import com.pulumi.oci.DataSafe.inputs.GetAlertPolicyRulesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetAlertPolicyRulesArgs extends com.pulumi.resources.InvokeAr
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAlertPolicyRulesFilter>> filters;
+    private @Nullable Output<List<GetAlertPolicyRulesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAlertPolicyRulesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAlertPolicyRulesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetAlertPolicyRulesArgs() {}
@@ -84,16 +85,16 @@ public final class GetAlertPolicyRulesArgs extends com.pulumi.resources.InvokeAr
             return alertPolicyId(Output.of(alertPolicyId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAlertPolicyRulesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAlertPolicyRulesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAlertPolicyRulesFilter> filters) {
+        public Builder filters(List<GetAlertPolicyRulesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAlertPolicyRulesFilter... filters) {
+        public Builder filters(GetAlertPolicyRulesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetFaultDomainsFilter;
+import com.pulumi.oci.Identity.inputs.GetFaultDomainsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,10 +48,10 @@ public final class GetFaultDomainsArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetFaultDomainsFilter>> filters;
+    private @Nullable Output<List<GetFaultDomainsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetFaultDomainsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetFaultDomainsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetFaultDomainsArgs() {}
@@ -121,16 +122,16 @@ public final class GetFaultDomainsArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetFaultDomainsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetFaultDomainsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetFaultDomainsFilter> filters) {
+        public Builder filters(List<GetFaultDomainsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetFaultDomainsFilter... filters) {
+        public Builder filters(GetFaultDomainsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

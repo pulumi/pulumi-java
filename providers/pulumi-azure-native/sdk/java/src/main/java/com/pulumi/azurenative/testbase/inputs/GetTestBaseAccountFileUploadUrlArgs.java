@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
      * 
      */
     @Import(name="blobName")
-    private Output</* @Nullable */ String> blobName;
+    private @Nullable Output<String> blobName;
 
     /**
      * @return The custom file name of the uploaded blob.
      * 
      */
-    public Output</* @Nullable */ String> blobName() {
-        return this.blobName;
+    public Optional<Output<String>> blobName() {
+        return Optional.ofNullable(this.blobName);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder blobName(Output</* @Nullable */ String> blobName) {
+        public Builder blobName(@Nullable Output<String> blobName) {
             $.blobName = blobName;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder blobName(@Nullable String blobName) {
+        public Builder blobName(String blobName) {
             return blobName(Output.of(blobName));
         }
 

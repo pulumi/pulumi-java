@@ -5,10 +5,11 @@ package com.pulumi.oci.Logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Logging.inputs.GetLogsFilter;
+import com.pulumi.oci.Logging.inputs.GetLogsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +22,21 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Resource name
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetLogsFilter>> filters;
+    private @Nullable Output<List<GetLogsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetLogsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetLogsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logType")
-    private Output</* @Nullable */ String> logType;
+    private @Nullable Output<String> logType;
 
     /**
      * @return The logType that the log object is for, whether custom or service.
      * 
      */
-    public Output</* @Nullable */ String> logType() {
-        return this.logType;
+    public Optional<Output<String>> logType() {
+        return Optional.ofNullable(this.logType);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceResource")
-    private Output</* @Nullable */ String> sourceResource;
+    private @Nullable Output<String> sourceResource;
 
     /**
      * @return Log object resource.
      * 
      */
-    public Output</* @Nullable */ String> sourceResource() {
-        return this.sourceResource;
+    public Optional<Output<String>> sourceResource() {
+        return Optional.ofNullable(this.sourceResource);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceService")
-    private Output</* @Nullable */ String> sourceService;
+    private @Nullable Output<String> sourceService;
 
     /**
      * @return Service that created the log object.
      * 
      */
-    public Output</* @Nullable */ String> sourceService() {
-        return this.sourceService;
+    public Optional<Output<String>> sourceService() {
+        return Optional.ofNullable(this.sourceService);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Lifecycle state of the log object
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetLogsArgs() {}
@@ -149,7 +150,7 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -160,20 +161,20 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetLogsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetLogsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetLogsFilter> filters) {
+        public Builder filters(List<GetLogsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetLogsFilter... filters) {
+        public Builder filters(GetLogsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -204,7 +205,7 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder logType(Output</* @Nullable */ String> logType) {
+        public Builder logType(@Nullable Output<String> logType) {
             $.logType = logType;
             return this;
         }
@@ -215,7 +216,7 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder logType(@Nullable String logType) {
+        public Builder logType(String logType) {
             return logType(Output.of(logType));
         }
 
@@ -225,7 +226,7 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sourceResource(Output</* @Nullable */ String> sourceResource) {
+        public Builder sourceResource(@Nullable Output<String> sourceResource) {
             $.sourceResource = sourceResource;
             return this;
         }
@@ -236,7 +237,7 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sourceResource(@Nullable String sourceResource) {
+        public Builder sourceResource(String sourceResource) {
             return sourceResource(Output.of(sourceResource));
         }
 
@@ -246,7 +247,7 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sourceService(Output</* @Nullable */ String> sourceService) {
+        public Builder sourceService(@Nullable Output<String> sourceService) {
             $.sourceService = sourceService;
             return this;
         }
@@ -257,7 +258,7 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sourceService(@Nullable String sourceService) {
+        public Builder sourceService(String sourceService) {
             return sourceService(Output.of(sourceService));
         }
 
@@ -267,7 +268,7 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -278,7 +279,7 @@ public final class GetLogsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

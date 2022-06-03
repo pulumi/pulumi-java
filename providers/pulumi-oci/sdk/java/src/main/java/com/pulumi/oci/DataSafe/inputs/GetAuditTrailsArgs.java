@@ -5,11 +5,12 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetAuditTrailsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetAuditTrailsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessLevel")
-    private Output</* @Nullable */ String> accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Output</* @Nullable */ String> accessLevel() {
-        return this.accessLevel;
+    public Optional<Output<String>> accessLevel() {
+        return Optional.ofNullable(this.accessLevel);
     }
 
     /**
@@ -37,14 +38,14 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="auditTrailId")
-    private Output</* @Nullable */ String> auditTrailId;
+    private @Nullable Output<String> auditTrailId;
 
     /**
      * @return A optional filter to return only resources that match the specified id.
      * 
      */
-    public Output</* @Nullable */ String> auditTrailId() {
-        return this.auditTrailId;
+    public Optional<Output<String>> auditTrailId() {
+        return Optional.ofNullable(this.auditTrailId);
     }
 
     /**
@@ -67,14 +68,14 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     /**
@@ -82,21 +83,21 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the specified display name.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAuditTrailsFilter>> filters;
+    private @Nullable Output<List<GetAuditTrailsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAuditTrailsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAuditTrailsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A optional filter to return only resources that match the specified lifecycle state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -119,14 +120,14 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status")
-    private Output</* @Nullable */ String> status;
+    private @Nullable Output<String> status;
 
     /**
      * @return A optional filter to return only resources that match the specified sub-state of audit trail.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -134,14 +135,14 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetId")
-    private Output</* @Nullable */ String> targetId;
+    private @Nullable Output<String> targetId;
 
     /**
      * @return A filter to return only items related to a specific target OCID.
      * 
      */
-    public Output</* @Nullable */ String> targetId() {
-        return this.targetId;
+    public Optional<Output<String>> targetId() {
+        return Optional.ofNullable(this.targetId);
     }
 
     private GetAuditTrailsArgs() {}
@@ -182,7 +183,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
             return this;
         }
@@ -193,7 +194,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(String accessLevel) {
             return accessLevel(Output.of(accessLevel));
         }
 
@@ -203,7 +204,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder auditTrailId(Output</* @Nullable */ String> auditTrailId) {
+        public Builder auditTrailId(@Nullable Output<String> auditTrailId) {
             $.auditTrailId = auditTrailId;
             return this;
         }
@@ -214,7 +215,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder auditTrailId(@Nullable String auditTrailId) {
+        public Builder auditTrailId(String auditTrailId) {
             return auditTrailId(Output.of(auditTrailId));
         }
 
@@ -245,7 +246,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -256,7 +257,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
@@ -266,7 +267,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -277,20 +278,20 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAuditTrailsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAuditTrailsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAuditTrailsFilter> filters) {
+        public Builder filters(List<GetAuditTrailsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAuditTrailsFilter... filters) {
+        public Builder filters(GetAuditTrailsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -300,7 +301,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -311,7 +312,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -321,7 +322,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder status(Output</* @Nullable */ String> status) {
+        public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
@@ -332,7 +333,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder status(@Nullable String status) {
+        public Builder status(String status) {
             return status(Output.of(status));
         }
 
@@ -342,7 +343,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder targetId(Output</* @Nullable */ String> targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             $.targetId = targetId;
             return this;
         }
@@ -353,7 +354,7 @@ public final class GetAuditTrailsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder targetId(@Nullable String targetId) {
+        public Builder targetId(String targetId) {
             return targetId(Output.of(targetId));
         }
 

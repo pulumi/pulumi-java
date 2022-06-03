@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="instanceType")
-    private Output</* @Nullable */ String> instanceType;
+    private @Nullable Output<String> instanceType;
 
     /**
      * @return Desired instance type. Conflicts with `preferred_instance_types`.
      * 
      */
-    public Output</* @Nullable */ String> instanceType() {
-        return this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="preferredInstanceTypes")
-    private Output</* @Nullable */ List<String>> preferredInstanceTypes;
+    private @Nullable Output<List<String>> preferredInstanceTypes;
 
     /**
      * @return Ordered list of preferred instance types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. Conflicts with `instance_type`.
      * 
      */
-    public Output</* @Nullable */ List<String>> preferredInstanceTypes() {
-        return this.preferredInstanceTypes;
+    public Optional<Output<List<String>>> preferredInstanceTypes() {
+        return Optional.ofNullable(this.preferredInstanceTypes);
     }
 
     private GetOutpostInstanceTypeArgs() {}
@@ -113,7 +114,7 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder instanceType(Output</* @Nullable */ String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
@@ -124,7 +125,7 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder instanceType(@Nullable String instanceType) {
+        public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
@@ -134,7 +135,7 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder preferredInstanceTypes(Output</* @Nullable */ List<String>> preferredInstanceTypes) {
+        public Builder preferredInstanceTypes(@Nullable Output<List<String>> preferredInstanceTypes) {
             $.preferredInstanceTypes = preferredInstanceTypes;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder preferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
+        public Builder preferredInstanceTypes(List<String> preferredInstanceTypes) {
             return preferredInstanceTypes(Output.of(preferredInstanceTypes));
         }
 

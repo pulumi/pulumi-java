@@ -5,10 +5,11 @@ package com.pulumi.oci.Artifacts.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Artifacts.inputs.GetGenericArtifactsFilter;
+import com.pulumi.oci.Artifacts.inputs.GetGenericArtifactsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="artifactPath")
-    private Output</* @Nullable */ String> artifactPath;
+    private @Nullable Output<String> artifactPath;
 
     /**
      * @return Filter results by a prefix for the `artifactPath` and and return artifacts that begin with the specified prefix in their path.
      * 
      */
-    public Output</* @Nullable */ String> artifactPath() {
-        return this.artifactPath;
+    public Optional<Output<String>> artifactPath() {
+        return Optional.ofNullable(this.artifactPath);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetGenericArtifactsFilter>> filters;
+    private @Nullable Output<List<GetGenericArtifactsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetGenericArtifactsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetGenericArtifactsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return A filter to return the resources for the specified OCID.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sha256")
-    private Output</* @Nullable */ String> sha256;
+    private @Nullable Output<String> sha256;
 
     /**
      * @return Filter results by a specified SHA256 digest for the artifact.
      * 
      */
-    public Output</* @Nullable */ String> sha256() {
-        return this.sha256;
+    public Optional<Output<String>> sha256() {
+        return Optional.ofNullable(this.sha256);
     }
 
     /**
@@ -118,14 +119,14 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state name exactly.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -133,14 +134,14 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="version")
-    private Output</* @Nullable */ String> version;
+    private @Nullable Output<String> version;
 
     /**
      * @return Filter results by a prefix for `version` and return artifacts that that begin with the specified prefix in their version.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     private GetGenericArtifactsArgs() {}
@@ -181,7 +182,7 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder artifactPath(Output</* @Nullable */ String> artifactPath) {
+        public Builder artifactPath(@Nullable Output<String> artifactPath) {
             $.artifactPath = artifactPath;
             return this;
         }
@@ -192,7 +193,7 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder artifactPath(@Nullable String artifactPath) {
+        public Builder artifactPath(String artifactPath) {
             return artifactPath(Output.of(artifactPath));
         }
 
@@ -223,7 +224,7 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -234,20 +235,20 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetGenericArtifactsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetGenericArtifactsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetGenericArtifactsFilter> filters) {
+        public Builder filters(List<GetGenericArtifactsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetGenericArtifactsFilter... filters) {
+        public Builder filters(GetGenericArtifactsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -257,7 +258,7 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -268,7 +269,7 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -299,7 +300,7 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder sha256(Output</* @Nullable */ String> sha256) {
+        public Builder sha256(@Nullable Output<String> sha256) {
             $.sha256 = sha256;
             return this;
         }
@@ -310,7 +311,7 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder sha256(@Nullable String sha256) {
+        public Builder sha256(String sha256) {
             return sha256(Output.of(sha256));
         }
 
@@ -320,7 +321,7 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -331,7 +332,7 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -341,7 +342,7 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder version(Output</* @Nullable */ String> version) {
+        public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
@@ -352,7 +353,7 @@ public final class GetGenericArtifactsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder version(@Nullable String version) {
+        public Builder version(String version) {
             return version(Output.of(version));
         }
 

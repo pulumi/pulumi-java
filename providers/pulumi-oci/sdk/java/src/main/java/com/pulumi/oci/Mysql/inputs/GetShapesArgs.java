@@ -5,10 +5,11 @@ package com.pulumi.oci.Mysql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Mysql.inputs.GetShapesFilter;
+import com.pulumi.oci.Mysql.inputs.GetShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the Availability Domain.
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetShapesFilter>> filters;
+    private @Nullable Output<List<GetShapesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetShapesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetShapesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isSupportedFors")
-    private Output</* @Nullable */ List<String>> isSupportedFors;
+    private @Nullable Output<List<String>> isSupportedFors;
 
     /**
      * @return Return shapes that are supported by the service feature.
      * 
      */
-    public Output</* @Nullable */ List<String>> isSupportedFors() {
-        return this.isSupportedFors;
+    public Optional<Output<List<String>>> isSupportedFors() {
+        return Optional.ofNullable(this.isSupportedFors);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Name
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetShapesArgs() {}
@@ -117,7 +118,7 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -128,7 +129,7 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -153,16 +154,16 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetShapesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetShapesFilter> filters) {
+        public Builder filters(List<GetShapesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetShapesFilter... filters) {
+        public Builder filters(GetShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isSupportedFors(Output</* @Nullable */ List<String>> isSupportedFors) {
+        public Builder isSupportedFors(@Nullable Output<List<String>> isSupportedFors) {
             $.isSupportedFors = isSupportedFors;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isSupportedFors(@Nullable List<String> isSupportedFors) {
+        public Builder isSupportedFors(List<String> isSupportedFors) {
             return isSupportedFors(Output.of(isSupportedFors));
         }
 
@@ -203,7 +204,7 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -214,7 +215,7 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

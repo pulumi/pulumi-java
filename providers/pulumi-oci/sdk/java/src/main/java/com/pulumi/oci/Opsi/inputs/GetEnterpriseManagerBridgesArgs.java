@@ -5,11 +5,12 @@ package com.pulumi.oci.Opsi.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Opsi.inputs.GetEnterpriseManagerBridgesFilter;
+import com.pulumi.oci.Opsi.inputs.GetEnterpriseManagerBridgesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="compartmentId")
-    private Output</* @Nullable */ String> compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Output</* @Nullable */ String> compartmentId() {
-        return this.compartmentId;
+    public Optional<Output<String>> compartmentId() {
+        return Optional.ofNullable(this.compartmentId);
     }
 
     /**
@@ -37,14 +38,14 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return A flag to search all resources within a given compartment and all sub-compartments.
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     /**
@@ -52,21 +53,21 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetEnterpriseManagerBridgesFilter>> filters;
+    private @Nullable Output<List<GetEnterpriseManagerBridgesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetEnterpriseManagerBridgesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetEnterpriseManagerBridgesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Unique Enterprise Manager bridge identifier
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="states")
-    private Output</* @Nullable */ List<String>> states;
+    private @Nullable Output<List<String>> states;
 
     /**
      * @return Lifecycle states
      * 
      */
-    public Output</* @Nullable */ List<String>> states() {
-        return this.states;
+    public Optional<Output<List<String>>> states() {
+        return Optional.ofNullable(this.states);
     }
 
     private GetEnterpriseManagerBridgesArgs() {}
@@ -134,7 +135,7 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(String compartmentId) {
             return compartmentId(Output.of(compartmentId));
         }
 
@@ -155,7 +156,7 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -166,7 +167,7 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
@@ -176,7 +177,7 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -187,20 +188,20 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetEnterpriseManagerBridgesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetEnterpriseManagerBridgesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetEnterpriseManagerBridgesFilter> filters) {
+        public Builder filters(List<GetEnterpriseManagerBridgesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetEnterpriseManagerBridgesFilter... filters) {
+        public Builder filters(GetEnterpriseManagerBridgesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -210,7 +211,7 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -221,7 +222,7 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -231,7 +232,7 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder states(Output</* @Nullable */ List<String>> states) {
+        public Builder states(@Nullable Output<List<String>> states) {
             $.states = states;
             return this;
         }
@@ -242,7 +243,7 @@ public final class GetEnterpriseManagerBridgesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder states(@Nullable List<String> states) {
+        public Builder states(List<String> states) {
             return states(Output.of(states));
         }
 

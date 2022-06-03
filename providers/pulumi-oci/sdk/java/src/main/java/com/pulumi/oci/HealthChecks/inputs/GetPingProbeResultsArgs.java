@@ -5,11 +5,12 @@ package com.pulumi.oci.HealthChecks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.HealthChecks.inputs.GetPingProbeResultsFilter;
+import com.pulumi.oci.HealthChecks.inputs.GetPingProbeResultsFilterArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +19,10 @@ public final class GetPingProbeResultsArgs extends com.pulumi.resources.InvokeAr
     public static final GetPingProbeResultsArgs Empty = new GetPingProbeResultsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetPingProbeResultsFilter>> filters;
+    private @Nullable Output<List<GetPingProbeResultsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetPingProbeResultsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetPingProbeResultsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -44,14 +45,14 @@ public final class GetPingProbeResultsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="startTimeGreaterThanOrEqualTo")
-    private Output</* @Nullable */ Double> startTimeGreaterThanOrEqualTo;
+    private @Nullable Output<Double> startTimeGreaterThanOrEqualTo;
 
     /**
      * @return Returns results with a `startTime` equal to or greater than the specified value.
      * 
      */
-    public Output</* @Nullable */ Double> startTimeGreaterThanOrEqualTo() {
-        return this.startTimeGreaterThanOrEqualTo;
+    public Optional<Output<Double>> startTimeGreaterThanOrEqualTo() {
+        return Optional.ofNullable(this.startTimeGreaterThanOrEqualTo);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetPingProbeResultsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="startTimeLessThanOrEqualTo")
-    private Output</* @Nullable */ Double> startTimeLessThanOrEqualTo;
+    private @Nullable Output<Double> startTimeLessThanOrEqualTo;
 
     /**
      * @return Returns results with a `startTime` equal to or less than the specified value.
      * 
      */
-    public Output</* @Nullable */ Double> startTimeLessThanOrEqualTo() {
-        return this.startTimeLessThanOrEqualTo;
+    public Optional<Output<Double>> startTimeLessThanOrEqualTo() {
+        return Optional.ofNullable(this.startTimeLessThanOrEqualTo);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetPingProbeResultsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="target")
-    private Output</* @Nullable */ String> target;
+    private @Nullable Output<String> target;
 
     /**
      * @return Filters results that match the `target`.
      * 
      */
-    public Output</* @Nullable */ String> target() {
-        return this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     private GetPingProbeResultsArgs() {}
@@ -112,16 +113,16 @@ public final class GetPingProbeResultsArgs extends com.pulumi.resources.InvokeAr
             $ = new GetPingProbeResultsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetPingProbeResultsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetPingProbeResultsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPingProbeResultsFilter> filters) {
+        public Builder filters(List<GetPingProbeResultsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetPingProbeResultsFilter... filters) {
+        public Builder filters(GetPingProbeResultsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -152,7 +153,7 @@ public final class GetPingProbeResultsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder startTimeGreaterThanOrEqualTo(Output</* @Nullable */ Double> startTimeGreaterThanOrEqualTo) {
+        public Builder startTimeGreaterThanOrEqualTo(@Nullable Output<Double> startTimeGreaterThanOrEqualTo) {
             $.startTimeGreaterThanOrEqualTo = startTimeGreaterThanOrEqualTo;
             return this;
         }
@@ -163,7 +164,7 @@ public final class GetPingProbeResultsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder startTimeGreaterThanOrEqualTo(@Nullable Double startTimeGreaterThanOrEqualTo) {
+        public Builder startTimeGreaterThanOrEqualTo(Double startTimeGreaterThanOrEqualTo) {
             return startTimeGreaterThanOrEqualTo(Output.of(startTimeGreaterThanOrEqualTo));
         }
 
@@ -173,7 +174,7 @@ public final class GetPingProbeResultsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder startTimeLessThanOrEqualTo(Output</* @Nullable */ Double> startTimeLessThanOrEqualTo) {
+        public Builder startTimeLessThanOrEqualTo(@Nullable Output<Double> startTimeLessThanOrEqualTo) {
             $.startTimeLessThanOrEqualTo = startTimeLessThanOrEqualTo;
             return this;
         }
@@ -184,7 +185,7 @@ public final class GetPingProbeResultsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder startTimeLessThanOrEqualTo(@Nullable Double startTimeLessThanOrEqualTo) {
+        public Builder startTimeLessThanOrEqualTo(Double startTimeLessThanOrEqualTo) {
             return startTimeLessThanOrEqualTo(Output.of(startTimeLessThanOrEqualTo));
         }
 
@@ -194,7 +195,7 @@ public final class GetPingProbeResultsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder target(Output</* @Nullable */ String> target) {
+        public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
@@ -205,7 +206,7 @@ public final class GetPingProbeResultsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder target(@Nullable String target) {
+        public Builder target(String target) {
             return target(Output.of(target));
         }
 

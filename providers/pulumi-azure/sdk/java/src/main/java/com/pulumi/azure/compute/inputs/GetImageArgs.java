@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the Image.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameRegex")
-    private Output</* @Nullable */ String> nameRegex;
+    private @Nullable Output<String> nameRegex;
 
     /**
      * @return Regex pattern of the image to match.
      * 
      */
-    public Output</* @Nullable */ String> nameRegex() {
-        return this.nameRegex;
+    public Optional<Output<String>> nameRegex() {
+        return Optional.ofNullable(this.nameRegex);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortDescending")
-    private Output</* @Nullable */ Boolean> sortDescending;
+    private @Nullable Output<Boolean> sortDescending;
 
     /**
      * @return By default when matching by regex, images are sorted by name in ascending order and the first match is chosen, to sort descending, set this flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> sortDescending() {
-        return this.sortDescending;
+    public Optional<Output<Boolean>> sortDescending() {
+        return Optional.ofNullable(this.sortDescending);
     }
 
     private GetImageArgs() {}
@@ -108,7 +109,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -129,7 +130,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameRegex(Output</* @Nullable */ String> nameRegex) {
+        public Builder nameRegex(@Nullable Output<String> nameRegex) {
             $.nameRegex = nameRegex;
             return this;
         }
@@ -140,7 +141,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameRegex(@Nullable String nameRegex) {
+        public Builder nameRegex(String nameRegex) {
             return nameRegex(Output.of(nameRegex));
         }
 
@@ -171,7 +172,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sortDescending(Output</* @Nullable */ Boolean> sortDescending) {
+        public Builder sortDescending(@Nullable Output<Boolean> sortDescending) {
             $.sortDescending = sortDescending;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sortDescending(@Nullable Boolean sortDescending) {
+        public Builder sortDescending(Boolean sortDescending) {
             return sortDescending(Output.of(sortDescending));
         }
 

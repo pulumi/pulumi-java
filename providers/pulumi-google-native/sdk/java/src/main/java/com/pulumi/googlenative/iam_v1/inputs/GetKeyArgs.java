@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +23,17 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="publicKeyType")
-    private Output</* @Nullable */ String> publicKeyType;
+    private @Nullable Output<String> publicKeyType;
 
-    public Output</* @Nullable */ String> publicKeyType() {
-        return this.publicKeyType;
+    public Optional<Output<String>> publicKeyType() {
+        return Optional.ofNullable(this.publicKeyType);
     }
 
     @Import(name="serviceAccountId", required=true)
@@ -78,21 +79,21 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
             return keyId(Output.of(keyId));
         }
 
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 
-        public Builder publicKeyType(Output</* @Nullable */ String> publicKeyType) {
+        public Builder publicKeyType(@Nullable Output<String> publicKeyType) {
             $.publicKeyType = publicKeyType;
             return this;
         }
 
-        public Builder publicKeyType(@Nullable String publicKeyType) {
+        public Builder publicKeyType(String publicKeyType) {
             return publicKeyType(Output.of(publicKeyType));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.NetworkLoadBalancer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.NetworkLoadBalancer.inputs.GetBackendsFilter;
+import com.pulumi.oci.NetworkLoadBalancer.inputs.GetBackendsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetBackendsArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetBackendsFilter>> filters;
+    private @Nullable Output<List<GetBackendsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetBackendsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetBackendsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -100,16 +101,16 @@ public final class GetBackendsArgs extends com.pulumi.resources.InvokeArgs {
             return backendSetName(Output.of(backendSetName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetBackendsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetBackendsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBackendsFilter> filters) {
+        public Builder filters(List<GetBackendsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetBackendsFilter... filters) {
+        public Builder filters(GetBackendsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

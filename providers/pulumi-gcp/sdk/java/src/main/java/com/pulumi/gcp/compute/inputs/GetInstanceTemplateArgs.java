@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +23,7 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filter")
-    private Output</* @Nullable */ String> filter;
+    private @Nullable Output<String> filter;
 
     /**
      * @return A filter to retrieve the instance templates.
@@ -30,8 +31,8 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
      * 
      */
-    public Output</* @Nullable */ String> filter() {
-        return this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -39,14 +40,14 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="mostRecent")
-    private Output</* @Nullable */ Boolean> mostRecent;
+    private @Nullable Output<Boolean> mostRecent;
 
     /**
      * @return If `filter` is provided, ensures the most recent template is returned when multiple instance templates match. One of `name` or `filter` must be provided.
      * 
      */
-    public Output</* @Nullable */ Boolean> mostRecent() {
-        return this.mostRecent;
+    public Optional<Output<Boolean>> mostRecent() {
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -54,14 +55,14 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the instance template. One of `name` or `filter` must be provided.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -70,15 +71,15 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="project")
-    private Output</* @Nullable */ String> project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The ID of the project in which the resource belongs.
      * If `project` is not provided, the provider project is used.
      * 
      */
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     private GetInstanceTemplateArgs() {}
@@ -116,7 +117,7 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filter(Output</* @Nullable */ String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
@@ -129,7 +130,7 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filter(@Nullable String filter) {
+        public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
@@ -139,7 +140,7 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder mostRecent(Output</* @Nullable */ Boolean> mostRecent) {
+        public Builder mostRecent(@Nullable Output<Boolean> mostRecent) {
             $.mostRecent = mostRecent;
             return this;
         }
@@ -150,7 +151,7 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(Boolean mostRecent) {
             return mostRecent(Output.of(mostRecent));
         }
 
@@ -160,7 +161,7 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -171,7 +172,7 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -182,7 +183,7 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder project(Output</* @Nullable */ String> project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
@@ -194,7 +195,7 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(String project) {
             return project(Output.of(project));
         }
 

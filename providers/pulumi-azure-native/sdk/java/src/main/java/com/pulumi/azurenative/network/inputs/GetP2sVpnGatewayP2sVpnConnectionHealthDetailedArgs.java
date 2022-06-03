@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
      * 
      */
     @Import(name="outputBlobSasUrl")
-    private Output</* @Nullable */ String> outputBlobSasUrl;
+    private @Nullable Output<String> outputBlobSasUrl;
 
     /**
      * @return The sas-url to download the P2S Vpn connection health detail.
      * 
      */
-    public Output</* @Nullable */ String> outputBlobSasUrl() {
-        return this.outputBlobSasUrl;
+    public Optional<Output<String>> outputBlobSasUrl() {
+        return Optional.ofNullable(this.outputBlobSasUrl);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
      * 
      */
     @Import(name="vpnUserNamesFilter")
-    private Output</* @Nullable */ List<String>> vpnUserNamesFilter;
+    private @Nullable Output<List<String>> vpnUserNamesFilter;
 
     /**
      * @return The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
      * 
      */
-    public Output</* @Nullable */ List<String>> vpnUserNamesFilter() {
-        return this.vpnUserNamesFilter;
+    public Optional<Output<List<String>>> vpnUserNamesFilter() {
+        return Optional.ofNullable(this.vpnUserNamesFilter);
     }
 
     private GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs() {}
@@ -129,7 +130,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
          * @return builder
          * 
          */
-        public Builder outputBlobSasUrl(Output</* @Nullable */ String> outputBlobSasUrl) {
+        public Builder outputBlobSasUrl(@Nullable Output<String> outputBlobSasUrl) {
             $.outputBlobSasUrl = outputBlobSasUrl;
             return this;
         }
@@ -140,7 +141,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
          * @return builder
          * 
          */
-        public Builder outputBlobSasUrl(@Nullable String outputBlobSasUrl) {
+        public Builder outputBlobSasUrl(String outputBlobSasUrl) {
             return outputBlobSasUrl(Output.of(outputBlobSasUrl));
         }
 
@@ -171,7 +172,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
          * @return builder
          * 
          */
-        public Builder vpnUserNamesFilter(Output</* @Nullable */ List<String>> vpnUserNamesFilter) {
+        public Builder vpnUserNamesFilter(@Nullable Output<List<String>> vpnUserNamesFilter) {
             $.vpnUserNamesFilter = vpnUserNamesFilter;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
          * @return builder
          * 
          */
-        public Builder vpnUserNamesFilter(@Nullable List<String> vpnUserNamesFilter) {
+        public Builder vpnUserNamesFilter(List<String> vpnUserNamesFilter) {
             return vpnUserNamesFilter(Output.of(vpnUserNamesFilter));
         }
 

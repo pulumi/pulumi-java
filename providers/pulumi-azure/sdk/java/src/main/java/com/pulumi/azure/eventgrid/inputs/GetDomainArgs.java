@@ -3,7 +3,7 @@
 
 package com.pulumi.azure.eventgrid.inputs;
 
-import com.pulumi.azure.eventgrid.inputs.GetDomainInboundIpRule;
+import com.pulumi.azure.eventgrid.inputs.GetDomainInboundIpRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -11,6 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +24,14 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inboundIpRules")
-    private Output</* @Nullable */ List<GetDomainInboundIpRule>> inboundIpRules;
+    private @Nullable Output<List<GetDomainInboundIpRuleArgs>> inboundIpRules;
 
     /**
      * @return One or more `inbound_ip_rule` blocks as defined below.
      * 
      */
-    public Output</* @Nullable */ List<GetDomainInboundIpRule>> inboundIpRules() {
-        return this.inboundIpRules;
+    public Optional<Output<List<GetDomainInboundIpRuleArgs>>> inboundIpRules() {
+        return Optional.ofNullable(this.inboundIpRules);
     }
 
     /**
@@ -53,14 +54,14 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicNetworkAccessEnabled")
-    private Output</* @Nullable */ Boolean> publicNetworkAccessEnabled;
+    private @Nullable Output<Boolean> publicNetworkAccessEnabled;
 
     /**
      * @return Whether or not public network access is allowed for this server.
      * 
      */
-    public Output</* @Nullable */ Boolean> publicNetworkAccessEnabled() {
-        return this.publicNetworkAccessEnabled;
+    public Optional<Output<Boolean>> publicNetworkAccessEnabled() {
+        return Optional.ofNullable(this.publicNetworkAccessEnabled);
     }
 
     /**
@@ -83,14 +84,14 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A mapping of tags assigned to the EventGrid Domain.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetDomainArgs() {}
@@ -127,7 +128,7 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder inboundIpRules(Output</* @Nullable */ List<GetDomainInboundIpRule>> inboundIpRules) {
+        public Builder inboundIpRules(@Nullable Output<List<GetDomainInboundIpRuleArgs>> inboundIpRules) {
             $.inboundIpRules = inboundIpRules;
             return this;
         }
@@ -138,7 +139,7 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder inboundIpRules(@Nullable List<GetDomainInboundIpRule> inboundIpRules) {
+        public Builder inboundIpRules(List<GetDomainInboundIpRuleArgs> inboundIpRules) {
             return inboundIpRules(Output.of(inboundIpRules));
         }
 
@@ -148,7 +149,7 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder inboundIpRules(GetDomainInboundIpRule... inboundIpRules) {
+        public Builder inboundIpRules(GetDomainInboundIpRuleArgs... inboundIpRules) {
             return inboundIpRules(List.of(inboundIpRules));
         }
 
@@ -179,7 +180,7 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicNetworkAccessEnabled(Output</* @Nullable */ Boolean> publicNetworkAccessEnabled) {
+        public Builder publicNetworkAccessEnabled(@Nullable Output<Boolean> publicNetworkAccessEnabled) {
             $.publicNetworkAccessEnabled = publicNetworkAccessEnabled;
             return this;
         }
@@ -190,7 +191,7 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicNetworkAccessEnabled(@Nullable Boolean publicNetworkAccessEnabled) {
+        public Builder publicNetworkAccessEnabled(Boolean publicNetworkAccessEnabled) {
             return publicNetworkAccessEnabled(Output.of(publicNetworkAccessEnabled));
         }
 
@@ -221,7 +222,7 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -232,7 +233,7 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

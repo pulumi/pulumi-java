@@ -11,6 +11,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -53,14 +54,14 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kinds")
-    private Output</* @Nullable */ List<Either<String,EntityTimelineKind>>> kinds;
+    private @Nullable Output<List<Either<String,EntityTimelineKind>>> kinds;
 
     /**
      * @return Array of timeline Item kinds.
      * 
      */
-    public Output</* @Nullable */ List<Either<String,EntityTimelineKind>>> kinds() {
-        return this.kinds;
+    public Optional<Output<List<Either<String,EntityTimelineKind>>>> kinds() {
+        return Optional.ofNullable(this.kinds);
     }
 
     /**
@@ -68,14 +69,14 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="numberOfBucket")
-    private Output</* @Nullable */ Integer> numberOfBucket;
+    private @Nullable Output<Integer> numberOfBucket;
 
     /**
      * @return The number of bucket for timeline queries aggregation.
      * 
      */
-    public Output</* @Nullable */ Integer> numberOfBucket() {
-        return this.numberOfBucket;
+    public Optional<Output<Integer>> numberOfBucket() {
+        return Optional.ofNullable(this.numberOfBucket);
     }
 
     /**
@@ -217,7 +218,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder kinds(Output</* @Nullable */ List<Either<String,EntityTimelineKind>>> kinds) {
+        public Builder kinds(@Nullable Output<List<Either<String,EntityTimelineKind>>> kinds) {
             $.kinds = kinds;
             return this;
         }
@@ -228,7 +229,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder kinds(@Nullable List<Either<String,EntityTimelineKind>> kinds) {
+        public Builder kinds(List<Either<String,EntityTimelineKind>> kinds) {
             return kinds(Output.of(kinds));
         }
 
@@ -248,7 +249,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder numberOfBucket(Output</* @Nullable */ Integer> numberOfBucket) {
+        public Builder numberOfBucket(@Nullable Output<Integer> numberOfBucket) {
             $.numberOfBucket = numberOfBucket;
             return this;
         }
@@ -259,7 +260,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder numberOfBucket(@Nullable Integer numberOfBucket) {
+        public Builder numberOfBucket(Integer numberOfBucket) {
             return numberOfBucket(Output.of(numberOfBucket));
         }
 

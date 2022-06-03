@@ -5,10 +5,11 @@ package com.pulumi.oci.GoldenGate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.GoldenGate.inputs.GetDatabaseRegistrationsFilter;
+import com.pulumi.oci.GoldenGate.inputs.GetDatabaseRegistrationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only the resources that match the entire &#39;displayName&#39; given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDatabaseRegistrationsFilter>> filters;
+    private @Nullable Output<List<GetDatabaseRegistrationsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDatabaseRegistrationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDatabaseRegistrationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only the resources that match the &#39;lifecycleState&#39; given.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetDatabaseRegistrationsArgs() {}
@@ -122,7 +123,7 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -133,20 +134,20 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDatabaseRegistrationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabaseRegistrationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDatabaseRegistrationsFilter> filters) {
+        public Builder filters(List<GetDatabaseRegistrationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDatabaseRegistrationsFilter... filters) {
+        public Builder filters(GetDatabaseRegistrationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -156,7 +157,7 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

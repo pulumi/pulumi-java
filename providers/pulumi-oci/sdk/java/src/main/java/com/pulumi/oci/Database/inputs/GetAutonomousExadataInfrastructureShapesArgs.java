@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetAutonomousExadataInfrastructureShapesFilter;
+import com.pulumi.oci.Database.inputs.GetAutonomousExadataInfrastructureShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,10 +48,10 @@ public final class GetAutonomousExadataInfrastructureShapesArgs extends com.pulu
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAutonomousExadataInfrastructureShapesFilter>> filters;
+    private @Nullable Output<List<GetAutonomousExadataInfrastructureShapesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAutonomousExadataInfrastructureShapesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAutonomousExadataInfrastructureShapesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetAutonomousExadataInfrastructureShapesArgs() {}
@@ -121,16 +122,16 @@ public final class GetAutonomousExadataInfrastructureShapesArgs extends com.pulu
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAutonomousExadataInfrastructureShapesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAutonomousExadataInfrastructureShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAutonomousExadataInfrastructureShapesFilter> filters) {
+        public Builder filters(List<GetAutonomousExadataInfrastructureShapesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAutonomousExadataInfrastructureShapesFilter... filters) {
+        public Builder filters(GetAutonomousExadataInfrastructureShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

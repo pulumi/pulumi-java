@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contactFlowId")
-    private Output</* @Nullable */ String> contactFlowId;
+    private @Nullable Output<String> contactFlowId;
 
     /**
      * @return Returns information on a specific Contact Flow by contact flow id
      * 
      */
-    public Output</* @Nullable */ String> contactFlowId() {
-        return this.contactFlowId;
+    public Optional<Output<String>> contactFlowId() {
+        return Optional.ofNullable(this.contactFlowId);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Returns information on a specific Contact Flow by name
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A the map of tags to assign to the Contact Flow.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -80,14 +81,14 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-    private Output</* @Nullable */ String> type;
+    private @Nullable Output<String> type;
 
     /**
      * @return Specifies the type of Contact Flow.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     private GetContactFlowArgs() {}
@@ -124,7 +125,7 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contactFlowId(Output</* @Nullable */ String> contactFlowId) {
+        public Builder contactFlowId(@Nullable Output<String> contactFlowId) {
             $.contactFlowId = contactFlowId;
             return this;
         }
@@ -135,7 +136,7 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contactFlowId(@Nullable String contactFlowId) {
+        public Builder contactFlowId(String contactFlowId) {
             return contactFlowId(Output.of(contactFlowId));
         }
 
@@ -166,7 +167,7 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -177,7 +178,7 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -187,7 +188,7 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -198,7 +199,7 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
@@ -208,7 +209,7 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder type(Output</* @Nullable */ String> type) {
+        public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
@@ -219,7 +220,7 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
+        public Builder type(String type) {
             return type(Output.of(type));
         }
 

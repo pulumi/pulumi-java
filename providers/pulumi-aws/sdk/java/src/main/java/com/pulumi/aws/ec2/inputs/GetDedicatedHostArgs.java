@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetDedicatedHostFilter;
+import com.pulumi.aws.ec2.inputs.GetDedicatedHostFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDedicatedHostFilter>> filters;
+    private @Nullable Output<List<GetDedicatedHostFilterArgs>> filters;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<GetDedicatedHostFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDedicatedHostFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -37,21 +38,21 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="hostId")
-    private Output</* @Nullable */ String> hostId;
+    private @Nullable Output<String> hostId;
 
     /**
      * @return The ID of the Dedicated Host.
      * 
      */
-    public Output</* @Nullable */ String> hostId() {
-        return this.hostId;
+    public Optional<Output<String>> hostId() {
+        return Optional.ofNullable(this.hostId);
     }
 
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetDedicatedHostArgs() {}
@@ -86,7 +87,7 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetDedicatedHostFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDedicatedHostFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -97,7 +98,7 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetDedicatedHostFilter> filters) {
+        public Builder filters(List<GetDedicatedHostFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -107,7 +108,7 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(GetDedicatedHostFilter... filters) {
+        public Builder filters(GetDedicatedHostFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -117,7 +118,7 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder hostId(Output</* @Nullable */ String> hostId) {
+        public Builder hostId(@Nullable Output<String> hostId) {
             $.hostId = hostId;
             return this;
         }
@@ -128,16 +129,16 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder hostId(@Nullable String hostId) {
+        public Builder hostId(String hostId) {
             return hostId(Output.of(hostId));
         }
 
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

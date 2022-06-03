@@ -5,10 +5,11 @@ package com.pulumi.oci.Marketplace.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Marketplace.inputs.GetListingTaxesFilter;
+import com.pulumi.oci.Marketplace.inputs.GetListingTaxesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +22,21 @@ public final class GetListingTaxesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private Output</* @Nullable */ String> compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The unique identifier for the compartment.
      * 
      */
-    public Output</* @Nullable */ String> compartmentId() {
-        return this.compartmentId;
+    public Optional<Output<String>> compartmentId() {
+        return Optional.ofNullable(this.compartmentId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetListingTaxesFilter>> filters;
+    private @Nullable Output<List<GetListingTaxesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetListingTaxesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetListingTaxesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -85,7 +86,7 @@ public final class GetListingTaxesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
@@ -96,20 +97,20 @@ public final class GetListingTaxesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(String compartmentId) {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetListingTaxesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetListingTaxesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetListingTaxesFilter> filters) {
+        public Builder filters(List<GetListingTaxesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetListingTaxesFilter... filters) {
+        public Builder filters(GetListingTaxesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

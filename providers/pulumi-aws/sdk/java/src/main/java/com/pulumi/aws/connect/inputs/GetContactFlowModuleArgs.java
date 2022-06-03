@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="contactFlowModuleId")
-    private Output</* @Nullable */ String> contactFlowModuleId;
+    private @Nullable Output<String> contactFlowModuleId;
 
     /**
      * @return Returns information on a specific Contact Flow Module by contact flow module id
      * 
      */
-    public Output</* @Nullable */ String> contactFlowModuleId() {
-        return this.contactFlowModuleId;
+    public Optional<Output<String>> contactFlowModuleId() {
+        return Optional.ofNullable(this.contactFlowModuleId);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Returns information on a specific Contact Flow Module by name
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags to assign to the Contact Flow Module.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetContactFlowModuleArgs() {}
@@ -108,7 +109,7 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder contactFlowModuleId(Output</* @Nullable */ String> contactFlowModuleId) {
+        public Builder contactFlowModuleId(@Nullable Output<String> contactFlowModuleId) {
             $.contactFlowModuleId = contactFlowModuleId;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder contactFlowModuleId(@Nullable String contactFlowModuleId) {
+        public Builder contactFlowModuleId(String contactFlowModuleId) {
             return contactFlowModuleId(Output.of(contactFlowModuleId));
         }
 
@@ -150,7 +151,7 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -171,7 +172,7 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -182,7 +183,7 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

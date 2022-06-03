@@ -5,10 +5,11 @@ package com.pulumi.oci.Mysql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Mysql.inputs.GetMysqlBackupsFilter;
+import com.pulumi.oci.Mysql.inputs.GetMysqlBackupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupId")
-    private Output</* @Nullable */ String> backupId;
+    private @Nullable Output<String> backupId;
 
     /**
      * @return Backup OCID
      * 
      */
-    public Output</* @Nullable */ String> backupId() {
-        return this.backupId;
+    public Optional<Output<String>> backupId() {
+        return Optional.ofNullable(this.backupId);
     }
 
     /**
@@ -51,14 +52,14 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="creationType")
-    private Output</* @Nullable */ String> creationType;
+    private @Nullable Output<String> creationType;
 
     /**
      * @return Backup creationType
      * 
      */
-    public Output</* @Nullable */ String> creationType() {
-        return this.creationType;
+    public Optional<Output<String>> creationType() {
+        return Optional.ofNullable(this.creationType);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSystemId")
-    private Output</* @Nullable */ String> dbSystemId;
+    private @Nullable Output<String> dbSystemId;
 
     /**
      * @return The DB System [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Output</* @Nullable */ String> dbSystemId() {
-        return this.dbSystemId;
+    public Optional<Output<String>> dbSystemId() {
+        return Optional.ofNullable(this.dbSystemId);
     }
 
     /**
@@ -81,21 +82,21 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only the resource matching the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetMysqlBackupsFilter>> filters;
+    private @Nullable Output<List<GetMysqlBackupsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetMysqlBackupsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetMysqlBackupsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Backup Lifecycle State
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetMysqlBackupsArgs() {}
@@ -149,7 +150,7 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder backupId(Output</* @Nullable */ String> backupId) {
+        public Builder backupId(@Nullable Output<String> backupId) {
             $.backupId = backupId;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder backupId(@Nullable String backupId) {
+        public Builder backupId(String backupId) {
             return backupId(Output.of(backupId));
         }
 
@@ -191,7 +192,7 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder creationType(Output</* @Nullable */ String> creationType) {
+        public Builder creationType(@Nullable Output<String> creationType) {
             $.creationType = creationType;
             return this;
         }
@@ -202,7 +203,7 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder creationType(@Nullable String creationType) {
+        public Builder creationType(String creationType) {
             return creationType(Output.of(creationType));
         }
 
@@ -212,7 +213,7 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbSystemId(Output</* @Nullable */ String> dbSystemId) {
+        public Builder dbSystemId(@Nullable Output<String> dbSystemId) {
             $.dbSystemId = dbSystemId;
             return this;
         }
@@ -223,7 +224,7 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbSystemId(@Nullable String dbSystemId) {
+        public Builder dbSystemId(String dbSystemId) {
             return dbSystemId(Output.of(dbSystemId));
         }
 
@@ -233,7 +234,7 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -244,20 +245,20 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetMysqlBackupsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetMysqlBackupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetMysqlBackupsFilter> filters) {
+        public Builder filters(List<GetMysqlBackupsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetMysqlBackupsFilter... filters) {
+        public Builder filters(GetMysqlBackupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -267,7 +268,7 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -278,7 +279,7 @@ public final class GetMysqlBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

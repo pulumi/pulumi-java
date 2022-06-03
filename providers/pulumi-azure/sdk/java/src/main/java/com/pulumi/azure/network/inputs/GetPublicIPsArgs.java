@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allocationType")
-    private Output</* @Nullable */ String> allocationType;
+    private @Nullable Output<String> allocationType;
 
     /**
      * @return The Allocation Type for the Public IP Address. Possible values include `Static` or `Dynamic`.
      * 
      */
-    public Output</* @Nullable */ String> allocationType() {
-        return this.allocationType;
+    public Optional<Output<String>> allocationType() {
+        return Optional.ofNullable(this.allocationType);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attachmentStatus")
-    private Output</* @Nullable */ String> attachmentStatus;
+    private @Nullable Output<String> attachmentStatus;
 
     /**
      * @return Filter to include IP Addresses which are attached to a device, such as a VM/LB (`Attached`) or unattached (`Unattached`). To allow for both, use `All`.
      * 
      */
-    public Output</* @Nullable */ String> attachmentStatus() {
-        return this.attachmentStatus;
+    public Optional<Output<String>> attachmentStatus() {
+        return Optional.ofNullable(this.attachmentStatus);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namePrefix")
-    private Output</* @Nullable */ String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
     /**
      * @return A prefix match used for the IP Addresses `name` field, case sensitive.
      * 
      */
-    public Output</* @Nullable */ String> namePrefix() {
-        return this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -107,7 +108,7 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder allocationType(Output</* @Nullable */ String> allocationType) {
+        public Builder allocationType(@Nullable Output<String> allocationType) {
             $.allocationType = allocationType;
             return this;
         }
@@ -118,7 +119,7 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder allocationType(@Nullable String allocationType) {
+        public Builder allocationType(String allocationType) {
             return allocationType(Output.of(allocationType));
         }
 
@@ -128,7 +129,7 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder attachmentStatus(Output</* @Nullable */ String> attachmentStatus) {
+        public Builder attachmentStatus(@Nullable Output<String> attachmentStatus) {
             $.attachmentStatus = attachmentStatus;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder attachmentStatus(@Nullable String attachmentStatus) {
+        public Builder attachmentStatus(String attachmentStatus) {
             return attachmentStatus(Output.of(attachmentStatus));
         }
 
@@ -149,7 +150,7 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namePrefix(Output</* @Nullable */ String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 

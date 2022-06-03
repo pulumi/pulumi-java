@@ -5,11 +5,12 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetDiscoveryAnalyticsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetDiscoveryAnalyticsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,21 +38,21 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDiscoveryAnalyticsFilter>> filters;
+    private @Nullable Output<List<GetDiscoveryAnalyticsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDiscoveryAnalyticsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDiscoveryAnalyticsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="groupBy")
-    private Output</* @Nullable */ String> groupBy;
+    private @Nullable Output<String> groupBy;
 
     /**
      * @return Attribute by which the discovery analytics data should be grouped.
      * 
      */
-    public Output</* @Nullable */ String> groupBy() {
-        return this.groupBy;
+    public Optional<Output<String>> groupBy() {
+        return Optional.ofNullable(this.groupBy);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sensitiveDataModelId")
-    private Output</* @Nullable */ String> sensitiveDataModelId;
+    private @Nullable Output<String> sensitiveDataModelId;
 
     /**
      * @return A filter to return only the resources that match the specified sensitive data model OCID.
      * 
      */
-    public Output</* @Nullable */ String> sensitiveDataModelId() {
-        return this.sensitiveDataModelId;
+    public Optional<Output<String>> sensitiveDataModelId() {
+        return Optional.ofNullable(this.sensitiveDataModelId);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetId")
-    private Output</* @Nullable */ String> targetId;
+    private @Nullable Output<String> targetId;
 
     /**
      * @return A filter to return only items related to a specific target OCID.
      * 
      */
-    public Output</* @Nullable */ String> targetId() {
-        return this.targetId;
+    public Optional<Output<String>> targetId() {
+        return Optional.ofNullable(this.targetId);
     }
 
     private GetDiscoveryAnalyticsArgs() {}
@@ -155,7 +156,7 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -166,20 +167,20 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDiscoveryAnalyticsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDiscoveryAnalyticsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDiscoveryAnalyticsFilter> filters) {
+        public Builder filters(List<GetDiscoveryAnalyticsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDiscoveryAnalyticsFilter... filters) {
+        public Builder filters(GetDiscoveryAnalyticsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -189,7 +190,7 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder groupBy(Output</* @Nullable */ String> groupBy) {
+        public Builder groupBy(@Nullable Output<String> groupBy) {
             $.groupBy = groupBy;
             return this;
         }
@@ -200,7 +201,7 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder groupBy(@Nullable String groupBy) {
+        public Builder groupBy(String groupBy) {
             return groupBy(Output.of(groupBy));
         }
 
@@ -210,7 +211,7 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder sensitiveDataModelId(Output</* @Nullable */ String> sensitiveDataModelId) {
+        public Builder sensitiveDataModelId(@Nullable Output<String> sensitiveDataModelId) {
             $.sensitiveDataModelId = sensitiveDataModelId;
             return this;
         }
@@ -221,7 +222,7 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder sensitiveDataModelId(@Nullable String sensitiveDataModelId) {
+        public Builder sensitiveDataModelId(String sensitiveDataModelId) {
             return sensitiveDataModelId(Output.of(sensitiveDataModelId));
         }
 
@@ -231,7 +232,7 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder targetId(Output</* @Nullable */ String> targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             $.targetId = targetId;
             return this;
         }
@@ -242,7 +243,7 @@ public final class GetDiscoveryAnalyticsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder targetId(@Nullable String targetId) {
+        public Builder targetId(String targetId) {
             return targetId(Output.of(targetId));
         }
 

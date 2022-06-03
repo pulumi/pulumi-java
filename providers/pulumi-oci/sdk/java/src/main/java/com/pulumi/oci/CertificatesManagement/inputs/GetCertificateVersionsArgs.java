@@ -5,10 +5,11 @@ package com.pulumi.oci.CertificatesManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.CertificatesManagement.inputs.GetCertificateVersionsFilter;
+import com.pulumi.oci.CertificatesManagement.inputs.GetCertificateVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetCertificateVersionsArgs extends com.pulumi.resources.Invok
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetCertificateVersionsFilter>> filters;
+    private @Nullable Output<List<GetCertificateVersionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetCertificateVersionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetCertificateVersionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetCertificateVersionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="versionNumber")
-    private Output</* @Nullable */ String> versionNumber;
+    private @Nullable Output<String> versionNumber;
 
     /**
      * @return A filter that returns only resources that match the specified version number. The default value is 0, which means that this filter is not applied.
      * 
      */
-    public Output</* @Nullable */ String> versionNumber() {
-        return this.versionNumber;
+    public Optional<Output<String>> versionNumber() {
+        return Optional.ofNullable(this.versionNumber);
     }
 
     private GetCertificateVersionsArgs() {}
@@ -100,16 +101,16 @@ public final class GetCertificateVersionsArgs extends com.pulumi.resources.Invok
             return certificateId(Output.of(certificateId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetCertificateVersionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetCertificateVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCertificateVersionsFilter> filters) {
+        public Builder filters(List<GetCertificateVersionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetCertificateVersionsFilter... filters) {
+        public Builder filters(GetCertificateVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -119,7 +120,7 @@ public final class GetCertificateVersionsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder versionNumber(Output</* @Nullable */ String> versionNumber) {
+        public Builder versionNumber(@Nullable Output<String> versionNumber) {
             $.versionNumber = versionNumber;
             return this;
         }
@@ -130,7 +131,7 @@ public final class GetCertificateVersionsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder versionNumber(@Nullable String versionNumber) {
+        public Builder versionNumber(String versionNumber) {
             return versionNumber(Output.of(versionNumber));
         }
 

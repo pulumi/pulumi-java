@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class ListEndpointManagedProxyDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="hostname")
-    private Output</* @Nullable */ String> hostname;
+    private @Nullable Output<String> hostname;
 
     /**
      * @return The target host name.
      * 
      */
-    public Output</* @Nullable */ String> hostname() {
-        return this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -128,7 +129,7 @@ public final class ListEndpointManagedProxyDetailsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder hostname(Output</* @Nullable */ String> hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
@@ -139,7 +140,7 @@ public final class ListEndpointManagedProxyDetailsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder hostname(@Nullable String hostname) {
+        public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 

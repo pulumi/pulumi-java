@@ -5,10 +5,11 @@ package com.pulumi.oci.DataCatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataCatalog.inputs.GetCatalogPrivateEndpointsFilter;
+import com.pulumi.oci.DataCatalog.inputs.GetCatalogPrivateEndpointsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetCatalogPrivateEndpointsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetCatalogPrivateEndpointsFilter>> filters;
+    private @Nullable Output<List<GetCatalogPrivateEndpointsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetCatalogPrivateEndpointsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetCatalogPrivateEndpointsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetCatalogPrivateEndpointsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetCatalogPrivateEndpointsArgs() {}
@@ -122,7 +123,7 @@ public final class GetCatalogPrivateEndpointsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -133,20 +134,20 @@ public final class GetCatalogPrivateEndpointsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetCatalogPrivateEndpointsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetCatalogPrivateEndpointsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCatalogPrivateEndpointsFilter> filters) {
+        public Builder filters(List<GetCatalogPrivateEndpointsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetCatalogPrivateEndpointsFilter... filters) {
+        public Builder filters(GetCatalogPrivateEndpointsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -156,7 +157,7 @@ public final class GetCatalogPrivateEndpointsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetCatalogPrivateEndpointsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

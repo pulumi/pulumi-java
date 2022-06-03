@@ -5,10 +5,11 @@ package com.pulumi.oci.ObjectStorage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ObjectStorage.inputs.GetReplicationSourcesFilter;
+import com.pulumi.oci.ObjectStorage.inputs.GetReplicationSourcesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetReplicationSourcesArgs extends com.pulumi.resources.Invoke
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetReplicationSourcesFilter>> filters;
+    private @Nullable Output<List<GetReplicationSourcesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetReplicationSourcesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetReplicationSourcesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -100,16 +101,16 @@ public final class GetReplicationSourcesArgs extends com.pulumi.resources.Invoke
             return bucket(Output.of(bucket));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetReplicationSourcesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetReplicationSourcesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetReplicationSourcesFilter> filters) {
+        public Builder filters(List<GetReplicationSourcesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetReplicationSourcesFilter... filters) {
+        public Builder filters(GetReplicationSourcesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

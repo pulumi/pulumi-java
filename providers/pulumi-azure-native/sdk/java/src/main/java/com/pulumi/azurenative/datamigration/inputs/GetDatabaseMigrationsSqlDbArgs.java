@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="expand")
-    private Output</* @Nullable */ String> expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return Complete migration details be included in the response.
      * 
      */
-    public Output</* @Nullable */ String> expand() {
-        return this.expand;
+    public Optional<Output<String>> expand() {
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="migrationOperationId")
-    private Output</* @Nullable */ String> migrationOperationId;
+    private @Nullable Output<String> migrationOperationId;
 
     /**
      * @return Optional migration operation ID. If this is provided, then details of migration operation for that ID are retrieved. If not provided (default), then details related to most recent or current operation are retrieved.
      * 
      */
-    public Output</* @Nullable */ String> migrationOperationId() {
-        return this.migrationOperationId;
+    public Optional<Output<String>> migrationOperationId() {
+        return Optional.ofNullable(this.migrationOperationId);
     }
 
     /**
@@ -115,7 +116,7 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder expand(Output</* @Nullable */ String> expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
             return this;
         }
@@ -126,7 +127,7 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(String expand) {
             return expand(Output.of(expand));
         }
 
@@ -136,7 +137,7 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder migrationOperationId(Output</* @Nullable */ String> migrationOperationId) {
+        public Builder migrationOperationId(@Nullable Output<String> migrationOperationId) {
             $.migrationOperationId = migrationOperationId;
             return this;
         }
@@ -147,7 +148,7 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder migrationOperationId(@Nullable String migrationOperationId) {
+        public Builder migrationOperationId(String migrationOperationId) {
             return migrationOperationId(Output.of(migrationOperationId));
         }
 

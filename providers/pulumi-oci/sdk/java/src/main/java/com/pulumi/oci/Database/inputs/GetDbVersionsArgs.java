@@ -5,11 +5,12 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDbVersionsFilter;
+import com.pulumi.oci.Database.inputs.GetDbVersionsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,14 +38,14 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSystemId")
-    private Output</* @Nullable */ String> dbSystemId;
+    private @Nullable Output<String> dbSystemId;
 
     /**
      * @return The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). If provided, filters the results to the set of database versions which are supported for the DB system.
      * 
      */
-    public Output</* @Nullable */ String> dbSystemId() {
-        return this.dbSystemId;
+    public Optional<Output<String>> dbSystemId() {
+        return Optional.ofNullable(this.dbSystemId);
     }
 
     /**
@@ -52,21 +53,21 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSystemShape")
-    private Output</* @Nullable */ String> dbSystemShape;
+    private @Nullable Output<String> dbSystemShape;
 
     /**
      * @return If provided, filters the results to the set of database versions which are supported for the given shape.
      * 
      */
-    public Output</* @Nullable */ String> dbSystemShape() {
-        return this.dbSystemShape;
+    public Optional<Output<String>> dbSystemShape() {
+        return Optional.ofNullable(this.dbSystemShape);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDbVersionsFilter>> filters;
+    private @Nullable Output<List<GetDbVersionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDbVersionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDbVersionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isDatabaseSoftwareImageSupported")
-    private Output</* @Nullable */ Boolean> isDatabaseSoftwareImageSupported;
+    private @Nullable Output<Boolean> isDatabaseSoftwareImageSupported;
 
     /**
      * @return If true, filters the results to the set of Oracle Database versions that are supported for Oracle Cloud Infrastructure database software images.
      * 
      */
-    public Output</* @Nullable */ Boolean> isDatabaseSoftwareImageSupported() {
-        return this.isDatabaseSoftwareImageSupported;
+    public Optional<Output<Boolean>> isDatabaseSoftwareImageSupported() {
+        return Optional.ofNullable(this.isDatabaseSoftwareImageSupported);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isUpgradeSupported")
-    private Output</* @Nullable */ Boolean> isUpgradeSupported;
+    private @Nullable Output<Boolean> isUpgradeSupported;
 
     /**
      * @return If provided, filters the results to the set of database versions which are supported for Upgrade.
      * 
      */
-    public Output</* @Nullable */ Boolean> isUpgradeSupported() {
-        return this.isUpgradeSupported;
+    public Optional<Output<Boolean>> isUpgradeSupported() {
+        return Optional.ofNullable(this.isUpgradeSupported);
     }
 
     /**
@@ -106,7 +107,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageManagement")
-    private Output</* @Nullable */ String> storageManagement;
+    private @Nullable Output<String> storageManagement;
 
     /**
      * @return The DB system storage management option. Used to list database versions available for that storage manager. Valid values are:
@@ -114,8 +115,8 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * * LVM - Logical volume management
      * 
      */
-    public Output</* @Nullable */ String> storageManagement() {
-        return this.storageManagement;
+    public Optional<Output<String>> storageManagement() {
+        return Optional.ofNullable(this.storageManagement);
     }
 
     private GetDbVersionsArgs() {}
@@ -175,7 +176,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbSystemId(Output</* @Nullable */ String> dbSystemId) {
+        public Builder dbSystemId(@Nullable Output<String> dbSystemId) {
             $.dbSystemId = dbSystemId;
             return this;
         }
@@ -186,7 +187,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbSystemId(@Nullable String dbSystemId) {
+        public Builder dbSystemId(String dbSystemId) {
             return dbSystemId(Output.of(dbSystemId));
         }
 
@@ -196,7 +197,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbSystemShape(Output</* @Nullable */ String> dbSystemShape) {
+        public Builder dbSystemShape(@Nullable Output<String> dbSystemShape) {
             $.dbSystemShape = dbSystemShape;
             return this;
         }
@@ -207,20 +208,20 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbSystemShape(@Nullable String dbSystemShape) {
+        public Builder dbSystemShape(String dbSystemShape) {
             return dbSystemShape(Output.of(dbSystemShape));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDbVersionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDbVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbVersionsFilter> filters) {
+        public Builder filters(List<GetDbVersionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDbVersionsFilter... filters) {
+        public Builder filters(GetDbVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -230,7 +231,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isDatabaseSoftwareImageSupported(Output</* @Nullable */ Boolean> isDatabaseSoftwareImageSupported) {
+        public Builder isDatabaseSoftwareImageSupported(@Nullable Output<Boolean> isDatabaseSoftwareImageSupported) {
             $.isDatabaseSoftwareImageSupported = isDatabaseSoftwareImageSupported;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isDatabaseSoftwareImageSupported(@Nullable Boolean isDatabaseSoftwareImageSupported) {
+        public Builder isDatabaseSoftwareImageSupported(Boolean isDatabaseSoftwareImageSupported) {
             return isDatabaseSoftwareImageSupported(Output.of(isDatabaseSoftwareImageSupported));
         }
 
@@ -251,7 +252,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isUpgradeSupported(Output</* @Nullable */ Boolean> isUpgradeSupported) {
+        public Builder isUpgradeSupported(@Nullable Output<Boolean> isUpgradeSupported) {
             $.isUpgradeSupported = isUpgradeSupported;
             return this;
         }
@@ -262,7 +263,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isUpgradeSupported(@Nullable Boolean isUpgradeSupported) {
+        public Builder isUpgradeSupported(Boolean isUpgradeSupported) {
             return isUpgradeSupported(Output.of(isUpgradeSupported));
         }
 
@@ -274,7 +275,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder storageManagement(Output</* @Nullable */ String> storageManagement) {
+        public Builder storageManagement(@Nullable Output<String> storageManagement) {
             $.storageManagement = storageManagement;
             return this;
         }
@@ -287,7 +288,7 @@ public final class GetDbVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder storageManagement(@Nullable String storageManagement) {
+        public Builder storageManagement(String storageManagement) {
             return storageManagement(Output.of(storageManagement));
         }
 

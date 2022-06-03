@@ -5,11 +5,12 @@ package com.pulumi.oci.Waf.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Waf.inputs.GetProtectionCapabilitiesFilter;
+import com.pulumi.oci.Waf.inputs.GetProtectionCapabilitiesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,21 +38,21 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetProtectionCapabilitiesFilter>> filters;
+    private @Nullable Output<List<GetProtectionCapabilitiesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetProtectionCapabilitiesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetProtectionCapabilitiesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="groupTags")
-    private Output</* @Nullable */ List<String>> groupTags;
+    private @Nullable Output<List<String>> groupTags;
 
     /**
      * @return A filter to return only resources that are accociated given group tag.
      * 
      */
-    public Output</* @Nullable */ List<String>> groupTags() {
-        return this.groupTags;
+    public Optional<Output<List<String>>> groupTags() {
+        return Optional.ofNullable(this.groupTags);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="isLatestVersions")
-    private Output</* @Nullable */ List<Boolean>> isLatestVersions;
+    private @Nullable Output<List<Boolean>> isLatestVersions;
 
     /**
      * @return A filter to return only resources that matches given isLatestVersion.
      * 
      */
-    public Output</* @Nullable */ List<Boolean>> isLatestVersions() {
-        return this.isLatestVersions;
+    public Optional<Output<List<Boolean>>> isLatestVersions() {
+        return Optional.ofNullable(this.isLatestVersions);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="key")
-    private Output</* @Nullable */ String> key;
+    private @Nullable Output<String> key;
 
     /**
      * @return The unique key of protection capability to filter by.
      * 
      */
-    public Output</* @Nullable */ String> key() {
-        return this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="type")
-    private Output</* @Nullable */ String> type;
+    private @Nullable Output<String> type;
 
     /**
      * @return A filter to return only resources that matches given type.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     private GetProtectionCapabilitiesArgs() {}
@@ -171,7 +172,7 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -182,20 +183,20 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetProtectionCapabilitiesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetProtectionCapabilitiesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetProtectionCapabilitiesFilter> filters) {
+        public Builder filters(List<GetProtectionCapabilitiesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetProtectionCapabilitiesFilter... filters) {
+        public Builder filters(GetProtectionCapabilitiesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -205,7 +206,7 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder groupTags(Output</* @Nullable */ List<String>> groupTags) {
+        public Builder groupTags(@Nullable Output<List<String>> groupTags) {
             $.groupTags = groupTags;
             return this;
         }
@@ -216,7 +217,7 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder groupTags(@Nullable List<String> groupTags) {
+        public Builder groupTags(List<String> groupTags) {
             return groupTags(Output.of(groupTags));
         }
 
@@ -236,7 +237,7 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder isLatestVersions(Output</* @Nullable */ List<Boolean>> isLatestVersions) {
+        public Builder isLatestVersions(@Nullable Output<List<Boolean>> isLatestVersions) {
             $.isLatestVersions = isLatestVersions;
             return this;
         }
@@ -247,7 +248,7 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder isLatestVersions(@Nullable List<Boolean> isLatestVersions) {
+        public Builder isLatestVersions(List<Boolean> isLatestVersions) {
             return isLatestVersions(Output.of(isLatestVersions));
         }
 
@@ -267,7 +268,7 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder key(Output</* @Nullable */ String> key) {
+        public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
@@ -278,7 +279,7 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder key(@Nullable String key) {
+        public Builder key(String key) {
             return key(Output.of(key));
         }
 
@@ -288,7 +289,7 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder type(Output</* @Nullable */ String> type) {
+        public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
@@ -299,7 +300,7 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
+        public Builder type(String type) {
             return type(Output.of(type));
         }
 

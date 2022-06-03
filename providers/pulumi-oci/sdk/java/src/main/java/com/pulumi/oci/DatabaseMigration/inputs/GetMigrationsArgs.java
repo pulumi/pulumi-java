@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseMigration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseMigration.inputs.GetMigrationsFilter;
+import com.pulumi.oci.DatabaseMigration.inputs.GetMigrationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetMigrationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetMigrationsFilter>> filters;
+    private @Nullable Output<List<GetMigrationsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetMigrationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetMigrationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetMigrationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lifecycleDetails")
-    private Output</* @Nullable */ String> lifecycleDetails;
+    private @Nullable Output<String> lifecycleDetails;
 
     /**
      * @return The lifecycle detailed status of the Migration.
      * 
      */
-    public Output</* @Nullable */ String> lifecycleDetails() {
-        return this.lifecycleDetails;
+    public Optional<Output<String>> lifecycleDetails() {
+        return Optional.ofNullable(this.lifecycleDetails);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetMigrationsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The lifecycle state of the Migration.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetMigrationsArgs() {}
@@ -138,7 +139,7 @@ public final class GetMigrationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,20 +150,20 @@ public final class GetMigrationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetMigrationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetMigrationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetMigrationsFilter> filters) {
+        public Builder filters(List<GetMigrationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetMigrationsFilter... filters) {
+        public Builder filters(GetMigrationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetMigrationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder lifecycleDetails(Output</* @Nullable */ String> lifecycleDetails) {
+        public Builder lifecycleDetails(@Nullable Output<String> lifecycleDetails) {
             $.lifecycleDetails = lifecycleDetails;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetMigrationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder lifecycleDetails(@Nullable String lifecycleDetails) {
+        public Builder lifecycleDetails(String lifecycleDetails) {
             return lifecycleDetails(Output.of(lifecycleDetails));
         }
 
@@ -193,7 +194,7 @@ public final class GetMigrationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetMigrationsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

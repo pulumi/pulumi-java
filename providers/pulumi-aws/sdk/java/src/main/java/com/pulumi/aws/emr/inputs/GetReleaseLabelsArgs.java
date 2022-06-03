@@ -3,10 +3,11 @@
 
 package com.pulumi.aws.emr.inputs;
 
-import com.pulumi.aws.emr.inputs.GetReleaseLabelsFilters;
+import com.pulumi.aws.emr.inputs.GetReleaseLabelsFiltersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetReleaseLabelsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ GetReleaseLabelsFilters> filters;
+    private @Nullable Output<GetReleaseLabelsFiltersArgs> filters;
 
     /**
      * @return Filters the results of the request. Prefix specifies the prefix of release labels to return. Application specifies the application (with/without version) of release labels to return. See Filters.
      * 
      */
-    public Output</* @Nullable */ GetReleaseLabelsFilters> filters() {
-        return this.filters;
+    public Optional<Output<GetReleaseLabelsFiltersArgs>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetReleaseLabelsArgs() {}
@@ -59,7 +60,7 @@ public final class GetReleaseLabelsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ GetReleaseLabelsFilters> filters) {
+        public Builder filters(@Nullable Output<GetReleaseLabelsFiltersArgs> filters) {
             $.filters = filters;
             return this;
         }
@@ -70,7 +71,7 @@ public final class GetReleaseLabelsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(@Nullable GetReleaseLabelsFilters filters) {
+        public Builder filters(GetReleaseLabelsFiltersArgs filters) {
             return filters(Output.of(filters));
         }
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="accessResourcePath")
-    private Output</* @Nullable */ String> accessResourcePath;
+    private @Nullable Output<String> accessResourcePath;
 
     /**
      * @return The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.
      * 
      */
-    public Output</* @Nullable */ String> accessResourcePath() {
-        return this.accessResourcePath;
+    public Optional<Output<String>> accessResourcePath() {
+        return Optional.ofNullable(this.accessResourcePath);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expireTime")
-    private Output</* @Nullable */ String> expireTime;
+    private @Nullable Output<String> expireTime;
 
     /**
      * @return Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.
      * 
      */
-    public Output</* @Nullable */ String> expireTime() {
-        return this.expireTime;
+    public Optional<Output<String>> expireTime() {
+        return Optional.ofNullable(this.expireTime);
     }
 
     /**
@@ -64,14 +65,14 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="permissions")
-    private Output</* @Nullable */ String> permissions;
+    private @Nullable Output<String> permissions;
 
     /**
      * @return The string with permissions for Data Plane access. Currently only &#39;r&#39; is supported which grants read only access.
      * 
      */
-    public Output</* @Nullable */ String> permissions() {
-        return this.permissions;
+    public Optional<Output<String>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -79,14 +80,14 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="profileName")
-    private Output</* @Nullable */ String> profileName;
+    private @Nullable Output<String> profileName;
 
     /**
      * @return The name of the profile. Currently only the default is supported. The default value is DefaultProfile.
      * 
      */
-    public Output</* @Nullable */ String> profileName() {
-        return this.profileName;
+    public Optional<Output<String>> profileName() {
+        return Optional.ofNullable(this.profileName);
     }
 
     /**
@@ -109,14 +110,14 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="startTime")
-    private Output</* @Nullable */ String> startTime;
+    private @Nullable Output<String> startTime;
 
     /**
      * @return Start time for the token. If not specified the current time will be used.
      * 
      */
-    public Output</* @Nullable */ String> startTime() {
-        return this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     private GetFactoryDataPlaneAccessArgs() {}
@@ -155,7 +156,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder accessResourcePath(Output</* @Nullable */ String> accessResourcePath) {
+        public Builder accessResourcePath(@Nullable Output<String> accessResourcePath) {
             $.accessResourcePath = accessResourcePath;
             return this;
         }
@@ -166,7 +167,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder accessResourcePath(@Nullable String accessResourcePath) {
+        public Builder accessResourcePath(String accessResourcePath) {
             return accessResourcePath(Output.of(accessResourcePath));
         }
 
@@ -176,7 +177,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder expireTime(Output</* @Nullable */ String> expireTime) {
+        public Builder expireTime(@Nullable Output<String> expireTime) {
             $.expireTime = expireTime;
             return this;
         }
@@ -187,7 +188,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder expireTime(@Nullable String expireTime) {
+        public Builder expireTime(String expireTime) {
             return expireTime(Output.of(expireTime));
         }
 
@@ -218,7 +219,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder permissions(Output</* @Nullable */ String> permissions) {
+        public Builder permissions(@Nullable Output<String> permissions) {
             $.permissions = permissions;
             return this;
         }
@@ -229,7 +230,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder permissions(@Nullable String permissions) {
+        public Builder permissions(String permissions) {
             return permissions(Output.of(permissions));
         }
 
@@ -239,7 +240,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder profileName(Output</* @Nullable */ String> profileName) {
+        public Builder profileName(@Nullable Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
@@ -250,7 +251,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder profileName(@Nullable String profileName) {
+        public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
@@ -281,7 +282,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder startTime(Output</* @Nullable */ String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
@@ -292,7 +293,7 @@ public final class GetFactoryDataPlaneAccessArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder startTime(@Nullable String startTime) {
+        public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 

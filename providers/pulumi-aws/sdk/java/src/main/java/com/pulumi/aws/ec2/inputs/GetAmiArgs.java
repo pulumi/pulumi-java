@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetAmiFilter;
+import com.pulumi.aws.ec2.inputs.GetAmiFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -11,6 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,15 +25,15 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executableUsers")
-    private Output</* @Nullable */ List<String>> executableUsers;
+    private @Nullable Output<List<String>> executableUsers;
 
     /**
      * @return Limit search to users with *explicit* launch permission on
      * the image. Valid items are the numeric account ID or `self`.
      * 
      */
-    public Output</* @Nullable */ List<String>> executableUsers() {
-        return this.executableUsers;
+    public Optional<Output<List<String>>> executableUsers() {
+        return Optional.ofNullable(this.executableUsers);
     }
 
     /**
@@ -42,7 +43,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAmiFilter>> filters;
+    private @Nullable Output<List<GetAmiFilterArgs>> filters;
 
     /**
      * @return One or more name/value pairs to filter off of. There are
@@ -50,8 +51,8 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * [describe-images in the AWS CLI reference][1].
      * 
      */
-    public Output</* @Nullable */ List<GetAmiFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAmiFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -60,15 +61,15 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-    private Output</* @Nullable */ Boolean> mostRecent;
+    private @Nullable Output<Boolean> mostRecent;
 
     /**
      * @return If more than one result is returned, use the most
      * recent AMI.
      * 
      */
-    public Output</* @Nullable */ Boolean> mostRecent() {
-        return this.mostRecent;
+    public Optional<Output<Boolean>> mostRecent() {
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -80,7 +81,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameRegex")
-    private Output</* @Nullable */ String> nameRegex;
+    private @Nullable Output<String> nameRegex;
 
     /**
      * @return A regex string to apply to the AMI list returned
@@ -90,8 +91,8 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * options to narrow down the list AWS returns.
      * 
      */
-    public Output</* @Nullable */ String> nameRegex() {
-        return this.nameRegex;
+    public Optional<Output<String>> nameRegex() {
+        return Optional.ofNullable(this.nameRegex);
     }
 
     /**
@@ -116,7 +117,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Any tags assigned to the image.
@@ -124,8 +125,8 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * * `tags.#.value` - The value of the tag.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetAmiArgs() {}
@@ -164,7 +165,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder executableUsers(Output</* @Nullable */ List<String>> executableUsers) {
+        public Builder executableUsers(@Nullable Output<List<String>> executableUsers) {
             $.executableUsers = executableUsers;
             return this;
         }
@@ -176,7 +177,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder executableUsers(@Nullable List<String> executableUsers) {
+        public Builder executableUsers(List<String> executableUsers) {
             return executableUsers(Output.of(executableUsers));
         }
 
@@ -199,7 +200,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetAmiFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAmiFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -212,7 +213,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetAmiFilter> filters) {
+        public Builder filters(List<GetAmiFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -224,7 +225,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetAmiFilter... filters) {
+        public Builder filters(GetAmiFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -235,7 +236,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(Output</* @Nullable */ Boolean> mostRecent) {
+        public Builder mostRecent(@Nullable Output<Boolean> mostRecent) {
             $.mostRecent = mostRecent;
             return this;
         }
@@ -247,7 +248,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(Boolean mostRecent) {
             return mostRecent(Output.of(mostRecent));
         }
 
@@ -261,7 +262,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameRegex(Output</* @Nullable */ String> nameRegex) {
+        public Builder nameRegex(@Nullable Output<String> nameRegex) {
             $.nameRegex = nameRegex;
             return this;
         }
@@ -276,7 +277,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameRegex(@Nullable String nameRegex) {
+        public Builder nameRegex(String nameRegex) {
             return nameRegex(Output.of(nameRegex));
         }
 
@@ -319,7 +320,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -332,7 +333,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

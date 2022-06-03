@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -50,14 +51,14 @@ public final class GetRepositoryDiffArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="isComparisonFromMergeBase")
-    private Output</* @Nullable */ Boolean> isComparisonFromMergeBase;
+    private @Nullable Output<Boolean> isComparisonFromMergeBase;
 
     /**
      * @return Boolean to indicate whether to use merge base or most recent revision.
      * 
      */
-    public Output</* @Nullable */ Boolean> isComparisonFromMergeBase() {
-        return this.isComparisonFromMergeBase;
+    public Optional<Output<Boolean>> isComparisonFromMergeBase() {
+        return Optional.ofNullable(this.isComparisonFromMergeBase);
     }
 
     /**
@@ -166,7 +167,7 @@ public final class GetRepositoryDiffArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder isComparisonFromMergeBase(Output</* @Nullable */ Boolean> isComparisonFromMergeBase) {
+        public Builder isComparisonFromMergeBase(@Nullable Output<Boolean> isComparisonFromMergeBase) {
             $.isComparisonFromMergeBase = isComparisonFromMergeBase;
             return this;
         }
@@ -177,7 +178,7 @@ public final class GetRepositoryDiffArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder isComparisonFromMergeBase(@Nullable Boolean isComparisonFromMergeBase) {
+        public Builder isComparisonFromMergeBase(Boolean isComparisonFromMergeBase) {
             return isComparisonFromMergeBase(Output.of(isComparisonFromMergeBase));
         }
 

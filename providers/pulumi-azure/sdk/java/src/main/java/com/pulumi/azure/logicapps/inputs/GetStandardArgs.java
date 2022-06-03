@@ -3,12 +3,13 @@
 
 package com.pulumi.azure.logicapps.inputs;
 
-import com.pulumi.azure.logicapps.inputs.GetStandardSiteConfig;
+import com.pulumi.azure.logicapps.inputs.GetStandardSiteConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,17 +48,17 @@ public final class GetStandardArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="siteConfig")
-    private Output</* @Nullable */ GetStandardSiteConfig> siteConfig;
+    private @Nullable Output<GetStandardSiteConfigArgs> siteConfig;
 
-    public Output</* @Nullable */ GetStandardSiteConfig> siteConfig() {
-        return this.siteConfig;
+    public Optional<Output<GetStandardSiteConfigArgs>> siteConfig() {
+        return Optional.ofNullable(this.siteConfig);
     }
 
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetStandardArgs() {}
@@ -129,21 +130,21 @@ public final class GetStandardArgs extends com.pulumi.resources.InvokeArgs {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
-        public Builder siteConfig(Output</* @Nullable */ GetStandardSiteConfig> siteConfig) {
+        public Builder siteConfig(@Nullable Output<GetStandardSiteConfigArgs> siteConfig) {
             $.siteConfig = siteConfig;
             return this;
         }
 
-        public Builder siteConfig(@Nullable GetStandardSiteConfig siteConfig) {
+        public Builder siteConfig(GetStandardSiteConfigArgs siteConfig) {
             return siteConfig(Output.of(siteConfig));
         }
 
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

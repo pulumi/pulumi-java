@@ -5,11 +5,12 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetTagNamespacesFilter;
+import com.pulumi.oci.Identity.inputs.GetTagNamespacesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class GetTagNamespacesArgs extends com.pulumi.resources.InvokeArgs 
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetTagNamespacesFilter>> filters;
+    private @Nullable Output<List<GetTagNamespacesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetTagNamespacesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetTagNamespacesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -44,14 +45,14 @@ public final class GetTagNamespacesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="includeSubcompartments")
-    private Output</* @Nullable */ Boolean> includeSubcompartments;
+    private @Nullable Output<Boolean> includeSubcompartments;
 
     /**
      * @return An optional boolean parameter indicating whether to retrieve all tag namespaces in subcompartments. If this parameter is not specified, only the tag namespaces defined in the specified compartment are retrieved.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeSubcompartments() {
-        return this.includeSubcompartments;
+    public Optional<Output<Boolean>> includeSubcompartments() {
+        return Optional.ofNullable(this.includeSubcompartments);
     }
 
     /**
@@ -59,14 +60,14 @@ public final class GetTagNamespacesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetTagNamespacesArgs() {}
@@ -117,16 +118,16 @@ public final class GetTagNamespacesArgs extends com.pulumi.resources.InvokeArgs 
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetTagNamespacesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetTagNamespacesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetTagNamespacesFilter> filters) {
+        public Builder filters(List<GetTagNamespacesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetTagNamespacesFilter... filters) {
+        public Builder filters(GetTagNamespacesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -136,7 +137,7 @@ public final class GetTagNamespacesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder includeSubcompartments(Output</* @Nullable */ Boolean> includeSubcompartments) {
+        public Builder includeSubcompartments(@Nullable Output<Boolean> includeSubcompartments) {
             $.includeSubcompartments = includeSubcompartments;
             return this;
         }
@@ -147,7 +148,7 @@ public final class GetTagNamespacesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder includeSubcompartments(@Nullable Boolean includeSubcompartments) {
+        public Builder includeSubcompartments(Boolean includeSubcompartments) {
             return includeSubcompartments(Output.of(includeSubcompartments));
         }
 
@@ -157,7 +158,7 @@ public final class GetTagNamespacesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -168,7 +169,7 @@ public final class GetTagNamespacesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

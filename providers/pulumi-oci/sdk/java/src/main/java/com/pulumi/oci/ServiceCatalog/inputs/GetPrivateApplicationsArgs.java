@@ -5,10 +5,11 @@ package com.pulumi.oci.ServiceCatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ServiceCatalog.inputs.GetPrivateApplicationsFilter;
+import com.pulumi.oci.ServiceCatalog.inputs.GetPrivateApplicationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetPrivateApplicationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Exact match name filter.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetPrivateApplicationsFilter>> filters;
+    private @Nullable Output<List<GetPrivateApplicationsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetPrivateApplicationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetPrivateApplicationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetPrivateApplicationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateApplicationId")
-    private Output</* @Nullable */ String> privateApplicationId;
+    private @Nullable Output<String> privateApplicationId;
 
     /**
      * @return The unique identifier for the private application.
      * 
      */
-    public Output</* @Nullable */ String> privateApplicationId() {
-        return this.privateApplicationId;
+    public Optional<Output<String>> privateApplicationId() {
+        return Optional.ofNullable(this.privateApplicationId);
     }
 
     private GetPrivateApplicationsArgs() {}
@@ -122,7 +123,7 @@ public final class GetPrivateApplicationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -133,20 +134,20 @@ public final class GetPrivateApplicationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetPrivateApplicationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetPrivateApplicationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPrivateApplicationsFilter> filters) {
+        public Builder filters(List<GetPrivateApplicationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetPrivateApplicationsFilter... filters) {
+        public Builder filters(GetPrivateApplicationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -156,7 +157,7 @@ public final class GetPrivateApplicationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder privateApplicationId(Output</* @Nullable */ String> privateApplicationId) {
+        public Builder privateApplicationId(@Nullable Output<String> privateApplicationId) {
             $.privateApplicationId = privateApplicationId;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetPrivateApplicationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder privateApplicationId(@Nullable String privateApplicationId) {
+        public Builder privateApplicationId(String privateApplicationId) {
             return privateApplicationId(Output.of(privateApplicationId));
         }
 

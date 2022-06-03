@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +23,10 @@ public final class GetOrganizationEnvironmentIamPolicyArgs extends com.pulumi.re
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private Output</* @Nullable */ String> optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Output</* @Nullable */ String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion;
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="organizationId", required=true)
@@ -70,12 +71,12 @@ public final class GetOrganizationEnvironmentIamPolicyArgs extends com.pulumi.re
             return environmentId(Output.of(environmentId));
         }
 
-        public Builder optionsRequestedPolicyVersion(Output</* @Nullable */ String> optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
             return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
         }
 

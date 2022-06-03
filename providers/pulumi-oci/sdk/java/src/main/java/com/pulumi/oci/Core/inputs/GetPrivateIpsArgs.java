@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetPrivateIpsFilter;
+import com.pulumi.oci.Core.inputs.GetPrivateIpsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPrivateIpsArgs Empty = new GetPrivateIpsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetPrivateIpsFilter>> filters;
+    private @Nullable Output<List<GetPrivateIpsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetPrivateIpsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetPrivateIpsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -28,14 +29,14 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAddress")
-    private Output</* @Nullable */ String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
     /**
      * @return An IP address. This could be either IPv4 or IPv6, depending on the resource. Example: `10.0.3.3`
      * 
      */
-    public Output</* @Nullable */ String> ipAddress() {
-        return this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetId")
-    private Output</* @Nullable */ String> subnetId;
+    private @Nullable Output<String> subnetId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subnet.
      * 
      */
-    public Output</* @Nullable */ String> subnetId() {
-        return this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vlanId")
-    private Output</* @Nullable */ String> vlanId;
+    private @Nullable Output<String> vlanId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN.
      * 
      */
-    public Output</* @Nullable */ String> vlanId() {
-        return this.vlanId;
+    public Optional<Output<String>> vlanId() {
+        return Optional.ofNullable(this.vlanId);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vnicId")
-    private Output</* @Nullable */ String> vnicId;
+    private @Nullable Output<String> vnicId;
 
     /**
      * @return The OCID of the VNIC.
      * 
      */
-    public Output</* @Nullable */ String> vnicId() {
-        return this.vnicId;
+    public Optional<Output<String>> vnicId() {
+        return Optional.ofNullable(this.vnicId);
     }
 
     private GetPrivateIpsArgs() {}
@@ -111,16 +112,16 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPrivateIpsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetPrivateIpsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetPrivateIpsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPrivateIpsFilter> filters) {
+        public Builder filters(List<GetPrivateIpsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetPrivateIpsFilter... filters) {
+        public Builder filters(GetPrivateIpsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -130,7 +131,7 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipAddress(Output</* @Nullable */ String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
@@ -141,7 +142,7 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
@@ -151,7 +152,7 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder subnetId(Output</* @Nullable */ String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
@@ -162,7 +163,7 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder subnetId(@Nullable String subnetId) {
+        public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
@@ -172,7 +173,7 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vlanId(Output</* @Nullable */ String> vlanId) {
+        public Builder vlanId(@Nullable Output<String> vlanId) {
             $.vlanId = vlanId;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vlanId(@Nullable String vlanId) {
+        public Builder vlanId(String vlanId) {
             return vlanId(Output.of(vlanId));
         }
 
@@ -193,7 +194,7 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vnicId(Output</* @Nullable */ String> vnicId) {
+        public Builder vnicId(@Nullable Output<String> vnicId) {
             $.vnicId = vnicId;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetPrivateIpsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vnicId(@Nullable String vnicId) {
+        public Builder vnicId(String vnicId) {
             return vnicId(Output.of(vnicId));
         }
 

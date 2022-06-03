@@ -5,11 +5,12 @@ package com.pulumi.oci.ManagementAgent.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ManagementAgent.inputs.GetManagementAgentInstallKeysFilter;
+import com.pulumi.oci.ManagementAgent.inputs.GetManagementAgentInstallKeysFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
      * 
      */
     @Import(name="accessLevel")
-    private Output</* @Nullable */ String> accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Value of this is always &#34;ACCESSIBLE&#34; and any other value is not supported.
      * 
      */
-    public Output</* @Nullable */ String> accessLevel() {
-        return this.accessLevel;
+    public Optional<Output<String>> accessLevel() {
+        return Optional.ofNullable(this.accessLevel);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private Output</* @Nullable */ Boolean> compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return if set to true then it fetches resources for all compartments where user has access to else only on the compartment specified.
      * 
      */
-    public Output</* @Nullable */ Boolean> compartmentIdInSubtree() {
-        return this.compartmentIdInSubtree;
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
+        return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     /**
@@ -67,21 +68,21 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The display name for which the Key needs to be listed.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagementAgentInstallKeysFilter>> filters;
+    private @Nullable Output<List<GetManagementAgentInstallKeysFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagementAgentInstallKeysFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagementAgentInstallKeysFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Filter to return only Management Agents in the particular lifecycle state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetManagementAgentInstallKeysArgs() {}
@@ -134,7 +135,7 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder accessLevel(Output</* @Nullable */ String> accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(String accessLevel) {
             return accessLevel(Output.of(accessLevel));
         }
 
@@ -176,7 +177,7 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(Output</* @Nullable */ Boolean> compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
@@ -187,7 +188,7 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
             return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
@@ -197,7 +198,7 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -208,20 +209,20 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagementAgentInstallKeysFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagementAgentInstallKeysFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagementAgentInstallKeysFilter> filters) {
+        public Builder filters(List<GetManagementAgentInstallKeysFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagementAgentInstallKeysFilter... filters) {
+        public Builder filters(GetManagementAgentInstallKeysFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -231,7 +232,7 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -242,7 +243,7 @@ public final class GetManagementAgentInstallKeysArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

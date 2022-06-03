@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDatabasePdbConversionHistoryEntriesFilter;
+import com.pulumi.oci.Database.inputs.GetDatabasePdbConversionHistoryEntriesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetDatabasePdbConversionHistoryEntriesArgs extends com.pulumi
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDatabasePdbConversionHistoryEntriesFilter>> filters;
+    private @Nullable Output<List<GetDatabasePdbConversionHistoryEntriesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDatabasePdbConversionHistoryEntriesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDatabasePdbConversionHistoryEntriesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetDatabasePdbConversionHistoryEntriesArgs extends com.pulumi
      * 
      */
     @Import(name="pdbConversionAction")
-    private Output</* @Nullable */ String> pdbConversionAction;
+    private @Nullable Output<String> pdbConversionAction;
 
     /**
      * @return A filter to return only the pluggable database conversion history entries that match the specified conversion action. For example, you can use this filter to return only entries for the precheck operation.
      * 
      */
-    public Output</* @Nullable */ String> pdbConversionAction() {
-        return this.pdbConversionAction;
+    public Optional<Output<String>> pdbConversionAction() {
+        return Optional.ofNullable(this.pdbConversionAction);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetDatabasePdbConversionHistoryEntriesArgs extends com.pulumi
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only the pluggable database conversion history entries that match the specified lifecycle state. For example, you can use this filter to return only entries in the &#34;failed&#34; lifecycle state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetDatabasePdbConversionHistoryEntriesArgs() {}
@@ -116,16 +117,16 @@ public final class GetDatabasePdbConversionHistoryEntriesArgs extends com.pulumi
             return databaseId(Output.of(databaseId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDatabasePdbConversionHistoryEntriesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabasePdbConversionHistoryEntriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDatabasePdbConversionHistoryEntriesFilter> filters) {
+        public Builder filters(List<GetDatabasePdbConversionHistoryEntriesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDatabasePdbConversionHistoryEntriesFilter... filters) {
+        public Builder filters(GetDatabasePdbConversionHistoryEntriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetDatabasePdbConversionHistoryEntriesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder pdbConversionAction(Output</* @Nullable */ String> pdbConversionAction) {
+        public Builder pdbConversionAction(@Nullable Output<String> pdbConversionAction) {
             $.pdbConversionAction = pdbConversionAction;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetDatabasePdbConversionHistoryEntriesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder pdbConversionAction(@Nullable String pdbConversionAction) {
+        public Builder pdbConversionAction(String pdbConversionAction) {
             return pdbConversionAction(Output.of(pdbConversionAction));
         }
 
@@ -156,7 +157,7 @@ public final class GetDatabasePdbConversionHistoryEntriesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetDatabasePdbConversionHistoryEntriesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

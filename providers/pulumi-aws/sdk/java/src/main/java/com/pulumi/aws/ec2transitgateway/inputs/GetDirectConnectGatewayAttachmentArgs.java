@@ -3,13 +3,14 @@
 
 package com.pulumi.aws.ec2transitgateway.inputs;
 
-import com.pulumi.aws.ec2transitgateway.inputs.GetDirectConnectGatewayAttachmentFilter;
+import com.pulumi.aws.ec2transitgateway.inputs.GetDirectConnectGatewayAttachmentFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="dxGatewayId")
-    private Output</* @Nullable */ String> dxGatewayId;
+    private @Nullable Output<String> dxGatewayId;
 
     /**
      * @return Identifier of the Direct Connect Gateway.
      * 
      */
-    public Output</* @Nullable */ String> dxGatewayId() {
-        return this.dxGatewayId;
+    public Optional<Output<String>> dxGatewayId() {
+        return Optional.ofNullable(this.dxGatewayId);
     }
 
     /**
@@ -37,14 +38,14 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDirectConnectGatewayAttachmentFilter>> filters;
+    private @Nullable Output<List<GetDirectConnectGatewayAttachmentFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<GetDirectConnectGatewayAttachmentFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDirectConnectGatewayAttachmentFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags, each pair of which must exactly match a pair on the desired Transit Gateway Direct Connect Gateway Attachment.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -67,14 +68,14 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="transitGatewayId")
-    private Output</* @Nullable */ String> transitGatewayId;
+    private @Nullable Output<String> transitGatewayId;
 
     /**
      * @return Identifier of the EC2 Transit Gateway.
      * 
      */
-    public Output</* @Nullable */ String> transitGatewayId() {
-        return this.transitGatewayId;
+    public Optional<Output<String>> transitGatewayId() {
+        return Optional.ofNullable(this.transitGatewayId);
     }
 
     private GetDirectConnectGatewayAttachmentArgs() {}
@@ -110,7 +111,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder dxGatewayId(Output</* @Nullable */ String> dxGatewayId) {
+        public Builder dxGatewayId(@Nullable Output<String> dxGatewayId) {
             $.dxGatewayId = dxGatewayId;
             return this;
         }
@@ -121,7 +122,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder dxGatewayId(@Nullable String dxGatewayId) {
+        public Builder dxGatewayId(String dxGatewayId) {
             return dxGatewayId(Output.of(dxGatewayId));
         }
 
@@ -131,7 +132,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetDirectConnectGatewayAttachmentFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDirectConnectGatewayAttachmentFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -142,7 +143,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetDirectConnectGatewayAttachmentFilter> filters) {
+        public Builder filters(List<GetDirectConnectGatewayAttachmentFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -152,7 +153,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder filters(GetDirectConnectGatewayAttachmentFilter... filters) {
+        public Builder filters(GetDirectConnectGatewayAttachmentFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -162,7 +163,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -173,7 +174,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
@@ -183,7 +184,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder transitGatewayId(Output</* @Nullable */ String> transitGatewayId) {
+        public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
             $.transitGatewayId = transitGatewayId;
             return this;
         }
@@ -194,7 +195,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder transitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             return transitGatewayId(Output.of(transitGatewayId));
         }
 

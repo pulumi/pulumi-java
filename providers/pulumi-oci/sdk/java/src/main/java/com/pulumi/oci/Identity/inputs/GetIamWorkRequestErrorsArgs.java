@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetIamWorkRequestErrorsFilter;
+import com.pulumi.oci.Identity.inputs.GetIamWorkRequestErrorsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetIamWorkRequestErrorsArgs extends com.pulumi.resources.Invo
     public static final GetIamWorkRequestErrorsArgs Empty = new GetIamWorkRequestErrorsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetIamWorkRequestErrorsFilter>> filters;
+    private @Nullable Output<List<GetIamWorkRequestErrorsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetIamWorkRequestErrorsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetIamWorkRequestErrorsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetIamWorkRequestErrorsArgs extends com.pulumi.resources.Invo
             $ = new GetIamWorkRequestErrorsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetIamWorkRequestErrorsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetIamWorkRequestErrorsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetIamWorkRequestErrorsFilter> filters) {
+        public Builder filters(List<GetIamWorkRequestErrorsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetIamWorkRequestErrorsFilter... filters) {
+        public Builder filters(GetIamWorkRequestErrorsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

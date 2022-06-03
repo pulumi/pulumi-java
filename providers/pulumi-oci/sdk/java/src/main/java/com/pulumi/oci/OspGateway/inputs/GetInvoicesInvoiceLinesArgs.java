@@ -5,10 +5,11 @@ package com.pulumi.oci.OspGateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OspGateway.inputs.GetInvoicesInvoiceLinesFilter;
+import com.pulumi.oci.OspGateway.inputs.GetInvoicesInvoiceLinesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetInvoicesInvoiceLinesArgs extends com.pulumi.resources.Invo
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetInvoicesInvoiceLinesFilter>> filters;
+    private @Nullable Output<List<GetInvoicesInvoiceLinesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetInvoicesInvoiceLinesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetInvoicesInvoiceLinesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -116,16 +117,16 @@ public final class GetInvoicesInvoiceLinesArgs extends com.pulumi.resources.Invo
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetInvoicesInvoiceLinesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetInvoicesInvoiceLinesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetInvoicesInvoiceLinesFilter> filters) {
+        public Builder filters(List<GetInvoicesInvoiceLinesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetInvoicesInvoiceLinesFilter... filters) {
+        public Builder filters(GetInvoicesInvoiceLinesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -3,11 +3,12 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
-import com.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationsFilter;
+import com.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationsFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetInfrastructureConfigurationsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetInfrastructureConfigurationsFilter>> filters;
+    private @Nullable Output<List<GetInfrastructureConfigurationsFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<GetInfrastructureConfigurationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetInfrastructureConfigurationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetInfrastructureConfigurationsArgs() {}
@@ -60,7 +61,7 @@ public final class GetInfrastructureConfigurationsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder filters(Output</* @Nullable */ List<GetInfrastructureConfigurationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetInfrastructureConfigurationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -71,7 +72,7 @@ public final class GetInfrastructureConfigurationsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetInfrastructureConfigurationsFilter> filters) {
+        public Builder filters(List<GetInfrastructureConfigurationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -81,7 +82,7 @@ public final class GetInfrastructureConfigurationsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder filters(GetInfrastructureConfigurationsFilter... filters) {
+        public Builder filters(GetInfrastructureConfigurationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.DataScience.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataScience.inputs.GetFastLaunchJobConfigsFilter;
+import com.pulumi.oci.DataScience.inputs.GetFastLaunchJobConfigsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetFastLaunchJobConfigsArgs extends com.pulumi.resources.Invo
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetFastLaunchJobConfigsFilter>> filters;
+    private @Nullable Output<List<GetFastLaunchJobConfigsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetFastLaunchJobConfigsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetFastLaunchJobConfigsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetFastLaunchJobConfigsArgs() {}
@@ -84,16 +85,16 @@ public final class GetFastLaunchJobConfigsArgs extends com.pulumi.resources.Invo
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetFastLaunchJobConfigsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetFastLaunchJobConfigsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetFastLaunchJobConfigsFilter> filters) {
+        public Builder filters(List<GetFastLaunchJobConfigsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetFastLaunchJobConfigsFilter... filters) {
+        public Builder filters(GetFastLaunchJobConfigsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Certificate identifier. For example, `rds-ca-2019`.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="latestValidTill")
-    private Output</* @Nullable */ Boolean> latestValidTill;
+    private @Nullable Output<Boolean> latestValidTill;
 
     /**
      * @return When enabled, returns the certificate with the latest `ValidTill`.
      * 
      */
-    public Output</* @Nullable */ Boolean> latestValidTill() {
-        return this.latestValidTill;
+    public Optional<Output<Boolean>> latestValidTill() {
+        return Optional.ofNullable(this.latestValidTill);
     }
 
     private GetCertificateArgs() {}
@@ -76,7 +77,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -87,7 +88,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -97,7 +98,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder latestValidTill(Output</* @Nullable */ Boolean> latestValidTill) {
+        public Builder latestValidTill(@Nullable Output<Boolean> latestValidTill) {
             $.latestValidTill = latestValidTill;
             return this;
         }
@@ -108,7 +109,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder latestValidTill(@Nullable Boolean latestValidTill) {
+        public Builder latestValidTill(Boolean latestValidTill) {
             return latestValidTill(Output.of(latestValidTill));
         }
 

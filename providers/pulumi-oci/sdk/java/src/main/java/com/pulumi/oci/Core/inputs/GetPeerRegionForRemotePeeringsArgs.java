@@ -5,9 +5,10 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetPeerRegionForRemotePeeringsFilter;
+import com.pulumi.oci.Core.inputs.GetPeerRegionForRemotePeeringsFilterArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +17,10 @@ public final class GetPeerRegionForRemotePeeringsArgs extends com.pulumi.resourc
     public static final GetPeerRegionForRemotePeeringsArgs Empty = new GetPeerRegionForRemotePeeringsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetPeerRegionForRemotePeeringsFilter>> filters;
+    private @Nullable Output<List<GetPeerRegionForRemotePeeringsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetPeerRegionForRemotePeeringsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetPeerRegionForRemotePeeringsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetPeerRegionForRemotePeeringsArgs() {}
@@ -46,16 +47,16 @@ public final class GetPeerRegionForRemotePeeringsArgs extends com.pulumi.resourc
             $ = new GetPeerRegionForRemotePeeringsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetPeerRegionForRemotePeeringsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetPeerRegionForRemotePeeringsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPeerRegionForRemotePeeringsFilter> filters) {
+        public Builder filters(List<GetPeerRegionForRemotePeeringsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetPeerRegionForRemotePeeringsFilter... filters) {
+        public Builder filters(GetPeerRegionForRemotePeeringsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

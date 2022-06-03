@@ -5,10 +5,11 @@ package com.pulumi.oci.DatabaseManagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseUserConsumerGroupPrivilegesFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseUserConsumerGroupPrivilegesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetManagedDatabaseUserConsumerGroupPrivilegesArgs extends com
     public static final GetManagedDatabaseUserConsumerGroupPrivilegesArgs Empty = new GetManagedDatabaseUserConsumerGroupPrivilegesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetManagedDatabaseUserConsumerGroupPrivilegesFilter>> filters;
+    private @Nullable Output<List<GetManagedDatabaseUserConsumerGroupPrivilegesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetManagedDatabaseUserConsumerGroupPrivilegesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetManagedDatabaseUserConsumerGroupPrivilegesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetManagedDatabaseUserConsumerGroupPrivilegesArgs extends com
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -95,16 +96,16 @@ public final class GetManagedDatabaseUserConsumerGroupPrivilegesArgs extends com
             $ = new GetManagedDatabaseUserConsumerGroupPrivilegesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetManagedDatabaseUserConsumerGroupPrivilegesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedDatabaseUserConsumerGroupPrivilegesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabaseUserConsumerGroupPrivilegesFilter> filters) {
+        public Builder filters(List<GetManagedDatabaseUserConsumerGroupPrivilegesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetManagedDatabaseUserConsumerGroupPrivilegesFilter... filters) {
+        public Builder filters(GetManagedDatabaseUserConsumerGroupPrivilegesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetManagedDatabaseUserConsumerGroupPrivilegesArgs extends com
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetManagedDatabaseUserConsumerGroupPrivilegesArgs extends com
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 

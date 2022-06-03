@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="labId")
-    private Output</* @Nullable */ String> labId;
+    private @Nullable Output<String> labId;
 
     /**
      * @return The resource Id of the lab
      * 
      */
-    public Output</* @Nullable */ String> labId() {
-        return this.labId;
+    public Optional<Output<String>> labId() {
+        return Optional.ofNullable(this.labId);
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder labId(Output</* @Nullable */ String> labId) {
+        public Builder labId(@Nullable Output<String> labId) {
             $.labId = labId;
             return this;
         }
@@ -86,7 +87,7 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder labId(@Nullable String labId) {
+        public Builder labId(String labId) {
             return labId(Output.of(labId));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetExternalPluggableDatabasesFilter;
+import com.pulumi.oci.Database.inputs.GetExternalPluggableDatabasesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetExternalPluggableDatabasesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetExternalPluggableDatabasesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="externalContainerDatabaseId")
-    private Output</* @Nullable */ String> externalContainerDatabaseId;
+    private @Nullable Output<String> externalContainerDatabaseId;
 
     /**
      * @return The ExternalContainerDatabase [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Output</* @Nullable */ String> externalContainerDatabaseId() {
-        return this.externalContainerDatabaseId;
+    public Optional<Output<String>> externalContainerDatabaseId() {
+        return Optional.ofNullable(this.externalContainerDatabaseId);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetExternalPluggableDatabasesFilter>> filters;
+    private @Nullable Output<List<GetExternalPluggableDatabasesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetExternalPluggableDatabasesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetExternalPluggableDatabasesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetExternalPluggableDatabasesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the specified lifecycle state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetExternalPluggableDatabasesArgs() {}
@@ -138,7 +139,7 @@ public final class GetExternalPluggableDatabasesArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,7 +150,7 @@ public final class GetExternalPluggableDatabasesArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -159,7 +160,7 @@ public final class GetExternalPluggableDatabasesArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder externalContainerDatabaseId(Output</* @Nullable */ String> externalContainerDatabaseId) {
+        public Builder externalContainerDatabaseId(@Nullable Output<String> externalContainerDatabaseId) {
             $.externalContainerDatabaseId = externalContainerDatabaseId;
             return this;
         }
@@ -170,20 +171,20 @@ public final class GetExternalPluggableDatabasesArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder externalContainerDatabaseId(@Nullable String externalContainerDatabaseId) {
+        public Builder externalContainerDatabaseId(String externalContainerDatabaseId) {
             return externalContainerDatabaseId(Output.of(externalContainerDatabaseId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetExternalPluggableDatabasesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetExternalPluggableDatabasesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetExternalPluggableDatabasesFilter> filters) {
+        public Builder filters(List<GetExternalPluggableDatabasesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetExternalPluggableDatabasesFilter... filters) {
+        public Builder filters(GetExternalPluggableDatabasesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -193,7 +194,7 @@ public final class GetExternalPluggableDatabasesArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetExternalPluggableDatabasesArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

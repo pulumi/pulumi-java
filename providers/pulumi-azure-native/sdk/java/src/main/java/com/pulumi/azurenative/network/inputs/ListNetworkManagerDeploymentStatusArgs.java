@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
      * 
      */
     @Import(name="deploymentTypes")
-    private Output</* @Nullable */ List<Either<String,ConfigurationType>>> deploymentTypes;
+    private @Nullable Output<List<Either<String,ConfigurationType>>> deploymentTypes;
 
     /**
      * @return List of deployment types.
      * 
      */
-    public Output</* @Nullable */ List<Either<String,ConfigurationType>>> deploymentTypes() {
-        return this.deploymentTypes;
+    public Optional<Output<List<Either<String,ConfigurationType>>>> deploymentTypes() {
+        return Optional.ofNullable(this.deploymentTypes);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
      * 
      */
     @Import(name="regions")
-    private Output</* @Nullable */ List<String>> regions;
+    private @Nullable Output<List<String>> regions;
 
     /**
      * @return List of locations.
      * 
      */
-    public Output</* @Nullable */ List<String>> regions() {
-        return this.regions;
+    public Optional<Output<List<String>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     /**
@@ -82,14 +83,14 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
      * 
      */
     @Import(name="skipToken")
-    private Output</* @Nullable */ String> skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
      * 
      */
-    public Output</* @Nullable */ String> skipToken() {
-        return this.skipToken;
+    public Optional<Output<String>> skipToken() {
+        return Optional.ofNullable(this.skipToken);
     }
 
     private ListNetworkManagerDeploymentStatusArgs() {}
@@ -126,7 +127,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder deploymentTypes(Output</* @Nullable */ List<Either<String,ConfigurationType>>> deploymentTypes) {
+        public Builder deploymentTypes(@Nullable Output<List<Either<String,ConfigurationType>>> deploymentTypes) {
             $.deploymentTypes = deploymentTypes;
             return this;
         }
@@ -137,7 +138,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder deploymentTypes(@Nullable List<Either<String,ConfigurationType>> deploymentTypes) {
+        public Builder deploymentTypes(List<Either<String,ConfigurationType>> deploymentTypes) {
             return deploymentTypes(Output.of(deploymentTypes));
         }
 
@@ -178,7 +179,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder regions(Output</* @Nullable */ List<String>> regions) {
+        public Builder regions(@Nullable Output<List<String>> regions) {
             $.regions = regions;
             return this;
         }
@@ -189,7 +190,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder regions(@Nullable List<String> regions) {
+        public Builder regions(List<String> regions) {
             return regions(Output.of(regions));
         }
 
@@ -230,7 +231,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+        public Builder skipToken(@Nullable Output<String> skipToken) {
             $.skipToken = skipToken;
             return this;
         }
@@ -241,7 +242,7 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
+        public Builder skipToken(String skipToken) {
             return skipToken(Output.of(skipToken));
         }
 

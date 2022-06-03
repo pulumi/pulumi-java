@@ -5,10 +5,11 @@ package com.pulumi.oci.DataCatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataCatalog.inputs.GetCatalogTypesFilter;
+import com.pulumi.oci.DataCatalog.inputs.GetCatalogTypesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="externalTypeName")
-    private Output</* @Nullable */ String> externalTypeName;
+    private @Nullable Output<String> externalTypeName;
 
     /**
      * @return Data type as defined in an external system.
      * 
      */
-    public Output</* @Nullable */ String> externalTypeName() {
-        return this.externalTypeName;
+    public Optional<Output<String>> externalTypeName() {
+        return Optional.ofNullable(this.externalTypeName);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields")
-    private Output</* @Nullable */ List<String>> fields;
+    private @Nullable Output<List<String>> fields;
 
     /**
      * @return Specifies the fields to return in a type summary response.
      * 
      */
-    public Output</* @Nullable */ List<String>> fields() {
-        return this.fields;
+    public Optional<Output<List<String>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetCatalogTypesFilter>> filters;
+    private @Nullable Output<List<GetCatalogTypesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetCatalogTypesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetCatalogTypesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isApproved")
-    private Output</* @Nullable */ String> isApproved;
+    private @Nullable Output<String> isApproved;
 
     /**
      * @return Indicates whether the type is approved for use as a classifying object.
      * 
      */
-    public Output</* @Nullable */ String> isApproved() {
-        return this.isApproved;
+    public Optional<Output<String>> isApproved() {
+        return Optional.ofNullable(this.isApproved);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isInternal")
-    private Output</* @Nullable */ String> isInternal;
+    private @Nullable Output<String> isInternal;
 
     /**
      * @return Indicates whether the type is internal, making it unavailable for use by metadata elements.
      * 
      */
-    public Output</* @Nullable */ String> isInternal() {
-        return this.isInternal;
+    public Optional<Output<String>> isInternal() {
+        return Optional.ofNullable(this.isInternal);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isTag")
-    private Output</* @Nullable */ String> isTag;
+    private @Nullable Output<String> isTag;
 
     /**
      * @return Indicates whether the type can be used for tagging metadata elements.
      * 
      */
-    public Output</* @Nullable */ String> isTag() {
-        return this.isTag;
+    public Optional<Output<String>> isTag() {
+        return Optional.ofNullable(this.isTag);
     }
 
     /**
@@ -118,14 +119,14 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Immutable resource name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -133,14 +134,14 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -148,14 +149,14 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="typeCategory")
-    private Output</* @Nullable */ String> typeCategory;
+    private @Nullable Output<String> typeCategory;
 
     /**
      * @return Indicates the category of this type . For example, data assets or connections.
      * 
      */
-    public Output</* @Nullable */ String> typeCategory() {
-        return this.typeCategory;
+    public Optional<Output<String>> typeCategory() {
+        return Optional.ofNullable(this.typeCategory);
     }
 
     private GetCatalogTypesArgs() {}
@@ -218,7 +219,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder externalTypeName(Output</* @Nullable */ String> externalTypeName) {
+        public Builder externalTypeName(@Nullable Output<String> externalTypeName) {
             $.externalTypeName = externalTypeName;
             return this;
         }
@@ -229,7 +230,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder externalTypeName(@Nullable String externalTypeName) {
+        public Builder externalTypeName(String externalTypeName) {
             return externalTypeName(Output.of(externalTypeName));
         }
 
@@ -239,7 +240,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fields(Output</* @Nullable */ List<String>> fields) {
+        public Builder fields(@Nullable Output<List<String>> fields) {
             $.fields = fields;
             return this;
         }
@@ -250,7 +251,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fields(@Nullable List<String> fields) {
+        public Builder fields(List<String> fields) {
             return fields(Output.of(fields));
         }
 
@@ -264,16 +265,16 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
             return fields(List.of(fields));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetCatalogTypesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetCatalogTypesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCatalogTypesFilter> filters) {
+        public Builder filters(List<GetCatalogTypesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetCatalogTypesFilter... filters) {
+        public Builder filters(GetCatalogTypesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -283,7 +284,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isApproved(Output</* @Nullable */ String> isApproved) {
+        public Builder isApproved(@Nullable Output<String> isApproved) {
             $.isApproved = isApproved;
             return this;
         }
@@ -294,7 +295,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isApproved(@Nullable String isApproved) {
+        public Builder isApproved(String isApproved) {
             return isApproved(Output.of(isApproved));
         }
 
@@ -304,7 +305,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isInternal(Output</* @Nullable */ String> isInternal) {
+        public Builder isInternal(@Nullable Output<String> isInternal) {
             $.isInternal = isInternal;
             return this;
         }
@@ -315,7 +316,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isInternal(@Nullable String isInternal) {
+        public Builder isInternal(String isInternal) {
             return isInternal(Output.of(isInternal));
         }
 
@@ -325,7 +326,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isTag(Output</* @Nullable */ String> isTag) {
+        public Builder isTag(@Nullable Output<String> isTag) {
             $.isTag = isTag;
             return this;
         }
@@ -336,7 +337,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isTag(@Nullable String isTag) {
+        public Builder isTag(String isTag) {
             return isTag(Output.of(isTag));
         }
 
@@ -346,7 +347,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -357,7 +358,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -367,7 +368,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -378,7 +379,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -388,7 +389,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder typeCategory(Output</* @Nullable */ String> typeCategory) {
+        public Builder typeCategory(@Nullable Output<String> typeCategory) {
             $.typeCategory = typeCategory;
             return this;
         }
@@ -399,7 +400,7 @@ public final class GetCatalogTypesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder typeCategory(@Nullable String typeCategory) {
+        public Builder typeCategory(String typeCategory) {
             return typeCategory(Output.of(typeCategory));
         }
 

@@ -3,12 +3,13 @@
 
 package com.pulumi.azurenative.web.inputs;
 
-import com.pulumi.azurenative.web.inputs.ConsentLinkParameterDefinition;
+import com.pulumi.azurenative.web.inputs.ConsentLinkParameterDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="parameters")
-    private Output</* @Nullable */ List<ConsentLinkParameterDefinition>> parameters;
+    private @Nullable Output<List<ConsentLinkParameterDefinitionArgs>> parameters;
 
     /**
      * @return Collection of resources
      * 
      */
-    public Output</* @Nullable */ List<ConsentLinkParameterDefinition>> parameters() {
-        return this.parameters;
+    public Optional<Output<List<ConsentLinkParameterDefinitionArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="subscriptionId")
-    private Output</* @Nullable */ String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
     /**
      * @return Subscription Id
      * 
      */
-    public Output</* @Nullable */ String> subscriptionId() {
-        return this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     private ListConnectionConsentLinksArgs() {}
@@ -130,7 +131,7 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder parameters(Output</* @Nullable */ List<ConsentLinkParameterDefinition>> parameters) {
+        public Builder parameters(@Nullable Output<List<ConsentLinkParameterDefinitionArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
@@ -141,7 +142,7 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder parameters(@Nullable List<ConsentLinkParameterDefinition> parameters) {
+        public Builder parameters(List<ConsentLinkParameterDefinitionArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
@@ -151,7 +152,7 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder parameters(ConsentLinkParameterDefinition... parameters) {
+        public Builder parameters(ConsentLinkParameterDefinitionArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
@@ -182,7 +183,7 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder subscriptionId(Output</* @Nullable */ String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
@@ -193,7 +194,7 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder subscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 

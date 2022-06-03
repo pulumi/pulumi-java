@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="withDecryption")
-    private Output</* @Nullable */ Boolean> withDecryption;
+    private @Nullable Output<Boolean> withDecryption;
 
     /**
      * @return Whether to return decrypted `SecureString` value. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> withDecryption() {
-        return this.withDecryption;
+    public Optional<Output<Boolean>> withDecryption() {
+        return Optional.ofNullable(this.withDecryption);
     }
 
     private GetParameterArgs() {}
@@ -97,7 +98,7 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder withDecryption(Output</* @Nullable */ Boolean> withDecryption) {
+        public Builder withDecryption(@Nullable Output<Boolean> withDecryption) {
             $.withDecryption = withDecryption;
             return this;
         }
@@ -108,7 +109,7 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder withDecryption(@Nullable Boolean withDecryption) {
+        public Builder withDecryption(Boolean withDecryption) {
             return withDecryption(Output.of(withDecryption));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.ApiGateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ApiGateway.inputs.GetGatewaysFilter;
+import com.pulumi.oci.ApiGateway.inputs.GetGatewaysFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetGatewaysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateId")
-    private Output</* @Nullable */ String> certificateId;
+    private @Nullable Output<String> certificateId;
 
     /**
      * @return Filter gateways by the certificate ocid.
      * 
      */
-    public Output</* @Nullable */ String> certificateId() {
-        return this.certificateId;
+    public Optional<Output<String>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetGatewaysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetGatewaysFilter>> filters;
+    private @Nullable Output<List<GetGatewaysFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetGatewaysFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetGatewaysFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetGatewaysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state.  Example: `SUCCEEDED`
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetGatewaysArgs() {}
@@ -117,7 +118,7 @@ public final class GetGatewaysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder certificateId(Output</* @Nullable */ String> certificateId) {
+        public Builder certificateId(@Nullable Output<String> certificateId) {
             $.certificateId = certificateId;
             return this;
         }
@@ -128,7 +129,7 @@ public final class GetGatewaysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder certificateId(@Nullable String certificateId) {
+        public Builder certificateId(String certificateId) {
             return certificateId(Output.of(certificateId));
         }
 
@@ -159,7 +160,7 @@ public final class GetGatewaysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -170,20 +171,20 @@ public final class GetGatewaysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetGatewaysFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetGatewaysFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetGatewaysFilter> filters) {
+        public Builder filters(List<GetGatewaysFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetGatewaysFilter... filters) {
+        public Builder filters(GetGatewaysFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -193,7 +194,7 @@ public final class GetGatewaysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetGatewaysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

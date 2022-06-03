@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,14 +35,14 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="localeCode")
-    private Output</* @Nullable */ String> localeCode;
+    private @Nullable Output<String> localeCode;
 
     /**
      * @return Locale of profile to retrieve, default is en-us.
      * 
      */
-    public Output</* @Nullable */ String> localeCode() {
-        return this.localeCode;
+    public Optional<Output<String>> localeCode() {
+        return Optional.ofNullable(this.localeCode);
     }
 
     /**
@@ -128,7 +129,7 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder localeCode(Output</* @Nullable */ String> localeCode) {
+        public Builder localeCode(@Nullable Output<String> localeCode) {
             $.localeCode = localeCode;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder localeCode(@Nullable String localeCode) {
+        public Builder localeCode(String localeCode) {
             return localeCode(Output.of(localeCode));
         }
 

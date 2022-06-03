@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="delegates")
-    private Output</* @Nullable */ List<String>> delegates;
+    private @Nullable Output<List<String>> delegates;
 
     /**
      * @return Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. `[&#34;projects/-/serviceAccounts/delegate-svc-account@project-id.iam.gserviceaccount.com&#34;]`)
      * 
      */
-    public Output</* @Nullable */ List<String>> delegates() {
-        return this.delegates;
+    public Optional<Output<List<String>>> delegates() {
+        return Optional.ofNullable(this.delegates);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="lifetime")
-    private Output</* @Nullable */ String> lifetime;
+    private @Nullable Output<String> lifetime;
 
     /**
      * @return Lifetime of the impersonated token (defaults to its max: `3600s`).
      * 
      */
-    public Output</* @Nullable */ String> lifetime() {
-        return this.lifetime;
+    public Optional<Output<String>> lifetime() {
+        return Optional.ofNullable(this.lifetime);
     }
 
     /**
@@ -108,7 +109,7 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder delegates(Output</* @Nullable */ List<String>> delegates) {
+        public Builder delegates(@Nullable Output<List<String>> delegates) {
             $.delegates = delegates;
             return this;
         }
@@ -119,7 +120,7 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder delegates(@Nullable List<String> delegates) {
+        public Builder delegates(List<String> delegates) {
             return delegates(Output.of(delegates));
         }
 
@@ -139,7 +140,7 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder lifetime(Output</* @Nullable */ String> lifetime) {
+        public Builder lifetime(@Nullable Output<String> lifetime) {
             $.lifetime = lifetime;
             return this;
         }
@@ -150,7 +151,7 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder lifetime(@Nullable String lifetime) {
+        public Builder lifetime(String lifetime) {
             return lifetime(Output.of(lifetime));
         }
 

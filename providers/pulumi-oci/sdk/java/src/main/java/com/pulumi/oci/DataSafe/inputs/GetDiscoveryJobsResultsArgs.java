@@ -5,11 +5,12 @@ package com.pulumi.oci.DataSafe.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetDiscoveryJobsResultsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetDiscoveryJobsResultsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +23,14 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="columnNames")
-    private Output</* @Nullable */ List<String>> columnNames;
+    private @Nullable Output<List<String>> columnNames;
 
     /**
      * @return A filter to return only a specific column based on column name.
      * 
      */
-    public Output</* @Nullable */ List<String>> columnNames() {
-        return this.columnNames;
+    public Optional<Output<List<String>>> columnNames() {
+        return Optional.ofNullable(this.columnNames);
     }
 
     /**
@@ -52,21 +53,21 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="discoveryType")
-    private Output</* @Nullable */ String> discoveryType;
+    private @Nullable Output<String> discoveryType;
 
     /**
      * @return A filter to return only the resources that match the specified discovery type.
      * 
      */
-    public Output</* @Nullable */ String> discoveryType() {
-        return this.discoveryType;
+    public Optional<Output<String>> discoveryType() {
+        return Optional.ofNullable(this.discoveryType);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDiscoveryJobsResultsFilter>> filters;
+    private @Nullable Output<List<GetDiscoveryJobsResultsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDiscoveryJobsResultsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDiscoveryJobsResultsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -74,14 +75,14 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="isResultApplied")
-    private Output</* @Nullable */ Boolean> isResultApplied;
+    private @Nullable Output<Boolean> isResultApplied;
 
     /**
      * @return A filter to return the discovery result resources based on the value of their isResultApplied attribute.
      * 
      */
-    public Output</* @Nullable */ Boolean> isResultApplied() {
-        return this.isResultApplied;
+    public Optional<Output<Boolean>> isResultApplied() {
+        return Optional.ofNullable(this.isResultApplied);
     }
 
     /**
@@ -89,14 +90,14 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="objects")
-    private Output</* @Nullable */ List<String>> objects;
+    private @Nullable Output<List<String>> objects;
 
     /**
      * @return A filter to return only items related to a specific object name.
      * 
      */
-    public Output</* @Nullable */ List<String>> objects() {
-        return this.objects;
+    public Optional<Output<List<String>>> objects() {
+        return Optional.ofNullable(this.objects);
     }
 
     /**
@@ -104,14 +105,14 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="plannedAction")
-    private Output</* @Nullable */ String> plannedAction;
+    private @Nullable Output<String> plannedAction;
 
     /**
      * @return A filter to return only the resources that match the specified planned action.
      * 
      */
-    public Output</* @Nullable */ String> plannedAction() {
-        return this.plannedAction;
+    public Optional<Output<String>> plannedAction() {
+        return Optional.ofNullable(this.plannedAction);
     }
 
     /**
@@ -119,14 +120,14 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="schemaNames")
-    private Output</* @Nullable */ List<String>> schemaNames;
+    private @Nullable Output<List<String>> schemaNames;
 
     /**
      * @return A filter to return only items related to specific schema name.
      * 
      */
-    public Output</* @Nullable */ List<String>> schemaNames() {
-        return this.schemaNames;
+    public Optional<Output<List<String>>> schemaNames() {
+        return Optional.ofNullable(this.schemaNames);
     }
 
     private GetDiscoveryJobsResultsArgs() {}
@@ -166,7 +167,7 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder columnNames(Output</* @Nullable */ List<String>> columnNames) {
+        public Builder columnNames(@Nullable Output<List<String>> columnNames) {
             $.columnNames = columnNames;
             return this;
         }
@@ -177,7 +178,7 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder columnNames(@Nullable List<String> columnNames) {
+        public Builder columnNames(List<String> columnNames) {
             return columnNames(Output.of(columnNames));
         }
 
@@ -218,7 +219,7 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder discoveryType(Output</* @Nullable */ String> discoveryType) {
+        public Builder discoveryType(@Nullable Output<String> discoveryType) {
             $.discoveryType = discoveryType;
             return this;
         }
@@ -229,20 +230,20 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder discoveryType(@Nullable String discoveryType) {
+        public Builder discoveryType(String discoveryType) {
             return discoveryType(Output.of(discoveryType));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDiscoveryJobsResultsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDiscoveryJobsResultsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDiscoveryJobsResultsFilter> filters) {
+        public Builder filters(List<GetDiscoveryJobsResultsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDiscoveryJobsResultsFilter... filters) {
+        public Builder filters(GetDiscoveryJobsResultsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -252,7 +253,7 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder isResultApplied(Output</* @Nullable */ Boolean> isResultApplied) {
+        public Builder isResultApplied(@Nullable Output<Boolean> isResultApplied) {
             $.isResultApplied = isResultApplied;
             return this;
         }
@@ -263,7 +264,7 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder isResultApplied(@Nullable Boolean isResultApplied) {
+        public Builder isResultApplied(Boolean isResultApplied) {
             return isResultApplied(Output.of(isResultApplied));
         }
 
@@ -273,7 +274,7 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder objects(Output</* @Nullable */ List<String>> objects) {
+        public Builder objects(@Nullable Output<List<String>> objects) {
             $.objects = objects;
             return this;
         }
@@ -284,7 +285,7 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder objects(@Nullable List<String> objects) {
+        public Builder objects(List<String> objects) {
             return objects(Output.of(objects));
         }
 
@@ -304,7 +305,7 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder plannedAction(Output</* @Nullable */ String> plannedAction) {
+        public Builder plannedAction(@Nullable Output<String> plannedAction) {
             $.plannedAction = plannedAction;
             return this;
         }
@@ -315,7 +316,7 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder plannedAction(@Nullable String plannedAction) {
+        public Builder plannedAction(String plannedAction) {
             return plannedAction(Output.of(plannedAction));
         }
 
@@ -325,7 +326,7 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder schemaNames(Output</* @Nullable */ List<String>> schemaNames) {
+        public Builder schemaNames(@Nullable Output<List<String>> schemaNames) {
             $.schemaNames = schemaNames;
             return this;
         }
@@ -336,7 +337,7 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder schemaNames(@Nullable List<String> schemaNames) {
+        public Builder schemaNames(List<String> schemaNames) {
             return schemaNames(Output.of(schemaNames));
         }
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
      * 
      */
     @Import(name="filterName")
-    private Output</* @Nullable */ String> filterName;
+    private @Nullable Output<String> filterName;
 
     /**
      * @return Describes the name of the column which values will be returned
      * 
      */
-    public Output</* @Nullable */ String> filterName() {
-        return this.filterName;
+    public Optional<Output<String>> filterName() {
+        return Optional.ofNullable(this.filterName);
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
          * @return builder
          * 
          */
-        public Builder filterName(Output</* @Nullable */ String> filterName) {
+        public Builder filterName(@Nullable Output<String> filterName) {
             $.filterName = filterName;
             return this;
         }
@@ -102,7 +103,7 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
          * @return builder
          * 
          */
-        public Builder filterName(@Nullable String filterName) {
+        public Builder filterName(String filterName) {
             return filterName(Output.of(filterName));
         }
 

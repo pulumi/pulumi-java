@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expandDetector")
-    private Output</* @Nullable */ Boolean> expandDetector;
+    private @Nullable Output<Boolean> expandDetector;
 
     /**
      * @return Indicates if Smart Detector should be expanded.
      * 
      */
-    public Output</* @Nullable */ Boolean> expandDetector() {
-        return this.expandDetector;
+    public Optional<Output<Boolean>> expandDetector() {
+        return Optional.ofNullable(this.expandDetector);
     }
 
     /**
@@ -113,7 +114,7 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder expandDetector(Output</* @Nullable */ Boolean> expandDetector) {
+        public Builder expandDetector(@Nullable Output<Boolean> expandDetector) {
             $.expandDetector = expandDetector;
             return this;
         }
@@ -124,7 +125,7 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder expandDetector(@Nullable Boolean expandDetector) {
+        public Builder expandDetector(Boolean expandDetector) {
             return expandDetector(Output.of(expandDetector));
         }
 

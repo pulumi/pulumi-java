@@ -5,10 +5,11 @@ package com.pulumi.oci.DevOps.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DevOps.inputs.GetRepositoryMirrorRecordsFilter;
+import com.pulumi.oci.DevOps.inputs.GetRepositoryMirrorRecordsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetRepositoryMirrorRecordsArgs extends com.pulumi.resources.I
     public static final GetRepositoryMirrorRecordsArgs Empty = new GetRepositoryMirrorRecordsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetRepositoryMirrorRecordsFilter>> filters;
+    private @Nullable Output<List<GetRepositoryMirrorRecordsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetRepositoryMirrorRecordsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetRepositoryMirrorRecordsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetRepositoryMirrorRecordsArgs extends com.pulumi.resources.I
             $ = new GetRepositoryMirrorRecordsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetRepositoryMirrorRecordsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetRepositoryMirrorRecordsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRepositoryMirrorRecordsFilter> filters) {
+        public Builder filters(List<GetRepositoryMirrorRecordsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetRepositoryMirrorRecordsFilter... filters) {
+        public Builder filters(GetRepositoryMirrorRecordsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

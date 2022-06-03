@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lookupOrganization")
-    private Output</* @Nullable */ Boolean> lookupOrganization;
+    private @Nullable Output<Boolean> lookupOrganization;
 
     /**
      * @return `true` to find the organization that the folder belongs, `false` to avoid the lookup. It searches up the tree. (defaults to `false`)
      * 
      */
-    public Output</* @Nullable */ Boolean> lookupOrganization() {
-        return this.lookupOrganization;
+    public Optional<Output<Boolean>> lookupOrganization() {
+        return Optional.ofNullable(this.lookupOrganization);
     }
 
     private GetFolderArgs() {}
@@ -97,7 +98,7 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder lookupOrganization(Output</* @Nullable */ Boolean> lookupOrganization) {
+        public Builder lookupOrganization(@Nullable Output<Boolean> lookupOrganization) {
             $.lookupOrganization = lookupOrganization;
             return this;
         }
@@ -108,7 +109,7 @@ public final class GetFolderArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder lookupOrganization(@Nullable Boolean lookupOrganization) {
+        public Builder lookupOrganization(Boolean lookupOrganization) {
             return lookupOrganization(Output.of(lookupOrganization));
         }
 

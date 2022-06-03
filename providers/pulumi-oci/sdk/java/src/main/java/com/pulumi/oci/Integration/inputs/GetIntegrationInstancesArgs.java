@@ -5,10 +5,11 @@ package com.pulumi.oci.Integration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Integration.inputs.GetIntegrationInstancesFilter;
+import com.pulumi.oci.Integration.inputs.GetIntegrationInstancesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetIntegrationInstancesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetIntegrationInstancesFilter>> filters;
+    private @Nullable Output<List<GetIntegrationInstancesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetIntegrationInstancesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetIntegrationInstancesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetIntegrationInstancesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Life cycle state to query on.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetIntegrationInstancesArgs() {}
@@ -122,7 +123,7 @@ public final class GetIntegrationInstancesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -133,20 +134,20 @@ public final class GetIntegrationInstancesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetIntegrationInstancesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetIntegrationInstancesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetIntegrationInstancesFilter> filters) {
+        public Builder filters(List<GetIntegrationInstancesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetIntegrationInstancesFilter... filters) {
+        public Builder filters(GetIntegrationInstancesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -156,7 +157,7 @@ public final class GetIntegrationInstancesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetIntegrationInstancesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.OsubUsage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OsubUsage.inputs.GetCommitmentAggregatedsFilter;
+import com.pulumi.oci.OsubUsage.inputs.GetCommitmentAggregatedsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetCommitmentAggregatedsFilter>> filters;
+    private @Nullable Output<List<GetCommitmentAggregatedsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetCommitmentAggregatedsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetCommitmentAggregatedsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="grouping")
-    private Output</* @Nullable */ String> grouping;
+    private @Nullable Output<String> grouping;
 
     /**
      * @return Grouping criteria to use for aggregate the computed Usage, either hourly (`HOURLY`), daily (`DAILY`), monthly(`MONTHLY`) or none (`NONE`) to not follow a grouping criteria by date.
      * 
      */
-    public Output</* @Nullable */ String> grouping() {
-        return this.grouping;
+    public Optional<Output<String>> grouping() {
+        return Optional.ofNullable(this.grouping);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="parentProduct")
-    private Output</* @Nullable */ String> parentProduct;
+    private @Nullable Output<String> parentProduct;
 
     /**
      * @return Product part number for subscribed service line, called parent product.
      * 
      */
-    public Output</* @Nullable */ String> parentProduct() {
-        return this.parentProduct;
+    public Optional<Output<String>> parentProduct() {
+        return Optional.ofNullable(this.parentProduct);
     }
 
     /**
@@ -118,14 +119,14 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="xOneOriginRegion")
-    private Output</* @Nullable */ String> xOneOriginRegion;
+    private @Nullable Output<String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Output</* @Nullable */ String> xOneOriginRegion() {
-        return this.xOneOriginRegion;
+    public Optional<Output<String>> xOneOriginRegion() {
+        return Optional.ofNullable(this.xOneOriginRegion);
     }
 
     private GetCommitmentAggregatedsArgs() {}
@@ -180,16 +181,16 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetCommitmentAggregatedsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetCommitmentAggregatedsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCommitmentAggregatedsFilter> filters) {
+        public Builder filters(List<GetCommitmentAggregatedsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetCommitmentAggregatedsFilter... filters) {
+        public Builder filters(GetCommitmentAggregatedsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -199,7 +200,7 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder grouping(Output</* @Nullable */ String> grouping) {
+        public Builder grouping(@Nullable Output<String> grouping) {
             $.grouping = grouping;
             return this;
         }
@@ -210,7 +211,7 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder grouping(@Nullable String grouping) {
+        public Builder grouping(String grouping) {
             return grouping(Output.of(grouping));
         }
 
@@ -220,7 +221,7 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder parentProduct(Output</* @Nullable */ String> parentProduct) {
+        public Builder parentProduct(@Nullable Output<String> parentProduct) {
             $.parentProduct = parentProduct;
             return this;
         }
@@ -231,7 +232,7 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder parentProduct(@Nullable String parentProduct) {
+        public Builder parentProduct(String parentProduct) {
             return parentProduct(Output.of(parentProduct));
         }
 
@@ -304,7 +305,7 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
+        public Builder xOneOriginRegion(@Nullable Output<String> xOneOriginRegion) {
             $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
@@ -315,7 +316,7 @@ public final class GetCommitmentAggregatedsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
+        public Builder xOneOriginRegion(String xOneOriginRegion) {
             return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 

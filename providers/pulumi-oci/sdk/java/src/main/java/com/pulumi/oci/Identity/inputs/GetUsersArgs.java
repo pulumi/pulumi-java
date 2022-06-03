@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetUsersFilter;
+import com.pulumi.oci.Identity.inputs.GetUsersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="externalIdentifier")
-    private Output</* @Nullable */ String> externalIdentifier;
+    private @Nullable Output<String> externalIdentifier;
 
     /**
      * @return The id of a user in the identity provider.
      * 
      */
-    public Output</* @Nullable */ String> externalIdentifier() {
-        return this.externalIdentifier;
+    public Optional<Output<String>> externalIdentifier() {
+        return Optional.ofNullable(this.externalIdentifier);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetUsersFilter>> filters;
+    private @Nullable Output<List<GetUsersFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetUsersFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetUsersFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identityProviderId")
-    private Output</* @Nullable */ String> identityProviderId;
+    private @Nullable Output<String> identityProviderId;
 
     /**
      * @return The id of the identity provider.
      * 
      */
-    public Output</* @Nullable */ String> identityProviderId() {
-        return this.identityProviderId;
+    public Optional<Output<String>> identityProviderId() {
+        return Optional.ofNullable(this.identityProviderId);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to only return resources that match the given name exactly.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetUsersArgs() {}
@@ -154,7 +155,7 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder externalIdentifier(Output</* @Nullable */ String> externalIdentifier) {
+        public Builder externalIdentifier(@Nullable Output<String> externalIdentifier) {
             $.externalIdentifier = externalIdentifier;
             return this;
         }
@@ -165,20 +166,20 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder externalIdentifier(@Nullable String externalIdentifier) {
+        public Builder externalIdentifier(String externalIdentifier) {
             return externalIdentifier(Output.of(externalIdentifier));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetUsersFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetUsersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetUsersFilter> filters) {
+        public Builder filters(List<GetUsersFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetUsersFilter... filters) {
+        public Builder filters(GetUsersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -188,7 +189,7 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder identityProviderId(Output</* @Nullable */ String> identityProviderId) {
+        public Builder identityProviderId(@Nullable Output<String> identityProviderId) {
             $.identityProviderId = identityProviderId;
             return this;
         }
@@ -199,7 +200,7 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder identityProviderId(@Nullable String identityProviderId) {
+        public Builder identityProviderId(String identityProviderId) {
             return identityProviderId(Output.of(identityProviderId));
         }
 
@@ -209,7 +210,7 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -230,7 +231,7 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -241,7 +242,7 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

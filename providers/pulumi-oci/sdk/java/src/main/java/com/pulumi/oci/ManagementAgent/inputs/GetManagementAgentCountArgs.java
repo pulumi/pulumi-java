@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -51,14 +52,14 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="hasPlugins")
-    private Output</* @Nullable */ Boolean> hasPlugins;
+    private @Nullable Output<Boolean> hasPlugins;
 
     /**
      * @return When set to true then agents that have at least one plugin deployed will be returned. When set to false only agents that have no plugins deployed will be returned.
      * 
      */
-    public Output</* @Nullable */ Boolean> hasPlugins() {
-        return this.hasPlugins;
+    public Optional<Output<Boolean>> hasPlugins() {
+        return Optional.ofNullable(this.hasPlugins);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="installType")
-    private Output</* @Nullable */ String> installType;
+    private @Nullable Output<String> installType;
 
     /**
      * @return A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.
      * 
      */
-    public Output</* @Nullable */ String> installType() {
-        return this.installType;
+    public Optional<Output<String>> installType() {
+        return Optional.ofNullable(this.installType);
     }
 
     private GetManagementAgentCountArgs() {}
@@ -161,7 +162,7 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder hasPlugins(Output</* @Nullable */ Boolean> hasPlugins) {
+        public Builder hasPlugins(@Nullable Output<Boolean> hasPlugins) {
             $.hasPlugins = hasPlugins;
             return this;
         }
@@ -172,7 +173,7 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder hasPlugins(@Nullable Boolean hasPlugins) {
+        public Builder hasPlugins(Boolean hasPlugins) {
             return hasPlugins(Output.of(hasPlugins));
         }
 
@@ -182,7 +183,7 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder installType(Output</* @Nullable */ String> installType) {
+        public Builder installType(@Nullable Output<String> installType) {
             $.installType = installType;
             return this;
         }
@@ -193,7 +194,7 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder installType(@Nullable String installType) {
+        public Builder installType(String installType) {
             return installType(Output.of(installType));
         }
 

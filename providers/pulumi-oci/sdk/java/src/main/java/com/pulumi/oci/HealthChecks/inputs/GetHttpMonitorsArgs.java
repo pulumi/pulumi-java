@@ -5,10 +5,11 @@ package com.pulumi.oci.HealthChecks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.HealthChecks.inputs.GetHttpMonitorsFilter;
+import com.pulumi.oci.HealthChecks.inputs.GetHttpMonitorsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Filters results that exactly match the `displayName` field.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetHttpMonitorsFilter>> filters;
+    private @Nullable Output<List<GetHttpMonitorsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetHttpMonitorsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetHttpMonitorsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="homeRegion")
-    private Output</* @Nullable */ String> homeRegion;
+    private @Nullable Output<String> homeRegion;
 
     /**
      * @return Filters results that match the `homeRegion`.
      * 
      */
-    public Output</* @Nullable */ String> homeRegion() {
-        return this.homeRegion;
+    public Optional<Output<String>> homeRegion() {
+        return Optional.ofNullable(this.homeRegion);
     }
 
     private GetHttpMonitorsArgs() {}
@@ -122,7 +123,7 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -133,20 +134,20 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetHttpMonitorsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetHttpMonitorsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetHttpMonitorsFilter> filters) {
+        public Builder filters(List<GetHttpMonitorsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetHttpMonitorsFilter... filters) {
+        public Builder filters(GetHttpMonitorsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -156,7 +157,7 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder homeRegion(Output</* @Nullable */ String> homeRegion) {
+        public Builder homeRegion(@Nullable Output<String> homeRegion) {
             $.homeRegion = homeRegion;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder homeRegion(@Nullable String homeRegion) {
+        public Builder homeRegion(String homeRegion) {
             return homeRegion(Output.of(homeRegion));
         }
 

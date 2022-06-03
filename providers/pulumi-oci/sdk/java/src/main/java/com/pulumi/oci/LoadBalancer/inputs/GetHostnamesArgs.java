@@ -5,10 +5,11 @@ package com.pulumi.oci.LoadBalancer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.LoadBalancer.inputs.GetHostnamesFilter;
+import com.pulumi.oci.LoadBalancer.inputs.GetHostnamesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetHostnamesArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHostnamesArgs Empty = new GetHostnamesArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetHostnamesFilter>> filters;
+    private @Nullable Output<List<GetHostnamesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetHostnamesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetHostnamesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -63,16 +64,16 @@ public final class GetHostnamesArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetHostnamesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetHostnamesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetHostnamesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetHostnamesFilter> filters) {
+        public Builder filters(List<GetHostnamesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetHostnamesFilter... filters) {
+        public Builder filters(GetHostnamesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

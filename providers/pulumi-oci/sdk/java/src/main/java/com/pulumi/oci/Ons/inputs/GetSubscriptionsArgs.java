@@ -5,10 +5,11 @@ package com.pulumi.oci.Ons.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Ons.inputs.GetSubscriptionsFilter;
+import com.pulumi.oci.Ons.inputs.GetSubscriptionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSubscriptionsFilter>> filters;
+    private @Nullable Output<List<GetSubscriptionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetSubscriptionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSubscriptionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="topicId")
-    private Output</* @Nullable */ String> topicId;
+    private @Nullable Output<String> topicId;
 
     /**
      * @return Return all subscriptions that are subscribed to the given topic OCID. Either this query parameter or the compartmentId query parameter must be set.
      * 
      */
-    public Output</* @Nullable */ String> topicId() {
-        return this.topicId;
+    public Optional<Output<String>> topicId() {
+        return Optional.ofNullable(this.topicId);
     }
 
     private GetSubscriptionsArgs() {}
@@ -100,16 +101,16 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetSubscriptionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSubscriptionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSubscriptionsFilter> filters) {
+        public Builder filters(List<GetSubscriptionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetSubscriptionsFilter... filters) {
+        public Builder filters(GetSubscriptionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -119,7 +120,7 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder topicId(Output</* @Nullable */ String> topicId) {
+        public Builder topicId(@Nullable Output<String> topicId) {
             $.topicId = topicId;
             return this;
         }
@@ -130,7 +131,7 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder topicId(@Nullable String topicId) {
+        public Builder topicId(String topicId) {
             return topicId(Output.of(topicId));
         }
 

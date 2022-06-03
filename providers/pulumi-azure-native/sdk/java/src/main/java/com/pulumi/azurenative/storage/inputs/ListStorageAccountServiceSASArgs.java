@@ -11,6 +11,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -38,14 +39,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="cacheControl")
-    private Output</* @Nullable */ String> cacheControl;
+    private @Nullable Output<String> cacheControl;
 
     /**
      * @return The response header override for cache control.
      * 
      */
-    public Output</* @Nullable */ String> cacheControl() {
-        return this.cacheControl;
+    public Optional<Output<String>> cacheControl() {
+        return Optional.ofNullable(this.cacheControl);
     }
 
     /**
@@ -68,14 +69,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="contentDisposition")
-    private Output</* @Nullable */ String> contentDisposition;
+    private @Nullable Output<String> contentDisposition;
 
     /**
      * @return The response header override for content disposition.
      * 
      */
-    public Output</* @Nullable */ String> contentDisposition() {
-        return this.contentDisposition;
+    public Optional<Output<String>> contentDisposition() {
+        return Optional.ofNullable(this.contentDisposition);
     }
 
     /**
@@ -83,14 +84,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="contentEncoding")
-    private Output</* @Nullable */ String> contentEncoding;
+    private @Nullable Output<String> contentEncoding;
 
     /**
      * @return The response header override for content encoding.
      * 
      */
-    public Output</* @Nullable */ String> contentEncoding() {
-        return this.contentEncoding;
+    public Optional<Output<String>> contentEncoding() {
+        return Optional.ofNullable(this.contentEncoding);
     }
 
     /**
@@ -98,14 +99,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="contentLanguage")
-    private Output</* @Nullable */ String> contentLanguage;
+    private @Nullable Output<String> contentLanguage;
 
     /**
      * @return The response header override for content language.
      * 
      */
-    public Output</* @Nullable */ String> contentLanguage() {
-        return this.contentLanguage;
+    public Optional<Output<String>> contentLanguage() {
+        return Optional.ofNullable(this.contentLanguage);
     }
 
     /**
@@ -113,14 +114,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="contentType")
-    private Output</* @Nullable */ String> contentType;
+    private @Nullable Output<String> contentType;
 
     /**
      * @return The response header override for content type.
      * 
      */
-    public Output</* @Nullable */ String> contentType() {
-        return this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -128,14 +129,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="iPAddressOrRange")
-    private Output</* @Nullable */ String> iPAddressOrRange;
+    private @Nullable Output<String> iPAddressOrRange;
 
     /**
      * @return An IP address or a range of IP addresses from which to accept requests.
      * 
      */
-    public Output</* @Nullable */ String> iPAddressOrRange() {
-        return this.iPAddressOrRange;
+    public Optional<Output<String>> iPAddressOrRange() {
+        return Optional.ofNullable(this.iPAddressOrRange);
     }
 
     /**
@@ -143,14 +144,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="identifier")
-    private Output</* @Nullable */ String> identifier;
+    private @Nullable Output<String> identifier;
 
     /**
      * @return A unique value up to 64 characters in length that correlates to an access policy specified for the container, queue, or table.
      * 
      */
-    public Output</* @Nullable */ String> identifier() {
-        return this.identifier;
+    public Optional<Output<String>> identifier() {
+        return Optional.ofNullable(this.identifier);
     }
 
     /**
@@ -158,14 +159,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="keyToSign")
-    private Output</* @Nullable */ String> keyToSign;
+    private @Nullable Output<String> keyToSign;
 
     /**
      * @return The key to sign the account SAS token with.
      * 
      */
-    public Output</* @Nullable */ String> keyToSign() {
-        return this.keyToSign;
+    public Optional<Output<String>> keyToSign() {
+        return Optional.ofNullable(this.keyToSign);
     }
 
     /**
@@ -173,14 +174,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="partitionKeyEnd")
-    private Output</* @Nullable */ String> partitionKeyEnd;
+    private @Nullable Output<String> partitionKeyEnd;
 
     /**
      * @return The end of partition key.
      * 
      */
-    public Output</* @Nullable */ String> partitionKeyEnd() {
-        return this.partitionKeyEnd;
+    public Optional<Output<String>> partitionKeyEnd() {
+        return Optional.ofNullable(this.partitionKeyEnd);
     }
 
     /**
@@ -188,14 +189,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="partitionKeyStart")
-    private Output</* @Nullable */ String> partitionKeyStart;
+    private @Nullable Output<String> partitionKeyStart;
 
     /**
      * @return The start of partition key.
      * 
      */
-    public Output</* @Nullable */ String> partitionKeyStart() {
-        return this.partitionKeyStart;
+    public Optional<Output<String>> partitionKeyStart() {
+        return Optional.ofNullable(this.partitionKeyStart);
     }
 
     /**
@@ -203,14 +204,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="permissions")
-    private Output</* @Nullable */ Either<String,Permissions>> permissions;
+    private @Nullable Output<Either<String,Permissions>> permissions;
 
     /**
      * @return The signed permissions for the service SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
      * 
      */
-    public Output</* @Nullable */ Either<String,Permissions>> permissions() {
-        return this.permissions;
+    public Optional<Output<Either<String,Permissions>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -218,14 +219,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="protocols")
-    private Output</* @Nullable */ HttpProtocol> protocols;
+    private @Nullable Output<HttpProtocol> protocols;
 
     /**
      * @return The protocol permitted for a request made with the account SAS.
      * 
      */
-    public Output</* @Nullable */ HttpProtocol> protocols() {
-        return this.protocols;
+    public Optional<Output<HttpProtocol>> protocols() {
+        return Optional.ofNullable(this.protocols);
     }
 
     /**
@@ -233,14 +234,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resource")
-    private Output</* @Nullable */ Either<String,SignedResource>> resource;
+    private @Nullable Output<Either<String,SignedResource>> resource;
 
     /**
      * @return The signed services accessible with the service SAS. Possible values include: Blob (b), Container (c), File (f), Share (s).
      * 
      */
-    public Output</* @Nullable */ Either<String,SignedResource>> resource() {
-        return this.resource;
+    public Optional<Output<Either<String,SignedResource>>> resource() {
+        return Optional.ofNullable(this.resource);
     }
 
     /**
@@ -263,14 +264,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="rowKeyEnd")
-    private Output</* @Nullable */ String> rowKeyEnd;
+    private @Nullable Output<String> rowKeyEnd;
 
     /**
      * @return The end of row key.
      * 
      */
-    public Output</* @Nullable */ String> rowKeyEnd() {
-        return this.rowKeyEnd;
+    public Optional<Output<String>> rowKeyEnd() {
+        return Optional.ofNullable(this.rowKeyEnd);
     }
 
     /**
@@ -278,14 +279,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="rowKeyStart")
-    private Output</* @Nullable */ String> rowKeyStart;
+    private @Nullable Output<String> rowKeyStart;
 
     /**
      * @return The start of row key.
      * 
      */
-    public Output</* @Nullable */ String> rowKeyStart() {
-        return this.rowKeyStart;
+    public Optional<Output<String>> rowKeyStart() {
+        return Optional.ofNullable(this.rowKeyStart);
     }
 
     /**
@@ -293,14 +294,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sharedAccessExpiryTime")
-    private Output</* @Nullable */ String> sharedAccessExpiryTime;
+    private @Nullable Output<String> sharedAccessExpiryTime;
 
     /**
      * @return The time at which the shared access signature becomes invalid.
      * 
      */
-    public Output</* @Nullable */ String> sharedAccessExpiryTime() {
-        return this.sharedAccessExpiryTime;
+    public Optional<Output<String>> sharedAccessExpiryTime() {
+        return Optional.ofNullable(this.sharedAccessExpiryTime);
     }
 
     /**
@@ -308,14 +309,14 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sharedAccessStartTime")
-    private Output</* @Nullable */ String> sharedAccessStartTime;
+    private @Nullable Output<String> sharedAccessStartTime;
 
     /**
      * @return The time at which the SAS becomes valid.
      * 
      */
-    public Output</* @Nullable */ String> sharedAccessStartTime() {
-        return this.sharedAccessStartTime;
+    public Optional<Output<String>> sharedAccessStartTime() {
+        return Optional.ofNullable(this.sharedAccessStartTime);
     }
 
     private ListStorageAccountServiceSASArgs() {}
@@ -388,7 +389,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder cacheControl(Output</* @Nullable */ String> cacheControl) {
+        public Builder cacheControl(@Nullable Output<String> cacheControl) {
             $.cacheControl = cacheControl;
             return this;
         }
@@ -399,7 +400,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder cacheControl(@Nullable String cacheControl) {
+        public Builder cacheControl(String cacheControl) {
             return cacheControl(Output.of(cacheControl));
         }
 
@@ -430,7 +431,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder contentDisposition(Output</* @Nullable */ String> contentDisposition) {
+        public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
             $.contentDisposition = contentDisposition;
             return this;
         }
@@ -441,7 +442,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder contentDisposition(@Nullable String contentDisposition) {
+        public Builder contentDisposition(String contentDisposition) {
             return contentDisposition(Output.of(contentDisposition));
         }
 
@@ -451,7 +452,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder contentEncoding(Output</* @Nullable */ String> contentEncoding) {
+        public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             $.contentEncoding = contentEncoding;
             return this;
         }
@@ -462,7 +463,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder contentEncoding(@Nullable String contentEncoding) {
+        public Builder contentEncoding(String contentEncoding) {
             return contentEncoding(Output.of(contentEncoding));
         }
 
@@ -472,7 +473,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder contentLanguage(Output</* @Nullable */ String> contentLanguage) {
+        public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
             $.contentLanguage = contentLanguage;
             return this;
         }
@@ -483,7 +484,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder contentLanguage(@Nullable String contentLanguage) {
+        public Builder contentLanguage(String contentLanguage) {
             return contentLanguage(Output.of(contentLanguage));
         }
 
@@ -493,7 +494,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder contentType(Output</* @Nullable */ String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
@@ -504,7 +505,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder contentType(@Nullable String contentType) {
+        public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
@@ -514,7 +515,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder iPAddressOrRange(Output</* @Nullable */ String> iPAddressOrRange) {
+        public Builder iPAddressOrRange(@Nullable Output<String> iPAddressOrRange) {
             $.iPAddressOrRange = iPAddressOrRange;
             return this;
         }
@@ -525,7 +526,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder iPAddressOrRange(@Nullable String iPAddressOrRange) {
+        public Builder iPAddressOrRange(String iPAddressOrRange) {
             return iPAddressOrRange(Output.of(iPAddressOrRange));
         }
 
@@ -535,7 +536,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder identifier(Output</* @Nullable */ String> identifier) {
+        public Builder identifier(@Nullable Output<String> identifier) {
             $.identifier = identifier;
             return this;
         }
@@ -546,7 +547,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder identifier(@Nullable String identifier) {
+        public Builder identifier(String identifier) {
             return identifier(Output.of(identifier));
         }
 
@@ -556,7 +557,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder keyToSign(Output</* @Nullable */ String> keyToSign) {
+        public Builder keyToSign(@Nullable Output<String> keyToSign) {
             $.keyToSign = keyToSign;
             return this;
         }
@@ -567,7 +568,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder keyToSign(@Nullable String keyToSign) {
+        public Builder keyToSign(String keyToSign) {
             return keyToSign(Output.of(keyToSign));
         }
 
@@ -577,7 +578,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder partitionKeyEnd(Output</* @Nullable */ String> partitionKeyEnd) {
+        public Builder partitionKeyEnd(@Nullable Output<String> partitionKeyEnd) {
             $.partitionKeyEnd = partitionKeyEnd;
             return this;
         }
@@ -588,7 +589,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder partitionKeyEnd(@Nullable String partitionKeyEnd) {
+        public Builder partitionKeyEnd(String partitionKeyEnd) {
             return partitionKeyEnd(Output.of(partitionKeyEnd));
         }
 
@@ -598,7 +599,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder partitionKeyStart(Output</* @Nullable */ String> partitionKeyStart) {
+        public Builder partitionKeyStart(@Nullable Output<String> partitionKeyStart) {
             $.partitionKeyStart = partitionKeyStart;
             return this;
         }
@@ -609,7 +610,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder partitionKeyStart(@Nullable String partitionKeyStart) {
+        public Builder partitionKeyStart(String partitionKeyStart) {
             return partitionKeyStart(Output.of(partitionKeyStart));
         }
 
@@ -619,7 +620,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder permissions(Output</* @Nullable */ Either<String,Permissions>> permissions) {
+        public Builder permissions(@Nullable Output<Either<String,Permissions>> permissions) {
             $.permissions = permissions;
             return this;
         }
@@ -630,7 +631,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder permissions(@Nullable Either<String,Permissions> permissions) {
+        public Builder permissions(Either<String,Permissions> permissions) {
             return permissions(Output.of(permissions));
         }
 
@@ -660,7 +661,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder protocols(Output</* @Nullable */ HttpProtocol> protocols) {
+        public Builder protocols(@Nullable Output<HttpProtocol> protocols) {
             $.protocols = protocols;
             return this;
         }
@@ -671,7 +672,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder protocols(@Nullable HttpProtocol protocols) {
+        public Builder protocols(HttpProtocol protocols) {
             return protocols(Output.of(protocols));
         }
 
@@ -681,7 +682,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder resource(Output</* @Nullable */ Either<String,SignedResource>> resource) {
+        public Builder resource(@Nullable Output<Either<String,SignedResource>> resource) {
             $.resource = resource;
             return this;
         }
@@ -692,7 +693,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder resource(@Nullable Either<String,SignedResource> resource) {
+        public Builder resource(Either<String,SignedResource> resource) {
             return resource(Output.of(resource));
         }
 
@@ -743,7 +744,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder rowKeyEnd(Output</* @Nullable */ String> rowKeyEnd) {
+        public Builder rowKeyEnd(@Nullable Output<String> rowKeyEnd) {
             $.rowKeyEnd = rowKeyEnd;
             return this;
         }
@@ -754,7 +755,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder rowKeyEnd(@Nullable String rowKeyEnd) {
+        public Builder rowKeyEnd(String rowKeyEnd) {
             return rowKeyEnd(Output.of(rowKeyEnd));
         }
 
@@ -764,7 +765,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder rowKeyStart(Output</* @Nullable */ String> rowKeyStart) {
+        public Builder rowKeyStart(@Nullable Output<String> rowKeyStart) {
             $.rowKeyStart = rowKeyStart;
             return this;
         }
@@ -775,7 +776,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder rowKeyStart(@Nullable String rowKeyStart) {
+        public Builder rowKeyStart(String rowKeyStart) {
             return rowKeyStart(Output.of(rowKeyStart));
         }
 
@@ -785,7 +786,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder sharedAccessExpiryTime(Output</* @Nullable */ String> sharedAccessExpiryTime) {
+        public Builder sharedAccessExpiryTime(@Nullable Output<String> sharedAccessExpiryTime) {
             $.sharedAccessExpiryTime = sharedAccessExpiryTime;
             return this;
         }
@@ -796,7 +797,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder sharedAccessExpiryTime(@Nullable String sharedAccessExpiryTime) {
+        public Builder sharedAccessExpiryTime(String sharedAccessExpiryTime) {
             return sharedAccessExpiryTime(Output.of(sharedAccessExpiryTime));
         }
 
@@ -806,7 +807,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder sharedAccessStartTime(Output</* @Nullable */ String> sharedAccessStartTime) {
+        public Builder sharedAccessStartTime(@Nullable Output<String> sharedAccessStartTime) {
             $.sharedAccessStartTime = sharedAccessStartTime;
             return this;
         }
@@ -817,7 +818,7 @@ public final class ListStorageAccountServiceSASArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder sharedAccessStartTime(@Nullable String sharedAccessStartTime) {
+        public Builder sharedAccessStartTime(String sharedAccessStartTime) {
             return sharedAccessStartTime(Output.of(sharedAccessStartTime));
         }
 

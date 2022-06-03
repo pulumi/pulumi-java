@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,15 +23,15 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupId")
-    private Output</* @Nullable */ Integer> backupId;
+    private @Nullable Output<Integer> backupId;
 
     /**
      * @return The identifier for this backup run. Unique only for a specific Cloud SQL instance.
      * If left empty and multiple backups exist for the instance, `most_recent` must be set to `true`.
      * 
      */
-    public Output</* @Nullable */ Integer> backupId() {
-        return this.backupId;
+    public Optional<Output<Integer>> backupId() {
+        return Optional.ofNullable(this.backupId);
     }
 
     /**
@@ -54,15 +55,15 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-    private Output</* @Nullable */ Boolean> mostRecent;
+    private @Nullable Output<Boolean> mostRecent;
 
     /**
      * @return Toggles use of the most recent backup run if multiple backups exist for a
      * Cloud SQL instance.
      * 
      */
-    public Output</* @Nullable */ Boolean> mostRecent() {
-        return this.mostRecent;
+    public Optional<Output<Boolean>> mostRecent() {
+        return Optional.ofNullable(this.mostRecent);
     }
 
     private GetBackupRunArgs() {}
@@ -98,7 +99,7 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder backupId(Output</* @Nullable */ Integer> backupId) {
+        public Builder backupId(@Nullable Output<Integer> backupId) {
             $.backupId = backupId;
             return this;
         }
@@ -110,7 +111,7 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder backupId(@Nullable Integer backupId) {
+        public Builder backupId(Integer backupId) {
             return backupId(Output.of(backupId));
         }
 
@@ -142,7 +143,7 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(Output</* @Nullable */ Boolean> mostRecent) {
+        public Builder mostRecent(@Nullable Output<Boolean> mostRecent) {
             $.mostRecent = mostRecent;
             return this;
         }
@@ -154,7 +155,7 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(Boolean mostRecent) {
             return mostRecent(Output.of(mostRecent));
         }
 

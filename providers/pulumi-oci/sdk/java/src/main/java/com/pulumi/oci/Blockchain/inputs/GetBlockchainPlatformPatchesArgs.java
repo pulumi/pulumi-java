@@ -5,10 +5,11 @@ package com.pulumi.oci.Blockchain.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Blockchain.inputs.GetBlockchainPlatformPatchesFilter;
+import com.pulumi.oci.Blockchain.inputs.GetBlockchainPlatformPatchesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetBlockchainPlatformPatchesArgs extends com.pulumi.resources
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetBlockchainPlatformPatchesFilter>> filters;
+    private @Nullable Output<List<GetBlockchainPlatformPatchesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetBlockchainPlatformPatchesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetBlockchainPlatformPatchesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetBlockchainPlatformPatchesArgs() {}
@@ -84,16 +85,16 @@ public final class GetBlockchainPlatformPatchesArgs extends com.pulumi.resources
             return blockchainPlatformId(Output.of(blockchainPlatformId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetBlockchainPlatformPatchesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetBlockchainPlatformPatchesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBlockchainPlatformPatchesFilter> filters) {
+        public Builder filters(List<GetBlockchainPlatformPatchesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetBlockchainPlatformPatchesFilter... filters) {
+        public Builder filters(GetBlockchainPlatformPatchesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

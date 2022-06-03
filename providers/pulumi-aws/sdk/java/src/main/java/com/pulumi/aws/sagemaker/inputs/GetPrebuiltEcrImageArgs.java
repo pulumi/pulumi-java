@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dnsSuffix")
-    private Output</* @Nullable */ String> dnsSuffix;
+    private @Nullable Output<String> dnsSuffix;
 
     /**
      * @return The DNS suffix to use in the registry path. If not specified, the AWS provider sets it to the DNS suffix for the current region.
      * 
      */
-    public Output</* @Nullable */ String> dnsSuffix() {
-        return this.dnsSuffix;
+    public Optional<Output<String>> dnsSuffix() {
+        return Optional.ofNullable(this.dnsSuffix);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="imageTag")
-    private Output</* @Nullable */ String> imageTag;
+    private @Nullable Output<String> imageTag;
 
     /**
      * @return The image tag for the Docker image. If not specified, the AWS provider sets the value to `1`, which for many repositories indicates the latest version. Some repositories, such as XGBoost, do not support `1` or `latest` and specific version must be used.
      * 
      */
-    public Output</* @Nullable */ String> imageTag() {
-        return this.imageTag;
+    public Optional<Output<String>> imageTag() {
+        return Optional.ofNullable(this.imageTag);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="region")
-    private Output</* @Nullable */ String> region;
+    private @Nullable Output<String> region;
 
     /**
      * @return The region to use in the registry path. If not specified, the AWS provider sets it to the current region.
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -107,7 +108,7 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder dnsSuffix(Output</* @Nullable */ String> dnsSuffix) {
+        public Builder dnsSuffix(@Nullable Output<String> dnsSuffix) {
             $.dnsSuffix = dnsSuffix;
             return this;
         }
@@ -118,7 +119,7 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder dnsSuffix(@Nullable String dnsSuffix) {
+        public Builder dnsSuffix(String dnsSuffix) {
             return dnsSuffix(Output.of(dnsSuffix));
         }
 
@@ -128,7 +129,7 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder imageTag(Output</* @Nullable */ String> imageTag) {
+        public Builder imageTag(@Nullable Output<String> imageTag) {
             $.imageTag = imageTag;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder imageTag(@Nullable String imageTag) {
+        public Builder imageTag(String imageTag) {
             return imageTag(Output.of(imageTag));
         }
 
@@ -149,7 +150,7 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder region(Output</* @Nullable */ String> region) {
+        public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder region(@Nullable String region) {
+        public Builder region(String region) {
             return region(Output.of(region));
         }
 

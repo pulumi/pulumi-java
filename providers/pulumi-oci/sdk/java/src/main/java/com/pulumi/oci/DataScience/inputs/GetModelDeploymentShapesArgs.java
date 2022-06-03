@@ -5,10 +5,11 @@ package com.pulumi.oci.DataScience.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataScience.inputs.GetModelDeploymentShapesFilter;
+import com.pulumi.oci.DataScience.inputs.GetModelDeploymentShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetModelDeploymentShapesArgs extends com.pulumi.resources.Inv
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetModelDeploymentShapesFilter>> filters;
+    private @Nullable Output<List<GetModelDeploymentShapesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetModelDeploymentShapesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetModelDeploymentShapesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetModelDeploymentShapesArgs() {}
@@ -84,16 +85,16 @@ public final class GetModelDeploymentShapesArgs extends com.pulumi.resources.Inv
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetModelDeploymentShapesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetModelDeploymentShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetModelDeploymentShapesFilter> filters) {
+        public Builder filters(List<GetModelDeploymentShapesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetModelDeploymentShapesFilter... filters) {
+        public Builder filters(GetModelDeploymentShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbInstanceIdentifier")
-    private Output</* @Nullable */ String> dbInstanceIdentifier;
+    private @Nullable Output<String> dbInstanceIdentifier;
 
     /**
      * @return Returns the list of snapshots created by the specific db_instance
      * 
      */
-    public Output</* @Nullable */ String> dbInstanceIdentifier() {
-        return this.dbInstanceIdentifier;
+    public Optional<Output<String>> dbInstanceIdentifier() {
+        return Optional.ofNullable(this.dbInstanceIdentifier);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbSnapshotIdentifier")
-    private Output</* @Nullable */ String> dbSnapshotIdentifier;
+    private @Nullable Output<String> dbSnapshotIdentifier;
 
     /**
      * @return Returns information on a specific snapshot_id.
      * 
      */
-    public Output</* @Nullable */ String> dbSnapshotIdentifier() {
-        return this.dbSnapshotIdentifier;
+    public Optional<Output<String>> dbSnapshotIdentifier() {
+        return Optional.ofNullable(this.dbSnapshotIdentifier);
     }
 
     /**
@@ -51,15 +52,15 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includePublic")
-    private Output</* @Nullable */ Boolean> includePublic;
+    private @Nullable Output<Boolean> includePublic;
 
     /**
      * @return Set this value to true to include manual DB snapshots that are public and can be
      * copied or restored by any AWS account, otherwise set this value to false. The default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> includePublic() {
-        return this.includePublic;
+    public Optional<Output<Boolean>> includePublic() {
+        return Optional.ofNullable(this.includePublic);
     }
 
     /**
@@ -69,7 +70,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeShared")
-    private Output</* @Nullable */ Boolean> includeShared;
+    private @Nullable Output<Boolean> includeShared;
 
     /**
      * @return Set this value to true to include shared manual DB snapshots from other
@@ -77,8 +78,8 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * The default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> includeShared() {
-        return this.includeShared;
+    public Optional<Output<Boolean>> includeShared() {
+        return Optional.ofNullable(this.includeShared);
     }
 
     /**
@@ -87,15 +88,15 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-    private Output</* @Nullable */ Boolean> mostRecent;
+    private @Nullable Output<Boolean> mostRecent;
 
     /**
      * @return If more than one result is returned, use the most
      * recent Snapshot.
      * 
      */
-    public Output</* @Nullable */ Boolean> mostRecent() {
-        return this.mostRecent;
+    public Optional<Output<Boolean>> mostRecent() {
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -105,7 +106,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="snapshotType")
-    private Output</* @Nullable */ String> snapshotType;
+    private @Nullable Output<String> snapshotType;
 
     /**
      * @return The type of snapshots to be returned. If you don&#39;t specify a SnapshotType
@@ -113,8 +114,8 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * included in the returned results by default. Possible values are, `automated`, `manual`, `shared`, `public` and `awsbackup`.
      * 
      */
-    public Output</* @Nullable */ String> snapshotType() {
-        return this.snapshotType;
+    public Optional<Output<String>> snapshotType() {
+        return Optional.ofNullable(this.snapshotType);
     }
 
     private GetSnapshotArgs() {}
@@ -152,7 +153,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbInstanceIdentifier(Output</* @Nullable */ String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
             $.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
@@ -163,7 +164,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
             return dbInstanceIdentifier(Output.of(dbInstanceIdentifier));
         }
 
@@ -173,7 +174,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbSnapshotIdentifier(Output</* @Nullable */ String> dbSnapshotIdentifier) {
+        public Builder dbSnapshotIdentifier(@Nullable Output<String> dbSnapshotIdentifier) {
             $.dbSnapshotIdentifier = dbSnapshotIdentifier;
             return this;
         }
@@ -184,7 +185,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbSnapshotIdentifier(@Nullable String dbSnapshotIdentifier) {
+        public Builder dbSnapshotIdentifier(String dbSnapshotIdentifier) {
             return dbSnapshotIdentifier(Output.of(dbSnapshotIdentifier));
         }
 
@@ -195,7 +196,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includePublic(Output</* @Nullable */ Boolean> includePublic) {
+        public Builder includePublic(@Nullable Output<Boolean> includePublic) {
             $.includePublic = includePublic;
             return this;
         }
@@ -207,7 +208,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includePublic(@Nullable Boolean includePublic) {
+        public Builder includePublic(Boolean includePublic) {
             return includePublic(Output.of(includePublic));
         }
 
@@ -219,7 +220,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeShared(Output</* @Nullable */ Boolean> includeShared) {
+        public Builder includeShared(@Nullable Output<Boolean> includeShared) {
             $.includeShared = includeShared;
             return this;
         }
@@ -232,7 +233,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeShared(@Nullable Boolean includeShared) {
+        public Builder includeShared(Boolean includeShared) {
             return includeShared(Output.of(includeShared));
         }
 
@@ -243,7 +244,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(Output</* @Nullable */ Boolean> mostRecent) {
+        public Builder mostRecent(@Nullable Output<Boolean> mostRecent) {
             $.mostRecent = mostRecent;
             return this;
         }
@@ -255,7 +256,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(Boolean mostRecent) {
             return mostRecent(Output.of(mostRecent));
         }
 
@@ -267,7 +268,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder snapshotType(Output</* @Nullable */ String> snapshotType) {
+        public Builder snapshotType(@Nullable Output<String> snapshotType) {
             $.snapshotType = snapshotType;
             return this;
         }
@@ -280,7 +281,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder snapshotType(@Nullable String snapshotType) {
+        public Builder snapshotType(String snapshotType) {
             return snapshotType(Output.of(snapshotType));
         }
 

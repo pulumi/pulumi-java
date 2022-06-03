@@ -5,10 +5,11 @@ package com.pulumi.oci.Limits.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Limits.inputs.GetLimitValuesFilter;
+import com.pulumi.oci.Limits.inputs.GetLimitValuesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetLimitValuesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return Filter entries by availability domain. This implies that only AD-specific values are returned.
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class GetLimitValuesArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetLimitValuesFilter>> filters;
+    private @Nullable Output<List<GetLimitValuesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetLimitValuesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetLimitValuesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetLimitValuesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Optional field, can be used to see a specific resource limit value.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetLimitValuesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scopeType")
-    private Output</* @Nullable */ String> scopeType;
+    private @Nullable Output<String> scopeType;
 
     /**
      * @return Filter entries by scope type.
      * 
      */
-    public Output</* @Nullable */ String> scopeType() {
-        return this.scopeType;
+    public Optional<Output<String>> scopeType() {
+        return Optional.ofNullable(this.scopeType);
     }
 
     /**
@@ -133,7 +134,7 @@ public final class GetLimitValuesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetLimitValuesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -169,16 +170,16 @@ public final class GetLimitValuesArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetLimitValuesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetLimitValuesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetLimitValuesFilter> filters) {
+        public Builder filters(List<GetLimitValuesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetLimitValuesFilter... filters) {
+        public Builder filters(GetLimitValuesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -188,7 +189,7 @@ public final class GetLimitValuesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -199,7 +200,7 @@ public final class GetLimitValuesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -209,7 +210,7 @@ public final class GetLimitValuesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder scopeType(Output</* @Nullable */ String> scopeType) {
+        public Builder scopeType(@Nullable Output<String> scopeType) {
             $.scopeType = scopeType;
             return this;
         }
@@ -220,7 +221,7 @@ public final class GetLimitValuesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder scopeType(@Nullable String scopeType) {
+        public Builder scopeType(String scopeType) {
             return scopeType(Output.of(scopeType));
         }
 

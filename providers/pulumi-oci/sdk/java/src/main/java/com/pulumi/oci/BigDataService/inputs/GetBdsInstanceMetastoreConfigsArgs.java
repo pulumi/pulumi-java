@@ -5,10 +5,11 @@ package com.pulumi.oci.BigDataService.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceMetastoreConfigsFilter;
+import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceMetastoreConfigsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="bdsApiKeyId")
-    private Output</* @Nullable */ String> bdsApiKeyId;
+    private @Nullable Output<String> bdsApiKeyId;
 
     /**
      * @return The ID of the API key that is associated with the external metastore in the metastore configuration
      * 
      */
-    public Output</* @Nullable */ String> bdsApiKeyId() {
-        return this.bdsApiKeyId;
+    public Optional<Output<String>> bdsApiKeyId() {
+        return Optional.ofNullable(this.bdsApiKeyId);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetBdsInstanceMetastoreConfigsFilter>> filters;
+    private @Nullable Output<List<GetBdsInstanceMetastoreConfigsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetBdsInstanceMetastoreConfigsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetBdsInstanceMetastoreConfigsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="metastoreId")
-    private Output</* @Nullable */ String> metastoreId;
+    private @Nullable Output<String> metastoreId;
 
     /**
      * @return The OCID of the Data Catalog metastore in the metastore configuration
      * 
      */
-    public Output</* @Nullable */ String> metastoreId() {
-        return this.metastoreId;
+    public Optional<Output<String>> metastoreId() {
+        return Optional.ofNullable(this.metastoreId);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="metastoreType")
-    private Output</* @Nullable */ String> metastoreType;
+    private @Nullable Output<String> metastoreType;
 
     /**
      * @return The type of the metastore in the metastore configuration
      * 
      */
-    public Output</* @Nullable */ String> metastoreType() {
-        return this.metastoreType;
+    public Optional<Output<String>> metastoreType() {
+        return Optional.ofNullable(this.metastoreType);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The lifecycle state of the metastore in the metastore configuration
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetBdsInstanceMetastoreConfigsArgs() {}
@@ -149,7 +150,7 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder bdsApiKeyId(Output</* @Nullable */ String> bdsApiKeyId) {
+        public Builder bdsApiKeyId(@Nullable Output<String> bdsApiKeyId) {
             $.bdsApiKeyId = bdsApiKeyId;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder bdsApiKeyId(@Nullable String bdsApiKeyId) {
+        public Builder bdsApiKeyId(String bdsApiKeyId) {
             return bdsApiKeyId(Output.of(bdsApiKeyId));
         }
 
@@ -191,7 +192,7 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -202,20 +203,20 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetBdsInstanceMetastoreConfigsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetBdsInstanceMetastoreConfigsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBdsInstanceMetastoreConfigsFilter> filters) {
+        public Builder filters(List<GetBdsInstanceMetastoreConfigsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetBdsInstanceMetastoreConfigsFilter... filters) {
+        public Builder filters(GetBdsInstanceMetastoreConfigsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -225,7 +226,7 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder metastoreId(Output</* @Nullable */ String> metastoreId) {
+        public Builder metastoreId(@Nullable Output<String> metastoreId) {
             $.metastoreId = metastoreId;
             return this;
         }
@@ -236,7 +237,7 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder metastoreId(@Nullable String metastoreId) {
+        public Builder metastoreId(String metastoreId) {
             return metastoreId(Output.of(metastoreId));
         }
 
@@ -246,7 +247,7 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder metastoreType(Output</* @Nullable */ String> metastoreType) {
+        public Builder metastoreType(@Nullable Output<String> metastoreType) {
             $.metastoreType = metastoreType;
             return this;
         }
@@ -257,7 +258,7 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder metastoreType(@Nullable String metastoreType) {
+        public Builder metastoreType(String metastoreType) {
             return metastoreType(Output.of(metastoreType));
         }
 
@@ -267,7 +268,7 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -278,7 +279,7 @@ public final class GetBdsInstanceMetastoreConfigsArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

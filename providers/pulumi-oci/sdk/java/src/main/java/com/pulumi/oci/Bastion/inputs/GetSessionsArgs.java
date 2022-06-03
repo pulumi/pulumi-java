@@ -5,10 +5,11 @@ package com.pulumi.oci.Bastion.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Bastion.inputs.GetSessionsFilter;
+import com.pulumi.oci.Bastion.inputs.GetSessionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSessionsFilter>> filters;
+    private @Nullable Output<List<GetSessionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetSessionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSessionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sessionId")
-    private Output</* @Nullable */ String> sessionId;
+    private @Nullable Output<String> sessionId;
 
     /**
      * @return The unique identifier (OCID) of the session in which to list resources.
      * 
      */
-    public Output</* @Nullable */ String> sessionId() {
-        return this.sessionId;
+    public Optional<Output<String>> sessionId() {
+        return Optional.ofNullable(this.sessionId);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sessionLifecycleState")
-    private Output</* @Nullable */ String> sessionLifecycleState;
+    private @Nullable Output<String> sessionLifecycleState;
 
     /**
      * @return A filter to return only resources their lifecycleState matches the given lifecycleState.
      * 
      */
-    public Output</* @Nullable */ String> sessionLifecycleState() {
-        return this.sessionLifecycleState;
+    public Optional<Output<String>> sessionLifecycleState() {
+        return Optional.ofNullable(this.sessionLifecycleState);
     }
 
     private GetSessionsArgs() {}
@@ -138,7 +139,7 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -149,20 +150,20 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetSessionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSessionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSessionsFilter> filters) {
+        public Builder filters(List<GetSessionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetSessionsFilter... filters) {
+        public Builder filters(GetSessionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sessionId(Output</* @Nullable */ String> sessionId) {
+        public Builder sessionId(@Nullable Output<String> sessionId) {
             $.sessionId = sessionId;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sessionId(@Nullable String sessionId) {
+        public Builder sessionId(String sessionId) {
             return sessionId(Output.of(sessionId));
         }
 
@@ -193,7 +194,7 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sessionLifecycleState(Output</* @Nullable */ String> sessionLifecycleState) {
+        public Builder sessionLifecycleState(@Nullable Output<String> sessionLifecycleState) {
             $.sessionLifecycleState = sessionLifecycleState;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetSessionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sessionLifecycleState(@Nullable String sessionLifecycleState) {
+        public Builder sessionLifecycleState(String sessionLifecycleState) {
             return sessionLifecycleState(Output.of(sessionLifecycleState));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetAutonomousDbVersionsFilter;
+import com.pulumi.oci.Database.inputs.GetAutonomousDbVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,21 +37,21 @@ public final class GetAutonomousDbVersionsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dbWorkload")
-    private Output</* @Nullable */ String> dbWorkload;
+    private @Nullable Output<String> dbWorkload;
 
     /**
      * @return A filter to return only autonomous database resources that match the specified workload type.
      * 
      */
-    public Output</* @Nullable */ String> dbWorkload() {
-        return this.dbWorkload;
+    public Optional<Output<String>> dbWorkload() {
+        return Optional.ofNullable(this.dbWorkload);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAutonomousDbVersionsFilter>> filters;
+    private @Nullable Output<List<GetAutonomousDbVersionsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAutonomousDbVersionsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAutonomousDbVersionsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetAutonomousDbVersionsArgs() {}
@@ -106,7 +107,7 @@ public final class GetAutonomousDbVersionsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder dbWorkload(Output</* @Nullable */ String> dbWorkload) {
+        public Builder dbWorkload(@Nullable Output<String> dbWorkload) {
             $.dbWorkload = dbWorkload;
             return this;
         }
@@ -117,20 +118,20 @@ public final class GetAutonomousDbVersionsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder dbWorkload(@Nullable String dbWorkload) {
+        public Builder dbWorkload(String dbWorkload) {
             return dbWorkload(Output.of(dbWorkload));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAutonomousDbVersionsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAutonomousDbVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAutonomousDbVersionsFilter> filters) {
+        public Builder filters(List<GetAutonomousDbVersionsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAutonomousDbVersionsFilter... filters) {
+        public Builder filters(GetAutonomousDbVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

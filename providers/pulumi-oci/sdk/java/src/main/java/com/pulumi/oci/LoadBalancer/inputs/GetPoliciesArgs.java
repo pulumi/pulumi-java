@@ -5,10 +5,11 @@ package com.pulumi.oci.LoadBalancer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.LoadBalancer.inputs.GetPoliciesFilter;
+import com.pulumi.oci.LoadBalancer.inputs.GetPoliciesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetPoliciesArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetPoliciesFilter>> filters;
+    private @Nullable Output<List<GetPoliciesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetPoliciesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetPoliciesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetPoliciesArgs() {}
@@ -84,16 +85,16 @@ public final class GetPoliciesArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetPoliciesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetPoliciesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPoliciesFilter> filters) {
+        public Builder filters(List<GetPoliciesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetPoliciesFilter... filters) {
+        public Builder filters(GetPoliciesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -3,12 +3,13 @@
 
 package com.pulumi.azure.monitoring.inputs;
 
-import com.pulumi.azure.monitoring.inputs.GetActionGroupEventHubReceiver;
+import com.pulumi.azure.monitoring.inputs.GetActionGroupEventHubReceiverArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventHubReceivers")
-    private Output</* @Nullable */ List<GetActionGroupEventHubReceiver>> eventHubReceivers;
+    private @Nullable Output<List<GetActionGroupEventHubReceiverArgs>> eventHubReceivers;
 
     /**
      * @return One or more `event_hub_receiver` blocks as defined below.
      * 
      */
-    public Output</* @Nullable */ List<GetActionGroupEventHubReceiver>> eventHubReceivers() {
-        return this.eventHubReceivers;
+    public Optional<Output<List<GetActionGroupEventHubReceiverArgs>>> eventHubReceivers() {
+        return Optional.ofNullable(this.eventHubReceivers);
     }
 
     /**
@@ -93,7 +94,7 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder eventHubReceivers(Output</* @Nullable */ List<GetActionGroupEventHubReceiver>> eventHubReceivers) {
+        public Builder eventHubReceivers(@Nullable Output<List<GetActionGroupEventHubReceiverArgs>> eventHubReceivers) {
             $.eventHubReceivers = eventHubReceivers;
             return this;
         }
@@ -104,7 +105,7 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder eventHubReceivers(@Nullable List<GetActionGroupEventHubReceiver> eventHubReceivers) {
+        public Builder eventHubReceivers(List<GetActionGroupEventHubReceiverArgs> eventHubReceivers) {
             return eventHubReceivers(Output.of(eventHubReceivers));
         }
 
@@ -114,7 +115,7 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder eventHubReceivers(GetActionGroupEventHubReceiver... eventHubReceivers) {
+        public Builder eventHubReceivers(GetActionGroupEventHubReceiverArgs... eventHubReceivers) {
             return eventHubReceivers(List.of(eventHubReceivers));
         }
 

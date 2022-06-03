@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +21,14 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="billingAccount")
-    private Output</* @Nullable */ String> billingAccount;
+    private @Nullable Output<String> billingAccount;
 
     /**
      * @return The name of the billing account in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
      * 
      */
-    public Output</* @Nullable */ String> billingAccount() {
-        return this.billingAccount;
+    public Optional<Output<String>> billingAccount() {
+        return Optional.ofNullable(this.billingAccount);
     }
 
     /**
@@ -35,14 +36,14 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The display name of the billing account.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="open")
-    private Output</* @Nullable */ Boolean> open;
+    private @Nullable Output<Boolean> open;
 
     /**
      * @return `true` if the billing account is open, `false` if the billing account is closed.
      * 
      */
-    public Output</* @Nullable */ Boolean> open() {
-        return this.open;
+    public Optional<Output<Boolean>> open() {
+        return Optional.ofNullable(this.open);
     }
 
     private GetBillingAccountArgs() {}
@@ -92,7 +93,7 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder billingAccount(Output</* @Nullable */ String> billingAccount) {
+        public Builder billingAccount(@Nullable Output<String> billingAccount) {
             $.billingAccount = billingAccount;
             return this;
         }
@@ -103,7 +104,7 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder billingAccount(@Nullable String billingAccount) {
+        public Builder billingAccount(String billingAccount) {
             return billingAccount(Output.of(billingAccount));
         }
 
@@ -113,7 +114,7 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -124,7 +125,7 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -134,7 +135,7 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder open(Output</* @Nullable */ Boolean> open) {
+        public Builder open(@Nullable Output<Boolean> open) {
             $.open = open;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder open(@Nullable Boolean open) {
+        public Builder open(Boolean open) {
             return open(Output.of(open));
         }
 

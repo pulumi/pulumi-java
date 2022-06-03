@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryId")
-    private Output</* @Nullable */ String> registryId;
+    private @Nullable Output<String> registryId;
 
     /**
      * @return The registry ID where the repository was created.
      * 
      */
-    public Output</* @Nullable */ String> registryId() {
-        return this.registryId;
+    public Optional<Output<String>> registryId() {
+        return Optional.ofNullable(this.registryId);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private Output</* @Nullable */ Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags assigned to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     private GetRepositoryArgs() {}
@@ -113,7 +114,7 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder registryId(Output</* @Nullable */ String> registryId) {
+        public Builder registryId(@Nullable Output<String> registryId) {
             $.registryId = registryId;
             return this;
         }
@@ -124,7 +125,7 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder registryId(@Nullable String registryId) {
+        public Builder registryId(String registryId) {
             return registryId(Output.of(registryId));
         }
 
@@ -134,7 +135,7 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(Output</* @Nullable */ Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 

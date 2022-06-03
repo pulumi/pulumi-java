@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,38 +23,38 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="generation")
-    private Output</* @Nullable */ String> generation;
+    private @Nullable Output<String> generation;
 
-    public Output</* @Nullable */ String> generation() {
-        return this.generation;
+    public Optional<Output<String>> generation() {
+        return Optional.ofNullable(this.generation);
     }
 
     @Import(name="ifGenerationMatch")
-    private Output</* @Nullable */ String> ifGenerationMatch;
+    private @Nullable Output<String> ifGenerationMatch;
 
-    public Output</* @Nullable */ String> ifGenerationMatch() {
-        return this.ifGenerationMatch;
+    public Optional<Output<String>> ifGenerationMatch() {
+        return Optional.ofNullable(this.ifGenerationMatch);
     }
 
     @Import(name="ifGenerationNotMatch")
-    private Output</* @Nullable */ String> ifGenerationNotMatch;
+    private @Nullable Output<String> ifGenerationNotMatch;
 
-    public Output</* @Nullable */ String> ifGenerationNotMatch() {
-        return this.ifGenerationNotMatch;
+    public Optional<Output<String>> ifGenerationNotMatch() {
+        return Optional.ofNullable(this.ifGenerationNotMatch);
     }
 
     @Import(name="ifMetagenerationMatch")
-    private Output</* @Nullable */ String> ifMetagenerationMatch;
+    private @Nullable Output<String> ifMetagenerationMatch;
 
-    public Output</* @Nullable */ String> ifMetagenerationMatch() {
-        return this.ifMetagenerationMatch;
+    public Optional<Output<String>> ifMetagenerationMatch() {
+        return Optional.ofNullable(this.ifMetagenerationMatch);
     }
 
     @Import(name="ifMetagenerationNotMatch")
-    private Output</* @Nullable */ String> ifMetagenerationNotMatch;
+    private @Nullable Output<String> ifMetagenerationNotMatch;
 
-    public Output</* @Nullable */ String> ifMetagenerationNotMatch() {
-        return this.ifMetagenerationNotMatch;
+    public Optional<Output<String>> ifMetagenerationNotMatch() {
+        return Optional.ofNullable(this.ifMetagenerationNotMatch);
     }
 
     @Import(name="object", required=true)
@@ -64,17 +65,17 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="projection")
-    private Output</* @Nullable */ String> projection;
+    private @Nullable Output<String> projection;
 
-    public Output</* @Nullable */ String> projection() {
-        return this.projection;
+    public Optional<Output<String>> projection() {
+        return Optional.ofNullable(this.projection);
     }
 
     @Import(name="userProject")
-    private Output</* @Nullable */ String> userProject;
+    private @Nullable Output<String> userProject;
 
-    public Output</* @Nullable */ String> userProject() {
-        return this.userProject;
+    public Optional<Output<String>> userProject() {
+        return Optional.ofNullable(this.userProject);
     }
 
     private GetBucketObjectArgs() {}
@@ -118,48 +119,48 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
             return bucket(Output.of(bucket));
         }
 
-        public Builder generation(Output</* @Nullable */ String> generation) {
+        public Builder generation(@Nullable Output<String> generation) {
             $.generation = generation;
             return this;
         }
 
-        public Builder generation(@Nullable String generation) {
+        public Builder generation(String generation) {
             return generation(Output.of(generation));
         }
 
-        public Builder ifGenerationMatch(Output</* @Nullable */ String> ifGenerationMatch) {
+        public Builder ifGenerationMatch(@Nullable Output<String> ifGenerationMatch) {
             $.ifGenerationMatch = ifGenerationMatch;
             return this;
         }
 
-        public Builder ifGenerationMatch(@Nullable String ifGenerationMatch) {
+        public Builder ifGenerationMatch(String ifGenerationMatch) {
             return ifGenerationMatch(Output.of(ifGenerationMatch));
         }
 
-        public Builder ifGenerationNotMatch(Output</* @Nullable */ String> ifGenerationNotMatch) {
+        public Builder ifGenerationNotMatch(@Nullable Output<String> ifGenerationNotMatch) {
             $.ifGenerationNotMatch = ifGenerationNotMatch;
             return this;
         }
 
-        public Builder ifGenerationNotMatch(@Nullable String ifGenerationNotMatch) {
+        public Builder ifGenerationNotMatch(String ifGenerationNotMatch) {
             return ifGenerationNotMatch(Output.of(ifGenerationNotMatch));
         }
 
-        public Builder ifMetagenerationMatch(Output</* @Nullable */ String> ifMetagenerationMatch) {
+        public Builder ifMetagenerationMatch(@Nullable Output<String> ifMetagenerationMatch) {
             $.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
 
-        public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
+        public Builder ifMetagenerationMatch(String ifMetagenerationMatch) {
             return ifMetagenerationMatch(Output.of(ifMetagenerationMatch));
         }
 
-        public Builder ifMetagenerationNotMatch(Output</* @Nullable */ String> ifMetagenerationNotMatch) {
+        public Builder ifMetagenerationNotMatch(@Nullable Output<String> ifMetagenerationNotMatch) {
             $.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
 
-        public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
+        public Builder ifMetagenerationNotMatch(String ifMetagenerationNotMatch) {
             return ifMetagenerationNotMatch(Output.of(ifMetagenerationNotMatch));
         }
 
@@ -172,21 +173,21 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
             return object(Output.of(object));
         }
 
-        public Builder projection(Output</* @Nullable */ String> projection) {
+        public Builder projection(@Nullable Output<String> projection) {
             $.projection = projection;
             return this;
         }
 
-        public Builder projection(@Nullable String projection) {
+        public Builder projection(String projection) {
             return projection(Output.of(projection));
         }
 
-        public Builder userProject(Output</* @Nullable */ String> userProject) {
+        public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
         }
 
-        public Builder userProject(@Nullable String userProject) {
+        public Builder userProject(String userProject) {
             return userProject(Output.of(userProject));
         }
 

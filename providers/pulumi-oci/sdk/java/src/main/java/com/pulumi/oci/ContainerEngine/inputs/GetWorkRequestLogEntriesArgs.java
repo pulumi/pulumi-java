@@ -5,10 +5,11 @@ package com.pulumi.oci.ContainerEngine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ContainerEngine.inputs.GetWorkRequestLogEntriesFilter;
+import com.pulumi.oci.ContainerEngine.inputs.GetWorkRequestLogEntriesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetWorkRequestLogEntriesArgs extends com.pulumi.resources.Inv
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetWorkRequestLogEntriesFilter>> filters;
+    private @Nullable Output<List<GetWorkRequestLogEntriesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetWorkRequestLogEntriesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetWorkRequestLogEntriesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -100,16 +101,16 @@ public final class GetWorkRequestLogEntriesArgs extends com.pulumi.resources.Inv
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetWorkRequestLogEntriesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetWorkRequestLogEntriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetWorkRequestLogEntriesFilter> filters) {
+        public Builder filters(List<GetWorkRequestLogEntriesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetWorkRequestLogEntriesFilter... filters) {
+        public Builder filters(GetWorkRequestLogEntriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

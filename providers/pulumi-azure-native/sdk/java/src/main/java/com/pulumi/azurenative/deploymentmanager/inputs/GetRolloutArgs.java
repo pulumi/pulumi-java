@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retryAttempt")
-    private Output</* @Nullable */ Integer> retryAttempt;
+    private @Nullable Output<Integer> retryAttempt;
 
     /**
      * @return Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.
      * 
      */
-    public Output</* @Nullable */ Integer> retryAttempt() {
-        return this.retryAttempt;
+    public Optional<Output<Integer>> retryAttempt() {
+        return Optional.ofNullable(this.retryAttempt);
     }
 
     /**
@@ -113,7 +114,7 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder retryAttempt(Output</* @Nullable */ Integer> retryAttempt) {
+        public Builder retryAttempt(@Nullable Output<Integer> retryAttempt) {
             $.retryAttempt = retryAttempt;
             return this;
         }
@@ -124,7 +125,7 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder retryAttempt(@Nullable Integer retryAttempt) {
+        public Builder retryAttempt(Integer retryAttempt) {
             return retryAttempt(Output.of(retryAttempt));
         }
 

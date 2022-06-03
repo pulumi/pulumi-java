@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,14 +36,14 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domainOwner")
-    private Output</* @Nullable */ String> domainOwner;
+    private @Nullable Output<String> domainOwner;
 
     /**
      * @return The account number of the AWS account that owns the domain.
      * 
      */
-    public Output</* @Nullable */ String> domainOwner() {
-        return this.domainOwner;
+    public Optional<Output<String>> domainOwner() {
+        return Optional.ofNullable(this.domainOwner);
     }
 
     /**
@@ -50,14 +51,14 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="durationSeconds")
-    private Output</* @Nullable */ Integer> durationSeconds;
+    private @Nullable Output<Integer> durationSeconds;
 
     /**
      * @return The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
      * 
      */
-    public Output</* @Nullable */ Integer> durationSeconds() {
-        return this.durationSeconds;
+    public Optional<Output<Integer>> durationSeconds() {
+        return Optional.ofNullable(this.durationSeconds);
     }
 
     private GetAuthorizationTokenArgs() {}
@@ -113,7 +114,7 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder domainOwner(Output</* @Nullable */ String> domainOwner) {
+        public Builder domainOwner(@Nullable Output<String> domainOwner) {
             $.domainOwner = domainOwner;
             return this;
         }
@@ -124,7 +125,7 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder domainOwner(@Nullable String domainOwner) {
+        public Builder domainOwner(String domainOwner) {
             return domainOwner(Output.of(domainOwner));
         }
 
@@ -134,7 +135,7 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder durationSeconds(Output</* @Nullable */ Integer> durationSeconds) {
+        public Builder durationSeconds(@Nullable Output<Integer> durationSeconds) {
             $.durationSeconds = durationSeconds;
             return this;
         }
@@ -145,7 +146,7 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder durationSeconds(@Nullable Integer durationSeconds) {
+        public Builder durationSeconds(Integer durationSeconds) {
             return durationSeconds(Output.of(durationSeconds));
         }
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +23,10 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="debugOptionsEnableDebugging")
-    private Output</* @Nullable */ String> debugOptionsEnableDebugging;
+    private @Nullable Output<String> debugOptionsEnableDebugging;
 
-    public Output</* @Nullable */ String> debugOptionsEnableDebugging() {
-        return this.debugOptionsEnableDebugging;
+    public Optional<Output<String>> debugOptionsEnableDebugging() {
+        return Optional.ofNullable(this.debugOptionsEnableDebugging);
     }
 
     private GetDataSourceArgs() {}
@@ -62,12 +63,12 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
             return datasourceId(Output.of(datasourceId));
         }
 
-        public Builder debugOptionsEnableDebugging(Output</* @Nullable */ String> debugOptionsEnableDebugging) {
+        public Builder debugOptionsEnableDebugging(@Nullable Output<String> debugOptionsEnableDebugging) {
             $.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
             return this;
         }
 
-        public Builder debugOptionsEnableDebugging(@Nullable String debugOptionsEnableDebugging) {
+        public Builder debugOptionsEnableDebugging(String debugOptionsEnableDebugging) {
             return debugOptionsEnableDebugging(Output.of(debugOptionsEnableDebugging));
         }
 

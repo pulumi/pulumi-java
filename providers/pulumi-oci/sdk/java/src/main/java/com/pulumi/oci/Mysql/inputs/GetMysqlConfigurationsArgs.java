@@ -5,10 +5,11 @@ package com.pulumi.oci.Mysql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Mysql.inputs.GetMysqlConfigurationsFilter;
+import com.pulumi.oci.Mysql.inputs.GetMysqlConfigurationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,14 +37,14 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="configurationId")
-    private Output</* @Nullable */ String> configurationId;
+    private @Nullable Output<String> configurationId;
 
     /**
      * @return The requested Configuration instance.
      * 
      */
-    public Output</* @Nullable */ String> configurationId() {
-        return this.configurationId;
+    public Optional<Output<String>> configurationId() {
+        return Optional.ofNullable(this.configurationId);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only the resource matching the given display name exactly.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetMysqlConfigurationsFilter>> filters;
+    private @Nullable Output<List<GetMysqlConfigurationsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetMysqlConfigurationsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetMysqlConfigurationsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="shapeName")
-    private Output</* @Nullable */ String> shapeName;
+    private @Nullable Output<String> shapeName;
 
     /**
      * @return The requested Shape name.
      * 
      */
-    public Output</* @Nullable */ String> shapeName() {
-        return this.shapeName;
+    public Optional<Output<String>> shapeName() {
+        return Optional.ofNullable(this.shapeName);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Configuration Lifecycle State
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="types")
-    private Output</* @Nullable */ List<String>> types;
+    private @Nullable Output<List<String>> types;
 
     /**
      * @return The requested Configuration types.
      * 
      */
-    public Output</* @Nullable */ List<String>> types() {
-        return this.types;
+    public Optional<Output<List<String>>> types() {
+        return Optional.ofNullable(this.types);
     }
 
     private GetMysqlConfigurationsArgs() {}
@@ -170,7 +171,7 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder configurationId(Output</* @Nullable */ String> configurationId) {
+        public Builder configurationId(@Nullable Output<String> configurationId) {
             $.configurationId = configurationId;
             return this;
         }
@@ -181,7 +182,7 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder configurationId(@Nullable String configurationId) {
+        public Builder configurationId(String configurationId) {
             return configurationId(Output.of(configurationId));
         }
 
@@ -191,7 +192,7 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -202,20 +203,20 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetMysqlConfigurationsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetMysqlConfigurationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetMysqlConfigurationsFilter> filters) {
+        public Builder filters(List<GetMysqlConfigurationsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetMysqlConfigurationsFilter... filters) {
+        public Builder filters(GetMysqlConfigurationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -225,7 +226,7 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder shapeName(Output</* @Nullable */ String> shapeName) {
+        public Builder shapeName(@Nullable Output<String> shapeName) {
             $.shapeName = shapeName;
             return this;
         }
@@ -236,7 +237,7 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder shapeName(@Nullable String shapeName) {
+        public Builder shapeName(String shapeName) {
             return shapeName(Output.of(shapeName));
         }
 
@@ -246,7 +247,7 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -257,7 +258,7 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 
@@ -267,7 +268,7 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder types(Output</* @Nullable */ List<String>> types) {
+        public Builder types(@Nullable Output<List<String>> types) {
             $.types = types;
             return this;
         }
@@ -278,7 +279,7 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder types(@Nullable List<String> types) {
+        public Builder types(List<String> types) {
             return types(Output.of(types));
         }
 

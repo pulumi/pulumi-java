@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class ListPrivateStoreStopSellOffersPlansNotificationsArgs extends 
     }
 
     @Import(name="subscriptions")
-    private Output</* @Nullable */ List<String>> subscriptions;
+    private @Nullable Output<List<String>> subscriptions;
 
-    public Output</* @Nullable */ List<String>> subscriptions() {
-        return this.subscriptions;
+    public Optional<Output<List<String>>> subscriptions() {
+        return Optional.ofNullable(this.subscriptions);
     }
 
     private ListPrivateStoreStopSellOffersPlansNotificationsArgs() {}
@@ -83,12 +84,12 @@ public final class ListPrivateStoreStopSellOffersPlansNotificationsArgs extends 
             return privateStoreId(Output.of(privateStoreId));
         }
 
-        public Builder subscriptions(Output</* @Nullable */ List<String>> subscriptions) {
+        public Builder subscriptions(@Nullable Output<List<String>> subscriptions) {
             $.subscriptions = subscriptions;
             return this;
         }
 
-        public Builder subscriptions(@Nullable List<String> subscriptions) {
+        public Builder subscriptions(List<String> subscriptions) {
             return subscriptions(Output.of(subscriptions));
         }
 

@@ -3,12 +3,13 @@
 
 package com.pulumi.aws.identitystore.inputs;
 
-import com.pulumi.aws.identitystore.inputs.GetUserFilter;
+import com.pulumi.aws.identitystore.inputs.GetUserFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,13 +22,13 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters", required=true)
-    private Output<List<GetUserFilter>> filters;
+    private Output<List<GetUserFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
      * 
      */
-    public Output<List<GetUserFilter>> filters() {
+    public Output<List<GetUserFilterArgs>> filters() {
         return this.filters;
     }
 
@@ -51,14 +52,14 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId")
-    private Output</* @Nullable */ String> userId;
+    private @Nullable Output<String> userId;
 
     /**
      * @return The identifier for a user in the Identity Store.
      * 
      */
-    public Output</* @Nullable */ String> userId() {
-        return this.userId;
+    public Optional<Output<String>> userId() {
+        return Optional.ofNullable(this.userId);
     }
 
     private GetUserArgs() {}
@@ -93,7 +94,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(Output<List<GetUserFilter>> filters) {
+        public Builder filters(Output<List<GetUserFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -104,7 +105,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(List<GetUserFilter> filters) {
+        public Builder filters(List<GetUserFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
@@ -114,7 +115,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetUserFilter... filters) {
+        public Builder filters(GetUserFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -145,7 +146,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userId(Output</* @Nullable */ String> userId) {
+        public Builder userId(@Nullable Output<String> userId) {
             $.userId = userId;
             return this;
         }
@@ -156,7 +157,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userId(@Nullable String userId) {
+        public Builder userId(String userId) {
             return userId(Output.of(userId));
         }
 

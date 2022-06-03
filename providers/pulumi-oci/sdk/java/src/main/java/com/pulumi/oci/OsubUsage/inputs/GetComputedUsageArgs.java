@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -50,14 +51,14 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fields")
-    private Output</* @Nullable */ List<String>> fields;
+    private @Nullable Output<List<String>> fields;
 
     /**
      * @return Partial response refers to an optimization technique offered by the RESTful web APIs to return only the information  (fields) required by the client. This parameter is used to control what fields to return.
      * 
      */
-    public Output</* @Nullable */ List<String>> fields() {
-        return this.fields;
+    public Optional<Output<List<String>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -65,14 +66,14 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="xOneOriginRegion")
-    private Output</* @Nullable */ String> xOneOriginRegion;
+    private @Nullable Output<String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Output</* @Nullable */ String> xOneOriginRegion() {
-        return this.xOneOriginRegion;
+    public Optional<Output<String>> xOneOriginRegion() {
+        return Optional.ofNullable(this.xOneOriginRegion);
     }
 
     private GetComputedUsageArgs() {}
@@ -150,7 +151,7 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder fields(Output</* @Nullable */ List<String>> fields) {
+        public Builder fields(@Nullable Output<List<String>> fields) {
             $.fields = fields;
             return this;
         }
@@ -161,7 +162,7 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder fields(@Nullable List<String> fields) {
+        public Builder fields(List<String> fields) {
             return fields(Output.of(fields));
         }
 
@@ -181,7 +182,7 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
+        public Builder xOneOriginRegion(@Nullable Output<String> xOneOriginRegion) {
             $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
@@ -192,7 +193,7 @@ public final class GetComputedUsageArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
+        public Builder xOneOriginRegion(String xOneOriginRegion) {
             return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 

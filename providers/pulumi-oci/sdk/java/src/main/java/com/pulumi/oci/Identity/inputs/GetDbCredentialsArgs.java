@@ -5,10 +5,11 @@ package com.pulumi.oci.Identity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetDbCredentialsFilter;
+import com.pulumi.oci.Identity.inputs.GetDbCredentialsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetDbCredentialsArgs Empty = new GetDbCredentialsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDbCredentialsFilter>> filters;
+    private @Nullable Output<List<GetDbCredentialsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDbCredentialsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDbCredentialsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -28,14 +29,14 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to only return resources that match the given name exactly.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -95,16 +96,16 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetDbCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDbCredentialsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDbCredentialsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbCredentialsFilter> filters) {
+        public Builder filters(List<GetDbCredentialsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDbCredentialsFilter... filters) {
+        public Builder filters(GetDbCredentialsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -114,7 +115,7 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -125,7 +126,7 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -135,7 +136,7 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetDbCredentialsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

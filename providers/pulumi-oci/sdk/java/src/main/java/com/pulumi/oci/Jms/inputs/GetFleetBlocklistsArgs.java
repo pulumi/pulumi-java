@@ -5,10 +5,11 @@ package com.pulumi.oci.Jms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Jms.inputs.GetFleetBlocklistsFilter;
+import com.pulumi.oci.Jms.inputs.GetFleetBlocklistsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
     public static final GetFleetBlocklistsArgs Empty = new GetFleetBlocklistsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetFleetBlocklistsFilter>> filters;
+    private @Nullable Output<List<GetFleetBlocklistsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetFleetBlocklistsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetFleetBlocklistsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="managedInstanceId")
-    private Output</* @Nullable */ String> managedInstanceId;
+    private @Nullable Output<String> managedInstanceId;
 
     /**
      * @return The Fleet-unique identifier of the related managed instance.
      * 
      */
-    public Output</* @Nullable */ String> managedInstanceId() {
-        return this.managedInstanceId;
+    public Optional<Output<String>> managedInstanceId() {
+        return Optional.ofNullable(this.managedInstanceId);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="operation")
-    private Output</* @Nullable */ String> operation;
+    private @Nullable Output<String> operation;
 
     /**
      * @return The operation type.
      * 
      */
-    public Output</* @Nullable */ String> operation() {
-        return this.operation;
+    public Optional<Output<String>> operation() {
+        return Optional.ofNullable(this.operation);
     }
 
     private GetFleetBlocklistsArgs() {}
@@ -95,16 +96,16 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
             $ = new GetFleetBlocklistsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetFleetBlocklistsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetFleetBlocklistsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetFleetBlocklistsFilter> filters) {
+        public Builder filters(List<GetFleetBlocklistsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetFleetBlocklistsFilter... filters) {
+        public Builder filters(GetFleetBlocklistsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -135,7 +136,7 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder managedInstanceId(Output</* @Nullable */ String> managedInstanceId) {
+        public Builder managedInstanceId(@Nullable Output<String> managedInstanceId) {
             $.managedInstanceId = managedInstanceId;
             return this;
         }
@@ -146,7 +147,7 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder managedInstanceId(@Nullable String managedInstanceId) {
+        public Builder managedInstanceId(String managedInstanceId) {
             return managedInstanceId(Output.of(managedInstanceId));
         }
 
@@ -156,7 +157,7 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder operation(Output</* @Nullable */ String> operation) {
+        public Builder operation(@Nullable Output<String> operation) {
             $.operation = operation;
             return this;
         }
@@ -167,7 +168,7 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder operation(@Nullable String operation) {
+        public Builder operation(String operation) {
             return operation(Output.of(operation));
         }
 

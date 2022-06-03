@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetEventCategoriesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sourceType")
-    private Output</* @Nullable */ String> sourceType;
+    private @Nullable Output<String> sourceType;
 
     /**
      * @return The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot.
      * 
      */
-    public Output</* @Nullable */ String> sourceType() {
-        return this.sourceType;
+    public Optional<Output<String>> sourceType() {
+        return Optional.ofNullable(this.sourceType);
     }
 
     private GetEventCategoriesArgs() {}
@@ -59,7 +60,7 @@ public final class GetEventCategoriesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder sourceType(Output</* @Nullable */ String> sourceType) {
+        public Builder sourceType(@Nullable Output<String> sourceType) {
             $.sourceType = sourceType;
             return this;
         }
@@ -70,7 +71,7 @@ public final class GetEventCategoriesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder sourceType(@Nullable String sourceType) {
+        public Builder sourceType(String sourceType) {
             return sourceType(Output.of(sourceType));
         }
 

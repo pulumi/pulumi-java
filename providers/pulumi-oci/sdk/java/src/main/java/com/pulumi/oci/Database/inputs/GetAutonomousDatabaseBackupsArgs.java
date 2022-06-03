@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetAutonomousDatabaseBackupsFilter;
+import com.pulumi.oci.Database.inputs.GetAutonomousDatabaseBackupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="autonomousDatabaseId")
-    private Output</* @Nullable */ String> autonomousDatabaseId;
+    private @Nullable Output<String> autonomousDatabaseId;
 
     /**
      * @return The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Output</* @Nullable */ String> autonomousDatabaseId() {
-        return this.autonomousDatabaseId;
+    public Optional<Output<String>> autonomousDatabaseId() {
+        return Optional.ofNullable(this.autonomousDatabaseId);
     }
 
     /**
@@ -36,14 +37,14 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="compartmentId")
-    private Output</* @Nullable */ String> compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Output</* @Nullable */ String> compartmentId() {
-        return this.compartmentId;
+    public Optional<Output<String>> compartmentId() {
+        return Optional.ofNullable(this.compartmentId);
     }
 
     /**
@@ -51,21 +52,21 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetAutonomousDatabaseBackupsFilter>> filters;
+    private @Nullable Output<List<GetAutonomousDatabaseBackupsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetAutonomousDatabaseBackupsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetAutonomousDatabaseBackupsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetAutonomousDatabaseBackupsArgs() {}
@@ -117,7 +118,7 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder autonomousDatabaseId(Output</* @Nullable */ String> autonomousDatabaseId) {
+        public Builder autonomousDatabaseId(@Nullable Output<String> autonomousDatabaseId) {
             $.autonomousDatabaseId = autonomousDatabaseId;
             return this;
         }
@@ -128,7 +129,7 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder autonomousDatabaseId(@Nullable String autonomousDatabaseId) {
+        public Builder autonomousDatabaseId(String autonomousDatabaseId) {
             return autonomousDatabaseId(Output.of(autonomousDatabaseId));
         }
 
@@ -138,7 +139,7 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder compartmentId(Output</* @Nullable */ String> compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
@@ -149,7 +150,7 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(String compartmentId) {
             return compartmentId(Output.of(compartmentId));
         }
 
@@ -159,7 +160,7 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -170,20 +171,20 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetAutonomousDatabaseBackupsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetAutonomousDatabaseBackupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAutonomousDatabaseBackupsFilter> filters) {
+        public Builder filters(List<GetAutonomousDatabaseBackupsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetAutonomousDatabaseBackupsFilter... filters) {
+        public Builder filters(GetAutonomousDatabaseBackupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -193,7 +194,7 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetAutonomousDatabaseBackupsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

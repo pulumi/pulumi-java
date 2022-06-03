@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,35 +22,35 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessString")
-    private Output</* @Nullable */ String> accessString;
+    private @Nullable Output<String> accessString;
 
     /**
      * @return A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
      * 
      */
-    public Output</* @Nullable */ String> accessString() {
-        return this.accessString;
+    public Optional<Output<String>> accessString() {
+        return Optional.ofNullable(this.accessString);
     }
 
     @Import(name="engine")
-    private Output</* @Nullable */ String> engine;
+    private @Nullable Output<String> engine;
 
-    public Output</* @Nullable */ String> engine() {
-        return this.engine;
+    public Optional<Output<String>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     @Import(name="noPasswordRequired")
-    private Output</* @Nullable */ Boolean> noPasswordRequired;
+    private @Nullable Output<Boolean> noPasswordRequired;
 
-    public Output</* @Nullable */ Boolean> noPasswordRequired() {
-        return this.noPasswordRequired;
+    public Optional<Output<Boolean>> noPasswordRequired() {
+        return Optional.ofNullable(this.noPasswordRequired);
     }
 
     @Import(name="passwords")
-    private Output</* @Nullable */ List<String>> passwords;
+    private @Nullable Output<List<String>> passwords;
 
-    public Output</* @Nullable */ List<String>> passwords() {
-        return this.passwords;
+    public Optional<Output<List<String>>> passwords() {
+        return Optional.ofNullable(this.passwords);
     }
 
     /**
@@ -72,14 +73,14 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName")
-    private Output</* @Nullable */ String> userName;
+    private @Nullable Output<String> userName;
 
     /**
      * @return The user name of the user.
      * 
      */
-    public Output</* @Nullable */ String> userName() {
-        return this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
     private GetUserArgs() {}
@@ -117,7 +118,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessString(Output</* @Nullable */ String> accessString) {
+        public Builder accessString(@Nullable Output<String> accessString) {
             $.accessString = accessString;
             return this;
         }
@@ -128,34 +129,34 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessString(@Nullable String accessString) {
+        public Builder accessString(String accessString) {
             return accessString(Output.of(accessString));
         }
 
-        public Builder engine(Output</* @Nullable */ String> engine) {
+        public Builder engine(@Nullable Output<String> engine) {
             $.engine = engine;
             return this;
         }
 
-        public Builder engine(@Nullable String engine) {
+        public Builder engine(String engine) {
             return engine(Output.of(engine));
         }
 
-        public Builder noPasswordRequired(Output</* @Nullable */ Boolean> noPasswordRequired) {
+        public Builder noPasswordRequired(@Nullable Output<Boolean> noPasswordRequired) {
             $.noPasswordRequired = noPasswordRequired;
             return this;
         }
 
-        public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
+        public Builder noPasswordRequired(Boolean noPasswordRequired) {
             return noPasswordRequired(Output.of(noPasswordRequired));
         }
 
-        public Builder passwords(Output</* @Nullable */ List<String>> passwords) {
+        public Builder passwords(@Nullable Output<List<String>> passwords) {
             $.passwords = passwords;
             return this;
         }
 
-        public Builder passwords(@Nullable List<String> passwords) {
+        public Builder passwords(List<String> passwords) {
             return passwords(Output.of(passwords));
         }
 
@@ -190,7 +191,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userName(Output</* @Nullable */ String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
@@ -201,7 +202,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userName(@Nullable String userName) {
+        public Builder userName(String userName) {
             return userName(Output.of(userName));
         }
 

@@ -9,6 +9,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="addDefaultExtendedTimeRange")
-    private Output</* @Nullable */ Boolean> addDefaultExtendedTimeRange;
+    private @Nullable Output<Boolean> addDefaultExtendedTimeRange;
 
     /**
      * @return Indicates if query time range should be extended with default time range of the query. Default value is false
      * 
      */
-    public Output</* @Nullable */ Boolean> addDefaultExtendedTimeRange() {
-        return this.addDefaultExtendedTimeRange;
+    public Optional<Output<Boolean>> addDefaultExtendedTimeRange() {
+        return Optional.ofNullable(this.addDefaultExtendedTimeRange);
     }
 
     /**
@@ -66,14 +67,14 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="insightQueryIds")
-    private Output</* @Nullable */ List<String>> insightQueryIds;
+    private @Nullable Output<List<String>> insightQueryIds;
 
     /**
      * @return List of Insights Query Id. If empty, default value is all insights of this entity
      * 
      */
-    public Output</* @Nullable */ List<String>> insightQueryIds() {
-        return this.insightQueryIds;
+    public Optional<Output<List<String>>> insightQueryIds() {
+        return Optional.ofNullable(this.insightQueryIds);
     }
 
     /**
@@ -173,7 +174,7 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder addDefaultExtendedTimeRange(Output</* @Nullable */ Boolean> addDefaultExtendedTimeRange) {
+        public Builder addDefaultExtendedTimeRange(@Nullable Output<Boolean> addDefaultExtendedTimeRange) {
             $.addDefaultExtendedTimeRange = addDefaultExtendedTimeRange;
             return this;
         }
@@ -184,7 +185,7 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder addDefaultExtendedTimeRange(@Nullable Boolean addDefaultExtendedTimeRange) {
+        public Builder addDefaultExtendedTimeRange(Boolean addDefaultExtendedTimeRange) {
             return addDefaultExtendedTimeRange(Output.of(addDefaultExtendedTimeRange));
         }
 
@@ -236,7 +237,7 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder insightQueryIds(Output</* @Nullable */ List<String>> insightQueryIds) {
+        public Builder insightQueryIds(@Nullable Output<List<String>> insightQueryIds) {
             $.insightQueryIds = insightQueryIds;
             return this;
         }
@@ -247,7 +248,7 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder insightQueryIds(@Nullable List<String> insightQueryIds) {
+        public Builder insightQueryIds(List<String> insightQueryIds) {
             return insightQueryIds(Output.of(insightQueryIds));
         }
 

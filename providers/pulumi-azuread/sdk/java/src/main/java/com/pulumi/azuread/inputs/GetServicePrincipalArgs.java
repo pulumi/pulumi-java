@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="applicationId")
-    private Output</* @Nullable */ String> applicationId;
+    private @Nullable Output<String> applicationId;
 
     /**
      * @return The application ID (client ID) of the application associated with this service principal.
      * 
      */
-    public Output</* @Nullable */ String> applicationId() {
-        return this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-    private Output</* @Nullable */ String> displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The display name of the application associated with this service principal.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="objectId")
-    private Output</* @Nullable */ String> objectId;
+    private @Nullable Output<String> objectId;
 
     /**
      * @return The object ID of the service principal.
      * 
      */
-    public Output</* @Nullable */ String> objectId() {
-        return this.objectId;
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     private GetServicePrincipalArgs() {}
@@ -91,7 +92,7 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder applicationId(Output</* @Nullable */ String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder applicationId(@Nullable String applicationId) {
+        public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
@@ -112,7 +113,7 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(Output</* @Nullable */ String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
@@ -133,7 +134,7 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder objectId(Output</* @Nullable */ String> objectId) {
+        public Builder objectId(@Nullable Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder objectId(@Nullable String objectId) {
+        public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 

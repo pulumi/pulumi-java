@@ -5,10 +5,11 @@ package com.pulumi.oci.OsubSubscription.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OsubSubscription.inputs.GetRatecardsFilter;
+import com.pulumi.oci.OsubSubscription.inputs.GetRatecardsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetRatecardsFilter>> filters;
+    private @Nullable Output<List<GetRatecardsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetRatecardsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetRatecardsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -43,14 +44,14 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="partNumber")
-    private Output</* @Nullable */ String> partNumber;
+    private @Nullable Output<String> partNumber;
 
     /**
      * @return This param is used to get the rate card(s) filterd by the partNumber
      * 
      */
-    public Output</* @Nullable */ String> partNumber() {
-        return this.partNumber;
+    public Optional<Output<String>> partNumber() {
+        return Optional.ofNullable(this.partNumber);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeFrom")
-    private Output</* @Nullable */ String> timeFrom;
+    private @Nullable Output<String> timeFrom;
 
     /**
      * @return This param is used to get the rate card(s) whose effective start date starts on or after a particular date
      * 
      */
-    public Output</* @Nullable */ String> timeFrom() {
-        return this.timeFrom;
+    public Optional<Output<String>> timeFrom() {
+        return Optional.ofNullable(this.timeFrom);
     }
 
     /**
@@ -88,14 +89,14 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeTo")
-    private Output</* @Nullable */ String> timeTo;
+    private @Nullable Output<String> timeTo;
 
     /**
      * @return This param is used to get the rate card(s) whose effective end date ends on or before a particular date
      * 
      */
-    public Output</* @Nullable */ String> timeTo() {
-        return this.timeTo;
+    public Optional<Output<String>> timeTo() {
+        return Optional.ofNullable(this.timeTo);
     }
 
     /**
@@ -103,14 +104,14 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xOneOriginRegion")
-    private Output</* @Nullable */ String> xOneOriginRegion;
+    private @Nullable Output<String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Output</* @Nullable */ String> xOneOriginRegion() {
-        return this.xOneOriginRegion;
+    public Optional<Output<String>> xOneOriginRegion() {
+        return Optional.ofNullable(this.xOneOriginRegion);
     }
 
     private GetRatecardsArgs() {}
@@ -164,16 +165,16 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetRatecardsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetRatecardsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRatecardsFilter> filters) {
+        public Builder filters(List<GetRatecardsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetRatecardsFilter... filters) {
+        public Builder filters(GetRatecardsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -183,7 +184,7 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder partNumber(Output</* @Nullable */ String> partNumber) {
+        public Builder partNumber(@Nullable Output<String> partNumber) {
             $.partNumber = partNumber;
             return this;
         }
@@ -194,7 +195,7 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder partNumber(@Nullable String partNumber) {
+        public Builder partNumber(String partNumber) {
             return partNumber(Output.of(partNumber));
         }
 
@@ -225,7 +226,7 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeFrom(Output</* @Nullable */ String> timeFrom) {
+        public Builder timeFrom(@Nullable Output<String> timeFrom) {
             $.timeFrom = timeFrom;
             return this;
         }
@@ -236,7 +237,7 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeFrom(@Nullable String timeFrom) {
+        public Builder timeFrom(String timeFrom) {
             return timeFrom(Output.of(timeFrom));
         }
 
@@ -246,7 +247,7 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeTo(Output</* @Nullable */ String> timeTo) {
+        public Builder timeTo(@Nullable Output<String> timeTo) {
             $.timeTo = timeTo;
             return this;
         }
@@ -257,7 +258,7 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeTo(@Nullable String timeTo) {
+        public Builder timeTo(String timeTo) {
             return timeTo(Output.of(timeTo));
         }
 
@@ -267,7 +268,7 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(Output</* @Nullable */ String> xOneOriginRegion) {
+        public Builder xOneOriginRegion(@Nullable Output<String> xOneOriginRegion) {
             $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
@@ -278,7 +279,7 @@ public final class GetRatecardsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
+        public Builder xOneOriginRegion(String xOneOriginRegion) {
             return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 

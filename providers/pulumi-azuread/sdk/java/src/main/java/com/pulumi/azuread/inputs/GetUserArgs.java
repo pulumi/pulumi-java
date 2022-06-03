@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mailNickname")
-    private Output</* @Nullable */ String> mailNickname;
+    private @Nullable Output<String> mailNickname;
 
     /**
      * @return The email alias of the user.
      * 
      */
-    public Output</* @Nullable */ String> mailNickname() {
-        return this.mailNickname;
+    public Optional<Output<String>> mailNickname() {
+        return Optional.ofNullable(this.mailNickname);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectId")
-    private Output</* @Nullable */ String> objectId;
+    private @Nullable Output<String> objectId;
 
     /**
      * @return The object ID of the user.
      * 
      */
-    public Output</* @Nullable */ String> objectId() {
-        return this.objectId;
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userPrincipalName")
-    private Output</* @Nullable */ String> userPrincipalName;
+    private @Nullable Output<String> userPrincipalName;
 
     /**
      * @return The user principal name (UPN) of the user.
      * 
      */
-    public Output</* @Nullable */ String> userPrincipalName() {
-        return this.userPrincipalName;
+    public Optional<Output<String>> userPrincipalName() {
+        return Optional.ofNullable(this.userPrincipalName);
     }
 
     private GetUserArgs() {}
@@ -91,7 +92,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mailNickname(Output</* @Nullable */ String> mailNickname) {
+        public Builder mailNickname(@Nullable Output<String> mailNickname) {
             $.mailNickname = mailNickname;
             return this;
         }
@@ -102,7 +103,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mailNickname(@Nullable String mailNickname) {
+        public Builder mailNickname(String mailNickname) {
             return mailNickname(Output.of(mailNickname));
         }
 
@@ -112,7 +113,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder objectId(Output</* @Nullable */ String> objectId) {
+        public Builder objectId(@Nullable Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
@@ -123,7 +124,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder objectId(@Nullable String objectId) {
+        public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 
@@ -133,7 +134,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userPrincipalName(Output</* @Nullable */ String> userPrincipalName) {
+        public Builder userPrincipalName(@Nullable Output<String> userPrincipalName) {
             $.userPrincipalName = userPrincipalName;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userPrincipalName(@Nullable String userPrincipalName) {
+        public Builder userPrincipalName(String userPrincipalName) {
             return userPrincipalName(Output.of(userPrincipalName));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.Database.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDbSystemHistoryEntriesFilter;
+import com.pulumi.oci.Database.inputs.GetDbSystemHistoryEntriesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class GetDbSystemHistoryEntriesArgs extends com.pulumi.resources.In
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetDbSystemHistoryEntriesFilter>> filters;
+    private @Nullable Output<List<GetDbSystemHistoryEntriesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetDbSystemHistoryEntriesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetDbSystemHistoryEntriesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     private GetDbSystemHistoryEntriesArgs() {}
@@ -84,16 +85,16 @@ public final class GetDbSystemHistoryEntriesArgs extends com.pulumi.resources.In
             return dbSystemId(Output.of(dbSystemId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetDbSystemHistoryEntriesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetDbSystemHistoryEntriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbSystemHistoryEntriesFilter> filters) {
+        public Builder filters(List<GetDbSystemHistoryEntriesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetDbSystemHistoryEntriesFilter... filters) {
+        public Builder filters(GetDbSystemHistoryEntriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -5,10 +5,11 @@ package com.pulumi.oci.UsageProxy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionProductsFilter;
+import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionProductsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +18,10 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
     public static final GetSubscriptionProductsArgs Empty = new GetSubscriptionProductsArgs();
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetSubscriptionProductsFilter>> filters;
+    private @Nullable Output<List<GetSubscriptionProductsFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetSubscriptionProductsFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetSubscriptionProductsFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -28,14 +29,14 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="producttype")
-    private Output</* @Nullable */ String> producttype;
+    private @Nullable Output<String> producttype;
 
     /**
      * @return The field to specify the type of product.
      * 
      */
-    public Output</* @Nullable */ String> producttype() {
-        return this.producttype;
+    public Optional<Output<String>> producttype() {
+        return Optional.ofNullable(this.producttype);
     }
 
     /**
@@ -111,16 +112,16 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
             $ = new GetSubscriptionProductsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetSubscriptionProductsFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetSubscriptionProductsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSubscriptionProductsFilter> filters) {
+        public Builder filters(List<GetSubscriptionProductsFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetSubscriptionProductsFilter... filters) {
+        public Builder filters(GetSubscriptionProductsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -130,7 +131,7 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder producttype(Output</* @Nullable */ String> producttype) {
+        public Builder producttype(@Nullable Output<String> producttype) {
             $.producttype = producttype;
             return this;
         }
@@ -141,7 +142,7 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder producttype(@Nullable String producttype) {
+        public Builder producttype(String producttype) {
             return producttype(Output.of(producttype));
         }
 

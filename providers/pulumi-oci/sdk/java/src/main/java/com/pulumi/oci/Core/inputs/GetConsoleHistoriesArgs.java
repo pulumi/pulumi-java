@@ -5,10 +5,11 @@ package com.pulumi.oci.Core.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetConsoleHistoriesFilter;
+import com.pulumi.oci.Core.inputs.GetConsoleHistoriesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +22,14 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="availabilityDomain")
-    private Output</* @Nullable */ String> availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Output</* @Nullable */ String> availabilityDomain() {
-        return this.availabilityDomain;
+    public Optional<Output<String>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
     }
 
     @Import(name="filters")
-    private Output</* @Nullable */ List<GetConsoleHistoriesFilter>> filters;
+    private @Nullable Output<List<GetConsoleHistoriesFilterArgs>> filters;
 
-    public Output</* @Nullable */ List<GetConsoleHistoriesFilter>> filters() {
-        return this.filters;
+    public Optional<Output<List<GetConsoleHistoriesFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -58,14 +59,14 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="instanceId")
-    private Output</* @Nullable */ String> instanceId;
+    private @Nullable Output<String> instanceId;
 
     /**
      * @return The OCID of the instance.
      * 
      */
-    public Output</* @Nullable */ String> instanceId() {
-        return this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -73,14 +74,14 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state")
-    private Output</* @Nullable */ String> state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private GetConsoleHistoriesArgs() {}
@@ -117,7 +118,7 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder availabilityDomain(Output</* @Nullable */ String> availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
             return this;
         }
@@ -128,7 +129,7 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(String availabilityDomain) {
             return availabilityDomain(Output.of(availabilityDomain));
         }
 
@@ -153,16 +154,16 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
             return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(Output</* @Nullable */ List<GetConsoleHistoriesFilter>> filters) {
+        public Builder filters(@Nullable Output<List<GetConsoleHistoriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetConsoleHistoriesFilter> filters) {
+        public Builder filters(List<GetConsoleHistoriesFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
-        public Builder filters(GetConsoleHistoriesFilter... filters) {
+        public Builder filters(GetConsoleHistoriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -172,7 +173,7 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder instanceId(Output</* @Nullable */ String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
@@ -183,7 +184,7 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder instanceId(@Nullable String instanceId) {
+        public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
@@ -193,7 +194,7 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(Output</* @Nullable */ String> state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
@@ -204,7 +205,7 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(String state) {
             return state(Output.of(state));
         }
 

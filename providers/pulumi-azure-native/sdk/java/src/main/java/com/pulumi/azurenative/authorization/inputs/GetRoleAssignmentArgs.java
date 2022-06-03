@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -49,14 +50,14 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tenantId")
-    private Output</* @Nullable */ String> tenantId;
+    private @Nullable Output<String> tenantId;
 
     /**
      * @return Tenant ID for cross-tenant request
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
     private GetRoleAssignmentArgs() {}
@@ -133,7 +134,7 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder tenantId(Output</* @Nullable */ String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
@@ -144,7 +145,7 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder tenantId(@Nullable String tenantId) {
+        public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }
 

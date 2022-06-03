@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="carrierGatewayId")
-    private Output</* @Nullable */ String> carrierGatewayId;
+    private @Nullable Output<String> carrierGatewayId;
 
     /**
      * @return EC2 Carrier Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> carrierGatewayId() {
-        return this.carrierGatewayId;
+    public Optional<Output<String>> carrierGatewayId() {
+        return Optional.ofNullable(this.carrierGatewayId);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="coreNetworkArn")
-    private Output</* @Nullable */ String> coreNetworkArn;
+    private @Nullable Output<String> coreNetworkArn;
 
     /**
      * @return Core network ARN of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> coreNetworkArn() {
-        return this.coreNetworkArn;
+    public Optional<Output<String>> coreNetworkArn() {
+        return Optional.ofNullable(this.coreNetworkArn);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationCidrBlock")
-    private Output</* @Nullable */ String> destinationCidrBlock;
+    private @Nullable Output<String> destinationCidrBlock;
 
     /**
      * @return CIDR block of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> destinationCidrBlock() {
-        return this.destinationCidrBlock;
+    public Optional<Output<String>> destinationCidrBlock() {
+        return Optional.ofNullable(this.destinationCidrBlock);
     }
 
     /**
@@ -64,14 +65,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationIpv6CidrBlock")
-    private Output</* @Nullable */ String> destinationIpv6CidrBlock;
+    private @Nullable Output<String> destinationIpv6CidrBlock;
 
     /**
      * @return IPv6 CIDR block of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> destinationIpv6CidrBlock() {
-        return this.destinationIpv6CidrBlock;
+    public Optional<Output<String>> destinationIpv6CidrBlock() {
+        return Optional.ofNullable(this.destinationIpv6CidrBlock);
     }
 
     /**
@@ -79,14 +80,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationPrefixListId")
-    private Output</* @Nullable */ String> destinationPrefixListId;
+    private @Nullable Output<String> destinationPrefixListId;
 
     /**
      * @return The ID of a managed prefix list destination of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> destinationPrefixListId() {
-        return this.destinationPrefixListId;
+    public Optional<Output<String>> destinationPrefixListId() {
+        return Optional.ofNullable(this.destinationPrefixListId);
     }
 
     /**
@@ -94,14 +95,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="egressOnlyGatewayId")
-    private Output</* @Nullable */ String> egressOnlyGatewayId;
+    private @Nullable Output<String> egressOnlyGatewayId;
 
     /**
      * @return Egress Only Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> egressOnlyGatewayId() {
-        return this.egressOnlyGatewayId;
+    public Optional<Output<String>> egressOnlyGatewayId() {
+        return Optional.ofNullable(this.egressOnlyGatewayId);
     }
 
     /**
@@ -109,14 +110,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayId")
-    private Output</* @Nullable */ String> gatewayId;
+    private @Nullable Output<String> gatewayId;
 
     /**
      * @return Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> gatewayId() {
-        return this.gatewayId;
+    public Optional<Output<String>> gatewayId() {
+        return Optional.ofNullable(this.gatewayId);
     }
 
     /**
@@ -124,14 +125,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceId")
-    private Output</* @Nullable */ String> instanceId;
+    private @Nullable Output<String> instanceId;
 
     /**
      * @return Instance ID of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> instanceId() {
-        return this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -139,14 +140,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="localGatewayId")
-    private Output</* @Nullable */ String> localGatewayId;
+    private @Nullable Output<String> localGatewayId;
 
     /**
      * @return Local Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> localGatewayId() {
-        return this.localGatewayId;
+    public Optional<Output<String>> localGatewayId() {
+        return Optional.ofNullable(this.localGatewayId);
     }
 
     /**
@@ -154,14 +155,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="natGatewayId")
-    private Output</* @Nullable */ String> natGatewayId;
+    private @Nullable Output<String> natGatewayId;
 
     /**
      * @return NAT Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> natGatewayId() {
-        return this.natGatewayId;
+    public Optional<Output<String>> natGatewayId() {
+        return Optional.ofNullable(this.natGatewayId);
     }
 
     /**
@@ -169,14 +170,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkInterfaceId")
-    private Output</* @Nullable */ String> networkInterfaceId;
+    private @Nullable Output<String> networkInterfaceId;
 
     /**
      * @return Network Interface ID of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> networkInterfaceId() {
-        return this.networkInterfaceId;
+    public Optional<Output<String>> networkInterfaceId() {
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     /**
@@ -199,14 +200,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transitGatewayId")
-    private Output</* @Nullable */ String> transitGatewayId;
+    private @Nullable Output<String> transitGatewayId;
 
     /**
      * @return EC2 Transit Gateway ID of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> transitGatewayId() {
-        return this.transitGatewayId;
+    public Optional<Output<String>> transitGatewayId() {
+        return Optional.ofNullable(this.transitGatewayId);
     }
 
     /**
@@ -214,14 +215,14 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcPeeringConnectionId")
-    private Output</* @Nullable */ String> vpcPeeringConnectionId;
+    private @Nullable Output<String> vpcPeeringConnectionId;
 
     /**
      * @return VPC Peering Connection ID of the Route belonging to the Route Table.
      * 
      */
-    public Output</* @Nullable */ String> vpcPeeringConnectionId() {
-        return this.vpcPeeringConnectionId;
+    public Optional<Output<String>> vpcPeeringConnectionId() {
+        return Optional.ofNullable(this.vpcPeeringConnectionId);
     }
 
     private GetRouteArgs() {}
@@ -267,7 +268,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder carrierGatewayId(Output</* @Nullable */ String> carrierGatewayId) {
+        public Builder carrierGatewayId(@Nullable Output<String> carrierGatewayId) {
             $.carrierGatewayId = carrierGatewayId;
             return this;
         }
@@ -278,7 +279,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
+        public Builder carrierGatewayId(String carrierGatewayId) {
             return carrierGatewayId(Output.of(carrierGatewayId));
         }
 
@@ -288,7 +289,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder coreNetworkArn(Output</* @Nullable */ String> coreNetworkArn) {
+        public Builder coreNetworkArn(@Nullable Output<String> coreNetworkArn) {
             $.coreNetworkArn = coreNetworkArn;
             return this;
         }
@@ -299,7 +300,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder coreNetworkArn(@Nullable String coreNetworkArn) {
+        public Builder coreNetworkArn(String coreNetworkArn) {
             return coreNetworkArn(Output.of(coreNetworkArn));
         }
 
@@ -309,7 +310,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder destinationCidrBlock(Output</* @Nullable */ String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
             $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
@@ -320,7 +321,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
             return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
 
@@ -330,7 +331,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder destinationIpv6CidrBlock(Output</* @Nullable */ String> destinationIpv6CidrBlock) {
+        public Builder destinationIpv6CidrBlock(@Nullable Output<String> destinationIpv6CidrBlock) {
             $.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
             return this;
         }
@@ -341,7 +342,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder destinationIpv6CidrBlock(@Nullable String destinationIpv6CidrBlock) {
+        public Builder destinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
             return destinationIpv6CidrBlock(Output.of(destinationIpv6CidrBlock));
         }
 
@@ -351,7 +352,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder destinationPrefixListId(Output</* @Nullable */ String> destinationPrefixListId) {
+        public Builder destinationPrefixListId(@Nullable Output<String> destinationPrefixListId) {
             $.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
@@ -362,7 +363,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
+        public Builder destinationPrefixListId(String destinationPrefixListId) {
             return destinationPrefixListId(Output.of(destinationPrefixListId));
         }
 
@@ -372,7 +373,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder egressOnlyGatewayId(Output</* @Nullable */ String> egressOnlyGatewayId) {
+        public Builder egressOnlyGatewayId(@Nullable Output<String> egressOnlyGatewayId) {
             $.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
@@ -383,7 +384,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder egressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
+        public Builder egressOnlyGatewayId(String egressOnlyGatewayId) {
             return egressOnlyGatewayId(Output.of(egressOnlyGatewayId));
         }
 
@@ -393,7 +394,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder gatewayId(Output</* @Nullable */ String> gatewayId) {
+        public Builder gatewayId(@Nullable Output<String> gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
@@ -404,7 +405,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder gatewayId(@Nullable String gatewayId) {
+        public Builder gatewayId(String gatewayId) {
             return gatewayId(Output.of(gatewayId));
         }
 
@@ -414,7 +415,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceId(Output</* @Nullable */ String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
@@ -425,7 +426,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceId(@Nullable String instanceId) {
+        public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
@@ -435,7 +436,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder localGatewayId(Output</* @Nullable */ String> localGatewayId) {
+        public Builder localGatewayId(@Nullable Output<String> localGatewayId) {
             $.localGatewayId = localGatewayId;
             return this;
         }
@@ -446,7 +447,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder localGatewayId(@Nullable String localGatewayId) {
+        public Builder localGatewayId(String localGatewayId) {
             return localGatewayId(Output.of(localGatewayId));
         }
 
@@ -456,7 +457,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder natGatewayId(Output</* @Nullable */ String> natGatewayId) {
+        public Builder natGatewayId(@Nullable Output<String> natGatewayId) {
             $.natGatewayId = natGatewayId;
             return this;
         }
@@ -467,7 +468,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder natGatewayId(@Nullable String natGatewayId) {
+        public Builder natGatewayId(String natGatewayId) {
             return natGatewayId(Output.of(natGatewayId));
         }
 
@@ -477,7 +478,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder networkInterfaceId(Output</* @Nullable */ String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
@@ -488,7 +489,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             return networkInterfaceId(Output.of(networkInterfaceId));
         }
 
@@ -519,7 +520,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder transitGatewayId(Output</* @Nullable */ String> transitGatewayId) {
+        public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
             $.transitGatewayId = transitGatewayId;
             return this;
         }
@@ -530,7 +531,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder transitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             return transitGatewayId(Output.of(transitGatewayId));
         }
 
@@ -540,7 +541,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vpcPeeringConnectionId(Output</* @Nullable */ String> vpcPeeringConnectionId) {
+        public Builder vpcPeeringConnectionId(@Nullable Output<String> vpcPeeringConnectionId) {
             $.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }
@@ -551,7 +552,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
+        public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
             return vpcPeeringConnectionId(Output.of(vpcPeeringConnectionId));
         }
 

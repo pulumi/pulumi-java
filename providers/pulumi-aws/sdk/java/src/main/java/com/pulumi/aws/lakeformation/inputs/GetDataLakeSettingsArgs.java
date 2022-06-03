@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetDataLakeSettingsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="catalogId")
-    private Output</* @Nullable */ String> catalogId;
+    private @Nullable Output<String> catalogId;
 
     /**
      * @return Identifier for the Data Catalog. By default, the account ID.
      * 
      */
-    public Output</* @Nullable */ String> catalogId() {
-        return this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     private GetDataLakeSettingsArgs() {}
@@ -59,7 +60,7 @@ public final class GetDataLakeSettingsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder catalogId(Output</* @Nullable */ String> catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
@@ -70,7 +71,7 @@ public final class GetDataLakeSettingsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder catalogId(@Nullable String catalogId) {
+        public Builder catalogId(String catalogId) {
             return catalogId(Output.of(catalogId));
         }
 

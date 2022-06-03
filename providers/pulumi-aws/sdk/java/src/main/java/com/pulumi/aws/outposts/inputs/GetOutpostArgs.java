@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,14 +20,14 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-    private Output</* @Nullable */ String> arn;
+    private @Nullable Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ String> arn() {
-        return this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,14 +35,14 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private Output</* @Nullable */ String> id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Identifier of the Outpost.
      * 
      */
-    public Output</* @Nullable */ String> id() {
-        return this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -49,14 +50,14 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private Output</* @Nullable */ String> name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Name of the Outpost.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -64,14 +65,14 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ownerId")
-    private Output</* @Nullable */ String> ownerId;
+    private @Nullable Output<String> ownerId;
 
     /**
      * @return AWS Account identifier of the Outpost owner.
      * 
      */
-    public Output</* @Nullable */ String> ownerId() {
-        return this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     private GetOutpostArgs() {}
@@ -107,7 +108,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(Output</* @Nullable */ String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
@@ -118,7 +119,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
@@ -128,7 +129,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(Output</* @Nullable */ String> id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -139,7 +140,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(String id) {
             return id(Output.of(id));
         }
 
@@ -149,7 +150,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(Output</* @Nullable */ String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -160,7 +161,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(String name) {
             return name(Output.of(name));
         }
 
@@ -170,7 +171,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ownerId(Output</* @Nullable */ String> ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
             return this;
         }
@@ -181,7 +182,7 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ownerId(@Nullable String ownerId) {
+        public Builder ownerId(String ownerId) {
             return ownerId(Output.of(ownerId));
         }
 
