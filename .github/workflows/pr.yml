@@ -59,7 +59,7 @@ jobs:
       - name: Setup versioning env vars
         run: cat versions.txt | tee $GITHUB_ENV
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -118,7 +118,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -193,7 +193,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -295,7 +295,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -401,7 +401,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -468,7 +468,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -548,7 +548,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -614,7 +614,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
