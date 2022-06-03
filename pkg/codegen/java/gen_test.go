@@ -35,6 +35,10 @@ var javaSpecificTests = []*test.SDKTest{
 		Directory:   "mini-awsx",
 		Description: "Regression tests extracted from trying to codegen awsx",
 	},
+	{
+		Directory:   "output-funcs-edgeorder",
+		Description: "Testing EdgeOrder functions which return Output<T>",
+	},
 }
 
 func adaptTest(t *test.SDKTest) *test.SDKTest {
