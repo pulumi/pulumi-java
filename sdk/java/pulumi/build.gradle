@@ -22,7 +22,7 @@ repositories {
     mavenLocal()
 }
 
-def grpcVersion = "1.47.0"
+def grpcVersion = "1.38.0"
 def protobufVersion = "3.21.1"
 def protocVersion = protobufVersion
 
