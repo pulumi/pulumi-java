@@ -82,6 +82,7 @@ public final class Stack extends ComponentResource {
      */
     @InternalUse
     public static Function<Supplier<Map<String, Output<?>>>, Stack> factory(
+
             String projectName,
             String stackName,
             List<ResourceTransformation> resourceTransformations
@@ -112,15 +113,16 @@ public final class Stack extends ComponentResource {
          * 5. Complete the Stack initialization (by completing the lazyFuture).
          *    This makes sure we provide a completed future to the Stack outputs.
          */
+        var deployment = DeploymentInternal.getInstance(); // TODO: pass as a parameter after refactoring the Deployment initialization
         return (Supplier<Map<String, Output<?>>> callback) -> {
             var lazyFuture = new CompletableFuture<Map<String, Output<?>>>();
             var lazyOutputs = Output.of(lazyFuture);
             var stack = new Stack(projectName, stackName, resourceTransformations, lazyOutputs);
-            DeploymentInternal.getInstance().setStack(stack);
-            DeploymentInternal.getInstance().registerResourceOutputs(stack, lazyOutputs);
+            deployment.setStack(stack);
+            deployment.registerResourceOutputs(stack, lazyOutputs);
             // run the user code callback after Stack was set globally, (note that future is eager)
             var callbackFuture = CompletableFuture.supplyAsync(callback);
-            DeploymentInternal.getInstance().getRunner().registerTask("callback", callbackFuture);
+            deployment.getRunner().registerTask("callback", callbackFuture);
             callbackFuture.whenComplete((value, throwable) -> {
                 if (throwable != null) {
                     lazyFuture.completeExceptionally(throwable);
