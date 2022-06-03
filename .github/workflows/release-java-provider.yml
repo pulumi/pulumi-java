@@ -28,7 +28,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
@@ -36,7 +36,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Run GoReleaser
-        uses: goreleaser/goreleaser-action@v2
+        uses: goreleaser/goreleaser-action@v3
         with:
           version: latest
           args: -p 3 -f .goreleaser.yml --rm-dist --release-notes=CHANGELOG_PENDING.md
