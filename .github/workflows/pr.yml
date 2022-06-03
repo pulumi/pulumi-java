@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Fetch Tags
         run: git fetch --quiet --prune --unshallow --tags
@@ -115,7 +115,7 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v3
@@ -190,7 +190,7 @@ jobs:
         - oci
         - random
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v3
@@ -238,7 +238,7 @@ jobs:
         run: |
           rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
       # build old
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - run: make submodule_update
@@ -292,7 +292,7 @@ jobs:
         - awsx
         - aws-apigateway
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v3
@@ -340,7 +340,7 @@ jobs:
         run: |
           rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
       # build old
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - run: make submodule_update
@@ -398,7 +398,7 @@ jobs:
         - random
         - eks-minimal
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v3
@@ -465,7 +465,7 @@ jobs:
     timeout-minutes: 25
     if: ${{ false }} # TODO: move to a nightly job
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v3
@@ -527,7 +527,7 @@ jobs:
         directory: [ pkg ]
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ env.PR_COMMIT_SHA }}
       - run: make submodule_update
@@ -545,7 +545,7 @@ jobs:
         integration:
           - stack-reference
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v3
@@ -611,7 +611,7 @@ jobs:
     needs: providers
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v3
@@ -675,7 +675,7 @@ jobs:
     needs: prerequisites
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Download go-binaries
         uses: actions/download-artifact@v3
         with:
