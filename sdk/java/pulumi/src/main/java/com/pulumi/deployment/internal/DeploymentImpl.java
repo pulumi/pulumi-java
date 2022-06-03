@@ -1706,21 +1706,25 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             registerTask("DefaultRunner#runAsync", valueFuture);
             // loop starts after the callback
             return valueFuture
-                    .thenCompose(__ -> whileRunningAsync())
-                    .handle((code, throwable) -> {
+                    .thenCompose(value -> whileRunningAsync().thenApply(__ -> value))
+                    .handle((value, throwable) -> {
                         if (throwable != null) {
                             return handleExceptionAsync(throwable).thenApply(errorCode ->
                                     new Result<>(
                                             errorCode,
                                             ImmutableList.copyOf(this.swallowedExceptions),
-                                            Optional.ofNullable(valueFuture.join()) // the future is already complete
+                                            Optional.ofNullable(value)
                                     )
                             );
                         }
+                        // Getting error information from a logger is slightly ugly, but that's what C# implementation does
+                        var code = this.engineLogger.hasLoggedErrors()
+                                ? ProcessExitedBeforeLoggingUserActionableMessage
+                                : ProcessExitedSuccessfully;
                         return CompletableFuture.completedFuture(new Result<>(
                                 code,
                                 ImmutableList.copyOf(this.swallowedExceptions),
-                                Optional.ofNullable(valueFuture.join()) // the future is already complete
+                                Optional.ofNullable(value)
                         ));
                     })
                     .thenCompose(Function.identity()); // we return a future from logging, and we need to flat-map here
@@ -1755,12 +1759,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         // 2. Any task throws an exception.
         // So the resulting semantics is that we complete
         // when remaining count is zero, or when an exception is thrown.
-        private CompletableFuture<Integer> whileRunningAsync() {
-            // Getting error information from a logger is slightly ugly, but that's what C# implementation does
-            Supplier<Integer> exitCode = () -> this.engineLogger.hasLoggedErrors()
-                    ? ProcessExitedBeforeLoggingUserActionableMessage
-                    : ProcessExitedSuccessfully;
-
+        private CompletableFuture<Void> whileRunningAsync() {
             // Wait for every task and remove from inFlightTasks when completed
             Consumer<CompletableFuture<Void>> handleCompletion = (task) -> {
                 try {
@@ -1794,7 +1793,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 }
             };
 
-            Supplier<CompletableFuture<Integer>> loopUntilDone = () -> {
+            Supplier<CompletableFuture<Void>> loopUntilDone = () -> {
                 // Keep looping as long as there are outstanding tasks that are still running.
                 while (inFlightTasks.size() > 0) {
                     this.standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
@@ -1811,14 +1810,13 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 // will attempt again in the next iteration
                             }
                         } catch (Exception e) {
-                            return handleExceptionAsync(e);
+                            return CompletableFuture.failedFuture(e);
                         }
                     }
                 }
 
-                // There were no more tasks we were waiting on.
-                // Quit out, reporting if we had any errors or not.
-                return CompletableFuture.completedFuture(exitCode.get());
+                // There were no more tasks we were waiting on. Quit out.
+                return CompletableFuture.completedFuture((Void) null);
             };
             return CompletableFuture.supplyAsync(loopUntilDone).thenCompose(f -> f);
         }
