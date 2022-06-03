@@ -13,6 +13,7 @@ import com.pulumi.oci.ApiGateway.inputs.GetApiContentPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApiDeploymentSpecificationArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApiDeploymentSpecificationPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApiPlainArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetApiValidationArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApisArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApisPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetCertificateArgs;
@@ -30,6 +31,7 @@ import com.pulumi.oci.ApiGateway.inputs.GetGatewaysPlainArgs;
 import com.pulumi.oci.ApiGateway.outputs.GetApiContentResult;
 import com.pulumi.oci.ApiGateway.outputs.GetApiDeploymentSpecificationResult;
 import com.pulumi.oci.ApiGateway.outputs.GetApiResult;
+import com.pulumi.oci.ApiGateway.outputs.GetApiValidationInvokeResult;
 import com.pulumi.oci.ApiGateway.outputs.GetApisResult;
 import com.pulumi.oci.ApiGateway.outputs.GetCertificateResult;
 import com.pulumi.oci.ApiGateway.outputs.GetCertificatesResult;
@@ -172,6 +174,28 @@ public final class ApiGatewayFunctions {
      */
     public static CompletableFuture<GetApiDeploymentSpecificationResult> getApiDeploymentSpecificationPlain(GetApiDeploymentSpecificationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getApiDeploymentSpecification:getApiDeploymentSpecification", TypeShape.of(GetApiDeploymentSpecificationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Api Validation resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets the API validation results.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetApiValidationInvokeResult> getApiValidation(GetApiValidationArgs args) {
+        return getApiValidation(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Api Validation resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets the API validation results.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetApiValidationInvokeResult> getApiValidation(GetApiValidationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("oci:ApiGateway/getApiValidation:getApiValidation", TypeShape.of(GetApiValidationInvokeResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source provides the list of Apis in Oracle Cloud Infrastructure API Gateway service.

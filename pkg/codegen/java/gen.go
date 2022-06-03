@@ -31,6 +31,7 @@ type modContext struct {
 	mod                    string
 	propertyNames          map[*schema.Property]string
 	types                  []*schema.ObjectType
+	typesByName            map[string]*schema.ObjectType
 	enums                  []*schema.EnumType
 	resources              []*schema.Resource
 	functions              []*schema.Function
@@ -71,8 +72,21 @@ func tokenToFunctionName(tok string) string {
 	return names.LowerCamelCase(tokenToName(tok))
 }
 
-func tokenToFunctionResultClassName(tok string) names.Ident {
-	return names.Ident(fmt.Sprintf("%sResult", tokenToName(tok)))
+func tokenToFunctionResultClassName(mod *modContext, tok string) names.Ident {
+	suffixes := []string{"Result", "InvokeResult"}
+	name := tokenToName(tok)
+	for _, suffix := range suffixes {
+		conflict := false
+		if mod != nil {
+			_, conflict = mod.typesByName[name+suffix]
+		}
+		if !conflict {
+			return names.Ident(name + suffix)
+		}
+	}
+	contract.Failf("cannot find an unambigious class name for the %s"+
+		"function result: tried suffixing with %v", tok, suffixes)
+	return names.Ident("")
 }
 
 func (mod *modContext) tokenToPackage(tok string, qualifier qualifier) string {
@@ -604,7 +618,9 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		propType := propTypes[propIndex]
 		fieldName := names.Ident(pt.mod.propertyName(prop)).AsProperty().Field()
 		propRef := fmt.Sprintf("$.%s", fieldName)
-		propInit, err := dg.defaultValueExpr(prop, propType, propRef)
+		propInit, err := dg.defaultValueExpr(
+			fmt.Sprintf("property of class %s", pt.name),
+			prop, propType, propRef)
 		if err != nil {
 			return err
 		}
@@ -1495,7 +1511,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		}
 
 		outputsPkg := javaPkg.Dot(names.Ident("outputs"))
-		resultClass := tokenToFunctionResultClassName(fun.Token)
+		resultClass := tokenToFunctionResultClassName(mod, fun.Token)
 		resultFQN := outputsPkg.Dot(resultClass)
 		inputsPkg := javaPkg.Dot(names.Ident("inputs"))
 
@@ -1864,7 +1880,7 @@ func (mod *modContext) getConfigProperty(ctx *classFileContext, prop *schema.Pro
 
 	dg := &defaultsGen{mod, ctx}
 
-	code, err := dg.configExpr(prop, projectedType)
+	code, err := dg.configExpr("property of config", prop, projectedType)
 	if err != nil {
 		return TypeShape{}, "", err
 	}
@@ -2257,6 +2273,10 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 		case *schema.ObjectType:
 			mod := getModFromToken(typ.Token, pkg)
 			mod.types = append(mod.types, typ)
+			if mod.typesByName == nil {
+				mod.typesByName = map[string]*schema.ObjectType{}
+			}
+			mod.typesByName[tokenToName(typ.Token)] = typ
 		case *schema.EnumType:
 			if !typ.IsOverlay {
 				mod := getModFromToken(typ.Token, pkg)

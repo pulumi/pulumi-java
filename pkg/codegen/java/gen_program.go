@@ -146,7 +146,11 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 
 	// Import Java-specific schema info.
 	// FIX ME: not sure what this is doing...
-	for _, p := range program.Packages() {
+	packages, err := program.PackageSnapshots()
+	if err != nil {
+		return nil, nil, err
+	}
+	for _, p := range packages {
 		if err := p.ImportLanguages(map[string]schema.Language{"java": Importer}); err != nil {
 			return nil, nil, err
 		}
@@ -568,12 +572,15 @@ func makeResourceName(baseName string, suffix string) string {
 }
 
 func (g *generator) findFunctionSchema(function string) (*schema.Function, bool) {
-	for _, pkg := range g.program.Packages() {
-		if pkg.Functions != nil {
-			for _, functionSchema := range pkg.Functions {
-				if functionSchema != nil && strings.HasSuffix(functionSchema.Token, names.LowerCamelCase(function)) {
-					return functionSchema, true
+	function = names.LowerCamelCase(function)
+	for _, pkg := range g.program.PackageReferences() {
+		for it := pkg.Functions().Range(); it.Next(); {
+			if strings.HasSuffix(it.Token(), function) {
+				fn, err := it.Function()
+				if err != nil {
+					return nil, false
 				}
+				return fn, true
 			}
 		}
 	}
