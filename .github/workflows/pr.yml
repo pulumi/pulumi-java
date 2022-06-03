@@ -102,8 +102,13 @@ jobs:
       - name: Publish Pulumi Java SDK
         run: make sdk.publish
         # See Note 1.
-        if: github.event_name == 'repository_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && ! startsWith(github.ref_name, 'dependabot/'))
-
+        if: |
+          github.event_name == 'repository_dispatch'
+          || (
+                github.event.pull_request.head.repo.full_name == github.repository
+                && ! startsWith(github.ref_name, 'dependabot/')
+             )
+          || github.ref_name == 'main'
     strategy:
       fail-fast: true
 
@@ -171,7 +176,13 @@ jobs:
 
   providers:
     # See Note 1.
-    if: github.event_name == 'repository_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && ! startsWith(github.ref_name, 'dependabot/'))
+    if: |
+      github.event_name == 'repository_dispatch'
+      || (
+            github.event.pull_request.head.repo.full_name == github.repository
+            && ! startsWith(github.ref_name, 'dependabot/')
+         )
+      || github.ref_name == 'main'
     needs: prerequisites
     runs-on: ubuntu-latest
     timeout-minutes: 15
