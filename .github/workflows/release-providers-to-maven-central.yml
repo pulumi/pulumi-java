@@ -67,7 +67,7 @@ jobs:
         - oci
         - random
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         if: startsWith(github.ref, format('refs/tags/{0}/v', matrix.provider))
       - run: make submodule_update
         if: startsWith(github.ref, format('refs/tags/{0}/v', matrix.provider))
