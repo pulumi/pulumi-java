@@ -23,7 +23,7 @@ repositories {
 }
 
 def grpcVersion = "1.47.0"
-def protobufVersion = "3.19.2"
+def protobufVersion = "3.21.1"
 def protocVersion = protobufVersion
 
 dependencies {
