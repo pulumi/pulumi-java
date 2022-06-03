@@ -385,9 +385,6 @@ type plainType struct {
 	propertyTypeQualifier qualifier
 	properties            []*schema.Property
 	args                  bool
-	// determines whether the properties should be wrapped in outputs.
-	// for example, PropType becomes Output<PropType> if PropType is not already an output
-	propertiesAsOutputs bool
 }
 
 type propJavadocOptions struct {
@@ -510,11 +507,6 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 			false,               // outer optional
 			false,               // inputless overload
 		)
-
-		if isOutput, _ := propTypes[i].UnOutput(); !isOutput && pt.propertiesAsOutputs {
-			// wrap the property as an output
-			propTypes[i] = propTypes[i].Output()
-		}
 	}
 
 	w := ctx.writer
@@ -1604,14 +1596,14 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		// Emit the args and result types, if any.
 		if fun.Inputs != nil {
 			// Generate "{Function}Args" class for invokes that return Output<T>
+			// Notice here using fun.Inputs.InputShape.Properties which use the shape which accepting Outputs
 			if err := addClass(inputsPkg, argsClass, func(ctx *classFileContext) error {
 				args := &plainType{
 					mod:                   mod,
 					name:                  ctx.className.String(),
 					baseClass:             "com.pulumi.resources.InvokeArgs",
 					propertyTypeQualifier: inputsQualifier,
-					properties:            fun.Inputs.Properties,
-					propertiesAsOutputs:   true,
+					properties:            fun.Inputs.InputShape.Properties,
 				}
 				return args.genInputType(ctx)
 			}); err != nil {
@@ -1619,8 +1611,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			}
 
 			// Generate "{Function}PlainArgs" class for invokes that return CompletableFuture<T>
-			// notice here that `propertiesAsOutputs` is set to false because properties
-			// of a plain args class do not accept outputs as parameters
+			// Notice here using fun.Inputs.Properties which use the plain shape (not accepting Outputs)
 			if err := addClass(inputsPkg, plainArgsClass, func(ctx *classFileContext) error {
 				args := &plainType{
 					mod:                   mod,
@@ -1628,7 +1619,6 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 					baseClass:             "com.pulumi.resources.InvokeArgs",
 					propertyTypeQualifier: inputsQualifier,
 					properties:            fun.Inputs.Properties,
-					propertiesAsOutputs:   false,
 				}
 				return args.genInputType(ctx)
 			}); err != nil {

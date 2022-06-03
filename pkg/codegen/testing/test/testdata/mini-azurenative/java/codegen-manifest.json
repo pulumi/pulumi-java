@@ -19,6 +19,7 @@
     "src/main/java/com/pulumi/azurenative/insights/enums/WebTestKind.java",
     "src/main/java/com/pulumi/azurenative/logic/LogicFunctions.java",
     "src/main/java/com/pulumi/azurenative/logic/inputs/KeyVaultReference.java",
+    "src/main/java/com/pulumi/azurenative/logic/inputs/KeyVaultReferenceArgs.java",
     "src/main/java/com/pulumi/azurenative/logic/inputs/ListIntegrationAccountKeyVaultKeysArgs.java",
     "src/main/java/com/pulumi/azurenative/logic/inputs/ListIntegrationAccountKeyVaultKeysPlainArgs.java",
     "src/main/java/com/pulumi/azurenative/logic/outputs/ListIntegrationAccountKeyVaultKeysResult.java",

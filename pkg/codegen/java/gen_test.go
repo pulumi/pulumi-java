@@ -54,8 +54,6 @@ func adaptTest(t *test.SDKTest) *test.SDKTest {
 		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "plain-object-defaults":
 		t.Skip = codegen.NewStringSet("java/any") // TODO
-	case "output-funcs":
-		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "regress-8403":
 		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "plain-object-disable-defaults":

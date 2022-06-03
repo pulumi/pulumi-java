@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,15 +22,15 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executableUsers")
-    private Output</* @Nullable */ List<String>> executableUsers;
+    private @Nullable Output<List<String>> executableUsers;
 
     /**
      * @return Limit search to users with *explicit* launch permission on
      * the image. Valid items are the numeric account ID or `self`.
      * 
      */
-    public Output</* @Nullable */ List<String>> executableUsers() {
-        return this.executableUsers;
+    public Optional<Output<List<String>>> executableUsers() {
+        return Optional.ofNullable(this.executableUsers);
     }
 
     /**
@@ -79,7 +80,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder executableUsers(Output</* @Nullable */ List<String>> executableUsers) {
+        public Builder executableUsers(@Nullable Output<List<String>> executableUsers) {
             $.executableUsers = executableUsers;
             return this;
         }
@@ -91,7 +92,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder executableUsers(@Nullable List<String> executableUsers) {
+        public Builder executableUsers(List<String> executableUsers) {
             return executableUsers(Output.of(executableUsers));
         }
 

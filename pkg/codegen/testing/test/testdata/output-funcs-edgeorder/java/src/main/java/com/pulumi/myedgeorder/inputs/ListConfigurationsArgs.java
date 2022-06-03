@@ -5,11 +5,12 @@ package com.pulumi.myedgeorder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.myedgeorder.inputs.ConfigurationFilters;
-import com.pulumi.myedgeorder.inputs.CustomerSubscriptionDetails;
+import com.pulumi.myedgeorder.inputs.ConfigurationFiltersArgs;
+import com.pulumi.myedgeorder.inputs.CustomerSubscriptionDetailsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,13 +23,13 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="configurationFilters", required=true)
-    private Output<List<ConfigurationFilters>> configurationFilters;
+    private Output<List<ConfigurationFiltersArgs>> configurationFilters;
 
     /**
      * @return Holds details about product hierarchy information and filterable property.
      * 
      */
-    public Output<List<ConfigurationFilters>> configurationFilters() {
+    public Output<List<ConfigurationFiltersArgs>> configurationFilters() {
         return this.configurationFilters;
     }
 
@@ -37,14 +38,14 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="customerSubscriptionDetails")
-    private Output</* @Nullable */ CustomerSubscriptionDetails> customerSubscriptionDetails;
+    private @Nullable Output<CustomerSubscriptionDetailsArgs> customerSubscriptionDetails;
 
     /**
      * @return Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
      * 
      */
-    public Output</* @Nullable */ CustomerSubscriptionDetails> customerSubscriptionDetails() {
-        return this.customerSubscriptionDetails;
+    public Optional<Output<CustomerSubscriptionDetailsArgs>> customerSubscriptionDetails() {
+        return Optional.ofNullable(this.customerSubscriptionDetails);
     }
 
     /**
@@ -52,14 +53,14 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="skipToken")
-    private Output</* @Nullable */ String> skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return $skipToken is supported on list of configurations, which provides the next page in the list of configurations.
      * 
      */
-    public Output</* @Nullable */ String> skipToken() {
-        return this.skipToken;
+    public Optional<Output<String>> skipToken() {
+        return Optional.ofNullable(this.skipToken);
     }
 
     private ListConfigurationsArgs() {}
@@ -94,7 +95,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder configurationFilters(Output<List<ConfigurationFilters>> configurationFilters) {
+        public Builder configurationFilters(Output<List<ConfigurationFiltersArgs>> configurationFilters) {
             $.configurationFilters = configurationFilters;
             return this;
         }
@@ -105,7 +106,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder configurationFilters(List<ConfigurationFilters> configurationFilters) {
+        public Builder configurationFilters(List<ConfigurationFiltersArgs> configurationFilters) {
             return configurationFilters(Output.of(configurationFilters));
         }
 
@@ -115,7 +116,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder configurationFilters(ConfigurationFilters... configurationFilters) {
+        public Builder configurationFilters(ConfigurationFiltersArgs... configurationFilters) {
             return configurationFilters(List.of(configurationFilters));
         }
 
@@ -125,7 +126,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder customerSubscriptionDetails(Output</* @Nullable */ CustomerSubscriptionDetails> customerSubscriptionDetails) {
+        public Builder customerSubscriptionDetails(@Nullable Output<CustomerSubscriptionDetailsArgs> customerSubscriptionDetails) {
             $.customerSubscriptionDetails = customerSubscriptionDetails;
             return this;
         }
@@ -136,7 +137,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder customerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
+        public Builder customerSubscriptionDetails(CustomerSubscriptionDetailsArgs customerSubscriptionDetails) {
             return customerSubscriptionDetails(Output.of(customerSubscriptionDetails));
         }
 
@@ -146,7 +147,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder skipToken(Output</* @Nullable */ String> skipToken) {
+        public Builder skipToken(@Nullable Output<String> skipToken) {
             $.skipToken = skipToken;
             return this;
         }
@@ -157,7 +158,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
+        public Builder skipToken(String skipToken) {
             return skipToken(Output.of(skipToken));
         }
 

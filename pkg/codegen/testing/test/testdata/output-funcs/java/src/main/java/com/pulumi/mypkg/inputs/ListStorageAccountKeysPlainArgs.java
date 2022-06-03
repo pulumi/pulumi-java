@@ -3,7 +3,6 @@
 
 package com.pulumi.mypkg.inputs;
 
-import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -11,22 +10,22 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class ListStorageAccountKeysArgs extends com.pulumi.resources.InvokeArgs {
+public final class ListStorageAccountKeysPlainArgs extends com.pulumi.resources.InvokeArgs {
 
-    public static final ListStorageAccountKeysArgs Empty = new ListStorageAccountKeysArgs();
+    public static final ListStorageAccountKeysPlainArgs Empty = new ListStorageAccountKeysPlainArgs();
 
     /**
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
     @Import(name="accountName", required=true)
-    private Output<String> accountName;
+    private String accountName;
 
     /**
      * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    public Output<String> accountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -35,13 +34,13 @@ public final class ListStorageAccountKeysArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="expand")
-    private @Nullable Output<String> expand;
+    private @Nullable String expand;
 
     /**
      * @return Specifies type of the key to be listed. Possible value is kerb.
      * 
      */
-    public Optional<Output<String>> expand() {
+    public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -50,19 +49,19 @@ public final class ListStorageAccountKeysArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private Output<String> resourceGroupName;
+    private String resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public Output<String> resourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    private ListStorageAccountKeysArgs() {}
+    private ListStorageAccountKeysPlainArgs() {}
 
-    private ListStorageAccountKeysArgs(ListStorageAccountKeysArgs $) {
+    private ListStorageAccountKeysPlainArgs(ListStorageAccountKeysPlainArgs $) {
         this.accountName = $.accountName;
         this.expand = $.expand;
         this.resourceGroupName = $.resourceGroupName;
@@ -71,30 +70,19 @@ public final class ListStorageAccountKeysArgs extends com.pulumi.resources.Invok
     public static Builder builder() {
         return new Builder();
     }
-    public static Builder builder(ListStorageAccountKeysArgs defaults) {
+    public static Builder builder(ListStorageAccountKeysPlainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ListStorageAccountKeysArgs $;
+        private ListStorageAccountKeysPlainArgs $;
 
         public Builder() {
-            $ = new ListStorageAccountKeysArgs();
+            $ = new ListStorageAccountKeysPlainArgs();
         }
 
-        public Builder(ListStorageAccountKeysArgs defaults) {
-            $ = new ListStorageAccountKeysArgs(Objects.requireNonNull(defaults));
-        }
-
-        /**
-         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder accountName(Output<String> accountName) {
-            $.accountName = accountName;
-            return this;
+        public Builder(ListStorageAccountKeysPlainArgs defaults) {
+            $ = new ListStorageAccountKeysPlainArgs(Objects.requireNonNull(defaults));
         }
 
         /**
@@ -104,17 +92,7 @@ public final class ListStorageAccountKeysArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder accountName(String accountName) {
-            return accountName(Output.of(accountName));
-        }
-
-        /**
-         * @param expand Specifies type of the key to be listed. Possible value is kerb.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder expand(@Nullable Output<String> expand) {
-            $.expand = expand;
+            $.accountName = accountName;
             return this;
         }
 
@@ -124,18 +102,8 @@ public final class ListStorageAccountKeysArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder expand(String expand) {
-            return expand(Output.of(expand));
-        }
-
-        /**
-         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder resourceGroupName(Output<String> resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+        public Builder expand(@Nullable String expand) {
+            $.expand = expand;
             return this;
         }
 
@@ -146,10 +114,11 @@ public final class ListStorageAccountKeysArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            return resourceGroupName(Output.of(resourceGroupName));
+            $.resourceGroupName = resourceGroupName;
+            return this;
         }
 
-        public ListStorageAccountKeysArgs build() {
+        public ListStorageAccountKeysPlainArgs build() {
             $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
             return $;
