@@ -76,7 +76,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
@@ -159,7 +159,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
@@ -418,7 +418,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
@@ -492,7 +492,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
@@ -565,7 +565,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
@@ -629,7 +629,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
