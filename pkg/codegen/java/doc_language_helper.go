@@ -30,7 +30,7 @@ func (d DocLanguageHelper) GetLanguageTypeString(
 		input,
 		false, // requireInitializers
 		false, // outerOptional
-		false, // inputlessOverload bool
+		false, // inputlessOverload
 	)
 
 	code := typeShape.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
