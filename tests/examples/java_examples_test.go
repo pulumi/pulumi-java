@@ -15,6 +15,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
+	jtests "github.com/pulumi/pulumi-java/tests/internal"
 	"github.com/pulumi/pulumi/pkg/v3/engine"
 	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
 )
@@ -55,18 +56,21 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("azure-java-static-website", func(t *testing.T) {
-		test := getJavaBase(t, "azure-java-static-website", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"azure-native:location": "westus",
-			},
-			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-				o := stackInfo.Outputs
-				cdnEndpoint := o["cdnEndpoint"].(string)
-				staticEndpoint := o["staticEndpoint"].(string)
-				assert.True(t, strings.HasPrefix(cdnEndpoint, "https"))
-				assert.True(t, strings.HasPrefix(staticEndpoint, "https"))
-			},
-		})
+		test := getJavaBaseNew(t,
+			"azure-java-static-website",
+			[]string{"azure-native"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"azure-native:location": "westus",
+				},
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					cdnEndpoint := o["cdnEndpoint"].(string)
+					staticEndpoint := o["staticEndpoint"].(string)
+					assert.True(t, strings.HasPrefix(cdnEndpoint, "https"))
+					assert.True(t, strings.HasPrefix(staticEndpoint, "https"))
+				},
+			})
 		integration.ProgramTest(t, &test)
 	})
 
@@ -192,6 +196,41 @@ func TestExamples(t *testing.T) {
 		})
 		integration.ProgramTest(t, &test)
 	})
+}
+
+func getJavaBaseNew(
+	t *testing.T,
+	dir string,
+	providers []string,
+	testSpecificOptions integration.ProgramTestOptions,
+) integration.ProgramTestOptions {
+	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
+	if err != nil {
+		panic(err)
+	}
+	opts := integration.ProgramTestOptions{
+		Dir: filepath.Join(repoRoot, "examples", dir),
+		Env: []string{fmt.Sprintf("PULUMI_REPO_ROOT=%s", repoRoot)},
+		PrepareProject: func(info *engine.Projinfo) error {
+			deps, err := jtests.ParsePinVersionsFromEnv(t, providers)
+			if err != nil {
+				return err
+			}
+			_, err = jtests.Pin(info.Root, deps)
+			return err
+		},
+	}
+	opts = opts.With(getBaseOptions()).With(testSpecificOptions)
+	if previewOnly {
+		opts = opts.With(integration.ProgramTestOptions{
+			SkipRefresh:            true,
+			SkipEmptyPreviewUpdate: true,
+			SkipExportImport:       true,
+			SkipUpdate:             true,
+		})
+		opts.ExtraRuntimeValidation = nil
+	}
+	return opts
 }
 
 func getJavaBase(t *testing.T, dir string, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
