@@ -3,9 +3,6 @@ package com.pulumi.deployment;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.internal.annotations.InternalUse;
-import com.pulumi.deployment.CallOptions;
-import com.pulumi.deployment.Deployment;
-import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.DeploymentInstanceHolder;
 import com.pulumi.deployment.internal.DeploymentInternal;
@@ -15,7 +12,7 @@ import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.ResourceOptions;
-import com.pulumi.resources.Stack;
+import com.pulumi.resources.internal.Stack;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

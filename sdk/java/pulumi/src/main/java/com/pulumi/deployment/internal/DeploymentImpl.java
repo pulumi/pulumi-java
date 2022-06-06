@@ -17,7 +17,6 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.CompletableFutures;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.core.internal.Environment;
-import com.pulumi.core.internal.Exceptions;
 import com.pulumi.core.internal.GlobalLogging;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.Maps;
@@ -44,9 +43,7 @@ import com.pulumi.resources.ProviderResource;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.ResourceOptions;
-import com.pulumi.resources.Stack;
-import com.pulumi.resources.Stack.StackInternal;
-import com.pulumi.resources.StackOptions;
+import com.pulumi.resources.internal.Stack;
 import com.pulumi.serialization.internal.Converter;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.JsonFormatter;
@@ -95,6 +92,7 @@ import static com.pulumi.core.internal.Environment.getBooleanEnvironmentVariable
 import static com.pulumi.core.internal.Environment.getEnvironmentVariable;
 import static com.pulumi.core.internal.Exceptions.getStackTrace;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
+import static com.pulumi.resources.internal.Stack.RootPulumiStackTypeName;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
@@ -211,7 +209,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     }
 
     @Nullable
-    private Stack stack; // TODO: get rid of mutability, somehow
+    private Stack stack;
 
     @InternalUse
     @Override
@@ -222,6 +220,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         return this.stack;
     }
 
+    // TODO: remove when refactoring deployment initialization
     @InternalUse
     @Override
     public void setStack(Stack stack) {
@@ -465,10 +464,41 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
-            return new OutputInternal<>(rawInvoke(token, targetType, args, options));
+            Objects.requireNonNull(token);
+            Objects.requireNonNull(targetType);
+            Objects.requireNonNull(args);
+            Objects.requireNonNull(options);
+
+            log.debug(String.format("Invoking function: token='%s' asynchronously", token));
+
+            // Wait for all values to be available, and then perform the RPC.
+            return new OutputInternal<>(this.featureSupport.monitorSupportsResourceReferences()
+                    .thenCompose(keepResources -> this.serializeInvokeArgs(token, args, keepResources))
+                    .thenCompose(serializedArgs -> {
+                        if (!serializedArgs.containsUnknowns) {
+                            return this.invokeRawAsync(token, serializedArgs, options)
+                                    .thenApply(result -> parseInvokeResponse(token, targetType, result));
+                        } else {
+                            return CompletableFuture.completedFuture(OutputData.unknown());
+                        }
+                    }));
         }
 
-        private <T> CompletableFuture<OutputData<T>> rawInvoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
+        private <T> OutputData<T> parseInvokeResponse(
+                String token, TypeShape<T> targetType, SerializationResult result) {
+            return this.converter.convertValue(
+                    String.format("%s result", token),
+                    Value.newBuilder()
+                            .setStructValue(result.serialized)
+                            .build(),
+                    targetType,
+                    result.propertyToDependentResources.values().stream()
+                            .flatMap(Collection::stream)
+                            .collect(toImmutableSet()));
+        }
+
+        private <T> CompletableFuture<OutputData<T>> rawInvoke(
+                String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(targetType);
             Objects.requireNonNull(args);
@@ -508,16 +538,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // `invoke`.
 
             return invokeRawAsync(token, args, options)
-                    .thenApply(result -> this.converter.convertValue(
-                            String.format("%s result", token),
-                            Value.newBuilder()
-                                    .setStructValue(result.serialized)
-                                    .build(),
-                            targetType,
-                            result.propertyToDependentResources.values().stream()
-                                    .flatMap(Collection::stream)
-                                    .collect(toImmutableSet()))
-                    );
+                    .thenApply(result -> parseInvokeResponse(token, targetType, result));
         }
 
         public CompletableFuture<Void> invokeAsync(String token, InvokeArgs args) {
@@ -533,70 +554,62 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> CompletableFuture<T> invokeAsync(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
-            return invokeRawAsync(token, args, options).thenApply(
-                            result -> this.converter.convertValue(
-                                    String.format("%s result", token),
-                                    Value.newBuilder()
-                                            .setStructValue(result.serialized)
-                                            .build(),
-                                    targetType
-                            ))
-                    .thenApply(OutputData::getValueNullable);
+            return this.rawInvoke(token, targetType, args, options).thenApply(OutputData::getValueNullable);
         }
 
-        private CompletableFuture<SerializationResult> invokeRawAsync(String token, InvokeArgs args, InvokeOptions options) {
+        private CompletableFuture<SerializationResult> invokeRawAsync(
+                String token, InvokeArgs args, InvokeOptions options) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(args);
             Objects.requireNonNull(options);
-
             log.debug(String.format("Invoking function: token='%s' asynchronously", token));
-
             // Wait for all values to be available, and then perform the RPC.
-            var serializedFuture = Internal.from(args).toMapAsync(this.log)
-                    .thenCompose(argsDict ->
-                            this.featureSupport.monitorSupportsResourceReferences()
-                                    .thenCompose(keepResources ->
-                                            serialization.serializeFilteredPropertiesAsync(
-                                                    String.format("invoke:%s", token), argsDict, ignore -> true, keepResources
-                                            ))
-                    );
+            return this.featureSupport.monitorSupportsResourceReferences()
+                    .thenCompose(keepResources -> this.serializeInvokeArgs(token, args, keepResources))
+                    .thenCompose(serializedArgs -> this.invokeRawAsync(token, serializedArgs, options));
+        }
 
+        private CompletableFuture<SerializationResult> invokeRawAsync(
+                String token, SerializationResult invokeArgs, InvokeOptions options) {
             CompletableFuture<Optional<String>> providerFuture = CompletableFutures.flipOptional(
                     () -> {
                         var provider = Internal.from(options).getNestedProvider(token);
                         return provider.map(p -> Internal.from(p).getRegistrationId());
                     }
             );
+            return providerFuture.thenCompose(provider -> {
+                var version = options.getVersion();
+                log.debugOrExcessive(
+                        String.format("Invoke RPC prepared: token='%s'", token),
+                        String.format(", obj='%s'", invokeArgs)
+                );
+                return this.monitor.invokeAsync(pulumirpc.Resource.ResourceInvokeRequest.newBuilder()
+                        .setTok(token)
+                        .setProvider(provider.orElse(""))
+                        .setVersion(version.orElse(""))
+                        .setArgs(invokeArgs.serialized)
+                        .setAcceptResources(!this.disableResourceReferences)
+                        .build()
+                ).thenApply(response -> {
+                    // Handle failures.
+                    if (response.getFailuresCount() > 0) {
+                        var reasons = response.getFailuresList().stream()
+                                .map(reason -> String.format("%s (%s)", reason.getReason(), reason.getProperty()))
+                                .collect(Collectors.joining("; "));
+                        throw new InvokeException(String.format("Invoke of '%s' failed: %s", token, reasons));
+                    }
+                    return new SerializationResult(response.getReturn(),
+                            invokeArgs.propertyToDependentResources);
+                });
+            });
+        }
 
-            return CompletableFuture.allOf(serializedFuture, providerFuture)
-                    .thenCompose(unused -> {
-                        var serialized = serializedFuture.join();
-                        var provider = providerFuture.join();
-                        var version = options.getVersion();
-
-                        log.debugOrExcessive(
-                                String.format("Invoke RPC prepared: token='%s'", token),
-                                String.format(", obj='%s'", serialized)
-                        );
-                        return this.monitor.invokeAsync(pulumirpc.Resource.ResourceInvokeRequest.newBuilder()
-                                .setTok(token)
-                                .setProvider(provider.orElse(""))
-                                .setVersion(version.orElse(""))
-                                .setArgs(serialized.serialized)
-                                .setAcceptResources(!this.disableResourceReferences)
-                                .build()
-                        ).thenApply(response -> {
-                            // Handle failures.
-                            if (response.getFailuresCount() > 0) {
-                                var reasons = response.getFailuresList().stream()
-                                        .map(reason -> String.format("%s (%s)", reason.getReason(), reason.getProperty()))
-                                        .collect(Collectors.joining("; "));
-
-                                throw new InvokeException(String.format("Invoke of '%s' failed: %s", token, reasons));
-                            }
-                            return new SerializationResult(response.getReturn(), serialized.propertyToDependentResources);
-                        });
-                    });
+        private CompletableFuture<SerializationResult> serializeInvokeArgs(
+                String token, InvokeArgs args, boolean keepResources) {
+            return Internal.from(args).toMapAsync(this.log).thenCompose(argsDict ->
+                    serialization.serializeFilteredPropertiesAsync(
+                            String.format("invoke:%s", token), argsDict, ignore -> true,
+                            keepResources));
         }
     }
 
@@ -1561,7 +1574,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          */
         CompletableFuture<Optional<String>> getRootResourceAsync(String type) {
             // If we're calling this while creating the stack itself. No way to know its urn at this point.
-            if (StackInternal.RootPulumiStackTypeName.equals(type)) {
+            if (RootPulumiStackTypeName.equals(type)) {
                 return CompletableFuture.completedFuture(Optional.empty());
             }
 
@@ -1700,43 +1713,35 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.engineLogger = Objects.requireNonNull(engineLogger);
         }
 
-        public List<Exception> getSwallowedExceptions() {
-            return ImmutableList.copyOf(this.swallowedExceptions);
-        }
-
         @Override
-        public <T extends Stack> CompletableFuture<Integer> runAsync(Supplier<T> stackFactory) {
-            try {
-                var stack = stackFactory.get();
-                var stackInternal = Internal.from(stack);
-                // Stack doesn't call RegisterOutputs, so we register them on its behalf.
-                stackInternal.registerPropertyOutputs();
-                registerTask(String.format("runAsync: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(stackInternal.getOutputs()).getDataAsync());
-            } catch (Exception ex) {
-                return handleExceptionAsync(ex);
-            }
-
-            return whileRunningAsync();
-        }
-
-        @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback) {
-            return runAsyncFuture(callback, StackOptions.Empty);
-        }
-
-        @Override
-        public CompletableFuture<Integer> runAsyncFuture(Supplier<CompletableFuture<Map<String, Output<?>>>> callback, StackOptions options) {
-            try {
-                var stack = StackInternal.of(callback, options);
-                // no outputs to register here
-                registerTask(String.format("runAsyncFuture: %s, %s", stack.getResourceType(), stack.getResourceName()),
-                        Internal.of(Internal.from(stack).getOutputs()).getDataAsync());
-            } catch (Exception ex) {
-                return handleExceptionAsync(ex);
-            }
-
-            return whileRunningAsync();
+        public <T> CompletableFuture<Result<T>> runAsync(Supplier<T> callback) {
+            var valueFuture = CompletableFuture.supplyAsync(callback);
+            // run the callback asynchronously in the context of the error handler
+            registerTask("DefaultRunner#runAsync", valueFuture);
+            // loop starts after the callback
+            return valueFuture
+                    .thenCompose(value -> whileRunningAsync().thenApply(__ -> value))
+                    .handle((value, throwable) -> {
+                        if (throwable != null) {
+                            return handleExceptionAsync(throwable).thenApply(errorCode ->
+                                    new Result<>(
+                                            errorCode,
+                                            ImmutableList.copyOf(this.swallowedExceptions),
+                                            Optional.ofNullable(value)
+                                    )
+                            );
+                        }
+                        // Getting error information from a logger is slightly ugly, but that's what C# implementation does
+                        var code = this.engineLogger.hasLoggedErrors()
+                                ? ProcessExitedBeforeLoggingUserActionableMessage
+                                : ProcessExitedSuccessfully;
+                        return CompletableFuture.completedFuture(new Result<>(
+                                code,
+                                ImmutableList.copyOf(this.swallowedExceptions),
+                                Optional.ofNullable(value)
+                        ));
+                    })
+                    .thenCompose(Function.identity()); // we return a future from logging, and we need to flat-map here
         }
 
         @Override
@@ -1768,12 +1773,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         // 2. Any task throws an exception.
         // So the resulting semantics is that we complete
         // when remaining count is zero, or when an exception is thrown.
-        private CompletableFuture<Integer> whileRunningAsync() {
-            // Getting error information from a logger is slightly ugly, but that's what C# implementation does
-            Supplier<Integer> exitCode = () -> this.engineLogger.hasLoggedErrors()
-                    ? ProcessExitedBeforeLoggingUserActionableMessage
-                    : ProcessExitedSuccessfully;
-
+        private CompletableFuture<Void> whileRunningAsync() {
             // Wait for every task and remove from inFlightTasks when completed
             Consumer<CompletableFuture<Void>> handleCompletion = (task) -> {
                 try {
@@ -1807,7 +1807,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 }
             };
 
-            Supplier<CompletableFuture<Integer>> loopUntilDone = () -> {
+            Supplier<CompletableFuture<Void>> loopUntilDone = () -> {
                 // Keep looping as long as there are outstanding tasks that are still running.
                 while (inFlightTasks.size() > 0) {
                     this.standardLogger.log(Level.FINEST, String.format("Remaining tasks [%s]: %s", inFlightTasks.size(), inFlightTasks));
@@ -1824,16 +1824,22 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 // will attempt again in the next iteration
                             }
                         } catch (Exception e) {
-                            return handleExceptionAsync(e);
+                            return CompletableFuture.failedFuture(e);
                         }
                     }
                 }
 
-                // There were no more tasks we were waiting on.
-                // Quit out, reporting if we had any errors or not.
-                return CompletableFuture.completedFuture(exitCode.get());
+                // There were no more tasks we were waiting on. Quit out.
+                return CompletableFuture.completedFuture((Void) null);
             };
             return CompletableFuture.supplyAsync(loopUntilDone).thenCompose(f -> f);
+        }
+
+        private CompletableFuture<Integer> handleExceptionAsync(Throwable throwable) {
+            if (throwable instanceof Exception) {
+                return handleExceptionAsync((Exception) throwable);
+            }
+            return handleExceptionAsync(new RunException("unexpected throwable", throwable));
         }
 
         private CompletableFuture<Integer> handleExceptionAsync(Exception exception) {
@@ -1867,7 +1873,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // problem to the error stream.
             //
             // Note: if these logging calls fail, they will just
-            // end up bubbling up an exception that will be caught
+            // end up bubbling an exception that will be caught
             // by nothing. This will tear down the actual process
             // with a non-zero error which our host will handle
             // properly.
@@ -1890,7 +1896,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return this.engineLogger
                     .errorAsync(String.format(
                             "Running program [PID: %d](%s) failed with an unhandled exception:\n%s",
-                            pid, command, Exceptions.getStackTrace(exception)))
+                            pid, command, getStackTrace(exception)))
                     .thenApply(exitMessageAndCode);
 
         }

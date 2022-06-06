@@ -9,13 +9,10 @@ import com.pulumi.core.internal.Constants;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.Strings;
 import com.pulumi.core.internal.Urn;
-import com.pulumi.core.internal.annotations.ExportMetadata;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.internal.DeploymentInternal;
 import com.pulumi.exceptions.ResourceException;
-import com.pulumi.exceptions.RunException;
-import com.pulumi.resources.Stack.StackInternal;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -29,13 +26,11 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Collectors;
 
-import static com.google.common.collect.ImmutableList.toImmutableList;
-import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.pulumi.core.internal.Objects.exceptionSupplier;
 import static com.pulumi.core.internal.Objects.require;
 import static com.pulumi.resources.Resources.copyNullableList;
+import static com.pulumi.resources.internal.Stack.RootPulumiStackTypeName;
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -132,9 +127,11 @@ public abstract class Resource {
                 exceptionSupplier
         );
 
+        // TODO: C# initializes OutputCompletionSource fields here, the fact that we don't might be a bug
+
         // Before anything else - if there are transformations registered, invoke them in order
         // to transform the properties and options assigned to this resource.
-        var parent = Objects.equals(type, StackInternal.RootPulumiStackTypeName)
+        var parent = Objects.equals(type, RootPulumiStackTypeName)
                 ? null
                 : (options.parent == null ? DeploymentInternal.getInstance().getStack() : options.parent);
 
@@ -501,61 +498,6 @@ public abstract class Resource {
             }
 
             return resource.providers.getOrDefault(memComponents[0], null);
-        }
-
-        /**
-         * Finds all {@link Output} fields annotated with {@link Export},
-         * validates the annotation presence and content,
-         * validates non-null-ness of fields,
-         * ensures the field type is {@link Output}
-         * and uses reflection to get the references to them.
-         * Returns a map of export names and output references.
-         * Not to be confused with {@link com.pulumi.core.internal.OutputCompletionSource#from(com.pulumi.resources.Resource)}
-         */
-        @InternalUse
-        public static Map<String, Output<?>> findOutputs(Object object) {
-            var infos = ExportMetadata.of(object.getClass());
-
-            var outputs = infos.entrySet().stream()
-                    .collect(toImmutableMap(
-                            Map.Entry::getKey,
-                            Map.Entry::getValue
-                    ));
-
-            var nulls = outputs.entrySet().stream()
-                    .filter(entry -> entry.getValue().isFieldNull(object))
-                    .map(Map.Entry::getKey)
-                    .collect(Collectors.toList());
-            if (!nulls.isEmpty()) {
-                throw new RunException(String.format(
-                        "Output(s) '%s' have no value assigned, it is 'null'. All '%s' annotated fields must have a value assigned (non-null).",
-                        String.join(", ", nulls), Export.class.getSimpleName()
-                ));
-            }
-
-            // check if annotated fields have the correct type;
-            // it would be easier to validate on construction,
-            // but we aggregate all errors here for user's convenience
-            var wrongFields = infos.entrySet().stream()
-                    // check if the field has type allowed by the annotation
-                    .filter(entry -> !Output.class.isAssignableFrom(entry.getValue().getFieldType()))
-                    .map(Map.Entry::getKey)
-                    .collect(toImmutableList());
-
-            if (!wrongFields.isEmpty()) {
-                throw new RunException(String.format(
-                        "Output(s) '%s' have incorrect type. All '%s' annotated fields must be an instances of Output<T>",
-                        String.join(", ", wrongFields), Export.class.getSimpleName()
-                ));
-            }
-
-            return outputs.entrySet().stream()
-                    .collect(toImmutableMap(
-                            Map.Entry::getKey,
-                            e -> e.getValue().getFieldValueOrThrow(object, () -> new IllegalStateException(
-                                    "Expected only non-null values at this point. This is a bug."
-                            ))
-                    ));
         }
     }
 

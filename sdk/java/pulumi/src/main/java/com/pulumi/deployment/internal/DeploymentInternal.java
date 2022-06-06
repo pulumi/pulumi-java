@@ -1,19 +1,16 @@
 package com.pulumi.deployment.internal;
 
-import com.google.common.annotations.VisibleForTesting;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.ResourceOptions;
-import com.pulumi.resources.Stack;
+import com.pulumi.resources.internal.Stack;
 
 import java.util.Map;
 import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 @InternalUse
 public interface DeploymentInternal extends Deployment {

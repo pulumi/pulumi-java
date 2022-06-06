@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Fetch Tags
         run: git fetch --quiet --prune --unshallow --tags
@@ -59,7 +59,7 @@ jobs:
       - name: Setup versioning env vars
         run: cat versions.txt | tee $GITHUB_ENV
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -67,7 +67,7 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
           go-version: 1.17.x
       - name: Configure Go cache
@@ -76,7 +76,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
@@ -84,7 +84,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
         with:
           arguments: build
           build-root-directory: sdk/java
@@ -102,7 +102,13 @@ jobs:
       - name: Publish Pulumi Java SDK
         run: make sdk.publish
         # See Note 1.
-        if: github.event_name == 'repository_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+        if: |
+          github.event_name == 'repository_dispatch'
+          || (
+                github.event.pull_request.head.repo.full_name == github.repository
+                && ! startsWith(github.ref_name, 'dependabot/')
+             )
+          || github.ref_name == 'main'
     strategy:
       fail-fast: true
 
@@ -115,10 +121,10 @@ jobs:
     strategy:
       fail-fast: false
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -126,11 +132,11 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
           go-version: 1.17.x
       - name: Download go-binaries
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: go-binaries
           path: ~/bin
@@ -139,14 +145,14 @@ jobs:
           chmod a+x ~/bin/pulumi-language-java
           chmod a+x ~/bin/pulumi-java-gen
       - name: Download versions.txt
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: versions.txt
           path: artifacts
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Publish Pulumi Java SDK locally to enable codegen tests
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
         env:
           # Override to match gen_test.go
           PULUMI_JAVA_SDK_VERSION: 0.0.1
@@ -159,7 +165,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
@@ -170,7 +176,13 @@ jobs:
 
   providers:
     # See Note 1.
-    if: github.event_name == 'repository_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    if: |
+      github.event_name == 'repository_dispatch'
+      || (
+            github.event.pull_request.head.repo.full_name == github.repository
+            && ! startsWith(github.ref_name, 'dependabot/')
+         )
+      || github.ref_name == 'main'
     needs: prerequisites
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -190,23 +202,23 @@ jobs:
         - oci
         - random
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
           cache: 'gradle'
       - name: Download versions.txt
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: versions.txt
           path: artifacts
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Download go-binaries
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: go-binaries
           path: ~/bin
@@ -217,7 +229,7 @@ jobs:
       - name: Codegen the provider code
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Build and unit-test
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
         with:
           arguments: build
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
@@ -238,7 +250,7 @@ jobs:
         run: |
           rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
       # build old
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - run: make submodule_update
@@ -246,7 +258,7 @@ jobs:
         continue-on-error: true
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Rebuild Java provider SDK from ${{ github.event.pull_request.base.ref }}
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
         continue-on-error: true
         with:
           gradle-version: 7.4.1
@@ -292,23 +304,23 @@ jobs:
         - awsx
         - aws-apigateway
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
           cache: 'gradle'
       - name: Download versions.txt
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: versions.txt
           path: artifacts
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Download go-binaries
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: go-binaries
           path: ~/bin
@@ -319,7 +331,7 @@ jobs:
       - name: Codegen the provider code
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Build and unit-test
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
         with:
           arguments: build
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
@@ -340,7 +352,7 @@ jobs:
         run: |
           rm -rf providers/pulumi-${{ matrix.provider }}/sdk/java/build/libs/*
       # build old
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.base.ref }}
       - run: make submodule_update
@@ -348,7 +360,7 @@ jobs:
         continue-on-error: true
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Rebuild Java provider SDK from ${{ github.event.pull_request.base.ref }}
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
         continue-on-error: true
         with:
           gradle-version: 7.4.1
@@ -398,10 +410,10 @@ jobs:
         - random
         - eks-minimal
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -409,7 +421,7 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
           go-version: 1.17.x
       - name: Configure Go cache
@@ -418,7 +430,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
@@ -428,7 +440,7 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Download versions.txt
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: versions.txt
           path: artifacts
@@ -465,10 +477,10 @@ jobs:
     timeout-minutes: 25
     if: ${{ false }} # TODO: move to a nightly job
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -483,7 +495,7 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
           go-version: 1.17.x
       - name: Configure Go cache
@@ -492,7 +504,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
@@ -502,7 +514,7 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Build and package the example application
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
+        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
         with:
           arguments: app:packageDistribution
           build-root-directory: tests/examples/azure-function-graal-spring
@@ -527,7 +539,7 @@ jobs:
         directory: [ pkg ]
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ env.PR_COMMIT_SHA }}
       - run: make submodule_update
@@ -545,10 +557,10 @@ jobs:
         integration:
           - stack-reference
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: make submodule_update
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'temurin'
@@ -556,7 +568,7 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
           go-version: 1.17.x
       - name: Configure Go cache
@@ -565,7 +577,7 @@ jobs:
           echo "::set-output name=go-build::$(go env GOCACHE)"
           echo "::set-output name=go-mod::$(go env GOMODCACHE)"
       - name: Set up Go cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: go-cache
         with:
           path: |
@@ -575,7 +587,7 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Download versions.txt
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: versions.txt
           path: artifacts
@@ -675,9 +687,9 @@ jobs:
     needs: prerequisites
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Download go-binaries
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: go-binaries
           path: ./bin
