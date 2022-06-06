@@ -91,12 +91,15 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("azure-java-appservice-sql", func(t *testing.T) {
-		test := getJavaBase(t, "azure-java-appservice-sql", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"azure-native:location":                 "westus",
-				"azure-java-appservice-sql:sqlPassword": "not-a-real-password",
-			},
-		})
+		test := getJavaBaseNew(t,
+			"azure-java-appservice-sql",
+			[]string{"azure-native"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"azure-native:location":                 "westus",
+					"azure-java-appservice-sql:sqlPassword": "not-a-real-password",
+				},
+			})
 		integration.ProgramTest(t, &test)
 	})
 

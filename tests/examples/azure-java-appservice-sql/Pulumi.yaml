@@ -1,3 +1,0 @@
-name: azure-java-appservice-sql
-description: Creates Azure App Service with SQL Database and Application Insights
-runtime: java
