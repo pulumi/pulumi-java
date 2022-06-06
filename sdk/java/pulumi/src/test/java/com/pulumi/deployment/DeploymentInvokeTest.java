@@ -130,7 +130,7 @@ public class DeploymentInvokeTest {
             var args = new IdentityArgs(unk);
             ctx.export("out", IdentityFunctions.invokeIdentity(args, new InvokeOptions()));
         }).join().throwOnError();
-        assertThat(OutputTests.waitFor(result.stackOutput("out")).isKnown()).isFalse();
+        assertThat(OutputTests.waitFor(result.output("out")).isKnown()).isFalse();
     }
 
     static class IdentityFunctions {
