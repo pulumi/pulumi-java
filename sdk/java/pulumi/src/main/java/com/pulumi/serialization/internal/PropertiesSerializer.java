@@ -2,6 +2,7 @@ package com.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.protobuf.Struct;
+import com.google.protobuf.Value;
 import com.pulumi.Log;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.CompletableFutures;
@@ -16,6 +17,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.StringJoiner;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Predicate;
 
 import static com.pulumi.core.internal.CompletableFutures.ignoreNullMapValues;
@@ -90,13 +92,30 @@ public final class PropertiesSerializer {
     @ParametersAreNonnullByDefault
     public static final class SerializationResult {
         public final Struct serialized;
+        public final boolean containsUnknowns;
         public final ImmutableMap<String, Set<Resource>> propertyToDependentResources;
 
         public SerializationResult(
                 Struct result,
                 ImmutableMap<String, Set<Resource>> propertyToDependentResources) {
             this.serialized = result;
+            this.containsUnknowns = detectUnknowns(Value.newBuilder().setStructValue(result).build());
             this.propertyToDependentResources = propertyToDependentResources;
+        }
+
+        private static boolean detectUnknowns(Value value) {
+            var result = new AtomicBoolean();
+            ValueVisitor.visit(value, v -> {
+                if (isUnknown(v)) {
+                    result.set(true);
+                }
+            });
+            return result.get();
+        }
+
+        private static boolean isUnknown(Value v) {
+            return (v.getKindCase() == Value.KindCase.STRING_VALUE) &&
+                    v.getStringValue() == Constants.UnknownValue;
         }
 
         @Override

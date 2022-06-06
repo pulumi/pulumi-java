@@ -3,6 +3,7 @@ package com.pulumi.deployment;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
+import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
@@ -10,6 +11,8 @@ import com.pulumi.core.annotations.CustomType.Constructor;
 import com.pulumi.core.annotations.CustomType.Parameter;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.OutputData;
+import com.pulumi.core.internal.OutputInternal;
 import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.InvokeArgs;
@@ -18,6 +21,7 @@ import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
@@ -102,6 +106,48 @@ public class DeploymentInvokeTest {
         @Constructor
         private CustomResult(@Parameter("result") ImmutableList<ImmutableMap<String, Object>> result) {
             this.result = result;
+        }
+    }
+
+    @Test
+    void testInvokeDoesNotCallMonitorWhenInputsNotKnown() {
+        var mocks = DeploymentTests.DeploymentMockBuilder.builder()
+                .setOptions(new TestOptions(true))
+                .setMocks(new Mocks() {
+                    @Override
+                    public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+                       throw new RuntimeException("new Resource not implemented");
+                    }
+
+                    @Override
+                    public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
+                        throw new RuntimeException("callAsync not implemented");
+                    }
+                })
+                .build();
+        var result = mocks.runTestAsync(ctx -> {
+            var unk = new OutputInternal<String>(OutputData.unknown());
+            var args = new IdentityArgs(unk);
+            ctx.export("out", IdentityFunctions.invokeIdentity(args, new InvokeOptions()));
+        }).join().throwOnError();
+        assertThat(OutputTests.waitFor(result.output("out")).isKnown()).isFalse();
+    }
+
+    static class IdentityFunctions {
+        public static Output<String> invokeIdentity(IdentityArgs args, @Nullable InvokeOptions options) {
+            return Deployment.getInstance().invoke("tests:custom:identity",
+                    TypeShape.of(String.class),
+                    args,
+                    options);
+        }
+    }
+
+    static class IdentityArgs extends InvokeArgs {
+        @Import(name = "incoming")
+        public final Output<String> incoming;
+
+        IdentityArgs(Output<String> incoming) {
+            this.incoming = Objects.requireNonNull(incoming);
         }
     }
 }
