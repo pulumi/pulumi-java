@@ -4,3 +4,7 @@
 [submodule "templates"]
 	path = templates
 	url = https://github.com/pulumi/templates
+[submodule "examples"]
+	path = examples
+	url = git@github.com:pulumi/examples.git
+	branch = t0yv0/update-java-examples-to-maven
