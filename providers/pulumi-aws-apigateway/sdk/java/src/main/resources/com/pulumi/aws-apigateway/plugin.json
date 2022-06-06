@@ -1,5 +1,5 @@
 {
   "resource": true,
   "name": "aws-apigateway",
-  "version": "0.0.8"
+  "version": "0.0.9"
 }
