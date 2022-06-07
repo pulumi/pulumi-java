@@ -38,15 +38,22 @@ func Pin(javaProjectDir string, deps map[string]string) (FileEdit, error) {
 		return nil, err
 	}
 
-	buildGradle := filepath.Join(javaProjectDir, "app", "build.gradle")
-	hasBuildGradle, err := fileExists(buildGradle)
-	if err != nil {
-		return nil, err
+	buildGradle := ""
+	for _, d := range []string{"infra", "app"} {
+		f := filepath.Join(javaProjectDir, d, "build.gradle")
+		exists, err := fileExists(f)
+		if err != nil {
+			return nil, err
+		}
+		if exists {
+			buildGradle = f
+			break
+		}
 	}
 
 	if hasPom {
 		return fixupPomVersions(pom, deps)
-	} else if hasBuildGradle {
+	} else if buildGradle != "" {
 		return fixupGradleVersions(buildGradle, deps)
 	} else {
 		return nil, fmt.Errorf("Pin cannot find pom.xml or build.gradle in %s",
@@ -118,11 +125,13 @@ func fixupPomVersions(pom string, deps map[string]string) (FileEdit, error) {
 }
 
 func fixupGradleVersions(buildGradle string, deps map[string]string) (FileEdit, error) {
-	return fixupVersionsInFile(buildGradle, deps, func(dep, ver string, codeBytes []byte) []byte {
-		newVer := []byte(fmt.Sprintf("com.pulumi:%s:%s", dep, ver))
-		pat := regexp.MustCompile(fmt.Sprintf("com.pulumi:%s:[^']+", dep))
-		return pat.ReplaceAll(codeBytes, newVer)
-	})
+	return fixupVersionsInFile(buildGradle, deps, fixupGradleVersion)
+}
+
+func fixupGradleVersion(dep, ver string, codeBytes []byte) []byte {
+	newVer := fmt.Sprintf(`("com.pulumi:%s") { version { strictly "%s" }}`, dep, ver)
+	pat := regexp.MustCompile(fmt.Sprintf("[ ]+[\"']com.pulumi:%s:[^\"']+[\"']", dep))
+	return pat.ReplaceAll(codeBytes, []byte(newVer))
 }
 
 func fixupVersionsInFile(
