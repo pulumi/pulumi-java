@@ -106,12 +106,15 @@ func TestExamples(t *testing.T) {
 		integration.ProgramTest(t, &test)
 	})
 
-	t.Run("eks-minimal", func(t *testing.T) {
-		test := getJavaBase(t, "eks-minimal", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"aws:region": "us-west-1",
-			},
-		})
+	t.Run("aws-java-eks-minimal", func(t *testing.T) {
+		test := getJavaBaseNew(t,
+			"aws-java-eks-minimal",
+			[]string{"eks", "aws", "kubernetes"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"aws:region": "us-west-1",
+				},
+			})
 		integration.ProgramTest(t, &test)
 	})
 

@@ -401,6 +401,7 @@ jobs:
       fail-fast: false
       matrix:
         example:
+        - aws-java-eks-minimal
         - aws-java-webserver
         - aws-native-java-s3-folder
         - azure-java-appservice-sql
@@ -408,7 +409,6 @@ jobs:
         - gcp-java-gke-hello-world
         - minimal
         - random
-        - eks-minimal
     steps:
       - uses: actions/checkout@v3
       - run: make submodule_update
