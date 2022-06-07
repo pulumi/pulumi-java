@@ -23,7 +23,7 @@ public class App {
 
     public static void stack(Context ctx) {
         final var amiResult = Ec2Functions.getAmi(GetAmiArgs.builder()
-                .filters(GetAmiFilter.builder()
+                .filters(GetAmiFilterArgs.builder()
                         .name("name")
                         .values("amzn-ami-hvm-*-x86_64-ebs")
                         .build())
