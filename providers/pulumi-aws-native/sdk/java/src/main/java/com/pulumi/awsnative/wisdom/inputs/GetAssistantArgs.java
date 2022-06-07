@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.wisdom.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetAssistantArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAssistantArgs Empty = new GetAssistantArgs();
 
     @Import(name="assistantId", required=true)
-    private String assistantId;
+    private Output<String> assistantId;
 
-    public String assistantId() {
+    public Output<String> assistantId() {
         return this.assistantId;
     }
 
@@ -43,9 +44,13 @@ public final class GetAssistantArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAssistantArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder assistantId(String assistantId) {
+        public Builder assistantId(Output<String> assistantId) {
             $.assistantId = assistantId;
             return this;
+        }
+
+        public Builder assistantId(String assistantId) {
+            return assistantId(Output.of(assistantId));
         }
 
         public GetAssistantArgs build() {

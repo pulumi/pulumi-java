@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of this Template Spec.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource Group where the Template Spec exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="version", required=true)
-    private String version;
+    private Output<String> version;
 
     /**
      * @return The Version Name of the Template Spec.
      * 
      */
-    public String version() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -89,8 +90,29 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of this Template Spec.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Resource Group where the Template Spec exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param version The Version Name of the Template Spec.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Output<String> version) {
+            $.version = version;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetTemplateSpecVersionArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder version(String version) {
-            $.version = version;
-            return this;
+            return version(Output.of(version));
         }
 
         public GetTemplateSpecVersionArgs build() {

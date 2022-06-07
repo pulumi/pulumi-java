@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.memorydb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetACLArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aCLName", required=true)
-    private String aCLName;
+    private Output<String> aCLName;
 
     /**
      * @return The name of the acl.
      * 
      */
-    public String aCLName() {
+    public Output<String> aCLName() {
         return this.aCLName;
     }
 
@@ -57,9 +58,19 @@ public final class GetACLArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder aCLName(String aCLName) {
+        public Builder aCLName(Output<String> aCLName) {
             $.aCLName = aCLName;
             return this;
+        }
+
+        /**
+         * @param aCLName The name of the acl.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aCLName(String aCLName) {
+            return aCLName(Output.of(aCLName));
         }
 
         public GetACLArgs build() {

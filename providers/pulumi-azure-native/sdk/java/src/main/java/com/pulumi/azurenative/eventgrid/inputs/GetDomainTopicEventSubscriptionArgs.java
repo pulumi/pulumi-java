@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDomainTopicEventSubscriptionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="domainName", required=true)
-    private String domainName;
+    private Output<String> domainName;
 
     /**
      * @return Name of the top level domain.
      * 
      */
-    public String domainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDomainTopicEventSubscriptionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="eventSubscriptionName", required=true)
-    private String eventSubscriptionName;
+    private Output<String> eventSubscriptionName;
 
     /**
      * @return Name of the event subscription.
      * 
      */
-    public String eventSubscriptionName() {
+    public Output<String> eventSubscriptionName() {
         return this.eventSubscriptionName;
     }
 
@@ -47,13 +48,13 @@ public final class GetDomainTopicEventSubscriptionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetDomainTopicEventSubscriptionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="topicName", required=true)
-    private String topicName;
+    private Output<String> topicName;
 
     /**
      * @return Name of the domain topic.
      * 
      */
-    public String topicName() {
+    public Output<String> topicName() {
         return this.topicName;
     }
 
@@ -105,8 +106,29 @@ public final class GetDomainTopicEventSubscriptionArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder domainName(String domainName) {
+        public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * @param domainName Name of the top level domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
+        }
+
+        /**
+         * @param eventSubscriptionName Name of the event subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventSubscriptionName(Output<String> eventSubscriptionName) {
+            $.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetDomainTopicEventSubscriptionArgs extends com.pulumi.resour
          * 
          */
         public Builder eventSubscriptionName(String eventSubscriptionName) {
-            $.eventSubscriptionName = eventSubscriptionName;
+            return eventSubscriptionName(Output.of(eventSubscriptionName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetDomainTopicEventSubscriptionArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param topicName Name of the domain topic.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder topicName(Output<String> topicName) {
+            $.topicName = topicName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetDomainTopicEventSubscriptionArgs extends com.pulumi.resour
          * 
          */
         public Builder topicName(String topicName) {
-            $.topicName = topicName;
-            return this;
+            return topicName(Output.of(topicName));
         }
 
         public GetDomainTopicEventSubscriptionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.organizations.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetDelegatedAdministratorsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="servicePrincipal")
-    private @Nullable String servicePrincipal;
+    private @Nullable Output<String> servicePrincipal;
 
     /**
      * @return Specifies a service principal name. If specified, then the operation lists the delegated administrators only for the specified service. If you don&#39;t specify a service principal, the operation lists all delegated administrators for all services in your organization.
      * 
      */
-    public Optional<String> servicePrincipal() {
+    public Optional<Output<String>> servicePrincipal() {
         return Optional.ofNullable(this.servicePrincipal);
     }
 
@@ -59,9 +60,19 @@ public final class GetDelegatedAdministratorsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder servicePrincipal(@Nullable String servicePrincipal) {
+        public Builder servicePrincipal(@Nullable Output<String> servicePrincipal) {
             $.servicePrincipal = servicePrincipal;
             return this;
+        }
+
+        /**
+         * @param servicePrincipal Specifies a service principal name. If specified, then the operation lists the delegated administrators only for the specified service. If you don&#39;t specify a service principal, the operation lists all delegated administrators for all services in your organization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder servicePrincipal(String servicePrincipal) {
+            return servicePrincipal(Output.of(servicePrincipal));
         }
 
         public GetDelegatedAdministratorsArgs build() {

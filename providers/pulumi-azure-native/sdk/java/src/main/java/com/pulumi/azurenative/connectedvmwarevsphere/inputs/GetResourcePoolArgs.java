@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResourcePoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Resource Group Name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetResourcePoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourcePoolName", required=true)
-    private String resourcePoolName;
+    private Output<String> resourcePoolName;
 
     /**
      * @return Name of the resourcePool.
      * 
      */
-    public String resourcePoolName() {
+    public Output<String> resourcePoolName() {
         return this.resourcePoolName;
     }
 
@@ -73,8 +74,29 @@ public final class GetResourcePoolArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourcePoolName Name of the resourcePool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourcePoolName(Output<String> resourcePoolName) {
+            $.resourcePoolName = resourcePoolName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetResourcePoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourcePoolName(String resourcePoolName) {
-            $.resourcePoolName = resourcePoolName;
-            return this;
+            return resourcePoolName(Output.of(resourcePoolName));
         }
 
         public GetResourcePoolArgs build() {

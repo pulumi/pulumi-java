@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInboundEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dnsResolverName", required=true)
-    private String dnsResolverName;
+    private Output<String> dnsResolverName;
 
     /**
      * @return The name of the DNS resolver.
      * 
      */
-    public String dnsResolverName() {
+    public Output<String> dnsResolverName() {
         return this.dnsResolverName;
     }
 
@@ -32,13 +33,13 @@ public final class GetInboundEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="inboundEndpointName", required=true)
-    private String inboundEndpointName;
+    private Output<String> inboundEndpointName;
 
     /**
      * @return The name of the inbound endpoint for the DNS resolver.
      * 
      */
-    public String inboundEndpointName() {
+    public Output<String> inboundEndpointName() {
         return this.inboundEndpointName;
     }
 
@@ -47,13 +48,13 @@ public final class GetInboundEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetInboundEndpointArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder dnsResolverName(String dnsResolverName) {
+        public Builder dnsResolverName(Output<String> dnsResolverName) {
             $.dnsResolverName = dnsResolverName;
+            return this;
+        }
+
+        /**
+         * @param dnsResolverName The name of the DNS resolver.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dnsResolverName(String dnsResolverName) {
+            return dnsResolverName(Output.of(dnsResolverName));
+        }
+
+        /**
+         * @param inboundEndpointName The name of the inbound endpoint for the DNS resolver.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder inboundEndpointName(Output<String> inboundEndpointName) {
+            $.inboundEndpointName = inboundEndpointName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetInboundEndpointArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder inboundEndpointName(String inboundEndpointName) {
-            $.inboundEndpointName = inboundEndpointName;
+            return inboundEndpointName(Output.of(inboundEndpointName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetInboundEndpointArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetInboundEndpointArgs build() {

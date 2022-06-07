@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataScience.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetModelProvenanceArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="modelId", required=true)
-    private String modelId;
+    private Output<String> modelId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the model.
      * 
      */
-    public String modelId() {
+    public Output<String> modelId() {
         return this.modelId;
     }
 
@@ -57,9 +58,19 @@ public final class GetModelProvenanceArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder modelId(String modelId) {
+        public Builder modelId(Output<String> modelId) {
             $.modelId = modelId;
             return this;
+        }
+
+        /**
+         * @param modelId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the model.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder modelId(String modelId) {
+            return modelId(Output.of(modelId));
         }
 
         public GetModelProvenanceArgs build() {

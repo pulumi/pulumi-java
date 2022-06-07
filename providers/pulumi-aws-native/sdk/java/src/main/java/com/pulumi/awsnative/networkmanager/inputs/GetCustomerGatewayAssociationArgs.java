@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.networkmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCustomerGatewayAssociationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="customerGatewayArn", required=true)
-    private String customerGatewayArn;
+    private Output<String> customerGatewayArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the customer gateway.
      * 
      */
-    public String customerGatewayArn() {
+    public Output<String> customerGatewayArn() {
         return this.customerGatewayArn;
     }
 
@@ -32,13 +33,13 @@ public final class GetCustomerGatewayAssociationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="globalNetworkId", required=true)
-    private String globalNetworkId;
+    private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the global network.
      * 
      */
-    public String globalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -73,8 +74,29 @@ public final class GetCustomerGatewayAssociationArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder customerGatewayArn(String customerGatewayArn) {
+        public Builder customerGatewayArn(Output<String> customerGatewayArn) {
             $.customerGatewayArn = customerGatewayArn;
+            return this;
+        }
+
+        /**
+         * @param customerGatewayArn The Amazon Resource Name (ARN) of the customer gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customerGatewayArn(String customerGatewayArn) {
+            return customerGatewayArn(Output.of(customerGatewayArn));
+        }
+
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetCustomerGatewayAssociationArgs extends com.pulumi.resource
          * 
          */
         public Builder globalNetworkId(String globalNetworkId) {
-            $.globalNetworkId = globalNetworkId;
-            return this;
+            return globalNetworkId(Output.of(globalNetworkId));
         }
 
         public GetCustomerGatewayAssociationArgs build() {

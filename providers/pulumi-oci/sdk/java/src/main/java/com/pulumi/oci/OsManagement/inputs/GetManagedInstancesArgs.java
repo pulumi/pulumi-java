@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.OsManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OsManagement.inputs.GetManagedInstancesFilter;
+import com.pulumi.oci.OsManagement.inputs.GetManagedInstancesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetManagedInstancesFilter> filters;
+    private @Nullable Output<List<GetManagedInstancesFilterArgs>> filters;
 
-    public Optional<List<GetManagedInstancesFilter>> filters() {
+    public Optional<Output<List<GetManagedInstancesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="osFamily")
-    private @Nullable String osFamily;
+    private @Nullable Output<String> osFamily;
 
     /**
      * @return The OS family for which to list resources.
      * 
      */
-    public Optional<String> osFamily() {
+    public Optional<Output<String>> osFamily() {
         return Optional.ofNullable(this.osFamily);
     }
 
@@ -101,8 +102,29 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -112,17 +134,20 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetManagedInstancesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedInstancesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetManagedInstancesFilter... filters) {
+        public Builder filters(List<GetManagedInstancesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetManagedInstancesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -132,9 +157,19 @@ public final class GetManagedInstancesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder osFamily(@Nullable String osFamily) {
+        public Builder osFamily(@Nullable Output<String> osFamily) {
             $.osFamily = osFamily;
             return this;
+        }
+
+        /**
+         * @param osFamily The OS family for which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder osFamily(String osFamily) {
+            return osFamily(Output.of(osFamily));
         }
 
         public GetManagedInstancesArgs build() {

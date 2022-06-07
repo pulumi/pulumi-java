@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dataproc_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetAutoscalingPolicyArgs extends com.pulumi.resources.InvokeA
     public static final GetAutoscalingPolicyArgs Empty = new GetAutoscalingPolicyArgs();
 
     @Import(name="autoscalingPolicyId", required=true)
-    private String autoscalingPolicyId;
+    private Output<String> autoscalingPolicyId;
 
-    public String autoscalingPolicyId() {
+    public Output<String> autoscalingPolicyId() {
         return this.autoscalingPolicyId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetAutoscalingPolicyArgs extends com.pulumi.resources.InvokeA
             $ = new GetAutoscalingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder autoscalingPolicyId(String autoscalingPolicyId) {
+        public Builder autoscalingPolicyId(Output<String> autoscalingPolicyId) {
             $.autoscalingPolicyId = autoscalingPolicyId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder autoscalingPolicyId(String autoscalingPolicyId) {
+            return autoscalingPolicyId(Output.of(autoscalingPolicyId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetAutoscalingPolicyArgs build() {

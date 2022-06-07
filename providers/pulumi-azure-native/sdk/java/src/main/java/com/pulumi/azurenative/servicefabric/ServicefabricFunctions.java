@@ -5,14 +5,23 @@ package com.pulumi.azurenative.servicefabric;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.servicefabric.inputs.GetApplicationArgs;
+import com.pulumi.azurenative.servicefabric.inputs.GetApplicationPlainArgs;
 import com.pulumi.azurenative.servicefabric.inputs.GetApplicationTypeArgs;
+import com.pulumi.azurenative.servicefabric.inputs.GetApplicationTypePlainArgs;
 import com.pulumi.azurenative.servicefabric.inputs.GetApplicationTypeVersionArgs;
+import com.pulumi.azurenative.servicefabric.inputs.GetApplicationTypeVersionPlainArgs;
 import com.pulumi.azurenative.servicefabric.inputs.GetClusterArgs;
+import com.pulumi.azurenative.servicefabric.inputs.GetClusterPlainArgs;
 import com.pulumi.azurenative.servicefabric.inputs.GetManagedClusterArgs;
+import com.pulumi.azurenative.servicefabric.inputs.GetManagedClusterPlainArgs;
 import com.pulumi.azurenative.servicefabric.inputs.GetNodeTypeArgs;
+import com.pulumi.azurenative.servicefabric.inputs.GetNodeTypePlainArgs;
 import com.pulumi.azurenative.servicefabric.inputs.GetServiceArgs;
+import com.pulumi.azurenative.servicefabric.inputs.GetServicePlainArgs;
 import com.pulumi.azurenative.servicefabric.inputs.GetmanagedAzResiliencyStatusArgs;
+import com.pulumi.azurenative.servicefabric.inputs.GetmanagedAzResiliencyStatusPlainArgs;
 import com.pulumi.azurenative.servicefabric.inputs.ListListUpgradableVersionPostArgs;
+import com.pulumi.azurenative.servicefabric.inputs.ListListUpgradableVersionPostPlainArgs;
 import com.pulumi.azurenative.servicefabric.outputs.GetApplicationResult;
 import com.pulumi.azurenative.servicefabric.outputs.GetApplicationTypeResult;
 import com.pulumi.azurenative.servicefabric.outputs.GetApplicationTypeVersionResult;
@@ -22,6 +31,7 @@ import com.pulumi.azurenative.servicefabric.outputs.GetNodeTypeResult;
 import com.pulumi.azurenative.servicefabric.outputs.GetServiceResult;
 import com.pulumi.azurenative.servicefabric.outputs.GetmanagedAzResiliencyStatusResult;
 import com.pulumi.azurenative.servicefabric.outputs.ListListUpgradableVersionPostResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -33,7 +43,7 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
     /**
@@ -41,7 +51,23 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args) {
+        return getApplicationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The application resource.
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicefabric:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The application resource.
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -49,7 +75,7 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetApplicationTypeResult> getApplicationType(GetApplicationTypeArgs args) {
+    public static Output<GetApplicationTypeResult> getApplicationType(GetApplicationTypeArgs args) {
         return getApplicationType(args, InvokeOptions.Empty);
     }
     /**
@@ -57,7 +83,23 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetApplicationTypeResult> getApplicationType(GetApplicationTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationTypeResult> getApplicationTypePlain(GetApplicationTypePlainArgs args) {
+        return getApplicationTypePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The application type name resource
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static Output<GetApplicationTypeResult> getApplicationType(GetApplicationTypeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicefabric:getApplicationType", TypeShape.of(GetApplicationTypeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The application type name resource
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static CompletableFuture<GetApplicationTypeResult> getApplicationTypePlain(GetApplicationTypePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getApplicationType", TypeShape.of(GetApplicationTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -65,7 +107,7 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetApplicationTypeVersionResult> getApplicationTypeVersion(GetApplicationTypeVersionArgs args) {
+    public static Output<GetApplicationTypeVersionResult> getApplicationTypeVersion(GetApplicationTypeVersionArgs args) {
         return getApplicationTypeVersion(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +115,23 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetApplicationTypeVersionResult> getApplicationTypeVersion(GetApplicationTypeVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationTypeVersionResult> getApplicationTypeVersionPlain(GetApplicationTypeVersionPlainArgs args) {
+        return getApplicationTypeVersionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An application type version resource for the specified application type name resource.
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static Output<GetApplicationTypeVersionResult> getApplicationTypeVersion(GetApplicationTypeVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicefabric:getApplicationTypeVersion", TypeShape.of(GetApplicationTypeVersionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An application type version resource for the specified application type name resource.
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static CompletableFuture<GetApplicationTypeVersionResult> getApplicationTypeVersionPlain(GetApplicationTypeVersionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getApplicationTypeVersion", TypeShape.of(GetApplicationTypeVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -82,7 +140,7 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -91,7 +149,25 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args) {
+        return getClusterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The cluster resource
+     * 
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicefabric:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The cluster resource
+     * 
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -100,7 +176,7 @@ public final class ServicefabricFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedClusterResult> getManagedCluster(GetManagedClusterArgs args) {
+    public static Output<GetManagedClusterResult> getManagedCluster(GetManagedClusterArgs args) {
         return getManagedCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -109,7 +185,25 @@ public final class ServicefabricFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagedClusterResult> getManagedCluster(GetManagedClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedClusterResult> getManagedClusterPlain(GetManagedClusterPlainArgs args) {
+        return getManagedClusterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The manged cluster resource
+     * 
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static Output<GetManagedClusterResult> getManagedCluster(GetManagedClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicefabric:getManagedCluster", TypeShape.of(GetManagedClusterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The manged cluster resource
+     * 
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetManagedClusterResult> getManagedClusterPlain(GetManagedClusterPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getManagedCluster", TypeShape.of(GetManagedClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -117,7 +211,7 @@ public final class ServicefabricFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNodeTypeResult> getNodeType(GetNodeTypeArgs args) {
+    public static Output<GetNodeTypeResult> getNodeType(GetNodeTypeArgs args) {
         return getNodeType(args, InvokeOptions.Empty);
     }
     /**
@@ -125,7 +219,23 @@ public final class ServicefabricFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNodeTypeResult> getNodeType(GetNodeTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNodeTypeResult> getNodeTypePlain(GetNodeTypePlainArgs args) {
+        return getNodeTypePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static Output<GetNodeTypeResult> getNodeType(GetNodeTypeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicefabric:getNodeType", TypeShape.of(GetNodeTypeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Describes a node type in the cluster, each node type represents sub set of nodes in the cluster.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetNodeTypeResult> getNodeTypePlain(GetNodeTypePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getNodeType", TypeShape.of(GetNodeTypeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -133,7 +243,7 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -141,7 +251,23 @@ public final class ServicefabricFunctions {
      * API Version: 2020-03-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args) {
+        return getServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The service resource.
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicefabric:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The service resource.
+     * API Version: 2020-03-01.
+     * 
+     */
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -149,7 +275,7 @@ public final class ServicefabricFunctions {
      * API Version: 2022-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetmanagedAzResiliencyStatusResult> getmanagedAzResiliencyStatus(GetmanagedAzResiliencyStatusArgs args) {
+    public static Output<GetmanagedAzResiliencyStatusResult> getmanagedAzResiliencyStatus(GetmanagedAzResiliencyStatusArgs args) {
         return getmanagedAzResiliencyStatus(args, InvokeOptions.Empty);
     }
     /**
@@ -157,7 +283,23 @@ public final class ServicefabricFunctions {
      * API Version: 2022-02-01-preview.
      * 
      */
-    public static CompletableFuture<GetmanagedAzResiliencyStatusResult> getmanagedAzResiliencyStatus(GetmanagedAzResiliencyStatusArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetmanagedAzResiliencyStatusResult> getmanagedAzResiliencyStatusPlain(GetmanagedAzResiliencyStatusPlainArgs args) {
+        return getmanagedAzResiliencyStatusPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Describes the result of the request to list Managed VM Sizes for Service Fabric Managed Clusters.
+     * API Version: 2022-02-01-preview.
+     * 
+     */
+    public static Output<GetmanagedAzResiliencyStatusResult> getmanagedAzResiliencyStatus(GetmanagedAzResiliencyStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicefabric:getmanagedAzResiliencyStatus", TypeShape.of(GetmanagedAzResiliencyStatusResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Describes the result of the request to list Managed VM Sizes for Service Fabric Managed Clusters.
+     * API Version: 2022-02-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetmanagedAzResiliencyStatusResult> getmanagedAzResiliencyStatusPlain(GetmanagedAzResiliencyStatusPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getmanagedAzResiliencyStatus", TypeShape.of(GetmanagedAzResiliencyStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -165,7 +307,7 @@ public final class ServicefabricFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<ListListUpgradableVersionPostResult> listListUpgradableVersionPost(ListListUpgradableVersionPostArgs args) {
+    public static Output<ListListUpgradableVersionPostResult> listListUpgradableVersionPost(ListListUpgradableVersionPostArgs args) {
         return listListUpgradableVersionPost(args, InvokeOptions.Empty);
     }
     /**
@@ -173,7 +315,23 @@ public final class ServicefabricFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<ListListUpgradableVersionPostResult> listListUpgradableVersionPost(ListListUpgradableVersionPostArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListListUpgradableVersionPostResult> listListUpgradableVersionPostPlain(ListListUpgradableVersionPostPlainArgs args) {
+        return listListUpgradableVersionPostPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
+     * API Version: 2020-12-01-preview.
+     * 
+     */
+    public static Output<ListListUpgradableVersionPostResult> listListUpgradableVersionPost(ListListUpgradableVersionPostArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:servicefabric:listListUpgradableVersionPost", TypeShape.of(ListListUpgradableVersionPostResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The list of intermediate cluster code versions for an upgrade or downgrade. Or minimum and maximum upgradable version if no target was given
+     * API Version: 2020-12-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListListUpgradableVersionPostResult> listListUpgradableVersionPostPlain(ListListUpgradableVersionPostPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:listListUpgradableVersionPost", TypeShape.of(ListListUpgradableVersionPostResult.class), args, Utilities.withVersion(options));
     }
 }

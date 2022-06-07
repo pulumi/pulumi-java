@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.LoadBalancer.inputs.GetListenerRulesFilter;
+import com.pulumi.oci.LoadBalancer.inputs.GetListenerRulesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetListenerRulesArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetListenerRulesArgs Empty = new GetListenerRulesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetListenerRulesFilter> filters;
+    private @Nullable Output<List<GetListenerRulesFilterArgs>> filters;
 
-    public Optional<List<GetListenerRulesFilter>> filters() {
+    public Optional<Output<List<GetListenerRulesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetListenerRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="listenerName", required=true)
-    private String listenerName;
+    private Output<String> listenerName;
 
     /**
      * @return The name of the listener the rules are associated with.
      * 
      */
-    public String listenerName() {
+    public Output<String> listenerName() {
         return this.listenerName;
     }
 
@@ -43,13 +44,13 @@ public final class GetListenerRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="loadBalancerId", required=true)
-    private String loadBalancerId;
+    private Output<String> loadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the listener.
      * 
      */
-    public String loadBalancerId() {
+    public Output<String> loadBalancerId() {
         return this.loadBalancerId;
     }
 
@@ -79,12 +80,16 @@ public final class GetListenerRulesArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetListenerRulesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetListenerRulesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetListenerRulesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetListenerRulesFilter... filters) {
+        public Builder filters(List<GetListenerRulesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetListenerRulesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -94,8 +99,29 @@ public final class GetListenerRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder listenerName(String listenerName) {
+        public Builder listenerName(Output<String> listenerName) {
             $.listenerName = listenerName;
+            return this;
+        }
+
+        /**
+         * @param listenerName The name of the listener the rules are associated with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listenerName(String listenerName) {
+            return listenerName(Output.of(listenerName));
+        }
+
+        /**
+         * @param loadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the listener.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerId(Output<String> loadBalancerId) {
+            $.loadBalancerId = loadBalancerId;
             return this;
         }
 
@@ -106,8 +132,7 @@ public final class GetListenerRulesArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder loadBalancerId(String loadBalancerId) {
-            $.loadBalancerId = loadBalancerId;
-            return this;
+            return loadBalancerId(Output.of(loadBalancerId));
         }
 
         public GetListenerRulesArgs build() {

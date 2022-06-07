@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.containerregistry.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="buildTaskName", required=true)
-    private String buildTaskName;
+    private Output<String> buildTaskName;
 
     /**
      * @return The name of the container registry build task.
      * 
      */
-    public String buildTaskName() {
+    public Output<String> buildTaskName() {
         return this.buildTaskName;
     }
 
@@ -32,13 +33,13 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="registryName", required=true)
-    private String registryName;
+    private Output<String> registryName;
 
     /**
      * @return The name of the container registry.
      * 
      */
-    public String registryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -47,13 +48,13 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group to which the container registry belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="stepName", required=true)
-    private String stepName;
+    private Output<String> stepName;
 
     /**
      * @return The name of a build step for a container registry build task.
      * 
      */
-    public String stepName() {
+    public Output<String> stepName() {
         return this.stepName;
     }
 
@@ -105,8 +106,29 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder buildTaskName(String buildTaskName) {
+        public Builder buildTaskName(Output<String> buildTaskName) {
             $.buildTaskName = buildTaskName;
+            return this;
+        }
+
+        /**
+         * @param buildTaskName The name of the container registry build task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder buildTaskName(String buildTaskName) {
+            return buildTaskName(Output.of(buildTaskName));
+        }
+
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryName(Output<String> registryName) {
+            $.registryName = registryName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
          * 
          */
         public Builder registryName(String registryName) {
-            $.registryName = registryName;
+            return registryName(Output.of(registryName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param stepName The name of a build step for a container registry build task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stepName(Output<String> stepName) {
+            $.stepName = stepName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class ListBuildStepBuildArgumentsArgs extends com.pulumi.resources.
          * 
          */
         public Builder stepName(String stepName) {
-            $.stepName = stepName;
-            return this;
+            return stepName(Output.of(stepName));
         }
 
         public ListBuildStepBuildArgumentsArgs build() {

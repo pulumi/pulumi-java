@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.globalaccelerator.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEndpointGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="endpointGroupArn", required=true)
-    private String endpointGroupArn;
+    private Output<String> endpointGroupArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the endpoint group
      * 
      */
-    public String endpointGroupArn() {
+    public Output<String> endpointGroupArn() {
         return this.endpointGroupArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetEndpointGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder endpointGroupArn(String endpointGroupArn) {
+        public Builder endpointGroupArn(Output<String> endpointGroupArn) {
             $.endpointGroupArn = endpointGroupArn;
             return this;
+        }
+
+        /**
+         * @param endpointGroupArn The Amazon Resource Name (ARN) of the endpoint group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointGroupArn(String endpointGroupArn) {
+            return endpointGroupArn(Output.of(endpointGroupArn));
         }
 
         public GetEndpointGroupArgs build() {

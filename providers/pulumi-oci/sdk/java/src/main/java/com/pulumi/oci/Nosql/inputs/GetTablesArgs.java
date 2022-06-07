@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Nosql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Nosql.inputs.GetTablesFilter;
+import com.pulumi.oci.Nosql.inputs.GetTablesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetTablesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of a table&#39;s compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetTablesFilter> filters;
+    private @Nullable Output<List<GetTablesFilterArgs>> filters;
 
-    public Optional<List<GetTablesFilter>> filters() {
+    public Optional<Output<List<GetTablesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetTablesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A shell-globbing-style (*?[]) filter for names.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -58,13 +59,13 @@ public final class GetTablesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Filter list by the lifecycle state of the item.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -101,17 +102,31 @@ public final class GetTablesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetTablesFilter> filters) {
+        /**
+         * @param compartmentId The ID of a table&#39;s compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetTablesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetTablesFilter... filters) {
+        public Builder filters(List<GetTablesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetTablesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -121,8 +136,29 @@ public final class GetTablesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A shell-globbing-style (*?[]) filter for names.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state Filter list by the lifecycle state of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -132,9 +168,8 @@ public final class GetTablesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetTablesArgs build() {

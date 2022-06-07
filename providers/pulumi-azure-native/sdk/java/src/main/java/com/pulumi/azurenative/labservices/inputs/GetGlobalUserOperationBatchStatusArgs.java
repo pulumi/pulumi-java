@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.labservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -18,13 +19,13 @@ public final class GetGlobalUserOperationBatchStatusArgs extends com.pulumi.reso
      * 
      */
     @Import(name="urls", required=true)
-    private List<String> urls;
+    private Output<List<String>> urls;
 
     /**
      * @return The operation url of long running operation
      * 
      */
-    public List<String> urls() {
+    public Output<List<String>> urls() {
         return this.urls;
     }
 
@@ -33,13 +34,13 @@ public final class GetGlobalUserOperationBatchStatusArgs extends com.pulumi.reso
      * 
      */
     @Import(name="userName", required=true)
-    private String userName;
+    private Output<String> userName;
 
     /**
      * @return The name of the user.
      * 
      */
-    public String userName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -74,9 +75,19 @@ public final class GetGlobalUserOperationBatchStatusArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder urls(List<String> urls) {
+        public Builder urls(Output<List<String>> urls) {
             $.urls = urls;
             return this;
+        }
+
+        /**
+         * @param urls The operation url of long running operation
+         * 
+         * @return builder
+         * 
+         */
+        public Builder urls(List<String> urls) {
+            return urls(Output.of(urls));
         }
 
         /**
@@ -95,9 +106,19 @@ public final class GetGlobalUserOperationBatchStatusArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder userName(String userName) {
+        public Builder userName(Output<String> userName) {
             $.userName = userName;
             return this;
+        }
+
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
         }
 
         public GetGlobalUserOperationBatchStatusArgs build() {

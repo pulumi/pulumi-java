@@ -5,11 +5,15 @@ package com.pulumi.awsnative.timestream;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.timestream.inputs.GetDatabaseArgs;
+import com.pulumi.awsnative.timestream.inputs.GetDatabasePlainArgs;
 import com.pulumi.awsnative.timestream.inputs.GetScheduledQueryArgs;
+import com.pulumi.awsnative.timestream.inputs.GetScheduledQueryPlainArgs;
 import com.pulumi.awsnative.timestream.inputs.GetTableArgs;
+import com.pulumi.awsnative.timestream.inputs.GetTablePlainArgs;
 import com.pulumi.awsnative.timestream.outputs.GetDatabaseResult;
 import com.pulumi.awsnative.timestream.outputs.GetScheduledQueryResult;
 import com.pulumi.awsnative.timestream.outputs.GetTableResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -20,42 +24,84 @@ public final class TimestreamFunctions {
      * The AWS::Timestream::Database resource creates a Timestream database.
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::Timestream::Database resource creates a Timestream database.
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseResult> getDatabasePlain(GetDatabasePlainArgs args) {
+        return getDatabasePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::Timestream::Database resource creates a Timestream database.
+     * 
+     */
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:timestream:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::Timestream::Database resource creates a Timestream database.
+     * 
+     */
+    public static CompletableFuture<GetDatabaseResult> getDatabasePlain(GetDatabasePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:timestream:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
      * 
      */
-    public static CompletableFuture<GetScheduledQueryResult> getScheduledQuery(GetScheduledQueryArgs args) {
+    public static Output<GetScheduledQueryResult> getScheduledQuery(GetScheduledQueryArgs args) {
         return getScheduledQuery(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
      * 
      */
-    public static CompletableFuture<GetScheduledQueryResult> getScheduledQuery(GetScheduledQueryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScheduledQueryResult> getScheduledQueryPlain(GetScheduledQueryPlainArgs args) {
+        return getScheduledQueryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
+     * 
+     */
+    public static Output<GetScheduledQueryResult> getScheduledQuery(GetScheduledQueryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:timestream:getScheduledQuery", TypeShape.of(GetScheduledQueryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::Timestream::ScheduledQuery resource creates a Timestream Scheduled Query.
+     * 
+     */
+    public static CompletableFuture<GetScheduledQueryResult> getScheduledQueryPlain(GetScheduledQueryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:timestream:getScheduledQuery", TypeShape.of(GetScheduledQueryResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::Timestream::Table resource creates a Timestream Table.
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+    public static Output<GetTableResult> getTable(GetTableArgs args) {
         return getTable(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::Timestream::Table resource creates a Timestream Table.
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTableResult> getTablePlain(GetTablePlainArgs args) {
+        return getTablePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::Timestream::Table resource creates a Timestream Table.
+     * 
+     */
+    public static Output<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:timestream:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::Timestream::Table resource creates a Timestream Table.
+     * 
+     */
+    public static CompletableFuture<GetTableResult> getTablePlain(GetTablePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:timestream:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
 }

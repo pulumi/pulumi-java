@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.managedidentities_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetDomainBackupIamPolicyArgs extends com.pulumi.resources.Inv
     public static final GetDomainBackupIamPolicyArgs Empty = new GetDomainBackupIamPolicyArgs();
 
     @Import(name="backupId", required=true)
-    private String backupId;
+    private Output<String> backupId;
 
-    public String backupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
 
     @Import(name="domainId", required=true)
-    private String domainId;
+    private Output<String> domainId;
 
-    public String domainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -69,24 +70,40 @@ public final class GetDomainBackupIamPolicyArgs extends com.pulumi.resources.Inv
             $ = new GetDomainBackupIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder backupId(String backupId) {
+        public Builder backupId(Output<String> backupId) {
             $.backupId = backupId;
             return this;
         }
 
-        public Builder domainId(String domainId) {
+        public Builder backupId(String backupId) {
+            return backupId(Output.of(backupId));
+        }
+
+        public Builder domainId(Output<String> domainId) {
             $.domainId = domainId;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder domainId(String domainId) {
+            return domainId(Output.of(domainId));
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetDomainBackupIamPolicyArgs build() {

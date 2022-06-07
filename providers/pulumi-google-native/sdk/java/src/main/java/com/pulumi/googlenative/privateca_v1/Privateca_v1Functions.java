@@ -3,17 +3,25 @@
 
 package com.pulumi.googlenative.privateca_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.privateca_v1.inputs.GetCaPoolArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs;
+import com.pulumi.googlenative.privateca_v1.inputs.GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyPlainArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.GetCaPoolIamPolicyArgs;
+import com.pulumi.googlenative.privateca_v1.inputs.GetCaPoolIamPolicyPlainArgs;
+import com.pulumi.googlenative.privateca_v1.inputs.GetCaPoolPlainArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.GetCertificateArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.GetCertificateAuthorityArgs;
+import com.pulumi.googlenative.privateca_v1.inputs.GetCertificateAuthorityPlainArgs;
+import com.pulumi.googlenative.privateca_v1.inputs.GetCertificatePlainArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.GetCertificateTemplateArgs;
 import com.pulumi.googlenative.privateca_v1.inputs.GetCertificateTemplateIamPolicyArgs;
+import com.pulumi.googlenative.privateca_v1.inputs.GetCertificateTemplateIamPolicyPlainArgs;
+import com.pulumi.googlenative.privateca_v1.inputs.GetCertificateTemplatePlainArgs;
 import com.pulumi.googlenative.privateca_v1.outputs.GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult;
 import com.pulumi.googlenative.privateca_v1.outputs.GetCaPoolIamPolicyResult;
 import com.pulumi.googlenative.privateca_v1.outputs.GetCaPoolResult;
@@ -28,98 +36,196 @@ public final class Privateca_v1Functions {
      * Returns a CaPool.
      * 
      */
-    public static CompletableFuture<GetCaPoolResult> getCaPool(GetCaPoolArgs args) {
+    public static Output<GetCaPoolResult> getCaPool(GetCaPoolArgs args) {
         return getCaPool(args, InvokeOptions.Empty);
     }
     /**
      * Returns a CaPool.
      * 
      */
-    public static CompletableFuture<GetCaPoolResult> getCaPool(GetCaPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCaPoolResult> getCaPoolPlain(GetCaPoolPlainArgs args) {
+        return getCaPoolPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns a CaPool.
+     * 
+     */
+    public static Output<GetCaPoolResult> getCaPool(GetCaPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:privateca/v1:getCaPool", TypeShape.of(GetCaPoolResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns a CaPool.
+     * 
+     */
+    public static CompletableFuture<GetCaPoolResult> getCaPoolPlain(GetCaPoolPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1:getCaPool", TypeShape.of(GetCaPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult> getCaPoolCertificateAuthorityCertificateRevocationListIamPolicy(GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs args) {
+    public static Output<GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult> getCaPoolCertificateAuthorityCertificateRevocationListIamPolicy(GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs args) {
         return getCaPoolCertificateAuthorityCertificateRevocationListIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult> getCaPoolCertificateAuthorityCertificateRevocationListIamPolicy(GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult> getCaPoolCertificateAuthorityCertificateRevocationListIamPolicyPlain(GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyPlainArgs args) {
+        return getCaPoolCertificateAuthorityCertificateRevocationListIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static Output<GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult> getCaPoolCertificateAuthorityCertificateRevocationListIamPolicy(GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:privateca/v1:getCaPoolCertificateAuthorityCertificateRevocationListIamPolicy", TypeShape.of(GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult> getCaPoolCertificateAuthorityCertificateRevocationListIamPolicyPlain(GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1:getCaPoolCertificateAuthorityCertificateRevocationListIamPolicy", TypeShape.of(GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetCaPoolIamPolicyResult> getCaPoolIamPolicy(GetCaPoolIamPolicyArgs args) {
+    public static Output<GetCaPoolIamPolicyResult> getCaPoolIamPolicy(GetCaPoolIamPolicyArgs args) {
         return getCaPoolIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetCaPoolIamPolicyResult> getCaPoolIamPolicy(GetCaPoolIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCaPoolIamPolicyResult> getCaPoolIamPolicyPlain(GetCaPoolIamPolicyPlainArgs args) {
+        return getCaPoolIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static Output<GetCaPoolIamPolicyResult> getCaPoolIamPolicy(GetCaPoolIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:privateca/v1:getCaPoolIamPolicy", TypeShape.of(GetCaPoolIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetCaPoolIamPolicyResult> getCaPoolIamPolicyPlain(GetCaPoolIamPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1:getCaPoolIamPolicy", TypeShape.of(GetCaPoolIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns a Certificate.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
      * Returns a Certificate.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args) {
+        return getCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns a Certificate.
+     * 
+     */
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:privateca/v1:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns a Certificate.
+     * 
+     */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns a CertificateAuthority.
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args) {
+    public static Output<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args) {
         return getCertificateAuthority(args, InvokeOptions.Empty);
     }
     /**
      * Returns a CertificateAuthority.
      * 
      */
-    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthorityPlain(GetCertificateAuthorityPlainArgs args) {
+        return getCertificateAuthorityPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns a CertificateAuthority.
+     * 
+     */
+    public static Output<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:privateca/v1:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns a CertificateAuthority.
+     * 
+     */
+    public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthorityPlain(GetCertificateAuthorityPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns a CertificateTemplate.
      * 
      */
-    public static CompletableFuture<GetCertificateTemplateResult> getCertificateTemplate(GetCertificateTemplateArgs args) {
+    public static Output<GetCertificateTemplateResult> getCertificateTemplate(GetCertificateTemplateArgs args) {
         return getCertificateTemplate(args, InvokeOptions.Empty);
     }
     /**
      * Returns a CertificateTemplate.
      * 
      */
-    public static CompletableFuture<GetCertificateTemplateResult> getCertificateTemplate(GetCertificateTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateTemplateResult> getCertificateTemplatePlain(GetCertificateTemplatePlainArgs args) {
+        return getCertificateTemplatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns a CertificateTemplate.
+     * 
+     */
+    public static Output<GetCertificateTemplateResult> getCertificateTemplate(GetCertificateTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:privateca/v1:getCertificateTemplate", TypeShape.of(GetCertificateTemplateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns a CertificateTemplate.
+     * 
+     */
+    public static CompletableFuture<GetCertificateTemplateResult> getCertificateTemplatePlain(GetCertificateTemplatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1:getCertificateTemplate", TypeShape.of(GetCertificateTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetCertificateTemplateIamPolicyResult> getCertificateTemplateIamPolicy(GetCertificateTemplateIamPolicyArgs args) {
+    public static Output<GetCertificateTemplateIamPolicyResult> getCertificateTemplateIamPolicy(GetCertificateTemplateIamPolicyArgs args) {
         return getCertificateTemplateIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetCertificateTemplateIamPolicyResult> getCertificateTemplateIamPolicy(GetCertificateTemplateIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateTemplateIamPolicyResult> getCertificateTemplateIamPolicyPlain(GetCertificateTemplateIamPolicyPlainArgs args) {
+        return getCertificateTemplateIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static Output<GetCertificateTemplateIamPolicyResult> getCertificateTemplateIamPolicy(GetCertificateTemplateIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:privateca/v1:getCertificateTemplateIamPolicy", TypeShape.of(GetCertificateTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetCertificateTemplateIamPolicyResult> getCertificateTemplateIamPolicyPlain(GetCertificateTemplateIamPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1:getCertificateTemplateIamPolicy", TypeShape.of(GetCertificateTemplateIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

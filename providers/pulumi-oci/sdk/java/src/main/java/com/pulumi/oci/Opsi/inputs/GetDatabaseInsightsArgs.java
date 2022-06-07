@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Opsi.inputs.GetDatabaseInsightsFilter;
+import com.pulumi.oci.Opsi.inputs.GetDatabaseInsightsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -37,13 +38,13 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return A flag to search all resources within a given compartment and all sub-compartments.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
@@ -52,13 +53,13 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="databaseIds")
-    private @Nullable List<String> databaseIds;
+    private @Nullable Output<List<String>> databaseIds;
 
     /**
      * @return Optional list of database [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the associated DBaaS entity.
      * 
      */
-    public Optional<List<String>> databaseIds() {
+    public Optional<Output<List<String>>> databaseIds() {
         return Optional.ofNullable(this.databaseIds);
     }
 
@@ -67,13 +68,13 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="databaseTypes")
-    private @Nullable List<String> databaseTypes;
+    private @Nullable Output<List<String>> databaseTypes;
 
     /**
      * @return Filter by one or more database type. Possible values are ADW-S, ATP-S, ADW-D, ATP-D, EXTERNAL-PDB, EXTERNAL-NONCDB.
      * 
      */
-    public Optional<List<String>> databaseTypes() {
+    public Optional<Output<List<String>>> databaseTypes() {
         return Optional.ofNullable(this.databaseTypes);
     }
 
@@ -82,13 +83,13 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enterpriseManagerBridgeId")
-    private @Nullable String enterpriseManagerBridgeId;
+    private @Nullable Output<String> enterpriseManagerBridgeId;
 
     /**
      * @return Unique Enterprise Manager bridge identifier
      * 
      */
-    public Optional<String> enterpriseManagerBridgeId() {
+    public Optional<Output<String>> enterpriseManagerBridgeId() {
         return Optional.ofNullable(this.enterpriseManagerBridgeId);
     }
 
@@ -97,13 +98,13 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="exadataInsightId")
-    private @Nullable String exadataInsightId;
+    private @Nullable Output<String> exadataInsightId;
 
     /**
      * @return [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of exadata insight resource.
      * 
      */
-    public Optional<String> exadataInsightId() {
+    public Optional<Output<String>> exadataInsightId() {
         return Optional.ofNullable(this.exadataInsightId);
     }
 
@@ -112,20 +113,20 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="fields")
-    private @Nullable List<String> fields;
+    private @Nullable Output<List<String>> fields;
 
     /**
      * @return Specifies the fields to return in a database summary response. By default all fields are returned if omitted.
      * 
      */
-    public Optional<List<String>> fields() {
+    public Optional<Output<List<String>>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDatabaseInsightsFilter> filters;
+    private @Nullable Output<List<GetDatabaseInsightsFilterArgs>> filters;
 
-    public Optional<List<GetDatabaseInsightsFilter>> filters() {
+    public Optional<Output<List<GetDatabaseInsightsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -134,13 +135,13 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Optional list of database insight resource [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -149,13 +150,13 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="opsiPrivateEndpointId")
-    private @Nullable String opsiPrivateEndpointId;
+    private @Nullable Output<String> opsiPrivateEndpointId;
 
     /**
      * @return Unique Operations Insights PrivateEndpoint identifier
      * 
      */
-    public Optional<String> opsiPrivateEndpointId() {
+    public Optional<Output<String>> opsiPrivateEndpointId() {
         return Optional.ofNullable(this.opsiPrivateEndpointId);
     }
 
@@ -164,13 +165,13 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="states")
-    private @Nullable List<String> states;
+    private @Nullable Output<List<String>> states;
 
     /**
      * @return Lifecycle states
      * 
      */
-    public Optional<List<String>> states() {
+    public Optional<Output<List<String>>> states() {
         return Optional.ofNullable(this.states);
     }
 
@@ -179,13 +180,13 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="statuses")
-    private @Nullable List<String> statuses;
+    private @Nullable Output<List<String>> statuses;
 
     /**
      * @return Resource Status
      * 
      */
-    public Optional<List<String>> statuses() {
+    public Optional<Output<List<String>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
 
@@ -230,8 +231,29 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree A flag to search all resources within a given compartment and all sub-compartments.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -241,8 +263,18 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param databaseIds Optional list of database [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the associated DBaaS entity.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseIds(@Nullable Output<List<String>> databaseIds) {
+            $.databaseIds = databaseIds;
             return this;
         }
 
@@ -252,9 +284,8 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder databaseIds(@Nullable List<String> databaseIds) {
-            $.databaseIds = databaseIds;
-            return this;
+        public Builder databaseIds(List<String> databaseIds) {
+            return databaseIds(Output.of(databaseIds));
         }
 
         /**
@@ -273,9 +304,19 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder databaseTypes(@Nullable List<String> databaseTypes) {
+        public Builder databaseTypes(@Nullable Output<List<String>> databaseTypes) {
             $.databaseTypes = databaseTypes;
             return this;
+        }
+
+        /**
+         * @param databaseTypes Filter by one or more database type. Possible values are ADW-S, ATP-S, ADW-D, ATP-D, EXTERNAL-PDB, EXTERNAL-NONCDB.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseTypes(List<String> databaseTypes) {
+            return databaseTypes(Output.of(databaseTypes));
         }
 
         /**
@@ -294,8 +335,29 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder enterpriseManagerBridgeId(@Nullable String enterpriseManagerBridgeId) {
+        public Builder enterpriseManagerBridgeId(@Nullable Output<String> enterpriseManagerBridgeId) {
             $.enterpriseManagerBridgeId = enterpriseManagerBridgeId;
+            return this;
+        }
+
+        /**
+         * @param enterpriseManagerBridgeId Unique Enterprise Manager bridge identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enterpriseManagerBridgeId(String enterpriseManagerBridgeId) {
+            return enterpriseManagerBridgeId(Output.of(enterpriseManagerBridgeId));
+        }
+
+        /**
+         * @param exadataInsightId [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of exadata insight resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exadataInsightId(@Nullable Output<String> exadataInsightId) {
+            $.exadataInsightId = exadataInsightId;
             return this;
         }
 
@@ -305,8 +367,18 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder exadataInsightId(@Nullable String exadataInsightId) {
-            $.exadataInsightId = exadataInsightId;
+        public Builder exadataInsightId(String exadataInsightId) {
+            return exadataInsightId(Output.of(exadataInsightId));
+        }
+
+        /**
+         * @param fields Specifies the fields to return in a database summary response. By default all fields are returned if omitted.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fields(@Nullable Output<List<String>> fields) {
+            $.fields = fields;
             return this;
         }
 
@@ -316,9 +388,8 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder fields(@Nullable List<String> fields) {
-            $.fields = fields;
-            return this;
+        public Builder fields(List<String> fields) {
+            return fields(Output.of(fields));
         }
 
         /**
@@ -331,12 +402,16 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
             return fields(List.of(fields));
         }
 
-        public Builder filters(@Nullable List<GetDatabaseInsightsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabaseInsightsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDatabaseInsightsFilter... filters) {
+        public Builder filters(List<GetDatabaseInsightsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDatabaseInsightsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -346,8 +421,29 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Optional list of database insight resource [OCIDs](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param opsiPrivateEndpointId Unique Operations Insights PrivateEndpoint identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder opsiPrivateEndpointId(@Nullable Output<String> opsiPrivateEndpointId) {
+            $.opsiPrivateEndpointId = opsiPrivateEndpointId;
             return this;
         }
 
@@ -357,8 +453,18 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder opsiPrivateEndpointId(@Nullable String opsiPrivateEndpointId) {
-            $.opsiPrivateEndpointId = opsiPrivateEndpointId;
+        public Builder opsiPrivateEndpointId(String opsiPrivateEndpointId) {
+            return opsiPrivateEndpointId(Output.of(opsiPrivateEndpointId));
+        }
+
+        /**
+         * @param states Lifecycle states
+         * 
+         * @return builder
+         * 
+         */
+        public Builder states(@Nullable Output<List<String>> states) {
+            $.states = states;
             return this;
         }
 
@@ -368,9 +474,8 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder states(@Nullable List<String> states) {
-            $.states = states;
-            return this;
+        public Builder states(List<String> states) {
+            return states(Output.of(states));
         }
 
         /**
@@ -389,9 +494,19 @@ public final class GetDatabaseInsightsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable List<String> statuses) {
+        public Builder statuses(@Nullable Output<List<String>> statuses) {
             $.statuses = statuses;
             return this;
+        }
+
+        /**
+         * @param statuses Resource Status
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statuses(List<String> statuses) {
+            return statuses(Output.of(statuses));
         }
 
         /**

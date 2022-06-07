@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="blobContainerSasUri", required=true)
-    private String blobContainerSasUri;
+    private Output<String> blobContainerSasUri;
 
     /**
      * @return SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
      * 
      */
-    public String blobContainerSasUri() {
+    public Output<String> blobContainerSasUri() {
         return this.blobContainerSasUri;
     }
 
@@ -35,13 +36,13 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="fromTime", required=true)
-    private String fromTime;
+    private Output<String> fromTime;
 
     /**
      * @return From time of the query
      * 
      */
-    public String fromTime() {
+    public Output<String> fromTime() {
         return this.fromTime;
     }
 
@@ -50,13 +51,13 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="groupByClientApplicationId")
-    private @Nullable Boolean groupByClientApplicationId;
+    private @Nullable Output<Boolean> groupByClientApplicationId;
 
     /**
      * @return Group query result by Client Application ID.
      * 
      */
-    public Optional<Boolean> groupByClientApplicationId() {
+    public Optional<Output<Boolean>> groupByClientApplicationId() {
         return Optional.ofNullable(this.groupByClientApplicationId);
     }
 
@@ -65,13 +66,13 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="groupByOperationName")
-    private @Nullable Boolean groupByOperationName;
+    private @Nullable Output<Boolean> groupByOperationName;
 
     /**
      * @return Group query result by Operation Name.
      * 
      */
-    public Optional<Boolean> groupByOperationName() {
+    public Optional<Output<Boolean>> groupByOperationName() {
         return Optional.ofNullable(this.groupByOperationName);
     }
 
@@ -80,13 +81,13 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="groupByResourceName")
-    private @Nullable Boolean groupByResourceName;
+    private @Nullable Output<Boolean> groupByResourceName;
 
     /**
      * @return Group query result by Resource Name.
      * 
      */
-    public Optional<Boolean> groupByResourceName() {
+    public Optional<Output<Boolean>> groupByResourceName() {
         return Optional.ofNullable(this.groupByResourceName);
     }
 
@@ -95,13 +96,13 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="groupByThrottlePolicy")
-    private @Nullable Boolean groupByThrottlePolicy;
+    private @Nullable Output<Boolean> groupByThrottlePolicy;
 
     /**
      * @return Group query result by Throttle Policy applied.
      * 
      */
-    public Optional<Boolean> groupByThrottlePolicy() {
+    public Optional<Output<Boolean>> groupByThrottlePolicy() {
         return Optional.ofNullable(this.groupByThrottlePolicy);
     }
 
@@ -110,13 +111,13 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="groupByUserAgent")
-    private @Nullable Boolean groupByUserAgent;
+    private @Nullable Output<Boolean> groupByUserAgent;
 
     /**
      * @return Group query result by User Agent.
      * 
      */
-    public Optional<Boolean> groupByUserAgent() {
+    public Optional<Output<Boolean>> groupByUserAgent() {
         return Optional.ofNullable(this.groupByUserAgent);
     }
 
@@ -125,13 +126,13 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return The location upon which virtual-machine-sizes is queried.
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -140,13 +141,13 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
      * 
      */
     @Import(name="toTime", required=true)
-    private String toTime;
+    private Output<String> toTime;
 
     /**
      * @return To time of the query
      * 
      */
-    public String toTime() {
+    public Output<String> toTime() {
         return this.toTime;
     }
 
@@ -188,8 +189,29 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder blobContainerSasUri(String blobContainerSasUri) {
+        public Builder blobContainerSasUri(Output<String> blobContainerSasUri) {
             $.blobContainerSasUri = blobContainerSasUri;
+            return this;
+        }
+
+        /**
+         * @param blobContainerSasUri SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blobContainerSasUri(String blobContainerSasUri) {
+            return blobContainerSasUri(Output.of(blobContainerSasUri));
+        }
+
+        /**
+         * @param fromTime From time of the query
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fromTime(Output<String> fromTime) {
+            $.fromTime = fromTime;
             return this;
         }
 
@@ -200,7 +222,17 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
          * 
          */
         public Builder fromTime(String fromTime) {
-            $.fromTime = fromTime;
+            return fromTime(Output.of(fromTime));
+        }
+
+        /**
+         * @param groupByClientApplicationId Group query result by Client Application ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupByClientApplicationId(@Nullable Output<Boolean> groupByClientApplicationId) {
+            $.groupByClientApplicationId = groupByClientApplicationId;
             return this;
         }
 
@@ -210,8 +242,18 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder groupByClientApplicationId(@Nullable Boolean groupByClientApplicationId) {
-            $.groupByClientApplicationId = groupByClientApplicationId;
+        public Builder groupByClientApplicationId(Boolean groupByClientApplicationId) {
+            return groupByClientApplicationId(Output.of(groupByClientApplicationId));
+        }
+
+        /**
+         * @param groupByOperationName Group query result by Operation Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupByOperationName(@Nullable Output<Boolean> groupByOperationName) {
+            $.groupByOperationName = groupByOperationName;
             return this;
         }
 
@@ -221,8 +263,18 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder groupByOperationName(@Nullable Boolean groupByOperationName) {
-            $.groupByOperationName = groupByOperationName;
+        public Builder groupByOperationName(Boolean groupByOperationName) {
+            return groupByOperationName(Output.of(groupByOperationName));
+        }
+
+        /**
+         * @param groupByResourceName Group query result by Resource Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupByResourceName(@Nullable Output<Boolean> groupByResourceName) {
+            $.groupByResourceName = groupByResourceName;
             return this;
         }
 
@@ -232,8 +284,18 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder groupByResourceName(@Nullable Boolean groupByResourceName) {
-            $.groupByResourceName = groupByResourceName;
+        public Builder groupByResourceName(Boolean groupByResourceName) {
+            return groupByResourceName(Output.of(groupByResourceName));
+        }
+
+        /**
+         * @param groupByThrottlePolicy Group query result by Throttle Policy applied.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupByThrottlePolicy(@Nullable Output<Boolean> groupByThrottlePolicy) {
+            $.groupByThrottlePolicy = groupByThrottlePolicy;
             return this;
         }
 
@@ -243,8 +305,18 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder groupByThrottlePolicy(@Nullable Boolean groupByThrottlePolicy) {
-            $.groupByThrottlePolicy = groupByThrottlePolicy;
+        public Builder groupByThrottlePolicy(Boolean groupByThrottlePolicy) {
+            return groupByThrottlePolicy(Output.of(groupByThrottlePolicy));
+        }
+
+        /**
+         * @param groupByUserAgent Group query result by User Agent.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupByUserAgent(@Nullable Output<Boolean> groupByUserAgent) {
+            $.groupByUserAgent = groupByUserAgent;
             return this;
         }
 
@@ -254,8 +326,18 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder groupByUserAgent(@Nullable Boolean groupByUserAgent) {
-            $.groupByUserAgent = groupByUserAgent;
+        public Builder groupByUserAgent(Boolean groupByUserAgent) {
+            return groupByUserAgent(Output.of(groupByUserAgent));
+        }
+
+        /**
+         * @param location The location upon which virtual-machine-sizes is queried.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(Output<String> location) {
+            $.location = location;
             return this;
         }
 
@@ -266,7 +348,17 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
          * 
          */
         public Builder location(String location) {
-            $.location = location;
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param toTime To time of the query
+         * 
+         * @return builder
+         * 
+         */
+        public Builder toTime(Output<String> toTime) {
+            $.toTime = toTime;
             return this;
         }
 
@@ -277,8 +369,7 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends com.pulumi.
          * 
          */
         public Builder toTime(String toTime) {
-            $.toTime = toTime;
-            return this;
+            return toTime(Output.of(toTime));
         }
 
         public GetLogAnalyticExportThrottledRequestsArgs build() {

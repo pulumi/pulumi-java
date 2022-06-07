@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.directoryservice.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetDirectoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="directoryId", required=true)
-    private String directoryId;
+    private Output<String> directoryId;
 
     /**
      * @return The ID of the directory.
      * 
      */
-    public String directoryId() {
+    public Output<String> directoryId() {
         return this.directoryId;
     }
 
@@ -35,13 +36,13 @@ public final class GetDirectoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags assigned to the directory/connector.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -76,8 +77,29 @@ public final class GetDirectoryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder directoryId(String directoryId) {
+        public Builder directoryId(Output<String> directoryId) {
             $.directoryId = directoryId;
+            return this;
+        }
+
+        /**
+         * @param directoryId The ID of the directory.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder directoryId(String directoryId) {
+            return directoryId(Output.of(directoryId));
+        }
+
+        /**
+         * @param tags A map of tags assigned to the directory/connector.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -87,9 +109,8 @@ public final class GetDirectoryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetDirectoryArgs build() {

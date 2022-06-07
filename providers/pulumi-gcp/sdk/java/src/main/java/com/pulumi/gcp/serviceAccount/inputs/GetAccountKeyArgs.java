@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.serviceAccount.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the service account key. This must have format
@@ -29,7 +30,7 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
      * is the email address or unique id of the service account.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -39,14 +40,14 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The ID of the project that the service account will be created in.
      * Defaults to the provider project configuration.
      * 
      */
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -55,13 +56,13 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicKeyType")
-    private @Nullable String publicKeyType;
+    private @Nullable Output<String> publicKeyType;
 
     /**
      * @return The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
      * 
      */
-    public Optional<String> publicKeyType() {
+    public Optional<Output<String>> publicKeyType() {
         return Optional.ofNullable(this.publicKeyType);
     }
 
@@ -99,8 +100,32 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the service account key. This must have format
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{KEYID}`, where `{ACCOUNT}`
+         * is the email address or unique id of the service account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The ID of the project that the service account will be created in.
+         * Defaults to the provider project configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable Output<String> project) {
+            $.project = project;
             return this;
         }
 
@@ -111,8 +136,18 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
-            $.project = project;
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param publicKeyType The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicKeyType(@Nullable Output<String> publicKeyType) {
+            $.publicKeyType = publicKeyType;
             return this;
         }
 
@@ -122,9 +157,8 @@ public final class GetAccountKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicKeyType(@Nullable String publicKeyType) {
-            $.publicKeyType = publicKeyType;
-            return this;
+        public Builder publicKeyType(String publicKeyType) {
+            return publicKeyType(Output.of(publicKeyType));
         }
 
         public GetAccountKeyArgs build() {

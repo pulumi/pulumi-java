@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetRepositoryObjectContentArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="filePath")
-    private @Nullable String filePath;
+    private @Nullable Output<String> filePath;
 
     /**
      * @return A filter to return only commits that affect any of the specified paths.
      * 
      */
-    public Optional<String> filePath() {
+    public Optional<Output<String>> filePath() {
         return Optional.ofNullable(this.filePath);
     }
 
@@ -34,13 +35,13 @@ public final class GetRepositoryObjectContentArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -49,13 +50,13 @@ public final class GetRepositoryObjectContentArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="sha", required=true)
-    private String sha;
+    private Output<String> sha;
 
     /**
      * @return The SHA of a blob or tree.
      * 
      */
-    public String sha() {
+    public Output<String> sha() {
         return this.sha;
     }
 
@@ -91,8 +92,29 @@ public final class GetRepositoryObjectContentArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder filePath(@Nullable String filePath) {
+        public Builder filePath(@Nullable Output<String> filePath) {
             $.filePath = filePath;
+            return this;
+        }
+
+        /**
+         * @param filePath A filter to return only commits that affect any of the specified paths.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filePath(String filePath) {
+            return filePath(Output.of(filePath));
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetRepositoryObjectContentArgs extends com.pulumi.resources.I
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
+            return repositoryId(Output.of(repositoryId));
+        }
+
+        /**
+         * @param sha The SHA of a blob or tree.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sha(Output<String> sha) {
+            $.sha = sha;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetRepositoryObjectContentArgs extends com.pulumi.resources.I
          * 
          */
         public Builder sha(String sha) {
-            $.sha = sha;
-            return this;
+            return sha(Output.of(sha));
         }
 
         public GetRepositoryObjectContentArgs build() {

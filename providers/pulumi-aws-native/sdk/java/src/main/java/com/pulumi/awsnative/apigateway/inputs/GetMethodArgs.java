@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.apigateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMethodArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpMethod", required=true)
-    private String httpMethod;
+    private Output<String> httpMethod;
 
     /**
      * @return The backend system that the method calls when it receives a request.
      * 
      */
-    public String httpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
 
@@ -32,13 +33,13 @@ public final class GetMethodArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceId", required=true)
-    private String resourceId;
+    private Output<String> resourceId;
 
     /**
      * @return The ID of an API Gateway resource.
      * 
      */
-    public String resourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -47,13 +48,13 @@ public final class GetMethodArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-    private String restApiId;
+    private Output<String> restApiId;
 
     /**
      * @return The ID of the RestApi resource in which API Gateway creates the method.
      * 
      */
-    public String restApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -89,8 +90,29 @@ public final class GetMethodArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpMethod(String httpMethod) {
+        public Builder httpMethod(Output<String> httpMethod) {
             $.httpMethod = httpMethod;
+            return this;
+        }
+
+        /**
+         * @param httpMethod The backend system that the method calls when it receives a request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder httpMethod(String httpMethod) {
+            return httpMethod(Output.of(httpMethod));
+        }
+
+        /**
+         * @param resourceId The ID of an API Gateway resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceId(Output<String> resourceId) {
+            $.resourceId = resourceId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetMethodArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceId(String resourceId) {
-            $.resourceId = resourceId;
+            return resourceId(Output.of(resourceId));
+        }
+
+        /**
+         * @param restApiId The ID of the RestApi resource in which API Gateway creates the method.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder restApiId(Output<String> restApiId) {
+            $.restApiId = restApiId;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetMethodArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder restApiId(String restApiId) {
-            $.restApiId = restApiId;
-            return this;
+            return restApiId(Output.of(restApiId));
         }
 
         public GetMethodArgs build() {

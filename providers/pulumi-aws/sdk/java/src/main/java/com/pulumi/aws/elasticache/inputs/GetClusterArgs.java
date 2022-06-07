@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.elasticache.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterId", required=true)
-    private String clusterId;
+    private Output<String> clusterId;
 
     /**
      * @return Group identifier.
      * 
      */
-    public String clusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -35,13 +36,13 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return The tags assigned to the resource
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -76,8 +77,29 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterId(String clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * @param clusterId Group identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
+        }
+
+        /**
+         * @param tags The tags assigned to the resource
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -87,9 +109,8 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetClusterArgs build() {

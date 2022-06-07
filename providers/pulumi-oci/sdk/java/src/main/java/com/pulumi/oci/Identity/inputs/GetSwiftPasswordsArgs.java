@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetSwiftPasswordsFilter;
+import com.pulumi.oci.Identity.inputs.GetSwiftPasswordsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetSwiftPasswordsArgs extends com.pulumi.resources.InvokeArgs
     public static final GetSwiftPasswordsArgs Empty = new GetSwiftPasswordsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetSwiftPasswordsFilter> filters;
+    private @Nullable Output<List<GetSwiftPasswordsFilterArgs>> filters;
 
-    public Optional<List<GetSwiftPasswordsFilter>> filters() {
+    public Optional<Output<List<GetSwiftPasswordsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetSwiftPasswordsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="userId", required=true)
-    private String userId;
+    private Output<String> userId;
 
     /**
      * @return The OCID of the user.
      * 
      */
-    public String userId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -63,12 +64,16 @@ public final class GetSwiftPasswordsArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetSwiftPasswordsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetSwiftPasswordsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetSwiftPasswordsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSwiftPasswordsFilter... filters) {
+        public Builder filters(List<GetSwiftPasswordsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSwiftPasswordsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetSwiftPasswordsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder userId(String userId) {
+        public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
+        }
+
+        /**
+         * @param userId The OCID of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
         }
 
         public GetSwiftPasswordsArgs build() {

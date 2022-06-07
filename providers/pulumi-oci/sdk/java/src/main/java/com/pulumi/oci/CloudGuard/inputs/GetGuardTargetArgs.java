@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.CloudGuard.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGuardTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetId", required=true)
-    private String targetId;
+    private Output<String> targetId;
 
     /**
      * @return OCID of target
      * 
      */
-    public String targetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 
@@ -57,9 +58,19 @@ public final class GetGuardTargetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder targetId(String targetId) {
+        public Builder targetId(Output<String> targetId) {
             $.targetId = targetId;
             return this;
+        }
+
+        /**
+         * @param targetId OCID of target
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetId(String targetId) {
+            return targetId(Output.of(targetId));
         }
 
         public GetGuardTargetArgs build() {

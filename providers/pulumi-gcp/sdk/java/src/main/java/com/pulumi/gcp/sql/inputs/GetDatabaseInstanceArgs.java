@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetDatabaseInstanceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the instance.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -34,13 +35,13 @@ public final class GetDatabaseInstanceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The ID of the project in which the resource belongs.
      * 
      */
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -75,8 +76,29 @@ public final class GetDatabaseInstanceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable Output<String> project) {
+            $.project = project;
             return this;
         }
 
@@ -86,9 +108,8 @@ public final class GetDatabaseInstanceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
-            $.project = project;
-            return this;
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetDatabaseInstanceArgs build() {

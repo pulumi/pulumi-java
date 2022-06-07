@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.redshift.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetScheduledActionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scheduledActionName", required=true)
-    private String scheduledActionName;
+    private Output<String> scheduledActionName;
 
     /**
      * @return The name of the scheduled action. The name must be unique within an account.
      * 
      */
-    public String scheduledActionName() {
+    public Output<String> scheduledActionName() {
         return this.scheduledActionName;
     }
 
@@ -57,9 +58,19 @@ public final class GetScheduledActionArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder scheduledActionName(String scheduledActionName) {
+        public Builder scheduledActionName(Output<String> scheduledActionName) {
             $.scheduledActionName = scheduledActionName;
             return this;
+        }
+
+        /**
+         * @param scheduledActionName The name of the scheduled action. The name must be unique within an account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scheduledActionName(String scheduledActionName) {
+            return scheduledActionName(Output.of(scheduledActionName));
         }
 
         public GetScheduledActionArgs build() {

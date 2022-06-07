@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OperatorAccessControl.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetControlAssignmentArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="operatorControlAssignmentId", required=true)
-    private String operatorControlAssignmentId;
+    private Output<String> operatorControlAssignmentId;
 
     /**
      * @return unique OperatorControl identifier
      * 
      */
-    public String operatorControlAssignmentId() {
+    public Output<String> operatorControlAssignmentId() {
         return this.operatorControlAssignmentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetControlAssignmentArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder operatorControlAssignmentId(String operatorControlAssignmentId) {
+        public Builder operatorControlAssignmentId(Output<String> operatorControlAssignmentId) {
             $.operatorControlAssignmentId = operatorControlAssignmentId;
             return this;
+        }
+
+        /**
+         * @param operatorControlAssignmentId unique OperatorControl identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operatorControlAssignmentId(String operatorControlAssignmentId) {
+            return operatorControlAssignmentId(Output.of(operatorControlAssignmentId));
         }
 
         public GetControlAssignmentArgs build() {

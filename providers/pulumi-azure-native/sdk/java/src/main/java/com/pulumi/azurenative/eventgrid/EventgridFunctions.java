@@ -6,38 +6,72 @@ package com.pulumi.azurenative.eventgrid;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.eventgrid.inputs.GetChannelArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetChannelFullUrlArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetChannelFullUrlPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetChannelPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetDomainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetDomainEventSubscriptionArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetDomainEventSubscriptionDeliveryAttributesArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetDomainEventSubscriptionDeliveryAttributesPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetDomainEventSubscriptionFullUrlArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetDomainEventSubscriptionFullUrlPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetDomainEventSubscriptionPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetDomainPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetDomainTopicArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetDomainTopicEventSubscriptionArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetDomainTopicEventSubscriptionDeliveryAttributesArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetDomainTopicEventSubscriptionDeliveryAttributesPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetDomainTopicEventSubscriptionFullUrlArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetDomainTopicEventSubscriptionFullUrlPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetDomainTopicEventSubscriptionPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetDomainTopicPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetEventChannelArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetEventChannelPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionDeliveryAttributesArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionDeliveryAttributesPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionFullUrlArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionFullUrlPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetEventSubscriptionPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetPartnerConfigurationArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetPartnerConfigurationPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetPartnerDestinationArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetPartnerDestinationPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetPartnerNamespaceArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetPartnerNamespacePlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetPartnerRegistrationArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetPartnerRegistrationPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionDeliveryAttributesArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionDeliveryAttributesPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionFullUrlArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionFullUrlPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicEventSubscriptionPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetPartnerTopicPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetSystemTopicArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionDeliveryAttributesArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionDeliveryAttributesPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionFullUrlArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionFullUrlPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetSystemTopicEventSubscriptionPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetSystemTopicPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetTopicArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetTopicEventSubscriptionArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetTopicEventSubscriptionDeliveryAttributesArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetTopicEventSubscriptionDeliveryAttributesPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.GetTopicEventSubscriptionFullUrlArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetTopicEventSubscriptionFullUrlPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetTopicEventSubscriptionPlainArgs;
+import com.pulumi.azurenative.eventgrid.inputs.GetTopicPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.ListDomainSharedAccessKeysArgs;
+import com.pulumi.azurenative.eventgrid.inputs.ListDomainSharedAccessKeysPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.ListPartnerNamespaceSharedAccessKeysArgs;
+import com.pulumi.azurenative.eventgrid.inputs.ListPartnerNamespaceSharedAccessKeysPlainArgs;
 import com.pulumi.azurenative.eventgrid.inputs.ListTopicSharedAccessKeysArgs;
+import com.pulumi.azurenative.eventgrid.inputs.ListTopicSharedAccessKeysPlainArgs;
 import com.pulumi.azurenative.eventgrid.outputs.GetChannelFullUrlResult;
 import com.pulumi.azurenative.eventgrid.outputs.GetChannelResult;
 import com.pulumi.azurenative.eventgrid.outputs.GetDomainEventSubscriptionDeliveryAttributesResult;
@@ -72,6 +106,7 @@ import com.pulumi.azurenative.eventgrid.outputs.GetTopicResult;
 import com.pulumi.azurenative.eventgrid.outputs.ListDomainSharedAccessKeysResult;
 import com.pulumi.azurenative.eventgrid.outputs.ListPartnerNamespaceSharedAccessKeysResult;
 import com.pulumi.azurenative.eventgrid.outputs.ListTopicSharedAccessKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -83,7 +118,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
+    public static Output<GetChannelResult> getChannel(GetChannelArgs args) {
         return getChannel(args, InvokeOptions.Empty);
     }
     /**
@@ -91,7 +126,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetChannelResult> getChannelPlain(GetChannelPlainArgs args) {
+        return getChannelPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Channel info.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Channel info.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetChannelResult> getChannelPlain(GetChannelPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -99,7 +150,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetChannelFullUrlResult> getChannelFullUrl(GetChannelFullUrlArgs args) {
+    public static Output<GetChannelFullUrlResult> getChannelFullUrl(GetChannelFullUrlArgs args) {
         return getChannelFullUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -107,7 +158,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetChannelFullUrlResult> getChannelFullUrl(GetChannelFullUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetChannelFullUrlResult> getChannelFullUrlPlain(GetChannelFullUrlPlainArgs args) {
+        return getChannelFullUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetChannelFullUrlResult> getChannelFullUrl(GetChannelFullUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getChannelFullUrl", TypeShape.of(GetChannelFullUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetChannelFullUrlResult> getChannelFullUrlPlain(GetChannelFullUrlPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getChannelFullUrl", TypeShape.of(GetChannelFullUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -115,7 +182,7 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -123,7 +190,23 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args) {
+        return getDomainPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * EventGrid Domain.
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * EventGrid Domain.
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -131,7 +214,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainEventSubscriptionResult> getDomainEventSubscription(GetDomainEventSubscriptionArgs args) {
+    public static Output<GetDomainEventSubscriptionResult> getDomainEventSubscription(GetDomainEventSubscriptionArgs args) {
         return getDomainEventSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -139,7 +222,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainEventSubscriptionResult> getDomainEventSubscription(GetDomainEventSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainEventSubscriptionResult> getDomainEventSubscriptionPlain(GetDomainEventSubscriptionPlainArgs args) {
+        return getDomainEventSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Event Subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetDomainEventSubscriptionResult> getDomainEventSubscription(GetDomainEventSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getDomainEventSubscription", TypeShape.of(GetDomainEventSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Event Subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetDomainEventSubscriptionResult> getDomainEventSubscriptionPlain(GetDomainEventSubscriptionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomainEventSubscription", TypeShape.of(GetDomainEventSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -147,7 +246,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainEventSubscriptionDeliveryAttributesResult> getDomainEventSubscriptionDeliveryAttributes(GetDomainEventSubscriptionDeliveryAttributesArgs args) {
+    public static Output<GetDomainEventSubscriptionDeliveryAttributesResult> getDomainEventSubscriptionDeliveryAttributes(GetDomainEventSubscriptionDeliveryAttributesArgs args) {
         return getDomainEventSubscriptionDeliveryAttributes(args, InvokeOptions.Empty);
     }
     /**
@@ -155,7 +254,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainEventSubscriptionDeliveryAttributesResult> getDomainEventSubscriptionDeliveryAttributes(GetDomainEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainEventSubscriptionDeliveryAttributesResult> getDomainEventSubscriptionDeliveryAttributesPlain(GetDomainEventSubscriptionDeliveryAttributesPlainArgs args) {
+        return getDomainEventSubscriptionDeliveryAttributesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetDomainEventSubscriptionDeliveryAttributesResult> getDomainEventSubscriptionDeliveryAttributes(GetDomainEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getDomainEventSubscriptionDeliveryAttributes", TypeShape.of(GetDomainEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetDomainEventSubscriptionDeliveryAttributesResult> getDomainEventSubscriptionDeliveryAttributesPlain(GetDomainEventSubscriptionDeliveryAttributesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomainEventSubscriptionDeliveryAttributes", TypeShape.of(GetDomainEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -163,7 +278,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainEventSubscriptionFullUrlResult> getDomainEventSubscriptionFullUrl(GetDomainEventSubscriptionFullUrlArgs args) {
+    public static Output<GetDomainEventSubscriptionFullUrlResult> getDomainEventSubscriptionFullUrl(GetDomainEventSubscriptionFullUrlArgs args) {
         return getDomainEventSubscriptionFullUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -171,7 +286,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainEventSubscriptionFullUrlResult> getDomainEventSubscriptionFullUrl(GetDomainEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainEventSubscriptionFullUrlResult> getDomainEventSubscriptionFullUrlPlain(GetDomainEventSubscriptionFullUrlPlainArgs args) {
+        return getDomainEventSubscriptionFullUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetDomainEventSubscriptionFullUrlResult> getDomainEventSubscriptionFullUrl(GetDomainEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getDomainEventSubscriptionFullUrl", TypeShape.of(GetDomainEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetDomainEventSubscriptionFullUrlResult> getDomainEventSubscriptionFullUrlPlain(GetDomainEventSubscriptionFullUrlPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomainEventSubscriptionFullUrl", TypeShape.of(GetDomainEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -179,7 +310,7 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetDomainTopicResult> getDomainTopic(GetDomainTopicArgs args) {
+    public static Output<GetDomainTopicResult> getDomainTopic(GetDomainTopicArgs args) {
         return getDomainTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -187,7 +318,23 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetDomainTopicResult> getDomainTopic(GetDomainTopicArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainTopicResult> getDomainTopicPlain(GetDomainTopicPlainArgs args) {
+        return getDomainTopicPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Domain Topic.
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static Output<GetDomainTopicResult> getDomainTopic(GetDomainTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getDomainTopic", TypeShape.of(GetDomainTopicResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Domain Topic.
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<GetDomainTopicResult> getDomainTopicPlain(GetDomainTopicPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomainTopic", TypeShape.of(GetDomainTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -195,7 +342,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainTopicEventSubscriptionResult> getDomainTopicEventSubscription(GetDomainTopicEventSubscriptionArgs args) {
+    public static Output<GetDomainTopicEventSubscriptionResult> getDomainTopicEventSubscription(GetDomainTopicEventSubscriptionArgs args) {
         return getDomainTopicEventSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -203,7 +350,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainTopicEventSubscriptionResult> getDomainTopicEventSubscription(GetDomainTopicEventSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainTopicEventSubscriptionResult> getDomainTopicEventSubscriptionPlain(GetDomainTopicEventSubscriptionPlainArgs args) {
+        return getDomainTopicEventSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Event Subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetDomainTopicEventSubscriptionResult> getDomainTopicEventSubscription(GetDomainTopicEventSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getDomainTopicEventSubscription", TypeShape.of(GetDomainTopicEventSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Event Subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetDomainTopicEventSubscriptionResult> getDomainTopicEventSubscriptionPlain(GetDomainTopicEventSubscriptionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomainTopicEventSubscription", TypeShape.of(GetDomainTopicEventSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -211,7 +374,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainTopicEventSubscriptionDeliveryAttributesResult> getDomainTopicEventSubscriptionDeliveryAttributes(GetDomainTopicEventSubscriptionDeliveryAttributesArgs args) {
+    public static Output<GetDomainTopicEventSubscriptionDeliveryAttributesResult> getDomainTopicEventSubscriptionDeliveryAttributes(GetDomainTopicEventSubscriptionDeliveryAttributesArgs args) {
         return getDomainTopicEventSubscriptionDeliveryAttributes(args, InvokeOptions.Empty);
     }
     /**
@@ -219,7 +382,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainTopicEventSubscriptionDeliveryAttributesResult> getDomainTopicEventSubscriptionDeliveryAttributes(GetDomainTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainTopicEventSubscriptionDeliveryAttributesResult> getDomainTopicEventSubscriptionDeliveryAttributesPlain(GetDomainTopicEventSubscriptionDeliveryAttributesPlainArgs args) {
+        return getDomainTopicEventSubscriptionDeliveryAttributesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetDomainTopicEventSubscriptionDeliveryAttributesResult> getDomainTopicEventSubscriptionDeliveryAttributes(GetDomainTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getDomainTopicEventSubscriptionDeliveryAttributes", TypeShape.of(GetDomainTopicEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetDomainTopicEventSubscriptionDeliveryAttributesResult> getDomainTopicEventSubscriptionDeliveryAttributesPlain(GetDomainTopicEventSubscriptionDeliveryAttributesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomainTopicEventSubscriptionDeliveryAttributes", TypeShape.of(GetDomainTopicEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -227,7 +406,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainTopicEventSubscriptionFullUrlResult> getDomainTopicEventSubscriptionFullUrl(GetDomainTopicEventSubscriptionFullUrlArgs args) {
+    public static Output<GetDomainTopicEventSubscriptionFullUrlResult> getDomainTopicEventSubscriptionFullUrl(GetDomainTopicEventSubscriptionFullUrlArgs args) {
         return getDomainTopicEventSubscriptionFullUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -235,7 +414,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetDomainTopicEventSubscriptionFullUrlResult> getDomainTopicEventSubscriptionFullUrl(GetDomainTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainTopicEventSubscriptionFullUrlResult> getDomainTopicEventSubscriptionFullUrlPlain(GetDomainTopicEventSubscriptionFullUrlPlainArgs args) {
+        return getDomainTopicEventSubscriptionFullUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetDomainTopicEventSubscriptionFullUrlResult> getDomainTopicEventSubscriptionFullUrl(GetDomainTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getDomainTopicEventSubscriptionFullUrl", TypeShape.of(GetDomainTopicEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetDomainTopicEventSubscriptionFullUrlResult> getDomainTopicEventSubscriptionFullUrlPlain(GetDomainTopicEventSubscriptionFullUrlPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomainTopicEventSubscriptionFullUrl", TypeShape.of(GetDomainTopicEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -243,7 +438,7 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventChannelResult> getEventChannel(GetEventChannelArgs args) {
+    public static Output<GetEventChannelResult> getEventChannel(GetEventChannelArgs args) {
         return getEventChannel(args, InvokeOptions.Empty);
     }
     /**
@@ -251,7 +446,23 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventChannelResult> getEventChannel(GetEventChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventChannelResult> getEventChannelPlain(GetEventChannelPlainArgs args) {
+        return getEventChannelPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Event Channel.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetEventChannelResult> getEventChannel(GetEventChannelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getEventChannel", TypeShape.of(GetEventChannelResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Event Channel.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetEventChannelResult> getEventChannelPlain(GetEventChannelPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventChannel", TypeShape.of(GetEventChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -259,7 +470,7 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetEventSubscriptionResult> getEventSubscription(GetEventSubscriptionArgs args) {
+    public static Output<GetEventSubscriptionResult> getEventSubscription(GetEventSubscriptionArgs args) {
         return getEventSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -267,7 +478,23 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetEventSubscriptionResult> getEventSubscription(GetEventSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventSubscriptionResult> getEventSubscriptionPlain(GetEventSubscriptionPlainArgs args) {
+        return getEventSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Event Subscription
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static Output<GetEventSubscriptionResult> getEventSubscription(GetEventSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getEventSubscription", TypeShape.of(GetEventSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Event Subscription
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<GetEventSubscriptionResult> getEventSubscriptionPlain(GetEventSubscriptionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventSubscription", TypeShape.of(GetEventSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -275,7 +502,7 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventSubscriptionDeliveryAttributesResult> getEventSubscriptionDeliveryAttributes(GetEventSubscriptionDeliveryAttributesArgs args) {
+    public static Output<GetEventSubscriptionDeliveryAttributesResult> getEventSubscriptionDeliveryAttributes(GetEventSubscriptionDeliveryAttributesArgs args) {
         return getEventSubscriptionDeliveryAttributes(args, InvokeOptions.Empty);
     }
     /**
@@ -283,7 +510,23 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetEventSubscriptionDeliveryAttributesResult> getEventSubscriptionDeliveryAttributes(GetEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventSubscriptionDeliveryAttributesResult> getEventSubscriptionDeliveryAttributesPlain(GetEventSubscriptionDeliveryAttributesPlainArgs args) {
+        return getEventSubscriptionDeliveryAttributesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetEventSubscriptionDeliveryAttributesResult> getEventSubscriptionDeliveryAttributes(GetEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getEventSubscriptionDeliveryAttributes", TypeShape.of(GetEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetEventSubscriptionDeliveryAttributesResult> getEventSubscriptionDeliveryAttributesPlain(GetEventSubscriptionDeliveryAttributesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventSubscriptionDeliveryAttributes", TypeShape.of(GetEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -291,7 +534,7 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetEventSubscriptionFullUrlResult> getEventSubscriptionFullUrl(GetEventSubscriptionFullUrlArgs args) {
+    public static Output<GetEventSubscriptionFullUrlResult> getEventSubscriptionFullUrl(GetEventSubscriptionFullUrlArgs args) {
         return getEventSubscriptionFullUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -299,7 +542,23 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetEventSubscriptionFullUrlResult> getEventSubscriptionFullUrl(GetEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventSubscriptionFullUrlResult> getEventSubscriptionFullUrlPlain(GetEventSubscriptionFullUrlPlainArgs args) {
+        return getEventSubscriptionFullUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static Output<GetEventSubscriptionFullUrlResult> getEventSubscriptionFullUrl(GetEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getEventSubscriptionFullUrl", TypeShape.of(GetEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<GetEventSubscriptionFullUrlResult> getEventSubscriptionFullUrlPlain(GetEventSubscriptionFullUrlPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventSubscriptionFullUrl", TypeShape.of(GetEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -307,7 +566,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerConfigurationResult> getPartnerConfiguration(GetPartnerConfigurationArgs args) {
+    public static Output<GetPartnerConfigurationResult> getPartnerConfiguration(GetPartnerConfigurationArgs args) {
         return getPartnerConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -315,7 +574,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerConfigurationResult> getPartnerConfiguration(GetPartnerConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerConfigurationResult> getPartnerConfigurationPlain(GetPartnerConfigurationPlainArgs args) {
+        return getPartnerConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Partner configuration information
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetPartnerConfigurationResult> getPartnerConfiguration(GetPartnerConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getPartnerConfiguration", TypeShape.of(GetPartnerConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Partner configuration information
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetPartnerConfigurationResult> getPartnerConfigurationPlain(GetPartnerConfigurationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerConfiguration", TypeShape.of(GetPartnerConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -323,7 +598,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerDestinationResult> getPartnerDestination(GetPartnerDestinationArgs args) {
+    public static Output<GetPartnerDestinationResult> getPartnerDestination(GetPartnerDestinationArgs args) {
         return getPartnerDestination(args, InvokeOptions.Empty);
     }
     /**
@@ -331,7 +606,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerDestinationResult> getPartnerDestination(GetPartnerDestinationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerDestinationResult> getPartnerDestinationPlain(GetPartnerDestinationPlainArgs args) {
+        return getPartnerDestinationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Event Grid Partner Destination.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetPartnerDestinationResult> getPartnerDestination(GetPartnerDestinationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getPartnerDestination", TypeShape.of(GetPartnerDestinationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Event Grid Partner Destination.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetPartnerDestinationResult> getPartnerDestinationPlain(GetPartnerDestinationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerDestination", TypeShape.of(GetPartnerDestinationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -339,7 +630,7 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerNamespaceResult> getPartnerNamespace(GetPartnerNamespaceArgs args) {
+    public static Output<GetPartnerNamespaceResult> getPartnerNamespace(GetPartnerNamespaceArgs args) {
         return getPartnerNamespace(args, InvokeOptions.Empty);
     }
     /**
@@ -347,7 +638,23 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerNamespaceResult> getPartnerNamespace(GetPartnerNamespaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerNamespaceResult> getPartnerNamespacePlain(GetPartnerNamespacePlainArgs args) {
+        return getPartnerNamespacePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * EventGrid Partner Namespace.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetPartnerNamespaceResult> getPartnerNamespace(GetPartnerNamespaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getPartnerNamespace", TypeShape.of(GetPartnerNamespaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * EventGrid Partner Namespace.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPartnerNamespaceResult> getPartnerNamespacePlain(GetPartnerNamespacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerNamespace", TypeShape.of(GetPartnerNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -355,7 +662,7 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerRegistrationResult> getPartnerRegistration(GetPartnerRegistrationArgs args) {
+    public static Output<GetPartnerRegistrationResult> getPartnerRegistration(GetPartnerRegistrationArgs args) {
         return getPartnerRegistration(args, InvokeOptions.Empty);
     }
     /**
@@ -363,7 +670,23 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerRegistrationResult> getPartnerRegistration(GetPartnerRegistrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerRegistrationResult> getPartnerRegistrationPlain(GetPartnerRegistrationPlainArgs args) {
+        return getPartnerRegistrationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Information about a partner registration.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetPartnerRegistrationResult> getPartnerRegistration(GetPartnerRegistrationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getPartnerRegistration", TypeShape.of(GetPartnerRegistrationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Information about a partner registration.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPartnerRegistrationResult> getPartnerRegistrationPlain(GetPartnerRegistrationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerRegistration", TypeShape.of(GetPartnerRegistrationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -371,7 +694,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerTopicResult> getPartnerTopic(GetPartnerTopicArgs args) {
+    public static Output<GetPartnerTopicResult> getPartnerTopic(GetPartnerTopicArgs args) {
         return getPartnerTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -379,7 +702,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerTopicResult> getPartnerTopic(GetPartnerTopicArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerTopicResult> getPartnerTopicPlain(GetPartnerTopicPlainArgs args) {
+        return getPartnerTopicPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Event Grid Partner Topic.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetPartnerTopicResult> getPartnerTopic(GetPartnerTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getPartnerTopic", TypeShape.of(GetPartnerTopicResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Event Grid Partner Topic.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetPartnerTopicResult> getPartnerTopicPlain(GetPartnerTopicPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerTopic", TypeShape.of(GetPartnerTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -387,7 +726,7 @@ public final class EventgridFunctions {
      * API Version: 2020-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionResult> getPartnerTopicEventSubscription(GetPartnerTopicEventSubscriptionArgs args) {
+    public static Output<GetPartnerTopicEventSubscriptionResult> getPartnerTopicEventSubscription(GetPartnerTopicEventSubscriptionArgs args) {
         return getPartnerTopicEventSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -395,7 +734,23 @@ public final class EventgridFunctions {
      * API Version: 2020-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionResult> getPartnerTopicEventSubscription(GetPartnerTopicEventSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionResult> getPartnerTopicEventSubscriptionPlain(GetPartnerTopicEventSubscriptionPlainArgs args) {
+        return getPartnerTopicEventSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Event Subscription
+     * API Version: 2020-04-01-preview.
+     * 
+     */
+    public static Output<GetPartnerTopicEventSubscriptionResult> getPartnerTopicEventSubscription(GetPartnerTopicEventSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getPartnerTopicEventSubscription", TypeShape.of(GetPartnerTopicEventSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Event Subscription
+     * API Version: 2020-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionResult> getPartnerTopicEventSubscriptionPlain(GetPartnerTopicEventSubscriptionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerTopicEventSubscription", TypeShape.of(GetPartnerTopicEventSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -403,7 +758,7 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionDeliveryAttributesResult> getPartnerTopicEventSubscriptionDeliveryAttributes(GetPartnerTopicEventSubscriptionDeliveryAttributesArgs args) {
+    public static Output<GetPartnerTopicEventSubscriptionDeliveryAttributesResult> getPartnerTopicEventSubscriptionDeliveryAttributes(GetPartnerTopicEventSubscriptionDeliveryAttributesArgs args) {
         return getPartnerTopicEventSubscriptionDeliveryAttributes(args, InvokeOptions.Empty);
     }
     /**
@@ -411,7 +766,23 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionDeliveryAttributesResult> getPartnerTopicEventSubscriptionDeliveryAttributes(GetPartnerTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionDeliveryAttributesResult> getPartnerTopicEventSubscriptionDeliveryAttributesPlain(GetPartnerTopicEventSubscriptionDeliveryAttributesPlainArgs args) {
+        return getPartnerTopicEventSubscriptionDeliveryAttributesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetPartnerTopicEventSubscriptionDeliveryAttributesResult> getPartnerTopicEventSubscriptionDeliveryAttributes(GetPartnerTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getPartnerTopicEventSubscriptionDeliveryAttributes", TypeShape.of(GetPartnerTopicEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionDeliveryAttributesResult> getPartnerTopicEventSubscriptionDeliveryAttributesPlain(GetPartnerTopicEventSubscriptionDeliveryAttributesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerTopicEventSubscriptionDeliveryAttributes", TypeShape.of(GetPartnerTopicEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -419,7 +790,7 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionFullUrlResult> getPartnerTopicEventSubscriptionFullUrl(GetPartnerTopicEventSubscriptionFullUrlArgs args) {
+    public static Output<GetPartnerTopicEventSubscriptionFullUrlResult> getPartnerTopicEventSubscriptionFullUrl(GetPartnerTopicEventSubscriptionFullUrlArgs args) {
         return getPartnerTopicEventSubscriptionFullUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -427,21 +798,51 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPartnerTopicEventSubscriptionFullUrlResult> getPartnerTopicEventSubscriptionFullUrl(GetPartnerTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionFullUrlResult> getPartnerTopicEventSubscriptionFullUrlPlain(GetPartnerTopicEventSubscriptionFullUrlPlainArgs args) {
+        return getPartnerTopicEventSubscriptionFullUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetPartnerTopicEventSubscriptionFullUrlResult> getPartnerTopicEventSubscriptionFullUrl(GetPartnerTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getPartnerTopicEventSubscriptionFullUrl", TypeShape.of(GetPartnerTopicEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPartnerTopicEventSubscriptionFullUrlResult> getPartnerTopicEventSubscriptionFullUrlPlain(GetPartnerTopicEventSubscriptionFullUrlPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerTopicEventSubscriptionFullUrl", TypeShape.of(GetPartnerTopicEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -449,7 +850,7 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicResult> getSystemTopic(GetSystemTopicArgs args) {
+    public static Output<GetSystemTopicResult> getSystemTopic(GetSystemTopicArgs args) {
         return getSystemTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -457,7 +858,23 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicResult> getSystemTopic(GetSystemTopicArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSystemTopicResult> getSystemTopicPlain(GetSystemTopicPlainArgs args) {
+        return getSystemTopicPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * EventGrid System Topic.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetSystemTopicResult> getSystemTopic(GetSystemTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getSystemTopic", TypeShape.of(GetSystemTopicResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * EventGrid System Topic.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSystemTopicResult> getSystemTopicPlain(GetSystemTopicPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopic", TypeShape.of(GetSystemTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -465,7 +882,7 @@ public final class EventgridFunctions {
      * API Version: 2020-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicEventSubscriptionResult> getSystemTopicEventSubscription(GetSystemTopicEventSubscriptionArgs args) {
+    public static Output<GetSystemTopicEventSubscriptionResult> getSystemTopicEventSubscription(GetSystemTopicEventSubscriptionArgs args) {
         return getSystemTopicEventSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -473,7 +890,23 @@ public final class EventgridFunctions {
      * API Version: 2020-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicEventSubscriptionResult> getSystemTopicEventSubscription(GetSystemTopicEventSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSystemTopicEventSubscriptionResult> getSystemTopicEventSubscriptionPlain(GetSystemTopicEventSubscriptionPlainArgs args) {
+        return getSystemTopicEventSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Event Subscription
+     * API Version: 2020-04-01-preview.
+     * 
+     */
+    public static Output<GetSystemTopicEventSubscriptionResult> getSystemTopicEventSubscription(GetSystemTopicEventSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getSystemTopicEventSubscription", TypeShape.of(GetSystemTopicEventSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Event Subscription
+     * API Version: 2020-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSystemTopicEventSubscriptionResult> getSystemTopicEventSubscriptionPlain(GetSystemTopicEventSubscriptionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopicEventSubscription", TypeShape.of(GetSystemTopicEventSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -481,7 +914,7 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicEventSubscriptionDeliveryAttributesResult> getSystemTopicEventSubscriptionDeliveryAttributes(GetSystemTopicEventSubscriptionDeliveryAttributesArgs args) {
+    public static Output<GetSystemTopicEventSubscriptionDeliveryAttributesResult> getSystemTopicEventSubscriptionDeliveryAttributes(GetSystemTopicEventSubscriptionDeliveryAttributesArgs args) {
         return getSystemTopicEventSubscriptionDeliveryAttributes(args, InvokeOptions.Empty);
     }
     /**
@@ -489,7 +922,23 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicEventSubscriptionDeliveryAttributesResult> getSystemTopicEventSubscriptionDeliveryAttributes(GetSystemTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSystemTopicEventSubscriptionDeliveryAttributesResult> getSystemTopicEventSubscriptionDeliveryAttributesPlain(GetSystemTopicEventSubscriptionDeliveryAttributesPlainArgs args) {
+        return getSystemTopicEventSubscriptionDeliveryAttributesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetSystemTopicEventSubscriptionDeliveryAttributesResult> getSystemTopicEventSubscriptionDeliveryAttributes(GetSystemTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getSystemTopicEventSubscriptionDeliveryAttributes", TypeShape.of(GetSystemTopicEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSystemTopicEventSubscriptionDeliveryAttributesResult> getSystemTopicEventSubscriptionDeliveryAttributesPlain(GetSystemTopicEventSubscriptionDeliveryAttributesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopicEventSubscriptionDeliveryAttributes", TypeShape.of(GetSystemTopicEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -497,7 +946,7 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> getSystemTopicEventSubscriptionFullUrl(GetSystemTopicEventSubscriptionFullUrlArgs args) {
+    public static Output<GetSystemTopicEventSubscriptionFullUrlResult> getSystemTopicEventSubscriptionFullUrl(GetSystemTopicEventSubscriptionFullUrlArgs args) {
         return getSystemTopicEventSubscriptionFullUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -505,7 +954,23 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> getSystemTopicEventSubscriptionFullUrl(GetSystemTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> getSystemTopicEventSubscriptionFullUrlPlain(GetSystemTopicEventSubscriptionFullUrlPlainArgs args) {
+        return getSystemTopicEventSubscriptionFullUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetSystemTopicEventSubscriptionFullUrlResult> getSystemTopicEventSubscriptionFullUrl(GetSystemTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getSystemTopicEventSubscriptionFullUrl", TypeShape.of(GetSystemTopicEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSystemTopicEventSubscriptionFullUrlResult> getSystemTopicEventSubscriptionFullUrlPlain(GetSystemTopicEventSubscriptionFullUrlPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopicEventSubscriptionFullUrl", TypeShape.of(GetSystemTopicEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -513,7 +978,7 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args) {
         return getTopic(args, InvokeOptions.Empty);
     }
     /**
@@ -521,7 +986,23 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicResult> getTopicPlain(GetTopicPlainArgs args) {
+        return getTopicPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * EventGrid Topic
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static Output<GetTopicResult> getTopic(GetTopicArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * EventGrid Topic
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<GetTopicResult> getTopicPlain(GetTopicPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getTopic", TypeShape.of(GetTopicResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -529,7 +1010,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetTopicEventSubscriptionResult> getTopicEventSubscription(GetTopicEventSubscriptionArgs args) {
+    public static Output<GetTopicEventSubscriptionResult> getTopicEventSubscription(GetTopicEventSubscriptionArgs args) {
         return getTopicEventSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -537,7 +1018,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetTopicEventSubscriptionResult> getTopicEventSubscription(GetTopicEventSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicEventSubscriptionResult> getTopicEventSubscriptionPlain(GetTopicEventSubscriptionPlainArgs args) {
+        return getTopicEventSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Event Subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetTopicEventSubscriptionResult> getTopicEventSubscription(GetTopicEventSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getTopicEventSubscription", TypeShape.of(GetTopicEventSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Event Subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetTopicEventSubscriptionResult> getTopicEventSubscriptionPlain(GetTopicEventSubscriptionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getTopicEventSubscription", TypeShape.of(GetTopicEventSubscriptionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -545,7 +1042,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetTopicEventSubscriptionDeliveryAttributesResult> getTopicEventSubscriptionDeliveryAttributes(GetTopicEventSubscriptionDeliveryAttributesArgs args) {
+    public static Output<GetTopicEventSubscriptionDeliveryAttributesResult> getTopicEventSubscriptionDeliveryAttributes(GetTopicEventSubscriptionDeliveryAttributesArgs args) {
         return getTopicEventSubscriptionDeliveryAttributes(args, InvokeOptions.Empty);
     }
     /**
@@ -553,7 +1050,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetTopicEventSubscriptionDeliveryAttributesResult> getTopicEventSubscriptionDeliveryAttributes(GetTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicEventSubscriptionDeliveryAttributesResult> getTopicEventSubscriptionDeliveryAttributesPlain(GetTopicEventSubscriptionDeliveryAttributesPlainArgs args) {
+        return getTopicEventSubscriptionDeliveryAttributesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetTopicEventSubscriptionDeliveryAttributesResult> getTopicEventSubscriptionDeliveryAttributes(GetTopicEventSubscriptionDeliveryAttributesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getTopicEventSubscriptionDeliveryAttributes", TypeShape.of(GetTopicEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Result of the Get delivery attributes operation.
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetTopicEventSubscriptionDeliveryAttributesResult> getTopicEventSubscriptionDeliveryAttributesPlain(GetTopicEventSubscriptionDeliveryAttributesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getTopicEventSubscriptionDeliveryAttributes", TypeShape.of(GetTopicEventSubscriptionDeliveryAttributesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -561,7 +1074,7 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetTopicEventSubscriptionFullUrlResult> getTopicEventSubscriptionFullUrl(GetTopicEventSubscriptionFullUrlArgs args) {
+    public static Output<GetTopicEventSubscriptionFullUrlResult> getTopicEventSubscriptionFullUrl(GetTopicEventSubscriptionFullUrlArgs args) {
         return getTopicEventSubscriptionFullUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -569,7 +1082,23 @@ public final class EventgridFunctions {
      * API Version: 2021-10-15-preview.
      * 
      */
-    public static CompletableFuture<GetTopicEventSubscriptionFullUrlResult> getTopicEventSubscriptionFullUrl(GetTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTopicEventSubscriptionFullUrlResult> getTopicEventSubscriptionFullUrlPlain(GetTopicEventSubscriptionFullUrlPlainArgs args) {
+        return getTopicEventSubscriptionFullUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static Output<GetTopicEventSubscriptionFullUrlResult> getTopicEventSubscriptionFullUrl(GetTopicEventSubscriptionFullUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:getTopicEventSubscriptionFullUrl", TypeShape.of(GetTopicEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Full endpoint url of an event subscription
+     * API Version: 2021-10-15-preview.
+     * 
+     */
+    public static CompletableFuture<GetTopicEventSubscriptionFullUrlResult> getTopicEventSubscriptionFullUrlPlain(GetTopicEventSubscriptionFullUrlPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getTopicEventSubscriptionFullUrl", TypeShape.of(GetTopicEventSubscriptionFullUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -577,7 +1106,7 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<ListDomainSharedAccessKeysResult> listDomainSharedAccessKeys(ListDomainSharedAccessKeysArgs args) {
+    public static Output<ListDomainSharedAccessKeysResult> listDomainSharedAccessKeys(ListDomainSharedAccessKeysArgs args) {
         return listDomainSharedAccessKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -585,7 +1114,23 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<ListDomainSharedAccessKeysResult> listDomainSharedAccessKeys(ListDomainSharedAccessKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListDomainSharedAccessKeysResult> listDomainSharedAccessKeysPlain(ListDomainSharedAccessKeysPlainArgs args) {
+        return listDomainSharedAccessKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Shared access keys of the Domain.
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static Output<ListDomainSharedAccessKeysResult> listDomainSharedAccessKeys(ListDomainSharedAccessKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:listDomainSharedAccessKeys", TypeShape.of(ListDomainSharedAccessKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Shared access keys of the Domain.
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<ListDomainSharedAccessKeysResult> listDomainSharedAccessKeysPlain(ListDomainSharedAccessKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:listDomainSharedAccessKeys", TypeShape.of(ListDomainSharedAccessKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -593,7 +1138,7 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListPartnerNamespaceSharedAccessKeysResult> listPartnerNamespaceSharedAccessKeys(ListPartnerNamespaceSharedAccessKeysArgs args) {
+    public static Output<ListPartnerNamespaceSharedAccessKeysResult> listPartnerNamespaceSharedAccessKeys(ListPartnerNamespaceSharedAccessKeysArgs args) {
         return listPartnerNamespaceSharedAccessKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -601,7 +1146,23 @@ public final class EventgridFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<ListPartnerNamespaceSharedAccessKeysResult> listPartnerNamespaceSharedAccessKeys(ListPartnerNamespaceSharedAccessKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListPartnerNamespaceSharedAccessKeysResult> listPartnerNamespaceSharedAccessKeysPlain(ListPartnerNamespaceSharedAccessKeysPlainArgs args) {
+        return listPartnerNamespaceSharedAccessKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Shared access keys of the partner namespace.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<ListPartnerNamespaceSharedAccessKeysResult> listPartnerNamespaceSharedAccessKeys(ListPartnerNamespaceSharedAccessKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:listPartnerNamespaceSharedAccessKeys", TypeShape.of(ListPartnerNamespaceSharedAccessKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Shared access keys of the partner namespace.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListPartnerNamespaceSharedAccessKeysResult> listPartnerNamespaceSharedAccessKeysPlain(ListPartnerNamespaceSharedAccessKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:listPartnerNamespaceSharedAccessKeys", TypeShape.of(ListPartnerNamespaceSharedAccessKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -609,7 +1170,7 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<ListTopicSharedAccessKeysResult> listTopicSharedAccessKeys(ListTopicSharedAccessKeysArgs args) {
+    public static Output<ListTopicSharedAccessKeysResult> listTopicSharedAccessKeys(ListTopicSharedAccessKeysArgs args) {
         return listTopicSharedAccessKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -617,7 +1178,23 @@ public final class EventgridFunctions {
      * API Version: 2020-06-01.
      * 
      */
-    public static CompletableFuture<ListTopicSharedAccessKeysResult> listTopicSharedAccessKeys(ListTopicSharedAccessKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListTopicSharedAccessKeysResult> listTopicSharedAccessKeysPlain(ListTopicSharedAccessKeysPlainArgs args) {
+        return listTopicSharedAccessKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Shared access keys of the Topic
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static Output<ListTopicSharedAccessKeysResult> listTopicSharedAccessKeys(ListTopicSharedAccessKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventgrid:listTopicSharedAccessKeys", TypeShape.of(ListTopicSharedAccessKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Shared access keys of the Topic
+     * API Version: 2020-06-01.
+     * 
+     */
+    public static CompletableFuture<ListTopicSharedAccessKeysResult> listTopicSharedAccessKeysPlain(ListTopicSharedAccessKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:listTopicSharedAccessKeys", TypeShape.of(ListTopicSharedAccessKeysResult.class), args, Utilities.withVersion(options));
     }
 }

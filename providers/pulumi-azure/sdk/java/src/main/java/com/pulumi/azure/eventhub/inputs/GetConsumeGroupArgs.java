@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.eventhub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConsumeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventhubName", required=true)
-    private String eventhubName;
+    private Output<String> eventhubName;
 
     /**
      * @return Specifies the name of the EventHub.
      * 
      */
-    public String eventhubName() {
+    public Output<String> eventhubName() {
         return this.eventhubName;
     }
 
@@ -32,13 +33,13 @@ public final class GetConsumeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the EventHub Consumer Group resource.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetConsumeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return Specifies the name of the grandparent EventHub Namespace.
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -62,13 +63,13 @@ public final class GetConsumeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group in which the EventHub Consumer Group&#39;s grandparent Namespace exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetConsumeGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder eventhubName(String eventhubName) {
+        public Builder eventhubName(Output<String> eventhubName) {
             $.eventhubName = eventhubName;
+            return this;
+        }
+
+        /**
+         * @param eventhubName Specifies the name of the EventHub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventhubName(String eventhubName) {
+            return eventhubName(Output.of(eventhubName));
+        }
+
+        /**
+         * @param name Specifies the name of the EventHub Consumer Group resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetConsumeGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param namespaceName Specifies the name of the grandparent EventHub Namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetConsumeGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder namespaceName(String namespaceName) {
-            $.namespaceName = namespaceName;
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group in which the EventHub Consumer Group&#39;s grandparent Namespace exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetConsumeGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetConsumeGroupArgs build() {

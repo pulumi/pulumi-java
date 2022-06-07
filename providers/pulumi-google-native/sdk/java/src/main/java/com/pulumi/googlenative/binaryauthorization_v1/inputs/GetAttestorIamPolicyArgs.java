@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.binaryauthorization_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetAttestorIamPolicyArgs extends com.pulumi.resources.InvokeA
     public static final GetAttestorIamPolicyArgs Empty = new GetAttestorIamPolicyArgs();
 
     @Import(name="attestorId", required=true)
-    private String attestorId;
+    private Output<String> attestorId;
 
-    public String attestorId() {
+    public Output<String> attestorId() {
         return this.attestorId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetAttestorIamPolicyArgs extends com.pulumi.resources.InvokeA
             $ = new GetAttestorIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder attestorId(String attestorId) {
+        public Builder attestorId(Output<String> attestorId) {
             $.attestorId = attestorId;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder attestorId(String attestorId) {
+            return attestorId(Output.of(attestorId));
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetAttestorIamPolicyArgs build() {

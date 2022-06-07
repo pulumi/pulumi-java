@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -20,13 +21,13 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
      * 
      */
     @Import(name="gatewayName", required=true)
-    private String gatewayName;
+    private Output<String> gatewayName;
 
     /**
      * @return The name of the P2SVpnGateway.
      * 
      */
-    public String gatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName;
     }
 
@@ -35,13 +36,13 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
      * 
      */
     @Import(name="outputBlobSasUrl")
-    private @Nullable String outputBlobSasUrl;
+    private @Nullable Output<String> outputBlobSasUrl;
 
     /**
      * @return The sas-url to download the P2S Vpn connection health detail.
      * 
      */
-    public Optional<String> outputBlobSasUrl() {
+    public Optional<Output<String>> outputBlobSasUrl() {
         return Optional.ofNullable(this.outputBlobSasUrl);
     }
 
@@ -50,13 +51,13 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,13 +66,13 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
      * 
      */
     @Import(name="vpnUserNamesFilter")
-    private @Nullable List<String> vpnUserNamesFilter;
+    private @Nullable Output<List<String>> vpnUserNamesFilter;
 
     /**
      * @return The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
      * 
      */
-    public Optional<List<String>> vpnUserNamesFilter() {
+    public Optional<Output<List<String>>> vpnUserNamesFilter() {
         return Optional.ofNullable(this.vpnUserNamesFilter);
     }
 
@@ -108,8 +109,29 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
          * @return builder
          * 
          */
-        public Builder gatewayName(String gatewayName) {
+        public Builder gatewayName(Output<String> gatewayName) {
             $.gatewayName = gatewayName;
+            return this;
+        }
+
+        /**
+         * @param gatewayName The name of the P2SVpnGateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayName(String gatewayName) {
+            return gatewayName(Output.of(gatewayName));
+        }
+
+        /**
+         * @param outputBlobSasUrl The sas-url to download the P2S Vpn connection health detail.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder outputBlobSasUrl(@Nullable Output<String> outputBlobSasUrl) {
+            $.outputBlobSasUrl = outputBlobSasUrl;
             return this;
         }
 
@@ -119,8 +141,18 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
          * @return builder
          * 
          */
-        public Builder outputBlobSasUrl(@Nullable String outputBlobSasUrl) {
-            $.outputBlobSasUrl = outputBlobSasUrl;
+        public Builder outputBlobSasUrl(String outputBlobSasUrl) {
+            return outputBlobSasUrl(Output.of(outputBlobSasUrl));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -131,7 +163,17 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vpnUserNamesFilter The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpnUserNamesFilter(@Nullable Output<List<String>> vpnUserNamesFilter) {
+            $.vpnUserNamesFilter = vpnUserNamesFilter;
             return this;
         }
 
@@ -141,9 +183,8 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends co
          * @return builder
          * 
          */
-        public Builder vpnUserNamesFilter(@Nullable List<String> vpnUserNamesFilter) {
-            $.vpnUserNamesFilter = vpnUserNamesFilter;
-            return this;
+        public Builder vpnUserNamesFilter(List<String> vpnUserNamesFilter) {
+            return vpnUserNamesFilter(Output.of(vpnUserNamesFilter));
         }
 
         /**

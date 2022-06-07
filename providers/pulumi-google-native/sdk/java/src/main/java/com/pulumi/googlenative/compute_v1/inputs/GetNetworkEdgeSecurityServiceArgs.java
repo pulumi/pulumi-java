@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetNetworkEdgeSecurityServiceArgs extends com.pulumi.resource
     public static final GetNetworkEdgeSecurityServiceArgs Empty = new GetNetworkEdgeSecurityServiceArgs();
 
     @Import(name="networkEdgeSecurityService", required=true)
-    private String networkEdgeSecurityService;
+    private Output<String> networkEdgeSecurityService;
 
-    public String networkEdgeSecurityService() {
+    public Output<String> networkEdgeSecurityService() {
         return this.networkEdgeSecurityService;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-    private String region;
+    private Output<String> region;
 
-    public String region() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -61,19 +62,31 @@ public final class GetNetworkEdgeSecurityServiceArgs extends com.pulumi.resource
             $ = new GetNetworkEdgeSecurityServiceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder networkEdgeSecurityService(String networkEdgeSecurityService) {
+        public Builder networkEdgeSecurityService(Output<String> networkEdgeSecurityService) {
             $.networkEdgeSecurityService = networkEdgeSecurityService;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder networkEdgeSecurityService(String networkEdgeSecurityService) {
+            return networkEdgeSecurityService(Output.of(networkEdgeSecurityService));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(String region) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output<String> region) {
             $.region = region;
             return this;
+        }
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
 
         public GetNetworkEdgeSecurityServiceArgs build() {

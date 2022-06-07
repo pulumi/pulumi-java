@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.globalaccelerator.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAcceleratorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceleratorArn", required=true)
-    private String acceleratorArn;
+    private Output<String> acceleratorArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the accelerator.
      * 
      */
-    public String acceleratorArn() {
+    public Output<String> acceleratorArn() {
         return this.acceleratorArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetAcceleratorArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder acceleratorArn(String acceleratorArn) {
+        public Builder acceleratorArn(Output<String> acceleratorArn) {
             $.acceleratorArn = acceleratorArn;
             return this;
+        }
+
+        /**
+         * @param acceleratorArn The Amazon Resource Name (ARN) of the accelerator.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceleratorArn(String acceleratorArn) {
+            return acceleratorArn(Output.of(acceleratorArn));
         }
 
         public GetAcceleratorArgs build() {

@@ -5,7 +5,9 @@ package com.pulumi.azurenative.dashboard;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.dashboard.inputs.GetGrafanaArgs;
+import com.pulumi.azurenative.dashboard.inputs.GetGrafanaPlainArgs;
 import com.pulumi.azurenative.dashboard.outputs.GetGrafanaResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -17,7 +19,7 @@ public final class DashboardFunctions {
      * API Version: 2021-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetGrafanaResult> getGrafana(GetGrafanaArgs args) {
+    public static Output<GetGrafanaResult> getGrafana(GetGrafanaArgs args) {
         return getGrafana(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +27,23 @@ public final class DashboardFunctions {
      * API Version: 2021-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetGrafanaResult> getGrafana(GetGrafanaArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGrafanaResult> getGrafanaPlain(GetGrafanaPlainArgs args) {
+        return getGrafanaPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The grafana resource type.
+     * API Version: 2021-09-01-preview.
+     * 
+     */
+    public static Output<GetGrafanaResult> getGrafana(GetGrafanaArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:dashboard:getGrafana", TypeShape.of(GetGrafanaResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The grafana resource type.
+     * API Version: 2021-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetGrafanaResult> getGrafanaPlain(GetGrafanaPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dashboard:getGrafana", TypeShape.of(GetGrafanaResult.class), args, Utilities.withVersion(options));
     }
 }

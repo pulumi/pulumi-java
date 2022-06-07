@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.peering.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return The properties to be expanded.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="peeringServiceName", required=true)
-    private String peeringServiceName;
+    private Output<String> peeringServiceName;
 
     /**
      * @return The name of the peering service.
      * 
      */
-    public String peeringServiceName() {
+    public Output<String> peeringServiceName() {
         return this.peeringServiceName;
     }
 
@@ -49,13 +50,13 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prefixName", required=true)
-    private String prefixName;
+    private Output<String> prefixName;
 
     /**
      * @return The name of the prefix.
      * 
      */
-    public String prefixName() {
+    public Output<String> prefixName() {
         return this.prefixName;
     }
 
@@ -64,13 +65,13 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,8 +108,29 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The properties to be expanded.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param peeringServiceName The name of the peering service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peeringServiceName(Output<String> peeringServiceName) {
+            $.peeringServiceName = peeringServiceName;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder peeringServiceName(String peeringServiceName) {
-            $.peeringServiceName = peeringServiceName;
+            return peeringServiceName(Output.of(peeringServiceName));
+        }
+
+        /**
+         * @param prefixName The name of the prefix.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder prefixName(Output<String> prefixName) {
+            $.prefixName = prefixName;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder prefixName(String prefixName) {
-            $.prefixName = prefixName;
+            return prefixName(Output.of(prefixName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPrefixArgs build() {

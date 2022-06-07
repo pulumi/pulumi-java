@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="natGatewayId", required=true)
-    private String natGatewayId;
+    private Output<String> natGatewayId;
 
     /**
      * @return The NAT gateway&#39;s [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String natGatewayId() {
+    public Output<String> natGatewayId() {
         return this.natGatewayId;
     }
 
@@ -57,9 +58,19 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder natGatewayId(String natGatewayId) {
+        public Builder natGatewayId(Output<String> natGatewayId) {
             $.natGatewayId = natGatewayId;
             return this;
+        }
+
+        /**
+         * @param natGatewayId The NAT gateway&#39;s [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natGatewayId(String natGatewayId) {
+            return natGatewayId(Output.of(natGatewayId));
         }
 
         public GetNatGatewayArgs build() {

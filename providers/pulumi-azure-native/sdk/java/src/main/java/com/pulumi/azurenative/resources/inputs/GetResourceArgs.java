@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.resources.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentResourcePath", required=true)
-    private String parentResourcePath;
+    private Output<String> parentResourcePath;
 
     /**
      * @return The parent resource identity.
      * 
      */
-    public String parentResourcePath() {
+    public Output<String> parentResourcePath() {
         return this.parentResourcePath;
     }
 
@@ -32,13 +33,13 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group containing the resource to get. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the resource to get.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -62,13 +63,13 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceProviderNamespace", required=true)
-    private String resourceProviderNamespace;
+    private Output<String> resourceProviderNamespace;
 
     /**
      * @return The namespace of the resource provider.
      * 
      */
-    public String resourceProviderNamespace() {
+    public Output<String> resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
@@ -77,13 +78,13 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceType", required=true)
-    private String resourceType;
+    private Output<String> resourceType;
 
     /**
      * @return The resource type of the resource.
      * 
      */
-    public String resourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -121,8 +122,29 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder parentResourcePath(String parentResourcePath) {
+        public Builder parentResourcePath(Output<String> parentResourcePath) {
             $.parentResourcePath = parentResourcePath;
+            return this;
+        }
+
+        /**
+         * @param parentResourcePath The parent resource identity.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentResourcePath(String parentResourcePath) {
+            return parentResourcePath(Output.of(parentResourcePath));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group containing the resource to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the resource to get.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param resourceProviderNamespace The namespace of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
+            $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
-            $.resourceProviderNamespace = resourceProviderNamespace;
+            return resourceProviderNamespace(Output.of(resourceProviderNamespace));
+        }
+
+        /**
+         * @param resourceType The resource type of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceType(Output<String> resourceType) {
+            $.resourceType = resourceType;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceType(String resourceType) {
-            $.resourceType = resourceType;
-            return this;
+            return resourceType(Output.of(resourceType));
         }
 
         public GetResourceArgs build() {

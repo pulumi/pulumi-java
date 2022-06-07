@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Monitoring.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Monitoring.inputs.GetMetricsFilter;
+import com.pulumi.oci.Monitoring.inputs.GetMetricsFilterArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,13 +25,13 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the resources monitored by the metric that you are searching for. Use tenancyId to search in the root compartment.  Example: `ocid1.compartment.oc1..exampleuniqueID`
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -39,13 +40,13 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return When true, returns resources from all compartments and subcompartments. The parameter can only be set to true when compartmentId is the tenancy OCID (the tenancy is the root compartment). A true value requires the user to have tenancy-level permissions. If this requirement is not met, then the call is rejected. When false, returns resources from only the compartment specified in compartmentId. Default is false.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
@@ -54,20 +55,20 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dimensionFilters")
-    private @Nullable Map<String,Object> dimensionFilters;
+    private @Nullable Output<Map<String,Object>> dimensionFilters;
 
     /**
      * @return Qualifiers that you want to use when searching for metric definitions. Available dimensions vary by metric namespace. Each dimension takes the form of a key-value pair.  Example: `&#34;resourceId&#34;: &#34;ocid1.instance.region1.phx.exampleuniqueID&#34;`
      * 
      */
-    public Optional<Map<String,Object>> dimensionFilters() {
+    public Optional<Output<Map<String,Object>>> dimensionFilters() {
         return Optional.ofNullable(this.dimensionFilters);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetMetricsFilter> filters;
+    private @Nullable Output<List<GetMetricsFilterArgs>> filters;
 
-    public Optional<List<GetMetricsFilter>> filters() {
+    public Optional<Output<List<GetMetricsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -76,13 +77,13 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupBies")
-    private @Nullable List<String> groupBies;
+    private @Nullable Output<List<String>> groupBies;
 
     /**
      * @return Group metrics by these fields in the response. For example, to list all metric namespaces available in a compartment, groupBy the &#34;namespace&#34; field. Supported fields: namespace, name, resourceGroup.
      * 
      */
-    public Optional<List<String>> groupBies() {
+    public Optional<Output<List<String>>> groupBies() {
         return Optional.ofNullable(this.groupBies);
     }
 
@@ -91,13 +92,13 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The metric name to use when searching for metric definitions.  Example: `CpuUtilization`
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -106,13 +107,13 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespace")
-    private @Nullable String namespace;
+    private @Nullable Output<String> namespace;
 
     /**
      * @return The source service or application to use when searching for metric definitions.  Example: `oci_computeagent`
      * 
      */
-    public Optional<String> namespace() {
+    public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
 
@@ -121,13 +122,13 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroup")
-    private @Nullable String resourceGroup;
+    private @Nullable Output<String> resourceGroup;
 
     /**
      * @return Resource group that you want to match. A null value returns only metric data that has no resource groups. The specified resource group must exist in the definition of the posted metric. Only one resource group can be applied per metric. A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).  Example: `frontend-fleet`
      * 
      */
-    public Optional<String> resourceGroup() {
+    public Optional<Output<String>> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
 
@@ -168,8 +169,29 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the resources monitored by the metric that you are searching for. Use tenancyId to search in the root compartment.  Example: `ocid1.compartment.oc1..exampleuniqueID`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree When true, returns resources from all compartments and subcompartments. The parameter can only be set to true when compartmentId is the tenancy OCID (the tenancy is the root compartment). A true value requires the user to have tenancy-level permissions. If this requirement is not met, then the call is rejected. When false, returns resources from only the compartment specified in compartmentId. Default is false.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -179,8 +201,18 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param dimensionFilters Qualifiers that you want to use when searching for metric definitions. Available dimensions vary by metric namespace. Each dimension takes the form of a key-value pair.  Example: `&#34;resourceId&#34;: &#34;ocid1.instance.region1.phx.exampleuniqueID&#34;`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dimensionFilters(@Nullable Output<Map<String,Object>> dimensionFilters) {
+            $.dimensionFilters = dimensionFilters;
             return this;
         }
 
@@ -190,17 +222,20 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dimensionFilters(@Nullable Map<String,Object> dimensionFilters) {
-            $.dimensionFilters = dimensionFilters;
-            return this;
+        public Builder dimensionFilters(Map<String,Object> dimensionFilters) {
+            return dimensionFilters(Output.of(dimensionFilters));
         }
 
-        public Builder filters(@Nullable List<GetMetricsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetMetricsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetMetricsFilter... filters) {
+        public Builder filters(List<GetMetricsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetMetricsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -210,9 +245,19 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder groupBies(@Nullable List<String> groupBies) {
+        public Builder groupBies(@Nullable Output<List<String>> groupBies) {
             $.groupBies = groupBies;
             return this;
+        }
+
+        /**
+         * @param groupBies Group metrics by these fields in the response. For example, to list all metric namespaces available in a compartment, groupBy the &#34;namespace&#34; field. Supported fields: namespace, name, resourceGroup.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupBies(List<String> groupBies) {
+            return groupBies(Output.of(groupBies));
         }
 
         /**
@@ -231,8 +276,29 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The metric name to use when searching for metric definitions.  Example: `CpuUtilization`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param namespace The source service or application to use when searching for metric definitions.  Example: `oci_computeagent`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(@Nullable Output<String> namespace) {
+            $.namespace = namespace;
             return this;
         }
 
@@ -242,8 +308,18 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namespace(@Nullable String namespace) {
-            $.namespace = namespace;
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param resourceGroup Resource group that you want to match. A null value returns only metric data that has no resource groups. The specified resource group must exist in the definition of the posted metric. Only one resource group can be applied per metric. A valid resourceGroup value starts with an alphabetical character and includes only alphanumeric characters, periods (.), underscores (_), hyphens (-), and dollar signs ($).  Example: `frontend-fleet`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
+            $.resourceGroup = resourceGroup;
             return this;
         }
 
@@ -253,9 +329,8 @@ public final class GetMetricsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroup(@Nullable String resourceGroup) {
-            $.resourceGroup = resourceGroup;
-            return this;
+        public Builder resourceGroup(String resourceGroup) {
+            return resourceGroup(Output.of(resourceGroup));
         }
 
         public GetMetricsArgs build() {

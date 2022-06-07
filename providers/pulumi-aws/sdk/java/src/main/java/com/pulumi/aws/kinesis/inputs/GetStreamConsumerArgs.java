@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.kinesis.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="arn")
-    private @Nullable String arn;
+    private @Nullable Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN) of the stream consumer.
      * 
      */
-    public Optional<String> arn() {
+    public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
 
@@ -34,13 +35,13 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Name of the stream consumer.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -49,13 +50,13 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="streamArn", required=true)
-    private String streamArn;
+    private Output<String> streamArn;
 
     /**
      * @return Amazon Resource Name (ARN) of the data stream the consumer is registered with.
      * 
      */
-    public String streamArn() {
+    public Output<String> streamArn() {
         return this.streamArn;
     }
 
@@ -91,8 +92,29 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn Amazon Resource Name (ARN) of the stream consumer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param name Name of the stream consumer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param streamArn Amazon Resource Name (ARN) of the data stream the consumer is registered with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder streamArn(Output<String> streamArn) {
+            $.streamArn = streamArn;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetStreamConsumerArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder streamArn(String streamArn) {
-            $.streamArn = streamArn;
-            return this;
+            return streamArn(Output.of(streamArn));
         }
 
         public GetStreamConsumerArgs build() {

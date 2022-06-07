@@ -5,7 +5,9 @@ package com.pulumi.azurenative.alertsmanagement;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.alertsmanagement.inputs.GetActionRuleByNameArgs;
+import com.pulumi.azurenative.alertsmanagement.inputs.GetActionRuleByNamePlainArgs;
 import com.pulumi.azurenative.alertsmanagement.outputs.GetActionRuleByNameResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -17,7 +19,7 @@ public final class AlertsmanagementFunctions {
      * API Version: 2019-05-05-preview.
      * 
      */
-    public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args) {
+    public static Output<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args) {
         return getActionRuleByName(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +27,23 @@ public final class AlertsmanagementFunctions {
      * API Version: 2019-05-05-preview.
      * 
      */
-    public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByNamePlain(GetActionRuleByNamePlainArgs args) {
+        return getActionRuleByNamePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Action rule object containing target scope, conditions and suppression logic
+     * API Version: 2019-05-05-preview.
+     * 
+     */
+    public static Output<GetActionRuleByNameResult> getActionRuleByName(GetActionRuleByNameArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Action rule object containing target scope, conditions and suppression logic
+     * API Version: 2019-05-05-preview.
+     * 
+     */
+    public static CompletableFuture<GetActionRuleByNameResult> getActionRuleByNamePlain(GetActionRuleByNamePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ContainerEngine.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetNodePoolOptionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -34,13 +35,13 @@ public final class GetNodePoolOptionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="nodePoolOptionId", required=true)
-    private String nodePoolOptionId;
+    private Output<String> nodePoolOptionId;
 
     /**
      * @return The id of the option set to retrieve. Use &#34;all&#34; get all options, or use a cluster ID to get options specific to the provided cluster.
      * 
      */
-    public String nodePoolOptionId() {
+    public Output<String> nodePoolOptionId() {
         return this.nodePoolOptionId;
     }
 
@@ -75,8 +76,29 @@ public final class GetNodePoolOptionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param nodePoolOptionId The id of the option set to retrieve. Use &#34;all&#34; get all options, or use a cluster ID to get options specific to the provided cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nodePoolOptionId(Output<String> nodePoolOptionId) {
+            $.nodePoolOptionId = nodePoolOptionId;
             return this;
         }
 
@@ -87,8 +109,7 @@ public final class GetNodePoolOptionArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder nodePoolOptionId(String nodePoolOptionId) {
-            $.nodePoolOptionId = nodePoolOptionId;
-            return this;
+            return nodePoolOptionId(Output.of(nodePoolOptionId));
         }
 
         public GetNodePoolOptionArgs build() {

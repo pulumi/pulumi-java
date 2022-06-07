@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.notificationhubs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListNamespaceKeysArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="authorizationRuleName", required=true)
-    private String authorizationRuleName;
+    private Output<String> authorizationRuleName;
 
     /**
      * @return The connection string of the namespace for the specified authorizationRule.
      * 
      */
-    public String authorizationRuleName() {
+    public Output<String> authorizationRuleName() {
         return this.authorizationRuleName;
     }
 
@@ -32,13 +33,13 @@ public final class ListNamespaceKeysArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The namespace name.
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -47,13 +48,13 @@ public final class ListNamespaceKeysArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class ListNamespaceKeysArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder authorizationRuleName(String authorizationRuleName) {
+        public Builder authorizationRuleName(Output<String> authorizationRuleName) {
             $.authorizationRuleName = authorizationRuleName;
+            return this;
+        }
+
+        /**
+         * @param authorizationRuleName The connection string of the namespace for the specified authorizationRule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authorizationRuleName(String authorizationRuleName) {
+            return authorizationRuleName(Output.of(authorizationRuleName));
+        }
+
+        /**
+         * @param namespaceName The namespace name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListNamespaceKeysArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder namespaceName(String namespaceName) {
-            $.namespaceName = namespaceName;
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListNamespaceKeysArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListNamespaceKeysArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.appsync.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetDomainNameApiAssociationArgs extends com.pulumi.resources.
     public static final GetDomainNameApiAssociationArgs Empty = new GetDomainNameApiAssociationArgs();
 
     @Import(name="apiAssociationIdentifier", required=true)
-    private String apiAssociationIdentifier;
+    private Output<String> apiAssociationIdentifier;
 
-    public String apiAssociationIdentifier() {
+    public Output<String> apiAssociationIdentifier() {
         return this.apiAssociationIdentifier;
     }
 
@@ -43,9 +44,13 @@ public final class GetDomainNameApiAssociationArgs extends com.pulumi.resources.
             $ = new GetDomainNameApiAssociationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder apiAssociationIdentifier(String apiAssociationIdentifier) {
+        public Builder apiAssociationIdentifier(Output<String> apiAssociationIdentifier) {
             $.apiAssociationIdentifier = apiAssociationIdentifier;
             return this;
+        }
+
+        public Builder apiAssociationIdentifier(String apiAssociationIdentifier) {
+            return apiAssociationIdentifier(Output.of(apiAssociationIdentifier));
         }
 
         public GetDomainNameApiAssociationArgs build() {

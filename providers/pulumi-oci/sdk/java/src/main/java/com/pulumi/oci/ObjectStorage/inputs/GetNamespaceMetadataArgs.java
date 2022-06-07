@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ObjectStorage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetNamespaceMetadataArgs extends com.pulumi.resources.InvokeA
     public static final GetNamespaceMetadataArgs Empty = new GetNamespaceMetadataArgs();
 
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -43,9 +44,13 @@ public final class GetNamespaceMetadataArgs extends com.pulumi.resources.InvokeA
             $ = new GetNamespaceMetadataArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder namespace(String namespace) {
+        public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
+        }
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
 
         public GetNamespaceMetadataArgs build() {

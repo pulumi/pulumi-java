@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.machinelearning.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-    private @Nullable String region;
+    private @Nullable Output<String> region;
 
     /**
      * @return The region for which encrypted credential parameters are valid.
      * 
      */
-    public Optional<String> region() {
+    public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
 
@@ -34,13 +35,13 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group in which the web service is located.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +50,13 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="webServiceName", required=true)
-    private String webServiceName;
+    private Output<String> webServiceName;
 
     /**
      * @return The name of the web service.
      * 
      */
-    public String webServiceName() {
+    public Output<String> webServiceName() {
         return this.webServiceName;
     }
 
@@ -91,8 +92,29 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder region(@Nullable String region) {
+        public Builder region(@Nullable Output<String> region) {
             $.region = region;
+            return this;
+        }
+
+        /**
+         * @param region The region for which encrypted credential parameters are valid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group in which the web service is located.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param webServiceName The name of the web service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder webServiceName(Output<String> webServiceName) {
+            $.webServiceName = webServiceName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetWebServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder webServiceName(String webServiceName) {
-            $.webServiceName = webServiceName;
-            return this;
+            return webServiceName(Output.of(webServiceName));
         }
 
         public GetWebServiceArgs build() {

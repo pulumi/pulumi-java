@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataConnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRegistryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
     /**
      * @return The registry Ocid.
      * 
      */
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -57,9 +58,19 @@ public final class GetRegistryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder registryId(String registryId) {
+        public Builder registryId(Output<String> registryId) {
             $.registryId = registryId;
             return this;
+        }
+
+        /**
+         * @param registryId The registry Ocid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryId(String registryId) {
+            return registryId(Output.of(registryId));
         }
 
         public GetRegistryArgs build() {

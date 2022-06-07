@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ManagementAgent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagementAgentPluginCountArgs extends com.pulumi.resource
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment to which a request will be scoped.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagementAgentPluginCountArgs extends com.pulumi.resource
      * 
      */
     @Import(name="groupBy", required=true)
-    private String groupBy;
+    private Output<String> groupBy;
 
     /**
      * @return The field by which to group Management Agent Plugins
      * 
      */
-    public String groupBy() {
+    public Output<String> groupBy() {
         return this.groupBy;
     }
 
@@ -73,8 +74,29 @@ public final class GetManagementAgentPluginCountArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment to which a request will be scoped.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param groupBy The field by which to group Management Agent Plugins
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupBy(Output<String> groupBy) {
+            $.groupBy = groupBy;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetManagementAgentPluginCountArgs extends com.pulumi.resource
          * 
          */
         public Builder groupBy(String groupBy) {
-            $.groupBy = groupBy;
-            return this;
+            return groupBy(Output.of(groupBy));
         }
 
         public GetManagementAgentPluginCountArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.containerservice.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="agentPoolName", required=true)
-    private String agentPoolName;
+    private Output<String> agentPoolName;
 
     /**
      * @return The name of the agent pool.
      * 
      */
-    public String agentPoolName() {
+    public Output<String> agentPoolName() {
         return this.agentPoolName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the managed cluster resource.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder agentPoolName(String agentPoolName) {
+        public Builder agentPoolName(Output<String> agentPoolName) {
             $.agentPoolName = agentPoolName;
+            return this;
+        }
+
+        /**
+         * @param agentPoolName The name of the agent pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder agentPoolName(String agentPoolName) {
+            return agentPoolName(Output.of(agentPoolName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public GetAgentPoolArgs build() {

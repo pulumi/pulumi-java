@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.education.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetGetLabArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="billingAccountName", required=true)
-    private String billingAccountName;
+    private Output<String> billingAccountName;
 
     /**
      * @return Billing account name.
      * 
      */
-    public String billingAccountName() {
+    public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -35,13 +36,13 @@ public final class GetGetLabArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="billingProfileName", required=true)
-    private String billingProfileName;
+    private Output<String> billingProfileName;
 
     /**
      * @return Billing profile name.
      * 
      */
-    public String billingProfileName() {
+    public Output<String> billingProfileName() {
         return this.billingProfileName;
     }
 
@@ -50,13 +51,13 @@ public final class GetGetLabArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeBudget")
-    private @Nullable Boolean includeBudget;
+    private @Nullable Output<Boolean> includeBudget;
 
     /**
      * @return May be used to include budget information.
      * 
      */
-    public Optional<Boolean> includeBudget() {
+    public Optional<Output<Boolean>> includeBudget() {
         return Optional.ofNullable(this.includeBudget);
     }
 
@@ -65,13 +66,13 @@ public final class GetGetLabArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="invoiceSectionName", required=true)
-    private String invoiceSectionName;
+    private Output<String> invoiceSectionName;
 
     /**
      * @return Invoice section name.
      * 
      */
-    public String invoiceSectionName() {
+    public Output<String> invoiceSectionName() {
         return this.invoiceSectionName;
     }
 
@@ -108,8 +109,29 @@ public final class GetGetLabArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder billingAccountName(String billingAccountName) {
+        public Builder billingAccountName(Output<String> billingAccountName) {
             $.billingAccountName = billingAccountName;
+            return this;
+        }
+
+        /**
+         * @param billingAccountName Billing account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccountName(String billingAccountName) {
+            return billingAccountName(Output.of(billingAccountName));
+        }
+
+        /**
+         * @param billingProfileName Billing profile name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingProfileName(Output<String> billingProfileName) {
+            $.billingProfileName = billingProfileName;
             return this;
         }
 
@@ -120,7 +142,17 @@ public final class GetGetLabArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder billingProfileName(String billingProfileName) {
-            $.billingProfileName = billingProfileName;
+            return billingProfileName(Output.of(billingProfileName));
+        }
+
+        /**
+         * @param includeBudget May be used to include budget information.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeBudget(@Nullable Output<Boolean> includeBudget) {
+            $.includeBudget = includeBudget;
             return this;
         }
 
@@ -130,8 +162,18 @@ public final class GetGetLabArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeBudget(@Nullable Boolean includeBudget) {
-            $.includeBudget = includeBudget;
+        public Builder includeBudget(Boolean includeBudget) {
+            return includeBudget(Output.of(includeBudget));
+        }
+
+        /**
+         * @param invoiceSectionName Invoice section name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder invoiceSectionName(Output<String> invoiceSectionName) {
+            $.invoiceSectionName = invoiceSectionName;
             return this;
         }
 
@@ -142,8 +184,7 @@ public final class GetGetLabArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder invoiceSectionName(String invoiceSectionName) {
-            $.invoiceSectionName = invoiceSectionName;
-            return this;
+            return invoiceSectionName(Output.of(invoiceSectionName));
         }
 
         public GetGetLabArgs build() {

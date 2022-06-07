@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.networkfirewall.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetRuleGroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRuleGroupArgs Empty = new GetRuleGroupArgs();
 
     @Import(name="ruleGroupArn", required=true)
-    private String ruleGroupArn;
+    private Output<String> ruleGroupArn;
 
-    public String ruleGroupArn() {
+    public Output<String> ruleGroupArn() {
         return this.ruleGroupArn;
     }
 
@@ -43,9 +44,13 @@ public final class GetRuleGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder ruleGroupArn(String ruleGroupArn) {
+        public Builder ruleGroupArn(Output<String> ruleGroupArn) {
             $.ruleGroupArn = ruleGroupArn;
             return this;
+        }
+
+        public Builder ruleGroupArn(String ruleGroupArn) {
+            return ruleGroupArn(Output.of(ruleGroupArn));
         }
 
         public GetRuleGroupArgs build() {

@@ -5,7 +5,9 @@ package com.pulumi.awsnative.greengrassv2;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.greengrassv2.inputs.GetComponentVersionArgs;
+import com.pulumi.awsnative.greengrassv2.inputs.GetComponentVersionPlainArgs;
 import com.pulumi.awsnative.greengrassv2.outputs.GetComponentVersionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class Greengrassv2Functions {
      * Resource for Greengrass component version.
      * 
      */
-    public static CompletableFuture<GetComponentVersionResult> getComponentVersion(GetComponentVersionArgs args) {
+    public static Output<GetComponentVersionResult> getComponentVersion(GetComponentVersionArgs args) {
         return getComponentVersion(args, InvokeOptions.Empty);
     }
     /**
      * Resource for Greengrass component version.
      * 
      */
-    public static CompletableFuture<GetComponentVersionResult> getComponentVersion(GetComponentVersionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComponentVersionResult> getComponentVersionPlain(GetComponentVersionPlainArgs args) {
+        return getComponentVersionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource for Greengrass component version.
+     * 
+     */
+    public static Output<GetComponentVersionResult> getComponentVersion(GetComponentVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:greengrassv2:getComponentVersion", TypeShape.of(GetComponentVersionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource for Greengrass component version.
+     * 
+     */
+    public static CompletableFuture<GetComponentVersionResult> getComponentVersionPlain(GetComponentVersionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:greengrassv2:getComponentVersion", TypeShape.of(GetComponentVersionResult.class), args, Utilities.withVersion(options));
     }
 }

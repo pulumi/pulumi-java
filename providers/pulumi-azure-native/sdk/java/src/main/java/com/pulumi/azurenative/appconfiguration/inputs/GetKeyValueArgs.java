@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.appconfiguration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="configStoreName", required=true)
-    private String configStoreName;
+    private Output<String> configStoreName;
 
     /**
      * @return The name of the configuration store.
      * 
      */
-    public String configStoreName() {
+    public Output<String> configStoreName() {
         return this.configStoreName;
     }
 
@@ -32,13 +33,13 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyValueName", required=true)
-    private String keyValueName;
+    private Output<String> keyValueName;
 
     /**
      * @return Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
      * 
      */
-    public String keyValueName() {
+    public Output<String> keyValueName() {
         return this.keyValueName;
     }
 
@@ -47,13 +48,13 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group to which the container registry belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder configStoreName(String configStoreName) {
+        public Builder configStoreName(Output<String> configStoreName) {
             $.configStoreName = configStoreName;
+            return this;
+        }
+
+        /**
+         * @param configStoreName The name of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configStoreName(String configStoreName) {
+            return configStoreName(Output.of(configStoreName));
+        }
+
+        /**
+         * @param keyValueName Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyValueName(Output<String> keyValueName) {
+            $.keyValueName = keyValueName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder keyValueName(String keyValueName) {
-            $.keyValueName = keyValueName;
+            return keyValueName(Output.of(keyValueName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetKeyValueArgs build() {

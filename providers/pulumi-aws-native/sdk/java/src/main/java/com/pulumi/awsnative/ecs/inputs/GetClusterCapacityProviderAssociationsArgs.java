@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ecs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetClusterCapacityProviderAssociationsArgs extends com.pulumi
     public static final GetClusterCapacityProviderAssociationsArgs Empty = new GetClusterCapacityProviderAssociationsArgs();
 
     @Import(name="cluster", required=true)
-    private String cluster;
+    private Output<String> cluster;
 
-    public String cluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
@@ -43,9 +44,13 @@ public final class GetClusterCapacityProviderAssociationsArgs extends com.pulumi
             $ = new GetClusterCapacityProviderAssociationsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder cluster(String cluster) {
+        public Builder cluster(Output<String> cluster) {
             $.cluster = cluster;
             return this;
+        }
+
+        public Builder cluster(String cluster) {
+            return cluster(Output.of(cluster));
         }
 
         public GetClusterCapacityProviderAssociationsArgs build() {

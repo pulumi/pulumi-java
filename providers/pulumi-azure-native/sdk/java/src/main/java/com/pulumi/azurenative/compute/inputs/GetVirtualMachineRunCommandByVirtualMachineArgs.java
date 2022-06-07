@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return The expand expression to apply on the operation.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +50,13 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
      * 
      */
     @Import(name="runCommandName", required=true)
-    private String runCommandName;
+    private Output<String> runCommandName;
 
     /**
      * @return The name of the virtual machine run command.
      * 
      */
-    public String runCommandName() {
+    public Output<String> runCommandName() {
         return this.runCommandName;
     }
 
@@ -64,13 +65,13 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
      * 
      */
     @Import(name="vmName", required=true)
-    private String vmName;
+    private Output<String> vmName;
 
     /**
      * @return The name of the virtual machine containing the run command.
      * 
      */
-    public String vmName() {
+    public Output<String> vmName() {
         return this.vmName;
     }
 
@@ -107,8 +108,29 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param runCommandName The name of the virtual machine run command.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder runCommandName(Output<String> runCommandName) {
+            $.runCommandName = runCommandName;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
          * 
          */
         public Builder runCommandName(String runCommandName) {
-            $.runCommandName = runCommandName;
+            return runCommandName(Output.of(runCommandName));
+        }
+
+        /**
+         * @param vmName The name of the virtual machine containing the run command.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmName(Output<String> vmName) {
+            $.vmName = vmName;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends com.p
          * 
          */
         public Builder vmName(String vmName) {
-            $.vmName = vmName;
-            return this;
+            return vmName(Output.of(vmName));
         }
 
         public GetVirtualMachineRunCommandByVirtualMachineArgs build() {

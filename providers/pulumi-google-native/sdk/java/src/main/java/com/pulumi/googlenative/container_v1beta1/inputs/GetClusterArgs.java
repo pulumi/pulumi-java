@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.container_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetClusterArgs Empty = new GetClusterArgs();
 
     @Import(name="clusterId", required=true)
-    private String clusterId;
+    private Output<String> clusterId;
 
-    public String clusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="projectId", required=true)
-    private String projectId;
+    private Output<String> projectId;
 
-    public String projectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
     @Import(name="zone", required=true)
-    private String zone;
+    private Output<String> zone;
 
-    public String zone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -77,29 +78,49 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder clusterId(String clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder projectId(String projectId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
-        public Builder zone(String zone) {
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
+        }
+
+        public Builder zone(Output<String> zone) {
             $.zone = zone;
             return this;
+        }
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetClusterArgs build() {

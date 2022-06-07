@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetIpv6sFilter;
+import com.pulumi.oci.Core.inputs.GetIpv6sFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetIpv6sArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIpv6sArgs Empty = new GetIpv6sArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetIpv6sFilter> filters;
+    private @Nullable Output<List<GetIpv6sFilterArgs>> filters;
 
-    public Optional<List<GetIpv6sFilter>> filters() {
+    public Optional<Output<List<GetIpv6sFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetIpv6sArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAddress")
-    private @Nullable String ipAddress;
+    private @Nullable Output<String> ipAddress;
 
     /**
      * @return An IP address. This could be either IPv4 or IPv6, depending on the resource. Example: `10.0.3.3`
      * 
      */
-    public Optional<String> ipAddress() {
+    public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
 
@@ -43,13 +44,13 @@ public final class GetIpv6sArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetId")
-    private @Nullable String subnetId;
+    private @Nullable Output<String> subnetId;
 
     /**
      * @return The OCID of the subnet.
      * 
      */
-    public Optional<String> subnetId() {
+    public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
 
@@ -58,13 +59,13 @@ public final class GetIpv6sArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vnicId")
-    private @Nullable String vnicId;
+    private @Nullable Output<String> vnicId;
 
     /**
      * @return The OCID of the VNIC.
      * 
      */
-    public Optional<String> vnicId() {
+    public Optional<Output<String>> vnicId() {
         return Optional.ofNullable(this.vnicId);
     }
 
@@ -95,12 +96,16 @@ public final class GetIpv6sArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIpv6sArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetIpv6sFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetIpv6sFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetIpv6sFilter... filters) {
+        public Builder filters(List<GetIpv6sFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetIpv6sFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -110,8 +115,29 @@ public final class GetIpv6sArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
+            return this;
+        }
+
+        /**
+         * @param ipAddress An IP address. This could be either IPv4 or IPv6, depending on the resource. Example: `10.0.3.3`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
+        }
+
+        /**
+         * @param subnetId The OCID of the subnet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subnetId(@Nullable Output<String> subnetId) {
+            $.subnetId = subnetId;
             return this;
         }
 
@@ -121,8 +147,18 @@ public final class GetIpv6sArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder subnetId(@Nullable String subnetId) {
-            $.subnetId = subnetId;
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        /**
+         * @param vnicId The OCID of the VNIC.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vnicId(@Nullable Output<String> vnicId) {
+            $.vnicId = vnicId;
             return this;
         }
 
@@ -132,9 +168,8 @@ public final class GetIpv6sArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vnicId(@Nullable String vnicId) {
-            $.vnicId = vnicId;
-            return this;
+        public Builder vnicId(String vnicId) {
+            return vnicId(Output.of(vnicId));
         }
 
         public GetIpv6sArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetAddressArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return A unique name for the resource, required by GCE.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -35,14 +36,14 @@ public final class GetAddressArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The project in which the resource belongs. If it
      * is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -52,14 +53,14 @@ public final class GetAddressArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-    private @Nullable String region;
+    private @Nullable Output<String> region;
 
     /**
      * @return The Region in which the created address reside.
      * If it is not provided, the provider region is used.
      * 
      */
-    public Optional<String> region() {
+    public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
 
@@ -95,8 +96,30 @@ public final class GetAddressArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A unique name for the resource, required by GCE.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable Output<String> project) {
+            $.project = project;
             return this;
         }
 
@@ -107,8 +130,19 @@ public final class GetAddressArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
-            $.project = project;
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param region The Region in which the created address reside.
+         * If it is not provided, the provider region is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(@Nullable Output<String> region) {
+            $.region = region;
             return this;
         }
 
@@ -119,9 +153,8 @@ public final class GetAddressArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder region(@Nullable String region) {
-            $.region = region;
-            return this;
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
 
         public GetAddressArgs build() {

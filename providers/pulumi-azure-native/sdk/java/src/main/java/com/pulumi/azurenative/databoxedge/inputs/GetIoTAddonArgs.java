@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.databoxedge.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIoTAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addonName", required=true)
-    private String addonName;
+    private Output<String> addonName;
 
     /**
      * @return The addon name.
      * 
      */
-    public String addonName() {
+    public Output<String> addonName() {
         return this.addonName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIoTAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-    private String deviceName;
+    private Output<String> deviceName;
 
     /**
      * @return The device name.
      * 
      */
-    public String deviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetIoTAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetIoTAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="roleName", required=true)
-    private String roleName;
+    private Output<String> roleName;
 
     /**
      * @return The role name.
      * 
      */
-    public String roleName() {
+    public Output<String> roleName() {
         return this.roleName;
     }
 
@@ -105,8 +106,29 @@ public final class GetIoTAddonArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder addonName(String addonName) {
+        public Builder addonName(Output<String> addonName) {
             $.addonName = addonName;
+            return this;
+        }
+
+        /**
+         * @param addonName The addon name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder addonName(String addonName) {
+            return addonName(Output.of(addonName));
+        }
+
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceName(Output<String> deviceName) {
+            $.deviceName = deviceName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetIoTAddonArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder deviceName(String deviceName) {
-            $.deviceName = deviceName;
+            return deviceName(Output.of(deviceName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetIoTAddonArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder roleName(Output<String> roleName) {
+            $.roleName = roleName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetIoTAddonArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder roleName(String roleName) {
-            $.roleName = roleName;
-            return this;
+            return roleName(Output.of(roleName));
         }
 
         public GetIoTAddonArgs build() {

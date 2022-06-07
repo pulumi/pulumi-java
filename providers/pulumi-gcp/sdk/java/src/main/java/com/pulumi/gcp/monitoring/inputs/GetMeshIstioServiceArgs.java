@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.monitoring.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +21,14 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="meshUid", required=true)
-    private String meshUid;
+    private Output<String> meshUid;
 
     /**
      * @return Identifier for the mesh in which this Istio service is defined.
      * Corresponds to the meshUid metric label in Istio metrics.
      * 
      */
-    public String meshUid() {
+    public Output<String> meshUid() {
         return this.meshUid;
     }
 
@@ -37,14 +38,14 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The ID of the project in which the resource belongs.
      * If it is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -54,14 +55,14 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the Istio service underlying this service.
      * Corresponds to the destination_service_name metric label in Istio metrics.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -71,14 +72,14 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceNamespace", required=true)
-    private String serviceNamespace;
+    private Output<String> serviceNamespace;
 
     /**
      * @return The namespace of the Istio service underlying this service.
      * Corresponds to the destination_service_namespace metric label in Istio metrics.
      * 
      */
-    public String serviceNamespace() {
+    public Output<String> serviceNamespace() {
         return this.serviceNamespace;
     }
 
@@ -116,8 +117,31 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder meshUid(String meshUid) {
+        public Builder meshUid(Output<String> meshUid) {
             $.meshUid = meshUid;
+            return this;
+        }
+
+        /**
+         * @param meshUid Identifier for the mesh in which this Istio service is defined.
+         * Corresponds to the meshUid metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder meshUid(String meshUid) {
+            return meshUid(Output.of(meshUid));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable Output<String> project) {
+            $.project = project;
             return this;
         }
 
@@ -128,8 +152,19 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
-            $.project = project;
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param serviceName The name of the Istio service underlying this service.
+         * Corresponds to the destination_service_name metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -141,7 +176,18 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
+            return serviceName(Output.of(serviceName));
+        }
+
+        /**
+         * @param serviceNamespace The namespace of the Istio service underlying this service.
+         * Corresponds to the destination_service_namespace metric label in Istio metrics.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceNamespace(Output<String> serviceNamespace) {
+            $.serviceNamespace = serviceNamespace;
             return this;
         }
 
@@ -153,8 +199,7 @@ public final class GetMeshIstioServiceArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder serviceNamespace(String serviceNamespace) {
-            $.serviceNamespace = serviceNamespace;
-            return this;
+            return serviceNamespace(Output.of(serviceNamespace));
         }
 
         public GetMeshIstioServiceArgs build() {

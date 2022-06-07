@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Email.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEmailDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="emailDomainId", required=true)
-    private String emailDomainId;
+    private Output<String> emailDomainId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of this email domain.
      * 
      */
-    public String emailDomainId() {
+    public Output<String> emailDomainId() {
         return this.emailDomainId;
     }
 
@@ -57,9 +58,19 @@ public final class GetEmailDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder emailDomainId(String emailDomainId) {
+        public Builder emailDomainId(Output<String> emailDomainId) {
             $.emailDomainId = emailDomainId;
             return this;
+        }
+
+        /**
+         * @param emailDomainId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of this email domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder emailDomainId(String emailDomainId) {
+            return emailDomainId(Output.of(emailDomainId));
         }
 
         public GetEmailDomainArgs build() {

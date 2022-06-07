@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInstanceProfileArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="instanceProfileName", required=true)
-    private String instanceProfileName;
+    private Output<String> instanceProfileName;
 
     /**
      * @return The name of the instance profile to create.
      * 
      */
-    public String instanceProfileName() {
+    public Output<String> instanceProfileName() {
         return this.instanceProfileName;
     }
 
@@ -57,9 +58,19 @@ public final class GetInstanceProfileArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder instanceProfileName(String instanceProfileName) {
+        public Builder instanceProfileName(Output<String> instanceProfileName) {
             $.instanceProfileName = instanceProfileName;
             return this;
+        }
+
+        /**
+         * @param instanceProfileName The name of the instance profile to create.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceProfileName(String instanceProfileName) {
+            return instanceProfileName(Output.of(instanceProfileName));
         }
 
         public GetInstanceProfileArgs build() {

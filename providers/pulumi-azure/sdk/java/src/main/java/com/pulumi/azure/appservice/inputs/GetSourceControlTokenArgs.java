@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.appservice.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSourceControlTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-    private String type;
+    private Output<String> type;
 
     /**
      * @return The Token type. Possible values include `Bitbucket`, `Dropbox`, `Github`, and `OneDrive`.
      * 
      */
-    public String type() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -57,9 +58,19 @@ public final class GetSourceControlTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder type(String type) {
+        public Builder type(Output<String> type) {
             $.type = type;
             return this;
+        }
+
+        /**
+         * @param type The Token type. Possible values include `Bitbucket`, `Dropbox`, `Github`, and `OneDrive`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         public GetSourceControlTokenArgs build() {

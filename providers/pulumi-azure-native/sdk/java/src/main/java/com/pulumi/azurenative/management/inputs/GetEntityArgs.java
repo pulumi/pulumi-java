@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.management.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filter")
-    private @Nullable String filter;
+    private @Nullable Output<String> filter;
 
     /**
      * @return The filter parameter allows you to filter on the the name or display name fields. You can check for equality on the name field (e.g. name eq &#39;{entityName}&#39;)  and you can check for substrings on either the name or display name fields(e.g. contains(name, &#39;{substringToSearch}&#39;), contains(displayName, &#39;{substringToSearch&#39;)). Note that the &#39;{entityName}&#39; and &#39;{substringToSearch}&#39; fields are checked case insensitively.
      * 
      */
-    public Optional<String> filter() {
+    public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
 
@@ -35,13 +36,13 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupName")
-    private @Nullable String groupName;
+    private @Nullable Output<String> groupName;
 
     /**
      * @return A filter which allows the get entities call to focus on a particular group (i.e. &#34;$filter=name eq &#39;groupName&#39;&#34;)
      * 
      */
-    public Optional<String> groupName() {
+    public Optional<Output<String>> groupName() {
         return Optional.ofNullable(this.groupName);
     }
 
@@ -55,7 +56,7 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="search")
-    private @Nullable String search;
+    private @Nullable Output<String> search;
 
     /**
      * @return The $search parameter is used in conjunction with the $filter parameter to return three different outputs depending on the parameter passed in.
@@ -66,7 +67,7 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * With $search=ChildrenOnly the API will return only the first level of children of the group entity info specified in $filter.  The user must have direct access to the children entities or one of it&#39;s descendants for it to show up in the results.
      * 
      */
-    public Optional<String> search() {
+    public Optional<Output<String>> search() {
         return Optional.ofNullable(this.search);
     }
 
@@ -75,13 +76,13 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="select")
-    private @Nullable String select;
+    private @Nullable Output<String> select;
 
     /**
      * @return This parameter specifies the fields to include in the response. Can include any combination of Name,DisplayName,Type,ParentDisplayNameChain,ParentChain, e.g. &#39;$select=Name,DisplayName,Type,ParentDisplayNameChain,ParentNameChain&#39;. When specified the $select parameter can override select in $skipToken.
      * 
      */
-    public Optional<String> select() {
+    public Optional<Output<String>> select() {
         return Optional.ofNullable(this.select);
     }
 
@@ -90,13 +91,13 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skip")
-    private @Nullable Integer skip;
+    private @Nullable Output<Integer> skip;
 
     /**
      * @return Number of entities to skip over when retrieving results. Passing this in will override $skipToken.
      * 
      */
-    public Optional<Integer> skip() {
+    public Optional<Output<Integer>> skip() {
         return Optional.ofNullable(this.skip);
     }
 
@@ -106,14 +107,14 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skiptoken")
-    private @Nullable String skiptoken;
+    private @Nullable Output<String> skiptoken;
 
     /**
      * @return Page continuation token is only used if a previous operation returned a partial result.
      * If a previous response contains a nextLink element, the value of the nextLink element will include a token parameter that specifies a starting point to use for subsequent calls.
      * 
      */
-    public Optional<String> skiptoken() {
+    public Optional<Output<String>> skiptoken() {
         return Optional.ofNullable(this.skiptoken);
     }
 
@@ -122,13 +123,13 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="top")
-    private @Nullable Integer top;
+    private @Nullable Output<Integer> top;
 
     /**
      * @return Number of elements to return when retrieving results. Passing this in will override $skipToken.
      * 
      */
-    public Optional<Integer> top() {
+    public Optional<Output<Integer>> top() {
         return Optional.ofNullable(this.top);
     }
 
@@ -137,13 +138,13 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="view")
-    private @Nullable String view;
+    private @Nullable Output<String> view;
 
     /**
      * @return The view parameter allows clients to filter the type of data that is returned by the getEntities call.
      * 
      */
-    public Optional<String> view() {
+    public Optional<Output<String>> view() {
         return Optional.ofNullable(this.view);
     }
 
@@ -184,8 +185,29 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filter(@Nullable String filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
+            return this;
+        }
+
+        /**
+         * @param filter The filter parameter allows you to filter on the the name or display name fields. You can check for equality on the name field (e.g. name eq &#39;{entityName}&#39;)  and you can check for substrings on either the name or display name fields(e.g. contains(name, &#39;{substringToSearch}&#39;), contains(displayName, &#39;{substringToSearch&#39;)). Note that the &#39;{entityName}&#39; and &#39;{substringToSearch}&#39; fields are checked case insensitively.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
+        }
+
+        /**
+         * @param groupName A filter which allows the get entities call to focus on a particular group (i.e. &#34;$filter=name eq &#39;groupName&#39;&#34;)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupName(@Nullable Output<String> groupName) {
+            $.groupName = groupName;
             return this;
         }
 
@@ -195,8 +217,23 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder groupName(@Nullable String groupName) {
-            $.groupName = groupName;
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
+        }
+
+        /**
+         * @param search The $search parameter is used in conjunction with the $filter parameter to return three different outputs depending on the parameter passed in.
+         * With $search=AllowedParents the API will return the entity info of all groups that the requested entity will be able to reparent to as determined by the user&#39;s permissions.
+         * With $search=AllowedChildren the API will return the entity info of all entities that can be added as children of the requested entity.
+         * With $search=ParentAndFirstLevelChildren the API will return the parent and  first level of children that the user has either direct access to or indirect access via one of their descendants.
+         * With $search=ParentOnly the API will return only the group if the user has access to at least one of the descendants of the group.
+         * With $search=ChildrenOnly the API will return only the first level of children of the group entity info specified in $filter.  The user must have direct access to the children entities or one of it&#39;s descendants for it to show up in the results.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder search(@Nullable Output<String> search) {
+            $.search = search;
             return this;
         }
 
@@ -211,8 +248,18 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder search(@Nullable String search) {
-            $.search = search;
+        public Builder search(String search) {
+            return search(Output.of(search));
+        }
+
+        /**
+         * @param select This parameter specifies the fields to include in the response. Can include any combination of Name,DisplayName,Type,ParentDisplayNameChain,ParentChain, e.g. &#39;$select=Name,DisplayName,Type,ParentDisplayNameChain,ParentNameChain&#39;. When specified the $select parameter can override select in $skipToken.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder select(@Nullable Output<String> select) {
+            $.select = select;
             return this;
         }
 
@@ -222,8 +269,18 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder select(@Nullable String select) {
-            $.select = select;
+        public Builder select(String select) {
+            return select(Output.of(select));
+        }
+
+        /**
+         * @param skip Number of entities to skip over when retrieving results. Passing this in will override $skipToken.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skip(@Nullable Output<Integer> skip) {
+            $.skip = skip;
             return this;
         }
 
@@ -233,8 +290,19 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder skip(@Nullable Integer skip) {
-            $.skip = skip;
+        public Builder skip(Integer skip) {
+            return skip(Output.of(skip));
+        }
+
+        /**
+         * @param skiptoken Page continuation token is only used if a previous operation returned a partial result.
+         * If a previous response contains a nextLink element, the value of the nextLink element will include a token parameter that specifies a starting point to use for subsequent calls.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skiptoken(@Nullable Output<String> skiptoken) {
+            $.skiptoken = skiptoken;
             return this;
         }
 
@@ -245,8 +313,18 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder skiptoken(@Nullable String skiptoken) {
-            $.skiptoken = skiptoken;
+        public Builder skiptoken(String skiptoken) {
+            return skiptoken(Output.of(skiptoken));
+        }
+
+        /**
+         * @param top Number of elements to return when retrieving results. Passing this in will override $skipToken.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder top(@Nullable Output<Integer> top) {
+            $.top = top;
             return this;
         }
 
@@ -256,8 +334,18 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder top(@Nullable Integer top) {
-            $.top = top;
+        public Builder top(Integer top) {
+            return top(Output.of(top));
+        }
+
+        /**
+         * @param view The view parameter allows clients to filter the type of data that is returned by the getEntities call.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder view(@Nullable Output<String> view) {
+            $.view = view;
             return this;
         }
 
@@ -267,9 +355,8 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder view(@Nullable String view) {
-            $.view = view;
-            return this;
+        public Builder view(String view) {
+            return view(Output.of(view));
         }
 
         public GetEntityArgs build() {

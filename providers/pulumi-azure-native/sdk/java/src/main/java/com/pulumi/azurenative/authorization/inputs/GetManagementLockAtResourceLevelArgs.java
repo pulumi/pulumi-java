@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="lockName", required=true)
-    private String lockName;
+    private Output<String> lockName;
 
     /**
      * @return The name of lock.
      * 
      */
-    public String lockName() {
+    public Output<String> lockName() {
         return this.lockName;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="parentResourcePath", required=true)
-    private String parentResourcePath;
+    private Output<String> parentResourcePath;
 
     /**
      * @return An extra path parameter needed in some services, like SQL Databases.
      * 
      */
-    public String parentResourcePath() {
+    public Output<String> parentResourcePath() {
         return this.parentResourcePath;
     }
 
@@ -47,13 +48,13 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the resource.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -77,13 +78,13 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceProviderNamespace", required=true)
-    private String resourceProviderNamespace;
+    private Output<String> resourceProviderNamespace;
 
     /**
      * @return The namespace of the resource provider.
      * 
      */
-    public String resourceProviderNamespace() {
+    public Output<String> resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
@@ -92,13 +93,13 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceType", required=true)
-    private String resourceType;
+    private Output<String> resourceType;
 
     /**
      * @return The type of the resource.
      * 
      */
-    public String resourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -137,8 +138,29 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder lockName(String lockName) {
+        public Builder lockName(Output<String> lockName) {
             $.lockName = lockName;
+            return this;
+        }
+
+        /**
+         * @param lockName The name of lock.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lockName(String lockName) {
+            return lockName(Output.of(lockName));
+        }
+
+        /**
+         * @param parentResourcePath An extra path parameter needed in some services, like SQL Databases.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentResourcePath(Output<String> parentResourcePath) {
+            $.parentResourcePath = parentResourcePath;
             return this;
         }
 
@@ -149,7 +171,17 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
          * 
          */
         public Builder parentResourcePath(String parentResourcePath) {
-            $.parentResourcePath = parentResourcePath;
+            return parentResourcePath(Output.of(parentResourcePath));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -160,7 +192,17 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -171,7 +213,17 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param resourceProviderNamespace The namespace of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
+            $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
 
@@ -182,7 +234,17 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
-            $.resourceProviderNamespace = resourceProviderNamespace;
+            return resourceProviderNamespace(Output.of(resourceProviderNamespace));
+        }
+
+        /**
+         * @param resourceType The type of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceType(Output<String> resourceType) {
+            $.resourceType = resourceType;
             return this;
         }
 
@@ -193,8 +255,7 @@ public final class GetManagementLockAtResourceLevelArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceType(String resourceType) {
-            $.resourceType = resourceType;
-            return this;
+            return resourceType(Output.of(resourceType));
         }
 
         public GetManagementLockAtResourceLevelArgs build() {

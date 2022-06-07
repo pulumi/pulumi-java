@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataLabellingService.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataLabellingService.inputs.GetDatasetsFilter;
+import com.pulumi.oci.DataLabellingService.inputs.GetDatasetsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetDatasetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="annotationFormat")
-    private @Nullable String annotationFormat;
+    private @Nullable Output<String> annotationFormat;
 
     /**
      * @return A filter to return only resources that match the entire annotation format given.
      * 
      */
-    public Optional<String> annotationFormat() {
+    public Optional<Output<String>> annotationFormat() {
         return Optional.ofNullable(this.annotationFormat);
     }
 
@@ -36,13 +37,13 @@ public final class GetDatasetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,20 +52,20 @@ public final class GetDatasetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDatasetsFilter> filters;
+    private @Nullable Output<List<GetDatasetsFilterArgs>> filters;
 
-    public Optional<List<GetDatasetsFilter>> filters() {
+    public Optional<Output<List<GetDatasetsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetDatasetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Unique Dataset OCID
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -88,13 +89,13 @@ public final class GetDatasetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources whose lifecycleState matches this query param.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -133,8 +134,29 @@ public final class GetDatasetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder annotationFormat(@Nullable String annotationFormat) {
+        public Builder annotationFormat(@Nullable Output<String> annotationFormat) {
             $.annotationFormat = annotationFormat;
+            return this;
+        }
+
+        /**
+         * @param annotationFormat A filter to return only resources that match the entire annotation format given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder annotationFormat(String annotationFormat) {
+            return annotationFormat(Output.of(annotationFormat));
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -145,7 +167,17 @@ public final class GetDatasetsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -155,17 +187,20 @@ public final class GetDatasetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetDatasetsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDatasetsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDatasetsFilter... filters) {
+        public Builder filters(List<GetDatasetsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDatasetsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -175,8 +210,29 @@ public final class GetDatasetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Unique Dataset OCID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param state A filter to return only resources whose lifecycleState matches this query param.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -186,9 +242,8 @@ public final class GetDatasetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetDatasetsArgs build() {

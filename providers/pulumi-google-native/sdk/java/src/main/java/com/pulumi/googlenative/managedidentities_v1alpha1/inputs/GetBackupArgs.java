@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.managedidentities_v1alpha1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBackupArgs Empty = new GetBackupArgs();
 
     @Import(name="backupId", required=true)
-    private String backupId;
+    private Output<String> backupId;
 
-    public String backupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
 
     @Import(name="domainId", required=true)
-    private String domainId;
+    private Output<String> domainId;
 
-    public String domainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBackupArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder backupId(String backupId) {
+        public Builder backupId(Output<String> backupId) {
             $.backupId = backupId;
             return this;
         }
 
-        public Builder domainId(String domainId) {
+        public Builder backupId(String backupId) {
+            return backupId(Output.of(backupId));
+        }
+
+        public Builder domainId(Output<String> domainId) {
             $.domainId = domainId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder domainId(String domainId) {
+            return domainId(Output.of(domainId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetBackupArgs build() {

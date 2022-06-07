@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dataplex_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetLakeContentIamPolicyArgs extends com.pulumi.resources.Invo
     public static final GetLakeContentIamPolicyArgs Empty = new GetLakeContentIamPolicyArgs();
 
     @Import(name="contentId", required=true)
-    private String contentId;
+    private Output<String> contentId;
 
-    public String contentId() {
+    public Output<String> contentId() {
         return this.contentId;
     }
 
     @Import(name="lakeId", required=true)
-    private String lakeId;
+    private Output<String> lakeId;
 
-    public String lakeId() {
+    public Output<String> lakeId() {
         return this.lakeId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -77,29 +78,49 @@ public final class GetLakeContentIamPolicyArgs extends com.pulumi.resources.Invo
             $ = new GetLakeContentIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder contentId(String contentId) {
+        public Builder contentId(Output<String> contentId) {
             $.contentId = contentId;
             return this;
         }
 
-        public Builder lakeId(String lakeId) {
+        public Builder contentId(String contentId) {
+            return contentId(Output.of(contentId));
+        }
+
+        public Builder lakeId(Output<String> lakeId) {
             $.lakeId = lakeId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder lakeId(String lakeId) {
+            return lakeId(Output.of(lakeId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetLakeContentIamPolicyArgs build() {

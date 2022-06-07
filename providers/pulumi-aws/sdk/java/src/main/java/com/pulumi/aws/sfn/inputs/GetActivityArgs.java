@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.sfn.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetActivityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-    private @Nullable String arn;
+    private @Nullable Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) that identifies the activity.
      * 
      */
-    public Optional<String> arn() {
+    public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
 
@@ -34,13 +35,13 @@ public final class GetActivityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name that identifies the activity.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -75,8 +76,29 @@ public final class GetActivityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn The Amazon Resource Name (ARN) that identifies the activity.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param name The name that identifies the activity.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -86,9 +108,8 @@ public final class GetActivityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
-            return this;
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetActivityArgs build() {

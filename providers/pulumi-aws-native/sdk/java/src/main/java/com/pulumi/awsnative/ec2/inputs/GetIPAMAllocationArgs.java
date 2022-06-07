@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
     public static final GetIPAMAllocationArgs Empty = new GetIPAMAllocationArgs();
 
     @Import(name="cidr", required=true)
-    private String cidr;
+    private Output<String> cidr;
 
-    public String cidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
 
@@ -24,13 +25,13 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipamPoolAllocationId", required=true)
-    private String ipamPoolAllocationId;
+    private Output<String> ipamPoolAllocationId;
 
     /**
      * @return Id of the allocation.
      * 
      */
-    public String ipamPoolAllocationId() {
+    public Output<String> ipamPoolAllocationId() {
         return this.ipamPoolAllocationId;
     }
 
@@ -39,13 +40,13 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipamPoolId", required=true)
-    private String ipamPoolId;
+    private Output<String> ipamPoolId;
 
     /**
      * @return Id of the IPAM Pool.
      * 
      */
-    public String ipamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
 
@@ -75,8 +76,23 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetIPAMAllocationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder cidr(String cidr) {
+        public Builder cidr(Output<String> cidr) {
             $.cidr = cidr;
+            return this;
+        }
+
+        public Builder cidr(String cidr) {
+            return cidr(Output.of(cidr));
+        }
+
+        /**
+         * @param ipamPoolAllocationId Id of the allocation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipamPoolAllocationId(Output<String> ipamPoolAllocationId) {
+            $.ipamPoolAllocationId = ipamPoolAllocationId;
             return this;
         }
 
@@ -87,7 +103,17 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder ipamPoolAllocationId(String ipamPoolAllocationId) {
-            $.ipamPoolAllocationId = ipamPoolAllocationId;
+            return ipamPoolAllocationId(Output.of(ipamPoolAllocationId));
+        }
+
+        /**
+         * @param ipamPoolId Id of the IPAM Pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipamPoolId(Output<String> ipamPoolId) {
+            $.ipamPoolId = ipamPoolId;
             return this;
         }
 
@@ -98,8 +124,7 @@ public final class GetIPAMAllocationArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder ipamPoolId(String ipamPoolId) {
-            $.ipamPoolId = ipamPoolId;
-            return this;
+            return ipamPoolId(Output.of(ipamPoolId));
         }
 
         public GetIPAMAllocationArgs build() {

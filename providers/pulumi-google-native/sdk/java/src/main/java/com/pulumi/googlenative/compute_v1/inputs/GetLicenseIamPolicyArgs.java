@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetLicenseIamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetLicenseIamPolicyArgs Empty = new GetLicenseIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="resource", required=true)
-    private String resource;
+    private Output<String> resource;
 
-    public String resource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -61,19 +62,31 @@ public final class GetLicenseIamPolicyArgs extends com.pulumi.resources.InvokeAr
             $ = new GetLicenseIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder resource(String resource) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder resource(Output<String> resource) {
             $.resource = resource;
             return this;
+        }
+
+        public Builder resource(String resource) {
+            return resource(Output.of(resource));
         }
 
         public GetLicenseIamPolicyArgs build() {

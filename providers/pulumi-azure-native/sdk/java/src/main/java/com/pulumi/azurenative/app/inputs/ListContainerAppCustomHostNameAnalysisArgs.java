@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.app.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class ListContainerAppCustomHostNameAnalysisArgs extends com.pulumi
      * 
      */
     @Import(name="containerAppName", required=true)
-    private String containerAppName;
+    private Output<String> containerAppName;
 
     /**
      * @return Name of the Container App.
      * 
      */
-    public String containerAppName() {
+    public Output<String> containerAppName() {
         return this.containerAppName;
     }
 
@@ -34,13 +35,13 @@ public final class ListContainerAppCustomHostNameAnalysisArgs extends com.pulumi
      * 
      */
     @Import(name="customHostname")
-    private @Nullable String customHostname;
+    private @Nullable Output<String> customHostname;
 
     /**
      * @return Custom hostname.
      * 
      */
-    public Optional<String> customHostname() {
+    public Optional<Output<String>> customHostname() {
         return Optional.ofNullable(this.customHostname);
     }
 
@@ -49,13 +50,13 @@ public final class ListContainerAppCustomHostNameAnalysisArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,29 @@ public final class ListContainerAppCustomHostNameAnalysisArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder containerAppName(String containerAppName) {
+        public Builder containerAppName(Output<String> containerAppName) {
             $.containerAppName = containerAppName;
+            return this;
+        }
+
+        /**
+         * @param containerAppName Name of the Container App.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerAppName(String containerAppName) {
+            return containerAppName(Output.of(containerAppName));
+        }
+
+        /**
+         * @param customHostname Custom hostname.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customHostname(@Nullable Output<String> customHostname) {
+            $.customHostname = customHostname;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class ListContainerAppCustomHostNameAnalysisArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder customHostname(@Nullable String customHostname) {
-            $.customHostname = customHostname;
+        public Builder customHostname(String customHostname) {
+            return customHostname(Output.of(customHostname));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class ListContainerAppCustomHostNameAnalysisArgs extends com.pulumi
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListContainerAppCustomHostNameAnalysisArgs build() {

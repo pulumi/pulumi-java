@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.AppMgmtControl.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMonitoredInstanceArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="monitoredInstanceId", required=true)
-    private String monitoredInstanceId;
+    private Output<String> monitoredInstanceId;
 
     /**
      * @return OCID of monitored instance.
      * 
      */
-    public String monitoredInstanceId() {
+    public Output<String> monitoredInstanceId() {
         return this.monitoredInstanceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetMonitoredInstanceArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder monitoredInstanceId(String monitoredInstanceId) {
+        public Builder monitoredInstanceId(Output<String> monitoredInstanceId) {
             $.monitoredInstanceId = monitoredInstanceId;
             return this;
+        }
+
+        /**
+         * @param monitoredInstanceId OCID of monitored instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monitoredInstanceId(String monitoredInstanceId) {
+            return monitoredInstanceId(Output.of(monitoredInstanceId));
         }
 
         public GetMonitoredInstanceArgs build() {

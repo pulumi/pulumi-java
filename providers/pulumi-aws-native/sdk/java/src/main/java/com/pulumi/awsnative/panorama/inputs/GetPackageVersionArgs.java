@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.panorama.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetPackageVersionArgs extends com.pulumi.resources.InvokeArgs
     public static final GetPackageVersionArgs Empty = new GetPackageVersionArgs();
 
     @Import(name="packageId", required=true)
-    private String packageId;
+    private Output<String> packageId;
 
-    public String packageId() {
+    public Output<String> packageId() {
         return this.packageId;
     }
 
     @Import(name="packageVersion", required=true)
-    private String packageVersion;
+    private Output<String> packageVersion;
 
-    public String packageVersion() {
+    public Output<String> packageVersion() {
         return this.packageVersion;
     }
 
     @Import(name="patchVersion", required=true)
-    private String patchVersion;
+    private Output<String> patchVersion;
 
-    public String patchVersion() {
+    public Output<String> patchVersion() {
         return this.patchVersion;
     }
 
@@ -59,19 +60,31 @@ public final class GetPackageVersionArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetPackageVersionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder packageId(String packageId) {
+        public Builder packageId(Output<String> packageId) {
             $.packageId = packageId;
             return this;
         }
 
-        public Builder packageVersion(String packageVersion) {
+        public Builder packageId(String packageId) {
+            return packageId(Output.of(packageId));
+        }
+
+        public Builder packageVersion(Output<String> packageVersion) {
             $.packageVersion = packageVersion;
             return this;
         }
 
-        public Builder patchVersion(String patchVersion) {
+        public Builder packageVersion(String packageVersion) {
+            return packageVersion(Output.of(packageVersion));
+        }
+
+        public Builder patchVersion(Output<String> patchVersion) {
             $.patchVersion = patchVersion;
             return this;
+        }
+
+        public Builder patchVersion(String patchVersion) {
+            return patchVersion(Output.of(patchVersion));
         }
 
         public GetPackageVersionArgs build() {

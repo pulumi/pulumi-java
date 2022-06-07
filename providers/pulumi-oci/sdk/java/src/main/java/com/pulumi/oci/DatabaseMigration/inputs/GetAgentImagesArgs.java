@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DatabaseMigration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseMigration.inputs.GetAgentImagesFilter;
+import com.pulumi.oci.DatabaseMigration.inputs.GetAgentImagesFilterArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,9 +17,9 @@ public final class GetAgentImagesArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAgentImagesArgs Empty = new GetAgentImagesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetAgentImagesFilter> filters;
+    private @Nullable Output<List<GetAgentImagesFilterArgs>> filters;
 
-    public Optional<List<GetAgentImagesFilter>> filters() {
+    public Optional<Output<List<GetAgentImagesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -46,12 +47,16 @@ public final class GetAgentImagesArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAgentImagesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetAgentImagesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetAgentImagesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAgentImagesFilter... filters) {
+        public Builder filters(List<GetAgentImagesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAgentImagesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.kubernetes.inputs;
 
 import com.pulumi.azurenative.kubernetes.enums.AuthenticationMethod;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
      * 
      */
     @Import(name="authenticationMethod", required=true)
-    private Either<String,AuthenticationMethod> authenticationMethod;
+    private Output<Either<String,AuthenticationMethod>> authenticationMethod;
 
     /**
      * @return The mode of client authentication.
      * 
      */
-    public Either<String,AuthenticationMethod> authenticationMethod() {
+    public Output<Either<String,AuthenticationMethod>> authenticationMethod() {
         return this.authenticationMethod;
     }
 
@@ -35,13 +36,13 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
      * 
      */
     @Import(name="clientProxy", required=true)
-    private Boolean clientProxy;
+    private Output<Boolean> clientProxy;
 
     /**
      * @return Boolean value to indicate whether the request is for client side proxy or not
      * 
      */
-    public Boolean clientProxy() {
+    public Output<Boolean> clientProxy() {
         return this.clientProxy;
     }
 
@@ -50,13 +51,13 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return The name of the Kubernetes cluster on which get is called.
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -65,13 +66,13 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -108,9 +109,19 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder authenticationMethod(Either<String,AuthenticationMethod> authenticationMethod) {
+        public Builder authenticationMethod(Output<Either<String,AuthenticationMethod>> authenticationMethod) {
             $.authenticationMethod = authenticationMethod;
             return this;
+        }
+
+        /**
+         * @param authenticationMethod The mode of client authentication.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationMethod(Either<String,AuthenticationMethod> authenticationMethod) {
+            return authenticationMethod(Output.of(authenticationMethod));
         }
 
         /**
@@ -139,8 +150,29 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder clientProxy(Boolean clientProxy) {
+        public Builder clientProxy(Output<Boolean> clientProxy) {
             $.clientProxy = clientProxy;
+            return this;
+        }
+
+        /**
+         * @param clientProxy Boolean value to indicate whether the request is for client side proxy or not
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientProxy(Boolean clientProxy) {
+            return clientProxy(Output.of(clientProxy));
+        }
+
+        /**
+         * @param clusterName The name of the Kubernetes cluster on which get is called.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(Output<String> clusterName) {
+            $.clusterName = clusterName;
             return this;
         }
 
@@ -151,7 +183,17 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
          * 
          */
         public Builder clusterName(String clusterName) {
-            $.clusterName = clusterName;
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -162,8 +204,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListConnectedClusterUserCredentialsArgs build() {

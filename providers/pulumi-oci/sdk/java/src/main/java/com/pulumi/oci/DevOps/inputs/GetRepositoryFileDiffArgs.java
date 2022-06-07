@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetRepositoryFileDiffArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="baseVersion", required=true)
-    private String baseVersion;
+    private Output<String> baseVersion;
 
     /**
      * @return The branch to compare changes against.
      * 
      */
-    public String baseVersion() {
+    public Output<String> baseVersion() {
         return this.baseVersion;
     }
 
@@ -35,13 +36,13 @@ public final class GetRepositoryFileDiffArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="filePath", required=true)
-    private String filePath;
+    private Output<String> filePath;
 
     /**
      * @return A filter to return only commits that affect any of the specified paths.
      * 
      */
-    public String filePath() {
+    public Output<String> filePath() {
         return this.filePath;
     }
 
@@ -50,13 +51,13 @@ public final class GetRepositoryFileDiffArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="isComparisonFromMergeBase")
-    private @Nullable Boolean isComparisonFromMergeBase;
+    private @Nullable Output<Boolean> isComparisonFromMergeBase;
 
     /**
      * @return Boolean to indicate whether to use merge base or most recent revision.
      * 
      */
-    public Optional<Boolean> isComparisonFromMergeBase() {
+    public Optional<Output<Boolean>> isComparisonFromMergeBase() {
         return Optional.ofNullable(this.isComparisonFromMergeBase);
     }
 
@@ -65,13 +66,13 @@ public final class GetRepositoryFileDiffArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -80,13 +81,13 @@ public final class GetRepositoryFileDiffArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetVersion", required=true)
-    private String targetVersion;
+    private Output<String> targetVersion;
 
     /**
      * @return The branch where changes are coming from.
      * 
      */
-    public String targetVersion() {
+    public Output<String> targetVersion() {
         return this.targetVersion;
     }
 
@@ -124,8 +125,29 @@ public final class GetRepositoryFileDiffArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder baseVersion(String baseVersion) {
+        public Builder baseVersion(Output<String> baseVersion) {
             $.baseVersion = baseVersion;
+            return this;
+        }
+
+        /**
+         * @param baseVersion The branch to compare changes against.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder baseVersion(String baseVersion) {
+            return baseVersion(Output.of(baseVersion));
+        }
+
+        /**
+         * @param filePath A filter to return only commits that affect any of the specified paths.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filePath(Output<String> filePath) {
+            $.filePath = filePath;
             return this;
         }
 
@@ -136,7 +158,17 @@ public final class GetRepositoryFileDiffArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder filePath(String filePath) {
-            $.filePath = filePath;
+            return filePath(Output.of(filePath));
+        }
+
+        /**
+         * @param isComparisonFromMergeBase Boolean to indicate whether to use merge base or most recent revision.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isComparisonFromMergeBase(@Nullable Output<Boolean> isComparisonFromMergeBase) {
+            $.isComparisonFromMergeBase = isComparisonFromMergeBase;
             return this;
         }
 
@@ -146,8 +178,18 @@ public final class GetRepositoryFileDiffArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder isComparisonFromMergeBase(@Nullable Boolean isComparisonFromMergeBase) {
-            $.isComparisonFromMergeBase = isComparisonFromMergeBase;
+        public Builder isComparisonFromMergeBase(Boolean isComparisonFromMergeBase) {
+            return isComparisonFromMergeBase(Output.of(isComparisonFromMergeBase));
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -158,7 +200,17 @@ public final class GetRepositoryFileDiffArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
+            return repositoryId(Output.of(repositoryId));
+        }
+
+        /**
+         * @param targetVersion The branch where changes are coming from.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetVersion(Output<String> targetVersion) {
+            $.targetVersion = targetVersion;
             return this;
         }
 
@@ -169,8 +221,7 @@ public final class GetRepositoryFileDiffArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder targetVersion(String targetVersion) {
-            $.targetVersion = targetVersion;
-            return this;
+            return targetVersion(Output.of(targetVersion));
         }
 
         public GetRepositoryFileDiffArgs build() {

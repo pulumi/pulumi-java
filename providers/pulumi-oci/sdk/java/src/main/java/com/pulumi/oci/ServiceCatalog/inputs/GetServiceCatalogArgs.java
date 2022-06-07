@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ServiceCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceCatalogArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="serviceCatalogId", required=true)
-    private String serviceCatalogId;
+    private Output<String> serviceCatalogId;
 
     /**
      * @return The unique identifier for the service catalog.
      * 
      */
-    public String serviceCatalogId() {
+    public Output<String> serviceCatalogId() {
         return this.serviceCatalogId;
     }
 
@@ -57,9 +58,19 @@ public final class GetServiceCatalogArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder serviceCatalogId(String serviceCatalogId) {
+        public Builder serviceCatalogId(Output<String> serviceCatalogId) {
             $.serviceCatalogId = serviceCatalogId;
             return this;
+        }
+
+        /**
+         * @param serviceCatalogId The unique identifier for the service catalog.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceCatalogId(String serviceCatalogId) {
+            return serviceCatalogId(Output.of(serviceCatalogId));
         }
 
         public GetServiceCatalogArgs build() {

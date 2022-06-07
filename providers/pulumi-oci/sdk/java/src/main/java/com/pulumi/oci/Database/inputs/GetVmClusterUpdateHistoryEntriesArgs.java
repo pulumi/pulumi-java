@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetVmClusterUpdateHistoryEntriesFilter;
+import com.pulumi.oci.Database.inputs.GetVmClusterUpdateHistoryEntriesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetVmClusterUpdateHistoryEntriesArgs extends com.pulumi.resou
     public static final GetVmClusterUpdateHistoryEntriesArgs Empty = new GetVmClusterUpdateHistoryEntriesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetVmClusterUpdateHistoryEntriesFilter> filters;
+    private @Nullable Output<List<GetVmClusterUpdateHistoryEntriesFilterArgs>> filters;
 
-    public Optional<List<GetVmClusterUpdateHistoryEntriesFilter>> filters() {
+    public Optional<Output<List<GetVmClusterUpdateHistoryEntriesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetVmClusterUpdateHistoryEntriesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -43,13 +44,13 @@ public final class GetVmClusterUpdateHistoryEntriesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="updateType")
-    private @Nullable String updateType;
+    private @Nullable Output<String> updateType;
 
     /**
      * @return A filter to return only resources that match the given update type exactly.
      * 
      */
-    public Optional<String> updateType() {
+    public Optional<Output<String>> updateType() {
         return Optional.ofNullable(this.updateType);
     }
 
@@ -58,13 +59,13 @@ public final class GetVmClusterUpdateHistoryEntriesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="vmClusterId", required=true)
-    private String vmClusterId;
+    private Output<String> vmClusterId;
 
     /**
      * @return The VM cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String vmClusterId() {
+    public Output<String> vmClusterId() {
         return this.vmClusterId;
     }
 
@@ -95,12 +96,16 @@ public final class GetVmClusterUpdateHistoryEntriesArgs extends com.pulumi.resou
             $ = new GetVmClusterUpdateHistoryEntriesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetVmClusterUpdateHistoryEntriesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetVmClusterUpdateHistoryEntriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetVmClusterUpdateHistoryEntriesFilter... filters) {
+        public Builder filters(List<GetVmClusterUpdateHistoryEntriesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetVmClusterUpdateHistoryEntriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -110,8 +115,29 @@ public final class GetVmClusterUpdateHistoryEntriesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param updateType A filter to return only resources that match the given update type exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder updateType(@Nullable Output<String> updateType) {
+            $.updateType = updateType;
             return this;
         }
 
@@ -121,8 +147,18 @@ public final class GetVmClusterUpdateHistoryEntriesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder updateType(@Nullable String updateType) {
-            $.updateType = updateType;
+        public Builder updateType(String updateType) {
+            return updateType(Output.of(updateType));
+        }
+
+        /**
+         * @param vmClusterId The VM cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmClusterId(Output<String> vmClusterId) {
+            $.vmClusterId = vmClusterId;
             return this;
         }
 
@@ -133,8 +169,7 @@ public final class GetVmClusterUpdateHistoryEntriesArgs extends com.pulumi.resou
          * 
          */
         public Builder vmClusterId(String vmClusterId) {
-            $.vmClusterId = vmClusterId;
-            return this;
+            return vmClusterId(Output.of(vmClusterId));
         }
 
         public GetVmClusterUpdateHistoryEntriesArgs build() {

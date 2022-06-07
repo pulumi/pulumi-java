@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetLocalPeeringGatewaysFilter;
+import com.pulumi.oci.Core.inputs.GetLocalPeeringGatewaysFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetLocalPeeringGatewaysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetLocalPeeringGatewaysFilter> filters;
+    private @Nullable Output<List<GetLocalPeeringGatewaysFilterArgs>> filters;
 
-    public Optional<List<GetLocalPeeringGatewaysFilter>> filters() {
+    public Optional<Output<List<GetLocalPeeringGatewaysFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetLocalPeeringGatewaysArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vcnId")
-    private @Nullable String vcnId;
+    private @Nullable Output<String> vcnId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
      * 
      */
-    public Optional<String> vcnId() {
+    public Optional<Output<String>> vcnId() {
         return Optional.ofNullable(this.vcnId);
     }
 
@@ -85,17 +86,31 @@ public final class GetLocalPeeringGatewaysArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetLocalPeeringGatewaysFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetLocalPeeringGatewaysFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetLocalPeeringGatewaysFilter... filters) {
+        public Builder filters(List<GetLocalPeeringGatewaysFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetLocalPeeringGatewaysFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -105,9 +120,19 @@ public final class GetLocalPeeringGatewaysArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder vcnId(@Nullable String vcnId) {
+        public Builder vcnId(@Nullable Output<String> vcnId) {
             $.vcnId = vcnId;
             return this;
+        }
+
+        /**
+         * @param vcnId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vcnId(String vcnId) {
+            return vcnId(Output.of(vcnId));
         }
 
         public GetLocalPeeringGatewaysArgs build() {

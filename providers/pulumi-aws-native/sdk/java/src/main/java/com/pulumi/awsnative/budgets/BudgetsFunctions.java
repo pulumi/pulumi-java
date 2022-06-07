@@ -5,7 +5,9 @@ package com.pulumi.awsnative.budgets;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.budgets.inputs.GetBudgetsActionArgs;
+import com.pulumi.awsnative.budgets.inputs.GetBudgetsActionPlainArgs;
 import com.pulumi.awsnative.budgets.outputs.GetBudgetsActionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class BudgetsFunctions {
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetBudgetsActionResult> getBudgetsAction(GetBudgetsActionArgs args) {
+    public static Output<GetBudgetsActionResult> getBudgetsAction(GetBudgetsActionArgs args) {
         return getBudgetsAction(args, InvokeOptions.Empty);
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetBudgetsActionResult> getBudgetsAction(GetBudgetsActionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBudgetsActionResult> getBudgetsActionPlain(GetBudgetsActionPlainArgs args) {
+        return getBudgetsActionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
+    public static Output<GetBudgetsActionResult> getBudgetsAction(GetBudgetsActionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:budgets:getBudgetsAction", TypeShape.of(GetBudgetsActionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
+    public static CompletableFuture<GetBudgetsActionResult> getBudgetsActionPlain(GetBudgetsActionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:budgets:getBudgetsAction", TypeShape.of(GetBudgetsActionResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApiManagementServiceArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetApiManagementServiceArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -73,8 +74,29 @@ public final class GetApiManagementServiceArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetApiManagementServiceArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetApiManagementServiceArgs build() {

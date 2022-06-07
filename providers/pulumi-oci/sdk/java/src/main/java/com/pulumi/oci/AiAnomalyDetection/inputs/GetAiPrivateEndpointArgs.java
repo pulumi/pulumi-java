@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.AiAnomalyDetection.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAiPrivateEndpointArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="aiPrivateEndpointId", required=true)
-    private String aiPrivateEndpointId;
+    private Output<String> aiPrivateEndpointId;
 
     /**
      * @return Unique private reverse connection identifier.
      * 
      */
-    public String aiPrivateEndpointId() {
+    public Output<String> aiPrivateEndpointId() {
         return this.aiPrivateEndpointId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAiPrivateEndpointArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder aiPrivateEndpointId(String aiPrivateEndpointId) {
+        public Builder aiPrivateEndpointId(Output<String> aiPrivateEndpointId) {
             $.aiPrivateEndpointId = aiPrivateEndpointId;
             return this;
+        }
+
+        /**
+         * @param aiPrivateEndpointId Unique private reverse connection identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aiPrivateEndpointId(String aiPrivateEndpointId) {
+            return aiPrivateEndpointId(Output.of(aiPrivateEndpointId));
         }
 
         public GetAiPrivateEndpointArgs build() {

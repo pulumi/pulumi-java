@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCarrierGatewayArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="carrierGatewayId", required=true)
-    private String carrierGatewayId;
+    private Output<String> carrierGatewayId;
 
     /**
      * @return The ID of the carrier gateway.
      * 
      */
-    public String carrierGatewayId() {
+    public Output<String> carrierGatewayId() {
         return this.carrierGatewayId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCarrierGatewayArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder carrierGatewayId(String carrierGatewayId) {
+        public Builder carrierGatewayId(Output<String> carrierGatewayId) {
             $.carrierGatewayId = carrierGatewayId;
             return this;
+        }
+
+        /**
+         * @param carrierGatewayId The ID of the carrier gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder carrierGatewayId(String carrierGatewayId) {
+            return carrierGatewayId(Output.of(carrierGatewayId));
         }
 
         public GetCarrierGatewayArgs build() {

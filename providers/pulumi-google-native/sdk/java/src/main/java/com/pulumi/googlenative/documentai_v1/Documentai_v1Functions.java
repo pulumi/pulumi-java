@@ -3,11 +3,13 @@
 
 package com.pulumi.googlenative.documentai_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.documentai_v1.inputs.GetProcessorArgs;
+import com.pulumi.googlenative.documentai_v1.inputs.GetProcessorPlainArgs;
 import com.pulumi.googlenative.documentai_v1.outputs.GetProcessorResult;
 import java.util.concurrent.CompletableFuture;
 
@@ -16,14 +18,28 @@ public final class Documentai_v1Functions {
      * Gets a processor detail.
      * 
      */
-    public static CompletableFuture<GetProcessorResult> getProcessor(GetProcessorArgs args) {
+    public static Output<GetProcessorResult> getProcessor(GetProcessorArgs args) {
         return getProcessor(args, InvokeOptions.Empty);
     }
     /**
      * Gets a processor detail.
      * 
      */
-    public static CompletableFuture<GetProcessorResult> getProcessor(GetProcessorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProcessorResult> getProcessorPlain(GetProcessorPlainArgs args) {
+        return getProcessorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a processor detail.
+     * 
+     */
+    public static Output<GetProcessorResult> getProcessor(GetProcessorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:documentai/v1:getProcessor", TypeShape.of(GetProcessorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a processor detail.
+     * 
+     */
+    public static CompletableFuture<GetProcessorResult> getProcessorPlain(GetProcessorPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:documentai/v1:getProcessor", TypeShape.of(GetProcessorResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectionName", required=true)
-    private String connectionName;
+    private Output<String> connectionName;
 
     /**
      * @return The name of the ExpressRoute connection.
      * 
      */
-    public String connectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expressRouteGatewayName", required=true)
-    private String expressRouteGatewayName;
+    private Output<String> expressRouteGatewayName;
 
     /**
      * @return The name of the ExpressRoute gateway.
      * 
      */
-    public String expressRouteGatewayName() {
+    public Output<String> expressRouteGatewayName() {
         return this.expressRouteGatewayName;
     }
 
@@ -47,13 +48,13 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder connectionName(String connectionName) {
+        public Builder connectionName(Output<String> connectionName) {
             $.connectionName = connectionName;
+            return this;
+        }
+
+        /**
+         * @param connectionName The name of the ExpressRoute connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
+        }
+
+        /**
+         * @param expressRouteGatewayName The name of the ExpressRoute gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expressRouteGatewayName(Output<String> expressRouteGatewayName) {
+            $.expressRouteGatewayName = expressRouteGatewayName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
          * 
          */
         public Builder expressRouteGatewayName(String expressRouteGatewayName) {
-            $.expressRouteGatewayName = expressRouteGatewayName;
+            return expressRouteGatewayName(Output.of(expressRouteGatewayName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExpressRouteConnectionArgs build() {

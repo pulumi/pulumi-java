@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.policyinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRemediationAtResourceGroupArgs extends com.pulumi.resource
      * 
      */
     @Import(name="remediationName", required=true)
-    private String remediationName;
+    private Output<String> remediationName;
 
     /**
      * @return The name of the remediation.
      * 
      */
-    public String remediationName() {
+    public Output<String> remediationName() {
         return this.remediationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetRemediationAtResourceGroupArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetRemediationAtResourceGroupArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder remediationName(String remediationName) {
+        public Builder remediationName(Output<String> remediationName) {
             $.remediationName = remediationName;
+            return this;
+        }
+
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder remediationName(String remediationName) {
+            return remediationName(Output.of(remediationName));
+        }
+
+        /**
+         * @param resourceGroupName Resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetRemediationAtResourceGroupArgs extends com.pulumi.resource
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetRemediationAtResourceGroupArgs build() {

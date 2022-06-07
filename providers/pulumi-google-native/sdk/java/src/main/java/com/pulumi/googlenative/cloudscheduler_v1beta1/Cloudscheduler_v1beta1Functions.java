@@ -3,11 +3,13 @@
 
 package com.pulumi.googlenative.cloudscheduler_v1beta1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.cloudscheduler_v1beta1.inputs.GetJobArgs;
+import com.pulumi.googlenative.cloudscheduler_v1beta1.inputs.GetJobPlainArgs;
 import com.pulumi.googlenative.cloudscheduler_v1beta1.outputs.GetJobResult;
 import java.util.concurrent.CompletableFuture;
 
@@ -16,14 +18,28 @@ public final class Cloudscheduler_v1beta1Functions {
      * Gets a job.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+    public static Output<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
     /**
      * Gets a job.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJobPlain(GetJobPlainArgs args) {
+        return getJobPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a job.
+     * 
+     */
+    public static Output<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:cloudscheduler/v1beta1:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a job.
+     * 
+     */
+    public static CompletableFuture<GetJobResult> getJobPlain(GetJobPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudscheduler/v1beta1:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.lambda.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCodeSigningConfigArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="arn", required=true)
-    private String arn;
+    private Output<String> arn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the code signing configuration.
      * 
      */
-    public String arn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -57,9 +58,19 @@ public final class GetCodeSigningConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder arn(String arn) {
+        public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
+        }
+
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the code signing configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
 
         public GetCodeSigningConfigArgs build() {

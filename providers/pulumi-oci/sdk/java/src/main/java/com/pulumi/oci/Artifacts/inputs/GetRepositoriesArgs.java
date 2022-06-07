@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Artifacts.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Artifacts.inputs.GetRepositoriesFilter;
+import com.pulumi.oci.Artifacts.inputs.GetRepositoriesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetRepositoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -37,20 +38,20 @@ public final class GetRepositoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetRepositoriesFilter> filters;
+    private @Nullable Output<List<GetRepositoriesFilterArgs>> filters;
 
-    public Optional<List<GetRepositoriesFilter>> filters() {
+    public Optional<Output<List<GetRepositoriesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -59,13 +60,13 @@ public final class GetRepositoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return A filter to return the resources for the specified OCID.
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -74,13 +75,13 @@ public final class GetRepositoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isImmutable")
-    private @Nullable Boolean isImmutable;
+    private @Nullable Output<Boolean> isImmutable;
 
     /**
      * @return A filter to return resources that match the isImmutable value.
      * 
      */
-    public Optional<Boolean> isImmutable() {
+    public Optional<Output<Boolean>> isImmutable() {
         return Optional.ofNullable(this.isImmutable);
     }
 
@@ -89,13 +90,13 @@ public final class GetRepositoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state name exactly.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -134,8 +135,29 @@ public final class GetRepositoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -145,17 +167,20 @@ public final class GetRepositoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetRepositoriesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetRepositoriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetRepositoriesFilter... filters) {
+        public Builder filters(List<GetRepositoriesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetRepositoriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -165,8 +190,29 @@ public final class GetRepositoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id A filter to return the resources for the specified OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param isImmutable A filter to return resources that match the isImmutable value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isImmutable(@Nullable Output<Boolean> isImmutable) {
+            $.isImmutable = isImmutable;
             return this;
         }
 
@@ -176,8 +222,18 @@ public final class GetRepositoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isImmutable(@Nullable Boolean isImmutable) {
-            $.isImmutable = isImmutable;
+        public Builder isImmutable(Boolean isImmutable) {
+            return isImmutable(Output.of(isImmutable));
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -187,9 +243,8 @@ public final class GetRepositoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetRepositoriesArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDataSafePrivateEndpointArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="dataSafePrivateEndpointId", required=true)
-    private String dataSafePrivateEndpointId;
+    private Output<String> dataSafePrivateEndpointId;
 
     /**
      * @return The OCID of the private endpoint.
      * 
      */
-    public String dataSafePrivateEndpointId() {
+    public Output<String> dataSafePrivateEndpointId() {
         return this.dataSafePrivateEndpointId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDataSafePrivateEndpointArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder dataSafePrivateEndpointId(String dataSafePrivateEndpointId) {
+        public Builder dataSafePrivateEndpointId(Output<String> dataSafePrivateEndpointId) {
             $.dataSafePrivateEndpointId = dataSafePrivateEndpointId;
             return this;
+        }
+
+        /**
+         * @param dataSafePrivateEndpointId The OCID of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataSafePrivateEndpointId(String dataSafePrivateEndpointId) {
+            return dataSafePrivateEndpointId(Output.of(dataSafePrivateEndpointId));
         }
 
         public GetDataSafePrivateEndpointArgs build() {

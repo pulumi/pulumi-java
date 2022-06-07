@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Blockchain.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Blockchain.inputs.GetPeersFilter;
+import com.pulumi.oci.Blockchain.inputs.GetPeersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetPeersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="blockchainPlatformId", required=true)
-    private String blockchainPlatformId;
+    private Output<String> blockchainPlatformId;
 
     /**
      * @return Unique service identifier.
      * 
      */
-    public String blockchainPlatformId() {
+    public Output<String> blockchainPlatformId() {
         return this.blockchainPlatformId;
     }
 
@@ -36,20 +37,20 @@ public final class GetPeersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable. Example: `My new resource`
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetPeersFilter> filters;
+    private @Nullable Output<List<GetPeersFilterArgs>> filters;
 
-    public Optional<List<GetPeersFilter>> filters() {
+    public Optional<Output<List<GetPeersFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -85,8 +86,29 @@ public final class GetPeersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder blockchainPlatformId(String blockchainPlatformId) {
+        public Builder blockchainPlatformId(Output<String> blockchainPlatformId) {
             $.blockchainPlatformId = blockchainPlatformId;
+            return this;
+        }
+
+        /**
+         * @param blockchainPlatformId Unique service identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockchainPlatformId(String blockchainPlatformId) {
+            return blockchainPlatformId(Output.of(blockchainPlatformId));
+        }
+
+        /**
+         * @param displayName A user-friendly name. Does not have to be unique, and it&#39;s changeable. Example: `My new resource`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -96,17 +118,20 @@ public final class GetPeersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetPeersFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetPeersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetPeersFilter... filters) {
+        public Builder filters(List<GetPeersFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetPeersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

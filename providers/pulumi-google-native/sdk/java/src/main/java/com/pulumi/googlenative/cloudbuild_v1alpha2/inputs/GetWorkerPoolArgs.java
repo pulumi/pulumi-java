@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudbuild_v1alpha2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetWorkerPoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWorkerPoolArgs Empty = new GetWorkerPoolArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="workerPoolId", required=true)
-    private String workerPoolId;
+    private Output<String> workerPoolId;
 
-    public String workerPoolId() {
+    public Output<String> workerPoolId() {
         return this.workerPoolId;
     }
 
@@ -53,14 +54,22 @@ public final class GetWorkerPoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder workerPoolId(String workerPoolId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder workerPoolId(Output<String> workerPoolId) {
             $.workerPoolId = workerPoolId;
             return this;
+        }
+
+        public Builder workerPoolId(String workerPoolId) {
+            return workerPoolId(Output.of(workerPoolId));
         }
 
         public GetWorkerPoolArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetChannelArgs Empty = new GetChannelArgs();
 
     @Import(name="channelId", required=true)
-    private String channelId;
+    private Output<String> channelId;
 
-    public String channelId() {
+    public Output<String> channelId() {
         return this.channelId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="siteId", required=true)
-    private String siteId;
+    private Output<String> siteId;
 
-    public String siteId() {
+    public Output<String> siteId() {
         return this.siteId;
     }
 
@@ -61,19 +62,31 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetChannelArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder channelId(String channelId) {
+        public Builder channelId(Output<String> channelId) {
             $.channelId = channelId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder channelId(String channelId) {
+            return channelId(Output.of(channelId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder siteId(String siteId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder siteId(Output<String> siteId) {
             $.siteId = siteId;
             return this;
+        }
+
+        public Builder siteId(String siteId) {
+            return siteId(Output.of(siteId));
         }
 
         public GetChannelArgs build() {

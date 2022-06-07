@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.MeteringComputation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCustomTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="customTableId", required=true)
-    private String customTableId;
+    private Output<String> customTableId;
 
     /**
      * @return The custom table unique OCID.
      * 
      */
-    public String customTableId() {
+    public Output<String> customTableId() {
         return this.customTableId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCustomTableArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder customTableId(String customTableId) {
+        public Builder customTableId(Output<String> customTableId) {
             $.customTableId = customTableId;
             return this;
+        }
+
+        /**
+         * @param customTableId The custom table unique OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customTableId(String customTableId) {
+            return customTableId(Output.of(customTableId));
         }
 
         public GetCustomTableArgs build() {

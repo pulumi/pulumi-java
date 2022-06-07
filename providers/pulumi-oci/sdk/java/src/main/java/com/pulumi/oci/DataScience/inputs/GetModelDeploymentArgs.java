@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataScience.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetModelDeploymentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="modelDeploymentId", required=true)
-    private String modelDeploymentId;
+    private Output<String> modelDeploymentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the model deployment.
      * 
      */
-    public String modelDeploymentId() {
+    public Output<String> modelDeploymentId() {
         return this.modelDeploymentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetModelDeploymentArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder modelDeploymentId(String modelDeploymentId) {
+        public Builder modelDeploymentId(Output<String> modelDeploymentId) {
             $.modelDeploymentId = modelDeploymentId;
             return this;
+        }
+
+        /**
+         * @param modelDeploymentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the model deployment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder modelDeploymentId(String modelDeploymentId) {
+            return modelDeploymentId(Output.of(modelDeploymentId));
         }
 
         public GetModelDeploymentArgs build() {

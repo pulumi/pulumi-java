@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ObjectStorage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ObjectStorage.inputs.GetReplicationSourcesFilter;
+import com.pulumi.oci.ObjectStorage.inputs.GetReplicationSourcesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetReplicationSourcesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
     /**
      * @return The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
      * 
      */
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetReplicationSourcesFilter> filters;
+    private @Nullable Output<List<GetReplicationSourcesFilterArgs>> filters;
 
-    public Optional<List<GetReplicationSourcesFilter>> filters() {
+    public Optional<Output<List<GetReplicationSourcesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetReplicationSourcesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Object Storage namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -85,17 +86,31 @@ public final class GetReplicationSourcesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetReplicationSourcesFilter> filters) {
+        /**
+         * @param bucket The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        public Builder filters(@Nullable Output<List<GetReplicationSourcesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetReplicationSourcesFilter... filters) {
+        public Builder filters(List<GetReplicationSourcesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetReplicationSourcesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -105,9 +120,19 @@ public final class GetReplicationSourcesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder namespace(String namespace) {
+        public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
+        }
+
+        /**
+         * @param namespace The Object Storage namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
 
         public GetReplicationSourcesArgs build() {

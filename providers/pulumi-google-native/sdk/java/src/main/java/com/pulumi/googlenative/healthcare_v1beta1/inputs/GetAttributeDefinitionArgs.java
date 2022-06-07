@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetAttributeDefinitionArgs extends com.pulumi.resources.Invok
     public static final GetAttributeDefinitionArgs Empty = new GetAttributeDefinitionArgs();
 
     @Import(name="attributeDefinitionId", required=true)
-    private String attributeDefinitionId;
+    private Output<String> attributeDefinitionId;
 
-    public String attributeDefinitionId() {
+    public Output<String> attributeDefinitionId() {
         return this.attributeDefinitionId;
     }
 
     @Import(name="consentStoreId", required=true)
-    private String consentStoreId;
+    private Output<String> consentStoreId;
 
-    public String consentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
-    private String datasetId;
+    private Output<String> datasetId;
 
-    public String datasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -77,29 +78,49 @@ public final class GetAttributeDefinitionArgs extends com.pulumi.resources.Invok
             $ = new GetAttributeDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder attributeDefinitionId(String attributeDefinitionId) {
+        public Builder attributeDefinitionId(Output<String> attributeDefinitionId) {
             $.attributeDefinitionId = attributeDefinitionId;
             return this;
         }
 
-        public Builder consentStoreId(String consentStoreId) {
+        public Builder attributeDefinitionId(String attributeDefinitionId) {
+            return attributeDefinitionId(Output.of(attributeDefinitionId));
+        }
+
+        public Builder consentStoreId(Output<String> consentStoreId) {
             $.consentStoreId = consentStoreId;
             return this;
         }
 
-        public Builder datasetId(String datasetId) {
+        public Builder consentStoreId(String consentStoreId) {
+            return consentStoreId(Output.of(consentStoreId));
+        }
+
+        public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetAttributeDefinitionArgs build() {

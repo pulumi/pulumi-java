@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.appplatform.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApiPortalArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiPortalName", required=true)
-    private String apiPortalName;
+    private Output<String> apiPortalName;
 
     /**
      * @return The name of API portal.
      * 
      */
-    public String apiPortalName() {
+    public Output<String> apiPortalName() {
         return this.apiPortalName;
     }
 
@@ -32,13 +33,13 @@ public final class GetApiPortalArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetApiPortalArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the Service resource.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetApiPortalArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apiPortalName(String apiPortalName) {
+        public Builder apiPortalName(Output<String> apiPortalName) {
             $.apiPortalName = apiPortalName;
+            return this;
+        }
+
+        /**
+         * @param apiPortalName The name of API portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiPortalName(String apiPortalName) {
+            return apiPortalName(Output.of(apiPortalName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetApiPortalArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetApiPortalArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetApiPortalArgs build() {

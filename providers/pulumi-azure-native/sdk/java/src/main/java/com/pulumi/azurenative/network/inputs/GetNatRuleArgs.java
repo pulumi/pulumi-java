@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayName", required=true)
-    private String gatewayName;
+    private Output<String> gatewayName;
 
     /**
      * @return The name of the gateway.
      * 
      */
-    public String gatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName;
     }
 
@@ -32,13 +33,13 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="natRuleName", required=true)
-    private String natRuleName;
+    private Output<String> natRuleName;
 
     /**
      * @return The name of the nat rule.
      * 
      */
-    public String natRuleName() {
+    public Output<String> natRuleName() {
         return this.natRuleName;
     }
 
@@ -47,13 +48,13 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name of the VpnGateway.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder gatewayName(String gatewayName) {
+        public Builder gatewayName(Output<String> gatewayName) {
             $.gatewayName = gatewayName;
+            return this;
+        }
+
+        /**
+         * @param gatewayName The name of the gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayName(String gatewayName) {
+            return gatewayName(Output.of(gatewayName));
+        }
+
+        /**
+         * @param natRuleName The name of the nat rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natRuleName(Output<String> natRuleName) {
+            $.natRuleName = natRuleName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder natRuleName(String natRuleName) {
-            $.natRuleName = natRuleName;
+            return natRuleName(Output.of(natRuleName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name of the VpnGateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetNatRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNatRuleArgs build() {

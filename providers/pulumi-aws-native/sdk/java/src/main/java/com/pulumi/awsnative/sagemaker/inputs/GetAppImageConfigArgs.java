@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sagemaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAppImageConfigArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="appImageConfigName", required=true)
-    private String appImageConfigName;
+    private Output<String> appImageConfigName;
 
     /**
      * @return The Name of the AppImageConfig.
      * 
      */
-    public String appImageConfigName() {
+    public Output<String> appImageConfigName() {
         return this.appImageConfigName;
     }
 
@@ -57,9 +58,19 @@ public final class GetAppImageConfigArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder appImageConfigName(String appImageConfigName) {
+        public Builder appImageConfigName(Output<String> appImageConfigName) {
             $.appImageConfigName = appImageConfigName;
             return this;
+        }
+
+        /**
+         * @param appImageConfigName The Name of the AppImageConfig.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appImageConfigName(String appImageConfigName) {
+            return appImageConfigName(Output.of(appImageConfigName));
         }
 
         public GetAppImageConfigArgs build() {

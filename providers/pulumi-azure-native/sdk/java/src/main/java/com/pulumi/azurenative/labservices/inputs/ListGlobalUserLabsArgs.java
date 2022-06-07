@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.labservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListGlobalUserLabsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="userName", required=true)
-    private String userName;
+    private Output<String> userName;
 
     /**
      * @return The name of the user.
      * 
      */
-    public String userName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -57,9 +58,19 @@ public final class ListGlobalUserLabsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder userName(String userName) {
+        public Builder userName(Output<String> userName) {
             $.userName = userName;
             return this;
+        }
+
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
         }
 
         public ListGlobalUserLabsArgs build() {

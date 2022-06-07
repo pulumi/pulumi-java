@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.operationsmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSolutionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group to get. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSolutionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="solutionName", required=true)
-    private String solutionName;
+    private Output<String> solutionName;
 
     /**
      * @return User Solution Name.
      * 
      */
-    public String solutionName() {
+    public Output<String> solutionName() {
         return this.solutionName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSolutionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param solutionName User Solution Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder solutionName(Output<String> solutionName) {
+            $.solutionName = solutionName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSolutionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder solutionName(String solutionName) {
-            $.solutionName = solutionName;
-            return this;
+            return solutionName(Output.of(solutionName));
         }
 
         public GetSolutionArgs build() {

@@ -5,7 +5,9 @@ package com.pulumi.azurenative.managementpartner;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.managementpartner.inputs.GetPartnerArgs;
+import com.pulumi.azurenative.managementpartner.inputs.GetPartnerPlainArgs;
 import com.pulumi.azurenative.managementpartner.outputs.GetPartnerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -17,7 +19,7 @@ public final class ManagementpartnerFunctions {
      * API Version: 2018-02-01.
      * 
      */
-    public static CompletableFuture<GetPartnerResult> getPartner(GetPartnerArgs args) {
+    public static Output<GetPartnerResult> getPartner(GetPartnerArgs args) {
         return getPartner(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +27,23 @@ public final class ManagementpartnerFunctions {
      * API Version: 2018-02-01.
      * 
      */
-    public static CompletableFuture<GetPartnerResult> getPartner(GetPartnerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartnerResult> getPartnerPlain(GetPartnerPlainArgs args) {
+        return getPartnerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * this is the management partner operations response
+     * API Version: 2018-02-01.
+     * 
+     */
+    public static Output<GetPartnerResult> getPartner(GetPartnerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:managementpartner:getPartner", TypeShape.of(GetPartnerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * this is the management partner operations response
+     * API Version: 2018-02-01.
+     * 
+     */
+    public static CompletableFuture<GetPartnerResult> getPartnerPlain(GetPartnerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managementpartner:getPartner", TypeShape.of(GetPartnerResult.class), args, Utilities.withVersion(options));
     }
 }

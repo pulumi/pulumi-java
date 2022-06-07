@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LogAnalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLogAnalyticsEntityArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="logAnalyticsEntityId", required=true)
-    private String logAnalyticsEntityId;
+    private Output<String> logAnalyticsEntityId;
 
     /**
      * @return The log analytics entity OCID.
      * 
      */
-    public String logAnalyticsEntityId() {
+    public Output<String> logAnalyticsEntityId() {
         return this.logAnalyticsEntityId;
     }
 
@@ -32,13 +33,13 @@ public final class GetLogAnalyticsEntityArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Logging Analytics namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -73,8 +74,29 @@ public final class GetLogAnalyticsEntityArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder logAnalyticsEntityId(String logAnalyticsEntityId) {
+        public Builder logAnalyticsEntityId(Output<String> logAnalyticsEntityId) {
             $.logAnalyticsEntityId = logAnalyticsEntityId;
+            return this;
+        }
+
+        /**
+         * @param logAnalyticsEntityId The log analytics entity OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logAnalyticsEntityId(String logAnalyticsEntityId) {
+            return logAnalyticsEntityId(Output.of(logAnalyticsEntityId));
+        }
+
+        /**
+         * @param namespace The Logging Analytics namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(Output<String> namespace) {
+            $.namespace = namespace;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLogAnalyticsEntityArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder namespace(String namespace) {
-            $.namespace = namespace;
-            return this;
+            return namespace(Output.of(namespace));
         }
 
         public GetLogAnalyticsEntityArgs build() {

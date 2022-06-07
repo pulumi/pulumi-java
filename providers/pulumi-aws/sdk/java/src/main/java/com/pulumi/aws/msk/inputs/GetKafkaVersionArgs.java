@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.msk.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -20,13 +21,13 @@ public final class GetKafkaVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="preferredVersions")
-    private @Nullable List<String> preferredVersions;
+    private @Nullable Output<List<String>> preferredVersions;
 
     /**
      * @return Ordered list of preferred Kafka versions. The first match in this list will be returned. Either `preferred_versions` or `version` must be set.
      * 
      */
-    public Optional<List<String>> preferredVersions() {
+    public Optional<Output<List<String>>> preferredVersions() {
         return Optional.ofNullable(this.preferredVersions);
     }
 
@@ -35,13 +36,13 @@ public final class GetKafkaVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version")
-    private @Nullable String version;
+    private @Nullable Output<String> version;
 
     /**
      * @return Version of MSK Kafka. For example 2.4.1.1 or &#34;2.2.1&#34; etc. Either `preferred_versions` or `version` must be set.
      * 
      */
-    public Optional<String> version() {
+    public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
 
@@ -76,9 +77,19 @@ public final class GetKafkaVersionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder preferredVersions(@Nullable List<String> preferredVersions) {
+        public Builder preferredVersions(@Nullable Output<List<String>> preferredVersions) {
             $.preferredVersions = preferredVersions;
             return this;
+        }
+
+        /**
+         * @param preferredVersions Ordered list of preferred Kafka versions. The first match in this list will be returned. Either `preferred_versions` or `version` must be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredVersions(List<String> preferredVersions) {
+            return preferredVersions(Output.of(preferredVersions));
         }
 
         /**
@@ -97,9 +108,19 @@ public final class GetKafkaVersionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder version(@Nullable String version) {
+        public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
+        }
+
+        /**
+         * @param version Version of MSK Kafka. For example 2.4.1.1 or &#34;2.2.1&#34; etc. Either `preferred_versions` or `version` must be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
 
         public GetKafkaVersionArgs build() {

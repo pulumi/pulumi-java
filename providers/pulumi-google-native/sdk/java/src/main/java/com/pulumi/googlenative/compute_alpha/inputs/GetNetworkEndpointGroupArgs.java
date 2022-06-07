@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
     public static final GetNetworkEndpointGroupArgs Empty = new GetNetworkEndpointGroupArgs();
 
     @Import(name="networkEndpointGroup", required=true)
-    private String networkEndpointGroup;
+    private Output<String> networkEndpointGroup;
 
-    public String networkEndpointGroup() {
+    public Output<String> networkEndpointGroup() {
         return this.networkEndpointGroup;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
-    private String zone;
+    private Output<String> zone;
 
-    public String zone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -61,19 +62,31 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
             $ = new GetNetworkEndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder networkEndpointGroup(String networkEndpointGroup) {
+        public Builder networkEndpointGroup(Output<String> networkEndpointGroup) {
             $.networkEndpointGroup = networkEndpointGroup;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder networkEndpointGroup(String networkEndpointGroup) {
+            return networkEndpointGroup(Output.of(networkEndpointGroup));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder zone(String zone) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder zone(Output<String> zone) {
             $.zone = zone;
             return this;
+        }
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetNetworkEndpointGroupArgs build() {

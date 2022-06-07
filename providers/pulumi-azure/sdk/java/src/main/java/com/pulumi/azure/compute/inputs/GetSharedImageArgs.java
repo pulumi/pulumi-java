@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSharedImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="galleryName", required=true)
-    private String galleryName;
+    private Output<String> galleryName;
 
     /**
      * @return The name of the Shared Image Gallery in which the Shared Image exists.
      * 
      */
-    public String galleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSharedImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the Shared Image.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetSharedImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource Group in which the Shared Image Gallery exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSharedImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder galleryName(String galleryName) {
+        public Builder galleryName(Output<String> galleryName) {
             $.galleryName = galleryName;
+            return this;
+        }
+
+        /**
+         * @param galleryName The name of the Shared Image Gallery in which the Shared Image exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryName(String galleryName) {
+            return galleryName(Output.of(galleryName));
+        }
+
+        /**
+         * @param name The name of the Shared Image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSharedImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Resource Group in which the Shared Image Gallery exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSharedImageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetSharedImageArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetListingResourceVersionArgs extends com.pulumi.resources.In
     public static final GetListingResourceVersionArgs Empty = new GetListingResourceVersionArgs();
 
     @Import(name="listingId", required=true)
-    private String listingId;
+    private Output<String> listingId;
 
-    public String listingId() {
+    public Output<String> listingId() {
         return this.listingId;
     }
 
     @Import(name="resourceVersion", required=true)
-    private String resourceVersion;
+    private Output<String> resourceVersion;
 
-    public String resourceVersion() {
+    public Output<String> resourceVersion() {
         return this.resourceVersion;
     }
 
@@ -51,14 +52,22 @@ public final class GetListingResourceVersionArgs extends com.pulumi.resources.In
             $ = new GetListingResourceVersionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder listingId(String listingId) {
+        public Builder listingId(Output<String> listingId) {
             $.listingId = listingId;
             return this;
         }
 
-        public Builder resourceVersion(String resourceVersion) {
+        public Builder listingId(String listingId) {
+            return listingId(Output.of(listingId));
+        }
+
+        public Builder resourceVersion(Output<String> resourceVersion) {
             $.resourceVersion = resourceVersion;
             return this;
+        }
+
+        public Builder resourceVersion(String resourceVersion) {
+            return resourceVersion(Output.of(resourceVersion));
         }
 
         public GetListingResourceVersionArgs build() {

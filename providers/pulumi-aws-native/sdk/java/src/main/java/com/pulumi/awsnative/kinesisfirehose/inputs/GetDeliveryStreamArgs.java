@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.kinesisfirehose.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetDeliveryStreamArgs extends com.pulumi.resources.InvokeArgs
     public static final GetDeliveryStreamArgs Empty = new GetDeliveryStreamArgs();
 
     @Import(name="deliveryStreamName", required=true)
-    private String deliveryStreamName;
+    private Output<String> deliveryStreamName;
 
-    public String deliveryStreamName() {
+    public Output<String> deliveryStreamName() {
         return this.deliveryStreamName;
     }
 
@@ -43,9 +44,13 @@ public final class GetDeliveryStreamArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetDeliveryStreamArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder deliveryStreamName(String deliveryStreamName) {
+        public Builder deliveryStreamName(Output<String> deliveryStreamName) {
             $.deliveryStreamName = deliveryStreamName;
             return this;
+        }
+
+        public Builder deliveryStreamName(String deliveryStreamName) {
+            return deliveryStreamName(Output.of(deliveryStreamName));
         }
 
         public GetDeliveryStreamArgs build() {

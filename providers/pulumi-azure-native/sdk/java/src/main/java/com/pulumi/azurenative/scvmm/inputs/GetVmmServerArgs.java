@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.scvmm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVmmServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVmmServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vmmServerName", required=true)
-    private String vmmServerName;
+    private Output<String> vmmServerName;
 
     /**
      * @return Name of the VMMServer.
      * 
      */
-    public String vmmServerName() {
+    public Output<String> vmmServerName() {
         return this.vmmServerName;
     }
 
@@ -73,8 +74,29 @@ public final class GetVmmServerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vmmServerName Name of the VMMServer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmmServerName(Output<String> vmmServerName) {
+            $.vmmServerName = vmmServerName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVmmServerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder vmmServerName(String vmmServerName) {
-            $.vmmServerName = vmmServerName;
-            return this;
+            return vmmServerName(Output.of(vmmServerName));
         }
 
         public GetVmmServerArgs build() {

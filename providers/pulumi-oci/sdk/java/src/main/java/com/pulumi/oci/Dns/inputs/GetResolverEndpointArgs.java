@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resolverEndpointName", required=true)
-    private String resolverEndpointName;
+    private Output<String> resolverEndpointName;
 
     /**
      * @return The name of the target resolver endpoint.
      * 
      */
-    public String resolverEndpointName() {
+    public Output<String> resolverEndpointName() {
         return this.resolverEndpointName;
     }
 
@@ -32,13 +33,13 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resolverId", required=true)
-    private String resolverId;
+    private Output<String> resolverId;
 
     /**
      * @return The OCID of the target resolver.
      * 
      */
-    public String resolverId() {
+    public Output<String> resolverId() {
         return this.resolverId;
     }
 
@@ -47,13 +48,13 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return Value must be `PRIVATE` when listing private name resolver endpoints.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -89,8 +90,29 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder resolverEndpointName(String resolverEndpointName) {
+        public Builder resolverEndpointName(Output<String> resolverEndpointName) {
             $.resolverEndpointName = resolverEndpointName;
+            return this;
+        }
+
+        /**
+         * @param resolverEndpointName The name of the target resolver endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resolverEndpointName(String resolverEndpointName) {
+            return resolverEndpointName(Output.of(resolverEndpointName));
+        }
+
+        /**
+         * @param resolverId The OCID of the target resolver.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resolverId(Output<String> resolverId) {
+            $.resolverId = resolverId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resolverId(String resolverId) {
-            $.resolverId = resolverId;
+            return resolverId(Output.of(resolverId));
+        }
+
+        /**
+         * @param scope Value must be `PRIVATE` when listing private name resolver endpoints.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetResolverEndpointArgs build() {

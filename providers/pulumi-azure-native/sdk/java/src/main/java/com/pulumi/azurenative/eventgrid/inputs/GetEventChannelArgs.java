@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventChannelName", required=true)
-    private String eventChannelName;
+    private Output<String> eventChannelName;
 
     /**
      * @return Name of the event channel.
      * 
      */
-    public String eventChannelName() {
+    public Output<String> eventChannelName() {
         return this.eventChannelName;
     }
 
@@ -32,13 +33,13 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="partnerNamespaceName", required=true)
-    private String partnerNamespaceName;
+    private Output<String> partnerNamespaceName;
 
     /**
      * @return Name of the partner namespace.
      * 
      */
-    public String partnerNamespaceName() {
+    public Output<String> partnerNamespaceName() {
         return this.partnerNamespaceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder eventChannelName(String eventChannelName) {
+        public Builder eventChannelName(Output<String> eventChannelName) {
             $.eventChannelName = eventChannelName;
+            return this;
+        }
+
+        /**
+         * @param eventChannelName Name of the event channel.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventChannelName(String eventChannelName) {
+            return eventChannelName(Output.of(eventChannelName));
+        }
+
+        /**
+         * @param partnerNamespaceName Name of the partner namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder partnerNamespaceName(Output<String> partnerNamespaceName) {
+            $.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder partnerNamespaceName(String partnerNamespaceName) {
-            $.partnerNamespaceName = partnerNamespaceName;
+            return partnerNamespaceName(Output.of(partnerNamespaceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetEventChannelArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetEventChannelArgs build() {

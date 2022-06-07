@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.offazure.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="peConnectionName", required=true)
-    private String peConnectionName;
+    private Output<String> peConnectionName;
 
     /**
      * @return Private link resource name.
      * 
      */
-    public String peConnectionName() {
+    public Output<String> peConnectionName() {
         return this.peConnectionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="siteName", required=true)
-    private String siteName;
+    private Output<String> siteName;
 
     /**
      * @return Site name.
      * 
      */
-    public String siteName() {
+    public Output<String> siteName() {
         return this.siteName;
     }
 
@@ -89,8 +90,29 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder peConnectionName(String peConnectionName) {
+        public Builder peConnectionName(Output<String> peConnectionName) {
             $.peConnectionName = peConnectionName;
+            return this;
+        }
+
+        /**
+         * @param peConnectionName Private link resource name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peConnectionName(String peConnectionName) {
+            return peConnectionName(Output.of(peConnectionName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param siteName Site name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder siteName(Output<String> siteName) {
+            $.siteName = siteName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * 
          */
         public Builder siteName(String siteName) {
-            $.siteName = siteName;
-            return this;
+            return siteName(Output.of(siteName));
         }
 
         public GetPrivateEndpointConnectionArgs build() {

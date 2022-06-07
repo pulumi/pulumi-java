@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.storagegateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskNode")
-    private @Nullable String diskNode;
+    private @Nullable Output<String> diskNode;
 
     /**
      * @return The device node of the local disk to retrieve. For example, `/dev/sdb`.
      * 
      */
-    public Optional<String> diskNode() {
+    public Optional<Output<String>> diskNode() {
         return Optional.ofNullable(this.diskNode);
     }
 
@@ -34,13 +35,13 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskPath")
-    private @Nullable String diskPath;
+    private @Nullable Output<String> diskPath;
 
     /**
      * @return The device path of the local disk to retrieve. For example, `/dev/xvdb` or `/dev/nvme1n1`.
      * 
      */
-    public Optional<String> diskPath() {
+    public Optional<Output<String>> diskPath() {
         return Optional.ofNullable(this.diskPath);
     }
 
@@ -49,13 +50,13 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayArn", required=true)
-    private String gatewayArn;
+    private Output<String> gatewayArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    public String gatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
 
@@ -91,8 +92,29 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder diskNode(@Nullable String diskNode) {
+        public Builder diskNode(@Nullable Output<String> diskNode) {
             $.diskNode = diskNode;
+            return this;
+        }
+
+        /**
+         * @param diskNode The device node of the local disk to retrieve. For example, `/dev/sdb`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder diskNode(String diskNode) {
+            return diskNode(Output.of(diskNode));
+        }
+
+        /**
+         * @param diskPath The device path of the local disk to retrieve. For example, `/dev/xvdb` or `/dev/nvme1n1`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder diskPath(@Nullable Output<String> diskPath) {
+            $.diskPath = diskPath;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder diskPath(@Nullable String diskPath) {
-            $.diskPath = diskPath;
+        public Builder diskPath(String diskPath) {
+            return diskPath(Output.of(diskPath));
+        }
+
+        /**
+         * @param gatewayArn The Amazon Resource Name (ARN) of the gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayArn(Output<String> gatewayArn) {
+            $.gatewayArn = gatewayArn;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder gatewayArn(String gatewayArn) {
-            $.gatewayArn = gatewayArn;
-            return this;
+            return gatewayArn(Output.of(gatewayArn));
         }
 
         public GetLocalDiskArgs build() {

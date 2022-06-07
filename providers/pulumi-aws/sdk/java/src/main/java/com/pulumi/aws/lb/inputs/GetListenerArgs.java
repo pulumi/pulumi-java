@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.lb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,13 +22,13 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-    private @Nullable String arn;
+    private @Nullable Output<String> arn;
 
     /**
      * @return ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
      * 
      */
-    public Optional<String> arn() {
+    public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
 
@@ -36,13 +37,13 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancerArn")
-    private @Nullable String loadBalancerArn;
+    private @Nullable Output<String> loadBalancerArn;
 
     /**
      * @return ARN of the load balancer. Required if `arn` is not set.
      * 
      */
-    public Optional<String> loadBalancerArn() {
+    public Optional<Output<String>> loadBalancerArn() {
         return Optional.ofNullable(this.loadBalancerArn);
     }
 
@@ -51,20 +52,20 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port")
-    private @Nullable Integer port;
+    private @Nullable Output<Integer> port;
 
     /**
      * @return Port of the listener. Required if `arn` is not set.
      * 
      */
-    public Optional<Integer> port() {
+    public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
 
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -101,8 +102,29 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param loadBalancerArn ARN of the load balancer. Required if `arn` is not set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerArn(@Nullable Output<String> loadBalancerArn) {
+            $.loadBalancerArn = loadBalancerArn;
             return this;
         }
 
@@ -112,8 +134,18 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancerArn(@Nullable String loadBalancerArn) {
-            $.loadBalancerArn = loadBalancerArn;
+        public Builder loadBalancerArn(String loadBalancerArn) {
+            return loadBalancerArn(Output.of(loadBalancerArn));
+        }
+
+        /**
+         * @param port Port of the listener. Required if `arn` is not set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder port(@Nullable Output<Integer> port) {
+            $.port = port;
             return this;
         }
 
@@ -123,14 +155,17 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder port(@Nullable Integer port) {
-            $.port = port;
+        public Builder port(Integer port) {
+            return port(Output.of(port));
+        }
+
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetListenerArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServerDnsAliasArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dnsAliasName", required=true)
-    private String dnsAliasName;
+    private Output<String> dnsAliasName;
 
     /**
      * @return The name of the server dns alias.
      * 
      */
-    public String dnsAliasName() {
+    public Output<String> dnsAliasName() {
         return this.dnsAliasName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServerDnsAliasArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetServerDnsAliasArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the server that the alias is pointing to.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -89,8 +90,29 @@ public final class GetServerDnsAliasArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder dnsAliasName(String dnsAliasName) {
+        public Builder dnsAliasName(Output<String> dnsAliasName) {
             $.dnsAliasName = dnsAliasName;
+            return this;
+        }
+
+        /**
+         * @param dnsAliasName The name of the server dns alias.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dnsAliasName(String dnsAliasName) {
+            return dnsAliasName(Output.of(dnsAliasName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetServerDnsAliasArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serverName The name of the server that the alias is pointing to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetServerDnsAliasArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
-            return this;
+            return serverName(Output.of(serverName));
         }
 
         public GetServerDnsAliasArgs build() {

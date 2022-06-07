@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OperatorAccessControl.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAccessRequestArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accessRequestId", required=true)
-    private String accessRequestId;
+    private Output<String> accessRequestId;
 
     /**
      * @return unique AccessRequest identifier
      * 
      */
-    public String accessRequestId() {
+    public Output<String> accessRequestId() {
         return this.accessRequestId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAccessRequestArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder accessRequestId(String accessRequestId) {
+        public Builder accessRequestId(Output<String> accessRequestId) {
             $.accessRequestId = accessRequestId;
             return this;
+        }
+
+        /**
+         * @param accessRequestId unique AccessRequest identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessRequestId(String accessRequestId) {
+            return accessRequestId(Output.of(accessRequestId));
         }
 
         public GetAccessRequestArgs build() {

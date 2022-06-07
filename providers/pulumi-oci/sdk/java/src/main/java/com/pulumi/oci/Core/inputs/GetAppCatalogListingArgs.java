@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAppCatalogListingArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="listingId", required=true)
-    private String listingId;
+    private Output<String> listingId;
 
     /**
      * @return The OCID of the listing.
      * 
      */
-    public String listingId() {
+    public Output<String> listingId() {
         return this.listingId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAppCatalogListingArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder listingId(String listingId) {
+        public Builder listingId(Output<String> listingId) {
             $.listingId = listingId;
             return this;
+        }
+
+        /**
+         * @param listingId The OCID of the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listingId(String listingId) {
+            return listingId(Output.of(listingId));
         }
 
         public GetAppCatalogListingArgs build() {

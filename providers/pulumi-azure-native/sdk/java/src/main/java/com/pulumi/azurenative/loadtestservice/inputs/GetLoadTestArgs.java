@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.loadtestservice.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLoadTestArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadTestName", required=true)
-    private String loadTestName;
+    private Output<String> loadTestName;
 
     /**
      * @return Load Test name.
      * 
      */
-    public String loadTestName() {
+    public Output<String> loadTestName() {
         return this.loadTestName;
     }
 
@@ -32,13 +33,13 @@ public final class GetLoadTestArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetLoadTestArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder loadTestName(String loadTestName) {
+        public Builder loadTestName(Output<String> loadTestName) {
             $.loadTestName = loadTestName;
+            return this;
+        }
+
+        /**
+         * @param loadTestName Load Test name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadTestName(String loadTestName) {
+            return loadTestName(Output.of(loadTestName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLoadTestArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetLoadTestArgs build() {

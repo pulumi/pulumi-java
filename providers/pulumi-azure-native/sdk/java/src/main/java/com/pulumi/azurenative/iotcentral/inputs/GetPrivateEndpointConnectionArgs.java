@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.iotcentral.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
-    private String privateEndpointConnectionName;
+    private Output<String> privateEndpointConnectionName;
 
     /**
      * @return The private endpoint connection name.
      * 
      */
-    public String privateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the IoT Central application.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The ARM resource name of the IoT Central application.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
+        public Builder privateEndpointConnectionName(Output<String> privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
+            return this;
+        }
+
+        /**
+         * @param privateEndpointConnectionName The private endpoint connection name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT Central application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The ARM resource name of the IoT Central application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public GetPrivateEndpointConnectionArgs build() {

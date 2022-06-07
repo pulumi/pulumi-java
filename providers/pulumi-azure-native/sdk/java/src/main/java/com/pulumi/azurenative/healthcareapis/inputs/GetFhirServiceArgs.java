@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.healthcareapis.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFhirServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fhirServiceName", required=true)
-    private String fhirServiceName;
+    private Output<String> fhirServiceName;
 
     /**
      * @return The name of FHIR Service resource.
      * 
      */
-    public String fhirServiceName() {
+    public Output<String> fhirServiceName() {
         return this.fhirServiceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetFhirServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the service instance.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetFhirServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of workspace resource.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetFhirServiceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fhirServiceName(String fhirServiceName) {
+        public Builder fhirServiceName(Output<String> fhirServiceName) {
             $.fhirServiceName = fhirServiceName;
+            return this;
+        }
+
+        /**
+         * @param fhirServiceName The name of FHIR Service resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fhirServiceName(String fhirServiceName) {
+            return fhirServiceName(Output.of(fhirServiceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the service instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetFhirServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceName The name of workspace resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetFhirServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetFhirServiceArgs build() {

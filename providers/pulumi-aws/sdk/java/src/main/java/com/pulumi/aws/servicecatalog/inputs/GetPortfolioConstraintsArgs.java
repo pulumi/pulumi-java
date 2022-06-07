@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.servicecatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="acceptLanguage")
-    private @Nullable String acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
     /**
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Optional<String> acceptLanguage() {
+    public Optional<Output<String>> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
 
@@ -34,13 +35,13 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="portfolioId", required=true)
-    private String portfolioId;
+    private Output<String> portfolioId;
 
     /**
      * @return Portfolio identifier.
      * 
      */
-    public String portfolioId() {
+    public Output<String> portfolioId() {
         return this.portfolioId;
     }
 
@@ -49,13 +50,13 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="productId")
-    private @Nullable String productId;
+    private @Nullable Output<String> productId;
 
     /**
      * @return Product identifier.
      * 
      */
-    public Optional<String> productId() {
+    public Optional<Output<String>> productId() {
         return Optional.ofNullable(this.productId);
     }
 
@@ -91,8 +92,29 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             $.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * @param acceptLanguage Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
+        }
+
+        /**
+         * @param portfolioId Portfolio identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portfolioId(Output<String> portfolioId) {
+            $.portfolioId = portfolioId;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder portfolioId(String portfolioId) {
-            $.portfolioId = portfolioId;
+            return portfolioId(Output.of(portfolioId));
+        }
+
+        /**
+         * @param productId Product identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder productId(@Nullable Output<String> productId) {
+            $.productId = productId;
             return this;
         }
 
@@ -113,9 +145,8 @@ public final class GetPortfolioConstraintsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder productId(@Nullable String productId) {
-            $.productId = productId;
-            return this;
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
         }
 
         public GetPortfolioConstraintsArgs build() {

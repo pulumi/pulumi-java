@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetCanaryEvaluationArgs extends com.pulumi.resources.InvokeAr
     public static final GetCanaryEvaluationArgs Empty = new GetCanaryEvaluationArgs();
 
     @Import(name="canaryevaluationId", required=true)
-    private String canaryevaluationId;
+    private Output<String> canaryevaluationId;
 
-    public String canaryevaluationId() {
+    public Output<String> canaryevaluationId() {
         return this.canaryevaluationId;
     }
 
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -59,19 +60,31 @@ public final class GetCanaryEvaluationArgs extends com.pulumi.resources.InvokeAr
             $ = new GetCanaryEvaluationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder canaryevaluationId(String canaryevaluationId) {
+        public Builder canaryevaluationId(Output<String> canaryevaluationId) {
             $.canaryevaluationId = canaryevaluationId;
             return this;
         }
 
-        public Builder instanceId(String instanceId) {
+        public Builder canaryevaluationId(String canaryevaluationId) {
+            return canaryevaluationId(Output.of(canaryevaluationId));
+        }
+
+        public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetCanaryEvaluationArgs build() {

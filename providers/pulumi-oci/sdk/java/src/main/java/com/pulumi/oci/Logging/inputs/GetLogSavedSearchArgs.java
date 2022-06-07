@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Logging.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLogSavedSearchArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="logSavedSearchId", required=true)
-    private String logSavedSearchId;
+    private Output<String> logSavedSearchId;
 
     /**
      * @return OCID of the logSavedSearch
      * 
      */
-    public String logSavedSearchId() {
+    public Output<String> logSavedSearchId() {
         return this.logSavedSearchId;
     }
 
@@ -57,9 +58,19 @@ public final class GetLogSavedSearchArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder logSavedSearchId(String logSavedSearchId) {
+        public Builder logSavedSearchId(Output<String> logSavedSearchId) {
             $.logSavedSearchId = logSavedSearchId;
             return this;
+        }
+
+        /**
+         * @param logSavedSearchId OCID of the logSavedSearch
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logSavedSearchId(String logSavedSearchId) {
+            return logSavedSearchId(Output.of(logSavedSearchId));
         }
 
         public GetLogSavedSearchArgs build() {

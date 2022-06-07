@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.cdn.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="originGroupName", required=true)
-    private String originGroupName;
+    private Output<String> originGroupName;
 
     /**
      * @return Name of the origin group which is unique within the profile.
      * 
      */
-    public String originGroupName() {
+    public Output<String> originGroupName() {
         return this.originGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="originName", required=true)
-    private String originName;
+    private Output<String> originName;
 
     /**
      * @return Name of the origin which is unique within the profile.
      * 
      */
-    public String originName() {
+    public Output<String> originName() {
         return this.originName;
     }
 
@@ -47,13 +48,13 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
     /**
      * @return Name of the CDN profile which is unique within the resource group.
      * 
      */
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -62,13 +63,13 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder originGroupName(String originGroupName) {
+        public Builder originGroupName(Output<String> originGroupName) {
             $.originGroupName = originGroupName;
+            return this;
+        }
+
+        /**
+         * @param originGroupName Name of the origin group which is unique within the profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder originGroupName(String originGroupName) {
+            return originGroupName(Output.of(originGroupName));
+        }
+
+        /**
+         * @param originName Name of the origin which is unique within the profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder originName(Output<String> originName) {
+            $.originName = originName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder originName(String originName) {
-            $.originName = originName;
+            return originName(Output.of(originName));
+        }
+
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(Output<String> profileName) {
+            $.profileName = profileName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder profileName(String profileName) {
-            $.profileName = profileName;
+            return profileName(Output.of(profileName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetAFDOriginArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAFDOriginArgs build() {

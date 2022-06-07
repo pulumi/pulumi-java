@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Kms.inputs.GetKeyVersionsFilter;
+import com.pulumi.oci.Kms.inputs.GetKeyVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetKeyVersionsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeyVersionsArgs Empty = new GetKeyVersionsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetKeyVersionsFilter> filters;
+    private @Nullable Output<List<GetKeyVersionsFilterArgs>> filters;
 
-    public Optional<List<GetKeyVersionsFilter>> filters() {
+    public Optional<Output<List<GetKeyVersionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetKeyVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyId", required=true)
-    private String keyId;
+    private Output<String> keyId;
 
     /**
      * @return The OCID of the key.
      * 
      */
-    public String keyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -43,13 +44,13 @@ public final class GetKeyVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managementEndpoint", required=true)
-    private String managementEndpoint;
+    private Output<String> managementEndpoint;
 
     /**
      * @return The service endpoint to perform management operations against. Management operations include &#39;Create,&#39; &#39;Update,&#39; &#39;List,&#39; &#39;Get,&#39; and &#39;Delete&#39; operations. See Vault Management endpoint.
      * 
      */
-    public String managementEndpoint() {
+    public Output<String> managementEndpoint() {
         return this.managementEndpoint;
     }
 
@@ -79,12 +80,16 @@ public final class GetKeyVersionsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKeyVersionsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetKeyVersionsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetKeyVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetKeyVersionsFilter... filters) {
+        public Builder filters(List<GetKeyVersionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetKeyVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -94,8 +99,29 @@ public final class GetKeyVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyId(String keyId) {
+        public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
+            return this;
+        }
+
+        /**
+         * @param keyId The OCID of the key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
+        }
+
+        /**
+         * @param managementEndpoint The service endpoint to perform management operations against. Management operations include &#39;Create,&#39; &#39;Update,&#39; &#39;List,&#39; &#39;Get,&#39; and &#39;Delete&#39; operations. See Vault Management endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementEndpoint(Output<String> managementEndpoint) {
+            $.managementEndpoint = managementEndpoint;
             return this;
         }
 
@@ -106,8 +132,7 @@ public final class GetKeyVersionsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder managementEndpoint(String managementEndpoint) {
-            $.managementEndpoint = managementEndpoint;
-            return this;
+            return managementEndpoint(Output.of(managementEndpoint));
         }
 
         public GetKeyVersionsArgs build() {

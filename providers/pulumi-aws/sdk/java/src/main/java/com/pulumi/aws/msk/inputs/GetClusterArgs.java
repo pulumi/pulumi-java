@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.msk.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return Name of the cluster.
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -35,13 +36,13 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Map of key-value pairs assigned to the cluster.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -76,8 +77,29 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterName(String clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * @param clusterName Name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param tags Map of key-value pairs assigned to the cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -87,9 +109,8 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetClusterArgs build() {

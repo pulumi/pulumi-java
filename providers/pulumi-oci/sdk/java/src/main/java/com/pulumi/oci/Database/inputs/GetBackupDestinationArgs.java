@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBackupDestinationArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="backupDestinationId", required=true)
-    private String backupDestinationId;
+    private Output<String> backupDestinationId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the backup destination.
      * 
      */
-    public String backupDestinationId() {
+    public Output<String> backupDestinationId() {
         return this.backupDestinationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetBackupDestinationArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder backupDestinationId(String backupDestinationId) {
+        public Builder backupDestinationId(Output<String> backupDestinationId) {
             $.backupDestinationId = backupDestinationId;
             return this;
+        }
+
+        /**
+         * @param backupDestinationId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the backup destination.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backupDestinationId(String backupDestinationId) {
+            return backupDestinationId(Output.of(backupDestinationId));
         }
 
         public GetBackupDestinationArgs build() {

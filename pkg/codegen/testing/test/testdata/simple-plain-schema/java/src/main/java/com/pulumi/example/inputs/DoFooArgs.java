@@ -3,8 +3,9 @@
 
 package com.pulumi.example.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.example.inputs.Foo;
+import com.pulumi.example.inputs.FooArgs;
 import java.util.Objects;
 
 
@@ -13,9 +14,9 @@ public final class DoFooArgs extends com.pulumi.resources.InvokeArgs {
     public static final DoFooArgs Empty = new DoFooArgs();
 
     @Import(name="foo", required=true)
-    private Foo foo;
+    private Output<FooArgs> foo;
 
-    public Foo foo() {
+    public Output<FooArgs> foo() {
         return this.foo;
     }
 
@@ -43,9 +44,13 @@ public final class DoFooArgs extends com.pulumi.resources.InvokeArgs {
             $ = new DoFooArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder foo(Foo foo) {
+        public Builder foo(Output<FooArgs> foo) {
             $.foo = foo;
             return this;
+        }
+
+        public Builder foo(FooArgs foo) {
+            return foo(Output.of(foo));
         }
 
         public DoFooArgs build() {

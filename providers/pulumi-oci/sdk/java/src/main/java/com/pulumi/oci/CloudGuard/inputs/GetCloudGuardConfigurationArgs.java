@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.CloudGuard.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCloudGuardConfigurationArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCloudGuardConfigurationArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
         }
 
         public GetCloudGuardConfigurationArgs build() {

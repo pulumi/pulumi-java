@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointType")
-    private @Nullable String endpointType;
+    private @Nullable Output<String> endpointType;
 
     /**
      * @return Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Jobs`.
      * 
      */
-    public Optional<String> endpointType() {
+    public Optional<Output<String>> endpointType() {
         return Optional.ofNullable(this.endpointType);
     }
 
@@ -59,9 +60,19 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endpointType(@Nullable String endpointType) {
+        public Builder endpointType(@Nullable Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
+        }
+
+        /**
+         * @param endpointType Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Jobs`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointType(String endpointType) {
+            return endpointType(Output.of(endpointType));
         }
 
         public GetEndpointArgs build() {

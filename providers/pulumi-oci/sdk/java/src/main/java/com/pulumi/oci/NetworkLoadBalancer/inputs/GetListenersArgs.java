@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.NetworkLoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.NetworkLoadBalancer.inputs.GetListenersFilter;
+import com.pulumi.oci.NetworkLoadBalancer.inputs.GetListenersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetListenersArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetListenersArgs Empty = new GetListenersArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetListenersFilter> filters;
+    private @Nullable Output<List<GetListenersFilterArgs>> filters;
 
-    public Optional<List<GetListenersFilter>> filters() {
+    public Optional<Output<List<GetListenersFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetListenersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkLoadBalancerId", required=true)
-    private String networkLoadBalancerId;
+    private Output<String> networkLoadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network load balancer to update.
      * 
      */
-    public String networkLoadBalancerId() {
+    public Output<String> networkLoadBalancerId() {
         return this.networkLoadBalancerId;
     }
 
@@ -63,12 +64,16 @@ public final class GetListenersArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetListenersArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetListenersFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetListenersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetListenersFilter... filters) {
+        public Builder filters(List<GetListenersFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetListenersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetListenersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder networkLoadBalancerId(String networkLoadBalancerId) {
+        public Builder networkLoadBalancerId(Output<String> networkLoadBalancerId) {
             $.networkLoadBalancerId = networkLoadBalancerId;
             return this;
+        }
+
+        /**
+         * @param networkLoadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network load balancer to update.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkLoadBalancerId(String networkLoadBalancerId) {
+            return networkLoadBalancerId(Output.of(networkLoadBalancerId));
         }
 
         public GetListenersArgs build() {

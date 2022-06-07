@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAzureFirewallArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="azureFirewallName", required=true)
-    private String azureFirewallName;
+    private Output<String> azureFirewallName;
 
     /**
      * @return The name of the Azure Firewall.
      * 
      */
-    public String azureFirewallName() {
+    public Output<String> azureFirewallName() {
         return this.azureFirewallName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAzureFirewallArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetAzureFirewallArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder azureFirewallName(String azureFirewallName) {
+        public Builder azureFirewallName(Output<String> azureFirewallName) {
             $.azureFirewallName = azureFirewallName;
+            return this;
+        }
+
+        /**
+         * @param azureFirewallName The name of the Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder azureFirewallName(String azureFirewallName) {
+            return azureFirewallName(Output.of(azureFirewallName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAzureFirewallArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAzureFirewallArgs build() {

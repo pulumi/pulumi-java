@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetVolumeGroupBackupsFilter;
+import com.pulumi.oci.Core.inputs.GetVolumeGroupBackupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetVolumeGroupBackupsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetVolumeGroupBackupsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetVolumeGroupBackupsFilter> filters;
+    private @Nullable Output<List<GetVolumeGroupBackupsFilterArgs>> filters;
 
-    public Optional<List<GetVolumeGroupBackupsFilter>> filters() {
+    public Optional<Output<List<GetVolumeGroupBackupsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetVolumeGroupBackupsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="volumeGroupId")
-    private @Nullable String volumeGroupId;
+    private @Nullable Output<String> volumeGroupId;
 
     /**
      * @return The OCID of the volume group.
      * 
      */
-    public Optional<String> volumeGroupId() {
+    public Optional<Output<String>> volumeGroupId() {
         return Optional.ofNullable(this.volumeGroupId);
     }
 
@@ -101,8 +102,29 @@ public final class GetVolumeGroupBackupsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -112,17 +134,20 @@ public final class GetVolumeGroupBackupsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetVolumeGroupBackupsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetVolumeGroupBackupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetVolumeGroupBackupsFilter... filters) {
+        public Builder filters(List<GetVolumeGroupBackupsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetVolumeGroupBackupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -132,9 +157,19 @@ public final class GetVolumeGroupBackupsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder volumeGroupId(@Nullable String volumeGroupId) {
+        public Builder volumeGroupId(@Nullable Output<String> volumeGroupId) {
             $.volumeGroupId = volumeGroupId;
             return this;
+        }
+
+        /**
+         * @param volumeGroupId The OCID of the volume group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder volumeGroupId(String volumeGroupId) {
+            return volumeGroupId(Output.of(volumeGroupId));
         }
 
         public GetVolumeGroupBackupsArgs build() {

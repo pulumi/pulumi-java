@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Logging.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLogArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logGroupId", required=true)
-    private String logGroupId;
+    private Output<String> logGroupId;
 
     /**
      * @return OCID of a log group to work with.
      * 
      */
-    public String logGroupId() {
+    public Output<String> logGroupId() {
         return this.logGroupId;
     }
 
@@ -32,13 +33,13 @@ public final class GetLogArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logId", required=true)
-    private String logId;
+    private Output<String> logId;
 
     /**
      * @return OCID of a log to work with.
      * 
      */
-    public String logId() {
+    public Output<String> logId() {
         return this.logId;
     }
 
@@ -73,8 +74,29 @@ public final class GetLogArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder logGroupId(String logGroupId) {
+        public Builder logGroupId(Output<String> logGroupId) {
             $.logGroupId = logGroupId;
+            return this;
+        }
+
+        /**
+         * @param logGroupId OCID of a log group to work with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logGroupId(String logGroupId) {
+            return logGroupId(Output.of(logGroupId));
+        }
+
+        /**
+         * @param logId OCID of a log to work with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logId(Output<String> logId) {
+            $.logId = logId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLogArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder logId(String logId) {
-            $.logId = logId;
-            return this;
+            return logId(Output.of(logId));
         }
 
         public GetLogArgs build() {

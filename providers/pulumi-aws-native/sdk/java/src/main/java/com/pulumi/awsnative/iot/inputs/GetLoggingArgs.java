@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLoggingArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountId", required=true)
-    private String accountId;
+    private Output<String> accountId;
 
     /**
      * @return Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
      * 
      */
-    public String accountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -57,9 +58,19 @@ public final class GetLoggingArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountId(String accountId) {
+        public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
+        }
+
+        /**
+         * @param accountId Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
 
         public GetLoggingArgs build() {

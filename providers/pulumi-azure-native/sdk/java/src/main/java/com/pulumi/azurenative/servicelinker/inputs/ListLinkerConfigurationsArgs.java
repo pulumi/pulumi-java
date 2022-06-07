@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.servicelinker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListLinkerConfigurationsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="linkerName", required=true)
-    private String linkerName;
+    private Output<String> linkerName;
 
     /**
      * @return The name Linker resource.
      * 
      */
-    public String linkerName() {
+    public Output<String> linkerName() {
         return this.linkerName;
     }
 
@@ -32,13 +33,13 @@ public final class ListLinkerConfigurationsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceUri", required=true)
-    private String resourceUri;
+    private Output<String> resourceUri;
 
     /**
      * @return The fully qualified Azure Resource manager identifier of the resource to be connected.
      * 
      */
-    public String resourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -73,8 +74,29 @@ public final class ListLinkerConfigurationsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder linkerName(String linkerName) {
+        public Builder linkerName(Output<String> linkerName) {
             $.linkerName = linkerName;
+            return this;
+        }
+
+        /**
+         * @param linkerName The name Linker resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder linkerName(String linkerName) {
+            return linkerName(Output.of(linkerName));
+        }
+
+        /**
+         * @param resourceUri The fully qualified Azure Resource manager identifier of the resource to be connected.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceUri(Output<String> resourceUri) {
+            $.resourceUri = resourceUri;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class ListLinkerConfigurationsArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceUri(String resourceUri) {
-            $.resourceUri = resourceUri;
-            return this;
+            return resourceUri(Output.of(resourceUri));
         }
 
         public ListLinkerConfigurationsArgs build() {

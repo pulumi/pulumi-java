@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.globalaccelerator.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="listenerArn", required=true)
-    private String listenerArn;
+    private Output<String> listenerArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the listener.
      * 
      */
-    public String listenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetListenerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder listenerArn(String listenerArn) {
+        public Builder listenerArn(Output<String> listenerArn) {
             $.listenerArn = listenerArn;
             return this;
+        }
+
+        /**
+         * @param listenerArn The Amazon Resource Name (ARN) of the listener.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listenerArn(String listenerArn) {
+            return listenerArn(Output.of(listenerArn));
         }
 
         public GetListenerArgs build() {

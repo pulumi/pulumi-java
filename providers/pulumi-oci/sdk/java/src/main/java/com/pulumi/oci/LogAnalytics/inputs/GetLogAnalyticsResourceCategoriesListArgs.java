@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LogAnalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Logging Analytics namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -34,13 +35,13 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceCategories")
-    private @Nullable String resourceCategories;
+    private @Nullable Output<String> resourceCategories;
 
     /**
      * @return A comma-separated list of category names used for filtering
      * 
      */
-    public Optional<String> resourceCategories() {
+    public Optional<Output<String>> resourceCategories() {
         return Optional.ofNullable(this.resourceCategories);
     }
 
@@ -49,13 +50,13 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceIds")
-    private @Nullable String resourceIds;
+    private @Nullable Output<String> resourceIds;
 
     /**
      * @return A comma-separated list of resource unique identifiers used for filtering. Only resources with matching unique identifiers will be returned.
      * 
      */
-    public Optional<String> resourceIds() {
+    public Optional<Output<String>> resourceIds() {
         return Optional.ofNullable(this.resourceIds);
     }
 
@@ -64,13 +65,13 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceTypes")
-    private @Nullable String resourceTypes;
+    private @Nullable Output<String> resourceTypes;
 
     /**
      * @return A comma-separated list of resource types used for filtering. Only resources of the types specified will be returned. Examples include SOURCE, PARSER, LOOKUP, etc.
      * 
      */
-    public Optional<String> resourceTypes() {
+    public Optional<Output<String>> resourceTypes() {
         return Optional.ofNullable(this.resourceTypes);
     }
 
@@ -107,8 +108,29 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder namespace(String namespace) {
+        public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * @param namespace The Logging Analytics namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param resourceCategories A comma-separated list of category names used for filtering
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceCategories(@Nullable Output<String> resourceCategories) {
+            $.resourceCategories = resourceCategories;
             return this;
         }
 
@@ -118,8 +140,18 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder resourceCategories(@Nullable String resourceCategories) {
-            $.resourceCategories = resourceCategories;
+        public Builder resourceCategories(String resourceCategories) {
+            return resourceCategories(Output.of(resourceCategories));
+        }
+
+        /**
+         * @param resourceIds A comma-separated list of resource unique identifiers used for filtering. Only resources with matching unique identifiers will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceIds(@Nullable Output<String> resourceIds) {
+            $.resourceIds = resourceIds;
             return this;
         }
 
@@ -129,8 +161,18 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder resourceIds(@Nullable String resourceIds) {
-            $.resourceIds = resourceIds;
+        public Builder resourceIds(String resourceIds) {
+            return resourceIds(Output.of(resourceIds));
+        }
+
+        /**
+         * @param resourceTypes A comma-separated list of resource types used for filtering. Only resources of the types specified will be returned. Examples include SOURCE, PARSER, LOOKUP, etc.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceTypes(@Nullable Output<String> resourceTypes) {
+            $.resourceTypes = resourceTypes;
             return this;
         }
 
@@ -140,9 +182,8 @@ public final class GetLogAnalyticsResourceCategoriesListArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder resourceTypes(@Nullable String resourceTypes) {
-            $.resourceTypes = resourceTypes;
-            return this;
+        public Builder resourceTypes(String resourceTypes) {
+            return resourceTypes(Output.of(resourceTypes));
         }
 
         public GetLogAnalyticsResourceCategoriesListArgs build() {

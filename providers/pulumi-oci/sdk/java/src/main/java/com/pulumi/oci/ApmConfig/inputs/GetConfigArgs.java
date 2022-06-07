@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ApmConfig.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apmDomainId", required=true)
-    private String apmDomainId;
+    private Output<String> apmDomainId;
 
     /**
      * @return The APM Domain Id the request is intended for.
      * 
      */
-    public String apmDomainId() {
+    public Output<String> apmDomainId() {
         return this.apmDomainId;
     }
 
@@ -32,13 +33,13 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="configId", required=true)
-    private String configId;
+    private Output<String> configId;
 
     /**
      * @return The OCID of the ConfiguredItem.
      * 
      */
-    public String configId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
@@ -73,8 +74,29 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apmDomainId(String apmDomainId) {
+        public Builder apmDomainId(Output<String> apmDomainId) {
             $.apmDomainId = apmDomainId;
+            return this;
+        }
+
+        /**
+         * @param apmDomainId The APM Domain Id the request is intended for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apmDomainId(String apmDomainId) {
+            return apmDomainId(Output.of(apmDomainId));
+        }
+
+        /**
+         * @param configId The OCID of the ConfiguredItem.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configId(Output<String> configId) {
+            $.configId = configId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder configId(String configId) {
-            $.configId = configId;
-            return this;
+            return configId(Output.of(configId));
         }
 
         public GetConfigArgs build() {

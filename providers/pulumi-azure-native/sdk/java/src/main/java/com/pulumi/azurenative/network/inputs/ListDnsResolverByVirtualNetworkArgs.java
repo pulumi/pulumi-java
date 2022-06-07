@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class ListDnsResolverByVirtualNetworkArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -35,13 +36,13 @@ public final class ListDnsResolverByVirtualNetworkArgs extends com.pulumi.resour
      * 
      */
     @Import(name="top")
-    private @Nullable Integer top;
+    private @Nullable Output<Integer> top;
 
     /**
      * @return The maximum number of results to return. If not specified, returns up to 100 results.
      * 
      */
-    public Optional<Integer> top() {
+    public Optional<Output<Integer>> top() {
         return Optional.ofNullable(this.top);
     }
 
@@ -50,13 +51,13 @@ public final class ListDnsResolverByVirtualNetworkArgs extends com.pulumi.resour
      * 
      */
     @Import(name="virtualNetworkName", required=true)
-    private String virtualNetworkName;
+    private Output<String> virtualNetworkName;
 
     /**
      * @return The name of the virtual network.
      * 
      */
-    public String virtualNetworkName() {
+    public Output<String> virtualNetworkName() {
         return this.virtualNetworkName;
     }
 
@@ -92,8 +93,29 @@ public final class ListDnsResolverByVirtualNetworkArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param top The maximum number of results to return. If not specified, returns up to 100 results.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder top(@Nullable Output<Integer> top) {
+            $.top = top;
             return this;
         }
 
@@ -103,8 +125,18 @@ public final class ListDnsResolverByVirtualNetworkArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder top(@Nullable Integer top) {
-            $.top = top;
+        public Builder top(Integer top) {
+            return top(Output.of(top));
+        }
+
+        /**
+         * @param virtualNetworkName The name of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualNetworkName(Output<String> virtualNetworkName) {
+            $.virtualNetworkName = virtualNetworkName;
             return this;
         }
 
@@ -115,8 +147,7 @@ public final class ListDnsResolverByVirtualNetworkArgs extends com.pulumi.resour
          * 
          */
         public Builder virtualNetworkName(String virtualNetworkName) {
-            $.virtualNetworkName = virtualNetworkName;
-            return this;
+            return virtualNetworkName(Output.of(virtualNetworkName));
         }
 
         public ListDnsResolverByVirtualNetworkArgs build() {

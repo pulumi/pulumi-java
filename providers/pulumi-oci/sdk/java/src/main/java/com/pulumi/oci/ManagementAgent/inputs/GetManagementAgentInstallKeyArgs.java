@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ManagementAgent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagementAgentInstallKeyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="managementAgentInstallKeyId", required=true)
-    private String managementAgentInstallKeyId;
+    private Output<String> managementAgentInstallKeyId;
 
     /**
      * @return Unique Management Agent Install Key identifier
      * 
      */
-    public String managementAgentInstallKeyId() {
+    public Output<String> managementAgentInstallKeyId() {
         return this.managementAgentInstallKeyId;
     }
 
@@ -57,9 +58,19 @@ public final class GetManagementAgentInstallKeyArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder managementAgentInstallKeyId(String managementAgentInstallKeyId) {
+        public Builder managementAgentInstallKeyId(Output<String> managementAgentInstallKeyId) {
             $.managementAgentInstallKeyId = managementAgentInstallKeyId;
             return this;
+        }
+
+        /**
+         * @param managementAgentInstallKeyId Unique Management Agent Install Key identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementAgentInstallKeyId(String managementAgentInstallKeyId) {
+            return managementAgentInstallKeyId(Output.of(managementAgentInstallKeyId));
         }
 
         public GetManagementAgentInstallKeyArgs build() {

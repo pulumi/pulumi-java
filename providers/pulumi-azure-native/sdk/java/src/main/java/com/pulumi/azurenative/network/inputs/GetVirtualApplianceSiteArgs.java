@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="networkVirtualApplianceName", required=true)
-    private String networkVirtualApplianceName;
+    private Output<String> networkVirtualApplianceName;
 
     /**
      * @return The name of the Network Virtual Appliance.
      * 
      */
-    public String networkVirtualApplianceName() {
+    public Output<String> networkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="siteName", required=true)
-    private String siteName;
+    private Output<String> siteName;
 
     /**
      * @return The name of the site.
      * 
      */
-    public String siteName() {
+    public Output<String> siteName() {
         return this.siteName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
+        public Builder networkVirtualApplianceName(Output<String> networkVirtualApplianceName) {
             $.networkVirtualApplianceName = networkVirtualApplianceName;
+            return this;
+        }
+
+        /**
+         * @param networkVirtualApplianceName The name of the Network Virtual Appliance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
+            return networkVirtualApplianceName(Output.of(networkVirtualApplianceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param siteName The name of the site.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder siteName(Output<String> siteName) {
+            $.siteName = siteName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVirtualApplianceSiteArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder siteName(String siteName) {
-            $.siteName = siteName;
-            return this;
+            return siteName(Output.of(siteName));
         }
 
         public GetVirtualApplianceSiteArgs build() {

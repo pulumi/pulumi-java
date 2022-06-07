@@ -3,6 +3,7 @@
 
 package com.pulumi.azuread.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,13 +22,13 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNamePrefix")
-    private @Nullable String displayNamePrefix;
+    private @Nullable Output<String> displayNamePrefix;
 
     /**
      * @return A common display name prefix to match when returning groups.
      * 
      */
-    public Optional<String> displayNamePrefix() {
+    public Optional<Output<String>> displayNamePrefix() {
         return Optional.ofNullable(this.displayNamePrefix);
     }
 
@@ -36,13 +37,13 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNames")
-    private @Nullable List<String> displayNames;
+    private @Nullable Output<List<String>> displayNames;
 
     /**
      * @return The display names of the groups.
      * 
      */
-    public Optional<List<String>> displayNames() {
+    public Optional<Output<List<String>>> displayNames() {
         return Optional.ofNullable(this.displayNames);
     }
 
@@ -51,13 +52,13 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ignoreMissing")
-    private @Nullable Boolean ignoreMissing;
+    private @Nullable Output<Boolean> ignoreMissing;
 
     /**
      * @return Ignore missing groups and return groups that were found. The data source will still fail if no groups are found. Cannot be specified with `return_all`. Defaults to `false`.
      * 
      */
-    public Optional<Boolean> ignoreMissing() {
+    public Optional<Output<Boolean>> ignoreMissing() {
         return Optional.ofNullable(this.ignoreMissing);
     }
 
@@ -66,13 +67,13 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mailEnabled")
-    private @Nullable Boolean mailEnabled;
+    private @Nullable Output<Boolean> mailEnabled;
 
     /**
      * @return Whether the returned groups should be mail-enabled. By itself this does not exclude security-enabled groups. Setting this to `true` ensures all groups are mail-enabled, and setting to `false` ensures that all groups are _not_ mail-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
      * 
      */
-    public Optional<Boolean> mailEnabled() {
+    public Optional<Output<Boolean>> mailEnabled() {
         return Optional.ofNullable(this.mailEnabled);
     }
 
@@ -81,13 +82,13 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectIds")
-    private @Nullable List<String> objectIds;
+    private @Nullable Output<List<String>> objectIds;
 
     /**
      * @return The object IDs of the groups.
      * 
      */
-    public Optional<List<String>> objectIds() {
+    public Optional<Output<List<String>>> objectIds() {
         return Optional.ofNullable(this.objectIds);
     }
 
@@ -96,13 +97,13 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="returnAll")
-    private @Nullable Boolean returnAll;
+    private @Nullable Output<Boolean> returnAll;
 
     /**
      * @return A flag to denote if all groups should be fetched and returned. Cannot be specified wth `ignore_missing`. Defaults to `false`.
      * 
      */
-    public Optional<Boolean> returnAll() {
+    public Optional<Output<Boolean>> returnAll() {
         return Optional.ofNullable(this.returnAll);
     }
 
@@ -111,13 +112,13 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityEnabled")
-    private @Nullable Boolean securityEnabled;
+    private @Nullable Output<Boolean> securityEnabled;
 
     /**
      * @return Whether the returned groups should be security-enabled. By itself this does not exclude mail-enabled groups. Setting this to `true` ensures all groups are security-enabled, and setting to `false` ensures that all groups are _not_ security-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
      * 
      */
-    public Optional<Boolean> securityEnabled() {
+    public Optional<Output<Boolean>> securityEnabled() {
         return Optional.ofNullable(this.securityEnabled);
     }
 
@@ -157,8 +158,29 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNamePrefix(@Nullable String displayNamePrefix) {
+        public Builder displayNamePrefix(@Nullable Output<String> displayNamePrefix) {
             $.displayNamePrefix = displayNamePrefix;
+            return this;
+        }
+
+        /**
+         * @param displayNamePrefix A common display name prefix to match when returning groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayNamePrefix(String displayNamePrefix) {
+            return displayNamePrefix(Output.of(displayNamePrefix));
+        }
+
+        /**
+         * @param displayNames The display names of the groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayNames(@Nullable Output<List<String>> displayNames) {
+            $.displayNames = displayNames;
             return this;
         }
 
@@ -168,9 +190,8 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNames(@Nullable List<String> displayNames) {
-            $.displayNames = displayNames;
-            return this;
+        public Builder displayNames(List<String> displayNames) {
+            return displayNames(Output.of(displayNames));
         }
 
         /**
@@ -189,8 +210,29 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ignoreMissing(@Nullable Boolean ignoreMissing) {
+        public Builder ignoreMissing(@Nullable Output<Boolean> ignoreMissing) {
             $.ignoreMissing = ignoreMissing;
+            return this;
+        }
+
+        /**
+         * @param ignoreMissing Ignore missing groups and return groups that were found. The data source will still fail if no groups are found. Cannot be specified with `return_all`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ignoreMissing(Boolean ignoreMissing) {
+            return ignoreMissing(Output.of(ignoreMissing));
+        }
+
+        /**
+         * @param mailEnabled Whether the returned groups should be mail-enabled. By itself this does not exclude security-enabled groups. Setting this to `true` ensures all groups are mail-enabled, and setting to `false` ensures that all groups are _not_ mail-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mailEnabled(@Nullable Output<Boolean> mailEnabled) {
+            $.mailEnabled = mailEnabled;
             return this;
         }
 
@@ -200,8 +242,18 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mailEnabled(@Nullable Boolean mailEnabled) {
-            $.mailEnabled = mailEnabled;
+        public Builder mailEnabled(Boolean mailEnabled) {
+            return mailEnabled(Output.of(mailEnabled));
+        }
+
+        /**
+         * @param objectIds The object IDs of the groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectIds(@Nullable Output<List<String>> objectIds) {
+            $.objectIds = objectIds;
             return this;
         }
 
@@ -211,9 +263,8 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder objectIds(@Nullable List<String> objectIds) {
-            $.objectIds = objectIds;
-            return this;
+        public Builder objectIds(List<String> objectIds) {
+            return objectIds(Output.of(objectIds));
         }
 
         /**
@@ -232,8 +283,29 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder returnAll(@Nullable Boolean returnAll) {
+        public Builder returnAll(@Nullable Output<Boolean> returnAll) {
             $.returnAll = returnAll;
+            return this;
+        }
+
+        /**
+         * @param returnAll A flag to denote if all groups should be fetched and returned. Cannot be specified wth `ignore_missing`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder returnAll(Boolean returnAll) {
+            return returnAll(Output.of(returnAll));
+        }
+
+        /**
+         * @param securityEnabled Whether the returned groups should be security-enabled. By itself this does not exclude mail-enabled groups. Setting this to `true` ensures all groups are security-enabled, and setting to `false` ensures that all groups are _not_ security-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityEnabled(@Nullable Output<Boolean> securityEnabled) {
+            $.securityEnabled = securityEnabled;
             return this;
         }
 
@@ -243,9 +315,8 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder securityEnabled(@Nullable Boolean securityEnabled) {
-            $.securityEnabled = securityEnabled;
-            return this;
+        public Builder securityEnabled(Boolean securityEnabled) {
+            return securityEnabled(Output.of(securityEnabled));
         }
 
         public GetGroupsArgs build() {

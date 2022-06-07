@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetBackupsFilter;
+import com.pulumi.oci.Database.inputs.GetBackupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -36,20 +37,20 @@ public final class GetBackupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseId")
-    private @Nullable String databaseId;
+    private @Nullable Output<String> databaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
      * 
      */
-    public Optional<String> databaseId() {
+    public Optional<Output<String>> databaseId() {
         return Optional.ofNullable(this.databaseId);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBackupsFilter> filters;
+    private @Nullable Output<List<GetBackupsFilterArgs>> filters;
 
-    public Optional<List<GetBackupsFilter>> filters() {
+    public Optional<Output<List<GetBackupsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -85,8 +86,29 @@ public final class GetBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param databaseId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseId(@Nullable Output<String> databaseId) {
+            $.databaseId = databaseId;
             return this;
         }
 
@@ -96,17 +118,20 @@ public final class GetBackupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder databaseId(@Nullable String databaseId) {
-            $.databaseId = databaseId;
-            return this;
+        public Builder databaseId(String databaseId) {
+            return databaseId(Output.of(databaseId));
         }
 
-        public Builder filters(@Nullable List<GetBackupsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetBackupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetBackupsFilter... filters) {
+        public Builder filters(List<GetBackupsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetBackupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

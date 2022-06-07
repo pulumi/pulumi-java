@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVaultArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vaultId", required=true)
-    private String vaultId;
+    private Output<String> vaultId;
 
     /**
      * @return The OCID of the vault.
      * 
      */
-    public String vaultId() {
+    public Output<String> vaultId() {
         return this.vaultId;
     }
 
@@ -57,9 +58,19 @@ public final class GetVaultArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vaultId(String vaultId) {
+        public Builder vaultId(Output<String> vaultId) {
             $.vaultId = vaultId;
             return this;
+        }
+
+        /**
+         * @param vaultId The OCID of the vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vaultId(String vaultId) {
+            return vaultId(Output.of(vaultId));
         }
 
         public GetVaultArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.advisor.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the suppression.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recommendationId", required=true)
-    private String recommendationId;
+    private Output<String> recommendationId;
 
     /**
      * @return The recommendation ID.
      * 
      */
-    public String recommendationId() {
+    public Output<String> recommendationId() {
         return this.recommendationId;
     }
 
@@ -47,13 +48,13 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-    private String resourceUri;
+    private Output<String> resourceUri;
 
     /**
      * @return The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
      * 
      */
-    public String resourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -89,8 +90,29 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the suppression.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param recommendationId The recommendation ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder recommendationId(Output<String> recommendationId) {
+            $.recommendationId = recommendationId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder recommendationId(String recommendationId) {
-            $.recommendationId = recommendationId;
+            return recommendationId(Output.of(recommendationId));
+        }
+
+        /**
+         * @param resourceUri The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceUri(Output<String> resourceUri) {
+            $.resourceUri = resourceUri;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceUri(String resourceUri) {
-            $.resourceUri = resourceUri;
-            return this;
+            return resourceUri(Output.of(resourceUri));
         }
 
         public GetSuppressionArgs build() {

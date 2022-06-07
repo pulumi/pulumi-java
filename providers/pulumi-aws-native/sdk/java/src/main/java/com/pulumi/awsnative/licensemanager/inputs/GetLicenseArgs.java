@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.licensemanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLicenseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="licenseArn", required=true)
-    private String licenseArn;
+    private Output<String> licenseArn;
 
     /**
      * @return Amazon Resource Name is a unique name for each resource.
      * 
      */
-    public String licenseArn() {
+    public Output<String> licenseArn() {
         return this.licenseArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetLicenseArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder licenseArn(String licenseArn) {
+        public Builder licenseArn(Output<String> licenseArn) {
             $.licenseArn = licenseArn;
             return this;
+        }
+
+        /**
+         * @param licenseArn Amazon Resource Name is a unique name for each resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder licenseArn(String licenseArn) {
+            return licenseArn(Output.of(licenseArn));
         }
 
         public GetLicenseArgs build() {

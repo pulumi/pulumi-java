@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetInstantSnapshotArgs extends com.pulumi.resources.InvokeArg
     public static final GetInstantSnapshotArgs Empty = new GetInstantSnapshotArgs();
 
     @Import(name="instantSnapshot", required=true)
-    private String instantSnapshot;
+    private Output<String> instantSnapshot;
 
-    public String instantSnapshot() {
+    public Output<String> instantSnapshot() {
         return this.instantSnapshot;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
-    private String zone;
+    private Output<String> zone;
 
-    public String zone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -61,19 +62,31 @@ public final class GetInstantSnapshotArgs extends com.pulumi.resources.InvokeArg
             $ = new GetInstantSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder instantSnapshot(String instantSnapshot) {
+        public Builder instantSnapshot(Output<String> instantSnapshot) {
             $.instantSnapshot = instantSnapshot;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder instantSnapshot(String instantSnapshot) {
+            return instantSnapshot(Output.of(instantSnapshot));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder zone(String zone) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder zone(Output<String> zone) {
             $.zone = zone;
             return this;
+        }
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetInstantSnapshotArgs build() {

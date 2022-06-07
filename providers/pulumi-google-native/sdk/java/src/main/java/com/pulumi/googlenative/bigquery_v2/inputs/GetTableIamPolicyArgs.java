@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.bigquery_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetTableIamPolicyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetTableIamPolicyArgs Empty = new GetTableIamPolicyArgs();
 
     @Import(name="datasetId", required=true)
-    private String datasetId;
+    private Output<String> datasetId;
 
-    public String datasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="tableId", required=true)
-    private String tableId;
+    private Output<String> tableId;
 
-    public String tableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
 
@@ -61,19 +62,31 @@ public final class GetTableIamPolicyArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetTableIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder datasetId(String datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder tableId(String tableId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder tableId(Output<String> tableId) {
             $.tableId = tableId;
             return this;
+        }
+
+        public Builder tableId(String tableId) {
+            return tableId(Output.of(tableId));
         }
 
         public GetTableIamPolicyArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.networkmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceId", required=true)
-    private String deviceId;
+    private Output<String> deviceId;
 
     /**
      * @return The ID of the device.
      * 
      */
-    public String deviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
 
@@ -35,13 +36,13 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="globalNetworkId", required=true)
-    private String globalNetworkId;
+    private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the global network.
      * 
      */
-    public String globalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -50,13 +51,13 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Key-value tags for the device.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -92,8 +93,29 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder deviceId(String deviceId) {
+        public Builder deviceId(Output<String> deviceId) {
             $.deviceId = deviceId;
+            return this;
+        }
+
+        /**
+         * @param deviceId The ID of the device.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceId(String deviceId) {
+            return deviceId(Output.of(deviceId));
+        }
+
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
 
@@ -104,7 +126,17 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder globalNetworkId(String globalNetworkId) {
-            $.globalNetworkId = globalNetworkId;
+            return globalNetworkId(Output.of(globalNetworkId));
+        }
+
+        /**
+         * @param tags Key-value tags for the device.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -114,9 +146,8 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetDeviceArgs build() {

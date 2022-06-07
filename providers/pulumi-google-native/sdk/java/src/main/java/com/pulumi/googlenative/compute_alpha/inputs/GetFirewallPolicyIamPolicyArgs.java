@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetFirewallPolicyIamPolicyArgs extends com.pulumi.resources.I
     public static final GetFirewallPolicyIamPolicyArgs Empty = new GetFirewallPolicyIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="resource", required=true)
-    private String resource;
+    private Output<String> resource;
 
-    public String resource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -53,14 +54,22 @@ public final class GetFirewallPolicyIamPolicyArgs extends com.pulumi.resources.I
             $ = new GetFirewallPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder resource(String resource) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder resource(Output<String> resource) {
             $.resource = resource;
             return this;
+        }
+
+        public Builder resource(String resource) {
+            return resource(Output.of(resource));
         }
 
         public GetFirewallPolicyIamPolicyArgs build() {

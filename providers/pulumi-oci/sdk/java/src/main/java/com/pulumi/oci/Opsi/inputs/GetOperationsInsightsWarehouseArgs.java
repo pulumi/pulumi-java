@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOperationsInsightsWarehouseArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="operationsInsightsWarehouseId", required=true)
-    private String operationsInsightsWarehouseId;
+    private Output<String> operationsInsightsWarehouseId;
 
     /**
      * @return Unique Operations Insights Warehouse identifier
      * 
      */
-    public String operationsInsightsWarehouseId() {
+    public Output<String> operationsInsightsWarehouseId() {
         return this.operationsInsightsWarehouseId;
     }
 
@@ -57,9 +58,19 @@ public final class GetOperationsInsightsWarehouseArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder operationsInsightsWarehouseId(String operationsInsightsWarehouseId) {
+        public Builder operationsInsightsWarehouseId(Output<String> operationsInsightsWarehouseId) {
             $.operationsInsightsWarehouseId = operationsInsightsWarehouseId;
             return this;
+        }
+
+        /**
+         * @param operationsInsightsWarehouseId Unique Operations Insights Warehouse identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationsInsightsWarehouseId(String operationsInsightsWarehouseId) {
+            return operationsInsightsWarehouseId(Output.of(operationsInsightsWarehouseId));
         }
 
         public GetOperationsInsightsWarehouseArgs build() {

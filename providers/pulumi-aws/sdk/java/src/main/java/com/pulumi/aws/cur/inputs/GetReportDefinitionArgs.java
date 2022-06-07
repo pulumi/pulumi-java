@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.cur.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReportDefinitionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="reportName", required=true)
-    private String reportName;
+    private Output<String> reportName;
 
     /**
      * @return The name of the report definition to match.
      * 
      */
-    public String reportName() {
+    public Output<String> reportName() {
         return this.reportName;
     }
 
@@ -57,9 +58,19 @@ public final class GetReportDefinitionArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder reportName(String reportName) {
+        public Builder reportName(Output<String> reportName) {
             $.reportName = reportName;
             return this;
+        }
+
+        /**
+         * @param reportName The name of the report definition to match.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reportName(String reportName) {
+            return reportName(Output.of(reportName));
         }
 
         public GetReportDefinitionArgs build() {

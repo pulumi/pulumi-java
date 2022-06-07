@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetAnalysisArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAnalysisArgs Empty = new GetAnalysisArgs();
 
     @Import(name="analysisId", required=true)
-    private String analysisId;
+    private Output<String> analysisId;
 
-    public String analysisId() {
+    public Output<String> analysisId() {
         return this.analysisId;
     }
 
     @Import(name="conversationId", required=true)
-    private String conversationId;
+    private Output<String> conversationId;
 
-    public String conversationId() {
+    public Output<String> conversationId() {
         return this.conversationId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -69,24 +70,40 @@ public final class GetAnalysisArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder analysisId(String analysisId) {
+        public Builder analysisId(Output<String> analysisId) {
             $.analysisId = analysisId;
             return this;
         }
 
-        public Builder conversationId(String conversationId) {
+        public Builder analysisId(String analysisId) {
+            return analysisId(Output.of(analysisId));
+        }
+
+        public Builder conversationId(Output<String> conversationId) {
             $.conversationId = conversationId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder conversationId(String conversationId) {
+            return conversationId(Output.of(conversationId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetAnalysisArgs build() {

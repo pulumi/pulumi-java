@@ -5,7 +5,9 @@ package com.pulumi.azurenative.confidentialledger;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.confidentialledger.inputs.GetLedgerArgs;
+import com.pulumi.azurenative.confidentialledger.inputs.GetLedgerPlainArgs;
 import com.pulumi.azurenative.confidentialledger.outputs.GetLedgerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -17,7 +19,7 @@ public final class ConfidentialledgerFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetLedgerResult> getLedger(GetLedgerArgs args) {
+    public static Output<GetLedgerResult> getLedger(GetLedgerArgs args) {
         return getLedger(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +27,23 @@ public final class ConfidentialledgerFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetLedgerResult> getLedger(GetLedgerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLedgerResult> getLedgerPlain(GetLedgerPlainArgs args) {
+        return getLedgerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Confidential Ledger. Contains the properties of Confidential Ledger Resource.
+     * API Version: 2020-12-01-preview.
+     * 
+     */
+    public static Output<GetLedgerResult> getLedger(GetLedgerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:confidentialledger:getLedger", TypeShape.of(GetLedgerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Confidential Ledger. Contains the properties of Confidential Ledger Resource.
+     * API Version: 2020-12-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetLedgerResult> getLedgerPlain(GetLedgerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:confidentialledger:getLedger", TypeShape.of(GetLedgerResult.class), args, Utilities.withVersion(options));
     }
 }

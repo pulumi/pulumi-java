@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.gamelift.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGameServerGroupArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="gameServerGroupArn", required=true)
-    private String gameServerGroupArn;
+    private Output<String> gameServerGroupArn;
 
     /**
      * @return A generated unique ID for the game server group.
      * 
      */
-    public String gameServerGroupArn() {
+    public Output<String> gameServerGroupArn() {
         return this.gameServerGroupArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetGameServerGroupArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder gameServerGroupArn(String gameServerGroupArn) {
+        public Builder gameServerGroupArn(Output<String> gameServerGroupArn) {
             $.gameServerGroupArn = gameServerGroupArn;
             return this;
+        }
+
+        /**
+         * @param gameServerGroupArn A generated unique ID for the game server group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gameServerGroupArn(String gameServerGroupArn) {
+            return gameServerGroupArn(Output.of(gameServerGroupArn));
         }
 
         public GetGameServerGroupArgs build() {

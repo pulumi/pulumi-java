@@ -5,7 +5,9 @@ package com.pulumi.aws.resourcegroupstaggingapi;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.resourcegroupstaggingapi.inputs.GetResourcesArgs;
+import com.pulumi.aws.resourcegroupstaggingapi.inputs.GetResourcesPlainArgs;
 import com.pulumi.aws.resourcegroupstaggingapi.outputs.GetResourcesResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -87,7 +89,7 @@ public final class ResourcegroupstaggingapiFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourcesResult> getResources() {
+    public static Output<GetResourcesResult> getResources() {
         return getResources(GetResourcesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -165,7 +167,85 @@ public final class ResourcegroupstaggingapiFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourcesResult> getResources(GetResourcesArgs args) {
+    public static CompletableFuture<GetResourcesResult> getResourcesPlain() {
+        return getResourcesPlain(GetResourcesPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about resource tagging.
+     * 
+     * ## Example Usage
+     * ### Get All Resource Tag Mappings
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Filter By Tag Key and Value
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources(GetResourcesArgs.builder()
+     *             .tagFilters(GetResourcesTagFilter.builder()
+     *                 .key(&#34;tag-key&#34;)
+     *                 .values(                
+     *                     &#34;tag-value-1&#34;,
+     *                     &#34;tag-value-2&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Filter By Resource Type
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources(GetResourcesArgs.builder()
+     *             .resourceTypeFilters(&#34;ec2:instance&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetResourcesResult> getResources(GetResourcesArgs args) {
         return getResources(args, InvokeOptions.Empty);
     }
     /**
@@ -243,7 +323,163 @@ public final class ResourcegroupstaggingapiFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetResourcesResult> getResources(GetResourcesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResourcesResult> getResourcesPlain(GetResourcesPlainArgs args) {
+        return getResourcesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about resource tagging.
+     * 
+     * ## Example Usage
+     * ### Get All Resource Tag Mappings
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Filter By Tag Key and Value
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources(GetResourcesArgs.builder()
+     *             .tagFilters(GetResourcesTagFilter.builder()
+     *                 .key(&#34;tag-key&#34;)
+     *                 .values(                
+     *                     &#34;tag-value-1&#34;,
+     *                     &#34;tag-value-2&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Filter By Resource Type
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources(GetResourcesArgs.builder()
+     *             .resourceTypeFilters(&#34;ec2:instance&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetResourcesResult> getResources(GetResourcesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:resourcegroupstaggingapi/getResources:getResources", TypeShape.of(GetResourcesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about resource tagging.
+     * 
+     * ## Example Usage
+     * ### Get All Resource Tag Mappings
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Filter By Tag Key and Value
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources(GetResourcesArgs.builder()
+     *             .tagFilters(GetResourcesTagFilter.builder()
+     *                 .key(&#34;tag-key&#34;)
+     *                 .values(                
+     *                     &#34;tag-value-1&#34;,
+     *                     &#34;tag-value-2&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Filter By Resource Type
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources(GetResourcesArgs.builder()
+     *             .resourceTypeFilters(&#34;ec2:instance&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetResourcesResult> getResourcesPlain(GetResourcesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:resourcegroupstaggingapi/getResources:getResources", TypeShape.of(GetResourcesResult.class), args, Utilities.withVersion(options));
     }
 }

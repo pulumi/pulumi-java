@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.spanner.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetInstanceArgs Empty = new GetInstanceArgs();
 
     @Import(name="config")
-    private @Nullable String config;
+    private @Nullable Output<String> config;
 
-    public Optional<String> config() {
+    public Optional<Output<String>> config() {
         return Optional.ofNullable(this.config);
     }
 
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -33,13 +34,13 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the spanner instance.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,14 +50,14 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The project in which the resource belongs. If it
      * is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -87,13 +88,32 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder config(@Nullable String config) {
+        public Builder config(@Nullable Output<String> config) {
             $.config = config;
             return this;
         }
 
-        public Builder displayName(@Nullable String displayName) {
+        public Builder config(String config) {
+            return config(Output.of(config));
+        }
+
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
+            return this;
+        }
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param name The name of the spanner instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -104,7 +124,18 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable Output<String> project) {
+            $.project = project;
             return this;
         }
 
@@ -115,9 +146,8 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
-            $.project = project;
-            return this;
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetInstanceArgs build() {

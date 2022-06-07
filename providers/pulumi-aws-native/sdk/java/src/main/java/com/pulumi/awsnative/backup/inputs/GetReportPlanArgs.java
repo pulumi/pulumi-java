@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.backup.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReportPlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reportPlanArn", required=true)
-    private String reportPlanArn;
+    private Output<String> reportPlanArn;
 
     /**
      * @return An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.
      * 
      */
-    public String reportPlanArn() {
+    public Output<String> reportPlanArn() {
         return this.reportPlanArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetReportPlanArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder reportPlanArn(String reportPlanArn) {
+        public Builder reportPlanArn(Output<String> reportPlanArn) {
             $.reportPlanArn = reportPlanArn;
             return this;
+        }
+
+        /**
+         * @param reportPlanArn An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reportPlanArn(String reportPlanArn) {
+            return reportPlanArn(Output.of(reportPlanArn));
         }
 
         public GetReportPlanArgs build() {

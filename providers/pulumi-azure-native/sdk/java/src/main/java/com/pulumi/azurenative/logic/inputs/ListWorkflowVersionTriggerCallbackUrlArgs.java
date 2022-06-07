@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.azurenative.logic.enums.KeyType;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="keyType")
-    private @Nullable Either<String,KeyType> keyType;
+    private @Nullable Output<Either<String,KeyType>> keyType;
 
     /**
      * @return The key type.
      * 
      */
-    public Optional<Either<String,KeyType>> keyType() {
+    public Optional<Output<Either<String,KeyType>>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
 
@@ -36,13 +37,13 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="notAfter")
-    private @Nullable String notAfter;
+    private @Nullable Output<String> notAfter;
 
     /**
      * @return The expiry time.
      * 
      */
-    public Optional<String> notAfter() {
+    public Optional<Output<String>> notAfter() {
         return Optional.ofNullable(this.notAfter);
     }
 
@@ -51,13 +52,13 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,13 +67,13 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="triggerName", required=true)
-    private String triggerName;
+    private Output<String> triggerName;
 
     /**
      * @return The workflow trigger name.
      * 
      */
-    public String triggerName() {
+    public Output<String> triggerName() {
         return this.triggerName;
     }
 
@@ -81,13 +82,13 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="versionId", required=true)
-    private String versionId;
+    private Output<String> versionId;
 
     /**
      * @return The workflow versionId.
      * 
      */
-    public String versionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
 
@@ -96,13 +97,13 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
      * 
      */
     @Import(name="workflowName", required=true)
-    private String workflowName;
+    private Output<String> workflowName;
 
     /**
      * @return The workflow name.
      * 
      */
-    public String workflowName() {
+    public Output<String> workflowName() {
         return this.workflowName;
     }
 
@@ -141,9 +142,19 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder keyType(@Nullable Either<String,KeyType> keyType) {
+        public Builder keyType(@Nullable Output<Either<String,KeyType>> keyType) {
             $.keyType = keyType;
             return this;
+        }
+
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyType(Either<String,KeyType> keyType) {
+            return keyType(Output.of(keyType));
         }
 
         /**
@@ -172,8 +183,29 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder notAfter(@Nullable String notAfter) {
+        public Builder notAfter(@Nullable Output<String> notAfter) {
             $.notAfter = notAfter;
+            return this;
+        }
+
+        /**
+         * @param notAfter The expiry time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder notAfter(String notAfter) {
+            return notAfter(Output.of(notAfter));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -184,7 +216,17 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param triggerName The workflow trigger name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder triggerName(Output<String> triggerName) {
+            $.triggerName = triggerName;
             return this;
         }
 
@@ -195,7 +237,17 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
          * 
          */
         public Builder triggerName(String triggerName) {
-            $.triggerName = triggerName;
+            return triggerName(Output.of(triggerName));
+        }
+
+        /**
+         * @param versionId The workflow versionId.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionId(Output<String> versionId) {
+            $.versionId = versionId;
             return this;
         }
 
@@ -206,7 +258,17 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
          * 
          */
         public Builder versionId(String versionId) {
-            $.versionId = versionId;
+            return versionId(Output.of(versionId));
+        }
+
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workflowName(Output<String> workflowName) {
+            $.workflowName = workflowName;
             return this;
         }
 
@@ -217,8 +279,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
          * 
          */
         public Builder workflowName(String workflowName) {
-            $.workflowName = workflowName;
-            return this;
+            return workflowName(Output.of(workflowName));
         }
 
         public ListWorkflowVersionTriggerCallbackUrlArgs build() {

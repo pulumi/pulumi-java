@@ -5,13 +5,18 @@ package com.pulumi.aws.wafregional;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.wafregional.inputs.GetIpsetArgs;
+import com.pulumi.aws.wafregional.inputs.GetIpsetPlainArgs;
 import com.pulumi.aws.wafregional.inputs.GetRateBasedModArgs;
+import com.pulumi.aws.wafregional.inputs.GetRateBasedModPlainArgs;
 import com.pulumi.aws.wafregional.inputs.GetRuleArgs;
+import com.pulumi.aws.wafregional.inputs.GetRulePlainArgs;
 import com.pulumi.aws.wafregional.inputs.GetWebAclArgs;
+import com.pulumi.aws.wafregional.inputs.GetWebAclPlainArgs;
 import com.pulumi.aws.wafregional.outputs.GetIpsetResult;
 import com.pulumi.aws.wafregional.outputs.GetRateBasedModResult;
 import com.pulumi.aws.wafregional.outputs.GetRuleResult;
 import com.pulumi.aws.wafregional.outputs.GetWebAclResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -45,7 +50,7 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpsetResult> getIpset(GetIpsetArgs args) {
+    public static Output<GetIpsetResult> getIpset(GetIpsetArgs args) {
         return getIpset(args, InvokeOptions.Empty);
     }
     /**
@@ -75,7 +80,67 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpsetResult> getIpset(GetIpsetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIpsetResult> getIpsetPlain(GetIpsetPlainArgs args) {
+        return getIpsetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * `aws.wafregional.IpSet` Retrieves a WAF Regional IP Set Resource Id.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getIpset(GetIpsetArgs.builder()
+     *             .name(&#34;tfWAFRegionalIPSet&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetIpsetResult> getIpset(GetIpsetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafregional/getIpset:getIpset", TypeShape.of(GetIpsetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * `aws.wafregional.IpSet` Retrieves a WAF Regional IP Set Resource Id.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getIpset(GetIpsetArgs.builder()
+     *             .name(&#34;tfWAFRegionalIPSet&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetIpsetResult> getIpsetPlain(GetIpsetPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafregional/getIpset:getIpset", TypeShape.of(GetIpsetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -105,7 +170,7 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRateBasedModResult> getRateBasedMod(GetRateBasedModArgs args) {
+    public static Output<GetRateBasedModResult> getRateBasedMod(GetRateBasedModArgs args) {
         return getRateBasedMod(args, InvokeOptions.Empty);
     }
     /**
@@ -135,7 +200,67 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRateBasedModResult> getRateBasedMod(GetRateBasedModArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRateBasedModResult> getRateBasedModPlain(GetRateBasedModPlainArgs args) {
+        return getRateBasedModPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getRateBasedMod(GetRateBasedModArgs.builder()
+     *             .name(&#34;tfWAFRegionalRateBasedRule&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetRateBasedModResult> getRateBasedMod(GetRateBasedModArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafregional/getRateBasedMod:getRateBasedMod", TypeShape.of(GetRateBasedModResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getRateBasedMod(GetRateBasedModArgs.builder()
+     *             .name(&#34;tfWAFRegionalRateBasedRule&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetRateBasedModResult> getRateBasedModPlain(GetRateBasedModPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafregional/getRateBasedMod:getRateBasedMod", TypeShape.of(GetRateBasedModResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -165,7 +290,7 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
+    public static Output<GetRuleResult> getRule(GetRuleArgs args) {
         return getRule(args, InvokeOptions.Empty);
     }
     /**
@@ -195,7 +320,67 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRuleResult> getRulePlain(GetRulePlainArgs args) {
+        return getRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * `aws.wafregional.Rule` Retrieves a WAF Regional Rule Resource Id.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getRule(GetRuleArgs.builder()
+     *             .name(&#34;tfWAFRegionalRule&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetRuleResult> getRule(GetRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafregional/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * `aws.wafregional.Rule` Retrieves a WAF Regional Rule Resource Id.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getRule(GetRuleArgs.builder()
+     *             .name(&#34;tfWAFRegionalRule&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetRuleResult> getRulePlain(GetRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafregional/getRule:getRule", TypeShape.of(GetRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -225,7 +410,7 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args) {
+    public static Output<GetWebAclResult> getWebAcl(GetWebAclArgs args) {
         return getWebAcl(args, InvokeOptions.Empty);
     }
     /**
@@ -255,7 +440,67 @@ public final class WafregionalFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebAclResult> getWebAclPlain(GetWebAclPlainArgs args) {
+        return getWebAclPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * `aws.wafregional.WebAcl` Retrieves a WAF Regional Web ACL Resource Id.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getWebAcl(GetWebAclArgs.builder()
+     *             .name(&#34;tfWAFRegionalWebACL&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetWebAclResult> getWebAcl(GetWebAclArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:wafregional/getWebAcl:getWebAcl", TypeShape.of(GetWebAclResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * `aws.wafregional.WebAcl` Retrieves a WAF Regional Web ACL Resource Id.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getWebAcl(GetWebAclArgs.builder()
+     *             .name(&#34;tfWAFRegionalWebACL&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetWebAclResult> getWebAclPlain(GetWebAclPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafregional/getWebAcl:getWebAcl", TypeShape.of(GetWebAclResult.class), args, Utilities.withVersion(options));
     }
 }

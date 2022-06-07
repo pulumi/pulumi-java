@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Kms.inputs.GetVaultReplicasFilter;
+import com.pulumi.oci.Kms.inputs.GetVaultReplicasFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetVaultReplicasArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetVaultReplicasArgs Empty = new GetVaultReplicasArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetVaultReplicasFilter> filters;
+    private @Nullable Output<List<GetVaultReplicasFilterArgs>> filters;
 
-    public Optional<List<GetVaultReplicasFilter>> filters() {
+    public Optional<Output<List<GetVaultReplicasFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetVaultReplicasArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vaultId", required=true)
-    private String vaultId;
+    private Output<String> vaultId;
 
     /**
      * @return The OCID of the vault.
      * 
      */
-    public String vaultId() {
+    public Output<String> vaultId() {
         return this.vaultId;
     }
 
@@ -63,12 +64,16 @@ public final class GetVaultReplicasArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetVaultReplicasArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetVaultReplicasFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetVaultReplicasFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetVaultReplicasFilter... filters) {
+        public Builder filters(List<GetVaultReplicasFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetVaultReplicasFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetVaultReplicasArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder vaultId(String vaultId) {
+        public Builder vaultId(Output<String> vaultId) {
             $.vaultId = vaultId;
             return this;
+        }
+
+        /**
+         * @param vaultId The OCID of the vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vaultId(String vaultId) {
+            return vaultId(Output.of(vaultId));
         }
 
         public GetVaultReplicasArgs build() {

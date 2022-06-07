@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecurityAssessmentComparisonArgs extends com.pulumi.resour
      * 
      */
     @Import(name="comparisonSecurityAssessmentId", required=true)
-    private String comparisonSecurityAssessmentId;
+    private Output<String> comparisonSecurityAssessmentId;
 
     /**
      * @return The OCID of the baseline security assessment.
      * 
      */
-    public String comparisonSecurityAssessmentId() {
+    public Output<String> comparisonSecurityAssessmentId() {
         return this.comparisonSecurityAssessmentId;
     }
 
@@ -32,13 +33,13 @@ public final class GetSecurityAssessmentComparisonArgs extends com.pulumi.resour
      * 
      */
     @Import(name="securityAssessmentId", required=true)
-    private String securityAssessmentId;
+    private Output<String> securityAssessmentId;
 
     /**
      * @return The OCID of the security assessment.
      * 
      */
-    public String securityAssessmentId() {
+    public Output<String> securityAssessmentId() {
         return this.securityAssessmentId;
     }
 
@@ -73,8 +74,29 @@ public final class GetSecurityAssessmentComparisonArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder comparisonSecurityAssessmentId(String comparisonSecurityAssessmentId) {
+        public Builder comparisonSecurityAssessmentId(Output<String> comparisonSecurityAssessmentId) {
             $.comparisonSecurityAssessmentId = comparisonSecurityAssessmentId;
+            return this;
+        }
+
+        /**
+         * @param comparisonSecurityAssessmentId The OCID of the baseline security assessment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder comparisonSecurityAssessmentId(String comparisonSecurityAssessmentId) {
+            return comparisonSecurityAssessmentId(Output.of(comparisonSecurityAssessmentId));
+        }
+
+        /**
+         * @param securityAssessmentId The OCID of the security assessment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityAssessmentId(Output<String> securityAssessmentId) {
+            $.securityAssessmentId = securityAssessmentId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSecurityAssessmentComparisonArgs extends com.pulumi.resour
          * 
          */
         public Builder securityAssessmentId(String securityAssessmentId) {
-            $.securityAssessmentId = securityAssessmentId;
-            return this;
+            return securityAssessmentId(Output.of(securityAssessmentId));
         }
 
         public GetSecurityAssessmentComparisonArgs build() {

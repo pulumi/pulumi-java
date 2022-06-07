@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.customerprofiles.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainName", required=true)
-    private String domainName;
+    private Output<String> domainName;
 
     /**
      * @return The unique name of the domain.
      * 
      */
-    public String domainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -57,9 +58,19 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domainName(String domainName) {
+        public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
+        }
+
+        /**
+         * @param domainName The unique name of the domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
 
         public GetDomainArgs build() {

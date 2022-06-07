@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OsManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -34,13 +35,13 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
      * 
      */
     @Import(name="latestTimestampGreaterThanOrEqualTo")
-    private @Nullable String latestTimestampGreaterThanOrEqualTo;
+    private @Nullable Output<String> latestTimestampGreaterThanOrEqualTo;
 
     /**
      * @return filter event occurrence. Selecting only those last occurred on or after given date in ISO 8601 format Example: 2017-07-14T02:40:00.000Z
      * 
      */
-    public Optional<String> latestTimestampGreaterThanOrEqualTo() {
+    public Optional<Output<String>> latestTimestampGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.latestTimestampGreaterThanOrEqualTo);
     }
 
@@ -49,13 +50,13 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
      * 
      */
     @Import(name="latestTimestampLessThan")
-    private @Nullable String latestTimestampLessThan;
+    private @Nullable Output<String> latestTimestampLessThan;
 
     /**
      * @return filter event occurrence. Selecting only those last occurred before given date in ISO 8601 format Example: 2017-07-14T02:40:00.000Z
      * 
      */
-    public Optional<String> latestTimestampLessThan() {
+    public Optional<Output<String>> latestTimestampLessThan() {
         return Optional.ofNullable(this.latestTimestampLessThan);
     }
 
@@ -64,13 +65,13 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
      * 
      */
     @Import(name="managedInstanceId", required=true)
-    private String managedInstanceId;
+    private Output<String> managedInstanceId;
 
     /**
      * @return Instance Oracle Cloud identifier (ocid)
      * 
      */
-    public String managedInstanceId() {
+    public Output<String> managedInstanceId() {
         return this.managedInstanceId;
     }
 
@@ -107,8 +108,29 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param latestTimestampGreaterThanOrEqualTo filter event occurrence. Selecting only those last occurred on or after given date in ISO 8601 format Example: 2017-07-14T02:40:00.000Z
+         * 
+         * @return builder
+         * 
+         */
+        public Builder latestTimestampGreaterThanOrEqualTo(@Nullable Output<String> latestTimestampGreaterThanOrEqualTo) {
+            $.latestTimestampGreaterThanOrEqualTo = latestTimestampGreaterThanOrEqualTo;
             return this;
         }
 
@@ -118,8 +140,18 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder latestTimestampGreaterThanOrEqualTo(@Nullable String latestTimestampGreaterThanOrEqualTo) {
-            $.latestTimestampGreaterThanOrEqualTo = latestTimestampGreaterThanOrEqualTo;
+        public Builder latestTimestampGreaterThanOrEqualTo(String latestTimestampGreaterThanOrEqualTo) {
+            return latestTimestampGreaterThanOrEqualTo(Output.of(latestTimestampGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param latestTimestampLessThan filter event occurrence. Selecting only those last occurred before given date in ISO 8601 format Example: 2017-07-14T02:40:00.000Z
+         * 
+         * @return builder
+         * 
+         */
+        public Builder latestTimestampLessThan(@Nullable Output<String> latestTimestampLessThan) {
+            $.latestTimestampLessThan = latestTimestampLessThan;
             return this;
         }
 
@@ -129,8 +161,18 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder latestTimestampLessThan(@Nullable String latestTimestampLessThan) {
-            $.latestTimestampLessThan = latestTimestampLessThan;
+        public Builder latestTimestampLessThan(String latestTimestampLessThan) {
+            return latestTimestampLessThan(Output.of(latestTimestampLessThan));
+        }
+
+        /**
+         * @param managedInstanceId Instance Oracle Cloud identifier (ocid)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedInstanceId(Output<String> managedInstanceId) {
+            $.managedInstanceId = managedInstanceId;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetManagedInstanceEventReportArgs extends com.pulumi.resource
          * 
          */
         public Builder managedInstanceId(String managedInstanceId) {
-            $.managedInstanceId = managedInstanceId;
-            return this;
+            return managedInstanceId(Output.of(managedInstanceId));
         }
 
         public GetManagedInstanceEventReportArgs build() {

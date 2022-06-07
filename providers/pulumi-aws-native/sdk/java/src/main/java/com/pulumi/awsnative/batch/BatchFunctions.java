@@ -5,11 +5,15 @@ package com.pulumi.awsnative.batch;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.batch.inputs.GetComputeEnvironmentArgs;
+import com.pulumi.awsnative.batch.inputs.GetComputeEnvironmentPlainArgs;
 import com.pulumi.awsnative.batch.inputs.GetJobQueueArgs;
+import com.pulumi.awsnative.batch.inputs.GetJobQueuePlainArgs;
 import com.pulumi.awsnative.batch.inputs.GetSchedulingPolicyArgs;
+import com.pulumi.awsnative.batch.inputs.GetSchedulingPolicyPlainArgs;
 import com.pulumi.awsnative.batch.outputs.GetComputeEnvironmentResult;
 import com.pulumi.awsnative.batch.outputs.GetJobQueueResult;
 import com.pulumi.awsnative.batch.outputs.GetSchedulingPolicyResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -20,42 +24,84 @@ public final class BatchFunctions {
      * Resource Type definition for AWS::Batch::ComputeEnvironment
      * 
      */
-    public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args) {
+    public static Output<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args) {
         return getComputeEnvironment(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Batch::ComputeEnvironment
      * 
      */
-    public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironmentPlain(GetComputeEnvironmentPlainArgs args) {
+        return getComputeEnvironmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Batch::ComputeEnvironment
+     * 
+     */
+    public static Output<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:batch:getComputeEnvironment", TypeShape.of(GetComputeEnvironmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Batch::ComputeEnvironment
+     * 
+     */
+    public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironmentPlain(GetComputeEnvironmentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:batch:getComputeEnvironment", TypeShape.of(GetComputeEnvironmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Batch::JobQueue
      * 
      */
-    public static CompletableFuture<GetJobQueueResult> getJobQueue(GetJobQueueArgs args) {
+    public static Output<GetJobQueueResult> getJobQueue(GetJobQueueArgs args) {
         return getJobQueue(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Batch::JobQueue
      * 
      */
-    public static CompletableFuture<GetJobQueueResult> getJobQueue(GetJobQueueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobQueueResult> getJobQueuePlain(GetJobQueuePlainArgs args) {
+        return getJobQueuePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Batch::JobQueue
+     * 
+     */
+    public static Output<GetJobQueueResult> getJobQueue(GetJobQueueArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:batch:getJobQueue", TypeShape.of(GetJobQueueResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Batch::JobQueue
+     * 
+     */
+    public static CompletableFuture<GetJobQueueResult> getJobQueuePlain(GetJobQueuePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:batch:getJobQueue", TypeShape.of(GetJobQueueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type schema for AWS::Batch::SchedulingPolicy
      * 
      */
-    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args) {
+    public static Output<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args) {
         return getSchedulingPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type schema for AWS::Batch::SchedulingPolicy
      * 
      */
-    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicyPlain(GetSchedulingPolicyPlainArgs args) {
+        return getSchedulingPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type schema for AWS::Batch::SchedulingPolicy
+     * 
+     */
+    public static Output<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:batch:getSchedulingPolicy", TypeShape.of(GetSchedulingPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type schema for AWS::Batch::SchedulingPolicy
+     * 
+     */
+    public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicyPlain(GetSchedulingPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:batch:getSchedulingPolicy", TypeShape.of(GetSchedulingPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

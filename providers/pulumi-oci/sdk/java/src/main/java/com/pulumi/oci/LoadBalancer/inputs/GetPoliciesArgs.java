@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.LoadBalancer.inputs.GetPoliciesFilter;
+import com.pulumi.oci.LoadBalancer.inputs.GetPoliciesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetPoliciesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the load balancer policies to list.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetPoliciesFilter> filters;
+    private @Nullable Output<List<GetPoliciesFilterArgs>> filters;
 
-    public Optional<List<GetPoliciesFilter>> filters() {
+    public Optional<Output<List<GetPoliciesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetPoliciesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPoliciesFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment containing the load balancer policies to list.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetPoliciesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetPoliciesFilter... filters) {
+        public Builder filters(List<GetPoliciesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetPoliciesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

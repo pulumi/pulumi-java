@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.synapse.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="columnName", required=true)
-    private String columnName;
+    private Output<String> columnName;
 
     /**
      * @return The name of the column.
      * 
      */
-    public String columnName() {
+    public Output<String> columnName() {
         return this.columnName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="schemaName", required=true)
-    private String schemaName;
+    private Output<String> schemaName;
 
     /**
      * @return The name of the schema.
      * 
      */
-    public String schemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
 
@@ -62,13 +63,13 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="sensitivityLabelSource", required=true)
-    private String sensitivityLabelSource;
+    private Output<String> sensitivityLabelSource;
 
     /**
      * @return The source of the sensitivity label.
      * 
      */
-    public String sensitivityLabelSource() {
+    public Output<String> sensitivityLabelSource() {
         return this.sensitivityLabelSource;
     }
 
@@ -77,13 +78,13 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="sqlPoolName", required=true)
-    private String sqlPoolName;
+    private Output<String> sqlPoolName;
 
     /**
      * @return SQL pool name
      * 
      */
-    public String sqlPoolName() {
+    public Output<String> sqlPoolName() {
         return this.sqlPoolName;
     }
 
@@ -92,13 +93,13 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="tableName", required=true)
-    private String tableName;
+    private Output<String> tableName;
 
     /**
      * @return The name of the table.
      * 
      */
-    public String tableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -107,13 +108,13 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of the workspace
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -153,8 +154,29 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder columnName(String columnName) {
+        public Builder columnName(Output<String> columnName) {
             $.columnName = columnName;
+            return this;
+        }
+
+        /**
+         * @param columnName The name of the column.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder columnName(String columnName) {
+            return columnName(Output.of(columnName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -165,7 +187,17 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param schemaName The name of the schema.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder schemaName(Output<String> schemaName) {
+            $.schemaName = schemaName;
             return this;
         }
 
@@ -176,7 +208,17 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
          * 
          */
         public Builder schemaName(String schemaName) {
-            $.schemaName = schemaName;
+            return schemaName(Output.of(schemaName));
+        }
+
+        /**
+         * @param sensitivityLabelSource The source of the sensitivity label.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensitivityLabelSource(Output<String> sensitivityLabelSource) {
+            $.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
 
@@ -187,7 +229,17 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
          * 
          */
         public Builder sensitivityLabelSource(String sensitivityLabelSource) {
-            $.sensitivityLabelSource = sensitivityLabelSource;
+            return sensitivityLabelSource(Output.of(sensitivityLabelSource));
+        }
+
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlPoolName(Output<String> sqlPoolName) {
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
 
@@ -198,7 +250,17 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
          * 
          */
         public Builder sqlPoolName(String sqlPoolName) {
-            $.sqlPoolName = sqlPoolName;
+            return sqlPoolName(Output.of(sqlPoolName));
+        }
+
+        /**
+         * @param tableName The name of the table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tableName(Output<String> tableName) {
+            $.tableName = tableName;
             return this;
         }
 
@@ -209,7 +271,17 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
          * 
          */
         public Builder tableName(String tableName) {
-            $.tableName = tableName;
+            return tableName(Output.of(tableName));
+        }
+
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -220,8 +292,7 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetSqlPoolSensitivityLabelArgs build() {

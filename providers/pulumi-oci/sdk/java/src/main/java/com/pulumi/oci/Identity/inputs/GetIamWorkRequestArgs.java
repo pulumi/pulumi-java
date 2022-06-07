@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIamWorkRequestArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="iamWorkRequestId", required=true)
-    private String iamWorkRequestId;
+    private Output<String> iamWorkRequestId;
 
     /**
      * @return The OCID of the IAM work request.
      * 
      */
-    public String iamWorkRequestId() {
+    public Output<String> iamWorkRequestId() {
         return this.iamWorkRequestId;
     }
 
@@ -57,9 +58,19 @@ public final class GetIamWorkRequestArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder iamWorkRequestId(String iamWorkRequestId) {
+        public Builder iamWorkRequestId(Output<String> iamWorkRequestId) {
             $.iamWorkRequestId = iamWorkRequestId;
             return this;
+        }
+
+        /**
+         * @param iamWorkRequestId The OCID of the IAM work request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder iamWorkRequestId(String iamWorkRequestId) {
+            return iamWorkRequestId(Output.of(iamWorkRequestId));
         }
 
         public GetIamWorkRequestArgs build() {

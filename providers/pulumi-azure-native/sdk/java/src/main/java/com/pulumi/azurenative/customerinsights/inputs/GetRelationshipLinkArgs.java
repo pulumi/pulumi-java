@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.customerinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hubName", required=true)
-    private String hubName;
+    private Output<String> hubName;
 
     /**
      * @return The name of the hub.
      * 
      */
-    public String hubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -32,13 +33,13 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="relationshipLinkName", required=true)
-    private String relationshipLinkName;
+    private Output<String> relationshipLinkName;
 
     /**
      * @return The name of the relationship link.
      * 
      */
-    public String relationshipLinkName() {
+    public Output<String> relationshipLinkName() {
         return this.relationshipLinkName;
     }
 
@@ -47,13 +48,13 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder hubName(String hubName) {
+        public Builder hubName(Output<String> hubName) {
             $.hubName = hubName;
+            return this;
+        }
+
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hubName(String hubName) {
+            return hubName(Output.of(hubName));
+        }
+
+        /**
+         * @param relationshipLinkName The name of the relationship link.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relationshipLinkName(Output<String> relationshipLinkName) {
+            $.relationshipLinkName = relationshipLinkName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder relationshipLinkName(String relationshipLinkName) {
-            $.relationshipLinkName = relationshipLinkName;
+            return relationshipLinkName(Output.of(relationshipLinkName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetRelationshipLinkArgs build() {

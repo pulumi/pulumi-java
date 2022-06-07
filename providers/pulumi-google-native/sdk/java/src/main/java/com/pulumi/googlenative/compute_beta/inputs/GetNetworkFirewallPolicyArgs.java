@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetNetworkFirewallPolicyArgs extends com.pulumi.resources.Inv
     public static final GetNetworkFirewallPolicyArgs Empty = new GetNetworkFirewallPolicyArgs();
 
     @Import(name="firewallPolicy", required=true)
-    private String firewallPolicy;
+    private Output<String> firewallPolicy;
 
-    public String firewallPolicy() {
+    public Output<String> firewallPolicy() {
         return this.firewallPolicy;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetNetworkFirewallPolicyArgs extends com.pulumi.resources.Inv
             $ = new GetNetworkFirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder firewallPolicy(String firewallPolicy) {
+        public Builder firewallPolicy(Output<String> firewallPolicy) {
             $.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder firewallPolicy(String firewallPolicy) {
+            return firewallPolicy(Output.of(firewallPolicy));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetNetworkFirewallPolicyArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetContentItemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentItemId", required=true)
-    private String contentItemId;
+    private Output<String> contentItemId;
 
     /**
      * @return Content item identifier.
      * 
      */
-    public String contentItemId() {
+    public Output<String> contentItemId() {
         return this.contentItemId;
     }
 
@@ -32,13 +33,13 @@ public final class GetContentItemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentTypeId", required=true)
-    private String contentTypeId;
+    private Output<String> contentTypeId;
 
     /**
      * @return Content type identifier.
      * 
      */
-    public String contentTypeId() {
+    public Output<String> contentTypeId() {
         return this.contentTypeId;
     }
 
@@ -47,13 +48,13 @@ public final class GetContentItemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetContentItemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetContentItemArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contentItemId(String contentItemId) {
+        public Builder contentItemId(Output<String> contentItemId) {
             $.contentItemId = contentItemId;
+            return this;
+        }
+
+        /**
+         * @param contentItemId Content item identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contentItemId(String contentItemId) {
+            return contentItemId(Output.of(contentItemId));
+        }
+
+        /**
+         * @param contentTypeId Content type identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contentTypeId(Output<String> contentTypeId) {
+            $.contentTypeId = contentTypeId;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetContentItemArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder contentTypeId(String contentTypeId) {
-            $.contentTypeId = contentTypeId;
+            return contentTypeId(Output.of(contentTypeId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetContentItemArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetContentItemArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetContentItemArgs build() {

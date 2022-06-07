@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.configuration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOrganizationConformancePackArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="organizationConformancePackName", required=true)
-    private String organizationConformancePackName;
+    private Output<String> organizationConformancePackName;
 
     /**
      * @return The name of the organization conformance pack.
      * 
      */
-    public String organizationConformancePackName() {
+    public Output<String> organizationConformancePackName() {
         return this.organizationConformancePackName;
     }
 
@@ -57,9 +58,19 @@ public final class GetOrganizationConformancePackArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder organizationConformancePackName(String organizationConformancePackName) {
+        public Builder organizationConformancePackName(Output<String> organizationConformancePackName) {
             $.organizationConformancePackName = organizationConformancePackName;
             return this;
+        }
+
+        /**
+         * @param organizationConformancePackName The name of the organization conformance pack.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationConformancePackName(String organizationConformancePackName) {
+            return organizationConformancePackName(Output.of(organizationConformancePackName));
         }
 
         public GetOrganizationConformancePackArgs build() {

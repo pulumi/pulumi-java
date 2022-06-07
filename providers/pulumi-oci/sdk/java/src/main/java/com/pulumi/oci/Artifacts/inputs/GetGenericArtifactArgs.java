@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Artifacts.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGenericArtifactArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="artifactId", required=true)
-    private String artifactId;
+    private Output<String> artifactId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the artifact.  Example: `ocid1.genericartifact.oc1..exampleuniqueID`
      * 
      */
-    public String artifactId() {
+    public Output<String> artifactId() {
         return this.artifactId;
     }
 
@@ -57,9 +58,19 @@ public final class GetGenericArtifactArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder artifactId(String artifactId) {
+        public Builder artifactId(Output<String> artifactId) {
             $.artifactId = artifactId;
             return this;
+        }
+
+        /**
+         * @param artifactId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the artifact.  Example: `ocid1.genericartifact.oc1..exampleuniqueID`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder artifactId(String artifactId) {
+            return artifactId(Output.of(artifactId));
         }
 
         public GetGenericArtifactArgs build() {

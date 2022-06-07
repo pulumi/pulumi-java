@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.devices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateName", required=true)
-    private String certificateName;
+    private Output<String> certificateName;
 
     /**
      * @return The name of the certificate
      * 
      */
-    public String certificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the IoT hub.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the IoT hub.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder certificateName(String certificateName) {
+        public Builder certificateName(Output<String> certificateName) {
             $.certificateName = certificateName;
+            return this;
+        }
+
+        /**
+         * @param certificateName The name of the certificate
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public GetCertificateArgs build() {

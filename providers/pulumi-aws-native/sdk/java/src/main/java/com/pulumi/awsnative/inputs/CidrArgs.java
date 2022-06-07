@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,23 +15,23 @@ public final class CidrArgs extends com.pulumi.resources.InvokeArgs {
     public static final CidrArgs Empty = new CidrArgs();
 
     @Import(name="cidrBits", required=true)
-    private Integer cidrBits;
+    private Output<Integer> cidrBits;
 
-    public Integer cidrBits() {
+    public Output<Integer> cidrBits() {
         return this.cidrBits;
     }
 
     @Import(name="count", required=true)
-    private Integer count;
+    private Output<Integer> count;
 
-    public Integer count() {
+    public Output<Integer> count() {
         return this.count;
     }
 
     @Import(name="ipBlock", required=true)
-    private String ipBlock;
+    private Output<String> ipBlock;
 
-    public String ipBlock() {
+    public Output<String> ipBlock() {
         return this.ipBlock;
     }
 
@@ -60,19 +61,31 @@ public final class CidrArgs extends com.pulumi.resources.InvokeArgs {
             $ = new CidrArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder cidrBits(Integer cidrBits) {
+        public Builder cidrBits(Output<Integer> cidrBits) {
             $.cidrBits = cidrBits;
             return this;
         }
 
-        public Builder count(Integer count) {
+        public Builder cidrBits(Integer cidrBits) {
+            return cidrBits(Output.of(cidrBits));
+        }
+
+        public Builder count(Output<Integer> count) {
             $.count = count;
             return this;
         }
 
-        public Builder ipBlock(String ipBlock) {
+        public Builder count(Integer count) {
+            return count(Output.of(count));
+        }
+
+        public Builder ipBlock(Output<String> ipBlock) {
             $.ipBlock = ipBlock;
             return this;
+        }
+
+        public Builder ipBlock(String ipBlock) {
+            return ipBlock(Output.of(ipBlock));
         }
 
         public CidrArgs build() {

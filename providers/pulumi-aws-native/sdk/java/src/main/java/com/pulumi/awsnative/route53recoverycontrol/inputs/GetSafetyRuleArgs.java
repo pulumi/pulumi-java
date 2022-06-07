@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.route53recoverycontrol.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSafetyRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="safetyRuleArn", required=true)
-    private String safetyRuleArn;
+    private Output<String> safetyRuleArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the safety rule.
      * 
      */
-    public String safetyRuleArn() {
+    public Output<String> safetyRuleArn() {
         return this.safetyRuleArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetSafetyRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder safetyRuleArn(String safetyRuleArn) {
+        public Builder safetyRuleArn(Output<String> safetyRuleArn) {
             $.safetyRuleArn = safetyRuleArn;
             return this;
+        }
+
+        /**
+         * @param safetyRuleArn The Amazon Resource Name (ARN) of the safety rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder safetyRuleArn(String safetyRuleArn) {
+            return safetyRuleArn(Output.of(safetyRuleArn));
         }
 
         public GetSafetyRuleArgs build() {

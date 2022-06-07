@@ -5,11 +5,15 @@ package com.pulumi.azurenative.automanage;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.automanage.inputs.GetAccountArgs;
+import com.pulumi.azurenative.automanage.inputs.GetAccountPlainArgs;
 import com.pulumi.azurenative.automanage.inputs.GetConfigurationProfileAssignmentArgs;
+import com.pulumi.azurenative.automanage.inputs.GetConfigurationProfileAssignmentPlainArgs;
 import com.pulumi.azurenative.automanage.inputs.GetConfigurationProfilePreferenceArgs;
+import com.pulumi.azurenative.automanage.inputs.GetConfigurationProfilePreferencePlainArgs;
 import com.pulumi.azurenative.automanage.outputs.GetAccountResult;
 import com.pulumi.azurenative.automanage.outputs.GetConfigurationProfileAssignmentResult;
 import com.pulumi.azurenative.automanage.outputs.GetConfigurationProfilePreferenceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -21,7 +25,7 @@ public final class AutomanageFunctions {
      * API Version: 2020-06-30-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -29,7 +33,23 @@ public final class AutomanageFunctions {
      * API Version: 2020-06-30-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args) {
+        return getAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of the Automanage account.
+     * API Version: 2020-06-30-preview.
+     * 
+     */
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:automanage:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of the Automanage account.
+     * API Version: 2020-06-30-preview.
+     * 
+     */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automanage:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -37,7 +57,7 @@ public final class AutomanageFunctions {
      * API Version: 2020-06-30-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationProfileAssignmentResult> getConfigurationProfileAssignment(GetConfigurationProfileAssignmentArgs args) {
+    public static Output<GetConfigurationProfileAssignmentResult> getConfigurationProfileAssignment(GetConfigurationProfileAssignmentArgs args) {
         return getConfigurationProfileAssignment(args, InvokeOptions.Empty);
     }
     /**
@@ -45,7 +65,23 @@ public final class AutomanageFunctions {
      * API Version: 2020-06-30-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationProfileAssignmentResult> getConfigurationProfileAssignment(GetConfigurationProfileAssignmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationProfileAssignmentResult> getConfigurationProfileAssignmentPlain(GetConfigurationProfileAssignmentPlainArgs args) {
+        return getConfigurationProfileAssignmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Configuration profile assignment is an association between a VM and automanage profile configuration.
+     * API Version: 2020-06-30-preview.
+     * 
+     */
+    public static Output<GetConfigurationProfileAssignmentResult> getConfigurationProfileAssignment(GetConfigurationProfileAssignmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:automanage:getConfigurationProfileAssignment", TypeShape.of(GetConfigurationProfileAssignmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Configuration profile assignment is an association between a VM and automanage profile configuration.
+     * API Version: 2020-06-30-preview.
+     * 
+     */
+    public static CompletableFuture<GetConfigurationProfileAssignmentResult> getConfigurationProfileAssignmentPlain(GetConfigurationProfileAssignmentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automanage:getConfigurationProfileAssignment", TypeShape.of(GetConfigurationProfileAssignmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -53,7 +89,7 @@ public final class AutomanageFunctions {
      * API Version: 2020-06-30-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationProfilePreferenceResult> getConfigurationProfilePreference(GetConfigurationProfilePreferenceArgs args) {
+    public static Output<GetConfigurationProfilePreferenceResult> getConfigurationProfilePreference(GetConfigurationProfilePreferenceArgs args) {
         return getConfigurationProfilePreference(args, InvokeOptions.Empty);
     }
     /**
@@ -61,7 +97,23 @@ public final class AutomanageFunctions {
      * API Version: 2020-06-30-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationProfilePreferenceResult> getConfigurationProfilePreference(GetConfigurationProfilePreferenceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationProfilePreferenceResult> getConfigurationProfilePreferencePlain(GetConfigurationProfilePreferencePlainArgs args) {
+        return getConfigurationProfilePreferencePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of the configuration profile preference.
+     * API Version: 2020-06-30-preview.
+     * 
+     */
+    public static Output<GetConfigurationProfilePreferenceResult> getConfigurationProfilePreference(GetConfigurationProfilePreferenceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:automanage:getConfigurationProfilePreference", TypeShape.of(GetConfigurationProfilePreferenceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of the configuration profile preference.
+     * API Version: 2020-06-30-preview.
+     * 
+     */
+    public static CompletableFuture<GetConfigurationProfilePreferenceResult> getConfigurationProfilePreferencePlain(GetConfigurationProfilePreferencePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automanage:getConfigurationProfilePreference", TypeShape.of(GetConfigurationProfilePreferenceResult.class), args, Utilities.withVersion(options));
     }
 }

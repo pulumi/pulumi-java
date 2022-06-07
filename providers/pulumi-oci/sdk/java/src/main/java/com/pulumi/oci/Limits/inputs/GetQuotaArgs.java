@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Limits.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetQuotaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quotaId", required=true)
-    private String quotaId;
+    private Output<String> quotaId;
 
     /**
      * @return The OCID of the quota.
      * 
      */
-    public String quotaId() {
+    public Output<String> quotaId() {
         return this.quotaId;
     }
 
@@ -57,9 +58,19 @@ public final class GetQuotaArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder quotaId(String quotaId) {
+        public Builder quotaId(Output<String> quotaId) {
             $.quotaId = quotaId;
             return this;
+        }
+
+        /**
+         * @param quotaId The OCID of the quota.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder quotaId(String quotaId) {
+            return quotaId(Output.of(quotaId));
         }
 
         public GetQuotaArgs build() {

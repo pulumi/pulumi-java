@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Budget.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Budget.inputs.GetBudgetsFilter;
+import com.pulumi.oci.Budget.inputs.GetBudgetsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetBudgetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetBudgetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBudgetsFilter> filters;
+    private @Nullable Output<List<GetBudgetsFilterArgs>> filters;
 
-    public Optional<List<GetBudgetsFilter>> filters() {
+    public Optional<Output<List<GetBudgetsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetBudgetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The current state of the resource to filter by.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -76,7 +77,7 @@ public final class GetBudgetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetType")
-    private @Nullable String targetType;
+    private @Nullable Output<String> targetType;
 
     /**
      * @return The type of target to filter by.
@@ -85,7 +86,7 @@ public final class GetBudgetsArgs extends com.pulumi.resources.InvokeArgs {
      * * TAG - List all budgets with targetType == &#34;TAG&#34;
      * 
      */
-    public Optional<String> targetType() {
+    public Optional<Output<String>> targetType() {
         return Optional.ofNullable(this.targetType);
     }
 
@@ -123,8 +124,29 @@ public final class GetBudgetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -134,17 +156,20 @@ public final class GetBudgetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetBudgetsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetBudgetsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetBudgetsFilter... filters) {
+        public Builder filters(List<GetBudgetsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetBudgetsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -154,8 +179,32 @@ public final class GetBudgetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state The current state of the resource to filter by.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param targetType The type of target to filter by.
+         * * ALL - List all budgets
+         * * COMPARTMENT - List all budgets with targetType == &#34;COMPARTMENT&#34;
+         * * TAG - List all budgets with targetType == &#34;TAG&#34;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetType(@Nullable Output<String> targetType) {
+            $.targetType = targetType;
             return this;
         }
 
@@ -168,9 +217,8 @@ public final class GetBudgetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder targetType(@Nullable String targetType) {
-            $.targetType = targetType;
-            return this;
+        public Builder targetType(String targetType) {
+            return targetType(Output.of(targetType));
         }
 
         public GetBudgetsArgs build() {

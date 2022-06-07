@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.deploymentmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -35,13 +36,13 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retryAttempt")
-    private @Nullable Integer retryAttempt;
+    private @Nullable Output<Integer> retryAttempt;
 
     /**
      * @return Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.
      * 
      */
-    public Optional<Integer> retryAttempt() {
+    public Optional<Output<Integer>> retryAttempt() {
         return Optional.ofNullable(this.retryAttempt);
     }
 
@@ -50,13 +51,13 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rolloutName", required=true)
-    private String rolloutName;
+    private Output<String> rolloutName;
 
     /**
      * @return The rollout name.
      * 
      */
-    public String rolloutName() {
+    public Output<String> rolloutName() {
         return this.rolloutName;
     }
 
@@ -92,8 +93,29 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param retryAttempt Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder retryAttempt(@Nullable Output<Integer> retryAttempt) {
+            $.retryAttempt = retryAttempt;
             return this;
         }
 
@@ -103,8 +125,18 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder retryAttempt(@Nullable Integer retryAttempt) {
-            $.retryAttempt = retryAttempt;
+        public Builder retryAttempt(Integer retryAttempt) {
+            return retryAttempt(Output.of(retryAttempt));
+        }
+
+        /**
+         * @param rolloutName The rollout name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rolloutName(Output<String> rolloutName) {
+            $.rolloutName = rolloutName;
             return this;
         }
 
@@ -115,8 +147,7 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder rolloutName(String rolloutName) {
-            $.rolloutName = rolloutName;
-            return this;
+            return rolloutName(Output.of(rolloutName));
         }
 
         public GetRolloutArgs build() {

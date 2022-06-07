@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dataproc_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetRegionClusterIamPolicyArgs extends com.pulumi.resources.In
     public static final GetRegionClusterIamPolicyArgs Empty = new GetRegionClusterIamPolicyArgs();
 
     @Import(name="clusterId", required=true)
-    private String clusterId;
+    private Output<String> clusterId;
 
-    public String clusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="regionId", required=true)
-    private String regionId;
+    private Output<String> regionId;
 
-    public String regionId() {
+    public Output<String> regionId() {
         return this.regionId;
     }
 
@@ -61,19 +62,31 @@ public final class GetRegionClusterIamPolicyArgs extends com.pulumi.resources.In
             $ = new GetRegionClusterIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder clusterId(String clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder regionId(String regionId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder regionId(Output<String> regionId) {
             $.regionId = regionId;
             return this;
+        }
+
+        public Builder regionId(String regionId) {
+            return regionId(Output.of(regionId));
         }
 
         public GetRegionClusterIamPolicyArgs build() {

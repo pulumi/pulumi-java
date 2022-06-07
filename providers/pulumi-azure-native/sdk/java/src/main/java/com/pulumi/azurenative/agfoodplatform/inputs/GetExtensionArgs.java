@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.agfoodplatform.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="extensionId", required=true)
-    private String extensionId;
+    private Output<String> extensionId;
 
     /**
      * @return Id of extension resource.
      * 
      */
-    public String extensionId() {
+    public Output<String> extensionId() {
         return this.extensionId;
     }
 
@@ -32,13 +33,13 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="farmBeatsResourceName", required=true)
-    private String farmBeatsResourceName;
+    private Output<String> farmBeatsResourceName;
 
     /**
      * @return FarmBeats resource name.
      * 
      */
-    public String farmBeatsResourceName() {
+    public Output<String> farmBeatsResourceName() {
         return this.farmBeatsResourceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder extensionId(String extensionId) {
+        public Builder extensionId(Output<String> extensionId) {
             $.extensionId = extensionId;
+            return this;
+        }
+
+        /**
+         * @param extensionId Id of extension resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder extensionId(String extensionId) {
+            return extensionId(Output.of(extensionId));
+        }
+
+        /**
+         * @param farmBeatsResourceName FarmBeats resource name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder farmBeatsResourceName(Output<String> farmBeatsResourceName) {
+            $.farmBeatsResourceName = farmBeatsResourceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder farmBeatsResourceName(String farmBeatsResourceName) {
-            $.farmBeatsResourceName = farmBeatsResourceName;
+            return farmBeatsResourceName(Output.of(farmBeatsResourceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExtensionArgs build() {

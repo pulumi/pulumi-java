@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPartnerDestinationArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="partnerDestinationName", required=true)
-    private String partnerDestinationName;
+    private Output<String> partnerDestinationName;
 
     /**
      * @return Name of the partner destination.
      * 
      */
-    public String partnerDestinationName() {
+    public Output<String> partnerDestinationName() {
         return this.partnerDestinationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPartnerDestinationArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPartnerDestinationArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder partnerDestinationName(String partnerDestinationName) {
+        public Builder partnerDestinationName(Output<String> partnerDestinationName) {
             $.partnerDestinationName = partnerDestinationName;
+            return this;
+        }
+
+        /**
+         * @param partnerDestinationName Name of the partner destination.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder partnerDestinationName(String partnerDestinationName) {
+            return partnerDestinationName(Output.of(partnerDestinationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPartnerDestinationArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPartnerDestinationArgs build() {

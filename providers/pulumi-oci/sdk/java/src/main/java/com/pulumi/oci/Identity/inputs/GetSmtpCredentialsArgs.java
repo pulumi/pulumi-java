@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetSmtpCredentialsFilter;
+import com.pulumi.oci.Identity.inputs.GetSmtpCredentialsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetSmtpCredentialsArgs extends com.pulumi.resources.InvokeArg
     public static final GetSmtpCredentialsArgs Empty = new GetSmtpCredentialsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetSmtpCredentialsFilter> filters;
+    private @Nullable Output<List<GetSmtpCredentialsFilterArgs>> filters;
 
-    public Optional<List<GetSmtpCredentialsFilter>> filters() {
+    public Optional<Output<List<GetSmtpCredentialsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetSmtpCredentialsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="userId", required=true)
-    private String userId;
+    private Output<String> userId;
 
     /**
      * @return The OCID of the user.
      * 
      */
-    public String userId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -63,12 +64,16 @@ public final class GetSmtpCredentialsArgs extends com.pulumi.resources.InvokeArg
             $ = new GetSmtpCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetSmtpCredentialsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetSmtpCredentialsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSmtpCredentialsFilter... filters) {
+        public Builder filters(List<GetSmtpCredentialsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSmtpCredentialsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetSmtpCredentialsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder userId(String userId) {
+        public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
+        }
+
+        /**
+         * @param userId The OCID of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
         }
 
         public GetSmtpCredentialsArgs build() {

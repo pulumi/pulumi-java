@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datashare.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBlobFolderDataSetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the share account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetBlobFolderDataSetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataSetName", required=true)
-    private String dataSetName;
+    private Output<String> dataSetName;
 
     /**
      * @return The name of the dataSet.
      * 
      */
-    public String dataSetName() {
+    public Output<String> dataSetName() {
         return this.dataSetName;
     }
 
@@ -47,13 +48,13 @@ public final class GetBlobFolderDataSetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetBlobFolderDataSetArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="shareName", required=true)
-    private String shareName;
+    private Output<String> shareName;
 
     /**
      * @return The name of the share.
      * 
      */
-    public String shareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -105,8 +106,29 @@ public final class GetBlobFolderDataSetArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param dataSetName The name of the dataSet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataSetName(Output<String> dataSetName) {
+            $.dataSetName = dataSetName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetBlobFolderDataSetArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder dataSetName(String dataSetName) {
-            $.dataSetName = dataSetName;
+            return dataSetName(Output.of(dataSetName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetBlobFolderDataSetArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param shareName The name of the share.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareName(Output<String> shareName) {
+            $.shareName = shareName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetBlobFolderDataSetArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder shareName(String shareName) {
-            $.shareName = shareName;
-            return this;
+            return shareName(Output.of(shareName));
         }
 
         public GetBlobFolderDataSetArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="circuitName", required=true)
-    private String circuitName;
+    private Output<String> circuitName;
 
     /**
      * @return The name of the express route circuit.
      * 
      */
-    public String circuitName() {
+    public Output<String> circuitName() {
         return this.circuitName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="connectionName", required=true)
-    private String connectionName;
+    private Output<String> connectionName;
 
     /**
      * @return The name of the express route circuit connection.
      * 
      */
-    public String connectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
 
@@ -47,13 +48,13 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="peeringName", required=true)
-    private String peeringName;
+    private Output<String> peeringName;
 
     /**
      * @return The name of the peering.
      * 
      */
-    public String peeringName() {
+    public Output<String> peeringName() {
         return this.peeringName;
     }
 
@@ -62,13 +63,13 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder circuitName(String circuitName) {
+        public Builder circuitName(Output<String> circuitName) {
             $.circuitName = circuitName;
+            return this;
+        }
+
+        /**
+         * @param circuitName The name of the express route circuit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder circuitName(String circuitName) {
+            return circuitName(Output.of(circuitName));
+        }
+
+        /**
+         * @param connectionName The name of the express route circuit connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionName(Output<String> connectionName) {
+            $.connectionName = connectionName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
          * 
          */
         public Builder connectionName(String connectionName) {
-            $.connectionName = connectionName;
+            return connectionName(Output.of(connectionName));
+        }
+
+        /**
+         * @param peeringName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peeringName(Output<String> peeringName) {
+            $.peeringName = peeringName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
          * 
          */
         public Builder peeringName(String peeringName) {
-            $.peeringName = peeringName;
+            return peeringName(Output.of(peeringName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetExpressRouteCircuitConnectionArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExpressRouteCircuitConnectionArgs build() {

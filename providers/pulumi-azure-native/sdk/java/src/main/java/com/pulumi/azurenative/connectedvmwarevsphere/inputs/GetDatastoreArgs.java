@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datastoreName", required=true)
-    private String datastoreName;
+    private Output<String> datastoreName;
 
     /**
      * @return Name of the datastore.
      * 
      */
-    public String datastoreName() {
+    public Output<String> datastoreName() {
         return this.datastoreName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Resource Group Name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder datastoreName(String datastoreName) {
+        public Builder datastoreName(Output<String> datastoreName) {
             $.datastoreName = datastoreName;
+            return this;
+        }
+
+        /**
+         * @param datastoreName Name of the datastore.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder datastoreName(String datastoreName) {
+            return datastoreName(Output.of(datastoreName));
+        }
+
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDatastoreArgs build() {

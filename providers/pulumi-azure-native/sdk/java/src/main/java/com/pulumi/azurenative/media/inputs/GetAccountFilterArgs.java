@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.media.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAccountFilterArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The Media Services account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAccountFilterArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filterName", required=true)
-    private String filterName;
+    private Output<String> filterName;
 
     /**
      * @return The Account Filter name
      * 
      */
-    public String filterName() {
+    public Output<String> filterName() {
         return this.filterName;
     }
 
@@ -47,13 +48,13 @@ public final class GetAccountFilterArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetAccountFilterArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param filterName The Account Filter name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filterName(Output<String> filterName) {
+            $.filterName = filterName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetAccountFilterArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder filterName(String filterName) {
-            $.filterName = filterName;
+            return filterName(Output.of(filterName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetAccountFilterArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAccountFilterArgs build() {

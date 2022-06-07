@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Secrets.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretId", required=true)
-    private String secretId;
+    private Output<String> secretId;
 
     /**
      * @return The OCID of the secret.
      * 
      */
-    public String secretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
@@ -34,13 +35,13 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretVersionName")
-    private @Nullable String secretVersionName;
+    private @Nullable Output<String> secretVersionName;
 
     /**
      * @return The name of the secret. (This might be referred to as the name of the secret version. Names are unique across the different versions of a secret.)
      * 
      */
-    public Optional<String> secretVersionName() {
+    public Optional<Output<String>> secretVersionName() {
         return Optional.ofNullable(this.secretVersionName);
     }
 
@@ -49,13 +50,13 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stage")
-    private @Nullable String stage;
+    private @Nullable Output<String> stage;
 
     /**
      * @return The rotation state of the secret version.
      * 
      */
-    public Optional<String> stage() {
+    public Optional<Output<String>> stage() {
         return Optional.ofNullable(this.stage);
     }
 
@@ -64,13 +65,13 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionNumber")
-    private @Nullable String versionNumber;
+    private @Nullable Output<String> versionNumber;
 
     /**
      * @return The version number of the secret.
      * 
      */
-    public Optional<String> versionNumber() {
+    public Optional<Output<String>> versionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }
 
@@ -107,8 +108,29 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder secretId(String secretId) {
+        public Builder secretId(Output<String> secretId) {
             $.secretId = secretId;
+            return this;
+        }
+
+        /**
+         * @param secretId The OCID of the secret.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretId(String secretId) {
+            return secretId(Output.of(secretId));
+        }
+
+        /**
+         * @param secretVersionName The name of the secret. (This might be referred to as the name of the secret version. Names are unique across the different versions of a secret.)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretVersionName(@Nullable Output<String> secretVersionName) {
+            $.secretVersionName = secretVersionName;
             return this;
         }
 
@@ -118,8 +140,18 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder secretVersionName(@Nullable String secretVersionName) {
-            $.secretVersionName = secretVersionName;
+        public Builder secretVersionName(String secretVersionName) {
+            return secretVersionName(Output.of(secretVersionName));
+        }
+
+        /**
+         * @param stage The rotation state of the secret version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stage(@Nullable Output<String> stage) {
+            $.stage = stage;
             return this;
         }
 
@@ -129,8 +161,18 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder stage(@Nullable String stage) {
-            $.stage = stage;
+        public Builder stage(String stage) {
+            return stage(Output.of(stage));
+        }
+
+        /**
+         * @param versionNumber The version number of the secret.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionNumber(@Nullable Output<String> versionNumber) {
+            $.versionNumber = versionNumber;
             return this;
         }
 
@@ -140,9 +182,8 @@ public final class GetSecretbundleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder versionNumber(@Nullable String versionNumber) {
-            $.versionNumber = versionNumber;
-            return this;
+        public Builder versionNumber(String versionNumber) {
+            return versionNumber(Output.of(versionNumber));
         }
 
         public GetSecretbundleArgs build() {

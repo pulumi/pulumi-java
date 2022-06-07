@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.serviceAccount.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,13 +22,13 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="delegates")
-    private @Nullable List<String> delegates;
+    private @Nullable Output<List<String>> delegates;
 
     /**
      * @return Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
      * 
      */
-    public Optional<List<String>> delegates() {
+    public Optional<Output<List<String>>> delegates() {
         return Optional.ofNullable(this.delegates);
     }
 
@@ -36,13 +37,13 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="includeEmail")
-    private @Nullable Boolean includeEmail;
+    private @Nullable Output<Boolean> includeEmail;
 
     /**
      * @return Include the verified email in the claim. Used only when using impersonation mode.
      * 
      */
-    public Optional<Boolean> includeEmail() {
+    public Optional<Output<Boolean>> includeEmail() {
         return Optional.ofNullable(this.includeEmail);
     }
 
@@ -51,13 +52,13 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="targetAudience", required=true)
-    private String targetAudience;
+    private Output<String> targetAudience;
 
     /**
      * @return The audience claim for the `id_token`.
      * 
      */
-    public String targetAudience() {
+    public Output<String> targetAudience() {
         return this.targetAudience;
     }
 
@@ -66,13 +67,13 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="targetServiceAccount")
-    private @Nullable String targetServiceAccount;
+    private @Nullable Output<String> targetServiceAccount;
 
     /**
      * @return The email of the service account being impersonated.  Used only when using impersonation mode.
      * 
      */
-    public Optional<String> targetServiceAccount() {
+    public Optional<Output<String>> targetServiceAccount() {
         return Optional.ofNullable(this.targetServiceAccount);
     }
 
@@ -109,9 +110,19 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder delegates(@Nullable List<String> delegates) {
+        public Builder delegates(@Nullable Output<List<String>> delegates) {
             $.delegates = delegates;
             return this;
+        }
+
+        /**
+         * @param delegates Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder delegates(List<String> delegates) {
+            return delegates(Output.of(delegates));
         }
 
         /**
@@ -130,8 +141,29 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder includeEmail(@Nullable Boolean includeEmail) {
+        public Builder includeEmail(@Nullable Output<Boolean> includeEmail) {
             $.includeEmail = includeEmail;
+            return this;
+        }
+
+        /**
+         * @param includeEmail Include the verified email in the claim. Used only when using impersonation mode.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeEmail(Boolean includeEmail) {
+            return includeEmail(Output.of(includeEmail));
+        }
+
+        /**
+         * @param targetAudience The audience claim for the `id_token`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetAudience(Output<String> targetAudience) {
+            $.targetAudience = targetAudience;
             return this;
         }
 
@@ -142,7 +174,17 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder targetAudience(String targetAudience) {
-            $.targetAudience = targetAudience;
+            return targetAudience(Output.of(targetAudience));
+        }
+
+        /**
+         * @param targetServiceAccount The email of the service account being impersonated.  Used only when using impersonation mode.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetServiceAccount(@Nullable Output<String> targetServiceAccount) {
+            $.targetServiceAccount = targetServiceAccount;
             return this;
         }
 
@@ -152,9 +194,8 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder targetServiceAccount(@Nullable String targetServiceAccount) {
-            $.targetServiceAccount = targetServiceAccount;
-            return this;
+        public Builder targetServiceAccount(String targetServiceAccount) {
+            return targetServiceAccount(Output.of(targetServiceAccount));
         }
 
         public GetAccountIdTokenArgs build() {

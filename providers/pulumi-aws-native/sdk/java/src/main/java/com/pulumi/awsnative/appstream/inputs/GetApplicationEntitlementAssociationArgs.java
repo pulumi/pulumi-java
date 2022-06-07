@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.appstream.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetApplicationEntitlementAssociationArgs extends com.pulumi.r
     public static final GetApplicationEntitlementAssociationArgs Empty = new GetApplicationEntitlementAssociationArgs();
 
     @Import(name="applicationIdentifier", required=true)
-    private String applicationIdentifier;
+    private Output<String> applicationIdentifier;
 
-    public String applicationIdentifier() {
+    public Output<String> applicationIdentifier() {
         return this.applicationIdentifier;
     }
 
     @Import(name="entitlementName", required=true)
-    private String entitlementName;
+    private Output<String> entitlementName;
 
-    public String entitlementName() {
+    public Output<String> entitlementName() {
         return this.entitlementName;
     }
 
     @Import(name="stackName", required=true)
-    private String stackName;
+    private Output<String> stackName;
 
-    public String stackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 
@@ -59,19 +60,31 @@ public final class GetApplicationEntitlementAssociationArgs extends com.pulumi.r
             $ = new GetApplicationEntitlementAssociationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder applicationIdentifier(String applicationIdentifier) {
+        public Builder applicationIdentifier(Output<String> applicationIdentifier) {
             $.applicationIdentifier = applicationIdentifier;
             return this;
         }
 
-        public Builder entitlementName(String entitlementName) {
+        public Builder applicationIdentifier(String applicationIdentifier) {
+            return applicationIdentifier(Output.of(applicationIdentifier));
+        }
+
+        public Builder entitlementName(Output<String> entitlementName) {
             $.entitlementName = entitlementName;
             return this;
         }
 
-        public Builder stackName(String stackName) {
+        public Builder entitlementName(String entitlementName) {
+            return entitlementName(Output.of(entitlementName));
+        }
+
+        public Builder stackName(Output<String> stackName) {
             $.stackName = stackName;
             return this;
+        }
+
+        public Builder stackName(String stackName) {
+            return stackName(Output.of(stackName));
         }
 
         public GetApplicationEntitlementAssociationArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIntegrationServiceEnvironmentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="integrationServiceEnvironmentName", required=true)
-    private String integrationServiceEnvironmentName;
+    private Output<String> integrationServiceEnvironmentName;
 
     /**
      * @return The integration service environment name.
      * 
      */
-    public String integrationServiceEnvironmentName() {
+    public Output<String> integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIntegrationServiceEnvironmentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroup", required=true)
-    private String resourceGroup;
+    private Output<String> resourceGroup;
 
     /**
      * @return The resource group.
      * 
      */
-    public String resourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -73,8 +74,29 @@ public final class GetIntegrationServiceEnvironmentArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
+        public Builder integrationServiceEnvironmentName(Output<String> integrationServiceEnvironmentName) {
             $.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
+            return this;
+        }
+
+        /**
+         * @param integrationServiceEnvironmentName The integration service environment name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
+            return integrationServiceEnvironmentName(Output.of(integrationServiceEnvironmentName));
+        }
+
+        /**
+         * @param resourceGroup The resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroup(Output<String> resourceGroup) {
+            $.resourceGroup = resourceGroup;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetIntegrationServiceEnvironmentArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroup(String resourceGroup) {
-            $.resourceGroup = resourceGroup;
-            return this;
+            return resourceGroup(Output.of(resourceGroup));
         }
 
         public GetIntegrationServiceEnvironmentArgs build() {

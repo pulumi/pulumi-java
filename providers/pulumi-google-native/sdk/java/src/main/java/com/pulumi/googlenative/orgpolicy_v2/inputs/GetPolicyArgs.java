@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.orgpolicy_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPolicyArgs Empty = new GetPolicyArgs();
 
     @Import(name="policyId", required=true)
-    private String policyId;
+    private Output<String> policyId;
 
-    public String policyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder policyId(String policyId) {
+        public Builder policyId(Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder policyId(String policyId) {
+            return policyId(Output.of(policyId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetPolicyArgs build() {

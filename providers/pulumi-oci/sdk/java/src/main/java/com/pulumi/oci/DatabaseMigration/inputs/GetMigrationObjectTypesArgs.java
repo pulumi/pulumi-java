@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DatabaseMigration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseMigration.inputs.GetMigrationObjectTypesFilter;
+import com.pulumi.oci.DatabaseMigration.inputs.GetMigrationObjectTypesFilterArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,9 +17,9 @@ public final class GetMigrationObjectTypesArgs extends com.pulumi.resources.Invo
     public static final GetMigrationObjectTypesArgs Empty = new GetMigrationObjectTypesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetMigrationObjectTypesFilter> filters;
+    private @Nullable Output<List<GetMigrationObjectTypesFilterArgs>> filters;
 
-    public Optional<List<GetMigrationObjectTypesFilter>> filters() {
+    public Optional<Output<List<GetMigrationObjectTypesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -46,12 +47,16 @@ public final class GetMigrationObjectTypesArgs extends com.pulumi.resources.Invo
             $ = new GetMigrationObjectTypesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetMigrationObjectTypesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetMigrationObjectTypesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetMigrationObjectTypesFilter... filters) {
+        public Builder filters(List<GetMigrationObjectTypesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetMigrationObjectTypesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

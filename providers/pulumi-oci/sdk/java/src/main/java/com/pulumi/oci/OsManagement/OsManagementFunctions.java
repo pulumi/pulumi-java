@@ -3,16 +3,24 @@
 
 package com.pulumi.oci.OsManagement;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.OsManagement.inputs.GetManagedInstanceArgs;
 import com.pulumi.oci.OsManagement.inputs.GetManagedInstanceEventReportArgs;
+import com.pulumi.oci.OsManagement.inputs.GetManagedInstanceEventReportPlainArgs;
 import com.pulumi.oci.OsManagement.inputs.GetManagedInstanceGroupArgs;
+import com.pulumi.oci.OsManagement.inputs.GetManagedInstanceGroupPlainArgs;
 import com.pulumi.oci.OsManagement.inputs.GetManagedInstanceGroupsArgs;
+import com.pulumi.oci.OsManagement.inputs.GetManagedInstanceGroupsPlainArgs;
+import com.pulumi.oci.OsManagement.inputs.GetManagedInstancePlainArgs;
 import com.pulumi.oci.OsManagement.inputs.GetManagedInstancesArgs;
+import com.pulumi.oci.OsManagement.inputs.GetManagedInstancesPlainArgs;
 import com.pulumi.oci.OsManagement.inputs.GetSoftwareSourceArgs;
+import com.pulumi.oci.OsManagement.inputs.GetSoftwareSourcePlainArgs;
 import com.pulumi.oci.OsManagement.inputs.GetSoftwareSourcesArgs;
+import com.pulumi.oci.OsManagement.inputs.GetSoftwareSourcesPlainArgs;
 import com.pulumi.oci.OsManagement.outputs.GetManagedInstanceEventReportResult;
 import com.pulumi.oci.OsManagement.outputs.GetManagedInstanceGroupResult;
 import com.pulumi.oci.OsManagement.outputs.GetManagedInstanceGroupsResult;
@@ -32,7 +40,7 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args) {
+    public static Output<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args) {
         return getManagedInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +51,29 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedInstanceResult> getManagedInstancePlain(GetManagedInstancePlainArgs args) {
+        return getManagedInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Managed Instance resource in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a specific Managed Instance.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetManagedInstanceResult> getManagedInstance(GetManagedInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsManagement/getManagedInstance:getManagedInstance", TypeShape.of(GetManagedInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Managed Instance resource in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a specific Managed Instance.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetManagedInstanceResult> getManagedInstancePlain(GetManagedInstancePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsManagement/getManagedInstance:getManagedInstance", TypeShape.of(GetManagedInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -54,7 +84,7 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedInstanceEventReportResult> getManagedInstanceEventReport(GetManagedInstanceEventReportArgs args) {
+    public static Output<GetManagedInstanceEventReportResult> getManagedInstanceEventReport(GetManagedInstanceEventReportArgs args) {
         return getManagedInstanceEventReport(args, InvokeOptions.Empty);
     }
     /**
@@ -65,7 +95,29 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedInstanceEventReportResult> getManagedInstanceEventReport(GetManagedInstanceEventReportArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedInstanceEventReportResult> getManagedInstanceEventReportPlain(GetManagedInstanceEventReportPlainArgs args) {
+        return getManagedInstanceEventReportPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Managed Instance Event Report resource in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Get summary information about events on this instance.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetManagedInstanceEventReportResult> getManagedInstanceEventReport(GetManagedInstanceEventReportArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsManagement/getManagedInstanceEventReport:getManagedInstanceEventReport", TypeShape.of(GetManagedInstanceEventReportResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Managed Instance Event Report resource in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Get summary information about events on this instance.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetManagedInstanceEventReportResult> getManagedInstanceEventReportPlain(GetManagedInstanceEventReportPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsManagement/getManagedInstanceEventReport:getManagedInstanceEventReport", TypeShape.of(GetManagedInstanceEventReportResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -76,7 +128,7 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedInstanceGroupResult> getManagedInstanceGroup(GetManagedInstanceGroupArgs args) {
+    public static Output<GetManagedInstanceGroupResult> getManagedInstanceGroup(GetManagedInstanceGroupArgs args) {
         return getManagedInstanceGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -87,7 +139,29 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedInstanceGroupResult> getManagedInstanceGroup(GetManagedInstanceGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedInstanceGroupResult> getManagedInstanceGroupPlain(GetManagedInstanceGroupPlainArgs args) {
+        return getManagedInstanceGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Managed Instance Group resource in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a specific Managed Instance Group.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetManagedInstanceGroupResult> getManagedInstanceGroup(GetManagedInstanceGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsManagement/getManagedInstanceGroup:getManagedInstanceGroup", TypeShape.of(GetManagedInstanceGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Managed Instance Group resource in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a specific Managed Instance Group.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetManagedInstanceGroupResult> getManagedInstanceGroupPlain(GetManagedInstanceGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsManagement/getManagedInstanceGroup:getManagedInstanceGroup", TypeShape.of(GetManagedInstanceGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -98,7 +172,7 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedInstanceGroupsResult> getManagedInstanceGroups(GetManagedInstanceGroupsArgs args) {
+    public static Output<GetManagedInstanceGroupsResult> getManagedInstanceGroups(GetManagedInstanceGroupsArgs args) {
         return getManagedInstanceGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -109,7 +183,29 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedInstanceGroupsResult> getManagedInstanceGroups(GetManagedInstanceGroupsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedInstanceGroupsResult> getManagedInstanceGroupsPlain(GetManagedInstanceGroupsPlainArgs args) {
+        return getManagedInstanceGroupsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Managed Instance Groups in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a list of all Managed Instance Groups.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetManagedInstanceGroupsResult> getManagedInstanceGroups(GetManagedInstanceGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsManagement/getManagedInstanceGroups:getManagedInstanceGroups", TypeShape.of(GetManagedInstanceGroupsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Managed Instance Groups in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a list of all Managed Instance Groups.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetManagedInstanceGroupsResult> getManagedInstanceGroupsPlain(GetManagedInstanceGroupsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsManagement/getManagedInstanceGroups:getManagedInstanceGroups", TypeShape.of(GetManagedInstanceGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -120,7 +216,7 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedInstancesResult> getManagedInstances(GetManagedInstancesArgs args) {
+    public static Output<GetManagedInstancesResult> getManagedInstances(GetManagedInstancesArgs args) {
         return getManagedInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -131,7 +227,29 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetManagedInstancesResult> getManagedInstances(GetManagedInstancesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagedInstancesResult> getManagedInstancesPlain(GetManagedInstancesPlainArgs args) {
+        return getManagedInstancesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Managed Instances in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a list of all Managed Instances.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetManagedInstancesResult> getManagedInstances(GetManagedInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsManagement/getManagedInstances:getManagedInstances", TypeShape.of(GetManagedInstancesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Managed Instances in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a list of all Managed Instances.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetManagedInstancesResult> getManagedInstancesPlain(GetManagedInstancesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsManagement/getManagedInstances:getManagedInstances", TypeShape.of(GetManagedInstancesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -142,7 +260,7 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSoftwareSourceResult> getSoftwareSource(GetSoftwareSourceArgs args) {
+    public static Output<GetSoftwareSourceResult> getSoftwareSource(GetSoftwareSourceArgs args) {
         return getSoftwareSource(args, InvokeOptions.Empty);
     }
     /**
@@ -153,7 +271,29 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSoftwareSourceResult> getSoftwareSource(GetSoftwareSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSoftwareSourceResult> getSoftwareSourcePlain(GetSoftwareSourcePlainArgs args) {
+        return getSoftwareSourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Software Source resource in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a specific Software Source.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSoftwareSourceResult> getSoftwareSource(GetSoftwareSourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsManagement/getSoftwareSource:getSoftwareSource", TypeShape.of(GetSoftwareSourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Software Source resource in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a specific Software Source.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSoftwareSourceResult> getSoftwareSourcePlain(GetSoftwareSourcePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsManagement/getSoftwareSource:getSoftwareSource", TypeShape.of(GetSoftwareSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -164,7 +304,7 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSoftwareSourcesResult> getSoftwareSources(GetSoftwareSourcesArgs args) {
+    public static Output<GetSoftwareSourcesResult> getSoftwareSources(GetSoftwareSourcesArgs args) {
         return getSoftwareSources(args, InvokeOptions.Empty);
     }
     /**
@@ -175,7 +315,29 @@ public final class OsManagementFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSoftwareSourcesResult> getSoftwareSources(GetSoftwareSourcesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSoftwareSourcesResult> getSoftwareSourcesPlain(GetSoftwareSourcesPlainArgs args) {
+        return getSoftwareSourcesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Software Sources in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a list of all Software Sources.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSoftwareSourcesResult> getSoftwareSources(GetSoftwareSourcesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:OsManagement/getSoftwareSources:getSoftwareSources", TypeShape.of(GetSoftwareSourcesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Software Sources in Oracle Cloud Infrastructure OS Management service.
+     * 
+     * Returns a list of all Software Sources.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSoftwareSourcesResult> getSoftwareSourcesPlain(GetSoftwareSourcesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:OsManagement/getSoftwareSources:getSoftwareSources", TypeShape.of(GetSoftwareSourcesResult.class), args, Utilities.withVersion(options));
     }
 }

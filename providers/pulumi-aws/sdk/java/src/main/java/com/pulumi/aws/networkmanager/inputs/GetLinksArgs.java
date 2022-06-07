@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.networkmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetLinksArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="globalNetworkId", required=true)
-    private String globalNetworkId;
+    private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the Global Network of the links to retrieve.
      * 
      */
-    public String globalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -35,13 +36,13 @@ public final class GetLinksArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="providerName")
-    private @Nullable String providerName;
+    private @Nullable Output<String> providerName;
 
     /**
      * @return The link provider to retrieve.
      * 
      */
-    public Optional<String> providerName() {
+    public Optional<Output<String>> providerName() {
         return Optional.ofNullable(this.providerName);
     }
 
@@ -50,13 +51,13 @@ public final class GetLinksArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="siteId")
-    private @Nullable String siteId;
+    private @Nullable Output<String> siteId;
 
     /**
      * @return The ID of the site of the links to retrieve.
      * 
      */
-    public Optional<String> siteId() {
+    public Optional<Output<String>> siteId() {
         return Optional.ofNullable(this.siteId);
     }
 
@@ -65,13 +66,13 @@ public final class GetLinksArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Restricts the list to the links with these tags.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -80,13 +81,13 @@ public final class GetLinksArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private @Nullable Output<String> type;
 
     /**
      * @return The link type to retrieve.
      * 
      */
-    public Optional<String> type() {
+    public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
 
@@ -124,8 +125,29 @@ public final class GetLinksArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder globalNetworkId(String globalNetworkId) {
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
+            return this;
+        }
+
+        /**
+         * @param globalNetworkId The ID of the Global Network of the links to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder globalNetworkId(String globalNetworkId) {
+            return globalNetworkId(Output.of(globalNetworkId));
+        }
+
+        /**
+         * @param providerName The link provider to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerName(@Nullable Output<String> providerName) {
+            $.providerName = providerName;
             return this;
         }
 
@@ -135,8 +157,18 @@ public final class GetLinksArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder providerName(@Nullable String providerName) {
-            $.providerName = providerName;
+        public Builder providerName(String providerName) {
+            return providerName(Output.of(providerName));
+        }
+
+        /**
+         * @param siteId The ID of the site of the links to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder siteId(@Nullable Output<String> siteId) {
+            $.siteId = siteId;
             return this;
         }
 
@@ -146,8 +178,18 @@ public final class GetLinksArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder siteId(@Nullable String siteId) {
-            $.siteId = siteId;
+        public Builder siteId(String siteId) {
+            return siteId(Output.of(siteId));
+        }
+
+        /**
+         * @param tags Restricts the list to the links with these tags.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -157,8 +199,18 @@ public final class GetLinksArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param type The link type to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable Output<String> type) {
+            $.type = type;
             return this;
         }
 
@@ -168,9 +220,8 @@ public final class GetLinksArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
-            $.type = type;
-            return this;
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         public GetLinksArgs build() {

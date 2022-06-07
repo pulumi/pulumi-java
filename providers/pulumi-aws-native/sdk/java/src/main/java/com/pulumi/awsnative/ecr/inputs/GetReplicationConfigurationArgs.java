@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ecr.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReplicationConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
     /**
      * @return The RegistryId associated with the aws account.
      * 
      */
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -57,9 +58,19 @@ public final class GetReplicationConfigurationArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder registryId(String registryId) {
+        public Builder registryId(Output<String> registryId) {
             $.registryId = registryId;
             return this;
+        }
+
+        /**
+         * @param registryId The RegistryId associated with the aws account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryId(String registryId) {
+            return registryId(Output.of(registryId));
         }
 
         public GetReplicationConfigurationArgs build() {

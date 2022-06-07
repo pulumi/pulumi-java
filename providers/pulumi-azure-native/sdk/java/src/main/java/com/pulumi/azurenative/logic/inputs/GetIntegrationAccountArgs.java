@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIntegrationAccountArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="integrationAccountName", required=true)
-    private String integrationAccountName;
+    private Output<String> integrationAccountName;
 
     /**
      * @return The integration account name.
      * 
      */
-    public String integrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIntegrationAccountArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetIntegrationAccountArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder integrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
+            return this;
+        }
+
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationAccountName(String integrationAccountName) {
+            return integrationAccountName(Output.of(integrationAccountName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetIntegrationAccountArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetIntegrationAccountArgs build() {

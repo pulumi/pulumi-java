@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.azurearcdata.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetActiveDirectoryConnectorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="activeDirectoryConnectorName", required=true)
-    private String activeDirectoryConnectorName;
+    private Output<String> activeDirectoryConnectorName;
 
     /**
      * @return The name of the Active Directory connector instance
      * 
      */
-    public String activeDirectoryConnectorName() {
+    public Output<String> activeDirectoryConnectorName() {
         return this.activeDirectoryConnectorName;
     }
 
@@ -32,13 +33,13 @@ public final class GetActiveDirectoryConnectorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="dataControllerName", required=true)
-    private String dataControllerName;
+    private Output<String> dataControllerName;
 
     /**
      * @return The name of the data controller
      * 
      */
-    public String dataControllerName() {
+    public Output<String> dataControllerName() {
         return this.dataControllerName;
     }
 
@@ -47,13 +48,13 @@ public final class GetActiveDirectoryConnectorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Azure resource group
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetActiveDirectoryConnectorArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder activeDirectoryConnectorName(String activeDirectoryConnectorName) {
+        public Builder activeDirectoryConnectorName(Output<String> activeDirectoryConnectorName) {
             $.activeDirectoryConnectorName = activeDirectoryConnectorName;
+            return this;
+        }
+
+        /**
+         * @param activeDirectoryConnectorName The name of the Active Directory connector instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activeDirectoryConnectorName(String activeDirectoryConnectorName) {
+            return activeDirectoryConnectorName(Output.of(activeDirectoryConnectorName));
+        }
+
+        /**
+         * @param dataControllerName The name of the data controller
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataControllerName(Output<String> dataControllerName) {
+            $.dataControllerName = dataControllerName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetActiveDirectoryConnectorArgs extends com.pulumi.resources.
          * 
          */
         public Builder dataControllerName(String dataControllerName) {
-            $.dataControllerName = dataControllerName;
+            return dataControllerName(Output.of(dataControllerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Azure resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetActiveDirectoryConnectorArgs extends com.pulumi.resources.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetActiveDirectoryConnectorArgs build() {

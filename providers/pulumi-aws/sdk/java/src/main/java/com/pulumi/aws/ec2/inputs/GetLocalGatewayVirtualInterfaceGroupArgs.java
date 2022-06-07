@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupFilter;
+import com.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetLocalGatewayVirtualInterfaceGroupFilter> filters;
+    private @Nullable Output<List<GetLocalGatewayVirtualInterfaceGroupFilterArgs>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaceGroups.html) for supported filters. Detailed below.
      * 
      */
-    public Optional<List<GetLocalGatewayVirtualInterfaceGroupFilter>> filters() {
+    public Optional<Output<List<GetLocalGatewayVirtualInterfaceGroupFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -37,13 +38,13 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Identifier of EC2 Local Gateway Virtual Interface Group.
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -52,13 +53,13 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
      * 
      */
     @Import(name="localGatewayId")
-    private @Nullable String localGatewayId;
+    private @Nullable Output<String> localGatewayId;
 
     /**
      * @return Identifier of EC2 Local Gateway.
      * 
      */
-    public Optional<String> localGatewayId() {
+    public Optional<Output<String>> localGatewayId() {
         return Optional.ofNullable(this.localGatewayId);
     }
 
@@ -67,13 +68,13 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Key-value map of resource tags, each pair of which must exactly match a pair on the desired local gateway route table.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -110,7 +111,7 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetLocalGatewayVirtualInterfaceGroupFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetLocalGatewayVirtualInterfaceGroupFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -121,7 +122,17 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder filters(GetLocalGatewayVirtualInterfaceGroupFilter... filters) {
+        public Builder filters(List<GetLocalGatewayVirtualInterfaceGroupFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaceGroups.html) for supported filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetLocalGatewayVirtualInterfaceGroupFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -131,8 +142,29 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Identifier of EC2 Local Gateway Virtual Interface Group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param localGatewayId Identifier of EC2 Local Gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localGatewayId(@Nullable Output<String> localGatewayId) {
+            $.localGatewayId = localGatewayId;
             return this;
         }
 
@@ -142,8 +174,18 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder localGatewayId(@Nullable String localGatewayId) {
-            $.localGatewayId = localGatewayId;
+        public Builder localGatewayId(String localGatewayId) {
+            return localGatewayId(Output.of(localGatewayId));
+        }
+
+        /**
+         * @param tags Key-value map of resource tags, each pair of which must exactly match a pair on the desired local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -153,9 +195,8 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetLocalGatewayVirtualInterfaceGroupArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="latest")
-    private @Nullable Boolean latest;
+    private @Nullable Output<Boolean> latest;
 
     /**
      * @return sort results by expiration date. returns the certificate with expiration date in furthest in the future.
      * 
      */
-    public Optional<Boolean> latest() {
+    public Optional<Output<Boolean>> latest() {
         return Optional.ofNullable(this.latest);
     }
 
@@ -35,13 +36,13 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return exact name of the cert to lookup
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -50,13 +51,13 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="namePrefix")
-    private @Nullable String namePrefix;
+    private @Nullable Output<String> namePrefix;
 
     /**
      * @return prefix of cert to filter by
      * 
      */
-    public Optional<String> namePrefix() {
+    public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
 
@@ -65,13 +66,13 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="pathPrefix")
-    private @Nullable String pathPrefix;
+    private @Nullable Output<String> pathPrefix;
 
     /**
      * @return prefix of path to filter by
      * 
      */
-    public Optional<String> pathPrefix() {
+    public Optional<Output<String>> pathPrefix() {
         return Optional.ofNullable(this.pathPrefix);
     }
 
@@ -108,8 +109,29 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder latest(@Nullable Boolean latest) {
+        public Builder latest(@Nullable Output<Boolean> latest) {
             $.latest = latest;
+            return this;
+        }
+
+        /**
+         * @param latest sort results by expiration date. returns the certificate with expiration date in furthest in the future.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder latest(Boolean latest) {
+            return latest(Output.of(latest));
+        }
+
+        /**
+         * @param name exact name of the cert to lookup
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -119,8 +141,18 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param namePrefix prefix of cert to filter by
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
+            $.namePrefix = namePrefix;
             return this;
         }
 
@@ -130,8 +162,18 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder namePrefix(@Nullable String namePrefix) {
-            $.namePrefix = namePrefix;
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
+        }
+
+        /**
+         * @param pathPrefix prefix of path to filter by
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pathPrefix(@Nullable Output<String> pathPrefix) {
+            $.pathPrefix = pathPrefix;
             return this;
         }
 
@@ -141,9 +183,8 @@ public final class GetServerCertificateArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder pathPrefix(@Nullable String pathPrefix) {
-            $.pathPrefix = pathPrefix;
-            return this;
+        public Builder pathPrefix(String pathPrefix) {
+            return pathPrefix(Output.of(pathPrefix));
         }
 
         public GetServerCertificateArgs build() {

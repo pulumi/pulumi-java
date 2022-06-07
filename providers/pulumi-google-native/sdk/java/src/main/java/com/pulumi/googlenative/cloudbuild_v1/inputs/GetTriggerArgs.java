@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTriggerArgs Empty = new GetTriggerArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="projectId", required=true)
-    private String projectId;
+    private Output<String> projectId;
 
-    public String projectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
     @Import(name="triggerId", required=true)
-    private String triggerId;
+    private Output<String> triggerId;
 
-    public String triggerId() {
+    public Output<String> triggerId() {
         return this.triggerId;
     }
 
@@ -69,24 +70,40 @@ public final class GetTriggerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTriggerArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder projectId(String projectId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
-        public Builder triggerId(String triggerId) {
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
+        }
+
+        public Builder triggerId(Output<String> triggerId) {
             $.triggerId = triggerId;
             return this;
+        }
+
+        public Builder triggerId(String triggerId) {
+            return triggerId(Output.of(triggerId));
         }
 
         public GetTriggerArgs build() {

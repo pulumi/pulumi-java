@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.NetworkLoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.NetworkLoadBalancer.inputs.GetBackendsFilter;
+import com.pulumi.oci.NetworkLoadBalancer.inputs.GetBackendsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetBackendsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backendSetName", required=true)
-    private String backendSetName;
+    private Output<String> backendSetName;
 
     /**
      * @return The name of the backend set associated with the backend servers.  Example: `example_backend_set`
      * 
      */
-    public String backendSetName() {
+    public Output<String> backendSetName() {
         return this.backendSetName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBackendsFilter> filters;
+    private @Nullable Output<List<GetBackendsFilterArgs>> filters;
 
-    public Optional<List<GetBackendsFilter>> filters() {
+    public Optional<Output<List<GetBackendsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetBackendsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkLoadBalancerId", required=true)
-    private String networkLoadBalancerId;
+    private Output<String> networkLoadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network load balancer to update.
      * 
      */
-    public String networkLoadBalancerId() {
+    public Output<String> networkLoadBalancerId() {
         return this.networkLoadBalancerId;
     }
 
@@ -85,17 +86,31 @@ public final class GetBackendsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder backendSetName(String backendSetName) {
+        public Builder backendSetName(Output<String> backendSetName) {
             $.backendSetName = backendSetName;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBackendsFilter> filters) {
+        /**
+         * @param backendSetName The name of the backend set associated with the backend servers.  Example: `example_backend_set`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backendSetName(String backendSetName) {
+            return backendSetName(Output.of(backendSetName));
+        }
+
+        public Builder filters(@Nullable Output<List<GetBackendsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetBackendsFilter... filters) {
+        public Builder filters(List<GetBackendsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetBackendsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -105,9 +120,19 @@ public final class GetBackendsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder networkLoadBalancerId(String networkLoadBalancerId) {
+        public Builder networkLoadBalancerId(Output<String> networkLoadBalancerId) {
             $.networkLoadBalancerId = networkLoadBalancerId;
             return this;
+        }
+
+        /**
+         * @param networkLoadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the network load balancer to update.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkLoadBalancerId(String networkLoadBalancerId) {
+            return networkLoadBalancerId(Output.of(networkLoadBalancerId));
         }
 
         public GetBackendsArgs build() {

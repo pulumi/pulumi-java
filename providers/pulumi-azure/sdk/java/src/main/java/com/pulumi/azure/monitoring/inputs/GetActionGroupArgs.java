@@ -3,7 +3,8 @@
 
 package com.pulumi.azure.monitoring.inputs;
 
-import com.pulumi.azure.monitoring.inputs.GetActionGroupEventHubReceiver;
+import com.pulumi.azure.monitoring.inputs.GetActionGroupEventHubReceiverArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -21,13 +22,13 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventHubReceivers")
-    private @Nullable List<GetActionGroupEventHubReceiver> eventHubReceivers;
+    private @Nullable Output<List<GetActionGroupEventHubReceiverArgs>> eventHubReceivers;
 
     /**
      * @return One or more `event_hub_receiver` blocks as defined below.
      * 
      */
-    public Optional<List<GetActionGroupEventHubReceiver>> eventHubReceivers() {
+    public Optional<Output<List<GetActionGroupEventHubReceiverArgs>>> eventHubReceivers() {
         return Optional.ofNullable(this.eventHubReceivers);
     }
 
@@ -36,13 +37,13 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the Action Group.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -51,13 +52,13 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Specifies the name of the resource group the Action Group is located in.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +94,7 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder eventHubReceivers(@Nullable List<GetActionGroupEventHubReceiver> eventHubReceivers) {
+        public Builder eventHubReceivers(@Nullable Output<List<GetActionGroupEventHubReceiverArgs>> eventHubReceivers) {
             $.eventHubReceivers = eventHubReceivers;
             return this;
         }
@@ -104,7 +105,17 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder eventHubReceivers(GetActionGroupEventHubReceiver... eventHubReceivers) {
+        public Builder eventHubReceivers(List<GetActionGroupEventHubReceiverArgs> eventHubReceivers) {
+            return eventHubReceivers(Output.of(eventHubReceivers));
+        }
+
+        /**
+         * @param eventHubReceivers One or more `event_hub_receiver` blocks as defined below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventHubReceivers(GetActionGroupEventHubReceiverArgs... eventHubReceivers) {
             return eventHubReceivers(List.of(eventHubReceivers));
         }
 
@@ -114,8 +125,29 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Specifies the name of the Action Group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Specifies the name of the resource group the Action Group is located in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -126,8 +158,7 @@ public final class GetActionGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetActionGroupArgs build() {

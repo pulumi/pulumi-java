@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.cloudcontrol.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identifier", required=true)
-    private String identifier;
+    private Output<String> identifier;
 
     /**
      * @return Identifier of the CloudFormation resource type. For example, `vpc-12345678`.
      * 
      */
-    public String identifier() {
+    public Output<String> identifier() {
         return this.identifier;
     }
 
@@ -34,13 +35,13 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="roleArn")
-    private @Nullable String roleArn;
+    private @Nullable Output<String> roleArn;
 
     /**
      * @return Amazon Resource Name (ARN) of the IAM Role to assume for operations.
      * 
      */
-    public Optional<String> roleArn() {
+    public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
 
@@ -49,13 +50,13 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="typeName", required=true)
-    private String typeName;
+    private Output<String> typeName;
 
     /**
      * @return CloudFormation resource type name. For example, `AWS::EC2::VPC`.
      * 
      */
-    public String typeName() {
+    public Output<String> typeName() {
         return this.typeName;
     }
 
@@ -64,13 +65,13 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="typeVersionId")
-    private @Nullable String typeVersionId;
+    private @Nullable Output<String> typeVersionId;
 
     /**
      * @return Identifier of the CloudFormation resource type version.
      * 
      */
-    public Optional<String> typeVersionId() {
+    public Optional<Output<String>> typeVersionId() {
         return Optional.ofNullable(this.typeVersionId);
     }
 
@@ -107,8 +108,29 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder identifier(String identifier) {
+        public Builder identifier(Output<String> identifier) {
             $.identifier = identifier;
+            return this;
+        }
+
+        /**
+         * @param identifier Identifier of the CloudFormation resource type. For example, `vpc-12345678`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identifier(String identifier) {
+            return identifier(Output.of(identifier));
+        }
+
+        /**
+         * @param roleArn Amazon Resource Name (ARN) of the IAM Role to assume for operations.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder roleArn(@Nullable Output<String> roleArn) {
+            $.roleArn = roleArn;
             return this;
         }
 
@@ -118,8 +140,18 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder roleArn(@Nullable String roleArn) {
-            $.roleArn = roleArn;
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        /**
+         * @param typeName CloudFormation resource type name. For example, `AWS::EC2::VPC`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder typeName(Output<String> typeName) {
+            $.typeName = typeName;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder typeName(String typeName) {
-            $.typeName = typeName;
+            return typeName(Output.of(typeName));
+        }
+
+        /**
+         * @param typeVersionId Identifier of the CloudFormation resource type version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder typeVersionId(@Nullable Output<String> typeVersionId) {
+            $.typeVersionId = typeVersionId;
             return this;
         }
 
@@ -140,9 +182,8 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder typeVersionId(@Nullable String typeVersionId) {
-            $.typeVersionId = typeVersionId;
-            return this;
+        public Builder typeVersionId(String typeVersionId) {
+            return typeVersionId(Output.of(typeVersionId));
         }
 
         public GetResourceArgs build() {

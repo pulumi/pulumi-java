@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.confluent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="organizationName", required=true)
-    private String organizationName;
+    private Output<String> organizationName;
 
     /**
      * @return Organization resource name
      * 
      */
-    public String organizationName() {
+    public Output<String> organizationName() {
         return this.organizationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Resource group name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder organizationName(String organizationName) {
+        public Builder organizationName(Output<String> organizationName) {
             $.organizationName = organizationName;
+            return this;
+        }
+
+        /**
+         * @param organizationName Organization resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationName(String organizationName) {
+            return organizationName(Output.of(organizationName));
+        }
+
+        /**
+         * @param resourceGroupName Resource group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetOrganizationArgs build() {

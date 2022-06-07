@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.keyvault.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyName", required=true)
-    private String keyName;
+    private Output<String> keyName;
 
     /**
      * @return The name of the key to be retrieved.
      * 
      */
-    public String keyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -32,13 +33,13 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group which contains the specified key vault.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vaultName", required=true)
-    private String vaultName;
+    private Output<String> vaultName;
 
     /**
      * @return The name of the vault which contains the key to be retrieved.
      * 
      */
-    public String vaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -89,8 +90,29 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyName(String keyName) {
+        public Builder keyName(Output<String> keyName) {
             $.keyName = keyName;
+            return this;
+        }
+
+        /**
+         * @param keyName The name of the key to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group which contains the specified key vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vaultName The name of the vault which contains the key to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vaultName(Output<String> vaultName) {
+            $.vaultName = vaultName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder vaultName(String vaultName) {
-            $.vaultName = vaultName;
-            return this;
+            return vaultName(Output.of(vaultName));
         }
 
         public GetKeyArgs build() {

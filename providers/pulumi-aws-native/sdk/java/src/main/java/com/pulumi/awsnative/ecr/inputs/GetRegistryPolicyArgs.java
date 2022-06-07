@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ecr.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetRegistryPolicyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetRegistryPolicyArgs Empty = new GetRegistryPolicyArgs();
 
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -43,9 +44,13 @@ public final class GetRegistryPolicyArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetRegistryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder registryId(String registryId) {
+        public Builder registryId(Output<String> registryId) {
             $.registryId = registryId;
             return this;
+        }
+
+        public Builder registryId(String registryId) {
+            return registryId(Output.of(registryId));
         }
 
         public GetRegistryPolicyArgs build() {

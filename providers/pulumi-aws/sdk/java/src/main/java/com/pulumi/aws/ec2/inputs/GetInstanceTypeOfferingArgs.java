@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetInstanceTypeOfferingFilter;
+import com.pulumi.aws.ec2.inputs.GetInstanceTypeOfferingFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -21,13 +22,13 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetInstanceTypeOfferingFilter> filters;
+    private @Nullable Output<List<GetInstanceTypeOfferingFilterArgs>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypeOfferings.html) for supported filters. Detailed below.
      * 
      */
-    public Optional<List<GetInstanceTypeOfferingFilter>> filters() {
+    public Optional<Output<List<GetInstanceTypeOfferingFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -36,13 +37,13 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="locationType")
-    private @Nullable String locationType;
+    private @Nullable Output<String> locationType;
 
     /**
      * @return Location type. Defaults to `region`. Valid values: `availability-zone`, `availability-zone-id`, and `region`.
      * 
      */
-    public Optional<String> locationType() {
+    public Optional<Output<String>> locationType() {
         return Optional.ofNullable(this.locationType);
     }
 
@@ -51,13 +52,13 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="preferredInstanceTypes")
-    private @Nullable List<String> preferredInstanceTypes;
+    private @Nullable Output<List<String>> preferredInstanceTypes;
 
     /**
      * @return Ordered list of preferred EC2 Instance Types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
      * 
      */
-    public Optional<List<String>> preferredInstanceTypes() {
+    public Optional<Output<List<String>>> preferredInstanceTypes() {
         return Optional.ofNullable(this.preferredInstanceTypes);
     }
 
@@ -93,7 +94,7 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetInstanceTypeOfferingFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetInstanceTypeOfferingFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -104,7 +105,17 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder filters(GetInstanceTypeOfferingFilter... filters) {
+        public Builder filters(List<GetInstanceTypeOfferingFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypeOfferings.html) for supported filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetInstanceTypeOfferingFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -114,8 +125,29 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder locationType(@Nullable String locationType) {
+        public Builder locationType(@Nullable Output<String> locationType) {
             $.locationType = locationType;
+            return this;
+        }
+
+        /**
+         * @param locationType Location type. Defaults to `region`. Valid values: `availability-zone`, `availability-zone-id`, and `region`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder locationType(String locationType) {
+            return locationType(Output.of(locationType));
+        }
+
+        /**
+         * @param preferredInstanceTypes Ordered list of preferred EC2 Instance Types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredInstanceTypes(@Nullable Output<List<String>> preferredInstanceTypes) {
+            $.preferredInstanceTypes = preferredInstanceTypes;
             return this;
         }
 
@@ -125,9 +157,8 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder preferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
-            $.preferredInstanceTypes = preferredInstanceTypes;
-            return this;
+        public Builder preferredInstanceTypes(List<String> preferredInstanceTypes) {
+            return preferredInstanceTypes(Output.of(preferredInstanceTypes));
         }
 
         /**

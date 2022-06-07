@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Ocvp.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Ocvp.inputs.GetSupportedHostShapesFilter;
+import com.pulumi.oci.Ocvp.inputs.GetSupportedHostShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetSupportedHostShapesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSupportedHostShapesFilter> filters;
+    private @Nullable Output<List<GetSupportedHostShapesFilterArgs>> filters;
 
-    public Optional<List<GetSupportedHostShapesFilter>> filters() {
+    public Optional<Output<List<GetSupportedHostShapesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetSupportedHostShapesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the given name exactly.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -58,13 +59,13 @@ public final class GetSupportedHostShapesArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sddcType")
-    private @Nullable String sddcType;
+    private @Nullable Output<String> sddcType;
 
     /**
      * @return A filter to return only resources that match the given SDDC type exactly.
      * 
      */
-    public Optional<String> sddcType() {
+    public Optional<Output<String>> sddcType() {
         return Optional.ofNullable(this.sddcType);
     }
 
@@ -101,17 +102,31 @@ public final class GetSupportedHostShapesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSupportedHostShapesFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetSupportedHostShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSupportedHostShapesFilter... filters) {
+        public Builder filters(List<GetSupportedHostShapesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSupportedHostShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -121,8 +136,29 @@ public final class GetSupportedHostShapesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A filter to return only resources that match the given name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param sddcType A filter to return only resources that match the given SDDC type exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sddcType(@Nullable Output<String> sddcType) {
+            $.sddcType = sddcType;
             return this;
         }
 
@@ -132,9 +168,8 @@ public final class GetSupportedHostShapesArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder sddcType(@Nullable String sddcType) {
-            $.sddcType = sddcType;
-            return this;
+        public Builder sddcType(String sddcType) {
+            return sddcType(Output.of(sddcType));
         }
 
         public GetSupportedHostShapesArgs build() {

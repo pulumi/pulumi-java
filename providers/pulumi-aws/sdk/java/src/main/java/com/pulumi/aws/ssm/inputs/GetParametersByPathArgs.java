@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.ssm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="path", required=true)
-    private String path;
+    private Output<String> path;
 
     /**
      * @return The prefix path of the parameter.
      * 
      */
-    public String path() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -35,13 +36,13 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="recursive")
-    private @Nullable Boolean recursive;
+    private @Nullable Output<Boolean> recursive;
 
     /**
      * @return Whether to recursively return parameters under `path`. Defaults to `false`.
      * 
      */
-    public Optional<Boolean> recursive() {
+    public Optional<Output<Boolean>> recursive() {
         return Optional.ofNullable(this.recursive);
     }
 
@@ -50,13 +51,13 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="withDecryption")
-    private @Nullable Boolean withDecryption;
+    private @Nullable Output<Boolean> withDecryption;
 
     /**
      * @return Whether to return decrypted `SecureString` value. Defaults to `true`.
      * 
      */
-    public Optional<Boolean> withDecryption() {
+    public Optional<Output<Boolean>> withDecryption() {
         return Optional.ofNullable(this.withDecryption);
     }
 
@@ -92,8 +93,29 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder path(String path) {
+        public Builder path(Output<String> path) {
             $.path = path;
+            return this;
+        }
+
+        /**
+         * @param path The prefix path of the parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        /**
+         * @param recursive Whether to recursively return parameters under `path`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder recursive(@Nullable Output<Boolean> recursive) {
+            $.recursive = recursive;
             return this;
         }
 
@@ -103,8 +125,18 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder recursive(@Nullable Boolean recursive) {
-            $.recursive = recursive;
+        public Builder recursive(Boolean recursive) {
+            return recursive(Output.of(recursive));
+        }
+
+        /**
+         * @param withDecryption Whether to return decrypted `SecureString` value. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder withDecryption(@Nullable Output<Boolean> withDecryption) {
+            $.withDecryption = withDecryption;
             return this;
         }
 
@@ -114,9 +146,8 @@ public final class GetParametersByPathArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder withDecryption(@Nullable Boolean withDecryption) {
-            $.withDecryption = withDecryption;
-            return this;
+        public Builder withDecryption(Boolean withDecryption) {
+            return withDecryption(Output.of(withDecryption));
         }
 
         public GetParametersByPathArgs build() {

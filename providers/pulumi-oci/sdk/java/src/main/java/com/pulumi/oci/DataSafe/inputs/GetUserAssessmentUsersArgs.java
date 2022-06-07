@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetUserAssessmentUsersFilter;
+import com.pulumi.oci.DataSafe.inputs.GetUserAssessmentUsersFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
+    public Optional<Output<String>> accessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
 
@@ -37,13 +38,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="accountStatus")
-    private @Nullable String accountStatus;
+    private @Nullable Output<String> accountStatus;
 
     /**
      * @return A filter to return only items that match the specified account status.
      * 
      */
-    public Optional<String> accountStatus() {
+    public Optional<Output<String>> accountStatus() {
         return Optional.ofNullable(this.accountStatus);
     }
 
@@ -52,13 +53,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="authenticationType")
-    private @Nullable String authenticationType;
+    private @Nullable Output<String> authenticationType;
 
     /**
      * @return A filter to return only items that match the specified authentication type.
      * 
      */
-    public Optional<String> authenticationType() {
+    public Optional<Output<String>> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
 
@@ -67,20 +68,20 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetUserAssessmentUsersFilter> filters;
+    private @Nullable Output<List<GetUserAssessmentUsersFilterArgs>> filters;
 
-    public Optional<List<GetUserAssessmentUsersFilter>> filters() {
+    public Optional<Output<List<GetUserAssessmentUsersFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -89,13 +90,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetId")
-    private @Nullable String targetId;
+    private @Nullable Output<String> targetId;
 
     /**
      * @return A filter to return only items related to a specific target OCID.
      * 
      */
-    public Optional<String> targetId() {
+    public Optional<Output<String>> targetId() {
         return Optional.ofNullable(this.targetId);
     }
 
@@ -104,13 +105,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timeLastLoginGreaterThanOrEqualTo")
-    private @Nullable String timeLastLoginGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeLastLoginGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return users whose last login time in the database is greater than or equal to the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
      * 
      */
-    public Optional<String> timeLastLoginGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timeLastLoginGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timeLastLoginGreaterThanOrEqualTo);
     }
 
@@ -119,13 +120,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timeLastLoginLessThan")
-    private @Nullable String timeLastLoginLessThan;
+    private @Nullable Output<String> timeLastLoginLessThan;
 
     /**
      * @return A filter to return users whose last login time in the database is less than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339). **Example:** 2016-12-19T16:39:57.600Z
      * 
      */
-    public Optional<String> timeLastLoginLessThan() {
+    public Optional<Output<String>> timeLastLoginLessThan() {
         return Optional.ofNullable(this.timeLastLoginLessThan);
     }
 
@@ -134,13 +135,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timePasswordLastChangedGreaterThanOrEqualTo")
-    private @Nullable String timePasswordLastChangedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timePasswordLastChangedGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return users whose last password change in the database is greater than or equal to the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
      * 
      */
-    public Optional<String> timePasswordLastChangedGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timePasswordLastChangedGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timePasswordLastChangedGreaterThanOrEqualTo);
     }
 
@@ -149,13 +150,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timePasswordLastChangedLessThan")
-    private @Nullable String timePasswordLastChangedLessThan;
+    private @Nullable Output<String> timePasswordLastChangedLessThan;
 
     /**
      * @return A filter to return users whose last password change in the database is less than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
      * 
      */
-    public Optional<String> timePasswordLastChangedLessThan() {
+    public Optional<Output<String>> timePasswordLastChangedLessThan() {
         return Optional.ofNullable(this.timePasswordLastChangedLessThan);
     }
 
@@ -164,13 +165,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timeUserCreatedGreaterThanOrEqualTo")
-    private @Nullable String timeUserCreatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeUserCreatedGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return users whose creation time in the database is greater than or equal to the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339). **Example:** 2016-12-19T16:39:57.600Z
      * 
      */
-    public Optional<String> timeUserCreatedGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timeUserCreatedGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timeUserCreatedGreaterThanOrEqualTo);
     }
 
@@ -179,13 +180,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timeUserCreatedLessThan")
-    private @Nullable String timeUserCreatedLessThan;
+    private @Nullable Output<String> timeUserCreatedLessThan;
 
     /**
      * @return A filter to return users whose creation time in the database is less than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339). **Example:** 2016-12-19T16:39:57.600Z
      * 
      */
-    public Optional<String> timeUserCreatedLessThan() {
+    public Optional<Output<String>> timeUserCreatedLessThan() {
         return Optional.ofNullable(this.timeUserCreatedLessThan);
     }
 
@@ -194,13 +195,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="userAssessmentId", required=true)
-    private String userAssessmentId;
+    private Output<String> userAssessmentId;
 
     /**
      * @return The OCID of the user assessment.
      * 
      */
-    public String userAssessmentId() {
+    public Output<String> userAssessmentId() {
         return this.userAssessmentId;
     }
 
@@ -209,13 +210,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="userCategory")
-    private @Nullable String userCategory;
+    private @Nullable Output<String> userCategory;
 
     /**
      * @return A filter to return only items that match the specified user category.
      * 
      */
-    public Optional<String> userCategory() {
+    public Optional<Output<String>> userCategory() {
         return Optional.ofNullable(this.userCategory);
     }
 
@@ -224,13 +225,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="userKey")
-    private @Nullable String userKey;
+    private @Nullable Output<String> userKey;
 
     /**
      * @return A filter to return only items that match the specified user key.
      * 
      */
-    public Optional<String> userKey() {
+    public Optional<Output<String>> userKey() {
         return Optional.ofNullable(this.userKey);
     }
 
@@ -239,13 +240,13 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="userName")
-    private @Nullable String userName;
+    private @Nullable Output<String> userName;
 
     /**
      * @return A filter to return only items that match the specified user name.
      * 
      */
-    public Optional<String> userName() {
+    public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
 
@@ -294,8 +295,29 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param accountStatus A filter to return only items that match the specified account status.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountStatus(@Nullable Output<String> accountStatus) {
+            $.accountStatus = accountStatus;
             return this;
         }
 
@@ -305,8 +327,18 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder accountStatus(@Nullable String accountStatus) {
-            $.accountStatus = accountStatus;
+        public Builder accountStatus(String accountStatus) {
+            return accountStatus(Output.of(accountStatus));
+        }
+
+        /**
+         * @param authenticationType A filter to return only items that match the specified authentication type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authenticationType(@Nullable Output<String> authenticationType) {
+            $.authenticationType = authenticationType;
             return this;
         }
 
@@ -316,8 +348,18 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder authenticationType(@Nullable String authenticationType) {
-            $.authenticationType = authenticationType;
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Output.of(authenticationType));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -327,17 +369,20 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
-            return this;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
         }
 
-        public Builder filters(@Nullable List<GetUserAssessmentUsersFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetUserAssessmentUsersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetUserAssessmentUsersFilter... filters) {
+        public Builder filters(List<GetUserAssessmentUsersFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetUserAssessmentUsersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -347,8 +392,29 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder targetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable Output<String> targetId) {
             $.targetId = targetId;
+            return this;
+        }
+
+        /**
+         * @param targetId A filter to return only items related to a specific target OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetId(String targetId) {
+            return targetId(Output.of(targetId));
+        }
+
+        /**
+         * @param timeLastLoginGreaterThanOrEqualTo A filter to return users whose last login time in the database is greater than or equal to the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeLastLoginGreaterThanOrEqualTo(@Nullable Output<String> timeLastLoginGreaterThanOrEqualTo) {
+            $.timeLastLoginGreaterThanOrEqualTo = timeLastLoginGreaterThanOrEqualTo;
             return this;
         }
 
@@ -358,8 +424,18 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder timeLastLoginGreaterThanOrEqualTo(@Nullable String timeLastLoginGreaterThanOrEqualTo) {
-            $.timeLastLoginGreaterThanOrEqualTo = timeLastLoginGreaterThanOrEqualTo;
+        public Builder timeLastLoginGreaterThanOrEqualTo(String timeLastLoginGreaterThanOrEqualTo) {
+            return timeLastLoginGreaterThanOrEqualTo(Output.of(timeLastLoginGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeLastLoginLessThan A filter to return users whose last login time in the database is less than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339). **Example:** 2016-12-19T16:39:57.600Z
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeLastLoginLessThan(@Nullable Output<String> timeLastLoginLessThan) {
+            $.timeLastLoginLessThan = timeLastLoginLessThan;
             return this;
         }
 
@@ -369,8 +445,18 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder timeLastLoginLessThan(@Nullable String timeLastLoginLessThan) {
-            $.timeLastLoginLessThan = timeLastLoginLessThan;
+        public Builder timeLastLoginLessThan(String timeLastLoginLessThan) {
+            return timeLastLoginLessThan(Output.of(timeLastLoginLessThan));
+        }
+
+        /**
+         * @param timePasswordLastChangedGreaterThanOrEqualTo A filter to return users whose last password change in the database is greater than or equal to the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timePasswordLastChangedGreaterThanOrEqualTo(@Nullable Output<String> timePasswordLastChangedGreaterThanOrEqualTo) {
+            $.timePasswordLastChangedGreaterThanOrEqualTo = timePasswordLastChangedGreaterThanOrEqualTo;
             return this;
         }
 
@@ -380,8 +466,18 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder timePasswordLastChangedGreaterThanOrEqualTo(@Nullable String timePasswordLastChangedGreaterThanOrEqualTo) {
-            $.timePasswordLastChangedGreaterThanOrEqualTo = timePasswordLastChangedGreaterThanOrEqualTo;
+        public Builder timePasswordLastChangedGreaterThanOrEqualTo(String timePasswordLastChangedGreaterThanOrEqualTo) {
+            return timePasswordLastChangedGreaterThanOrEqualTo(Output.of(timePasswordLastChangedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timePasswordLastChangedLessThan A filter to return users whose last password change in the database is less than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timePasswordLastChangedLessThan(@Nullable Output<String> timePasswordLastChangedLessThan) {
+            $.timePasswordLastChangedLessThan = timePasswordLastChangedLessThan;
             return this;
         }
 
@@ -391,8 +487,18 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder timePasswordLastChangedLessThan(@Nullable String timePasswordLastChangedLessThan) {
-            $.timePasswordLastChangedLessThan = timePasswordLastChangedLessThan;
+        public Builder timePasswordLastChangedLessThan(String timePasswordLastChangedLessThan) {
+            return timePasswordLastChangedLessThan(Output.of(timePasswordLastChangedLessThan));
+        }
+
+        /**
+         * @param timeUserCreatedGreaterThanOrEqualTo A filter to return users whose creation time in the database is greater than or equal to the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339). **Example:** 2016-12-19T16:39:57.600Z
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeUserCreatedGreaterThanOrEqualTo(@Nullable Output<String> timeUserCreatedGreaterThanOrEqualTo) {
+            $.timeUserCreatedGreaterThanOrEqualTo = timeUserCreatedGreaterThanOrEqualTo;
             return this;
         }
 
@@ -402,8 +508,18 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder timeUserCreatedGreaterThanOrEqualTo(@Nullable String timeUserCreatedGreaterThanOrEqualTo) {
-            $.timeUserCreatedGreaterThanOrEqualTo = timeUserCreatedGreaterThanOrEqualTo;
+        public Builder timeUserCreatedGreaterThanOrEqualTo(String timeUserCreatedGreaterThanOrEqualTo) {
+            return timeUserCreatedGreaterThanOrEqualTo(Output.of(timeUserCreatedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeUserCreatedLessThan A filter to return users whose creation time in the database is less than the date and time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339). **Example:** 2016-12-19T16:39:57.600Z
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeUserCreatedLessThan(@Nullable Output<String> timeUserCreatedLessThan) {
+            $.timeUserCreatedLessThan = timeUserCreatedLessThan;
             return this;
         }
 
@@ -413,8 +529,18 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder timeUserCreatedLessThan(@Nullable String timeUserCreatedLessThan) {
-            $.timeUserCreatedLessThan = timeUserCreatedLessThan;
+        public Builder timeUserCreatedLessThan(String timeUserCreatedLessThan) {
+            return timeUserCreatedLessThan(Output.of(timeUserCreatedLessThan));
+        }
+
+        /**
+         * @param userAssessmentId The OCID of the user assessment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userAssessmentId(Output<String> userAssessmentId) {
+            $.userAssessmentId = userAssessmentId;
             return this;
         }
 
@@ -425,7 +551,17 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder userAssessmentId(String userAssessmentId) {
-            $.userAssessmentId = userAssessmentId;
+            return userAssessmentId(Output.of(userAssessmentId));
+        }
+
+        /**
+         * @param userCategory A filter to return only items that match the specified user category.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userCategory(@Nullable Output<String> userCategory) {
+            $.userCategory = userCategory;
             return this;
         }
 
@@ -435,8 +571,18 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder userCategory(@Nullable String userCategory) {
-            $.userCategory = userCategory;
+        public Builder userCategory(String userCategory) {
+            return userCategory(Output.of(userCategory));
+        }
+
+        /**
+         * @param userKey A filter to return only items that match the specified user key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userKey(@Nullable Output<String> userKey) {
+            $.userKey = userKey;
             return this;
         }
 
@@ -446,8 +592,18 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder userKey(@Nullable String userKey) {
-            $.userKey = userKey;
+        public Builder userKey(String userKey) {
+            return userKey(Output.of(userKey));
+        }
+
+        /**
+         * @param userName A filter to return only items that match the specified user name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userName(@Nullable Output<String> userName) {
+            $.userName = userName;
             return this;
         }
 
@@ -457,9 +613,8 @@ public final class GetUserAssessmentUsersArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder userName(@Nullable String userName) {
-            $.userName = userName;
-            return this;
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
         }
 
         public GetUserAssessmentUsersArgs build() {

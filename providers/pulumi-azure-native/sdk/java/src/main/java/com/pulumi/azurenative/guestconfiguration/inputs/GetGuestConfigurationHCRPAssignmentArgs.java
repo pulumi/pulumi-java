@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.guestconfiguration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
      * 
      */
     @Import(name="guestConfigurationAssignmentName", required=true)
-    private String guestConfigurationAssignmentName;
+    private Output<String> guestConfigurationAssignmentName;
 
     /**
      * @return The guest configuration assignment name.
      * 
      */
-    public String guestConfigurationAssignmentName() {
+    public Output<String> guestConfigurationAssignmentName() {
         return this.guestConfigurationAssignmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
      * 
      */
     @Import(name="machineName", required=true)
-    private String machineName;
+    private Output<String> machineName;
 
     /**
      * @return The name of the ARC machine.
      * 
      */
-    public String machineName() {
+    public Output<String> machineName() {
         return this.machineName;
     }
 
@@ -47,13 +48,13 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder guestConfigurationAssignmentName(String guestConfigurationAssignmentName) {
+        public Builder guestConfigurationAssignmentName(Output<String> guestConfigurationAssignmentName) {
             $.guestConfigurationAssignmentName = guestConfigurationAssignmentName;
+            return this;
+        }
+
+        /**
+         * @param guestConfigurationAssignmentName The guest configuration assignment name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder guestConfigurationAssignmentName(String guestConfigurationAssignmentName) {
+            return guestConfigurationAssignmentName(Output.of(guestConfigurationAssignmentName));
+        }
+
+        /**
+         * @param machineName The name of the ARC machine.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder machineName(Output<String> machineName) {
+            $.machineName = machineName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
          * 
          */
         public Builder machineName(String machineName) {
-            $.machineName = machineName;
+            return machineName(Output.of(machineName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetGuestConfigurationHCRPAssignmentArgs build() {

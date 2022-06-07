@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetDiscoveryJobsResultsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetDiscoveryJobsResultsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="columnNames")
-    private @Nullable List<String> columnNames;
+    private @Nullable Output<List<String>> columnNames;
 
     /**
      * @return A filter to return only a specific column based on column name.
      * 
      */
-    public Optional<List<String>> columnNames() {
+    public Optional<Output<List<String>>> columnNames() {
         return Optional.ofNullable(this.columnNames);
     }
 
@@ -37,13 +38,13 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="discoveryJobId", required=true)
-    private String discoveryJobId;
+    private Output<String> discoveryJobId;
 
     /**
      * @return The OCID of the discovery job.
      * 
      */
-    public String discoveryJobId() {
+    public Output<String> discoveryJobId() {
         return this.discoveryJobId;
     }
 
@@ -52,20 +53,20 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="discoveryType")
-    private @Nullable String discoveryType;
+    private @Nullable Output<String> discoveryType;
 
     /**
      * @return A filter to return only the resources that match the specified discovery type.
      * 
      */
-    public Optional<String> discoveryType() {
+    public Optional<Output<String>> discoveryType() {
         return Optional.ofNullable(this.discoveryType);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDiscoveryJobsResultsFilter> filters;
+    private @Nullable Output<List<GetDiscoveryJobsResultsFilterArgs>> filters;
 
-    public Optional<List<GetDiscoveryJobsResultsFilter>> filters() {
+    public Optional<Output<List<GetDiscoveryJobsResultsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -74,13 +75,13 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="isResultApplied")
-    private @Nullable Boolean isResultApplied;
+    private @Nullable Output<Boolean> isResultApplied;
 
     /**
      * @return A filter to return the discovery result resources based on the value of their isResultApplied attribute.
      * 
      */
-    public Optional<Boolean> isResultApplied() {
+    public Optional<Output<Boolean>> isResultApplied() {
         return Optional.ofNullable(this.isResultApplied);
     }
 
@@ -89,13 +90,13 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="objects")
-    private @Nullable List<String> objects;
+    private @Nullable Output<List<String>> objects;
 
     /**
      * @return A filter to return only items related to a specific object name.
      * 
      */
-    public Optional<List<String>> objects() {
+    public Optional<Output<List<String>>> objects() {
         return Optional.ofNullable(this.objects);
     }
 
@@ -104,13 +105,13 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="plannedAction")
-    private @Nullable String plannedAction;
+    private @Nullable Output<String> plannedAction;
 
     /**
      * @return A filter to return only the resources that match the specified planned action.
      * 
      */
-    public Optional<String> plannedAction() {
+    public Optional<Output<String>> plannedAction() {
         return Optional.ofNullable(this.plannedAction);
     }
 
@@ -119,13 +120,13 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="schemaNames")
-    private @Nullable List<String> schemaNames;
+    private @Nullable Output<List<String>> schemaNames;
 
     /**
      * @return A filter to return only items related to specific schema name.
      * 
      */
-    public Optional<List<String>> schemaNames() {
+    public Optional<Output<List<String>>> schemaNames() {
         return Optional.ofNullable(this.schemaNames);
     }
 
@@ -166,9 +167,19 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder columnNames(@Nullable List<String> columnNames) {
+        public Builder columnNames(@Nullable Output<List<String>> columnNames) {
             $.columnNames = columnNames;
             return this;
+        }
+
+        /**
+         * @param columnNames A filter to return only a specific column based on column name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder columnNames(List<String> columnNames) {
+            return columnNames(Output.of(columnNames));
         }
 
         /**
@@ -187,8 +198,29 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder discoveryJobId(String discoveryJobId) {
+        public Builder discoveryJobId(Output<String> discoveryJobId) {
             $.discoveryJobId = discoveryJobId;
+            return this;
+        }
+
+        /**
+         * @param discoveryJobId The OCID of the discovery job.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder discoveryJobId(String discoveryJobId) {
+            return discoveryJobId(Output.of(discoveryJobId));
+        }
+
+        /**
+         * @param discoveryType A filter to return only the resources that match the specified discovery type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder discoveryType(@Nullable Output<String> discoveryType) {
+            $.discoveryType = discoveryType;
             return this;
         }
 
@@ -198,17 +230,20 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder discoveryType(@Nullable String discoveryType) {
-            $.discoveryType = discoveryType;
-            return this;
+        public Builder discoveryType(String discoveryType) {
+            return discoveryType(Output.of(discoveryType));
         }
 
-        public Builder filters(@Nullable List<GetDiscoveryJobsResultsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDiscoveryJobsResultsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDiscoveryJobsResultsFilter... filters) {
+        public Builder filters(List<GetDiscoveryJobsResultsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDiscoveryJobsResultsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -218,8 +253,29 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder isResultApplied(@Nullable Boolean isResultApplied) {
+        public Builder isResultApplied(@Nullable Output<Boolean> isResultApplied) {
             $.isResultApplied = isResultApplied;
+            return this;
+        }
+
+        /**
+         * @param isResultApplied A filter to return the discovery result resources based on the value of their isResultApplied attribute.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isResultApplied(Boolean isResultApplied) {
+            return isResultApplied(Output.of(isResultApplied));
+        }
+
+        /**
+         * @param objects A filter to return only items related to a specific object name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objects(@Nullable Output<List<String>> objects) {
+            $.objects = objects;
             return this;
         }
 
@@ -229,9 +285,8 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder objects(@Nullable List<String> objects) {
-            $.objects = objects;
-            return this;
+        public Builder objects(List<String> objects) {
+            return objects(Output.of(objects));
         }
 
         /**
@@ -250,8 +305,29 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder plannedAction(@Nullable String plannedAction) {
+        public Builder plannedAction(@Nullable Output<String> plannedAction) {
             $.plannedAction = plannedAction;
+            return this;
+        }
+
+        /**
+         * @param plannedAction A filter to return only the resources that match the specified planned action.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder plannedAction(String plannedAction) {
+            return plannedAction(Output.of(plannedAction));
+        }
+
+        /**
+         * @param schemaNames A filter to return only items related to specific schema name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder schemaNames(@Nullable Output<List<String>> schemaNames) {
+            $.schemaNames = schemaNames;
             return this;
         }
 
@@ -261,9 +337,8 @@ public final class GetDiscoveryJobsResultsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder schemaNames(@Nullable List<String> schemaNames) {
-            $.schemaNames = schemaNames;
-            return this;
+        public Builder schemaNames(List<String> schemaNames) {
+            return schemaNames(Output.of(schemaNames));
         }
 
         /**

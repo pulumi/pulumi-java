@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInstanceProfileArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The friendly IAM instance profile name to match.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -57,9 +58,19 @@ public final class GetInstanceProfileArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name The friendly IAM instance profile name to match.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetInstanceProfileArgs build() {

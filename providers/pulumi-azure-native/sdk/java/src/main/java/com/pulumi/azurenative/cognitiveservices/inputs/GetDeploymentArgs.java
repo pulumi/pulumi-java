@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.cognitiveservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of Cognitive Services account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deploymentName", required=true)
-    private String deploymentName;
+    private Output<String> deploymentName;
 
     /**
      * @return The name of the deployment associated with the Cognitive Services Account
      * 
      */
-    public String deploymentName() {
+    public Output<String> deploymentName() {
         return this.deploymentName;
     }
 
@@ -47,13 +48,13 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of Cognitive Services account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param deploymentName The name of the deployment associated with the Cognitive Services Account
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentName(Output<String> deploymentName) {
+            $.deploymentName = deploymentName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder deploymentName(String deploymentName) {
-            $.deploymentName = deploymentName;
+            return deploymentName(Output.of(deploymentName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDeploymentArgs build() {

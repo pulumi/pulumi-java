@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.LoadBalancer.inputs.GetPathRouteSetsFilter;
+import com.pulumi.oci.LoadBalancer.inputs.GetPathRouteSetsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetPathRouteSetsArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetPathRouteSetsArgs Empty = new GetPathRouteSetsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetPathRouteSetsFilter> filters;
+    private @Nullable Output<List<GetPathRouteSetsFilterArgs>> filters;
 
-    public Optional<List<GetPathRouteSetsFilter>> filters() {
+    public Optional<Output<List<GetPathRouteSetsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetPathRouteSetsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="loadBalancerId", required=true)
-    private String loadBalancerId;
+    private Output<String> loadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the path route sets to retrieve.
      * 
      */
-    public String loadBalancerId() {
+    public Output<String> loadBalancerId() {
         return this.loadBalancerId;
     }
 
@@ -63,12 +64,16 @@ public final class GetPathRouteSetsArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetPathRouteSetsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetPathRouteSetsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetPathRouteSetsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetPathRouteSetsFilter... filters) {
+        public Builder filters(List<GetPathRouteSetsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetPathRouteSetsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetPathRouteSetsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder loadBalancerId(String loadBalancerId) {
+        public Builder loadBalancerId(Output<String> loadBalancerId) {
             $.loadBalancerId = loadBalancerId;
             return this;
+        }
+
+        /**
+         * @param loadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the path route sets to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerId(String loadBalancerId) {
+            return loadBalancerId(Output.of(loadBalancerId));
         }
 
         public GetPathRouteSetsArgs build() {

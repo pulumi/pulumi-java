@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.monitoring_v3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetAlertPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAlertPolicyArgs Empty = new GetAlertPolicyArgs();
 
     @Import(name="alertPolicyId", required=true)
-    private String alertPolicyId;
+    private Output<String> alertPolicyId;
 
-    public String alertPolicyId() {
+    public Output<String> alertPolicyId() {
         return this.alertPolicyId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetAlertPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAlertPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder alertPolicyId(String alertPolicyId) {
+        public Builder alertPolicyId(Output<String> alertPolicyId) {
             $.alertPolicyId = alertPolicyId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder alertPolicyId(String alertPolicyId) {
+            return alertPolicyId(Output.of(alertPolicyId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetAlertPolicyArgs build() {

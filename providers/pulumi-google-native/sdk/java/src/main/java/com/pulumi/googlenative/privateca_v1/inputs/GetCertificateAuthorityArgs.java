@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.privateca_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
     public static final GetCertificateAuthorityArgs Empty = new GetCertificateAuthorityArgs();
 
     @Import(name="caPoolId", required=true)
-    private String caPoolId;
+    private Output<String> caPoolId;
 
-    public String caPoolId() {
+    public Output<String> caPoolId() {
         return this.caPoolId;
     }
 
     @Import(name="certificateAuthorityId", required=true)
-    private String certificateAuthorityId;
+    private Output<String> certificateAuthorityId;
 
-    public String certificateAuthorityId() {
+    public Output<String> certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -69,24 +70,40 @@ public final class GetCertificateAuthorityArgs extends com.pulumi.resources.Invo
             $ = new GetCertificateAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder caPoolId(String caPoolId) {
+        public Builder caPoolId(Output<String> caPoolId) {
             $.caPoolId = caPoolId;
             return this;
         }
 
-        public Builder certificateAuthorityId(String certificateAuthorityId) {
+        public Builder caPoolId(String caPoolId) {
+            return caPoolId(Output.of(caPoolId));
+        }
+
+        public Builder certificateAuthorityId(Output<String> certificateAuthorityId) {
             $.certificateAuthorityId = certificateAuthorityId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder certificateAuthorityId(String certificateAuthorityId) {
+            return certificateAuthorityId(Output.of(certificateAuthorityId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetCertificateAuthorityArgs build() {

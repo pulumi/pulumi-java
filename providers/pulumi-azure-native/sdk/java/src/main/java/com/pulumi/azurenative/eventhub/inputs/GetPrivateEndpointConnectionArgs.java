@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventhub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The Namespace name
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
-    private String privateEndpointConnectionName;
+    private Output<String> privateEndpointConnectionName;
 
     /**
      * @return The PrivateEndpointConnection name
      * 
      */
-    public String privateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
 
@@ -47,13 +48,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group within the azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder namespaceName(String namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
+            return this;
+        }
+
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(String namespaceName) {
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param privateEndpointConnectionName The PrivateEndpointConnection name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpointConnectionName(Output<String> privateEndpointConnectionName) {
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * 
          */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
-            $.privateEndpointConnectionName = privateEndpointConnectionName;
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPrivateEndpointConnectionArgs build() {

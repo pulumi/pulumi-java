@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.search.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSharedPrivateLinkResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSharedPrivateLinkResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="searchServiceName", required=true)
-    private String searchServiceName;
+    private Output<String> searchServiceName;
 
     /**
      * @return The name of the Azure Cognitive Search service associated with the specified resource group.
      * 
      */
-    public String searchServiceName() {
+    public Output<String> searchServiceName() {
         return this.searchServiceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSharedPrivateLinkResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sharedPrivateLinkResourceName", required=true)
-    private String sharedPrivateLinkResourceName;
+    private Output<String> sharedPrivateLinkResourceName;
 
     /**
      * @return The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.
      * 
      */
-    public String sharedPrivateLinkResourceName() {
+    public Output<String> sharedPrivateLinkResourceName() {
         return this.sharedPrivateLinkResourceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSharedPrivateLinkResourceArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param searchServiceName The name of the Azure Cognitive Search service associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder searchServiceName(Output<String> searchServiceName) {
+            $.searchServiceName = searchServiceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSharedPrivateLinkResourceArgs extends com.pulumi.resources
          * 
          */
         public Builder searchServiceName(String searchServiceName) {
-            $.searchServiceName = searchServiceName;
+            return searchServiceName(Output.of(searchServiceName));
+        }
+
+        /**
+         * @param sharedPrivateLinkResourceName The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sharedPrivateLinkResourceName(Output<String> sharedPrivateLinkResourceName) {
+            $.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSharedPrivateLinkResourceArgs extends com.pulumi.resources
          * 
          */
         public Builder sharedPrivateLinkResourceName(String sharedPrivateLinkResourceName) {
-            $.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
-            return this;
+            return sharedPrivateLinkResourceName(Output.of(sharedPrivateLinkResourceName));
         }
 
         public GetSharedPrivateLinkResourceArgs build() {

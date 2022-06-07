@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ResourceManager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetStackTfStateArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStackTfStateArgs Empty = new GetStackTfStateArgs();
 
     @Import(name="localPath", required=true)
-    private String localPath;
+    private Output<String> localPath;
 
-    public String localPath() {
+    public Output<String> localPath() {
         return this.localPath;
     }
 
@@ -24,13 +25,13 @@ public final class GetStackTfStateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stackId", required=true)
-    private String stackId;
+    private Output<String> stackId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the stack.
      * 
      */
-    public String stackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
 
@@ -59,8 +60,23 @@ public final class GetStackTfStateArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStackTfStateArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder localPath(String localPath) {
+        public Builder localPath(Output<String> localPath) {
             $.localPath = localPath;
+            return this;
+        }
+
+        public Builder localPath(String localPath) {
+            return localPath(Output.of(localPath));
+        }
+
+        /**
+         * @param stackId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the stack.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stackId(Output<String> stackId) {
+            $.stackId = stackId;
             return this;
         }
 
@@ -71,8 +87,7 @@ public final class GetStackTfStateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder stackId(String stackId) {
-            $.stackId = stackId;
-            return this;
+            return stackId(Output.of(stackId));
         }
 
         public GetStackTfStateArgs build() {

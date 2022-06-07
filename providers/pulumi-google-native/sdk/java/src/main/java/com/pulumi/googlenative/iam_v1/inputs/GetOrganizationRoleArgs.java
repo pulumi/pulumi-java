@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.iam_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetOrganizationRoleArgs extends com.pulumi.resources.InvokeAr
     public static final GetOrganizationRoleArgs Empty = new GetOrganizationRoleArgs();
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="roleId", required=true)
-    private String roleId;
+    private Output<String> roleId;
 
-    public String roleId() {
+    public Output<String> roleId() {
         return this.roleId;
     }
 
@@ -51,14 +52,22 @@ public final class GetOrganizationRoleArgs extends com.pulumi.resources.InvokeAr
             $ = new GetOrganizationRoleArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
-        public Builder roleId(String roleId) {
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public Builder roleId(Output<String> roleId) {
             $.roleId = roleId;
             return this;
+        }
+
+        public Builder roleId(String roleId) {
+            return roleId(Output.of(roleId));
         }
 
         public GetOrganizationRoleArgs build() {

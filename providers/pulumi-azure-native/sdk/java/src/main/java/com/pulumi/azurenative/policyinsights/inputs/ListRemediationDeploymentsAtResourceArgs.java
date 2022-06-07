@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.policyinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="remediationName", required=true)
-    private String remediationName;
+    private Output<String> remediationName;
 
     /**
      * @return The name of the remediation.
      * 
      */
-    public String remediationName() {
+    public Output<String> remediationName() {
         return this.remediationName;
     }
 
@@ -35,13 +36,13 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceId", required=true)
-    private String resourceId;
+    private Output<String> resourceId;
 
     /**
      * @return Resource ID.
      * 
      */
-    public String resourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -50,13 +51,13 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="top")
-    private @Nullable Integer top;
+    private @Nullable Output<Integer> top;
 
     /**
      * @return Maximum number of records to return.
      * 
      */
-    public Optional<Integer> top() {
+    public Optional<Output<Integer>> top() {
         return Optional.ofNullable(this.top);
     }
 
@@ -92,8 +93,29 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder remediationName(String remediationName) {
+        public Builder remediationName(Output<String> remediationName) {
             $.remediationName = remediationName;
+            return this;
+        }
+
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder remediationName(String remediationName) {
+            return remediationName(Output.of(remediationName));
+        }
+
+        /**
+         * @param resourceId Resource ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceId(Output<String> resourceId) {
+            $.resourceId = resourceId;
             return this;
         }
 
@@ -104,7 +126,17 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
          * 
          */
         public Builder resourceId(String resourceId) {
-            $.resourceId = resourceId;
+            return resourceId(Output.of(resourceId));
+        }
+
+        /**
+         * @param top Maximum number of records to return.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder top(@Nullable Output<Integer> top) {
+            $.top = top;
             return this;
         }
 
@@ -114,9 +146,8 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder top(@Nullable Integer top) {
-            $.top = top;
-            return this;
+        public Builder top(Integer top) {
+            return top(Output.of(top));
         }
 
         public ListRemediationDeploymentsAtResourceArgs build() {

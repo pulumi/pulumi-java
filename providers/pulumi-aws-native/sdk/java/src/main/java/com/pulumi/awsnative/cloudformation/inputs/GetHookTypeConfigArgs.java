@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.cloudformation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHookTypeConfigArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="typeArn", required=true)
-    private String typeArn;
+    private Output<String> typeArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the type version.
      * 
      */
-    public String typeArn() {
+    public Output<String> typeArn() {
         return this.typeArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetHookTypeConfigArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder typeArn(String typeArn) {
+        public Builder typeArn(Output<String> typeArn) {
             $.typeArn = typeArn;
             return this;
+        }
+
+        /**
+         * @param typeArn The Amazon Resource Name (ARN) of the type version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder typeArn(String typeArn) {
+            return typeArn(Output.of(typeArn));
         }
 
         public GetHookTypeConfigArgs build() {

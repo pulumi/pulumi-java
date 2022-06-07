@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.managementpartner.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPartnerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="partnerId", required=true)
-    private String partnerId;
+    private Output<String> partnerId;
 
     /**
      * @return Id of the Partner
      * 
      */
-    public String partnerId() {
+    public Output<String> partnerId() {
         return this.partnerId;
     }
 
@@ -57,9 +58,19 @@ public final class GetPartnerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder partnerId(String partnerId) {
+        public Builder partnerId(Output<String> partnerId) {
             $.partnerId = partnerId;
             return this;
+        }
+
+        /**
+         * @param partnerId Id of the Partner
+         * 
+         * @return builder
+         * 
+         */
+        public Builder partnerId(String partnerId) {
+            return partnerId(Output.of(partnerId));
         }
 
         public GetPartnerArgs build() {

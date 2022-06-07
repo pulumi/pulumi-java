@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetRegionSubscriptionsFilter;
+import com.pulumi.oci.Identity.inputs.GetRegionSubscriptionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetRegionSubscriptionsArgs extends com.pulumi.resources.Invok
     public static final GetRegionSubscriptionsArgs Empty = new GetRegionSubscriptionsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetRegionSubscriptionsFilter> filters;
+    private @Nullable Output<List<GetRegionSubscriptionsFilterArgs>> filters;
 
-    public Optional<List<GetRegionSubscriptionsFilter>> filters() {
+    public Optional<Output<List<GetRegionSubscriptionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetRegionSubscriptionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tenancyId", required=true)
-    private String tenancyId;
+    private Output<String> tenancyId;
 
     /**
      * @return The OCID of the tenancy.
      * 
      */
-    public String tenancyId() {
+    public Output<String> tenancyId() {
         return this.tenancyId;
     }
 
@@ -63,12 +64,16 @@ public final class GetRegionSubscriptionsArgs extends com.pulumi.resources.Invok
             $ = new GetRegionSubscriptionsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetRegionSubscriptionsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetRegionSubscriptionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetRegionSubscriptionsFilter... filters) {
+        public Builder filters(List<GetRegionSubscriptionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetRegionSubscriptionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetRegionSubscriptionsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder tenancyId(String tenancyId) {
+        public Builder tenancyId(Output<String> tenancyId) {
             $.tenancyId = tenancyId;
             return this;
+        }
+
+        /**
+         * @param tenancyId The OCID of the tenancy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tenancyId(String tenancyId) {
+            return tenancyId(Output.of(tenancyId));
         }
 
         public GetRegionSubscriptionsArgs build() {

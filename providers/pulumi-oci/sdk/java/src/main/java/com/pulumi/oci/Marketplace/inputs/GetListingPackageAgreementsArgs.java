@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Marketplace.inputs.GetListingPackageAgreementsFilter;
+import com.pulumi.oci.Marketplace.inputs.GetListingPackageAgreementsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetListingPackageAgreementsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The unique identifier for the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetListingPackageAgreementsFilter> filters;
+    private @Nullable Output<List<GetListingPackageAgreementsFilterArgs>> filters;
 
-    public Optional<List<GetListingPackageAgreementsFilter>> filters() {
+    public Optional<Output<List<GetListingPackageAgreementsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetListingPackageAgreementsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="listingId", required=true)
-    private String listingId;
+    private Output<String> listingId;
 
     /**
      * @return The unique identifier for the listing.
      * 
      */
-    public String listingId() {
+    public Output<String> listingId() {
         return this.listingId;
     }
 
@@ -58,13 +59,13 @@ public final class GetListingPackageAgreementsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="packageVersion", required=true)
-    private String packageVersion;
+    private Output<String> packageVersion;
 
     /**
      * @return The version of the package. Package versions are unique within a listing.
      * 
      */
-    public String packageVersion() {
+    public Output<String> packageVersion() {
         return this.packageVersion;
     }
 
@@ -101,17 +102,31 @@ public final class GetListingPackageAgreementsArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetListingPackageAgreementsFilter> filters) {
+        /**
+         * @param compartmentId The unique identifier for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetListingPackageAgreementsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetListingPackageAgreementsFilter... filters) {
+        public Builder filters(List<GetListingPackageAgreementsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetListingPackageAgreementsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -121,8 +136,29 @@ public final class GetListingPackageAgreementsArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder listingId(String listingId) {
+        public Builder listingId(Output<String> listingId) {
             $.listingId = listingId;
+            return this;
+        }
+
+        /**
+         * @param listingId The unique identifier for the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listingId(String listingId) {
+            return listingId(Output.of(listingId));
+        }
+
+        /**
+         * @param packageVersion The version of the package. Package versions are unique within a listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packageVersion(Output<String> packageVersion) {
+            $.packageVersion = packageVersion;
             return this;
         }
 
@@ -133,8 +169,7 @@ public final class GetListingPackageAgreementsArgs extends com.pulumi.resources.
          * 
          */
         public Builder packageVersion(String packageVersion) {
-            $.packageVersion = packageVersion;
-            return this;
+            return packageVersion(Output.of(packageVersion));
         }
 
         public GetListingPackageAgreementsArgs build() {

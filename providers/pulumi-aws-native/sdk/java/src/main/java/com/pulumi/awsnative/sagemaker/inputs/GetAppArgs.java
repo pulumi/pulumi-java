@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.awsnative.sagemaker.enums.AppType;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -18,13 +19,13 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appName", required=true)
-    private String appName;
+    private Output<String> appName;
 
     /**
      * @return The name of the app.
      * 
      */
-    public String appName() {
+    public Output<String> appName() {
         return this.appName;
     }
 
@@ -33,13 +34,13 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appType", required=true)
-    private AppType appType;
+    private Output<AppType> appType;
 
     /**
      * @return The type of app.
      * 
      */
-    public AppType appType() {
+    public Output<AppType> appType() {
         return this.appType;
     }
 
@@ -48,13 +49,13 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainId", required=true)
-    private String domainId;
+    private Output<String> domainId;
 
     /**
      * @return The domain ID.
      * 
      */
-    public String domainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
 
@@ -63,13 +64,13 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userProfileName", required=true)
-    private String userProfileName;
+    private Output<String> userProfileName;
 
     /**
      * @return The user profile name.
      * 
      */
-    public String userProfileName() {
+    public Output<String> userProfileName() {
         return this.userProfileName;
     }
 
@@ -106,8 +107,29 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder appName(String appName) {
+        public Builder appName(Output<String> appName) {
             $.appName = appName;
+            return this;
+        }
+
+        /**
+         * @param appName The name of the app.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appName(String appName) {
+            return appName(Output.of(appName));
+        }
+
+        /**
+         * @param appType The type of app.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appType(Output<AppType> appType) {
+            $.appType = appType;
             return this;
         }
 
@@ -118,7 +140,17 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder appType(AppType appType) {
-            $.appType = appType;
+            return appType(Output.of(appType));
+        }
+
+        /**
+         * @param domainId The domain ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainId(Output<String> domainId) {
+            $.domainId = domainId;
             return this;
         }
 
@@ -129,7 +161,17 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder domainId(String domainId) {
-            $.domainId = domainId;
+            return domainId(Output.of(domainId));
+        }
+
+        /**
+         * @param userProfileName The user profile name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userProfileName(Output<String> userProfileName) {
+            $.userProfileName = userProfileName;
             return this;
         }
 
@@ -140,8 +182,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder userProfileName(String userProfileName) {
-            $.userProfileName = userProfileName;
-            return this;
+            return userProfileName(Output.of(userProfileName));
         }
 
         public GetAppArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetInspectTemplateArgs extends com.pulumi.resources.InvokeArg
     public static final GetInspectTemplateArgs Empty = new GetInspectTemplateArgs();
 
     @Import(name="inspectTemplateId", required=true)
-    private String inspectTemplateId;
+    private Output<String> inspectTemplateId;
 
-    public String inspectTemplateId() {
+    public Output<String> inspectTemplateId() {
         return this.inspectTemplateId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetInspectTemplateArgs extends com.pulumi.resources.InvokeArg
             $ = new GetInspectTemplateArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder inspectTemplateId(String inspectTemplateId) {
+        public Builder inspectTemplateId(Output<String> inspectTemplateId) {
             $.inspectTemplateId = inspectTemplateId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder inspectTemplateId(String inspectTemplateId) {
+            return inspectTemplateId(Output.of(inspectTemplateId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetInspectTemplateArgs build() {

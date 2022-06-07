@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.memorydb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSubnetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetGroupName", required=true)
-    private String subnetGroupName;
+    private Output<String> subnetGroupName;
 
     /**
      * @return The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
      * 
      */
-    public String subnetGroupName() {
+    public Output<String> subnetGroupName() {
         return this.subnetGroupName;
     }
 
@@ -57,9 +58,19 @@ public final class GetSubnetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder subnetGroupName(String subnetGroupName) {
+        public Builder subnetGroupName(Output<String> subnetGroupName) {
             $.subnetGroupName = subnetGroupName;
             return this;
+        }
+
+        /**
+         * @param subnetGroupName The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subnetGroupName(String subnetGroupName) {
+            return subnetGroupName(Output.of(subnetGroupName));
         }
 
         public GetSubnetGroupArgs build() {

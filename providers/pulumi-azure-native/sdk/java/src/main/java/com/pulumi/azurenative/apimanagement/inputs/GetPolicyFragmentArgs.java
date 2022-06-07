@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetPolicyFragmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="format")
-    private @Nullable String format;
+    private @Nullable Output<String> format;
 
     /**
      * @return Policy fragment content format.
      * 
      */
-    public Optional<String> format() {
+    public Optional<Output<String>> format() {
         return Optional.ofNullable(this.format);
     }
 
@@ -34,13 +35,13 @@ public final class GetPolicyFragmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
     /**
      * @return A resource identifier.
      * 
      */
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -49,13 +50,13 @@ public final class GetPolicyFragmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,13 +65,13 @@ public final class GetPolicyFragmentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -107,8 +108,29 @@ public final class GetPolicyFragmentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder format(@Nullable String format) {
+        public Builder format(@Nullable Output<String> format) {
             $.format = format;
+            return this;
+        }
+
+        /**
+         * @param format Policy fragment content format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder format(String format) {
+            return format(Output.of(format));
+        }
+
+        /**
+         * @param id A resource identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(Output<String> id) {
+            $.id = id;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class GetPolicyFragmentArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder id(String id) {
-            $.id = id;
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class GetPolicyFragmentArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetPolicyFragmentArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetPolicyFragmentArgs build() {

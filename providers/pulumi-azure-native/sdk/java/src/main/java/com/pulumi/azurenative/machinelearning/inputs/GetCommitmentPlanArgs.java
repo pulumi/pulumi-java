@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.machinelearning.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="commitmentPlanName", required=true)
-    private String commitmentPlanName;
+    private Output<String> commitmentPlanName;
 
     /**
      * @return The Azure ML commitment plan name.
      * 
      */
-    public String commitmentPlanName() {
+    public Output<String> commitmentPlanName() {
         return this.commitmentPlanName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder commitmentPlanName(String commitmentPlanName) {
+        public Builder commitmentPlanName(Output<String> commitmentPlanName) {
             $.commitmentPlanName = commitmentPlanName;
+            return this;
+        }
+
+        /**
+         * @param commitmentPlanName The Azure ML commitment plan name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder commitmentPlanName(String commitmentPlanName) {
+            return commitmentPlanName(Output.of(commitmentPlanName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetCommitmentPlanArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetCommitmentPlanArgs build() {

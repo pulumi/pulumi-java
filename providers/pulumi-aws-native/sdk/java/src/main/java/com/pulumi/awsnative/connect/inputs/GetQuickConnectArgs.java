@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.connect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quickConnectArn", required=true)
-    private String quickConnectArn;
+    private Output<String> quickConnectArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the quick connect.
      * 
      */
-    public String quickConnectArn() {
+    public Output<String> quickConnectArn() {
         return this.quickConnectArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder quickConnectArn(String quickConnectArn) {
+        public Builder quickConnectArn(Output<String> quickConnectArn) {
             $.quickConnectArn = quickConnectArn;
             return this;
+        }
+
+        /**
+         * @param quickConnectArn The Amazon Resource Name (ARN) for the quick connect.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder quickConnectArn(String quickConnectArn) {
+            return quickConnectArn(Output.of(quickConnectArn));
         }
 
         public GetQuickConnectArgs build() {

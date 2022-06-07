@@ -5,7 +5,9 @@ package com.pulumi.azurenative.addons;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.addons.inputs.GetSupportPlanTypeArgs;
+import com.pulumi.azurenative.addons.inputs.GetSupportPlanTypePlainArgs;
 import com.pulumi.azurenative.addons.outputs.GetSupportPlanTypeResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -17,7 +19,7 @@ public final class AddonsFunctions {
      * API Version: 2018-03-01.
      * 
      */
-    public static CompletableFuture<GetSupportPlanTypeResult> getSupportPlanType(GetSupportPlanTypeArgs args) {
+    public static Output<GetSupportPlanTypeResult> getSupportPlanType(GetSupportPlanTypeArgs args) {
         return getSupportPlanType(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +27,23 @@ public final class AddonsFunctions {
      * API Version: 2018-03-01.
      * 
      */
-    public static CompletableFuture<GetSupportPlanTypeResult> getSupportPlanType(GetSupportPlanTypeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSupportPlanTypeResult> getSupportPlanTypePlain(GetSupportPlanTypePlainArgs args) {
+        return getSupportPlanTypePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The status of the Canonical support plan.
+     * API Version: 2018-03-01.
+     * 
+     */
+    public static Output<GetSupportPlanTypeResult> getSupportPlanType(GetSupportPlanTypeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:addons:getSupportPlanType", TypeShape.of(GetSupportPlanTypeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The status of the Canonical support plan.
+     * API Version: 2018-03-01.
+     * 
+     */
+    public static CompletableFuture<GetSupportPlanTypeResult> getSupportPlanTypePlain(GetSupportPlanTypePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:addons:getSupportPlanType", TypeShape.of(GetSupportPlanTypeResult.class), args, Utilities.withVersion(options));
     }
 }

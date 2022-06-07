@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetIamWorkRequestLogsFilter;
+import com.pulumi.oci.Identity.inputs.GetIamWorkRequestLogsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetIamWorkRequestLogsArgs extends com.pulumi.resources.Invoke
     public static final GetIamWorkRequestLogsArgs Empty = new GetIamWorkRequestLogsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetIamWorkRequestLogsFilter> filters;
+    private @Nullable Output<List<GetIamWorkRequestLogsFilterArgs>> filters;
 
-    public Optional<List<GetIamWorkRequestLogsFilter>> filters() {
+    public Optional<Output<List<GetIamWorkRequestLogsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetIamWorkRequestLogsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="iamWorkRequestId", required=true)
-    private String iamWorkRequestId;
+    private Output<String> iamWorkRequestId;
 
     /**
      * @return The OCID of the IAM work request.
      * 
      */
-    public String iamWorkRequestId() {
+    public Output<String> iamWorkRequestId() {
         return this.iamWorkRequestId;
     }
 
@@ -63,12 +64,16 @@ public final class GetIamWorkRequestLogsArgs extends com.pulumi.resources.Invoke
             $ = new GetIamWorkRequestLogsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetIamWorkRequestLogsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetIamWorkRequestLogsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetIamWorkRequestLogsFilter... filters) {
+        public Builder filters(List<GetIamWorkRequestLogsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetIamWorkRequestLogsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetIamWorkRequestLogsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder iamWorkRequestId(String iamWorkRequestId) {
+        public Builder iamWorkRequestId(Output<String> iamWorkRequestId) {
             $.iamWorkRequestId = iamWorkRequestId;
             return this;
+        }
+
+        /**
+         * @param iamWorkRequestId The OCID of the IAM work request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder iamWorkRequestId(String iamWorkRequestId) {
+            return iamWorkRequestId(Output.of(iamWorkRequestId));
         }
 
         public GetIamWorkRequestLogsArgs build() {

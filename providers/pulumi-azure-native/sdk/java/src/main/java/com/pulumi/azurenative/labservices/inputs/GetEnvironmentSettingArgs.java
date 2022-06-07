@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.labservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetEnvironmentSettingArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="environmentSettingName", required=true)
-    private String environmentSettingName;
+    private Output<String> environmentSettingName;
 
     /**
      * @return The name of the environment Setting.
      * 
      */
-    public String environmentSettingName() {
+    public Output<String> environmentSettingName() {
         return this.environmentSettingName;
     }
 
@@ -34,13 +35,13 @@ public final class GetEnvironmentSettingArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return Specify the $expand query. Example: &#39;properties($select=publishingState)&#39;
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -49,13 +50,13 @@ public final class GetEnvironmentSettingArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="labAccountName", required=true)
-    private String labAccountName;
+    private Output<String> labAccountName;
 
     /**
      * @return The name of the lab Account.
      * 
      */
-    public String labAccountName() {
+    public Output<String> labAccountName() {
         return this.labAccountName;
     }
 
@@ -64,13 +65,13 @@ public final class GetEnvironmentSettingArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="labName", required=true)
-    private String labName;
+    private Output<String> labName;
 
     /**
      * @return The name of the lab.
      * 
      */
-    public String labName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -79,13 +80,13 @@ public final class GetEnvironmentSettingArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -123,8 +124,29 @@ public final class GetEnvironmentSettingArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder environmentSettingName(String environmentSettingName) {
+        public Builder environmentSettingName(Output<String> environmentSettingName) {
             $.environmentSettingName = environmentSettingName;
+            return this;
+        }
+
+        /**
+         * @param environmentSettingName The name of the environment Setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environmentSettingName(String environmentSettingName) {
+            return environmentSettingName(Output.of(environmentSettingName));
+        }
+
+        /**
+         * @param expand Specify the $expand query. Example: &#39;properties($select=publishingState)&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable Output<String> expand) {
+            $.expand = expand;
             return this;
         }
 
@@ -134,8 +156,18 @@ public final class GetEnvironmentSettingArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
-            $.expand = expand;
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param labAccountName The name of the lab Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder labAccountName(Output<String> labAccountName) {
+            $.labAccountName = labAccountName;
             return this;
         }
 
@@ -146,7 +178,17 @@ public final class GetEnvironmentSettingArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder labAccountName(String labAccountName) {
-            $.labAccountName = labAccountName;
+            return labAccountName(Output.of(labAccountName));
+        }
+
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder labName(Output<String> labName) {
+            $.labName = labName;
             return this;
         }
 
@@ -157,7 +199,17 @@ public final class GetEnvironmentSettingArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder labName(String labName) {
-            $.labName = labName;
+            return labName(Output.of(labName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -168,8 +220,7 @@ public final class GetEnvironmentSettingArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetEnvironmentSettingArgs build() {

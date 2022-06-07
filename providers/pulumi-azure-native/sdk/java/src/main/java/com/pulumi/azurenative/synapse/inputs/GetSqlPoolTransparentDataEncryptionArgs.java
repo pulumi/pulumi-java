@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.synapse.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
      * 
      */
     @Import(name="sqlPoolName", required=true)
-    private String sqlPoolName;
+    private Output<String> sqlPoolName;
 
     /**
      * @return SQL pool name
      * 
      */
-    public String sqlPoolName() {
+    public Output<String> sqlPoolName() {
         return this.sqlPoolName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
      * 
      */
     @Import(name="transparentDataEncryptionName", required=true)
-    private String transparentDataEncryptionName;
+    private Output<String> transparentDataEncryptionName;
 
     /**
      * @return The name of the transparent data encryption configuration.
      * 
      */
-    public String transparentDataEncryptionName() {
+    public Output<String> transparentDataEncryptionName() {
         return this.transparentDataEncryptionName;
     }
 
@@ -62,13 +63,13 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of the workspace
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlPoolName(Output<String> sqlPoolName) {
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
          * 
          */
         public Builder sqlPoolName(String sqlPoolName) {
-            $.sqlPoolName = sqlPoolName;
+            return sqlPoolName(Output.of(sqlPoolName));
+        }
+
+        /**
+         * @param transparentDataEncryptionName The name of the transparent data encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transparentDataEncryptionName(Output<String> transparentDataEncryptionName) {
+            $.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
          * 
          */
         public Builder transparentDataEncryptionName(String transparentDataEncryptionName) {
-            $.transparentDataEncryptionName = transparentDataEncryptionName;
+            return transparentDataEncryptionName(Output.of(transparentDataEncryptionName));
+        }
+
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetSqlPoolTransparentDataEncryptionArgs build() {

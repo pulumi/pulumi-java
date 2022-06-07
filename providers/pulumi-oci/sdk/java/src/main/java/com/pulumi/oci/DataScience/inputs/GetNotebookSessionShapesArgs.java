@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataScience.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataScience.inputs.GetNotebookSessionShapesFilter;
+import com.pulumi.oci.DataScience.inputs.GetNotebookSessionShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetNotebookSessionShapesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return &lt;b&gt;Filter&lt;/b&gt; results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetNotebookSessionShapesFilter> filters;
+    private @Nullable Output<List<GetNotebookSessionShapesFilterArgs>> filters;
 
-    public Optional<List<GetNotebookSessionShapesFilter>> filters() {
+    public Optional<Output<List<GetNotebookSessionShapesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetNotebookSessionShapesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetNotebookSessionShapesFilter> filters) {
+        /**
+         * @param compartmentId &lt;b&gt;Filter&lt;/b&gt; results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetNotebookSessionShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetNotebookSessionShapesFilter... filters) {
+        public Builder filters(List<GetNotebookSessionShapesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetNotebookSessionShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.autoscaling.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLifecycleHookArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="autoScalingGroupName", required=true)
-    private String autoScalingGroupName;
+    private Output<String> autoScalingGroupName;
 
     /**
      * @return The name of the Auto Scaling group for the lifecycle hook.
      * 
      */
-    public String autoScalingGroupName() {
+    public Output<String> autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetLifecycleHookArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="lifecycleHookName", required=true)
-    private String lifecycleHookName;
+    private Output<String> lifecycleHookName;
 
     /**
      * @return The name of the lifecycle hook.
      * 
      */
-    public String lifecycleHookName() {
+    public Output<String> lifecycleHookName() {
         return this.lifecycleHookName;
     }
 
@@ -73,8 +74,29 @@ public final class GetLifecycleHookArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder autoScalingGroupName(String autoScalingGroupName) {
+        public Builder autoScalingGroupName(Output<String> autoScalingGroupName) {
             $.autoScalingGroupName = autoScalingGroupName;
+            return this;
+        }
+
+        /**
+         * @param autoScalingGroupName The name of the Auto Scaling group for the lifecycle hook.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autoScalingGroupName(String autoScalingGroupName) {
+            return autoScalingGroupName(Output.of(autoScalingGroupName));
+        }
+
+        /**
+         * @param lifecycleHookName The name of the lifecycle hook.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lifecycleHookName(Output<String> lifecycleHookName) {
+            $.lifecycleHookName = lifecycleHookName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLifecycleHookArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder lifecycleHookName(String lifecycleHookName) {
-            $.lifecycleHookName = lifecycleHookName;
-            return this;
+            return lifecycleHookName(Output.of(lifecycleHookName));
         }
 
         public GetLifecycleHookArgs build() {

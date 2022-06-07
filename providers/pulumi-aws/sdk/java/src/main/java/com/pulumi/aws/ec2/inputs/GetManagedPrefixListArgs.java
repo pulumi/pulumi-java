@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetManagedPrefixListFilter;
+import com.pulumi.aws.ec2.inputs.GetManagedPrefixListFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetManagedPrefixListFilter> filters;
+    private @Nullable Output<List<GetManagedPrefixListFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Optional<List<GetManagedPrefixListFilter>> filters() {
+    public Optional<Output<List<GetManagedPrefixListFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -37,13 +38,13 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The ID of the prefix list to select.
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -52,13 +53,13 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the filter field. Valid values can be found in the EC2 [DescribeManagedPrefixLists](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeManagedPrefixLists.html) API Reference.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -67,13 +68,13 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags assigned to the resource.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -110,7 +111,7 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetManagedPrefixListFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedPrefixListFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -121,7 +122,17 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder filters(GetManagedPrefixListFilter... filters) {
+        public Builder filters(List<GetManagedPrefixListFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetManagedPrefixListFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -131,8 +142,29 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id The ID of the prefix list to select.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param name The name of the filter field. Valid values can be found in the EC2 [DescribeManagedPrefixLists](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeManagedPrefixLists.html) API Reference.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -142,8 +174,18 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param tags A map of tags assigned to the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -153,9 +195,8 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetManagedPrefixListArgs build() {

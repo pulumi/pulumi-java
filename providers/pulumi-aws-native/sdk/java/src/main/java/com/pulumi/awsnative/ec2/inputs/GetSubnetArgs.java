@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSubnetArgs Empty = new GetSubnetArgs();
 
     @Import(name="subnetId", required=true)
-    private String subnetId;
+    private Output<String> subnetId;
 
-    public String subnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -43,9 +44,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSubnetArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder subnetId(String subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
+        }
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
 
         public GetSubnetArgs build() {

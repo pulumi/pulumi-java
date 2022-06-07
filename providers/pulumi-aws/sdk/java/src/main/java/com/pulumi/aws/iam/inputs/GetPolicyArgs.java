@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-    private @Nullable String arn;
+    private @Nullable Output<String> arn;
 
     /**
      * @return The ARN of the IAM policy.
      * 
      */
-    public Optional<String> arn() {
+    public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
 
@@ -35,13 +36,13 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the IAM policy.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -50,13 +51,13 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pathPrefix")
-    private @Nullable String pathPrefix;
+    private @Nullable Output<String> pathPrefix;
 
     /**
      * @return The prefix of the path to the IAM policy. Defaults to a slash (`/`).
      * 
      */
-    public Optional<String> pathPrefix() {
+    public Optional<Output<String>> pathPrefix() {
         return Optional.ofNullable(this.pathPrefix);
     }
 
@@ -65,13 +66,13 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Key-value mapping of tags for the IAM Policy.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -108,8 +109,29 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn The ARN of the IAM policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param name The name of the IAM policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -119,8 +141,18 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param pathPrefix The prefix of the path to the IAM policy. Defaults to a slash (`/`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pathPrefix(@Nullable Output<String> pathPrefix) {
+            $.pathPrefix = pathPrefix;
             return this;
         }
 
@@ -130,8 +162,18 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder pathPrefix(@Nullable String pathPrefix) {
-            $.pathPrefix = pathPrefix;
+        public Builder pathPrefix(String pathPrefix) {
+            return pathPrefix(Output.of(pathPrefix));
+        }
+
+        /**
+         * @param tags Key-value mapping of tags for the IAM Policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -141,9 +183,8 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetPolicyArgs build() {

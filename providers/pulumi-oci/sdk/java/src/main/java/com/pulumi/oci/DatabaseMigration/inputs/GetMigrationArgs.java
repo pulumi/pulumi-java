@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseMigration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMigrationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="migrationId", required=true)
-    private String migrationId;
+    private Output<String> migrationId;
 
     /**
      * @return The OCID of the migration
      * 
      */
-    public String migrationId() {
+    public Output<String> migrationId() {
         return this.migrationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetMigrationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder migrationId(String migrationId) {
+        public Builder migrationId(Output<String> migrationId) {
             $.migrationId = migrationId;
             return this;
+        }
+
+        /**
+         * @param migrationId The OCID of the migration
+         * 
+         * @return builder
+         * 
+         */
+        public Builder migrationId(String migrationId) {
+            return migrationId(Output.of(migrationId));
         }
 
         public GetMigrationArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatabasePdbConversionHistoryEntryArgs extends com.pulumi.r
      * 
      */
     @Import(name="databaseId", required=true)
-    private String databaseId;
+    private Output<String> databaseId;
 
     /**
      * @return The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String databaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
@@ -32,13 +33,13 @@ public final class GetDatabasePdbConversionHistoryEntryArgs extends com.pulumi.r
      * 
      */
     @Import(name="pdbConversionHistoryEntryId", required=true)
-    private String pdbConversionHistoryEntryId;
+    private Output<String> pdbConversionHistoryEntryId;
 
     /**
      * @return The database conversion history [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String pdbConversionHistoryEntryId() {
+    public Output<String> pdbConversionHistoryEntryId() {
         return this.pdbConversionHistoryEntryId;
     }
 
@@ -73,8 +74,29 @@ public final class GetDatabasePdbConversionHistoryEntryArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder databaseId(String databaseId) {
+        public Builder databaseId(Output<String> databaseId) {
             $.databaseId = databaseId;
+            return this;
+        }
+
+        /**
+         * @param databaseId The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseId(String databaseId) {
+            return databaseId(Output.of(databaseId));
+        }
+
+        /**
+         * @param pdbConversionHistoryEntryId The database conversion history [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pdbConversionHistoryEntryId(Output<String> pdbConversionHistoryEntryId) {
+            $.pdbConversionHistoryEntryId = pdbConversionHistoryEntryId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDatabasePdbConversionHistoryEntryArgs extends com.pulumi.r
          * 
          */
         public Builder pdbConversionHistoryEntryId(String pdbConversionHistoryEntryId) {
-            $.pdbConversionHistoryEntryId = pdbConversionHistoryEntryId;
-            return this;
+            return pdbConversionHistoryEntryId(Output.of(pdbConversionHistoryEntryId));
         }
 
         public GetDatabasePdbConversionHistoryEntryArgs build() {

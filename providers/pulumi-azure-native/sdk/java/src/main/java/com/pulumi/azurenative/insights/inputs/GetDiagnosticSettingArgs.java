@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDiagnosticSettingArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the diagnostic setting.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetDiagnosticSettingArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceUri", required=true)
-    private String resourceUri;
+    private Output<String> resourceUri;
 
     /**
      * @return The identifier of the resource.
      * 
      */
-    public String resourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -73,8 +74,29 @@ public final class GetDiagnosticSettingArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the diagnostic setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceUri The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceUri(Output<String> resourceUri) {
+            $.resourceUri = resourceUri;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDiagnosticSettingArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceUri(String resourceUri) {
-            $.resourceUri = resourceUri;
-            return this;
+            return resourceUri(Output.of(resourceUri));
         }
 
         public GetDiagnosticSettingArgs build() {

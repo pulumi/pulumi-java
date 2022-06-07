@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.CertificatesManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.CertificatesManagement.inputs.GetCertificateVersionsFilter;
+import com.pulumi.oci.CertificatesManagement.inputs.GetCertificateVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetCertificateVersionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="certificateId", required=true)
-    private String certificateId;
+    private Output<String> certificateId;
 
     /**
      * @return The OCID of the certificate.
      * 
      */
-    public String certificateId() {
+    public Output<String> certificateId() {
         return this.certificateId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetCertificateVersionsFilter> filters;
+    private @Nullable Output<List<GetCertificateVersionsFilterArgs>> filters;
 
-    public Optional<List<GetCertificateVersionsFilter>> filters() {
+    public Optional<Output<List<GetCertificateVersionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetCertificateVersionsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="versionNumber")
-    private @Nullable String versionNumber;
+    private @Nullable Output<String> versionNumber;
 
     /**
      * @return A filter that returns only resources that match the specified version number. The default value is 0, which means that this filter is not applied.
      * 
      */
-    public Optional<String> versionNumber() {
+    public Optional<Output<String>> versionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }
 
@@ -85,17 +86,31 @@ public final class GetCertificateVersionsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder certificateId(String certificateId) {
+        public Builder certificateId(Output<String> certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCertificateVersionsFilter> filters) {
+        /**
+         * @param certificateId The OCID of the certificate.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateId(String certificateId) {
+            return certificateId(Output.of(certificateId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetCertificateVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetCertificateVersionsFilter... filters) {
+        public Builder filters(List<GetCertificateVersionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetCertificateVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -105,9 +120,19 @@ public final class GetCertificateVersionsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder versionNumber(@Nullable String versionNumber) {
+        public Builder versionNumber(@Nullable Output<String> versionNumber) {
             $.versionNumber = versionNumber;
             return this;
+        }
+
+        /**
+         * @param versionNumber A filter that returns only resources that match the specified version number. The default value is 0, which means that this filter is not applied.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionNumber(String versionNumber) {
+            return versionNumber(Output.of(versionNumber));
         }
 
         public GetCertificateVersionsArgs build() {

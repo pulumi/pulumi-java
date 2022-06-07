@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Jms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -34,13 +35,13 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
      * 
      */
     @Import(name="timeEnd")
-    private @Nullable String timeEnd;
+    private @Nullable Output<String> timeEnd;
 
     /**
      * @return The end of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
      * 
      */
-    public Optional<String> timeEnd() {
+    public Optional<Output<String>> timeEnd() {
         return Optional.ofNullable(this.timeEnd);
     }
 
@@ -49,13 +50,13 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
      * 
      */
     @Import(name="timeStart")
-    private @Nullable String timeStart;
+    private @Nullable Output<String> timeStart;
 
     /**
      * @return The start of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
      * 
      */
-    public Optional<String> timeStart() {
+    public Optional<Output<String>> timeStart() {
         return Optional.ofNullable(this.timeStart);
     }
 
@@ -91,8 +92,29 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param timeEnd The end of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeEnd(@Nullable Output<String> timeEnd) {
+            $.timeEnd = timeEnd;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder timeEnd(@Nullable String timeEnd) {
-            $.timeEnd = timeEnd;
+        public Builder timeEnd(String timeEnd) {
+            return timeEnd(Output.of(timeEnd));
+        }
+
+        /**
+         * @param timeStart The start of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeStart(@Nullable Output<String> timeStart) {
+            $.timeStart = timeStart;
             return this;
         }
 
@@ -113,9 +145,8 @@ public final class GetSummarizeResourceInventoryArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder timeStart(@Nullable String timeStart) {
-            $.timeStart = timeStart;
-            return this;
+        public Builder timeStart(String timeStart) {
+            return timeStart(Output.of(timeStart));
         }
 
         public GetSummarizeResourceInventoryArgs build() {

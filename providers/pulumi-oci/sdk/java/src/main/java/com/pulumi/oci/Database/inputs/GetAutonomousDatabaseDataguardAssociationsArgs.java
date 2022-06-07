@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetAutonomousDatabaseDataguardAssociationsFilter;
+import com.pulumi.oci.Database.inputs.GetAutonomousDatabaseDataguardAssociationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetAutonomousDatabaseDataguardAssociationsArgs extends com.pu
      * 
      */
     @Import(name="autonomousDatabaseId", required=true)
-    private String autonomousDatabaseId;
+    private Output<String> autonomousDatabaseId;
 
     /**
      * @return The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String autonomousDatabaseId() {
+    public Output<String> autonomousDatabaseId() {
         return this.autonomousDatabaseId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAutonomousDatabaseDataguardAssociationsFilter> filters;
+    private @Nullable Output<List<GetAutonomousDatabaseDataguardAssociationsFilterArgs>> filters;
 
-    public Optional<List<GetAutonomousDatabaseDataguardAssociationsFilter>> filters() {
+    public Optional<Output<List<GetAutonomousDatabaseDataguardAssociationsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetAutonomousDatabaseDataguardAssociationsArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder autonomousDatabaseId(String autonomousDatabaseId) {
+        public Builder autonomousDatabaseId(Output<String> autonomousDatabaseId) {
             $.autonomousDatabaseId = autonomousDatabaseId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAutonomousDatabaseDataguardAssociationsFilter> filters) {
+        /**
+         * @param autonomousDatabaseId The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousDatabaseId(String autonomousDatabaseId) {
+            return autonomousDatabaseId(Output.of(autonomousDatabaseId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetAutonomousDatabaseDataguardAssociationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAutonomousDatabaseDataguardAssociationsFilter... filters) {
+        public Builder filters(List<GetAutonomousDatabaseDataguardAssociationsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAutonomousDatabaseDataguardAssociationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

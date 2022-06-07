@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTableEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="partitionKey", required=true)
-    private String partitionKey;
+    private Output<String> partitionKey;
 
     /**
      * @return The key for the partition where the entity will be retrieved.
      * 
      */
-    public String partitionKey() {
+    public Output<String> partitionKey() {
         return this.partitionKey;
     }
 
@@ -32,13 +33,13 @@ public final class GetTableEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rowKey", required=true)
-    private String rowKey;
+    private Output<String> rowKey;
 
     /**
      * @return The key for the row where the entity will be retrieved.
      * 
      */
-    public String rowKey() {
+    public Output<String> rowKey() {
         return this.rowKey;
     }
 
@@ -47,13 +48,13 @@ public final class GetTableEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageAccountName", required=true)
-    private String storageAccountName;
+    private Output<String> storageAccountName;
 
     /**
      * @return The name of the Storage Account where the Table exists.
      * 
      */
-    public String storageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -62,13 +63,13 @@ public final class GetTableEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableName", required=true)
-    private String tableName;
+    private Output<String> tableName;
 
     /**
      * @return The name of the Table.
      * 
      */
-    public String tableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -105,8 +106,29 @@ public final class GetTableEntityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder partitionKey(String partitionKey) {
+        public Builder partitionKey(Output<String> partitionKey) {
             $.partitionKey = partitionKey;
+            return this;
+        }
+
+        /**
+         * @param partitionKey The key for the partition where the entity will be retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder partitionKey(String partitionKey) {
+            return partitionKey(Output.of(partitionKey));
+        }
+
+        /**
+         * @param rowKey The key for the row where the entity will be retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rowKey(Output<String> rowKey) {
+            $.rowKey = rowKey;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetTableEntityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder rowKey(String rowKey) {
-            $.rowKey = rowKey;
+            return rowKey(Output.of(rowKey));
+        }
+
+        /**
+         * @param storageAccountName The name of the Storage Account where the Table exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageAccountName(Output<String> storageAccountName) {
+            $.storageAccountName = storageAccountName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetTableEntityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder storageAccountName(String storageAccountName) {
-            $.storageAccountName = storageAccountName;
+            return storageAccountName(Output.of(storageAccountName));
+        }
+
+        /**
+         * @param tableName The name of the Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tableName(Output<String> tableName) {
+            $.tableName = tableName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetTableEntityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tableName(String tableName) {
-            $.tableName = tableName;
-            return this;
+            return tableName(Output.of(tableName));
         }
 
         public GetTableEntityArgs build() {

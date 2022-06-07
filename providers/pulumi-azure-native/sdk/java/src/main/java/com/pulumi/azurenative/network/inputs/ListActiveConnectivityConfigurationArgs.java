@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -20,13 +21,13 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="networkManagerName", required=true)
-    private String networkManagerName;
+    private Output<String> networkManagerName;
 
     /**
      * @return The name of the network manager.
      * 
      */
-    public String networkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -35,13 +36,13 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="regions")
-    private @Nullable List<String> regions;
+    private @Nullable Output<List<String>> regions;
 
     /**
      * @return List of regions.
      * 
      */
-    public Optional<List<String>> regions() {
+    public Optional<Output<List<String>>> regions() {
         return Optional.ofNullable(this.regions);
     }
 
@@ -50,13 +51,13 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,13 +66,13 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
      */
-    public Optional<String> skipToken() {
+    public Optional<Output<String>> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
 
@@ -108,8 +109,29 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder networkManagerName(String networkManagerName) {
+        public Builder networkManagerName(Output<String> networkManagerName) {
             $.networkManagerName = networkManagerName;
+            return this;
+        }
+
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkManagerName(String networkManagerName) {
+            return networkManagerName(Output.of(networkManagerName));
+        }
+
+        /**
+         * @param regions List of regions.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regions(@Nullable Output<List<String>> regions) {
+            $.regions = regions;
             return this;
         }
 
@@ -119,9 +141,8 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder regions(@Nullable List<String> regions) {
-            $.regions = regions;
-            return this;
+        public Builder regions(List<String> regions) {
+            return regions(Output.of(regions));
         }
 
         /**
@@ -140,8 +161,29 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param skipToken When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(@Nullable Output<String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -151,9 +193,8 @@ public final class ListActiveConnectivityConfigurationArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
-            return this;
+        public Builder skipToken(String skipToken) {
+            return skipToken(Output.of(skipToken));
         }
 
         public ListActiveConnectivityConfigurationArgs build() {

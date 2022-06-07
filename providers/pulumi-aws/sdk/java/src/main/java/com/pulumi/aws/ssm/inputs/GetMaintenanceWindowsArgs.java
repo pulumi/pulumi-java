@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ssm.inputs;
 
-import com.pulumi.aws.ssm.inputs.GetMaintenanceWindowsFilter;
+import com.pulumi.aws.ssm.inputs.GetMaintenanceWindowsFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
@@ -20,13 +21,13 @@ public final class GetMaintenanceWindowsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetMaintenanceWindowsFilter> filters;
+    private @Nullable Output<List<GetMaintenanceWindowsFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Optional<List<GetMaintenanceWindowsFilter>> filters() {
+    public Optional<Output<List<GetMaintenanceWindowsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -60,7 +61,7 @@ public final class GetMaintenanceWindowsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetMaintenanceWindowsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetMaintenanceWindowsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -71,7 +72,17 @@ public final class GetMaintenanceWindowsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder filters(GetMaintenanceWindowsFilter... filters) {
+        public Builder filters(List<GetMaintenanceWindowsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetMaintenanceWindowsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

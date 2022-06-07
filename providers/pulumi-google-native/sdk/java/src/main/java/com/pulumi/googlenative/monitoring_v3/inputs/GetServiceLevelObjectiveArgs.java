@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.monitoring_v3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetServiceLevelObjectiveArgs extends com.pulumi.resources.Inv
     public static final GetServiceLevelObjectiveArgs Empty = new GetServiceLevelObjectiveArgs();
 
     @Import(name="serviceId", required=true)
-    private String serviceId;
+    private Output<String> serviceId;
 
-    public String serviceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
     @Import(name="serviceLevelObjectiveId", required=true)
-    private String serviceLevelObjectiveId;
+    private Output<String> serviceLevelObjectiveId;
 
-    public String serviceLevelObjectiveId() {
+    public Output<String> serviceLevelObjectiveId() {
         return this.serviceLevelObjectiveId;
     }
 
     @Import(name="v3Id", required=true)
-    private String v3Id;
+    private Output<String> v3Id;
 
-    public String v3Id() {
+    public Output<String> v3Id() {
         return this.v3Id;
     }
 
     @Import(name="v3Id1", required=true)
-    private String v3Id1;
+    private Output<String> v3Id1;
 
-    public String v3Id1() {
+    public Output<String> v3Id1() {
         return this.v3Id1;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private @Nullable Output<String> view;
 
-    public Optional<String> view() {
+    public Optional<Output<String>> view() {
         return Optional.ofNullable(this.view);
     }
 
@@ -77,29 +78,49 @@ public final class GetServiceLevelObjectiveArgs extends com.pulumi.resources.Inv
             $ = new GetServiceLevelObjectiveArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder serviceId(String serviceId) {
+        public Builder serviceId(Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
         }
 
-        public Builder serviceLevelObjectiveId(String serviceLevelObjectiveId) {
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
+        }
+
+        public Builder serviceLevelObjectiveId(Output<String> serviceLevelObjectiveId) {
             $.serviceLevelObjectiveId = serviceLevelObjectiveId;
             return this;
         }
 
-        public Builder v3Id(String v3Id) {
+        public Builder serviceLevelObjectiveId(String serviceLevelObjectiveId) {
+            return serviceLevelObjectiveId(Output.of(serviceLevelObjectiveId));
+        }
+
+        public Builder v3Id(Output<String> v3Id) {
             $.v3Id = v3Id;
             return this;
         }
 
-        public Builder v3Id1(String v3Id1) {
+        public Builder v3Id(String v3Id) {
+            return v3Id(Output.of(v3Id));
+        }
+
+        public Builder v3Id1(Output<String> v3Id1) {
             $.v3Id1 = v3Id1;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder v3Id1(String v3Id1) {
+            return v3Id1(Output.of(v3Id1));
+        }
+
+        public Builder view(@Nullable Output<String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(String view) {
+            return view(Output.of(view));
         }
 
         public GetServiceLevelObjectiveArgs build() {

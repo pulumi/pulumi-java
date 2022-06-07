@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCatalogArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogId", required=true)
-    private String catalogId;
+    private Output<String> catalogId;
 
     /**
      * @return Unique catalog identifier.
      * 
      */
-    public String catalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCatalogArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder catalogId(String catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
+        }
+
+        /**
+         * @param catalogId Unique catalog identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
 
         public GetCatalogArgs build() {

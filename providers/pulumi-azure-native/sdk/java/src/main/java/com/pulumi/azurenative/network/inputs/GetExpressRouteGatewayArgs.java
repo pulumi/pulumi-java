@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExpressRouteGatewayArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="expressRouteGatewayName", required=true)
-    private String expressRouteGatewayName;
+    private Output<String> expressRouteGatewayName;
 
     /**
      * @return The name of the ExpressRoute gateway.
      * 
      */
-    public String expressRouteGatewayName() {
+    public Output<String> expressRouteGatewayName() {
         return this.expressRouteGatewayName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExpressRouteGatewayArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetExpressRouteGatewayArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder expressRouteGatewayName(String expressRouteGatewayName) {
+        public Builder expressRouteGatewayName(Output<String> expressRouteGatewayName) {
             $.expressRouteGatewayName = expressRouteGatewayName;
+            return this;
+        }
+
+        /**
+         * @param expressRouteGatewayName The name of the ExpressRoute gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expressRouteGatewayName(String expressRouteGatewayName) {
+            return expressRouteGatewayName(Output.of(expressRouteGatewayName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetExpressRouteGatewayArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExpressRouteGatewayArgs build() {

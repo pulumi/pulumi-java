@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTenancyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tenancyId", required=true)
-    private String tenancyId;
+    private Output<String> tenancyId;
 
     /**
      * @return The OCID of the tenancy.
      * 
      */
-    public String tenancyId() {
+    public Output<String> tenancyId() {
         return this.tenancyId;
     }
 
@@ -57,9 +58,19 @@ public final class GetTenancyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tenancyId(String tenancyId) {
+        public Builder tenancyId(Output<String> tenancyId) {
             $.tenancyId = tenancyId;
             return this;
+        }
+
+        /**
+         * @param tenancyId The OCID of the tenancy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tenancyId(String tenancyId) {
+            return tenancyId(Output.of(tenancyId));
         }
 
         public GetTenancyArgs build() {

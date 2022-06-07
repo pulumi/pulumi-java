@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetInstanceGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the instance group. Either `name` or `self_link` must be provided.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -35,14 +36,14 @@ public final class GetInstanceGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The ID of the project in which the resource belongs. If it
      * is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -51,13 +52,13 @@ public final class GetInstanceGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="selfLink")
-    private @Nullable String selfLink;
+    private @Nullable Output<String> selfLink;
 
     /**
      * @return The self link of the instance group. Either `name` or `self_link` must be provided.
      * 
      */
-    public Optional<String> selfLink() {
+    public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
 
@@ -67,14 +68,14 @@ public final class GetInstanceGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="zone")
-    private @Nullable String zone;
+    private @Nullable Output<String> zone;
 
     /**
      * @return The zone of the instance group. If referencing the instance group by name
      * and `zone` is not provided, the provider zone is used.
      * 
      */
-    public Optional<String> zone() {
+    public Optional<Output<String>> zone() {
         return Optional.ofNullable(this.zone);
     }
 
@@ -111,8 +112,30 @@ public final class GetInstanceGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the instance group. Either `name` or `self_link` must be provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable Output<String> project) {
+            $.project = project;
             return this;
         }
 
@@ -123,8 +146,18 @@ public final class GetInstanceGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
-            $.project = project;
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param selfLink The self link of the instance group. Either `name` or `self_link` must be provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder selfLink(@Nullable Output<String> selfLink) {
+            $.selfLink = selfLink;
             return this;
         }
 
@@ -134,8 +167,19 @@ public final class GetInstanceGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder selfLink(@Nullable String selfLink) {
-            $.selfLink = selfLink;
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        /**
+         * @param zone The zone of the instance group. If referencing the instance group by name
+         * and `zone` is not provided, the provider zone is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zone(@Nullable Output<String> zone) {
+            $.zone = zone;
             return this;
         }
 
@@ -146,9 +190,8 @@ public final class GetInstanceGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder zone(@Nullable String zone) {
-            $.zone = zone;
-            return this;
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetInstanceGroupArgs build() {

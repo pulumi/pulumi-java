@@ -5,9 +5,12 @@ package com.pulumi.azurenative.education;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.education.inputs.GetGetLabArgs;
+import com.pulumi.azurenative.education.inputs.GetGetLabPlainArgs;
 import com.pulumi.azurenative.education.inputs.GetGetStudentArgs;
+import com.pulumi.azurenative.education.inputs.GetGetStudentPlainArgs;
 import com.pulumi.azurenative.education.outputs.GetGetLabResult;
 import com.pulumi.azurenative.education.outputs.GetGetStudentResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +22,7 @@ public final class EducationFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetGetLabResult> getGetLab(GetGetLabArgs args) {
+    public static Output<GetGetLabResult> getGetLab(GetGetLabArgs args) {
         return getGetLab(args, InvokeOptions.Empty);
     }
     /**
@@ -27,7 +30,23 @@ public final class EducationFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetGetLabResult> getGetLab(GetGetLabArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGetLabResult> getGetLabPlain(GetGetLabPlainArgs args) {
+        return getGetLabPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Lab details.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
+    public static Output<GetGetLabResult> getGetLab(GetGetLabArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:education:getGetLab", TypeShape.of(GetGetLabResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Lab details.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetGetLabResult> getGetLabPlain(GetGetLabPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:education:getGetLab", TypeShape.of(GetGetLabResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -35,7 +54,7 @@ public final class EducationFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetGetStudentResult> getGetStudent(GetGetStudentArgs args) {
+    public static Output<GetGetStudentResult> getGetStudent(GetGetStudentArgs args) {
         return getGetStudent(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +62,23 @@ public final class EducationFunctions {
      * API Version: 2021-12-01-preview.
      * 
      */
-    public static CompletableFuture<GetGetStudentResult> getGetStudent(GetGetStudentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGetStudentResult> getGetStudentPlain(GetGetStudentPlainArgs args) {
+        return getGetStudentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Student details.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
+    public static Output<GetGetStudentResult> getGetStudent(GetGetStudentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:education:getGetStudent", TypeShape.of(GetGetStudentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Student details.
+     * API Version: 2021-12-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetGetStudentResult> getGetStudentPlain(GetGetStudentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:education:getGetStudent", TypeShape.of(GetGetStudentResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTransitGatewayMulticastGroupMemberArgs extends com.pulumi.
      * 
      */
     @Import(name="groupIpAddress", required=true)
-    private String groupIpAddress;
+    private Output<String> groupIpAddress;
 
     /**
      * @return The IP address assigned to the transit gateway multicast group.
      * 
      */
-    public String groupIpAddress() {
+    public Output<String> groupIpAddress() {
         return this.groupIpAddress;
     }
 
@@ -32,13 +33,13 @@ public final class GetTransitGatewayMulticastGroupMemberArgs extends com.pulumi.
      * 
      */
     @Import(name="networkInterfaceId", required=true)
-    private String networkInterfaceId;
+    private Output<String> networkInterfaceId;
 
     /**
      * @return The ID of the transit gateway attachment.
      * 
      */
-    public String networkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -47,13 +48,13 @@ public final class GetTransitGatewayMulticastGroupMemberArgs extends com.pulumi.
      * 
      */
     @Import(name="transitGatewayMulticastDomainId", required=true)
-    private String transitGatewayMulticastDomainId;
+    private Output<String> transitGatewayMulticastDomainId;
 
     /**
      * @return The ID of the transit gateway multicast domain.
      * 
      */
-    public String transitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
@@ -89,8 +90,29 @@ public final class GetTransitGatewayMulticastGroupMemberArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder groupIpAddress(String groupIpAddress) {
+        public Builder groupIpAddress(Output<String> groupIpAddress) {
             $.groupIpAddress = groupIpAddress;
+            return this;
+        }
+
+        /**
+         * @param groupIpAddress The IP address assigned to the transit gateway multicast group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupIpAddress(String groupIpAddress) {
+            return groupIpAddress(Output.of(groupIpAddress));
+        }
+
+        /**
+         * @param networkInterfaceId The ID of the transit gateway attachment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkInterfaceId(Output<String> networkInterfaceId) {
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetTransitGatewayMulticastGroupMemberArgs extends com.pulumi.
          * 
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
-            $.networkInterfaceId = networkInterfaceId;
+            return networkInterfaceId(Output.of(networkInterfaceId));
+        }
+
+        /**
+         * @param transitGatewayMulticastDomainId The ID of the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayMulticastDomainId(Output<String> transitGatewayMulticastDomainId) {
+            $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetTransitGatewayMulticastGroupMemberArgs extends com.pulumi.
          * 
          */
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
-            $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
-            return this;
+            return transitGatewayMulticastDomainId(Output.of(transitGatewayMulticastDomainId));
         }
 
         public GetTransitGatewayMulticastGroupMemberArgs build() {

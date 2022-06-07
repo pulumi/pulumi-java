@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetNetblockIPRangesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rangeType")
-    private @Nullable String rangeType;
+    private @Nullable Output<String> rangeType;
 
     /**
      * @return The type of range for which to provide results.
      * 
      */
-    public Optional<String> rangeType() {
+    public Optional<Output<String>> rangeType() {
         return Optional.ofNullable(this.rangeType);
     }
 
@@ -59,9 +60,19 @@ public final class GetNetblockIPRangesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder rangeType(@Nullable String rangeType) {
+        public Builder rangeType(@Nullable Output<String> rangeType) {
             $.rangeType = rangeType;
             return this;
+        }
+
+        /**
+         * @param rangeType The type of range for which to provide results.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rangeType(String rangeType) {
+            return rangeType(Output.of(rangeType));
         }
 
         public GetNetblockIPRangesArgs build() {

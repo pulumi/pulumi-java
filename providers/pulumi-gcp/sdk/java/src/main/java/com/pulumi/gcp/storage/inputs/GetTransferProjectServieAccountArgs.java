@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetTransferProjectServieAccountArgs extends com.pulumi.resour
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The project ID. If it is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -59,9 +60,19 @@ public final class GetTransferProjectServieAccountArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        /**
+         * @param project The project ID. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetTransferProjectServieAccountArgs build() {

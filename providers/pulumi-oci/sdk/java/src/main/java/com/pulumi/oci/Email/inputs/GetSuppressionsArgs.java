@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Email.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Email.inputs.GetSuppressionsFilter;
+import com.pulumi.oci.Email.inputs.GetSuppressionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetSuppressionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID for the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetSuppressionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="emailAddress")
-    private @Nullable String emailAddress;
+    private @Nullable Output<String> emailAddress;
 
     /**
      * @return The email address of the suppression.
      * 
      */
-    public Optional<String> emailAddress() {
+    public Optional<Output<String>> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSuppressionsFilter> filters;
+    private @Nullable Output<List<GetSuppressionsFilterArgs>> filters;
 
-    public Optional<List<GetSuppressionsFilter>> filters() {
+    public Optional<Output<List<GetSuppressionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetSuppressionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private @Nullable String timeCreatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return Search for suppressions that were created within a specific date range, using this parameter to specify the earliest creation date for the returned list (inclusive). Specifying this parameter without the corresponding `timeCreatedLessThan` parameter will retrieve suppressions created from the given `timeCreatedGreaterThanOrEqualTo` to the current time, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Optional<String> timeCreatedGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timeCreatedGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
     }
 
@@ -73,13 +74,13 @@ public final class GetSuppressionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private @Nullable String timeCreatedLessThan;
+    private @Nullable Output<String> timeCreatedLessThan;
 
     /**
      * @return Search for suppressions that were created within a specific date range, using this parameter to specify the latest creation date for the returned list (exclusive). Specifying this parameter without the corresponding `timeCreatedGreaterThanOrEqualTo` parameter will retrieve all suppressions created before the specified end date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Optional<String> timeCreatedLessThan() {
+    public Optional<Output<String>> timeCreatedLessThan() {
         return Optional.ofNullable(this.timeCreatedLessThan);
     }
 
@@ -117,8 +118,29 @@ public final class GetSuppressionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param emailAddress The email address of the suppression.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder emailAddress(@Nullable Output<String> emailAddress) {
+            $.emailAddress = emailAddress;
             return this;
         }
 
@@ -128,17 +150,20 @@ public final class GetSuppressionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder emailAddress(@Nullable String emailAddress) {
-            $.emailAddress = emailAddress;
-            return this;
+        public Builder emailAddress(String emailAddress) {
+            return emailAddress(Output.of(emailAddress));
         }
 
-        public Builder filters(@Nullable List<GetSuppressionsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetSuppressionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSuppressionsFilter... filters) {
+        public Builder filters(List<GetSuppressionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSuppressionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -148,8 +173,29 @@ public final class GetSuppressionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable Output<String> timeCreatedGreaterThanOrEqualTo) {
             $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
+            return this;
+        }
+
+        /**
+         * @param timeCreatedGreaterThanOrEqualTo Search for suppressions that were created within a specific date range, using this parameter to specify the earliest creation date for the returned list (inclusive). Specifying this parameter without the corresponding `timeCreatedLessThan` parameter will retrieve suppressions created from the given `timeCreatedGreaterThanOrEqualTo` to the current time, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedGreaterThanOrEqualTo(String timeCreatedGreaterThanOrEqualTo) {
+            return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeCreatedLessThan Search for suppressions that were created within a specific date range, using this parameter to specify the latest creation date for the returned list (exclusive). Specifying this parameter without the corresponding `timeCreatedGreaterThanOrEqualTo` parameter will retrieve all suppressions created before the specified end date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedLessThan(@Nullable Output<String> timeCreatedLessThan) {
+            $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetSuppressionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
-            $.timeCreatedLessThan = timeCreatedLessThan;
-            return this;
+        public Builder timeCreatedLessThan(String timeCreatedLessThan) {
+            return timeCreatedLessThan(Output.of(timeCreatedLessThan));
         }
 
         public GetSuppressionsArgs build() {

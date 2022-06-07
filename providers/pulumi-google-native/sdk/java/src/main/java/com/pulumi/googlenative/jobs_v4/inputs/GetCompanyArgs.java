@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.jobs_v4.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetCompanyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCompanyArgs Empty = new GetCompanyArgs();
 
     @Import(name="companyId", required=true)
-    private String companyId;
+    private Output<String> companyId;
 
-    public String companyId() {
+    public Output<String> companyId() {
         return this.companyId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="tenantId", required=true)
-    private String tenantId;
+    private Output<String> tenantId;
 
-    public String tenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 
@@ -61,19 +62,31 @@ public final class GetCompanyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCompanyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder companyId(String companyId) {
+        public Builder companyId(Output<String> companyId) {
             $.companyId = companyId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder companyId(String companyId) {
+            return companyId(Output.of(companyId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder tenantId(String tenantId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder tenantId(Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
+        }
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
 
         public GetCompanyArgs build() {

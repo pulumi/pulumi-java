@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.billing.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEnrollmentAccountScopeArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="billingAccountName", required=true)
-    private String billingAccountName;
+    private Output<String> billingAccountName;
 
     /**
      * @return The Billing Account Name of the Enterprise Account.
      * 
      */
-    public String billingAccountName() {
+    public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetEnrollmentAccountScopeArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="enrollmentAccountName", required=true)
-    private String enrollmentAccountName;
+    private Output<String> enrollmentAccountName;
 
     /**
      * @return The Enrollment Account Name in the above Enterprise Account.
      * 
      */
-    public String enrollmentAccountName() {
+    public Output<String> enrollmentAccountName() {
         return this.enrollmentAccountName;
     }
 
@@ -73,8 +74,29 @@ public final class GetEnrollmentAccountScopeArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder billingAccountName(String billingAccountName) {
+        public Builder billingAccountName(Output<String> billingAccountName) {
             $.billingAccountName = billingAccountName;
+            return this;
+        }
+
+        /**
+         * @param billingAccountName The Billing Account Name of the Enterprise Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccountName(String billingAccountName) {
+            return billingAccountName(Output.of(billingAccountName));
+        }
+
+        /**
+         * @param enrollmentAccountName The Enrollment Account Name in the above Enterprise Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enrollmentAccountName(Output<String> enrollmentAccountName) {
+            $.enrollmentAccountName = enrollmentAccountName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetEnrollmentAccountScopeArgs extends com.pulumi.resources.In
          * 
          */
         public Builder enrollmentAccountName(String enrollmentAccountName) {
-            $.enrollmentAccountName = enrollmentAccountName;
-            return this;
+            return enrollmentAccountName(Output.of(enrollmentAccountName));
         }
 
         public GetEnrollmentAccountScopeArgs build() {

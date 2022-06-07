@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -20,13 +21,13 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the Name of the NAT Gateway.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -35,13 +36,13 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicIpAddressIds")
-    private @Nullable List<String> publicIpAddressIds;
+    private @Nullable Output<List<String>> publicIpAddressIds;
 
     /**
      * @return A list of existing Public IP Address resource IDs which the NAT Gateway is using.
      * 
      */
-    public Optional<List<String>> publicIpAddressIds() {
+    public Optional<Output<List<String>>> publicIpAddressIds() {
         return Optional.ofNullable(this.publicIpAddressIds);
     }
 
@@ -50,13 +51,13 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicIpPrefixIds")
-    private @Nullable List<String> publicIpPrefixIds;
+    private @Nullable Output<List<String>> publicIpPrefixIds;
 
     /**
      * @return A list of existing Public IP Prefix resource IDs which the NAT Gateway is using.
      * 
      */
-    public Optional<List<String>> publicIpPrefixIds() {
+    public Optional<Output<List<String>>> publicIpPrefixIds() {
         return Optional.ofNullable(this.publicIpPrefixIds);
     }
 
@@ -65,13 +66,13 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Specifies the name of the Resource Group where the NAT Gateway exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -108,8 +109,29 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Specifies the Name of the NAT Gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param publicIpAddressIds A list of existing Public IP Address resource IDs which the NAT Gateway is using.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicIpAddressIds(@Nullable Output<List<String>> publicIpAddressIds) {
+            $.publicIpAddressIds = publicIpAddressIds;
             return this;
         }
 
@@ -119,9 +141,8 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicIpAddressIds(@Nullable List<String> publicIpAddressIds) {
-            $.publicIpAddressIds = publicIpAddressIds;
-            return this;
+        public Builder publicIpAddressIds(List<String> publicIpAddressIds) {
+            return publicIpAddressIds(Output.of(publicIpAddressIds));
         }
 
         /**
@@ -140,9 +161,19 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicIpPrefixIds(@Nullable List<String> publicIpPrefixIds) {
+        public Builder publicIpPrefixIds(@Nullable Output<List<String>> publicIpPrefixIds) {
             $.publicIpPrefixIds = publicIpPrefixIds;
             return this;
+        }
+
+        /**
+         * @param publicIpPrefixIds A list of existing Public IP Prefix resource IDs which the NAT Gateway is using.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicIpPrefixIds(List<String> publicIpPrefixIds) {
+            return publicIpPrefixIds(Output.of(publicIpPrefixIds));
         }
 
         /**
@@ -161,9 +192,19 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
+        }
+
+        /**
+         * @param resourceGroupName Specifies the name of the Resource Group where the NAT Gateway exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNatGatewayArgs build() {

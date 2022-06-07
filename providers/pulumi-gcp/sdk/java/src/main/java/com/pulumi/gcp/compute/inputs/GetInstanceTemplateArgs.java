@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +23,7 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filter")
-    private @Nullable String filter;
+    private @Nullable Output<String> filter;
 
     /**
      * @return A filter to retrieve the instance templates.
@@ -30,7 +31,7 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
      * 
      */
-    public Optional<String> filter() {
+    public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
 
@@ -39,13 +40,13 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="mostRecent")
-    private @Nullable Boolean mostRecent;
+    private @Nullable Output<Boolean> mostRecent;
 
     /**
      * @return If `filter` is provided, ensures the most recent template is returned when multiple instance templates match. One of `name` or `filter` must be provided.
      * 
      */
-    public Optional<Boolean> mostRecent() {
+    public Optional<Output<Boolean>> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
 
@@ -54,13 +55,13 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the instance template. One of `name` or `filter` must be provided.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -70,14 +71,14 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The ID of the project in which the resource belongs.
      * If `project` is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -116,8 +117,31 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filter(@Nullable String filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
+            return this;
+        }
+
+        /**
+         * @param filter A filter to retrieve the instance templates.
+         * See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
+         * If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
+        }
+
+        /**
+         * @param mostRecent If `filter` is provided, ensures the most recent template is returned when multiple instance templates match. One of `name` or `filter` must be provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mostRecent(@Nullable Output<Boolean> mostRecent) {
+            $.mostRecent = mostRecent;
             return this;
         }
 
@@ -127,8 +151,18 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
-            $.mostRecent = mostRecent;
+        public Builder mostRecent(Boolean mostRecent) {
+            return mostRecent(Output.of(mostRecent));
+        }
+
+        /**
+         * @param name The name of the instance template. One of `name` or `filter` must be provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -138,8 +172,19 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If `project` is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable Output<String> project) {
+            $.project = project;
             return this;
         }
 
@@ -150,9 +195,8 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
-            $.project = project;
-            return this;
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetInstanceTemplateArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.iam_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
     @Import(name="keyId", required=true)
-    private String keyId;
+    private Output<String> keyId;
 
-    public String keyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="publicKeyType")
-    private @Nullable String publicKeyType;
+    private @Nullable Output<String> publicKeyType;
 
-    public Optional<String> publicKeyType() {
+    public Optional<Output<String>> publicKeyType() {
         return Optional.ofNullable(this.publicKeyType);
     }
 
     @Import(name="serviceAccountId", required=true)
-    private String serviceAccountId;
+    private Output<String> serviceAccountId;
 
-    public String serviceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 
@@ -69,24 +70,40 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKeyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder keyId(String keyId) {
+        public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder publicKeyType(@Nullable String publicKeyType) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder publicKeyType(@Nullable Output<String> publicKeyType) {
             $.publicKeyType = publicKeyType;
             return this;
         }
 
-        public Builder serviceAccountId(String serviceAccountId) {
+        public Builder publicKeyType(String publicKeyType) {
+            return publicKeyType(Output.of(publicKeyType));
+        }
+
+        public Builder serviceAccountId(Output<String> serviceAccountId) {
             $.serviceAccountId = serviceAccountId;
             return this;
+        }
+
+        public Builder serviceAccountId(String serviceAccountId) {
+            return serviceAccountId(Output.of(serviceAccountId));
         }
 
         public GetKeyArgs build() {

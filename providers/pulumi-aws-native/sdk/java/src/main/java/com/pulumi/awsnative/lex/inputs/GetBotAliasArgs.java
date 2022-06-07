@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lex.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetBotAliasArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBotAliasArgs Empty = new GetBotAliasArgs();
 
     @Import(name="botAliasId", required=true)
-    private String botAliasId;
+    private Output<String> botAliasId;
 
-    public String botAliasId() {
+    public Output<String> botAliasId() {
         return this.botAliasId;
     }
 
     @Import(name="botId", required=true)
-    private String botId;
+    private Output<String> botId;
 
-    public String botId() {
+    public Output<String> botId() {
         return this.botId;
     }
 
@@ -51,14 +52,22 @@ public final class GetBotAliasArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBotAliasArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder botAliasId(String botAliasId) {
+        public Builder botAliasId(Output<String> botAliasId) {
             $.botAliasId = botAliasId;
             return this;
         }
 
-        public Builder botId(String botId) {
+        public Builder botAliasId(String botAliasId) {
+            return botAliasId(Output.of(botAliasId));
+        }
+
+        public Builder botId(Output<String> botId) {
             $.botId = botId;
             return this;
+        }
+
+        public Builder botId(String botId) {
+            return botId(Output.of(botId));
         }
 
         public GetBotAliasArgs build() {

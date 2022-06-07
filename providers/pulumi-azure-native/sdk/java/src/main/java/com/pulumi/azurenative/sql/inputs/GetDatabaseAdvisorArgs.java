@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="advisorName", required=true)
-    private String advisorName;
+    private Output<String> advisorName;
 
     /**
      * @return The name of the Database Advisor.
      * 
      */
-    public String advisorName() {
+    public Output<String> advisorName() {
         return this.advisorName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="databaseName", required=true)
-    private String databaseName;
+    private Output<String> databaseName;
 
     /**
      * @return The name of the database.
      * 
      */
-    public String databaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -47,13 +48,13 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the server.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -105,8 +106,29 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder advisorName(String advisorName) {
+        public Builder advisorName(Output<String> advisorName) {
             $.advisorName = advisorName;
+            return this;
+        }
+
+        /**
+         * @param advisorName The name of the Database Advisor.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder advisorName(String advisorName) {
+            return advisorName(Output.of(advisorName));
+        }
+
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseName(Output<String> databaseName) {
+            $.databaseName = databaseName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder databaseName(String databaseName) {
-            $.databaseName = databaseName;
+            return databaseName(Output.of(databaseName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
-            return this;
+            return serverName(Output.of(serverName));
         }
 
         public GetDatabaseAdvisorArgs build() {

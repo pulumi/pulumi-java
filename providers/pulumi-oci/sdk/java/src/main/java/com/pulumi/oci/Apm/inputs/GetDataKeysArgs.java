@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Apm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Apm.inputs.GetDataKeysFilter;
+import com.pulumi.oci.Apm.inputs.GetDataKeysFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetDataKeysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apmDomainId", required=true)
-    private String apmDomainId;
+    private Output<String> apmDomainId;
 
     /**
      * @return The OCID of the APM domain
      * 
      */
-    public String apmDomainId() {
+    public Output<String> apmDomainId() {
         return this.apmDomainId;
     }
 
@@ -36,20 +37,20 @@ public final class GetDataKeysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataKeyType")
-    private @Nullable String dataKeyType;
+    private @Nullable Output<String> dataKeyType;
 
     /**
      * @return Data key type.
      * 
      */
-    public Optional<String> dataKeyType() {
+    public Optional<Output<String>> dataKeyType() {
         return Optional.ofNullable(this.dataKeyType);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDataKeysFilter> filters;
+    private @Nullable Output<List<GetDataKeysFilterArgs>> filters;
 
-    public Optional<List<GetDataKeysFilter>> filters() {
+    public Optional<Output<List<GetDataKeysFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -85,8 +86,29 @@ public final class GetDataKeysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apmDomainId(String apmDomainId) {
+        public Builder apmDomainId(Output<String> apmDomainId) {
             $.apmDomainId = apmDomainId;
+            return this;
+        }
+
+        /**
+         * @param apmDomainId The OCID of the APM domain
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apmDomainId(String apmDomainId) {
+            return apmDomainId(Output.of(apmDomainId));
+        }
+
+        /**
+         * @param dataKeyType Data key type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataKeyType(@Nullable Output<String> dataKeyType) {
+            $.dataKeyType = dataKeyType;
             return this;
         }
 
@@ -96,17 +118,20 @@ public final class GetDataKeysArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dataKeyType(@Nullable String dataKeyType) {
-            $.dataKeyType = dataKeyType;
-            return this;
+        public Builder dataKeyType(String dataKeyType) {
+            return dataKeyType(Output.of(dataKeyType));
         }
 
-        public Builder filters(@Nullable List<GetDataKeysFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDataKeysFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDataKeysFilter... filters) {
+        public Builder filters(List<GetDataKeysFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDataKeysFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

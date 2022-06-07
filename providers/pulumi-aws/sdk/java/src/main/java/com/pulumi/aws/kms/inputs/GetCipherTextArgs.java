@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="context")
-    private @Nullable Map<String,String> context;
+    private @Nullable Output<Map<String,String>> context;
 
     /**
      * @return An optional mapping that makes up the encryption context.
      * 
      */
-    public Optional<Map<String,String>> context() {
+    public Optional<Output<Map<String,String>>> context() {
         return Optional.ofNullable(this.context);
     }
 
@@ -35,13 +36,13 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyId", required=true)
-    private String keyId;
+    private Output<String> keyId;
 
     /**
      * @return Globally unique key ID for the customer master key.
      * 
      */
-    public String keyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -50,13 +51,13 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="plaintext", required=true)
-    private String plaintext;
+    private Output<String> plaintext;
 
     /**
      * @return Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
      * 
      */
-    public String plaintext() {
+    public Output<String> plaintext() {
         return this.plaintext;
     }
 
@@ -92,8 +93,29 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder context(@Nullable Map<String,String> context) {
+        public Builder context(@Nullable Output<Map<String,String>> context) {
             $.context = context;
+            return this;
+        }
+
+        /**
+         * @param context An optional mapping that makes up the encryption context.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder context(Map<String,String> context) {
+            return context(Output.of(context));
+        }
+
+        /**
+         * @param keyId Globally unique key ID for the customer master key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyId(Output<String> keyId) {
+            $.keyId = keyId;
             return this;
         }
 
@@ -104,7 +126,17 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder keyId(String keyId) {
-            $.keyId = keyId;
+            return keyId(Output.of(keyId));
+        }
+
+        /**
+         * @param plaintext Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder plaintext(Output<String> plaintext) {
+            $.plaintext = plaintext;
             return this;
         }
 
@@ -115,8 +147,7 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder plaintext(String plaintext) {
-            $.plaintext = plaintext;
-            return this;
+            return plaintext(Output.of(plaintext));
         }
 
         public GetCipherTextArgs build() {

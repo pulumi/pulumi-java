@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Oda.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Oda.inputs.GetOdaInstancesFilter;
+import com.pulumi.oci.Oda.inputs.GetOdaInstancesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetOdaInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return List the Digital Assistant instances that belong to this compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetOdaInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return List only the information for the Digital Assistant instance with this user-friendly name. These names don&#39;t have to be unique and may change.  Example: `My new resource`
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetOdaInstancesFilter> filters;
+    private @Nullable Output<List<GetOdaInstancesFilterArgs>> filters;
 
-    public Optional<List<GetOdaInstancesFilter>> filters() {
+    public Optional<Output<List<GetOdaInstancesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetOdaInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return List only the Digital Assistant instances that are in this lifecycle state.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -101,8 +102,29 @@ public final class GetOdaInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId List the Digital Assistant instances that belong to this compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName List only the information for the Digital Assistant instance with this user-friendly name. These names don&#39;t have to be unique and may change.  Example: `My new resource`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -112,17 +134,20 @@ public final class GetOdaInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetOdaInstancesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetOdaInstancesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetOdaInstancesFilter... filters) {
+        public Builder filters(List<GetOdaInstancesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetOdaInstancesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -132,9 +157,19 @@ public final class GetOdaInstancesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state List only the Digital Assistant instances that are in this lifecycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetOdaInstancesArgs build() {

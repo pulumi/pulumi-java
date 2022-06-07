@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.awsnative.wafv2.enums.RegexPatternSetScope;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -18,13 +19,13 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
     /**
      * @return Id of the RegexPatternSet
      * 
      */
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -33,13 +34,13 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the RegexPatternSet.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,13 +49,13 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scope", required=true)
-    private RegexPatternSetScope scope;
+    private Output<RegexPatternSetScope> scope;
 
     /**
      * @return Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
      * 
      */
-    public RegexPatternSetScope scope() {
+    public Output<RegexPatternSetScope> scope() {
         return this.scope;
     }
 
@@ -90,8 +91,29 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Id of the RegexPatternSet
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param name Name of the RegexPatternSet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -102,7 +124,17 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param scope Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<RegexPatternSetScope> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -113,8 +145,7 @@ public final class GetRegexPatternSetArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder scope(RegexPatternSetScope scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetRegexPatternSetArgs build() {

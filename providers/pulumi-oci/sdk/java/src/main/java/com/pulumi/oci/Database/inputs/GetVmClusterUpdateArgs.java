@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVmClusterUpdateArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="updateId", required=true)
-    private String updateId;
+    private Output<String> updateId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the maintenance update.
      * 
      */
-    public String updateId() {
+    public Output<String> updateId() {
         return this.updateId;
     }
 
@@ -32,13 +33,13 @@ public final class GetVmClusterUpdateArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="vmClusterId", required=true)
-    private String vmClusterId;
+    private Output<String> vmClusterId;
 
     /**
      * @return The VM cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String vmClusterId() {
+    public Output<String> vmClusterId() {
         return this.vmClusterId;
     }
 
@@ -73,8 +74,29 @@ public final class GetVmClusterUpdateArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder updateId(String updateId) {
+        public Builder updateId(Output<String> updateId) {
             $.updateId = updateId;
+            return this;
+        }
+
+        /**
+         * @param updateId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the maintenance update.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder updateId(String updateId) {
+            return updateId(Output.of(updateId));
+        }
+
+        /**
+         * @param vmClusterId The VM cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmClusterId(Output<String> vmClusterId) {
+            $.vmClusterId = vmClusterId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVmClusterUpdateArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder vmClusterId(String vmClusterId) {
-            $.vmClusterId = vmClusterId;
-            return this;
+            return vmClusterId(Output.of(vmClusterId));
         }
 
         public GetVmClusterUpdateArgs build() {

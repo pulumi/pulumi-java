@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetBootVolumeAttachmentsFilter;
+import com.pulumi.oci.Core.inputs.GetBootVolumeAttachmentsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetBootVolumeAttachmentsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="availabilityDomain", required=true)
-    private String availabilityDomain;
+    private Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public String availabilityDomain() {
+    public Output<String> availabilityDomain() {
         return this.availabilityDomain;
     }
 
@@ -36,13 +37,13 @@ public final class GetBootVolumeAttachmentsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="bootVolumeId")
-    private @Nullable String bootVolumeId;
+    private @Nullable Output<String> bootVolumeId;
 
     /**
      * @return The OCID of the boot volume.
      * 
      */
-    public Optional<String> bootVolumeId() {
+    public Optional<Output<String>> bootVolumeId() {
         return Optional.ofNullable(this.bootVolumeId);
     }
 
@@ -51,20 +52,20 @@ public final class GetBootVolumeAttachmentsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBootVolumeAttachmentsFilter> filters;
+    private @Nullable Output<List<GetBootVolumeAttachmentsFilterArgs>> filters;
 
-    public Optional<List<GetBootVolumeAttachmentsFilter>> filters() {
+    public Optional<Output<List<GetBootVolumeAttachmentsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetBootVolumeAttachmentsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="instanceId")
-    private @Nullable String instanceId;
+    private @Nullable Output<String> instanceId;
 
     /**
      * @return The OCID of the instance.
      * 
      */
-    public Optional<String> instanceId() {
+    public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
 
@@ -117,8 +118,29 @@ public final class GetBootVolumeAttachmentsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder availabilityDomain(String availabilityDomain) {
+        public Builder availabilityDomain(Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param bootVolumeId The OCID of the boot volume.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bootVolumeId(@Nullable Output<String> bootVolumeId) {
+            $.bootVolumeId = bootVolumeId;
             return this;
         }
 
@@ -128,8 +150,18 @@ public final class GetBootVolumeAttachmentsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder bootVolumeId(@Nullable String bootVolumeId) {
-            $.bootVolumeId = bootVolumeId;
+        public Builder bootVolumeId(String bootVolumeId) {
+            return bootVolumeId(Output.of(bootVolumeId));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -140,16 +172,19 @@ public final class GetBootVolumeAttachmentsArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
-            return this;
+            return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(@Nullable List<GetBootVolumeAttachmentsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetBootVolumeAttachmentsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetBootVolumeAttachmentsFilter... filters) {
+        public Builder filters(List<GetBootVolumeAttachmentsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetBootVolumeAttachmentsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -159,9 +194,19 @@ public final class GetBootVolumeAttachmentsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder instanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
+        }
+
+        /**
+         * @param instanceId The OCID of the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
 
         public GetBootVolumeAttachmentsArgs build() {

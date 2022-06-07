@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.resiliencehub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResiliencyPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="policyArn", required=true)
-    private String policyArn;
+    private Output<String> policyArn;
 
     /**
      * @return Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
      */
-    public String policyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetResiliencyPolicyArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder policyArn(String policyArn) {
+        public Builder policyArn(Output<String> policyArn) {
             $.policyArn = policyArn;
             return this;
+        }
+
+        /**
+         * @param policyArn Amazon Resource Name (ARN) of the Resiliency Policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyArn(String policyArn) {
+            return policyArn(Output.of(policyArn));
         }
 
         public GetResiliencyPolicyArgs build() {

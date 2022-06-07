@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetMaintenanceRunsFilter;
+import com.pulumi.oci.Database.inputs.GetMaintenanceRunsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return A filter to return only resources that match the given availability domain exactly.
      * 
      */
-    public Optional<String> availabilityDomain() {
+    public Optional<Output<String>> availabilityDomain() {
         return Optional.ofNullable(this.availabilityDomain);
     }
 
@@ -36,20 +37,20 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetMaintenanceRunsFilter> filters;
+    private @Nullable Output<List<GetMaintenanceRunsFilterArgs>> filters;
 
-    public Optional<List<GetMaintenanceRunsFilter>> filters() {
+    public Optional<Output<List<GetMaintenanceRunsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="maintenanceType")
-    private @Nullable String maintenanceType;
+    private @Nullable Output<String> maintenanceType;
 
     /**
      * @return The maintenance type.
      * 
      */
-    public Optional<String> maintenanceType() {
+    public Optional<Output<String>> maintenanceType() {
         return Optional.ofNullable(this.maintenanceType);
     }
 
@@ -73,13 +74,13 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -88,13 +89,13 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="targetResourceId")
-    private @Nullable String targetResourceId;
+    private @Nullable Output<String> targetResourceId;
 
     /**
      * @return The target resource ID.
      * 
      */
-    public Optional<String> targetResourceId() {
+    public Optional<Output<String>> targetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
 
@@ -103,13 +104,13 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="targetResourceType")
-    private @Nullable String targetResourceType;
+    private @Nullable Output<String> targetResourceType;
 
     /**
      * @return The type of the target resource. Accepted values are: AUTONOMOUS_CONTAINER_DATABASE, AUTONOMOUS_EXADATA_INFRASTRUCTURE, EXADATA_DB_SYSTEM
      * 
      */
-    public Optional<String> targetResourceType() {
+    public Optional<Output<String>> targetResourceType() {
         return Optional.ofNullable(this.targetResourceType);
     }
 
@@ -149,8 +150,29 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain A filter to return only resources that match the given availability domain exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -161,16 +183,19 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
-            return this;
+            return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(@Nullable List<GetMaintenanceRunsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetMaintenanceRunsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetMaintenanceRunsFilter... filters) {
+        public Builder filters(List<GetMaintenanceRunsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetMaintenanceRunsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -180,8 +205,29 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder maintenanceType(@Nullable String maintenanceType) {
+        public Builder maintenanceType(@Nullable Output<String> maintenanceType) {
             $.maintenanceType = maintenanceType;
+            return this;
+        }
+
+        /**
+         * @param maintenanceType The maintenance type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maintenanceType(String maintenanceType) {
+            return maintenanceType(Output.of(maintenanceType));
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -191,8 +237,18 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param targetResourceId The target resource ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
+            $.targetResourceId = targetResourceId;
             return this;
         }
 
@@ -202,8 +258,18 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder targetResourceId(@Nullable String targetResourceId) {
-            $.targetResourceId = targetResourceId;
+        public Builder targetResourceId(String targetResourceId) {
+            return targetResourceId(Output.of(targetResourceId));
+        }
+
+        /**
+         * @param targetResourceType The type of the target resource. Accepted values are: AUTONOMOUS_CONTAINER_DATABASE, AUTONOMOUS_EXADATA_INFRASTRUCTURE, EXADATA_DB_SYSTEM
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetResourceType(@Nullable Output<String> targetResourceType) {
+            $.targetResourceType = targetResourceType;
             return this;
         }
 
@@ -213,9 +279,8 @@ public final class GetMaintenanceRunsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder targetResourceType(@Nullable String targetResourceType) {
-            $.targetResourceType = targetResourceType;
-            return this;
+        public Builder targetResourceType(String targetResourceType) {
+            return targetResourceType(Output.of(targetResourceType));
         }
 
         public GetMaintenanceRunsArgs build() {

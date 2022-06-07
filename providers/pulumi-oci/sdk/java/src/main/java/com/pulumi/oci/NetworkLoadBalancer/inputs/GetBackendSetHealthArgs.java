@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.NetworkLoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetBackendSetHealthArgs extends com.pulumi.resources.InvokeAr
     public static final GetBackendSetHealthArgs Empty = new GetBackendSetHealthArgs();
 
     @Import(name="backendSetName", required=true)
-    private String backendSetName;
+    private Output<String> backendSetName;
 
-    public String backendSetName() {
+    public Output<String> backendSetName() {
         return this.backendSetName;
     }
 
     @Import(name="networkLoadBalancerId", required=true)
-    private String networkLoadBalancerId;
+    private Output<String> networkLoadBalancerId;
 
-    public String networkLoadBalancerId() {
+    public Output<String> networkLoadBalancerId() {
         return this.networkLoadBalancerId;
     }
 
@@ -51,14 +52,22 @@ public final class GetBackendSetHealthArgs extends com.pulumi.resources.InvokeAr
             $ = new GetBackendSetHealthArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder backendSetName(String backendSetName) {
+        public Builder backendSetName(Output<String> backendSetName) {
             $.backendSetName = backendSetName;
             return this;
         }
 
-        public Builder networkLoadBalancerId(String networkLoadBalancerId) {
+        public Builder backendSetName(String backendSetName) {
+            return backendSetName(Output.of(backendSetName));
+        }
+
+        public Builder networkLoadBalancerId(Output<String> networkLoadBalancerId) {
             $.networkLoadBalancerId = networkLoadBalancerId;
             return this;
+        }
+
+        public Builder networkLoadBalancerId(String networkLoadBalancerId) {
+            return networkLoadBalancerId(Output.of(networkLoadBalancerId));
         }
 
         public GetBackendSetHealthArgs build() {

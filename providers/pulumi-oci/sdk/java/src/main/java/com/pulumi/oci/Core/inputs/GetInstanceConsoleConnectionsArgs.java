@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetInstanceConsoleConnectionsFilter;
+import com.pulumi.oci.Core.inputs.GetInstanceConsoleConnectionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetInstanceConsoleConnectionsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetInstanceConsoleConnectionsFilter> filters;
+    private @Nullable Output<List<GetInstanceConsoleConnectionsFilterArgs>> filters;
 
-    public Optional<List<GetInstanceConsoleConnectionsFilter>> filters() {
+    public Optional<Output<List<GetInstanceConsoleConnectionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetInstanceConsoleConnectionsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="instanceId")
-    private @Nullable String instanceId;
+    private @Nullable Output<String> instanceId;
 
     /**
      * @return The OCID of the instance.
      * 
      */
-    public Optional<String> instanceId() {
+    public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
 
@@ -85,17 +86,31 @@ public final class GetInstanceConsoleConnectionsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetInstanceConsoleConnectionsFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetInstanceConsoleConnectionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetInstanceConsoleConnectionsFilter... filters) {
+        public Builder filters(List<GetInstanceConsoleConnectionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetInstanceConsoleConnectionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -105,9 +120,19 @@ public final class GetInstanceConsoleConnectionsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder instanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
+        }
+
+        /**
+         * @param instanceId The OCID of the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
 
         public GetInstanceConsoleConnectionsArgs build() {

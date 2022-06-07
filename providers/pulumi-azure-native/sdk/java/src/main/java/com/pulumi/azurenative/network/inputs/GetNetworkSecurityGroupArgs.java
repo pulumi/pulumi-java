@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return Expands referenced resources.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="networkSecurityGroupName", required=true)
-    private String networkSecurityGroupName;
+    private Output<String> networkSecurityGroupName;
 
     /**
      * @return The name of the network security group.
      * 
      */
-    public String networkSecurityGroupName() {
+    public Output<String> networkSecurityGroupName() {
         return this.networkSecurityGroupName;
     }
 
@@ -49,13 +50,13 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,29 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param networkSecurityGroupName The name of the network security group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkSecurityGroupName(Output<String> networkSecurityGroupName) {
+            $.networkSecurityGroupName = networkSecurityGroupName;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder networkSecurityGroupName(String networkSecurityGroupName) {
-            $.networkSecurityGroupName = networkSecurityGroupName;
+            return networkSecurityGroupName(Output.of(networkSecurityGroupName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNetworkSecurityGroupArgs build() {

@@ -5,6 +5,7 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.azurenative.logic.enums.KeyType;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
      * 
      */
     @Import(name="integrationAccountName", required=true)
-    private String integrationAccountName;
+    private Output<String> integrationAccountName;
 
     /**
      * @return The integration account name.
      * 
      */
-    public String integrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -36,13 +37,13 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
      * 
      */
     @Import(name="keyType")
-    private @Nullable Either<String,KeyType> keyType;
+    private @Nullable Output<Either<String,KeyType>> keyType;
 
     /**
      * @return The key type.
      * 
      */
-    public Optional<Either<String,KeyType>> keyType() {
+    public Optional<Output<Either<String,KeyType>>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
 
@@ -51,13 +52,13 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
      * 
      */
     @Import(name="notAfter")
-    private @Nullable String notAfter;
+    private @Nullable Output<String> notAfter;
 
     /**
      * @return The expiry time.
      * 
      */
-    public Optional<String> notAfter() {
+    public Optional<Output<String>> notAfter() {
         return Optional.ofNullable(this.notAfter);
     }
 
@@ -66,13 +67,13 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
      * 
      */
     @Import(name="partnerName", required=true)
-    private String partnerName;
+    private Output<String> partnerName;
 
     /**
      * @return The integration account partner name.
      * 
      */
-    public String partnerName() {
+    public Output<String> partnerName() {
         return this.partnerName;
     }
 
@@ -81,13 +82,13 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,8 +126,29 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
          * @return builder
          * 
          */
-        public Builder integrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
+            return this;
+        }
+
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationAccountName(String integrationAccountName) {
+            return integrationAccountName(Output.of(integrationAccountName));
+        }
+
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyType(@Nullable Output<Either<String,KeyType>> keyType) {
+            $.keyType = keyType;
             return this;
         }
 
@@ -136,9 +158,8 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
          * @return builder
          * 
          */
-        public Builder keyType(@Nullable Either<String,KeyType> keyType) {
-            $.keyType = keyType;
-            return this;
+        public Builder keyType(Either<String,KeyType> keyType) {
+            return keyType(Output.of(keyType));
         }
 
         /**
@@ -167,8 +188,29 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
          * @return builder
          * 
          */
-        public Builder notAfter(@Nullable String notAfter) {
+        public Builder notAfter(@Nullable Output<String> notAfter) {
             $.notAfter = notAfter;
+            return this;
+        }
+
+        /**
+         * @param notAfter The expiry time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder notAfter(String notAfter) {
+            return notAfter(Output.of(notAfter));
+        }
+
+        /**
+         * @param partnerName The integration account partner name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder partnerName(Output<String> partnerName) {
+            $.partnerName = partnerName;
             return this;
         }
 
@@ -179,7 +221,17 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
          * 
          */
         public Builder partnerName(String partnerName) {
-            $.partnerName = partnerName;
+            return partnerName(Output.of(partnerName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -190,8 +242,7 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlArgs extends c
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListIntegrationAccountPartnerContentCallbackUrlArgs build() {

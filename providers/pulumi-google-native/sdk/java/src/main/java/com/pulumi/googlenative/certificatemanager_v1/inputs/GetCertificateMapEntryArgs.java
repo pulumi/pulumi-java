@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.certificatemanager_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetCertificateMapEntryArgs extends com.pulumi.resources.Invok
     public static final GetCertificateMapEntryArgs Empty = new GetCertificateMapEntryArgs();
 
     @Import(name="certificateMapEntryId", required=true)
-    private String certificateMapEntryId;
+    private Output<String> certificateMapEntryId;
 
-    public String certificateMapEntryId() {
+    public Output<String> certificateMapEntryId() {
         return this.certificateMapEntryId;
     }
 
     @Import(name="certificateMapId", required=true)
-    private String certificateMapId;
+    private Output<String> certificateMapId;
 
-    public String certificateMapId() {
+    public Output<String> certificateMapId() {
         return this.certificateMapId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -69,24 +70,40 @@ public final class GetCertificateMapEntryArgs extends com.pulumi.resources.Invok
             $ = new GetCertificateMapEntryArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder certificateMapEntryId(String certificateMapEntryId) {
+        public Builder certificateMapEntryId(Output<String> certificateMapEntryId) {
             $.certificateMapEntryId = certificateMapEntryId;
             return this;
         }
 
-        public Builder certificateMapId(String certificateMapId) {
+        public Builder certificateMapEntryId(String certificateMapEntryId) {
+            return certificateMapEntryId(Output.of(certificateMapEntryId));
+        }
+
+        public Builder certificateMapId(Output<String> certificateMapId) {
             $.certificateMapId = certificateMapId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder certificateMapId(String certificateMapId) {
+            return certificateMapId(Output.of(certificateMapId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetCertificateMapEntryArgs build() {

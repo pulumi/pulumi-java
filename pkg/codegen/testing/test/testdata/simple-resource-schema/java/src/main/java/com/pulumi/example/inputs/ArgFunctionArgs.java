@@ -3,6 +3,7 @@
 
 package com.pulumi.example.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.example.Resource;
 import java.util.Objects;
@@ -15,9 +16,9 @@ public final class ArgFunctionArgs extends com.pulumi.resources.InvokeArgs {
     public static final ArgFunctionArgs Empty = new ArgFunctionArgs();
 
     @Import(name="arg1")
-    private @Nullable Resource arg1;
+    private @Nullable Output<Resource> arg1;
 
-    public Optional<Resource> arg1() {
+    public Optional<Output<Resource>> arg1() {
         return Optional.ofNullable(this.arg1);
     }
 
@@ -45,9 +46,13 @@ public final class ArgFunctionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new ArgFunctionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder arg1(@Nullable Resource arg1) {
+        public Builder arg1(@Nullable Output<Resource> arg1) {
             $.arg1 = arg1;
             return this;
+        }
+
+        public Builder arg1(Resource arg1) {
+            return arg1(Output.of(arg1));
         }
 
         public ArgFunctionArgs build() {

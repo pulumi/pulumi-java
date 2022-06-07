@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.management.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetManagementGroupSubscriptionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="groupId", required=true)
-    private String groupId;
+    private Output<String> groupId;
 
     /**
      * @return Management Group ID.
      * 
      */
-    public String groupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
@@ -34,13 +35,13 @@ public final class GetManagementGroupSubscriptionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="subscriptionId")
-    private @Nullable String subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
     /**
      * @return Subscription ID.
      * 
      */
-    public Optional<String> subscriptionId() {
+    public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
 
@@ -75,8 +76,29 @@ public final class GetManagementGroupSubscriptionArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder groupId(String groupId) {
+        public Builder groupId(Output<String> groupId) {
             $.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * @param groupId Management Group ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
+        }
+
+        /**
+         * @param subscriptionId Subscription ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -86,9 +108,8 @@ public final class GetManagementGroupSubscriptionArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            $.subscriptionId = subscriptionId;
-            return this;
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
 
         public GetManagementGroupSubscriptionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetResourcePolicyArgs Empty = new GetResourcePolicyArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-    private String region;
+    private Output<String> region;
 
-    public String region() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="resourcePolicy", required=true)
-    private String resourcePolicy;
+    private Output<String> resourcePolicy;
 
-    public String resourcePolicy() {
+    public Output<String> resourcePolicy() {
         return this.resourcePolicy;
     }
 
@@ -61,19 +62,31 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetResourcePolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(String region) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
-        public Builder resourcePolicy(String resourcePolicy) {
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public Builder resourcePolicy(Output<String> resourcePolicy) {
             $.resourcePolicy = resourcePolicy;
             return this;
+        }
+
+        public Builder resourcePolicy(String resourcePolicy) {
+            return resourcePolicy(Output.of(resourcePolicy));
         }
 
         public GetResourcePolicyArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.workflows_v1beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWorkflowArgs Empty = new GetWorkflowArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="workflowId", required=true)
-    private String workflowId;
+    private Output<String> workflowId;
 
-    public String workflowId() {
+    public Output<String> workflowId() {
         return this.workflowId;
     }
 
@@ -61,19 +62,31 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWorkflowArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder workflowId(String workflowId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder workflowId(Output<String> workflowId) {
             $.workflowId = workflowId;
             return this;
+        }
+
+        public Builder workflowId(String workflowId) {
+            return workflowId(Output.of(workflowId));
         }
 
         public GetWorkflowArgs build() {

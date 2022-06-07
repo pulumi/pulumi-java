@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ServiceCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ServiceCatalog.inputs.GetServiceCatalogsFilter;
+import com.pulumi.oci.ServiceCatalog.inputs.GetServiceCatalogsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetServiceCatalogsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The unique identifier for the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetServiceCatalogsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Exact match name filter.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetServiceCatalogsFilter> filters;
+    private @Nullable Output<List<GetServiceCatalogsFilterArgs>> filters;
 
-    public Optional<List<GetServiceCatalogsFilter>> filters() {
+    public Optional<Output<List<GetServiceCatalogsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetServiceCatalogsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceCatalogId")
-    private @Nullable String serviceCatalogId;
+    private @Nullable Output<String> serviceCatalogId;
 
     /**
      * @return The unique identifier for the service catalog.
      * 
      */
-    public Optional<String> serviceCatalogId() {
+    public Optional<Output<String>> serviceCatalogId() {
         return Optional.ofNullable(this.serviceCatalogId);
     }
 
@@ -101,8 +102,29 @@ public final class GetServiceCatalogsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The unique identifier for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName Exact match name filter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -112,17 +134,20 @@ public final class GetServiceCatalogsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetServiceCatalogsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetServiceCatalogsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetServiceCatalogsFilter... filters) {
+        public Builder filters(List<GetServiceCatalogsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetServiceCatalogsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -132,9 +157,19 @@ public final class GetServiceCatalogsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder serviceCatalogId(@Nullable String serviceCatalogId) {
+        public Builder serviceCatalogId(@Nullable Output<String> serviceCatalogId) {
             $.serviceCatalogId = serviceCatalogId;
             return this;
+        }
+
+        /**
+         * @param serviceCatalogId The unique identifier for the service catalog.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceCatalogId(String serviceCatalogId) {
+            return serviceCatalogId(Output.of(serviceCatalogId));
         }
 
         public GetServiceCatalogsArgs build() {

@@ -5,7 +5,9 @@ package com.pulumi.azure.mariadb;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.mariadb.inputs.GetMariaDbServerArgs;
+import com.pulumi.azure.mariadb.inputs.GetMariaDbServerPlainArgs;
 import com.pulumi.azure.mariadb.outputs.GetMariaDbServerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -41,7 +43,7 @@ public final class MariadbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMariaDbServerResult> getMariaDbServer(GetMariaDbServerArgs args) {
+    public static Output<GetMariaDbServerResult> getMariaDbServer(GetMariaDbServerArgs args) {
         return getMariaDbServer(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +75,71 @@ public final class MariadbFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetMariaDbServerResult> getMariaDbServer(GetMariaDbServerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMariaDbServerResult> getMariaDbServerPlain(GetMariaDbServerPlainArgs args) {
+        return getMariaDbServerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing MariaDB Server.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var dbServer = Output.of(MariadbFunctions.getMariaDbServer(GetMariaDbServerArgs.builder()
+     *             .name(&#34;mariadb-server&#34;)
+     *             .resourceGroupName(azurerm_mariadb_server.getExample().getResource_group_name())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;mariadbServerId&#34;, data.getAzurerm_mariadb_server().getExample().getId());
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetMariaDbServerResult> getMariaDbServer(GetMariaDbServerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:mariadb/getMariaDbServer:getMariaDbServer", TypeShape.of(GetMariaDbServerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing MariaDB Server.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var dbServer = Output.of(MariadbFunctions.getMariaDbServer(GetMariaDbServerArgs.builder()
+     *             .name(&#34;mariadb-server&#34;)
+     *             .resourceGroupName(azurerm_mariadb_server.getExample().getResource_group_name())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;mariadbServerId&#34;, data.getAzurerm_mariadb_server().getExample().getId());
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetMariaDbServerResult> getMariaDbServerPlain(GetMariaDbServerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:mariadb/getMariaDbServer:getMariaDbServer", TypeShape.of(GetMariaDbServerResult.class), args, Utilities.withVersion(options));
     }
 }

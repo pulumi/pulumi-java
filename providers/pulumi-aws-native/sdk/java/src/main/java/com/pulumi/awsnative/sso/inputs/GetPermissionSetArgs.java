@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sso.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="instanceArn", required=true)
-    private String instanceArn;
+    private Output<String> instanceArn;
 
     /**
      * @return The sso instance arn that the permission set is owned.
      * 
      */
-    public String instanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -32,13 +33,13 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="permissionSetArn", required=true)
-    private String permissionSetArn;
+    private Output<String> permissionSetArn;
 
     /**
      * @return The permission set that the policy will be attached to
      * 
      */
-    public String permissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 
@@ -73,8 +74,29 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder instanceArn(String instanceArn) {
+        public Builder instanceArn(Output<String> instanceArn) {
             $.instanceArn = instanceArn;
+            return this;
+        }
+
+        /**
+         * @param instanceArn The sso instance arn that the permission set is owned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceArn(String instanceArn) {
+            return instanceArn(Output.of(instanceArn));
+        }
+
+        /**
+         * @param permissionSetArn The permission set that the policy will be attached to
+         * 
+         * @return builder
+         * 
+         */
+        public Builder permissionSetArn(Output<String> permissionSetArn) {
+            $.permissionSetArn = permissionSetArn;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder permissionSetArn(String permissionSetArn) {
-            $.permissionSetArn = permissionSetArn;
-            return this;
+            return permissionSetArn(Output.of(permissionSetArn));
         }
 
         public GetPermissionSetArgs build() {

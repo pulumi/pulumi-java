@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataConnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -20,13 +21,13 @@ public final class GetRegistryTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields")
-    private @Nullable List<String> fields;
+    private @Nullable Output<List<String>> fields;
 
     /**
      * @return Specifies the fields to get for an object.
      * 
      */
-    public Optional<List<String>> fields() {
+    public Optional<Output<List<String>>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
@@ -35,13 +36,13 @@ public final class GetRegistryTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
     /**
      * @return The registry Ocid.
      * 
      */
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -50,13 +51,13 @@ public final class GetRegistryTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="typeKey", required=true)
-    private String typeKey;
+    private Output<String> typeKey;
 
     /**
      * @return key of the a specefic Type.
      * 
      */
-    public String typeKey() {
+    public Output<String> typeKey() {
         return this.typeKey;
     }
 
@@ -92,9 +93,19 @@ public final class GetRegistryTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fields(@Nullable List<String> fields) {
+        public Builder fields(@Nullable Output<List<String>> fields) {
             $.fields = fields;
             return this;
+        }
+
+        /**
+         * @param fields Specifies the fields to get for an object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fields(List<String> fields) {
+            return fields(Output.of(fields));
         }
 
         /**
@@ -113,8 +124,29 @@ public final class GetRegistryTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder registryId(String registryId) {
+        public Builder registryId(Output<String> registryId) {
             $.registryId = registryId;
+            return this;
+        }
+
+        /**
+         * @param registryId The registry Ocid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryId(String registryId) {
+            return registryId(Output.of(registryId));
+        }
+
+        /**
+         * @param typeKey key of the a specefic Type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder typeKey(Output<String> typeKey) {
+            $.typeKey = typeKey;
             return this;
         }
 
@@ -125,8 +157,7 @@ public final class GetRegistryTypeArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder typeKey(String typeKey) {
-            $.typeKey = typeKey;
-            return this;
+            return typeKey(Output.of(typeKey));
         }
 
         public GetRegistryTypeArgs build() {

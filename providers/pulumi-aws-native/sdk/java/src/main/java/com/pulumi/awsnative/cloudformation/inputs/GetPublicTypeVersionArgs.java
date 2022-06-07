@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.cloudformation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPublicTypeVersionArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="publicTypeArn", required=true)
-    private String publicTypeArn;
+    private Output<String> publicTypeArn;
 
     /**
      * @return The Amazon Resource Number (ARN) assigned to the public extension upon publication
      * 
      */
-    public String publicTypeArn() {
+    public Output<String> publicTypeArn() {
         return this.publicTypeArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetPublicTypeVersionArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder publicTypeArn(String publicTypeArn) {
+        public Builder publicTypeArn(Output<String> publicTypeArn) {
             $.publicTypeArn = publicTypeArn;
             return this;
+        }
+
+        /**
+         * @param publicTypeArn The Amazon Resource Number (ARN) assigned to the public extension upon publication
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicTypeArn(String publicTypeArn) {
+            return publicTypeArn(Output.of(publicTypeArn));
         }
 
         public GetPublicTypeVersionArgs build() {

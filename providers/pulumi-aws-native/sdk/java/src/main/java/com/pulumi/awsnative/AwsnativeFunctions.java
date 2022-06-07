@@ -5,10 +5,15 @@ package com.pulumi.awsnative;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.inputs.CidrArgs;
+import com.pulumi.awsnative.inputs.CidrPlainArgs;
 import com.pulumi.awsnative.inputs.GetAzsArgs;
+import com.pulumi.awsnative.inputs.GetAzsPlainArgs;
 import com.pulumi.awsnative.inputs.GetSsmParameterListArgs;
+import com.pulumi.awsnative.inputs.GetSsmParameterListPlainArgs;
 import com.pulumi.awsnative.inputs.GetSsmParameterStringArgs;
+import com.pulumi.awsnative.inputs.GetSsmParameterStringPlainArgs;
 import com.pulumi.awsnative.inputs.ImportValueArgs;
+import com.pulumi.awsnative.inputs.ImportValuePlainArgs;
 import com.pulumi.awsnative.outputs.CidrResult;
 import com.pulumi.awsnative.outputs.GetAccountIdResult;
 import com.pulumi.awsnative.outputs.GetAzsResult;
@@ -18,6 +23,7 @@ import com.pulumi.awsnative.outputs.GetSsmParameterListResult;
 import com.pulumi.awsnative.outputs.GetSsmParameterStringResult;
 import com.pulumi.awsnative.outputs.GetUrlSuffixResult;
 import com.pulumi.awsnative.outputs.ImportValueResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -25,73 +31,142 @@ import com.pulumi.resources.InvokeArgs;
 import java.util.concurrent.CompletableFuture;
 
 public final class AwsnativeFunctions {
-    public static CompletableFuture<CidrResult> cidr(CidrArgs args) {
+    public static Output<CidrResult> cidr(CidrArgs args) {
         return cidr(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<CidrResult> cidr(CidrArgs args, InvokeOptions options) {
+    public static CompletableFuture<CidrResult> cidrPlain(CidrPlainArgs args) {
+        return cidrPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<CidrResult> cidr(CidrArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:index:cidr", TypeShape.of(CidrResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<CidrResult> cidrPlain(CidrPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:cidr", TypeShape.of(CidrResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetAccountIdResult> getAccountId() {
+    public static Output<GetAccountIdResult> getAccountId() {
         return getAccountId(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountIdResult> getAccountId(InvokeArgs args) {
+    public static CompletableFuture<GetAccountIdResult> getAccountIdPlain() {
+        return getAccountIdPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    public static Output<GetAccountIdResult> getAccountId(InvokeArgs args) {
         return getAccountId(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAccountIdResult> getAccountId(InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountIdResult> getAccountIdPlain(InvokeArgs args) {
+        return getAccountIdPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<GetAccountIdResult> getAccountId(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:index:getAccountId", TypeShape.of(GetAccountIdResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<GetAccountIdResult> getAccountIdPlain(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getAccountId", TypeShape.of(GetAccountIdResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetAzsResult> getAzs() {
+    public static Output<GetAzsResult> getAzs() {
         return getAzs(GetAzsArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAzsResult> getAzs(GetAzsArgs args) {
+    public static CompletableFuture<GetAzsResult> getAzsPlain() {
+        return getAzsPlain(GetAzsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    public static Output<GetAzsResult> getAzs(GetAzsArgs args) {
         return getAzs(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAzsResult> getAzs(GetAzsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAzsResult> getAzsPlain(GetAzsPlainArgs args) {
+        return getAzsPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<GetAzsResult> getAzs(GetAzsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:index:getAzs", TypeShape.of(GetAzsResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<GetAzsResult> getAzsPlain(GetAzsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getAzs", TypeShape.of(GetAzsResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetPartitionResult> getPartition() {
+    public static Output<GetPartitionResult> getPartition() {
         return getPartition(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPartitionResult> getPartition(InvokeArgs args) {
+    public static CompletableFuture<GetPartitionResult> getPartitionPlain() {
+        return getPartitionPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    public static Output<GetPartitionResult> getPartition(InvokeArgs args) {
         return getPartition(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetPartitionResult> getPartition(InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPartitionResult> getPartitionPlain(InvokeArgs args) {
+        return getPartitionPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<GetPartitionResult> getPartition(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:index:getPartition", TypeShape.of(GetPartitionResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<GetPartitionResult> getPartitionPlain(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getPartition", TypeShape.of(GetPartitionResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetRegionResult> getRegion() {
+    public static Output<GetRegionResult> getRegion() {
         return getRegion(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionResult> getRegion(InvokeArgs args) {
+    public static CompletableFuture<GetRegionResult> getRegionPlain() {
+        return getRegionPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    public static Output<GetRegionResult> getRegion(InvokeArgs args) {
         return getRegion(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetRegionResult> getRegion(InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionResult> getRegionPlain(InvokeArgs args) {
+        return getRegionPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<GetRegionResult> getRegion(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:index:getRegion", TypeShape.of(GetRegionResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<GetRegionResult> getRegionPlain(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getRegion", TypeShape.of(GetRegionResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetSsmParameterListResult> getSsmParameterList(GetSsmParameterListArgs args) {
+    public static Output<GetSsmParameterListResult> getSsmParameterList(GetSsmParameterListArgs args) {
         return getSsmParameterList(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSsmParameterListResult> getSsmParameterList(GetSsmParameterListArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSsmParameterListResult> getSsmParameterListPlain(GetSsmParameterListPlainArgs args) {
+        return getSsmParameterListPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<GetSsmParameterListResult> getSsmParameterList(GetSsmParameterListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:index:getSsmParameterList", TypeShape.of(GetSsmParameterListResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<GetSsmParameterListResult> getSsmParameterListPlain(GetSsmParameterListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getSsmParameterList", TypeShape.of(GetSsmParameterListResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetSsmParameterStringResult> getSsmParameterString(GetSsmParameterStringArgs args) {
+    public static Output<GetSsmParameterStringResult> getSsmParameterString(GetSsmParameterStringArgs args) {
         return getSsmParameterString(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetSsmParameterStringResult> getSsmParameterString(GetSsmParameterStringArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSsmParameterStringResult> getSsmParameterStringPlain(GetSsmParameterStringPlainArgs args) {
+        return getSsmParameterStringPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<GetSsmParameterStringResult> getSsmParameterString(GetSsmParameterStringArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:index:getSsmParameterString", TypeShape.of(GetSsmParameterStringResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<GetSsmParameterStringResult> getSsmParameterStringPlain(GetSsmParameterStringPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getSsmParameterString", TypeShape.of(GetSsmParameterStringResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetUrlSuffixResult> getUrlSuffix() {
+    public static Output<GetUrlSuffixResult> getUrlSuffix() {
         return getUrlSuffix(InvokeArgs.Empty, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUrlSuffixResult> getUrlSuffix(InvokeArgs args) {
+    public static CompletableFuture<GetUrlSuffixResult> getUrlSuffixPlain() {
+        return getUrlSuffixPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    public static Output<GetUrlSuffixResult> getUrlSuffix(InvokeArgs args) {
         return getUrlSuffix(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetUrlSuffixResult> getUrlSuffix(InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUrlSuffixResult> getUrlSuffixPlain(InvokeArgs args) {
+        return getUrlSuffixPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<GetUrlSuffixResult> getUrlSuffix(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:index:getUrlSuffix", TypeShape.of(GetUrlSuffixResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<GetUrlSuffixResult> getUrlSuffixPlain(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getUrlSuffix", TypeShape.of(GetUrlSuffixResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<ImportValueResult> importValue(ImportValueArgs args) {
+    public static Output<ImportValueResult> importValue(ImportValueArgs args) {
         return importValue(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<ImportValueResult> importValue(ImportValueArgs args, InvokeOptions options) {
+    public static CompletableFuture<ImportValueResult> importValuePlain(ImportValuePlainArgs args) {
+        return importValuePlain(args, InvokeOptions.Empty);
+    }
+    public static Output<ImportValueResult> importValue(ImportValueArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:index:importValue", TypeShape.of(ImportValueResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<ImportValueResult> importValuePlain(ImportValuePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:importValue", TypeShape.of(ImportValueResult.class), args, Utilities.withVersion(options));
     }
 }

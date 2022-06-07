@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.panorama.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetApplicationInstanceArgs extends com.pulumi.resources.Invok
     public static final GetApplicationInstanceArgs Empty = new GetApplicationInstanceArgs();
 
     @Import(name="applicationInstanceId", required=true)
-    private String applicationInstanceId;
+    private Output<String> applicationInstanceId;
 
-    public String applicationInstanceId() {
+    public Output<String> applicationInstanceId() {
         return this.applicationInstanceId;
     }
 
@@ -43,9 +44,13 @@ public final class GetApplicationInstanceArgs extends com.pulumi.resources.Invok
             $ = new GetApplicationInstanceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder applicationInstanceId(String applicationInstanceId) {
+        public Builder applicationInstanceId(Output<String> applicationInstanceId) {
             $.applicationInstanceId = applicationInstanceId;
             return this;
+        }
+
+        public Builder applicationInstanceId(String applicationInstanceId) {
+            return applicationInstanceId(Output.of(applicationInstanceId));
         }
 
         public GetApplicationInstanceArgs build() {

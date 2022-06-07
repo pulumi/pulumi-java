@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="internetGatewayId", required=true)
-    private String internetGatewayId;
+    private Output<String> internetGatewayId;
 
     /**
      * @return ID of internet gateway.
      * 
      */
-    public String internetGatewayId() {
+    public Output<String> internetGatewayId() {
         return this.internetGatewayId;
     }
 
@@ -57,9 +58,19 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder internetGatewayId(String internetGatewayId) {
+        public Builder internetGatewayId(Output<String> internetGatewayId) {
             $.internetGatewayId = internetGatewayId;
             return this;
+        }
+
+        /**
+         * @param internetGatewayId ID of internet gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder internetGatewayId(String internetGatewayId) {
+            return internetGatewayId(Output.of(internetGatewayId));
         }
 
         public GetInternetGatewayArgs build() {

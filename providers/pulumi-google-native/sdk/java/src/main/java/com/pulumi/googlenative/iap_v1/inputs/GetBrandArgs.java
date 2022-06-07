@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.iap_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetBrandArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBrandArgs Empty = new GetBrandArgs();
 
     @Import(name="brandId", required=true)
-    private String brandId;
+    private Output<String> brandId;
 
-    public String brandId() {
+    public Output<String> brandId() {
         return this.brandId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetBrandArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBrandArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder brandId(String brandId) {
+        public Builder brandId(Output<String> brandId) {
             $.brandId = brandId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder brandId(String brandId) {
+            return brandId(Output.of(brandId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetBrandArgs build() {

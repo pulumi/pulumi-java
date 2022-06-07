@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMaskingPolicyArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="maskingPolicyId", required=true)
-    private String maskingPolicyId;
+    private Output<String> maskingPolicyId;
 
     /**
      * @return The OCID of the masking policy.
      * 
      */
-    public String maskingPolicyId() {
+    public Output<String> maskingPolicyId() {
         return this.maskingPolicyId;
     }
 
@@ -57,9 +58,19 @@ public final class GetMaskingPolicyArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder maskingPolicyId(String maskingPolicyId) {
+        public Builder maskingPolicyId(Output<String> maskingPolicyId) {
             $.maskingPolicyId = maskingPolicyId;
             return this;
+        }
+
+        /**
+         * @param maskingPolicyId The OCID of the masking policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maskingPolicyId(String maskingPolicyId) {
+            return maskingPolicyId(Output.of(maskingPolicyId));
         }
 
         public GetMaskingPolicyArgs build() {

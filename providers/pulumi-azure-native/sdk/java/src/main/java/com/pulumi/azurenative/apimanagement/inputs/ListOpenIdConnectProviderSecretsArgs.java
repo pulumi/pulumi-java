@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListOpenIdConnectProviderSecretsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="opid", required=true)
-    private String opid;
+    private Output<String> opid;
 
     /**
      * @return Identifier of the OpenID Connect Provider.
      * 
      */
-    public String opid() {
+    public Output<String> opid() {
         return this.opid;
     }
 
@@ -32,13 +33,13 @@ public final class ListOpenIdConnectProviderSecretsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class ListOpenIdConnectProviderSecretsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -89,8 +90,29 @@ public final class ListOpenIdConnectProviderSecretsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder opid(String opid) {
+        public Builder opid(Output<String> opid) {
             $.opid = opid;
+            return this;
+        }
+
+        /**
+         * @param opid Identifier of the OpenID Connect Provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder opid(String opid) {
+            return opid(Output.of(opid));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListOpenIdConnectProviderSecretsArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListOpenIdConnectProviderSecretsArgs extends com.pulumi.resou
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public ListOpenIdConnectProviderSecretsArgs build() {

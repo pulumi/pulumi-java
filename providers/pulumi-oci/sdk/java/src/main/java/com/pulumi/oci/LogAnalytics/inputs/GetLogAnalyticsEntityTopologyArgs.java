@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LogAnalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetLogAnalyticsEntityTopologyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="logAnalyticsEntityId", required=true)
-    private String logAnalyticsEntityId;
+    private Output<String> logAnalyticsEntityId;
 
     /**
      * @return The log analytics entity OCID.
      * 
      */
-    public String logAnalyticsEntityId() {
+    public Output<String> logAnalyticsEntityId() {
         return this.logAnalyticsEntityId;
     }
 
@@ -34,13 +35,13 @@ public final class GetLogAnalyticsEntityTopologyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Logging Analytics namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -49,13 +50,13 @@ public final class GetLogAnalyticsEntityTopologyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only those log analytics entities with the specified lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -91,8 +92,29 @@ public final class GetLogAnalyticsEntityTopologyArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder logAnalyticsEntityId(String logAnalyticsEntityId) {
+        public Builder logAnalyticsEntityId(Output<String> logAnalyticsEntityId) {
             $.logAnalyticsEntityId = logAnalyticsEntityId;
+            return this;
+        }
+
+        /**
+         * @param logAnalyticsEntityId The log analytics entity OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logAnalyticsEntityId(String logAnalyticsEntityId) {
+            return logAnalyticsEntityId(Output.of(logAnalyticsEntityId));
+        }
+
+        /**
+         * @param namespace The Logging Analytics namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(Output<String> namespace) {
+            $.namespace = namespace;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetLogAnalyticsEntityTopologyArgs extends com.pulumi.resource
          * 
          */
         public Builder namespace(String namespace) {
-            $.namespace = namespace;
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param state A filter to return only those log analytics entities with the specified lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -113,9 +145,8 @@ public final class GetLogAnalyticsEntityTopologyArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetLogAnalyticsEntityTopologyArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetNoteIamPolicyArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetNoteIamPolicyArgs Empty = new GetNoteIamPolicyArgs();
 
     @Import(name="noteId", required=true)
-    private String noteId;
+    private Output<String> noteId;
 
-    public String noteId() {
+    public Output<String> noteId() {
         return this.noteId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetNoteIamPolicyArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetNoteIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder noteId(String noteId) {
+        public Builder noteId(Output<String> noteId) {
             $.noteId = noteId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder noteId(String noteId) {
+            return noteId(Output.of(noteId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetNoteIamPolicyArgs build() {

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ApmSynthetics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ApmSynthetics.inputs.GetVantagePointsFilter;
+import com.pulumi.oci.ApmSynthetics.inputs.GetVantagePointsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetVantagePointsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="apmDomainId", required=true)
-    private String apmDomainId;
+    private Output<String> apmDomainId;
 
     /**
      * @return The APM domain ID the request is intended for.
      * 
      */
-    public String apmDomainId() {
+    public Output<String> apmDomainId() {
         return this.apmDomainId;
     }
 
@@ -36,20 +37,20 @@ public final class GetVantagePointsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetVantagePointsFilter> filters;
+    private @Nullable Output<List<GetVantagePointsFilterArgs>> filters;
 
-    public Optional<List<GetVantagePointsFilter>> filters() {
+    public Optional<Output<List<GetVantagePointsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetVantagePointsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name given.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -101,8 +102,29 @@ public final class GetVantagePointsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder apmDomainId(String apmDomainId) {
+        public Builder apmDomainId(Output<String> apmDomainId) {
             $.apmDomainId = apmDomainId;
+            return this;
+        }
+
+        /**
+         * @param apmDomainId The APM domain ID the request is intended for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apmDomainId(String apmDomainId) {
+            return apmDomainId(Output.of(apmDomainId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -112,17 +134,20 @@ public final class GetVantagePointsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetVantagePointsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetVantagePointsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetVantagePointsFilter... filters) {
+        public Builder filters(List<GetVantagePointsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetVantagePointsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -132,9 +157,19 @@ public final class GetVantagePointsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetVantagePointsArgs build() {

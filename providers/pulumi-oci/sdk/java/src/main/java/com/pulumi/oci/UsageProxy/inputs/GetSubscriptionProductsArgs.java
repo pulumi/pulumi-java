@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.UsageProxy.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionProductsFilter;
+import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionProductsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
     public static final GetSubscriptionProductsArgs Empty = new GetSubscriptionProductsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetSubscriptionProductsFilter> filters;
+    private @Nullable Output<List<GetSubscriptionProductsFilterArgs>> filters;
 
-    public Optional<List<GetSubscriptionProductsFilter>> filters() {
+    public Optional<Output<List<GetSubscriptionProductsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="producttype")
-    private @Nullable String producttype;
+    private @Nullable Output<String> producttype;
 
     /**
      * @return The field to specify the type of product.
      * 
      */
-    public Optional<String> producttype() {
+    public Optional<Output<String>> producttype() {
         return Optional.ofNullable(this.producttype);
     }
 
@@ -43,13 +44,13 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
     /**
      * @return The subscription ID for which rewards information is requested for.
      * 
      */
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -58,13 +59,13 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tenancyId", required=true)
-    private String tenancyId;
+    private Output<String> tenancyId;
 
     /**
      * @return The OCID of the tenancy.
      * 
      */
-    public String tenancyId() {
+    public Output<String> tenancyId() {
         return this.tenancyId;
     }
 
@@ -73,13 +74,13 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="usagePeriodKey", required=true)
-    private String usagePeriodKey;
+    private Output<String> usagePeriodKey;
 
     /**
      * @return The SPM Identifier for the usage period.
      * 
      */
-    public String usagePeriodKey() {
+    public Output<String> usagePeriodKey() {
         return this.usagePeriodKey;
     }
 
@@ -111,12 +112,16 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
             $ = new GetSubscriptionProductsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetSubscriptionProductsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetSubscriptionProductsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSubscriptionProductsFilter... filters) {
+        public Builder filters(List<GetSubscriptionProductsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSubscriptionProductsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -126,8 +131,29 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder producttype(@Nullable String producttype) {
+        public Builder producttype(@Nullable Output<String> producttype) {
             $.producttype = producttype;
+            return this;
+        }
+
+        /**
+         * @param producttype The field to specify the type of product.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder producttype(String producttype) {
+            return producttype(Output.of(producttype));
+        }
+
+        /**
+         * @param subscriptionId The subscription ID for which rewards information is requested for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(Output<String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -138,7 +164,17 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder subscriptionId(String subscriptionId) {
-            $.subscriptionId = subscriptionId;
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        /**
+         * @param tenancyId The OCID of the tenancy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tenancyId(Output<String> tenancyId) {
+            $.tenancyId = tenancyId;
             return this;
         }
 
@@ -149,7 +185,17 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder tenancyId(String tenancyId) {
-            $.tenancyId = tenancyId;
+            return tenancyId(Output.of(tenancyId));
+        }
+
+        /**
+         * @param usagePeriodKey The SPM Identifier for the usage period.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder usagePeriodKey(Output<String> usagePeriodKey) {
+            $.usagePeriodKey = usagePeriodKey;
             return this;
         }
 
@@ -160,8 +206,7 @@ public final class GetSubscriptionProductsArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder usagePeriodKey(String usagePeriodKey) {
-            $.usagePeriodKey = usagePeriodKey;
-            return this;
+            return usagePeriodKey(Output.of(usagePeriodKey));
         }
 
         public GetSubscriptionProductsArgs build() {

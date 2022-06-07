@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.glue.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-    private String arn;
+    private Output<String> arn;
 
     /**
      * @return Amazon Resource Name for the Schema.
      * 
      */
-    public String arn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -57,9 +58,19 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(String arn) {
+        public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
+        }
+
+        /**
+         * @param arn Amazon Resource Name for the Schema.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
 
         public GetSchemaArgs build() {

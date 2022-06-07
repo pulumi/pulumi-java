@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetRemotePeeringConnectionsFilter;
+import com.pulumi.oci.Core.inputs.GetRemotePeeringConnectionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetRemotePeeringConnectionsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetRemotePeeringConnectionsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="drgId")
-    private @Nullable String drgId;
+    private @Nullable Output<String> drgId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG.
      * 
      */
-    public Optional<String> drgId() {
+    public Optional<Output<String>> drgId() {
         return Optional.ofNullable(this.drgId);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetRemotePeeringConnectionsFilter> filters;
+    private @Nullable Output<List<GetRemotePeeringConnectionsFilterArgs>> filters;
 
-    public Optional<List<GetRemotePeeringConnectionsFilter>> filters() {
+    public Optional<Output<List<GetRemotePeeringConnectionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -85,8 +86,29 @@ public final class GetRemotePeeringConnectionsArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param drgId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder drgId(@Nullable Output<String> drgId) {
+            $.drgId = drgId;
             return this;
         }
 
@@ -96,17 +118,20 @@ public final class GetRemotePeeringConnectionsArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder drgId(@Nullable String drgId) {
-            $.drgId = drgId;
-            return this;
+        public Builder drgId(String drgId) {
+            return drgId(Output.of(drgId));
         }
 
-        public Builder filters(@Nullable List<GetRemotePeeringConnectionsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetRemotePeeringConnectionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetRemotePeeringConnectionsFilter... filters) {
+        public Builder filters(List<GetRemotePeeringConnectionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetRemotePeeringConnectionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

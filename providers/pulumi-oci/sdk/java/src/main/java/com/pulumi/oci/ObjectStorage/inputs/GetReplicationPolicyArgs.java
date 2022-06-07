@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ObjectStorage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
     /**
      * @return The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
      * 
      */
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -32,13 +33,13 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Object Storage namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -47,13 +48,13 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="replicationId", required=true)
-    private String replicationId;
+    private Output<String> replicationId;
 
     /**
      * @return The ID of the replication policy.
      * 
      */
-    public String replicationId() {
+    public Output<String> replicationId() {
         return this.replicationId;
     }
 
@@ -89,8 +90,29 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * @param bucket The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        /**
+         * @param namespace The Object Storage namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(Output<String> namespace) {
+            $.namespace = namespace;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder namespace(String namespace) {
-            $.namespace = namespace;
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param replicationId The ID of the replication policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder replicationId(Output<String> replicationId) {
+            $.replicationId = replicationId;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetReplicationPolicyArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder replicationId(String replicationId) {
-            $.replicationId = replicationId;
-            return this;
+            return replicationId(Output.of(replicationId));
         }
 
         public GetReplicationPolicyArgs build() {

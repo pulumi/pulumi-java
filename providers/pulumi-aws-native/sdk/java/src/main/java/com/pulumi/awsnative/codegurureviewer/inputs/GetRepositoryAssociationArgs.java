@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.codegurureviewer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRepositoryAssociationArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="associationArn", required=true)
-    private String associationArn;
+    private Output<String> associationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the repository association.
      * 
      */
-    public String associationArn() {
+    public Output<String> associationArn() {
         return this.associationArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetRepositoryAssociationArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder associationArn(String associationArn) {
+        public Builder associationArn(Output<String> associationArn) {
             $.associationArn = associationArn;
             return this;
+        }
+
+        /**
+         * @param associationArn The Amazon Resource Name (ARN) of the repository association.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder associationArn(String associationArn) {
+            return associationArn(Output.of(associationArn));
         }
 
         public GetRepositoryAssociationArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetBitbucketServerConfigArgs extends com.pulumi.resources.Inv
     public static final GetBitbucketServerConfigArgs Empty = new GetBitbucketServerConfigArgs();
 
     @Import(name="bitbucketServerConfigId", required=true)
-    private String bitbucketServerConfigId;
+    private Output<String> bitbucketServerConfigId;
 
-    public String bitbucketServerConfigId() {
+    public Output<String> bitbucketServerConfigId() {
         return this.bitbucketServerConfigId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetBitbucketServerConfigArgs extends com.pulumi.resources.Inv
             $ = new GetBitbucketServerConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bitbucketServerConfigId(String bitbucketServerConfigId) {
+        public Builder bitbucketServerConfigId(Output<String> bitbucketServerConfigId) {
             $.bitbucketServerConfigId = bitbucketServerConfigId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder bitbucketServerConfigId(String bitbucketServerConfigId) {
+            return bitbucketServerConfigId(Output.of(bitbucketServerConfigId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetBitbucketServerConfigArgs build() {

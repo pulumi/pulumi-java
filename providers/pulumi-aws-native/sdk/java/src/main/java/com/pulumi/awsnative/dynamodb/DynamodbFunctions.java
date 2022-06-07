@@ -5,7 +5,9 @@ package com.pulumi.awsnative.dynamodb;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.dynamodb.inputs.GetGlobalTableArgs;
+import com.pulumi.awsnative.dynamodb.inputs.GetGlobalTablePlainArgs;
 import com.pulumi.awsnative.dynamodb.outputs.GetGlobalTableResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class DynamodbFunctions {
      * Version: None. Resource Type definition for AWS::DynamoDB::GlobalTable
      * 
      */
-    public static CompletableFuture<GetGlobalTableResult> getGlobalTable(GetGlobalTableArgs args) {
+    public static Output<GetGlobalTableResult> getGlobalTable(GetGlobalTableArgs args) {
         return getGlobalTable(args, InvokeOptions.Empty);
     }
     /**
      * Version: None. Resource Type definition for AWS::DynamoDB::GlobalTable
      * 
      */
-    public static CompletableFuture<GetGlobalTableResult> getGlobalTable(GetGlobalTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGlobalTableResult> getGlobalTablePlain(GetGlobalTablePlainArgs args) {
+        return getGlobalTablePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Version: None. Resource Type definition for AWS::DynamoDB::GlobalTable
+     * 
+     */
+    public static Output<GetGlobalTableResult> getGlobalTable(GetGlobalTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:dynamodb:getGlobalTable", TypeShape.of(GetGlobalTableResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Version: None. Resource Type definition for AWS::DynamoDB::GlobalTable
+     * 
+     */
+    public static CompletableFuture<GetGlobalTableResult> getGlobalTablePlain(GetGlobalTablePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:dynamodb:getGlobalTable", TypeShape.of(GetGlobalTableResult.class), args, Utilities.withVersion(options));
     }
 }

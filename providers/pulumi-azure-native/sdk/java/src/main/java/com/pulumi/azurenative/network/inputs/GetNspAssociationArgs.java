@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNspAssociationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="associationName", required=true)
-    private String associationName;
+    private Output<String> associationName;
 
     /**
      * @return The name of the NSP association.
      * 
      */
-    public String associationName() {
+    public Output<String> associationName() {
         return this.associationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetNspAssociationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="networkSecurityPerimeterName", required=true)
-    private String networkSecurityPerimeterName;
+    private Output<String> networkSecurityPerimeterName;
 
     /**
      * @return The name of the network security perimeter.
      * 
      */
-    public String networkSecurityPerimeterName() {
+    public Output<String> networkSecurityPerimeterName() {
         return this.networkSecurityPerimeterName;
     }
 
@@ -47,13 +48,13 @@ public final class GetNspAssociationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetNspAssociationArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder associationName(String associationName) {
+        public Builder associationName(Output<String> associationName) {
             $.associationName = associationName;
+            return this;
+        }
+
+        /**
+         * @param associationName The name of the NSP association.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder associationName(String associationName) {
+            return associationName(Output.of(associationName));
+        }
+
+        /**
+         * @param networkSecurityPerimeterName The name of the network security perimeter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkSecurityPerimeterName(Output<String> networkSecurityPerimeterName) {
+            $.networkSecurityPerimeterName = networkSecurityPerimeterName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetNspAssociationArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder networkSecurityPerimeterName(String networkSecurityPerimeterName) {
-            $.networkSecurityPerimeterName = networkSecurityPerimeterName;
+            return networkSecurityPerimeterName(Output.of(networkSecurityPerimeterName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetNspAssociationArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNspAssociationArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetInterconnectArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetInterconnectArgs Empty = new GetInterconnectArgs();
 
     @Import(name="interconnect", required=true)
-    private String interconnect;
+    private Output<String> interconnect;
 
-    public String interconnect() {
+    public Output<String> interconnect() {
         return this.interconnect;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetInterconnectArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInterconnectArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder interconnect(String interconnect) {
+        public Builder interconnect(Output<String> interconnect) {
             $.interconnect = interconnect;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder interconnect(String interconnect) {
+            return interconnect(Output.of(interconnect));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetInterconnectArgs build() {

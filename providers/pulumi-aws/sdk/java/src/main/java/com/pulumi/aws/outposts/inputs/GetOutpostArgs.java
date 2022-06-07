@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.outposts.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-    private @Nullable String arn;
+    private @Nullable Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN).
      * 
      */
-    public Optional<String> arn() {
+    public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
 
@@ -34,13 +35,13 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Identifier of the Outpost.
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -49,13 +50,13 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Name of the Outpost.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -64,13 +65,13 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ownerId")
-    private @Nullable String ownerId;
+    private @Nullable Output<String> ownerId;
 
     /**
      * @return AWS Account identifier of the Outpost owner.
      * 
      */
-    public Optional<String> ownerId() {
+    public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
 
@@ -107,8 +108,29 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder arn(@Nullable String arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param id Identifier of the Outpost.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable Output<String> id) {
+            $.id = id;
             return this;
         }
 
@@ -118,8 +140,18 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
-            $.id = id;
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param name Name of the Outpost.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -129,8 +161,18 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param ownerId AWS Account identifier of the Outpost owner.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ownerId(@Nullable Output<String> ownerId) {
+            $.ownerId = ownerId;
             return this;
         }
 
@@ -140,9 +182,8 @@ public final class GetOutpostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ownerId(@Nullable String ownerId) {
-            $.ownerId = ownerId;
-            return this;
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
 
         public GetOutpostArgs build() {

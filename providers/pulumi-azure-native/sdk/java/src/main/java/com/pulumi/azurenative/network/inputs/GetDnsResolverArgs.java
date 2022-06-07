@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDnsResolverArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dnsResolverName", required=true)
-    private String dnsResolverName;
+    private Output<String> dnsResolverName;
 
     /**
      * @return The name of the DNS resolver.
      * 
      */
-    public String dnsResolverName() {
+    public Output<String> dnsResolverName() {
         return this.dnsResolverName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDnsResolverArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetDnsResolverArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dnsResolverName(String dnsResolverName) {
+        public Builder dnsResolverName(Output<String> dnsResolverName) {
             $.dnsResolverName = dnsResolverName;
+            return this;
+        }
+
+        /**
+         * @param dnsResolverName The name of the DNS resolver.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dnsResolverName(String dnsResolverName) {
+            return dnsResolverName(Output.of(dnsResolverName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDnsResolverArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDnsResolverArgs build() {

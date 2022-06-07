@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.features.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSubscriptionFeatureRegistrationArgs extends com.pulumi.res
      * 
      */
     @Import(name="featureName", required=true)
-    private String featureName;
+    private Output<String> featureName;
 
     /**
      * @return The feature name.
      * 
      */
-    public String featureName() {
+    public Output<String> featureName() {
         return this.featureName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSubscriptionFeatureRegistrationArgs extends com.pulumi.res
      * 
      */
     @Import(name="providerNamespace", required=true)
-    private String providerNamespace;
+    private Output<String> providerNamespace;
 
     /**
      * @return The provider namespace.
      * 
      */
-    public String providerNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -73,8 +74,29 @@ public final class GetSubscriptionFeatureRegistrationArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder featureName(String featureName) {
+        public Builder featureName(Output<String> featureName) {
             $.featureName = featureName;
+            return this;
+        }
+
+        /**
+         * @param featureName The feature name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureName(String featureName) {
+            return featureName(Output.of(featureName));
+        }
+
+        /**
+         * @param providerNamespace The provider namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerNamespace(Output<String> providerNamespace) {
+            $.providerNamespace = providerNamespace;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSubscriptionFeatureRegistrationArgs extends com.pulumi.res
          * 
          */
         public Builder providerNamespace(String providerNamespace) {
-            $.providerNamespace = providerNamespace;
-            return this;
+            return providerNamespace(Output.of(providerNamespace));
         }
 
         public GetSubscriptionFeatureRegistrationArgs build() {

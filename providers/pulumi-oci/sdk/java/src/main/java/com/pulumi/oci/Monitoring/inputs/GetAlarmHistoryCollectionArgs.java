@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Monitoring.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetAlarmHistoryCollectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="alarmHistorytype")
-    private @Nullable String alarmHistorytype;
+    private @Nullable Output<String> alarmHistorytype;
 
     /**
      * @return The type of history entries to retrieve. State history (STATE_HISTORY) or state transition history (STATE_TRANSITION_HISTORY). If not specified, entries of both types are retrieved.  Example: `STATE_HISTORY`
      * 
      */
-    public Optional<String> alarmHistorytype() {
+    public Optional<Output<String>> alarmHistorytype() {
         return Optional.ofNullable(this.alarmHistorytype);
     }
 
@@ -34,13 +35,13 @@ public final class GetAlarmHistoryCollectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="alarmId", required=true)
-    private String alarmId;
+    private Output<String> alarmId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of an alarm.
      * 
      */
-    public String alarmId() {
+    public Output<String> alarmId() {
         return this.alarmId;
     }
 
@@ -49,13 +50,13 @@ public final class GetAlarmHistoryCollectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="timestampGreaterThanOrEqualTo")
-    private @Nullable String timestampGreaterThanOrEqualTo;
+    private @Nullable Output<String> timestampGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return only alarm history entries with timestamps occurring on or after the specified date and time. Format defined by RFC3339.  Example: `2019-01-01T01:00:00.789Z`
      * 
      */
-    public Optional<String> timestampGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timestampGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timestampGreaterThanOrEqualTo);
     }
 
@@ -64,13 +65,13 @@ public final class GetAlarmHistoryCollectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="timestampLessThan")
-    private @Nullable String timestampLessThan;
+    private @Nullable Output<String> timestampLessThan;
 
     /**
      * @return A filter to return only alarm history entries with timestamps occurring before the specified date and time. Format defined by RFC3339.  Example: `2019-01-02T01:00:00.789Z`
      * 
      */
-    public Optional<String> timestampLessThan() {
+    public Optional<Output<String>> timestampLessThan() {
         return Optional.ofNullable(this.timestampLessThan);
     }
 
@@ -107,8 +108,29 @@ public final class GetAlarmHistoryCollectionArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder alarmHistorytype(@Nullable String alarmHistorytype) {
+        public Builder alarmHistorytype(@Nullable Output<String> alarmHistorytype) {
             $.alarmHistorytype = alarmHistorytype;
+            return this;
+        }
+
+        /**
+         * @param alarmHistorytype The type of history entries to retrieve. State history (STATE_HISTORY) or state transition history (STATE_TRANSITION_HISTORY). If not specified, entries of both types are retrieved.  Example: `STATE_HISTORY`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alarmHistorytype(String alarmHistorytype) {
+            return alarmHistorytype(Output.of(alarmHistorytype));
+        }
+
+        /**
+         * @param alarmId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of an alarm.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alarmId(Output<String> alarmId) {
+            $.alarmId = alarmId;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class GetAlarmHistoryCollectionArgs extends com.pulumi.resources.In
          * 
          */
         public Builder alarmId(String alarmId) {
-            $.alarmId = alarmId;
+            return alarmId(Output.of(alarmId));
+        }
+
+        /**
+         * @param timestampGreaterThanOrEqualTo A filter to return only alarm history entries with timestamps occurring on or after the specified date and time. Format defined by RFC3339.  Example: `2019-01-01T01:00:00.789Z`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timestampGreaterThanOrEqualTo(@Nullable Output<String> timestampGreaterThanOrEqualTo) {
+            $.timestampGreaterThanOrEqualTo = timestampGreaterThanOrEqualTo;
             return this;
         }
 
@@ -129,8 +161,18 @@ public final class GetAlarmHistoryCollectionArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder timestampGreaterThanOrEqualTo(@Nullable String timestampGreaterThanOrEqualTo) {
-            $.timestampGreaterThanOrEqualTo = timestampGreaterThanOrEqualTo;
+        public Builder timestampGreaterThanOrEqualTo(String timestampGreaterThanOrEqualTo) {
+            return timestampGreaterThanOrEqualTo(Output.of(timestampGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timestampLessThan A filter to return only alarm history entries with timestamps occurring before the specified date and time. Format defined by RFC3339.  Example: `2019-01-02T01:00:00.789Z`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timestampLessThan(@Nullable Output<String> timestampLessThan) {
+            $.timestampLessThan = timestampLessThan;
             return this;
         }
 
@@ -140,9 +182,8 @@ public final class GetAlarmHistoryCollectionArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder timestampLessThan(@Nullable String timestampLessThan) {
-            $.timestampLessThan = timestampLessThan;
-            return this;
+        public Builder timestampLessThan(String timestampLessThan) {
+            return timestampLessThan(Output.of(timestampLessThan));
         }
 
         public GetAlarmHistoryCollectionArgs build() {

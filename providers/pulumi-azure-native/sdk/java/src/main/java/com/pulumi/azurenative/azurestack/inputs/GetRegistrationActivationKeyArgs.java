@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.azurestack.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRegistrationActivationKeyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="registrationName", required=true)
-    private String registrationName;
+    private Output<String> registrationName;
 
     /**
      * @return Name of the Azure Stack registration.
      * 
      */
-    public String registrationName() {
+    public Output<String> registrationName() {
         return this.registrationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetRegistrationActivationKeyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroup", required=true)
-    private String resourceGroup;
+    private Output<String> resourceGroup;
 
     /**
      * @return Name of the resource group.
      * 
      */
-    public String resourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -73,8 +74,29 @@ public final class GetRegistrationActivationKeyArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder registrationName(String registrationName) {
+        public Builder registrationName(Output<String> registrationName) {
             $.registrationName = registrationName;
+            return this;
+        }
+
+        /**
+         * @param registrationName Name of the Azure Stack registration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registrationName(String registrationName) {
+            return registrationName(Output.of(registrationName));
+        }
+
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroup(Output<String> resourceGroup) {
+            $.resourceGroup = resourceGroup;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetRegistrationActivationKeyArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroup(String resourceGroup) {
-            $.resourceGroup = resourceGroup;
-            return this;
+            return resourceGroup(Output.of(resourceGroup));
         }
 
         public GetRegistrationActivationKeyArgs build() {

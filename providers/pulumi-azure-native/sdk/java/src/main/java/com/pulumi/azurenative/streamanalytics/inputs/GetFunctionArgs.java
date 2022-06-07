@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.streamanalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="functionName", required=true)
-    private String functionName;
+    private Output<String> functionName;
 
     /**
      * @return The name of the function.
      * 
      */
-    public String functionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobName", required=true)
-    private String jobName;
+    private Output<String> jobName;
 
     /**
      * @return The name of the streaming job.
      * 
      */
-    public String jobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -47,13 +48,13 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder functionName(String functionName) {
+        public Builder functionName(Output<String> functionName) {
             $.functionName = functionName;
+            return this;
+        }
+
+        /**
+         * @param functionName The name of the function.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionName(String functionName) {
+            return functionName(Output.of(functionName));
+        }
+
+        /**
+         * @param jobName The name of the streaming job.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobName(Output<String> jobName) {
+            $.jobName = jobName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder jobName(String jobName) {
-            $.jobName = jobName;
+            return jobName(Output.of(jobName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetFunctionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMaskingPoliciesMaskingColumnArgs extends com.pulumi.resour
      * 
      */
     @Import(name="maskingColumnKey", required=true)
-    private String maskingColumnKey;
+    private Output<String> maskingColumnKey;
 
     /**
      * @return The unique key that identifies the masking column. It&#39;s numeric and unique within a masking policy.
      * 
      */
-    public String maskingColumnKey() {
+    public Output<String> maskingColumnKey() {
         return this.maskingColumnKey;
     }
 
@@ -32,13 +33,13 @@ public final class GetMaskingPoliciesMaskingColumnArgs extends com.pulumi.resour
      * 
      */
     @Import(name="maskingPolicyId", required=true)
-    private String maskingPolicyId;
+    private Output<String> maskingPolicyId;
 
     /**
      * @return The OCID of the masking policy.
      * 
      */
-    public String maskingPolicyId() {
+    public Output<String> maskingPolicyId() {
         return this.maskingPolicyId;
     }
 
@@ -73,8 +74,29 @@ public final class GetMaskingPoliciesMaskingColumnArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder maskingColumnKey(String maskingColumnKey) {
+        public Builder maskingColumnKey(Output<String> maskingColumnKey) {
             $.maskingColumnKey = maskingColumnKey;
+            return this;
+        }
+
+        /**
+         * @param maskingColumnKey The unique key that identifies the masking column. It&#39;s numeric and unique within a masking policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maskingColumnKey(String maskingColumnKey) {
+            return maskingColumnKey(Output.of(maskingColumnKey));
+        }
+
+        /**
+         * @param maskingPolicyId The OCID of the masking policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maskingPolicyId(Output<String> maskingPolicyId) {
+            $.maskingPolicyId = maskingPolicyId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetMaskingPoliciesMaskingColumnArgs extends com.pulumi.resour
          * 
          */
         public Builder maskingPolicyId(String maskingPolicyId) {
-            $.maskingPolicyId = maskingPolicyId;
-            return this;
+            return maskingPolicyId(Output.of(maskingPolicyId));
         }
 
         public GetMaskingPoliciesMaskingColumnArgs build() {

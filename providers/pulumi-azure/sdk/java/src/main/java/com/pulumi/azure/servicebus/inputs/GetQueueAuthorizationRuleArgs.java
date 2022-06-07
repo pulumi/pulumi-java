@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.servicebus.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of this ServiceBus Queue Authorisation Rule.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -34,20 +35,20 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="namespaceName")
-    private @Nullable String namespaceName;
+    private @Nullable Output<String> namespaceName;
 
     /**
      * @return The name of the ServiceBus Namespace.
      * 
      */
-    public Optional<String> namespaceName() {
+    public Optional<Output<String>> namespaceName() {
         return Optional.ofNullable(this.namespaceName);
     }
 
     @Import(name="queueId")
-    private @Nullable String queueId;
+    private @Nullable Output<String> queueId;
 
-    public Optional<String> queueId() {
+    public Optional<Output<String>> queueId() {
         return Optional.ofNullable(this.queueId);
     }
 
@@ -56,13 +57,13 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="queueName")
-    private @Nullable String queueName;
+    private @Nullable Output<String> queueName;
 
     /**
      * @return The name of the ServiceBus Queue.
      * 
      */
-    public Optional<String> queueName() {
+    public Optional<Output<String>> queueName() {
         return Optional.ofNullable(this.queueName);
     }
 
@@ -71,13 +72,13 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName")
-    private @Nullable String resourceGroupName;
+    private @Nullable Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource Group where the ServiceBus Queue Authorisation Rule exists.
      * 
      */
-    public Optional<String> resourceGroupName() {
+    public Optional<Output<String>> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
 
@@ -115,8 +116,29 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of this ServiceBus Queue Authorisation Rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param namespaceName The name of the ServiceBus Namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(@Nullable Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -126,13 +148,27 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder namespaceName(@Nullable String namespaceName) {
-            $.namespaceName = namespaceName;
+        public Builder namespaceName(String namespaceName) {
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        public Builder queueId(@Nullable Output<String> queueId) {
+            $.queueId = queueId;
             return this;
         }
 
-        public Builder queueId(@Nullable String queueId) {
-            $.queueId = queueId;
+        public Builder queueId(String queueId) {
+            return queueId(Output.of(queueId));
+        }
+
+        /**
+         * @param queueName The name of the ServiceBus Queue.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder queueName(@Nullable Output<String> queueName) {
+            $.queueName = queueName;
             return this;
         }
 
@@ -142,8 +178,18 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder queueName(@Nullable String queueName) {
-            $.queueName = queueName;
+        public Builder queueName(String queueName) {
+            return queueName(Output.of(queueName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Resource Group where the ServiceBus Queue Authorisation Rule exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -153,9 +199,8 @@ public final class GetQueueAuthorizationRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetQueueAuthorizationRuleArgs build() {

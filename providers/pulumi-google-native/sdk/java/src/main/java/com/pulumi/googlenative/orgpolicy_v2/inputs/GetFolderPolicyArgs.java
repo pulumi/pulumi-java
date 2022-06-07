@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.orgpolicy_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetFolderPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFolderPolicyArgs Empty = new GetFolderPolicyArgs();
 
     @Import(name="folderId", required=true)
-    private String folderId;
+    private Output<String> folderId;
 
-    public String folderId() {
+    public Output<String> folderId() {
         return this.folderId;
     }
 
     @Import(name="policyId", required=true)
-    private String policyId;
+    private Output<String> policyId;
 
-    public String policyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 
@@ -51,14 +52,22 @@ public final class GetFolderPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFolderPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder folderId(String folderId) {
+        public Builder folderId(Output<String> folderId) {
             $.folderId = folderId;
             return this;
         }
 
-        public Builder policyId(String policyId) {
+        public Builder folderId(String folderId) {
+            return folderId(Output.of(folderId));
+        }
+
+        public Builder policyId(Output<String> policyId) {
             $.policyId = policyId;
             return this;
+        }
+
+        public Builder policyId(String policyId) {
+            return policyId(Output.of(policyId));
         }
 
         public GetFolderPolicyArgs build() {

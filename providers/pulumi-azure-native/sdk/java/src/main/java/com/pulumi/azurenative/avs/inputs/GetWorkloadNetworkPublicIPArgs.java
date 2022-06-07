@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.avs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWorkloadNetworkPublicIPArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="privateCloudName", required=true)
-    private String privateCloudName;
+    private Output<String> privateCloudName;
 
     /**
      * @return Name of the private cloud
      * 
      */
-    public String privateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -32,13 +33,13 @@ public final class GetWorkloadNetworkPublicIPArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="publicIPId", required=true)
-    private String publicIPId;
+    private Output<String> publicIPId;
 
     /**
      * @return NSX Public IP Block identifier. Generally the same as the Public IP Block&#39;s display name
      * 
      */
-    public String publicIPId() {
+    public Output<String> publicIPId() {
         return this.publicIPId;
     }
 
@@ -47,13 +48,13 @@ public final class GetWorkloadNetworkPublicIPArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetWorkloadNetworkPublicIPArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder privateCloudName(String privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
+            return this;
+        }
+
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateCloudName(String privateCloudName) {
+            return privateCloudName(Output.of(privateCloudName));
+        }
+
+        /**
+         * @param publicIPId NSX Public IP Block identifier. Generally the same as the Public IP Block&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicIPId(Output<String> publicIPId) {
+            $.publicIPId = publicIPId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetWorkloadNetworkPublicIPArgs extends com.pulumi.resources.I
          * 
          */
         public Builder publicIPId(String publicIPId) {
-            $.publicIPId = publicIPId;
+            return publicIPId(Output.of(publicIPId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetWorkloadNetworkPublicIPArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetWorkloadNetworkPublicIPArgs build() {

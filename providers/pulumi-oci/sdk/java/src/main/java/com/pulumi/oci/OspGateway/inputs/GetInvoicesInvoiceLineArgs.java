@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OspGateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInvoicesInvoiceLineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -32,13 +33,13 @@ public final class GetInvoicesInvoiceLineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="internalInvoiceId", required=true)
-    private String internalInvoiceId;
+    private Output<String> internalInvoiceId;
 
     /**
      * @return The identifier of the invoice.
      * 
      */
-    public String internalInvoiceId() {
+    public Output<String> internalInvoiceId() {
         return this.internalInvoiceId;
     }
 
@@ -47,13 +48,13 @@ public final class GetInvoicesInvoiceLineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ospHomeRegion", required=true)
-    private String ospHomeRegion;
+    private Output<String> ospHomeRegion;
 
     /**
      * @return The home region&#39;s public name of the logged in user.
      * 
      */
-    public String ospHomeRegion() {
+    public Output<String> ospHomeRegion() {
         return this.ospHomeRegion;
     }
 
@@ -89,8 +90,29 @@ public final class GetInvoicesInvoiceLineArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param internalInvoiceId The identifier of the invoice.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder internalInvoiceId(Output<String> internalInvoiceId) {
+            $.internalInvoiceId = internalInvoiceId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetInvoicesInvoiceLineArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder internalInvoiceId(String internalInvoiceId) {
-            $.internalInvoiceId = internalInvoiceId;
+            return internalInvoiceId(Output.of(internalInvoiceId));
+        }
+
+        /**
+         * @param ospHomeRegion The home region&#39;s public name of the logged in user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ospHomeRegion(Output<String> ospHomeRegion) {
+            $.ospHomeRegion = ospHomeRegion;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetInvoicesInvoiceLineArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder ospHomeRegion(String ospHomeRegion) {
-            $.ospHomeRegion = ospHomeRegion;
-            return this;
+            return ospHomeRegion(Output.of(ospHomeRegion));
         }
 
         public GetInvoicesInvoiceLineArgs build() {

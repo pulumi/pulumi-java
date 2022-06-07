@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.apigateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBasePathMappingArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="basePath", required=true)
-    private String basePath;
+    private Output<String> basePath;
 
     /**
      * @return The base path name that callers of the API must provide in the URL after the domain name.
      * 
      */
-    public String basePath() {
+    public Output<String> basePath() {
         return this.basePath;
     }
 
@@ -32,13 +33,13 @@ public final class GetBasePathMappingArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="domainName", required=true)
-    private String domainName;
+    private Output<String> domainName;
 
     /**
      * @return The DomainName of an AWS::ApiGateway::DomainName resource.
      * 
      */
-    public String domainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -73,8 +74,29 @@ public final class GetBasePathMappingArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder basePath(String basePath) {
+        public Builder basePath(Output<String> basePath) {
             $.basePath = basePath;
+            return this;
+        }
+
+        /**
+         * @param basePath The base path name that callers of the API must provide in the URL after the domain name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder basePath(String basePath) {
+            return basePath(Output.of(basePath));
+        }
+
+        /**
+         * @param domainName The DomainName of an AWS::ApiGateway::DomainName resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainName(Output<String> domainName) {
+            $.domainName = domainName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetBasePathMappingArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder domainName(String domainName) {
-            $.domainName = domainName;
-            return this;
+            return domainName(Output.of(domainName));
         }
 
         public GetBasePathMappingArgs build() {

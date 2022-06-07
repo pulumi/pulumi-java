@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.bigquery_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetRoutineArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRoutineArgs Empty = new GetRoutineArgs();
 
     @Import(name="datasetId", required=true)
-    private String datasetId;
+    private Output<String> datasetId;
 
-    public String datasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="readMask")
-    private @Nullable String readMask;
+    private @Nullable Output<String> readMask;
 
-    public Optional<String> readMask() {
+    public Optional<Output<String>> readMask() {
         return Optional.ofNullable(this.readMask);
     }
 
     @Import(name="routineId", required=true)
-    private String routineId;
+    private Output<String> routineId;
 
-    public String routineId() {
+    public Output<String> routineId() {
         return this.routineId;
     }
 
@@ -69,24 +70,40 @@ public final class GetRoutineArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRoutineArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder datasetId(String datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder readMask(@Nullable String readMask) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder readMask(@Nullable Output<String> readMask) {
             $.readMask = readMask;
             return this;
         }
 
-        public Builder routineId(String routineId) {
+        public Builder readMask(String readMask) {
+            return readMask(Output.of(readMask));
+        }
+
+        public Builder routineId(Output<String> routineId) {
             $.routineId = routineId;
             return this;
+        }
+
+        public Builder routineId(String routineId) {
+            return routineId(Output.of(routineId));
         }
 
         public GetRoutineArgs build() {

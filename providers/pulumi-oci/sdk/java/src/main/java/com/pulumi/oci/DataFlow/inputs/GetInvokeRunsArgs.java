@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataFlow.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataFlow.inputs.GetInvokeRunsFilter;
+import com.pulumi.oci.DataFlow.inputs.GetInvokeRunsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationId")
-    private @Nullable String applicationId;
+    private @Nullable Output<String> applicationId;
 
     /**
      * @return The ID of the application.
      * 
      */
-    public Optional<String> applicationId() {
+    public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
 
@@ -36,13 +37,13 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,13 +52,13 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The query parameter for the Spark application name.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -66,20 +67,20 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNameStartsWith")
-    private @Nullable String displayNameStartsWith;
+    private @Nullable Output<String> displayNameStartsWith;
 
     /**
      * @return The displayName prefix.
      * 
      */
-    public Optional<String> displayNameStartsWith() {
+    public Optional<Output<String>> displayNameStartsWith() {
         return Optional.ofNullable(this.displayNameStartsWith);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetInvokeRunsFilter> filters;
+    private @Nullable Output<List<GetInvokeRunsFilterArgs>> filters;
 
-    public Optional<List<GetInvokeRunsFilter>> filters() {
+    public Optional<Output<List<GetInvokeRunsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -88,13 +89,13 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ownerPrincipalId")
-    private @Nullable String ownerPrincipalId;
+    private @Nullable Output<String> ownerPrincipalId;
 
     /**
      * @return The OCID of the user who created the resource.
      * 
      */
-    public Optional<String> ownerPrincipalId() {
+    public Optional<Output<String>> ownerPrincipalId() {
         return Optional.ofNullable(this.ownerPrincipalId);
     }
 
@@ -103,13 +104,13 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The LifecycleState of the run.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -118,13 +119,13 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedGreaterThan")
-    private @Nullable String timeCreatedGreaterThan;
+    private @Nullable Output<String> timeCreatedGreaterThan;
 
     /**
      * @return The epoch time that the resource was created.
      * 
      */
-    public Optional<String> timeCreatedGreaterThan() {
+    public Optional<Output<String>> timeCreatedGreaterThan() {
         return Optional.ofNullable(this.timeCreatedGreaterThan);
     }
 
@@ -165,8 +166,29 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder applicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * @param applicationId The ID of the application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -177,7 +199,17 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName The query parameter for the Spark application name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -187,8 +219,18 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param displayNameStartsWith The displayName prefix.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayNameStartsWith(@Nullable Output<String> displayNameStartsWith) {
+            $.displayNameStartsWith = displayNameStartsWith;
             return this;
         }
 
@@ -198,17 +240,20 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNameStartsWith(@Nullable String displayNameStartsWith) {
-            $.displayNameStartsWith = displayNameStartsWith;
-            return this;
+        public Builder displayNameStartsWith(String displayNameStartsWith) {
+            return displayNameStartsWith(Output.of(displayNameStartsWith));
         }
 
-        public Builder filters(@Nullable List<GetInvokeRunsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetInvokeRunsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetInvokeRunsFilter... filters) {
+        public Builder filters(List<GetInvokeRunsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetInvokeRunsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -218,8 +263,29 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ownerPrincipalId(@Nullable String ownerPrincipalId) {
+        public Builder ownerPrincipalId(@Nullable Output<String> ownerPrincipalId) {
             $.ownerPrincipalId = ownerPrincipalId;
+            return this;
+        }
+
+        /**
+         * @param ownerPrincipalId The OCID of the user who created the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ownerPrincipalId(String ownerPrincipalId) {
+            return ownerPrincipalId(Output.of(ownerPrincipalId));
+        }
+
+        /**
+         * @param state The LifecycleState of the run.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -229,8 +295,18 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param timeCreatedGreaterThan The epoch time that the resource was created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedGreaterThan(@Nullable Output<String> timeCreatedGreaterThan) {
+            $.timeCreatedGreaterThan = timeCreatedGreaterThan;
             return this;
         }
 
@@ -240,9 +316,8 @@ public final class GetInvokeRunsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThan(@Nullable String timeCreatedGreaterThan) {
-            $.timeCreatedGreaterThan = timeCreatedGreaterThan;
-            return this;
+        public Builder timeCreatedGreaterThan(String timeCreatedGreaterThan) {
+            return timeCreatedGreaterThan(Output.of(timeCreatedGreaterThan));
         }
 
         public GetInvokeRunsArgs build() {

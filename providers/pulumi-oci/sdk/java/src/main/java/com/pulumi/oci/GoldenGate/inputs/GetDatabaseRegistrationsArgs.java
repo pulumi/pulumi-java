@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.GoldenGate.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.GoldenGate.inputs.GetDatabaseRegistrationsFilter;
+import com.pulumi.oci.GoldenGate.inputs.GetDatabaseRegistrationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only the resources that match the entire &#39;displayName&#39; given.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDatabaseRegistrationsFilter> filters;
+    private @Nullable Output<List<GetDatabaseRegistrationsFilterArgs>> filters;
 
-    public Optional<List<GetDatabaseRegistrationsFilter>> filters() {
+    public Optional<Output<List<GetDatabaseRegistrationsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only the resources that match the &#39;lifecycleState&#39; given.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -101,8 +102,29 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only the resources that match the entire &#39;displayName&#39; given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -112,17 +134,20 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetDatabaseRegistrationsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabaseRegistrationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDatabaseRegistrationsFilter... filters) {
+        public Builder filters(List<GetDatabaseRegistrationsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDatabaseRegistrationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -132,9 +157,19 @@ public final class GetDatabaseRegistrationsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state A filter to return only the resources that match the &#39;lifecycleState&#39; given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetDatabaseRegistrationsArgs build() {

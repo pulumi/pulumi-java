@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.avs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateCloudArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateCloudName", required=true)
-    private String privateCloudName;
+    private Output<String> privateCloudName;
 
     /**
      * @return Name of the private cloud
      * 
      */
-    public String privateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateCloudArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPrivateCloudArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder privateCloudName(String privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
+            return this;
+        }
+
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateCloudName(String privateCloudName) {
+            return privateCloudName(Output.of(privateCloudName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPrivateCloudArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPrivateCloudArgs build() {

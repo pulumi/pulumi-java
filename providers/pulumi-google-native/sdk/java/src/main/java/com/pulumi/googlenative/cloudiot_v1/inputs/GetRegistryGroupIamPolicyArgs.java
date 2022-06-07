@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudiot_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetRegistryGroupIamPolicyArgs extends com.pulumi.resources.In
     public static final GetRegistryGroupIamPolicyArgs Empty = new GetRegistryGroupIamPolicyArgs();
 
     @Import(name="groupId", required=true)
-    private String groupId;
+    private Output<String> groupId;
 
-    public String groupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -69,24 +70,40 @@ public final class GetRegistryGroupIamPolicyArgs extends com.pulumi.resources.In
             $ = new GetRegistryGroupIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder groupId(String groupId) {
+        public Builder groupId(Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder registryId(String registryId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder registryId(Output<String> registryId) {
             $.registryId = registryId;
             return this;
+        }
+
+        public Builder registryId(String registryId) {
+            return registryId(Output.of(registryId));
         }
 
         public GetRegistryGroupIamPolicyArgs build() {

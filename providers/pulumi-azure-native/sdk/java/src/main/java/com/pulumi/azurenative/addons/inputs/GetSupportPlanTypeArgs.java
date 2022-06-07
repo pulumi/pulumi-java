@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.addons.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSupportPlanTypeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="planTypeName", required=true)
-    private String planTypeName;
+    private Output<String> planTypeName;
 
     /**
      * @return The Canonical support plan type.
      * 
      */
-    public String planTypeName() {
+    public Output<String> planTypeName() {
         return this.planTypeName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSupportPlanTypeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="providerName", required=true)
-    private String providerName;
+    private Output<String> providerName;
 
     /**
      * @return The support plan type. For now the only valid type is &#34;canonical&#34;.
      * 
      */
-    public String providerName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSupportPlanTypeArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder planTypeName(String planTypeName) {
+        public Builder planTypeName(Output<String> planTypeName) {
             $.planTypeName = planTypeName;
+            return this;
+        }
+
+        /**
+         * @param planTypeName The Canonical support plan type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder planTypeName(String planTypeName) {
+            return planTypeName(Output.of(planTypeName));
+        }
+
+        /**
+         * @param providerName The support plan type. For now the only valid type is &#34;canonical&#34;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerName(Output<String> providerName) {
+            $.providerName = providerName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSupportPlanTypeArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder providerName(String providerName) {
-            $.providerName = providerName;
-            return this;
+            return providerName(Output.of(providerName));
         }
 
         public GetSupportPlanTypeArgs build() {

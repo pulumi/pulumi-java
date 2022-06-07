@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.domainregistration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDomainOwnershipIdentifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="domainName", required=true)
-    private String domainName;
+    private Output<String> domainName;
 
     /**
      * @return Name of domain.
      * 
      */
-    public String domainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDomainOwnershipIdentifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of identifier.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetDomainOwnershipIdentifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetDomainOwnershipIdentifierArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder domainName(String domainName) {
+        public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * @param domainName Name of domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
+        }
+
+        /**
+         * @param name Name of identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetDomainOwnershipIdentifierArgs extends com.pulumi.resources
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetDomainOwnershipIdentifierArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDomainOwnershipIdentifierArgs build() {

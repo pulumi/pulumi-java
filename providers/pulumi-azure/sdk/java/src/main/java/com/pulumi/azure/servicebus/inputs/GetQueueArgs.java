@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.servicebus.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,20 +20,20 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of this Service Bus Queue.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="namespaceId")
-    private @Nullable String namespaceId;
+    private @Nullable Output<String> namespaceId;
 
-    public Optional<String> namespaceId() {
+    public Optional<Output<String>> namespaceId() {
         return Optional.ofNullable(this.namespaceId);
     }
 
@@ -41,13 +42,13 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespaceName")
-    private @Nullable String namespaceName;
+    private @Nullable Output<String> namespaceName;
 
     /**
      * @return The name of the ServiceBus Namespace.
      * 
      */
-    public Optional<String> namespaceName() {
+    public Optional<Output<String>> namespaceName() {
         return Optional.ofNullable(this.namespaceName);
     }
 
@@ -56,13 +57,13 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName")
-    private @Nullable String resourceGroupName;
+    private @Nullable Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource Group where the Service Bus Queue exists.
      * 
      */
-    public Optional<String> resourceGroupName() {
+    public Optional<Output<String>> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
 
@@ -99,13 +100,38 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder namespaceId(@Nullable String namespaceId) {
+        /**
+         * @param name The name of this Service Bus Queue.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder namespaceId(@Nullable Output<String> namespaceId) {
             $.namespaceId = namespaceId;
+            return this;
+        }
+
+        public Builder namespaceId(String namespaceId) {
+            return namespaceId(Output.of(namespaceId));
+        }
+
+        /**
+         * @param namespaceName The name of the ServiceBus Namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(@Nullable Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -115,8 +141,18 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namespaceName(@Nullable String namespaceName) {
-            $.namespaceName = namespaceName;
+        public Builder namespaceName(String namespaceName) {
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Resource Group where the Service Bus Queue exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -126,9 +162,8 @@ public final class GetQueueArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetQueueArgs build() {

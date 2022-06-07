@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.servicefabricmesh.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayResourceName", required=true)
-    private String gatewayResourceName;
+    private Output<String> gatewayResourceName;
 
     /**
      * @return The identity of the gateway.
      * 
      */
-    public String gatewayResourceName() {
+    public Output<String> gatewayResourceName() {
         return this.gatewayResourceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Azure resource group name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder gatewayResourceName(String gatewayResourceName) {
+        public Builder gatewayResourceName(Output<String> gatewayResourceName) {
             $.gatewayResourceName = gatewayResourceName;
+            return this;
+        }
+
+        /**
+         * @param gatewayResourceName The identity of the gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayResourceName(String gatewayResourceName) {
+            return gatewayResourceName(Output.of(gatewayResourceName));
+        }
+
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetGatewayArgs build() {

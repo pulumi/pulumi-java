@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Optimizer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCategoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="categoryId", required=true)
-    private String categoryId;
+    private Output<String> categoryId;
 
     /**
      * @return The unique OCID associated with the category.
      * 
      */
-    public String categoryId() {
+    public Output<String> categoryId() {
         return this.categoryId;
     }
 
@@ -57,9 +58,19 @@ public final class GetCategoryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder categoryId(String categoryId) {
+        public Builder categoryId(Output<String> categoryId) {
             $.categoryId = categoryId;
             return this;
+        }
+
+        /**
+         * @param categoryId The unique OCID associated with the category.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder categoryId(String categoryId) {
+            return categoryId(Output.of(categoryId));
         }
 
         public GetCategoryArgs build() {

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.HealthChecks.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.HealthChecks.inputs.GetVantagePointsFilter;
+import com.pulumi.oci.HealthChecks.inputs.GetVantagePointsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetVantagePointsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Filters results that exactly match the `displayName` field.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetVantagePointsFilter> filters;
+    private @Nullable Output<List<GetVantagePointsFilterArgs>> filters;
 
-    public Optional<List<GetVantagePointsFilter>> filters() {
+    public Optional<Output<List<GetVantagePointsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetVantagePointsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Filters results that exactly match the `name` field.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -85,17 +86,31 @@ public final class GetVantagePointsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetVantagePointsFilter> filters) {
+        /**
+         * @param displayName Filters results that exactly match the `displayName` field.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(@Nullable Output<List<GetVantagePointsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetVantagePointsFilter... filters) {
+        public Builder filters(List<GetVantagePointsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetVantagePointsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -105,9 +120,19 @@ public final class GetVantagePointsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name Filters results that exactly match the `name` field.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetVantagePointsArgs build() {

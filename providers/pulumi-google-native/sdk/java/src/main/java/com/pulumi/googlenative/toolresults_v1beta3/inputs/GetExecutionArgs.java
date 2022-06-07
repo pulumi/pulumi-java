@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetExecutionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetExecutionArgs Empty = new GetExecutionArgs();
 
     @Import(name="executionId", required=true)
-    private String executionId;
+    private Output<String> executionId;
 
-    public String executionId() {
+    public Output<String> executionId() {
         return this.executionId;
     }
 
     @Import(name="historyId", required=true)
-    private String historyId;
+    private Output<String> historyId;
 
-    public String historyId() {
+    public Output<String> historyId() {
         return this.historyId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetExecutionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetExecutionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder executionId(String executionId) {
+        public Builder executionId(Output<String> executionId) {
             $.executionId = executionId;
             return this;
         }
 
-        public Builder historyId(String historyId) {
+        public Builder executionId(String executionId) {
+            return executionId(Output.of(executionId));
+        }
+
+        public Builder historyId(Output<String> historyId) {
             $.historyId = historyId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder historyId(String historyId) {
+            return historyId(Output.of(historyId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetExecutionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.bigqueryreservation_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetCapacityCommitmentArgs extends com.pulumi.resources.Invoke
     public static final GetCapacityCommitmentArgs Empty = new GetCapacityCommitmentArgs();
 
     @Import(name="capacityCommitmentId", required=true)
-    private String capacityCommitmentId;
+    private Output<String> capacityCommitmentId;
 
-    public String capacityCommitmentId() {
+    public Output<String> capacityCommitmentId() {
         return this.capacityCommitmentId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetCapacityCommitmentArgs extends com.pulumi.resources.Invoke
             $ = new GetCapacityCommitmentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder capacityCommitmentId(String capacityCommitmentId) {
+        public Builder capacityCommitmentId(Output<String> capacityCommitmentId) {
             $.capacityCommitmentId = capacityCommitmentId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder capacityCommitmentId(String capacityCommitmentId) {
+            return capacityCommitmentId(Output.of(capacityCommitmentId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetCapacityCommitmentArgs build() {

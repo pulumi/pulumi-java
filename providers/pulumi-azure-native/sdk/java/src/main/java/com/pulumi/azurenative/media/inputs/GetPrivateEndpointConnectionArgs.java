@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.media.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,20 +18,20 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The Media Services account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -39,13 +40,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,13 +82,38 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
-        public Builder name(String name) {
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -98,8 +124,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPrivateEndpointConnectionArgs build() {

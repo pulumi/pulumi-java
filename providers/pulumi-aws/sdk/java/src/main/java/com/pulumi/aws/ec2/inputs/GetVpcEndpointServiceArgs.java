@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetVpcEndpointServiceFilter;
+import com.pulumi.aws.ec2.inputs.GetVpcEndpointServiceFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetVpcEndpointServiceFilter> filters;
+    private @Nullable Output<List<GetVpcEndpointServiceFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Optional<List<GetVpcEndpointServiceFilter>> filters() {
+    public Optional<Output<List<GetVpcEndpointServiceFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -37,13 +38,13 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="service")
-    private @Nullable String service;
+    private @Nullable Output<String> service;
 
     /**
      * @return The common name of an AWS service (e.g., `s3`).
      * 
      */
-    public Optional<String> service() {
+    public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
 
@@ -52,13 +53,13 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceName")
-    private @Nullable String serviceName;
+    private @Nullable Output<String> serviceName;
 
     /**
      * @return The service name that is specified when creating a VPC endpoint. For AWS services the service name is usually in the form `com.amazonaws.&lt;region&gt;.&lt;service&gt;` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.&lt;region&gt;.notebook`).
      * 
      */
-    public Optional<String> serviceName() {
+    public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
 
@@ -67,13 +68,13 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceType")
-    private @Nullable String serviceType;
+    private @Nullable Output<String> serviceType;
 
     /**
      * @return The service type, `Gateway` or `Interface`.
      * 
      */
-    public Optional<String> serviceType() {
+    public Optional<Output<String>> serviceType() {
         return Optional.ofNullable(this.serviceType);
     }
 
@@ -82,13 +83,13 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags, each pair of which must exactly match a pair on the desired VPC Endpoint Service.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -126,7 +127,7 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetVpcEndpointServiceFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetVpcEndpointServiceFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -137,7 +138,17 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder filters(GetVpcEndpointServiceFilter... filters) {
+        public Builder filters(List<GetVpcEndpointServiceFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetVpcEndpointServiceFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -147,8 +158,29 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder service(@Nullable String service) {
+        public Builder service(@Nullable Output<String> service) {
             $.service = service;
+            return this;
+        }
+
+        /**
+         * @param service The common name of an AWS service (e.g., `s3`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        /**
+         * @param serviceName The service name that is specified when creating a VPC endpoint. For AWS services the service name is usually in the form `com.amazonaws.&lt;region&gt;.&lt;service&gt;` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.&lt;region&gt;.notebook`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(@Nullable Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -158,8 +190,18 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder serviceName(@Nullable String serviceName) {
-            $.serviceName = serviceName;
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
+        }
+
+        /**
+         * @param serviceType The service type, `Gateway` or `Interface`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceType(@Nullable Output<String> serviceType) {
+            $.serviceType = serviceType;
             return this;
         }
 
@@ -169,8 +211,18 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder serviceType(@Nullable String serviceType) {
-            $.serviceType = serviceType;
+        public Builder serviceType(String serviceType) {
+            return serviceType(Output.of(serviceType));
+        }
+
+        /**
+         * @param tags A map of tags, each pair of which must exactly match a pair on the desired VPC Endpoint Service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -180,9 +232,8 @@ public final class GetVpcEndpointServiceArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetVpcEndpointServiceArgs build() {

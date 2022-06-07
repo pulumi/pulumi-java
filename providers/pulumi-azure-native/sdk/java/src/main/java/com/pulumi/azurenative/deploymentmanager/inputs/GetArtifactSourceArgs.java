@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.deploymentmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetArtifactSourceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="artifactSourceName", required=true)
-    private String artifactSourceName;
+    private Output<String> artifactSourceName;
 
     /**
      * @return The name of the artifact source.
      * 
      */
-    public String artifactSourceName() {
+    public Output<String> artifactSourceName() {
         return this.artifactSourceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetArtifactSourceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetArtifactSourceArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder artifactSourceName(String artifactSourceName) {
+        public Builder artifactSourceName(Output<String> artifactSourceName) {
             $.artifactSourceName = artifactSourceName;
+            return this;
+        }
+
+        /**
+         * @param artifactSourceName The name of the artifact source.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder artifactSourceName(String artifactSourceName) {
+            return artifactSourceName(Output.of(artifactSourceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetArtifactSourceArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetArtifactSourceArgs build() {

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetAlertPoliciesFilter;
+import com.pulumi.oci.DataSafe.inputs.GetAlertPoliciesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
+    public Optional<Output<String>> accessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
 
@@ -37,13 +38,13 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="alertPolicyId")
-    private @Nullable String alertPolicyId;
+    private @Nullable Output<String> alertPolicyId;
 
     /**
      * @return A filter to return policy by it&#39;s OCID.
      * 
      */
-    public Optional<String> alertPolicyId() {
+    public Optional<Output<String>> alertPolicyId() {
         return Optional.ofNullable(this.alertPolicyId);
     }
 
@@ -52,13 +53,13 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the specified compartment OCID.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -67,13 +68,13 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
@@ -82,20 +83,20 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the specified display name.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAlertPoliciesFilter> filters;
+    private @Nullable Output<List<GetAlertPoliciesFilterArgs>> filters;
 
-    public Optional<List<GetAlertPoliciesFilter>> filters() {
+    public Optional<Output<List<GetAlertPoliciesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -104,13 +105,13 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="isUserDefined")
-    private @Nullable Boolean isUserDefined;
+    private @Nullable Output<Boolean> isUserDefined;
 
     /**
      * @return An optional filter to return only alert policies that are user-defined or not.
      * 
      */
-    public Optional<Boolean> isUserDefined() {
+    public Optional<Output<Boolean>> isUserDefined() {
         return Optional.ofNullable(this.isUserDefined);
     }
 
@@ -119,13 +120,13 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return An optional filter to return only alert policies that have the given life-cycle state.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -134,13 +135,13 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private @Nullable String timeCreatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return only the resources that were created after the specified date and time, as defined by [RFC3339](https://tools.ietf.org/html/rfc3339). Using TimeCreatedGreaterThanOrEqualToQueryParam parameter retrieves all resources created after that date.
      * 
      */
-    public Optional<String> timeCreatedGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timeCreatedGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
     }
 
@@ -149,13 +150,13 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private @Nullable String timeCreatedLessThan;
+    private @Nullable Output<String> timeCreatedLessThan;
 
     /**
      * @return Search for resources that were created before a specific date. Specifying this parameter corresponding `timeCreatedLessThan` parameter will retrieve all resources created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Optional<String> timeCreatedLessThan() {
+    public Optional<Output<String>> timeCreatedLessThan() {
         return Optional.ofNullable(this.timeCreatedLessThan);
     }
 
@@ -164,13 +165,13 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private @Nullable Output<String> type;
 
     /**
      * @return An optional filter to return only alert policies of a certain type.
      * 
      */
-    public Optional<String> type() {
+    public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
 
@@ -214,8 +215,29 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param alertPolicyId A filter to return policy by it&#39;s OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alertPolicyId(@Nullable Output<String> alertPolicyId) {
+            $.alertPolicyId = alertPolicyId;
             return this;
         }
 
@@ -225,8 +247,18 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder alertPolicyId(@Nullable String alertPolicyId) {
-            $.alertPolicyId = alertPolicyId;
+        public Builder alertPolicyId(String alertPolicyId) {
+            return alertPolicyId(Output.of(alertPolicyId));
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the specified compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -237,7 +269,17 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -247,8 +289,18 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the specified display name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -258,17 +310,20 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetAlertPoliciesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetAlertPoliciesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAlertPoliciesFilter... filters) {
+        public Builder filters(List<GetAlertPoliciesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAlertPoliciesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -278,8 +333,29 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder isUserDefined(@Nullable Boolean isUserDefined) {
+        public Builder isUserDefined(@Nullable Output<Boolean> isUserDefined) {
             $.isUserDefined = isUserDefined;
+            return this;
+        }
+
+        /**
+         * @param isUserDefined An optional filter to return only alert policies that are user-defined or not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isUserDefined(Boolean isUserDefined) {
+            return isUserDefined(Output.of(isUserDefined));
+        }
+
+        /**
+         * @param state An optional filter to return only alert policies that have the given life-cycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -289,8 +365,18 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param timeCreatedGreaterThanOrEqualTo A filter to return only the resources that were created after the specified date and time, as defined by [RFC3339](https://tools.ietf.org/html/rfc3339). Using TimeCreatedGreaterThanOrEqualToQueryParam parameter retrieves all resources created after that date.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable Output<String> timeCreatedGreaterThanOrEqualTo) {
+            $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
             return this;
         }
 
@@ -300,8 +386,18 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
-            $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
+        public Builder timeCreatedGreaterThanOrEqualTo(String timeCreatedGreaterThanOrEqualTo) {
+            return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeCreatedLessThan Search for resources that were created before a specific date. Specifying this parameter corresponding `timeCreatedLessThan` parameter will retrieve all resources created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedLessThan(@Nullable Output<String> timeCreatedLessThan) {
+            $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
 
@@ -311,8 +407,18 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
-            $.timeCreatedLessThan = timeCreatedLessThan;
+        public Builder timeCreatedLessThan(String timeCreatedLessThan) {
+            return timeCreatedLessThan(Output.of(timeCreatedLessThan));
+        }
+
+        /**
+         * @param type An optional filter to return only alert policies of a certain type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable Output<String> type) {
+            $.type = type;
             return this;
         }
 
@@ -322,9 +428,8 @@ public final class GetAlertPoliciesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
-            $.type = type;
-            return this;
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         public GetAlertPoliciesArgs build() {

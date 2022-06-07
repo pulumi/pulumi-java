@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.policysimulator_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetReplayArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetReplayArgs Empty = new GetReplayArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="replayId", required=true)
-    private String replayId;
+    private Output<String> replayId;
 
-    public String replayId() {
+    public Output<String> replayId() {
         return this.replayId;
     }
 
@@ -61,19 +62,31 @@ public final class GetReplayArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetReplayArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder replayId(String replayId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder replayId(Output<String> replayId) {
             $.replayId = replayId;
             return this;
+        }
+
+        public Builder replayId(String replayId) {
+            return replayId(Output.of(replayId));
         }
 
         public GetReplayArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.ssm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="documentFormat")
-    private @Nullable String documentFormat;
+    private @Nullable Output<String> documentFormat;
 
     /**
      * @return Returns the document in the specified format. The document format can be either `JSON`, `YAML` and `TEXT`. JSON is the default format.
      * 
      */
-    public Optional<String> documentFormat() {
+    public Optional<Output<String>> documentFormat() {
         return Optional.ofNullable(this.documentFormat);
     }
 
@@ -34,13 +35,13 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="documentVersion")
-    private @Nullable String documentVersion;
+    private @Nullable Output<String> documentVersion;
 
     /**
      * @return The document version for which you want information.
      * 
      */
-    public Optional<String> documentVersion() {
+    public Optional<Output<String>> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
 
@@ -49,13 +50,13 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the Systems Manager document.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -91,8 +92,29 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder documentFormat(@Nullable String documentFormat) {
+        public Builder documentFormat(@Nullable Output<String> documentFormat) {
             $.documentFormat = documentFormat;
+            return this;
+        }
+
+        /**
+         * @param documentFormat Returns the document in the specified format. The document format can be either `JSON`, `YAML` and `TEXT`. JSON is the default format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder documentFormat(String documentFormat) {
+            return documentFormat(Output.of(documentFormat));
+        }
+
+        /**
+         * @param documentVersion The document version for which you want information.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder documentVersion(@Nullable Output<String> documentVersion) {
+            $.documentVersion = documentVersion;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder documentVersion(@Nullable String documentVersion) {
-            $.documentVersion = documentVersion;
+        public Builder documentVersion(String documentVersion) {
+            return documentVersion(Output.of(documentVersion));
+        }
+
+        /**
+         * @param name The name of the Systems Manager document.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetDocumentArgs build() {

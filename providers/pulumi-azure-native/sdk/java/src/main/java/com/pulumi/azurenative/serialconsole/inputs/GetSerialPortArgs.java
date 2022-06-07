@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.serialconsole.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentResource", required=true)
-    private String parentResource;
+    private Output<String> parentResource;
 
     /**
      * @return The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.
      * 
      */
-    public String parentResource() {
+    public Output<String> parentResource() {
         return this.parentResource;
     }
 
@@ -32,13 +33,13 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentResourceType", required=true)
-    private String parentResourceType;
+    private Output<String> parentResourceType;
 
     /**
      * @return The resource type of the parent resource.  For example: &#39;virtualMachines&#39; or &#39;virtualMachineScaleSets&#39;
      * 
      */
-    public String parentResourceType() {
+    public Output<String> parentResourceType() {
         return this.parentResourceType;
     }
 
@@ -47,13 +48,13 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceProviderNamespace", required=true)
-    private String resourceProviderNamespace;
+    private Output<String> resourceProviderNamespace;
 
     /**
      * @return The namespace of the resource provider.
      * 
      */
-    public String resourceProviderNamespace() {
+    public Output<String> resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
@@ -77,13 +78,13 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serialPort", required=true)
-    private String serialPort;
+    private Output<String> serialPort;
 
     /**
      * @return The name of the serial port to connect to.
      * 
      */
-    public String serialPort() {
+    public Output<String> serialPort() {
         return this.serialPort;
     }
 
@@ -121,8 +122,29 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder parentResource(String parentResource) {
+        public Builder parentResource(Output<String> parentResource) {
             $.parentResource = parentResource;
+            return this;
+        }
+
+        /**
+         * @param parentResource The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentResource(String parentResource) {
+            return parentResource(Output.of(parentResource));
+        }
+
+        /**
+         * @param parentResourceType The resource type of the parent resource.  For example: &#39;virtualMachines&#39; or &#39;virtualMachineScaleSets&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentResourceType(Output<String> parentResourceType) {
+            $.parentResourceType = parentResourceType;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder parentResourceType(String parentResourceType) {
-            $.parentResourceType = parentResourceType;
+            return parentResourceType(Output.of(parentResourceType));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceProviderNamespace The namespace of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
+            $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
-            $.resourceProviderNamespace = resourceProviderNamespace;
+            return resourceProviderNamespace(Output.of(resourceProviderNamespace));
+        }
+
+        /**
+         * @param serialPort The name of the serial port to connect to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serialPort(Output<String> serialPort) {
+            $.serialPort = serialPort;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetSerialPortArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serialPort(String serialPort) {
-            $.serialPort = serialPort;
-            return this;
+            return serialPort(Output.of(serialPort));
         }
 
         public GetSerialPortArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.organizations.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domain")
-    private @Nullable String domain;
+    private @Nullable Output<String> domain;
 
     /**
      * @return The domain name of the Organization.
      * 
      */
-    public Optional<String> domain() {
+    public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
 
@@ -34,13 +35,13 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="organization")
-    private @Nullable String organization;
+    private @Nullable Output<String> organization;
 
     /**
      * @return The Organization&#39;s numeric ID, including an optional `organizations/` prefix.
      * 
      */
-    public Optional<String> organization() {
+    public Optional<Output<String>> organization() {
         return Optional.ofNullable(this.organization);
     }
 
@@ -75,8 +76,29 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder domain(@Nullable String domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
+            return this;
+        }
+
+        /**
+         * @param domain The domain name of the Organization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
+        }
+
+        /**
+         * @param organization The Organization&#39;s numeric ID, including an optional `organizations/` prefix.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organization(@Nullable Output<String> organization) {
+            $.organization = organization;
             return this;
         }
 
@@ -86,9 +108,8 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder organization(@Nullable String organization) {
-            $.organization = organization;
-            return this;
+        public Builder organization(String organization) {
+            return organization(Output.of(organization));
         }
 
         public GetOrganizationArgs build() {

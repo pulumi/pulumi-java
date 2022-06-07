@@ -4,8 +4,9 @@
 package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.azurenative.web.enums.WsdlImportMethod;
-import com.pulumi.azurenative.web.inputs.WsdlService;
+import com.pulumi.azurenative.web.inputs.WsdlServiceArgs;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -22,13 +23,13 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="content")
-    private @Nullable String content;
+    private @Nullable Output<String> content;
 
     /**
      * @return The WSDL content
      * 
      */
-    public Optional<String> content() {
+    public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
 
@@ -37,13 +38,13 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="importMethod")
-    private @Nullable Either<String,WsdlImportMethod> importMethod;
+    private @Nullable Output<Either<String,WsdlImportMethod>> importMethod;
 
     /**
      * @return The WSDL import method
      * 
      */
-    public Optional<Either<String,WsdlImportMethod>> importMethod() {
+    public Optional<Output<Either<String,WsdlImportMethod>>> importMethod() {
         return Optional.ofNullable(this.importMethod);
     }
 
@@ -52,13 +53,13 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return The location
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -67,13 +68,13 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="service")
-    private @Nullable WsdlService service;
+    private @Nullable Output<WsdlServiceArgs> service;
 
     /**
      * @return The service with name and endpoint names
      * 
      */
-    public Optional<WsdlService> service() {
+    public Optional<Output<WsdlServiceArgs>> service() {
         return Optional.ofNullable(this.service);
     }
 
@@ -82,13 +83,13 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="subscriptionId")
-    private @Nullable String subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
     /**
      * @return Subscription Id
      * 
      */
-    public Optional<String> subscriptionId() {
+    public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
 
@@ -97,13 +98,13 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="url")
-    private @Nullable String url;
+    private @Nullable Output<String> url;
 
     /**
      * @return The WSDL URL
      * 
      */
-    public Optional<String> url() {
+    public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
 
@@ -142,8 +143,29 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder content(@Nullable String content) {
+        public Builder content(@Nullable Output<String> content) {
             $.content = content;
+            return this;
+        }
+
+        /**
+         * @param content The WSDL content
+         * 
+         * @return builder
+         * 
+         */
+        public Builder content(String content) {
+            return content(Output.of(content));
+        }
+
+        /**
+         * @param importMethod The WSDL import method
+         * 
+         * @return builder
+         * 
+         */
+        public Builder importMethod(@Nullable Output<Either<String,WsdlImportMethod>> importMethod) {
+            $.importMethod = importMethod;
             return this;
         }
 
@@ -153,9 +175,8 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder importMethod(@Nullable Either<String,WsdlImportMethod> importMethod) {
-            $.importMethod = importMethod;
-            return this;
+        public Builder importMethod(Either<String,WsdlImportMethod> importMethod) {
+            return importMethod(Output.of(importMethod));
         }
 
         /**
@@ -184,8 +205,29 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
+            return this;
+        }
+
+        /**
+         * @param location The location
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param service The service with name and endpoint names
+         * 
+         * @return builder
+         * 
+         */
+        public Builder service(@Nullable Output<WsdlServiceArgs> service) {
+            $.service = service;
             return this;
         }
 
@@ -195,8 +237,18 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder service(@Nullable WsdlService service) {
-            $.service = service;
+        public Builder service(WsdlServiceArgs service) {
+            return service(Output.of(service));
+        }
+
+        /**
+         * @param subscriptionId Subscription Id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -206,8 +258,18 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            $.subscriptionId = subscriptionId;
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        /**
+         * @param url The WSDL URL
+         * 
+         * @return builder
+         * 
+         */
+        public Builder url(@Nullable Output<String> url) {
+            $.url = url;
             return this;
         }
 
@@ -217,9 +279,8 @@ public final class ListCustomApiWsdlInterfacesArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder url(@Nullable String url) {
-            $.url = url;
-            return this;
+        public Builder url(String url) {
+            return url(Output.of(url));
         }
 
         public ListCustomApiWsdlInterfacesArgs build() {

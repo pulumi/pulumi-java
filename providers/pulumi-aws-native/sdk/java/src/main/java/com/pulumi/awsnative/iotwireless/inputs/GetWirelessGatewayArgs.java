@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotwireless.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWirelessGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
     /**
      * @return Id for Wireless Gateway. Returned upon successful create.
      * 
      */
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -57,9 +58,19 @@ public final class GetWirelessGatewayArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
+        }
+
+        /**
+         * @param id Id for Wireless Gateway. Returned upon successful create.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
 
         public GetWirelessGatewayArgs build() {

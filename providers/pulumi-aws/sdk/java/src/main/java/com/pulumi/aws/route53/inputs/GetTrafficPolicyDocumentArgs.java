@@ -3,8 +3,9 @@
 
 package com.pulumi.aws.route53.inputs;
 
-import com.pulumi.aws.route53.inputs.GetTrafficPolicyDocumentEndpoint;
-import com.pulumi.aws.route53.inputs.GetTrafficPolicyDocumentRule;
+import com.pulumi.aws.route53.inputs.GetTrafficPolicyDocumentEndpointArgs;
+import com.pulumi.aws.route53.inputs.GetTrafficPolicyDocumentRuleArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="endpoints")
-    private @Nullable List<GetTrafficPolicyDocumentEndpoint> endpoints;
+    private @Nullable Output<List<GetTrafficPolicyDocumentEndpointArgs>> endpoints;
 
     /**
      * @return Configuration block for the definitions of the endpoints that you want to use in this traffic policy. See below
      * 
      */
-    public Optional<List<GetTrafficPolicyDocumentEndpoint>> endpoints() {
+    public Optional<Output<List<GetTrafficPolicyDocumentEndpointArgs>>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
 
@@ -37,13 +38,13 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="recordType")
-    private @Nullable String recordType;
+    private @Nullable Output<String> recordType;
 
     /**
      * @return DNS type of all of the resource record sets that Amazon Route 53 will create based on this traffic policy.
      * 
      */
-    public Optional<String> recordType() {
+    public Optional<Output<String>> recordType() {
         return Optional.ofNullable(this.recordType);
     }
 
@@ -52,13 +53,13 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="rules")
-    private @Nullable List<GetTrafficPolicyDocumentRule> rules;
+    private @Nullable Output<List<GetTrafficPolicyDocumentRuleArgs>> rules;
 
     /**
      * @return Configuration block for definitions of the rules that you want to use in this traffic policy. See below
      * 
      */
-    public Optional<List<GetTrafficPolicyDocumentRule>> rules() {
+    public Optional<Output<List<GetTrafficPolicyDocumentRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
 
@@ -67,13 +68,13 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="startEndpoint")
-    private @Nullable String startEndpoint;
+    private @Nullable Output<String> startEndpoint;
 
     /**
      * @return An endpoint to be as the starting point for the traffic policy.
      * 
      */
-    public Optional<String> startEndpoint() {
+    public Optional<Output<String>> startEndpoint() {
         return Optional.ofNullable(this.startEndpoint);
     }
 
@@ -82,13 +83,13 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="startRule")
-    private @Nullable String startRule;
+    private @Nullable Output<String> startRule;
 
     /**
      * @return A rule to be as the starting point for the traffic policy.
      * 
      */
-    public Optional<String> startRule() {
+    public Optional<Output<String>> startRule() {
         return Optional.ofNullable(this.startRule);
     }
 
@@ -97,13 +98,13 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="version")
-    private @Nullable String version;
+    private @Nullable Output<String> version;
 
     /**
      * @return Version of the traffic policy format.
      * 
      */
-    public Optional<String> version() {
+    public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
 
@@ -142,7 +143,7 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder endpoints(@Nullable List<GetTrafficPolicyDocumentEndpoint> endpoints) {
+        public Builder endpoints(@Nullable Output<List<GetTrafficPolicyDocumentEndpointArgs>> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
@@ -153,7 +154,17 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder endpoints(GetTrafficPolicyDocumentEndpoint... endpoints) {
+        public Builder endpoints(List<GetTrafficPolicyDocumentEndpointArgs> endpoints) {
+            return endpoints(Output.of(endpoints));
+        }
+
+        /**
+         * @param endpoints Configuration block for the definitions of the endpoints that you want to use in this traffic policy. See below
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpoints(GetTrafficPolicyDocumentEndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
 
@@ -163,9 +174,19 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder recordType(@Nullable String recordType) {
+        public Builder recordType(@Nullable Output<String> recordType) {
             $.recordType = recordType;
             return this;
+        }
+
+        /**
+         * @param recordType DNS type of all of the resource record sets that Amazon Route 53 will create based on this traffic policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder recordType(String recordType) {
+            return recordType(Output.of(recordType));
         }
 
         /**
@@ -174,7 +195,7 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder rules(@Nullable List<GetTrafficPolicyDocumentRule> rules) {
+        public Builder rules(@Nullable Output<List<GetTrafficPolicyDocumentRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
@@ -185,7 +206,17 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder rules(GetTrafficPolicyDocumentRule... rules) {
+        public Builder rules(List<GetTrafficPolicyDocumentRuleArgs> rules) {
+            return rules(Output.of(rules));
+        }
+
+        /**
+         * @param rules Configuration block for definitions of the rules that you want to use in this traffic policy. See below
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rules(GetTrafficPolicyDocumentRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
@@ -195,8 +226,29 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder startEndpoint(@Nullable String startEndpoint) {
+        public Builder startEndpoint(@Nullable Output<String> startEndpoint) {
             $.startEndpoint = startEndpoint;
+            return this;
+        }
+
+        /**
+         * @param startEndpoint An endpoint to be as the starting point for the traffic policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startEndpoint(String startEndpoint) {
+            return startEndpoint(Output.of(startEndpoint));
+        }
+
+        /**
+         * @param startRule A rule to be as the starting point for the traffic policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startRule(@Nullable Output<String> startRule) {
+            $.startRule = startRule;
             return this;
         }
 
@@ -206,8 +258,18 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder startRule(@Nullable String startRule) {
-            $.startRule = startRule;
+        public Builder startRule(String startRule) {
+            return startRule(Output.of(startRule));
+        }
+
+        /**
+         * @param version Version of the traffic policy format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(@Nullable Output<String> version) {
+            $.version = version;
             return this;
         }
 
@@ -217,9 +279,8 @@ public final class GetTrafficPolicyDocumentArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder version(@Nullable String version) {
-            $.version = version;
-            return this;
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
 
         public GetTrafficPolicyDocumentArgs build() {

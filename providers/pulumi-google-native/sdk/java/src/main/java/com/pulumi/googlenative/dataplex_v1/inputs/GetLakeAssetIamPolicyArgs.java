@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dataplex_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,44 +16,44 @@ public final class GetLakeAssetIamPolicyArgs extends com.pulumi.resources.Invoke
     public static final GetLakeAssetIamPolicyArgs Empty = new GetLakeAssetIamPolicyArgs();
 
     @Import(name="assetId", required=true)
-    private String assetId;
+    private Output<String> assetId;
 
-    public String assetId() {
+    public Output<String> assetId() {
         return this.assetId;
     }
 
     @Import(name="lakeId", required=true)
-    private String lakeId;
+    private Output<String> lakeId;
 
-    public String lakeId() {
+    public Output<String> lakeId() {
         return this.lakeId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
-    private String zone;
+    private Output<String> zone;
 
-    public String zone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -85,34 +86,58 @@ public final class GetLakeAssetIamPolicyArgs extends com.pulumi.resources.Invoke
             $ = new GetLakeAssetIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder assetId(String assetId) {
+        public Builder assetId(Output<String> assetId) {
             $.assetId = assetId;
             return this;
         }
 
-        public Builder lakeId(String lakeId) {
+        public Builder assetId(String assetId) {
+            return assetId(Output.of(assetId));
+        }
+
+        public Builder lakeId(Output<String> lakeId) {
             $.lakeId = lakeId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder lakeId(String lakeId) {
+            return lakeId(Output.of(lakeId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder zone(String zone) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder zone(Output<String> zone) {
             $.zone = zone;
             return this;
+        }
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetLakeAssetIamPolicyArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetListingPackageArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The unique identifier for the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -34,13 +35,13 @@ public final class GetListingPackageArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="listingId", required=true)
-    private String listingId;
+    private Output<String> listingId;
 
     /**
      * @return The unique identifier for the listing.
      * 
      */
-    public String listingId() {
+    public Output<String> listingId() {
         return this.listingId;
     }
 
@@ -49,13 +50,13 @@ public final class GetListingPackageArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="packageVersion", required=true)
-    private String packageVersion;
+    private Output<String> packageVersion;
 
     /**
      * @return The version of the package. Package versions are unique within a listing.
      * 
      */
-    public String packageVersion() {
+    public Output<String> packageVersion() {
         return this.packageVersion;
     }
 
@@ -91,8 +92,29 @@ public final class GetListingPackageArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The unique identifier for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param listingId The unique identifier for the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listingId(Output<String> listingId) {
+            $.listingId = listingId;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetListingPackageArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder listingId(String listingId) {
-            $.listingId = listingId;
+            return listingId(Output.of(listingId));
+        }
+
+        /**
+         * @param packageVersion The version of the package. Package versions are unique within a listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packageVersion(Output<String> packageVersion) {
+            $.packageVersion = packageVersion;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetListingPackageArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder packageVersion(String packageVersion) {
-            $.packageVersion = packageVersion;
-            return this;
+            return packageVersion(Output.of(packageVersion));
         }
 
         public GetListingPackageArgs build() {

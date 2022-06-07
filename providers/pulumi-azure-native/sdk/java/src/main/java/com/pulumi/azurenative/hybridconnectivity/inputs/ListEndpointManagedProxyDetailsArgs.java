@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.hybridconnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class ListEndpointManagedProxyDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="endpointName", required=true)
-    private String endpointName;
+    private Output<String> endpointName;
 
     /**
      * @return The endpoint name.
      * 
      */
-    public String endpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -34,13 +35,13 @@ public final class ListEndpointManagedProxyDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="hostname")
-    private @Nullable String hostname;
+    private @Nullable Output<String> hostname;
 
     /**
      * @return The target host name.
      * 
      */
-    public Optional<String> hostname() {
+    public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
 
@@ -49,13 +50,13 @@ public final class ListEndpointManagedProxyDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceUri", required=true)
-    private String resourceUri;
+    private Output<String> resourceUri;
 
     /**
      * @return The fully qualified Azure Resource manager identifier of the resource to be connected.
      * 
      */
-    public String resourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -64,13 +65,13 @@ public final class ListEndpointManagedProxyDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="service", required=true)
-    private String service;
+    private Output<String> service;
 
     /**
      * @return The name of the service.
      * 
      */
-    public String service() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -107,8 +108,29 @@ public final class ListEndpointManagedProxyDetailsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder endpointName(String endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
+            return this;
+        }
+
+        /**
+         * @param endpointName The endpoint name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointName(String endpointName) {
+            return endpointName(Output.of(endpointName));
+        }
+
+        /**
+         * @param hostname The target host name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostname(@Nullable Output<String> hostname) {
+            $.hostname = hostname;
             return this;
         }
 
@@ -118,8 +140,18 @@ public final class ListEndpointManagedProxyDetailsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder hostname(@Nullable String hostname) {
-            $.hostname = hostname;
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
+        }
+
+        /**
+         * @param resourceUri The fully qualified Azure Resource manager identifier of the resource to be connected.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceUri(Output<String> resourceUri) {
+            $.resourceUri = resourceUri;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class ListEndpointManagedProxyDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceUri(String resourceUri) {
-            $.resourceUri = resourceUri;
+            return resourceUri(Output.of(resourceUri));
+        }
+
+        /**
+         * @param service The name of the service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder service(Output<String> service) {
+            $.service = service;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class ListEndpointManagedProxyDetailsArgs extends com.pulumi.resour
          * 
          */
         public Builder service(String service) {
-            $.service = service;
-            return this;
+            return service(Output.of(service));
         }
 
         public ListEndpointManagedProxyDetailsArgs build() {

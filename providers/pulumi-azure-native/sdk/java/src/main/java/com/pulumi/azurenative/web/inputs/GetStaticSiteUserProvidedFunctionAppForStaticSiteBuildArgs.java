@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @Import(name="environmentName", required=true)
-    private String environmentName;
+    private Output<String> environmentName;
 
     /**
      * @return The stage site identifier.
      * 
      */
-    public String environmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @Import(name="functionAppName", required=true)
-    private String functionAppName;
+    private Output<String> functionAppName;
 
     /**
      * @return Name of the function app registered with the static site build.
      * 
      */
-    public String functionAppName() {
+    public Output<String> functionAppName() {
         return this.functionAppName;
     }
 
@@ -47,13 +48,13 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the static site.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -62,13 +63,13 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
          * @return builder
          * 
          */
-        public Builder environmentName(String environmentName) {
+        public Builder environmentName(Output<String> environmentName) {
             $.environmentName = environmentName;
+            return this;
+        }
+
+        /**
+         * @param environmentName The stage site identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environmentName(String environmentName) {
+            return environmentName(Output.of(environmentName));
+        }
+
+        /**
+         * @param functionAppName Name of the function app registered with the static site build.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionAppName(Output<String> functionAppName) {
+            $.functionAppName = functionAppName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
          * 
          */
         public Builder functionAppName(String functionAppName) {
-            $.functionAppName = functionAppName;
+            return functionAppName(Output.of(functionAppName));
+        }
+
+        /**
+         * @param name Name of the static site.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs ex
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetStaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs build() {

@@ -3,13 +3,17 @@
 
 package com.pulumi.googlenative.connectors_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.connectors_v1.inputs.GetConnectionArgs;
 import com.pulumi.googlenative.connectors_v1.inputs.GetConnectionIamPolicyArgs;
+import com.pulumi.googlenative.connectors_v1.inputs.GetConnectionIamPolicyPlainArgs;
+import com.pulumi.googlenative.connectors_v1.inputs.GetConnectionPlainArgs;
 import com.pulumi.googlenative.connectors_v1.inputs.GetProviderIamPolicyArgs;
+import com.pulumi.googlenative.connectors_v1.inputs.GetProviderIamPolicyPlainArgs;
 import com.pulumi.googlenative.connectors_v1.outputs.GetConnectionIamPolicyResult;
 import com.pulumi.googlenative.connectors_v1.outputs.GetConnectionResult;
 import com.pulumi.googlenative.connectors_v1.outputs.GetProviderIamPolicyResult;
@@ -20,42 +24,84 @@ public final class Connectors_v1Functions {
      * Gets details of a single Connection.
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
     /**
      * Gets details of a single Connection.
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionResult> getConnectionPlain(GetConnectionPlainArgs args) {
+        return getConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets details of a single Connection.
+     * 
+     */
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:connectors/v1:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets details of a single Connection.
+     * 
+     */
+    public static CompletableFuture<GetConnectionResult> getConnectionPlain(GetConnectionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:connectors/v1:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(GetConnectionIamPolicyArgs args) {
+    public static Output<GetConnectionIamPolicyResult> getConnectionIamPolicy(GetConnectionIamPolicyArgs args) {
         return getConnectionIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicy(GetConnectionIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicyPlain(GetConnectionIamPolicyPlainArgs args) {
+        return getConnectionIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static Output<GetConnectionIamPolicyResult> getConnectionIamPolicy(GetConnectionIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:connectors/v1:getConnectionIamPolicy", TypeShape.of(GetConnectionIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetConnectionIamPolicyResult> getConnectionIamPolicyPlain(GetConnectionIamPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:connectors/v1:getConnectionIamPolicy", TypeShape.of(GetConnectionIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetProviderIamPolicyResult> getProviderIamPolicy(GetProviderIamPolicyArgs args) {
+    public static Output<GetProviderIamPolicyResult> getProviderIamPolicy(GetProviderIamPolicyArgs args) {
         return getProviderIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetProviderIamPolicyResult> getProviderIamPolicy(GetProviderIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProviderIamPolicyResult> getProviderIamPolicyPlain(GetProviderIamPolicyPlainArgs args) {
+        return getProviderIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static Output<GetProviderIamPolicyResult> getProviderIamPolicy(GetProviderIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:connectors/v1:getProviderIamPolicy", TypeShape.of(GetProviderIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetProviderIamPolicyResult> getProviderIamPolicyPlain(GetProviderIamPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:connectors/v1:getProviderIamPolicy", TypeShape.of(GetProviderIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

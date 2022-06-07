@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
     public static final GetManagedInstanceAdministratorArgs Empty = new GetManagedInstanceAdministratorArgs();
 
     @Import(name="administratorName", required=true)
-    private String administratorName;
+    private Output<String> administratorName;
 
-    public String administratorName() {
+    public Output<String> administratorName() {
         return this.administratorName;
     }
 
@@ -24,13 +25,13 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
      * 
      */
     @Import(name="managedInstanceName", required=true)
-    private String managedInstanceName;
+    private Output<String> managedInstanceName;
 
     /**
      * @return The name of the managed instance.
      * 
      */
-    public String managedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -39,13 +40,13 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,8 +76,23 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
             $ = new GetManagedInstanceAdministratorArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder administratorName(String administratorName) {
+        public Builder administratorName(Output<String> administratorName) {
             $.administratorName = administratorName;
+            return this;
+        }
+
+        public Builder administratorName(String administratorName) {
+            return administratorName(Output.of(administratorName));
+        }
+
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedInstanceName(Output<String> managedInstanceName) {
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
 
@@ -87,7 +103,17 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
          * 
          */
         public Builder managedInstanceName(String managedInstanceName) {
-            $.managedInstanceName = managedInstanceName;
+            return managedInstanceName(Output.of(managedInstanceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -98,8 +124,7 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetManagedInstanceAdministratorArgs build() {

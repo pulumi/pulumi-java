@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetSensitiveTypesFilter;
+import com.pulumi.oci.DataSafe.inputs.GetSensitiveTypesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
+    public Optional<Output<String>> accessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
 
@@ -37,13 +38,13 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the specified compartment OCID.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -52,13 +53,13 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
@@ -67,13 +68,13 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="defaultMaskingFormatId")
-    private @Nullable String defaultMaskingFormatId;
+    private @Nullable Output<String> defaultMaskingFormatId;
 
     /**
      * @return A filter to return only the sensitive types that have the default masking format identified by the specified OCID.
      * 
      */
-    public Optional<String> defaultMaskingFormatId() {
+    public Optional<Output<String>> defaultMaskingFormatId() {
         return Optional.ofNullable(this.defaultMaskingFormatId);
     }
 
@@ -82,13 +83,13 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the specified display name.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -97,20 +98,20 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="entityType")
-    private @Nullable String entityType;
+    private @Nullable Output<String> entityType;
 
     /**
      * @return A filter to return the sensitive type resources based on the value of their entityType attribute.
      * 
      */
-    public Optional<String> entityType() {
+    public Optional<Output<String>> entityType() {
         return Optional.ofNullable(this.entityType);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSensitiveTypesFilter> filters;
+    private @Nullable Output<List<GetSensitiveTypesFilterArgs>> filters;
 
-    public Optional<List<GetSensitiveTypesFilter>> filters() {
+    public Optional<Output<List<GetSensitiveTypesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -119,13 +120,13 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="parentCategoryId")
-    private @Nullable String parentCategoryId;
+    private @Nullable Output<String> parentCategoryId;
 
     /**
      * @return A filter to return only the sensitive types that are children of the sensitive category identified by the specified OCID.
      * 
      */
-    public Optional<String> parentCategoryId() {
+    public Optional<Output<String>> parentCategoryId() {
         return Optional.ofNullable(this.parentCategoryId);
     }
 
@@ -134,13 +135,13 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sensitiveTypeId")
-    private @Nullable String sensitiveTypeId;
+    private @Nullable Output<String> sensitiveTypeId;
 
     /**
      * @return A filter to return only items related to a specific sensitive type OCID.
      * 
      */
-    public Optional<String> sensitiveTypeId() {
+    public Optional<Output<String>> sensitiveTypeId() {
         return Optional.ofNullable(this.sensitiveTypeId);
     }
 
@@ -149,13 +150,13 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sensitiveTypeSource")
-    private @Nullable String sensitiveTypeSource;
+    private @Nullable Output<String> sensitiveTypeSource;
 
     /**
      * @return A filter to return the sensitive type resources based on the value of their source attribute.
      * 
      */
-    public Optional<String> sensitiveTypeSource() {
+    public Optional<Output<String>> sensitiveTypeSource() {
         return Optional.ofNullable(this.sensitiveTypeSource);
     }
 
@@ -164,13 +165,13 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only the resources that match the specified lifecycle state.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -179,13 +180,13 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private @Nullable String timeCreatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return only the resources that were created after the specified date and time, as defined by [RFC3339](https://tools.ietf.org/html/rfc3339). Using TimeCreatedGreaterThanOrEqualToQueryParam parameter retrieves all resources created after that date.
      * 
      */
-    public Optional<String> timeCreatedGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timeCreatedGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
     }
 
@@ -194,13 +195,13 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private @Nullable String timeCreatedLessThan;
+    private @Nullable Output<String> timeCreatedLessThan;
 
     /**
      * @return Search for resources that were created before a specific date. Specifying this parameter corresponding `timeCreatedLessThan` parameter will retrieve all resources created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Optional<String> timeCreatedLessThan() {
+    public Optional<Output<String>> timeCreatedLessThan() {
         return Optional.ofNullable(this.timeCreatedLessThan);
     }
 
@@ -246,8 +247,29 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the specified compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -258,7 +280,17 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -268,8 +300,18 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param defaultMaskingFormatId A filter to return only the sensitive types that have the default masking format identified by the specified OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultMaskingFormatId(@Nullable Output<String> defaultMaskingFormatId) {
+            $.defaultMaskingFormatId = defaultMaskingFormatId;
             return this;
         }
 
@@ -279,8 +321,18 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder defaultMaskingFormatId(@Nullable String defaultMaskingFormatId) {
-            $.defaultMaskingFormatId = defaultMaskingFormatId;
+        public Builder defaultMaskingFormatId(String defaultMaskingFormatId) {
+            return defaultMaskingFormatId(Output.of(defaultMaskingFormatId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the specified display name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -290,8 +342,18 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param entityType A filter to return the sensitive type resources based on the value of their entityType attribute.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder entityType(@Nullable Output<String> entityType) {
+            $.entityType = entityType;
             return this;
         }
 
@@ -301,17 +363,20 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder entityType(@Nullable String entityType) {
-            $.entityType = entityType;
-            return this;
+        public Builder entityType(String entityType) {
+            return entityType(Output.of(entityType));
         }
 
-        public Builder filters(@Nullable List<GetSensitiveTypesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetSensitiveTypesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSensitiveTypesFilter... filters) {
+        public Builder filters(List<GetSensitiveTypesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSensitiveTypesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -321,8 +386,29 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder parentCategoryId(@Nullable String parentCategoryId) {
+        public Builder parentCategoryId(@Nullable Output<String> parentCategoryId) {
             $.parentCategoryId = parentCategoryId;
+            return this;
+        }
+
+        /**
+         * @param parentCategoryId A filter to return only the sensitive types that are children of the sensitive category identified by the specified OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentCategoryId(String parentCategoryId) {
+            return parentCategoryId(Output.of(parentCategoryId));
+        }
+
+        /**
+         * @param sensitiveTypeId A filter to return only items related to a specific sensitive type OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensitiveTypeId(@Nullable Output<String> sensitiveTypeId) {
+            $.sensitiveTypeId = sensitiveTypeId;
             return this;
         }
 
@@ -332,8 +418,18 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder sensitiveTypeId(@Nullable String sensitiveTypeId) {
-            $.sensitiveTypeId = sensitiveTypeId;
+        public Builder sensitiveTypeId(String sensitiveTypeId) {
+            return sensitiveTypeId(Output.of(sensitiveTypeId));
+        }
+
+        /**
+         * @param sensitiveTypeSource A filter to return the sensitive type resources based on the value of their source attribute.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensitiveTypeSource(@Nullable Output<String> sensitiveTypeSource) {
+            $.sensitiveTypeSource = sensitiveTypeSource;
             return this;
         }
 
@@ -343,8 +439,18 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder sensitiveTypeSource(@Nullable String sensitiveTypeSource) {
-            $.sensitiveTypeSource = sensitiveTypeSource;
+        public Builder sensitiveTypeSource(String sensitiveTypeSource) {
+            return sensitiveTypeSource(Output.of(sensitiveTypeSource));
+        }
+
+        /**
+         * @param state A filter to return only the resources that match the specified lifecycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -354,8 +460,18 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param timeCreatedGreaterThanOrEqualTo A filter to return only the resources that were created after the specified date and time, as defined by [RFC3339](https://tools.ietf.org/html/rfc3339). Using TimeCreatedGreaterThanOrEqualToQueryParam parameter retrieves all resources created after that date.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable Output<String> timeCreatedGreaterThanOrEqualTo) {
+            $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
             return this;
         }
 
@@ -365,8 +481,18 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
-            $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
+        public Builder timeCreatedGreaterThanOrEqualTo(String timeCreatedGreaterThanOrEqualTo) {
+            return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeCreatedLessThan Search for resources that were created before a specific date. Specifying this parameter corresponding `timeCreatedLessThan` parameter will retrieve all resources created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedLessThan(@Nullable Output<String> timeCreatedLessThan) {
+            $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
 
@@ -376,9 +502,8 @@ public final class GetSensitiveTypesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
-            $.timeCreatedLessThan = timeCreatedLessThan;
-            return this;
+        public Builder timeCreatedLessThan(String timeCreatedLessThan) {
+            return timeCreatedLessThan(Output.of(timeCreatedLessThan));
         }
 
         public GetSensitiveTypesArgs build() {

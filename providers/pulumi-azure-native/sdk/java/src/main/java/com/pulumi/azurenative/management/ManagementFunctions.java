@@ -5,13 +5,18 @@ package com.pulumi.azurenative.management;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.management.inputs.GetEntityArgs;
+import com.pulumi.azurenative.management.inputs.GetEntityPlainArgs;
 import com.pulumi.azurenative.management.inputs.GetHierarchySettingArgs;
+import com.pulumi.azurenative.management.inputs.GetHierarchySettingPlainArgs;
 import com.pulumi.azurenative.management.inputs.GetManagementGroupArgs;
+import com.pulumi.azurenative.management.inputs.GetManagementGroupPlainArgs;
 import com.pulumi.azurenative.management.inputs.GetManagementGroupSubscriptionArgs;
+import com.pulumi.azurenative.management.inputs.GetManagementGroupSubscriptionPlainArgs;
 import com.pulumi.azurenative.management.outputs.GetEntityResult;
 import com.pulumi.azurenative.management.outputs.GetHierarchySettingResult;
 import com.pulumi.azurenative.management.outputs.GetManagementGroupResult;
 import com.pulumi.azurenative.management.outputs.GetManagementGroupSubscriptionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -23,7 +28,7 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetEntityResult> getEntity() {
+    public static Output<GetEntityResult> getEntity() {
         return getEntity(GetEntityArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -31,7 +36,15 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetEntityResult> getEntity(GetEntityArgs args) {
+    public static CompletableFuture<GetEntityResult> getEntityPlain() {
+        return getEntityPlain(GetEntityPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Describes the result of the request to view entities.
+     * API Version: 2020-05-01.
+     * 
+     */
+    public static Output<GetEntityResult> getEntity(GetEntityArgs args) {
         return getEntity(args, InvokeOptions.Empty);
     }
     /**
@@ -39,7 +52,23 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetEntityResult> getEntity(GetEntityArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEntityResult> getEntityPlain(GetEntityPlainArgs args) {
+        return getEntityPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Describes the result of the request to view entities.
+     * API Version: 2020-05-01.
+     * 
+     */
+    public static Output<GetEntityResult> getEntity(GetEntityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:management:getEntity", TypeShape.of(GetEntityResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Describes the result of the request to view entities.
+     * API Version: 2020-05-01.
+     * 
+     */
+    public static CompletableFuture<GetEntityResult> getEntityPlain(GetEntityPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getEntity", TypeShape.of(GetEntityResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -47,7 +76,7 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetHierarchySettingResult> getHierarchySetting(GetHierarchySettingArgs args) {
+    public static Output<GetHierarchySettingResult> getHierarchySetting(GetHierarchySettingArgs args) {
         return getHierarchySetting(args, InvokeOptions.Empty);
     }
     /**
@@ -55,7 +84,23 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetHierarchySettingResult> getHierarchySetting(GetHierarchySettingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHierarchySettingResult> getHierarchySettingPlain(GetHierarchySettingPlainArgs args) {
+        return getHierarchySettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Settings defined at the Management Group scope.
+     * API Version: 2020-05-01.
+     * 
+     */
+    public static Output<GetHierarchySettingResult> getHierarchySetting(GetHierarchySettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:management:getHierarchySetting", TypeShape.of(GetHierarchySettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Settings defined at the Management Group scope.
+     * API Version: 2020-05-01.
+     * 
+     */
+    public static CompletableFuture<GetHierarchySettingResult> getHierarchySettingPlain(GetHierarchySettingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getHierarchySetting", TypeShape.of(GetHierarchySettingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -63,7 +108,7 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetManagementGroupResult> getManagementGroup(GetManagementGroupArgs args) {
+    public static Output<GetManagementGroupResult> getManagementGroup(GetManagementGroupArgs args) {
         return getManagementGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -71,7 +116,23 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetManagementGroupResult> getManagementGroup(GetManagementGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagementGroupResult> getManagementGroupPlain(GetManagementGroupPlainArgs args) {
+        return getManagementGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The management group details.
+     * API Version: 2020-05-01.
+     * 
+     */
+    public static Output<GetManagementGroupResult> getManagementGroup(GetManagementGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:management:getManagementGroup", TypeShape.of(GetManagementGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The management group details.
+     * API Version: 2020-05-01.
+     * 
+     */
+    public static CompletableFuture<GetManagementGroupResult> getManagementGroupPlain(GetManagementGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getManagementGroup", TypeShape.of(GetManagementGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -79,7 +140,7 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetManagementGroupSubscriptionResult> getManagementGroupSubscription(GetManagementGroupSubscriptionArgs args) {
+    public static Output<GetManagementGroupSubscriptionResult> getManagementGroupSubscription(GetManagementGroupSubscriptionArgs args) {
         return getManagementGroupSubscription(args, InvokeOptions.Empty);
     }
     /**
@@ -87,7 +148,23 @@ public final class ManagementFunctions {
      * API Version: 2020-05-01.
      * 
      */
-    public static CompletableFuture<GetManagementGroupSubscriptionResult> getManagementGroupSubscription(GetManagementGroupSubscriptionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagementGroupSubscriptionResult> getManagementGroupSubscriptionPlain(GetManagementGroupSubscriptionPlainArgs args) {
+        return getManagementGroupSubscriptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The details of subscription under management group.
+     * API Version: 2020-05-01.
+     * 
+     */
+    public static Output<GetManagementGroupSubscriptionResult> getManagementGroupSubscription(GetManagementGroupSubscriptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:management:getManagementGroupSubscription", TypeShape.of(GetManagementGroupSubscriptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The details of subscription under management group.
+     * API Version: 2020-05-01.
+     * 
+     */
+    public static CompletableFuture<GetManagementGroupSubscriptionResult> getManagementGroupSubscriptionPlain(GetManagementGroupSubscriptionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getManagementGroupSubscription", TypeShape.of(GetManagementGroupSubscriptionResult.class), args, Utilities.withVersion(options));
     }
 }

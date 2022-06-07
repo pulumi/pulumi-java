@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.containerservice.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="includePreview")
-    private @Nullable Boolean includePreview;
+    private @Nullable Output<Boolean> includePreview;
 
     /**
      * @return Should Preview versions of Kubernetes in AKS be included? Defaults to `true`
      * 
      */
-    public Optional<Boolean> includePreview() {
+    public Optional<Output<Boolean>> includePreview() {
         return Optional.ofNullable(this.includePreview);
     }
 
@@ -35,13 +36,13 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return Specifies the location in which to query for versions.
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -50,13 +51,13 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="versionPrefix")
-    private @Nullable String versionPrefix;
+    private @Nullable Output<String> versionPrefix;
 
     /**
      * @return A prefix filter for the versions of Kubernetes which should be returned; for example `1.` will return `1.9` to `1.14`, whereas `1.12` will return `1.12.2`.
      * 
      */
-    public Optional<String> versionPrefix() {
+    public Optional<Output<String>> versionPrefix() {
         return Optional.ofNullable(this.versionPrefix);
     }
 
@@ -92,8 +93,29 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder includePreview(@Nullable Boolean includePreview) {
+        public Builder includePreview(@Nullable Output<Boolean> includePreview) {
             $.includePreview = includePreview;
+            return this;
+        }
+
+        /**
+         * @param includePreview Should Preview versions of Kubernetes in AKS be included? Defaults to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includePreview(Boolean includePreview) {
+            return includePreview(Output.of(includePreview));
+        }
+
+        /**
+         * @param location Specifies the location in which to query for versions.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(Output<String> location) {
+            $.location = location;
             return this;
         }
 
@@ -104,7 +126,17 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
          * 
          */
         public Builder location(String location) {
-            $.location = location;
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param versionPrefix A prefix filter for the versions of Kubernetes which should be returned; for example `1.` will return `1.9` to `1.14`, whereas `1.12` will return `1.12.2`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionPrefix(@Nullable Output<String> versionPrefix) {
+            $.versionPrefix = versionPrefix;
             return this;
         }
 
@@ -114,9 +146,8 @@ public final class GetKubernetesServiceVersionsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder versionPrefix(@Nullable String versionPrefix) {
-            $.versionPrefix = versionPrefix;
-            return this;
+        public Builder versionPrefix(String versionPrefix) {
+            return versionPrefix(Output.of(versionPrefix));
         }
 
         public GetKubernetesServiceVersionsArgs build() {

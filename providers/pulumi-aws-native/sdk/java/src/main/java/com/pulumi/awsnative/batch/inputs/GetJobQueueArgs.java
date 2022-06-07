@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.batch.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetJobQueueArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetJobQueueArgs Empty = new GetJobQueueArgs();
 
     @Import(name="jobQueueArn", required=true)
-    private String jobQueueArn;
+    private Output<String> jobQueueArn;
 
-    public String jobQueueArn() {
+    public Output<String> jobQueueArn() {
         return this.jobQueueArn;
     }
 
@@ -43,9 +44,13 @@ public final class GetJobQueueArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetJobQueueArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder jobQueueArn(String jobQueueArn) {
+        public Builder jobQueueArn(Output<String> jobQueueArn) {
             $.jobQueueArn = jobQueueArn;
             return this;
+        }
+
+        public Builder jobQueueArn(String jobQueueArn) {
+            return jobQueueArn(Output.of(jobQueueArn));
         }
 
         public GetJobQueueArgs build() {

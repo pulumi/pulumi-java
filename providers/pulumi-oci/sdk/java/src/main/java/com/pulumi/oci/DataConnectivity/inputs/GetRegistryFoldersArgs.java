@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataConnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataConnectivity.inputs.GetRegistryFoldersFilter;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryFoldersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetRegistryFoldersArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="favoritesQueryParam")
-    private @Nullable String favoritesQueryParam;
+    private @Nullable Output<String> favoritesQueryParam;
 
     /**
      * @return If value is FAVORITES_ONLY, then only objects marked as favorite by the requesting user will be included in result. If value is NON_FAVORITES_ONLY, then objects marked as favorites by the requesting user will be skipped. If value is ALL or if not specified, all objects, irrespective of favorites or not will be returned. Default is ALL.
      * 
      */
-    public Optional<String> favoritesQueryParam() {
+    public Optional<Output<String>> favoritesQueryParam() {
         return Optional.ofNullable(this.favoritesQueryParam);
     }
 
@@ -36,20 +37,20 @@ public final class GetRegistryFoldersArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="fields")
-    private @Nullable List<String> fields;
+    private @Nullable Output<List<String>> fields;
 
     /**
      * @return Specifies the fields to get for an object.
      * 
      */
-    public Optional<List<String>> fields() {
+    public Optional<Output<List<String>>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetRegistryFoldersFilter> filters;
+    private @Nullable Output<List<GetRegistryFoldersFilterArgs>> filters;
 
-    public Optional<List<GetRegistryFoldersFilter>> filters() {
+    public Optional<Output<List<GetRegistryFoldersFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetRegistryFoldersArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Used to filter by the name of the object.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -73,13 +74,13 @@ public final class GetRegistryFoldersArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
     /**
      * @return The registry Ocid.
      * 
      */
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -88,13 +89,13 @@ public final class GetRegistryFoldersArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private @Nullable Output<String> type;
 
     /**
      * @return Type of the object to filter the results with.
      * 
      */
-    public Optional<String> type() {
+    public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
 
@@ -133,8 +134,29 @@ public final class GetRegistryFoldersArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder favoritesQueryParam(@Nullable String favoritesQueryParam) {
+        public Builder favoritesQueryParam(@Nullable Output<String> favoritesQueryParam) {
             $.favoritesQueryParam = favoritesQueryParam;
+            return this;
+        }
+
+        /**
+         * @param favoritesQueryParam If value is FAVORITES_ONLY, then only objects marked as favorite by the requesting user will be included in result. If value is NON_FAVORITES_ONLY, then objects marked as favorites by the requesting user will be skipped. If value is ALL or if not specified, all objects, irrespective of favorites or not will be returned. Default is ALL.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder favoritesQueryParam(String favoritesQueryParam) {
+            return favoritesQueryParam(Output.of(favoritesQueryParam));
+        }
+
+        /**
+         * @param fields Specifies the fields to get for an object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fields(@Nullable Output<List<String>> fields) {
+            $.fields = fields;
             return this;
         }
 
@@ -144,9 +166,8 @@ public final class GetRegistryFoldersArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder fields(@Nullable List<String> fields) {
-            $.fields = fields;
-            return this;
+        public Builder fields(List<String> fields) {
+            return fields(Output.of(fields));
         }
 
         /**
@@ -159,12 +180,16 @@ public final class GetRegistryFoldersArgs extends com.pulumi.resources.InvokeArg
             return fields(List.of(fields));
         }
 
-        public Builder filters(@Nullable List<GetRegistryFoldersFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetRegistryFoldersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetRegistryFoldersFilter... filters) {
+        public Builder filters(List<GetRegistryFoldersFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetRegistryFoldersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -174,8 +199,29 @@ public final class GetRegistryFoldersArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Used to filter by the name of the object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param registryId The registry Ocid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryId(Output<String> registryId) {
+            $.registryId = registryId;
             return this;
         }
 
@@ -186,7 +232,17 @@ public final class GetRegistryFoldersArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder registryId(String registryId) {
-            $.registryId = registryId;
+            return registryId(Output.of(registryId));
+        }
+
+        /**
+         * @param type Type of the object to filter the results with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable Output<String> type) {
+            $.type = type;
             return this;
         }
 
@@ -196,9 +252,8 @@ public final class GetRegistryFoldersArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
-            $.type = type;
-            return this;
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         public GetRegistryFoldersArgs build() {

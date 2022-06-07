@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sagemaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMonitoringScheduleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="monitoringScheduleArn", required=true)
-    private String monitoringScheduleArn;
+    private Output<String> monitoringScheduleArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the monitoring schedule.
      * 
      */
-    public String monitoringScheduleArn() {
+    public Output<String> monitoringScheduleArn() {
         return this.monitoringScheduleArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetMonitoringScheduleArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder monitoringScheduleArn(String monitoringScheduleArn) {
+        public Builder monitoringScheduleArn(Output<String> monitoringScheduleArn) {
             $.monitoringScheduleArn = monitoringScheduleArn;
             return this;
+        }
+
+        /**
+         * @param monitoringScheduleArn The Amazon Resource Name (ARN) of the monitoring schedule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monitoringScheduleArn(String monitoringScheduleArn) {
+            return monitoringScheduleArn(Output.of(monitoringScheduleArn));
         }
 
         public GetMonitoringScheduleArgs build() {

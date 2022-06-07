@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ServiceCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceCatalogAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="serviceCatalogAssociationId", required=true)
-    private String serviceCatalogAssociationId;
+    private Output<String> serviceCatalogAssociationId;
 
     /**
      * @return The unique identifier of the service catalog association.
      * 
      */
-    public String serviceCatalogAssociationId() {
+    public Output<String> serviceCatalogAssociationId() {
         return this.serviceCatalogAssociationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetServiceCatalogAssociationArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder serviceCatalogAssociationId(String serviceCatalogAssociationId) {
+        public Builder serviceCatalogAssociationId(Output<String> serviceCatalogAssociationId) {
             $.serviceCatalogAssociationId = serviceCatalogAssociationId;
             return this;
+        }
+
+        /**
+         * @param serviceCatalogAssociationId The unique identifier of the service catalog association.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceCatalogAssociationId(String serviceCatalogAssociationId) {
+            return serviceCatalogAssociationId(Output.of(serviceCatalogAssociationId));
         }
 
         public GetServiceCatalogAssociationArgs build() {

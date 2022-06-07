@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.cdn.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
     /**
      * @return Name of the CDN profile which is unique within the resource group.
      * 
      */
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="securityPolicyName", required=true)
-    private String securityPolicyName;
+    private Output<String> securityPolicyName;
 
     /**
      * @return Name of the security policy under the profile.
      * 
      */
-    public String securityPolicyName() {
+    public Output<String> securityPolicyName() {
         return this.securityPolicyName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder profileName(String profileName) {
+        public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
+            return this;
+        }
+
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(String profileName) {
+            return profileName(Output.of(profileName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param securityPolicyName Name of the security policy under the profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityPolicyName(Output<String> securityPolicyName) {
+            $.securityPolicyName = securityPolicyName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder securityPolicyName(String securityPolicyName) {
-            $.securityPolicyName = securityPolicyName;
-            return this;
+            return securityPolicyName(Output.of(securityPolicyName));
         }
 
         public GetSecurityPolicyArgs build() {

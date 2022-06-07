@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCustomMetricArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metricName", required=true)
-    private String metricName;
+    private Output<String> metricName;
 
     /**
      * @return The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn&#39;t begin with aws: . Cannot be updated once defined.
      * 
      */
-    public String metricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -57,9 +58,19 @@ public final class GetCustomMetricArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder metricName(String metricName) {
+        public Builder metricName(Output<String> metricName) {
             $.metricName = metricName;
             return this;
+        }
+
+        /**
+         * @param metricName The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn&#39;t begin with aws: . Cannot be updated once defined.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metricName(String metricName) {
+            return metricName(Output.of(metricName));
         }
 
         public GetCustomMetricArgs build() {

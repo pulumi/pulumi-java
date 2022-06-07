@@ -5,13 +5,18 @@ package com.pulumi.azurenative.datalakeanalytics;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.datalakeanalytics.inputs.GetAccountArgs;
+import com.pulumi.azurenative.datalakeanalytics.inputs.GetAccountPlainArgs;
 import com.pulumi.azurenative.datalakeanalytics.inputs.GetComputePolicyArgs;
+import com.pulumi.azurenative.datalakeanalytics.inputs.GetComputePolicyPlainArgs;
 import com.pulumi.azurenative.datalakeanalytics.inputs.GetFirewallRuleArgs;
+import com.pulumi.azurenative.datalakeanalytics.inputs.GetFirewallRulePlainArgs;
 import com.pulumi.azurenative.datalakeanalytics.inputs.ListStorageAccountSasTokensArgs;
+import com.pulumi.azurenative.datalakeanalytics.inputs.ListStorageAccountSasTokensPlainArgs;
 import com.pulumi.azurenative.datalakeanalytics.outputs.GetAccountResult;
 import com.pulumi.azurenative.datalakeanalytics.outputs.GetComputePolicyResult;
 import com.pulumi.azurenative.datalakeanalytics.outputs.GetFirewallRuleResult;
 import com.pulumi.azurenative.datalakeanalytics.outputs.ListStorageAccountSasTokensResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -23,7 +28,7 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -31,7 +36,23 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args) {
+        return getAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datalakeanalytics:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -39,7 +60,7 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetComputePolicyResult> getComputePolicy(GetComputePolicyArgs args) {
+    public static Output<GetComputePolicyResult> getComputePolicy(GetComputePolicyArgs args) {
         return getComputePolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -47,7 +68,23 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetComputePolicyResult> getComputePolicy(GetComputePolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComputePolicyResult> getComputePolicyPlain(GetComputePolicyPlainArgs args) {
+        return getComputePolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Data Lake Analytics compute policy information.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static Output<GetComputePolicyResult> getComputePolicy(GetComputePolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datalakeanalytics:getComputePolicy", TypeShape.of(GetComputePolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Data Lake Analytics compute policy information.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static CompletableFuture<GetComputePolicyResult> getComputePolicyPlain(GetComputePolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:getComputePolicy", TypeShape.of(GetComputePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -55,7 +92,7 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args) {
+    public static Output<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args) {
         return getFirewallRule(args, InvokeOptions.Empty);
     }
     /**
@@ -63,7 +100,23 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRulePlain(GetFirewallRulePlainArgs args) {
+        return getFirewallRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Data Lake Analytics firewall rule information.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static Output<GetFirewallRuleResult> getFirewallRule(GetFirewallRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datalakeanalytics:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Data Lake Analytics firewall rule information.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static CompletableFuture<GetFirewallRuleResult> getFirewallRulePlain(GetFirewallRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -71,7 +124,7 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<ListStorageAccountSasTokensResult> listStorageAccountSasTokens(ListStorageAccountSasTokensArgs args) {
+    public static Output<ListStorageAccountSasTokensResult> listStorageAccountSasTokens(ListStorageAccountSasTokensArgs args) {
         return listStorageAccountSasTokens(args, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +132,23 @@ public final class DatalakeanalyticsFunctions {
      * API Version: 2016-11-01.
      * 
      */
-    public static CompletableFuture<ListStorageAccountSasTokensResult> listStorageAccountSasTokens(ListStorageAccountSasTokensArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListStorageAccountSasTokensResult> listStorageAccountSasTokensPlain(ListStorageAccountSasTokensPlainArgs args) {
+        return listStorageAccountSasTokensPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The SAS response that contains the storage account, container and associated SAS token for connection use.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static Output<ListStorageAccountSasTokensResult> listStorageAccountSasTokens(ListStorageAccountSasTokensArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:datalakeanalytics:listStorageAccountSasTokens", TypeShape.of(ListStorageAccountSasTokensResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The SAS response that contains the storage account, container and associated SAS token for connection use.
+     * API Version: 2016-11-01.
+     * 
+     */
+    public static CompletableFuture<ListStorageAccountSasTokensResult> listStorageAccountSasTokensPlain(ListStorageAccountSasTokensPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakeanalytics:listStorageAccountSasTokens", TypeShape.of(ListStorageAccountSasTokensResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExternalDatabaseConnectorArgs extends com.pulumi.resources
      * 
      */
     @Import(name="externalDatabaseConnectorId", required=true)
-    private String externalDatabaseConnectorId;
+    private Output<String> externalDatabaseConnectorId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the external database connector resource (`ExternalDatabaseConnectorId`).
      * 
      */
-    public String externalDatabaseConnectorId() {
+    public Output<String> externalDatabaseConnectorId() {
         return this.externalDatabaseConnectorId;
     }
 
@@ -57,9 +58,19 @@ public final class GetExternalDatabaseConnectorArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder externalDatabaseConnectorId(String externalDatabaseConnectorId) {
+        public Builder externalDatabaseConnectorId(Output<String> externalDatabaseConnectorId) {
             $.externalDatabaseConnectorId = externalDatabaseConnectorId;
             return this;
+        }
+
+        /**
+         * @param externalDatabaseConnectorId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the external database connector resource (`ExternalDatabaseConnectorId`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externalDatabaseConnectorId(String externalDatabaseConnectorId) {
+            return externalDatabaseConnectorId(Output.of(externalDatabaseConnectorId));
         }
 
         public GetExternalDatabaseConnectorArgs build() {

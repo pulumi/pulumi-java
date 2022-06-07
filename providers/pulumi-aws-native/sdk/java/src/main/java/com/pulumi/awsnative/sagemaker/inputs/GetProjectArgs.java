@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sagemaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
     @Import(name="projectArn", required=true)
-    private String projectArn;
+    private Output<String> projectArn;
 
-    public String projectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
 
@@ -43,9 +44,13 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetProjectArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder projectArn(String projectArn) {
+        public Builder projectArn(Output<String> projectArn) {
             $.projectArn = projectArn;
             return this;
+        }
+
+        public Builder projectArn(String projectArn) {
+            return projectArn(Output.of(projectArn));
         }
 
         public GetProjectArgs build() {

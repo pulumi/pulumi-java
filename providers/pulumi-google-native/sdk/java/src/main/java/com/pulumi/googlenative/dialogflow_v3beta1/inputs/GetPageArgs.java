@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,44 +16,44 @@ public final class GetPageArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPageArgs Empty = new GetPageArgs();
 
     @Import(name="agentId", required=true)
-    private String agentId;
+    private Output<String> agentId;
 
-    public String agentId() {
+    public Output<String> agentId() {
         return this.agentId;
     }
 
     @Import(name="flowId", required=true)
-    private String flowId;
+    private Output<String> flowId;
 
-    public String flowId() {
+    public Output<String> flowId() {
         return this.flowId;
     }
 
     @Import(name="languageCode")
-    private @Nullable String languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Optional<String> languageCode() {
+    public Optional<Output<String>> languageCode() {
         return Optional.ofNullable(this.languageCode);
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="pageId", required=true)
-    private String pageId;
+    private Output<String> pageId;
 
-    public String pageId() {
+    public Output<String> pageId() {
         return this.pageId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -85,34 +86,58 @@ public final class GetPageArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPageArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder agentId(String agentId) {
+        public Builder agentId(Output<String> agentId) {
             $.agentId = agentId;
             return this;
         }
 
-        public Builder flowId(String flowId) {
+        public Builder agentId(String agentId) {
+            return agentId(Output.of(agentId));
+        }
+
+        public Builder flowId(Output<String> flowId) {
             $.flowId = flowId;
             return this;
         }
 
-        public Builder languageCode(@Nullable String languageCode) {
+        public Builder flowId(String flowId) {
+            return flowId(Output.of(flowId));
+        }
+
+        public Builder languageCode(@Nullable Output<String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder pageId(String pageId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder pageId(Output<String> pageId) {
             $.pageId = pageId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder pageId(String pageId) {
+            return pageId(Output.of(pageId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetPageArgs build() {

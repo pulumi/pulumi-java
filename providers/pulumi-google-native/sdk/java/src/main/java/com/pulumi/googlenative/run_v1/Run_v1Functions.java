@@ -3,14 +3,19 @@
 
 package com.pulumi.googlenative.run_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.run_v1.inputs.GetDomainMappingArgs;
+import com.pulumi.googlenative.run_v1.inputs.GetDomainMappingPlainArgs;
 import com.pulumi.googlenative.run_v1.inputs.GetJobIamPolicyArgs;
+import com.pulumi.googlenative.run_v1.inputs.GetJobIamPolicyPlainArgs;
 import com.pulumi.googlenative.run_v1.inputs.GetServiceArgs;
 import com.pulumi.googlenative.run_v1.inputs.GetServiceIamPolicyArgs;
+import com.pulumi.googlenative.run_v1.inputs.GetServiceIamPolicyPlainArgs;
+import com.pulumi.googlenative.run_v1.inputs.GetServicePlainArgs;
 import com.pulumi.googlenative.run_v1.outputs.GetDomainMappingResult;
 import com.pulumi.googlenative.run_v1.outputs.GetJobIamPolicyResult;
 import com.pulumi.googlenative.run_v1.outputs.GetServiceIamPolicyResult;
@@ -22,56 +27,112 @@ public final class Run_v1Functions {
      * Get information about a domain mapping.
      * 
      */
-    public static CompletableFuture<GetDomainMappingResult> getDomainMapping(GetDomainMappingArgs args) {
+    public static Output<GetDomainMappingResult> getDomainMapping(GetDomainMappingArgs args) {
         return getDomainMapping(args, InvokeOptions.Empty);
     }
     /**
      * Get information about a domain mapping.
      * 
      */
-    public static CompletableFuture<GetDomainMappingResult> getDomainMapping(GetDomainMappingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainMappingResult> getDomainMappingPlain(GetDomainMappingPlainArgs args) {
+        return getDomainMappingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get information about a domain mapping.
+     * 
+     */
+    public static Output<GetDomainMappingResult> getDomainMapping(GetDomainMappingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:run/v1:getDomainMapping", TypeShape.of(GetDomainMappingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get information about a domain mapping.
+     * 
+     */
+    public static CompletableFuture<GetDomainMappingResult> getDomainMappingPlain(GetDomainMappingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v1:getDomainMapping", TypeShape.of(GetDomainMappingResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get the IAM Access Control policy currently in effect for the given job. This result does not include any inherited policies.
      * 
      */
-    public static CompletableFuture<GetJobIamPolicyResult> getJobIamPolicy(GetJobIamPolicyArgs args) {
+    public static Output<GetJobIamPolicyResult> getJobIamPolicy(GetJobIamPolicyArgs args) {
         return getJobIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Get the IAM Access Control policy currently in effect for the given job. This result does not include any inherited policies.
      * 
      */
-    public static CompletableFuture<GetJobIamPolicyResult> getJobIamPolicy(GetJobIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobIamPolicyResult> getJobIamPolicyPlain(GetJobIamPolicyPlainArgs args) {
+        return getJobIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get the IAM Access Control policy currently in effect for the given job. This result does not include any inherited policies.
+     * 
+     */
+    public static Output<GetJobIamPolicyResult> getJobIamPolicy(GetJobIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:run/v1:getJobIamPolicy", TypeShape.of(GetJobIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get the IAM Access Control policy currently in effect for the given job. This result does not include any inherited policies.
+     * 
+     */
+    public static CompletableFuture<GetJobIamPolicyResult> getJobIamPolicyPlain(GetJobIamPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v1:getJobIamPolicy", TypeShape.of(GetJobIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information about a service.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
      * Get information about a service.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args) {
+        return getServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get information about a service.
+     * 
+     */
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:run/v1:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get information about a service.
+     * 
+     */
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v1:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get the IAM Access Control policy currently in effect for the given Cloud Run service. This result does not include any inherited policies.
      * 
      */
-    public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args) {
+    public static Output<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args) {
         return getServiceIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Get the IAM Access Control policy currently in effect for the given Cloud Run service. This result does not include any inherited policies.
      * 
      */
-    public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicyPlain(GetServiceIamPolicyPlainArgs args) {
+        return getServiceIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get the IAM Access Control policy currently in effect for the given Cloud Run service. This result does not include any inherited policies.
+     * 
+     */
+    public static Output<GetServiceIamPolicyResult> getServiceIamPolicy(GetServiceIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:run/v1:getServiceIamPolicy", TypeShape.of(GetServiceIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get the IAM Access Control policy currently in effect for the given Cloud Run service. This result does not include any inherited policies.
+     * 
+     */
+    public static CompletableFuture<GetServiceIamPolicyResult> getServiceIamPolicyPlain(GetServiceIamPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v1:getServiceIamPolicy", TypeShape.of(GetServiceIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }

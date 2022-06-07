@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAppArgs Empty = new GetAppArgs();
 
     @Import(name="appId", required=true)
-    private String appId;
+    private Output<String> appId;
 
-    public String appId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
     @Import(name="developerId", required=true)
-    private String developerId;
+    private Output<String> developerId;
 
-    public String developerId() {
+    public Output<String> developerId() {
         return this.developerId;
     }
 
     @Import(name="entity")
-    private @Nullable String entity;
+    private @Nullable Output<String> entity;
 
-    public Optional<String> entity() {
+    public Optional<Output<String>> entity() {
         return Optional.ofNullable(this.entity);
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="query")
-    private @Nullable String query;
+    private @Nullable Output<String> query;
 
-    public Optional<String> query() {
+    public Optional<Output<String>> query() {
         return Optional.ofNullable(this.query);
     }
 
@@ -77,29 +78,49 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAppArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder appId(String appId) {
+        public Builder appId(Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
-        public Builder developerId(String developerId) {
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
+        }
+
+        public Builder developerId(Output<String> developerId) {
             $.developerId = developerId;
             return this;
         }
 
-        public Builder entity(@Nullable String entity) {
+        public Builder developerId(String developerId) {
+            return developerId(Output.of(developerId));
+        }
+
+        public Builder entity(@Nullable Output<String> entity) {
             $.entity = entity;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder entity(String entity) {
+            return entity(Output.of(entity));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
-        public Builder query(@Nullable String query) {
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
+        }
+
+        public Builder query(String query) {
+            return query(Output.of(query));
         }
 
         public GetAppArgs build() {

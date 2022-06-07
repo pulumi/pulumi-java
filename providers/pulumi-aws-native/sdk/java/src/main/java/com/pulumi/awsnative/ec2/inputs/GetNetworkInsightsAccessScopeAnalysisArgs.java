@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetNetworkInsightsAccessScopeAnalysisArgs extends com.pulumi.
     public static final GetNetworkInsightsAccessScopeAnalysisArgs Empty = new GetNetworkInsightsAccessScopeAnalysisArgs();
 
     @Import(name="networkInsightsAccessScopeAnalysisId", required=true)
-    private String networkInsightsAccessScopeAnalysisId;
+    private Output<String> networkInsightsAccessScopeAnalysisId;
 
-    public String networkInsightsAccessScopeAnalysisId() {
+    public Output<String> networkInsightsAccessScopeAnalysisId() {
         return this.networkInsightsAccessScopeAnalysisId;
     }
 
@@ -43,9 +44,13 @@ public final class GetNetworkInsightsAccessScopeAnalysisArgs extends com.pulumi.
             $ = new GetNetworkInsightsAccessScopeAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder networkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
+        public Builder networkInsightsAccessScopeAnalysisId(Output<String> networkInsightsAccessScopeAnalysisId) {
             $.networkInsightsAccessScopeAnalysisId = networkInsightsAccessScopeAnalysisId;
             return this;
+        }
+
+        public Builder networkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
+            return networkInsightsAccessScopeAnalysisId(Output.of(networkInsightsAccessScopeAnalysisId));
         }
 
         public GetNetworkInsightsAccessScopeAnalysisArgs build() {

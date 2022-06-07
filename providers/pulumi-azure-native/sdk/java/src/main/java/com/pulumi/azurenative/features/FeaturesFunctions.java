@@ -5,7 +5,9 @@ package com.pulumi.azurenative.features;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.features.inputs.GetSubscriptionFeatureRegistrationArgs;
+import com.pulumi.azurenative.features.inputs.GetSubscriptionFeatureRegistrationPlainArgs;
 import com.pulumi.azurenative.features.outputs.GetSubscriptionFeatureRegistrationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -17,7 +19,7 @@ public final class FeaturesFunctions {
      * API Version: 2021-07-01.
      * 
      */
-    public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistration(GetSubscriptionFeatureRegistrationArgs args) {
+    public static Output<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistration(GetSubscriptionFeatureRegistrationArgs args) {
         return getSubscriptionFeatureRegistration(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +27,23 @@ public final class FeaturesFunctions {
      * API Version: 2021-07-01.
      * 
      */
-    public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistration(GetSubscriptionFeatureRegistrationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistrationPlain(GetSubscriptionFeatureRegistrationPlainArgs args) {
+        return getSubscriptionFeatureRegistrationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Subscription feature registration details
+     * API Version: 2021-07-01.
+     * 
+     */
+    public static Output<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistration(GetSubscriptionFeatureRegistrationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:features:getSubscriptionFeatureRegistration", TypeShape.of(GetSubscriptionFeatureRegistrationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Subscription feature registration details
+     * API Version: 2021-07-01.
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionFeatureRegistrationResult> getSubscriptionFeatureRegistrationPlain(GetSubscriptionFeatureRegistrationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:features:getSubscriptionFeatureRegistration", TypeShape.of(GetSubscriptionFeatureRegistrationResult.class), args, Utilities.withVersion(options));
     }
 }

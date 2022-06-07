@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.billing.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
      * 
      */
     @Import(name="billingAccountName", required=true)
-    private String billingAccountName;
+    private Output<String> billingAccountName;
 
     /**
      * @return The ID that uniquely identifies a billing account.
      * 
      */
-    public String billingAccountName() {
+    public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -57,9 +58,19 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
          * @return builder
          * 
          */
-        public Builder billingAccountName(String billingAccountName) {
+        public Builder billingAccountName(Output<String> billingAccountName) {
             $.billingAccountName = billingAccountName;
             return this;
+        }
+
+        /**
+         * @param billingAccountName The ID that uniquely identifies a billing account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccountName(String billingAccountName) {
+            return billingAccountName(Output.of(billingAccountName));
         }
 
         public ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Logging.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUnifiedAgentConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="unifiedAgentConfigurationId", required=true)
-    private String unifiedAgentConfigurationId;
+    private Output<String> unifiedAgentConfigurationId;
 
     /**
      * @return The OCID of the Unified Agent configuration.
      * 
      */
-    public String unifiedAgentConfigurationId() {
+    public Output<String> unifiedAgentConfigurationId() {
         return this.unifiedAgentConfigurationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetUnifiedAgentConfigurationArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder unifiedAgentConfigurationId(String unifiedAgentConfigurationId) {
+        public Builder unifiedAgentConfigurationId(Output<String> unifiedAgentConfigurationId) {
             $.unifiedAgentConfigurationId = unifiedAgentConfigurationId;
             return this;
+        }
+
+        /**
+         * @param unifiedAgentConfigurationId The OCID of the Unified Agent configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder unifiedAgentConfigurationId(String unifiedAgentConfigurationId) {
+            return unifiedAgentConfigurationId(Output.of(unifiedAgentConfigurationId));
         }
 
         public GetUnifiedAgentConfigurationArgs build() {

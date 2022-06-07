@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.route53recoveryreadiness.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRecoveryGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recoveryGroupName", required=true)
-    private String recoveryGroupName;
+    private Output<String> recoveryGroupName;
 
     /**
      * @return The name of the recovery group to create.
      * 
      */
-    public String recoveryGroupName() {
+    public Output<String> recoveryGroupName() {
         return this.recoveryGroupName;
     }
 
@@ -57,9 +58,19 @@ public final class GetRecoveryGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder recoveryGroupName(String recoveryGroupName) {
+        public Builder recoveryGroupName(Output<String> recoveryGroupName) {
             $.recoveryGroupName = recoveryGroupName;
             return this;
+        }
+
+        /**
+         * @param recoveryGroupName The name of the recovery group to create.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder recoveryGroupName(String recoveryGroupName) {
+            return recoveryGroupName(Output.of(recoveryGroupName));
         }
 
         public GetRecoveryGroupArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
      * 
      */
     @Import(name="circuitName", required=true)
-    private String circuitName;
+    private Output<String> circuitName;
 
     /**
      * @return The name of the express route circuit.
      * 
      */
-    public String circuitName() {
+    public Output<String> circuitName() {
         return this.circuitName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
      * 
      */
     @Import(name="peeringName", required=true)
-    private String peeringName;
+    private Output<String> peeringName;
 
     /**
      * @return The name of the peering.
      * 
      */
-    public String peeringName() {
+    public Output<String> peeringName() {
         return this.peeringName;
     }
 
@@ -47,13 +48,13 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder circuitName(String circuitName) {
+        public Builder circuitName(Output<String> circuitName) {
             $.circuitName = circuitName;
+            return this;
+        }
+
+        /**
+         * @param circuitName The name of the express route circuit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder circuitName(String circuitName) {
+            return circuitName(Output.of(circuitName));
+        }
+
+        /**
+         * @param peeringName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peeringName(Output<String> peeringName) {
+            $.peeringName = peeringName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
          * 
          */
         public Builder peeringName(String peeringName) {
-            $.peeringName = peeringName;
+            return peeringName(Output.of(peeringName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetExpressRouteCircuitPeeringArgs extends com.pulumi.resource
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExpressRouteCircuitPeeringArgs build() {

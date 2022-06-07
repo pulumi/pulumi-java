@@ -5,32 +5,59 @@ package com.pulumi.azure.network;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.network.inputs.GetApplicationGatewayArgs;
+import com.pulumi.azure.network.inputs.GetApplicationGatewayPlainArgs;
 import com.pulumi.azure.network.inputs.GetApplicationSecurityGroupArgs;
+import com.pulumi.azure.network.inputs.GetApplicationSecurityGroupPlainArgs;
 import com.pulumi.azure.network.inputs.GetExpressRouteCircuitArgs;
+import com.pulumi.azure.network.inputs.GetExpressRouteCircuitPlainArgs;
 import com.pulumi.azure.network.inputs.GetFirewallArgs;
+import com.pulumi.azure.network.inputs.GetFirewallPlainArgs;
 import com.pulumi.azure.network.inputs.GetFirewallPolicyArgs;
+import com.pulumi.azure.network.inputs.GetFirewallPolicyPlainArgs;
 import com.pulumi.azure.network.inputs.GetGatewayConnectionArgs;
+import com.pulumi.azure.network.inputs.GetGatewayConnectionPlainArgs;
 import com.pulumi.azure.network.inputs.GetIpGroupArgs;
+import com.pulumi.azure.network.inputs.GetIpGroupPlainArgs;
 import com.pulumi.azure.network.inputs.GetLocalNetworkGatewayArgs;
+import com.pulumi.azure.network.inputs.GetLocalNetworkGatewayPlainArgs;
 import com.pulumi.azure.network.inputs.GetNatGatewayArgs;
+import com.pulumi.azure.network.inputs.GetNatGatewayPlainArgs;
 import com.pulumi.azure.network.inputs.GetNetworkDdosProtectionPlanArgs;
+import com.pulumi.azure.network.inputs.GetNetworkDdosProtectionPlanPlainArgs;
 import com.pulumi.azure.network.inputs.GetNetworkInterfaceArgs;
+import com.pulumi.azure.network.inputs.GetNetworkInterfacePlainArgs;
 import com.pulumi.azure.network.inputs.GetNetworkSecurityGroupArgs;
+import com.pulumi.azure.network.inputs.GetNetworkSecurityGroupPlainArgs;
 import com.pulumi.azure.network.inputs.GetNetworkWatcherArgs;
+import com.pulumi.azure.network.inputs.GetNetworkWatcherPlainArgs;
 import com.pulumi.azure.network.inputs.GetPublicIPArgs;
+import com.pulumi.azure.network.inputs.GetPublicIPPlainArgs;
 import com.pulumi.azure.network.inputs.GetPublicIPsArgs;
+import com.pulumi.azure.network.inputs.GetPublicIPsPlainArgs;
 import com.pulumi.azure.network.inputs.GetPublicIpPrefixArgs;
+import com.pulumi.azure.network.inputs.GetPublicIpPrefixPlainArgs;
 import com.pulumi.azure.network.inputs.GetRouteFilterArgs;
+import com.pulumi.azure.network.inputs.GetRouteFilterPlainArgs;
 import com.pulumi.azure.network.inputs.GetRouteTableArgs;
+import com.pulumi.azure.network.inputs.GetRouteTablePlainArgs;
 import com.pulumi.azure.network.inputs.GetServiceTagsArgs;
+import com.pulumi.azure.network.inputs.GetServiceTagsPlainArgs;
 import com.pulumi.azure.network.inputs.GetSubnetArgs;
+import com.pulumi.azure.network.inputs.GetSubnetPlainArgs;
 import com.pulumi.azure.network.inputs.GetTrafficManagerArgs;
+import com.pulumi.azure.network.inputs.GetTrafficManagerPlainArgs;
 import com.pulumi.azure.network.inputs.GetTrafficManagerProfileArgs;
+import com.pulumi.azure.network.inputs.GetTrafficManagerProfilePlainArgs;
 import com.pulumi.azure.network.inputs.GetVirtualHubArgs;
+import com.pulumi.azure.network.inputs.GetVirtualHubPlainArgs;
 import com.pulumi.azure.network.inputs.GetVirtualNetworkArgs;
 import com.pulumi.azure.network.inputs.GetVirtualNetworkGatewayArgs;
+import com.pulumi.azure.network.inputs.GetVirtualNetworkGatewayPlainArgs;
+import com.pulumi.azure.network.inputs.GetVirtualNetworkPlainArgs;
 import com.pulumi.azure.network.inputs.GetVirtualWanArgs;
+import com.pulumi.azure.network.inputs.GetVirtualWanPlainArgs;
 import com.pulumi.azure.network.inputs.GetVpnGatewayArgs;
+import com.pulumi.azure.network.inputs.GetVpnGatewayPlainArgs;
 import com.pulumi.azure.network.outputs.GetApplicationGatewayResult;
 import com.pulumi.azure.network.outputs.GetApplicationSecurityGroupResult;
 import com.pulumi.azure.network.outputs.GetExpressRouteCircuitResult;
@@ -58,6 +85,7 @@ import com.pulumi.azure.network.outputs.GetVirtualNetworkGatewayResult;
 import com.pulumi.azure.network.outputs.GetVirtualNetworkResult;
 import com.pulumi.azure.network.outputs.GetVirtualWanResult;
 import com.pulumi.azure.network.outputs.GetVpnGatewayResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -93,7 +121,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationGatewayResult> getApplicationGateway(GetApplicationGatewayArgs args) {
+    public static Output<GetApplicationGatewayResult> getApplicationGateway(GetApplicationGatewayArgs args) {
         return getApplicationGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -125,7 +153,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationGatewayResult> getApplicationGateway(GetApplicationGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationGatewayResult> getApplicationGatewayPlain(GetApplicationGatewayPlainArgs args) {
+        return getApplicationGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Application Gateway.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getApplicationGateway(GetApplicationGatewayArgs.builder()
+     *             .name(&#34;existing-app-gateway&#34;)
+     *             .resourceGroupName(&#34;existing-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getApplicationGatewayResult -&gt; getApplicationGatewayResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetApplicationGatewayResult> getApplicationGateway(GetApplicationGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getApplicationGateway:getApplicationGateway", TypeShape.of(GetApplicationGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Application Gateway.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getApplicationGateway(GetApplicationGatewayArgs.builder()
+     *             .name(&#34;existing-app-gateway&#34;)
+     *             .resourceGroupName(&#34;existing-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getApplicationGatewayResult -&gt; getApplicationGatewayResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetApplicationGatewayResult> getApplicationGatewayPlain(GetApplicationGatewayPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getApplicationGateway:getApplicationGateway", TypeShape.of(GetApplicationGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -157,7 +249,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(GetApplicationSecurityGroupArgs args) {
+    public static Output<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(GetApplicationSecurityGroupArgs args) {
         return getApplicationSecurityGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -189,7 +281,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(GetApplicationSecurityGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationSecurityGroupResult> getApplicationSecurityGroupPlain(GetApplicationSecurityGroupPlainArgs args) {
+        return getApplicationSecurityGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Application Security Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getApplicationSecurityGroup(GetApplicationSecurityGroupArgs.builder()
+     *             .name(&#34;tf-appsecuritygroup&#34;)
+     *             .resourceGroupName(&#34;my-resource-group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;applicationSecurityGroupId&#34;, example.apply(getApplicationSecurityGroupResult -&gt; getApplicationSecurityGroupResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetApplicationSecurityGroupResult> getApplicationSecurityGroup(GetApplicationSecurityGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getApplicationSecurityGroup:getApplicationSecurityGroup", TypeShape.of(GetApplicationSecurityGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Application Security Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getApplicationSecurityGroup(GetApplicationSecurityGroupArgs.builder()
+     *             .name(&#34;tf-appsecuritygroup&#34;)
+     *             .resourceGroupName(&#34;my-resource-group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;applicationSecurityGroupId&#34;, example.apply(getApplicationSecurityGroupResult -&gt; getApplicationSecurityGroupResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetApplicationSecurityGroupResult> getApplicationSecurityGroupPlain(GetApplicationSecurityGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getApplicationSecurityGroup:getApplicationSecurityGroup", TypeShape.of(GetApplicationSecurityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -222,7 +378,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExpressRouteCircuitResult> getExpressRouteCircuit(GetExpressRouteCircuitArgs args) {
+    public static Output<GetExpressRouteCircuitResult> getExpressRouteCircuit(GetExpressRouteCircuitArgs args) {
         return getExpressRouteCircuit(args, InvokeOptions.Empty);
     }
     /**
@@ -255,7 +411,73 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetExpressRouteCircuitResult> getExpressRouteCircuit(GetExpressRouteCircuitArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExpressRouteCircuitResult> getExpressRouteCircuitPlain(GetExpressRouteCircuitPlainArgs args) {
+        return getExpressRouteCircuitPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing ExpressRoute circuit.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getExpressRouteCircuit(GetExpressRouteCircuitArgs.builder()
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .name(azurerm_express_route_circuit.getExample().getName())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;expressRouteCircuitId&#34;, example.apply(getExpressRouteCircuitResult -&gt; getExpressRouteCircuitResult.getId()));
+     *         ctx.export(&#34;serviceKey&#34;, example.apply(getExpressRouteCircuitResult -&gt; getExpressRouteCircuitResult.getServiceKey()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetExpressRouteCircuitResult> getExpressRouteCircuit(GetExpressRouteCircuitArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getExpressRouteCircuit:getExpressRouteCircuit", TypeShape.of(GetExpressRouteCircuitResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing ExpressRoute circuit.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getExpressRouteCircuit(GetExpressRouteCircuitArgs.builder()
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .name(azurerm_express_route_circuit.getExample().getName())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;expressRouteCircuitId&#34;, example.apply(getExpressRouteCircuitResult -&gt; getExpressRouteCircuitResult.getId()));
+     *         ctx.export(&#34;serviceKey&#34;, example.apply(getExpressRouteCircuitResult -&gt; getExpressRouteCircuitResult.getServiceKey()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetExpressRouteCircuitResult> getExpressRouteCircuitPlain(GetExpressRouteCircuitPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getExpressRouteCircuit:getExpressRouteCircuit", TypeShape.of(GetExpressRouteCircuitResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -287,7 +509,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirewallResult> getFirewall(GetFirewallArgs args) {
+    public static Output<GetFirewallResult> getFirewall(GetFirewallArgs args) {
         return getFirewall(args, InvokeOptions.Empty);
     }
     /**
@@ -319,7 +541,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirewallResult> getFirewall(GetFirewallArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallResult> getFirewallPlain(GetFirewallPlainArgs args) {
+        return getFirewallPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Azure Firewall.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getFirewall(GetFirewallArgs.builder()
+     *             .name(&#34;firewall1&#34;)
+     *             .resourceGroupName(&#34;firewall-RG&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;firewallPrivateIp&#34;, example.apply(getFirewallResult -&gt; getFirewallResult.getIpConfigurations()[0].getPrivateIpAddress()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetFirewallResult> getFirewall(GetFirewallArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getFirewall:getFirewall", TypeShape.of(GetFirewallResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Azure Firewall.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getFirewall(GetFirewallArgs.builder()
+     *             .name(&#34;firewall1&#34;)
+     *             .resourceGroupName(&#34;firewall-RG&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;firewallPrivateIp&#34;, example.apply(getFirewallResult -&gt; getFirewallResult.getIpConfigurations()[0].getPrivateIpAddress()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetFirewallResult> getFirewallPlain(GetFirewallPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getFirewall:getFirewall", TypeShape.of(GetFirewallResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -351,7 +637,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args) {
+    public static Output<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args) {
         return getFirewallPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -383,7 +669,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicyPlain(GetFirewallPolicyPlainArgs args) {
+        return getFirewallPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Firewall Policy.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getFirewallPolicy(GetFirewallPolicyArgs.builder()
+     *             .name(&#34;existing&#34;)
+     *             .resourceGroupName(&#34;existing&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getFirewallPolicyResult -&gt; getFirewallPolicyResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetFirewallPolicyResult> getFirewallPolicy(GetFirewallPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getFirewallPolicy:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Firewall Policy.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getFirewallPolicy(GetFirewallPolicyArgs.builder()
+     *             .name(&#34;existing&#34;)
+     *             .resourceGroupName(&#34;existing&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getFirewallPolicyResult -&gt; getFirewallPolicyResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetFirewallPolicyResult> getFirewallPolicyPlain(GetFirewallPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getFirewallPolicy:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -415,7 +765,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGatewayConnectionResult> getGatewayConnection(GetGatewayConnectionArgs args) {
+    public static Output<GetGatewayConnectionResult> getGatewayConnection(GetGatewayConnectionArgs args) {
         return getGatewayConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -447,7 +797,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetGatewayConnectionResult> getGatewayConnection(GetGatewayConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayConnectionResult> getGatewayConnectionPlain(GetGatewayConnectionPlainArgs args) {
+        return getGatewayConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Virtual Network Gateway Connection.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getGatewayConnection(GetGatewayConnectionArgs.builder()
+     *             .name(&#34;production&#34;)
+     *             .resourceGroupName(&#34;networking&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;virtualNetworkGatewayConnectionId&#34;, example.apply(getGatewayConnectionResult -&gt; getGatewayConnectionResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetGatewayConnectionResult> getGatewayConnection(GetGatewayConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getGatewayConnection:getGatewayConnection", TypeShape.of(GetGatewayConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Virtual Network Gateway Connection.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getGatewayConnection(GetGatewayConnectionArgs.builder()
+     *             .name(&#34;production&#34;)
+     *             .resourceGroupName(&#34;networking&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;virtualNetworkGatewayConnectionId&#34;, example.apply(getGatewayConnectionResult -&gt; getGatewayConnectionResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetGatewayConnectionResult> getGatewayConnectionPlain(GetGatewayConnectionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getGatewayConnection:getGatewayConnection", TypeShape.of(GetGatewayConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -479,7 +893,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpGroupResult> getIpGroup(GetIpGroupArgs args) {
+    public static Output<GetIpGroupResult> getIpGroup(GetIpGroupArgs args) {
         return getIpGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -511,7 +925,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetIpGroupResult> getIpGroup(GetIpGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIpGroupResult> getIpGroupPlain(GetIpGroupPlainArgs args) {
+        return getIpGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing IP Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getIpGroup(GetIpGroupArgs.builder()
+     *             .name(&#34;example1-ipgroup&#34;)
+     *             .resourceGroupName(&#34;example-rg&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;cidrs&#34;, example.apply(getIpGroupResult -&gt; getIpGroupResult.getCidrs()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetIpGroupResult> getIpGroup(GetIpGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getIpGroup:getIpGroup", TypeShape.of(GetIpGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing IP Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getIpGroup(GetIpGroupArgs.builder()
+     *             .name(&#34;example1-ipgroup&#34;)
+     *             .resourceGroupName(&#34;example-rg&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;cidrs&#34;, example.apply(getIpGroupResult -&gt; getIpGroupResult.getCidrs()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetIpGroupResult> getIpGroupPlain(GetIpGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getIpGroup:getIpGroup", TypeShape.of(GetIpGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -543,7 +1021,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalNetworkGatewayResult> getLocalNetworkGateway(GetLocalNetworkGatewayArgs args) {
+    public static Output<GetLocalNetworkGatewayResult> getLocalNetworkGateway(GetLocalNetworkGatewayArgs args) {
         return getLocalNetworkGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -575,21 +1053,99 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLocalNetworkGatewayResult> getLocalNetworkGateway(GetLocalNetworkGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLocalNetworkGatewayResult> getLocalNetworkGatewayPlain(GetLocalNetworkGatewayPlainArgs args) {
+        return getLocalNetworkGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Local Network Gateway.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getLocalNetworkGateway(GetLocalNetworkGatewayArgs.builder()
+     *             .name(&#34;existing-local-network-gateway&#34;)
+     *             .resourceGroupName(&#34;existing-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getLocalNetworkGatewayResult -&gt; getLocalNetworkGatewayResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetLocalNetworkGatewayResult> getLocalNetworkGateway(GetLocalNetworkGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getLocalNetworkGateway:getLocalNetworkGateway", TypeShape.of(GetLocalNetworkGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Local Network Gateway.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getLocalNetworkGateway(GetLocalNetworkGatewayArgs.builder()
+     *             .name(&#34;existing-local-network-gateway&#34;)
+     *             .resourceGroupName(&#34;existing-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getLocalNetworkGatewayResult -&gt; getLocalNetworkGatewayResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetLocalNetworkGatewayResult> getLocalNetworkGatewayPlain(GetLocalNetworkGatewayPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getLocalNetworkGateway:getLocalNetworkGateway", TypeShape.of(GetLocalNetworkGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing NAT Gateway.
      * 
      */
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args) {
+    public static Output<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args) {
         return getNatGateway(args, InvokeOptions.Empty);
     }
     /**
      * Use this data source to access information about an existing NAT Gateway.
      * 
      */
-    public static CompletableFuture<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNatGatewayResult> getNatGatewayPlain(GetNatGatewayPlainArgs args) {
+        return getNatGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing NAT Gateway.
+     * 
+     */
+    public static Output<GetNatGatewayResult> getNatGateway(GetNatGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getNatGateway:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing NAT Gateway.
+     * 
+     */
+    public static CompletableFuture<GetNatGatewayResult> getNatGatewayPlain(GetNatGatewayPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getNatGateway:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -621,7 +1177,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkDdosProtectionPlanResult> getNetworkDdosProtectionPlan(GetNetworkDdosProtectionPlanArgs args) {
+    public static Output<GetNetworkDdosProtectionPlanResult> getNetworkDdosProtectionPlan(GetNetworkDdosProtectionPlanArgs args) {
         return getNetworkDdosProtectionPlan(args, InvokeOptions.Empty);
     }
     /**
@@ -653,7 +1209,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkDdosProtectionPlanResult> getNetworkDdosProtectionPlan(GetNetworkDdosProtectionPlanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkDdosProtectionPlanResult> getNetworkDdosProtectionPlanPlain(GetNetworkDdosProtectionPlanPlainArgs args) {
+        return getNetworkDdosProtectionPlanPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Azure Network DDoS Protection Plan.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getNetworkDdosProtectionPlan(GetNetworkDdosProtectionPlanArgs.builder()
+     *             .name(azurerm_network_ddos_protection_plan.getExample().getName())
+     *             .resourceGroupName(azurerm_network_ddos_protection_plan.getExample().getResource_group_name())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;ddosProtectionPlanId&#34;, example.apply(getNetworkDdosProtectionPlanResult -&gt; getNetworkDdosProtectionPlanResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetNetworkDdosProtectionPlanResult> getNetworkDdosProtectionPlan(GetNetworkDdosProtectionPlanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getNetworkDdosProtectionPlan:getNetworkDdosProtectionPlan", TypeShape.of(GetNetworkDdosProtectionPlanResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Azure Network DDoS Protection Plan.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getNetworkDdosProtectionPlan(GetNetworkDdosProtectionPlanArgs.builder()
+     *             .name(azurerm_network_ddos_protection_plan.getExample().getName())
+     *             .resourceGroupName(azurerm_network_ddos_protection_plan.getExample().getResource_group_name())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;ddosProtectionPlanId&#34;, example.apply(getNetworkDdosProtectionPlanResult -&gt; getNetworkDdosProtectionPlanResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetNetworkDdosProtectionPlanResult> getNetworkDdosProtectionPlanPlain(GetNetworkDdosProtectionPlanPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getNetworkDdosProtectionPlan:getNetworkDdosProtectionPlan", TypeShape.of(GetNetworkDdosProtectionPlanResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -685,7 +1305,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args) {
+    public static Output<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args) {
         return getNetworkInterface(args, InvokeOptions.Empty);
     }
     /**
@@ -717,7 +1337,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterfacePlain(GetNetworkInterfacePlainArgs args) {
+        return getNetworkInterfacePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Network Interface.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getNetworkInterface(GetNetworkInterfaceArgs.builder()
+     *             .name(&#34;acctest-nic&#34;)
+     *             .resourceGroupName(&#34;networking&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;networkInterfaceId&#34;, example.apply(getNetworkInterfaceResult -&gt; getNetworkInterfaceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetNetworkInterfaceResult> getNetworkInterface(GetNetworkInterfaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getNetworkInterface:getNetworkInterface", TypeShape.of(GetNetworkInterfaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Network Interface.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getNetworkInterface(GetNetworkInterfaceArgs.builder()
+     *             .name(&#34;acctest-nic&#34;)
+     *             .resourceGroupName(&#34;networking&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;networkInterfaceId&#34;, example.apply(getNetworkInterfaceResult -&gt; getNetworkInterfaceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetNetworkInterfaceResult> getNetworkInterfacePlain(GetNetworkInterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getNetworkInterface:getNetworkInterface", TypeShape.of(GetNetworkInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -749,7 +1433,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args) {
+    public static Output<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args) {
         return getNetworkSecurityGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -781,7 +1465,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroupPlain(GetNetworkSecurityGroupPlainArgs args) {
+        return getNetworkSecurityGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Network Security Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getNetworkSecurityGroup(GetNetworkSecurityGroupArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;location&#34;, example.apply(getNetworkSecurityGroupResult -&gt; getNetworkSecurityGroupResult.getLocation()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetNetworkSecurityGroupResult> getNetworkSecurityGroup(GetNetworkSecurityGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getNetworkSecurityGroup:getNetworkSecurityGroup", TypeShape.of(GetNetworkSecurityGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Network Security Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getNetworkSecurityGroup(GetNetworkSecurityGroupArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;location&#34;, example.apply(getNetworkSecurityGroupResult -&gt; getNetworkSecurityGroupResult.getLocation()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetNetworkSecurityGroupResult> getNetworkSecurityGroupPlain(GetNetworkSecurityGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getNetworkSecurityGroup:getNetworkSecurityGroup", TypeShape.of(GetNetworkSecurityGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -813,7 +1561,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkWatcherResult> getNetworkWatcher(GetNetworkWatcherArgs args) {
+    public static Output<GetNetworkWatcherResult> getNetworkWatcher(GetNetworkWatcherArgs args) {
         return getNetworkWatcher(args, InvokeOptions.Empty);
     }
     /**
@@ -845,7 +1593,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetNetworkWatcherResult> getNetworkWatcher(GetNetworkWatcherArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkWatcherResult> getNetworkWatcherPlain(GetNetworkWatcherPlainArgs args) {
+        return getNetworkWatcherPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Network Watcher.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getNetworkWatcher(GetNetworkWatcherArgs.builder()
+     *             .name(azurerm_network_watcher.getExample().getName())
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;networkWatcherId&#34;, example.apply(getNetworkWatcherResult -&gt; getNetworkWatcherResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetNetworkWatcherResult> getNetworkWatcher(GetNetworkWatcherArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getNetworkWatcher:getNetworkWatcher", TypeShape.of(GetNetworkWatcherResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Network Watcher.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getNetworkWatcher(GetNetworkWatcherArgs.builder()
+     *             .name(azurerm_network_watcher.getExample().getName())
+     *             .resourceGroupName(azurerm_resource_group.getExample().getName())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;networkWatcherId&#34;, example.apply(getNetworkWatcherResult -&gt; getNetworkWatcherResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetNetworkWatcherResult> getNetworkWatcherPlain(GetNetworkWatcherPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getNetworkWatcher:getNetworkWatcher", TypeShape.of(GetNetworkWatcherResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -945,7 +1757,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIPResult> getPublicIP(GetPublicIPArgs args) {
+    public static Output<GetPublicIPResult> getPublicIP(GetPublicIPArgs args) {
         return getPublicIP(args, InvokeOptions.Empty);
     }
     /**
@@ -1045,7 +1857,207 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIPResult> getPublicIP(GetPublicIPArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublicIPResult> getPublicIPPlain(GetPublicIPPlainArgs args) {
+        return getPublicIPPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Public IP Address.
+     * 
+     * ## Example Usage
+     * ### Reference An Existing)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getPublicIP(GetPublicIPArgs.builder()
+     *             .name(&#34;name_of_public_ip&#34;)
+     *             .resourceGroupName(&#34;name_of_resource_group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;domainNameLabel&#34;, example.apply(getPublicIPResult -&gt; getPublicIPResult.getDomainNameLabel()));
+     *         ctx.export(&#34;publicIpAddress&#34;, example.apply(getPublicIPResult -&gt; getPublicIPResult.getIpAddress()));
+     *         }
+     * }
+     * ```
+     * ### Retrieve The Dynamic Public IP Of A New VM)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var exampleResourceGroup = new ResourceGroup(&#34;exampleResourceGroup&#34;, ResourceGroupArgs.builder()        
+     *             .location(&#34;West Europe&#34;)
+     *             .build());
+     * 
+     *         var exampleVirtualNetwork = new VirtualNetwork(&#34;exampleVirtualNetwork&#34;, VirtualNetworkArgs.builder()        
+     *             .addressSpaces(&#34;10.0.0.0/16&#34;)
+     *             .location(exampleResourceGroup.getLocation())
+     *             .resourceGroupName(exampleResourceGroup.getName())
+     *             .build());
+     * 
+     *         var exampleSubnet = new Subnet(&#34;exampleSubnet&#34;, SubnetArgs.builder()        
+     *             .resourceGroupName(exampleResourceGroup.getName())
+     *             .virtualNetworkName(exampleVirtualNetwork.getName())
+     *             .addressPrefixes(&#34;10.0.2.0/24&#34;)
+     *             .build());
+     * 
+     *         var examplePublicIp = new PublicIp(&#34;examplePublicIp&#34;, PublicIpArgs.builder()        
+     *             .location(exampleResourceGroup.getLocation())
+     *             .resourceGroupName(exampleResourceGroup.getName())
+     *             .allocationMethod(&#34;Dynamic&#34;)
+     *             .idleTimeoutInMinutes(30)
+     *             .tags(Map.of(&#34;environment&#34;, &#34;test&#34;))
+     *             .build());
+     * 
+     *         var exampleNetworkInterface = new NetworkInterface(&#34;exampleNetworkInterface&#34;, NetworkInterfaceArgs.builder()        
+     *             .location(exampleResourceGroup.getLocation())
+     *             .resourceGroupName(exampleResourceGroup.getName())
+     *             .ipConfigurations(NetworkInterfaceIpConfiguration.builder()
+     *                 .name(&#34;testconfiguration1&#34;)
+     *                 .subnetId(exampleSubnet.getId())
+     *                 .privateIpAddressAllocation(&#34;Static&#34;)
+     *                 .privateIpAddress(&#34;10.0.2.5&#34;)
+     *                 .publicIpAddressId(examplePublicIp.getId())
+     *                 .build())
+     *             .build());
+     * 
+     *         var exampleVirtualMachine = new VirtualMachine(&#34;exampleVirtualMachine&#34;, VirtualMachineArgs.builder()        
+     *             .location(exampleResourceGroup.getLocation())
+     *             .resourceGroupName(exampleResourceGroup.getName())
+     *             .networkInterfaceIds(exampleNetworkInterface.getId())
+     *             .build());
+     * 
+     *         final var examplePublicIP = NetworkFunctions.getPublicIP(GetPublicIPArgs.builder()
+     *             .name(examplePublicIp.getName())
+     *             .resourceGroupName(exampleVirtualMachine.getResourceGroupName())
+     *             .build());
+     * 
+     *         ctx.export(&#34;publicIpAddress&#34;, examplePublicIp.getIpAddress());
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetPublicIPResult> getPublicIP(GetPublicIPArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getPublicIP:getPublicIP", TypeShape.of(GetPublicIPResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Public IP Address.
+     * 
+     * ## Example Usage
+     * ### Reference An Existing)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getPublicIP(GetPublicIPArgs.builder()
+     *             .name(&#34;name_of_public_ip&#34;)
+     *             .resourceGroupName(&#34;name_of_resource_group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;domainNameLabel&#34;, example.apply(getPublicIPResult -&gt; getPublicIPResult.getDomainNameLabel()));
+     *         ctx.export(&#34;publicIpAddress&#34;, example.apply(getPublicIPResult -&gt; getPublicIPResult.getIpAddress()));
+     *         }
+     * }
+     * ```
+     * ### Retrieve The Dynamic Public IP Of A New VM)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var exampleResourceGroup = new ResourceGroup(&#34;exampleResourceGroup&#34;, ResourceGroupArgs.builder()        
+     *             .location(&#34;West Europe&#34;)
+     *             .build());
+     * 
+     *         var exampleVirtualNetwork = new VirtualNetwork(&#34;exampleVirtualNetwork&#34;, VirtualNetworkArgs.builder()        
+     *             .addressSpaces(&#34;10.0.0.0/16&#34;)
+     *             .location(exampleResourceGroup.getLocation())
+     *             .resourceGroupName(exampleResourceGroup.getName())
+     *             .build());
+     * 
+     *         var exampleSubnet = new Subnet(&#34;exampleSubnet&#34;, SubnetArgs.builder()        
+     *             .resourceGroupName(exampleResourceGroup.getName())
+     *             .virtualNetworkName(exampleVirtualNetwork.getName())
+     *             .addressPrefixes(&#34;10.0.2.0/24&#34;)
+     *             .build());
+     * 
+     *         var examplePublicIp = new PublicIp(&#34;examplePublicIp&#34;, PublicIpArgs.builder()        
+     *             .location(exampleResourceGroup.getLocation())
+     *             .resourceGroupName(exampleResourceGroup.getName())
+     *             .allocationMethod(&#34;Dynamic&#34;)
+     *             .idleTimeoutInMinutes(30)
+     *             .tags(Map.of(&#34;environment&#34;, &#34;test&#34;))
+     *             .build());
+     * 
+     *         var exampleNetworkInterface = new NetworkInterface(&#34;exampleNetworkInterface&#34;, NetworkInterfaceArgs.builder()        
+     *             .location(exampleResourceGroup.getLocation())
+     *             .resourceGroupName(exampleResourceGroup.getName())
+     *             .ipConfigurations(NetworkInterfaceIpConfiguration.builder()
+     *                 .name(&#34;testconfiguration1&#34;)
+     *                 .subnetId(exampleSubnet.getId())
+     *                 .privateIpAddressAllocation(&#34;Static&#34;)
+     *                 .privateIpAddress(&#34;10.0.2.5&#34;)
+     *                 .publicIpAddressId(examplePublicIp.getId())
+     *                 .build())
+     *             .build());
+     * 
+     *         var exampleVirtualMachine = new VirtualMachine(&#34;exampleVirtualMachine&#34;, VirtualMachineArgs.builder()        
+     *             .location(exampleResourceGroup.getLocation())
+     *             .resourceGroupName(exampleResourceGroup.getName())
+     *             .networkInterfaceIds(exampleNetworkInterface.getId())
+     *             .build());
+     * 
+     *         final var examplePublicIP = NetworkFunctions.getPublicIP(GetPublicIPArgs.builder()
+     *             .name(examplePublicIp.getName())
+     *             .resourceGroupName(exampleVirtualMachine.getResourceGroupName())
+     *             .build());
+     * 
+     *         ctx.export(&#34;publicIpAddress&#34;, examplePublicIp.getIpAddress());
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetPublicIPResult> getPublicIPPlain(GetPublicIPPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getPublicIP:getPublicIP", TypeShape.of(GetPublicIPResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1076,7 +2088,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIPsResult> getPublicIPs(GetPublicIPsArgs args) {
+    public static Output<GetPublicIPsResult> getPublicIPs(GetPublicIPsArgs args) {
         return getPublicIPs(args, InvokeOptions.Empty);
     }
     /**
@@ -1107,7 +2119,69 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIPsResult> getPublicIPs(GetPublicIPsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublicIPsResult> getPublicIPsPlain(GetPublicIPsPlainArgs args) {
+        return getPublicIPsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about a set of existing Public IP Addresses.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getPublicIPs(GetPublicIPsArgs.builder()
+     *             .attachmentStatus(&#34;Attached&#34;)
+     *             .resourceGroupName(&#34;pip-test&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetPublicIPsResult> getPublicIPs(GetPublicIPsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getPublicIPs:getPublicIPs", TypeShape.of(GetPublicIPsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about a set of existing Public IP Addresses.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getPublicIPs(GetPublicIPsArgs.builder()
+     *             .attachmentStatus(&#34;Attached&#34;)
+     *             .resourceGroupName(&#34;pip-test&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetPublicIPsResult> getPublicIPsPlain(GetPublicIPsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getPublicIPs:getPublicIPs", TypeShape.of(GetPublicIPsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1140,7 +2214,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIpPrefixResult> getPublicIpPrefix(GetPublicIpPrefixArgs args) {
+    public static Output<GetPublicIpPrefixResult> getPublicIpPrefix(GetPublicIpPrefixArgs args) {
         return getPublicIpPrefix(args, InvokeOptions.Empty);
     }
     /**
@@ -1173,7 +2247,73 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPublicIpPrefixResult> getPublicIpPrefix(GetPublicIpPrefixArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPublicIpPrefixResult> getPublicIpPrefixPlain(GetPublicIpPrefixPlainArgs args) {
+        return getPublicIpPrefixPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Public IP Prefix.
+     * 
+     * ## Example Usage
+     * ### Reference An Existing)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getPublicIpPrefix(GetPublicIpPrefixArgs.builder()
+     *             .name(&#34;name_of_public_ip&#34;)
+     *             .resourceGroupName(&#34;name_of_resource_group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;publicIpPrefix&#34;, example.apply(getPublicIpPrefixResult -&gt; getPublicIpPrefixResult.getIpPrefix()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetPublicIpPrefixResult> getPublicIpPrefix(GetPublicIpPrefixArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getPublicIpPrefix:getPublicIpPrefix", TypeShape.of(GetPublicIpPrefixResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Public IP Prefix.
+     * 
+     * ## Example Usage
+     * ### Reference An Existing)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getPublicIpPrefix(GetPublicIpPrefixArgs.builder()
+     *             .name(&#34;name_of_public_ip&#34;)
+     *             .resourceGroupName(&#34;name_of_resource_group&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;publicIpPrefix&#34;, example.apply(getPublicIpPrefixResult -&gt; getPublicIpPrefixResult.getIpPrefix()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetPublicIpPrefixResult> getPublicIpPrefixPlain(GetPublicIpPrefixPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getPublicIpPrefix:getPublicIpPrefix", TypeShape.of(GetPublicIpPrefixResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1205,7 +2345,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteFilterResult> getRouteFilter(GetRouteFilterArgs args) {
+    public static Output<GetRouteFilterResult> getRouteFilter(GetRouteFilterArgs args) {
         return getRouteFilter(args, InvokeOptions.Empty);
     }
     /**
@@ -1237,7 +2377,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteFilterResult> getRouteFilter(GetRouteFilterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteFilterResult> getRouteFilterPlain(GetRouteFilterPlainArgs args) {
+        return getRouteFilterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Route Filter.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getRouteFilter(GetRouteFilterArgs.builder()
+     *             .name(&#34;existing&#34;)
+     *             .resourceGroupName(&#34;existing&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getRouteFilterResult -&gt; getRouteFilterResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetRouteFilterResult> getRouteFilter(GetRouteFilterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getRouteFilter:getRouteFilter", TypeShape.of(GetRouteFilterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Route Filter.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getRouteFilter(GetRouteFilterArgs.builder()
+     *             .name(&#34;existing&#34;)
+     *             .resourceGroupName(&#34;existing&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;id&#34;, example.apply(getRouteFilterResult -&gt; getRouteFilterResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetRouteFilterResult> getRouteFilterPlain(GetRouteFilterPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getRouteFilter:getRouteFilter", TypeShape.of(GetRouteFilterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1268,7 +2472,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args) {
+    public static Output<GetRouteTableResult> getRouteTable(GetRouteTableArgs args) {
         return getRouteTable(args, InvokeOptions.Empty);
     }
     /**
@@ -1299,7 +2503,69 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRouteTableResult> getRouteTable(GetRouteTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRouteTableResult> getRouteTablePlain(GetRouteTablePlainArgs args) {
+        return getRouteTablePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Route Table.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getRouteTable(GetRouteTableArgs.builder()
+     *             .name(&#34;myroutetable&#34;)
+     *             .resourceGroupName(&#34;some-resource-group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetRouteTableResult> getRouteTable(GetRouteTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getRouteTable:getRouteTable", TypeShape.of(GetRouteTableResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Route Table.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getRouteTable(GetRouteTableArgs.builder()
+     *             .name(&#34;myroutetable&#34;)
+     *             .resourceGroupName(&#34;some-resource-group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetRouteTableResult> getRouteTablePlain(GetRouteTablePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getRouteTable:getRouteTable", TypeShape.of(GetRouteTableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1333,7 +2599,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceTagsResult> getServiceTags(GetServiceTagsArgs args) {
+    public static Output<GetServiceTagsResult> getServiceTags(GetServiceTagsArgs args) {
         return getServiceTags(args, InvokeOptions.Empty);
     }
     /**
@@ -1367,7 +2633,75 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceTagsResult> getServiceTags(GetServiceTagsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceTagsResult> getServiceTagsPlain(GetServiceTagsPlainArgs args) {
+        return getServiceTagsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about Service Tags.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getServiceTags(GetServiceTagsArgs.builder()
+     *             .location(&#34;westcentralus&#34;)
+     *             .service(&#34;AzureKeyVault&#34;)
+     *             .locationFilter(&#34;northeurope&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;addressPrefixes&#34;, example.apply(getServiceTagsResult -&gt; getServiceTagsResult.getAddressPrefixes()));
+     *         ctx.export(&#34;ipv4Cidrs&#34;, example.apply(getServiceTagsResult -&gt; getServiceTagsResult.getIpv4Cidrs()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetServiceTagsResult> getServiceTags(GetServiceTagsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getServiceTags:getServiceTags", TypeShape.of(GetServiceTagsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about Service Tags.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getServiceTags(GetServiceTagsArgs.builder()
+     *             .location(&#34;westcentralus&#34;)
+     *             .service(&#34;AzureKeyVault&#34;)
+     *             .locationFilter(&#34;northeurope&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;addressPrefixes&#34;, example.apply(getServiceTagsResult -&gt; getServiceTagsResult.getAddressPrefixes()));
+     *         ctx.export(&#34;ipv4Cidrs&#34;, example.apply(getServiceTagsResult -&gt; getServiceTagsResult.getIpv4Cidrs()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetServiceTagsResult> getServiceTagsPlain(GetServiceTagsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getServiceTags:getServiceTags", TypeShape.of(GetServiceTagsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1400,7 +2734,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args) {
+    public static Output<GetSubnetResult> getSubnet(GetSubnetArgs args) {
         return getSubnet(args, InvokeOptions.Empty);
     }
     /**
@@ -1433,7 +2767,73 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSubnetResult> getSubnet(GetSubnetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubnetResult> getSubnetPlain(GetSubnetPlainArgs args) {
+        return getSubnetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Subnet within a Virtual Network.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getSubnet(GetSubnetArgs.builder()
+     *             .name(&#34;backend&#34;)
+     *             .virtualNetworkName(&#34;production&#34;)
+     *             .resourceGroupName(&#34;networking&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;subnetId&#34;, example.apply(getSubnetResult -&gt; getSubnetResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetSubnetResult> getSubnet(GetSubnetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getSubnet:getSubnet", TypeShape.of(GetSubnetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Subnet within a Virtual Network.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getSubnet(GetSubnetArgs.builder()
+     *             .name(&#34;backend&#34;)
+     *             .virtualNetworkName(&#34;production&#34;)
+     *             .resourceGroupName(&#34;networking&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;subnetId&#34;, example.apply(getSubnetResult -&gt; getSubnetResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetSubnetResult> getSubnetPlain(GetSubnetPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getSubnet:getSubnet", TypeShape.of(GetSubnetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1465,7 +2865,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTrafficManagerResult> getTrafficManager(GetTrafficManagerArgs args) {
+    public static Output<GetTrafficManagerResult> getTrafficManager(GetTrafficManagerArgs args) {
         return getTrafficManager(args, InvokeOptions.Empty);
     }
     /**
@@ -1497,7 +2897,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTrafficManagerResult> getTrafficManager(GetTrafficManagerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTrafficManagerResult> getTrafficManagerPlain(GetTrafficManagerPlainArgs args) {
+        return getTrafficManagerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.
+     * 
+     * ## Example Usage
+     * ### World)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getTrafficManager(GetTrafficManagerArgs.builder()
+     *             .name(&#34;World&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;locationCode&#34;, example.apply(getTrafficManagerResult -&gt; getTrafficManagerResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetTrafficManagerResult> getTrafficManager(GetTrafficManagerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getTrafficManager:getTrafficManager", TypeShape.of(GetTrafficManagerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.
+     * 
+     * ## Example Usage
+     * ### World)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getTrafficManager(GetTrafficManagerArgs.builder()
+     *             .name(&#34;World&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;locationCode&#34;, example.apply(getTrafficManagerResult -&gt; getTrafficManagerResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetTrafficManagerResult> getTrafficManagerPlain(GetTrafficManagerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getTrafficManager:getTrafficManager", TypeShape.of(GetTrafficManagerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1529,7 +2993,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTrafficManagerProfileResult> getTrafficManagerProfile(GetTrafficManagerProfileArgs args) {
+    public static Output<GetTrafficManagerProfileResult> getTrafficManagerProfile(GetTrafficManagerProfileArgs args) {
         return getTrafficManagerProfile(args, InvokeOptions.Empty);
     }
     /**
@@ -1561,7 +3025,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetTrafficManagerProfileResult> getTrafficManagerProfile(GetTrafficManagerProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTrafficManagerProfileResult> getTrafficManagerProfilePlain(GetTrafficManagerProfilePlainArgs args) {
+        return getTrafficManagerProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Traffic Manager Profile.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getTrafficManagerProfile(GetTrafficManagerProfileArgs.builder()
+     *             .name(&#34;test&#34;)
+     *             .resourceGroupName(&#34;test&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;trafficRoutingMethod&#34;, data.getAzurerm_traffic_manager_profile().getTraffic_routing_method());
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetTrafficManagerProfileResult> getTrafficManagerProfile(GetTrafficManagerProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getTrafficManagerProfile:getTrafficManagerProfile", TypeShape.of(GetTrafficManagerProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Traffic Manager Profile.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getTrafficManagerProfile(GetTrafficManagerProfileArgs.builder()
+     *             .name(&#34;test&#34;)
+     *             .resourceGroupName(&#34;test&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;trafficRoutingMethod&#34;, data.getAzurerm_traffic_manager_profile().getTraffic_routing_method());
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetTrafficManagerProfileResult> getTrafficManagerProfilePlain(GetTrafficManagerProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getTrafficManagerProfile:getTrafficManagerProfile", TypeShape.of(GetTrafficManagerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1593,7 +3121,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualHubResult> getVirtualHub(GetVirtualHubArgs args) {
+    public static Output<GetVirtualHubResult> getVirtualHub(GetVirtualHubArgs args) {
         return getVirtualHub(args, InvokeOptions.Empty);
     }
     /**
@@ -1625,7 +3153,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualHubResult> getVirtualHub(GetVirtualHubArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualHubResult> getVirtualHubPlain(GetVirtualHubPlainArgs args) {
+        return getVirtualHubPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Uses this data source to access information about an existing Virtual Hub.
+     * 
+     * ## Virtual Hub Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getVirtualHub(GetVirtualHubArgs.builder()
+     *             .name(&#34;example-hub&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;virtualHubId&#34;, example.apply(getVirtualHubResult -&gt; getVirtualHubResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetVirtualHubResult> getVirtualHub(GetVirtualHubArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getVirtualHub:getVirtualHub", TypeShape.of(GetVirtualHubResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Uses this data source to access information about an existing Virtual Hub.
+     * 
+     * ## Virtual Hub Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getVirtualHub(GetVirtualHubArgs.builder()
+     *             .name(&#34;example-hub&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;virtualHubId&#34;, example.apply(getVirtualHubResult -&gt; getVirtualHubResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetVirtualHubResult> getVirtualHubPlain(GetVirtualHubPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getVirtualHub:getVirtualHub", TypeShape.of(GetVirtualHubResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1657,7 +3249,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
+    public static Output<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args) {
         return getVirtualNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -1689,7 +3281,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetworkPlain(GetVirtualNetworkPlainArgs args) {
+        return getVirtualNetworkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Virtual Network.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getVirtualNetwork(GetVirtualNetworkArgs.builder()
+     *             .name(&#34;production&#34;)
+     *             .resourceGroupName(&#34;networking&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;virtualNetworkId&#34;, example.apply(getVirtualNetworkResult -&gt; getVirtualNetworkResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetVirtualNetworkResult> getVirtualNetwork(GetVirtualNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getVirtualNetwork:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Virtual Network.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getVirtualNetwork(GetVirtualNetworkArgs.builder()
+     *             .name(&#34;production&#34;)
+     *             .resourceGroupName(&#34;networking&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;virtualNetworkId&#34;, example.apply(getVirtualNetworkResult -&gt; getVirtualNetworkResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetVirtualNetworkResult> getVirtualNetworkPlain(GetVirtualNetworkPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getVirtualNetwork:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1721,7 +3377,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs args) {
+    public static Output<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs args) {
         return getVirtualNetworkGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -1753,21 +3409,99 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualNetworkGatewayResult> getVirtualNetworkGatewayPlain(GetVirtualNetworkGatewayPlainArgs args) {
+        return getVirtualNetworkGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Virtual Network Gateway.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs.builder()
+     *             .name(&#34;production&#34;)
+     *             .resourceGroupName(&#34;networking&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;virtualNetworkGatewayId&#34;, example.apply(getVirtualNetworkGatewayResult -&gt; getVirtualNetworkGatewayResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetVirtualNetworkGatewayResult> getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getVirtualNetworkGateway:getVirtualNetworkGateway", TypeShape.of(GetVirtualNetworkGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Virtual Network Gateway.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getVirtualNetworkGateway(GetVirtualNetworkGatewayArgs.builder()
+     *             .name(&#34;production&#34;)
+     *             .resourceGroupName(&#34;networking&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;virtualNetworkGatewayId&#34;, example.apply(getVirtualNetworkGatewayResult -&gt; getVirtualNetworkGatewayResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetVirtualNetworkGatewayResult> getVirtualNetworkGatewayPlain(GetVirtualNetworkGatewayPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getVirtualNetworkGateway:getVirtualNetworkGateway", TypeShape.of(GetVirtualNetworkGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to access information about an existing Virtual Wan.
      * 
      */
-    public static CompletableFuture<GetVirtualWanResult> getVirtualWan(GetVirtualWanArgs args) {
+    public static Output<GetVirtualWanResult> getVirtualWan(GetVirtualWanArgs args) {
         return getVirtualWan(args, InvokeOptions.Empty);
     }
     /**
      * Use this data source to access information about an existing Virtual Wan.
      * 
      */
-    public static CompletableFuture<GetVirtualWanResult> getVirtualWan(GetVirtualWanArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualWanResult> getVirtualWanPlain(GetVirtualWanPlainArgs args) {
+        return getVirtualWanPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Virtual Wan.
+     * 
+     */
+    public static Output<GetVirtualWanResult> getVirtualWan(GetVirtualWanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getVirtualWan:getVirtualWan", TypeShape.of(GetVirtualWanResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Virtual Wan.
+     * 
+     */
+    public static CompletableFuture<GetVirtualWanResult> getVirtualWanPlain(GetVirtualWanPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getVirtualWan:getVirtualWan", TypeShape.of(GetVirtualWanResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1799,7 +3533,7 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args) {
+    public static Output<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args) {
         return getVpnGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -1831,7 +3565,71 @@ public final class NetworkFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVpnGatewayResult> getVpnGatewayPlain(GetVpnGatewayPlainArgs args) {
+        return getVpnGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing VPN Gateway within a Virtual Hub.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getVpnGateway(GetVpnGatewayArgs.builder()
+     *             .name(&#34;existing-local-vpn_gateway&#34;)
+     *             .resourceGroupName(&#34;existing-vpn_gateway&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;azurermVpnGatewayId&#34;, example.apply(getVpnGatewayResult -&gt; getVpnGatewayResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetVpnGatewayResult> getVpnGateway(GetVpnGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:network/getVpnGateway:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing VPN Gateway within a Virtual Hub.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkFunctions.getVpnGateway(GetVpnGatewayArgs.builder()
+     *             .name(&#34;existing-local-vpn_gateway&#34;)
+     *             .resourceGroupName(&#34;existing-vpn_gateway&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;azurermVpnGatewayId&#34;, example.apply(getVpnGatewayResult -&gt; getVpnGatewayResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetVpnGatewayResult> getVpnGatewayPlain(GetVpnGatewayPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:network/getVpnGateway:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args, Utilities.withVersion(options));
     }
 }

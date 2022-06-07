@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ApiGateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApiValidationArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="apiId", required=true)
-    private String apiId;
+    private Output<String> apiId;
 
     /**
      * @return The ocid of the API.
      * 
      */
-    public String apiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -57,9 +58,19 @@ public final class GetApiValidationArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder apiId(String apiId) {
+        public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
+        }
+
+        /**
+         * @param apiId The ocid of the API.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
         }
 
         public GetApiValidationArgs build() {

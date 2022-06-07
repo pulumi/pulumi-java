@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetDeveloperArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDeveloperArgs Empty = new GetDeveloperArgs();
 
     @Import(name="action")
-    private @Nullable String action;
+    private @Nullable Output<String> action;
 
-    public Optional<String> action() {
+    public Optional<Output<String>> action() {
         return Optional.ofNullable(this.action);
     }
 
     @Import(name="developerId", required=true)
-    private String developerId;
+    private Output<String> developerId;
 
-    public String developerId() {
+    public Output<String> developerId() {
         return this.developerId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -61,19 +62,31 @@ public final class GetDeveloperArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDeveloperArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder action(@Nullable String action) {
+        public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
-        public Builder developerId(String developerId) {
+        public Builder action(String action) {
+            return action(Output.of(action));
+        }
+
+        public Builder developerId(Output<String> developerId) {
             $.developerId = developerId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder developerId(String developerId) {
+            return developerId(Output.of(developerId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetDeveloperArgs build() {

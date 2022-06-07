@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetHubArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHubArgs Empty = new GetHubArgs();
 
     @Import(name="hubId", required=true)
-    private String hubId;
+    private Output<String> hubId;
 
-    public String hubId() {
+    public Output<String> hubId() {
         return this.hubId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetHubArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetHubArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder hubId(String hubId) {
+        public Builder hubId(Output<String> hubId) {
             $.hubId = hubId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder hubId(String hubId) {
+            return hubId(Output.of(hubId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetHubArgs build() {

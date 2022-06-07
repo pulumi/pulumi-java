@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.managednetwork.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="managedNetworkName", required=true)
-    private String managedNetworkName;
+    private Output<String> managedNetworkName;
 
     /**
      * @return The name of the Managed Network.
      * 
      */
-    public String managedNetworkName() {
+    public Output<String> managedNetworkName() {
         return this.managedNetworkName;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="managedNetworkPeeringPolicyName", required=true)
-    private String managedNetworkPeeringPolicyName;
+    private Output<String> managedNetworkPeeringPolicyName;
 
     /**
      * @return The name of the Managed Network Peering Policy.
      * 
      */
-    public String managedNetworkPeeringPolicyName() {
+    public Output<String> managedNetworkPeeringPolicyName() {
         return this.managedNetworkPeeringPolicyName;
     }
 
@@ -47,13 +48,13 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder managedNetworkName(String managedNetworkName) {
+        public Builder managedNetworkName(Output<String> managedNetworkName) {
             $.managedNetworkName = managedNetworkName;
+            return this;
+        }
+
+        /**
+         * @param managedNetworkName The name of the Managed Network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedNetworkName(String managedNetworkName) {
+            return managedNetworkName(Output.of(managedNetworkName));
+        }
+
+        /**
+         * @param managedNetworkPeeringPolicyName The name of the Managed Network Peering Policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedNetworkPeeringPolicyName(Output<String> managedNetworkPeeringPolicyName) {
+            $.managedNetworkPeeringPolicyName = managedNetworkPeeringPolicyName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
          * 
          */
         public Builder managedNetworkPeeringPolicyName(String managedNetworkPeeringPolicyName) {
-            $.managedNetworkPeeringPolicyName = managedNetworkPeeringPolicyName;
+            return managedNetworkPeeringPolicyName(Output.of(managedNetworkPeeringPolicyName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetManagedNetworkPeeringPolicyArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSslCipherSuiteArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="loadBalancerId", required=true)
-    private String loadBalancerId;
+    private Output<String> loadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the associated load balancer.
      * 
      */
-    public String loadBalancerId() {
+    public Output<String> loadBalancerId() {
         return this.loadBalancerId;
     }
 
@@ -32,13 +33,13 @@ public final class GetSslCipherSuiteArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the SSL cipher suite to retrieve.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetSslCipherSuiteArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder loadBalancerId(String loadBalancerId) {
+        public Builder loadBalancerId(Output<String> loadBalancerId) {
             $.loadBalancerId = loadBalancerId;
+            return this;
+        }
+
+        /**
+         * @param loadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the associated load balancer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerId(String loadBalancerId) {
+            return loadBalancerId(Output.of(loadBalancerId));
+        }
+
+        /**
+         * @param name The name of the SSL cipher suite to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSslCipherSuiteArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetSslCipherSuiteArgs build() {

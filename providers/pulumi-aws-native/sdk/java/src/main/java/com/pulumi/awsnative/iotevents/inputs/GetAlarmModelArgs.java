@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotevents.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAlarmModelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alarmModelName", required=true)
-    private String alarmModelName;
+    private Output<String> alarmModelName;
 
     /**
      * @return The name of the alarm model.
      * 
      */
-    public String alarmModelName() {
+    public Output<String> alarmModelName() {
         return this.alarmModelName;
     }
 
@@ -57,9 +58,19 @@ public final class GetAlarmModelArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder alarmModelName(String alarmModelName) {
+        public Builder alarmModelName(Output<String> alarmModelName) {
             $.alarmModelName = alarmModelName;
             return this;
+        }
+
+        /**
+         * @param alarmModelName The name of the alarm model.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alarmModelName(String alarmModelName) {
+            return alarmModelName(Output.of(alarmModelName));
         }
 
         public GetAlarmModelArgs build() {

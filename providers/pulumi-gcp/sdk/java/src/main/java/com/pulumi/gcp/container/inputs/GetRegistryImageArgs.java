@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.container.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetRegistryImageArgs Empty = new GetRegistryImageArgs();
 
     @Import(name="digest")
-    private @Nullable String digest;
+    private @Nullable Output<String> digest;
 
-    public Optional<String> digest() {
+    public Optional<Output<String>> digest() {
         return Optional.ofNullable(this.digest);
     }
 
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-    private @Nullable String region;
+    private @Nullable Output<String> region;
 
-    public Optional<String> region() {
+    public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
 
     @Import(name="tag")
-    private @Nullable String tag;
+    private @Nullable Output<String> tag;
 
-    public Optional<String> tag() {
+    public Optional<Output<String>> tag() {
         return Optional.ofNullable(this.tag);
     }
 
@@ -77,29 +78,49 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetRegistryImageArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder digest(@Nullable String digest) {
+        public Builder digest(@Nullable Output<String> digest) {
             $.digest = digest;
             return this;
         }
 
-        public Builder name(String name) {
+        public Builder digest(String digest) {
+            return digest(Output.of(digest));
+        }
+
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(@Nullable String region) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
-        public Builder tag(@Nullable String tag) {
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public Builder tag(@Nullable Output<String> tag) {
             $.tag = tag;
             return this;
+        }
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
         }
 
         public GetRegistryImageArgs build() {

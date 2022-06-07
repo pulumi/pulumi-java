@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DatabaseTools.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseTools.inputs.GetDatabaseToolsEndpointServicesFilter;
+import com.pulumi.oci.DatabaseTools.inputs.GetDatabaseToolsEndpointServicesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDatabaseToolsEndpointServicesFilter> filters;
+    private @Nullable Output<List<GetDatabaseToolsEndpointServicesFilterArgs>> filters;
 
-    public Optional<List<GetDatabaseToolsEndpointServicesFilter>> filters() {
+    public Optional<Output<List<GetDatabaseToolsEndpointServicesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name given.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -73,13 +74,13 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources their lifecycleState matches the given lifecycleState.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,8 +118,29 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -128,17 +150,20 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetDatabaseToolsEndpointServicesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabaseToolsEndpointServicesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDatabaseToolsEndpointServicesFilter... filters) {
+        public Builder filters(List<GetDatabaseToolsEndpointServicesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDatabaseToolsEndpointServicesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -148,8 +173,29 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state A filter to return only resources their lifecycleState matches the given lifecycleState.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetDatabaseToolsEndpointServicesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetDatabaseToolsEndpointServicesArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.lambda.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="functionName", required=true)
-    private String functionName;
+    private Output<String> functionName;
 
     /**
      * @return Name of the lambda function.
      * 
      */
-    public String functionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -35,20 +36,20 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="qualifier")
-    private @Nullable String qualifier;
+    private @Nullable Output<String> qualifier;
 
     /**
      * @return Alias name or version number of the lambda functionE.g., `$LATEST`, `my-alias`, or `1`
      * 
      */
-    public Optional<String> qualifier() {
+    public Optional<Output<String>> qualifier() {
         return Optional.ofNullable(this.qualifier);
     }
 
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -84,8 +85,29 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder functionName(String functionName) {
+        public Builder functionName(Output<String> functionName) {
             $.functionName = functionName;
+            return this;
+        }
+
+        /**
+         * @param functionName Name of the lambda function.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionName(String functionName) {
+            return functionName(Output.of(functionName));
+        }
+
+        /**
+         * @param qualifier Alias name or version number of the lambda functionE.g., `$LATEST`, `my-alias`, or `1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder qualifier(@Nullable Output<String> qualifier) {
+            $.qualifier = qualifier;
             return this;
         }
 
@@ -95,14 +117,17 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder qualifier(@Nullable String qualifier) {
-            $.qualifier = qualifier;
+        public Builder qualifier(String qualifier) {
+            return qualifier(Output.of(qualifier));
+        }
+
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetFunctionArgs build() {

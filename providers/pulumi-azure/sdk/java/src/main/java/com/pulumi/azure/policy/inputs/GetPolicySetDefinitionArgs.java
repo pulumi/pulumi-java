@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.policy.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetPolicySetDefinitionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Specifies the display name of the Policy Set Definition. Conflicts with `name`.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -34,13 +35,13 @@ public final class GetPolicySetDefinitionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="managementGroupName")
-    private @Nullable String managementGroupName;
+    private @Nullable Output<String> managementGroupName;
 
     /**
      * @return Only retrieve Policy Set Definitions from this Management Group.
      * 
      */
-    public Optional<String> managementGroupName() {
+    public Optional<Output<String>> managementGroupName() {
         return Optional.ofNullable(this.managementGroupName);
     }
 
@@ -49,13 +50,13 @@ public final class GetPolicySetDefinitionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Specifies the name of the Policy Set Definition. Conflicts with `display_name`.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -91,8 +92,29 @@ public final class GetPolicySetDefinitionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * @param displayName Specifies the display name of the Policy Set Definition. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param managementGroupName Only retrieve Policy Set Definitions from this Management Group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementGroupName(@Nullable Output<String> managementGroupName) {
+            $.managementGroupName = managementGroupName;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetPolicySetDefinitionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder managementGroupName(@Nullable String managementGroupName) {
-            $.managementGroupName = managementGroupName;
+        public Builder managementGroupName(String managementGroupName) {
+            return managementGroupName(Output.of(managementGroupName));
+        }
+
+        /**
+         * @param name Specifies the name of the Policy Set Definition. Conflicts with `display_name`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -113,9 +145,8 @@ public final class GetPolicySetDefinitionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
-            return this;
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetPolicySetDefinitionArgs build() {

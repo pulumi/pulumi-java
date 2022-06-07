@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assessmentName", required=true)
-    private String assessmentName;
+    private Output<String> assessmentName;
 
     /**
      * @return The Assessment Key - Unique key for the assessment type
      * 
      */
-    public String assessmentName() {
+    public Output<String> assessmentName() {
         return this.assessmentName;
     }
 
@@ -34,13 +35,13 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return OData expand. Optional.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -49,13 +50,13 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceId", required=true)
-    private String resourceId;
+    private Output<String> resourceId;
 
     /**
      * @return The identifier of the resource.
      * 
      */
-    public String resourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -91,8 +92,29 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder assessmentName(String assessmentName) {
+        public Builder assessmentName(Output<String> assessmentName) {
             $.assessmentName = assessmentName;
+            return this;
+        }
+
+        /**
+         * @param assessmentName The Assessment Key - Unique key for the assessment type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder assessmentName(String assessmentName) {
+            return assessmentName(Output.of(assessmentName));
+        }
+
+        /**
+         * @param expand OData expand. Optional.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable Output<String> expand) {
+            $.expand = expand;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
-            $.expand = expand;
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceId The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceId(Output<String> resourceId) {
+            $.resourceId = resourceId;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceId(String resourceId) {
-            $.resourceId = resourceId;
-            return this;
+            return resourceId(Output.of(resourceId));
         }
 
         public GetAssessmentArgs build() {

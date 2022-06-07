@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.OsubUsage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OsubUsage.inputs.GetComputedUsagesFilter;
+import com.pulumi.oci.OsubUsage.inputs.GetComputedUsagesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the root compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="computedProduct")
-    private @Nullable String computedProduct;
+    private @Nullable Output<String> computedProduct;
 
     /**
      * @return Product part number for Computed Usage .
      * 
      */
-    public Optional<String> computedProduct() {
+    public Optional<Output<String>> computedProduct() {
         return Optional.ofNullable(this.computedProduct);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetComputedUsagesFilter> filters;
+    private @Nullable Output<List<GetComputedUsagesFilterArgs>> filters;
 
-    public Optional<List<GetComputedUsagesFilter>> filters() {
+    public Optional<Output<List<GetComputedUsagesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="parentProduct")
-    private @Nullable String parentProduct;
+    private @Nullable Output<String> parentProduct;
 
     /**
      * @return Product part number for subscribed service line, called parent product.
      * 
      */
-    public Optional<String> parentProduct() {
+    public Optional<Output<String>> parentProduct() {
         return Optional.ofNullable(this.parentProduct);
     }
 
@@ -73,13 +74,13 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
     /**
      * @return Subscription Id is an identifier associated to the service used for filter the Computed Usage in SPM.
      * 
      */
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -88,13 +89,13 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeFrom", required=true)
-    private String timeFrom;
+    private Output<String> timeFrom;
 
     /**
      * @return Initial date to filter Computed Usage data in SPM. In the case of non aggregated data the time period between of fromDate and toDate , expressed in RFC 3339 timestamp format.
      * 
      */
-    public String timeFrom() {
+    public Output<String> timeFrom() {
         return this.timeFrom;
     }
 
@@ -103,13 +104,13 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeTo", required=true)
-    private String timeTo;
+    private Output<String> timeTo;
 
     /**
      * @return Final date to filter Computed Usage data in SPM, expressed in RFC 3339 timestamp format.
      * 
      */
-    public String timeTo() {
+    public Output<String> timeTo() {
         return this.timeTo;
     }
 
@@ -118,13 +119,13 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="xOneOriginRegion")
-    private @Nullable String xOneOriginRegion;
+    private @Nullable Output<String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Optional<String> xOneOriginRegion() {
+    public Optional<Output<String>> xOneOriginRegion() {
         return Optional.ofNullable(this.xOneOriginRegion);
     }
 
@@ -165,8 +166,29 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the root compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param computedProduct Product part number for Computed Usage .
+         * 
+         * @return builder
+         * 
+         */
+        public Builder computedProduct(@Nullable Output<String> computedProduct) {
+            $.computedProduct = computedProduct;
             return this;
         }
 
@@ -176,17 +198,20 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder computedProduct(@Nullable String computedProduct) {
-            $.computedProduct = computedProduct;
-            return this;
+        public Builder computedProduct(String computedProduct) {
+            return computedProduct(Output.of(computedProduct));
         }
 
-        public Builder filters(@Nullable List<GetComputedUsagesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetComputedUsagesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetComputedUsagesFilter... filters) {
+        public Builder filters(List<GetComputedUsagesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetComputedUsagesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -196,8 +221,29 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder parentProduct(@Nullable String parentProduct) {
+        public Builder parentProduct(@Nullable Output<String> parentProduct) {
             $.parentProduct = parentProduct;
+            return this;
+        }
+
+        /**
+         * @param parentProduct Product part number for subscribed service line, called parent product.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentProduct(String parentProduct) {
+            return parentProduct(Output.of(parentProduct));
+        }
+
+        /**
+         * @param subscriptionId Subscription Id is an identifier associated to the service used for filter the Computed Usage in SPM.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(Output<String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -208,7 +254,17 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder subscriptionId(String subscriptionId) {
-            $.subscriptionId = subscriptionId;
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        /**
+         * @param timeFrom Initial date to filter Computed Usage data in SPM. In the case of non aggregated data the time period between of fromDate and toDate , expressed in RFC 3339 timestamp format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeFrom(Output<String> timeFrom) {
+            $.timeFrom = timeFrom;
             return this;
         }
 
@@ -219,7 +275,17 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder timeFrom(String timeFrom) {
-            $.timeFrom = timeFrom;
+            return timeFrom(Output.of(timeFrom));
+        }
+
+        /**
+         * @param timeTo Final date to filter Computed Usage data in SPM, expressed in RFC 3339 timestamp format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeTo(Output<String> timeTo) {
+            $.timeTo = timeTo;
             return this;
         }
 
@@ -230,7 +296,17 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder timeTo(String timeTo) {
-            $.timeTo = timeTo;
+            return timeTo(Output.of(timeTo));
+        }
+
+        /**
+         * @param xOneOriginRegion The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneOriginRegion(@Nullable Output<String> xOneOriginRegion) {
+            $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
 
@@ -240,9 +316,8 @@ public final class GetComputedUsagesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
-            $.xOneOriginRegion = xOneOriginRegion;
-            return this;
+        public Builder xOneOriginRegion(String xOneOriginRegion) {
+            return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 
         public GetComputedUsagesArgs build() {

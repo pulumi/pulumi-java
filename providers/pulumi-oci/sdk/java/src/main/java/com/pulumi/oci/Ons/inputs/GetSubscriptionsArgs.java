@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Ons.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Ons.inputs.GetSubscriptionsFilter;
+import com.pulumi.oci.Ons.inputs.GetSubscriptionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSubscriptionsFilter> filters;
+    private @Nullable Output<List<GetSubscriptionsFilterArgs>> filters;
 
-    public Optional<List<GetSubscriptionsFilter>> filters() {
+    public Optional<Output<List<GetSubscriptionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="topicId")
-    private @Nullable String topicId;
+    private @Nullable Output<String> topicId;
 
     /**
      * @return Return all subscriptions that are subscribed to the given topic OCID. Either this query parameter or the compartmentId query parameter must be set.
      * 
      */
-    public Optional<String> topicId() {
+    public Optional<Output<String>> topicId() {
         return Optional.ofNullable(this.topicId);
     }
 
@@ -85,17 +86,31 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSubscriptionsFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetSubscriptionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSubscriptionsFilter... filters) {
+        public Builder filters(List<GetSubscriptionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSubscriptionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -105,9 +120,19 @@ public final class GetSubscriptionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder topicId(@Nullable String topicId) {
+        public Builder topicId(@Nullable Output<String> topicId) {
             $.topicId = topicId;
             return this;
+        }
+
+        /**
+         * @param topicId Return all subscriptions that are subscribed to the given topic OCID. Either this query parameter or the compartmentId query parameter must be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder topicId(String topicId) {
+            return topicId(Output.of(topicId));
         }
 
         public GetSubscriptionsArgs build() {

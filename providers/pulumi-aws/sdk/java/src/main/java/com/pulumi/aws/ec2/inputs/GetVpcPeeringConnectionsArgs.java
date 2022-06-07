@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionsFilter;
+import com.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionsFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetVpcPeeringConnectionsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetVpcPeeringConnectionsFilter> filters;
+    private @Nullable Output<List<GetVpcPeeringConnectionsFilterArgs>> filters;
 
     /**
      * @return Custom filter block as described below.
      * 
      */
-    public Optional<List<GetVpcPeeringConnectionsFilter>> filters() {
+    public Optional<Output<List<GetVpcPeeringConnectionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -38,14 +39,14 @@ public final class GetVpcPeeringConnectionsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A mapping of tags, each pair of which must exactly match
      * a pair on the desired VPC Peering Connection.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -80,7 +81,7 @@ public final class GetVpcPeeringConnectionsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetVpcPeeringConnectionsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetVpcPeeringConnectionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -91,7 +92,17 @@ public final class GetVpcPeeringConnectionsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder filters(GetVpcPeeringConnectionsFilter... filters) {
+        public Builder filters(List<GetVpcPeeringConnectionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetVpcPeeringConnectionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -102,9 +113,20 @@ public final class GetVpcPeeringConnectionsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
+        }
+
+        /**
+         * @param tags A mapping of tags, each pair of which must exactly match
+         * a pair on the desired VPC Peering Connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetVpcPeeringConnectionsArgs build() {

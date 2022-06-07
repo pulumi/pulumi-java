@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkSecurityGroupName", required=true)
-    private String networkSecurityGroupName;
+    private Output<String> networkSecurityGroupName;
 
     /**
      * @return The name of the network security group.
      * 
      */
-    public String networkSecurityGroupName() {
+    public Output<String> networkSecurityGroupName() {
         return this.networkSecurityGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityRuleName", required=true)
-    private String securityRuleName;
+    private Output<String> securityRuleName;
 
     /**
      * @return The name of the security rule.
      * 
      */
-    public String securityRuleName() {
+    public Output<String> securityRuleName() {
         return this.securityRuleName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder networkSecurityGroupName(String networkSecurityGroupName) {
+        public Builder networkSecurityGroupName(Output<String> networkSecurityGroupName) {
             $.networkSecurityGroupName = networkSecurityGroupName;
+            return this;
+        }
+
+        /**
+         * @param networkSecurityGroupName The name of the network security group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkSecurityGroupName(String networkSecurityGroupName) {
+            return networkSecurityGroupName(Output.of(networkSecurityGroupName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param securityRuleName The name of the security rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityRuleName(Output<String> securityRuleName) {
+            $.securityRuleName = securityRuleName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSecurityRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder securityRuleName(String securityRuleName) {
-            $.securityRuleName = securityRuleName;
-            return this;
+            return securityRuleName(Output.of(securityRuleName));
         }
 
         public GetSecurityRuleArgs build() {

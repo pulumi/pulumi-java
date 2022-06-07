@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetActiveSessionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="bastionHostName", required=true)
-    private String bastionHostName;
+    private Output<String> bastionHostName;
 
     /**
      * @return The name of the Bastion Host.
      * 
      */
-    public String bastionHostName() {
+    public Output<String> bastionHostName() {
         return this.bastionHostName;
     }
 
@@ -32,13 +33,13 @@ public final class GetActiveSessionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetActiveSessionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder bastionHostName(String bastionHostName) {
+        public Builder bastionHostName(Output<String> bastionHostName) {
             $.bastionHostName = bastionHostName;
+            return this;
+        }
+
+        /**
+         * @param bastionHostName The name of the Bastion Host.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bastionHostName(String bastionHostName) {
+            return bastionHostName(Output.of(bastionHostName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetActiveSessionsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetActiveSessionsArgs build() {

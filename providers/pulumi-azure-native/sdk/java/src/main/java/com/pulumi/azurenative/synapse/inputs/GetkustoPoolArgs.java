@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.synapse.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetkustoPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kustoPoolName", required=true)
-    private String kustoPoolName;
+    private Output<String> kustoPoolName;
 
     /**
      * @return The name of the Kusto pool.
      * 
      */
-    public String kustoPoolName() {
+    public Output<String> kustoPoolName() {
         return this.kustoPoolName;
     }
 
@@ -32,13 +33,13 @@ public final class GetkustoPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetkustoPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of the workspace
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetkustoPoolArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder kustoPoolName(String kustoPoolName) {
+        public Builder kustoPoolName(Output<String> kustoPoolName) {
             $.kustoPoolName = kustoPoolName;
+            return this;
+        }
+
+        /**
+         * @param kustoPoolName The name of the Kusto pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder kustoPoolName(String kustoPoolName) {
+            return kustoPoolName(Output.of(kustoPoolName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetkustoPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetkustoPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetkustoPoolArgs build() {

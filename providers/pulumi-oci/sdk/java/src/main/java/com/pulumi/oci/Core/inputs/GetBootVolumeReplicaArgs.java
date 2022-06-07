@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBootVolumeReplicaArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="bootVolumeReplicaId", required=true)
-    private String bootVolumeReplicaId;
+    private Output<String> bootVolumeReplicaId;
 
     /**
      * @return The OCID of the boot volume replica.
      * 
      */
-    public String bootVolumeReplicaId() {
+    public Output<String> bootVolumeReplicaId() {
         return this.bootVolumeReplicaId;
     }
 
@@ -57,9 +58,19 @@ public final class GetBootVolumeReplicaArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder bootVolumeReplicaId(String bootVolumeReplicaId) {
+        public Builder bootVolumeReplicaId(Output<String> bootVolumeReplicaId) {
             $.bootVolumeReplicaId = bootVolumeReplicaId;
             return this;
+        }
+
+        /**
+         * @param bootVolumeReplicaId The OCID of the boot volume replica.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bootVolumeReplicaId(String bootVolumeReplicaId) {
+            return bootVolumeReplicaId(Output.of(bootVolumeReplicaId));
         }
 
         public GetBootVolumeReplicaArgs build() {

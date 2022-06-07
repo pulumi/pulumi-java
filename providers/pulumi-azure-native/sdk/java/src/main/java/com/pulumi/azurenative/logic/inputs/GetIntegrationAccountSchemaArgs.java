@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIntegrationAccountSchemaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="integrationAccountName", required=true)
-    private String integrationAccountName;
+    private Output<String> integrationAccountName;
 
     /**
      * @return The integration account name.
      * 
      */
-    public String integrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIntegrationAccountSchemaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetIntegrationAccountSchemaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="schemaName", required=true)
-    private String schemaName;
+    private Output<String> schemaName;
 
     /**
      * @return The integration account schema name.
      * 
      */
-    public String schemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
 
@@ -89,8 +90,29 @@ public final class GetIntegrationAccountSchemaArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder integrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
+            return this;
+        }
+
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationAccountName(String integrationAccountName) {
+            return integrationAccountName(Output.of(integrationAccountName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetIntegrationAccountSchemaArgs extends com.pulumi.resources.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param schemaName The integration account schema name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder schemaName(Output<String> schemaName) {
+            $.schemaName = schemaName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetIntegrationAccountSchemaArgs extends com.pulumi.resources.
          * 
          */
         public Builder schemaName(String schemaName) {
-            $.schemaName = schemaName;
-            return this;
+            return schemaName(Output.of(schemaName));
         }
 
         public GetIntegrationAccountSchemaArgs build() {

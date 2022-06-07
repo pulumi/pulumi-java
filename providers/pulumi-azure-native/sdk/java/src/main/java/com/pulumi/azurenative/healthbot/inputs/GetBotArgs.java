@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.healthbot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="botName", required=true)
-    private String botName;
+    private Output<String> botName;
 
     /**
      * @return The name of the Bot resource.
      * 
      */
-    public String botName() {
+    public Output<String> botName() {
         return this.botName;
     }
 
@@ -32,13 +33,13 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Bot resource group in the user subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder botName(String botName) {
+        public Builder botName(Output<String> botName) {
             $.botName = botName;
+            return this;
+        }
+
+        /**
+         * @param botName The name of the Bot resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder botName(String botName) {
+            return botName(Output.of(botName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Bot resource group in the user subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetBotArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetBotArgs build() {

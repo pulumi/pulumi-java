@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.devices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="keyName", required=true)
-    private String keyName;
+    private Output<String> keyName;
 
     /**
      * @return Logical key name to get key-values for.
      * 
      */
-    public String keyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -32,13 +33,13 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningServiceName", required=true)
-    private String provisioningServiceName;
+    private Output<String> provisioningServiceName;
 
     /**
      * @return Name of the provisioning service.
      * 
      */
-    public String provisioningServiceName() {
+    public Output<String> provisioningServiceName() {
         return this.provisioningServiceName;
     }
 
@@ -47,13 +48,13 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the provisioning service.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder keyName(String keyName) {
+        public Builder keyName(Output<String> keyName) {
             $.keyName = keyName;
+            return this;
+        }
+
+        /**
+         * @param keyName Logical key name to get key-values for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
+        }
+
+        /**
+         * @param provisioningServiceName Name of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder provisioningServiceName(Output<String> provisioningServiceName) {
+            $.provisioningServiceName = provisioningServiceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
          * 
          */
         public Builder provisioningServiceName(String provisioningServiceName) {
-            $.provisioningServiceName = provisioningServiceName;
+            return provisioningServiceName(Output.of(provisioningServiceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListIotDpsResourceKeysForKeyNameArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseTools.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatabaseToolsConnectionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="databaseToolsConnectionId", required=true)
-    private String databaseToolsConnectionId;
+    private Output<String> databaseToolsConnectionId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a DatabaseToolsConnection.
      * 
      */
-    public String databaseToolsConnectionId() {
+    public Output<String> databaseToolsConnectionId() {
         return this.databaseToolsConnectionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDatabaseToolsConnectionArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder databaseToolsConnectionId(String databaseToolsConnectionId) {
+        public Builder databaseToolsConnectionId(Output<String> databaseToolsConnectionId) {
             $.databaseToolsConnectionId = databaseToolsConnectionId;
             return this;
+        }
+
+        /**
+         * @param databaseToolsConnectionId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a DatabaseToolsConnection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseToolsConnectionId(String databaseToolsConnectionId) {
+            return databaseToolsConnectionId(Output.of(databaseToolsConnectionId));
         }
 
         public GetDatabaseToolsConnectionArgs build() {

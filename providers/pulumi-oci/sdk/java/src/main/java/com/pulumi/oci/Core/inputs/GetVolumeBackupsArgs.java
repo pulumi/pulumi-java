@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetVolumeBackupsFilter;
+import com.pulumi.oci.Core.inputs.GetVolumeBackupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetVolumeBackupsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetVolumeBackupsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetVolumeBackupsFilter> filters;
+    private @Nullable Output<List<GetVolumeBackupsFilterArgs>> filters;
 
-    public Optional<List<GetVolumeBackupsFilter>> filters() {
+    public Optional<Output<List<GetVolumeBackupsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetVolumeBackupsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceVolumeBackupId")
-    private @Nullable String sourceVolumeBackupId;
+    private @Nullable Output<String> sourceVolumeBackupId;
 
     /**
      * @return A filter to return only resources that originated from the given source volume backup.
      * 
      */
-    public Optional<String> sourceVolumeBackupId() {
+    public Optional<Output<String>> sourceVolumeBackupId() {
         return Optional.ofNullable(this.sourceVolumeBackupId);
     }
 
@@ -73,13 +74,13 @@ public final class GetVolumeBackupsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -88,13 +89,13 @@ public final class GetVolumeBackupsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="volumeId")
-    private @Nullable String volumeId;
+    private @Nullable Output<String> volumeId;
 
     /**
      * @return The OCID of the volume.
      * 
      */
-    public Optional<String> volumeId() {
+    public Optional<Output<String>> volumeId() {
         return Optional.ofNullable(this.volumeId);
     }
 
@@ -133,8 +134,29 @@ public final class GetVolumeBackupsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -144,17 +166,20 @@ public final class GetVolumeBackupsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetVolumeBackupsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetVolumeBackupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetVolumeBackupsFilter... filters) {
+        public Builder filters(List<GetVolumeBackupsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetVolumeBackupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -164,8 +189,29 @@ public final class GetVolumeBackupsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder sourceVolumeBackupId(@Nullable String sourceVolumeBackupId) {
+        public Builder sourceVolumeBackupId(@Nullable Output<String> sourceVolumeBackupId) {
             $.sourceVolumeBackupId = sourceVolumeBackupId;
+            return this;
+        }
+
+        /**
+         * @param sourceVolumeBackupId A filter to return only resources that originated from the given source volume backup.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceVolumeBackupId(String sourceVolumeBackupId) {
+            return sourceVolumeBackupId(Output.of(sourceVolumeBackupId));
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -175,8 +221,18 @@ public final class GetVolumeBackupsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param volumeId The OCID of the volume.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder volumeId(@Nullable Output<String> volumeId) {
+            $.volumeId = volumeId;
             return this;
         }
 
@@ -186,9 +242,8 @@ public final class GetVolumeBackupsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder volumeId(@Nullable String volumeId) {
-            $.volumeId = volumeId;
-            return this;
+        public Builder volumeId(String volumeId) {
+            return volumeId(Output.of(volumeId));
         }
 
         public GetVolumeBackupsArgs build() {

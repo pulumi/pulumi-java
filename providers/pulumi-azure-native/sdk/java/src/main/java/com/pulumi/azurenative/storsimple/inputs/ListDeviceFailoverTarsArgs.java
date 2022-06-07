@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.storsimple.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -20,13 +21,13 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="managerName", required=true)
-    private String managerName;
+    private Output<String> managerName;
 
     /**
      * @return The manager name
      * 
      */
-    public String managerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -35,13 +36,13 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -50,13 +51,13 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sourceDeviceName", required=true)
-    private String sourceDeviceName;
+    private Output<String> sourceDeviceName;
 
     /**
      * @return The source device name on which failover is performed.
      * 
      */
-    public String sourceDeviceName() {
+    public Output<String> sourceDeviceName() {
         return this.sourceDeviceName;
     }
 
@@ -65,13 +66,13 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="volumeContainers")
-    private @Nullable List<String> volumeContainers;
+    private @Nullable Output<List<String>> volumeContainers;
 
     /**
      * @return The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
      * 
      */
-    public Optional<List<String>> volumeContainers() {
+    public Optional<Output<List<String>>> volumeContainers() {
         return Optional.ofNullable(this.volumeContainers);
     }
 
@@ -108,8 +109,29 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder managerName(String managerName) {
+        public Builder managerName(Output<String> managerName) {
             $.managerName = managerName;
+            return this;
+        }
+
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managerName(String managerName) {
+            return managerName(Output.of(managerName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -120,7 +142,17 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sourceDeviceName The source device name on which failover is performed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceDeviceName(Output<String> sourceDeviceName) {
+            $.sourceDeviceName = sourceDeviceName;
             return this;
         }
 
@@ -131,7 +163,17 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder sourceDeviceName(String sourceDeviceName) {
-            $.sourceDeviceName = sourceDeviceName;
+            return sourceDeviceName(Output.of(sourceDeviceName));
+        }
+
+        /**
+         * @param volumeContainers The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder volumeContainers(@Nullable Output<List<String>> volumeContainers) {
+            $.volumeContainers = volumeContainers;
             return this;
         }
 
@@ -141,9 +183,8 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder volumeContainers(@Nullable List<String> volumeContainers) {
-            $.volumeContainers = volumeContainers;
-            return this;
+        public Builder volumeContainers(List<String> volumeContainers) {
+            return volumeContainers(Output.of(volumeContainers));
         }
 
         /**

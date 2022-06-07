@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotcoredeviceadvisor.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSuiteDefinitionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="suiteDefinitionId", required=true)
-    private String suiteDefinitionId;
+    private Output<String> suiteDefinitionId;
 
     /**
      * @return The unique identifier for the suite definition.
      * 
      */
-    public String suiteDefinitionId() {
+    public Output<String> suiteDefinitionId() {
         return this.suiteDefinitionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSuiteDefinitionArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder suiteDefinitionId(String suiteDefinitionId) {
+        public Builder suiteDefinitionId(Output<String> suiteDefinitionId) {
             $.suiteDefinitionId = suiteDefinitionId;
             return this;
+        }
+
+        /**
+         * @param suiteDefinitionId The unique identifier for the suite definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder suiteDefinitionId(String suiteDefinitionId) {
+            return suiteDefinitionId(Output.of(suiteDefinitionId));
         }
 
         public GetSuiteDefinitionArgs build() {

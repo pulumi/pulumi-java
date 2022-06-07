@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ecs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
     @Import(name="cluster", required=true)
-    private String cluster;
+    private Output<String> cluster;
 
-    public String cluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
     @Import(name="serviceArn", required=true)
-    private String serviceArn;
+    private Output<String> serviceArn;
 
-    public String serviceArn() {
+    public Output<String> serviceArn() {
         return this.serviceArn;
     }
 
@@ -51,14 +52,22 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder cluster(String cluster) {
+        public Builder cluster(Output<String> cluster) {
             $.cluster = cluster;
             return this;
         }
 
-        public Builder serviceArn(String serviceArn) {
+        public Builder cluster(String cluster) {
+            return cluster(Output.of(cluster));
+        }
+
+        public Builder serviceArn(Output<String> serviceArn) {
             $.serviceArn = serviceArn;
             return this;
+        }
+
+        public Builder serviceArn(String serviceArn) {
+            return serviceArn(Output.of(serviceArn));
         }
 
         public GetServiceArgs build() {

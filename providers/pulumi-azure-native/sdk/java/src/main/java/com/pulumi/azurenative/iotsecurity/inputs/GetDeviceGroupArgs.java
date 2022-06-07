@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.iotsecurity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeviceGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceGroupName", required=true)
-    private String deviceGroupName;
+    private Output<String> deviceGroupName;
 
     /**
      * @return Device group name
      * 
      */
-    public String deviceGroupName() {
+    public Output<String> deviceGroupName() {
         return this.deviceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDeviceGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iotDefenderLocation", required=true)
-    private String iotDefenderLocation;
+    private Output<String> iotDefenderLocation;
 
     /**
      * @return Defender for IoT location
      * 
      */
-    public String iotDefenderLocation() {
+    public Output<String> iotDefenderLocation() {
         return this.iotDefenderLocation;
     }
 
@@ -73,8 +74,29 @@ public final class GetDeviceGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder deviceGroupName(String deviceGroupName) {
+        public Builder deviceGroupName(Output<String> deviceGroupName) {
             $.deviceGroupName = deviceGroupName;
+            return this;
+        }
+
+        /**
+         * @param deviceGroupName Device group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceGroupName(String deviceGroupName) {
+            return deviceGroupName(Output.of(deviceGroupName));
+        }
+
+        /**
+         * @param iotDefenderLocation Defender for IoT location
+         * 
+         * @return builder
+         * 
+         */
+        public Builder iotDefenderLocation(Output<String> iotDefenderLocation) {
+            $.iotDefenderLocation = iotDefenderLocation;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDeviceGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder iotDefenderLocation(String iotDefenderLocation) {
-            $.iotDefenderLocation = iotDefenderLocation;
-            return this;
+            return iotDefenderLocation(Output.of(iotDefenderLocation));
         }
 
         public GetDeviceGroupArgs build() {

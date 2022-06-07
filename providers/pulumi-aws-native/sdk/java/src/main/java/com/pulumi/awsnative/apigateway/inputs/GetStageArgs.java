@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.apigateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-    private String restApiId;
+    private Output<String> restApiId;
 
     /**
      * @return The ID of the RestApi resource that you&#39;re deploying with this stage.
      * 
      */
-    public String restApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -32,13 +33,13 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageName", required=true)
-    private String stageName;
+    private Output<String> stageName;
 
     /**
      * @return The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
      * 
      */
-    public String stageName() {
+    public Output<String> stageName() {
         return this.stageName;
     }
 
@@ -73,8 +74,29 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder restApiId(String restApiId) {
+        public Builder restApiId(Output<String> restApiId) {
             $.restApiId = restApiId;
+            return this;
+        }
+
+        /**
+         * @param restApiId The ID of the RestApi resource that you&#39;re deploying with this stage.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder restApiId(String restApiId) {
+            return restApiId(Output.of(restApiId));
+        }
+
+        /**
+         * @param stageName The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stageName(Output<String> stageName) {
+            $.stageName = stageName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetStageArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder stageName(String stageName) {
-            $.stageName = stageName;
-            return this;
+            return stageName(Output.of(stageName));
         }
 
         public GetStageArgs build() {

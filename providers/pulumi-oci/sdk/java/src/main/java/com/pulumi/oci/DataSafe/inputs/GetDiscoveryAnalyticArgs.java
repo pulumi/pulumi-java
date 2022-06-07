@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetDiscoveryAnalyticArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the specified compartment OCID.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -35,13 +36,13 @@ public final class GetDiscoveryAnalyticArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
@@ -50,13 +51,13 @@ public final class GetDiscoveryAnalyticArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="groupBy")
-    private @Nullable String groupBy;
+    private @Nullable Output<String> groupBy;
 
     /**
      * @return Attribute by which the discovery analytics data should be grouped.
      * 
      */
-    public Optional<String> groupBy() {
+    public Optional<Output<String>> groupBy() {
         return Optional.ofNullable(this.groupBy);
     }
 
@@ -65,13 +66,13 @@ public final class GetDiscoveryAnalyticArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sensitiveDataModelId")
-    private @Nullable String sensitiveDataModelId;
+    private @Nullable Output<String> sensitiveDataModelId;
 
     /**
      * @return A filter to return only the resources that match the specified sensitive data model OCID.
      * 
      */
-    public Optional<String> sensitiveDataModelId() {
+    public Optional<Output<String>> sensitiveDataModelId() {
         return Optional.ofNullable(this.sensitiveDataModelId);
     }
 
@@ -80,13 +81,13 @@ public final class GetDiscoveryAnalyticArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="targetId")
-    private @Nullable String targetId;
+    private @Nullable Output<String> targetId;
 
     /**
      * @return A filter to return only items related to a specific target OCID.
      * 
      */
-    public Optional<String> targetId() {
+    public Optional<Output<String>> targetId() {
         return Optional.ofNullable(this.targetId);
     }
 
@@ -124,8 +125,29 @@ public final class GetDiscoveryAnalyticArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the specified compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -135,8 +157,18 @@ public final class GetDiscoveryAnalyticArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param groupBy Attribute by which the discovery analytics data should be grouped.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupBy(@Nullable Output<String> groupBy) {
+            $.groupBy = groupBy;
             return this;
         }
 
@@ -146,8 +178,18 @@ public final class GetDiscoveryAnalyticArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder groupBy(@Nullable String groupBy) {
-            $.groupBy = groupBy;
+        public Builder groupBy(String groupBy) {
+            return groupBy(Output.of(groupBy));
+        }
+
+        /**
+         * @param sensitiveDataModelId A filter to return only the resources that match the specified sensitive data model OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensitiveDataModelId(@Nullable Output<String> sensitiveDataModelId) {
+            $.sensitiveDataModelId = sensitiveDataModelId;
             return this;
         }
 
@@ -157,8 +199,18 @@ public final class GetDiscoveryAnalyticArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder sensitiveDataModelId(@Nullable String sensitiveDataModelId) {
-            $.sensitiveDataModelId = sensitiveDataModelId;
+        public Builder sensitiveDataModelId(String sensitiveDataModelId) {
+            return sensitiveDataModelId(Output.of(sensitiveDataModelId));
+        }
+
+        /**
+         * @param targetId A filter to return only items related to a specific target OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetId(@Nullable Output<String> targetId) {
+            $.targetId = targetId;
             return this;
         }
 
@@ -168,9 +220,8 @@ public final class GetDiscoveryAnalyticArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder targetId(@Nullable String targetId) {
-            $.targetId = targetId;
-            return this;
+        public Builder targetId(String targetId) {
+            return targetId(Output.of(targetId));
         }
 
         public GetDiscoveryAnalyticArgs build() {

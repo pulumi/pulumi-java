@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudkms_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetEkmConnectionIamPolicyArgs extends com.pulumi.resources.In
     public static final GetEkmConnectionIamPolicyArgs Empty = new GetEkmConnectionIamPolicyArgs();
 
     @Import(name="ekmConnectionId", required=true)
-    private String ekmConnectionId;
+    private Output<String> ekmConnectionId;
 
-    public String ekmConnectionId() {
+    public Output<String> ekmConnectionId() {
         return this.ekmConnectionId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -69,24 +70,40 @@ public final class GetEkmConnectionIamPolicyArgs extends com.pulumi.resources.In
             $ = new GetEkmConnectionIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder ekmConnectionId(String ekmConnectionId) {
+        public Builder ekmConnectionId(Output<String> ekmConnectionId) {
             $.ekmConnectionId = ekmConnectionId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder ekmConnectionId(String ekmConnectionId) {
+            return ekmConnectionId(Output.of(ekmConnectionId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetEkmConnectionIamPolicyArgs build() {

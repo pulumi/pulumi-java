@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetServiceGatewaysFilter;
+import com.pulumi.oci.Core.inputs.GetServiceGatewaysFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetServiceGatewaysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetServiceGatewaysFilter> filters;
+    private @Nullable Output<List<GetServiceGatewaysFilterArgs>> filters;
 
-    public Optional<List<GetServiceGatewaysFilter>> filters() {
+    public Optional<Output<List<GetServiceGatewaysFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetServiceGatewaysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -58,13 +59,13 @@ public final class GetServiceGatewaysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="vcnId")
-    private @Nullable String vcnId;
+    private @Nullable Output<String> vcnId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
      * 
      */
-    public Optional<String> vcnId() {
+    public Optional<Output<String>> vcnId() {
         return Optional.ofNullable(this.vcnId);
     }
 
@@ -101,17 +102,31 @@ public final class GetServiceGatewaysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetServiceGatewaysFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetServiceGatewaysFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetServiceGatewaysFilter... filters) {
+        public Builder filters(List<GetServiceGatewaysFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetServiceGatewaysFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -121,8 +136,29 @@ public final class GetServiceGatewaysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param vcnId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vcnId(@Nullable Output<String> vcnId) {
+            $.vcnId = vcnId;
             return this;
         }
 
@@ -132,9 +168,8 @@ public final class GetServiceGatewaysArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder vcnId(@Nullable String vcnId) {
-            $.vcnId = vcnId;
-            return this;
+        public Builder vcnId(String vcnId) {
+            return vcnId(Output.of(vcnId));
         }
 
         public GetServiceGatewaysArgs build() {

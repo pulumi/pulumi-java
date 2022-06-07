@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.timeseriesinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="environmentName", required=true)
-    private String environmentName;
+    private Output<String> environmentName;
 
     /**
      * @return The name of the Time Series Insights environment associated with the specified resource group.
      * 
      */
-    public String environmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="referenceDataSetName", required=true)
-    private String referenceDataSetName;
+    private Output<String> referenceDataSetName;
 
     /**
      * @return The name of the Time Series Insights reference data set associated with the specified environment.
      * 
      */
-    public String referenceDataSetName() {
+    public Output<String> referenceDataSetName() {
         return this.referenceDataSetName;
     }
 
@@ -47,13 +48,13 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder environmentName(String environmentName) {
+        public Builder environmentName(Output<String> environmentName) {
             $.environmentName = environmentName;
+            return this;
+        }
+
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environmentName(String environmentName) {
+            return environmentName(Output.of(environmentName));
+        }
+
+        /**
+         * @param referenceDataSetName The name of the Time Series Insights reference data set associated with the specified environment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder referenceDataSetName(Output<String> referenceDataSetName) {
+            $.referenceDataSetName = referenceDataSetName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder referenceDataSetName(String referenceDataSetName) {
-            $.referenceDataSetName = referenceDataSetName;
+            return referenceDataSetName(Output.of(referenceDataSetName));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetReferenceDataSetArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetReferenceDataSetArgs build() {

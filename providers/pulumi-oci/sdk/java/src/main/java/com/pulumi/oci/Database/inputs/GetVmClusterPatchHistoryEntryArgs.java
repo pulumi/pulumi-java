@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVmClusterPatchHistoryEntryArgs extends com.pulumi.resource
      * 
      */
     @Import(name="patchHistoryEntryId", required=true)
-    private String patchHistoryEntryId;
+    private Output<String> patchHistoryEntryId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the patch history entry.
      * 
      */
-    public String patchHistoryEntryId() {
+    public Output<String> patchHistoryEntryId() {
         return this.patchHistoryEntryId;
     }
 
@@ -32,13 +33,13 @@ public final class GetVmClusterPatchHistoryEntryArgs extends com.pulumi.resource
      * 
      */
     @Import(name="vmClusterId", required=true)
-    private String vmClusterId;
+    private Output<String> vmClusterId;
 
     /**
      * @return The VM cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String vmClusterId() {
+    public Output<String> vmClusterId() {
         return this.vmClusterId;
     }
 
@@ -73,8 +74,29 @@ public final class GetVmClusterPatchHistoryEntryArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder patchHistoryEntryId(String patchHistoryEntryId) {
+        public Builder patchHistoryEntryId(Output<String> patchHistoryEntryId) {
             $.patchHistoryEntryId = patchHistoryEntryId;
+            return this;
+        }
+
+        /**
+         * @param patchHistoryEntryId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the patch history entry.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder patchHistoryEntryId(String patchHistoryEntryId) {
+            return patchHistoryEntryId(Output.of(patchHistoryEntryId));
+        }
+
+        /**
+         * @param vmClusterId The VM cluster [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmClusterId(Output<String> vmClusterId) {
+            $.vmClusterId = vmClusterId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVmClusterPatchHistoryEntryArgs extends com.pulumi.resource
          * 
          */
         public Builder vmClusterId(String vmClusterId) {
-            $.vmClusterId = vmClusterId;
-            return this;
+            return vmClusterId(Output.of(vmClusterId));
         }
 
         public GetVmClusterPatchHistoryEntryArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.quicksight.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetThemeArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetThemeArgs Empty = new GetThemeArgs();
 
     @Import(name="awsAccountId", required=true)
-    private String awsAccountId;
+    private Output<String> awsAccountId;
 
-    public String awsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="themeId", required=true)
-    private String themeId;
+    private Output<String> themeId;
 
-    public String themeId() {
+    public Output<String> themeId() {
         return this.themeId;
     }
 
@@ -51,14 +52,22 @@ public final class GetThemeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetThemeArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder awsAccountId(String awsAccountId) {
+        public Builder awsAccountId(Output<String> awsAccountId) {
             $.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder themeId(String themeId) {
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
+        }
+
+        public Builder themeId(Output<String> themeId) {
             $.themeId = themeId;
             return this;
+        }
+
+        public Builder themeId(String themeId) {
+            return themeId(Output.of(themeId));
         }
 
         public GetThemeArgs build() {

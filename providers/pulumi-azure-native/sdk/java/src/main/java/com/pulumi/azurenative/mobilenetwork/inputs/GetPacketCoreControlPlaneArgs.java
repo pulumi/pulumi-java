@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.mobilenetwork.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPacketCoreControlPlaneArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="packetCoreControlPlaneName", required=true)
-    private String packetCoreControlPlaneName;
+    private Output<String> packetCoreControlPlaneName;
 
     /**
      * @return The name of the packet core control plane.
      * 
      */
-    public String packetCoreControlPlaneName() {
+    public Output<String> packetCoreControlPlaneName() {
         return this.packetCoreControlPlaneName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPacketCoreControlPlaneArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPacketCoreControlPlaneArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder packetCoreControlPlaneName(String packetCoreControlPlaneName) {
+        public Builder packetCoreControlPlaneName(Output<String> packetCoreControlPlaneName) {
             $.packetCoreControlPlaneName = packetCoreControlPlaneName;
+            return this;
+        }
+
+        /**
+         * @param packetCoreControlPlaneName The name of the packet core control plane.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packetCoreControlPlaneName(String packetCoreControlPlaneName) {
+            return packetCoreControlPlaneName(Output.of(packetCoreControlPlaneName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPacketCoreControlPlaneArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPacketCoreControlPlaneArgs build() {

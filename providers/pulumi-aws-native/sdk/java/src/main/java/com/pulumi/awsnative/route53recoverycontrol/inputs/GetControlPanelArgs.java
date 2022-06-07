@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.route53recoverycontrol.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetControlPanelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="controlPanelArn", required=true)
-    private String controlPanelArn;
+    private Output<String> controlPanelArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the cluster.
      * 
      */
-    public String controlPanelArn() {
+    public Output<String> controlPanelArn() {
         return this.controlPanelArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetControlPanelArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder controlPanelArn(String controlPanelArn) {
+        public Builder controlPanelArn(Output<String> controlPanelArn) {
             $.controlPanelArn = controlPanelArn;
             return this;
+        }
+
+        /**
+         * @param controlPanelArn The Amazon Resource Name (ARN) of the cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder controlPanelArn(String controlPanelArn) {
+            return controlPanelArn(Output.of(controlPanelArn));
         }
 
         public GetControlPanelArgs build() {

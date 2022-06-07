@@ -3,11 +3,13 @@
 
 package com.pulumi.googlenative.composer_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.composer_v1.inputs.GetEnvironmentArgs;
+import com.pulumi.googlenative.composer_v1.inputs.GetEnvironmentPlainArgs;
 import com.pulumi.googlenative.composer_v1.outputs.GetEnvironmentResult;
 import java.util.concurrent.CompletableFuture;
 
@@ -16,14 +18,28 @@ public final class Composer_v1Functions {
      * Get an existing environment.
      * 
      */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
+    public static Output<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args) {
         return getEnvironment(args, InvokeOptions.Empty);
     }
     /**
      * Get an existing environment.
      * 
      */
-    public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnvironmentResult> getEnvironmentPlain(GetEnvironmentPlainArgs args) {
+        return getEnvironmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get an existing environment.
+     * 
+     */
+    public static Output<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:composer/v1:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get an existing environment.
+     * 
+     */
+    public static CompletableFuture<GetEnvironmentResult> getEnvironmentPlain(GetEnvironmentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:composer/v1:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
     }
 }

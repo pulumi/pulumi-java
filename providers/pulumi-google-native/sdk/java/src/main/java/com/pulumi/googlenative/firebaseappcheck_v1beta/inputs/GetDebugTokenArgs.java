@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.firebaseappcheck_v1beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetDebugTokenArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDebugTokenArgs Empty = new GetDebugTokenArgs();
 
     @Import(name="appId", required=true)
-    private String appId;
+    private Output<String> appId;
 
-    public String appId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
     @Import(name="debugTokenId", required=true)
-    private String debugTokenId;
+    private Output<String> debugTokenId;
 
-    public String debugTokenId() {
+    public Output<String> debugTokenId() {
         return this.debugTokenId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetDebugTokenArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDebugTokenArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder appId(String appId) {
+        public Builder appId(Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
-        public Builder debugTokenId(String debugTokenId) {
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
+        }
+
+        public Builder debugTokenId(Output<String> debugTokenId) {
             $.debugTokenId = debugTokenId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder debugTokenId(String debugTokenId) {
+            return debugTokenId(Output.of(debugTokenId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetDebugTokenArgs build() {

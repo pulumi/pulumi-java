@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.healthcareapis.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="fhirDestinationName", required=true)
-    private String fhirDestinationName;
+    private Output<String> fhirDestinationName;
 
     /**
      * @return The name of IoT Connector FHIR destination resource.
      * 
      */
-    public String fhirDestinationName() {
+    public Output<String> fhirDestinationName() {
         return this.fhirDestinationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="iotConnectorName", required=true)
-    private String iotConnectorName;
+    private Output<String> iotConnectorName;
 
     /**
      * @return The name of IoT Connector resource.
      * 
      */
-    public String iotConnectorName() {
+    public Output<String> iotConnectorName() {
         return this.iotConnectorName;
     }
 
@@ -47,13 +48,13 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the service instance.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of workspace resource.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder fhirDestinationName(String fhirDestinationName) {
+        public Builder fhirDestinationName(Output<String> fhirDestinationName) {
             $.fhirDestinationName = fhirDestinationName;
+            return this;
+        }
+
+        /**
+         * @param fhirDestinationName The name of IoT Connector FHIR destination resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fhirDestinationName(String fhirDestinationName) {
+            return fhirDestinationName(Output.of(fhirDestinationName));
+        }
+
+        /**
+         * @param iotConnectorName The name of IoT Connector resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder iotConnectorName(Output<String> iotConnectorName) {
+            $.iotConnectorName = iotConnectorName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
          * 
          */
         public Builder iotConnectorName(String iotConnectorName) {
-            $.iotConnectorName = iotConnectorName;
+            return iotConnectorName(Output.of(iotConnectorName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the service instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceName The name of workspace resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetIotConnectorFhirDestinationArgs extends com.pulumi.resourc
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetIotConnectorFhirDestinationArgs build() {

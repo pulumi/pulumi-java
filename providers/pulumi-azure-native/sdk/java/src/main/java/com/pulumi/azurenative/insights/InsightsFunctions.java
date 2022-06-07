@@ -5,39 +5,73 @@ package com.pulumi.azurenative.insights;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.insights.inputs.GetActionGroupArgs;
+import com.pulumi.azurenative.insights.inputs.GetActionGroupPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetActivityLogAlertArgs;
+import com.pulumi.azurenative.insights.inputs.GetActivityLogAlertPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetAlertRuleArgs;
+import com.pulumi.azurenative.insights.inputs.GetAlertRulePlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetAnalyticsItemArgs;
+import com.pulumi.azurenative.insights.inputs.GetAnalyticsItemPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetAutoscaleSettingArgs;
+import com.pulumi.azurenative.insights.inputs.GetAutoscaleSettingPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetComponentArgs;
 import com.pulumi.azurenative.insights.inputs.GetComponentCurrentBillingFeatureArgs;
+import com.pulumi.azurenative.insights.inputs.GetComponentCurrentBillingFeaturePlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetComponentLinkedStorageAccountArgs;
+import com.pulumi.azurenative.insights.inputs.GetComponentLinkedStorageAccountPlainArgs;
+import com.pulumi.azurenative.insights.inputs.GetComponentPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetDataCollectionEndpointArgs;
+import com.pulumi.azurenative.insights.inputs.GetDataCollectionEndpointPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetDataCollectionRuleArgs;
 import com.pulumi.azurenative.insights.inputs.GetDataCollectionRuleAssociationArgs;
+import com.pulumi.azurenative.insights.inputs.GetDataCollectionRuleAssociationPlainArgs;
+import com.pulumi.azurenative.insights.inputs.GetDataCollectionRulePlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetDiagnosticServiceTokenReadOnlyArgs;
+import com.pulumi.azurenative.insights.inputs.GetDiagnosticServiceTokenReadOnlyPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetDiagnosticServiceTokenReadWriteArgs;
+import com.pulumi.azurenative.insights.inputs.GetDiagnosticServiceTokenReadWritePlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetDiagnosticSettingArgs;
+import com.pulumi.azurenative.insights.inputs.GetDiagnosticSettingPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetExportConfigurationArgs;
+import com.pulumi.azurenative.insights.inputs.GetExportConfigurationPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetFavoriteArgs;
+import com.pulumi.azurenative.insights.inputs.GetFavoritePlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetGuestDiagnosticsSettingsAssociationArgs;
+import com.pulumi.azurenative.insights.inputs.GetGuestDiagnosticsSettingsAssociationPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetLiveTokenArgs;
+import com.pulumi.azurenative.insights.inputs.GetLiveTokenPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetLogProfileArgs;
+import com.pulumi.azurenative.insights.inputs.GetLogProfilePlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetManagementGroupDiagnosticSettingArgs;
+import com.pulumi.azurenative.insights.inputs.GetManagementGroupDiagnosticSettingPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetMetricAlertArgs;
+import com.pulumi.azurenative.insights.inputs.GetMetricAlertPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetMyWorkbookArgs;
+import com.pulumi.azurenative.insights.inputs.GetMyWorkbookPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.insights.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetPrivateLinkScopeArgs;
+import com.pulumi.azurenative.insights.inputs.GetPrivateLinkScopePlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetPrivateLinkScopedResourceArgs;
+import com.pulumi.azurenative.insights.inputs.GetPrivateLinkScopedResourcePlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetProactiveDetectionConfigurationArgs;
+import com.pulumi.azurenative.insights.inputs.GetProactiveDetectionConfigurationPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetScheduledQueryRuleArgs;
+import com.pulumi.azurenative.insights.inputs.GetScheduledQueryRulePlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetSubscriptionDiagnosticSettingArgs;
+import com.pulumi.azurenative.insights.inputs.GetSubscriptionDiagnosticSettingPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetTestResultFileArgs;
+import com.pulumi.azurenative.insights.inputs.GetTestResultFilePlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetWebTestArgs;
+import com.pulumi.azurenative.insights.inputs.GetWebTestPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetWorkbookArgs;
+import com.pulumi.azurenative.insights.inputs.GetWorkbookPlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetWorkbookTemplateArgs;
+import com.pulumi.azurenative.insights.inputs.GetWorkbookTemplatePlainArgs;
 import com.pulumi.azurenative.insights.inputs.GetguestDiagnosticsSettingArgs;
+import com.pulumi.azurenative.insights.inputs.GetguestDiagnosticsSettingPlainArgs;
 import com.pulumi.azurenative.insights.inputs.ListEASubscriptionListMigrationDatePostArgs;
+import com.pulumi.azurenative.insights.inputs.ListEASubscriptionListMigrationDatePostPlainArgs;
 import com.pulumi.azurenative.insights.outputs.GetActionGroupResult;
 import com.pulumi.azurenative.insights.outputs.GetActivityLogAlertResult;
 import com.pulumi.azurenative.insights.outputs.GetAlertRuleResult;
@@ -72,6 +106,7 @@ import com.pulumi.azurenative.insights.outputs.GetWorkbookResult;
 import com.pulumi.azurenative.insights.outputs.GetWorkbookTemplateResult;
 import com.pulumi.azurenative.insights.outputs.GetguestDiagnosticsSettingResult;
 import com.pulumi.azurenative.insights.outputs.ListEASubscriptionListMigrationDatePostResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -83,7 +118,7 @@ public final class InsightsFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetActionGroupResult> getActionGroup(GetActionGroupArgs args) {
+    public static Output<GetActionGroupResult> getActionGroup(GetActionGroupArgs args) {
         return getActionGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -91,7 +126,23 @@ public final class InsightsFunctions {
      * API Version: 2019-06-01.
      * 
      */
-    public static CompletableFuture<GetActionGroupResult> getActionGroup(GetActionGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActionGroupResult> getActionGroupPlain(GetActionGroupPlainArgs args) {
+        return getActionGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An action group resource.
+     * API Version: 2019-06-01.
+     * 
+     */
+    public static Output<GetActionGroupResult> getActionGroup(GetActionGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getActionGroup", TypeShape.of(GetActionGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An action group resource.
+     * API Version: 2019-06-01.
+     * 
+     */
+    public static CompletableFuture<GetActionGroupResult> getActionGroupPlain(GetActionGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getActionGroup", TypeShape.of(GetActionGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -99,7 +150,7 @@ public final class InsightsFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetActivityLogAlertResult> getActivityLogAlert(GetActivityLogAlertArgs args) {
+    public static Output<GetActivityLogAlertResult> getActivityLogAlert(GetActivityLogAlertArgs args) {
         return getActivityLogAlert(args, InvokeOptions.Empty);
     }
     /**
@@ -107,7 +158,23 @@ public final class InsightsFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetActivityLogAlertResult> getActivityLogAlert(GetActivityLogAlertArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActivityLogAlertResult> getActivityLogAlertPlain(GetActivityLogAlertPlainArgs args) {
+        return getActivityLogAlertPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An Activity Log Alert rule resource.
+     * API Version: 2020-10-01.
+     * 
+     */
+    public static Output<GetActivityLogAlertResult> getActivityLogAlert(GetActivityLogAlertArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getActivityLogAlert", TypeShape.of(GetActivityLogAlertResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Activity Log Alert rule resource.
+     * API Version: 2020-10-01.
+     * 
+     */
+    public static CompletableFuture<GetActivityLogAlertResult> getActivityLogAlertPlain(GetActivityLogAlertPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getActivityLogAlert", TypeShape.of(GetActivityLogAlertResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -115,7 +182,7 @@ public final class InsightsFunctions {
      * API Version: 2016-03-01.
      * 
      */
-    public static CompletableFuture<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args) {
+    public static Output<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args) {
         return getAlertRule(args, InvokeOptions.Empty);
     }
     /**
@@ -123,7 +190,23 @@ public final class InsightsFunctions {
      * API Version: 2016-03-01.
      * 
      */
-    public static CompletableFuture<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAlertRuleResult> getAlertRulePlain(GetAlertRulePlainArgs args) {
+        return getAlertRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The alert rule resource.
+     * API Version: 2016-03-01.
+     * 
+     */
+    public static Output<GetAlertRuleResult> getAlertRule(GetAlertRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The alert rule resource.
+     * API Version: 2016-03-01.
+     * 
+     */
+    public static CompletableFuture<GetAlertRuleResult> getAlertRulePlain(GetAlertRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -131,7 +214,7 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetAnalyticsItemResult> getAnalyticsItem(GetAnalyticsItemArgs args) {
+    public static Output<GetAnalyticsItemResult> getAnalyticsItem(GetAnalyticsItemArgs args) {
         return getAnalyticsItem(args, InvokeOptions.Empty);
     }
     /**
@@ -139,7 +222,23 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetAnalyticsItemResult> getAnalyticsItem(GetAnalyticsItemArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAnalyticsItemResult> getAnalyticsItemPlain(GetAnalyticsItemPlainArgs args) {
+        return getAnalyticsItemPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Properties that define an Analytics item that is associated to an Application Insights component.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static Output<GetAnalyticsItemResult> getAnalyticsItem(GetAnalyticsItemArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getAnalyticsItem", TypeShape.of(GetAnalyticsItemResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Properties that define an Analytics item that is associated to an Application Insights component.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static CompletableFuture<GetAnalyticsItemResult> getAnalyticsItemPlain(GetAnalyticsItemPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getAnalyticsItem", TypeShape.of(GetAnalyticsItemResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -147,7 +246,7 @@ public final class InsightsFunctions {
      * API Version: 2015-04-01.
      * 
      */
-    public static CompletableFuture<GetAutoscaleSettingResult> getAutoscaleSetting(GetAutoscaleSettingArgs args) {
+    public static Output<GetAutoscaleSettingResult> getAutoscaleSetting(GetAutoscaleSettingArgs args) {
         return getAutoscaleSetting(args, InvokeOptions.Empty);
     }
     /**
@@ -155,7 +254,23 @@ public final class InsightsFunctions {
      * API Version: 2015-04-01.
      * 
      */
-    public static CompletableFuture<GetAutoscaleSettingResult> getAutoscaleSetting(GetAutoscaleSettingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAutoscaleSettingResult> getAutoscaleSettingPlain(GetAutoscaleSettingPlainArgs args) {
+        return getAutoscaleSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The autoscale setting resource.
+     * API Version: 2015-04-01.
+     * 
+     */
+    public static Output<GetAutoscaleSettingResult> getAutoscaleSetting(GetAutoscaleSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getAutoscaleSetting", TypeShape.of(GetAutoscaleSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The autoscale setting resource.
+     * API Version: 2015-04-01.
+     * 
+     */
+    public static CompletableFuture<GetAutoscaleSettingResult> getAutoscaleSettingPlain(GetAutoscaleSettingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getAutoscaleSetting", TypeShape.of(GetAutoscaleSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -163,7 +278,7 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args) {
+    public static Output<GetComponentResult> getComponent(GetComponentArgs args) {
         return getComponent(args, InvokeOptions.Empty);
     }
     /**
@@ -171,7 +286,23 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComponentResult> getComponentPlain(GetComponentPlainArgs args) {
+        return getComponentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An Application Insights component definition.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static Output<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Application Insights component definition.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static CompletableFuture<GetComponentResult> getComponentPlain(GetComponentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -179,7 +310,7 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetComponentCurrentBillingFeatureResult> getComponentCurrentBillingFeature(GetComponentCurrentBillingFeatureArgs args) {
+    public static Output<GetComponentCurrentBillingFeatureResult> getComponentCurrentBillingFeature(GetComponentCurrentBillingFeatureArgs args) {
         return getComponentCurrentBillingFeature(args, InvokeOptions.Empty);
     }
     /**
@@ -187,7 +318,23 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetComponentCurrentBillingFeatureResult> getComponentCurrentBillingFeature(GetComponentCurrentBillingFeatureArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComponentCurrentBillingFeatureResult> getComponentCurrentBillingFeaturePlain(GetComponentCurrentBillingFeaturePlainArgs args) {
+        return getComponentCurrentBillingFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An Application Insights component billing features
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static Output<GetComponentCurrentBillingFeatureResult> getComponentCurrentBillingFeature(GetComponentCurrentBillingFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getComponentCurrentBillingFeature", TypeShape.of(GetComponentCurrentBillingFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Application Insights component billing features
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static CompletableFuture<GetComponentCurrentBillingFeatureResult> getComponentCurrentBillingFeaturePlain(GetComponentCurrentBillingFeaturePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getComponentCurrentBillingFeature", TypeShape.of(GetComponentCurrentBillingFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -195,7 +342,7 @@ public final class InsightsFunctions {
      * API Version: 2020-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetComponentLinkedStorageAccountResult> getComponentLinkedStorageAccount(GetComponentLinkedStorageAccountArgs args) {
+    public static Output<GetComponentLinkedStorageAccountResult> getComponentLinkedStorageAccount(GetComponentLinkedStorageAccountArgs args) {
         return getComponentLinkedStorageAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -203,7 +350,23 @@ public final class InsightsFunctions {
      * API Version: 2020-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetComponentLinkedStorageAccountResult> getComponentLinkedStorageAccount(GetComponentLinkedStorageAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComponentLinkedStorageAccountResult> getComponentLinkedStorageAccountPlain(GetComponentLinkedStorageAccountPlainArgs args) {
+        return getComponentLinkedStorageAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An Application Insights component linked storage accounts
+     * API Version: 2020-03-01-preview.
+     * 
+     */
+    public static Output<GetComponentLinkedStorageAccountResult> getComponentLinkedStorageAccount(GetComponentLinkedStorageAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getComponentLinkedStorageAccount", TypeShape.of(GetComponentLinkedStorageAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Application Insights component linked storage accounts
+     * API Version: 2020-03-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetComponentLinkedStorageAccountResult> getComponentLinkedStorageAccountPlain(GetComponentLinkedStorageAccountPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getComponentLinkedStorageAccount", TypeShape.of(GetComponentLinkedStorageAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -211,7 +374,7 @@ public final class InsightsFunctions {
      * API Version: 2021-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataCollectionEndpointResult> getDataCollectionEndpoint(GetDataCollectionEndpointArgs args) {
+    public static Output<GetDataCollectionEndpointResult> getDataCollectionEndpoint(GetDataCollectionEndpointArgs args) {
         return getDataCollectionEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -219,7 +382,23 @@ public final class InsightsFunctions {
      * API Version: 2021-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataCollectionEndpointResult> getDataCollectionEndpoint(GetDataCollectionEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataCollectionEndpointResult> getDataCollectionEndpointPlain(GetDataCollectionEndpointPlainArgs args) {
+        return getDataCollectionEndpointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of ARM tracked top level resource.
+     * API Version: 2021-09-01-preview.
+     * 
+     */
+    public static Output<GetDataCollectionEndpointResult> getDataCollectionEndpoint(GetDataCollectionEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getDataCollectionEndpoint", TypeShape.of(GetDataCollectionEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of ARM tracked top level resource.
+     * API Version: 2021-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetDataCollectionEndpointResult> getDataCollectionEndpointPlain(GetDataCollectionEndpointPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDataCollectionEndpoint", TypeShape.of(GetDataCollectionEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -227,7 +406,7 @@ public final class InsightsFunctions {
      * API Version: 2019-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataCollectionRuleResult> getDataCollectionRule(GetDataCollectionRuleArgs args) {
+    public static Output<GetDataCollectionRuleResult> getDataCollectionRule(GetDataCollectionRuleArgs args) {
         return getDataCollectionRule(args, InvokeOptions.Empty);
     }
     /**
@@ -235,7 +414,23 @@ public final class InsightsFunctions {
      * API Version: 2019-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataCollectionRuleResult> getDataCollectionRule(GetDataCollectionRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataCollectionRuleResult> getDataCollectionRulePlain(GetDataCollectionRulePlainArgs args) {
+        return getDataCollectionRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of ARM tracked top level resource.
+     * API Version: 2019-11-01-preview.
+     * 
+     */
+    public static Output<GetDataCollectionRuleResult> getDataCollectionRule(GetDataCollectionRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getDataCollectionRule", TypeShape.of(GetDataCollectionRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of ARM tracked top level resource.
+     * API Version: 2019-11-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetDataCollectionRuleResult> getDataCollectionRulePlain(GetDataCollectionRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDataCollectionRule", TypeShape.of(GetDataCollectionRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -243,7 +438,7 @@ public final class InsightsFunctions {
      * API Version: 2019-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataCollectionRuleAssociationResult> getDataCollectionRuleAssociation(GetDataCollectionRuleAssociationArgs args) {
+    public static Output<GetDataCollectionRuleAssociationResult> getDataCollectionRuleAssociation(GetDataCollectionRuleAssociationArgs args) {
         return getDataCollectionRuleAssociation(args, InvokeOptions.Empty);
     }
     /**
@@ -251,7 +446,23 @@ public final class InsightsFunctions {
      * API Version: 2019-11-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataCollectionRuleAssociationResult> getDataCollectionRuleAssociation(GetDataCollectionRuleAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataCollectionRuleAssociationResult> getDataCollectionRuleAssociationPlain(GetDataCollectionRuleAssociationPlainArgs args) {
+        return getDataCollectionRuleAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of generic ARM proxy resource.
+     * API Version: 2019-11-01-preview.
+     * 
+     */
+    public static Output<GetDataCollectionRuleAssociationResult> getDataCollectionRuleAssociation(GetDataCollectionRuleAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getDataCollectionRuleAssociation", TypeShape.of(GetDataCollectionRuleAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of generic ARM proxy resource.
+     * API Version: 2019-11-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetDataCollectionRuleAssociationResult> getDataCollectionRuleAssociationPlain(GetDataCollectionRuleAssociationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDataCollectionRuleAssociation", TypeShape.of(GetDataCollectionRuleAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -259,7 +470,7 @@ public final class InsightsFunctions {
      * API Version: 2021-03-03-preview.
      * 
      */
-    public static CompletableFuture<GetDiagnosticServiceTokenReadOnlyResult> getDiagnosticServiceTokenReadOnly(GetDiagnosticServiceTokenReadOnlyArgs args) {
+    public static Output<GetDiagnosticServiceTokenReadOnlyResult> getDiagnosticServiceTokenReadOnly(GetDiagnosticServiceTokenReadOnlyArgs args) {
         return getDiagnosticServiceTokenReadOnly(args, InvokeOptions.Empty);
     }
     /**
@@ -267,7 +478,23 @@ public final class InsightsFunctions {
      * API Version: 2021-03-03-preview.
      * 
      */
-    public static CompletableFuture<GetDiagnosticServiceTokenReadOnlyResult> getDiagnosticServiceTokenReadOnly(GetDiagnosticServiceTokenReadOnlyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiagnosticServiceTokenReadOnlyResult> getDiagnosticServiceTokenReadOnlyPlain(GetDiagnosticServiceTokenReadOnlyPlainArgs args) {
+        return getDiagnosticServiceTokenReadOnlyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The response to a diagnostic services token query.
+     * API Version: 2021-03-03-preview.
+     * 
+     */
+    public static Output<GetDiagnosticServiceTokenReadOnlyResult> getDiagnosticServiceTokenReadOnly(GetDiagnosticServiceTokenReadOnlyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getDiagnosticServiceTokenReadOnly", TypeShape.of(GetDiagnosticServiceTokenReadOnlyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The response to a diagnostic services token query.
+     * API Version: 2021-03-03-preview.
+     * 
+     */
+    public static CompletableFuture<GetDiagnosticServiceTokenReadOnlyResult> getDiagnosticServiceTokenReadOnlyPlain(GetDiagnosticServiceTokenReadOnlyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDiagnosticServiceTokenReadOnly", TypeShape.of(GetDiagnosticServiceTokenReadOnlyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -275,7 +502,7 @@ public final class InsightsFunctions {
      * API Version: 2021-03-03-preview.
      * 
      */
-    public static CompletableFuture<GetDiagnosticServiceTokenReadWriteResult> getDiagnosticServiceTokenReadWrite(GetDiagnosticServiceTokenReadWriteArgs args) {
+    public static Output<GetDiagnosticServiceTokenReadWriteResult> getDiagnosticServiceTokenReadWrite(GetDiagnosticServiceTokenReadWriteArgs args) {
         return getDiagnosticServiceTokenReadWrite(args, InvokeOptions.Empty);
     }
     /**
@@ -283,7 +510,23 @@ public final class InsightsFunctions {
      * API Version: 2021-03-03-preview.
      * 
      */
-    public static CompletableFuture<GetDiagnosticServiceTokenReadWriteResult> getDiagnosticServiceTokenReadWrite(GetDiagnosticServiceTokenReadWriteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiagnosticServiceTokenReadWriteResult> getDiagnosticServiceTokenReadWritePlain(GetDiagnosticServiceTokenReadWritePlainArgs args) {
+        return getDiagnosticServiceTokenReadWritePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The response to a diagnostic services token query.
+     * API Version: 2021-03-03-preview.
+     * 
+     */
+    public static Output<GetDiagnosticServiceTokenReadWriteResult> getDiagnosticServiceTokenReadWrite(GetDiagnosticServiceTokenReadWriteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getDiagnosticServiceTokenReadWrite", TypeShape.of(GetDiagnosticServiceTokenReadWriteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The response to a diagnostic services token query.
+     * API Version: 2021-03-03-preview.
+     * 
+     */
+    public static CompletableFuture<GetDiagnosticServiceTokenReadWriteResult> getDiagnosticServiceTokenReadWritePlain(GetDiagnosticServiceTokenReadWritePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDiagnosticServiceTokenReadWrite", TypeShape.of(GetDiagnosticServiceTokenReadWriteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -291,7 +534,7 @@ public final class InsightsFunctions {
      * API Version: 2017-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetDiagnosticSettingResult> getDiagnosticSetting(GetDiagnosticSettingArgs args) {
+    public static Output<GetDiagnosticSettingResult> getDiagnosticSetting(GetDiagnosticSettingArgs args) {
         return getDiagnosticSetting(args, InvokeOptions.Empty);
     }
     /**
@@ -299,7 +542,23 @@ public final class InsightsFunctions {
      * API Version: 2017-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetDiagnosticSettingResult> getDiagnosticSetting(GetDiagnosticSettingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiagnosticSettingResult> getDiagnosticSettingPlain(GetDiagnosticSettingPlainArgs args) {
+        return getDiagnosticSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The diagnostic setting resource.
+     * API Version: 2017-05-01-preview.
+     * 
+     */
+    public static Output<GetDiagnosticSettingResult> getDiagnosticSetting(GetDiagnosticSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getDiagnosticSetting", TypeShape.of(GetDiagnosticSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The diagnostic setting resource.
+     * API Version: 2017-05-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetDiagnosticSettingResult> getDiagnosticSettingPlain(GetDiagnosticSettingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDiagnosticSetting", TypeShape.of(GetDiagnosticSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -307,7 +566,7 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetExportConfigurationResult> getExportConfiguration(GetExportConfigurationArgs args) {
+    public static Output<GetExportConfigurationResult> getExportConfiguration(GetExportConfigurationArgs args) {
         return getExportConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -315,7 +574,23 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetExportConfigurationResult> getExportConfiguration(GetExportConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExportConfigurationResult> getExportConfigurationPlain(GetExportConfigurationPlainArgs args) {
+        return getExportConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Properties that define a Continuous Export configuration.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static Output<GetExportConfigurationResult> getExportConfiguration(GetExportConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getExportConfiguration", TypeShape.of(GetExportConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Properties that define a Continuous Export configuration.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static CompletableFuture<GetExportConfigurationResult> getExportConfigurationPlain(GetExportConfigurationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getExportConfiguration", TypeShape.of(GetExportConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -323,7 +598,7 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetFavoriteResult> getFavorite(GetFavoriteArgs args) {
+    public static Output<GetFavoriteResult> getFavorite(GetFavoriteArgs args) {
         return getFavorite(args, InvokeOptions.Empty);
     }
     /**
@@ -331,7 +606,23 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetFavoriteResult> getFavorite(GetFavoriteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFavoriteResult> getFavoritePlain(GetFavoritePlainArgs args) {
+        return getFavoritePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Properties that define a favorite that is associated to an Application Insights component.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static Output<GetFavoriteResult> getFavorite(GetFavoriteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getFavorite", TypeShape.of(GetFavoriteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Properties that define a favorite that is associated to an Application Insights component.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static CompletableFuture<GetFavoriteResult> getFavoritePlain(GetFavoritePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getFavorite", TypeShape.of(GetFavoriteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -339,7 +630,7 @@ public final class InsightsFunctions {
      * API Version: 2018-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetGuestDiagnosticsSettingsAssociationResult> getGuestDiagnosticsSettingsAssociation(GetGuestDiagnosticsSettingsAssociationArgs args) {
+    public static Output<GetGuestDiagnosticsSettingsAssociationResult> getGuestDiagnosticsSettingsAssociation(GetGuestDiagnosticsSettingsAssociationArgs args) {
         return getGuestDiagnosticsSettingsAssociation(args, InvokeOptions.Empty);
     }
     /**
@@ -347,7 +638,23 @@ public final class InsightsFunctions {
      * API Version: 2018-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetGuestDiagnosticsSettingsAssociationResult> getGuestDiagnosticsSettingsAssociation(GetGuestDiagnosticsSettingsAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGuestDiagnosticsSettingsAssociationResult> getGuestDiagnosticsSettingsAssociationPlain(GetGuestDiagnosticsSettingsAssociationPlainArgs args) {
+        return getGuestDiagnosticsSettingsAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Virtual machine guest diagnostic settings resource.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
+    public static Output<GetGuestDiagnosticsSettingsAssociationResult> getGuestDiagnosticsSettingsAssociation(GetGuestDiagnosticsSettingsAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getGuestDiagnosticsSettingsAssociation", TypeShape.of(GetGuestDiagnosticsSettingsAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Virtual machine guest diagnostic settings resource.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetGuestDiagnosticsSettingsAssociationResult> getGuestDiagnosticsSettingsAssociationPlain(GetGuestDiagnosticsSettingsAssociationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getGuestDiagnosticsSettingsAssociation", TypeShape.of(GetGuestDiagnosticsSettingsAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -355,7 +662,7 @@ public final class InsightsFunctions {
      * API Version: 2020-06-02-preview.
      * 
      */
-    public static CompletableFuture<GetLiveTokenResult> getLiveToken(GetLiveTokenArgs args) {
+    public static Output<GetLiveTokenResult> getLiveToken(GetLiveTokenArgs args) {
         return getLiveToken(args, InvokeOptions.Empty);
     }
     /**
@@ -363,7 +670,23 @@ public final class InsightsFunctions {
      * API Version: 2020-06-02-preview.
      * 
      */
-    public static CompletableFuture<GetLiveTokenResult> getLiveToken(GetLiveTokenArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLiveTokenResult> getLiveTokenPlain(GetLiveTokenPlainArgs args) {
+        return getLiveTokenPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The response to a live token query.
+     * API Version: 2020-06-02-preview.
+     * 
+     */
+    public static Output<GetLiveTokenResult> getLiveToken(GetLiveTokenArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getLiveToken", TypeShape.of(GetLiveTokenResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The response to a live token query.
+     * API Version: 2020-06-02-preview.
+     * 
+     */
+    public static CompletableFuture<GetLiveTokenResult> getLiveTokenPlain(GetLiveTokenPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getLiveToken", TypeShape.of(GetLiveTokenResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -371,7 +694,7 @@ public final class InsightsFunctions {
      * API Version: 2016-03-01.
      * 
      */
-    public static CompletableFuture<GetLogProfileResult> getLogProfile(GetLogProfileArgs args) {
+    public static Output<GetLogProfileResult> getLogProfile(GetLogProfileArgs args) {
         return getLogProfile(args, InvokeOptions.Empty);
     }
     /**
@@ -379,7 +702,23 @@ public final class InsightsFunctions {
      * API Version: 2016-03-01.
      * 
      */
-    public static CompletableFuture<GetLogProfileResult> getLogProfile(GetLogProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLogProfileResult> getLogProfilePlain(GetLogProfilePlainArgs args) {
+        return getLogProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The log profile resource.
+     * API Version: 2016-03-01.
+     * 
+     */
+    public static Output<GetLogProfileResult> getLogProfile(GetLogProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getLogProfile", TypeShape.of(GetLogProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The log profile resource.
+     * API Version: 2016-03-01.
+     * 
+     */
+    public static CompletableFuture<GetLogProfileResult> getLogProfilePlain(GetLogProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getLogProfile", TypeShape.of(GetLogProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -387,7 +726,7 @@ public final class InsightsFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagementGroupDiagnosticSettingResult> getManagementGroupDiagnosticSetting(GetManagementGroupDiagnosticSettingArgs args) {
+    public static Output<GetManagementGroupDiagnosticSettingResult> getManagementGroupDiagnosticSetting(GetManagementGroupDiagnosticSettingArgs args) {
         return getManagementGroupDiagnosticSetting(args, InvokeOptions.Empty);
     }
     /**
@@ -395,7 +734,23 @@ public final class InsightsFunctions {
      * API Version: 2020-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetManagementGroupDiagnosticSettingResult> getManagementGroupDiagnosticSetting(GetManagementGroupDiagnosticSettingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetManagementGroupDiagnosticSettingResult> getManagementGroupDiagnosticSettingPlain(GetManagementGroupDiagnosticSettingPlainArgs args) {
+        return getManagementGroupDiagnosticSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The management group diagnostic setting resource.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static Output<GetManagementGroupDiagnosticSettingResult> getManagementGroupDiagnosticSetting(GetManagementGroupDiagnosticSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getManagementGroupDiagnosticSetting", TypeShape.of(GetManagementGroupDiagnosticSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The management group diagnostic setting resource.
+     * API Version: 2020-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetManagementGroupDiagnosticSettingResult> getManagementGroupDiagnosticSettingPlain(GetManagementGroupDiagnosticSettingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getManagementGroupDiagnosticSetting", TypeShape.of(GetManagementGroupDiagnosticSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -403,7 +758,7 @@ public final class InsightsFunctions {
      * API Version: 2018-03-01.
      * 
      */
-    public static CompletableFuture<GetMetricAlertResult> getMetricAlert(GetMetricAlertArgs args) {
+    public static Output<GetMetricAlertResult> getMetricAlert(GetMetricAlertArgs args) {
         return getMetricAlert(args, InvokeOptions.Empty);
     }
     /**
@@ -411,7 +766,23 @@ public final class InsightsFunctions {
      * API Version: 2018-03-01.
      * 
      */
-    public static CompletableFuture<GetMetricAlertResult> getMetricAlert(GetMetricAlertArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMetricAlertResult> getMetricAlertPlain(GetMetricAlertPlainArgs args) {
+        return getMetricAlertPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The metric alert resource.
+     * API Version: 2018-03-01.
+     * 
+     */
+    public static Output<GetMetricAlertResult> getMetricAlert(GetMetricAlertArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getMetricAlert", TypeShape.of(GetMetricAlertResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The metric alert resource.
+     * API Version: 2018-03-01.
+     * 
+     */
+    public static CompletableFuture<GetMetricAlertResult> getMetricAlertPlain(GetMetricAlertPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getMetricAlert", TypeShape.of(GetMetricAlertResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -419,7 +790,7 @@ public final class InsightsFunctions {
      * API Version: 2020-10-20.
      * 
      */
-    public static CompletableFuture<GetMyWorkbookResult> getMyWorkbook(GetMyWorkbookArgs args) {
+    public static Output<GetMyWorkbookResult> getMyWorkbook(GetMyWorkbookArgs args) {
         return getMyWorkbook(args, InvokeOptions.Empty);
     }
     /**
@@ -427,7 +798,23 @@ public final class InsightsFunctions {
      * API Version: 2020-10-20.
      * 
      */
-    public static CompletableFuture<GetMyWorkbookResult> getMyWorkbook(GetMyWorkbookArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMyWorkbookResult> getMyWorkbookPlain(GetMyWorkbookPlainArgs args) {
+        return getMyWorkbookPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An Application Insights private workbook definition.
+     * API Version: 2020-10-20.
+     * 
+     */
+    public static Output<GetMyWorkbookResult> getMyWorkbook(GetMyWorkbookArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getMyWorkbook", TypeShape.of(GetMyWorkbookResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Application Insights private workbook definition.
+     * API Version: 2020-10-20.
+     * 
+     */
+    public static CompletableFuture<GetMyWorkbookResult> getMyWorkbookPlain(GetMyWorkbookPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getMyWorkbook", TypeShape.of(GetMyWorkbookResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -435,7 +822,7 @@ public final class InsightsFunctions {
      * API Version: 2019-10-17-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -443,7 +830,23 @@ public final class InsightsFunctions {
      * API Version: 2019-10-17-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A private endpoint connection
+     * API Version: 2019-10-17-preview.
+     * 
+     */
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A private endpoint connection
+     * API Version: 2019-10-17-preview.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -451,7 +854,7 @@ public final class InsightsFunctions {
      * API Version: 2019-10-17-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateLinkScopeResult> getPrivateLinkScope(GetPrivateLinkScopeArgs args) {
+    public static Output<GetPrivateLinkScopeResult> getPrivateLinkScope(GetPrivateLinkScopeArgs args) {
         return getPrivateLinkScope(args, InvokeOptions.Empty);
     }
     /**
@@ -459,7 +862,23 @@ public final class InsightsFunctions {
      * API Version: 2019-10-17-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateLinkScopeResult> getPrivateLinkScope(GetPrivateLinkScopeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateLinkScopeResult> getPrivateLinkScopePlain(GetPrivateLinkScopePlainArgs args) {
+        return getPrivateLinkScopePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An Azure Monitor PrivateLinkScope definition.
+     * API Version: 2019-10-17-preview.
+     * 
+     */
+    public static Output<GetPrivateLinkScopeResult> getPrivateLinkScope(GetPrivateLinkScopeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getPrivateLinkScope", TypeShape.of(GetPrivateLinkScopeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Azure Monitor PrivateLinkScope definition.
+     * API Version: 2019-10-17-preview.
+     * 
+     */
+    public static CompletableFuture<GetPrivateLinkScopeResult> getPrivateLinkScopePlain(GetPrivateLinkScopePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getPrivateLinkScope", TypeShape.of(GetPrivateLinkScopeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -467,7 +886,7 @@ public final class InsightsFunctions {
      * API Version: 2019-10-17-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateLinkScopedResourceResult> getPrivateLinkScopedResource(GetPrivateLinkScopedResourceArgs args) {
+    public static Output<GetPrivateLinkScopedResourceResult> getPrivateLinkScopedResource(GetPrivateLinkScopedResourceArgs args) {
         return getPrivateLinkScopedResource(args, InvokeOptions.Empty);
     }
     /**
@@ -475,7 +894,23 @@ public final class InsightsFunctions {
      * API Version: 2019-10-17-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateLinkScopedResourceResult> getPrivateLinkScopedResource(GetPrivateLinkScopedResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateLinkScopedResourceResult> getPrivateLinkScopedResourcePlain(GetPrivateLinkScopedResourcePlainArgs args) {
+        return getPrivateLinkScopedResourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A private link scoped resource
+     * API Version: 2019-10-17-preview.
+     * 
+     */
+    public static Output<GetPrivateLinkScopedResourceResult> getPrivateLinkScopedResource(GetPrivateLinkScopedResourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getPrivateLinkScopedResource", TypeShape.of(GetPrivateLinkScopedResourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A private link scoped resource
+     * API Version: 2019-10-17-preview.
+     * 
+     */
+    public static CompletableFuture<GetPrivateLinkScopedResourceResult> getPrivateLinkScopedResourcePlain(GetPrivateLinkScopedResourcePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getPrivateLinkScopedResource", TypeShape.of(GetPrivateLinkScopedResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -483,7 +918,7 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetProactiveDetectionConfigurationResult> getProactiveDetectionConfiguration(GetProactiveDetectionConfigurationArgs args) {
+    public static Output<GetProactiveDetectionConfigurationResult> getProactiveDetectionConfiguration(GetProactiveDetectionConfigurationArgs args) {
         return getProactiveDetectionConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -491,7 +926,23 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetProactiveDetectionConfigurationResult> getProactiveDetectionConfiguration(GetProactiveDetectionConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProactiveDetectionConfigurationResult> getProactiveDetectionConfigurationPlain(GetProactiveDetectionConfigurationPlainArgs args) {
+        return getProactiveDetectionConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Properties that define a ProactiveDetection configuration.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static Output<GetProactiveDetectionConfigurationResult> getProactiveDetectionConfiguration(GetProactiveDetectionConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getProactiveDetectionConfiguration", TypeShape.of(GetProactiveDetectionConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Properties that define a ProactiveDetection configuration.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static CompletableFuture<GetProactiveDetectionConfigurationResult> getProactiveDetectionConfigurationPlain(GetProactiveDetectionConfigurationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getProactiveDetectionConfiguration", TypeShape.of(GetProactiveDetectionConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -499,7 +950,7 @@ public final class InsightsFunctions {
      * API Version: 2018-04-16.
      * 
      */
-    public static CompletableFuture<GetScheduledQueryRuleResult> getScheduledQueryRule(GetScheduledQueryRuleArgs args) {
+    public static Output<GetScheduledQueryRuleResult> getScheduledQueryRule(GetScheduledQueryRuleArgs args) {
         return getScheduledQueryRule(args, InvokeOptions.Empty);
     }
     /**
@@ -507,7 +958,23 @@ public final class InsightsFunctions {
      * API Version: 2018-04-16.
      * 
      */
-    public static CompletableFuture<GetScheduledQueryRuleResult> getScheduledQueryRule(GetScheduledQueryRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetScheduledQueryRuleResult> getScheduledQueryRulePlain(GetScheduledQueryRulePlainArgs args) {
+        return getScheduledQueryRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The Log Search Rule resource.
+     * API Version: 2018-04-16.
+     * 
+     */
+    public static Output<GetScheduledQueryRuleResult> getScheduledQueryRule(GetScheduledQueryRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getScheduledQueryRule", TypeShape.of(GetScheduledQueryRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Log Search Rule resource.
+     * API Version: 2018-04-16.
+     * 
+     */
+    public static CompletableFuture<GetScheduledQueryRuleResult> getScheduledQueryRulePlain(GetScheduledQueryRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getScheduledQueryRule", TypeShape.of(GetScheduledQueryRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -515,7 +982,7 @@ public final class InsightsFunctions {
      * API Version: 2017-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetSubscriptionDiagnosticSettingResult> getSubscriptionDiagnosticSetting(GetSubscriptionDiagnosticSettingArgs args) {
+    public static Output<GetSubscriptionDiagnosticSettingResult> getSubscriptionDiagnosticSetting(GetSubscriptionDiagnosticSettingArgs args) {
         return getSubscriptionDiagnosticSetting(args, InvokeOptions.Empty);
     }
     /**
@@ -523,7 +990,23 @@ public final class InsightsFunctions {
      * API Version: 2017-05-01-preview.
      * 
      */
-    public static CompletableFuture<GetSubscriptionDiagnosticSettingResult> getSubscriptionDiagnosticSetting(GetSubscriptionDiagnosticSettingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionDiagnosticSettingResult> getSubscriptionDiagnosticSettingPlain(GetSubscriptionDiagnosticSettingPlainArgs args) {
+        return getSubscriptionDiagnosticSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The subscription diagnostic setting resource.
+     * API Version: 2017-05-01-preview.
+     * 
+     */
+    public static Output<GetSubscriptionDiagnosticSettingResult> getSubscriptionDiagnosticSetting(GetSubscriptionDiagnosticSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getSubscriptionDiagnosticSetting", TypeShape.of(GetSubscriptionDiagnosticSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The subscription diagnostic setting resource.
+     * API Version: 2017-05-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionDiagnosticSettingResult> getSubscriptionDiagnosticSettingPlain(GetSubscriptionDiagnosticSettingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getSubscriptionDiagnosticSetting", TypeShape.of(GetSubscriptionDiagnosticSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -531,7 +1014,7 @@ public final class InsightsFunctions {
      * API Version: 2020-02-10-preview.
      * 
      */
-    public static CompletableFuture<GetTestResultFileResult> getTestResultFile(GetTestResultFileArgs args) {
+    public static Output<GetTestResultFileResult> getTestResultFile(GetTestResultFileArgs args) {
         return getTestResultFile(args, InvokeOptions.Empty);
     }
     /**
@@ -539,7 +1022,23 @@ public final class InsightsFunctions {
      * API Version: 2020-02-10-preview.
      * 
      */
-    public static CompletableFuture<GetTestResultFileResult> getTestResultFile(GetTestResultFileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTestResultFileResult> getTestResultFilePlain(GetTestResultFilePlainArgs args) {
+        return getTestResultFilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Test result.
+     * API Version: 2020-02-10-preview.
+     * 
+     */
+    public static Output<GetTestResultFileResult> getTestResultFile(GetTestResultFileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getTestResultFile", TypeShape.of(GetTestResultFileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Test result.
+     * API Version: 2020-02-10-preview.
+     * 
+     */
+    public static CompletableFuture<GetTestResultFileResult> getTestResultFilePlain(GetTestResultFilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getTestResultFile", TypeShape.of(GetTestResultFileResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -547,7 +1046,7 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetWebTestResult> getWebTest(GetWebTestArgs args) {
+    public static Output<GetWebTestResult> getWebTest(GetWebTestArgs args) {
         return getWebTest(args, InvokeOptions.Empty);
     }
     /**
@@ -555,7 +1054,23 @@ public final class InsightsFunctions {
      * API Version: 2015-05-01.
      * 
      */
-    public static CompletableFuture<GetWebTestResult> getWebTest(GetWebTestArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebTestResult> getWebTestPlain(GetWebTestPlainArgs args) {
+        return getWebTestPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An Application Insights web test definition.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static Output<GetWebTestResult> getWebTest(GetWebTestArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getWebTest", TypeShape.of(GetWebTestResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Application Insights web test definition.
+     * API Version: 2015-05-01.
+     * 
+     */
+    public static CompletableFuture<GetWebTestResult> getWebTestPlain(GetWebTestPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getWebTest", TypeShape.of(GetWebTestResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -563,7 +1078,7 @@ public final class InsightsFunctions {
      * API Version: 2020-10-20.
      * 
      */
-    public static CompletableFuture<GetWorkbookResult> getWorkbook(GetWorkbookArgs args) {
+    public static Output<GetWorkbookResult> getWorkbook(GetWorkbookArgs args) {
         return getWorkbook(args, InvokeOptions.Empty);
     }
     /**
@@ -571,7 +1086,23 @@ public final class InsightsFunctions {
      * API Version: 2020-10-20.
      * 
      */
-    public static CompletableFuture<GetWorkbookResult> getWorkbook(GetWorkbookArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkbookResult> getWorkbookPlain(GetWorkbookPlainArgs args) {
+        return getWorkbookPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An Application Insights workbook definition.
+     * API Version: 2020-10-20.
+     * 
+     */
+    public static Output<GetWorkbookResult> getWorkbook(GetWorkbookArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getWorkbook", TypeShape.of(GetWorkbookResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Application Insights workbook definition.
+     * API Version: 2020-10-20.
+     * 
+     */
+    public static CompletableFuture<GetWorkbookResult> getWorkbookPlain(GetWorkbookPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getWorkbook", TypeShape.of(GetWorkbookResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -579,7 +1110,7 @@ public final class InsightsFunctions {
      * API Version: 2019-10-17-preview.
      * 
      */
-    public static CompletableFuture<GetWorkbookTemplateResult> getWorkbookTemplate(GetWorkbookTemplateArgs args) {
+    public static Output<GetWorkbookTemplateResult> getWorkbookTemplate(GetWorkbookTemplateArgs args) {
         return getWorkbookTemplate(args, InvokeOptions.Empty);
     }
     /**
@@ -587,7 +1118,23 @@ public final class InsightsFunctions {
      * API Version: 2019-10-17-preview.
      * 
      */
-    public static CompletableFuture<GetWorkbookTemplateResult> getWorkbookTemplate(GetWorkbookTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkbookTemplateResult> getWorkbookTemplatePlain(GetWorkbookTemplatePlainArgs args) {
+        return getWorkbookTemplatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An Application Insights workbook template definition.
+     * API Version: 2019-10-17-preview.
+     * 
+     */
+    public static Output<GetWorkbookTemplateResult> getWorkbookTemplate(GetWorkbookTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getWorkbookTemplate", TypeShape.of(GetWorkbookTemplateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Application Insights workbook template definition.
+     * API Version: 2019-10-17-preview.
+     * 
+     */
+    public static CompletableFuture<GetWorkbookTemplateResult> getWorkbookTemplatePlain(GetWorkbookTemplatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getWorkbookTemplate", TypeShape.of(GetWorkbookTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -595,7 +1142,7 @@ public final class InsightsFunctions {
      * API Version: 2018-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetguestDiagnosticsSettingResult> getguestDiagnosticsSetting(GetguestDiagnosticsSettingArgs args) {
+    public static Output<GetguestDiagnosticsSettingResult> getguestDiagnosticsSetting(GetguestDiagnosticsSettingArgs args) {
         return getguestDiagnosticsSetting(args, InvokeOptions.Empty);
     }
     /**
@@ -603,7 +1150,23 @@ public final class InsightsFunctions {
      * API Version: 2018-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetguestDiagnosticsSettingResult> getguestDiagnosticsSetting(GetguestDiagnosticsSettingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetguestDiagnosticsSettingResult> getguestDiagnosticsSettingPlain(GetguestDiagnosticsSettingPlainArgs args) {
+        return getguestDiagnosticsSettingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Virtual machine guest diagnostics settings resource.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
+    public static Output<GetguestDiagnosticsSettingResult> getguestDiagnosticsSetting(GetguestDiagnosticsSettingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:getguestDiagnosticsSetting", TypeShape.of(GetguestDiagnosticsSettingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Virtual machine guest diagnostics settings resource.
+     * API Version: 2018-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetguestDiagnosticsSettingResult> getguestDiagnosticsSettingPlain(GetguestDiagnosticsSettingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getguestDiagnosticsSetting", TypeShape.of(GetguestDiagnosticsSettingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -611,7 +1174,7 @@ public final class InsightsFunctions {
      * API Version: 2017-10-01.
      * 
      */
-    public static CompletableFuture<ListEASubscriptionListMigrationDatePostResult> listEASubscriptionListMigrationDatePost() {
+    public static Output<ListEASubscriptionListMigrationDatePostResult> listEASubscriptionListMigrationDatePost() {
         return listEASubscriptionListMigrationDatePost(ListEASubscriptionListMigrationDatePostArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -619,7 +1182,15 @@ public final class InsightsFunctions {
      * API Version: 2017-10-01.
      * 
      */
-    public static CompletableFuture<ListEASubscriptionListMigrationDatePostResult> listEASubscriptionListMigrationDatePost(ListEASubscriptionListMigrationDatePostArgs args) {
+    public static CompletableFuture<ListEASubscriptionListMigrationDatePostResult> listEASubscriptionListMigrationDatePostPlain() {
+        return listEASubscriptionListMigrationDatePostPlain(ListEASubscriptionListMigrationDatePostPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Subscription migrate date information properties
+     * API Version: 2017-10-01.
+     * 
+     */
+    public static Output<ListEASubscriptionListMigrationDatePostResult> listEASubscriptionListMigrationDatePost(ListEASubscriptionListMigrationDatePostArgs args) {
         return listEASubscriptionListMigrationDatePost(args, InvokeOptions.Empty);
     }
     /**
@@ -627,7 +1198,23 @@ public final class InsightsFunctions {
      * API Version: 2017-10-01.
      * 
      */
-    public static CompletableFuture<ListEASubscriptionListMigrationDatePostResult> listEASubscriptionListMigrationDatePost(ListEASubscriptionListMigrationDatePostArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListEASubscriptionListMigrationDatePostResult> listEASubscriptionListMigrationDatePostPlain(ListEASubscriptionListMigrationDatePostPlainArgs args) {
+        return listEASubscriptionListMigrationDatePostPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Subscription migrate date information properties
+     * API Version: 2017-10-01.
+     * 
+     */
+    public static Output<ListEASubscriptionListMigrationDatePostResult> listEASubscriptionListMigrationDatePost(ListEASubscriptionListMigrationDatePostArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:insights:listEASubscriptionListMigrationDatePost", TypeShape.of(ListEASubscriptionListMigrationDatePostResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Subscription migrate date information properties
+     * API Version: 2017-10-01.
+     * 
+     */
+    public static CompletableFuture<ListEASubscriptionListMigrationDatePostResult> listEASubscriptionListMigrationDatePostPlain(ListEASubscriptionListMigrationDatePostPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:listEASubscriptionListMigrationDatePost", TypeShape.of(ListEASubscriptionListMigrationDatePostResult.class), args, Utilities.withVersion(options));
     }
 }

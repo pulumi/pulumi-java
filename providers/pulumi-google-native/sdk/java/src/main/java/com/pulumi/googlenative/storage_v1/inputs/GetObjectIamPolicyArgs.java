@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.storage_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetObjectIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetObjectIamPolicyArgs Empty = new GetObjectIamPolicyArgs();
 
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="generation")
-    private @Nullable String generation;
+    private @Nullable Output<String> generation;
 
-    public Optional<String> generation() {
+    public Optional<Output<String>> generation() {
         return Optional.ofNullable(this.generation);
     }
 
     @Import(name="object", required=true)
-    private String object;
+    private Output<String> object;
 
-    public String object() {
+    public Output<String> object() {
         return this.object;
     }
 
     @Import(name="userProject")
-    private @Nullable String userProject;
+    private @Nullable Output<String> userProject;
 
-    public Optional<String> userProject() {
+    public Optional<Output<String>> userProject() {
         return Optional.ofNullable(this.userProject);
     }
 
@@ -69,24 +70,40 @@ public final class GetObjectIamPolicyArgs extends com.pulumi.resources.InvokeArg
             $ = new GetObjectIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
-        public Builder generation(@Nullable String generation) {
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        public Builder generation(@Nullable Output<String> generation) {
             $.generation = generation;
             return this;
         }
 
-        public Builder object(String object) {
+        public Builder generation(String generation) {
+            return generation(Output.of(generation));
+        }
+
+        public Builder object(Output<String> object) {
             $.object = object;
             return this;
         }
 
-        public Builder userProject(@Nullable String userProject) {
+        public Builder object(String object) {
+            return object(Output.of(object));
+        }
+
+        public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
+        }
+
+        public Builder userProject(String userProject) {
+            return userProject(Output.of(userProject));
         }
 
         public GetObjectIamPolicyArgs build() {

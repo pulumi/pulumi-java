@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPartnerRegistrationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="partnerRegistrationName", required=true)
-    private String partnerRegistrationName;
+    private Output<String> partnerRegistrationName;
 
     /**
      * @return Name of the partner registration.
      * 
      */
-    public String partnerRegistrationName() {
+    public Output<String> partnerRegistrationName() {
         return this.partnerRegistrationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPartnerRegistrationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPartnerRegistrationArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder partnerRegistrationName(String partnerRegistrationName) {
+        public Builder partnerRegistrationName(Output<String> partnerRegistrationName) {
             $.partnerRegistrationName = partnerRegistrationName;
+            return this;
+        }
+
+        /**
+         * @param partnerRegistrationName Name of the partner registration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder partnerRegistrationName(String partnerRegistrationName) {
+            return partnerRegistrationName(Output.of(partnerRegistrationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPartnerRegistrationArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPartnerRegistrationArgs build() {

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetSensitiveDataModelsSensitiveColumnsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetSensitiveDataModelsSensitiveColumnsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="columnGroup")
-    private @Nullable String columnGroup;
+    private @Nullable Output<String> columnGroup;
 
     /**
      * @return A filter to return only the sensitive columns that belong to the specified column group.
      * 
      */
-    public Optional<String> columnGroup() {
+    public Optional<Output<String>> columnGroup() {
         return Optional.ofNullable(this.columnGroup);
     }
 
@@ -36,13 +37,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="columnNames")
-    private @Nullable List<String> columnNames;
+    private @Nullable Output<List<String>> columnNames;
 
     /**
      * @return A filter to return only a specific column based on column name.
      * 
      */
-    public Optional<List<String>> columnNames() {
+    public Optional<Output<List<String>>> columnNames() {
         return Optional.ofNullable(this.columnNames);
     }
 
@@ -51,20 +52,20 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="dataTypes")
-    private @Nullable List<String> dataTypes;
+    private @Nullable Output<List<String>> dataTypes;
 
     /**
      * @return A filter to return only the resources that match the specified data types.
      * 
      */
-    public Optional<List<String>> dataTypes() {
+    public Optional<Output<List<String>>> dataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSensitiveDataModelsSensitiveColumnsFilter> filters;
+    private @Nullable Output<List<GetSensitiveDataModelsSensitiveColumnsFilterArgs>> filters;
 
-    public Optional<List<GetSensitiveDataModelsSensitiveColumnsFilter>> filters() {
+    public Optional<Output<List<GetSensitiveDataModelsSensitiveColumnsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="objectTypes")
-    private @Nullable List<String> objectTypes;
+    private @Nullable Output<List<String>> objectTypes;
 
     /**
      * @return A filter to return only items related to a specific object type.
      * 
      */
-    public Optional<List<String>> objectTypes() {
+    public Optional<Output<List<String>>> objectTypes() {
         return Optional.ofNullable(this.objectTypes);
     }
 
@@ -88,13 +89,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="objects")
-    private @Nullable List<String> objects;
+    private @Nullable Output<List<String>> objects;
 
     /**
      * @return A filter to return only items related to a specific object name.
      * 
      */
-    public Optional<List<String>> objects() {
+    public Optional<Output<List<String>>> objects() {
         return Optional.ofNullable(this.objects);
     }
 
@@ -103,13 +104,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="parentColumnKeys")
-    private @Nullable List<String> parentColumnKeys;
+    private @Nullable Output<List<String>> parentColumnKeys;
 
     /**
      * @return A filter to return only the sensitive columns that are children of one of the columns identified by the specified keys.
      * 
      */
-    public Optional<List<String>> parentColumnKeys() {
+    public Optional<Output<List<String>>> parentColumnKeys() {
         return Optional.ofNullable(this.parentColumnKeys);
     }
 
@@ -118,13 +119,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="relationTypes")
-    private @Nullable List<String> relationTypes;
+    private @Nullable Output<List<String>> relationTypes;
 
     /**
      * @return A filter to return sensitive columns based on their relationship with their parent columns. If set to NONE, it returns the sensitive columns that do not have any parent. The response includes the parent columns as well as the independent columns that are not in any relationship. If set to APP_DEFINED, it returns all the child columns that have application-level (non-dictionary) relationship with their parents. If set to DB_DEFINED, it returns all the child columns that have database-level (dictionary-defined) relationship with their parents.
      * 
      */
-    public Optional<List<String>> relationTypes() {
+    public Optional<Output<List<String>>> relationTypes() {
         return Optional.ofNullable(this.relationTypes);
     }
 
@@ -133,13 +134,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="schemaNames")
-    private @Nullable List<String> schemaNames;
+    private @Nullable Output<List<String>> schemaNames;
 
     /**
      * @return A filter to return only items related to specific schema name.
      * 
      */
-    public Optional<List<String>> schemaNames() {
+    public Optional<Output<List<String>>> schemaNames() {
         return Optional.ofNullable(this.schemaNames);
     }
 
@@ -148,13 +149,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="sensitiveColumnLifecycleState")
-    private @Nullable String sensitiveColumnLifecycleState;
+    private @Nullable Output<String> sensitiveColumnLifecycleState;
 
     /**
      * @return Filters the sensitive column resources with the given lifecycle state values.
      * 
      */
-    public Optional<String> sensitiveColumnLifecycleState() {
+    public Optional<Output<String>> sensitiveColumnLifecycleState() {
         return Optional.ofNullable(this.sensitiveColumnLifecycleState);
     }
 
@@ -163,13 +164,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="sensitiveDataModelId", required=true)
-    private String sensitiveDataModelId;
+    private Output<String> sensitiveDataModelId;
 
     /**
      * @return The OCID of the sensitive data model.
      * 
      */
-    public String sensitiveDataModelId() {
+    public Output<String> sensitiveDataModelId() {
         return this.sensitiveDataModelId;
     }
 
@@ -178,13 +179,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="sensitiveTypeIds")
-    private @Nullable List<String> sensitiveTypeIds;
+    private @Nullable Output<List<String>> sensitiveTypeIds;
 
     /**
      * @return A filter to return only the sensitive columns that are associated with one of the sensitive types identified by the specified OCIDs.
      * 
      */
-    public Optional<List<String>> sensitiveTypeIds() {
+    public Optional<Output<List<String>>> sensitiveTypeIds() {
         return Optional.ofNullable(this.sensitiveTypeIds);
     }
 
@@ -193,13 +194,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="statuses")
-    private @Nullable List<String> statuses;
+    private @Nullable Output<List<String>> statuses;
 
     /**
      * @return A filter to return only the sensitive columns that match the specified status.
      * 
      */
-    public Optional<List<String>> statuses() {
+    public Optional<Output<List<String>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
 
@@ -208,13 +209,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private @Nullable String timeCreatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return only the resources that were created after the specified date and time, as defined by [RFC3339](https://tools.ietf.org/html/rfc3339). Using TimeCreatedGreaterThanOrEqualToQueryParam parameter retrieves all resources created after that date.
      * 
      */
-    public Optional<String> timeCreatedGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timeCreatedGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
     }
 
@@ -223,13 +224,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private @Nullable String timeCreatedLessThan;
+    private @Nullable Output<String> timeCreatedLessThan;
 
     /**
      * @return Search for resources that were created before a specific date. Specifying this parameter corresponding `timeCreatedLessThan` parameter will retrieve all resources created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Optional<String> timeCreatedLessThan() {
+    public Optional<Output<String>> timeCreatedLessThan() {
         return Optional.ofNullable(this.timeCreatedLessThan);
     }
 
@@ -238,13 +239,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="timeUpdatedGreaterThanOrEqualTo")
-    private @Nullable String timeUpdatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeUpdatedGreaterThanOrEqualTo;
 
     /**
      * @return Search for resources that were updated after a specific date. Specifying this parameter corresponding `timeUpdatedGreaterThanOrEqualTo` parameter will retrieve all resources updated after the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Optional<String> timeUpdatedGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timeUpdatedGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timeUpdatedGreaterThanOrEqualTo);
     }
 
@@ -253,13 +254,13 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
      * 
      */
     @Import(name="timeUpdatedLessThan")
-    private @Nullable String timeUpdatedLessThan;
+    private @Nullable Output<String> timeUpdatedLessThan;
 
     /**
      * @return Search for resources that were updated before a specific date. Specifying this parameter corresponding `timeUpdatedLessThan` parameter will retrieve all resources updated before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
      * 
      */
-    public Optional<String> timeUpdatedLessThan() {
+    public Optional<Output<String>> timeUpdatedLessThan() {
         return Optional.ofNullable(this.timeUpdatedLessThan);
     }
 
@@ -309,8 +310,29 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder columnGroup(@Nullable String columnGroup) {
+        public Builder columnGroup(@Nullable Output<String> columnGroup) {
             $.columnGroup = columnGroup;
+            return this;
+        }
+
+        /**
+         * @param columnGroup A filter to return only the sensitive columns that belong to the specified column group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder columnGroup(String columnGroup) {
+            return columnGroup(Output.of(columnGroup));
+        }
+
+        /**
+         * @param columnNames A filter to return only a specific column based on column name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder columnNames(@Nullable Output<List<String>> columnNames) {
+            $.columnNames = columnNames;
             return this;
         }
 
@@ -320,9 +342,8 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder columnNames(@Nullable List<String> columnNames) {
-            $.columnNames = columnNames;
-            return this;
+        public Builder columnNames(List<String> columnNames) {
+            return columnNames(Output.of(columnNames));
         }
 
         /**
@@ -341,9 +362,19 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder dataTypes(@Nullable List<String> dataTypes) {
+        public Builder dataTypes(@Nullable Output<List<String>> dataTypes) {
             $.dataTypes = dataTypes;
             return this;
+        }
+
+        /**
+         * @param dataTypes A filter to return only the resources that match the specified data types.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataTypes(List<String> dataTypes) {
+            return dataTypes(Output.of(dataTypes));
         }
 
         /**
@@ -356,12 +387,16 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
             return dataTypes(List.of(dataTypes));
         }
 
-        public Builder filters(@Nullable List<GetSensitiveDataModelsSensitiveColumnsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetSensitiveDataModelsSensitiveColumnsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSensitiveDataModelsSensitiveColumnsFilter... filters) {
+        public Builder filters(List<GetSensitiveDataModelsSensitiveColumnsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSensitiveDataModelsSensitiveColumnsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -371,9 +406,19 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder objectTypes(@Nullable List<String> objectTypes) {
+        public Builder objectTypes(@Nullable Output<List<String>> objectTypes) {
             $.objectTypes = objectTypes;
             return this;
+        }
+
+        /**
+         * @param objectTypes A filter to return only items related to a specific object type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectTypes(List<String> objectTypes) {
+            return objectTypes(Output.of(objectTypes));
         }
 
         /**
@@ -392,9 +437,19 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder objects(@Nullable List<String> objects) {
+        public Builder objects(@Nullable Output<List<String>> objects) {
             $.objects = objects;
             return this;
+        }
+
+        /**
+         * @param objects A filter to return only items related to a specific object name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objects(List<String> objects) {
+            return objects(Output.of(objects));
         }
 
         /**
@@ -413,9 +468,19 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder parentColumnKeys(@Nullable List<String> parentColumnKeys) {
+        public Builder parentColumnKeys(@Nullable Output<List<String>> parentColumnKeys) {
             $.parentColumnKeys = parentColumnKeys;
             return this;
+        }
+
+        /**
+         * @param parentColumnKeys A filter to return only the sensitive columns that are children of one of the columns identified by the specified keys.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentColumnKeys(List<String> parentColumnKeys) {
+            return parentColumnKeys(Output.of(parentColumnKeys));
         }
 
         /**
@@ -434,9 +499,19 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder relationTypes(@Nullable List<String> relationTypes) {
+        public Builder relationTypes(@Nullable Output<List<String>> relationTypes) {
             $.relationTypes = relationTypes;
             return this;
+        }
+
+        /**
+         * @param relationTypes A filter to return sensitive columns based on their relationship with their parent columns. If set to NONE, it returns the sensitive columns that do not have any parent. The response includes the parent columns as well as the independent columns that are not in any relationship. If set to APP_DEFINED, it returns all the child columns that have application-level (non-dictionary) relationship with their parents. If set to DB_DEFINED, it returns all the child columns that have database-level (dictionary-defined) relationship with their parents.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relationTypes(List<String> relationTypes) {
+            return relationTypes(Output.of(relationTypes));
         }
 
         /**
@@ -455,9 +530,19 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder schemaNames(@Nullable List<String> schemaNames) {
+        public Builder schemaNames(@Nullable Output<List<String>> schemaNames) {
             $.schemaNames = schemaNames;
             return this;
+        }
+
+        /**
+         * @param schemaNames A filter to return only items related to specific schema name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder schemaNames(List<String> schemaNames) {
+            return schemaNames(Output.of(schemaNames));
         }
 
         /**
@@ -476,8 +561,29 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder sensitiveColumnLifecycleState(@Nullable String sensitiveColumnLifecycleState) {
+        public Builder sensitiveColumnLifecycleState(@Nullable Output<String> sensitiveColumnLifecycleState) {
             $.sensitiveColumnLifecycleState = sensitiveColumnLifecycleState;
+            return this;
+        }
+
+        /**
+         * @param sensitiveColumnLifecycleState Filters the sensitive column resources with the given lifecycle state values.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensitiveColumnLifecycleState(String sensitiveColumnLifecycleState) {
+            return sensitiveColumnLifecycleState(Output.of(sensitiveColumnLifecycleState));
+        }
+
+        /**
+         * @param sensitiveDataModelId The OCID of the sensitive data model.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensitiveDataModelId(Output<String> sensitiveDataModelId) {
+            $.sensitiveDataModelId = sensitiveDataModelId;
             return this;
         }
 
@@ -488,7 +594,17 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * 
          */
         public Builder sensitiveDataModelId(String sensitiveDataModelId) {
-            $.sensitiveDataModelId = sensitiveDataModelId;
+            return sensitiveDataModelId(Output.of(sensitiveDataModelId));
+        }
+
+        /**
+         * @param sensitiveTypeIds A filter to return only the sensitive columns that are associated with one of the sensitive types identified by the specified OCIDs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensitiveTypeIds(@Nullable Output<List<String>> sensitiveTypeIds) {
+            $.sensitiveTypeIds = sensitiveTypeIds;
             return this;
         }
 
@@ -498,9 +614,8 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder sensitiveTypeIds(@Nullable List<String> sensitiveTypeIds) {
-            $.sensitiveTypeIds = sensitiveTypeIds;
-            return this;
+        public Builder sensitiveTypeIds(List<String> sensitiveTypeIds) {
+            return sensitiveTypeIds(Output.of(sensitiveTypeIds));
         }
 
         /**
@@ -519,9 +634,19 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable List<String> statuses) {
+        public Builder statuses(@Nullable Output<List<String>> statuses) {
             $.statuses = statuses;
             return this;
+        }
+
+        /**
+         * @param statuses A filter to return only the sensitive columns that match the specified status.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statuses(List<String> statuses) {
+            return statuses(Output.of(statuses));
         }
 
         /**
@@ -540,8 +665,29 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable Output<String> timeCreatedGreaterThanOrEqualTo) {
             $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
+            return this;
+        }
+
+        /**
+         * @param timeCreatedGreaterThanOrEqualTo A filter to return only the resources that were created after the specified date and time, as defined by [RFC3339](https://tools.ietf.org/html/rfc3339). Using TimeCreatedGreaterThanOrEqualToQueryParam parameter retrieves all resources created after that date.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedGreaterThanOrEqualTo(String timeCreatedGreaterThanOrEqualTo) {
+            return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeCreatedLessThan Search for resources that were created before a specific date. Specifying this parameter corresponding `timeCreatedLessThan` parameter will retrieve all resources created before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedLessThan(@Nullable Output<String> timeCreatedLessThan) {
+            $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
 
@@ -551,8 +697,18 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
-            $.timeCreatedLessThan = timeCreatedLessThan;
+        public Builder timeCreatedLessThan(String timeCreatedLessThan) {
+            return timeCreatedLessThan(Output.of(timeCreatedLessThan));
+        }
+
+        /**
+         * @param timeUpdatedGreaterThanOrEqualTo Search for resources that were updated after a specific date. Specifying this parameter corresponding `timeUpdatedGreaterThanOrEqualTo` parameter will retrieve all resources updated after the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeUpdatedGreaterThanOrEqualTo(@Nullable Output<String> timeUpdatedGreaterThanOrEqualTo) {
+            $.timeUpdatedGreaterThanOrEqualTo = timeUpdatedGreaterThanOrEqualTo;
             return this;
         }
 
@@ -562,8 +718,18 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder timeUpdatedGreaterThanOrEqualTo(@Nullable String timeUpdatedGreaterThanOrEqualTo) {
-            $.timeUpdatedGreaterThanOrEqualTo = timeUpdatedGreaterThanOrEqualTo;
+        public Builder timeUpdatedGreaterThanOrEqualTo(String timeUpdatedGreaterThanOrEqualTo) {
+            return timeUpdatedGreaterThanOrEqualTo(Output.of(timeUpdatedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeUpdatedLessThan Search for resources that were updated before a specific date. Specifying this parameter corresponding `timeUpdatedLessThan` parameter will retrieve all resources updated before the specified created date, in &#34;YYYY-MM-ddThh:mmZ&#34; format with a Z offset, as defined by RFC 3339.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeUpdatedLessThan(@Nullable Output<String> timeUpdatedLessThan) {
+            $.timeUpdatedLessThan = timeUpdatedLessThan;
             return this;
         }
 
@@ -573,9 +739,8 @@ public final class GetSensitiveDataModelsSensitiveColumnsArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder timeUpdatedLessThan(@Nullable String timeUpdatedLessThan) {
-            $.timeUpdatedLessThan = timeUpdatedLessThan;
-            return this;
+        public Builder timeUpdatedLessThan(String timeUpdatedLessThan) {
+            return timeUpdatedLessThan(Output.of(timeUpdatedLessThan));
         }
 
         public GetSensitiveDataModelsSensitiveColumnsArgs build() {

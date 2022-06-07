@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Sch.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServiceConnectorArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceConnectorId", required=true)
-    private String serviceConnectorId;
+    private Output<String> serviceConnectorId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the service connector.
      * 
      */
-    public String serviceConnectorId() {
+    public Output<String> serviceConnectorId() {
         return this.serviceConnectorId;
     }
 
@@ -57,9 +58,19 @@ public final class GetServiceConnectorArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder serviceConnectorId(String serviceConnectorId) {
+        public Builder serviceConnectorId(Output<String> serviceConnectorId) {
             $.serviceConnectorId = serviceConnectorId;
             return this;
+        }
+
+        /**
+         * @param serviceConnectorId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the service connector.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceConnectorId(String serviceConnectorId) {
+            return serviceConnectorId(Output.of(serviceConnectorId));
         }
 
         public GetServiceConnectorArgs build() {

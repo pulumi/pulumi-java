@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends com.pulumi.reso
      * 
      */
     @Import(name="backendAddressPoolName", required=true)
-    private String backendAddressPoolName;
+    private Output<String> backendAddressPoolName;
 
     /**
      * @return The name of the backend address pool.
      * 
      */
-    public String backendAddressPoolName() {
+    public Output<String> backendAddressPoolName() {
         return this.backendAddressPoolName;
     }
 
@@ -32,13 +33,13 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends com.pulumi.reso
      * 
      */
     @Import(name="loadBalancerName", required=true)
-    private String loadBalancerName;
+    private Output<String> loadBalancerName;
 
     /**
      * @return The name of the load balancer.
      * 
      */
-    public String loadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -47,13 +48,13 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder backendAddressPoolName(String backendAddressPoolName) {
+        public Builder backendAddressPoolName(Output<String> backendAddressPoolName) {
             $.backendAddressPoolName = backendAddressPoolName;
+            return this;
+        }
+
+        /**
+         * @param backendAddressPoolName The name of the backend address pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backendAddressPoolName(String backendAddressPoolName) {
+            return backendAddressPoolName(Output.of(backendAddressPoolName));
+        }
+
+        /**
+         * @param loadBalancerName The name of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerName(Output<String> loadBalancerName) {
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends com.pulumi.reso
          * 
          */
         public Builder loadBalancerName(String loadBalancerName) {
-            $.loadBalancerName = loadBalancerName;
+            return loadBalancerName(Output.of(loadBalancerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends com.pulumi.reso
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetLoadBalancerBackendAddressPoolArgs build() {

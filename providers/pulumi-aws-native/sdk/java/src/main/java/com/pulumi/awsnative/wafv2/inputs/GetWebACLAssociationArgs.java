@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.wafv2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetWebACLAssociationArgs extends com.pulumi.resources.InvokeA
     public static final GetWebACLAssociationArgs Empty = new GetWebACLAssociationArgs();
 
     @Import(name="resourceArn", required=true)
-    private String resourceArn;
+    private Output<String> resourceArn;
 
-    public String resourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
     @Import(name="webACLArn", required=true)
-    private String webACLArn;
+    private Output<String> webACLArn;
 
-    public String webACLArn() {
+    public Output<String> webACLArn() {
         return this.webACLArn;
     }
 
@@ -51,14 +52,22 @@ public final class GetWebACLAssociationArgs extends com.pulumi.resources.InvokeA
             $ = new GetWebACLAssociationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder resourceArn(String resourceArn) {
+        public Builder resourceArn(Output<String> resourceArn) {
             $.resourceArn = resourceArn;
             return this;
         }
 
-        public Builder webACLArn(String webACLArn) {
+        public Builder resourceArn(String resourceArn) {
+            return resourceArn(Output.of(resourceArn));
+        }
+
+        public Builder webACLArn(Output<String> webACLArn) {
             $.webACLArn = webACLArn;
             return this;
+        }
+
+        public Builder webACLArn(String webACLArn) {
+            return webACLArn(Output.of(webACLArn));
         }
 
         public GetWebACLAssociationArgs build() {

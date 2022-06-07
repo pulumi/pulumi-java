@@ -3,52 +3,96 @@
 
 package com.pulumi.oci.Identity;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Identity.inputs.GetAllowedDomainLicenseTypesArgs;
+import com.pulumi.oci.Identity.inputs.GetAllowedDomainLicenseTypesPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetApiKeysArgs;
+import com.pulumi.oci.Identity.inputs.GetApiKeysPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetAuthTokensArgs;
+import com.pulumi.oci.Identity.inputs.GetAuthTokensPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetAuthenticationPolicyArgs;
+import com.pulumi.oci.Identity.inputs.GetAuthenticationPolicyPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetAvailabilityDomainArgs;
+import com.pulumi.oci.Identity.inputs.GetAvailabilityDomainPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetAvailabilityDomainsArgs;
+import com.pulumi.oci.Identity.inputs.GetAvailabilityDomainsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetCompartmentArgs;
+import com.pulumi.oci.Identity.inputs.GetCompartmentPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetCompartmentsArgs;
+import com.pulumi.oci.Identity.inputs.GetCompartmentsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetCostTrackingTagsArgs;
+import com.pulumi.oci.Identity.inputs.GetCostTrackingTagsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetCustomerSecretKeysArgs;
+import com.pulumi.oci.Identity.inputs.GetCustomerSecretKeysPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetDbCredentialsArgs;
+import com.pulumi.oci.Identity.inputs.GetDbCredentialsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetDomainArgs;
+import com.pulumi.oci.Identity.inputs.GetDomainPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetDomainsArgs;
+import com.pulumi.oci.Identity.inputs.GetDomainsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetDynamicGroupsArgs;
+import com.pulumi.oci.Identity.inputs.GetDynamicGroupsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetFaultDomainsArgs;
+import com.pulumi.oci.Identity.inputs.GetFaultDomainsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetGroupArgs;
+import com.pulumi.oci.Identity.inputs.GetGroupPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetGroupsArgs;
+import com.pulumi.oci.Identity.inputs.GetGroupsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetIamWorkRequestArgs;
 import com.pulumi.oci.Identity.inputs.GetIamWorkRequestErrorsArgs;
+import com.pulumi.oci.Identity.inputs.GetIamWorkRequestErrorsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetIamWorkRequestLogsArgs;
+import com.pulumi.oci.Identity.inputs.GetIamWorkRequestLogsPlainArgs;
+import com.pulumi.oci.Identity.inputs.GetIamWorkRequestPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetIamWorkRequestsArgs;
+import com.pulumi.oci.Identity.inputs.GetIamWorkRequestsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetIdentityProviderGroupsArgs;
+import com.pulumi.oci.Identity.inputs.GetIdentityProviderGroupsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetIdentityProvidersArgs;
+import com.pulumi.oci.Identity.inputs.GetIdentityProvidersPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetIdpGroupMappingsArgs;
+import com.pulumi.oci.Identity.inputs.GetIdpGroupMappingsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetNetworkSourceArgs;
+import com.pulumi.oci.Identity.inputs.GetNetworkSourcePlainArgs;
 import com.pulumi.oci.Identity.inputs.GetNetworkSourcesArgs;
+import com.pulumi.oci.Identity.inputs.GetNetworkSourcesPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetPoliciesArgs;
+import com.pulumi.oci.Identity.inputs.GetPoliciesPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetRegionSubscriptionsArgs;
+import com.pulumi.oci.Identity.inputs.GetRegionSubscriptionsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetRegionsArgs;
+import com.pulumi.oci.Identity.inputs.GetRegionsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetSmtpCredentialsArgs;
+import com.pulumi.oci.Identity.inputs.GetSmtpCredentialsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetSwiftPasswordsArgs;
+import com.pulumi.oci.Identity.inputs.GetSwiftPasswordsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetTagArgs;
 import com.pulumi.oci.Identity.inputs.GetTagDefaultArgs;
+import com.pulumi.oci.Identity.inputs.GetTagDefaultPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetTagDefaultsArgs;
+import com.pulumi.oci.Identity.inputs.GetTagDefaultsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetTagNamespacesArgs;
+import com.pulumi.oci.Identity.inputs.GetTagNamespacesPlainArgs;
+import com.pulumi.oci.Identity.inputs.GetTagPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetTagStandardTagNamespaceTemplateArgs;
+import com.pulumi.oci.Identity.inputs.GetTagStandardTagNamespaceTemplatePlainArgs;
 import com.pulumi.oci.Identity.inputs.GetTagStandardTagNamespaceTemplatesArgs;
+import com.pulumi.oci.Identity.inputs.GetTagStandardTagNamespaceTemplatesPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetTagsArgs;
+import com.pulumi.oci.Identity.inputs.GetTagsPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetTenancyArgs;
+import com.pulumi.oci.Identity.inputs.GetTenancyPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetUiPasswordArgs;
+import com.pulumi.oci.Identity.inputs.GetUiPasswordPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetUserArgs;
 import com.pulumi.oci.Identity.inputs.GetUserGroupMembershipsArgs;
+import com.pulumi.oci.Identity.inputs.GetUserGroupMembershipsPlainArgs;
+import com.pulumi.oci.Identity.inputs.GetUserPlainArgs;
 import com.pulumi.oci.Identity.inputs.GetUsersArgs;
+import com.pulumi.oci.Identity.inputs.GetUsersPlainArgs;
 import com.pulumi.oci.Identity.outputs.GetAllowedDomainLicenseTypesResult;
 import com.pulumi.oci.Identity.outputs.GetApiKeysResult;
 import com.pulumi.oci.Identity.outputs.GetAuthTokensResult;
@@ -109,7 +153,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAllowedDomainLicenseTypesResult> getAllowedDomainLicenseTypes() {
+    public static Output<GetAllowedDomainLicenseTypesResult> getAllowedDomainLicenseTypes() {
         return getAllowedDomainLicenseTypes(GetAllowedDomainLicenseTypesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -125,7 +169,23 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAllowedDomainLicenseTypesResult> getAllowedDomainLicenseTypes(GetAllowedDomainLicenseTypesArgs args) {
+    public static CompletableFuture<GetAllowedDomainLicenseTypesResult> getAllowedDomainLicenseTypesPlain() {
+        return getAllowedDomainLicenseTypesPlain(GetAllowedDomainLicenseTypesPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Allowed Domain License Types in Oracle Cloud Infrastructure Identity service.
+     * 
+     * List the allowed domain license types supported by Oracle Cloud Infrastructure If {@code currentLicenseTypeName} provided, returns allowed license types a domain with the specified license type name can migrate to.
+     * If {@code name} is provided, it filters and returns resources that match the given license type name.
+     * Otherwise, returns all valid license types that are currently supported.
+     * 
+     * - If license type details are retrieved sucessfully, return 202 ACCEPTED.
+     * - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetAllowedDomainLicenseTypesResult> getAllowedDomainLicenseTypes(GetAllowedDomainLicenseTypesArgs args) {
         return getAllowedDomainLicenseTypes(args, InvokeOptions.Empty);
     }
     /**
@@ -141,7 +201,39 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAllowedDomainLicenseTypesResult> getAllowedDomainLicenseTypes(GetAllowedDomainLicenseTypesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAllowedDomainLicenseTypesResult> getAllowedDomainLicenseTypesPlain(GetAllowedDomainLicenseTypesPlainArgs args) {
+        return getAllowedDomainLicenseTypesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Allowed Domain License Types in Oracle Cloud Infrastructure Identity service.
+     * 
+     * List the allowed domain license types supported by Oracle Cloud Infrastructure If {@code currentLicenseTypeName} provided, returns allowed license types a domain with the specified license type name can migrate to.
+     * If {@code name} is provided, it filters and returns resources that match the given license type name.
+     * Otherwise, returns all valid license types that are currently supported.
+     * 
+     * - If license type details are retrieved sucessfully, return 202 ACCEPTED.
+     * - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetAllowedDomainLicenseTypesResult> getAllowedDomainLicenseTypes(GetAllowedDomainLicenseTypesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getAllowedDomainLicenseTypes:getAllowedDomainLicenseTypes", TypeShape.of(GetAllowedDomainLicenseTypesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Allowed Domain License Types in Oracle Cloud Infrastructure Identity service.
+     * 
+     * List the allowed domain license types supported by Oracle Cloud Infrastructure If {@code currentLicenseTypeName} provided, returns allowed license types a domain with the specified license type name can migrate to.
+     * If {@code name} is provided, it filters and returns resources that match the given license type name.
+     * Otherwise, returns all valid license types that are currently supported.
+     * 
+     * - If license type details are retrieved sucessfully, return 202 ACCEPTED.
+     * - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAllowedDomainLicenseTypesResult> getAllowedDomainLicenseTypesPlain(GetAllowedDomainLicenseTypesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getAllowedDomainLicenseTypes:getAllowedDomainLicenseTypes", TypeShape.of(GetAllowedDomainLicenseTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -155,7 +247,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiKeysResult> getApiKeys(GetApiKeysArgs args) {
+    public static Output<GetApiKeysResult> getApiKeys(GetApiKeysArgs args) {
         return getApiKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -169,7 +261,35 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiKeysResult> getApiKeys(GetApiKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiKeysResult> getApiKeysPlain(GetApiKeysPlainArgs args) {
+        return getApiKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Api Keys in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the API signing keys for the specified user. A user can have a maximum of three keys.
+     * 
+     * Every user has permission to use this API call for *their own user ID*.  An administrator in your
+     * organization does not need to write a policy to give users this ability.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetApiKeysResult> getApiKeys(GetApiKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getApiKeys:getApiKeys", TypeShape.of(GetApiKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Api Keys in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the API signing keys for the specified user. A user can have a maximum of three keys.
+     * 
+     * Every user has permission to use this API call for *their own user ID*.  An administrator in your
+     * organization does not need to write a policy to give users this ability.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetApiKeysResult> getApiKeysPlain(GetApiKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getApiKeys:getApiKeys", TypeShape.of(GetApiKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -181,7 +301,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuthTokensResult> getAuthTokens(GetAuthTokensArgs args) {
+    public static Output<GetAuthTokensResult> getAuthTokens(GetAuthTokensArgs args) {
         return getAuthTokens(args, InvokeOptions.Empty);
     }
     /**
@@ -193,7 +313,31 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuthTokensResult> getAuthTokens(GetAuthTokensArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAuthTokensResult> getAuthTokensPlain(GetAuthTokensPlainArgs args) {
+        return getAuthTokensPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Auth Tokens in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the auth tokens for the specified user. The returned object contains the token&#39;s OCID, but not
+     * the token itself. The actual token is returned only upon creation.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetAuthTokensResult> getAuthTokens(GetAuthTokensArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getAuthTokens:getAuthTokens", TypeShape.of(GetAuthTokensResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Auth Tokens in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the auth tokens for the specified user. The returned object contains the token&#39;s OCID, but not
+     * the token itself. The actual token is returned only upon creation.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAuthTokensResult> getAuthTokensPlain(GetAuthTokensPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getAuthTokens:getAuthTokens", TypeShape.of(GetAuthTokensResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -205,7 +349,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuthenticationPolicyResult> getAuthenticationPolicy(GetAuthenticationPolicyArgs args) {
+    public static Output<GetAuthenticationPolicyResult> getAuthenticationPolicy(GetAuthenticationPolicyArgs args) {
         return getAuthenticationPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -217,7 +361,31 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAuthenticationPolicyResult> getAuthenticationPolicy(GetAuthenticationPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAuthenticationPolicyResult> getAuthenticationPolicyPlain(GetAuthenticationPolicyPlainArgs args) {
+        return getAuthenticationPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Authentication Policy resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the authentication policy for the given tenancy. You must specify your tenant’s OCID as the value for
+     * the compartment ID (remember that the tenancy is simply the root compartment).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetAuthenticationPolicyResult> getAuthenticationPolicy(GetAuthenticationPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getAuthenticationPolicy:getAuthenticationPolicy", TypeShape.of(GetAuthenticationPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Authentication Policy resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the authentication policy for the given tenancy. You must specify your tenant’s OCID as the value for
+     * the compartment ID (remember that the tenancy is simply the root compartment).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAuthenticationPolicyResult> getAuthenticationPolicyPlain(GetAuthenticationPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getAuthenticationPolicy:getAuthenticationPolicy", TypeShape.of(GetAuthenticationPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -226,7 +394,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAvailabilityDomainResult> getAvailabilityDomain(GetAvailabilityDomainArgs args) {
+    public static Output<GetAvailabilityDomainResult> getAvailabilityDomain(GetAvailabilityDomainArgs args) {
         return getAvailabilityDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -235,7 +403,25 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAvailabilityDomainResult> getAvailabilityDomain(GetAvailabilityDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAvailabilityDomainResult> getAvailabilityDomainPlain(GetAvailabilityDomainPlainArgs args) {
+        return getAvailabilityDomainPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the details of a single Availability Domain in Oracle Cloud Infrastructure Identity service.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetAvailabilityDomainResult> getAvailabilityDomain(GetAvailabilityDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getAvailabilityDomain:getAvailabilityDomain", TypeShape.of(GetAvailabilityDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the details of a single Availability Domain in Oracle Cloud Infrastructure Identity service.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAvailabilityDomainResult> getAvailabilityDomainPlain(GetAvailabilityDomainPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getAvailabilityDomain:getAvailabilityDomain", TypeShape.of(GetAvailabilityDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -250,7 +436,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAvailabilityDomainsResult> getAvailabilityDomains(GetAvailabilityDomainsArgs args) {
+    public static Output<GetAvailabilityDomainsResult> getAvailabilityDomains(GetAvailabilityDomainsArgs args) {
         return getAvailabilityDomains(args, InvokeOptions.Empty);
     }
     /**
@@ -265,7 +451,37 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAvailabilityDomainsResult> getAvailabilityDomains(GetAvailabilityDomainsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAvailabilityDomainsResult> getAvailabilityDomainsPlain(GetAvailabilityDomainsPlainArgs args) {
+        return getAvailabilityDomainsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Availability Domains in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the availability domains in your tenancy. Specify the OCID of either the tenancy or another
+     * of your compartments as the value for the compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * Note that the order of the results returned can change if availability domains are added or removed; therefore, do not
+     * create a dependency on the list order.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetAvailabilityDomainsResult> getAvailabilityDomains(GetAvailabilityDomainsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getAvailabilityDomains:getAvailabilityDomains", TypeShape.of(GetAvailabilityDomainsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Availability Domains in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the availability domains in your tenancy. Specify the OCID of either the tenancy or another
+     * of your compartments as the value for the compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * Note that the order of the results returned can change if availability domains are added or removed; therefore, do not
+     * create a dependency on the list order.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAvailabilityDomainsResult> getAvailabilityDomainsPlain(GetAvailabilityDomainsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getAvailabilityDomains:getAvailabilityDomains", TypeShape.of(GetAvailabilityDomainsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -283,7 +499,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCompartmentResult> getCompartment(GetCompartmentArgs args) {
+    public static Output<GetCompartmentResult> getCompartment(GetCompartmentArgs args) {
         return getCompartment(args, InvokeOptions.Empty);
     }
     /**
@@ -301,7 +517,43 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCompartmentResult> getCompartment(GetCompartmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCompartmentResult> getCompartmentPlain(GetCompartmentPlainArgs args) {
+        return getCompartmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Compartment resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified compartment&#39;s information.
+     * 
+     * This operation does not return a list of all the resources inside the compartment. There is no single
+     * API operation that does that. Compartments can contain multiple types of resources (instances, block
+     * storage volumes, etc.). To find out what&#39;s in a compartment, you must call the &#34;List&#34; operation for
+     * each resource type and specify the compartment&#39;s OCID as a query parameter in the request. For example,
+     * call the [ListInstances](https://docs.cloud.oracle.com/iaas/api/#/en/iaas/20160918/Instance/ListInstances) operation in the Cloud Compute
+     * Service or the [ListVolumes](https://docs.cloud.oracle.com/iaas/api/#/en/iaas/20160918/Volume/ListVolumes) operation in Cloud Block Storage.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetCompartmentResult> getCompartment(GetCompartmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getCompartment:getCompartment", TypeShape.of(GetCompartmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Compartment resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified compartment&#39;s information.
+     * 
+     * This operation does not return a list of all the resources inside the compartment. There is no single
+     * API operation that does that. Compartments can contain multiple types of resources (instances, block
+     * storage volumes, etc.). To find out what&#39;s in a compartment, you must call the &#34;List&#34; operation for
+     * each resource type and specify the compartment&#39;s OCID as a query parameter in the request. For example,
+     * call the [ListInstances](https://docs.cloud.oracle.com/iaas/api/#/en/iaas/20160918/Instance/ListInstances) operation in the Cloud Compute
+     * Service or the [ListVolumes](https://docs.cloud.oracle.com/iaas/api/#/en/iaas/20160918/Volume/ListVolumes) operation in Cloud Block Storage.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCompartmentResult> getCompartmentPlain(GetCompartmentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getCompartment:getCompartment", TypeShape.of(GetCompartmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -329,7 +581,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCompartmentsResult> getCompartments(GetCompartmentsArgs args) {
+    public static Output<GetCompartmentsResult> getCompartments(GetCompartmentsArgs args) {
         return getCompartments(args, InvokeOptions.Empty);
     }
     /**
@@ -357,7 +609,63 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCompartmentsResult> getCompartments(GetCompartmentsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCompartmentsResult> getCompartmentsPlain(GetCompartmentsPlainArgs args) {
+        return getCompartmentsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Compartments in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the compartments in a specified compartment. The members of the list
+     * returned depends on the values set for several parameters.
+     * 
+     * With the exception of the tenancy (root compartment), the ListCompartments operation
+     * returns only the first-level child compartments in the parent compartment specified in
+     * `compartmentId`. The list does not include any subcompartments of the child
+     * compartments (grandchildren).
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (the resource can be in a subcompartment).
+     * 
+     * The parameter `compartmentIdInSubtree` applies only when you perform ListCompartments on the
+     * tenancy (root compartment). When set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ANY.
+     * 
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetCompartmentsResult> getCompartments(GetCompartmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getCompartments:getCompartments", TypeShape.of(GetCompartmentsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Compartments in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the compartments in a specified compartment. The members of the list
+     * returned depends on the values set for several parameters.
+     * 
+     * With the exception of the tenancy (root compartment), the ListCompartments operation
+     * returns only the first-level child compartments in the parent compartment specified in
+     * `compartmentId`. The list does not include any subcompartments of the child
+     * compartments (grandchildren).
+     * 
+     * The parameter `accessLevel` specifies whether to return only those compartments for which the
+     * requestor has INSPECT permissions on at least one resource directly
+     * or indirectly (the resource can be in a subcompartment).
+     * 
+     * The parameter `compartmentIdInSubtree` applies only when you perform ListCompartments on the
+     * tenancy (root compartment). When set to true, the entire hierarchy of compartments can be returned.
+     * To get a full list of all compartments and subcompartments in the tenancy (root compartment),
+     * set the parameter `compartmentIdInSubtree` to true and `accessLevel` to ANY.
+     * 
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCompartmentsResult> getCompartmentsPlain(GetCompartmentsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getCompartments:getCompartments", TypeShape.of(GetCompartmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -369,7 +677,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCostTrackingTagsResult> getCostTrackingTags(GetCostTrackingTagsArgs args) {
+    public static Output<GetCostTrackingTagsResult> getCostTrackingTags(GetCostTrackingTagsArgs args) {
         return getCostTrackingTags(args, InvokeOptions.Empty);
     }
     /**
@@ -381,7 +689,31 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCostTrackingTagsResult> getCostTrackingTags(GetCostTrackingTagsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCostTrackingTagsResult> getCostTrackingTagsPlain(GetCostTrackingTagsPlainArgs args) {
+        return getCostTrackingTagsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Cost Tracking Tags in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists all the tags enabled for cost-tracking in the specified tenancy. For information about
+     * cost-tracking tags, see [Using Cost-tracking Tags](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/taggingoverview.htm#costs).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetCostTrackingTagsResult> getCostTrackingTags(GetCostTrackingTagsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getCostTrackingTags:getCostTrackingTags", TypeShape.of(GetCostTrackingTagsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Cost Tracking Tags in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists all the tags enabled for cost-tracking in the specified tenancy. For information about
+     * cost-tracking tags, see [Using Cost-tracking Tags](https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/taggingoverview.htm#costs).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCostTrackingTagsResult> getCostTrackingTagsPlain(GetCostTrackingTagsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getCostTrackingTags:getCostTrackingTags", TypeShape.of(GetCostTrackingTagsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -393,7 +725,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCustomerSecretKeysResult> getCustomerSecretKeys(GetCustomerSecretKeysArgs args) {
+    public static Output<GetCustomerSecretKeysResult> getCustomerSecretKeys(GetCustomerSecretKeysArgs args) {
         return getCustomerSecretKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -405,7 +737,31 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCustomerSecretKeysResult> getCustomerSecretKeys(GetCustomerSecretKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomerSecretKeysResult> getCustomerSecretKeysPlain(GetCustomerSecretKeysPlainArgs args) {
+        return getCustomerSecretKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Customer Secret Keys in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the secret keys for the specified user. The returned object contains the secret key&#39;s OCID, but not
+     * the secret key itself. The actual secret key is returned only upon creation.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetCustomerSecretKeysResult> getCustomerSecretKeys(GetCustomerSecretKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getCustomerSecretKeys:getCustomerSecretKeys", TypeShape.of(GetCustomerSecretKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Customer Secret Keys in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the secret keys for the specified user. The returned object contains the secret key&#39;s OCID, but not
+     * the secret key itself. The actual secret key is returned only upon creation.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCustomerSecretKeysResult> getCustomerSecretKeysPlain(GetCustomerSecretKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getCustomerSecretKeys:getCustomerSecretKeys", TypeShape.of(GetCustomerSecretKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -416,7 +772,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDbCredentialsResult> getDbCredentials(GetDbCredentialsArgs args) {
+    public static Output<GetDbCredentialsResult> getDbCredentials(GetDbCredentialsArgs args) {
         return getDbCredentials(args, InvokeOptions.Empty);
     }
     /**
@@ -427,7 +783,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDbCredentialsResult> getDbCredentials(GetDbCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDbCredentialsResult> getDbCredentialsPlain(GetDbCredentialsPlainArgs args) {
+        return getDbCredentialsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Db Credentials in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the DB credentials for the specified user. The returned object contains the credential&#39;s OCID
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetDbCredentialsResult> getDbCredentials(GetDbCredentialsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getDbCredentials:getDbCredentials", TypeShape.of(GetDbCredentialsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Db Credentials in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the DB credentials for the specified user. The returned object contains the credential&#39;s OCID
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDbCredentialsResult> getDbCredentialsPlain(GetDbCredentialsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getDbCredentials:getDbCredentials", TypeShape.of(GetDbCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -441,7 +819,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -455,7 +833,35 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args) {
+        return getDomainPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Domain resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Get the specified domain&#39;s information.
+     * 
+     * - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
+     * - If any internal error occurs, returns 500 INTERNAL SERVER ERROR.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getDomain:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Domain resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Get the specified domain&#39;s information.
+     * 
+     * - If the domain doesn&#39;t exists, returns 404 NOT FOUND.
+     * - If any internal error occurs, returns 500 INTERNAL SERVER ERROR.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getDomain:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -467,7 +873,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDomainsResult> getDomains(GetDomainsArgs args) {
+    public static Output<GetDomainsResult> getDomains(GetDomainsArgs args) {
         return getDomains(args, InvokeOptions.Empty);
     }
     /**
@@ -479,7 +885,31 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDomainsResult> getDomains(GetDomainsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainsResult> getDomainsPlain(GetDomainsPlainArgs args) {
+        return getDomainsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Domains in Oracle Cloud Infrastructure Identity service.
+     * 
+     * List all domains that are homed or have a replica region in current region.
+     * - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetDomainsResult> getDomains(GetDomainsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getDomains:getDomains", TypeShape.of(GetDomainsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Domains in Oracle Cloud Infrastructure Identity service.
+     * 
+     * List all domains that are homed or have a replica region in current region.
+     * - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDomainsResult> getDomainsPlain(GetDomainsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getDomains:getDomains", TypeShape.of(GetDomainsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -492,7 +922,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDynamicGroupsResult> getDynamicGroups(GetDynamicGroupsArgs args) {
+    public static Output<GetDynamicGroupsResult> getDynamicGroups(GetDynamicGroupsArgs args) {
         return getDynamicGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -505,7 +935,33 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDynamicGroupsResult> getDynamicGroups(GetDynamicGroupsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDynamicGroupsResult> getDynamicGroupsPlain(GetDynamicGroupsPlainArgs args) {
+        return getDynamicGroupsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Dynamic Groups in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the dynamic groups in your tenancy. You must specify your tenancy&#39;s OCID as the value for
+     * the compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetDynamicGroupsResult> getDynamicGroups(GetDynamicGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getDynamicGroups:getDynamicGroups", TypeShape.of(GetDynamicGroupsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Dynamic Groups in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the dynamic groups in your tenancy. You must specify your tenancy&#39;s OCID as the value for
+     * the compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDynamicGroupsResult> getDynamicGroupsPlain(GetDynamicGroupsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getDynamicGroups:getDynamicGroups", TypeShape.of(GetDynamicGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -518,7 +974,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFaultDomainsResult> getFaultDomains(GetFaultDomainsArgs args) {
+    public static Output<GetFaultDomainsResult> getFaultDomains(GetFaultDomainsArgs args) {
         return getFaultDomains(args, InvokeOptions.Empty);
     }
     /**
@@ -531,7 +987,33 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetFaultDomainsResult> getFaultDomains(GetFaultDomainsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFaultDomainsResult> getFaultDomainsPlain(GetFaultDomainsPlainArgs args) {
+        return getFaultDomainsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Fault Domains in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the Fault Domains in your tenancy. Specify the OCID of either the tenancy or another
+     * of your compartments as the value for the compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetFaultDomainsResult> getFaultDomains(GetFaultDomainsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getFaultDomains:getFaultDomains", TypeShape.of(GetFaultDomainsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Fault Domains in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the Fault Domains in your tenancy. Specify the OCID of either the tenancy or another
+     * of your compartments as the value for the compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetFaultDomainsResult> getFaultDomainsPlain(GetFaultDomainsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getFaultDomains:getFaultDomains", TypeShape.of(GetFaultDomainsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -546,7 +1028,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -561,7 +1043,37 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGroupResult> getGroupPlain(GetGroupPlainArgs args) {
+        return getGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Group resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified group&#39;s information.
+     * 
+     * This operation does not return a list of all the users in the group. To do that, use
+     * [ListUserGroupMemberships](https://docs.cloud.oracle.com/iaas/api/#/en/identity/20160918/UserGroupMembership/ListUserGroupMemberships) and
+     * provide the group&#39;s OCID as a query parameter in the request.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Group resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified group&#39;s information.
+     * 
+     * This operation does not return a list of all the users in the group. To do that, use
+     * [ListUserGroupMemberships](https://docs.cloud.oracle.com/iaas/api/#/en/identity/20160918/UserGroupMembership/ListUserGroupMemberships) and
+     * provide the group&#39;s OCID as a query parameter in the request.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetGroupResult> getGroupPlain(GetGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -574,7 +1086,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args) {
+    public static Output<GetGroupsResult> getGroups(GetGroupsArgs args) {
         return getGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -587,7 +1099,33 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGroupsResult> getGroupsPlain(GetGroupsPlainArgs args) {
+        return getGroupsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Groups in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the groups in your tenancy. You must specify your tenancy&#39;s OCID as the value for
+     * the compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetGroupsResult> getGroups(GetGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getGroups:getGroups", TypeShape.of(GetGroupsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Groups in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the groups in your tenancy. You must specify your tenancy&#39;s OCID as the value for
+     * the compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetGroupsResult> getGroupsPlain(GetGroupsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getGroups:getGroups", TypeShape.of(GetGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -602,7 +1140,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIamWorkRequestResult> getIamWorkRequest(GetIamWorkRequestArgs args) {
+    public static Output<GetIamWorkRequestResult> getIamWorkRequest(GetIamWorkRequestArgs args) {
         return getIamWorkRequest(args, InvokeOptions.Empty);
     }
     /**
@@ -617,7 +1155,37 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIamWorkRequestResult> getIamWorkRequest(GetIamWorkRequestArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIamWorkRequestResult> getIamWorkRequestPlain(GetIamWorkRequestPlainArgs args) {
+        return getIamWorkRequestPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Iam Work Request resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets details on a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
+     * iam work request id that can be provided in this API to track the current status of the operation.
+     * 
+     * - If workrequest exists, returns 202 ACCEPTED
+     * - If workrequest does not exist, returns 404 NOT FOUND
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetIamWorkRequestResult> getIamWorkRequest(GetIamWorkRequestArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getIamWorkRequest:getIamWorkRequest", TypeShape.of(GetIamWorkRequestResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Iam Work Request resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets details on a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
+     * iam work request id that can be provided in this API to track the current status of the operation.
+     * 
+     * - If workrequest exists, returns 202 ACCEPTED
+     * - If workrequest does not exist, returns 404 NOT FOUND
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetIamWorkRequestResult> getIamWorkRequestPlain(GetIamWorkRequestPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getIamWorkRequest:getIamWorkRequest", TypeShape.of(GetIamWorkRequestResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -632,7 +1200,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIamWorkRequestErrorsResult> getIamWorkRequestErrors(GetIamWorkRequestErrorsArgs args) {
+    public static Output<GetIamWorkRequestErrorsResult> getIamWorkRequestErrors(GetIamWorkRequestErrorsArgs args) {
         return getIamWorkRequestErrors(args, InvokeOptions.Empty);
     }
     /**
@@ -647,7 +1215,37 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIamWorkRequestErrorsResult> getIamWorkRequestErrors(GetIamWorkRequestErrorsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIamWorkRequestErrorsResult> getIamWorkRequestErrorsPlain(GetIamWorkRequestErrorsPlainArgs args) {
+        return getIamWorkRequestErrorsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Iam Work Request Errors in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets error details for a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
+     * iam work request id that can be provided in this API to track the current status of the operation.
+     * 
+     * - If workrequest exists, returns 202 ACCEPTED
+     * - If workrequest does not exist, returns 404 NOT FOUND
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetIamWorkRequestErrorsResult> getIamWorkRequestErrors(GetIamWorkRequestErrorsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getIamWorkRequestErrors:getIamWorkRequestErrors", TypeShape.of(GetIamWorkRequestErrorsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Iam Work Request Errors in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets error details for a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
+     * iam work request id that can be provided in this API to track the current status of the operation.
+     * 
+     * - If workrequest exists, returns 202 ACCEPTED
+     * - If workrequest does not exist, returns 404 NOT FOUND
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetIamWorkRequestErrorsResult> getIamWorkRequestErrorsPlain(GetIamWorkRequestErrorsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getIamWorkRequestErrors:getIamWorkRequestErrors", TypeShape.of(GetIamWorkRequestErrorsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -662,7 +1260,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIamWorkRequestLogsResult> getIamWorkRequestLogs(GetIamWorkRequestLogsArgs args) {
+    public static Output<GetIamWorkRequestLogsResult> getIamWorkRequestLogs(GetIamWorkRequestLogsArgs args) {
         return getIamWorkRequestLogs(args, InvokeOptions.Empty);
     }
     /**
@@ -677,7 +1275,37 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIamWorkRequestLogsResult> getIamWorkRequestLogs(GetIamWorkRequestLogsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIamWorkRequestLogsResult> getIamWorkRequestLogsPlain(GetIamWorkRequestLogsPlainArgs args) {
+        return getIamWorkRequestLogsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Iam Work Request Logs in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets logs for a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
+     * iam work request id that can be provided in this API to track the current status of the operation.
+     * 
+     * - If workrequest exists, returns 202 ACCEPTED
+     * - If workrequest does not exist, returns 404 NOT FOUND
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetIamWorkRequestLogsResult> getIamWorkRequestLogs(GetIamWorkRequestLogsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getIamWorkRequestLogs:getIamWorkRequestLogs", TypeShape.of(GetIamWorkRequestLogsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Iam Work Request Logs in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets logs for a specified IAM work request. For asynchronous operations in Identity and Access Management service, opc-work-request-id header values contains
+     * iam work request id that can be provided in this API to track the current status of the operation.
+     * 
+     * - If workrequest exists, returns 202 ACCEPTED
+     * - If workrequest does not exist, returns 404 NOT FOUND
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetIamWorkRequestLogsResult> getIamWorkRequestLogsPlain(GetIamWorkRequestLogsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getIamWorkRequestLogs:getIamWorkRequestLogs", TypeShape.of(GetIamWorkRequestLogsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -691,7 +1319,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIamWorkRequestsResult> getIamWorkRequests(GetIamWorkRequestsArgs args) {
+    public static Output<GetIamWorkRequestsResult> getIamWorkRequests(GetIamWorkRequestsArgs args) {
         return getIamWorkRequests(args, InvokeOptions.Empty);
     }
     /**
@@ -705,7 +1333,35 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIamWorkRequestsResult> getIamWorkRequests(GetIamWorkRequestsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIamWorkRequestsResult> getIamWorkRequestsPlain(GetIamWorkRequestsPlainArgs args) {
+        return getIamWorkRequestsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Iam Work Requests in Oracle Cloud Infrastructure Identity service.
+     * 
+     * List the IAM work requests in compartment
+     * 
+     * - If IAM workrequest  details are retrieved sucessfully, return 202 ACCEPTED.
+     * - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetIamWorkRequestsResult> getIamWorkRequests(GetIamWorkRequestsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getIamWorkRequests:getIamWorkRequests", TypeShape.of(GetIamWorkRequestsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Iam Work Requests in Oracle Cloud Infrastructure Identity service.
+     * 
+     * List the IAM work requests in compartment
+     * 
+     * - If IAM workrequest  details are retrieved sucessfully, return 202 ACCEPTED.
+     * - If any internal error occurs, return 500 INTERNAL SERVER ERROR.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetIamWorkRequestsResult> getIamWorkRequestsPlain(GetIamWorkRequestsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getIamWorkRequests:getIamWorkRequests", TypeShape.of(GetIamWorkRequestsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -718,7 +1374,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIdentityProviderGroupsResult> getIdentityProviderGroups(GetIdentityProviderGroupsArgs args) {
+    public static Output<GetIdentityProviderGroupsResult> getIdentityProviderGroups(GetIdentityProviderGroupsArgs args) {
         return getIdentityProviderGroups(args, InvokeOptions.Empty);
     }
     /**
@@ -731,7 +1387,33 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIdentityProviderGroupsResult> getIdentityProviderGroups(GetIdentityProviderGroupsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIdentityProviderGroupsResult> getIdentityProviderGroupsPlain(GetIdentityProviderGroupsPlainArgs args) {
+        return getIdentityProviderGroupsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Identity Provider Groups in Oracle Cloud Infrastructure Identity service.
+     * 
+     * **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/iaas/Content/Identity/Reference/deprecatediamapis.htm).
+     * 
+     * Lists the identity provider groups.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetIdentityProviderGroupsResult> getIdentityProviderGroups(GetIdentityProviderGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getIdentityProviderGroups:getIdentityProviderGroups", TypeShape.of(GetIdentityProviderGroupsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Identity Provider Groups in Oracle Cloud Infrastructure Identity service.
+     * 
+     * **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/iaas/Content/Identity/Reference/deprecatediamapis.htm).
+     * 
+     * Lists the identity provider groups.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetIdentityProviderGroupsResult> getIdentityProviderGroupsPlain(GetIdentityProviderGroupsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getIdentityProviderGroups:getIdentityProviderGroups", TypeShape.of(GetIdentityProviderGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -747,7 +1429,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIdentityProvidersResult> getIdentityProviders(GetIdentityProvidersArgs args) {
+    public static Output<GetIdentityProvidersResult> getIdentityProviders(GetIdentityProvidersArgs args) {
         return getIdentityProviders(args, InvokeOptions.Empty);
     }
     /**
@@ -763,7 +1445,39 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIdentityProvidersResult> getIdentityProviders(GetIdentityProvidersArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIdentityProvidersResult> getIdentityProvidersPlain(GetIdentityProvidersPlainArgs args) {
+        return getIdentityProvidersPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Identity Providers in Oracle Cloud Infrastructure Identity service.
+     * 
+     * **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/iaas/Content/Identity/Reference/deprecatediamapis.htm).
+     * 
+     * Lists all the identity providers in your tenancy. You must specify the identity provider type (e.g., `SAML2` for
+     * identity providers using the SAML2.0 protocol). You must specify your tenancy&#39;s OCID as the value for the
+     * compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetIdentityProvidersResult> getIdentityProviders(GetIdentityProvidersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getIdentityProviders:getIdentityProviders", TypeShape.of(GetIdentityProvidersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Identity Providers in Oracle Cloud Infrastructure Identity service.
+     * 
+     * **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/iaas/Content/Identity/Reference/deprecatediamapis.htm).
+     * 
+     * Lists all the identity providers in your tenancy. You must specify the identity provider type (e.g., `SAML2` for
+     * identity providers using the SAML2.0 protocol). You must specify your tenancy&#39;s OCID as the value for the
+     * compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetIdentityProvidersResult> getIdentityProvidersPlain(GetIdentityProvidersPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getIdentityProviders:getIdentityProviders", TypeShape.of(GetIdentityProvidersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -776,7 +1490,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIdpGroupMappingsResult> getIdpGroupMappings(GetIdpGroupMappingsArgs args) {
+    public static Output<GetIdpGroupMappingsResult> getIdpGroupMappings(GetIdpGroupMappingsArgs args) {
         return getIdpGroupMappings(args, InvokeOptions.Empty);
     }
     /**
@@ -789,7 +1503,33 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetIdpGroupMappingsResult> getIdpGroupMappings(GetIdpGroupMappingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetIdpGroupMappingsResult> getIdpGroupMappingsPlain(GetIdpGroupMappingsPlainArgs args) {
+        return getIdpGroupMappingsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Idp Group Mappings in Oracle Cloud Infrastructure Identity service.
+     * 
+     * **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/iaas/Content/Identity/Reference/deprecatediamapis.htm).
+     * 
+     * Lists the group mappings for the specified identity provider.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetIdpGroupMappingsResult> getIdpGroupMappings(GetIdpGroupMappingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getIdpGroupMappings:getIdpGroupMappings", TypeShape.of(GetIdpGroupMappingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Idp Group Mappings in Oracle Cloud Infrastructure Identity service.
+     * 
+     * **Deprecated.** For more information, see [Deprecated IAM Service APIs](https://docs.cloud.oracle.com/iaas/Content/Identity/Reference/deprecatediamapis.htm).
+     * 
+     * Lists the group mappings for the specified identity provider.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetIdpGroupMappingsResult> getIdpGroupMappingsPlain(GetIdpGroupMappingsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getIdpGroupMappings:getIdpGroupMappings", TypeShape.of(GetIdpGroupMappingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -800,7 +1540,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSourceResult> getNetworkSource(GetNetworkSourceArgs args) {
+    public static Output<GetNetworkSourceResult> getNetworkSource(GetNetworkSourceArgs args) {
         return getNetworkSource(args, InvokeOptions.Empty);
     }
     /**
@@ -811,7 +1551,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSourceResult> getNetworkSource(GetNetworkSourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkSourceResult> getNetworkSourcePlain(GetNetworkSourcePlainArgs args) {
+        return getNetworkSourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Network Source resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified network source&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetNetworkSourceResult> getNetworkSource(GetNetworkSourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getNetworkSource:getNetworkSource", TypeShape.of(GetNetworkSourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Network Source resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified network source&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetNetworkSourceResult> getNetworkSourcePlain(GetNetworkSourcePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getNetworkSource:getNetworkSource", TypeShape.of(GetNetworkSourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -824,7 +1586,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSourcesResult> getNetworkSources(GetNetworkSourcesArgs args) {
+    public static Output<GetNetworkSourcesResult> getNetworkSources(GetNetworkSourcesArgs args) {
         return getNetworkSources(args, InvokeOptions.Empty);
     }
     /**
@@ -837,7 +1599,33 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetNetworkSourcesResult> getNetworkSources(GetNetworkSourcesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNetworkSourcesResult> getNetworkSourcesPlain(GetNetworkSourcesPlainArgs args) {
+        return getNetworkSourcesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Network Sources in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the network sources in your tenancy. You must specify your tenancy&#39;s OCID as the value for
+     * the compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetNetworkSourcesResult> getNetworkSources(GetNetworkSourcesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getNetworkSources:getNetworkSources", TypeShape.of(GetNetworkSourcesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Network Sources in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the network sources in your tenancy. You must specify your tenancy&#39;s OCID as the value for
+     * the compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetNetworkSourcesResult> getNetworkSourcesPlain(GetNetworkSourcesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getNetworkSources:getNetworkSources", TypeShape.of(GetNetworkSourcesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -852,7 +1640,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPoliciesResult> getPolicies(GetPoliciesArgs args) {
+    public static Output<GetPoliciesResult> getPolicies(GetPoliciesArgs args) {
         return getPolicies(args, InvokeOptions.Empty);
     }
     /**
@@ -867,7 +1655,37 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetPoliciesResult> getPolicies(GetPoliciesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPoliciesResult> getPoliciesPlain(GetPoliciesPlainArgs args) {
+        return getPoliciesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Policies in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the policies in the specified compartment (either the tenancy or another of your compartments).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * To determine which policies apply to a particular group or compartment, you must view the individual
+     * statements inside all your policies. There isn&#39;t a way to automatically obtain that information via the API.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetPoliciesResult> getPolicies(GetPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getPolicies:getPolicies", TypeShape.of(GetPoliciesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Policies in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the policies in the specified compartment (either the tenancy or another of your compartments).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * To determine which policies apply to a particular group or compartment, you must view the individual
+     * statements inside all your policies. There isn&#39;t a way to automatically obtain that information via the API.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetPoliciesResult> getPoliciesPlain(GetPoliciesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getPolicies:getPolicies", TypeShape.of(GetPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -878,7 +1696,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRegionSubscriptionsResult> getRegionSubscriptions(GetRegionSubscriptionsArgs args) {
+    public static Output<GetRegionSubscriptionsResult> getRegionSubscriptions(GetRegionSubscriptionsArgs args) {
         return getRegionSubscriptions(args, InvokeOptions.Empty);
     }
     /**
@@ -889,7 +1707,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRegionSubscriptionsResult> getRegionSubscriptions(GetRegionSubscriptionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionSubscriptionsResult> getRegionSubscriptionsPlain(GetRegionSubscriptionsPlainArgs args) {
+        return getRegionSubscriptionsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Region Subscriptions in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the region subscriptions for the specified tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetRegionSubscriptionsResult> getRegionSubscriptions(GetRegionSubscriptionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getRegionSubscriptions:getRegionSubscriptions", TypeShape.of(GetRegionSubscriptionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Region Subscriptions in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the region subscriptions for the specified tenancy.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegionSubscriptionsResult> getRegionSubscriptionsPlain(GetRegionSubscriptionsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getRegionSubscriptions:getRegionSubscriptions", TypeShape.of(GetRegionSubscriptionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -900,7 +1740,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRegionsResult> getRegions() {
+    public static Output<GetRegionsResult> getRegions() {
         return getRegions(GetRegionsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -911,7 +1751,18 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args) {
+    public static CompletableFuture<GetRegionsResult> getRegionsPlain() {
+        return getRegionsPlain(GetRegionsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Regions in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists all the regions offered by Oracle Cloud Infrastructure.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetRegionsResult> getRegions(GetRegionsArgs args) {
         return getRegions(args, InvokeOptions.Empty);
     }
     /**
@@ -922,7 +1773,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRegionsResult> getRegionsPlain(GetRegionsPlainArgs args) {
+        return getRegionsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Regions in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists all the regions offered by Oracle Cloud Infrastructure.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetRegionsResult> getRegions(GetRegionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Regions in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists all the regions offered by Oracle Cloud Infrastructure.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRegionsResult> getRegionsPlain(GetRegionsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -934,7 +1807,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSmtpCredentialsResult> getSmtpCredentials(GetSmtpCredentialsArgs args) {
+    public static Output<GetSmtpCredentialsResult> getSmtpCredentials(GetSmtpCredentialsArgs args) {
         return getSmtpCredentials(args, InvokeOptions.Empty);
     }
     /**
@@ -946,7 +1819,31 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSmtpCredentialsResult> getSmtpCredentials(GetSmtpCredentialsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSmtpCredentialsResult> getSmtpCredentialsPlain(GetSmtpCredentialsPlainArgs args) {
+        return getSmtpCredentialsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Smtp Credentials in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the SMTP credentials for the specified user. The returned object contains the credential&#39;s OCID,
+     * the SMTP user name but not the SMTP password. The SMTP password is returned only upon creation.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSmtpCredentialsResult> getSmtpCredentials(GetSmtpCredentialsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getSmtpCredentials:getSmtpCredentials", TypeShape.of(GetSmtpCredentialsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Smtp Credentials in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the SMTP credentials for the specified user. The returned object contains the credential&#39;s OCID,
+     * the SMTP user name but not the SMTP password. The SMTP password is returned only upon creation.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSmtpCredentialsResult> getSmtpCredentialsPlain(GetSmtpCredentialsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getSmtpCredentials:getSmtpCredentials", TypeShape.of(GetSmtpCredentialsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -960,7 +1857,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSwiftPasswordsResult> getSwiftPasswords(GetSwiftPasswordsArgs args) {
+    public static Output<GetSwiftPasswordsResult> getSwiftPasswords(GetSwiftPasswordsArgs args) {
         return getSwiftPasswords(args, InvokeOptions.Empty);
     }
     /**
@@ -974,7 +1871,35 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSwiftPasswordsResult> getSwiftPasswords(GetSwiftPasswordsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSwiftPasswordsResult> getSwiftPasswordsPlain(GetSwiftPasswordsPlainArgs args) {
+        return getSwiftPasswordsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Swift Passwords in Oracle Cloud Infrastructure Identity service.
+     * 
+     * **Deprecated. Use [ListAuthTokens](https://docs.cloud.oracle.com/iaas/api/#/en/identity/20160918/AuthToken/ListAuthTokens) instead.**
+     * 
+     * Lists the Swift passwords for the specified user. The returned object contains the password&#39;s OCID, but not
+     * the password itself. The actual password is returned only upon creation.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSwiftPasswordsResult> getSwiftPasswords(GetSwiftPasswordsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getSwiftPasswords:getSwiftPasswords", TypeShape.of(GetSwiftPasswordsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Swift Passwords in Oracle Cloud Infrastructure Identity service.
+     * 
+     * **Deprecated. Use [ListAuthTokens](https://docs.cloud.oracle.com/iaas/api/#/en/identity/20160918/AuthToken/ListAuthTokens) instead.**
+     * 
+     * Lists the Swift passwords for the specified user. The returned object contains the password&#39;s OCID, but not
+     * the password itself. The actual password is returned only upon creation.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSwiftPasswordsResult> getSwiftPasswordsPlain(GetSwiftPasswordsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getSwiftPasswords:getSwiftPasswords", TypeShape.of(GetSwiftPasswordsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -985,7 +1910,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagResult> getTag(GetTagArgs args) {
+    public static Output<GetTagResult> getTag(GetTagArgs args) {
         return getTag(args, InvokeOptions.Empty);
     }
     /**
@@ -996,7 +1921,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagResult> getTag(GetTagArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagResult> getTagPlain(GetTagPlainArgs args) {
+        return getTagPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Tag resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified tag&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTagResult> getTag(GetTagArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getTag:getTag", TypeShape.of(GetTagResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Tag resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified tag&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTagResult> getTagPlain(GetTagPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getTag:getTag", TypeShape.of(GetTagResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1007,7 +1954,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagDefaultResult> getTagDefault(GetTagDefaultArgs args) {
+    public static Output<GetTagDefaultResult> getTagDefault(GetTagDefaultArgs args) {
         return getTagDefault(args, InvokeOptions.Empty);
     }
     /**
@@ -1018,7 +1965,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagDefaultResult> getTagDefault(GetTagDefaultArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagDefaultResult> getTagDefaultPlain(GetTagDefaultPlainArgs args) {
+        return getTagDefaultPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Tag Default resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Retrieves the specified tag default.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTagDefaultResult> getTagDefault(GetTagDefaultArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getTagDefault:getTagDefault", TypeShape.of(GetTagDefaultResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Tag Default resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Retrieves the specified tag default.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTagDefaultResult> getTagDefaultPlain(GetTagDefaultPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getTagDefault:getTagDefault", TypeShape.of(GetTagDefaultResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1029,7 +1998,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagDefaultsResult> getTagDefaults() {
+    public static Output<GetTagDefaultsResult> getTagDefaults() {
         return getTagDefaults(GetTagDefaultsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1040,7 +2009,18 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagDefaultsResult> getTagDefaults(GetTagDefaultsArgs args) {
+    public static CompletableFuture<GetTagDefaultsResult> getTagDefaultsPlain() {
+        return getTagDefaultsPlain(GetTagDefaultsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Tag Defaults in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the tag defaults for tag definitions in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTagDefaultsResult> getTagDefaults(GetTagDefaultsArgs args) {
         return getTagDefaults(args, InvokeOptions.Empty);
     }
     /**
@@ -1051,7 +2031,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagDefaultsResult> getTagDefaults(GetTagDefaultsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagDefaultsResult> getTagDefaultsPlain(GetTagDefaultsPlainArgs args) {
+        return getTagDefaultsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Tag Defaults in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the tag defaults for tag definitions in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTagDefaultsResult> getTagDefaults(GetTagDefaultsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getTagDefaults:getTagDefaults", TypeShape.of(GetTagDefaultsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Tag Defaults in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the tag defaults for tag definitions in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTagDefaultsResult> getTagDefaultsPlain(GetTagDefaultsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getTagDefaults:getTagDefaults", TypeShape.of(GetTagDefaultsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1062,7 +2064,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagNamespacesResult> getTagNamespaces(GetTagNamespacesArgs args) {
+    public static Output<GetTagNamespacesResult> getTagNamespaces(GetTagNamespacesArgs args) {
         return getTagNamespaces(args, InvokeOptions.Empty);
     }
     /**
@@ -1073,7 +2075,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagNamespacesResult> getTagNamespaces(GetTagNamespacesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagNamespacesResult> getTagNamespacesPlain(GetTagNamespacesPlainArgs args) {
+        return getTagNamespacesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Tag Namespaces in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the tag namespaces in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTagNamespacesResult> getTagNamespaces(GetTagNamespacesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getTagNamespaces:getTagNamespaces", TypeShape.of(GetTagNamespacesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Tag Namespaces in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the tag namespaces in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTagNamespacesResult> getTagNamespacesPlain(GetTagNamespacesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getTagNamespaces:getTagNamespaces", TypeShape.of(GetTagNamespacesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1084,7 +2108,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagStandardTagNamespaceTemplateResult> getTagStandardTagNamespaceTemplate(GetTagStandardTagNamespaceTemplateArgs args) {
+    public static Output<GetTagStandardTagNamespaceTemplateResult> getTagStandardTagNamespaceTemplate(GetTagStandardTagNamespaceTemplateArgs args) {
         return getTagStandardTagNamespaceTemplate(args, InvokeOptions.Empty);
     }
     /**
@@ -1095,7 +2119,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagStandardTagNamespaceTemplateResult> getTagStandardTagNamespaceTemplate(GetTagStandardTagNamespaceTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagStandardTagNamespaceTemplateResult> getTagStandardTagNamespaceTemplatePlain(GetTagStandardTagNamespaceTemplatePlainArgs args) {
+        return getTagStandardTagNamespaceTemplatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Tag Standard Tag Namespace Template resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Retrieve the standard tag namespace template given the standard tag namespace name.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTagStandardTagNamespaceTemplateResult> getTagStandardTagNamespaceTemplate(GetTagStandardTagNamespaceTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getTagStandardTagNamespaceTemplate:getTagStandardTagNamespaceTemplate", TypeShape.of(GetTagStandardTagNamespaceTemplateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Tag Standard Tag Namespace Template resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Retrieve the standard tag namespace template given the standard tag namespace name.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTagStandardTagNamespaceTemplateResult> getTagStandardTagNamespaceTemplatePlain(GetTagStandardTagNamespaceTemplatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getTagStandardTagNamespaceTemplate:getTagStandardTagNamespaceTemplate", TypeShape.of(GetTagStandardTagNamespaceTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1106,7 +2152,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagStandardTagNamespaceTemplatesResult> getTagStandardTagNamespaceTemplates(GetTagStandardTagNamespaceTemplatesArgs args) {
+    public static Output<GetTagStandardTagNamespaceTemplatesResult> getTagStandardTagNamespaceTemplates(GetTagStandardTagNamespaceTemplatesArgs args) {
         return getTagStandardTagNamespaceTemplates(args, InvokeOptions.Empty);
     }
     /**
@@ -1117,7 +2163,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagStandardTagNamespaceTemplatesResult> getTagStandardTagNamespaceTemplates(GetTagStandardTagNamespaceTemplatesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagStandardTagNamespaceTemplatesResult> getTagStandardTagNamespaceTemplatesPlain(GetTagStandardTagNamespaceTemplatesPlainArgs args) {
+        return getTagStandardTagNamespaceTemplatesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Tag Standard Tag Namespace Templates in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists available standard tag namespaces that users can create.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTagStandardTagNamespaceTemplatesResult> getTagStandardTagNamespaceTemplates(GetTagStandardTagNamespaceTemplatesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getTagStandardTagNamespaceTemplates:getTagStandardTagNamespaceTemplates", TypeShape.of(GetTagStandardTagNamespaceTemplatesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Tag Standard Tag Namespace Templates in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists available standard tag namespaces that users can create.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTagStandardTagNamespaceTemplatesResult> getTagStandardTagNamespaceTemplatesPlain(GetTagStandardTagNamespaceTemplatesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getTagStandardTagNamespaceTemplates:getTagStandardTagNamespaceTemplates", TypeShape.of(GetTagStandardTagNamespaceTemplatesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1128,7 +2196,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagsResult> getTags(GetTagsArgs args) {
+    public static Output<GetTagsResult> getTags(GetTagsArgs args) {
         return getTags(args, InvokeOptions.Empty);
     }
     /**
@@ -1139,7 +2207,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTagsResult> getTags(GetTagsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagsResult> getTagsPlain(GetTagsPlainArgs args) {
+        return getTagsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Tags in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the tag definitions in the specified tag namespace.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTagsResult> getTags(GetTagsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getTags:getTags", TypeShape.of(GetTagsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Tags in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the tag definitions in the specified tag namespace.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTagsResult> getTagsPlain(GetTagsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getTags:getTags", TypeShape.of(GetTagsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1150,7 +2240,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTenancyResult> getTenancy(GetTenancyArgs args) {
+    public static Output<GetTenancyResult> getTenancy(GetTenancyArgs args) {
         return getTenancy(args, InvokeOptions.Empty);
     }
     /**
@@ -1161,7 +2251,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTenancyResult> getTenancy(GetTenancyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTenancyResult> getTenancyPlain(GetTenancyPlainArgs args) {
+        return getTenancyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Tenancy resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Get the specified tenancy&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTenancyResult> getTenancy(GetTenancyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getTenancy:getTenancy", TypeShape.of(GetTenancyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Tenancy resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Get the specified tenancy&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTenancyResult> getTenancyPlain(GetTenancyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getTenancy:getTenancy", TypeShape.of(GetTenancyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1173,7 +2285,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUiPasswordResult> getUiPassword(GetUiPasswordArgs args) {
+    public static Output<GetUiPasswordResult> getUiPassword(GetUiPasswordArgs args) {
         return getUiPassword(args, InvokeOptions.Empty);
     }
     /**
@@ -1185,7 +2297,31 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUiPasswordResult> getUiPassword(GetUiPasswordArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUiPasswordResult> getUiPasswordPlain(GetUiPasswordPlainArgs args) {
+        return getUiPasswordPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Ui Password resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified user&#39;s console password information. The returned object contains the user&#39;s OCID,
+     * but not the password itself. The actual password is returned only when created or reset.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetUiPasswordResult> getUiPassword(GetUiPasswordArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getUiPassword:getUiPassword", TypeShape.of(GetUiPasswordResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Ui Password resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified user&#39;s console password information. The returned object contains the user&#39;s OCID,
+     * but not the password itself. The actual password is returned only when created or reset.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetUiPasswordResult> getUiPasswordPlain(GetUiPasswordPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getUiPassword:getUiPassword", TypeShape.of(GetUiPasswordResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1196,7 +2332,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+    public static Output<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
     /**
@@ -1207,7 +2343,29 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args) {
+        return getUserPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific User resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified user&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific User resource in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Gets the specified user&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1227,7 +2385,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserGroupMembershipsResult> getUserGroupMemberships(GetUserGroupMembershipsArgs args) {
+    public static Output<GetUserGroupMembershipsResult> getUserGroupMemberships(GetUserGroupMembershipsArgs args) {
         return getUserGroupMemberships(args, InvokeOptions.Empty);
     }
     /**
@@ -1247,7 +2405,47 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUserGroupMembershipsResult> getUserGroupMemberships(GetUserGroupMembershipsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserGroupMembershipsResult> getUserGroupMembershipsPlain(GetUserGroupMembershipsPlainArgs args) {
+        return getUserGroupMembershipsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of User Group Memberships in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the `UserGroupMembership` objects in your tenancy. You must specify your tenancy&#39;s OCID
+     * as the value for the compartment ID
+     * (see [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five)).
+     * You must also then filter the list in one of these ways:
+     * 
+     * - You can limit the results to just the memberships for a given user by specifying a `userId`.
+     * - Similarly, you can limit the results to just the memberships for a given group by specifying a `groupId`.
+     * - You can set both the `userId` and `groupId` to determine if the specified user is in the specified group.
+     *   If the answer is no, the response is an empty list.
+     * - Although`userId` and `groupId` are not individually required, you must set one of them.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetUserGroupMembershipsResult> getUserGroupMemberships(GetUserGroupMembershipsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getUserGroupMemberships:getUserGroupMemberships", TypeShape.of(GetUserGroupMembershipsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of User Group Memberships in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the `UserGroupMembership` objects in your tenancy. You must specify your tenancy&#39;s OCID
+     * as the value for the compartment ID
+     * (see [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five)).
+     * You must also then filter the list in one of these ways:
+     * 
+     * - You can limit the results to just the memberships for a given user by specifying a `userId`.
+     * - Similarly, you can limit the results to just the memberships for a given group by specifying a `groupId`.
+     * - You can set both the `userId` and `groupId` to determine if the specified user is in the specified group.
+     *   If the answer is no, the response is an empty list.
+     * - Although`userId` and `groupId` are not individually required, you must set one of them.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetUserGroupMembershipsResult> getUserGroupMembershipsPlain(GetUserGroupMembershipsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getUserGroupMemberships:getUserGroupMemberships", TypeShape.of(GetUserGroupMembershipsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1260,7 +2458,7 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUsersResult> getUsers(GetUsersArgs args) {
+    public static Output<GetUsersResult> getUsers(GetUsersArgs args) {
         return getUsers(args, InvokeOptions.Empty);
     }
     /**
@@ -1273,7 +2471,33 @@ public final class IdentityFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetUsersResult> getUsers(GetUsersArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUsersResult> getUsersPlain(GetUsersPlainArgs args) {
+        return getUsersPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Users in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the users in your tenancy. You must specify your tenancy&#39;s OCID as the value for the
+     * compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetUsersResult> getUsers(GetUsersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Identity/getUsers:getUsers", TypeShape.of(GetUsersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Users in Oracle Cloud Infrastructure Identity service.
+     * 
+     * Lists the users in your tenancy. You must specify your tenancy&#39;s OCID as the value for the
+     * compartment ID (remember that the tenancy is simply the root compartment).
+     * See [Where to Get the Tenancy&#39;s OCID and User&#39;s OCID](https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetUsersResult> getUsersPlain(GetUsersPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Identity/getUsers:getUsers", TypeShape.of(GetUsersResult.class), args, Utilities.withVersion(options));
     }
 }

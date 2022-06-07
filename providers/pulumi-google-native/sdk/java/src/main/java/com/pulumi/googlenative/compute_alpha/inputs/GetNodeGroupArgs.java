@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNodeGroupArgs Empty = new GetNodeGroupArgs();
 
     @Import(name="nodeGroup", required=true)
-    private String nodeGroup;
+    private Output<String> nodeGroup;
 
-    public String nodeGroup() {
+    public Output<String> nodeGroup() {
         return this.nodeGroup;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
-    private String zone;
+    private Output<String> zone;
 
-    public String zone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -61,19 +62,31 @@ public final class GetNodeGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNodeGroupArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder nodeGroup(String nodeGroup) {
+        public Builder nodeGroup(Output<String> nodeGroup) {
             $.nodeGroup = nodeGroup;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder nodeGroup(String nodeGroup) {
+            return nodeGroup(Output.of(nodeGroup));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder zone(String zone) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder zone(Output<String> zone) {
             $.zone = zone;
             return this;
+        }
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetNodeGroupArgs build() {

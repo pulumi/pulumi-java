@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetAutonomousDatabasesClonesFilter;
+import com.pulumi.oci.Database.inputs.GetAutonomousDatabasesClonesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetAutonomousDatabasesClonesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="autonomousDatabaseId", required=true)
-    private String autonomousDatabaseId;
+    private Output<String> autonomousDatabaseId;
 
     /**
      * @return The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String autonomousDatabaseId() {
+    public Output<String> autonomousDatabaseId() {
         return this.autonomousDatabaseId;
     }
 
@@ -36,13 +37,13 @@ public final class GetAutonomousDatabasesClonesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="cloneType")
-    private @Nullable String cloneType;
+    private @Nullable Output<String> cloneType;
 
     /**
      * @return A filter to return only resources that match the given clone type exactly.
      * 
      */
-    public Optional<String> cloneType() {
+    public Optional<Output<String>> cloneType() {
         return Optional.ofNullable(this.cloneType);
     }
 
@@ -51,13 +52,13 @@ public final class GetAutonomousDatabasesClonesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -66,20 +67,20 @@ public final class GetAutonomousDatabasesClonesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAutonomousDatabasesClonesFilter> filters;
+    private @Nullable Output<List<GetAutonomousDatabasesClonesFilterArgs>> filters;
 
-    public Optional<List<GetAutonomousDatabasesClonesFilter>> filters() {
+    public Optional<Output<List<GetAutonomousDatabasesClonesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -88,13 +89,13 @@ public final class GetAutonomousDatabasesClonesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -133,8 +134,29 @@ public final class GetAutonomousDatabasesClonesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder autonomousDatabaseId(String autonomousDatabaseId) {
+        public Builder autonomousDatabaseId(Output<String> autonomousDatabaseId) {
             $.autonomousDatabaseId = autonomousDatabaseId;
+            return this;
+        }
+
+        /**
+         * @param autonomousDatabaseId The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousDatabaseId(String autonomousDatabaseId) {
+            return autonomousDatabaseId(Output.of(autonomousDatabaseId));
+        }
+
+        /**
+         * @param cloneType A filter to return only resources that match the given clone type exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cloneType(@Nullable Output<String> cloneType) {
+            $.cloneType = cloneType;
             return this;
         }
 
@@ -144,8 +166,18 @@ public final class GetAutonomousDatabasesClonesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder cloneType(@Nullable String cloneType) {
-            $.cloneType = cloneType;
+        public Builder cloneType(String cloneType) {
+            return cloneType(Output.of(cloneType));
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -156,7 +188,17 @@ public final class GetAutonomousDatabasesClonesArgs extends com.pulumi.resources
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given. The match is not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -166,17 +208,20 @@ public final class GetAutonomousDatabasesClonesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetAutonomousDatabasesClonesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetAutonomousDatabasesClonesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAutonomousDatabasesClonesFilter... filters) {
+        public Builder filters(List<GetAutonomousDatabasesClonesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAutonomousDatabasesClonesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -186,9 +231,19 @@ public final class GetAutonomousDatabasesClonesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetAutonomousDatabasesClonesArgs build() {

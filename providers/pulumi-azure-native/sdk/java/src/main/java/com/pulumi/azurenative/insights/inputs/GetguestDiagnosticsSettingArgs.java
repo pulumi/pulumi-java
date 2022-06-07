@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetguestDiagnosticsSettingArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="diagnosticSettingsName", required=true)
-    private String diagnosticSettingsName;
+    private Output<String> diagnosticSettingsName;
 
     /**
      * @return The name of the diagnostic setting.
      * 
      */
-    public String diagnosticSettingsName() {
+    public Output<String> diagnosticSettingsName() {
         return this.diagnosticSettingsName;
     }
 
@@ -32,13 +33,13 @@ public final class GetguestDiagnosticsSettingArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetguestDiagnosticsSettingArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder diagnosticSettingsName(String diagnosticSettingsName) {
+        public Builder diagnosticSettingsName(Output<String> diagnosticSettingsName) {
             $.diagnosticSettingsName = diagnosticSettingsName;
+            return this;
+        }
+
+        /**
+         * @param diagnosticSettingsName The name of the diagnostic setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder diagnosticSettingsName(String diagnosticSettingsName) {
+            return diagnosticSettingsName(Output.of(diagnosticSettingsName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetguestDiagnosticsSettingArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetguestDiagnosticsSettingArgs build() {

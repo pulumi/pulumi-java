@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.databox.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListJobCredentialsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="jobName", required=true)
-    private String jobName;
+    private Output<String> jobName;
 
     /**
      * @return The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
      * 
      */
-    public String jobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -32,13 +33,13 @@ public final class ListJobCredentialsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Resource Group Name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class ListJobCredentialsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder jobName(String jobName) {
+        public Builder jobName(Output<String> jobName) {
             $.jobName = jobName;
+            return this;
+        }
+
+        /**
+         * @param jobName The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobName(String jobName) {
+            return jobName(Output.of(jobName));
+        }
+
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class ListJobCredentialsArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListJobCredentialsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.blockchain.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListLocationConsortiumsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="locationName", required=true)
-    private String locationName;
+    private Output<String> locationName;
 
     /**
      * @return Location Name.
      * 
      */
-    public String locationName() {
+    public Output<String> locationName() {
         return this.locationName;
     }
 
@@ -57,9 +58,19 @@ public final class ListLocationConsortiumsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder locationName(String locationName) {
+        public Builder locationName(Output<String> locationName) {
             $.locationName = locationName;
             return this;
+        }
+
+        /**
+         * @param locationName Location Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder locationName(String locationName) {
+            return locationName(Output.of(locationName));
         }
 
         public ListLocationConsortiumsArgs build() {

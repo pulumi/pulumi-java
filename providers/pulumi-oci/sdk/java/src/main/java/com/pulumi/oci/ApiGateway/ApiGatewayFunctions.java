@@ -3,20 +3,32 @@
 
 package com.pulumi.oci.ApiGateway;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.ApiGateway.inputs.GetApiArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApiContentArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetApiContentPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApiDeploymentSpecificationArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetApiDeploymentSpecificationPlainArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetApiPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApiValidationArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetApiValidationPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetApisArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetApisPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetCertificateArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetCertificatePlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetCertificatesArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetCertificatesPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetDeploymentArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetDeploymentPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetDeploymentsArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetDeploymentsPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetGatewayArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetGatewayPlainArgs;
 import com.pulumi.oci.ApiGateway.inputs.GetGatewaysArgs;
+import com.pulumi.oci.ApiGateway.inputs.GetGatewaysPlainArgs;
 import com.pulumi.oci.ApiGateway.outputs.GetApiContentResult;
 import com.pulumi.oci.ApiGateway.outputs.GetApiDeploymentSpecificationResult;
 import com.pulumi.oci.ApiGateway.outputs.GetApiResult;
@@ -40,7 +52,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiResult> getApi(GetApiArgs args) {
+    public static Output<GetApiResult> getApi(GetApiArgs args) {
         return getApi(args, InvokeOptions.Empty);
     }
     /**
@@ -51,7 +63,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiResult> getApi(GetApiArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiResult> getApiPlain(GetApiPlainArgs args) {
+        return getApiPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Api resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets an API by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetApiResult> getApi(GetApiArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getApi:getApi", TypeShape.of(GetApiResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Api resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets an API by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetApiResult> getApiPlain(GetApiPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getApi:getApi", TypeShape.of(GetApiResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,7 +96,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiContentResult> getApiContent(GetApiContentArgs args) {
+    public static Output<GetApiContentResult> getApiContent(GetApiContentArgs args) {
         return getApiContent(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +107,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiContentResult> getApiContent(GetApiContentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiContentResult> getApiContentPlain(GetApiContentPlainArgs args) {
+        return getApiContentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Api Content resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Get the raw API content.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetApiContentResult> getApiContent(GetApiContentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getApiContent:getApiContent", TypeShape.of(GetApiContentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Api Content resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Get the raw API content.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetApiContentResult> getApiContentPlain(GetApiContentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getApiContent:getApiContent", TypeShape.of(GetApiContentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,7 +140,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiDeploymentSpecificationResult> getApiDeploymentSpecification(GetApiDeploymentSpecificationArgs args) {
+    public static Output<GetApiDeploymentSpecificationResult> getApiDeploymentSpecification(GetApiDeploymentSpecificationArgs args) {
         return getApiDeploymentSpecification(args, InvokeOptions.Empty);
     }
     /**
@@ -95,7 +151,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiDeploymentSpecificationResult> getApiDeploymentSpecification(GetApiDeploymentSpecificationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiDeploymentSpecificationResult> getApiDeploymentSpecificationPlain(GetApiDeploymentSpecificationPlainArgs args) {
+        return getApiDeploymentSpecificationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Api Deployment Specification resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets an API Deployment specification by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetApiDeploymentSpecificationResult> getApiDeploymentSpecification(GetApiDeploymentSpecificationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getApiDeploymentSpecification:getApiDeploymentSpecification", TypeShape.of(GetApiDeploymentSpecificationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Api Deployment Specification resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets an API Deployment specification by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetApiDeploymentSpecificationResult> getApiDeploymentSpecificationPlain(GetApiDeploymentSpecificationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getApiDeploymentSpecification:getApiDeploymentSpecification", TypeShape.of(GetApiDeploymentSpecificationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -106,7 +184,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiValidationInvokeResult> getApiValidation(GetApiValidationArgs args) {
+    public static Output<GetApiValidationInvokeResult> getApiValidation(GetApiValidationArgs args) {
         return getApiValidation(args, InvokeOptions.Empty);
     }
     /**
@@ -117,7 +195,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApiValidationInvokeResult> getApiValidation(GetApiValidationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiValidationInvokeResult> getApiValidationPlain(GetApiValidationPlainArgs args) {
+        return getApiValidationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Api Validation resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets the API validation results.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetApiValidationInvokeResult> getApiValidation(GetApiValidationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getApiValidation:getApiValidation", TypeShape.of(GetApiValidationInvokeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Api Validation resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets the API validation results.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetApiValidationInvokeResult> getApiValidationPlain(GetApiValidationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getApiValidation:getApiValidation", TypeShape.of(GetApiValidationInvokeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -128,7 +228,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApisResult> getApis(GetApisArgs args) {
+    public static Output<GetApisResult> getApis(GetApisArgs args) {
         return getApis(args, InvokeOptions.Empty);
     }
     /**
@@ -139,7 +239,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetApisResult> getApis(GetApisArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApisResult> getApisPlain(GetApisPlainArgs args) {
+        return getApisPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Apis in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Returns a list of APIs.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetApisResult> getApis(GetApisArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getApis:getApis", TypeShape.of(GetApisResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Apis in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Returns a list of APIs.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetApisResult> getApisPlain(GetApisPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getApis:getApis", TypeShape.of(GetApisResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -150,7 +272,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -161,7 +283,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args) {
+        return getCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Certificate resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets a certificate by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Certificate resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets a certificate by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -172,7 +316,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificatesResult> getCertificates(GetCertificatesArgs args) {
+    public static Output<GetCertificatesResult> getCertificates(GetCertificatesArgs args) {
         return getCertificates(args, InvokeOptions.Empty);
     }
     /**
@@ -183,7 +327,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetCertificatesResult> getCertificates(GetCertificatesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificatesResult> getCertificatesPlain(GetCertificatesPlainArgs args) {
+        return getCertificatesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Certificates in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Returns a list of certificates.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetCertificatesResult> getCertificates(GetCertificatesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getCertificates:getCertificates", TypeShape.of(GetCertificatesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Certificates in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Returns a list of certificates.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetCertificatesResult> getCertificatesPlain(GetCertificatesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getCertificates:getCertificates", TypeShape.of(GetCertificatesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -194,7 +360,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
+    public static Output<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
         return getDeployment(args, InvokeOptions.Empty);
     }
     /**
@@ -205,7 +371,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentResult> getDeploymentPlain(GetDeploymentPlainArgs args) {
+        return getDeploymentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Deployment resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets a deployment by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getDeployment:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Deployment resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets a deployment by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDeploymentResult> getDeploymentPlain(GetDeploymentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getDeployment:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -216,7 +404,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeploymentsResult> getDeployments(GetDeploymentsArgs args) {
+    public static Output<GetDeploymentsResult> getDeployments(GetDeploymentsArgs args) {
         return getDeployments(args, InvokeOptions.Empty);
     }
     /**
@@ -227,7 +415,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetDeploymentsResult> getDeployments(GetDeploymentsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentsResult> getDeploymentsPlain(GetDeploymentsPlainArgs args) {
+        return getDeploymentsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Deployments in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Returns a list of deployments.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetDeploymentsResult> getDeployments(GetDeploymentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getDeployments:getDeployments", TypeShape.of(GetDeploymentsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Deployments in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Returns a list of deployments.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetDeploymentsResult> getDeploymentsPlain(GetDeploymentsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getDeployments:getDeployments", TypeShape.of(GetDeploymentsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -238,7 +448,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
+    public static Output<GetGatewayResult> getGateway(GetGatewayArgs args) {
         return getGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -249,7 +459,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayResult> getGatewayPlain(GetGatewayPlainArgs args) {
+        return getGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Gateway resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets a gateway by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getGateway:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Gateway resource in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Gets a gateway by identifier.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetGatewayResult> getGatewayPlain(GetGatewayPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getGateway:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -260,7 +492,7 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGatewaysResult> getGateways(GetGatewaysArgs args) {
+    public static Output<GetGatewaysResult> getGateways(GetGatewaysArgs args) {
         return getGateways(args, InvokeOptions.Empty);
     }
     /**
@@ -271,7 +503,29 @@ public final class ApiGatewayFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetGatewaysResult> getGateways(GetGatewaysArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewaysResult> getGatewaysPlain(GetGatewaysPlainArgs args) {
+        return getGatewaysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Gateways in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Returns a list of gateways.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetGatewaysResult> getGateways(GetGatewaysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApiGateway/getGateways:getGateways", TypeShape.of(GetGatewaysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Gateways in Oracle Cloud Infrastructure API Gateway service.
+     * 
+     * Returns a list of gateways.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetGatewaysResult> getGatewaysPlain(GetGatewaysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApiGateway/getGateways:getGateways", TypeShape.of(GetGatewaysResult.class), args, Utilities.withVersion(options));
     }
 }

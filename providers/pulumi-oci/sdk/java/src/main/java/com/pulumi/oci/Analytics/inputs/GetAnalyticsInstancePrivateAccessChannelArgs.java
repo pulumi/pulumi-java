@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Analytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAnalyticsInstancePrivateAccessChannelArgs extends com.pulu
      * 
      */
     @Import(name="analyticsInstanceId", required=true)
-    private String analyticsInstanceId;
+    private Output<String> analyticsInstanceId;
 
     /**
      * @return The OCID of the AnalyticsInstance.
      * 
      */
-    public String analyticsInstanceId() {
+    public Output<String> analyticsInstanceId() {
         return this.analyticsInstanceId;
     }
 
@@ -32,13 +33,13 @@ public final class GetAnalyticsInstancePrivateAccessChannelArgs extends com.pulu
      * 
      */
     @Import(name="privateAccessChannelKey", required=true)
-    private String privateAccessChannelKey;
+    private Output<String> privateAccessChannelKey;
 
     /**
      * @return The unique identifier key of the Private Access Channel.
      * 
      */
-    public String privateAccessChannelKey() {
+    public Output<String> privateAccessChannelKey() {
         return this.privateAccessChannelKey;
     }
 
@@ -73,8 +74,29 @@ public final class GetAnalyticsInstancePrivateAccessChannelArgs extends com.pulu
          * @return builder
          * 
          */
-        public Builder analyticsInstanceId(String analyticsInstanceId) {
+        public Builder analyticsInstanceId(Output<String> analyticsInstanceId) {
             $.analyticsInstanceId = analyticsInstanceId;
+            return this;
+        }
+
+        /**
+         * @param analyticsInstanceId The OCID of the AnalyticsInstance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder analyticsInstanceId(String analyticsInstanceId) {
+            return analyticsInstanceId(Output.of(analyticsInstanceId));
+        }
+
+        /**
+         * @param privateAccessChannelKey The unique identifier key of the Private Access Channel.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateAccessChannelKey(Output<String> privateAccessChannelKey) {
+            $.privateAccessChannelKey = privateAccessChannelKey;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAnalyticsInstancePrivateAccessChannelArgs extends com.pulu
          * 
          */
         public Builder privateAccessChannelKey(String privateAccessChannelKey) {
-            $.privateAccessChannelKey = privateAccessChannelKey;
-            return this;
+            return privateAccessChannelKey(Output.of(privateAccessChannelKey));
         }
 
         public GetAnalyticsInstancePrivateAccessChannelArgs build() {

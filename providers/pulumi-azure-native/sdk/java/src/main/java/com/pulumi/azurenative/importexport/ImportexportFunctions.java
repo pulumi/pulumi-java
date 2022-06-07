@@ -5,9 +5,12 @@ package com.pulumi.azurenative.importexport;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.importexport.inputs.GetJobArgs;
+import com.pulumi.azurenative.importexport.inputs.GetJobPlainArgs;
 import com.pulumi.azurenative.importexport.inputs.ListBitLockerKeyArgs;
+import com.pulumi.azurenative.importexport.inputs.ListBitLockerKeyPlainArgs;
 import com.pulumi.azurenative.importexport.outputs.GetJobResult;
 import com.pulumi.azurenative.importexport.outputs.ListBitLockerKeyResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +22,7 @@ public final class ImportexportFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+    public static Output<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
     /**
@@ -27,7 +30,23 @@ public final class ImportexportFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJobPlain(GetJobPlainArgs args) {
+        return getJobPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Contains the job information.
+     * API Version: 2020-08-01.
+     * 
+     */
+    public static Output<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:importexport:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Contains the job information.
+     * API Version: 2020-08-01.
+     * 
+     */
+    public static CompletableFuture<GetJobResult> getJobPlain(GetJobPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:importexport:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -35,7 +54,7 @@ public final class ImportexportFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<ListBitLockerKeyResult> listBitLockerKey(ListBitLockerKeyArgs args) {
+    public static Output<ListBitLockerKeyResult> listBitLockerKey(ListBitLockerKeyArgs args) {
         return listBitLockerKey(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +62,23 @@ public final class ImportexportFunctions {
      * API Version: 2020-08-01.
      * 
      */
-    public static CompletableFuture<ListBitLockerKeyResult> listBitLockerKey(ListBitLockerKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListBitLockerKeyResult> listBitLockerKeyPlain(ListBitLockerKeyPlainArgs args) {
+        return listBitLockerKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * GetBitLockerKeys response
+     * API Version: 2020-08-01.
+     * 
+     */
+    public static Output<ListBitLockerKeyResult> listBitLockerKey(ListBitLockerKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:importexport:listBitLockerKey", TypeShape.of(ListBitLockerKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * GetBitLockerKeys response
+     * API Version: 2020-08-01.
+     * 
+     */
+    public static CompletableFuture<ListBitLockerKeyResult> listBitLockerKeyPlain(ListBitLockerKeyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:importexport:listBitLockerKey", TypeShape.of(ListBitLockerKeyResult.class), args, Utilities.withVersion(options));
     }
 }

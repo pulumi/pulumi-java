@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,14 +23,14 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupId")
-    private @Nullable Integer backupId;
+    private @Nullable Output<Integer> backupId;
 
     /**
      * @return The identifier for this backup run. Unique only for a specific Cloud SQL instance.
      * If left empty and multiple backups exist for the instance, `most_recent` must be set to `true`.
      * 
      */
-    public Optional<Integer> backupId() {
+    public Optional<Output<Integer>> backupId() {
         return Optional.ofNullable(this.backupId);
     }
 
@@ -38,13 +39,13 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instance", required=true)
-    private String instance;
+    private Output<String> instance;
 
     /**
      * @return The name of the instance the backup is taken from.
      * 
      */
-    public String instance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
@@ -54,14 +55,14 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-    private @Nullable Boolean mostRecent;
+    private @Nullable Output<Boolean> mostRecent;
 
     /**
      * @return Toggles use of the most recent backup run if multiple backups exist for a
      * Cloud SQL instance.
      * 
      */
-    public Optional<Boolean> mostRecent() {
+    public Optional<Output<Boolean>> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
 
@@ -98,8 +99,30 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder backupId(@Nullable Integer backupId) {
+        public Builder backupId(@Nullable Output<Integer> backupId) {
             $.backupId = backupId;
+            return this;
+        }
+
+        /**
+         * @param backupId The identifier for this backup run. Unique only for a specific Cloud SQL instance.
+         * If left empty and multiple backups exist for the instance, `most_recent` must be set to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backupId(Integer backupId) {
+            return backupId(Output.of(backupId));
+        }
+
+        /**
+         * @param instance The name of the instance the backup is taken from.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instance(Output<String> instance) {
+            $.instance = instance;
             return this;
         }
 
@@ -110,7 +133,18 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder instance(String instance) {
-            $.instance = instance;
+            return instance(Output.of(instance));
+        }
+
+        /**
+         * @param mostRecent Toggles use of the most recent backup run if multiple backups exist for a
+         * Cloud SQL instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mostRecent(@Nullable Output<Boolean> mostRecent) {
+            $.mostRecent = mostRecent;
             return this;
         }
 
@@ -121,9 +155,8 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
-            $.mostRecent = mostRecent;
-            return this;
+        public Builder mostRecent(Boolean mostRecent) {
+            return mostRecent(Output.of(mostRecent));
         }
 
         public GetBackupRunArgs build() {

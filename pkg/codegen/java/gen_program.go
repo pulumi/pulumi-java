@@ -869,12 +869,9 @@ func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariab
 	g.genIndent(w)
 	if isInvokeCall {
 		g.functionInvokes[variableName] = functionSchema
-		// convert CompletableFuture<T> to Output<T> using Output.of
-		// TODO: call the Output<T>-version of invokes when the SDK allows it.
-		functionDefinition := outputOf(localVariable.Definition.Value)
 		// TODO: lowerExpression isn't what we expect: function call should extract outputs into .apply(...) calls
 		//functionDefinitionWithApplies := g.lowerExpression(functionDefinition, localVariable.Definition.Value.Type())
-		g.Fgenf(w, "final var %s = %v;\n", variableName, functionDefinition)
+		g.Fgenf(w, "final var %s = %v;\n", variableName, localVariable.Definition.Value)
 	} else {
 		variable := localVariable.Definition.Value
 		g.Fgenf(w, "final var %s = %v;\n", variableName, g.lowerExpression(variable, variable.Type()))

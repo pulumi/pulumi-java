@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDbNodeConsoleConnectionsFilter;
+import com.pulumi.oci.Database.inputs.GetDbNodeConsoleConnectionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetDbNodeConsoleConnectionsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="dbNodeId", required=true)
-    private String dbNodeId;
+    private Output<String> dbNodeId;
 
     /**
      * @return The database node [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String dbNodeId() {
+    public Output<String> dbNodeId() {
         return this.dbNodeId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDbNodeConsoleConnectionsFilter> filters;
+    private @Nullable Output<List<GetDbNodeConsoleConnectionsFilterArgs>> filters;
 
-    public Optional<List<GetDbNodeConsoleConnectionsFilter>> filters() {
+    public Optional<Output<List<GetDbNodeConsoleConnectionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetDbNodeConsoleConnectionsArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder dbNodeId(String dbNodeId) {
+        public Builder dbNodeId(Output<String> dbNodeId) {
             $.dbNodeId = dbNodeId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbNodeConsoleConnectionsFilter> filters) {
+        /**
+         * @param dbNodeId The database node [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbNodeId(String dbNodeId) {
+            return dbNodeId(Output.of(dbNodeId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetDbNodeConsoleConnectionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDbNodeConsoleConnectionsFilter... filters) {
+        public Builder filters(List<GetDbNodeConsoleConnectionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDbNodeConsoleConnectionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

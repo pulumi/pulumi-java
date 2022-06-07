@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Vault.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Vault.inputs.GetSecretsFilter;
+import com.pulumi.oci.Vault.inputs.GetSecretsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSecretsFilter> filters;
+    private @Nullable Output<List<GetSecretsFilterArgs>> filters;
 
-    public Optional<List<GetSecretsFilter>> filters() {
+    public Optional<Output<List<GetSecretsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The secret name.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -58,13 +59,13 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter that returns only resources that match the specified lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -73,13 +74,13 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vaultId")
-    private @Nullable String vaultId;
+    private @Nullable Output<String> vaultId;
 
     /**
      * @return The OCID of the vault.
      * 
      */
-    public Optional<String> vaultId() {
+    public Optional<Output<String>> vaultId() {
         return Optional.ofNullable(this.vaultId);
     }
 
@@ -117,17 +118,31 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSecretsFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetSecretsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSecretsFilter... filters) {
+        public Builder filters(List<GetSecretsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSecretsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -137,8 +152,29 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The secret name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state A filter that returns only resources that match the specified lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -148,8 +184,18 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param vaultId The OCID of the vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vaultId(@Nullable Output<String> vaultId) {
+            $.vaultId = vaultId;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vaultId(@Nullable String vaultId) {
-            $.vaultId = vaultId;
-            return this;
+        public Builder vaultId(String vaultId) {
+            return vaultId(Output.of(vaultId));
         }
 
         public GetSecretsArgs build() {

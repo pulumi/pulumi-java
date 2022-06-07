@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFirewallPolicyRuleGroupArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="firewallPolicyName", required=true)
-    private String firewallPolicyName;
+    private Output<String> firewallPolicyName;
 
     /**
      * @return The name of the Firewall Policy.
      * 
      */
-    public String firewallPolicyName() {
+    public Output<String> firewallPolicyName() {
         return this.firewallPolicyName;
     }
 
@@ -32,13 +33,13 @@ public final class GetFirewallPolicyRuleGroupArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetFirewallPolicyRuleGroupArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="ruleGroupName", required=true)
-    private String ruleGroupName;
+    private Output<String> ruleGroupName;
 
     /**
      * @return The name of the FirewallPolicyRuleGroup.
      * 
      */
-    public String ruleGroupName() {
+    public Output<String> ruleGroupName() {
         return this.ruleGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetFirewallPolicyRuleGroupArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder firewallPolicyName(String firewallPolicyName) {
+        public Builder firewallPolicyName(Output<String> firewallPolicyName) {
             $.firewallPolicyName = firewallPolicyName;
+            return this;
+        }
+
+        /**
+         * @param firewallPolicyName The name of the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder firewallPolicyName(String firewallPolicyName) {
+            return firewallPolicyName(Output.of(firewallPolicyName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetFirewallPolicyRuleGroupArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param ruleGroupName The name of the FirewallPolicyRuleGroup.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleGroupName(Output<String> ruleGroupName) {
+            $.ruleGroupName = ruleGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetFirewallPolicyRuleGroupArgs extends com.pulumi.resources.I
          * 
          */
         public Builder ruleGroupName(String ruleGroupName) {
-            $.ruleGroupName = ruleGroupName;
-            return this;
+            return ruleGroupName(Output.of(ruleGroupName));
         }
 
         public GetFirewallPolicyRuleGroupArgs build() {

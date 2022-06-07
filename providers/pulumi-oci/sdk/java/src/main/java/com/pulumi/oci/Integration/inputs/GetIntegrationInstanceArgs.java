@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Integration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIntegrationInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="integrationInstanceId", required=true)
-    private String integrationInstanceId;
+    private Output<String> integrationInstanceId;
 
     /**
      * @return Unique Integration Instance identifier.
      * 
      */
-    public String integrationInstanceId() {
+    public Output<String> integrationInstanceId() {
         return this.integrationInstanceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetIntegrationInstanceArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder integrationInstanceId(String integrationInstanceId) {
+        public Builder integrationInstanceId(Output<String> integrationInstanceId) {
             $.integrationInstanceId = integrationInstanceId;
             return this;
+        }
+
+        /**
+         * @param integrationInstanceId Unique Integration Instance identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationInstanceId(String integrationInstanceId) {
+            return integrationInstanceId(Output.of(integrationInstanceId));
         }
 
         public GetIntegrationInstanceArgs build() {

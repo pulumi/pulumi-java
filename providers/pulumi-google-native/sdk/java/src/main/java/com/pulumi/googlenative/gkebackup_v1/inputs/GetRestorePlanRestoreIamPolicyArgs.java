@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.gkebackup_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetRestorePlanRestoreIamPolicyArgs extends com.pulumi.resourc
     public static final GetRestorePlanRestoreIamPolicyArgs Empty = new GetRestorePlanRestoreIamPolicyArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="restoreId", required=true)
-    private String restoreId;
+    private Output<String> restoreId;
 
-    public String restoreId() {
+    public Output<String> restoreId() {
         return this.restoreId;
     }
 
     @Import(name="restorePlanId", required=true)
-    private String restorePlanId;
+    private Output<String> restorePlanId;
 
-    public String restorePlanId() {
+    public Output<String> restorePlanId() {
         return this.restorePlanId;
     }
 
@@ -77,29 +78,49 @@ public final class GetRestorePlanRestoreIamPolicyArgs extends com.pulumi.resourc
             $ = new GetRestorePlanRestoreIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder restoreId(String restoreId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder restoreId(Output<String> restoreId) {
             $.restoreId = restoreId;
             return this;
         }
 
-        public Builder restorePlanId(String restorePlanId) {
+        public Builder restoreId(String restoreId) {
+            return restoreId(Output.of(restoreId));
+        }
+
+        public Builder restorePlanId(Output<String> restorePlanId) {
             $.restorePlanId = restorePlanId;
             return this;
+        }
+
+        public Builder restorePlanId(String restorePlanId) {
+            return restorePlanId(Output.of(restorePlanId));
         }
 
         public GetRestorePlanRestoreIamPolicyArgs build() {

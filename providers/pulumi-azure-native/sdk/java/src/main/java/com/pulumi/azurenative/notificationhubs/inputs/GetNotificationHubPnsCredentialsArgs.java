@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.notificationhubs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNotificationHubPnsCredentialsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The namespace name.
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetNotificationHubPnsCredentialsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="notificationHubName", required=true)
-    private String notificationHubName;
+    private Output<String> notificationHubName;
 
     /**
      * @return The notification hub name.
      * 
      */
-    public String notificationHubName() {
+    public Output<String> notificationHubName() {
         return this.notificationHubName;
     }
 
@@ -47,13 +48,13 @@ public final class GetNotificationHubPnsCredentialsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetNotificationHubPnsCredentialsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder namespaceName(String namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
+            return this;
+        }
+
+        /**
+         * @param namespaceName The namespace name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(String namespaceName) {
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param notificationHubName The notification hub name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder notificationHubName(Output<String> notificationHubName) {
+            $.notificationHubName = notificationHubName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetNotificationHubPnsCredentialsArgs extends com.pulumi.resou
          * 
          */
         public Builder notificationHubName(String notificationHubName) {
-            $.notificationHubName = notificationHubName;
+            return notificationHubName(Output.of(notificationHubName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetNotificationHubPnsCredentialsArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNotificationHubPnsCredentialsArgs build() {

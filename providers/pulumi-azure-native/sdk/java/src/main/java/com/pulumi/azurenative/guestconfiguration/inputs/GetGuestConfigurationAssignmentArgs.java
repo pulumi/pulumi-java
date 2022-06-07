@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.guestconfiguration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="guestConfigurationAssignmentName", required=true)
-    private String guestConfigurationAssignmentName;
+    private Output<String> guestConfigurationAssignmentName;
 
     /**
      * @return The guest configuration assignment name.
      * 
      */
-    public String guestConfigurationAssignmentName() {
+    public Output<String> guestConfigurationAssignmentName() {
         return this.guestConfigurationAssignmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="vmName", required=true)
-    private String vmName;
+    private Output<String> vmName;
 
     /**
      * @return The name of the virtual machine.
      * 
      */
-    public String vmName() {
+    public Output<String> vmName() {
         return this.vmName;
     }
 
@@ -89,8 +90,29 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder guestConfigurationAssignmentName(String guestConfigurationAssignmentName) {
+        public Builder guestConfigurationAssignmentName(Output<String> guestConfigurationAssignmentName) {
             $.guestConfigurationAssignmentName = guestConfigurationAssignmentName;
+            return this;
+        }
+
+        /**
+         * @param guestConfigurationAssignmentName The guest configuration assignment name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder guestConfigurationAssignmentName(String guestConfigurationAssignmentName) {
+            return guestConfigurationAssignmentName(Output.of(guestConfigurationAssignmentName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vmName The name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmName(Output<String> vmName) {
+            $.vmName = vmName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
          * 
          */
         public Builder vmName(String vmName) {
-            $.vmName = vmName;
-            return this;
+            return vmName(Output.of(vmName));
         }
 
         public GetGuestConfigurationAssignmentArgs build() {

@@ -3,9 +3,10 @@
 
 package com.pulumi.myedgeorder.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.myedgeorder.inputs.ConfigurationFilters;
-import com.pulumi.myedgeorder.inputs.CustomerSubscriptionDetails;
+import com.pulumi.myedgeorder.inputs.ConfigurationFiltersArgs;
+import com.pulumi.myedgeorder.inputs.CustomerSubscriptionDetailsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,13 +23,13 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="configurationFilters", required=true)
-    private List<ConfigurationFilters> configurationFilters;
+    private Output<List<ConfigurationFiltersArgs>> configurationFilters;
 
     /**
      * @return Holds details about product hierarchy information and filterable property.
      * 
      */
-    public List<ConfigurationFilters> configurationFilters() {
+    public Output<List<ConfigurationFiltersArgs>> configurationFilters() {
         return this.configurationFilters;
     }
 
@@ -37,13 +38,13 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="customerSubscriptionDetails")
-    private @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
+    private @Nullable Output<CustomerSubscriptionDetailsArgs> customerSubscriptionDetails;
 
     /**
      * @return Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
      * 
      */
-    public Optional<CustomerSubscriptionDetails> customerSubscriptionDetails() {
+    public Optional<Output<CustomerSubscriptionDetailsArgs>> customerSubscriptionDetails() {
         return Optional.ofNullable(this.customerSubscriptionDetails);
     }
 
@@ -52,13 +53,13 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return $skipToken is supported on list of configurations, which provides the next page in the list of configurations.
      * 
      */
-    public Optional<String> skipToken() {
+    public Optional<Output<String>> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
 
@@ -94,7 +95,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder configurationFilters(List<ConfigurationFilters> configurationFilters) {
+        public Builder configurationFilters(Output<List<ConfigurationFiltersArgs>> configurationFilters) {
             $.configurationFilters = configurationFilters;
             return this;
         }
@@ -105,7 +106,17 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder configurationFilters(ConfigurationFilters... configurationFilters) {
+        public Builder configurationFilters(List<ConfigurationFiltersArgs> configurationFilters) {
+            return configurationFilters(Output.of(configurationFilters));
+        }
+
+        /**
+         * @param configurationFilters Holds details about product hierarchy information and filterable property.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configurationFilters(ConfigurationFiltersArgs... configurationFilters) {
             return configurationFilters(List.of(configurationFilters));
         }
 
@@ -115,8 +126,29 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder customerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
+        public Builder customerSubscriptionDetails(@Nullable Output<CustomerSubscriptionDetailsArgs> customerSubscriptionDetails) {
             $.customerSubscriptionDetails = customerSubscriptionDetails;
+            return this;
+        }
+
+        /**
+         * @param customerSubscriptionDetails Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customerSubscriptionDetails(CustomerSubscriptionDetailsArgs customerSubscriptionDetails) {
+            return customerSubscriptionDetails(Output.of(customerSubscriptionDetails));
+        }
+
+        /**
+         * @param skipToken $skipToken is supported on list of configurations, which provides the next page in the list of configurations.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(@Nullable Output<String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -126,9 +158,8 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
-            return this;
+        public Builder skipToken(String skipToken) {
+            return skipToken(Output.of(skipToken));
         }
 
         public ListConfigurationsArgs build() {

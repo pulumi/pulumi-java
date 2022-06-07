@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="connectionName", required=true)
-    private String connectionName;
+    private Output<String> connectionName;
 
     /**
      * @return The name of the connection.
      * 
      */
-    public String connectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name of the VirtualHub.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="virtualHubName", required=true)
-    private String virtualHubName;
+    private Output<String> virtualHubName;
 
     /**
      * @return The name of the VirtualHub.
      * 
      */
-    public String virtualHubName() {
+    public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder connectionName(String connectionName) {
+        public Builder connectionName(Output<String> connectionName) {
             $.connectionName = connectionName;
+            return this;
+        }
+
+        /**
+         * @param connectionName The name of the connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualHubName(Output<String> virtualHubName) {
+            $.virtualHubName = virtualHubName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVirtualHubBgpConnectionArgs extends com.pulumi.resources.I
          * 
          */
         public Builder virtualHubName(String virtualHubName) {
-            $.virtualHubName = virtualHubName;
-            return this;
+            return virtualHubName(Output.of(virtualHubName));
         }
 
         public GetVirtualHubBgpConnectionArgs build() {

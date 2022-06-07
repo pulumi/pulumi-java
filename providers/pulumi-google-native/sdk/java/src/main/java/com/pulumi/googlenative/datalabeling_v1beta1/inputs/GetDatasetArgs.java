@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDatasetArgs Empty = new GetDatasetArgs();
 
     @Import(name="datasetId", required=true)
-    private String datasetId;
+    private Output<String> datasetId;
 
-    public String datasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetDatasetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDatasetArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder datasetId(String datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetDatasetArgs build() {

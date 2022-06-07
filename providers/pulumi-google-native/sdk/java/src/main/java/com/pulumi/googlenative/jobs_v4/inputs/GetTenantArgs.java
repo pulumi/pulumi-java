@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.jobs_v4.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetTenantArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTenantArgs Empty = new GetTenantArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="tenantId", required=true)
-    private String tenantId;
+    private Output<String> tenantId;
 
-    public String tenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 
@@ -53,14 +54,22 @@ public final class GetTenantArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTenantArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder tenantId(String tenantId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder tenantId(Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
+        }
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
 
         public GetTenantArgs build() {

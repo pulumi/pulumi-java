@@ -5,7 +5,9 @@ package com.pulumi.aws.acm;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.acm.inputs.GetCertificateArgs;
+import com.pulumi.aws.acm.inputs.GetCertificatePlainArgs;
 import com.pulumi.aws.acm.outputs.GetCertificateResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -53,7 +55,7 @@ public final class AcmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -97,7 +99,95 @@ public final class AcmFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args) {
+        return getCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARN of a certificate in AWS Certificate
+     * Manager (ACM), you can reference
+     * it by domain without having to hard code the ARNs as input.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var issued = Output.of(AcmFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .domain(&#34;tf.example.com&#34;)
+     *             .statuses(&#34;ISSUED&#34;)
+     *             .build()));
+     * 
+     *         final var amazonIssued = Output.of(AcmFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .domain(&#34;tf.example.com&#34;)
+     *             .mostRecent(true)
+     *             .types(&#34;AMAZON_ISSUED&#34;)
+     *             .build()));
+     * 
+     *         final var rsa4096 = Output.of(AcmFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .domain(&#34;tf.example.com&#34;)
+     *             .keyTypes(&#34;RSA_4096&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:acm/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the ARN of a certificate in AWS Certificate
+     * Manager (ACM), you can reference
+     * it by domain without having to hard code the ARNs as input.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var issued = Output.of(AcmFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .domain(&#34;tf.example.com&#34;)
+     *             .statuses(&#34;ISSUED&#34;)
+     *             .build()));
+     * 
+     *         final var amazonIssued = Output.of(AcmFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .domain(&#34;tf.example.com&#34;)
+     *             .mostRecent(true)
+     *             .types(&#34;AMAZON_ISSUED&#34;)
+     *             .build()));
+     * 
+     *         final var rsa4096 = Output.of(AcmFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .domain(&#34;tf.example.com&#34;)
+     *             .keyTypes(&#34;RSA_4096&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:acm/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
 }

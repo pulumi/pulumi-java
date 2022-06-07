@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualWanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name of the VirtualWan.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualWanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="virtualWANName", required=true)
-    private String virtualWANName;
+    private Output<String> virtualWANName;
 
     /**
      * @return The name of the VirtualWAN being retrieved.
      * 
      */
-    public String virtualWANName() {
+    public Output<String> virtualWANName() {
         return this.virtualWANName;
     }
 
@@ -73,8 +74,29 @@ public final class GetVirtualWanArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The resource group name of the VirtualWan.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualWANName The name of the VirtualWAN being retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualWANName(Output<String> virtualWANName) {
+            $.virtualWANName = virtualWANName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVirtualWanArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder virtualWANName(String virtualWANName) {
-            $.virtualWANName = virtualWANName;
-            return this;
+            return virtualWANName(Output.of(virtualWANName));
         }
 
         public GetVirtualWanArgs build() {

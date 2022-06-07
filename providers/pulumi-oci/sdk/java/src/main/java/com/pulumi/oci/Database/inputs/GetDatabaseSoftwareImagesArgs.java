@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDatabaseSoftwareImagesFilter;
+import com.pulumi.oci.Database.inputs.GetDatabaseSoftwareImagesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -37,20 +38,20 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDatabaseSoftwareImagesFilter> filters;
+    private @Nullable Output<List<GetDatabaseSoftwareImagesFilterArgs>> filters;
 
-    public Optional<List<GetDatabaseSoftwareImagesFilter>> filters() {
+    public Optional<Output<List<GetDatabaseSoftwareImagesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -59,13 +60,13 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="imageShapeFamily")
-    private @Nullable String imageShapeFamily;
+    private @Nullable Output<String> imageShapeFamily;
 
     /**
      * @return A filter to return only resources that match the given image shape family exactly.
      * 
      */
-    public Optional<String> imageShapeFamily() {
+    public Optional<Output<String>> imageShapeFamily() {
         return Optional.ofNullable(this.imageShapeFamily);
     }
 
@@ -74,13 +75,13 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="imageType")
-    private @Nullable String imageType;
+    private @Nullable Output<String> imageType;
 
     /**
      * @return A filter to return only resources that match the given image type exactly.
      * 
      */
-    public Optional<String> imageType() {
+    public Optional<Output<String>> imageType() {
         return Optional.ofNullable(this.imageType);
     }
 
@@ -89,13 +90,13 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="isUpgradeSupported")
-    private @Nullable Boolean isUpgradeSupported;
+    private @Nullable Output<Boolean> isUpgradeSupported;
 
     /**
      * @return If provided, filters the results to the set of database versions which are supported for Upgrade.
      * 
      */
-    public Optional<Boolean> isUpgradeSupported() {
+    public Optional<Output<Boolean>> isUpgradeSupported() {
         return Optional.ofNullable(this.isUpgradeSupported);
     }
 
@@ -104,13 +105,13 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -150,8 +151,29 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given. The match is not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -161,17 +183,20 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetDatabaseSoftwareImagesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabaseSoftwareImagesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDatabaseSoftwareImagesFilter... filters) {
+        public Builder filters(List<GetDatabaseSoftwareImagesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDatabaseSoftwareImagesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -181,8 +206,29 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder imageShapeFamily(@Nullable String imageShapeFamily) {
+        public Builder imageShapeFamily(@Nullable Output<String> imageShapeFamily) {
             $.imageShapeFamily = imageShapeFamily;
+            return this;
+        }
+
+        /**
+         * @param imageShapeFamily A filter to return only resources that match the given image shape family exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageShapeFamily(String imageShapeFamily) {
+            return imageShapeFamily(Output.of(imageShapeFamily));
+        }
+
+        /**
+         * @param imageType A filter to return only resources that match the given image type exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageType(@Nullable Output<String> imageType) {
+            $.imageType = imageType;
             return this;
         }
 
@@ -192,8 +238,18 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder imageType(@Nullable String imageType) {
-            $.imageType = imageType;
+        public Builder imageType(String imageType) {
+            return imageType(Output.of(imageType));
+        }
+
+        /**
+         * @param isUpgradeSupported If provided, filters the results to the set of database versions which are supported for Upgrade.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isUpgradeSupported(@Nullable Output<Boolean> isUpgradeSupported) {
+            $.isUpgradeSupported = isUpgradeSupported;
             return this;
         }
 
@@ -203,8 +259,18 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder isUpgradeSupported(@Nullable Boolean isUpgradeSupported) {
-            $.isUpgradeSupported = isUpgradeSupported;
+        public Builder isUpgradeSupported(Boolean isUpgradeSupported) {
+            return isUpgradeSupported(Output.of(isUpgradeSupported));
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -214,9 +280,8 @@ public final class GetDatabaseSoftwareImagesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetDatabaseSoftwareImagesArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lambda.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="functionName", required=true)
-    private String functionName;
+    private Output<String> functionName;
 
     /**
      * @return The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
      * 
      */
-    public String functionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -57,9 +58,19 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder functionName(String functionName) {
+        public Builder functionName(Output<String> functionName) {
             $.functionName = functionName;
             return this;
+        }
+
+        /**
+         * @param functionName The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionName(String functionName) {
+            return functionName(Output.of(functionName));
         }
 
         public GetFunctionArgs build() {

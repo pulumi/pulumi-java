@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetIssueModelArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIssueModelArgs Empty = new GetIssueModelArgs();
 
     @Import(name="issueModelId", required=true)
-    private String issueModelId;
+    private Output<String> issueModelId;
 
-    public String issueModelId() {
+    public Output<String> issueModelId() {
         return this.issueModelId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetIssueModelArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIssueModelArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder issueModelId(String issueModelId) {
+        public Builder issueModelId(Output<String> issueModelId) {
             $.issueModelId = issueModelId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder issueModelId(String issueModelId) {
+            return issueModelId(Output.of(issueModelId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetIssueModelArgs build() {

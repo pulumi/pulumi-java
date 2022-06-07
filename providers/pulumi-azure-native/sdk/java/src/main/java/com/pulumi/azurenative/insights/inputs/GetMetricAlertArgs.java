@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMetricAlertArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMetricAlertArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleName", required=true)
-    private String ruleName;
+    private Output<String> ruleName;
 
     /**
      * @return The name of the rule.
      * 
      */
-    public String ruleName() {
+    public Output<String> ruleName() {
         return this.ruleName;
     }
 
@@ -73,8 +74,29 @@ public final class GetMetricAlertArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleName(Output<String> ruleName) {
+            $.ruleName = ruleName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetMetricAlertArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ruleName(String ruleName) {
-            $.ruleName = ruleName;
-            return this;
+            return ruleName(Output.of(ruleName));
         }
 
         public GetMetricAlertArgs build() {

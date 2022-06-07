@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Marketplace.inputs.GetCategoriesFilter;
+import com.pulumi.oci.Marketplace.inputs.GetCategoriesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetCategoriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The unique identifier for the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetCategoriesFilter> filters;
+    private @Nullable Output<List<GetCategoriesFilterArgs>> filters;
 
-    public Optional<List<GetCategoriesFilter>> filters() {
+    public Optional<Output<List<GetCategoriesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetCategoriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCategoriesFilter> filters) {
+        /**
+         * @param compartmentId The unique identifier for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetCategoriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetCategoriesFilter... filters) {
+        public Builder filters(List<GetCategoriesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetCategoriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

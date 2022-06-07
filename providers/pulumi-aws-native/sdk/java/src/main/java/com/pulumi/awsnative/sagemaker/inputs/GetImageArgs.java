@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sagemaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetImageArgs Empty = new GetImageArgs();
 
     @Import(name="imageArn", required=true)
-    private String imageArn;
+    private Output<String> imageArn;
 
-    public String imageArn() {
+    public Output<String> imageArn() {
         return this.imageArn;
     }
 
@@ -43,9 +44,13 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetImageArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder imageArn(String imageArn) {
+        public Builder imageArn(Output<String> imageArn) {
             $.imageArn = imageArn;
             return this;
+        }
+
+        public Builder imageArn(String imageArn) {
+            return imageArn(Output.of(imageArn));
         }
 
         public GetImageArgs build() {

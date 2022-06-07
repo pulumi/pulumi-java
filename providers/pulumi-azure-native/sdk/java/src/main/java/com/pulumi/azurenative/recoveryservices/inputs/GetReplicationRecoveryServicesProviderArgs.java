@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.recoveryservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
      * 
      */
     @Import(name="fabricName", required=true)
-    private String fabricName;
+    private Output<String> fabricName;
 
     /**
      * @return Fabric name.
      * 
      */
-    public String fabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -32,13 +33,13 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
      * 
      */
     @Import(name="providerName", required=true)
-    private String providerName;
+    private Output<String> providerName;
 
     /**
      * @return Recovery services provider name
      * 
      */
-    public String providerName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
 
@@ -47,13 +48,13 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the recovery services vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the recovery services vault.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder fabricName(String fabricName) {
+        public Builder fabricName(Output<String> fabricName) {
             $.fabricName = fabricName;
+            return this;
+        }
+
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fabricName(String fabricName) {
+            return fabricName(Output.of(fabricName));
+        }
+
+        /**
+         * @param providerName Recovery services provider name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerName(Output<String> providerName) {
+            $.providerName = providerName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
          * 
          */
         public Builder providerName(String providerName) {
-            $.providerName = providerName;
+            return providerName(Output.of(providerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public GetReplicationRecoveryServicesProviderArgs build() {

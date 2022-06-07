@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.ecs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTaskDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="taskDefinition", required=true)
-    private String taskDefinition;
+    private Output<String> taskDefinition;
 
     /**
      * @return The family for the latest ACTIVE revision, family and revision (family:revision) for a specific revision in the family, the ARN of the task definition to access to.
      * 
      */
-    public String taskDefinition() {
+    public Output<String> taskDefinition() {
         return this.taskDefinition;
     }
 
@@ -57,9 +58,19 @@ public final class GetTaskDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder taskDefinition(String taskDefinition) {
+        public Builder taskDefinition(Output<String> taskDefinition) {
             $.taskDefinition = taskDefinition;
             return this;
+        }
+
+        /**
+         * @param taskDefinition The family for the latest ACTIVE revision, family and revision (family:revision) for a specific revision in the family, the ARN of the task definition to access to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder taskDefinition(String taskDefinition) {
+            return taskDefinition(Output.of(taskDefinition));
         }
 
         public GetTaskDefinitionArgs build() {

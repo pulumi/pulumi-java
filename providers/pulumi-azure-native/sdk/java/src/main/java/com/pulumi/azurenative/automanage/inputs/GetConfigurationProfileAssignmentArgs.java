@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.automanage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="configurationProfileAssignmentName", required=true)
-    private String configurationProfileAssignmentName;
+    private Output<String> configurationProfileAssignmentName;
 
     /**
      * @return The configuration profile assignment name.
      * 
      */
-    public String configurationProfileAssignmentName() {
+    public Output<String> configurationProfileAssignmentName() {
         return this.configurationProfileAssignmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
      * 
      */
     @Import(name="vmName", required=true)
-    private String vmName;
+    private Output<String> vmName;
 
     /**
      * @return The name of the virtual machine.
      * 
      */
-    public String vmName() {
+    public Output<String> vmName() {
         return this.vmName;
     }
 
@@ -89,8 +90,29 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder configurationProfileAssignmentName(String configurationProfileAssignmentName) {
+        public Builder configurationProfileAssignmentName(Output<String> configurationProfileAssignmentName) {
             $.configurationProfileAssignmentName = configurationProfileAssignmentName;
+            return this;
+        }
+
+        /**
+         * @param configurationProfileAssignmentName The configuration profile assignment name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configurationProfileAssignmentName(String configurationProfileAssignmentName) {
+            return configurationProfileAssignmentName(Output.of(configurationProfileAssignmentName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vmName The name of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmName(Output<String> vmName) {
+            $.vmName = vmName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetConfigurationProfileAssignmentArgs extends com.pulumi.reso
          * 
          */
         public Builder vmName(String vmName) {
-            $.vmName = vmName;
-            return this;
+            return vmName(Output.of(vmName));
         }
 
         public GetConfigurationProfileAssignmentArgs build() {

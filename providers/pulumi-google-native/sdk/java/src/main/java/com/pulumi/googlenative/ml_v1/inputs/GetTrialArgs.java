@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.ml_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetTrialArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTrialArgs Empty = new GetTrialArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="studyId", required=true)
-    private String studyId;
+    private Output<String> studyId;
 
-    public String studyId() {
+    public Output<String> studyId() {
         return this.studyId;
     }
 
     @Import(name="trialId", required=true)
-    private String trialId;
+    private Output<String> trialId;
 
-    public String trialId() {
+    public Output<String> trialId() {
         return this.trialId;
     }
 
@@ -69,24 +70,40 @@ public final class GetTrialArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTrialArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder studyId(String studyId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder studyId(Output<String> studyId) {
             $.studyId = studyId;
             return this;
         }
 
-        public Builder trialId(String trialId) {
+        public Builder studyId(String studyId) {
+            return studyId(Output.of(studyId));
+        }
+
+        public Builder trialId(Output<String> trialId) {
             $.trialId = trialId;
             return this;
+        }
+
+        public Builder trialId(String trialId) {
+            return trialId(Output.of(trialId));
         }
 
         public GetTrialArgs build() {

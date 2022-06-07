@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetWorkflowTemplateArgs extends com.pulumi.resources.InvokeAr
     public static final GetWorkflowTemplateArgs Empty = new GetWorkflowTemplateArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="version")
-    private @Nullable String version;
+    private @Nullable Output<String> version;
 
-    public Optional<String> version() {
+    public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
 
     @Import(name="workflowTemplateId", required=true)
-    private String workflowTemplateId;
+    private Output<String> workflowTemplateId;
 
-    public String workflowTemplateId() {
+    public Output<String> workflowTemplateId() {
         return this.workflowTemplateId;
     }
 
@@ -69,24 +70,40 @@ public final class GetWorkflowTemplateArgs extends com.pulumi.resources.InvokeAr
             $ = new GetWorkflowTemplateArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder version(@Nullable String version) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
-        public Builder workflowTemplateId(String workflowTemplateId) {
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public Builder workflowTemplateId(Output<String> workflowTemplateId) {
             $.workflowTemplateId = workflowTemplateId;
             return this;
+        }
+
+        public Builder workflowTemplateId(String workflowTemplateId) {
+            return workflowTemplateId(Output.of(workflowTemplateId));
         }
 
         public GetWorkflowTemplateArgs build() {

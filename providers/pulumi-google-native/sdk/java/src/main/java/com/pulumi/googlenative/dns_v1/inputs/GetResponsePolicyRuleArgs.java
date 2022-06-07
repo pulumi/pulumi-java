@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dns_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetResponsePolicyRuleArgs extends com.pulumi.resources.Invoke
     public static final GetResponsePolicyRuleArgs Empty = new GetResponsePolicyRuleArgs();
 
     @Import(name="clientOperationId")
-    private @Nullable String clientOperationId;
+    private @Nullable Output<String> clientOperationId;
 
-    public Optional<String> clientOperationId() {
+    public Optional<Output<String>> clientOperationId() {
         return Optional.ofNullable(this.clientOperationId);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="responsePolicy", required=true)
-    private String responsePolicy;
+    private Output<String> responsePolicy;
 
-    public String responsePolicy() {
+    public Output<String> responsePolicy() {
         return this.responsePolicy;
     }
 
     @Import(name="responsePolicyRule", required=true)
-    private String responsePolicyRule;
+    private Output<String> responsePolicyRule;
 
-    public String responsePolicyRule() {
+    public Output<String> responsePolicyRule() {
         return this.responsePolicyRule;
     }
 
@@ -69,24 +70,40 @@ public final class GetResponsePolicyRuleArgs extends com.pulumi.resources.Invoke
             $ = new GetResponsePolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder clientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             $.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder clientOperationId(String clientOperationId) {
+            return clientOperationId(Output.of(clientOperationId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder responsePolicy(String responsePolicy) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder responsePolicy(Output<String> responsePolicy) {
             $.responsePolicy = responsePolicy;
             return this;
         }
 
-        public Builder responsePolicyRule(String responsePolicyRule) {
+        public Builder responsePolicy(String responsePolicy) {
+            return responsePolicy(Output.of(responsePolicy));
+        }
+
+        public Builder responsePolicyRule(Output<String> responsePolicyRule) {
             $.responsePolicyRule = responsePolicyRule;
             return this;
+        }
+
+        public Builder responsePolicyRule(String responsePolicyRule) {
+            return responsePolicyRule(Output.of(responsePolicyRule));
         }
 
         public GetResponsePolicyRuleArgs build() {

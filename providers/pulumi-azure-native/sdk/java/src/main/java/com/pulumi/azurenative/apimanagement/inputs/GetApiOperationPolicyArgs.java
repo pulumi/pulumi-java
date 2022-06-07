@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="apiId", required=true)
-    private String apiId;
+    private Output<String> apiId;
 
     /**
      * @return API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
      * 
      */
-    public String apiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -34,13 +35,13 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="format")
-    private @Nullable String format;
+    private @Nullable Output<String> format;
 
     /**
      * @return Policy Export Format.
      * 
      */
-    public Optional<String> format() {
+    public Optional<Output<String>> format() {
         return Optional.ofNullable(this.format);
     }
 
@@ -49,13 +50,13 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="operationId", required=true)
-    private String operationId;
+    private Output<String> operationId;
 
     /**
      * @return Operation identifier within an API. Must be unique in the current API Management service instance.
      * 
      */
-    public String operationId() {
+    public Output<String> operationId() {
         return this.operationId;
     }
 
@@ -64,13 +65,13 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="policyId", required=true)
-    private String policyId;
+    private Output<String> policyId;
 
     /**
      * @return The identifier of the Policy.
      * 
      */
-    public String policyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 
@@ -79,13 +80,13 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -94,13 +95,13 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -139,8 +140,29 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder apiId(String apiId) {
+        public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
+            return this;
+        }
+
+        /**
+         * @param apiId API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
+        }
+
+        /**
+         * @param format Policy Export Format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder format(@Nullable Output<String> format) {
+            $.format = format;
             return this;
         }
 
@@ -150,8 +172,18 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder format(@Nullable String format) {
-            $.format = format;
+        public Builder format(String format) {
+            return format(Output.of(format));
+        }
+
+        /**
+         * @param operationId Operation identifier within an API. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationId(Output<String> operationId) {
+            $.operationId = operationId;
             return this;
         }
 
@@ -162,7 +194,17 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder operationId(String operationId) {
-            $.operationId = operationId;
+            return operationId(Output.of(operationId));
+        }
+
+        /**
+         * @param policyId The identifier of the Policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyId(Output<String> policyId) {
+            $.policyId = policyId;
             return this;
         }
 
@@ -173,7 +215,17 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder policyId(String policyId) {
-            $.policyId = policyId;
+            return policyId(Output.of(policyId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -184,7 +236,17 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -195,8 +257,7 @@ public final class GetApiOperationPolicyArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetApiOperationPolicyArgs build() {

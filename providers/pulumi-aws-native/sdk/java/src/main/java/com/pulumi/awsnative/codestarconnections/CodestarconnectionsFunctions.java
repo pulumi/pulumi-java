@@ -5,7 +5,9 @@ package com.pulumi.awsnative.codestarconnections;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.codestarconnections.inputs.GetConnectionArgs;
+import com.pulumi.awsnative.codestarconnections.inputs.GetConnectionPlainArgs;
 import com.pulumi.awsnative.codestarconnections.outputs.GetConnectionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class CodestarconnectionsFunctions {
      * Schema for AWS::CodeStarConnections::Connection resource which can be used to connect external source providers with AWS CodePipeline
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args) {
         return getConnection(args, InvokeOptions.Empty);
     }
     /**
      * Schema for AWS::CodeStarConnections::Connection resource which can be used to connect external source providers with AWS CodePipeline
      * 
      */
-    public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectionResult> getConnectionPlain(GetConnectionPlainArgs args) {
+        return getConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Schema for AWS::CodeStarConnections::Connection resource which can be used to connect external source providers with AWS CodePipeline
+     * 
+     */
+    public static Output<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:codestarconnections:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Schema for AWS::CodeStarConnections::Connection resource which can be used to connect external source providers with AWS CodePipeline
+     * 
+     */
+    public static CompletableFuture<GetConnectionResult> getConnectionPlain(GetConnectionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codestarconnections:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

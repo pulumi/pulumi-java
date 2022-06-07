@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAdaptiveApplicationControlArgs extends com.pulumi.resource
      * 
      */
     @Import(name="ascLocation", required=true)
-    private String ascLocation;
+    private Output<String> ascLocation;
 
     /**
      * @return The location where ASC stores the data of the subscription. can be retrieved from Get locations
      * 
      */
-    public String ascLocation() {
+    public Output<String> ascLocation() {
         return this.ascLocation;
     }
 
@@ -32,13 +33,13 @@ public final class GetAdaptiveApplicationControlArgs extends com.pulumi.resource
      * 
      */
     @Import(name="groupName", required=true)
-    private String groupName;
+    private Output<String> groupName;
 
     /**
      * @return Name of an application control machine group
      * 
      */
-    public String groupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetAdaptiveApplicationControlArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder ascLocation(String ascLocation) {
+        public Builder ascLocation(Output<String> ascLocation) {
             $.ascLocation = ascLocation;
+            return this;
+        }
+
+        /**
+         * @param ascLocation The location where ASC stores the data of the subscription. can be retrieved from Get locations
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ascLocation(String ascLocation) {
+            return ascLocation(Output.of(ascLocation));
+        }
+
+        /**
+         * @param groupName Name of an application control machine group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupName(Output<String> groupName) {
+            $.groupName = groupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAdaptiveApplicationControlArgs extends com.pulumi.resource
          * 
          */
         public Builder groupName(String groupName) {
-            $.groupName = groupName;
-            return this;
+            return groupName(Output.of(groupName));
         }
 
         public GetAdaptiveApplicationControlArgs build() {

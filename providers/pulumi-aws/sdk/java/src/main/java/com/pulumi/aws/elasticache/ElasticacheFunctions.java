@@ -5,11 +5,15 @@ package com.pulumi.aws.elasticache;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.elasticache.inputs.GetClusterArgs;
+import com.pulumi.aws.elasticache.inputs.GetClusterPlainArgs;
 import com.pulumi.aws.elasticache.inputs.GetReplicationGroupArgs;
+import com.pulumi.aws.elasticache.inputs.GetReplicationGroupPlainArgs;
 import com.pulumi.aws.elasticache.inputs.GetUserArgs;
+import com.pulumi.aws.elasticache.inputs.GetUserPlainArgs;
 import com.pulumi.aws.elasticache.outputs.GetClusterResult;
 import com.pulumi.aws.elasticache.outputs.GetReplicationGroupResult;
 import com.pulumi.aws.elasticache.outputs.GetUserResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -43,7 +47,7 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +77,67 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args) {
+        return getClusterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get information about an Elasticache Cluster
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myCluster = Output.of(ElasticacheFunctions.getCluster(GetClusterArgs.builder()
+     *             .clusterId(&#34;my-cluster-id&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elasticache/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get information about an Elasticache Cluster
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myCluster = Output.of(ElasticacheFunctions.getCluster(GetClusterArgs.builder()
+     *             .clusterId(&#34;my-cluster-id&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticache/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -103,7 +167,7 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReplicationGroupResult> getReplicationGroup(GetReplicationGroupArgs args) {
+    public static Output<GetReplicationGroupResult> getReplicationGroup(GetReplicationGroupArgs args) {
         return getReplicationGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -133,7 +197,67 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetReplicationGroupResult> getReplicationGroup(GetReplicationGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetReplicationGroupResult> getReplicationGroupPlain(GetReplicationGroupPlainArgs args) {
+        return getReplicationGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get information about an Elasticache Replication Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var bar = Output.of(ElasticacheFunctions.getReplicationGroup(GetReplicationGroupArgs.builder()
+     *             .replicationGroupId(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetReplicationGroupResult> getReplicationGroup(GetReplicationGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elasticache/getReplicationGroup:getReplicationGroup", TypeShape.of(GetReplicationGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get information about an Elasticache Replication Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var bar = Output.of(ElasticacheFunctions.getReplicationGroup(GetReplicationGroupArgs.builder()
+     *             .replicationGroupId(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetReplicationGroupResult> getReplicationGroupPlain(GetReplicationGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticache/getReplicationGroup:getReplicationGroup", TypeShape.of(GetReplicationGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -163,7 +287,7 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
+    public static Output<GetUserResult> getUser(GetUserArgs args) {
         return getUser(args, InvokeOptions.Empty);
     }
     /**
@@ -193,7 +317,67 @@ public final class ElasticacheFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args) {
+        return getUserPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get information about an Elasticache User.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var bar = Output.of(ElasticacheFunctions.getUser(GetUserArgs.builder()
+     *             .userId(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetUserResult> getUser(GetUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elasticache/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get information about an Elasticache User.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var bar = Output.of(ElasticacheFunctions.getUser(GetUserArgs.builder()
+     *             .userId(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetUserResult> getUserPlain(GetUserPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticache/getUser:getUser", TypeShape.of(GetUserResult.class), args, Utilities.withVersion(options));
     }
 }

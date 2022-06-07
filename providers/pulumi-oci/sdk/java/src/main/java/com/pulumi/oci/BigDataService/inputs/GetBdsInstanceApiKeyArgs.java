@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.BigDataService.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBdsInstanceApiKeyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="apiKeyId", required=true)
-    private String apiKeyId;
+    private Output<String> apiKeyId;
 
     /**
      * @return The API key identifier.
      * 
      */
-    public String apiKeyId() {
+    public Output<String> apiKeyId() {
         return this.apiKeyId;
     }
 
@@ -32,13 +33,13 @@ public final class GetBdsInstanceApiKeyArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="bdsInstanceId", required=true)
-    private String bdsInstanceId;
+    private Output<String> bdsInstanceId;
 
     /**
      * @return The OCID of the cluster.
      * 
      */
-    public String bdsInstanceId() {
+    public Output<String> bdsInstanceId() {
         return this.bdsInstanceId;
     }
 
@@ -73,8 +74,29 @@ public final class GetBdsInstanceApiKeyArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder apiKeyId(String apiKeyId) {
+        public Builder apiKeyId(Output<String> apiKeyId) {
             $.apiKeyId = apiKeyId;
+            return this;
+        }
+
+        /**
+         * @param apiKeyId The API key identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiKeyId(String apiKeyId) {
+            return apiKeyId(Output.of(apiKeyId));
+        }
+
+        /**
+         * @param bdsInstanceId The OCID of the cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bdsInstanceId(Output<String> bdsInstanceId) {
+            $.bdsInstanceId = bdsInstanceId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetBdsInstanceApiKeyArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder bdsInstanceId(String bdsInstanceId) {
-            $.bdsInstanceId = bdsInstanceId;
-            return this;
+            return bdsInstanceId(Output.of(bdsInstanceId));
         }
 
         public GetBdsInstanceApiKeyArgs build() {

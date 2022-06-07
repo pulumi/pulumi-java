@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.backup.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFrameworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="frameworkArn", required=true)
-    private String frameworkArn;
+    private Output<String> frameworkArn;
 
     /**
      * @return An Amazon Resource Name (ARN) that uniquely identifies Framework as a resource
      * 
      */
-    public String frameworkArn() {
+    public Output<String> frameworkArn() {
         return this.frameworkArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetFrameworkArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder frameworkArn(String frameworkArn) {
+        public Builder frameworkArn(Output<String> frameworkArn) {
             $.frameworkArn = frameworkArn;
             return this;
+        }
+
+        /**
+         * @param frameworkArn An Amazon Resource Name (ARN) that uniquely identifies Framework as a resource
+         * 
+         * @return builder
+         * 
+         */
+        public Builder frameworkArn(String frameworkArn) {
+            return frameworkArn(Output.of(frameworkArn));
         }
 
         public GetFrameworkArgs build() {

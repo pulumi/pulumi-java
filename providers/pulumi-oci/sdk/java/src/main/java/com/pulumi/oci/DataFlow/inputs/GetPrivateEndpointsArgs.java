@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataFlow.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataFlow.inputs.GetPrivateEndpointsFilter;
+import com.pulumi.oci.DataFlow.inputs.GetPrivateEndpointsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetPrivateEndpointsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,13 +37,13 @@ public final class GetPrivateEndpointsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The query parameter for the Spark application name. Note: At a time only one optional filter can be used with `compartment_id` to get the list of Private Endpoint resources.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -51,20 +52,20 @@ public final class GetPrivateEndpointsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayNameStartsWith")
-    private @Nullable String displayNameStartsWith;
+    private @Nullable Output<String> displayNameStartsWith;
 
     /**
      * @return The displayName prefix.
      * 
      */
-    public Optional<String> displayNameStartsWith() {
+    public Optional<Output<String>> displayNameStartsWith() {
         return Optional.ofNullable(this.displayNameStartsWith);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetPrivateEndpointsFilter> filters;
+    private @Nullable Output<List<GetPrivateEndpointsFilterArgs>> filters;
 
-    public Optional<List<GetPrivateEndpointsFilter>> filters() {
+    public Optional<Output<List<GetPrivateEndpointsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetPrivateEndpointsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ownerPrincipalId")
-    private @Nullable String ownerPrincipalId;
+    private @Nullable Output<String> ownerPrincipalId;
 
     /**
      * @return The OCID of the user who created the resource.
      * 
      */
-    public Optional<String> ownerPrincipalId() {
+    public Optional<Output<String>> ownerPrincipalId() {
         return Optional.ofNullable(this.ownerPrincipalId);
     }
 
@@ -88,13 +89,13 @@ public final class GetPrivateEndpointsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The LifecycleState of the private endpoint.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -133,8 +134,29 @@ public final class GetPrivateEndpointsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName The query parameter for the Spark application name. Note: At a time only one optional filter can be used with `compartment_id` to get the list of Private Endpoint resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -144,8 +166,18 @@ public final class GetPrivateEndpointsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param displayNameStartsWith The displayName prefix.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayNameStartsWith(@Nullable Output<String> displayNameStartsWith) {
+            $.displayNameStartsWith = displayNameStartsWith;
             return this;
         }
 
@@ -155,17 +187,20 @@ public final class GetPrivateEndpointsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayNameStartsWith(@Nullable String displayNameStartsWith) {
-            $.displayNameStartsWith = displayNameStartsWith;
-            return this;
+        public Builder displayNameStartsWith(String displayNameStartsWith) {
+            return displayNameStartsWith(Output.of(displayNameStartsWith));
         }
 
-        public Builder filters(@Nullable List<GetPrivateEndpointsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetPrivateEndpointsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetPrivateEndpointsFilter... filters) {
+        public Builder filters(List<GetPrivateEndpointsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetPrivateEndpointsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -175,8 +210,29 @@ public final class GetPrivateEndpointsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder ownerPrincipalId(@Nullable String ownerPrincipalId) {
+        public Builder ownerPrincipalId(@Nullable Output<String> ownerPrincipalId) {
             $.ownerPrincipalId = ownerPrincipalId;
+            return this;
+        }
+
+        /**
+         * @param ownerPrincipalId The OCID of the user who created the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ownerPrincipalId(String ownerPrincipalId) {
+            return ownerPrincipalId(Output.of(ownerPrincipalId));
+        }
+
+        /**
+         * @param state The LifecycleState of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -186,9 +242,8 @@ public final class GetPrivateEndpointsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetPrivateEndpointsArgs build() {

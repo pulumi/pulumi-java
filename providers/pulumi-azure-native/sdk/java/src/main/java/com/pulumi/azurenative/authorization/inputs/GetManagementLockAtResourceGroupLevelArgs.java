@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends com.pulumi.
      * 
      */
     @Import(name="lockName", required=true)
-    private String lockName;
+    private Output<String> lockName;
 
     /**
      * @return The name of the lock to get.
      * 
      */
-    public String lockName() {
+    public Output<String> lockName() {
         return this.lockName;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the locked resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder lockName(String lockName) {
+        public Builder lockName(Output<String> lockName) {
             $.lockName = lockName;
+            return this;
+        }
+
+        /**
+         * @param lockName The name of the lock to get.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lockName(String lockName) {
+            return lockName(Output.of(lockName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the locked resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends com.pulumi.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetManagementLockAtResourceGroupLevelArgs build() {

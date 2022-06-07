@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.servicebus.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetNamespaceDisasterRecoveryConfigArgs extends com.pulumi.res
     public static final GetNamespaceDisasterRecoveryConfigArgs Empty = new GetNamespaceDisasterRecoveryConfigArgs();
 
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="namespaceId")
-    private @Nullable String namespaceId;
+    private @Nullable Output<String> namespaceId;
 
-    public Optional<String> namespaceId() {
+    public Optional<Output<String>> namespaceId() {
         return Optional.ofNullable(this.namespaceId);
     }
 
     @Import(name="namespaceName")
-    private @Nullable String namespaceName;
+    private @Nullable Output<String> namespaceName;
 
-    public Optional<String> namespaceName() {
+    public Optional<Output<String>> namespaceName() {
         return Optional.ofNullable(this.namespaceName);
     }
 
     @Import(name="resourceGroupName")
-    private @Nullable String resourceGroupName;
+    private @Nullable Output<String> resourceGroupName;
 
-    public Optional<String> resourceGroupName() {
+    public Optional<Output<String>> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
 
@@ -69,24 +70,40 @@ public final class GetNamespaceDisasterRecoveryConfigArgs extends com.pulumi.res
             $ = new GetNamespaceDisasterRecoveryConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder namespaceId(@Nullable String namespaceId) {
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder namespaceId(@Nullable Output<String> namespaceId) {
             $.namespaceId = namespaceId;
             return this;
         }
 
-        public Builder namespaceName(@Nullable String namespaceName) {
+        public Builder namespaceId(String namespaceId) {
+            return namespaceId(Output.of(namespaceId));
+        }
+
+        public Builder namespaceName(@Nullable Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
-        public Builder resourceGroupName(@Nullable String resourceGroupName) {
+        public Builder namespaceName(String namespaceName) {
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
+        }
+
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNamespaceDisasterRecoveryConfigArgs build() {

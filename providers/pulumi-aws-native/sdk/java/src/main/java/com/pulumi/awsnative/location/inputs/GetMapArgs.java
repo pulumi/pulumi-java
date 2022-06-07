@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.location.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetMapArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMapArgs Empty = new GetMapArgs();
 
     @Import(name="mapName", required=true)
-    private String mapName;
+    private Output<String> mapName;
 
-    public String mapName() {
+    public Output<String> mapName() {
         return this.mapName;
     }
 
@@ -43,9 +44,13 @@ public final class GetMapArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetMapArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder mapName(String mapName) {
+        public Builder mapName(Output<String> mapName) {
             $.mapName = mapName;
             return this;
+        }
+
+        public Builder mapName(String mapName) {
+            return mapName(Output.of(mapName));
         }
 
         public GetMapArgs build() {

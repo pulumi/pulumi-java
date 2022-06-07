@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.sqladmin_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBackupRunArgs Empty = new GetBackupRunArgs();
 
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="instance", required=true)
-    private String instance;
+    private Output<String> instance;
 
-    public String instance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBackupRunArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
-        public Builder instance(String instance) {
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public Builder instance(Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetBackupRunArgs build() {

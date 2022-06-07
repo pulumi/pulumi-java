@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.app.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetContainerAppsAuthConfigArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="containerAppName", required=true)
-    private String containerAppName;
+    private Output<String> containerAppName;
 
     /**
      * @return Name of the Container App.
      * 
      */
-    public String containerAppName() {
+    public Output<String> containerAppName() {
         return this.containerAppName;
     }
 
@@ -32,13 +33,13 @@ public final class GetContainerAppsAuthConfigArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the Container App AuthConfig.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetContainerAppsAuthConfigArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetContainerAppsAuthConfigArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder containerAppName(String containerAppName) {
+        public Builder containerAppName(Output<String> containerAppName) {
             $.containerAppName = containerAppName;
+            return this;
+        }
+
+        /**
+         * @param containerAppName Name of the Container App.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerAppName(String containerAppName) {
+            return containerAppName(Output.of(containerAppName));
+        }
+
+        /**
+         * @param name Name of the Container App AuthConfig.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetContainerAppsAuthConfigArgs extends com.pulumi.resources.I
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetContainerAppsAuthConfigArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetContainerAppsAuthConfigArgs build() {

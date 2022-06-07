@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allocationType")
-    private @Nullable String allocationType;
+    private @Nullable Output<String> allocationType;
 
     /**
      * @return The Allocation Type for the Public IP Address. Possible values include `Static` or `Dynamic`.
      * 
      */
-    public Optional<String> allocationType() {
+    public Optional<Output<String>> allocationType() {
         return Optional.ofNullable(this.allocationType);
     }
 
@@ -34,13 +35,13 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attachmentStatus")
-    private @Nullable String attachmentStatus;
+    private @Nullable Output<String> attachmentStatus;
 
     /**
      * @return Filter to include IP Addresses which are attached to a device, such as a VM/LB (`Attached`) or unattached (`Unattached`). To allow for both, use `All`.
      * 
      */
-    public Optional<String> attachmentStatus() {
+    public Optional<Output<String>> attachmentStatus() {
         return Optional.ofNullable(this.attachmentStatus);
     }
 
@@ -49,13 +50,13 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namePrefix")
-    private @Nullable String namePrefix;
+    private @Nullable Output<String> namePrefix;
 
     /**
      * @return A prefix match used for the IP Addresses `name` field, case sensitive.
      * 
      */
-    public Optional<String> namePrefix() {
+    public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
 
@@ -64,13 +65,13 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Specifies the name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,8 +108,29 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder allocationType(@Nullable String allocationType) {
+        public Builder allocationType(@Nullable Output<String> allocationType) {
             $.allocationType = allocationType;
+            return this;
+        }
+
+        /**
+         * @param allocationType The Allocation Type for the Public IP Address. Possible values include `Static` or `Dynamic`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder allocationType(String allocationType) {
+            return allocationType(Output.of(allocationType));
+        }
+
+        /**
+         * @param attachmentStatus Filter to include IP Addresses which are attached to a device, such as a VM/LB (`Attached`) or unattached (`Unattached`). To allow for both, use `All`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder attachmentStatus(@Nullable Output<String> attachmentStatus) {
+            $.attachmentStatus = attachmentStatus;
             return this;
         }
 
@@ -118,8 +140,18 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder attachmentStatus(@Nullable String attachmentStatus) {
-            $.attachmentStatus = attachmentStatus;
+        public Builder attachmentStatus(String attachmentStatus) {
+            return attachmentStatus(Output.of(attachmentStatus));
+        }
+
+        /**
+         * @param namePrefix A prefix match used for the IP Addresses `name` field, case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
+            $.namePrefix = namePrefix;
             return this;
         }
 
@@ -129,8 +161,18 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namePrefix(@Nullable String namePrefix) {
-            $.namePrefix = namePrefix;
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
+        }
+
+        /**
+         * @param resourceGroupName Specifies the name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetPublicIPsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPublicIPsArgs build() {

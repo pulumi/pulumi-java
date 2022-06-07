@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.appconfiguration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetConfigurationKeyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="configurationStoreId", required=true)
-    private String configurationStoreId;
+    private Output<String> configurationStoreId;
 
     /**
      * @return Specifies the id of the App Configuration.
      * 
      */
-    public String configurationStoreId() {
+    public Output<String> configurationStoreId() {
         return this.configurationStoreId;
     }
 
@@ -34,13 +35,13 @@ public final class GetConfigurationKeyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="key", required=true)
-    private String key;
+    private Output<String> key;
 
     /**
      * @return The name of the App Configuration Key.
      * 
      */
-    public String key() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -49,13 +50,13 @@ public final class GetConfigurationKeyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="label")
-    private @Nullable String label;
+    private @Nullable Output<String> label;
 
     /**
      * @return The label of the App Configuration Key.
      * 
      */
-    public Optional<String> label() {
+    public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
 
@@ -91,8 +92,29 @@ public final class GetConfigurationKeyArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder configurationStoreId(String configurationStoreId) {
+        public Builder configurationStoreId(Output<String> configurationStoreId) {
             $.configurationStoreId = configurationStoreId;
+            return this;
+        }
+
+        /**
+         * @param configurationStoreId Specifies the id of the App Configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configurationStoreId(String configurationStoreId) {
+            return configurationStoreId(Output.of(configurationStoreId));
+        }
+
+        /**
+         * @param key The name of the App Configuration Key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder key(Output<String> key) {
+            $.key = key;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetConfigurationKeyArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder key(String key) {
-            $.key = key;
+            return key(Output.of(key));
+        }
+
+        /**
+         * @param label The label of the App Configuration Key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder label(@Nullable Output<String> label) {
+            $.label = label;
             return this;
         }
 
@@ -113,9 +145,8 @@ public final class GetConfigurationKeyArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder label(@Nullable String label) {
-            $.label = label;
-            return this;
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
 
         public GetConfigurationKeyArgs build() {

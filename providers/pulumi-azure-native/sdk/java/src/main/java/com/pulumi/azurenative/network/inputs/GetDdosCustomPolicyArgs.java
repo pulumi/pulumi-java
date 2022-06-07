@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDdosCustomPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ddosCustomPolicyName", required=true)
-    private String ddosCustomPolicyName;
+    private Output<String> ddosCustomPolicyName;
 
     /**
      * @return The name of the DDoS custom policy.
      * 
      */
-    public String ddosCustomPolicyName() {
+    public Output<String> ddosCustomPolicyName() {
         return this.ddosCustomPolicyName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDdosCustomPolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetDdosCustomPolicyArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder ddosCustomPolicyName(String ddosCustomPolicyName) {
+        public Builder ddosCustomPolicyName(Output<String> ddosCustomPolicyName) {
             $.ddosCustomPolicyName = ddosCustomPolicyName;
+            return this;
+        }
+
+        /**
+         * @param ddosCustomPolicyName The name of the DDoS custom policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ddosCustomPolicyName(String ddosCustomPolicyName) {
+            return ddosCustomPolicyName(Output.of(ddosCustomPolicyName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDdosCustomPolicyArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDdosCustomPolicyArgs build() {

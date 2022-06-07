@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.apigateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-    private String path;
+    private Output<String> path;
 
     /**
      * @return The full path of the resource.  If no path is found, an error will be returned.
      * 
      */
-    public String path() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -32,13 +33,13 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-    private String restApiId;
+    private Output<String> restApiId;
 
     /**
      * @return The REST API id that owns the resource. If no REST API is found, an error will be returned.
      * 
      */
-    public String restApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -73,8 +74,29 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder path(String path) {
+        public Builder path(Output<String> path) {
             $.path = path;
+            return this;
+        }
+
+        /**
+         * @param path The full path of the resource.  If no path is found, an error will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        /**
+         * @param restApiId The REST API id that owns the resource. If no REST API is found, an error will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder restApiId(Output<String> restApiId) {
+            $.restApiId = restApiId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder restApiId(String restApiId) {
-            $.restApiId = restApiId;
-            return this;
+            return restApiId(Output.of(restApiId));
         }
 
         public GetResourceArgs build() {

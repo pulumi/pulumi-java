@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.CertificatesManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCertificateVersionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="certificateId", required=true)
-    private String certificateId;
+    private Output<String> certificateId;
 
     /**
      * @return The OCID of the certificate.
      * 
      */
-    public String certificateId() {
+    public Output<String> certificateId() {
         return this.certificateId;
     }
 
@@ -32,13 +33,13 @@ public final class GetCertificateVersionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="certificateVersionNumber", required=true)
-    private String certificateVersionNumber;
+    private Output<String> certificateVersionNumber;
 
     /**
      * @return The version number of the certificate.
      * 
      */
-    public String certificateVersionNumber() {
+    public Output<String> certificateVersionNumber() {
         return this.certificateVersionNumber;
     }
 
@@ -73,8 +74,29 @@ public final class GetCertificateVersionArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder certificateId(String certificateId) {
+        public Builder certificateId(Output<String> certificateId) {
             $.certificateId = certificateId;
+            return this;
+        }
+
+        /**
+         * @param certificateId The OCID of the certificate.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateId(String certificateId) {
+            return certificateId(Output.of(certificateId));
+        }
+
+        /**
+         * @param certificateVersionNumber The version number of the certificate.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateVersionNumber(Output<String> certificateVersionNumber) {
+            $.certificateVersionNumber = certificateVersionNumber;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetCertificateVersionArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder certificateVersionNumber(String certificateVersionNumber) {
-            $.certificateVersionNumber = certificateVersionNumber;
-            return this;
+            return certificateVersionNumber(Output.of(certificateVersionNumber));
         }
 
         public GetCertificateVersionArgs build() {

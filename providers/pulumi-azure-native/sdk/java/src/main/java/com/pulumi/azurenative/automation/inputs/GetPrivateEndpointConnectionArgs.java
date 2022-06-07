@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.automation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="automationAccountName", required=true)
-    private String automationAccountName;
+    private Output<String> automationAccountName;
 
     /**
      * @return The name of the automation account.
      * 
      */
-    public String automationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
-    private String privateEndpointConnectionName;
+    private Output<String> privateEndpointConnectionName;
 
     /**
      * @return The name of the private endpoint connection.
      * 
      */
-    public String privateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
 
@@ -47,13 +48,13 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder automationAccountName(String automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
+            return this;
+        }
+
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder automationAccountName(String automationAccountName) {
+            return automationAccountName(Output.of(automationAccountName));
+        }
+
+        /**
+         * @param privateEndpointConnectionName The name of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpointConnectionName(Output<String> privateEndpointConnectionName) {
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * 
          */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
-            $.privateEndpointConnectionName = privateEndpointConnectionName;
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPrivateEndpointConnectionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotsitewise.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessPolicyId", required=true)
-    private String accessPolicyId;
+    private Output<String> accessPolicyId;
 
     /**
      * @return The ID of the access policy.
      * 
      */
-    public String accessPolicyId() {
+    public Output<String> accessPolicyId() {
         return this.accessPolicyId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accessPolicyId(String accessPolicyId) {
+        public Builder accessPolicyId(Output<String> accessPolicyId) {
             $.accessPolicyId = accessPolicyId;
             return this;
+        }
+
+        /**
+         * @param accessPolicyId The ID of the access policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessPolicyId(String accessPolicyId) {
+            return accessPolicyId(Output.of(accessPolicyId));
         }
 
         public GetAccessPolicyArgs build() {

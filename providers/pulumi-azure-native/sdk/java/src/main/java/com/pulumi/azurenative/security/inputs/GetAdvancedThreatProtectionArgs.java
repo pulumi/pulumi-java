@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAdvancedThreatProtectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceId", required=true)
-    private String resourceId;
+    private Output<String> resourceId;
 
     /**
      * @return The identifier of the resource.
      * 
      */
-    public String resourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -32,13 +33,13 @@ public final class GetAdvancedThreatProtectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="settingName", required=true)
-    private String settingName;
+    private Output<String> settingName;
 
     /**
      * @return Advanced Threat Protection setting name.
      * 
      */
-    public String settingName() {
+    public Output<String> settingName() {
         return this.settingName;
     }
 
@@ -73,8 +74,29 @@ public final class GetAdvancedThreatProtectionArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder resourceId(String resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * @param resourceId The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        /**
+         * @param settingName Advanced Threat Protection setting name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder settingName(Output<String> settingName) {
+            $.settingName = settingName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAdvancedThreatProtectionArgs extends com.pulumi.resources.
          * 
          */
         public Builder settingName(String settingName) {
-            $.settingName = settingName;
-            return this;
+            return settingName(Output.of(settingName));
         }
 
         public GetAdvancedThreatProtectionArgs build() {

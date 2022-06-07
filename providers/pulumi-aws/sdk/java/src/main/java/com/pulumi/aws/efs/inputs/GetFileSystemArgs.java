@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.efs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="creationToken")
-    private @Nullable String creationToken;
+    private @Nullable Output<String> creationToken;
 
     /**
      * @return Restricts the list to the file system with this creation token.
      * 
      */
-    public Optional<String> creationToken() {
+    public Optional<Output<String>> creationToken() {
         return Optional.ofNullable(this.creationToken);
     }
 
@@ -35,13 +36,13 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileSystemId")
-    private @Nullable String fileSystemId;
+    private @Nullable Output<String> fileSystemId;
 
     /**
      * @return The ID that identifies the file system (e.g., fs-ccfc0d65).
      * 
      */
-    public Optional<String> fileSystemId() {
+    public Optional<Output<String>> fileSystemId() {
         return Optional.ofNullable(this.fileSystemId);
     }
 
@@ -50,13 +51,13 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Restricts the list to the file system with these tags.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -92,8 +93,29 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder creationToken(@Nullable String creationToken) {
+        public Builder creationToken(@Nullable Output<String> creationToken) {
             $.creationToken = creationToken;
+            return this;
+        }
+
+        /**
+         * @param creationToken Restricts the list to the file system with this creation token.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder creationToken(String creationToken) {
+            return creationToken(Output.of(creationToken));
+        }
+
+        /**
+         * @param fileSystemId The ID that identifies the file system (e.g., fs-ccfc0d65).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
+            $.fileSystemId = fileSystemId;
             return this;
         }
 
@@ -103,8 +125,18 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fileSystemId(@Nullable String fileSystemId) {
-            $.fileSystemId = fileSystemId;
+        public Builder fileSystemId(String fileSystemId) {
+            return fileSystemId(Output.of(fileSystemId));
+        }
+
+        /**
+         * @param tags Restricts the list to the file system with these tags.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -114,9 +146,8 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetFileSystemArgs build() {

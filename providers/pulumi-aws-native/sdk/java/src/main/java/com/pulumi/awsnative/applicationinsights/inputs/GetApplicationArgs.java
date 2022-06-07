@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.applicationinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationARN", required=true)
-    private String applicationARN;
+    private Output<String> applicationARN;
 
     /**
      * @return The ARN of the ApplicationInsights application.
      * 
      */
-    public String applicationARN() {
+    public Output<String> applicationARN() {
         return this.applicationARN;
     }
 
@@ -57,9 +58,19 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder applicationARN(String applicationARN) {
+        public Builder applicationARN(Output<String> applicationARN) {
             $.applicationARN = applicationARN;
             return this;
+        }
+
+        /**
+         * @param applicationARN The ARN of the ApplicationInsights application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationARN(String applicationARN) {
+            return applicationARN(Output.of(applicationARN));
         }
 
         public GetApplicationArgs build() {

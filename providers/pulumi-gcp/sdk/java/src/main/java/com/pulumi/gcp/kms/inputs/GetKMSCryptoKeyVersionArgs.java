@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,14 +22,14 @@ public final class GetKMSCryptoKeyVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cryptoKey", required=true)
-    private String cryptoKey;
+    private Output<String> cryptoKey;
 
     /**
      * @return The `id` of the Google Cloud Platform CryptoKey to which the key version belongs. This is also the `id` field of the
      * `gcp.kms.CryptoKey` resource/datasource.
      * 
      */
-    public String cryptoKey() {
+    public Output<String> cryptoKey() {
         return this.cryptoKey;
     }
 
@@ -37,13 +38,13 @@ public final class GetKMSCryptoKeyVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="version")
-    private @Nullable Integer version;
+    private @Nullable Output<Integer> version;
 
     /**
      * @return The version number for this CryptoKeyVersion. Defaults to `1`.
      * 
      */
-    public Optional<Integer> version() {
+    public Optional<Output<Integer>> version() {
         return Optional.ofNullable(this.version);
     }
 
@@ -79,8 +80,30 @@ public final class GetKMSCryptoKeyVersionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder cryptoKey(String cryptoKey) {
+        public Builder cryptoKey(Output<String> cryptoKey) {
             $.cryptoKey = cryptoKey;
+            return this;
+        }
+
+        /**
+         * @param cryptoKey The `id` of the Google Cloud Platform CryptoKey to which the key version belongs. This is also the `id` field of the
+         * `gcp.kms.CryptoKey` resource/datasource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cryptoKey(String cryptoKey) {
+            return cryptoKey(Output.of(cryptoKey));
+        }
+
+        /**
+         * @param version The version number for this CryptoKeyVersion. Defaults to `1`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(@Nullable Output<Integer> version) {
+            $.version = version;
             return this;
         }
 
@@ -90,9 +113,8 @@ public final class GetKMSCryptoKeyVersionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder version(@Nullable Integer version) {
-            $.version = version;
-            return this;
+        public Builder version(Integer version) {
+            return version(Output.of(version));
         }
 
         public GetKMSCryptoKeyVersionArgs build() {

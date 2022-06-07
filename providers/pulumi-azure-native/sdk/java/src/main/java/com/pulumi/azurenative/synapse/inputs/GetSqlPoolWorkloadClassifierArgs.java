@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.synapse.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sqlPoolName", required=true)
-    private String sqlPoolName;
+    private Output<String> sqlPoolName;
 
     /**
      * @return SQL pool name
      * 
      */
-    public String sqlPoolName() {
+    public Output<String> sqlPoolName() {
         return this.sqlPoolName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="workloadClassifierName", required=true)
-    private String workloadClassifierName;
+    private Output<String> workloadClassifierName;
 
     /**
      * @return The name of the workload classifier.
      * 
      */
-    public String workloadClassifierName() {
+    public Output<String> workloadClassifierName() {
         return this.workloadClassifierName;
     }
 
@@ -62,13 +63,13 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="workloadGroupName", required=true)
-    private String workloadGroupName;
+    private Output<String> workloadGroupName;
 
     /**
      * @return The name of the workload group.
      * 
      */
-    public String workloadGroupName() {
+    public Output<String> workloadGroupName() {
         return this.workloadGroupName;
     }
 
@@ -77,13 +78,13 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of the workspace
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -121,8 +122,29 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlPoolName(Output<String> sqlPoolName) {
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
          * 
          */
         public Builder sqlPoolName(String sqlPoolName) {
-            $.sqlPoolName = sqlPoolName;
+            return sqlPoolName(Output.of(sqlPoolName));
+        }
+
+        /**
+         * @param workloadClassifierName The name of the workload classifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workloadClassifierName(Output<String> workloadClassifierName) {
+            $.workloadClassifierName = workloadClassifierName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
          * 
          */
         public Builder workloadClassifierName(String workloadClassifierName) {
-            $.workloadClassifierName = workloadClassifierName;
+            return workloadClassifierName(Output.of(workloadClassifierName));
+        }
+
+        /**
+         * @param workloadGroupName The name of the workload group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workloadGroupName(Output<String> workloadGroupName) {
+            $.workloadGroupName = workloadGroupName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
          * 
          */
         public Builder workloadGroupName(String workloadGroupName) {
-            $.workloadGroupName = workloadGroupName;
+            return workloadGroupName(Output.of(workloadGroupName));
+        }
+
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetSqlPoolWorkloadClassifierArgs extends com.pulumi.resources
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetSqlPoolWorkloadClassifierArgs build() {

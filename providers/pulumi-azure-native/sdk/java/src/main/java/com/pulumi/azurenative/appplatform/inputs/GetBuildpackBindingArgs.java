@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.appplatform.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="buildServiceName", required=true)
-    private String buildServiceName;
+    private Output<String> buildServiceName;
 
     /**
      * @return The name of the build service resource.
      * 
      */
-    public String buildServiceName() {
+    public Output<String> buildServiceName() {
         return this.buildServiceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="builderName", required=true)
-    private String builderName;
+    private Output<String> builderName;
 
     /**
      * @return The name of the builder resource.
      * 
      */
-    public String builderName() {
+    public Output<String> builderName() {
         return this.builderName;
     }
 
@@ -47,13 +48,13 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="buildpackBindingName", required=true)
-    private String buildpackBindingName;
+    private Output<String> buildpackBindingName;
 
     /**
      * @return The name of the Buildpack Binding Name
      * 
      */
-    public String buildpackBindingName() {
+    public Output<String> buildpackBindingName() {
         return this.buildpackBindingName;
     }
 
@@ -62,13 +63,13 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,13 +78,13 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the Service resource.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -121,8 +122,29 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder buildServiceName(String buildServiceName) {
+        public Builder buildServiceName(Output<String> buildServiceName) {
             $.buildServiceName = buildServiceName;
+            return this;
+        }
+
+        /**
+         * @param buildServiceName The name of the build service resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder buildServiceName(String buildServiceName) {
+            return buildServiceName(Output.of(buildServiceName));
+        }
+
+        /**
+         * @param builderName The name of the builder resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder builderName(Output<String> builderName) {
+            $.builderName = builderName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder builderName(String builderName) {
-            $.builderName = builderName;
+            return builderName(Output.of(builderName));
+        }
+
+        /**
+         * @param buildpackBindingName The name of the Buildpack Binding Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder buildpackBindingName(Output<String> buildpackBindingName) {
+            $.buildpackBindingName = buildpackBindingName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder buildpackBindingName(String buildpackBindingName) {
-            $.buildpackBindingName = buildpackBindingName;
+            return buildpackBindingName(Output.of(buildpackBindingName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetBuildpackBindingArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetBuildpackBindingArgs build() {

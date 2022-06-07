@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetByoipAllocatedRangesFilter;
+import com.pulumi.oci.Core.inputs.GetByoipAllocatedRangesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetByoipAllocatedRangesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="byoipRangeId", required=true)
-    private String byoipRangeId;
+    private Output<String> byoipRangeId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the `ByoipRange` resource containing the BYOIP CIDR block.
      * 
      */
-    public String byoipRangeId() {
+    public Output<String> byoipRangeId() {
         return this.byoipRangeId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetByoipAllocatedRangesFilter> filters;
+    private @Nullable Output<List<GetByoipAllocatedRangesFilterArgs>> filters;
 
-    public Optional<List<GetByoipAllocatedRangesFilter>> filters() {
+    public Optional<Output<List<GetByoipAllocatedRangesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetByoipAllocatedRangesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder byoipRangeId(String byoipRangeId) {
+        public Builder byoipRangeId(Output<String> byoipRangeId) {
             $.byoipRangeId = byoipRangeId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetByoipAllocatedRangesFilter> filters) {
+        /**
+         * @param byoipRangeId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the `ByoipRange` resource containing the BYOIP CIDR block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder byoipRangeId(String byoipRangeId) {
+            return byoipRangeId(Output.of(byoipRangeId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetByoipAllocatedRangesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetByoipAllocatedRangesFilter... filters) {
+        public Builder filters(List<GetByoipAllocatedRangesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetByoipAllocatedRangesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWebAppVnetConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the app.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetWebAppVnetConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetWebAppVnetConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vnetName", required=true)
-    private String vnetName;
+    private Output<String> vnetName;
 
     /**
      * @return Name of the virtual network.
      * 
      */
-    public String vnetName() {
+    public Output<String> vnetName() {
         return this.vnetName;
     }
 
@@ -89,8 +90,29 @@ public final class GetWebAppVnetConnectionArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetWebAppVnetConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vnetName Name of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vnetName(Output<String> vnetName) {
+            $.vnetName = vnetName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetWebAppVnetConnectionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder vnetName(String vnetName) {
-            $.vnetName = vnetName;
-            return this;
+            return vnetName(Output.of(vnetName));
         }
 
         public GetWebAppVnetConnectionArgs build() {

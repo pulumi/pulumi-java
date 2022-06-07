@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetRegionCommitmentArgs extends com.pulumi.resources.InvokeAr
     public static final GetRegionCommitmentArgs Empty = new GetRegionCommitmentArgs();
 
     @Import(name="commitment", required=true)
-    private String commitment;
+    private Output<String> commitment;
 
-    public String commitment() {
+    public Output<String> commitment() {
         return this.commitment;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-    private String region;
+    private Output<String> region;
 
-    public String region() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -61,19 +62,31 @@ public final class GetRegionCommitmentArgs extends com.pulumi.resources.InvokeAr
             $ = new GetRegionCommitmentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder commitment(String commitment) {
+        public Builder commitment(Output<String> commitment) {
             $.commitment = commitment;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder commitment(String commitment) {
+            return commitment(Output.of(commitment));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(String region) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output<String> region) {
             $.region = region;
             return this;
+        }
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
 
         public GetRegionCommitmentArgs build() {

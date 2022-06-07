@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.hybridconnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointName", required=true)
-    private String endpointName;
+    private Output<String> endpointName;
 
     /**
      * @return The endpoint name.
      * 
      */
-    public String endpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -32,13 +33,13 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-    private String resourceUri;
+    private Output<String> resourceUri;
 
     /**
      * @return The fully qualified Azure Resource manager identifier of the resource to be connected.
      * 
      */
-    public String resourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -73,8 +74,29 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endpointName(String endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
+            return this;
+        }
+
+        /**
+         * @param endpointName The endpoint name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointName(String endpointName) {
+            return endpointName(Output.of(endpointName));
+        }
+
+        /**
+         * @param resourceUri The fully qualified Azure Resource manager identifier of the resource to be connected.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceUri(Output<String> resourceUri) {
+            $.resourceUri = resourceUri;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceUri(String resourceUri) {
-            $.resourceUri = resourceUri;
-            return this;
+            return resourceUri(Output.of(resourceUri));
         }
 
         public GetEndpointArgs build() {

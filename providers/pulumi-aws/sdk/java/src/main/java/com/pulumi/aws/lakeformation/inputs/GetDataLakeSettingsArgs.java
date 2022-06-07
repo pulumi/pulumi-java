@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.lakeformation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetDataLakeSettingsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="catalogId")
-    private @Nullable String catalogId;
+    private @Nullable Output<String> catalogId;
 
     /**
      * @return Identifier for the Data Catalog. By default, the account ID.
      * 
      */
-    public Optional<String> catalogId() {
+    public Optional<Output<String>> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
 
@@ -59,9 +60,19 @@ public final class GetDataLakeSettingsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder catalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
+        }
+
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, the account ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
 
         public GetDataLakeSettingsArgs build() {

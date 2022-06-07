@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.appconfiguration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="configStoreName", required=true)
-    private String configStoreName;
+    private Output<String> configStoreName;
 
     /**
      * @return The name of the configuration store.
      * 
      */
-    public String configStoreName() {
+    public Output<String> configStoreName() {
         return this.configStoreName;
     }
 
@@ -34,13 +35,13 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="key", required=true)
-    private String key;
+    private Output<String> key;
 
     /**
      * @return The key to retrieve.
      * 
      */
-    public String key() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -49,13 +50,13 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="label")
-    private @Nullable String label;
+    private @Nullable Output<String> label;
 
     /**
      * @return The label of the key.
      * 
      */
-    public Optional<String> label() {
+    public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
 
@@ -64,13 +65,13 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group to which the container registry belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,8 +108,29 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder configStoreName(String configStoreName) {
+        public Builder configStoreName(Output<String> configStoreName) {
             $.configStoreName = configStoreName;
+            return this;
+        }
+
+        /**
+         * @param configStoreName The name of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configStoreName(String configStoreName) {
+            return configStoreName(Output.of(configStoreName));
+        }
+
+        /**
+         * @param key The key to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder key(Output<String> key) {
+            $.key = key;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
          * 
          */
         public Builder key(String key) {
-            $.key = key;
+            return key(Output.of(key));
+        }
+
+        /**
+         * @param label The label of the key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder label(@Nullable Output<String> label) {
+            $.label = label;
             return this;
         }
 
@@ -129,8 +161,18 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder label(@Nullable String label) {
-            $.label = label;
+        public Builder label(String label) {
+            return label(Output.of(label));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListConfigurationStoreKeyValueArgs build() {

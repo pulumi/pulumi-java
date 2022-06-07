@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLocalNetworkGatewayArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="localNetworkGatewayName", required=true)
-    private String localNetworkGatewayName;
+    private Output<String> localNetworkGatewayName;
 
     /**
      * @return The name of the local network gateway.
      * 
      */
-    public String localNetworkGatewayName() {
+    public Output<String> localNetworkGatewayName() {
         return this.localNetworkGatewayName;
     }
 
@@ -32,13 +33,13 @@ public final class GetLocalNetworkGatewayArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetLocalNetworkGatewayArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder localNetworkGatewayName(String localNetworkGatewayName) {
+        public Builder localNetworkGatewayName(Output<String> localNetworkGatewayName) {
             $.localNetworkGatewayName = localNetworkGatewayName;
+            return this;
+        }
+
+        /**
+         * @param localNetworkGatewayName The name of the local network gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localNetworkGatewayName(String localNetworkGatewayName) {
+            return localNetworkGatewayName(Output.of(localNetworkGatewayName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLocalNetworkGatewayArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetLocalNetworkGatewayArgs build() {

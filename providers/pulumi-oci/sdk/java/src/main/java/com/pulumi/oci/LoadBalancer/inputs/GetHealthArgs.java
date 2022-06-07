@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHealthArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancerId", required=true)
-    private String loadBalancerId;
+    private Output<String> loadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer to return health status for.
      * 
      */
-    public String loadBalancerId() {
+    public Output<String> loadBalancerId() {
         return this.loadBalancerId;
     }
 
@@ -57,9 +58,19 @@ public final class GetHealthArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancerId(String loadBalancerId) {
+        public Builder loadBalancerId(Output<String> loadBalancerId) {
             $.loadBalancerId = loadBalancerId;
             return this;
+        }
+
+        /**
+         * @param loadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer to return health status for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerId(String loadBalancerId) {
+            return loadBalancerId(Output.of(loadBalancerId));
         }
 
         public GetHealthArgs build() {

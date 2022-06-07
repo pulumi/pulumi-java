@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ComputeInstanceAgent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ComputeInstanceAgent.inputs.GetInstanceAvailablePluginFilter;
+import com.pulumi.oci.ComputeInstanceAgent.inputs.GetInstanceAvailablePluginFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,16 +18,16 @@ public final class GetInstanceAvailablePluginArgs extends com.pulumi.resources.I
     public static final GetInstanceAvailablePluginArgs Empty = new GetInstanceAvailablePluginArgs();
 
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetInstanceAvailablePluginFilter> filters;
+    private @Nullable Output<List<GetInstanceAvailablePluginFilterArgs>> filters;
 
-    public Optional<List<GetInstanceAvailablePluginFilter>> filters() {
+    public Optional<Output<List<GetInstanceAvailablePluginFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -35,13 +36,13 @@ public final class GetInstanceAvailablePluginArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The plugin name
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -50,13 +51,13 @@ public final class GetInstanceAvailablePluginArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="osName", required=true)
-    private String osName;
+    private Output<String> osName;
 
     /**
      * @return The OS for which the plugin is supported. Examples of OperatingSystemQueryParam:OperatingSystemVersionQueryParam are as follows: &#39;CentOS&#39; &#39;6.10&#39; , &#39;CentOS Linux&#39; &#39;7&#39;, &#39;CentOS Linux&#39; &#39;8&#39;, &#39;Oracle Linux Server&#39; &#39;6.10&#39;, &#39;Oracle Linux Server&#39; &#39;8.0&#39;, &#39;Red Hat Enterprise Linux Server&#39; &#39;7.8&#39;, &#39;Windows&#39; &#39;10&#39;, &#39;Windows&#39; &#39;2008ServerR2&#39;, &#39;Windows&#39; &#39;2012ServerR2&#39;, &#39;Windows&#39; &#39;7&#39;, &#39;Windows&#39; &#39;8.1&#39;
      * 
      */
-    public String osName() {
+    public Output<String> osName() {
         return this.osName;
     }
 
@@ -65,13 +66,13 @@ public final class GetInstanceAvailablePluginArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="osVersion", required=true)
-    private String osVersion;
+    private Output<String> osVersion;
 
     /**
      * @return The OS version for which the plugin is supported.
      * 
      */
-    public String osVersion() {
+    public Output<String> osVersion() {
         return this.osVersion;
     }
 
@@ -103,17 +104,25 @@ public final class GetInstanceAvailablePluginArgs extends com.pulumi.resources.I
             $ = new GetInstanceAvailablePluginArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetInstanceAvailablePluginFilter> filters) {
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetInstanceAvailablePluginFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetInstanceAvailablePluginFilter... filters) {
+        public Builder filters(List<GetInstanceAvailablePluginFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetInstanceAvailablePluginFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -123,8 +132,29 @@ public final class GetInstanceAvailablePluginArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The plugin name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param osName The OS for which the plugin is supported. Examples of OperatingSystemQueryParam:OperatingSystemVersionQueryParam are as follows: &#39;CentOS&#39; &#39;6.10&#39; , &#39;CentOS Linux&#39; &#39;7&#39;, &#39;CentOS Linux&#39; &#39;8&#39;, &#39;Oracle Linux Server&#39; &#39;6.10&#39;, &#39;Oracle Linux Server&#39; &#39;8.0&#39;, &#39;Red Hat Enterprise Linux Server&#39; &#39;7.8&#39;, &#39;Windows&#39; &#39;10&#39;, &#39;Windows&#39; &#39;2008ServerR2&#39;, &#39;Windows&#39; &#39;2012ServerR2&#39;, &#39;Windows&#39; &#39;7&#39;, &#39;Windows&#39; &#39;8.1&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder osName(Output<String> osName) {
+            $.osName = osName;
             return this;
         }
 
@@ -135,7 +165,17 @@ public final class GetInstanceAvailablePluginArgs extends com.pulumi.resources.I
          * 
          */
         public Builder osName(String osName) {
-            $.osName = osName;
+            return osName(Output.of(osName));
+        }
+
+        /**
+         * @param osVersion The OS version for which the plugin is supported.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder osVersion(Output<String> osVersion) {
+            $.osVersion = osVersion;
             return this;
         }
 
@@ -146,8 +186,7 @@ public final class GetInstanceAvailablePluginArgs extends com.pulumi.resources.I
          * 
          */
         public Builder osVersion(String osVersion) {
-            $.osVersion = osVersion;
-            return this;
+            return osVersion(Output.of(osVersion));
         }
 
         public GetInstanceAvailablePluginArgs build() {

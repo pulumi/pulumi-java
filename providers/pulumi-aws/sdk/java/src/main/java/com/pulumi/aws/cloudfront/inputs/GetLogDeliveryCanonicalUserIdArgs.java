@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetLogDeliveryCanonicalUserIdArgs extends com.pulumi.resource
      * 
      */
     @Import(name="region")
-    private @Nullable String region;
+    private @Nullable Output<String> region;
 
     /**
      * @return The region you&#39;d like the zone for. By default, fetches the current region.
      * 
      */
-    public Optional<String> region() {
+    public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
 
@@ -59,9 +60,19 @@ public final class GetLogDeliveryCanonicalUserIdArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder region(@Nullable String region) {
+        public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
+        }
+
+        /**
+         * @param region The region you&#39;d like the zone for. By default, fetches the current region.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
 
         public GetLogDeliveryCanonicalUserIdArgs build() {

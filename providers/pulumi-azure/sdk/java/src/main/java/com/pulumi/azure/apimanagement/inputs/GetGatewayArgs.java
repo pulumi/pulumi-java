@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiManagementId", required=true)
-    private String apiManagementId;
+    private Output<String> apiManagementId;
 
     /**
      * @return The ID of the API Management Service in which the Gateway exists.
      * 
      */
-    public String apiManagementId() {
+    public Output<String> apiManagementId() {
         return this.apiManagementId;
     }
 
@@ -32,13 +33,13 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the API Management Gateway.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apiManagementId(String apiManagementId) {
+        public Builder apiManagementId(Output<String> apiManagementId) {
             $.apiManagementId = apiManagementId;
+            return this;
+        }
+
+        /**
+         * @param apiManagementId The ID of the API Management Service in which the Gateway exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiManagementId(String apiManagementId) {
+            return apiManagementId(Output.of(apiManagementId));
+        }
+
+        /**
+         * @param name The name of the API Management Gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetGatewayArgs build() {

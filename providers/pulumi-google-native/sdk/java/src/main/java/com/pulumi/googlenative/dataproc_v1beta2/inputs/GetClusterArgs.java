@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetClusterArgs Empty = new GetClusterArgs();
 
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-    private String region;
+    private Output<String> region;
 
-    public String region() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -61,19 +62,31 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder clusterName(String clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(String region) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output<String> region) {
             $.region = region;
             return this;
+        }
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
 
         public GetClusterArgs build() {

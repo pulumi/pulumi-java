@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the router.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -34,13 +35,13 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="network", required=true)
-    private String network;
+    private Output<String> network;
 
     /**
      * @return The VPC network on which this router lives.
      * 
      */
-    public String network() {
+    public Output<String> network() {
         return this.network;
     }
 
@@ -50,14 +51,14 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The ID of the project in which the resource
      * belongs. If it is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -67,14 +68,14 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-    private @Nullable String region;
+    private @Nullable Output<String> region;
 
     /**
      * @return The region this router has been created in. If
      * unspecified, this defaults to the region configured in the provider.
      * 
      */
-    public Optional<String> region() {
+    public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
 
@@ -111,8 +112,29 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the router.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param network The VPC network on which this router lives.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder network(Output<String> network) {
+            $.network = network;
             return this;
         }
 
@@ -123,7 +145,18 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder network(String network) {
-            $.network = network;
+            return network(Output.of(network));
+        }
+
+        /**
+         * @param project The ID of the project in which the resource
+         * belongs. If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable Output<String> project) {
+            $.project = project;
             return this;
         }
 
@@ -134,8 +167,19 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
-            $.project = project;
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param region The region this router has been created in. If
+         * unspecified, this defaults to the region configured in the provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(@Nullable Output<String> region) {
+            $.region = region;
             return this;
         }
 
@@ -146,9 +190,8 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder region(@Nullable String region) {
-            $.region = region;
-            return this;
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
 
         public GetRouterArgs build() {

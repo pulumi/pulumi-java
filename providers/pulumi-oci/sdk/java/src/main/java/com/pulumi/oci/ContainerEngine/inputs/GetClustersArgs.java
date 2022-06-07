@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ContainerEngine.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ContainerEngine.inputs.GetClustersFilter;
+import com.pulumi.oci.ContainerEngine.inputs.GetClustersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetClustersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetClustersFilter> filters;
+    private @Nullable Output<List<GetClustersFilterArgs>> filters;
 
-    public Optional<List<GetClustersFilter>> filters() {
+    public Optional<Output<List<GetClustersFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetClustersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name to filter on.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -58,13 +59,13 @@ public final class GetClustersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="states")
-    private @Nullable List<String> states;
+    private @Nullable Output<List<String>> states;
 
     /**
      * @return A cluster lifecycle state to filter on. Can have multiple parameters of this name.
      * 
      */
-    public Optional<List<String>> states() {
+    public Optional<Output<List<String>>> states() {
         return Optional.ofNullable(this.states);
     }
 
@@ -101,17 +102,31 @@ public final class GetClustersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetClustersFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetClustersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetClustersFilter... filters) {
+        public Builder filters(List<GetClustersFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetClustersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -121,8 +136,29 @@ public final class GetClustersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name to filter on.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param states A cluster lifecycle state to filter on. Can have multiple parameters of this name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder states(@Nullable Output<List<String>> states) {
+            $.states = states;
             return this;
         }
 
@@ -132,9 +168,8 @@ public final class GetClustersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder states(@Nullable List<String> states) {
-            $.states = states;
-            return this;
+        public Builder states(List<String> states) {
+            return states(Output.of(states));
         }
 
         /**

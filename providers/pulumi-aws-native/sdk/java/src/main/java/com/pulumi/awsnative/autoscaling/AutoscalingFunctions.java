@@ -5,11 +5,15 @@ package com.pulumi.awsnative.autoscaling;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.autoscaling.inputs.GetLaunchConfigurationArgs;
+import com.pulumi.awsnative.autoscaling.inputs.GetLaunchConfigurationPlainArgs;
 import com.pulumi.awsnative.autoscaling.inputs.GetLifecycleHookArgs;
+import com.pulumi.awsnative.autoscaling.inputs.GetLifecycleHookPlainArgs;
 import com.pulumi.awsnative.autoscaling.inputs.GetWarmPoolArgs;
+import com.pulumi.awsnative.autoscaling.inputs.GetWarmPoolPlainArgs;
 import com.pulumi.awsnative.autoscaling.outputs.GetLaunchConfigurationResult;
 import com.pulumi.awsnative.autoscaling.outputs.GetLifecycleHookResult;
 import com.pulumi.awsnative.autoscaling.outputs.GetWarmPoolResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -20,42 +24,84 @@ public final class AutoscalingFunctions {
      * The AWS::AutoScaling::LaunchConfiguration resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances.
      * 
      */
-    public static CompletableFuture<GetLaunchConfigurationResult> getLaunchConfiguration(GetLaunchConfigurationArgs args) {
+    public static Output<GetLaunchConfigurationResult> getLaunchConfiguration(GetLaunchConfigurationArgs args) {
         return getLaunchConfiguration(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::AutoScaling::LaunchConfiguration resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances.
      * 
      */
-    public static CompletableFuture<GetLaunchConfigurationResult> getLaunchConfiguration(GetLaunchConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLaunchConfigurationResult> getLaunchConfigurationPlain(GetLaunchConfigurationPlainArgs args) {
+        return getLaunchConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::AutoScaling::LaunchConfiguration resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances.
+     * 
+     */
+    public static Output<GetLaunchConfigurationResult> getLaunchConfiguration(GetLaunchConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:autoscaling:getLaunchConfiguration", TypeShape.of(GetLaunchConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::AutoScaling::LaunchConfiguration resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances.
+     * 
+     */
+    public static CompletableFuture<GetLaunchConfigurationResult> getLaunchConfigurationPlain(GetLaunchConfigurationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:autoscaling:getLaunchConfiguration", TypeShape.of(GetLaunchConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::AutoScaling::LifecycleHook
      * 
      */
-    public static CompletableFuture<GetLifecycleHookResult> getLifecycleHook(GetLifecycleHookArgs args) {
+    public static Output<GetLifecycleHookResult> getLifecycleHook(GetLifecycleHookArgs args) {
         return getLifecycleHook(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::AutoScaling::LifecycleHook
      * 
      */
-    public static CompletableFuture<GetLifecycleHookResult> getLifecycleHook(GetLifecycleHookArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLifecycleHookResult> getLifecycleHookPlain(GetLifecycleHookPlainArgs args) {
+        return getLifecycleHookPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::AutoScaling::LifecycleHook
+     * 
+     */
+    public static Output<GetLifecycleHookResult> getLifecycleHook(GetLifecycleHookArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:autoscaling:getLifecycleHook", TypeShape.of(GetLifecycleHookResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::AutoScaling::LifecycleHook
+     * 
+     */
+    public static CompletableFuture<GetLifecycleHookResult> getLifecycleHookPlain(GetLifecycleHookPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:autoscaling:getLifecycleHook", TypeShape.of(GetLifecycleHookResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::AutoScaling::WarmPool.
      * 
      */
-    public static CompletableFuture<GetWarmPoolResult> getWarmPool(GetWarmPoolArgs args) {
+    public static Output<GetWarmPoolResult> getWarmPool(GetWarmPoolArgs args) {
         return getWarmPool(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::AutoScaling::WarmPool.
      * 
      */
-    public static CompletableFuture<GetWarmPoolResult> getWarmPool(GetWarmPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWarmPoolResult> getWarmPoolPlain(GetWarmPoolPlainArgs args) {
+        return getWarmPoolPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::AutoScaling::WarmPool.
+     * 
+     */
+    public static Output<GetWarmPoolResult> getWarmPool(GetWarmPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:autoscaling:getWarmPool", TypeShape.of(GetWarmPoolResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::AutoScaling::WarmPool.
+     * 
+     */
+    public static CompletableFuture<GetWarmPoolResult> getWarmPoolPlain(GetWarmPoolPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:autoscaling:getWarmPool", TypeShape.of(GetWarmPoolResult.class), args, Utilities.withVersion(options));
     }
 }

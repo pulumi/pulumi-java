@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetInstructionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetInstructionArgs Empty = new GetInstructionArgs();
 
     @Import(name="instructionId", required=true)
-    private String instructionId;
+    private Output<String> instructionId;
 
-    public String instructionId() {
+    public Output<String> instructionId() {
         return this.instructionId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetInstructionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInstructionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder instructionId(String instructionId) {
+        public Builder instructionId(Output<String> instructionId) {
             $.instructionId = instructionId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder instructionId(String instructionId) {
+            return instructionId(Output.of(instructionId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetInstructionArgs build() {

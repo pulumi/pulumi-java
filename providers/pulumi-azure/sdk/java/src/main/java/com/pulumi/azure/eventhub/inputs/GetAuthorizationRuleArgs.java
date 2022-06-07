@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.eventhub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,27 +21,27 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="eventhubName", required=true)
-    private String eventhubName;
+    private Output<String> eventhubName;
 
     /**
      * @return Specifies the name of the EventHub.
      * 
      */
-    public String eventhubName() {
+    public Output<String> eventhubName() {
         return this.eventhubName;
     }
 
     @Import(name="listen")
-    private @Nullable Boolean listen;
+    private @Nullable Output<Boolean> listen;
 
-    public Optional<Boolean> listen() {
+    public Optional<Output<Boolean>> listen() {
         return Optional.ofNullable(this.listen);
     }
 
     @Import(name="manage")
-    private @Nullable Boolean manage;
+    private @Nullable Output<Boolean> manage;
 
-    public Optional<Boolean> manage() {
+    public Optional<Output<Boolean>> manage() {
         return Optional.ofNullable(this.manage);
     }
 
@@ -49,13 +50,13 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the EventHub Authorization Rule resource. be created.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -64,13 +65,13 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return Specifies the name of the grandparent EventHub Namespace.
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -79,20 +80,20 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group in which the EventHub Authorization Rule&#39;s grandparent Namespace exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="send")
-    private @Nullable Boolean send;
+    private @Nullable Output<Boolean> send;
 
-    public Optional<Boolean> send() {
+    public Optional<Output<Boolean>> send() {
         return Optional.ofNullable(this.send);
     }
 
@@ -132,18 +133,47 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder eventhubName(String eventhubName) {
+        public Builder eventhubName(Output<String> eventhubName) {
             $.eventhubName = eventhubName;
             return this;
         }
 
-        public Builder listen(@Nullable Boolean listen) {
+        /**
+         * @param eventhubName Specifies the name of the EventHub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventhubName(String eventhubName) {
+            return eventhubName(Output.of(eventhubName));
+        }
+
+        public Builder listen(@Nullable Output<Boolean> listen) {
             $.listen = listen;
             return this;
         }
 
-        public Builder manage(@Nullable Boolean manage) {
+        public Builder listen(Boolean listen) {
+            return listen(Output.of(listen));
+        }
+
+        public Builder manage(@Nullable Output<Boolean> manage) {
             $.manage = manage;
+            return this;
+        }
+
+        public Builder manage(Boolean manage) {
+            return manage(Output.of(manage));
+        }
+
+        /**
+         * @param name Specifies the name of the EventHub Authorization Rule resource. be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -154,7 +184,17 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param namespaceName Specifies the name of the grandparent EventHub Namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -165,7 +205,17 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder namespaceName(String namespaceName) {
-            $.namespaceName = namespaceName;
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group in which the EventHub Authorization Rule&#39;s grandparent Namespace exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -176,13 +226,16 @@ public final class GetAuthorizationRuleArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public Builder send(@Nullable Output<Boolean> send) {
+            $.send = send;
             return this;
         }
 
-        public Builder send(@Nullable Boolean send) {
-            $.send = send;
-            return this;
+        public Builder send(Boolean send) {
+            return send(Output.of(send));
         }
 
         public GetAuthorizationRuleArgs build() {

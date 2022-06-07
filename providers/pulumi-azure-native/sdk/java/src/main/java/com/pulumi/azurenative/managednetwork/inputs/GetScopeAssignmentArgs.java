@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.managednetwork.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetScopeAssignmentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return The base resource of the scope assignment.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -32,13 +33,13 @@ public final class GetScopeAssignmentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scopeAssignmentName", required=true)
-    private String scopeAssignmentName;
+    private Output<String> scopeAssignmentName;
 
     /**
      * @return The name of the scope assignment to get.
      * 
      */
-    public String scopeAssignmentName() {
+    public Output<String> scopeAssignmentName() {
         return this.scopeAssignmentName;
     }
 
@@ -73,8 +74,29 @@ public final class GetScopeAssignmentArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder scope(String scope) {
+        public Builder scope(Output<String> scope) {
             $.scope = scope;
+            return this;
+        }
+
+        /**
+         * @param scope The base resource of the scope assignment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
+        }
+
+        /**
+         * @param scopeAssignmentName The name of the scope assignment to get.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scopeAssignmentName(Output<String> scopeAssignmentName) {
+            $.scopeAssignmentName = scopeAssignmentName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetScopeAssignmentArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder scopeAssignmentName(String scopeAssignmentName) {
-            $.scopeAssignmentName = scopeAssignmentName;
-            return this;
+            return scopeAssignmentName(Output.of(scopeAssignmentName));
         }
 
         public GetScopeAssignmentArgs build() {

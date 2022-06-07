@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.aps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRuleGroupsNamespaceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="arn", required=true)
-    private String arn;
+    private Output<String> arn;
 
     /**
      * @return The RuleGroupsNamespace ARN.
      * 
      */
-    public String arn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -57,9 +58,19 @@ public final class GetRuleGroupsNamespaceArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder arn(String arn) {
+        public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
+        }
+
+        /**
+         * @param arn The RuleGroupsNamespace ARN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
 
         public GetRuleGroupsNamespaceArgs build() {

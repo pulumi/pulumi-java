@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dialogflow_v3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetTestCaseArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTestCaseArgs Empty = new GetTestCaseArgs();
 
     @Import(name="agentId", required=true)
-    private String agentId;
+    private Output<String> agentId;
 
-    public String agentId() {
+    public Output<String> agentId() {
         return this.agentId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="testCaseId", required=true)
-    private String testCaseId;
+    private Output<String> testCaseId;
 
-    public String testCaseId() {
+    public Output<String> testCaseId() {
         return this.testCaseId;
     }
 
@@ -69,24 +70,40 @@ public final class GetTestCaseArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTestCaseArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder agentId(String agentId) {
+        public Builder agentId(Output<String> agentId) {
             $.agentId = agentId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder agentId(String agentId) {
+            return agentId(Output.of(agentId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder testCaseId(String testCaseId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder testCaseId(Output<String> testCaseId) {
             $.testCaseId = testCaseId;
             return this;
+        }
+
+        public Builder testCaseId(String testCaseId) {
+            return testCaseId(Output.of(testCaseId));
         }
 
         public GetTestCaseArgs build() {

@@ -5,17 +5,24 @@ package com.pulumi.azurenative.elastic;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.elastic.inputs.GetMonitorArgs;
+import com.pulumi.azurenative.elastic.inputs.GetMonitorPlainArgs;
 import com.pulumi.azurenative.elastic.inputs.GetTagRuleArgs;
+import com.pulumi.azurenative.elastic.inputs.GetTagRulePlainArgs;
 import com.pulumi.azurenative.elastic.inputs.ListDeploymentInfoArgs;
+import com.pulumi.azurenative.elastic.inputs.ListDeploymentInfoPlainArgs;
 import com.pulumi.azurenative.elastic.inputs.ListMonitoredResourceArgs;
+import com.pulumi.azurenative.elastic.inputs.ListMonitoredResourcePlainArgs;
 import com.pulumi.azurenative.elastic.inputs.ListUpgradableVersionDetailsArgs;
+import com.pulumi.azurenative.elastic.inputs.ListUpgradableVersionDetailsPlainArgs;
 import com.pulumi.azurenative.elastic.inputs.ListVMHostArgs;
+import com.pulumi.azurenative.elastic.inputs.ListVMHostPlainArgs;
 import com.pulumi.azurenative.elastic.outputs.GetMonitorResult;
 import com.pulumi.azurenative.elastic.outputs.GetTagRuleResult;
 import com.pulumi.azurenative.elastic.outputs.ListDeploymentInfoResult;
 import com.pulumi.azurenative.elastic.outputs.ListMonitoredResourceResult;
 import com.pulumi.azurenative.elastic.outputs.ListUpgradableVersionDetailsResult;
 import com.pulumi.azurenative.elastic.outputs.ListVMHostResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -27,7 +34,7 @@ public final class ElasticFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args) {
+    public static Output<GetMonitorResult> getMonitor(GetMonitorArgs args) {
         return getMonitor(args, InvokeOptions.Empty);
     }
     /**
@@ -35,7 +42,23 @@ public final class ElasticFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetMonitorResult> getMonitor(GetMonitorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMonitorResult> getMonitorPlain(GetMonitorPlainArgs args) {
+        return getMonitorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Monitor resource.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<GetMonitorResult> getMonitor(GetMonitorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:elastic:getMonitor", TypeShape.of(GetMonitorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Monitor resource.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<GetMonitorResult> getMonitorPlain(GetMonitorPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:getMonitor", TypeShape.of(GetMonitorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -43,7 +66,7 @@ public final class ElasticFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetTagRuleResult> getTagRule(GetTagRuleArgs args) {
+    public static Output<GetTagRuleResult> getTagRule(GetTagRuleArgs args) {
         return getTagRule(args, InvokeOptions.Empty);
     }
     /**
@@ -51,7 +74,23 @@ public final class ElasticFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetTagRuleResult> getTagRule(GetTagRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTagRuleResult> getTagRulePlain(GetTagRulePlainArgs args) {
+        return getTagRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Capture logs and metrics of Azure resources based on ARM tags.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<GetTagRuleResult> getTagRule(GetTagRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:elastic:getTagRule", TypeShape.of(GetTagRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Capture logs and metrics of Azure resources based on ARM tags.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<GetTagRuleResult> getTagRulePlain(GetTagRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:getTagRule", TypeShape.of(GetTagRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -59,7 +98,7 @@ public final class ElasticFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<ListDeploymentInfoResult> listDeploymentInfo(ListDeploymentInfoArgs args) {
+    public static Output<ListDeploymentInfoResult> listDeploymentInfo(ListDeploymentInfoArgs args) {
         return listDeploymentInfo(args, InvokeOptions.Empty);
     }
     /**
@@ -67,7 +106,23 @@ public final class ElasticFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<ListDeploymentInfoResult> listDeploymentInfo(ListDeploymentInfoArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListDeploymentInfoResult> listDeploymentInfoPlain(ListDeploymentInfoPlainArgs args) {
+        return listDeploymentInfoPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<ListDeploymentInfoResult> listDeploymentInfo(ListDeploymentInfoArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:elastic:listDeploymentInfo", TypeShape.of(ListDeploymentInfoResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<ListDeploymentInfoResult> listDeploymentInfoPlain(ListDeploymentInfoPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:listDeploymentInfo", TypeShape.of(ListDeploymentInfoResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -75,7 +130,7 @@ public final class ElasticFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<ListMonitoredResourceResult> listMonitoredResource(ListMonitoredResourceArgs args) {
+    public static Output<ListMonitoredResourceResult> listMonitoredResource(ListMonitoredResourceArgs args) {
         return listMonitoredResource(args, InvokeOptions.Empty);
     }
     /**
@@ -83,7 +138,23 @@ public final class ElasticFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<ListMonitoredResourceResult> listMonitoredResource(ListMonitoredResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListMonitoredResourceResult> listMonitoredResourcePlain(ListMonitoredResourcePlainArgs args) {
+        return listMonitoredResourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Response of a list operation.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<ListMonitoredResourceResult> listMonitoredResource(ListMonitoredResourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:elastic:listMonitoredResource", TypeShape.of(ListMonitoredResourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Response of a list operation.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<ListMonitoredResourceResult> listMonitoredResourcePlain(ListMonitoredResourcePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:listMonitoredResource", TypeShape.of(ListMonitoredResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -91,7 +162,7 @@ public final class ElasticFunctions {
      * API Version: 2021-10-01-preview.
      * 
      */
-    public static CompletableFuture<ListUpgradableVersionDetailsResult> listUpgradableVersionDetails(ListUpgradableVersionDetailsArgs args) {
+    public static Output<ListUpgradableVersionDetailsResult> listUpgradableVersionDetails(ListUpgradableVersionDetailsArgs args) {
         return listUpgradableVersionDetails(args, InvokeOptions.Empty);
     }
     /**
@@ -99,7 +170,23 @@ public final class ElasticFunctions {
      * API Version: 2021-10-01-preview.
      * 
      */
-    public static CompletableFuture<ListUpgradableVersionDetailsResult> listUpgradableVersionDetails(ListUpgradableVersionDetailsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListUpgradableVersionDetailsResult> listUpgradableVersionDetailsPlain(ListUpgradableVersionDetailsPlainArgs args) {
+        return listUpgradableVersionDetailsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Stack Versions that this version can upgrade to
+     * API Version: 2021-10-01-preview.
+     * 
+     */
+    public static Output<ListUpgradableVersionDetailsResult> listUpgradableVersionDetails(ListUpgradableVersionDetailsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:elastic:listUpgradableVersionDetails", TypeShape.of(ListUpgradableVersionDetailsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Stack Versions that this version can upgrade to
+     * API Version: 2021-10-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListUpgradableVersionDetailsResult> listUpgradableVersionDetailsPlain(ListUpgradableVersionDetailsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:listUpgradableVersionDetails", TypeShape.of(ListUpgradableVersionDetailsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -107,7 +194,7 @@ public final class ElasticFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<ListVMHostResult> listVMHost(ListVMHostArgs args) {
+    public static Output<ListVMHostResult> listVMHost(ListVMHostArgs args) {
         return listVMHost(args, InvokeOptions.Empty);
     }
     /**
@@ -115,7 +202,23 @@ public final class ElasticFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<ListVMHostResult> listVMHost(ListVMHostArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListVMHostResult> listVMHostPlain(ListVMHostPlainArgs args) {
+        return listVMHostPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Response of a list operation.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<ListVMHostResult> listVMHost(ListVMHostArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:elastic:listVMHost", TypeShape.of(ListVMHostResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Response of a list operation.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<ListVMHostResult> listVMHostPlain(ListVMHostPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:listVMHost", TypeShape.of(ListVMHostResult.class), args, Utilities.withVersion(options));
     }
 }

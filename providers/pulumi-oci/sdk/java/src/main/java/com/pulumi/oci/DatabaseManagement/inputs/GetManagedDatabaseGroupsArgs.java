@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseGroupsFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabaseGroupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetManagedDatabaseGroupsFilter> filters;
+    private @Nullable Output<List<GetManagedDatabaseGroupsFilterArgs>> filters;
 
-    public Optional<List<GetManagedDatabaseGroupsFilter>> filters() {
+    public Optional<Output<List<GetManagedDatabaseGroupsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The identifier of the resource. Only one of the parameters, id or name should be provided.
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -58,13 +59,13 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name. Only one of the parameters, id or name should be provided
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -73,13 +74,13 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The lifecycle state of a resource.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,17 +118,31 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabaseGroupsFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetManagedDatabaseGroupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetManagedDatabaseGroupsFilter... filters) {
+        public Builder filters(List<GetManagedDatabaseGroupsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetManagedDatabaseGroupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -137,8 +152,29 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id The identifier of the resource. Only one of the parameters, id or name should be provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire name. Only one of the parameters, id or name should be provided
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -148,8 +184,18 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state The lifecycle state of a resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetManagedDatabaseGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetManagedDatabaseGroupsArgs build() {

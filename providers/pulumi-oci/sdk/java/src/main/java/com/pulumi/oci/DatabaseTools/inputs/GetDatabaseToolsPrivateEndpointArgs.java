@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseTools.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatabaseToolsPrivateEndpointArgs extends com.pulumi.resour
      * 
      */
     @Import(name="databaseToolsPrivateEndpointId", required=true)
-    private String databaseToolsPrivateEndpointId;
+    private Output<String> databaseToolsPrivateEndpointId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a DatabaseToolsPrivateEndpoint.
      * 
      */
-    public String databaseToolsPrivateEndpointId() {
+    public Output<String> databaseToolsPrivateEndpointId() {
         return this.databaseToolsPrivateEndpointId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDatabaseToolsPrivateEndpointArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder databaseToolsPrivateEndpointId(String databaseToolsPrivateEndpointId) {
+        public Builder databaseToolsPrivateEndpointId(Output<String> databaseToolsPrivateEndpointId) {
             $.databaseToolsPrivateEndpointId = databaseToolsPrivateEndpointId;
             return this;
+        }
+
+        /**
+         * @param databaseToolsPrivateEndpointId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of a DatabaseToolsPrivateEndpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseToolsPrivateEndpointId(String databaseToolsPrivateEndpointId) {
+            return databaseToolsPrivateEndpointId(Output.of(databaseToolsPrivateEndpointId));
         }
 
         public GetDatabaseToolsPrivateEndpointArgs build() {

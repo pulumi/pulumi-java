@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetAutonomousExadataInfrastructureShapesFilter;
+import com.pulumi.oci.Database.inputs.GetAutonomousExadataInfrastructureShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetAutonomousExadataInfrastructureShapesArgs extends com.pulu
      * 
      */
     @Import(name="availabilityDomain", required=true)
-    private String availabilityDomain;
+    private Output<String> availabilityDomain;
 
     /**
      * @return The name of the Availability Domain.
      * 
      */
-    public String availabilityDomain() {
+    public Output<String> availabilityDomain() {
         return this.availabilityDomain;
     }
 
@@ -36,20 +37,20 @@ public final class GetAutonomousExadataInfrastructureShapesArgs extends com.pulu
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAutonomousExadataInfrastructureShapesFilter> filters;
+    private @Nullable Output<List<GetAutonomousExadataInfrastructureShapesFilterArgs>> filters;
 
-    public Optional<List<GetAutonomousExadataInfrastructureShapesFilter>> filters() {
+    public Optional<Output<List<GetAutonomousExadataInfrastructureShapesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -85,8 +86,29 @@ public final class GetAutonomousExadataInfrastructureShapesArgs extends com.pulu
          * @return builder
          * 
          */
-        public Builder availabilityDomain(String availabilityDomain) {
+        public Builder availabilityDomain(Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the Availability Domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -97,16 +119,19 @@ public final class GetAutonomousExadataInfrastructureShapesArgs extends com.pulu
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
-            return this;
+            return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(@Nullable List<GetAutonomousExadataInfrastructureShapesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetAutonomousExadataInfrastructureShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAutonomousExadataInfrastructureShapesFilter... filters) {
+        public Builder filters(List<GetAutonomousExadataInfrastructureShapesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAutonomousExadataInfrastructureShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

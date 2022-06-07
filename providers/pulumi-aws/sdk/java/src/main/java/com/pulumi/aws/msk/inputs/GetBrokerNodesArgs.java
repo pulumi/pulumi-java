@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.msk.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBrokerNodesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterArn", required=true)
-    private String clusterArn;
+    private Output<String> clusterArn;
 
     /**
      * @return The ARN of the cluster the nodes belong to.
      * 
      */
-    public String clusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetBrokerNodesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterArn(String clusterArn) {
+        public Builder clusterArn(Output<String> clusterArn) {
             $.clusterArn = clusterArn;
             return this;
+        }
+
+        /**
+         * @param clusterArn The ARN of the cluster the nodes belong to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterArn(String clusterArn) {
+            return clusterArn(Output.of(clusterArn));
         }
 
         public GetBrokerNodesArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends com.p
      * 
      */
     @Import(name="managedInstanceName", required=true)
-    private String managedInstanceName;
+    private Output<String> managedInstanceName;
 
     /**
      * @return The name of the managed instance.
      * 
      */
-    public String managedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends com.p
      * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
-    private String privateEndpointConnectionName;
+    private Output<String> privateEndpointConnectionName;
 
     /**
      * @return The name of the private endpoint connection.
      * 
      */
-    public String privateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
 
@@ -47,13 +48,13 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends com.p
          * @return builder
          * 
          */
-        public Builder managedInstanceName(String managedInstanceName) {
+        public Builder managedInstanceName(Output<String> managedInstanceName) {
             $.managedInstanceName = managedInstanceName;
+            return this;
+        }
+
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedInstanceName(String managedInstanceName) {
+            return managedInstanceName(Output.of(managedInstanceName));
+        }
+
+        /**
+         * @param privateEndpointConnectionName The name of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpointConnectionName(Output<String> privateEndpointConnectionName) {
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends com.p
          * 
          */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
-            $.privateEndpointConnectionName = privateEndpointConnectionName;
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends com.p
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetManagedInstancePrivateEndpointConnectionArgs build() {

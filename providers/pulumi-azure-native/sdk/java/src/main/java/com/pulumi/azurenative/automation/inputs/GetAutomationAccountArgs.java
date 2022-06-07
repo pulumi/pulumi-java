@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.automation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAutomationAccountArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="automationAccountName", required=true)
-    private String automationAccountName;
+    private Output<String> automationAccountName;
 
     /**
      * @return The name of the automation account.
      * 
      */
-    public String automationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAutomationAccountArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetAutomationAccountArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder automationAccountName(String automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
+            return this;
+        }
+
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder automationAccountName(String automationAccountName) {
+            return automationAccountName(Output.of(automationAccountName));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAutomationAccountArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAutomationAccountArgs build() {

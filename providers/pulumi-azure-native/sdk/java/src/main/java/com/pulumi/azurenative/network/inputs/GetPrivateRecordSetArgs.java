@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privateZoneName", required=true)
-    private String privateZoneName;
+    private Output<String> privateZoneName;
 
     /**
      * @return The name of the Private DNS zone (without a terminating dot).
      * 
      */
-    public String privateZoneName() {
+    public Output<String> privateZoneName() {
         return this.privateZoneName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="recordType", required=true)
-    private String recordType;
+    private Output<String> recordType;
 
     /**
      * @return The type of DNS record in this record set.
      * 
      */
-    public String recordType() {
+    public Output<String> recordType() {
         return this.recordType;
     }
 
@@ -47,13 +48,13 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="relativeRecordSetName", required=true)
-    private String relativeRecordSetName;
+    private Output<String> relativeRecordSetName;
 
     /**
      * @return The name of the record set, relative to the name of the zone.
      * 
      */
-    public String relativeRecordSetName() {
+    public Output<String> relativeRecordSetName() {
         return this.relativeRecordSetName;
     }
 
@@ -62,13 +63,13 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder privateZoneName(String privateZoneName) {
+        public Builder privateZoneName(Output<String> privateZoneName) {
             $.privateZoneName = privateZoneName;
+            return this;
+        }
+
+        /**
+         * @param privateZoneName The name of the Private DNS zone (without a terminating dot).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateZoneName(String privateZoneName) {
+            return privateZoneName(Output.of(privateZoneName));
+        }
+
+        /**
+         * @param recordType The type of DNS record in this record set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder recordType(Output<String> recordType) {
+            $.recordType = recordType;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder recordType(String recordType) {
-            $.recordType = recordType;
+            return recordType(Output.of(recordType));
+        }
+
+        /**
+         * @param relativeRecordSetName The name of the record set, relative to the name of the zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relativeRecordSetName(Output<String> relativeRecordSetName) {
+            $.relativeRecordSetName = relativeRecordSetName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder relativeRecordSetName(String relativeRecordSetName) {
-            $.relativeRecordSetName = relativeRecordSetName;
+            return relativeRecordSetName(Output.of(relativeRecordSetName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPrivateRecordSetArgs build() {

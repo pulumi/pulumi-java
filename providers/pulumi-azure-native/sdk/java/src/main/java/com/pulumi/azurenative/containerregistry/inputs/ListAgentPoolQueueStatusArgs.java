@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.containerregistry.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListAgentPoolQueueStatusArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="agentPoolName", required=true)
-    private String agentPoolName;
+    private Output<String> agentPoolName;
 
     /**
      * @return The name of the agent pool.
      * 
      */
-    public String agentPoolName() {
+    public Output<String> agentPoolName() {
         return this.agentPoolName;
     }
 
@@ -32,13 +33,13 @@ public final class ListAgentPoolQueueStatusArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="registryName", required=true)
-    private String registryName;
+    private Output<String> registryName;
 
     /**
      * @return The name of the container registry.
      * 
      */
-    public String registryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -47,13 +48,13 @@ public final class ListAgentPoolQueueStatusArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group to which the container registry belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class ListAgentPoolQueueStatusArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder agentPoolName(String agentPoolName) {
+        public Builder agentPoolName(Output<String> agentPoolName) {
             $.agentPoolName = agentPoolName;
+            return this;
+        }
+
+        /**
+         * @param agentPoolName The name of the agent pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder agentPoolName(String agentPoolName) {
+            return agentPoolName(Output.of(agentPoolName));
+        }
+
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryName(Output<String> registryName) {
+            $.registryName = registryName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListAgentPoolQueueStatusArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder registryName(String registryName) {
-            $.registryName = registryName;
+            return registryName(Output.of(registryName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListAgentPoolQueueStatusArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListAgentPoolQueueStatusArgs build() {

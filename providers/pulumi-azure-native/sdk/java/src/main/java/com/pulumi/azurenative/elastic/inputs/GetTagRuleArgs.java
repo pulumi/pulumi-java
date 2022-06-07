@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.elastic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTagRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="monitorName", required=true)
-    private String monitorName;
+    private Output<String> monitorName;
 
     /**
      * @return Monitor resource name
      * 
      */
-    public String monitorName() {
+    public Output<String> monitorName() {
         return this.monitorName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTagRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group to which the Elastic resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetTagRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleSetName", required=true)
-    private String ruleSetName;
+    private Output<String> ruleSetName;
 
     /**
      * @return Tag Rule Set resource name
      * 
      */
-    public String ruleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
 
@@ -89,8 +90,29 @@ public final class GetTagRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder monitorName(String monitorName) {
+        public Builder monitorName(Output<String> monitorName) {
             $.monitorName = monitorName;
+            return this;
+        }
+
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monitorName(String monitorName) {
+            return monitorName(Output.of(monitorName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group to which the Elastic resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetTagRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param ruleSetName Tag Rule Set resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleSetName(Output<String> ruleSetName) {
+            $.ruleSetName = ruleSetName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetTagRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ruleSetName(String ruleSetName) {
-            $.ruleSetName = ruleSetName;
-            return this;
+            return ruleSetName(Output.of(ruleSetName));
         }
 
         public GetTagRuleArgs build() {

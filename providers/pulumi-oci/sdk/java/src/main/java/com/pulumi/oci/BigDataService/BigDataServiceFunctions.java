@@ -3,17 +3,26 @@
 
 package com.pulumi.oci.BigDataService;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.BigDataService.inputs.GetAutoScalingConfigurationArgs;
+import com.pulumi.oci.BigDataService.inputs.GetAutoScalingConfigurationPlainArgs;
 import com.pulumi.oci.BigDataService.inputs.GetAutoScalingConfigurationsArgs;
+import com.pulumi.oci.BigDataService.inputs.GetAutoScalingConfigurationsPlainArgs;
 import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceApiKeyArgs;
+import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceApiKeyPlainArgs;
 import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceApiKeysArgs;
+import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceApiKeysPlainArgs;
 import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceArgs;
 import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceMetastoreConfigArgs;
+import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceMetastoreConfigPlainArgs;
 import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceMetastoreConfigsArgs;
+import com.pulumi.oci.BigDataService.inputs.GetBdsInstanceMetastoreConfigsPlainArgs;
+import com.pulumi.oci.BigDataService.inputs.GetBdsInstancePlainArgs;
 import com.pulumi.oci.BigDataService.inputs.GetBdsInstancesArgs;
+import com.pulumi.oci.BigDataService.inputs.GetBdsInstancesPlainArgs;
 import com.pulumi.oci.BigDataService.outputs.GetAutoScalingConfigurationResult;
 import com.pulumi.oci.BigDataService.outputs.GetAutoScalingConfigurationsResult;
 import com.pulumi.oci.BigDataService.outputs.GetBdsInstanceApiKeyResult;
@@ -34,7 +43,7 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAutoScalingConfigurationResult> getAutoScalingConfiguration(GetAutoScalingConfigurationArgs args) {
+    public static Output<GetAutoScalingConfigurationResult> getAutoScalingConfiguration(GetAutoScalingConfigurationArgs args) {
         return getAutoScalingConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -45,13 +54,41 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetAutoScalingConfigurationResult> getAutoScalingConfiguration(GetAutoScalingConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAutoScalingConfigurationResult> getAutoScalingConfigurationPlain(GetAutoScalingConfigurationPlainArgs args) {
+        return getAutoScalingConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Auto Scaling Configuration resource in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns details of the autoscale configuration identified by the given ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetAutoScalingConfigurationResult> getAutoScalingConfiguration(GetAutoScalingConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:BigDataService/getAutoScalingConfiguration:getAutoScalingConfiguration", TypeShape.of(GetAutoScalingConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Auto Scaling Configuration resource in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns details of the autoscale configuration identified by the given ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAutoScalingConfigurationResult> getAutoScalingConfigurationPlain(GetAutoScalingConfigurationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:BigDataService/getAutoScalingConfiguration:getAutoScalingConfiguration", TypeShape.of(GetAutoScalingConfigurationResult.class), args, Utilities.withVersion(options));
     }
-    public static CompletableFuture<GetAutoScalingConfigurationsResult> getAutoScalingConfigurations(GetAutoScalingConfigurationsArgs args) {
+    public static Output<GetAutoScalingConfigurationsResult> getAutoScalingConfigurations(GetAutoScalingConfigurationsArgs args) {
         return getAutoScalingConfigurations(args, InvokeOptions.Empty);
     }
-    public static CompletableFuture<GetAutoScalingConfigurationsResult> getAutoScalingConfigurations(GetAutoScalingConfigurationsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAutoScalingConfigurationsResult> getAutoScalingConfigurationsPlain(GetAutoScalingConfigurationsPlainArgs args) {
+        return getAutoScalingConfigurationsPlain(args, InvokeOptions.Empty);
+    }
+    public static Output<GetAutoScalingConfigurationsResult> getAutoScalingConfigurations(GetAutoScalingConfigurationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:BigDataService/getAutoScalingConfigurations:getAutoScalingConfigurations", TypeShape.of(GetAutoScalingConfigurationsResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<GetAutoScalingConfigurationsResult> getAutoScalingConfigurationsPlain(GetAutoScalingConfigurationsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:BigDataService/getAutoScalingConfigurations:getAutoScalingConfigurations", TypeShape.of(GetAutoScalingConfigurationsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,7 +99,7 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstanceResult> getBdsInstance(GetBdsInstanceArgs args) {
+    public static Output<GetBdsInstanceResult> getBdsInstance(GetBdsInstanceArgs args) {
         return getBdsInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +110,29 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstanceResult> getBdsInstance(GetBdsInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBdsInstanceResult> getBdsInstancePlain(GetBdsInstancePlainArgs args) {
+        return getBdsInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Bds Instance resource in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns information about the Big Data Service cluster identified by the given ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetBdsInstanceResult> getBdsInstance(GetBdsInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:BigDataService/getBdsInstance:getBdsInstance", TypeShape.of(GetBdsInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Bds Instance resource in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns information about the Big Data Service cluster identified by the given ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetBdsInstanceResult> getBdsInstancePlain(GetBdsInstancePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:BigDataService/getBdsInstance:getBdsInstance", TypeShape.of(GetBdsInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -84,7 +143,7 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstanceApiKeyResult> getBdsInstanceApiKey(GetBdsInstanceApiKeyArgs args) {
+    public static Output<GetBdsInstanceApiKeyResult> getBdsInstanceApiKey(GetBdsInstanceApiKeyArgs args) {
         return getBdsInstanceApiKey(args, InvokeOptions.Empty);
     }
     /**
@@ -95,7 +154,29 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstanceApiKeyResult> getBdsInstanceApiKey(GetBdsInstanceApiKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBdsInstanceApiKeyResult> getBdsInstanceApiKeyPlain(GetBdsInstanceApiKeyPlainArgs args) {
+        return getBdsInstanceApiKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Bds Instance Api Key resource in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns the user&#39;s API key information for the given ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetBdsInstanceApiKeyResult> getBdsInstanceApiKey(GetBdsInstanceApiKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:BigDataService/getBdsInstanceApiKey:getBdsInstanceApiKey", TypeShape.of(GetBdsInstanceApiKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Bds Instance Api Key resource in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns the user&#39;s API key information for the given ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetBdsInstanceApiKeyResult> getBdsInstanceApiKeyPlain(GetBdsInstanceApiKeyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:BigDataService/getBdsInstanceApiKey:getBdsInstanceApiKey", TypeShape.of(GetBdsInstanceApiKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -106,7 +187,7 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstanceApiKeysResult> getBdsInstanceApiKeys(GetBdsInstanceApiKeysArgs args) {
+    public static Output<GetBdsInstanceApiKeysResult> getBdsInstanceApiKeys(GetBdsInstanceApiKeysArgs args) {
         return getBdsInstanceApiKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -117,7 +198,29 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstanceApiKeysResult> getBdsInstanceApiKeys(GetBdsInstanceApiKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBdsInstanceApiKeysResult> getBdsInstanceApiKeysPlain(GetBdsInstanceApiKeysPlainArgs args) {
+        return getBdsInstanceApiKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Bds Instance Api Key resource in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns the user&#39;s API key information for the given ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetBdsInstanceApiKeysResult> getBdsInstanceApiKeys(GetBdsInstanceApiKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:BigDataService/getBdsInstanceApiKeys:getBdsInstanceApiKeys", TypeShape.of(GetBdsInstanceApiKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Bds Instance Api Key resource in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns the user&#39;s API key information for the given ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetBdsInstanceApiKeysResult> getBdsInstanceApiKeysPlain(GetBdsInstanceApiKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:BigDataService/getBdsInstanceApiKeys:getBdsInstanceApiKeys", TypeShape.of(GetBdsInstanceApiKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -128,7 +231,7 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstanceMetastoreConfigResult> getBdsInstanceMetastoreConfig(GetBdsInstanceMetastoreConfigArgs args) {
+    public static Output<GetBdsInstanceMetastoreConfigResult> getBdsInstanceMetastoreConfig(GetBdsInstanceMetastoreConfigArgs args) {
         return getBdsInstanceMetastoreConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -139,7 +242,29 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstanceMetastoreConfigResult> getBdsInstanceMetastoreConfig(GetBdsInstanceMetastoreConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBdsInstanceMetastoreConfigResult> getBdsInstanceMetastoreConfigPlain(GetBdsInstanceMetastoreConfigPlainArgs args) {
+        return getBdsInstanceMetastoreConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Bds Instance Metastore Config resource in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns the BDS Metastore configuration information for the given ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetBdsInstanceMetastoreConfigResult> getBdsInstanceMetastoreConfig(GetBdsInstanceMetastoreConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:BigDataService/getBdsInstanceMetastoreConfig:getBdsInstanceMetastoreConfig", TypeShape.of(GetBdsInstanceMetastoreConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Bds Instance Metastore Config resource in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns the BDS Metastore configuration information for the given ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetBdsInstanceMetastoreConfigResult> getBdsInstanceMetastoreConfigPlain(GetBdsInstanceMetastoreConfigPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:BigDataService/getBdsInstanceMetastoreConfig:getBdsInstanceMetastoreConfig", TypeShape.of(GetBdsInstanceMetastoreConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -150,7 +275,7 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstanceMetastoreConfigsResult> getBdsInstanceMetastoreConfigs(GetBdsInstanceMetastoreConfigsArgs args) {
+    public static Output<GetBdsInstanceMetastoreConfigsResult> getBdsInstanceMetastoreConfigs(GetBdsInstanceMetastoreConfigsArgs args) {
         return getBdsInstanceMetastoreConfigs(args, InvokeOptions.Empty);
     }
     /**
@@ -161,7 +286,29 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstanceMetastoreConfigsResult> getBdsInstanceMetastoreConfigs(GetBdsInstanceMetastoreConfigsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBdsInstanceMetastoreConfigsResult> getBdsInstanceMetastoreConfigsPlain(GetBdsInstanceMetastoreConfigsPlainArgs args) {
+        return getBdsInstanceMetastoreConfigsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Bds Instance Metastore Configs in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns a list of metastore configurations ssociated with this Big Data Service cluster.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetBdsInstanceMetastoreConfigsResult> getBdsInstanceMetastoreConfigs(GetBdsInstanceMetastoreConfigsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:BigDataService/getBdsInstanceMetastoreConfigs:getBdsInstanceMetastoreConfigs", TypeShape.of(GetBdsInstanceMetastoreConfigsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Bds Instance Metastore Configs in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns a list of metastore configurations ssociated with this Big Data Service cluster.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetBdsInstanceMetastoreConfigsResult> getBdsInstanceMetastoreConfigsPlain(GetBdsInstanceMetastoreConfigsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:BigDataService/getBdsInstanceMetastoreConfigs:getBdsInstanceMetastoreConfigs", TypeShape.of(GetBdsInstanceMetastoreConfigsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -172,7 +319,7 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstancesResult> getBdsInstances(GetBdsInstancesArgs args) {
+    public static Output<GetBdsInstancesResult> getBdsInstances(GetBdsInstancesArgs args) {
         return getBdsInstances(args, InvokeOptions.Empty);
     }
     /**
@@ -183,7 +330,29 @@ public final class BigDataServiceFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetBdsInstancesResult> getBdsInstances(GetBdsInstancesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBdsInstancesResult> getBdsInstancesPlain(GetBdsInstancesPlainArgs args) {
+        return getBdsInstancesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Bds Instances in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns a list of all Big Data Service clusters in a compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetBdsInstancesResult> getBdsInstances(GetBdsInstancesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:BigDataService/getBdsInstances:getBdsInstances", TypeShape.of(GetBdsInstancesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Bds Instances in Oracle Cloud Infrastructure Big Data Service service.
+     * 
+     * Returns a list of all Big Data Service clusters in a compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetBdsInstancesResult> getBdsInstancesPlain(GetBdsInstancesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:BigDataService/getBdsInstances:getBdsInstances", TypeShape.of(GetBdsInstancesResult.class), args, Utilities.withVersion(options));
     }
 }

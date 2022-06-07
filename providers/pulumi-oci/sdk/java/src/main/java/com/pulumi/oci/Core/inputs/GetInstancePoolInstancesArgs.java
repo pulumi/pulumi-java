@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetInstancePoolInstancesFilter;
+import com.pulumi.oci.Core.inputs.GetInstancePoolInstancesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetInstancePoolInstancesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetInstancePoolInstancesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetInstancePoolInstancesFilter> filters;
+    private @Nullable Output<List<GetInstancePoolInstancesFilterArgs>> filters;
 
-    public Optional<List<GetInstancePoolInstancesFilter>> filters() {
+    public Optional<Output<List<GetInstancePoolInstancesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetInstancePoolInstancesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="instancePoolId", required=true)
-    private String instancePoolId;
+    private Output<String> instancePoolId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance pool.
      * 
      */
-    public String instancePoolId() {
+    public Output<String> instancePoolId() {
         return this.instancePoolId;
     }
 
@@ -101,8 +102,29 @@ public final class GetInstancePoolInstancesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -112,17 +134,20 @@ public final class GetInstancePoolInstancesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetInstancePoolInstancesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetInstancePoolInstancesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetInstancePoolInstancesFilter... filters) {
+        public Builder filters(List<GetInstancePoolInstancesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetInstancePoolInstancesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -132,9 +157,19 @@ public final class GetInstancePoolInstancesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder instancePoolId(String instancePoolId) {
+        public Builder instancePoolId(Output<String> instancePoolId) {
             $.instancePoolId = instancePoolId;
             return this;
+        }
+
+        /**
+         * @param instancePoolId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instancePoolId(String instancePoolId) {
+            return instancePoolId(Output.of(instancePoolId));
         }
 
         public GetInstancePoolInstancesArgs build() {

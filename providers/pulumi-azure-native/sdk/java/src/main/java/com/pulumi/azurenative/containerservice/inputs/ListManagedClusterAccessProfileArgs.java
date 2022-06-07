@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.containerservice.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the managed cluster resource.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -47,13 +48,13 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="roleName", required=true)
-    private String roleName;
+    private Output<String> roleName;
 
     /**
      * @return The name of the role for managed cluster accessProfile resource.
      * 
      */
-    public String roleName() {
+    public Output<String> roleName() {
         return this.roleName;
     }
 
@@ -89,8 +90,29 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the managed cluster resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param roleName The name of the role for managed cluster accessProfile resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder roleName(Output<String> roleName) {
+            $.roleName = roleName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListManagedClusterAccessProfileArgs extends com.pulumi.resour
          * 
          */
         public Builder roleName(String roleName) {
-            $.roleName = roleName;
-            return this;
+            return roleName(Output.of(roleName));
         }
 
         public ListManagedClusterAccessProfileArgs build() {

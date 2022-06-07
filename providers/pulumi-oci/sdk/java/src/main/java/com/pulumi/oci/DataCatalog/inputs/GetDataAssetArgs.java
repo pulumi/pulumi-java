@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -20,13 +21,13 @@ public final class GetDataAssetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogId", required=true)
-    private String catalogId;
+    private Output<String> catalogId;
 
     /**
      * @return Unique catalog identifier.
      * 
      */
-    public String catalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
@@ -35,13 +36,13 @@ public final class GetDataAssetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataAssetKey", required=true)
-    private String dataAssetKey;
+    private Output<String> dataAssetKey;
 
     /**
      * @return Unique data asset key.
      * 
      */
-    public String dataAssetKey() {
+    public Output<String> dataAssetKey() {
         return this.dataAssetKey;
     }
 
@@ -50,13 +51,13 @@ public final class GetDataAssetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields")
-    private @Nullable List<String> fields;
+    private @Nullable Output<List<String>> fields;
 
     /**
      * @return Specifies the fields to return in a data asset response.
      * 
      */
-    public Optional<List<String>> fields() {
+    public Optional<Output<List<String>>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
@@ -92,8 +93,29 @@ public final class GetDataAssetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder catalogId(String catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             $.catalogId = catalogId;
+            return this;
+        }
+
+        /**
+         * @param catalogId Unique catalog identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
+        }
+
+        /**
+         * @param dataAssetKey Unique data asset key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataAssetKey(Output<String> dataAssetKey) {
+            $.dataAssetKey = dataAssetKey;
             return this;
         }
 
@@ -104,7 +126,17 @@ public final class GetDataAssetArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dataAssetKey(String dataAssetKey) {
-            $.dataAssetKey = dataAssetKey;
+            return dataAssetKey(Output.of(dataAssetKey));
+        }
+
+        /**
+         * @param fields Specifies the fields to return in a data asset response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fields(@Nullable Output<List<String>> fields) {
+            $.fields = fields;
             return this;
         }
 
@@ -114,9 +146,8 @@ public final class GetDataAssetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fields(@Nullable List<String> fields) {
-            $.fields = fields;
-            return this;
+        public Builder fields(List<String> fields) {
+            return fields(Output.of(fields));
         }
 
         /**

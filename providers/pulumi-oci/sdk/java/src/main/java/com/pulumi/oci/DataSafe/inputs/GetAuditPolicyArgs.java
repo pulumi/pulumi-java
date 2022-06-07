@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAuditPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="auditPolicyId", required=true)
-    private String auditPolicyId;
+    private Output<String> auditPolicyId;
 
     /**
      * @return Unique audit policy identifier.
      * 
      */
-    public String auditPolicyId() {
+    public Output<String> auditPolicyId() {
         return this.auditPolicyId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAuditPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder auditPolicyId(String auditPolicyId) {
+        public Builder auditPolicyId(Output<String> auditPolicyId) {
             $.auditPolicyId = auditPolicyId;
             return this;
+        }
+
+        /**
+         * @param auditPolicyId Unique audit policy identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder auditPolicyId(String auditPolicyId) {
+            return auditPolicyId(Output.of(auditPolicyId));
         }
 
         public GetAuditPolicyArgs build() {

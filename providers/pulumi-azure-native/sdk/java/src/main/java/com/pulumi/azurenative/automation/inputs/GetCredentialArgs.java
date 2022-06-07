@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.automation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCredentialArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-    private String automationAccountName;
+    private Output<String> automationAccountName;
 
     /**
      * @return The name of the automation account.
      * 
      */
-    public String automationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCredentialArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="credentialName", required=true)
-    private String credentialName;
+    private Output<String> credentialName;
 
     /**
      * @return The name of credential.
      * 
      */
-    public String credentialName() {
+    public Output<String> credentialName() {
         return this.credentialName;
     }
 
@@ -47,13 +48,13 @@ public final class GetCredentialArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetCredentialArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder automationAccountName(String automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
+            return this;
+        }
+
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder automationAccountName(String automationAccountName) {
+            return automationAccountName(Output.of(automationAccountName));
+        }
+
+        /**
+         * @param credentialName The name of credential.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder credentialName(Output<String> credentialName) {
+            $.credentialName = credentialName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetCredentialArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder credentialName(String credentialName) {
-            $.credentialName = credentialName;
+            return credentialName(Output.of(credentialName));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetCredentialArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetCredentialArgs build() {

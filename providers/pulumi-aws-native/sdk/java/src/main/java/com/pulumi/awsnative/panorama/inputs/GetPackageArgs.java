@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.panorama.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetPackageArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPackageArgs Empty = new GetPackageArgs();
 
     @Import(name="packageId", required=true)
-    private String packageId;
+    private Output<String> packageId;
 
-    public String packageId() {
+    public Output<String> packageId() {
         return this.packageId;
     }
 
@@ -43,9 +44,13 @@ public final class GetPackageArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPackageArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder packageId(String packageId) {
+        public Builder packageId(Output<String> packageId) {
             $.packageId = packageId;
             return this;
+        }
+
+        public Builder packageId(String packageId) {
+            return packageId(Output.of(packageId));
         }
 
         public GetPackageArgs build() {

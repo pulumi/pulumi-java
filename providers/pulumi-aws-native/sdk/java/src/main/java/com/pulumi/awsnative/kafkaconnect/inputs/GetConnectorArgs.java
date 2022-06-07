@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.kafkaconnect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConnectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="connectorArn", required=true)
-    private String connectorArn;
+    private Output<String> connectorArn;
 
     /**
      * @return Amazon Resource Name for the created Connector.
      * 
      */
-    public String connectorArn() {
+    public Output<String> connectorArn() {
         return this.connectorArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetConnectorArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder connectorArn(String connectorArn) {
+        public Builder connectorArn(Output<String> connectorArn) {
             $.connectorArn = connectorArn;
             return this;
+        }
+
+        /**
+         * @param connectorArn Amazon Resource Name for the created Connector.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectorArn(String connectorArn) {
+            return connectorArn(Output.of(connectorArn));
         }
 
         public GetConnectorArgs build() {

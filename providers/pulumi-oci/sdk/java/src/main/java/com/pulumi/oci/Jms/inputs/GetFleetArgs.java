@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Jms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFleetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fleetId", required=true)
-    private String fleetId;
+    private Output<String> fleetId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Fleet.
      * 
      */
-    public String fleetId() {
+    public Output<String> fleetId() {
         return this.fleetId;
     }
 
@@ -57,9 +58,19 @@ public final class GetFleetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fleetId(String fleetId) {
+        public Builder fleetId(Output<String> fleetId) {
             $.fleetId = fleetId;
             return this;
+        }
+
+        /**
+         * @param fleetId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Fleet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fleetId(String fleetId) {
+            return fleetId(Output.of(fleetId));
         }
 
         public GetFleetArgs build() {

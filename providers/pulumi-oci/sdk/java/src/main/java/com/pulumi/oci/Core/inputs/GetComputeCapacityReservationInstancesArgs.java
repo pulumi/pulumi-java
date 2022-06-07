@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetComputeCapacityReservationInstancesFilter;
+import com.pulumi.oci.Core.inputs.GetComputeCapacityReservationInstancesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Optional<String> availabilityDomain() {
+    public Optional<Output<String>> availabilityDomain() {
         return Optional.ofNullable(this.availabilityDomain);
     }
 
@@ -36,13 +37,13 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
      * 
      */
     @Import(name="capacityReservationId", required=true)
-    private String capacityReservationId;
+    private Output<String> capacityReservationId;
 
     /**
      * @return The OCID of the compute capacity reservation.
      * 
      */
-    public String capacityReservationId() {
+    public Output<String> capacityReservationId() {
         return this.capacityReservationId;
     }
 
@@ -51,20 +52,20 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetComputeCapacityReservationInstancesFilter> filters;
+    private @Nullable Output<List<GetComputeCapacityReservationInstancesFilterArgs>> filters;
 
-    public Optional<List<GetComputeCapacityReservationInstancesFilter>> filters() {
+    public Optional<Output<List<GetComputeCapacityReservationInstancesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -101,8 +102,29 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param capacityReservationId The OCID of the compute capacity reservation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder capacityReservationId(Output<String> capacityReservationId) {
+            $.capacityReservationId = capacityReservationId;
             return this;
         }
 
@@ -113,7 +135,17 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
          * 
          */
         public Builder capacityReservationId(String capacityReservationId) {
-            $.capacityReservationId = capacityReservationId;
+            return capacityReservationId(Output.of(capacityReservationId));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -123,17 +155,20 @@ public final class GetComputeCapacityReservationInstancesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
-            $.compartmentId = compartmentId;
-            return this;
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(@Nullable List<GetComputeCapacityReservationInstancesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetComputeCapacityReservationInstancesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetComputeCapacityReservationInstancesFilter... filters) {
+        public Builder filters(List<GetComputeCapacityReservationInstancesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetComputeCapacityReservationInstancesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

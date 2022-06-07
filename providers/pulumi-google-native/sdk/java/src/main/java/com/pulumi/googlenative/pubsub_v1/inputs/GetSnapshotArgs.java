@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.pubsub_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSnapshotArgs Empty = new GetSnapshotArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="snapshotId", required=true)
-    private String snapshotId;
+    private Output<String> snapshotId;
 
-    public String snapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId;
     }
 
@@ -53,14 +54,22 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder snapshotId(String snapshotId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder snapshotId(Output<String> snapshotId) {
             $.snapshotId = snapshotId;
             return this;
+        }
+
+        public Builder snapshotId(String snapshotId) {
+            return snapshotId(Output.of(snapshotId));
         }
 
         public GetSnapshotArgs build() {

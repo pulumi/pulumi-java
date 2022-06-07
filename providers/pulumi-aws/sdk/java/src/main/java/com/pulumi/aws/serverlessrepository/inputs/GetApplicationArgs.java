@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.serverlessrepository.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationId", required=true)
-    private String applicationId;
+    private Output<String> applicationId;
 
     /**
      * @return The ARN of the application.
      * 
      */
-    public String applicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -34,13 +35,13 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="semanticVersion")
-    private @Nullable String semanticVersion;
+    private @Nullable Output<String> semanticVersion;
 
     /**
      * @return The requested version of the application. By default, retrieves the latest version.
      * 
      */
-    public Optional<String> semanticVersion() {
+    public Optional<Output<String>> semanticVersion() {
         return Optional.ofNullable(this.semanticVersion);
     }
 
@@ -75,8 +76,29 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder applicationId(String applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             $.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * @param applicationId The ARN of the application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
+        }
+
+        /**
+         * @param semanticVersion The requested version of the application. By default, retrieves the latest version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder semanticVersion(@Nullable Output<String> semanticVersion) {
+            $.semanticVersion = semanticVersion;
             return this;
         }
 
@@ -86,9 +108,8 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder semanticVersion(@Nullable String semanticVersion) {
-            $.semanticVersion = semanticVersion;
-            return this;
+        public Builder semanticVersion(String semanticVersion) {
+            return semanticVersion(Output.of(semanticVersion));
         }
 
         public GetApplicationArgs build() {

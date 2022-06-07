@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHybridIdentityMetadatumArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="metadataName", required=true)
-    private String metadataName;
+    private Output<String> metadataName;
 
     /**
      * @return Name of the HybridIdentityMetadata.
      * 
      */
-    public String metadataName() {
+    public Output<String> metadataName() {
         return this.metadataName;
     }
 
@@ -32,13 +33,13 @@ public final class GetHybridIdentityMetadatumArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Resource Group Name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetHybridIdentityMetadatumArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="virtualMachineName", required=true)
-    private String virtualMachineName;
+    private Output<String> virtualMachineName;
 
     /**
      * @return Name of the vm.
      * 
      */
-    public String virtualMachineName() {
+    public Output<String> virtualMachineName() {
         return this.virtualMachineName;
     }
 
@@ -89,8 +90,29 @@ public final class GetHybridIdentityMetadatumArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder metadataName(String metadataName) {
+        public Builder metadataName(Output<String> metadataName) {
             $.metadataName = metadataName;
+            return this;
+        }
+
+        /**
+         * @param metadataName Name of the HybridIdentityMetadata.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metadataName(String metadataName) {
+            return metadataName(Output.of(metadataName));
+        }
+
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetHybridIdentityMetadatumArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualMachineName Name of the vm.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualMachineName(Output<String> virtualMachineName) {
+            $.virtualMachineName = virtualMachineName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetHybridIdentityMetadatumArgs extends com.pulumi.resources.I
          * 
          */
         public Builder virtualMachineName(String virtualMachineName) {
-            $.virtualMachineName = virtualMachineName;
-            return this;
+            return virtualMachineName(Output.of(virtualMachineName));
         }
 
         public GetHybridIdentityMetadatumArgs build() {

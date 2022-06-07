@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.iam_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetWorkloadIdentityPoolArgs extends com.pulumi.resources.Invo
     public static final GetWorkloadIdentityPoolArgs Empty = new GetWorkloadIdentityPoolArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="workloadIdentityPoolId", required=true)
-    private String workloadIdentityPoolId;
+    private Output<String> workloadIdentityPoolId;
 
-    public String workloadIdentityPoolId() {
+    public Output<String> workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
 
@@ -61,19 +62,31 @@ public final class GetWorkloadIdentityPoolArgs extends com.pulumi.resources.Invo
             $ = new GetWorkloadIdentityPoolArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder workloadIdentityPoolId(Output<String> workloadIdentityPoolId) {
             $.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
+        }
+
+        public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
+            return workloadIdentityPoolId(Output.of(workloadIdentityPoolId));
         }
 
         public GetWorkloadIdentityPoolArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.storagesync.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serverId", required=true)
-    private String serverId;
+    private Output<String> serverId;
 
     /**
      * @return GUID identifying the on-premises server.
      * 
      */
-    public String serverId() {
+    public Output<String> serverId() {
         return this.serverId;
     }
 
@@ -47,13 +48,13 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="storageSyncServiceName", required=true)
-    private String storageSyncServiceName;
+    private Output<String> storageSyncServiceName;
 
     /**
      * @return Name of Storage Sync Service resource.
      * 
      */
-    public String storageSyncServiceName() {
+    public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serverId GUID identifying the on-premises server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverId(Output<String> serverId) {
+            $.serverId = serverId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder serverId(String serverId) {
-            $.serverId = serverId;
+            return serverId(Output.of(serverId));
+        }
+
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
+            $.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetRegisteredServerArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder storageSyncServiceName(String storageSyncServiceName) {
-            $.storageSyncServiceName = storageSyncServiceName;
-            return this;
+            return storageSyncServiceName(Output.of(storageSyncServiceName));
         }
 
         public GetRegisteredServerArgs build() {

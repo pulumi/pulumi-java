@@ -5,18 +5,31 @@ package com.pulumi.aws.imagebuilder;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.imagebuilder.inputs.GetComponentArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetComponentPlainArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetComponentsArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetComponentsPlainArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetContainerRecipeArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetContainerRecipePlainArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetContainerRecipesArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetContainerRecipesPlainArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationPlainArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationsArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationsPlainArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetImageArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetImagePipelineArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetImagePipelinePlainArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetImagePipelinesArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetImagePipelinesPlainArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetImagePlainArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetImageRecipeArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetImageRecipePlainArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetImageRecipesArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetImageRecipesPlainArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationPlainArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationsArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationsPlainArgs;
 import com.pulumi.aws.imagebuilder.outputs.GetComponentResult;
 import com.pulumi.aws.imagebuilder.outputs.GetComponentsResult;
 import com.pulumi.aws.imagebuilder.outputs.GetContainerRecipeResult;
@@ -30,6 +43,7 @@ import com.pulumi.aws.imagebuilder.outputs.GetImageRecipesResult;
 import com.pulumi.aws.imagebuilder.outputs.GetImageResult;
 import com.pulumi.aws.imagebuilder.outputs.GetInfrastructureConfigurationResult;
 import com.pulumi.aws.imagebuilder.outputs.GetInfrastructureConfigurationsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -63,7 +77,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args) {
+    public static Output<GetComponentResult> getComponent(GetComponentArgs args) {
         return getComponent(args, InvokeOptions.Empty);
     }
     /**
@@ -93,7 +107,67 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComponentResult> getComponentPlain(GetComponentPlainArgs args) {
+        return getComponentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about an Image Builder Component.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getComponent(GetComponentArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-west-2:aws:component/amazon-cloudwatch-agent-linux/1.0.0&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetComponentResult> getComponent(GetComponentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getComponent:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about an Image Builder Component.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getComponent(GetComponentArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-west-2:aws:component/amazon-cloudwatch-agent-linux/1.0.0&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetComponentResult> getComponentPlain(GetComponentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getComponent:getComponent", TypeShape.of(GetComponentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -127,7 +201,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComponentsResult> getComponents() {
+    public static Output<GetComponentsResult> getComponents() {
         return getComponents(GetComponentsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -161,7 +235,41 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComponentsResult> getComponents(GetComponentsArgs args) {
+    public static CompletableFuture<GetComponentsResult> getComponentsPlain() {
+        return getComponentsPlain(GetComponentsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Components matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getComponents(GetComponentsArgs.builder()
+     *             .filters(GetComponentsFilter.builder()
+     *                 .name(&#34;platform&#34;)
+     *                 .values(&#34;Linux&#34;)
+     *                 .build())
+     *             .owner(&#34;Self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetComponentsResult> getComponents(GetComponentsArgs args) {
         return getComponents(args, InvokeOptions.Empty);
     }
     /**
@@ -195,7 +303,75 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetComponentsResult> getComponents(GetComponentsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetComponentsResult> getComponentsPlain(GetComponentsPlainArgs args) {
+        return getComponentsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Components matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getComponents(GetComponentsArgs.builder()
+     *             .filters(GetComponentsFilter.builder()
+     *                 .name(&#34;platform&#34;)
+     *                 .values(&#34;Linux&#34;)
+     *                 .build())
+     *             .owner(&#34;Self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetComponentsResult> getComponents(GetComponentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getComponents:getComponents", TypeShape.of(GetComponentsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Components matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getComponents(GetComponentsArgs.builder()
+     *             .filters(GetComponentsFilter.builder()
+     *                 .name(&#34;platform&#34;)
+     *                 .values(&#34;Linux&#34;)
+     *                 .build())
+     *             .owner(&#34;Self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetComponentsResult> getComponentsPlain(GetComponentsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getComponents:getComponents", TypeShape.of(GetComponentsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -225,7 +401,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args) {
+    public static Output<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args) {
         return getContainerRecipe(args, InvokeOptions.Empty);
     }
     /**
@@ -255,7 +431,67 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContainerRecipeResult> getContainerRecipePlain(GetContainerRecipePlainArgs args) {
+        return getContainerRecipePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about an Image builder Container Recipe.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getContainerRecipe(GetContainerRecipeArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-east-1:aws:container-recipe/example/1.0.0&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getContainerRecipe:getContainerRecipe", TypeShape.of(GetContainerRecipeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about an Image builder Container Recipe.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getContainerRecipe(GetContainerRecipeArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-east-1:aws:container-recipe/example/1.0.0&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetContainerRecipeResult> getContainerRecipePlain(GetContainerRecipePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getContainerRecipe:getContainerRecipe", TypeShape.of(GetContainerRecipeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -289,7 +525,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipes() {
+    public static Output<GetContainerRecipesResult> getContainerRecipes() {
         return getContainerRecipes(GetContainerRecipesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -323,7 +559,41 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipes(GetContainerRecipesArgs args) {
+    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipesPlain() {
+        return getContainerRecipesPlain(GetContainerRecipesPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Container Recipes matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getContainerRecipes(GetContainerRecipesArgs.builder()
+     *             .filters(GetContainerRecipesFilter.builder()
+     *                 .name(&#34;platform&#34;)
+     *                 .values(&#34;Linux&#34;)
+     *                 .build())
+     *             .owner(&#34;Self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetContainerRecipesResult> getContainerRecipes(GetContainerRecipesArgs args) {
         return getContainerRecipes(args, InvokeOptions.Empty);
     }
     /**
@@ -357,7 +627,75 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipes(GetContainerRecipesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipesPlain(GetContainerRecipesPlainArgs args) {
+        return getContainerRecipesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Container Recipes matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getContainerRecipes(GetContainerRecipesArgs.builder()
+     *             .filters(GetContainerRecipesFilter.builder()
+     *                 .name(&#34;platform&#34;)
+     *                 .values(&#34;Linux&#34;)
+     *                 .build())
+     *             .owner(&#34;Self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetContainerRecipesResult> getContainerRecipes(GetContainerRecipesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getContainerRecipes:getContainerRecipes", TypeShape.of(GetContainerRecipesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Container Recipes matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getContainerRecipes(GetContainerRecipesArgs.builder()
+     *             .filters(GetContainerRecipesFilter.builder()
+     *                 .name(&#34;platform&#34;)
+     *                 .values(&#34;Linux&#34;)
+     *                 .build())
+     *             .owner(&#34;Self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipesPlain(GetContainerRecipesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getContainerRecipes:getContainerRecipes", TypeShape.of(GetContainerRecipesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -387,7 +725,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args) {
+    public static Output<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args) {
         return getDistributionConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -417,7 +755,67 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfigurationPlain(GetDistributionConfigurationPlainArgs args) {
+        return getDistributionConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about an Image Builder Distribution Configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getDistributionConfiguration(GetDistributionConfigurationArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-west-2:aws:distribution-configuration/example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetDistributionConfigurationResult> getDistributionConfiguration(GetDistributionConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getDistributionConfiguration:getDistributionConfiguration", TypeShape.of(GetDistributionConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about an Image Builder Distribution Configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getDistributionConfiguration(GetDistributionConfigurationArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-west-2:aws:distribution-configuration/example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetDistributionConfigurationResult> getDistributionConfigurationPlain(GetDistributionConfigurationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getDistributionConfiguration:getDistributionConfiguration", TypeShape.of(GetDistributionConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -450,7 +848,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurations() {
+    public static Output<GetDistributionConfigurationsResult> getDistributionConfigurations() {
         return getDistributionConfigurations(GetDistributionConfigurationsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -483,7 +881,40 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurations(GetDistributionConfigurationsArgs args) {
+    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurationsPlain() {
+        return getDistributionConfigurationsPlain(GetDistributionConfigurationsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Distribution Configurations matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getDistributionConfigurations(GetDistributionConfigurationsArgs.builder()
+     *             .filters(GetDistributionConfigurationsFilter.builder()
+     *                 .name(&#34;name&#34;)
+     *                 .values(&#34;example&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetDistributionConfigurationsResult> getDistributionConfigurations(GetDistributionConfigurationsArgs args) {
         return getDistributionConfigurations(args, InvokeOptions.Empty);
     }
     /**
@@ -516,7 +947,73 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurations(GetDistributionConfigurationsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurationsPlain(GetDistributionConfigurationsPlainArgs args) {
+        return getDistributionConfigurationsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Distribution Configurations matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getDistributionConfigurations(GetDistributionConfigurationsArgs.builder()
+     *             .filters(GetDistributionConfigurationsFilter.builder()
+     *                 .name(&#34;name&#34;)
+     *                 .values(&#34;example&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetDistributionConfigurationsResult> getDistributionConfigurations(GetDistributionConfigurationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getDistributionConfigurations:getDistributionConfigurations", TypeShape.of(GetDistributionConfigurationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Distribution Configurations matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getDistributionConfigurations(GetDistributionConfigurationsArgs.builder()
+     *             .filters(GetDistributionConfigurationsFilter.builder()
+     *                 .name(&#34;name&#34;)
+     *                 .values(&#34;example&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetDistributionConfigurationsResult> getDistributionConfigurationsPlain(GetDistributionConfigurationsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getDistributionConfigurations:getDistributionConfigurations", TypeShape.of(GetDistributionConfigurationsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -547,7 +1044,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
+    public static Output<GetImageResult> getImage(GetImageArgs args) {
         return getImage(args, InvokeOptions.Empty);
     }
     /**
@@ -578,7 +1075,69 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageResult> getImagePlain(GetImagePlainArgs args) {
+        return getImagePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about an Image Builder Image.
+     * 
+     * ## Example Usage
+     * ### Latest
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImage(GetImageArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-west-2:aws:image/amazon-linux-2-x86/x.x.x&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetImageResult> getImage(GetImageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about an Image Builder Image.
+     * 
+     * ## Example Usage
+     * ### Latest
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImage(GetImageArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-west-2:aws:image/amazon-linux-2-x86/x.x.x&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetImageResult> getImagePlain(GetImagePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImage:getImage", TypeShape.of(GetImageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -608,7 +1167,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args) {
+    public static Output<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args) {
         return getImagePipeline(args, InvokeOptions.Empty);
     }
     /**
@@ -638,7 +1197,67 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImagePipelineResult> getImagePipelinePlain(GetImagePipelinePlainArgs args) {
+        return getImagePipelinePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about an Image Builder Image Pipeline.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImagePipeline(GetImagePipelineArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-west-2:aws:image-pipeline/example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getImagePipeline:getImagePipeline", TypeShape.of(GetImagePipelineResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about an Image Builder Image Pipeline.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImagePipeline(GetImagePipelineArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-west-2:aws:image-pipeline/example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetImagePipelineResult> getImagePipelinePlain(GetImagePipelinePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImagePipeline:getImagePipeline", TypeShape.of(GetImagePipelineResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -671,7 +1290,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagePipelinesResult> getImagePipelines() {
+    public static Output<GetImagePipelinesResult> getImagePipelines() {
         return getImagePipelines(GetImagePipelinesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -704,7 +1323,40 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagePipelinesResult> getImagePipelines(GetImagePipelinesArgs args) {
+    public static CompletableFuture<GetImagePipelinesResult> getImagePipelinesPlain() {
+        return getImagePipelinesPlain(GetImagePipelinesPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Image Pipelines matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImagePipelines(GetImagePipelinesArgs.builder()
+     *             .filters(GetImagePipelinesFilter.builder()
+     *                 .name(&#34;name&#34;)
+     *                 .values(&#34;example&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetImagePipelinesResult> getImagePipelines(GetImagePipelinesArgs args) {
         return getImagePipelines(args, InvokeOptions.Empty);
     }
     /**
@@ -737,7 +1389,73 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImagePipelinesResult> getImagePipelines(GetImagePipelinesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImagePipelinesResult> getImagePipelinesPlain(GetImagePipelinesPlainArgs args) {
+        return getImagePipelinesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Image Pipelines matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImagePipelines(GetImagePipelinesArgs.builder()
+     *             .filters(GetImagePipelinesFilter.builder()
+     *                 .name(&#34;name&#34;)
+     *                 .values(&#34;example&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetImagePipelinesResult> getImagePipelines(GetImagePipelinesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getImagePipelines:getImagePipelines", TypeShape.of(GetImagePipelinesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Image Pipelines matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImagePipelines(GetImagePipelinesArgs.builder()
+     *             .filters(GetImagePipelinesFilter.builder()
+     *                 .name(&#34;name&#34;)
+     *                 .values(&#34;example&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetImagePipelinesResult> getImagePipelinesPlain(GetImagePipelinesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImagePipelines:getImagePipelines", TypeShape.of(GetImagePipelinesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -767,7 +1485,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args) {
+    public static Output<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args) {
         return getImageRecipe(args, InvokeOptions.Empty);
     }
     /**
@@ -797,7 +1515,67 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageRecipeResult> getImageRecipePlain(GetImageRecipePlainArgs args) {
+        return getImageRecipePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about an Image Builder Image Recipe.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImageRecipe(GetImageRecipeArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-east-1:aws:image-recipe/example/1.0.0&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetImageRecipeResult> getImageRecipe(GetImageRecipeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getImageRecipe:getImageRecipe", TypeShape.of(GetImageRecipeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about an Image Builder Image Recipe.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImageRecipe(GetImageRecipeArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-east-1:aws:image-recipe/example/1.0.0&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetImageRecipeResult> getImageRecipePlain(GetImageRecipePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImageRecipe:getImageRecipe", TypeShape.of(GetImageRecipeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -831,7 +1609,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageRecipesResult> getImageRecipes() {
+    public static Output<GetImageRecipesResult> getImageRecipes() {
         return getImageRecipes(GetImageRecipesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -865,7 +1643,41 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageRecipesResult> getImageRecipes(GetImageRecipesArgs args) {
+    public static CompletableFuture<GetImageRecipesResult> getImageRecipesPlain() {
+        return getImageRecipesPlain(GetImageRecipesPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Image Recipes matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImageRecipes(GetImageRecipesArgs.builder()
+     *             .filters(GetImageRecipesFilter.builder()
+     *                 .name(&#34;platform&#34;)
+     *                 .values(&#34;Linux&#34;)
+     *                 .build())
+     *             .owner(&#34;Self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetImageRecipesResult> getImageRecipes(GetImageRecipesArgs args) {
         return getImageRecipes(args, InvokeOptions.Empty);
     }
     /**
@@ -899,7 +1711,75 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetImageRecipesResult> getImageRecipes(GetImageRecipesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetImageRecipesResult> getImageRecipesPlain(GetImageRecipesPlainArgs args) {
+        return getImageRecipesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Image Recipes matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImageRecipes(GetImageRecipesArgs.builder()
+     *             .filters(GetImageRecipesFilter.builder()
+     *                 .name(&#34;platform&#34;)
+     *                 .values(&#34;Linux&#34;)
+     *                 .build())
+     *             .owner(&#34;Self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetImageRecipesResult> getImageRecipes(GetImageRecipesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getImageRecipes:getImageRecipes", TypeShape.of(GetImageRecipesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Image Recipes matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getImageRecipes(GetImageRecipesArgs.builder()
+     *             .filters(GetImageRecipesFilter.builder()
+     *                 .name(&#34;platform&#34;)
+     *                 .values(&#34;Linux&#34;)
+     *                 .build())
+     *             .owner(&#34;Self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetImageRecipesResult> getImageRecipesPlain(GetImageRecipesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImageRecipes:getImageRecipes", TypeShape.of(GetImageRecipesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -929,7 +1809,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args) {
+    public static Output<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args) {
         return getInfrastructureConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -959,7 +1839,67 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfigurationPlain(GetInfrastructureConfigurationPlainArgs args) {
+        return getInfrastructureConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about an Image Builder Infrastructure Configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getInfrastructureConfiguration(GetInfrastructureConfigurationArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-west-2:aws:infrastructure-configuration/example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetInfrastructureConfigurationResult> getInfrastructureConfiguration(GetInfrastructureConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getInfrastructureConfiguration:getInfrastructureConfiguration", TypeShape.of(GetInfrastructureConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about an Image Builder Infrastructure Configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getInfrastructureConfiguration(GetInfrastructureConfigurationArgs.builder()
+     *             .arn(&#34;arn:aws:imagebuilder:us-west-2:aws:infrastructure-configuration/example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetInfrastructureConfigurationResult> getInfrastructureConfigurationPlain(GetInfrastructureConfigurationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getInfrastructureConfiguration:getInfrastructureConfiguration", TypeShape.of(GetInfrastructureConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -992,7 +1932,7 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations() {
+    public static Output<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations() {
         return getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -1025,7 +1965,40 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs args) {
+    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurationsPlain() {
+        return getInfrastructureConfigurationsPlain(GetInfrastructureConfigurationsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Infrastructure Configurations matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs.builder()
+     *             .filters(GetInfrastructureConfigurationsFilter.builder()
+     *                 .name(&#34;name&#34;)
+     *                 .values(&#34;example&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs args) {
         return getInfrastructureConfigurations(args, InvokeOptions.Empty);
     }
     /**
@@ -1058,7 +2031,73 @@ public final class ImagebuilderFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurationsPlain(GetInfrastructureConfigurationsPlainArgs args) {
+        return getInfrastructureConfigurationsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Infrastructure Configurations matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs.builder()
+     *             .filters(GetInfrastructureConfigurationsFilter.builder()
+     *                 .name(&#34;name&#34;)
+     *                 .values(&#34;example&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetInfrastructureConfigurationsResult> getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:imagebuilder/getInfrastructureConfigurations:getInfrastructureConfigurations", TypeShape.of(GetInfrastructureConfigurationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Infrastructure Configurations matching the specified criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ImagebuilderFunctions.getInfrastructureConfigurations(GetInfrastructureConfigurationsArgs.builder()
+     *             .filters(GetInfrastructureConfigurationsFilter.builder()
+     *                 .name(&#34;name&#34;)
+     *                 .values(&#34;example&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetInfrastructureConfigurationsResult> getInfrastructureConfigurationsPlain(GetInfrastructureConfigurationsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getInfrastructureConfigurations:getInfrastructureConfigurations", TypeShape.of(GetInfrastructureConfigurationsResult.class), args, Utilities.withVersion(options));
     }
 }

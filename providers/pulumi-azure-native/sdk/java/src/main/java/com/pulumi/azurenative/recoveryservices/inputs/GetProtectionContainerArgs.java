@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.recoveryservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="containerName", required=true)
-    private String containerName;
+    private Output<String> containerName;
 
     /**
      * @return Name of the container whose details need to be fetched.
      * 
      */
-    public String containerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -32,13 +33,13 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fabricName", required=true)
-    private String fabricName;
+    private Output<String> fabricName;
 
     /**
      * @return Name of the fabric where the container belongs.
      * 
      */
-    public String fabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -47,13 +48,13 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the recovery services vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="vaultName", required=true)
-    private String vaultName;
+    private Output<String> vaultName;
 
     /**
      * @return The name of the recovery services vault.
      * 
      */
-    public String vaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -105,8 +106,29 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder containerName(String containerName) {
+        public Builder containerName(Output<String> containerName) {
             $.containerName = containerName;
+            return this;
+        }
+
+        /**
+         * @param containerName Name of the container whose details need to be fetched.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
+        }
+
+        /**
+         * @param fabricName Name of the fabric where the container belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fabricName(Output<String> fabricName) {
+            $.fabricName = fabricName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder fabricName(String fabricName) {
-            $.fabricName = fabricName;
+            return fabricName(Output.of(fabricName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vaultName(Output<String> vaultName) {
+            $.vaultName = vaultName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder vaultName(String vaultName) {
-            $.vaultName = vaultName;
-            return this;
+            return vaultName(Output.of(vaultName));
         }
 
         public GetProtectionContainerArgs build() {

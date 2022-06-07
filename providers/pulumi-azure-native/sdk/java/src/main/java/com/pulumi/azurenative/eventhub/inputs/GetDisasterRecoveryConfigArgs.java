@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventhub.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="alias", required=true)
-    private String alias;
+    private Output<String> alias;
 
     /**
      * @return The Disaster Recovery configuration name
      * 
      */
-    public String alias() {
+    public Output<String> alias() {
         return this.alias;
     }
 
@@ -32,13 +33,13 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The Namespace name
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group within the azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder alias(String alias) {
+        public Builder alias(Output<String> alias) {
             $.alias = alias;
+            return this;
+        }
+
+        /**
+         * @param alias The Disaster Recovery configuration name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
+        }
+
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
          * 
          */
         public Builder namespaceName(String namespaceName) {
-            $.namespaceName = namespaceName;
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetDisasterRecoveryConfigArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDisasterRecoveryConfigArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.customerinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="entityType")
-    private @Nullable String entityType;
+    private @Nullable Output<String> entityType;
 
     /**
      * @return Type of entity. Can be Profile or Interaction.
      * 
      */
-    public Optional<String> entityType() {
+    public Optional<Output<String>> entityType() {
         return Optional.ofNullable(this.entityType);
     }
 
@@ -34,13 +35,13 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="entityTypeName")
-    private @Nullable String entityTypeName;
+    private @Nullable Output<String> entityTypeName;
 
     /**
      * @return Name of the entity type.
      * 
      */
-    public Optional<String> entityTypeName() {
+    public Optional<Output<String>> entityTypeName() {
         return Optional.ofNullable(this.entityTypeName);
     }
 
@@ -49,13 +50,13 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="hubName", required=true)
-    private String hubName;
+    private Output<String> hubName;
 
     /**
      * @return The name of the hub.
      * 
      */
-    public String hubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -64,13 +65,13 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="relativePath")
-    private @Nullable String relativePath;
+    private @Nullable Output<String> relativePath;
 
     /**
      * @return Relative path of the image.
      * 
      */
-    public Optional<String> relativePath() {
+    public Optional<Output<String>> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }
 
@@ -79,13 +80,13 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -123,8 +124,29 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder entityType(@Nullable String entityType) {
+        public Builder entityType(@Nullable Output<String> entityType) {
             $.entityType = entityType;
+            return this;
+        }
+
+        /**
+         * @param entityType Type of entity. Can be Profile or Interaction.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder entityType(String entityType) {
+            return entityType(Output.of(entityType));
+        }
+
+        /**
+         * @param entityTypeName Name of the entity type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder entityTypeName(@Nullable Output<String> entityTypeName) {
+            $.entityTypeName = entityTypeName;
             return this;
         }
 
@@ -134,8 +156,18 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder entityTypeName(@Nullable String entityTypeName) {
-            $.entityTypeName = entityTypeName;
+        public Builder entityTypeName(String entityTypeName) {
+            return entityTypeName(Output.of(entityTypeName));
+        }
+
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hubName(Output<String> hubName) {
+            $.hubName = hubName;
             return this;
         }
 
@@ -146,7 +178,17 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder hubName(String hubName) {
-            $.hubName = hubName;
+            return hubName(Output.of(hubName));
+        }
+
+        /**
+         * @param relativePath Relative path of the image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relativePath(@Nullable Output<String> relativePath) {
+            $.relativePath = relativePath;
             return this;
         }
 
@@ -156,8 +198,18 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder relativePath(@Nullable String relativePath) {
-            $.relativePath = relativePath;
+        public Builder relativePath(String relativePath) {
+            return relativePath(Output.of(relativePath));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -168,8 +220,7 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetImageUploadUrlForDataArgs build() {

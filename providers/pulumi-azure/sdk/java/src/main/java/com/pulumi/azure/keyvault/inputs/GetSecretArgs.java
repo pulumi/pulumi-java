@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.keyvault.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyVaultId", required=true)
-    private String keyVaultId;
+    private Output<String> keyVaultId;
 
     /**
      * @return Specifies the ID of the Key Vault instance where the Secret resides, available on the `azure.keyvault.KeyVault` Data Source / Resource.
      * 
      */
-    public String keyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId;
     }
 
@@ -32,13 +33,13 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the Key Vault Secret.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyVaultId(String keyVaultId) {
+        public Builder keyVaultId(Output<String> keyVaultId) {
             $.keyVaultId = keyVaultId;
+            return this;
+        }
+
+        /**
+         * @param keyVaultId Specifies the ID of the Key Vault instance where the Secret resides, available on the `azure.keyvault.KeyVault` Data Source / Resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyVaultId(String keyVaultId) {
+            return keyVaultId(Output.of(keyVaultId));
+        }
+
+        /**
+         * @param name Specifies the name of the Key Vault Secret.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetSecretArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.rds.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,20 +21,20 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbInstanceIdentifier", required=true)
-    private String dbInstanceIdentifier;
+    private Output<String> dbInstanceIdentifier;
 
     /**
      * @return The name of the RDS instance
      * 
      */
-    public String dbInstanceIdentifier() {
+    public Output<String> dbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
     }
 
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -68,14 +69,28 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(Output<String> dbInstanceIdentifier) {
             $.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
 
-        public Builder tags(@Nullable Map<String,String> tags) {
+        /**
+         * @param dbInstanceIdentifier The name of the RDS instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
+            return dbInstanceIdentifier(Output.of(dbInstanceIdentifier));
+        }
+
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
+        }
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetInstanceArgs build() {

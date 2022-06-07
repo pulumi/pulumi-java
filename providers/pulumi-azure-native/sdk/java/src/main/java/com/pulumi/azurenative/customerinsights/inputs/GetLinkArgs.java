@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.customerinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hubName", required=true)
-    private String hubName;
+    private Output<String> hubName;
 
     /**
      * @return The name of the hub.
      * 
      */
-    public String hubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -32,13 +33,13 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkName", required=true)
-    private String linkName;
+    private Output<String> linkName;
 
     /**
      * @return The name of the link.
      * 
      */
-    public String linkName() {
+    public Output<String> linkName() {
         return this.linkName;
     }
 
@@ -47,13 +48,13 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder hubName(String hubName) {
+        public Builder hubName(Output<String> hubName) {
             $.hubName = hubName;
+            return this;
+        }
+
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hubName(String hubName) {
+            return hubName(Output.of(hubName));
+        }
+
+        /**
+         * @param linkName The name of the link.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder linkName(Output<String> linkName) {
+            $.linkName = linkName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder linkName(String linkName) {
-            $.linkName = linkName;
+            return linkName(Output.of(linkName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetLinkArgs build() {

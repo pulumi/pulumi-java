@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datashare.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the share account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,13 +35,13 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
      * 
      */
     @Import(name="filter")
-    private @Nullable String filter;
+    private @Nullable Output<String> filter;
 
     /**
      * @return Filters the results using OData syntax.
      * 
      */
-    public Optional<String> filter() {
+    public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
 
@@ -49,13 +50,13 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
      * 
      */
     @Import(name="orderby")
-    private @Nullable String orderby;
+    private @Nullable Output<String> orderby;
 
     /**
      * @return Sorts the results using OData syntax.
      * 
      */
-    public Optional<String> orderby() {
+    public Optional<Output<String>> orderby() {
         return Optional.ofNullable(this.orderby);
     }
 
@@ -64,13 +65,13 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,13 +80,13 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-    private String shareSubscriptionName;
+    private Output<String> shareSubscriptionName;
 
     /**
      * @return The name of the share subscription.
      * 
      */
-    public String shareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -94,13 +95,13 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return Continuation token
      * 
      */
-    public Optional<String> skipToken() {
+    public Optional<Output<String>> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
 
@@ -109,13 +110,13 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
      * 
      */
     @Import(name="synchronizationId", required=true)
-    private String synchronizationId;
+    private Output<String> synchronizationId;
 
     /**
      * @return Synchronization id
      * 
      */
-    public String synchronizationId() {
+    public Output<String> synchronizationId() {
         return this.synchronizationId;
     }
 
@@ -155,8 +156,29 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param filter Filters the results using OData syntax.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filter(@Nullable Output<String> filter) {
+            $.filter = filter;
             return this;
         }
 
@@ -166,8 +188,18 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * @return builder
          * 
          */
-        public Builder filter(@Nullable String filter) {
-            $.filter = filter;
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
+        }
+
+        /**
+         * @param orderby Sorts the results using OData syntax.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder orderby(@Nullable Output<String> orderby) {
+            $.orderby = orderby;
             return this;
         }
 
@@ -177,8 +209,18 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * @return builder
          * 
          */
-        public Builder orderby(@Nullable String orderby) {
-            $.orderby = orderby;
+        public Builder orderby(String orderby) {
+            return orderby(Output.of(orderby));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -189,7 +231,17 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param shareSubscriptionName The name of the share subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
@@ -200,7 +252,17 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * 
          */
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            $.shareSubscriptionName = shareSubscriptionName;
+            return shareSubscriptionName(Output.of(shareSubscriptionName));
+        }
+
+        /**
+         * @param skipToken Continuation token
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(@Nullable Output<String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -210,8 +272,18 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
+        public Builder skipToken(String skipToken) {
+            return skipToken(Output.of(skipToken));
+        }
+
+        /**
+         * @param synchronizationId Synchronization id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder synchronizationId(Output<String> synchronizationId) {
+            $.synchronizationId = synchronizationId;
             return this;
         }
 
@@ -222,8 +294,7 @@ public final class ListShareSubscriptionSynchronizationDetailsArgs extends com.p
          * 
          */
         public Builder synchronizationId(String synchronizationId) {
-            $.synchronizationId = synchronizationId;
-            return this;
+            return synchronizationId(Output.of(synchronizationId));
         }
 
         public ListShareSubscriptionSynchronizationDetailsArgs build() {

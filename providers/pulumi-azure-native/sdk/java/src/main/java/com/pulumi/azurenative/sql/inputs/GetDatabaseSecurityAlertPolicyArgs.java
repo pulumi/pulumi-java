@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="databaseName", required=true)
-    private String databaseName;
+    private Output<String> databaseName;
 
     /**
      * @return The name of the  database for which the security alert policy is defined.
      * 
      */
-    public String databaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="securityAlertPolicyName", required=true)
-    private String securityAlertPolicyName;
+    private Output<String> securityAlertPolicyName;
 
     /**
      * @return The name of the security alert policy.
      * 
      */
-    public String securityAlertPolicyName() {
+    public Output<String> securityAlertPolicyName() {
         return this.securityAlertPolicyName;
     }
 
@@ -62,13 +63,13 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the  server.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -105,8 +106,29 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder databaseName(String databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
+            return this;
+        }
+
+        /**
+         * @param databaseName The name of the  database for which the security alert policy is defined.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param securityAlertPolicyName The name of the security alert policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityAlertPolicyName(Output<String> securityAlertPolicyName) {
+            $.securityAlertPolicyName = securityAlertPolicyName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
          * 
          */
         public Builder securityAlertPolicyName(String securityAlertPolicyName) {
-            $.securityAlertPolicyName = securityAlertPolicyName;
+            return securityAlertPolicyName(Output.of(securityAlertPolicyName));
+        }
+
+        /**
+         * @param serverName The name of the  server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetDatabaseSecurityAlertPolicyArgs extends com.pulumi.resourc
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
-            return this;
+            return serverName(Output.of(serverName));
         }
 
         public GetDatabaseSecurityAlertPolicyArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="computeName", required=true)
-    private String computeName;
+    private Output<String> computeName;
 
     /**
      * @return Name of the Azure Machine Learning compute.
      * 
      */
-    public String computeName() {
+    public Output<String> computeName() {
         return this.computeName;
     }
 
@@ -32,13 +33,13 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group in which workspace is located.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return Name of Azure Machine Learning workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -89,8 +90,29 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder computeName(String computeName) {
+        public Builder computeName(Output<String> computeName) {
             $.computeName = computeName;
+            return this;
+        }
+
+        /**
+         * @param computeName Name of the Azure Machine Learning compute.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder computeName(String computeName) {
+            return computeName(Output.of(computeName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListMachineLearningComputeNodesArgs extends com.pulumi.resour
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public ListMachineLearningComputeNodesArgs build() {

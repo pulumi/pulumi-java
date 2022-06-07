@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetQueueServicePropertiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetQueueServicePropertiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="queueServiceName", required=true)
-    private String queueServiceName;
+    private Output<String> queueServiceName;
 
     /**
      * @return The name of the Queue Service within the specified storage account. Queue Service Name must be &#39;default&#39;
      * 
      */
-    public String queueServiceName() {
+    public Output<String> queueServiceName() {
         return this.queueServiceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetQueueServicePropertiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetQueueServicePropertiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param queueServiceName The name of the Queue Service within the specified storage account. Queue Service Name must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder queueServiceName(Output<String> queueServiceName) {
+            $.queueServiceName = queueServiceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetQueueServicePropertiesArgs extends com.pulumi.resources.In
          * 
          */
         public Builder queueServiceName(String queueServiceName) {
-            $.queueServiceName = queueServiceName;
+            return queueServiceName(Output.of(queueServiceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetQueueServicePropertiesArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetQueueServicePropertiesArgs build() {

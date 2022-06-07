@@ -3,11 +3,13 @@
 
 package com.pulumi.googlenative.bigquerydatatransfer_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.bigquerydatatransfer_v1.inputs.GetTransferConfigArgs;
+import com.pulumi.googlenative.bigquerydatatransfer_v1.inputs.GetTransferConfigPlainArgs;
 import com.pulumi.googlenative.bigquerydatatransfer_v1.outputs.GetTransferConfigResult;
 import java.util.concurrent.CompletableFuture;
 
@@ -16,14 +18,28 @@ public final class Bigquerydatatransfer_v1Functions {
      * Returns information about a data transfer config.
      * 
      */
-    public static CompletableFuture<GetTransferConfigResult> getTransferConfig(GetTransferConfigArgs args) {
+    public static Output<GetTransferConfigResult> getTransferConfig(GetTransferConfigArgs args) {
         return getTransferConfig(args, InvokeOptions.Empty);
     }
     /**
      * Returns information about a data transfer config.
      * 
      */
-    public static CompletableFuture<GetTransferConfigResult> getTransferConfig(GetTransferConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTransferConfigResult> getTransferConfigPlain(GetTransferConfigPlainArgs args) {
+        return getTransferConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns information about a data transfer config.
+     * 
+     */
+    public static Output<GetTransferConfigResult> getTransferConfig(GetTransferConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:bigquerydatatransfer/v1:getTransferConfig", TypeShape.of(GetTransferConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns information about a data transfer config.
+     * 
+     */
+    public static CompletableFuture<GetTransferConfigResult> getTransferConfigPlain(GetTransferConfigPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigquerydatatransfer/v1:getTransferConfig", TypeShape.of(GetTransferConfigResult.class), args, Utilities.withVersion(options));
     }
 }

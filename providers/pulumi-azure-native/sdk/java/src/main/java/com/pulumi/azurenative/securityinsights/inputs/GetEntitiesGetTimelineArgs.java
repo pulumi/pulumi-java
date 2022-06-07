@@ -5,6 +5,7 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.azurenative.securityinsights.enums.EntityTimelineKind;
 import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,13 +24,13 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="endTime", required=true)
-    private String endTime;
+    private Output<String> endTime;
 
     /**
      * @return The end timeline date, so the results returned are before this date.
      * 
      */
-    public String endTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
@@ -38,13 +39,13 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="entityId", required=true)
-    private String entityId;
+    private Output<String> entityId;
 
     /**
      * @return entity ID
      * 
      */
-    public String entityId() {
+    public Output<String> entityId() {
         return this.entityId;
     }
 
@@ -53,13 +54,13 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kinds")
-    private @Nullable List<Either<String,EntityTimelineKind>> kinds;
+    private @Nullable Output<List<Either<String,EntityTimelineKind>>> kinds;
 
     /**
      * @return Array of timeline Item kinds.
      * 
      */
-    public Optional<List<Either<String,EntityTimelineKind>>> kinds() {
+    public Optional<Output<List<Either<String,EntityTimelineKind>>>> kinds() {
         return Optional.ofNullable(this.kinds);
     }
 
@@ -68,13 +69,13 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="numberOfBucket")
-    private @Nullable Integer numberOfBucket;
+    private @Nullable Output<Integer> numberOfBucket;
 
     /**
      * @return The number of bucket for timeline queries aggregation.
      * 
      */
-    public Optional<Integer> numberOfBucket() {
+    public Optional<Output<Integer>> numberOfBucket() {
         return Optional.ofNullable(this.numberOfBucket);
     }
 
@@ -83,13 +84,13 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-    private String operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     /**
      * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    public String operationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -98,13 +99,13 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,13 +114,13 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="startTime", required=true)
-    private String startTime;
+    private Output<String> startTime;
 
     /**
      * @return The start timeline date, so the results returned are after this date.
      * 
      */
-    public String startTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -128,13 +129,13 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of the workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -175,8 +176,29 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder endTime(String endTime) {
+        public Builder endTime(Output<String> endTime) {
             $.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * @param endTime The end timeline date, so the results returned are before this date.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
+        }
+
+        /**
+         * @param entityId entity ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder entityId(Output<String> entityId) {
+            $.entityId = entityId;
             return this;
         }
 
@@ -187,7 +209,17 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder entityId(String entityId) {
-            $.entityId = entityId;
+            return entityId(Output.of(entityId));
+        }
+
+        /**
+         * @param kinds Array of timeline Item kinds.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder kinds(@Nullable Output<List<Either<String,EntityTimelineKind>>> kinds) {
+            $.kinds = kinds;
             return this;
         }
 
@@ -197,9 +229,8 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder kinds(@Nullable List<Either<String,EntityTimelineKind>> kinds) {
-            $.kinds = kinds;
-            return this;
+        public Builder kinds(List<Either<String,EntityTimelineKind>> kinds) {
+            return kinds(Output.of(kinds));
         }
 
         /**
@@ -218,8 +249,29 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder numberOfBucket(@Nullable Integer numberOfBucket) {
+        public Builder numberOfBucket(@Nullable Output<Integer> numberOfBucket) {
             $.numberOfBucket = numberOfBucket;
+            return this;
+        }
+
+        /**
+         * @param numberOfBucket The number of bucket for timeline queries aggregation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder numberOfBucket(Integer numberOfBucket) {
+            return numberOfBucket(Output.of(numberOfBucket));
+        }
+
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
@@ -230,7 +282,17 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -241,7 +303,17 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param startTime The start timeline date, so the results returned are after this date.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startTime(Output<String> startTime) {
+            $.startTime = startTime;
             return this;
         }
 
@@ -252,7 +324,17 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder startTime(String startTime) {
-            $.startTime = startTime;
+            return startTime(Output.of(startTime));
+        }
+
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -263,8 +345,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetEntitiesGetTimelineArgs build() {

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetDrgRouteTablesFilter;
+import com.pulumi.oci.Core.inputs.GetDrgRouteTablesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -36,20 +37,20 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="drgId", required=true)
-    private String drgId;
+    private Output<String> drgId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG.
      * 
      */
-    public String drgId() {
+    public Output<String> drgId() {
         return this.drgId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDrgRouteTablesFilter> filters;
+    private @Nullable Output<List<GetDrgRouteTablesFilterArgs>> filters;
 
-    public Optional<List<GetDrgRouteTablesFilter>> filters() {
+    public Optional<Output<List<GetDrgRouteTablesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="importDrgRouteDistributionId")
-    private @Nullable String importDrgRouteDistributionId;
+    private @Nullable Output<String> importDrgRouteDistributionId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the import route distribution.
      * 
      */
-    public Optional<String> importDrgRouteDistributionId() {
+    public Optional<Output<String>> importDrgRouteDistributionId() {
         return Optional.ofNullable(this.importDrgRouteDistributionId);
     }
 
@@ -73,13 +74,13 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter that only returns matches for the specified lifecycle state. The value is case insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,8 +118,29 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param drgId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder drgId(Output<String> drgId) {
+            $.drgId = drgId;
             return this;
         }
 
@@ -129,16 +151,19 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder drgId(String drgId) {
-            $.drgId = drgId;
-            return this;
+            return drgId(Output.of(drgId));
         }
 
-        public Builder filters(@Nullable List<GetDrgRouteTablesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDrgRouteTablesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDrgRouteTablesFilter... filters) {
+        public Builder filters(List<GetDrgRouteTablesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDrgRouteTablesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -148,8 +173,29 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder importDrgRouteDistributionId(@Nullable String importDrgRouteDistributionId) {
+        public Builder importDrgRouteDistributionId(@Nullable Output<String> importDrgRouteDistributionId) {
             $.importDrgRouteDistributionId = importDrgRouteDistributionId;
+            return this;
+        }
+
+        /**
+         * @param importDrgRouteDistributionId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the import route distribution.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder importDrgRouteDistributionId(String importDrgRouteDistributionId) {
+            return importDrgRouteDistributionId(Output.of(importDrgRouteDistributionId));
+        }
+
+        /**
+         * @param state A filter that only returns matches for the specified lifecycle state. The value is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetDrgRouteTablesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetDrgRouteTablesArgs build() {

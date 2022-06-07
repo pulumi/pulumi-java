@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.azurestack.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="customerSubscriptionName", required=true)
-    private String customerSubscriptionName;
+    private Output<String> customerSubscriptionName;
 
     /**
      * @return Name of the product.
      * 
      */
-    public String customerSubscriptionName() {
+    public Output<String> customerSubscriptionName() {
         return this.customerSubscriptionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="registrationName", required=true)
-    private String registrationName;
+    private Output<String> registrationName;
 
     /**
      * @return Name of the Azure Stack registration.
      * 
      */
-    public String registrationName() {
+    public Output<String> registrationName() {
         return this.registrationName;
     }
 
@@ -47,13 +48,13 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroup", required=true)
-    private String resourceGroup;
+    private Output<String> resourceGroup;
 
     /**
      * @return Name of the resource group.
      * 
      */
-    public String resourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -89,8 +90,29 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder customerSubscriptionName(String customerSubscriptionName) {
+        public Builder customerSubscriptionName(Output<String> customerSubscriptionName) {
             $.customerSubscriptionName = customerSubscriptionName;
+            return this;
+        }
+
+        /**
+         * @param customerSubscriptionName Name of the product.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customerSubscriptionName(String customerSubscriptionName) {
+            return customerSubscriptionName(Output.of(customerSubscriptionName));
+        }
+
+        /**
+         * @param registrationName Name of the Azure Stack registration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registrationName(Output<String> registrationName) {
+            $.registrationName = registrationName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder registrationName(String registrationName) {
-            $.registrationName = registrationName;
+            return registrationName(Output.of(registrationName));
+        }
+
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroup(Output<String> resourceGroup) {
+            $.resourceGroup = resourceGroup;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroup(String resourceGroup) {
-            $.resourceGroup = resourceGroup;
-            return this;
+            return resourceGroup(Output.of(resourceGroup));
         }
 
         public GetCustomerSubscriptionArgs build() {

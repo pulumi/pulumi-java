@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.location.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetPlaceIndexArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPlaceIndexArgs Empty = new GetPlaceIndexArgs();
 
     @Import(name="indexName", required=true)
-    private String indexName;
+    private Output<String> indexName;
 
-    public String indexName() {
+    public Output<String> indexName() {
         return this.indexName;
     }
 
@@ -43,9 +44,13 @@ public final class GetPlaceIndexArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPlaceIndexArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder indexName(String indexName) {
+        public Builder indexName(Output<String> indexName) {
             $.indexName = indexName;
             return this;
+        }
+
+        public Builder indexName(String indexName) {
+            return indexName(Output.of(indexName));
         }
 
         public GetPlaceIndexArgs build() {

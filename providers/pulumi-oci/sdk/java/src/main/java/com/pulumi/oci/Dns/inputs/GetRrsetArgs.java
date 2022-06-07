@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment the resource belongs to.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -34,13 +35,13 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domain", required=true)
-    private String domain;
+    private Output<String> domain;
 
     /**
      * @return The target fully-qualified domain name (FQDN) within the target zone.
      * 
      */
-    public String domain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -49,13 +50,13 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rtype", required=true)
-    private String rtype;
+    private Output<String> rtype;
 
     /**
      * @return The type of the target RRSet within the target zone.
      * 
      */
-    public String rtype() {
+    public Output<String> rtype() {
         return this.rtype;
     }
 
@@ -65,14 +66,14 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope")
-    private @Nullable String scope;
+    private @Nullable Output<String> scope;
 
     /**
      * @return Specifies to operate only on resources that have a matching DNS scope.
      * This value will be null for zones in the global DNS and `PRIVATE` when listing private Rrsets.
      * 
      */
-    public Optional<String> scope() {
+    public Optional<Output<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
 
@@ -81,13 +82,13 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="viewId")
-    private @Nullable String viewId;
+    private @Nullable Output<String> viewId;
 
     /**
      * @return The OCID of the view the resource is associated with.
      * 
      */
-    public Optional<String> viewId() {
+    public Optional<Output<String>> viewId() {
         return Optional.ofNullable(this.viewId);
     }
 
@@ -96,13 +97,13 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zoneNameOrId", required=true)
-    private String zoneNameOrId;
+    private Output<String> zoneNameOrId;
 
     /**
      * @return The name or OCID of the target zone.
      * 
      */
-    public String zoneNameOrId() {
+    public Output<String> zoneNameOrId() {
         return this.zoneNameOrId;
     }
 
@@ -111,13 +112,13 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zoneVersion")
-    private @Nullable String zoneVersion;
+    private @Nullable Output<String> zoneVersion;
 
     /**
      * @return The version of the zone for which data is requested.
      * 
      */
-    public Optional<String> zoneVersion() {
+    public Optional<Output<String>> zoneVersion() {
         return Optional.ofNullable(this.zoneVersion);
     }
 
@@ -157,8 +158,29 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment the resource belongs to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param domain The target fully-qualified domain name (FQDN) within the target zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domain(Output<String> domain) {
+            $.domain = domain;
             return this;
         }
 
@@ -169,7 +191,17 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder domain(String domain) {
-            $.domain = domain;
+            return domain(Output.of(domain));
+        }
+
+        /**
+         * @param rtype The type of the target RRSet within the target zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rtype(Output<String> rtype) {
+            $.rtype = rtype;
             return this;
         }
 
@@ -180,7 +212,18 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder rtype(String rtype) {
-            $.rtype = rtype;
+            return rtype(Output.of(rtype));
+        }
+
+        /**
+         * @param scope Specifies to operate only on resources that have a matching DNS scope.
+         * This value will be null for zones in the global DNS and `PRIVATE` when listing private Rrsets.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(@Nullable Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -191,8 +234,18 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder scope(@Nullable String scope) {
-            $.scope = scope;
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
+        }
+
+        /**
+         * @param viewId The OCID of the view the resource is associated with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder viewId(@Nullable Output<String> viewId) {
+            $.viewId = viewId;
             return this;
         }
 
@@ -202,8 +255,18 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder viewId(@Nullable String viewId) {
-            $.viewId = viewId;
+        public Builder viewId(String viewId) {
+            return viewId(Output.of(viewId));
+        }
+
+        /**
+         * @param zoneNameOrId The name or OCID of the target zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zoneNameOrId(Output<String> zoneNameOrId) {
+            $.zoneNameOrId = zoneNameOrId;
             return this;
         }
 
@@ -214,7 +277,17 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder zoneNameOrId(String zoneNameOrId) {
-            $.zoneNameOrId = zoneNameOrId;
+            return zoneNameOrId(Output.of(zoneNameOrId));
+        }
+
+        /**
+         * @param zoneVersion The version of the zone for which data is requested.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zoneVersion(@Nullable Output<String> zoneVersion) {
+            $.zoneVersion = zoneVersion;
             return this;
         }
 
@@ -224,9 +297,8 @@ public final class GetRrsetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder zoneVersion(@Nullable String zoneVersion) {
-            $.zoneVersion = zoneVersion;
-            return this;
+        public Builder zoneVersion(String zoneVersion) {
+            return zoneVersion(Output.of(zoneVersion));
         }
 
         public GetRrsetArgs build() {

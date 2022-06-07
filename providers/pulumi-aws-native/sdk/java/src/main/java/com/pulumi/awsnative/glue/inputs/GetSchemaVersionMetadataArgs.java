@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.glue.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSchemaVersionMetadataArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="key", required=true)
-    private String key;
+    private Output<String> key;
 
     /**
      * @return Metadata key
      * 
      */
-    public String key() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -32,13 +33,13 @@ public final class GetSchemaVersionMetadataArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="schemaVersionId", required=true)
-    private String schemaVersionId;
+    private Output<String> schemaVersionId;
 
     /**
      * @return Represents the version ID associated with the schema version.
      * 
      */
-    public String schemaVersionId() {
+    public Output<String> schemaVersionId() {
         return this.schemaVersionId;
     }
 
@@ -47,13 +48,13 @@ public final class GetSchemaVersionMetadataArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="value", required=true)
-    private String value;
+    private Output<String> value;
 
     /**
      * @return Metadata value
      * 
      */
-    public String value() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -89,8 +90,29 @@ public final class GetSchemaVersionMetadataArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder key(String key) {
+        public Builder key(Output<String> key) {
             $.key = key;
+            return this;
+        }
+
+        /**
+         * @param key Metadata key
+         * 
+         * @return builder
+         * 
+         */
+        public Builder key(String key) {
+            return key(Output.of(key));
+        }
+
+        /**
+         * @param schemaVersionId Represents the version ID associated with the schema version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder schemaVersionId(Output<String> schemaVersionId) {
+            $.schemaVersionId = schemaVersionId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSchemaVersionMetadataArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder schemaVersionId(String schemaVersionId) {
-            $.schemaVersionId = schemaVersionId;
+            return schemaVersionId(Output.of(schemaVersionId));
+        }
+
+        /**
+         * @param value Metadata value
+         * 
+         * @return builder
+         * 
+         */
+        public Builder value(Output<String> value) {
+            $.value = value;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSchemaVersionMetadataArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder value(String value) {
-            $.value = value;
-            return this;
+            return value(Output.of(value));
         }
 
         public GetSchemaVersionMetadataArgs build() {

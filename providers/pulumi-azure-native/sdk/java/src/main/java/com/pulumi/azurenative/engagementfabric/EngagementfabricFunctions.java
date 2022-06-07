@@ -5,13 +5,18 @@ package com.pulumi.azurenative.engagementfabric;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.engagementfabric.inputs.GetAccountArgs;
+import com.pulumi.azurenative.engagementfabric.inputs.GetAccountPlainArgs;
 import com.pulumi.azurenative.engagementfabric.inputs.GetChannelArgs;
+import com.pulumi.azurenative.engagementfabric.inputs.GetChannelPlainArgs;
 import com.pulumi.azurenative.engagementfabric.inputs.ListAccountChannelTypesArgs;
+import com.pulumi.azurenative.engagementfabric.inputs.ListAccountChannelTypesPlainArgs;
 import com.pulumi.azurenative.engagementfabric.inputs.ListAccountKeysArgs;
+import com.pulumi.azurenative.engagementfabric.inputs.ListAccountKeysPlainArgs;
 import com.pulumi.azurenative.engagementfabric.outputs.GetAccountResult;
 import com.pulumi.azurenative.engagementfabric.outputs.GetChannelResult;
 import com.pulumi.azurenative.engagementfabric.outputs.ListAccountChannelTypesResult;
 import com.pulumi.azurenative.engagementfabric.outputs.ListAccountKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -23,7 +28,7 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -31,7 +36,23 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args) {
+        return getAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The EngagementFabric account
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:engagementfabric:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The EngagementFabric account
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:engagementfabric:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -39,7 +60,7 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args) {
+    public static Output<GetChannelResult> getChannel(GetChannelArgs args) {
         return getChannel(args, InvokeOptions.Empty);
     }
     /**
@@ -47,7 +68,23 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetChannelResult> getChannelPlain(GetChannelPlainArgs args) {
+        return getChannelPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The EngagementFabric channel
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static Output<GetChannelResult> getChannel(GetChannelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:engagementfabric:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The EngagementFabric channel
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetChannelResult> getChannelPlain(GetChannelPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:engagementfabric:getChannel", TypeShape.of(GetChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -55,7 +92,7 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<ListAccountChannelTypesResult> listAccountChannelTypes(ListAccountChannelTypesArgs args) {
+    public static Output<ListAccountChannelTypesResult> listAccountChannelTypes(ListAccountChannelTypesArgs args) {
         return listAccountChannelTypes(args, InvokeOptions.Empty);
     }
     /**
@@ -63,7 +100,23 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<ListAccountChannelTypesResult> listAccountChannelTypes(ListAccountChannelTypesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListAccountChannelTypesResult> listAccountChannelTypesPlain(ListAccountChannelTypesPlainArgs args) {
+        return listAccountChannelTypesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * List of the EngagementFabric channel descriptions
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static Output<ListAccountChannelTypesResult> listAccountChannelTypes(ListAccountChannelTypesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:engagementfabric:listAccountChannelTypes", TypeShape.of(ListAccountChannelTypesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List of the EngagementFabric channel descriptions
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListAccountChannelTypesResult> listAccountChannelTypesPlain(ListAccountChannelTypesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:engagementfabric:listAccountChannelTypes", TypeShape.of(ListAccountChannelTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -71,7 +124,7 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args) {
+    public static Output<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args) {
         return listAccountKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +132,23 @@ public final class EngagementfabricFunctions {
      * API Version: 2018-09-01-preview.
      * 
      */
-    public static CompletableFuture<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListAccountKeysResult> listAccountKeysPlain(ListAccountKeysPlainArgs args) {
+        return listAccountKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The list of the EngagementFabric account keys
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static Output<ListAccountKeysResult> listAccountKeys(ListAccountKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:engagementfabric:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The list of the EngagementFabric account keys
+     * API Version: 2018-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListAccountKeysResult> listAccountKeysPlain(ListAccountKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:engagementfabric:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args, Utilities.withVersion(options));
     }
 }

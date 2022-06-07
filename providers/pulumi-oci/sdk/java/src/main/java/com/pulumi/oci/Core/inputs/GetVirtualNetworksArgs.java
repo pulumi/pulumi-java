@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetVirtualNetworksFilter;
+import com.pulumi.oci.Core.inputs.GetVirtualNetworksFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,30 +18,30 @@ public final class GetVirtualNetworksArgs extends com.pulumi.resources.InvokeArg
     public static final GetVirtualNetworksArgs Empty = new GetVirtualNetworksArgs();
 
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetVirtualNetworksFilter> filters;
+    private @Nullable Output<List<GetVirtualNetworksFilterArgs>> filters;
 
-    public Optional<List<GetVirtualNetworksFilter>> filters() {
+    public Optional<Output<List<GetVirtualNetworksFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -71,28 +72,44 @@ public final class GetVirtualNetworksArgs extends com.pulumi.resources.InvokeArg
             $ = new GetVirtualNetworksArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder displayName(@Nullable String displayName) {
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetVirtualNetworksFilter> filters) {
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(@Nullable Output<List<GetVirtualNetworksFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetVirtualNetworksFilter... filters) {
+        public Builder filters(List<GetVirtualNetworksFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetVirtualNetworksFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
+        }
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetVirtualNetworksArgs build() {

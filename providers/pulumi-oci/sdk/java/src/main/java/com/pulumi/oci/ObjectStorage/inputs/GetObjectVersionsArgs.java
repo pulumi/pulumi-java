@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ObjectStorage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ObjectStorage.inputs.GetObjectVersionsFilter;
+import com.pulumi.oci.ObjectStorage.inputs.GetObjectVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
     /**
      * @return The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
      * 
      */
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -36,13 +37,13 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="delimiter")
-    private @Nullable String delimiter;
+    private @Nullable Output<String> delimiter;
 
     /**
      * @return When this parameter is set, only objects whose names do not contain the delimiter character (after an optionally specified prefix) are returned in the objects key of the response body. Scanned objects whose names contain the delimiter have the part of their name up to the first occurrence of the delimiter (including the optional prefix) returned as a set of prefixes. Note that only &#39;/&#39; is a supported delimiter character at this time.
      * 
      */
-    public Optional<String> delimiter() {
+    public Optional<Output<String>> delimiter() {
         return Optional.ofNullable(this.delimiter);
     }
 
@@ -51,13 +52,13 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="end")
-    private @Nullable String end;
+    private @Nullable Output<String> end;
 
     /**
      * @return Object names returned by a list query must be strictly less than this parameter.
      * 
      */
-    public Optional<String> end() {
+    public Optional<Output<String>> end() {
         return Optional.ofNullable(this.end);
     }
 
@@ -66,20 +67,20 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fields")
-    private @Nullable String fields;
+    private @Nullable Output<String> fields;
 
     /**
      * @return Object summary by default includes only the &#39;name&#39; field. Use this parameter to also include &#39;size&#39; (object size in bytes), &#39;etag&#39;, &#39;md5&#39;, &#39;timeCreated&#39; (object creation date and time), &#39;timeModified&#39; (object modification date and time), &#39;storageTier&#39; and &#39;archivalState&#39; fields. Specify the value of this parameter as a comma-separated, case-insensitive list of those field names.  For example &#39;name,etag,timeCreated,md5,timeModified,storageTier,archivalState&#39;.
      * 
      */
-    public Optional<String> fields() {
+    public Optional<Output<String>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetObjectVersionsFilter> filters;
+    private @Nullable Output<List<GetObjectVersionsFilterArgs>> filters;
 
-    public Optional<List<GetObjectVersionsFilter>> filters() {
+    public Optional<Output<List<GetObjectVersionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -88,13 +89,13 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Object Storage namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -103,13 +104,13 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="prefix")
-    private @Nullable String prefix;
+    private @Nullable Output<String> prefix;
 
     /**
      * @return The string to use for matching against the start of object names in a list query.
      * 
      */
-    public Optional<String> prefix() {
+    public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
 
@@ -118,13 +119,13 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="start")
-    private @Nullable String start;
+    private @Nullable Output<String> start;
 
     /**
      * @return Object names returned by a list query must be greater or equal to this parameter.
      * 
      */
-    public Optional<String> start() {
+    public Optional<Output<String>> start() {
         return Optional.ofNullable(this.start);
     }
 
@@ -133,13 +134,13 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="startAfter")
-    private @Nullable String startAfter;
+    private @Nullable Output<String> startAfter;
 
     /**
      * @return Object names returned by a list query must be greater than this parameter.
      * 
      */
-    public Optional<String> startAfter() {
+    public Optional<Output<String>> startAfter() {
         return Optional.ofNullable(this.startAfter);
     }
 
@@ -181,8 +182,29 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * @param bucket The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        /**
+         * @param delimiter When this parameter is set, only objects whose names do not contain the delimiter character (after an optionally specified prefix) are returned in the objects key of the response body. Scanned objects whose names contain the delimiter have the part of their name up to the first occurrence of the delimiter (including the optional prefix) returned as a set of prefixes. Note that only &#39;/&#39; is a supported delimiter character at this time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder delimiter(@Nullable Output<String> delimiter) {
+            $.delimiter = delimiter;
             return this;
         }
 
@@ -192,8 +214,18 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder delimiter(@Nullable String delimiter) {
-            $.delimiter = delimiter;
+        public Builder delimiter(String delimiter) {
+            return delimiter(Output.of(delimiter));
+        }
+
+        /**
+         * @param end Object names returned by a list query must be strictly less than this parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder end(@Nullable Output<String> end) {
+            $.end = end;
             return this;
         }
 
@@ -203,8 +235,18 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder end(@Nullable String end) {
-            $.end = end;
+        public Builder end(String end) {
+            return end(Output.of(end));
+        }
+
+        /**
+         * @param fields Object summary by default includes only the &#39;name&#39; field. Use this parameter to also include &#39;size&#39; (object size in bytes), &#39;etag&#39;, &#39;md5&#39;, &#39;timeCreated&#39; (object creation date and time), &#39;timeModified&#39; (object modification date and time), &#39;storageTier&#39; and &#39;archivalState&#39; fields. Specify the value of this parameter as a comma-separated, case-insensitive list of those field names.  For example &#39;name,etag,timeCreated,md5,timeModified,storageTier,archivalState&#39;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fields(@Nullable Output<String> fields) {
+            $.fields = fields;
             return this;
         }
 
@@ -214,17 +256,20 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder fields(@Nullable String fields) {
-            $.fields = fields;
-            return this;
+        public Builder fields(String fields) {
+            return fields(Output.of(fields));
         }
 
-        public Builder filters(@Nullable List<GetObjectVersionsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetObjectVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetObjectVersionsFilter... filters) {
+        public Builder filters(List<GetObjectVersionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetObjectVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -234,8 +279,29 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder namespace(String namespace) {
+        public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * @param namespace The Object Storage namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param prefix The string to use for matching against the start of object names in a list query.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder prefix(@Nullable Output<String> prefix) {
+            $.prefix = prefix;
             return this;
         }
 
@@ -245,8 +311,18 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder prefix(@Nullable String prefix) {
-            $.prefix = prefix;
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        /**
+         * @param start Object names returned by a list query must be greater or equal to this parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder start(@Nullable Output<String> start) {
+            $.start = start;
             return this;
         }
 
@@ -256,8 +332,18 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder start(@Nullable String start) {
-            $.start = start;
+        public Builder start(String start) {
+            return start(Output.of(start));
+        }
+
+        /**
+         * @param startAfter Object names returned by a list query must be greater than this parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startAfter(@Nullable Output<String> startAfter) {
+            $.startAfter = startAfter;
             return this;
         }
 
@@ -267,9 +353,8 @@ public final class GetObjectVersionsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder startAfter(@Nullable String startAfter) {
-            $.startAfter = startAfter;
-            return this;
+        public Builder startAfter(String startAfter) {
+            return startAfter(Output.of(startAfter));
         }
 
         public GetObjectVersionsArgs build() {

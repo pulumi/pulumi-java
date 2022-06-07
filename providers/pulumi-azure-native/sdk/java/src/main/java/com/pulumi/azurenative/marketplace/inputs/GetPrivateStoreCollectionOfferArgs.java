@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateStoreCollectionOfferArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="collectionId", required=true)
-    private String collectionId;
+    private Output<String> collectionId;
 
     /**
      * @return The collection ID
      * 
      */
-    public String collectionId() {
+    public Output<String> collectionId() {
         return this.collectionId;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateStoreCollectionOfferArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="offerId", required=true)
-    private String offerId;
+    private Output<String> offerId;
 
     /**
      * @return The offer ID to update or delete
      * 
      */
-    public String offerId() {
+    public Output<String> offerId() {
         return this.offerId;
     }
 
@@ -47,13 +48,13 @@ public final class GetPrivateStoreCollectionOfferArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="privateStoreId", required=true)
-    private String privateStoreId;
+    private Output<String> privateStoreId;
 
     /**
      * @return The store ID - must use the tenant ID
      * 
      */
-    public String privateStoreId() {
+    public Output<String> privateStoreId() {
         return this.privateStoreId;
     }
 
@@ -89,8 +90,29 @@ public final class GetPrivateStoreCollectionOfferArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder collectionId(String collectionId) {
+        public Builder collectionId(Output<String> collectionId) {
             $.collectionId = collectionId;
+            return this;
+        }
+
+        /**
+         * @param collectionId The collection ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder collectionId(String collectionId) {
+            return collectionId(Output.of(collectionId));
+        }
+
+        /**
+         * @param offerId The offer ID to update or delete
+         * 
+         * @return builder
+         * 
+         */
+        public Builder offerId(Output<String> offerId) {
+            $.offerId = offerId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPrivateStoreCollectionOfferArgs extends com.pulumi.resourc
          * 
          */
         public Builder offerId(String offerId) {
-            $.offerId = offerId;
+            return offerId(Output.of(offerId));
+        }
+
+        /**
+         * @param privateStoreId The store ID - must use the tenant ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateStoreId(Output<String> privateStoreId) {
+            $.privateStoreId = privateStoreId;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPrivateStoreCollectionOfferArgs extends com.pulumi.resourc
          * 
          */
         public Builder privateStoreId(String privateStoreId) {
-            $.privateStoreId = privateStoreId;
-            return this;
+            return privateStoreId(Output.of(privateStoreId));
         }
 
         public GetPrivateStoreCollectionOfferArgs build() {

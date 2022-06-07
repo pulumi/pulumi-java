@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.kms.inputs;
 
-import com.pulumi.aws.kms.inputs.GetSecretSecret;
+import com.pulumi.aws.kms.inputs.GetSecretSecretArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
@@ -14,9 +15,9 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSecretArgs Empty = new GetSecretArgs();
 
     @Import(name="secrets", required=true)
-    private List<GetSecretSecret> secrets;
+    private Output<List<GetSecretSecretArgs>> secrets;
 
-    public List<GetSecretSecret> secrets() {
+    public Output<List<GetSecretSecretArgs>> secrets() {
         return this.secrets;
     }
 
@@ -44,12 +45,16 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSecretArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder secrets(List<GetSecretSecret> secrets) {
+        public Builder secrets(Output<List<GetSecretSecretArgs>> secrets) {
             $.secrets = secrets;
             return this;
         }
 
-        public Builder secrets(GetSecretSecret... secrets) {
+        public Builder secrets(List<GetSecretSecretArgs> secrets) {
+            return secrets(Output.of(secrets));
+        }
+
+        public Builder secrets(GetSecretSecretArgs... secrets) {
             return secrets(List.of(secrets));
         }
 

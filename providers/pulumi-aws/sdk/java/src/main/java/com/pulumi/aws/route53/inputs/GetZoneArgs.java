@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.route53.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,13 +23,13 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The Hosted Zone name of the desired Hosted Zone.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -37,13 +38,13 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateZone")
-    private @Nullable Boolean privateZone;
+    private @Nullable Output<Boolean> privateZone;
 
     /**
      * @return Used with `name` field to get a private Hosted Zone.
      * 
      */
-    public Optional<Boolean> privateZone() {
+    public Optional<Output<Boolean>> privateZone() {
         return Optional.ofNullable(this.privateZone);
     }
 
@@ -52,13 +53,13 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceRecordSetCount")
-    private @Nullable Integer resourceRecordSetCount;
+    private @Nullable Output<Integer> resourceRecordSetCount;
 
     /**
      * @return The number of Record Set in the Hosted Zone.
      * 
      */
-    public Optional<Integer> resourceRecordSetCount() {
+    public Optional<Output<Integer>> resourceRecordSetCount() {
         return Optional.ofNullable(this.resourceRecordSetCount);
     }
 
@@ -67,13 +68,13 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Used with `name` field. A map of tags, each pair of which must exactly match a pair on the desired Hosted Zone.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -82,13 +83,13 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId")
-    private @Nullable String vpcId;
+    private @Nullable Output<String> vpcId;
 
     /**
      * @return Used with `name` field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).
      * 
      */
-    public Optional<String> vpcId() {
+    public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
 
@@ -97,13 +98,13 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zoneId")
-    private @Nullable String zoneId;
+    private @Nullable Output<String> zoneId;
 
     /**
      * @return The Hosted Zone id of the desired Hosted Zone.
      * 
      */
-    public Optional<String> zoneId() {
+    public Optional<Output<String>> zoneId() {
         return Optional.ofNullable(this.zoneId);
     }
 
@@ -142,8 +143,29 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The Hosted Zone name of the desired Hosted Zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param privateZone Used with `name` field to get a private Hosted Zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateZone(@Nullable Output<Boolean> privateZone) {
+            $.privateZone = privateZone;
             return this;
         }
 
@@ -153,8 +175,18 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder privateZone(@Nullable Boolean privateZone) {
-            $.privateZone = privateZone;
+        public Builder privateZone(Boolean privateZone) {
+            return privateZone(Output.of(privateZone));
+        }
+
+        /**
+         * @param resourceRecordSetCount The number of Record Set in the Hosted Zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceRecordSetCount(@Nullable Output<Integer> resourceRecordSetCount) {
+            $.resourceRecordSetCount = resourceRecordSetCount;
             return this;
         }
 
@@ -164,8 +196,18 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceRecordSetCount(@Nullable Integer resourceRecordSetCount) {
-            $.resourceRecordSetCount = resourceRecordSetCount;
+        public Builder resourceRecordSetCount(Integer resourceRecordSetCount) {
+            return resourceRecordSetCount(Output.of(resourceRecordSetCount));
+        }
+
+        /**
+         * @param tags Used with `name` field. A map of tags, each pair of which must exactly match a pair on the desired Hosted Zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -175,8 +217,18 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param vpcId Used with `name` field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcId(@Nullable Output<String> vpcId) {
+            $.vpcId = vpcId;
             return this;
         }
 
@@ -186,8 +238,18 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vpcId(@Nullable String vpcId) {
-            $.vpcId = vpcId;
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        /**
+         * @param zoneId The Hosted Zone id of the desired Hosted Zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zoneId(@Nullable Output<String> zoneId) {
+            $.zoneId = zoneId;
             return this;
         }
 
@@ -197,9 +259,8 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder zoneId(@Nullable String zoneId) {
-            $.zoneId = zoneId;
-            return this;
+        public Builder zoneId(String zoneId) {
+            return zoneId(Output.of(zoneId));
         }
 
         public GetZoneArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.redis.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetEnterpriseDatabaseArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clusterId", required=true)
-    private String clusterId;
+    private Output<String> clusterId;
 
     /**
      * @return The resource ID of Redis Enterprise Cluster which hosts the Redis Enterprise Database instance.
      * 
      */
-    public String clusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -34,13 +35,13 @@ public final class GetEnterpriseDatabaseArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the Redis Enterprise Database.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -53,7 +54,7 @@ public final class GetEnterpriseDatabaseArgs extends com.pulumi.resources.Invoke
      */
     @Deprecated /* This field is no longer used and will be removed in the next major version of the Azure Provider */
     @Import(name="resourceGroupName")
-    private @Nullable String resourceGroupName;
+    private @Nullable Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group the Redis Enterprise Database instance is located in.
@@ -63,7 +64,7 @@ public final class GetEnterpriseDatabaseArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Deprecated /* This field is no longer used and will be removed in the next major version of the Azure Provider */
-    public Optional<String> resourceGroupName() {
+    public Optional<Output<String>> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
 
@@ -99,8 +100,29 @@ public final class GetEnterpriseDatabaseArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder clusterId(String clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * @param clusterId The resource ID of Redis Enterprise Cluster which hosts the Redis Enterprise Database instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
+        }
+
+        /**
+         * @param name The name of the Redis Enterprise Database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -111,7 +133,21 @@ public final class GetEnterpriseDatabaseArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group the Redis Enterprise Database instance is located in.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is no longer used and will be removed in the next major version of the Azure Provider
+         * 
+         */
+        @Deprecated /* This field is no longer used and will be removed in the next major version of the Azure Provider */
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -125,9 +161,8 @@ public final class GetEnterpriseDatabaseArgs extends com.pulumi.resources.Invoke
          * 
          */
         @Deprecated /* This field is no longer used and will be removed in the next major version of the Azure Provider */
-        public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetEnterpriseDatabaseArgs build() {

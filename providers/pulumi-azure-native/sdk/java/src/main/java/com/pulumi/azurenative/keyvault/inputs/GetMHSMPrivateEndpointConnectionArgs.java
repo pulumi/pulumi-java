@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.keyvault.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the managed HSM Pool
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
-    private String privateEndpointConnectionName;
+    private Output<String> privateEndpointConnectionName;
 
     /**
      * @return Name of the private endpoint connection associated with the managed hsm pool.
      * 
      */
-    public String privateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
 
@@ -47,13 +48,13 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group that contains the managed HSM pool.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Name of the managed HSM Pool
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param privateEndpointConnectionName Name of the private endpoint connection associated with the managed hsm pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpointConnectionName(Output<String> privateEndpointConnectionName) {
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends com.pulumi.resou
          * 
          */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
-            $.privateEndpointConnectionName = privateEndpointConnectionName;
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group that contains the managed HSM pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetMHSMPrivateEndpointConnectionArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetMHSMPrivateEndpointConnectionArgs build() {

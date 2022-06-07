@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.appplatform.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="gatewayName", required=true)
-    private String gatewayName;
+    private Output<String> gatewayName;
 
     /**
      * @return The name of Spring Cloud Gateway.
      * 
      */
-    public String gatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName;
     }
 
@@ -32,13 +33,13 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="routeConfigName", required=true)
-    private String routeConfigName;
+    private Output<String> routeConfigName;
 
     /**
      * @return The name of the Spring Cloud Gateway route config.
      * 
      */
-    public String routeConfigName() {
+    public Output<String> routeConfigName() {
         return this.routeConfigName;
     }
 
@@ -62,13 +63,13 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the Service resource.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder gatewayName(String gatewayName) {
+        public Builder gatewayName(Output<String> gatewayName) {
             $.gatewayName = gatewayName;
+            return this;
+        }
+
+        /**
+         * @param gatewayName The name of Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayName(String gatewayName) {
+            return gatewayName(Output.of(gatewayName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param routeConfigName The name of the Spring Cloud Gateway route config.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routeConfigName(Output<String> routeConfigName) {
+            $.routeConfigName = routeConfigName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder routeConfigName(String routeConfigName) {
-            $.routeConfigName = routeConfigName;
+            return routeConfigName(Output.of(routeConfigName));
+        }
+
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetGatewayRouteConfigArgs build() {

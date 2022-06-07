@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudidentity_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetGroupArgs Empty = new GetGroupArgs();
 
     @Import(name="groupId", required=true)
-    private String groupId;
+    private Output<String> groupId;
 
-    public String groupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
@@ -43,9 +44,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGroupArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder groupId(String groupId) {
+        public Builder groupId(Output<String> groupId) {
             $.groupId = groupId;
             return this;
+        }
+
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
 
         public GetGroupArgs build() {

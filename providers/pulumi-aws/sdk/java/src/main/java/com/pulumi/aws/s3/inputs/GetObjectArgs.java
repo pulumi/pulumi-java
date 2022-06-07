@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.s3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
     /**
      * @return The name of the bucket to read the object from. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
      * 
      */
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -35,20 +36,20 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-    private String key;
+    private Output<String> key;
 
     /**
      * @return The full path to the object inside the bucket
      * 
      */
-    public String key() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="range")
-    private @Nullable String range;
+    private @Nullable Output<String> range;
 
-    public Optional<String> range() {
+    public Optional<Output<String>> range() {
         return Optional.ofNullable(this.range);
     }
 
@@ -57,13 +58,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags assigned to the object.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -72,13 +73,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionId")
-    private @Nullable String versionId;
+    private @Nullable Output<String> versionId;
 
     /**
      * @return Specific version ID of the object returned (defaults to latest version)
      * 
      */
-    public Optional<String> versionId() {
+    public Optional<Output<String>> versionId() {
         return Optional.ofNullable(this.versionId);
     }
 
@@ -116,8 +117,29 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
+            return this;
+        }
+
+        /**
+         * @param bucket The name of the bucket to read the object from. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        /**
+         * @param key The full path to the object inside the bucket
+         * 
+         * @return builder
+         * 
+         */
+        public Builder key(Output<String> key) {
+            $.key = key;
             return this;
         }
 
@@ -128,12 +150,26 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder key(String key) {
-            $.key = key;
+            return key(Output.of(key));
+        }
+
+        public Builder range(@Nullable Output<String> range) {
+            $.range = range;
             return this;
         }
 
-        public Builder range(@Nullable String range) {
-            $.range = range;
+        public Builder range(String range) {
+            return range(Output.of(range));
+        }
+
+        /**
+         * @param tags A map of tags assigned to the object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -143,8 +179,18 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param versionId Specific version ID of the object returned (defaults to latest version)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionId(@Nullable Output<String> versionId) {
+            $.versionId = versionId;
             return this;
         }
 
@@ -154,9 +200,8 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder versionId(@Nullable String versionId) {
-            $.versionId = versionId;
-            return this;
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
         }
 
         public GetObjectArgs build() {

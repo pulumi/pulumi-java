@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagementLockByScopeArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="lockName", required=true)
-    private String lockName;
+    private Output<String> lockName;
 
     /**
      * @return The name of lock.
      * 
      */
-    public String lockName() {
+    public Output<String> lockName() {
         return this.lockName;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagementLockByScopeArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return The scope for the lock.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -73,8 +74,29 @@ public final class GetManagementLockByScopeArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder lockName(String lockName) {
+        public Builder lockName(Output<String> lockName) {
             $.lockName = lockName;
+            return this;
+        }
+
+        /**
+         * @param lockName The name of lock.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lockName(String lockName) {
+            return lockName(Output.of(lockName));
+        }
+
+        /**
+         * @param scope The scope for the lock.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetManagementLockByScopeArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetManagementLockByScopeArgs build() {

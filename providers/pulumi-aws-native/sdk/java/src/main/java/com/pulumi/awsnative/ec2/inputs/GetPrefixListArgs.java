@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prefixListId", required=true)
-    private String prefixListId;
+    private Output<String> prefixListId;
 
     /**
      * @return Id of Prefix List.
      * 
      */
-    public String prefixListId() {
+    public Output<String> prefixListId() {
         return this.prefixListId;
     }
 
@@ -57,9 +58,19 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder prefixListId(String prefixListId) {
+        public Builder prefixListId(Output<String> prefixListId) {
             $.prefixListId = prefixListId;
             return this;
+        }
+
+        /**
+         * @param prefixListId Id of Prefix List.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder prefixListId(String prefixListId) {
+            return prefixListId(Output.of(prefixListId));
         }
 
         public GetPrefixListArgs build() {

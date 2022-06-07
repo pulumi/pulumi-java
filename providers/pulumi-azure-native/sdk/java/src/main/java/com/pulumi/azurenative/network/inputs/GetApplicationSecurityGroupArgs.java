@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApplicationSecurityGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="applicationSecurityGroupName", required=true)
-    private String applicationSecurityGroupName;
+    private Output<String> applicationSecurityGroupName;
 
     /**
      * @return The name of the application security group.
      * 
      */
-    public String applicationSecurityGroupName() {
+    public Output<String> applicationSecurityGroupName() {
         return this.applicationSecurityGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetApplicationSecurityGroupArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetApplicationSecurityGroupArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder applicationSecurityGroupName(String applicationSecurityGroupName) {
+        public Builder applicationSecurityGroupName(Output<String> applicationSecurityGroupName) {
             $.applicationSecurityGroupName = applicationSecurityGroupName;
+            return this;
+        }
+
+        /**
+         * @param applicationSecurityGroupName The name of the application security group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationSecurityGroupName(String applicationSecurityGroupName) {
+            return applicationSecurityGroupName(Output.of(applicationSecurityGroupName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetApplicationSecurityGroupArgs extends com.pulumi.resources.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetApplicationSecurityGroupArgs build() {

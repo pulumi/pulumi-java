@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetMaskingReportMaskedColumnsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetMaskingReportMaskedColumnsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="columnNames")
-    private @Nullable List<String> columnNames;
+    private @Nullable Output<List<String>> columnNames;
 
     /**
      * @return A filter to return only a specific column based on column name.
      * 
      */
-    public Optional<List<String>> columnNames() {
+    public Optional<Output<List<String>>> columnNames() {
         return Optional.ofNullable(this.columnNames);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetMaskingReportMaskedColumnsFilter> filters;
+    private @Nullable Output<List<GetMaskingReportMaskedColumnsFilterArgs>> filters;
 
-    public Optional<List<GetMaskingReportMaskedColumnsFilter>> filters() {
+    public Optional<Output<List<GetMaskingReportMaskedColumnsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="maskingColumnGroups")
-    private @Nullable List<String> maskingColumnGroups;
+    private @Nullable Output<List<String>> maskingColumnGroups;
 
     /**
      * @return A filter to return only the resources that match the specified masking column group.
      * 
      */
-    public Optional<List<String>> maskingColumnGroups() {
+    public Optional<Output<List<String>>> maskingColumnGroups() {
         return Optional.ofNullable(this.maskingColumnGroups);
     }
 
@@ -58,13 +59,13 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="maskingReportId", required=true)
-    private String maskingReportId;
+    private Output<String> maskingReportId;
 
     /**
      * @return The OCID of the masking report.
      * 
      */
-    public String maskingReportId() {
+    public Output<String> maskingReportId() {
         return this.maskingReportId;
     }
 
@@ -73,13 +74,13 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="objectTypes")
-    private @Nullable List<String> objectTypes;
+    private @Nullable Output<List<String>> objectTypes;
 
     /**
      * @return A filter to return only items related to a specific object type.
      * 
      */
-    public Optional<List<String>> objectTypes() {
+    public Optional<Output<List<String>>> objectTypes() {
         return Optional.ofNullable(this.objectTypes);
     }
 
@@ -88,13 +89,13 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="objects")
-    private @Nullable List<String> objects;
+    private @Nullable Output<List<String>> objects;
 
     /**
      * @return A filter to return only items related to a specific object name.
      * 
      */
-    public Optional<List<String>> objects() {
+    public Optional<Output<List<String>>> objects() {
         return Optional.ofNullable(this.objects);
     }
 
@@ -103,13 +104,13 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="schemaNames")
-    private @Nullable List<String> schemaNames;
+    private @Nullable Output<List<String>> schemaNames;
 
     /**
      * @return A filter to return only items related to specific schema name.
      * 
      */
-    public Optional<List<String>> schemaNames() {
+    public Optional<Output<List<String>>> schemaNames() {
         return Optional.ofNullable(this.schemaNames);
     }
 
@@ -118,13 +119,13 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sensitiveTypeId")
-    private @Nullable String sensitiveTypeId;
+    private @Nullable Output<String> sensitiveTypeId;
 
     /**
      * @return A filter to return only items related to a specific sensitive type OCID.
      * 
      */
-    public Optional<String> sensitiveTypeId() {
+    public Optional<Output<String>> sensitiveTypeId() {
         return Optional.ofNullable(this.sensitiveTypeId);
     }
 
@@ -165,9 +166,19 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder columnNames(@Nullable List<String> columnNames) {
+        public Builder columnNames(@Nullable Output<List<String>> columnNames) {
             $.columnNames = columnNames;
             return this;
+        }
+
+        /**
+         * @param columnNames A filter to return only a specific column based on column name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder columnNames(List<String> columnNames) {
+            return columnNames(Output.of(columnNames));
         }
 
         /**
@@ -180,12 +191,16 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
             return columnNames(List.of(columnNames));
         }
 
-        public Builder filters(@Nullable List<GetMaskingReportMaskedColumnsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetMaskingReportMaskedColumnsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetMaskingReportMaskedColumnsFilter... filters) {
+        public Builder filters(List<GetMaskingReportMaskedColumnsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetMaskingReportMaskedColumnsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -195,9 +210,19 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder maskingColumnGroups(@Nullable List<String> maskingColumnGroups) {
+        public Builder maskingColumnGroups(@Nullable Output<List<String>> maskingColumnGroups) {
             $.maskingColumnGroups = maskingColumnGroups;
             return this;
+        }
+
+        /**
+         * @param maskingColumnGroups A filter to return only the resources that match the specified masking column group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maskingColumnGroups(List<String> maskingColumnGroups) {
+            return maskingColumnGroups(Output.of(maskingColumnGroups));
         }
 
         /**
@@ -216,8 +241,29 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder maskingReportId(String maskingReportId) {
+        public Builder maskingReportId(Output<String> maskingReportId) {
             $.maskingReportId = maskingReportId;
+            return this;
+        }
+
+        /**
+         * @param maskingReportId The OCID of the masking report.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maskingReportId(String maskingReportId) {
+            return maskingReportId(Output.of(maskingReportId));
+        }
+
+        /**
+         * @param objectTypes A filter to return only items related to a specific object type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectTypes(@Nullable Output<List<String>> objectTypes) {
+            $.objectTypes = objectTypes;
             return this;
         }
 
@@ -227,9 +273,8 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder objectTypes(@Nullable List<String> objectTypes) {
-            $.objectTypes = objectTypes;
-            return this;
+        public Builder objectTypes(List<String> objectTypes) {
+            return objectTypes(Output.of(objectTypes));
         }
 
         /**
@@ -248,9 +293,19 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder objects(@Nullable List<String> objects) {
+        public Builder objects(@Nullable Output<List<String>> objects) {
             $.objects = objects;
             return this;
+        }
+
+        /**
+         * @param objects A filter to return only items related to a specific object name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objects(List<String> objects) {
+            return objects(Output.of(objects));
         }
 
         /**
@@ -269,9 +324,19 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder schemaNames(@Nullable List<String> schemaNames) {
+        public Builder schemaNames(@Nullable Output<List<String>> schemaNames) {
             $.schemaNames = schemaNames;
             return this;
+        }
+
+        /**
+         * @param schemaNames A filter to return only items related to specific schema name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder schemaNames(List<String> schemaNames) {
+            return schemaNames(Output.of(schemaNames));
         }
 
         /**
@@ -290,9 +355,19 @@ public final class GetMaskingReportMaskedColumnsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder sensitiveTypeId(@Nullable String sensitiveTypeId) {
+        public Builder sensitiveTypeId(@Nullable Output<String> sensitiveTypeId) {
             $.sensitiveTypeId = sensitiveTypeId;
             return this;
+        }
+
+        /**
+         * @param sensitiveTypeId A filter to return only items related to a specific sensitive type OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sensitiveTypeId(String sensitiveTypeId) {
+            return sensitiveTypeId(Output.of(sensitiveTypeId));
         }
 
         public GetMaskingReportMaskedColumnsArgs build() {

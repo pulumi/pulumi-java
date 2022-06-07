@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetPluggableDatabasesFilter;
+import com.pulumi.oci.Database.inputs.GetPluggableDatabasesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetPluggableDatabasesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -36,20 +37,20 @@ public final class GetPluggableDatabasesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="databaseId")
-    private @Nullable String databaseId;
+    private @Nullable Output<String> databaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
      * 
      */
-    public Optional<String> databaseId() {
+    public Optional<Output<String>> databaseId() {
         return Optional.ofNullable(this.databaseId);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetPluggableDatabasesFilter> filters;
+    private @Nullable Output<List<GetPluggableDatabasesFilterArgs>> filters;
 
-    public Optional<List<GetPluggableDatabasesFilter>> filters() {
+    public Optional<Output<List<GetPluggableDatabasesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetPluggableDatabasesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="pdbName")
-    private @Nullable String pdbName;
+    private @Nullable Output<String> pdbName;
 
     /**
      * @return A filter to return only pluggable databases that match the entire name given. The match is not case sensitive.
      * 
      */
-    public Optional<String> pdbName() {
+    public Optional<Output<String>> pdbName() {
         return Optional.ofNullable(this.pdbName);
     }
 
@@ -73,13 +74,13 @@ public final class GetPluggableDatabasesArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,8 +118,29 @@ public final class GetPluggableDatabasesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param databaseId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseId(@Nullable Output<String> databaseId) {
+            $.databaseId = databaseId;
             return this;
         }
 
@@ -128,17 +150,20 @@ public final class GetPluggableDatabasesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder databaseId(@Nullable String databaseId) {
-            $.databaseId = databaseId;
-            return this;
+        public Builder databaseId(String databaseId) {
+            return databaseId(Output.of(databaseId));
         }
 
-        public Builder filters(@Nullable List<GetPluggableDatabasesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetPluggableDatabasesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetPluggableDatabasesFilter... filters) {
+        public Builder filters(List<GetPluggableDatabasesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetPluggableDatabasesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -148,8 +173,29 @@ public final class GetPluggableDatabasesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder pdbName(@Nullable String pdbName) {
+        public Builder pdbName(@Nullable Output<String> pdbName) {
             $.pdbName = pdbName;
+            return this;
+        }
+
+        /**
+         * @param pdbName A filter to return only pluggable databases that match the entire name given. The match is not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pdbName(String pdbName) {
+            return pdbName(Output.of(pdbName));
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetPluggableDatabasesArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetPluggableDatabasesArgs build() {

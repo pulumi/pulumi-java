@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetSslPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSslPolicyArgs Empty = new GetSslPolicyArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="sslPolicy", required=true)
-    private String sslPolicy;
+    private Output<String> sslPolicy;
 
-    public String sslPolicy() {
+    public Output<String> sslPolicy() {
         return this.sslPolicy;
     }
 
@@ -53,14 +54,22 @@ public final class GetSslPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSslPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder sslPolicy(String sslPolicy) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder sslPolicy(Output<String> sslPolicy) {
             $.sslPolicy = sslPolicy;
             return this;
+        }
+
+        public Builder sslPolicy(String sslPolicy) {
+            return sslPolicy(Output.of(sslPolicy));
         }
 
         public GetSslPolicyArgs build() {

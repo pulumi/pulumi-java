@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetRegionSslCertificateArgs extends com.pulumi.resources.Invo
     public static final GetRegionSslCertificateArgs Empty = new GetRegionSslCertificateArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-    private String region;
+    private Output<String> region;
 
-    public String region() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="sslCertificate", required=true)
-    private String sslCertificate;
+    private Output<String> sslCertificate;
 
-    public String sslCertificate() {
+    public Output<String> sslCertificate() {
         return this.sslCertificate;
     }
 
@@ -61,19 +62,31 @@ public final class GetRegionSslCertificateArgs extends com.pulumi.resources.Invo
             $ = new GetRegionSslCertificateArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(String region) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
-        public Builder sslCertificate(String sslCertificate) {
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public Builder sslCertificate(Output<String> sslCertificate) {
             $.sslCertificate = sslCertificate;
             return this;
+        }
+
+        public Builder sslCertificate(String sslCertificate) {
+            return sslCertificate(Output.of(sslCertificate));
         }
 
         public GetRegionSslCertificateArgs build() {

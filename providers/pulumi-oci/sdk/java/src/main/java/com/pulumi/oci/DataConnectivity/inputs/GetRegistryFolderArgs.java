@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataConnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRegistryFolderArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="folderKey", required=true)
-    private String folderKey;
+    private Output<String> folderKey;
 
     /**
      * @return The folder ID.
      * 
      */
-    public String folderKey() {
+    public Output<String> folderKey() {
         return this.folderKey;
     }
 
@@ -32,13 +33,13 @@ public final class GetRegistryFolderArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
     /**
      * @return The registry Ocid.
      * 
      */
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -73,8 +74,29 @@ public final class GetRegistryFolderArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder folderKey(String folderKey) {
+        public Builder folderKey(Output<String> folderKey) {
             $.folderKey = folderKey;
+            return this;
+        }
+
+        /**
+         * @param folderKey The folder ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folderKey(String folderKey) {
+            return folderKey(Output.of(folderKey));
+        }
+
+        /**
+         * @param registryId The registry Ocid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryId(Output<String> registryId) {
+            $.registryId = registryId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetRegistryFolderArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder registryId(String registryId) {
-            $.registryId = registryId;
-            return this;
+            return registryId(Output.of(registryId));
         }
 
         public GetRegistryFolderArgs build() {

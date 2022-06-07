@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lightsail.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancerName", required=true)
-    private String loadBalancerName;
+    private Output<String> loadBalancerName;
 
     /**
      * @return The name of your load balancer.
      * 
      */
-    public String loadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -57,9 +58,19 @@ public final class GetLoadBalancerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancerName(String loadBalancerName) {
+        public Builder loadBalancerName(Output<String> loadBalancerName) {
             $.loadBalancerName = loadBalancerName;
             return this;
+        }
+
+        /**
+         * @param loadBalancerName The name of your load balancer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerName(String loadBalancerName) {
+            return loadBalancerName(Output.of(loadBalancerName));
         }
 
         public GetLoadBalancerArgs build() {

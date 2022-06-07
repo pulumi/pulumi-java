@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return The name of the kubernetes cluster.
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterResourceName", required=true)
-    private String clusterResourceName;
+    private Output<String> clusterResourceName;
 
     /**
      * @return The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
      * 
      */
-    public String clusterResourceName() {
+    public Output<String> clusterResourceName() {
         return this.clusterResourceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterRp", required=true)
-    private String clusterRp;
+    private Output<String> clusterRp;
 
     /**
      * @return The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
      * 
      */
-    public String clusterRp() {
+    public Output<String> clusterRp() {
         return this.clusterRp;
     }
 
@@ -62,13 +63,13 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="extensionInstanceName", required=true)
-    private String extensionInstanceName;
+    private Output<String> extensionInstanceName;
 
     /**
      * @return Name of an instance of the Extension.
      * 
      */
-    public String extensionInstanceName() {
+    public Output<String> extensionInstanceName() {
         return this.extensionInstanceName;
     }
 
@@ -77,13 +78,13 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -121,8 +122,29 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterName(String clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * @param clusterName The name of the kubernetes cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param clusterResourceName The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterResourceName(Output<String> clusterResourceName) {
+            $.clusterResourceName = clusterResourceName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder clusterResourceName(String clusterResourceName) {
-            $.clusterResourceName = clusterResourceName;
+            return clusterResourceName(Output.of(clusterResourceName));
+        }
+
+        /**
+         * @param clusterRp The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterRp(Output<String> clusterRp) {
+            $.clusterRp = clusterRp;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder clusterRp(String clusterRp) {
-            $.clusterRp = clusterRp;
+            return clusterRp(Output.of(clusterRp));
+        }
+
+        /**
+         * @param extensionInstanceName Name of an instance of the Extension.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder extensionInstanceName(Output<String> extensionInstanceName) {
+            $.extensionInstanceName = extensionInstanceName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder extensionInstanceName(String extensionInstanceName) {
-            $.extensionInstanceName = extensionInstanceName;
+            return extensionInstanceName(Output.of(extensionInstanceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExtensionArgs build() {

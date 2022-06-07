@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -20,13 +21,13 @@ public final class GetCatalogTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogId", required=true)
-    private String catalogId;
+    private Output<String> catalogId;
 
     /**
      * @return Unique catalog identifier.
      * 
      */
-    public String catalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
@@ -35,13 +36,13 @@ public final class GetCatalogTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields")
-    private @Nullable List<String> fields;
+    private @Nullable Output<List<String>> fields;
 
     /**
      * @return Specifies the fields to return in a type response.
      * 
      */
-    public Optional<List<String>> fields() {
+    public Optional<Output<List<String>>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
@@ -50,13 +51,13 @@ public final class GetCatalogTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="typeKey", required=true)
-    private String typeKey;
+    private Output<String> typeKey;
 
     /**
      * @return Unique type key.
      * 
      */
-    public String typeKey() {
+    public Output<String> typeKey() {
         return this.typeKey;
     }
 
@@ -92,8 +93,29 @@ public final class GetCatalogTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder catalogId(String catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             $.catalogId = catalogId;
+            return this;
+        }
+
+        /**
+         * @param catalogId Unique catalog identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
+        }
+
+        /**
+         * @param fields Specifies the fields to return in a type response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fields(@Nullable Output<List<String>> fields) {
+            $.fields = fields;
             return this;
         }
 
@@ -103,9 +125,8 @@ public final class GetCatalogTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fields(@Nullable List<String> fields) {
-            $.fields = fields;
-            return this;
+        public Builder fields(List<String> fields) {
+            return fields(Output.of(fields));
         }
 
         /**
@@ -124,9 +145,19 @@ public final class GetCatalogTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder typeKey(String typeKey) {
+        public Builder typeKey(Output<String> typeKey) {
             $.typeKey = typeKey;
             return this;
+        }
+
+        /**
+         * @param typeKey Unique type key.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder typeKey(String typeKey) {
+            return typeKey(Output.of(typeKey));
         }
 
         public GetCatalogTypeArgs build() {

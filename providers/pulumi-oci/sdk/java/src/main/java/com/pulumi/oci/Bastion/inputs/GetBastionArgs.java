@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Bastion.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBastionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bastionId", required=true)
-    private String bastionId;
+    private Output<String> bastionId;
 
     /**
      * @return The unique identifier (OCID) of the bastion.
      * 
      */
-    public String bastionId() {
+    public Output<String> bastionId() {
         return this.bastionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetBastionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder bastionId(String bastionId) {
+        public Builder bastionId(Output<String> bastionId) {
             $.bastionId = bastionId;
             return this;
+        }
+
+        /**
+         * @param bastionId The unique identifier (OCID) of the bastion.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bastionId(String bastionId) {
+            return bastionId(Output.of(bastionId));
         }
 
         public GetBastionArgs build() {

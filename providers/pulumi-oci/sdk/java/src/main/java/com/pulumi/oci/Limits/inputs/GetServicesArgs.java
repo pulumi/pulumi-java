@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Limits.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Limits.inputs.GetServicesFilter;
+import com.pulumi.oci.Limits.inputs.GetServicesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetServicesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the parent compartment (remember that the tenancy is simply the root compartment).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetServicesFilter> filters;
+    private @Nullable Output<List<GetServicesFilterArgs>> filters;
 
-    public Optional<List<GetServicesFilter>> filters() {
+    public Optional<Output<List<GetServicesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetServicesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetServicesFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the parent compartment (remember that the tenancy is simply the root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetServicesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetServicesFilter... filters) {
+        public Builder filters(List<GetServicesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetServicesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

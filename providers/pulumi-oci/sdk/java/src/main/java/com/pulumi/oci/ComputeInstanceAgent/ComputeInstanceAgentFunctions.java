@@ -3,12 +3,16 @@
 
 package com.pulumi.oci.ComputeInstanceAgent;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.ComputeInstanceAgent.inputs.GetInstanceAgentPluginArgs;
+import com.pulumi.oci.ComputeInstanceAgent.inputs.GetInstanceAgentPluginPlainArgs;
 import com.pulumi.oci.ComputeInstanceAgent.inputs.GetInstanceAgentPluginsArgs;
+import com.pulumi.oci.ComputeInstanceAgent.inputs.GetInstanceAgentPluginsPlainArgs;
 import com.pulumi.oci.ComputeInstanceAgent.inputs.GetInstanceAvailablePluginArgs;
+import com.pulumi.oci.ComputeInstanceAgent.inputs.GetInstanceAvailablePluginPlainArgs;
 import com.pulumi.oci.ComputeInstanceAgent.outputs.GetInstanceAgentPluginResult;
 import com.pulumi.oci.ComputeInstanceAgent.outputs.GetInstanceAgentPluginsResult;
 import com.pulumi.oci.ComputeInstanceAgent.outputs.GetInstanceAvailablePluginResult;
@@ -24,7 +28,7 @@ public final class ComputeInstanceAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceAgentPluginResult> getInstanceAgentPlugin(GetInstanceAgentPluginArgs args) {
+    public static Output<GetInstanceAgentPluginResult> getInstanceAgentPlugin(GetInstanceAgentPluginArgs args) {
         return getInstanceAgentPlugin(args, InvokeOptions.Empty);
     }
     /**
@@ -35,7 +39,29 @@ public final class ComputeInstanceAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceAgentPluginResult> getInstanceAgentPlugin(GetInstanceAgentPluginArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceAgentPluginResult> getInstanceAgentPluginPlain(GetInstanceAgentPluginPlainArgs args) {
+        return getInstanceAgentPluginPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Instance Agent Plugin resource in Oracle Cloud Infrastructure Compute Instance Agent service.
+     * 
+     * The API to get information for a plugin.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetInstanceAgentPluginResult> getInstanceAgentPlugin(GetInstanceAgentPluginArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ComputeInstanceAgent/getInstanceAgentPlugin:getInstanceAgentPlugin", TypeShape.of(GetInstanceAgentPluginResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Instance Agent Plugin resource in Oracle Cloud Infrastructure Compute Instance Agent service.
+     * 
+     * The API to get information for a plugin.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetInstanceAgentPluginResult> getInstanceAgentPluginPlain(GetInstanceAgentPluginPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ComputeInstanceAgent/getInstanceAgentPlugin:getInstanceAgentPlugin", TypeShape.of(GetInstanceAgentPluginResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -46,7 +72,7 @@ public final class ComputeInstanceAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceAgentPluginsResult> getInstanceAgentPlugins(GetInstanceAgentPluginsArgs args) {
+    public static Output<GetInstanceAgentPluginsResult> getInstanceAgentPlugins(GetInstanceAgentPluginsArgs args) {
         return getInstanceAgentPlugins(args, InvokeOptions.Empty);
     }
     /**
@@ -57,7 +83,29 @@ public final class ComputeInstanceAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceAgentPluginsResult> getInstanceAgentPlugins(GetInstanceAgentPluginsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceAgentPluginsResult> getInstanceAgentPluginsPlain(GetInstanceAgentPluginsPlainArgs args) {
+        return getInstanceAgentPluginsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Instance Agent Plugins in Oracle Cloud Infrastructure Compute Instance Agent service.
+     * 
+     * The API to get one or more plugin information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetInstanceAgentPluginsResult> getInstanceAgentPlugins(GetInstanceAgentPluginsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ComputeInstanceAgent/getInstanceAgentPlugins:getInstanceAgentPlugins", TypeShape.of(GetInstanceAgentPluginsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Instance Agent Plugins in Oracle Cloud Infrastructure Compute Instance Agent service.
+     * 
+     * The API to get one or more plugin information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetInstanceAgentPluginsResult> getInstanceAgentPluginsPlain(GetInstanceAgentPluginsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ComputeInstanceAgent/getInstanceAgentPlugins:getInstanceAgentPlugins", TypeShape.of(GetInstanceAgentPluginsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -68,7 +116,7 @@ public final class ComputeInstanceAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceAvailablePluginResult> getInstanceAvailablePlugin(GetInstanceAvailablePluginArgs args) {
+    public static Output<GetInstanceAvailablePluginResult> getInstanceAvailablePlugin(GetInstanceAvailablePluginArgs args) {
         return getInstanceAvailablePlugin(args, InvokeOptions.Empty);
     }
     /**
@@ -79,7 +127,29 @@ public final class ComputeInstanceAgentFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetInstanceAvailablePluginResult> getInstanceAvailablePlugin(GetInstanceAvailablePluginArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceAvailablePluginResult> getInstanceAvailablePluginPlain(GetInstanceAvailablePluginPlainArgs args) {
+        return getInstanceAvailablePluginPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Instance Available Plugins in Oracle Cloud Infrastructure Compute Instance Agent service.
+     * 
+     * The API to get the list of plugins that are available.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetInstanceAvailablePluginResult> getInstanceAvailablePlugin(GetInstanceAvailablePluginArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ComputeInstanceAgent/getInstanceAvailablePlugin:getInstanceAvailablePlugin", TypeShape.of(GetInstanceAvailablePluginResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Instance Available Plugins in Oracle Cloud Infrastructure Compute Instance Agent service.
+     * 
+     * The API to get the list of plugins that are available.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetInstanceAvailablePluginResult> getInstanceAvailablePluginPlain(GetInstanceAvailablePluginPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ComputeInstanceAgent/getInstanceAvailablePlugin:getInstanceAvailablePlugin", TypeShape.of(GetInstanceAvailablePluginResult.class), args, Utilities.withVersion(options));
     }
 }

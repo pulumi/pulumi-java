@@ -3,11 +3,13 @@
 
 package com.pulumi.googlenative.run_v1alpha1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.run_v1alpha1.inputs.GetJobArgs;
+import com.pulumi.googlenative.run_v1alpha1.inputs.GetJobPlainArgs;
 import com.pulumi.googlenative.run_v1alpha1.outputs.GetJobResult;
 import java.util.concurrent.CompletableFuture;
 
@@ -16,14 +18,28 @@ public final class Run_v1alpha1Functions {
      * Get information about a job.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args) {
+    public static Output<GetJobResult> getJob(GetJobArgs args) {
         return getJob(args, InvokeOptions.Empty);
     }
     /**
      * Get information about a job.
      * 
      */
-    public static CompletableFuture<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetJobResult> getJobPlain(GetJobPlainArgs args) {
+        return getJobPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get information about a job.
+     * 
+     */
+    public static Output<GetJobResult> getJob(GetJobArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:run/v1alpha1:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get information about a job.
+     * 
+     */
+    public static CompletableFuture<GetJobResult> getJobPlain(GetJobPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v1alpha1:getJob", TypeShape.of(GetJobResult.class), args, Utilities.withVersion(options));
     }
 }

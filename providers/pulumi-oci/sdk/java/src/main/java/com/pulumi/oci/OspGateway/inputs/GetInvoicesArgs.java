@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.OspGateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OspGateway.inputs.GetInvoicesFilter;
+import com.pulumi.oci.OspGateway.inputs.GetInvoicesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetInvoicesFilter> filters;
+    private @Nullable Output<List<GetInvoicesFilterArgs>> filters;
 
-    public Optional<List<GetInvoicesFilter>> filters() {
+    public Optional<Output<List<GetInvoicesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="invoiceId")
-    private @Nullable String invoiceId;
+    private @Nullable Output<String> invoiceId;
 
     /**
      * @return The invoice query param (not unique).
      * 
      */
-    public Optional<String> invoiceId() {
+    public Optional<Output<String>> invoiceId() {
         return Optional.ofNullable(this.invoiceId);
     }
 
@@ -58,13 +59,13 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ospHomeRegion", required=true)
-    private String ospHomeRegion;
+    private Output<String> ospHomeRegion;
 
     /**
      * @return The home region&#39;s public name of the logged in user.
      * 
      */
-    public String ospHomeRegion() {
+    public Output<String> ospHomeRegion() {
         return this.ospHomeRegion;
     }
 
@@ -73,13 +74,13 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="searchText")
-    private @Nullable String searchText;
+    private @Nullable Output<String> searchText;
 
     /**
      * @return A filter to only return resources that match the given value. Looking for partial matches in the following fileds: Invoice No., Reference No. (plan number), Payment Ref, Total Amount(plan number), Balance Due(plan number) and Party/Customer Name
      * 
      */
-    public Optional<String> searchText() {
+    public Optional<Output<String>> searchText() {
         return Optional.ofNullable(this.searchText);
     }
 
@@ -88,13 +89,13 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="statuses")
-    private @Nullable List<String> statuses;
+    private @Nullable Output<List<String>> statuses;
 
     /**
      * @return A filter to only return resources that match one of the status elements.
      * 
      */
-    public Optional<List<String>> statuses() {
+    public Optional<Output<List<String>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
 
@@ -103,13 +104,13 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeInvoiceEnd")
-    private @Nullable String timeInvoiceEnd;
+    private @Nullable Output<String> timeInvoiceEnd;
 
     /**
      * @return description: End time (UTC) of the target invoice date range for which to fetch invoice data (exclusive).
      * 
      */
-    public Optional<String> timeInvoiceEnd() {
+    public Optional<Output<String>> timeInvoiceEnd() {
         return Optional.ofNullable(this.timeInvoiceEnd);
     }
 
@@ -118,13 +119,13 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeInvoiceStart")
-    private @Nullable String timeInvoiceStart;
+    private @Nullable Output<String> timeInvoiceStart;
 
     /**
      * @return description: Start time (UTC) of the target invoice date range for which to fetch invoice data (inclusive).
      * 
      */
-    public Optional<String> timeInvoiceStart() {
+    public Optional<Output<String>> timeInvoiceStart() {
         return Optional.ofNullable(this.timeInvoiceStart);
     }
 
@@ -133,13 +134,13 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timePaymentEnd")
-    private @Nullable String timePaymentEnd;
+    private @Nullable Output<String> timePaymentEnd;
 
     /**
      * @return description: End time (UTC) of the target payment date range for which to fetch invoice data (exclusive).
      * 
      */
-    public Optional<String> timePaymentEnd() {
+    public Optional<Output<String>> timePaymentEnd() {
         return Optional.ofNullable(this.timePaymentEnd);
     }
 
@@ -148,13 +149,13 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timePaymentStart")
-    private @Nullable String timePaymentStart;
+    private @Nullable Output<String> timePaymentStart;
 
     /**
      * @return description: Start time (UTC) of the target payment date range for which to fetch invoice data (inclusive).
      * 
      */
-    public Optional<String> timePaymentStart() {
+    public Optional<Output<String>> timePaymentStart() {
         return Optional.ofNullable(this.timePaymentStart);
     }
 
@@ -163,13 +164,13 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="types")
-    private @Nullable List<String> types;
+    private @Nullable Output<List<String>> types;
 
     /**
      * @return A filter to only return resources that match the given type exactly.
      * 
      */
-    public Optional<List<String>> types() {
+    public Optional<Output<List<String>>> types() {
         return Optional.ofNullable(this.types);
     }
 
@@ -213,17 +214,31 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetInvoicesFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetInvoicesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetInvoicesFilter... filters) {
+        public Builder filters(List<GetInvoicesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetInvoicesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -233,8 +248,29 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder invoiceId(@Nullable String invoiceId) {
+        public Builder invoiceId(@Nullable Output<String> invoiceId) {
             $.invoiceId = invoiceId;
+            return this;
+        }
+
+        /**
+         * @param invoiceId The invoice query param (not unique).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder invoiceId(String invoiceId) {
+            return invoiceId(Output.of(invoiceId));
+        }
+
+        /**
+         * @param ospHomeRegion The home region&#39;s public name of the logged in user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ospHomeRegion(Output<String> ospHomeRegion) {
+            $.ospHomeRegion = ospHomeRegion;
             return this;
         }
 
@@ -245,7 +281,17 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ospHomeRegion(String ospHomeRegion) {
-            $.ospHomeRegion = ospHomeRegion;
+            return ospHomeRegion(Output.of(ospHomeRegion));
+        }
+
+        /**
+         * @param searchText A filter to only return resources that match the given value. Looking for partial matches in the following fileds: Invoice No., Reference No. (plan number), Payment Ref, Total Amount(plan number), Balance Due(plan number) and Party/Customer Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder searchText(@Nullable Output<String> searchText) {
+            $.searchText = searchText;
             return this;
         }
 
@@ -255,8 +301,18 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder searchText(@Nullable String searchText) {
-            $.searchText = searchText;
+        public Builder searchText(String searchText) {
+            return searchText(Output.of(searchText));
+        }
+
+        /**
+         * @param statuses A filter to only return resources that match one of the status elements.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statuses(@Nullable Output<List<String>> statuses) {
+            $.statuses = statuses;
             return this;
         }
 
@@ -266,9 +322,8 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable List<String> statuses) {
-            $.statuses = statuses;
-            return this;
+        public Builder statuses(List<String> statuses) {
+            return statuses(Output.of(statuses));
         }
 
         /**
@@ -287,8 +342,29 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeInvoiceEnd(@Nullable String timeInvoiceEnd) {
+        public Builder timeInvoiceEnd(@Nullable Output<String> timeInvoiceEnd) {
             $.timeInvoiceEnd = timeInvoiceEnd;
+            return this;
+        }
+
+        /**
+         * @param timeInvoiceEnd description: End time (UTC) of the target invoice date range for which to fetch invoice data (exclusive).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeInvoiceEnd(String timeInvoiceEnd) {
+            return timeInvoiceEnd(Output.of(timeInvoiceEnd));
+        }
+
+        /**
+         * @param timeInvoiceStart description: Start time (UTC) of the target invoice date range for which to fetch invoice data (inclusive).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeInvoiceStart(@Nullable Output<String> timeInvoiceStart) {
+            $.timeInvoiceStart = timeInvoiceStart;
             return this;
         }
 
@@ -298,8 +374,18 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeInvoiceStart(@Nullable String timeInvoiceStart) {
-            $.timeInvoiceStart = timeInvoiceStart;
+        public Builder timeInvoiceStart(String timeInvoiceStart) {
+            return timeInvoiceStart(Output.of(timeInvoiceStart));
+        }
+
+        /**
+         * @param timePaymentEnd description: End time (UTC) of the target payment date range for which to fetch invoice data (exclusive).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timePaymentEnd(@Nullable Output<String> timePaymentEnd) {
+            $.timePaymentEnd = timePaymentEnd;
             return this;
         }
 
@@ -309,8 +395,18 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timePaymentEnd(@Nullable String timePaymentEnd) {
-            $.timePaymentEnd = timePaymentEnd;
+        public Builder timePaymentEnd(String timePaymentEnd) {
+            return timePaymentEnd(Output.of(timePaymentEnd));
+        }
+
+        /**
+         * @param timePaymentStart description: Start time (UTC) of the target payment date range for which to fetch invoice data (inclusive).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timePaymentStart(@Nullable Output<String> timePaymentStart) {
+            $.timePaymentStart = timePaymentStart;
             return this;
         }
 
@@ -320,8 +416,18 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timePaymentStart(@Nullable String timePaymentStart) {
-            $.timePaymentStart = timePaymentStart;
+        public Builder timePaymentStart(String timePaymentStart) {
+            return timePaymentStart(Output.of(timePaymentStart));
+        }
+
+        /**
+         * @param types A filter to only return resources that match the given type exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder types(@Nullable Output<List<String>> types) {
+            $.types = types;
             return this;
         }
 
@@ -331,9 +437,8 @@ public final class GetInvoicesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder types(@Nullable List<String> types) {
-            $.types = types;
-            return this;
+        public Builder types(List<String> types) {
+            return types(Output.of(types));
         }
 
         /**

@@ -5,7 +5,9 @@ package com.pulumi.azurenative.openenergyplatform;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.openenergyplatform.inputs.GetEnergyServiceArgs;
+import com.pulumi.azurenative.openenergyplatform.inputs.GetEnergyServicePlainArgs;
 import com.pulumi.azurenative.openenergyplatform.outputs.GetEnergyServiceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class OpenenergyplatformFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetEnergyServiceResult> getEnergyService(GetEnergyServiceArgs args) {
+    public static Output<GetEnergyServiceResult> getEnergyService(GetEnergyServiceArgs args) {
         return getEnergyService(args, InvokeOptions.Empty);
     }
     /**
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetEnergyServiceResult> getEnergyService(GetEnergyServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnergyServiceResult> getEnergyServicePlain(GetEnergyServicePlainArgs args) {
+        return getEnergyServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetEnergyServiceResult> getEnergyService(GetEnergyServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:openenergyplatform:getEnergyService", TypeShape.of(GetEnergyServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetEnergyServiceResult> getEnergyServicePlain(GetEnergyServicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:openenergyplatform:getEnergyService", TypeShape.of(GetEnergyServiceResult.class), args, Utilities.withVersion(options));
     }
 }

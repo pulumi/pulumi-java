@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.avs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="dnsServiceId", required=true)
-    private String dnsServiceId;
+    private Output<String> dnsServiceId;
 
     /**
      * @return NSX DNS Service identifier. Generally the same as the DNS Service&#39;s display name
      * 
      */
-    public String dnsServiceId() {
+    public Output<String> dnsServiceId() {
         return this.dnsServiceId;
     }
 
@@ -32,13 +33,13 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateCloudName", required=true)
-    private String privateCloudName;
+    private Output<String> privateCloudName;
 
     /**
      * @return Name of the private cloud
      * 
      */
-    public String privateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -47,13 +48,13 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder dnsServiceId(String dnsServiceId) {
+        public Builder dnsServiceId(Output<String> dnsServiceId) {
             $.dnsServiceId = dnsServiceId;
+            return this;
+        }
+
+        /**
+         * @param dnsServiceId NSX DNS Service identifier. Generally the same as the DNS Service&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dnsServiceId(String dnsServiceId) {
+            return dnsServiceId(Output.of(dnsServiceId));
+        }
+
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateCloudName(Output<String> privateCloudName) {
+            $.privateCloudName = privateCloudName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
          * 
          */
         public Builder privateCloudName(String privateCloudName) {
-            $.privateCloudName = privateCloudName;
+            return privateCloudName(Output.of(privateCloudName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetWorkloadNetworkDnsServiceArgs build() {

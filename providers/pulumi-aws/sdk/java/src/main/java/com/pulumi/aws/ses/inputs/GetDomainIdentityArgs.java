@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.ses.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDomainIdentityArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="domain", required=true)
-    private String domain;
+    private Output<String> domain;
 
     /**
      * @return The name of the domain
      * 
      */
-    public String domain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -57,9 +58,19 @@ public final class GetDomainIdentityArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder domain(String domain) {
+        public Builder domain(Output<String> domain) {
             $.domain = domain;
             return this;
+        }
+
+        /**
+         * @param domain The name of the domain
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
 
         public GetDomainIdentityArgs build() {

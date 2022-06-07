@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.codestarconnections.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="connectionArn", required=true)
-    private String connectionArn;
+    private Output<String> connectionArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
      * 
      */
-    public String connectionArn() {
+    public Output<String> connectionArn() {
         return this.connectionArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder connectionArn(String connectionArn) {
+        public Builder connectionArn(Output<String> connectionArn) {
             $.connectionArn = connectionArn;
             return this;
+        }
+
+        /**
+         * @param connectionArn The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionArn(String connectionArn) {
+            return connectionArn(Output.of(connectionArn));
         }
 
         public GetConnectionArgs build() {

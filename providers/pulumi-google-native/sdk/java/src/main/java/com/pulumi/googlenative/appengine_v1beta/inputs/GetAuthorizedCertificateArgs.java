@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.appengine_v1beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetAuthorizedCertificateArgs extends com.pulumi.resources.Inv
     public static final GetAuthorizedCertificateArgs Empty = new GetAuthorizedCertificateArgs();
 
     @Import(name="appId", required=true)
-    private String appId;
+    private Output<String> appId;
 
-    public String appId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
     @Import(name="authorizedCertificateId", required=true)
-    private String authorizedCertificateId;
+    private Output<String> authorizedCertificateId;
 
-    public String authorizedCertificateId() {
+    public Output<String> authorizedCertificateId() {
         return this.authorizedCertificateId;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private @Nullable Output<String> view;
 
-    public Optional<String> view() {
+    public Optional<Output<String>> view() {
         return Optional.ofNullable(this.view);
     }
 
@@ -61,19 +62,31 @@ public final class GetAuthorizedCertificateArgs extends com.pulumi.resources.Inv
             $ = new GetAuthorizedCertificateArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder appId(String appId) {
+        public Builder appId(Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
-        public Builder authorizedCertificateId(String authorizedCertificateId) {
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
+        }
+
+        public Builder authorizedCertificateId(Output<String> authorizedCertificateId) {
             $.authorizedCertificateId = authorizedCertificateId;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder authorizedCertificateId(String authorizedCertificateId) {
+            return authorizedCertificateId(Output.of(authorizedCertificateId));
+        }
+
+        public Builder view(@Nullable Output<String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(String view) {
+            return view(Output.of(view));
         }
 
         public GetAuthorizedCertificateArgs build() {

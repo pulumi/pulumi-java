@@ -5,7 +5,9 @@ package com.pulumi.awsnative.auditmanager;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.auditmanager.inputs.GetAssessmentArgs;
+import com.pulumi.awsnative.auditmanager.inputs.GetAssessmentPlainArgs;
 import com.pulumi.awsnative.auditmanager.outputs.GetAssessmentResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class AuditmanagerFunctions {
      * An entity that defines the scope of audit evidence collected by AWS Audit Manager.
      * 
      */
-    public static CompletableFuture<GetAssessmentResult> getAssessment(GetAssessmentArgs args) {
+    public static Output<GetAssessmentResult> getAssessment(GetAssessmentArgs args) {
         return getAssessment(args, InvokeOptions.Empty);
     }
     /**
      * An entity that defines the scope of audit evidence collected by AWS Audit Manager.
      * 
      */
-    public static CompletableFuture<GetAssessmentResult> getAssessment(GetAssessmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAssessmentResult> getAssessmentPlain(GetAssessmentPlainArgs args) {
+        return getAssessmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An entity that defines the scope of audit evidence collected by AWS Audit Manager.
+     * 
+     */
+    public static Output<GetAssessmentResult> getAssessment(GetAssessmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:auditmanager:getAssessment", TypeShape.of(GetAssessmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An entity that defines the scope of audit evidence collected by AWS Audit Manager.
+     * 
+     */
+    public static CompletableFuture<GetAssessmentResult> getAssessmentPlain(GetAssessmentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:auditmanager:getAssessment", TypeShape.of(GetAssessmentResult.class), args, Utilities.withVersion(options));
     }
 }

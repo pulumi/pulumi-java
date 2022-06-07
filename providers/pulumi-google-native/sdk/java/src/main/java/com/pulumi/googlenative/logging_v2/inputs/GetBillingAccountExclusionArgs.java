@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.logging_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetBillingAccountExclusionArgs extends com.pulumi.resources.I
     public static final GetBillingAccountExclusionArgs Empty = new GetBillingAccountExclusionArgs();
 
     @Import(name="billingAccountId", required=true)
-    private String billingAccountId;
+    private Output<String> billingAccountId;
 
-    public String billingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="exclusionId", required=true)
-    private String exclusionId;
+    private Output<String> exclusionId;
 
-    public String exclusionId() {
+    public Output<String> exclusionId() {
         return this.exclusionId;
     }
 
@@ -51,14 +52,22 @@ public final class GetBillingAccountExclusionArgs extends com.pulumi.resources.I
             $ = new GetBillingAccountExclusionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder billingAccountId(String billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             $.billingAccountId = billingAccountId;
             return this;
         }
 
-        public Builder exclusionId(String exclusionId) {
+        public Builder billingAccountId(String billingAccountId) {
+            return billingAccountId(Output.of(billingAccountId));
+        }
+
+        public Builder exclusionId(Output<String> exclusionId) {
             $.exclusionId = exclusionId;
             return this;
+        }
+
+        public Builder exclusionId(String exclusionId) {
+            return exclusionId(Output.of(exclusionId));
         }
 
         public GetBillingAccountExclusionArgs build() {

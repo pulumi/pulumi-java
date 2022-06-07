@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataScience.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataScience.inputs.GetFastLaunchJobConfigsFilter;
+import com.pulumi.oci.DataScience.inputs.GetFastLaunchJobConfigsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetFastLaunchJobConfigsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return &lt;b&gt;Filter&lt;/b&gt; results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetFastLaunchJobConfigsFilter> filters;
+    private @Nullable Output<List<GetFastLaunchJobConfigsFilterArgs>> filters;
 
-    public Optional<List<GetFastLaunchJobConfigsFilter>> filters() {
+    public Optional<Output<List<GetFastLaunchJobConfigsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetFastLaunchJobConfigsArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetFastLaunchJobConfigsFilter> filters) {
+        /**
+         * @param compartmentId &lt;b&gt;Filter&lt;/b&gt; results by the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetFastLaunchJobConfigsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetFastLaunchJobConfigsFilter... filters) {
+        public Builder filters(List<GetFastLaunchJobConfigsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetFastLaunchJobConfigsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

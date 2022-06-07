@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetPatchDeploymentArgs extends com.pulumi.resources.InvokeArg
     public static final GetPatchDeploymentArgs Empty = new GetPatchDeploymentArgs();
 
     @Import(name="patchDeploymentId", required=true)
-    private String patchDeploymentId;
+    private Output<String> patchDeploymentId;
 
-    public String patchDeploymentId() {
+    public Output<String> patchDeploymentId() {
         return this.patchDeploymentId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetPatchDeploymentArgs extends com.pulumi.resources.InvokeArg
             $ = new GetPatchDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder patchDeploymentId(String patchDeploymentId) {
+        public Builder patchDeploymentId(Output<String> patchDeploymentId) {
             $.patchDeploymentId = patchDeploymentId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder patchDeploymentId(String patchDeploymentId) {
+            return patchDeploymentId(Output.of(patchDeploymentId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetPatchDeploymentArgs build() {

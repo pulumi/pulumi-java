@@ -3,15 +3,22 @@
 
 package com.pulumi.oci.UsageProxy;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionProductArgs;
+import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionProductPlainArgs;
 import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionProductsArgs;
+import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionProductsPlainArgs;
 import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionRedeemableUserArgs;
+import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionRedeemableUserPlainArgs;
 import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionRedeemableUsersArgs;
+import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionRedeemableUsersPlainArgs;
 import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionRewardArgs;
+import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionRewardPlainArgs;
 import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionRewardsArgs;
+import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionRewardsPlainArgs;
 import com.pulumi.oci.UsageProxy.outputs.GetSubscriptionProductResult;
 import com.pulumi.oci.UsageProxy.outputs.GetSubscriptionProductsResult;
 import com.pulumi.oci.UsageProxy.outputs.GetSubscriptionRedeemableUserResult;
@@ -30,7 +37,7 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionProductResult> getSubscriptionProduct(GetSubscriptionProductArgs args) {
+    public static Output<GetSubscriptionProductResult> getSubscriptionProduct(GetSubscriptionProductArgs args) {
         return getSubscriptionProduct(args, InvokeOptions.Empty);
     }
     /**
@@ -41,7 +48,29 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionProductResult> getSubscriptionProduct(GetSubscriptionProductArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionProductResult> getSubscriptionProductPlain(GetSubscriptionProductPlainArgs args) {
+        return getSubscriptionProductPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Subscription Product resource in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Provides product information that is specific to a reward usage period and its usage details.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSubscriptionProductResult> getSubscriptionProduct(GetSubscriptionProductArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:UsageProxy/getSubscriptionProduct:getSubscriptionProduct", TypeShape.of(GetSubscriptionProductResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Subscription Product resource in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Provides product information that is specific to a reward usage period and its usage details.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionProductResult> getSubscriptionProductPlain(GetSubscriptionProductPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:UsageProxy/getSubscriptionProduct:getSubscriptionProduct", TypeShape.of(GetSubscriptionProductResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -52,7 +81,7 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionProductsResult> getSubscriptionProducts(GetSubscriptionProductsArgs args) {
+    public static Output<GetSubscriptionProductsResult> getSubscriptionProducts(GetSubscriptionProductsArgs args) {
         return getSubscriptionProducts(args, InvokeOptions.Empty);
     }
     /**
@@ -63,7 +92,29 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionProductsResult> getSubscriptionProducts(GetSubscriptionProductsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionProductsResult> getSubscriptionProductsPlain(GetSubscriptionProductsPlainArgs args) {
+        return getSubscriptionProductsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Subscription Products in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Provides product information that is specific to a reward usage period and its usage details.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSubscriptionProductsResult> getSubscriptionProducts(GetSubscriptionProductsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:UsageProxy/getSubscriptionProducts:getSubscriptionProducts", TypeShape.of(GetSubscriptionProductsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Subscription Products in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Provides product information that is specific to a reward usage period and its usage details.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionProductsResult> getSubscriptionProductsPlain(GetSubscriptionProductsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:UsageProxy/getSubscriptionProducts:getSubscriptionProducts", TypeShape.of(GetSubscriptionProductsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -74,7 +125,7 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionRedeemableUserResult> getSubscriptionRedeemableUser(GetSubscriptionRedeemableUserArgs args) {
+    public static Output<GetSubscriptionRedeemableUserResult> getSubscriptionRedeemableUser(GetSubscriptionRedeemableUserArgs args) {
         return getSubscriptionRedeemableUser(args, InvokeOptions.Empty);
     }
     /**
@@ -85,7 +136,29 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionRedeemableUserResult> getSubscriptionRedeemableUser(GetSubscriptionRedeemableUserArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionRedeemableUserResult> getSubscriptionRedeemableUserPlain(GetSubscriptionRedeemableUserPlainArgs args) {
+        return getSubscriptionRedeemableUserPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Subscription Redeemable User resource in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Provides the email IDs of users that can redeem rewards for the given subscription ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSubscriptionRedeemableUserResult> getSubscriptionRedeemableUser(GetSubscriptionRedeemableUserArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:UsageProxy/getSubscriptionRedeemableUser:getSubscriptionRedeemableUser", TypeShape.of(GetSubscriptionRedeemableUserResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Subscription Redeemable User resource in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Provides the email IDs of users that can redeem rewards for the given subscription ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionRedeemableUserResult> getSubscriptionRedeemableUserPlain(GetSubscriptionRedeemableUserPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:UsageProxy/getSubscriptionRedeemableUser:getSubscriptionRedeemableUser", TypeShape.of(GetSubscriptionRedeemableUserResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -96,7 +169,7 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionRedeemableUsersResult> getSubscriptionRedeemableUsers(GetSubscriptionRedeemableUsersArgs args) {
+    public static Output<GetSubscriptionRedeemableUsersResult> getSubscriptionRedeemableUsers(GetSubscriptionRedeemableUsersArgs args) {
         return getSubscriptionRedeemableUsers(args, InvokeOptions.Empty);
     }
     /**
@@ -107,7 +180,29 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionRedeemableUsersResult> getSubscriptionRedeemableUsers(GetSubscriptionRedeemableUsersArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionRedeemableUsersResult> getSubscriptionRedeemableUsersPlain(GetSubscriptionRedeemableUsersPlainArgs args) {
+        return getSubscriptionRedeemableUsersPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Subscription Redeemable Users in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Provides the email IDs of users that can redeem rewards for the given subscription ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSubscriptionRedeemableUsersResult> getSubscriptionRedeemableUsers(GetSubscriptionRedeemableUsersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:UsageProxy/getSubscriptionRedeemableUsers:getSubscriptionRedeemableUsers", TypeShape.of(GetSubscriptionRedeemableUsersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Subscription Redeemable Users in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Provides the email IDs of users that can redeem rewards for the given subscription ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionRedeemableUsersResult> getSubscriptionRedeemableUsersPlain(GetSubscriptionRedeemableUsersPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:UsageProxy/getSubscriptionRedeemableUsers:getSubscriptionRedeemableUsers", TypeShape.of(GetSubscriptionRedeemableUsersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -118,7 +213,7 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionRewardResult> getSubscriptionReward(GetSubscriptionRewardArgs args) {
+    public static Output<GetSubscriptionRewardResult> getSubscriptionReward(GetSubscriptionRewardArgs args) {
         return getSubscriptionReward(args, InvokeOptions.Empty);
     }
     /**
@@ -129,7 +224,29 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionRewardResult> getSubscriptionReward(GetSubscriptionRewardArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionRewardResult> getSubscriptionRewardPlain(GetSubscriptionRewardPlainArgs args) {
+        return getSubscriptionRewardPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Subscription Reward resource in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Returns the list of rewards for a subscription ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSubscriptionRewardResult> getSubscriptionReward(GetSubscriptionRewardArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:UsageProxy/getSubscriptionReward:getSubscriptionReward", TypeShape.of(GetSubscriptionRewardResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Subscription Reward resource in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Returns the list of rewards for a subscription ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionRewardResult> getSubscriptionRewardPlain(GetSubscriptionRewardPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:UsageProxy/getSubscriptionReward:getSubscriptionReward", TypeShape.of(GetSubscriptionRewardResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -140,7 +257,7 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionRewardsResult> getSubscriptionRewards(GetSubscriptionRewardsArgs args) {
+    public static Output<GetSubscriptionRewardsResult> getSubscriptionRewards(GetSubscriptionRewardsArgs args) {
         return getSubscriptionRewards(args, InvokeOptions.Empty);
     }
     /**
@@ -151,7 +268,29 @@ public final class UsageProxyFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSubscriptionRewardsResult> getSubscriptionRewards(GetSubscriptionRewardsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSubscriptionRewardsResult> getSubscriptionRewardsPlain(GetSubscriptionRewardsPlainArgs args) {
+        return getSubscriptionRewardsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Subscription Rewards in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Returns the list of rewards for a subscription ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSubscriptionRewardsResult> getSubscriptionRewards(GetSubscriptionRewardsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:UsageProxy/getSubscriptionRewards:getSubscriptionRewards", TypeShape.of(GetSubscriptionRewardsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Subscription Rewards in Oracle Cloud Infrastructure Usage Proxy service.
+     * 
+     * Returns the list of rewards for a subscription ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSubscriptionRewardsResult> getSubscriptionRewardsPlain(GetSubscriptionRewardsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:UsageProxy/getSubscriptionRewards:getSubscriptionRewards", TypeShape.of(GetSubscriptionRewardsResult.class), args, Utilities.withVersion(options));
     }
 }

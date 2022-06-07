@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Email.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="suppressionId", required=true)
-    private String suppressionId;
+    private Output<String> suppressionId;
 
     /**
      * @return The unique OCID of the suppression.
      * 
      */
-    public String suppressionId() {
+    public Output<String> suppressionId() {
         return this.suppressionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder suppressionId(String suppressionId) {
+        public Builder suppressionId(Output<String> suppressionId) {
             $.suppressionId = suppressionId;
             return this;
+        }
+
+        /**
+         * @param suppressionId The unique OCID of the suppression.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder suppressionId(String suppressionId) {
+            return suppressionId(Output.of(suppressionId));
         }
 
         public GetSuppressionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Optimizer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileId", required=true)
-    private String profileId;
+    private Output<String> profileId;
 
     /**
      * @return The unique OCID of the profile.
      * 
      */
-    public String profileId() {
+    public Output<String> profileId() {
         return this.profileId;
     }
 
@@ -57,9 +58,19 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder profileId(String profileId) {
+        public Builder profileId(Output<String> profileId) {
             $.profileId = profileId;
             return this;
+        }
+
+        /**
+         * @param profileId The unique OCID of the profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileId(String profileId) {
+            return profileId(Output.of(profileId));
         }
 
         public GetProfileArgs build() {

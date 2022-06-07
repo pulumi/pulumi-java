@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.connect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLambdaFunctionAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="functionArn", required=true)
-    private String functionArn;
+    private Output<String> functionArn;
 
     /**
      * @return Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
      * 
      */
-    public String functionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 
@@ -32,13 +33,13 @@ public final class GetLambdaFunctionAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
     /**
      * @return The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
      * 
      */
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -73,8 +74,29 @@ public final class GetLambdaFunctionAssociationArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder functionArn(String functionArn) {
+        public Builder functionArn(Output<String> functionArn) {
             $.functionArn = functionArn;
+            return this;
+        }
+
+        /**
+         * @param functionArn Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionArn(String functionArn) {
+            return functionArn(Output.of(functionArn));
+        }
+
+        /**
+         * @param instanceId The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(Output<String> instanceId) {
+            $.instanceId = instanceId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLambdaFunctionAssociationArgs extends com.pulumi.resources
          * 
          */
         public Builder instanceId(String instanceId) {
-            $.instanceId = instanceId;
-            return this;
+            return instanceId(Output.of(instanceId));
         }
 
         public GetLambdaFunctionAssociationArgs build() {

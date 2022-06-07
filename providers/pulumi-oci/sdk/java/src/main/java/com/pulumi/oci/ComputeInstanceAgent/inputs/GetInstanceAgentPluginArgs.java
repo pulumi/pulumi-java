@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ComputeInstanceAgent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetInstanceAgentPluginArgs extends com.pulumi.resources.Invok
     public static final GetInstanceAgentPluginArgs Empty = new GetInstanceAgentPluginArgs();
 
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -24,13 +25,13 @@ public final class GetInstanceAgentPluginArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="instanceagentId", required=true)
-    private String instanceagentId;
+    private Output<String> instanceagentId;
 
     /**
      * @return The OCID of the instance.
      * 
      */
-    public String instanceagentId() {
+    public Output<String> instanceagentId() {
         return this.instanceagentId;
     }
 
@@ -39,13 +40,13 @@ public final class GetInstanceAgentPluginArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="pluginName", required=true)
-    private String pluginName;
+    private Output<String> pluginName;
 
     /**
      * @return The name of the plugin.
      * 
      */
-    public String pluginName() {
+    public Output<String> pluginName() {
         return this.pluginName;
     }
 
@@ -75,8 +76,23 @@ public final class GetInstanceAgentPluginArgs extends com.pulumi.resources.Invok
             $ = new GetInstanceAgentPluginArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param instanceagentId The OCID of the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceagentId(Output<String> instanceagentId) {
+            $.instanceagentId = instanceagentId;
             return this;
         }
 
@@ -87,7 +103,17 @@ public final class GetInstanceAgentPluginArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder instanceagentId(String instanceagentId) {
-            $.instanceagentId = instanceagentId;
+            return instanceagentId(Output.of(instanceagentId));
+        }
+
+        /**
+         * @param pluginName The name of the plugin.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pluginName(Output<String> pluginName) {
+            $.pluginName = pluginName;
             return this;
         }
 
@@ -98,8 +124,7 @@ public final class GetInstanceAgentPluginArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder pluginName(String pluginName) {
-            $.pluginName = pluginName;
-            return this;
+            return pluginName(Output.of(pluginName));
         }
 
         public GetInstanceAgentPluginArgs build() {

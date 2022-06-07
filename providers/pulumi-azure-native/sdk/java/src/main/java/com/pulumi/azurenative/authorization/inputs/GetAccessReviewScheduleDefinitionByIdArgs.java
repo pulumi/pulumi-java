@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAccessReviewScheduleDefinitionByIdArgs extends com.pulumi.
      * 
      */
     @Import(name="scheduleDefinitionId", required=true)
-    private String scheduleDefinitionId;
+    private Output<String> scheduleDefinitionId;
 
     /**
      * @return The id of the access review schedule definition.
      * 
      */
-    public String scheduleDefinitionId() {
+    public Output<String> scheduleDefinitionId() {
         return this.scheduleDefinitionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAccessReviewScheduleDefinitionByIdArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder scheduleDefinitionId(String scheduleDefinitionId) {
+        public Builder scheduleDefinitionId(Output<String> scheduleDefinitionId) {
             $.scheduleDefinitionId = scheduleDefinitionId;
             return this;
+        }
+
+        /**
+         * @param scheduleDefinitionId The id of the access review schedule definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scheduleDefinitionId(String scheduleDefinitionId) {
+            return scheduleDefinitionId(Output.of(scheduleDefinitionId));
         }
 
         public GetAccessReviewScheduleDefinitionByIdArgs build() {

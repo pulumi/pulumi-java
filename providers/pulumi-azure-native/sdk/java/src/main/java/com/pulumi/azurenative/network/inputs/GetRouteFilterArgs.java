@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetRouteFilterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return Expands referenced express route bgp peering resources.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetRouteFilterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +50,13 @@ public final class GetRouteFilterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeFilterName", required=true)
-    private String routeFilterName;
+    private Output<String> routeFilterName;
 
     /**
      * @return The name of the route filter.
      * 
      */
-    public String routeFilterName() {
+    public Output<String> routeFilterName() {
         return this.routeFilterName;
     }
 
@@ -91,8 +92,29 @@ public final class GetRouteFilterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Expands referenced express route bgp peering resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetRouteFilterArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param routeFilterName The name of the route filter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routeFilterName(Output<String> routeFilterName) {
+            $.routeFilterName = routeFilterName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetRouteFilterArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder routeFilterName(String routeFilterName) {
-            $.routeFilterName = routeFilterName;
-            return this;
+            return routeFilterName(Output.of(routeFilterName));
         }
 
         public GetRouteFilterArgs build() {

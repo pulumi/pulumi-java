@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetCustomerSecretKeysFilter;
+import com.pulumi.oci.Identity.inputs.GetCustomerSecretKeysFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetCustomerSecretKeysArgs extends com.pulumi.resources.Invoke
     public static final GetCustomerSecretKeysArgs Empty = new GetCustomerSecretKeysArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetCustomerSecretKeysFilter> filters;
+    private @Nullable Output<List<GetCustomerSecretKeysFilterArgs>> filters;
 
-    public Optional<List<GetCustomerSecretKeysFilter>> filters() {
+    public Optional<Output<List<GetCustomerSecretKeysFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetCustomerSecretKeysArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="userId", required=true)
-    private String userId;
+    private Output<String> userId;
 
     /**
      * @return The OCID of the user.
      * 
      */
-    public String userId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -63,12 +64,16 @@ public final class GetCustomerSecretKeysArgs extends com.pulumi.resources.Invoke
             $ = new GetCustomerSecretKeysArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetCustomerSecretKeysFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetCustomerSecretKeysFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetCustomerSecretKeysFilter... filters) {
+        public Builder filters(List<GetCustomerSecretKeysFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetCustomerSecretKeysFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetCustomerSecretKeysArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder userId(String userId) {
+        public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
+        }
+
+        /**
+         * @param userId The OCID of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
         }
 
         public GetCustomerSecretKeysArgs build() {

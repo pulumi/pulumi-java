@@ -5,7 +5,9 @@ package com.pulumi.azure.cdn;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.cdn.inputs.GetProfileArgs;
+import com.pulumi.azure.cdn.inputs.GetProfilePlainArgs;
 import com.pulumi.azure.cdn.outputs.GetProfileResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -41,7 +43,7 @@ public final class CdnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProfileResult> getProfile(GetProfileArgs args) {
+    public static Output<GetProfileResult> getProfile(GetProfileArgs args) {
         return getProfile(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +75,71 @@ public final class CdnFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetProfileResult> getProfile(GetProfileArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetProfileResult> getProfilePlain(GetProfilePlainArgs args) {
+        return getProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing CDN Profile.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CdnFunctions.getProfile(GetProfileArgs.builder()
+     *             .name(&#34;myfirstcdnprofile&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;cdnProfileId&#34;, example.apply(getProfileResult -&gt; getProfileResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetProfileResult> getProfile(GetProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:cdn/getProfile:getProfile", TypeShape.of(GetProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing CDN Profile.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CdnFunctions.getProfile(GetProfileArgs.builder()
+     *             .name(&#34;myfirstcdnprofile&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;cdnProfileId&#34;, example.apply(getProfileResult -&gt; getProfileResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetProfileResult> getProfilePlain(GetProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:cdn/getProfile:getProfile", TypeShape.of(GetProfileResult.class), args, Utilities.withVersion(options));
     }
 }

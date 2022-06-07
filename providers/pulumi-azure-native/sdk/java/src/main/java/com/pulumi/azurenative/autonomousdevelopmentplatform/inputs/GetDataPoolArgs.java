@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.autonomousdevelopmentplatform.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the ADP account
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataPoolName", required=true)
-    private String dataPoolName;
+    private Output<String> dataPoolName;
 
     /**
      * @return The name of the Data Pool
      * 
      */
-    public String dataPoolName() {
+    public Output<String> dataPoolName() {
         return this.dataPoolName;
     }
 
@@ -47,13 +48,13 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the ADP account
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param dataPoolName The name of the Data Pool
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataPoolName(Output<String> dataPoolName) {
+            $.dataPoolName = dataPoolName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder dataPoolName(String dataPoolName) {
-            $.dataPoolName = dataPoolName;
+            return dataPoolName(Output.of(dataPoolName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetDataPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDataPoolArgs build() {

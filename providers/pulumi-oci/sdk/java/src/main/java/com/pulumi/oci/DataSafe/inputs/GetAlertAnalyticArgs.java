@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,13 +22,13 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
+    public Optional<Output<String>> accessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
 
@@ -36,13 +37,13 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the specified compartment OCID.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,13 +52,13 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
@@ -66,13 +67,13 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="groupBies")
-    private @Nullable List<String> groupBies;
+    private @Nullable Output<List<String>> groupBies;
 
     /**
      * @return A groupBy can only be used in combination with summaryField parameter. A groupBy value has to be a subset of the values mentioned in summaryField parameter.
      * 
      */
-    public Optional<List<String>> groupBies() {
+    public Optional<Output<List<String>>> groupBies() {
         return Optional.ofNullable(this.groupBies);
     }
 
@@ -81,13 +82,13 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="queryTimeZone")
-    private @Nullable String queryTimeZone;
+    private @Nullable Output<String> queryTimeZone;
 
     /**
      * @return Default time zone is UTC if no time zone provided. The date-time considerations of the resource will be in accordance with the specified time zone.
      * 
      */
-    public Optional<String> queryTimeZone() {
+    public Optional<Output<String>> queryTimeZone() {
         return Optional.ofNullable(this.queryTimeZone);
     }
 
@@ -96,13 +97,13 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="scimQuery")
-    private @Nullable String scimQuery;
+    private @Nullable Output<String> scimQuery;
 
     /**
      * @return The scimQuery query parameter accepts filter expressions that use the syntax described in Section 3.2.2.2 of the System for Cross-Domain Identity Management (SCIM) specification, which is available at [RFC3339](https://tools.ietf.org/html/draft-ietf-scim-api-12). In SCIM filtering expressions, text, date, and time values must be enclosed in quotation marks, with date and time values using ISO-8601 format. (Numeric and boolean values should not be quoted.)
      * 
      */
-    public Optional<String> scimQuery() {
+    public Optional<Output<String>> scimQuery() {
         return Optional.ofNullable(this.scimQuery);
     }
 
@@ -111,13 +112,13 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="summaryFields")
-    private @Nullable List<String> summaryFields;
+    private @Nullable Output<List<String>> summaryFields;
 
     /**
      * @return Specifies a subset of summarized fields to be returned in the response.
      * 
      */
-    public Optional<List<String>> summaryFields() {
+    public Optional<Output<List<String>>> summaryFields() {
         return Optional.ofNullable(this.summaryFields);
     }
 
@@ -126,13 +127,13 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="timeEnded")
-    private @Nullable String timeEnded;
+    private @Nullable Output<String> timeEnded;
 
     /**
      * @return An optional filter to return audit events whose creation time in the database is less than and equal to the date-time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
      * 
      */
-    public Optional<String> timeEnded() {
+    public Optional<Output<String>> timeEnded() {
         return Optional.ofNullable(this.timeEnded);
     }
 
@@ -141,13 +142,13 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="timeStarted")
-    private @Nullable String timeStarted;
+    private @Nullable Output<String> timeStarted;
 
     /**
      * @return An optional filter to return audit events whose creation time in the database is greater than and equal to the date-time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
      * 
      */
-    public Optional<String> timeStarted() {
+    public Optional<Output<String>> timeStarted() {
         return Optional.ofNullable(this.timeStarted);
     }
 
@@ -189,8 +190,29 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the specified compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -201,7 +223,17 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -211,8 +243,18 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param groupBies A groupBy can only be used in combination with summaryField parameter. A groupBy value has to be a subset of the values mentioned in summaryField parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupBies(@Nullable Output<List<String>> groupBies) {
+            $.groupBies = groupBies;
             return this;
         }
 
@@ -222,9 +264,8 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder groupBies(@Nullable List<String> groupBies) {
-            $.groupBies = groupBies;
-            return this;
+        public Builder groupBies(List<String> groupBies) {
+            return groupBies(Output.of(groupBies));
         }
 
         /**
@@ -243,8 +284,29 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder queryTimeZone(@Nullable String queryTimeZone) {
+        public Builder queryTimeZone(@Nullable Output<String> queryTimeZone) {
             $.queryTimeZone = queryTimeZone;
+            return this;
+        }
+
+        /**
+         * @param queryTimeZone Default time zone is UTC if no time zone provided. The date-time considerations of the resource will be in accordance with the specified time zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder queryTimeZone(String queryTimeZone) {
+            return queryTimeZone(Output.of(queryTimeZone));
+        }
+
+        /**
+         * @param scimQuery The scimQuery query parameter accepts filter expressions that use the syntax described in Section 3.2.2.2 of the System for Cross-Domain Identity Management (SCIM) specification, which is available at [RFC3339](https://tools.ietf.org/html/draft-ietf-scim-api-12). In SCIM filtering expressions, text, date, and time values must be enclosed in quotation marks, with date and time values using ISO-8601 format. (Numeric and boolean values should not be quoted.)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scimQuery(@Nullable Output<String> scimQuery) {
+            $.scimQuery = scimQuery;
             return this;
         }
 
@@ -254,8 +316,18 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder scimQuery(@Nullable String scimQuery) {
-            $.scimQuery = scimQuery;
+        public Builder scimQuery(String scimQuery) {
+            return scimQuery(Output.of(scimQuery));
+        }
+
+        /**
+         * @param summaryFields Specifies a subset of summarized fields to be returned in the response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder summaryFields(@Nullable Output<List<String>> summaryFields) {
+            $.summaryFields = summaryFields;
             return this;
         }
 
@@ -265,9 +337,8 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder summaryFields(@Nullable List<String> summaryFields) {
-            $.summaryFields = summaryFields;
-            return this;
+        public Builder summaryFields(List<String> summaryFields) {
+            return summaryFields(Output.of(summaryFields));
         }
 
         /**
@@ -286,8 +357,29 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder timeEnded(@Nullable String timeEnded) {
+        public Builder timeEnded(@Nullable Output<String> timeEnded) {
             $.timeEnded = timeEnded;
+            return this;
+        }
+
+        /**
+         * @param timeEnded An optional filter to return audit events whose creation time in the database is less than and equal to the date-time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeEnded(String timeEnded) {
+            return timeEnded(Output.of(timeEnded));
+        }
+
+        /**
+         * @param timeStarted An optional filter to return audit events whose creation time in the database is greater than and equal to the date-time specified, in the format defined by [RFC3339](https://tools.ietf.org/html/rfc3339).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeStarted(@Nullable Output<String> timeStarted) {
+            $.timeStarted = timeStarted;
             return this;
         }
 
@@ -297,9 +389,8 @@ public final class GetAlertAnalyticArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder timeStarted(@Nullable String timeStarted) {
-            $.timeStarted = timeStarted;
-            return this;
+        public Builder timeStarted(String timeStarted) {
+            return timeStarted(Output.of(timeStarted));
         }
 
         public GetAlertAnalyticArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.dbforpostgresql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="securityAlertPolicyName", required=true)
-    private String securityAlertPolicyName;
+    private Output<String> securityAlertPolicyName;
 
     /**
      * @return The name of the security alert policy.
      * 
      */
-    public String securityAlertPolicyName() {
+    public Output<String> securityAlertPolicyName() {
         return this.securityAlertPolicyName;
     }
 
@@ -47,13 +48,13 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the server.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -89,8 +90,29 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param securityAlertPolicyName The name of the security alert policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityAlertPolicyName(Output<String> securityAlertPolicyName) {
+            $.securityAlertPolicyName = securityAlertPolicyName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
          * 
          */
         public Builder securityAlertPolicyName(String securityAlertPolicyName) {
-            $.securityAlertPolicyName = securityAlertPolicyName;
+            return securityAlertPolicyName(Output.of(securityAlertPolicyName));
+        }
+
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetServerSecurityAlertPolicyArgs extends com.pulumi.resources
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
-            return this;
+            return serverName(Output.of(serverName));
         }
 
         public GetServerSecurityAlertPolicyArgs build() {

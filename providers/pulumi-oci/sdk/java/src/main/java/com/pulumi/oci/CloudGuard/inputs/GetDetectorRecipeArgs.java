@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.CloudGuard.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDetectorRecipeArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="detectorRecipeId", required=true)
-    private String detectorRecipeId;
+    private Output<String> detectorRecipeId;
 
     /**
      * @return DetectorRecipe OCID
      * 
      */
-    public String detectorRecipeId() {
+    public Output<String> detectorRecipeId() {
         return this.detectorRecipeId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDetectorRecipeArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder detectorRecipeId(String detectorRecipeId) {
+        public Builder detectorRecipeId(Output<String> detectorRecipeId) {
             $.detectorRecipeId = detectorRecipeId;
             return this;
+        }
+
+        /**
+         * @param detectorRecipeId DetectorRecipe OCID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder detectorRecipeId(String detectorRecipeId) {
+            return detectorRecipeId(Output.of(detectorRecipeId));
         }
 
         public GetDetectorRecipeArgs build() {

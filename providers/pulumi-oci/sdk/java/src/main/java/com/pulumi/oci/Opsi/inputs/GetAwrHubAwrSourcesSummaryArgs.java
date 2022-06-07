@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetAwrHubAwrSourcesSummaryArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="awrHubId", required=true)
-    private String awrHubId;
+    private Output<String> awrHubId;
 
     /**
      * @return Unique Awr Hub identifier
      * 
      */
-    public String awrHubId() {
+    public Output<String> awrHubId() {
         return this.awrHubId;
     }
 
@@ -34,13 +35,13 @@ public final class GetAwrHubAwrSourcesSummaryArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -49,13 +50,13 @@ public final class GetAwrHubAwrSourcesSummaryArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Name for an Awr source database
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -91,8 +92,29 @@ public final class GetAwrHubAwrSourcesSummaryArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder awrHubId(String awrHubId) {
+        public Builder awrHubId(Output<String> awrHubId) {
             $.awrHubId = awrHubId;
+            return this;
+        }
+
+        /**
+         * @param awrHubId Unique Awr Hub identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder awrHubId(String awrHubId) {
+            return awrHubId(Output.of(awrHubId));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetAwrHubAwrSourcesSummaryArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
-            $.compartmentId = compartmentId;
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param name Name for an Awr source database
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -113,9 +145,8 @@ public final class GetAwrHubAwrSourcesSummaryArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
-            return this;
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetAwrHubAwrSourcesSummaryArgs build() {

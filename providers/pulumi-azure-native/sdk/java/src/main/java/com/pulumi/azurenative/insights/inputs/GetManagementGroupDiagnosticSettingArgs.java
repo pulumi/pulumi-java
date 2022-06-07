@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagementGroupDiagnosticSettingArgs extends com.pulumi.re
      * 
      */
     @Import(name="managementGroupId", required=true)
-    private String managementGroupId;
+    private Output<String> managementGroupId;
 
     /**
      * @return The management group id.
      * 
      */
-    public String managementGroupId() {
+    public Output<String> managementGroupId() {
         return this.managementGroupId;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagementGroupDiagnosticSettingArgs extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the diagnostic setting.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetManagementGroupDiagnosticSettingArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder managementGroupId(String managementGroupId) {
+        public Builder managementGroupId(Output<String> managementGroupId) {
             $.managementGroupId = managementGroupId;
+            return this;
+        }
+
+        /**
+         * @param managementGroupId The management group id.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementGroupId(String managementGroupId) {
+            return managementGroupId(Output.of(managementGroupId));
+        }
+
+        /**
+         * @param name The name of the diagnostic setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetManagementGroupDiagnosticSettingArgs extends com.pulumi.re
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetManagementGroupDiagnosticSettingArgs build() {

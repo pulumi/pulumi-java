@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetConsoleHistoriesFilter;
+import com.pulumi.oci.Core.inputs.GetConsoleHistoriesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Optional<String> availabilityDomain() {
+    public Optional<Output<String>> availabilityDomain() {
         return Optional.ofNullable(this.availabilityDomain);
     }
 
@@ -36,20 +37,20 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetConsoleHistoriesFilter> filters;
+    private @Nullable Output<List<GetConsoleHistoriesFilterArgs>> filters;
 
-    public Optional<List<GetConsoleHistoriesFilter>> filters() {
+    public Optional<Output<List<GetConsoleHistoriesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="instanceId")
-    private @Nullable String instanceId;
+    private @Nullable Output<String> instanceId;
 
     /**
      * @return The OCID of the instance.
      * 
      */
-    public Optional<String> instanceId() {
+    public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
 
@@ -73,13 +74,13 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,8 +118,29 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -129,16 +151,19 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
-            return this;
+            return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(@Nullable List<GetConsoleHistoriesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetConsoleHistoriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetConsoleHistoriesFilter... filters) {
+        public Builder filters(List<GetConsoleHistoriesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetConsoleHistoriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -148,8 +173,29 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder instanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * @param instanceId The OCID of the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetConsoleHistoriesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetConsoleHistoriesArgs build() {

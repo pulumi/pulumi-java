@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.OspGateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -32,13 +33,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ospHomeRegion", required=true)
-    private String ospHomeRegion;
+    private Output<String> ospHomeRegion;
 
     /**
      * @return The home region&#39;s public name of the logged in user.
      * 
      */
-    public String ospHomeRegion() {
+    public Output<String> ospHomeRegion() {
         return this.ospHomeRegion;
     }
 
@@ -47,13 +48,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
     /**
      * @return Subscription id(OCID).
      * 
      */
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -89,8 +90,29 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param ospHomeRegion The home region&#39;s public name of the logged in user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ospHomeRegion(Output<String> ospHomeRegion) {
+            $.ospHomeRegion = ospHomeRegion;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder ospHomeRegion(String ospHomeRegion) {
-            $.ospHomeRegion = ospHomeRegion;
+            return ospHomeRegion(Output.of(ospHomeRegion));
+        }
+
+        /**
+         * @param subscriptionId Subscription id(OCID).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(Output<String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder subscriptionId(String subscriptionId) {
-            $.subscriptionId = subscriptionId;
-            return this;
+            return subscriptionId(Output.of(subscriptionId));
         }
 
         public GetSubscriptionArgs build() {

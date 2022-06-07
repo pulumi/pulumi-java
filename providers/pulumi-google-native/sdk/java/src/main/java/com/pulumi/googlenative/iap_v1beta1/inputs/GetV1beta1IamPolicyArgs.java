@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.iap_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetV1beta1IamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetV1beta1IamPolicyArgs Empty = new GetV1beta1IamPolicyArgs();
 
     @Import(name="v1beta1Id", required=true)
-    private String v1beta1Id;
+    private Output<String> v1beta1Id;
 
-    public String v1beta1Id() {
+    public Output<String> v1beta1Id() {
         return this.v1beta1Id;
     }
 
@@ -43,9 +44,13 @@ public final class GetV1beta1IamPolicyArgs extends com.pulumi.resources.InvokeAr
             $ = new GetV1beta1IamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder v1beta1Id(String v1beta1Id) {
+        public Builder v1beta1Id(Output<String> v1beta1Id) {
             $.v1beta1Id = v1beta1Id;
             return this;
+        }
+
+        public Builder v1beta1Id(String v1beta1Id) {
+            return v1beta1Id(Output.of(v1beta1Id));
         }
 
         public GetV1beta1IamPolicyArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The Id of a specific item defined in the Application Insights component
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -34,13 +35,13 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of a specific item defined in the Application Insights component
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -49,13 +50,13 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,13 +65,13 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the Application Insights component resource.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -79,13 +80,13 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="scopePath", required=true)
-    private String scopePath;
+    private Output<String> scopePath;
 
     /**
      * @return Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
-    public String scopePath() {
+    public Output<String> scopePath() {
         return this.scopePath;
     }
 
@@ -123,8 +124,29 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id The Id of a specific item defined in the Application Insights component
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param name The name of a specific item defined in the Application Insights component
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -134,8 +156,18 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -146,7 +178,17 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -157,7 +199,17 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param scopePath Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scopePath(Output<String> scopePath) {
+            $.scopePath = scopePath;
             return this;
         }
 
@@ -168,8 +220,7 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder scopePath(String scopePath) {
-            $.scopePath = scopePath;
-            return this;
+            return scopePath(Output.of(scopePath));
         }
 
         public GetAnalyticsItemArgs build() {

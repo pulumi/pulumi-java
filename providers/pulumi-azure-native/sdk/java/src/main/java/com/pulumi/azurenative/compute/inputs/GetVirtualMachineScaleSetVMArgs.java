@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetVirtualMachineScaleSetVMArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return The expand expression to apply on the operation. &#39;InstanceView&#39; will retrieve the instance view of the virtual machine. &#39;UserData&#39; will retrieve the UserData of the virtual machine.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetVirtualMachineScaleSetVMArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
     /**
      * @return The instance ID of the virtual machine.
      * 
      */
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -49,13 +50,13 @@ public final class GetVirtualMachineScaleSetVMArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,13 +65,13 @@ public final class GetVirtualMachineScaleSetVMArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vmScaleSetName", required=true)
-    private String vmScaleSetName;
+    private Output<String> vmScaleSetName;
 
     /**
      * @return The name of the VM scale set.
      * 
      */
-    public String vmScaleSetName() {
+    public Output<String> vmScaleSetName() {
         return this.vmScaleSetName;
     }
 
@@ -107,8 +108,29 @@ public final class GetVirtualMachineScaleSetVMArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The expand expression to apply on the operation. &#39;InstanceView&#39; will retrieve the instance view of the virtual machine. &#39;UserData&#39; will retrieve the UserData of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param instanceId The instance ID of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(Output<String> instanceId) {
+            $.instanceId = instanceId;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class GetVirtualMachineScaleSetVMArgs extends com.pulumi.resources.
          * 
          */
         public Builder instanceId(String instanceId) {
-            $.instanceId = instanceId;
+            return instanceId(Output.of(instanceId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class GetVirtualMachineScaleSetVMArgs extends com.pulumi.resources.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vmScaleSetName The name of the VM scale set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmScaleSetName(Output<String> vmScaleSetName) {
+            $.vmScaleSetName = vmScaleSetName;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetVirtualMachineScaleSetVMArgs extends com.pulumi.resources.
          * 
          */
         public Builder vmScaleSetName(String vmScaleSetName) {
-            $.vmScaleSetName = vmScaleSetName;
-            return this;
+            return vmScaleSetName(Output.of(vmScaleSetName));
         }
 
         public GetVirtualMachineScaleSetVMArgs build() {

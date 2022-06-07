@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="experimentName", required=true)
-    private String experimentName;
+    private Output<String> experimentName;
 
     /**
      * @return The Experiment identifier associated with the Experiment
      * 
      */
-    public String experimentName() {
+    public Output<String> experimentName() {
         return this.experimentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
     /**
      * @return The Profile identifier associated with the Tenant and Partner
      * 
      */
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -47,13 +48,13 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder experimentName(String experimentName) {
+        public Builder experimentName(Output<String> experimentName) {
             $.experimentName = experimentName;
+            return this;
+        }
+
+        /**
+         * @param experimentName The Experiment identifier associated with the Experiment
+         * 
+         * @return builder
+         * 
+         */
+        public Builder experimentName(String experimentName) {
+            return experimentName(Output.of(experimentName));
+        }
+
+        /**
+         * @param profileName The Profile identifier associated with the Tenant and Partner
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(Output<String> profileName) {
+            $.profileName = profileName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder profileName(String profileName) {
-            $.profileName = profileName;
+            return profileName(Output.of(profileName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetExperimentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExperimentArgs build() {

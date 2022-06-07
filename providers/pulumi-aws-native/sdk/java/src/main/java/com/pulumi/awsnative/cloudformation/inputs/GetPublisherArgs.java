@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.cloudformation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPublisherArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publisherId", required=true)
-    private String publisherId;
+    private Output<String> publisherId;
 
     /**
      * @return The publisher id assigned by CloudFormation for publishing in this region.
      * 
      */
-    public String publisherId() {
+    public Output<String> publisherId() {
         return this.publisherId;
     }
 
@@ -57,9 +58,19 @@ public final class GetPublisherArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publisherId(String publisherId) {
+        public Builder publisherId(Output<String> publisherId) {
             $.publisherId = publisherId;
             return this;
+        }
+
+        /**
+         * @param publisherId The publisher id assigned by CloudFormation for publishing in this region.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publisherId(String publisherId) {
+            return publisherId(Output.of(publisherId));
         }
 
         public GetPublisherArgs build() {

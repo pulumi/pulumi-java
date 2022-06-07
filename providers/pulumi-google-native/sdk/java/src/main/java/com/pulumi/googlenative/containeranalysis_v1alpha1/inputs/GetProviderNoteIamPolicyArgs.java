@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetProviderNoteIamPolicyArgs extends com.pulumi.resources.Inv
     public static final GetProviderNoteIamPolicyArgs Empty = new GetProviderNoteIamPolicyArgs();
 
     @Import(name="noteId", required=true)
-    private String noteId;
+    private Output<String> noteId;
 
-    public String noteId() {
+    public Output<String> noteId() {
         return this.noteId;
     }
 
     @Import(name="providerId", required=true)
-    private String providerId;
+    private Output<String> providerId;
 
-    public String providerId() {
+    public Output<String> providerId() {
         return this.providerId;
     }
 
@@ -51,14 +52,22 @@ public final class GetProviderNoteIamPolicyArgs extends com.pulumi.resources.Inv
             $ = new GetProviderNoteIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder noteId(String noteId) {
+        public Builder noteId(Output<String> noteId) {
             $.noteId = noteId;
             return this;
         }
 
-        public Builder providerId(String providerId) {
+        public Builder noteId(String noteId) {
+            return noteId(Output.of(noteId));
+        }
+
+        public Builder providerId(Output<String> providerId) {
             $.providerId = providerId;
             return this;
+        }
+
+        public Builder providerId(String providerId) {
+            return providerId(Output.of(providerId));
         }
 
         public GetProviderNoteIamPolicyArgs build() {

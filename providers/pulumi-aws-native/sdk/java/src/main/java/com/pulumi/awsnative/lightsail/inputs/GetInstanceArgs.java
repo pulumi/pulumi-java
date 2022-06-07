@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lightsail.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceName", required=true)
-    private String instanceName;
+    private Output<String> instanceName;
 
     /**
      * @return The names to use for your new Lightsail instance.
      * 
      */
-    public String instanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
 
@@ -57,9 +58,19 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceName(String instanceName) {
+        public Builder instanceName(Output<String> instanceName) {
             $.instanceName = instanceName;
             return this;
+        }
+
+        /**
+         * @param instanceName The names to use for your new Lightsail instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
         }
 
         public GetInstanceArgs build() {

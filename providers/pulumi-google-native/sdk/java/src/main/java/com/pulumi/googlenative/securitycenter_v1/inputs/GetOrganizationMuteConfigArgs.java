@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.securitycenter_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetOrganizationMuteConfigArgs extends com.pulumi.resources.In
     public static final GetOrganizationMuteConfigArgs Empty = new GetOrganizationMuteConfigArgs();
 
     @Import(name="muteConfigId", required=true)
-    private String muteConfigId;
+    private Output<String> muteConfigId;
 
-    public String muteConfigId() {
+    public Output<String> muteConfigId() {
         return this.muteConfigId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -51,14 +52,22 @@ public final class GetOrganizationMuteConfigArgs extends com.pulumi.resources.In
             $ = new GetOrganizationMuteConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder muteConfigId(String muteConfigId) {
+        public Builder muteConfigId(Output<String> muteConfigId) {
             $.muteConfigId = muteConfigId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder muteConfigId(String muteConfigId) {
+            return muteConfigId(Output.of(muteConfigId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetOrganizationMuteConfigArgs build() {

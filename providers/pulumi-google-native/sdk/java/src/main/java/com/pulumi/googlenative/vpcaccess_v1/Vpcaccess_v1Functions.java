@@ -3,11 +3,13 @@
 
 package com.pulumi.googlenative.vpcaccess_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.vpcaccess_v1.inputs.GetConnectorArgs;
+import com.pulumi.googlenative.vpcaccess_v1.inputs.GetConnectorPlainArgs;
 import com.pulumi.googlenative.vpcaccess_v1.outputs.GetConnectorResult;
 import java.util.concurrent.CompletableFuture;
 
@@ -16,14 +18,28 @@ public final class Vpcaccess_v1Functions {
      * Gets a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
      * 
      */
-    public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args) {
+    public static Output<GetConnectorResult> getConnector(GetConnectorArgs args) {
         return getConnector(args, InvokeOptions.Empty);
     }
     /**
      * Gets a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
      * 
      */
-    public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectorResult> getConnectorPlain(GetConnectorPlainArgs args) {
+        return getConnectorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
+     * 
+     */
+    public static Output<GetConnectorResult> getConnector(GetConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:vpcaccess/v1:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
+     * 
+     */
+    public static CompletableFuture<GetConnectorResult> getConnectorPlain(GetConnectorPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vpcaccess/v1:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
     }
 }

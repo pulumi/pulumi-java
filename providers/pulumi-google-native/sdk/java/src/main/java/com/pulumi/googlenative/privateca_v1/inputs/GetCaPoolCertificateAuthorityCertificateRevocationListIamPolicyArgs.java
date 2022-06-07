@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.privateca_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,44 +16,44 @@ public final class GetCaPoolCertificateAuthorityCertificateRevocationListIamPoli
     public static final GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs Empty = new GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs();
 
     @Import(name="caPoolId", required=true)
-    private String caPoolId;
+    private Output<String> caPoolId;
 
-    public String caPoolId() {
+    public Output<String> caPoolId() {
         return this.caPoolId;
     }
 
     @Import(name="certificateAuthorityId", required=true)
-    private String certificateAuthorityId;
+    private Output<String> certificateAuthorityId;
 
-    public String certificateAuthorityId() {
+    public Output<String> certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
     @Import(name="certificateRevocationListId", required=true)
-    private String certificateRevocationListId;
+    private Output<String> certificateRevocationListId;
 
-    public String certificateRevocationListId() {
+    public Output<String> certificateRevocationListId() {
         return this.certificateRevocationListId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -85,34 +86,58 @@ public final class GetCaPoolCertificateAuthorityCertificateRevocationListIamPoli
             $ = new GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder caPoolId(String caPoolId) {
+        public Builder caPoolId(Output<String> caPoolId) {
             $.caPoolId = caPoolId;
             return this;
         }
 
-        public Builder certificateAuthorityId(String certificateAuthorityId) {
+        public Builder caPoolId(String caPoolId) {
+            return caPoolId(Output.of(caPoolId));
+        }
+
+        public Builder certificateAuthorityId(Output<String> certificateAuthorityId) {
             $.certificateAuthorityId = certificateAuthorityId;
             return this;
         }
 
-        public Builder certificateRevocationListId(String certificateRevocationListId) {
+        public Builder certificateAuthorityId(String certificateAuthorityId) {
+            return certificateAuthorityId(Output.of(certificateAuthorityId));
+        }
+
+        public Builder certificateRevocationListId(Output<String> certificateRevocationListId) {
             $.certificateRevocationListId = certificateRevocationListId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder certificateRevocationListId(String certificateRevocationListId) {
+            return certificateRevocationListId(Output.of(certificateRevocationListId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs build() {

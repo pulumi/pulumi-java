@@ -3,16 +3,24 @@
 
 package com.pulumi.oci.Ocvp;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Ocvp.inputs.GetExsiHostArgs;
+import com.pulumi.oci.Ocvp.inputs.GetExsiHostPlainArgs;
 import com.pulumi.oci.Ocvp.inputs.GetExsiHostsArgs;
+import com.pulumi.oci.Ocvp.inputs.GetExsiHostsPlainArgs;
 import com.pulumi.oci.Ocvp.inputs.GetSddcArgs;
+import com.pulumi.oci.Ocvp.inputs.GetSddcPlainArgs;
 import com.pulumi.oci.Ocvp.inputs.GetSddcsArgs;
+import com.pulumi.oci.Ocvp.inputs.GetSddcsPlainArgs;
 import com.pulumi.oci.Ocvp.inputs.GetSupportedHostShapesArgs;
+import com.pulumi.oci.Ocvp.inputs.GetSupportedHostShapesPlainArgs;
 import com.pulumi.oci.Ocvp.inputs.GetSupportedSkusArgs;
+import com.pulumi.oci.Ocvp.inputs.GetSupportedSkusPlainArgs;
 import com.pulumi.oci.Ocvp.inputs.GetSupportedVmwareSoftwareVersionsArgs;
+import com.pulumi.oci.Ocvp.inputs.GetSupportedVmwareSoftwareVersionsPlainArgs;
 import com.pulumi.oci.Ocvp.outputs.GetExsiHostResult;
 import com.pulumi.oci.Ocvp.outputs.GetExsiHostsResult;
 import com.pulumi.oci.Ocvp.outputs.GetSddcResult;
@@ -32,7 +40,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExsiHostResult> getExsiHost(GetExsiHostArgs args) {
+    public static Output<GetExsiHostResult> getExsiHost(GetExsiHostArgs args) {
         return getExsiHost(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +51,29 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExsiHostResult> getExsiHost(GetExsiHostArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExsiHostResult> getExsiHostPlain(GetExsiHostPlainArgs args) {
+        return getExsiHostPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Esxi Host resource in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Gets the specified ESXi host&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetExsiHostResult> getExsiHost(GetExsiHostArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getExsiHost:getExsiHost", TypeShape.of(GetExsiHostResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Esxi Host resource in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Gets the specified ESXi host&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetExsiHostResult> getExsiHostPlain(GetExsiHostPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Ocvp/getExsiHost:getExsiHost", TypeShape.of(GetExsiHostResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -62,7 +92,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExsiHostsResult> getExsiHosts() {
+    public static Output<GetExsiHostsResult> getExsiHosts() {
         return getExsiHosts(GetExsiHostsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -81,7 +111,26 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExsiHostsResult> getExsiHosts(GetExsiHostsArgs args) {
+    public static CompletableFuture<GetExsiHostsResult> getExsiHostsPlain() {
+        return getExsiHostsPlain(GetExsiHostsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Esxi Hosts in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Lists the ESXi hosts in the specified SDDC. The list can be filtered
+     * by Compute instance OCID or ESXi display name.
+     * 
+     * Remember that in terms of implementation, an ESXi host is a Compute instance that
+     * is configured with the chosen bundle of VMware software. Each `EsxiHost`
+     * object has its own OCID (`id`), and a separate attribute for the OCID of
+     * the Compute instance (`computeInstanceId`). When filtering the list of
+     * ESXi hosts, you can specify the OCID of the Compute instance, not the
+     * ESXi host OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetExsiHostsResult> getExsiHosts(GetExsiHostsArgs args) {
         return getExsiHosts(args, InvokeOptions.Empty);
     }
     /**
@@ -100,7 +149,45 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetExsiHostsResult> getExsiHosts(GetExsiHostsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExsiHostsResult> getExsiHostsPlain(GetExsiHostsPlainArgs args) {
+        return getExsiHostsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Esxi Hosts in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Lists the ESXi hosts in the specified SDDC. The list can be filtered
+     * by Compute instance OCID or ESXi display name.
+     * 
+     * Remember that in terms of implementation, an ESXi host is a Compute instance that
+     * is configured with the chosen bundle of VMware software. Each `EsxiHost`
+     * object has its own OCID (`id`), and a separate attribute for the OCID of
+     * the Compute instance (`computeInstanceId`). When filtering the list of
+     * ESXi hosts, you can specify the OCID of the Compute instance, not the
+     * ESXi host OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetExsiHostsResult> getExsiHosts(GetExsiHostsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getExsiHosts:getExsiHosts", TypeShape.of(GetExsiHostsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Esxi Hosts in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Lists the ESXi hosts in the specified SDDC. The list can be filtered
+     * by Compute instance OCID or ESXi display name.
+     * 
+     * Remember that in terms of implementation, an ESXi host is a Compute instance that
+     * is configured with the chosen bundle of VMware software. Each `EsxiHost`
+     * object has its own OCID (`id`), and a separate attribute for the OCID of
+     * the Compute instance (`computeInstanceId`). When filtering the list of
+     * ESXi hosts, you can specify the OCID of the Compute instance, not the
+     * ESXi host OCID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetExsiHostsResult> getExsiHostsPlain(GetExsiHostsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Ocvp/getExsiHosts:getExsiHosts", TypeShape.of(GetExsiHostsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -111,7 +198,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSddcResult> getSddc(GetSddcArgs args) {
+    public static Output<GetSddcResult> getSddc(GetSddcArgs args) {
         return getSddc(args, InvokeOptions.Empty);
     }
     /**
@@ -122,7 +209,29 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSddcResult> getSddc(GetSddcArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSddcResult> getSddcPlain(GetSddcPlainArgs args) {
+        return getSddcPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Sddc resource in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Gets the specified SDDC&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSddcResult> getSddc(GetSddcArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getSddc:getSddc", TypeShape.of(GetSddcResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Sddc resource in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Gets the specified SDDC&#39;s information.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSddcResult> getSddcPlain(GetSddcPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Ocvp/getSddc:getSddc", TypeShape.of(GetSddcResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -134,7 +243,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSddcsResult> getSddcs(GetSddcsArgs args) {
+    public static Output<GetSddcsResult> getSddcs(GetSddcsArgs args) {
         return getSddcs(args, InvokeOptions.Empty);
     }
     /**
@@ -146,7 +255,31 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSddcsResult> getSddcs(GetSddcsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSddcsResult> getSddcsPlain(GetSddcsPlainArgs args) {
+        return getSddcsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Sddcs in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Lists the SDDCs in the specified compartment. The list can be
+     * filtered by display name or availability domain.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSddcsResult> getSddcs(GetSddcsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getSddcs:getSddcs", TypeShape.of(GetSddcsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Sddcs in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Lists the SDDCs in the specified compartment. The list can be
+     * filtered by display name or availability domain.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSddcsResult> getSddcsPlain(GetSddcsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Ocvp/getSddcs:getSddcs", TypeShape.of(GetSddcsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -157,7 +290,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedHostShapesResult> getSupportedHostShapes(GetSupportedHostShapesArgs args) {
+    public static Output<GetSupportedHostShapesResult> getSupportedHostShapes(GetSupportedHostShapesArgs args) {
         return getSupportedHostShapes(args, InvokeOptions.Empty);
     }
     /**
@@ -168,7 +301,29 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedHostShapesResult> getSupportedHostShapes(GetSupportedHostShapesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSupportedHostShapesResult> getSupportedHostShapesPlain(GetSupportedHostShapesPlainArgs args) {
+        return getSupportedHostShapesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Supported Host Shapes in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Lists supported compute shapes for ESXi hosts.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSupportedHostShapesResult> getSupportedHostShapes(GetSupportedHostShapesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getSupportedHostShapes:getSupportedHostShapes", TypeShape.of(GetSupportedHostShapesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Supported Host Shapes in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Lists supported compute shapes for ESXi hosts.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSupportedHostShapesResult> getSupportedHostShapesPlain(GetSupportedHostShapesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Ocvp/getSupportedHostShapes:getSupportedHostShapes", TypeShape.of(GetSupportedHostShapesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -179,7 +334,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedSkusResult> getSupportedSkus(GetSupportedSkusArgs args) {
+    public static Output<GetSupportedSkusResult> getSupportedSkus(GetSupportedSkusArgs args) {
         return getSupportedSkus(args, InvokeOptions.Empty);
     }
     /**
@@ -190,7 +345,29 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedSkusResult> getSupportedSkus(GetSupportedSkusArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSupportedSkusResult> getSupportedSkusPlain(GetSupportedSkusPlainArgs args) {
+        return getSupportedSkusPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Supported Skus in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Lists supported SKUs.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSupportedSkusResult> getSupportedSkus(GetSupportedSkusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getSupportedSkus:getSupportedSkus", TypeShape.of(GetSupportedSkusResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Supported Skus in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Lists supported SKUs.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSupportedSkusResult> getSupportedSkusPlain(GetSupportedSkusPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Ocvp/getSupportedSkus:getSupportedSkus", TypeShape.of(GetSupportedSkusResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -202,7 +379,7 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedVmwareSoftwareVersionsResult> getSupportedVmwareSoftwareVersions(GetSupportedVmwareSoftwareVersionsArgs args) {
+    public static Output<GetSupportedVmwareSoftwareVersionsResult> getSupportedVmwareSoftwareVersions(GetSupportedVmwareSoftwareVersionsArgs args) {
         return getSupportedVmwareSoftwareVersions(args, InvokeOptions.Empty);
     }
     /**
@@ -214,7 +391,31 @@ public final class OcvpFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSupportedVmwareSoftwareVersionsResult> getSupportedVmwareSoftwareVersions(GetSupportedVmwareSoftwareVersionsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSupportedVmwareSoftwareVersionsResult> getSupportedVmwareSoftwareVersionsPlain(GetSupportedVmwareSoftwareVersionsPlainArgs args) {
+        return getSupportedVmwareSoftwareVersionsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Supported Vmware Software Versions in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Lists the versions of bundled VMware software supported by the Oracle Cloud
+     * VMware Solution.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSupportedVmwareSoftwareVersionsResult> getSupportedVmwareSoftwareVersions(GetSupportedVmwareSoftwareVersionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Ocvp/getSupportedVmwareSoftwareVersions:getSupportedVmwareSoftwareVersions", TypeShape.of(GetSupportedVmwareSoftwareVersionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Supported Vmware Software Versions in Oracle Cloud Infrastructure Oracle Cloud VMware Solution service.
+     * 
+     * Lists the versions of bundled VMware software supported by the Oracle Cloud
+     * VMware Solution.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSupportedVmwareSoftwareVersionsResult> getSupportedVmwareSoftwareVersionsPlain(GetSupportedVmwareSoftwareVersionsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Ocvp/getSupportedVmwareSoftwareVersions:getSupportedVmwareSoftwareVersions", TypeShape.of(GetSupportedVmwareSoftwareVersionsResult.class), args, Utilities.withVersion(options));
     }
 }

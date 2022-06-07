@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.managedidentities_v1alpha1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetPeeringIamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetPeeringIamPolicyArgs Empty = new GetPeeringIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="peeringId", required=true)
-    private String peeringId;
+    private Output<String> peeringId;
 
-    public String peeringId() {
+    public Output<String> peeringId() {
         return this.peeringId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetPeeringIamPolicyArgs extends com.pulumi.resources.InvokeAr
             $ = new GetPeeringIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder peeringId(String peeringId) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder peeringId(Output<String> peeringId) {
             $.peeringId = peeringId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder peeringId(String peeringId) {
+            return peeringId(Output.of(peeringId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetPeeringIamPolicyArgs build() {

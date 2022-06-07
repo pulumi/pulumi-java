@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ses.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetContactListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contactListName", required=true)
-    private String contactListName;
+    private Output<String> contactListName;
 
     /**
      * @return The name of the contact list.
      * 
      */
-    public String contactListName() {
+    public Output<String> contactListName() {
         return this.contactListName;
     }
 
@@ -57,9 +58,19 @@ public final class GetContactListArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contactListName(String contactListName) {
+        public Builder contactListName(Output<String> contactListName) {
             $.contactListName = contactListName;
             return this;
+        }
+
+        /**
+         * @param contactListName The name of the contact list.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contactListName(String contactListName) {
+            return contactListName(Output.of(contactListName));
         }
 
         public GetContactListArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.orbital.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contactName", required=true)
-    private String contactName;
+    private Output<String> contactName;
 
     /**
      * @return Contact Name
      * 
      */
-    public String contactName() {
+    public Output<String> contactName() {
         return this.contactName;
     }
 
@@ -32,13 +33,13 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="spacecraftName", required=true)
-    private String spacecraftName;
+    private Output<String> spacecraftName;
 
     /**
      * @return Spacecraft ID
      * 
      */
-    public String spacecraftName() {
+    public Output<String> spacecraftName() {
         return this.spacecraftName;
     }
 
@@ -89,8 +90,29 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contactName(String contactName) {
+        public Builder contactName(Output<String> contactName) {
             $.contactName = contactName;
+            return this;
+        }
+
+        /**
+         * @param contactName Contact Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contactName(String contactName) {
+            return contactName(Output.of(contactName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param spacecraftName Spacecraft ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder spacecraftName(Output<String> spacecraftName) {
+            $.spacecraftName = spacecraftName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder spacecraftName(String spacecraftName) {
-            $.spacecraftName = spacecraftName;
-            return this;
+            return spacecraftName(Output.of(spacecraftName));
         }
 
         public GetContactArgs build() {

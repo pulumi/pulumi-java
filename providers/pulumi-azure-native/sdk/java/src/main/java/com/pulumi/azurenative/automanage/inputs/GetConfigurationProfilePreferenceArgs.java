@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.automanage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConfigurationProfilePreferenceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="configurationProfilePreferenceName", required=true)
-    private String configurationProfilePreferenceName;
+    private Output<String> configurationProfilePreferenceName;
 
     /**
      * @return The configuration profile preference name.
      * 
      */
-    public String configurationProfilePreferenceName() {
+    public Output<String> configurationProfilePreferenceName() {
         return this.configurationProfilePreferenceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetConfigurationProfilePreferenceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetConfigurationProfilePreferenceArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder configurationProfilePreferenceName(String configurationProfilePreferenceName) {
+        public Builder configurationProfilePreferenceName(Output<String> configurationProfilePreferenceName) {
             $.configurationProfilePreferenceName = configurationProfilePreferenceName;
+            return this;
+        }
+
+        /**
+         * @param configurationProfilePreferenceName The configuration profile preference name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configurationProfilePreferenceName(String configurationProfilePreferenceName) {
+            return configurationProfilePreferenceName(Output.of(configurationProfilePreferenceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetConfigurationProfilePreferenceArgs extends com.pulumi.reso
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetConfigurationProfilePreferenceArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.labservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGlobalUserOperationStatusArgs extends com.pulumi.resources
      * 
      */
     @Import(name="operationUrl", required=true)
-    private String operationUrl;
+    private Output<String> operationUrl;
 
     /**
      * @return The operation url of long running operation
      * 
      */
-    public String operationUrl() {
+    public Output<String> operationUrl() {
         return this.operationUrl;
     }
 
@@ -32,13 +33,13 @@ public final class GetGlobalUserOperationStatusArgs extends com.pulumi.resources
      * 
      */
     @Import(name="userName", required=true)
-    private String userName;
+    private Output<String> userName;
 
     /**
      * @return The name of the user.
      * 
      */
-    public String userName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -73,8 +74,29 @@ public final class GetGlobalUserOperationStatusArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder operationUrl(String operationUrl) {
+        public Builder operationUrl(Output<String> operationUrl) {
             $.operationUrl = operationUrl;
+            return this;
+        }
+
+        /**
+         * @param operationUrl The operation url of long running operation
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationUrl(String operationUrl) {
+            return operationUrl(Output.of(operationUrl));
+        }
+
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userName(Output<String> userName) {
+            $.userName = userName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetGlobalUserOperationStatusArgs extends com.pulumi.resources
          * 
          */
         public Builder userName(String userName) {
-            $.userName = userName;
-            return this;
+            return userName(Output.of(userName));
         }
 
         public GetGlobalUserOperationStatusArgs build() {

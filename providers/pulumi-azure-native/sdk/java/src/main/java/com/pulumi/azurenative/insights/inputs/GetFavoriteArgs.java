@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="favoriteId", required=true)
-    private String favoriteId;
+    private Output<String> favoriteId;
 
     /**
      * @return The Id of a specific favorite defined in the Application Insights component
      * 
      */
-    public String favoriteId() {
+    public Output<String> favoriteId() {
         return this.favoriteId;
     }
 
@@ -32,13 +33,13 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the Application Insights component resource.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder favoriteId(String favoriteId) {
+        public Builder favoriteId(Output<String> favoriteId) {
             $.favoriteId = favoriteId;
+            return this;
+        }
+
+        /**
+         * @param favoriteId The Id of a specific favorite defined in the Application Insights component
+         * 
+         * @return builder
+         * 
+         */
+        public Builder favoriteId(String favoriteId) {
+            return favoriteId(Output.of(favoriteId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetFavoriteArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public GetFavoriteArgs build() {

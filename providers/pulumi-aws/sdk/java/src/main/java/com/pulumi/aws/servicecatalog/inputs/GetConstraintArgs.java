@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.servicecatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="acceptLanguage")
-    private @Nullable String acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
     /**
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Optional<String> acceptLanguage() {
+    public Optional<Output<String>> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
 
@@ -34,13 +35,13 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-    private @Nullable String description;
+    private @Nullable Output<String> description;
 
     /**
      * @return Description of the constraint.
      * 
      */
-    public Optional<String> description() {
+    public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
 
@@ -49,13 +50,13 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
     /**
      * @return Constraint identifier.
      * 
      */
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -91,8 +92,29 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             $.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * @param acceptLanguage Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
+        }
+
+        /**
+         * @param description Description of the constraint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder description(@Nullable Output<String> description) {
+            $.description = description;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder description(@Nullable String description) {
-            $.description = description;
+        public Builder description(String description) {
+            return description(Output.of(description));
+        }
+
+        /**
+         * @param id Constraint identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(Output<String> id) {
+            $.id = id;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder id(String id) {
-            $.id = id;
-            return this;
+            return id(Output.of(id));
         }
 
         public GetConstraintArgs build() {

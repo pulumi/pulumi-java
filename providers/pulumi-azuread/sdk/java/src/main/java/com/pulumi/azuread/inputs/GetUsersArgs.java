@@ -3,6 +3,7 @@
 
 package com.pulumi.azuread.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,13 +22,13 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ignoreMissing")
-    private @Nullable Boolean ignoreMissing;
+    private @Nullable Output<Boolean> ignoreMissing;
 
     /**
      * @return Ignore missing users and return users that were found. The data source will still fail if no users are found. Cannot be specified with `return_all`. Defaults to `false`.
      * 
      */
-    public Optional<Boolean> ignoreMissing() {
+    public Optional<Output<Boolean>> ignoreMissing() {
         return Optional.ofNullable(this.ignoreMissing);
     }
 
@@ -36,13 +37,13 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mailNicknames")
-    private @Nullable List<String> mailNicknames;
+    private @Nullable Output<List<String>> mailNicknames;
 
     /**
      * @return The email aliases of the users.
      * 
      */
-    public Optional<List<String>> mailNicknames() {
+    public Optional<Output<List<String>>> mailNicknames() {
         return Optional.ofNullable(this.mailNicknames);
     }
 
@@ -51,13 +52,13 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectIds")
-    private @Nullable List<String> objectIds;
+    private @Nullable Output<List<String>> objectIds;
 
     /**
      * @return The object IDs of the users.
      * 
      */
-    public Optional<List<String>> objectIds() {
+    public Optional<Output<List<String>>> objectIds() {
         return Optional.ofNullable(this.objectIds);
     }
 
@@ -66,13 +67,13 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="returnAll")
-    private @Nullable Boolean returnAll;
+    private @Nullable Output<Boolean> returnAll;
 
     /**
      * @return When `true`, the data source will return all users. Cannot be used with `ignore_missing`. Defaults to `false`.
      * 
      */
-    public Optional<Boolean> returnAll() {
+    public Optional<Output<Boolean>> returnAll() {
         return Optional.ofNullable(this.returnAll);
     }
 
@@ -81,13 +82,13 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userPrincipalNames")
-    private @Nullable List<String> userPrincipalNames;
+    private @Nullable Output<List<String>> userPrincipalNames;
 
     /**
      * @return The user principal names (UPNs) of the users.
      * 
      */
-    public Optional<List<String>> userPrincipalNames() {
+    public Optional<Output<List<String>>> userPrincipalNames() {
         return Optional.ofNullable(this.userPrincipalNames);
     }
 
@@ -125,8 +126,29 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ignoreMissing(@Nullable Boolean ignoreMissing) {
+        public Builder ignoreMissing(@Nullable Output<Boolean> ignoreMissing) {
             $.ignoreMissing = ignoreMissing;
+            return this;
+        }
+
+        /**
+         * @param ignoreMissing Ignore missing users and return users that were found. The data source will still fail if no users are found. Cannot be specified with `return_all`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ignoreMissing(Boolean ignoreMissing) {
+            return ignoreMissing(Output.of(ignoreMissing));
+        }
+
+        /**
+         * @param mailNicknames The email aliases of the users.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mailNicknames(@Nullable Output<List<String>> mailNicknames) {
+            $.mailNicknames = mailNicknames;
             return this;
         }
 
@@ -136,9 +158,8 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mailNicknames(@Nullable List<String> mailNicknames) {
-            $.mailNicknames = mailNicknames;
-            return this;
+        public Builder mailNicknames(List<String> mailNicknames) {
+            return mailNicknames(Output.of(mailNicknames));
         }
 
         /**
@@ -157,9 +178,19 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder objectIds(@Nullable List<String> objectIds) {
+        public Builder objectIds(@Nullable Output<List<String>> objectIds) {
             $.objectIds = objectIds;
             return this;
+        }
+
+        /**
+         * @param objectIds The object IDs of the users.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectIds(List<String> objectIds) {
+            return objectIds(Output.of(objectIds));
         }
 
         /**
@@ -178,8 +209,29 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder returnAll(@Nullable Boolean returnAll) {
+        public Builder returnAll(@Nullable Output<Boolean> returnAll) {
             $.returnAll = returnAll;
+            return this;
+        }
+
+        /**
+         * @param returnAll When `true`, the data source will return all users. Cannot be used with `ignore_missing`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder returnAll(Boolean returnAll) {
+            return returnAll(Output.of(returnAll));
+        }
+
+        /**
+         * @param userPrincipalNames The user principal names (UPNs) of the users.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userPrincipalNames(@Nullable Output<List<String>> userPrincipalNames) {
+            $.userPrincipalNames = userPrincipalNames;
             return this;
         }
 
@@ -189,9 +241,8 @@ public final class GetUsersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userPrincipalNames(@Nullable List<String> userPrincipalNames) {
-            $.userPrincipalNames = userPrincipalNames;
-            return this;
+        public Builder userPrincipalNames(List<String> userPrincipalNames) {
+            return userPrincipalNames(Output.of(userPrincipalNames));
         }
 
         /**

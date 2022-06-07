@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSteeringPolicyAttachmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="steeringPolicyAttachmentId", required=true)
-    private String steeringPolicyAttachmentId;
+    private Output<String> steeringPolicyAttachmentId;
 
     /**
      * @return The OCID of the target steering policy attachment.
      * 
      */
-    public String steeringPolicyAttachmentId() {
+    public Output<String> steeringPolicyAttachmentId() {
         return this.steeringPolicyAttachmentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSteeringPolicyAttachmentArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder steeringPolicyAttachmentId(String steeringPolicyAttachmentId) {
+        public Builder steeringPolicyAttachmentId(Output<String> steeringPolicyAttachmentId) {
             $.steeringPolicyAttachmentId = steeringPolicyAttachmentId;
             return this;
+        }
+
+        /**
+         * @param steeringPolicyAttachmentId The OCID of the target steering policy attachment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder steeringPolicyAttachmentId(String steeringPolicyAttachmentId) {
+            return steeringPolicyAttachmentId(Output.of(steeringPolicyAttachmentId));
         }
 
         public GetSteeringPolicyAttachmentArgs build() {

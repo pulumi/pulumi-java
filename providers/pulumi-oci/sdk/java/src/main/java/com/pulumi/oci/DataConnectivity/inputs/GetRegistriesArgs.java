@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataConnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataConnectivity.inputs.GetRegistriesFilter;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistriesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,20 +23,20 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment containing the resources you want to list.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetRegistriesFilter> filters;
+    private @Nullable Output<List<GetRegistriesFilterArgs>> filters;
 
-    public Optional<List<GetRegistriesFilter>> filters() {
+    public Optional<Output<List<GetRegistriesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -44,13 +45,13 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isDeepLookup")
-    private @Nullable Boolean isDeepLookup;
+    private @Nullable Output<Boolean> isDeepLookup;
 
     /**
      * @return This parameter allows list registries to deep look at whole tenancy.
      * 
      */
-    public Optional<Boolean> isDeepLookup() {
+    public Optional<Output<Boolean>> isDeepLookup() {
         return Optional.ofNullable(this.isDeepLookup);
     }
 
@@ -59,13 +60,13 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Used to filter by the name of the object.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -74,13 +75,13 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Lifecycle state of the resource.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -118,17 +119,31 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetRegistriesFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment containing the resources you want to list.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetRegistriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetRegistriesFilter... filters) {
+        public Builder filters(List<GetRegistriesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetRegistriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -138,8 +153,29 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isDeepLookup(@Nullable Boolean isDeepLookup) {
+        public Builder isDeepLookup(@Nullable Output<Boolean> isDeepLookup) {
             $.isDeepLookup = isDeepLookup;
+            return this;
+        }
+
+        /**
+         * @param isDeepLookup This parameter allows list registries to deep look at whole tenancy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isDeepLookup(Boolean isDeepLookup) {
+            return isDeepLookup(Output.of(isDeepLookup));
+        }
+
+        /**
+         * @param name Used to filter by the name of the object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -149,8 +185,18 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state Lifecycle state of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -160,9 +206,8 @@ public final class GetRegistriesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetRegistriesArgs build() {

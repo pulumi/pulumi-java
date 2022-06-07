@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.connect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hoursOfOperationArn", required=true)
-    private String hoursOfOperationArn;
+    private Output<String> hoursOfOperationArn;
 
     /**
      * @return The Amazon Resource Name (ARN) for the hours of operation.
      * 
      */
-    public String hoursOfOperationArn() {
+    public Output<String> hoursOfOperationArn() {
         return this.hoursOfOperationArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetHoursOfOperationArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder hoursOfOperationArn(String hoursOfOperationArn) {
+        public Builder hoursOfOperationArn(Output<String> hoursOfOperationArn) {
             $.hoursOfOperationArn = hoursOfOperationArn;
             return this;
+        }
+
+        /**
+         * @param hoursOfOperationArn The Amazon Resource Name (ARN) for the hours of operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hoursOfOperationArn(String hoursOfOperationArn) {
+            return hoursOfOperationArn(Output.of(hoursOfOperationArn));
         }
 
         public GetHoursOfOperationArgs build() {

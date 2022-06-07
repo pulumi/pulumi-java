@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.firebase_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetAndroidAppArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAndroidAppArgs Empty = new GetAndroidAppArgs();
 
     @Import(name="androidAppId", required=true)
-    private String androidAppId;
+    private Output<String> androidAppId;
 
-    public String androidAppId() {
+    public Output<String> androidAppId() {
         return this.androidAppId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetAndroidAppArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAndroidAppArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder androidAppId(String androidAppId) {
+        public Builder androidAppId(Output<String> androidAppId) {
             $.androidAppId = androidAppId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder androidAppId(String androidAppId) {
+            return androidAppId(Output.of(androidAppId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetAndroidAppArgs build() {

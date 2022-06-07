@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAutonomousContainerDatabaseDataguardAssociationArgs extend
      * 
      */
     @Import(name="autonomousContainerDatabaseDataguardAssociationId", required=true)
-    private String autonomousContainerDatabaseDataguardAssociationId;
+    private Output<String> autonomousContainerDatabaseDataguardAssociationId;
 
     /**
      * @return The Autonomous Container Database-Autonomous Data Guard association [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String autonomousContainerDatabaseDataguardAssociationId() {
+    public Output<String> autonomousContainerDatabaseDataguardAssociationId() {
         return this.autonomousContainerDatabaseDataguardAssociationId;
     }
 
@@ -32,13 +33,13 @@ public final class GetAutonomousContainerDatabaseDataguardAssociationArgs extend
      * 
      */
     @Import(name="autonomousContainerDatabaseId", required=true)
-    private String autonomousContainerDatabaseId;
+    private Output<String> autonomousContainerDatabaseId;
 
     /**
      * @return The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String autonomousContainerDatabaseId() {
+    public Output<String> autonomousContainerDatabaseId() {
         return this.autonomousContainerDatabaseId;
     }
 
@@ -73,8 +74,29 @@ public final class GetAutonomousContainerDatabaseDataguardAssociationArgs extend
          * @return builder
          * 
          */
-        public Builder autonomousContainerDatabaseDataguardAssociationId(String autonomousContainerDatabaseDataguardAssociationId) {
+        public Builder autonomousContainerDatabaseDataguardAssociationId(Output<String> autonomousContainerDatabaseDataguardAssociationId) {
             $.autonomousContainerDatabaseDataguardAssociationId = autonomousContainerDatabaseDataguardAssociationId;
+            return this;
+        }
+
+        /**
+         * @param autonomousContainerDatabaseDataguardAssociationId The Autonomous Container Database-Autonomous Data Guard association [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousContainerDatabaseDataguardAssociationId(String autonomousContainerDatabaseDataguardAssociationId) {
+            return autonomousContainerDatabaseDataguardAssociationId(Output.of(autonomousContainerDatabaseDataguardAssociationId));
+        }
+
+        /**
+         * @param autonomousContainerDatabaseId The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousContainerDatabaseId(Output<String> autonomousContainerDatabaseId) {
+            $.autonomousContainerDatabaseId = autonomousContainerDatabaseId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAutonomousContainerDatabaseDataguardAssociationArgs extend
          * 
          */
         public Builder autonomousContainerDatabaseId(String autonomousContainerDatabaseId) {
-            $.autonomousContainerDatabaseId = autonomousContainerDatabaseId;
-            return this;
+            return autonomousContainerDatabaseId(Output.of(autonomousContainerDatabaseId));
         }
 
         public GetAutonomousContainerDatabaseDataguardAssociationArgs build() {

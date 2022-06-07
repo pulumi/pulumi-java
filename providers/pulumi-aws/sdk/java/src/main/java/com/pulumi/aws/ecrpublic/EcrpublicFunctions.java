@@ -5,6 +5,7 @@ package com.pulumi.aws.ecrpublic;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.ecrpublic.outputs.GetAuthorizationTokenResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -37,7 +38,7 @@ public final class EcrpublicFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken() {
+    public static Output<GetAuthorizationTokenResult> getAuthorizationToken() {
         return getAuthorizationToken(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -65,7 +66,35 @@ public final class EcrpublicFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(InvokeArgs args) {
+    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationTokenPlain() {
+        return getAuthorizationTokenPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * The Public ECR Authorization Token data source allows the authorization token, token expiration date, user name and password to be retrieved for a Public ECR repository.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var token = Output.of(EcrpublicFunctions.getAuthorizationToken());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetAuthorizationTokenResult> getAuthorizationToken(InvokeArgs args) {
         return getAuthorizationToken(args, InvokeOptions.Empty);
     }
     /**
@@ -93,7 +122,63 @@ public final class EcrpublicFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationTokenPlain(InvokeArgs args) {
+        return getAuthorizationTokenPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The Public ECR Authorization Token data source allows the authorization token, token expiration date, user name and password to be retrieved for a Public ECR repository.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var token = Output.of(EcrpublicFunctions.getAuthorizationToken());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetAuthorizationTokenResult> getAuthorizationToken(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ecrpublic/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Public ECR Authorization Token data source allows the authorization token, token expiration date, user name and password to be retrieved for a Public ECR repository.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var token = Output.of(EcrpublicFunctions.getAuthorizationToken());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationTokenPlain(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecrpublic/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args, Utilities.withVersion(options));
     }
 }

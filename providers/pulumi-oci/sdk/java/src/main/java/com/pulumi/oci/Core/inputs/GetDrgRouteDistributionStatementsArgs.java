@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetDrgRouteDistributionStatementsFilter;
+import com.pulumi.oci.Core.inputs.GetDrgRouteDistributionStatementsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetDrgRouteDistributionStatementsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="drgRouteDistributionId", required=true)
-    private String drgRouteDistributionId;
+    private Output<String> drgRouteDistributionId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route distribution.
      * 
      */
-    public String drgRouteDistributionId() {
+    public Output<String> drgRouteDistributionId() {
         return this.drgRouteDistributionId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDrgRouteDistributionStatementsFilter> filters;
+    private @Nullable Output<List<GetDrgRouteDistributionStatementsFilterArgs>> filters;
 
-    public Optional<List<GetDrgRouteDistributionStatementsFilter>> filters() {
+    public Optional<Output<List<GetDrgRouteDistributionStatementsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetDrgRouteDistributionStatementsArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder drgRouteDistributionId(String drgRouteDistributionId) {
+        public Builder drgRouteDistributionId(Output<String> drgRouteDistributionId) {
             $.drgRouteDistributionId = drgRouteDistributionId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDrgRouteDistributionStatementsFilter> filters) {
+        /**
+         * @param drgRouteDistributionId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route distribution.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder drgRouteDistributionId(String drgRouteDistributionId) {
+            return drgRouteDistributionId(Output.of(drgRouteDistributionId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetDrgRouteDistributionStatementsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDrgRouteDistributionStatementsFilter... filters) {
+        public Builder filters(List<GetDrgRouteDistributionStatementsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDrgRouteDistributionStatementsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

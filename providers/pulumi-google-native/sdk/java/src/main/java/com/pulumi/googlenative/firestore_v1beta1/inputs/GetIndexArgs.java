@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.firestore_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetIndexArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIndexArgs Empty = new GetIndexArgs();
 
     @Import(name="databaseId", required=true)
-    private String databaseId;
+    private Output<String> databaseId;
 
-    public String databaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
     @Import(name="indexId", required=true)
-    private String indexId;
+    private Output<String> indexId;
 
-    public String indexId() {
+    public Output<String> indexId() {
         return this.indexId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetIndexArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIndexArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder databaseId(String databaseId) {
+        public Builder databaseId(Output<String> databaseId) {
             $.databaseId = databaseId;
             return this;
         }
 
-        public Builder indexId(String indexId) {
+        public Builder databaseId(String databaseId) {
+            return databaseId(Output.of(databaseId));
+        }
+
+        public Builder indexId(Output<String> indexId) {
             $.indexId = indexId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder indexId(String indexId) {
+            return indexId(Output.of(indexId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetIndexArgs build() {

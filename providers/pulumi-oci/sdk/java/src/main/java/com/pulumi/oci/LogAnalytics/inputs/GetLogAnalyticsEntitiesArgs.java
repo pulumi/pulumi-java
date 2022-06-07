@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.LogAnalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.LogAnalytics.inputs.GetLogAnalyticsEntitiesFilter;
+import com.pulumi.oci.LogAnalytics.inputs.GetLogAnalyticsEntitiesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="cloudResourceId")
-    private @Nullable String cloudResourceId;
+    private @Nullable Output<String> cloudResourceId;
 
     /**
      * @return A filter to return only log analytics entities whose cloudResourceId matches the cloudResourceId given.
      * 
      */
-    public Optional<String> cloudResourceId() {
+    public Optional<Output<String>> cloudResourceId() {
         return Optional.ofNullable(this.cloudResourceId);
     }
 
@@ -36,13 +37,13 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,20 +52,20 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="entityTypeNames")
-    private @Nullable List<String> entityTypeNames;
+    private @Nullable Output<List<String>> entityTypeNames;
 
     /**
      * @return A filter to return only log analytics entities whose entityTypeName matches the entire log analytics entity type name of one of the entityTypeNames given in the list. The match is case-insensitive.
      * 
      */
-    public Optional<List<String>> entityTypeNames() {
+    public Optional<Output<List<String>>> entityTypeNames() {
         return Optional.ofNullable(this.entityTypeNames);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetLogAnalyticsEntitiesFilter> filters;
+    private @Nullable Output<List<GetLogAnalyticsEntitiesFilterArgs>> filters;
 
-    public Optional<List<GetLogAnalyticsEntitiesFilter>> filters() {
+    public Optional<Output<List<GetLogAnalyticsEntitiesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="hostname")
-    private @Nullable String hostname;
+    private @Nullable Output<String> hostname;
 
     /**
      * @return A filter to return only log analytics entities whose hostname matches the entire hostname given.
      * 
      */
-    public Optional<String> hostname() {
+    public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
 
@@ -88,13 +89,13 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="hostnameContains")
-    private @Nullable String hostnameContains;
+    private @Nullable Output<String> hostnameContains;
 
     /**
      * @return A filter to return only log analytics entities whose hostname contains the substring given. The match is case-insensitive.
      * 
      */
-    public Optional<String> hostnameContains() {
+    public Optional<Output<String>> hostnameContains() {
         return Optional.ofNullable(this.hostnameContains);
     }
 
@@ -103,13 +104,13 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="isManagementAgentIdNull")
-    private @Nullable String isManagementAgentIdNull;
+    private @Nullable Output<String> isManagementAgentIdNull;
 
     /**
      * @return A filter to return only those log analytics entities whose managementAgentId is null or is not null.
      * 
      */
-    public Optional<String> isManagementAgentIdNull() {
+    public Optional<Output<String>> isManagementAgentIdNull() {
         return Optional.ofNullable(this.isManagementAgentIdNull);
     }
 
@@ -118,13 +119,13 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="lifecycleDetailsContains")
-    private @Nullable String lifecycleDetailsContains;
+    private @Nullable Output<String> lifecycleDetailsContains;
 
     /**
      * @return A filter to return only log analytics entities whose lifecycleDetails contains the specified string.
      * 
      */
-    public Optional<String> lifecycleDetailsContains() {
+    public Optional<Output<String>> lifecycleDetailsContains() {
         return Optional.ofNullable(this.lifecycleDetailsContains);
     }
 
@@ -133,13 +134,13 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only log analytics entities whose name matches the entire name given. The match is case-insensitive.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -148,13 +149,13 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="nameContains")
-    private @Nullable String nameContains;
+    private @Nullable Output<String> nameContains;
 
     /**
      * @return A filter to return only log analytics entities whose name contains the name given. The match is case-insensitive.
      * 
      */
-    public Optional<String> nameContains() {
+    public Optional<Output<String>> nameContains() {
         return Optional.ofNullable(this.nameContains);
     }
 
@@ -163,13 +164,13 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Logging Analytics namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -178,13 +179,13 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sourceId")
-    private @Nullable String sourceId;
+    private @Nullable Output<String> sourceId;
 
     /**
      * @return A filter to return only log analytics entities whose sourceId matches the sourceId given.
      * 
      */
-    public Optional<String> sourceId() {
+    public Optional<Output<String>> sourceId() {
         return Optional.ofNullable(this.sourceId);
     }
 
@@ -193,13 +194,13 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only those log analytics entities with the specified lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -245,8 +246,29 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder cloudResourceId(@Nullable String cloudResourceId) {
+        public Builder cloudResourceId(@Nullable Output<String> cloudResourceId) {
             $.cloudResourceId = cloudResourceId;
+            return this;
+        }
+
+        /**
+         * @param cloudResourceId A filter to return only log analytics entities whose cloudResourceId matches the cloudResourceId given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cloudResourceId(String cloudResourceId) {
+            return cloudResourceId(Output.of(cloudResourceId));
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -257,7 +279,17 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param entityTypeNames A filter to return only log analytics entities whose entityTypeName matches the entire log analytics entity type name of one of the entityTypeNames given in the list. The match is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder entityTypeNames(@Nullable Output<List<String>> entityTypeNames) {
+            $.entityTypeNames = entityTypeNames;
             return this;
         }
 
@@ -267,9 +299,8 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder entityTypeNames(@Nullable List<String> entityTypeNames) {
-            $.entityTypeNames = entityTypeNames;
-            return this;
+        public Builder entityTypeNames(List<String> entityTypeNames) {
+            return entityTypeNames(Output.of(entityTypeNames));
         }
 
         /**
@@ -282,12 +313,16 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
             return entityTypeNames(List.of(entityTypeNames));
         }
 
-        public Builder filters(@Nullable List<GetLogAnalyticsEntitiesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetLogAnalyticsEntitiesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetLogAnalyticsEntitiesFilter... filters) {
+        public Builder filters(List<GetLogAnalyticsEntitiesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetLogAnalyticsEntitiesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -297,8 +332,29 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder hostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
+            return this;
+        }
+
+        /**
+         * @param hostname A filter to return only log analytics entities whose hostname matches the entire hostname given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
+        }
+
+        /**
+         * @param hostnameContains A filter to return only log analytics entities whose hostname contains the substring given. The match is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostnameContains(@Nullable Output<String> hostnameContains) {
+            $.hostnameContains = hostnameContains;
             return this;
         }
 
@@ -308,8 +364,18 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder hostnameContains(@Nullable String hostnameContains) {
-            $.hostnameContains = hostnameContains;
+        public Builder hostnameContains(String hostnameContains) {
+            return hostnameContains(Output.of(hostnameContains));
+        }
+
+        /**
+         * @param isManagementAgentIdNull A filter to return only those log analytics entities whose managementAgentId is null or is not null.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isManagementAgentIdNull(@Nullable Output<String> isManagementAgentIdNull) {
+            $.isManagementAgentIdNull = isManagementAgentIdNull;
             return this;
         }
 
@@ -319,8 +385,18 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder isManagementAgentIdNull(@Nullable String isManagementAgentIdNull) {
-            $.isManagementAgentIdNull = isManagementAgentIdNull;
+        public Builder isManagementAgentIdNull(String isManagementAgentIdNull) {
+            return isManagementAgentIdNull(Output.of(isManagementAgentIdNull));
+        }
+
+        /**
+         * @param lifecycleDetailsContains A filter to return only log analytics entities whose lifecycleDetails contains the specified string.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lifecycleDetailsContains(@Nullable Output<String> lifecycleDetailsContains) {
+            $.lifecycleDetailsContains = lifecycleDetailsContains;
             return this;
         }
 
@@ -330,8 +406,18 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder lifecycleDetailsContains(@Nullable String lifecycleDetailsContains) {
-            $.lifecycleDetailsContains = lifecycleDetailsContains;
+        public Builder lifecycleDetailsContains(String lifecycleDetailsContains) {
+            return lifecycleDetailsContains(Output.of(lifecycleDetailsContains));
+        }
+
+        /**
+         * @param name A filter to return only log analytics entities whose name matches the entire name given. The match is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -341,8 +427,18 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param nameContains A filter to return only log analytics entities whose name contains the name given. The match is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nameContains(@Nullable Output<String> nameContains) {
+            $.nameContains = nameContains;
             return this;
         }
 
@@ -352,8 +448,18 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder nameContains(@Nullable String nameContains) {
-            $.nameContains = nameContains;
+        public Builder nameContains(String nameContains) {
+            return nameContains(Output.of(nameContains));
+        }
+
+        /**
+         * @param namespace The Logging Analytics namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(Output<String> namespace) {
+            $.namespace = namespace;
             return this;
         }
 
@@ -364,7 +470,17 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder namespace(String namespace) {
-            $.namespace = namespace;
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param sourceId A filter to return only log analytics entities whose sourceId matches the sourceId given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceId(@Nullable Output<String> sourceId) {
+            $.sourceId = sourceId;
             return this;
         }
 
@@ -374,8 +490,18 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder sourceId(@Nullable String sourceId) {
-            $.sourceId = sourceId;
+        public Builder sourceId(String sourceId) {
+            return sourceId(Output.of(sourceId));
+        }
+
+        /**
+         * @param state A filter to return only those log analytics entities with the specified lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -385,9 +511,8 @@ public final class GetLogAnalyticsEntitiesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetLogAnalyticsEntitiesArgs build() {

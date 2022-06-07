@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.route53resolver.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFirewallRuleGroupArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
     /**
      * @return ResourceId
      * 
      */
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -57,9 +58,19 @@ public final class GetFirewallRuleGroupArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
+        }
+
+        /**
+         * @param id ResourceId
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
 
         public GetFirewallRuleGroupArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.servicecatalogappregistry.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetAttributeGroupAssociationArgs extends com.pulumi.resources
     public static final GetAttributeGroupAssociationArgs Empty = new GetAttributeGroupAssociationArgs();
 
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -43,9 +44,13 @@ public final class GetAttributeGroupAssociationArgs extends com.pulumi.resources
             $ = new GetAttributeGroupAssociationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
+        }
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
 
         public GetAttributeGroupAssociationArgs build() {

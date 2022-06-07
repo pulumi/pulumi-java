@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="conditionalMembers")
-    private @Nullable String conditionalMembers;
+    private @Nullable Output<String> conditionalMembers;
 
     /**
      * @return Conditional Members.
      * 
      */
-    public Optional<String> conditionalMembers() {
+    public Optional<Output<String>> conditionalMembers() {
         return Optional.ofNullable(this.conditionalMembers);
     }
 
@@ -35,13 +36,13 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="networkManagerName", required=true)
-    private String networkManagerName;
+    private Output<String> networkManagerName;
 
     /**
      * @return The name of the network manager.
      * 
      */
-    public String networkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -50,13 +51,13 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,13 +66,13 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
      * 
      */
-    public Optional<String> skipToken() {
+    public Optional<Output<String>> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
 
@@ -80,13 +81,13 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
      * 
      */
     @Import(name="top")
-    private @Nullable Integer top;
+    private @Nullable Output<Integer> top;
 
     /**
      * @return An optional query parameter which specifies the maximum number of records to be returned by the server.
      * 
      */
-    public Optional<Integer> top() {
+    public Optional<Output<Integer>> top() {
         return Optional.ofNullable(this.top);
     }
 
@@ -124,8 +125,29 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
          * @return builder
          * 
          */
-        public Builder conditionalMembers(@Nullable String conditionalMembers) {
+        public Builder conditionalMembers(@Nullable Output<String> conditionalMembers) {
             $.conditionalMembers = conditionalMembers;
+            return this;
+        }
+
+        /**
+         * @param conditionalMembers Conditional Members.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder conditionalMembers(String conditionalMembers) {
+            return conditionalMembers(Output.of(conditionalMembers));
+        }
+
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkManagerName(Output<String> networkManagerName) {
+            $.networkManagerName = networkManagerName;
             return this;
         }
 
@@ -136,7 +158,17 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
          * 
          */
         public Builder networkManagerName(String networkManagerName) {
-            $.networkManagerName = networkManagerName;
+            return networkManagerName(Output.of(networkManagerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -147,7 +179,17 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param skipToken Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(@Nullable Output<String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -157,8 +199,18 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
+        public Builder skipToken(String skipToken) {
+            return skipToken(Output.of(skipToken));
+        }
+
+        /**
+         * @param top An optional query parameter which specifies the maximum number of records to be returned by the server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder top(@Nullable Output<Integer> top) {
+            $.top = top;
             return this;
         }
 
@@ -168,9 +220,8 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends com.p
          * @return builder
          * 
          */
-        public Builder top(@Nullable Integer top) {
-            $.top = top;
-            return this;
+        public Builder top(Integer top) {
+            return top(Output.of(top));
         }
 
         public ListEffectiveVirtualNetworkByNetworkManagerArgs build() {

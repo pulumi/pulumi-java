@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,9 +17,9 @@ public final class GetVmClusterNetworkDownloadConfigFileArgs extends com.pulumi.
     public static final GetVmClusterNetworkDownloadConfigFileArgs Empty = new GetVmClusterNetworkDownloadConfigFileArgs();
 
     @Import(name="base64EncodeContent")
-    private @Nullable Boolean base64EncodeContent;
+    private @Nullable Output<Boolean> base64EncodeContent;
 
-    public Optional<Boolean> base64EncodeContent() {
+    public Optional<Output<Boolean>> base64EncodeContent() {
         return Optional.ofNullable(this.base64EncodeContent);
     }
 
@@ -27,13 +28,13 @@ public final class GetVmClusterNetworkDownloadConfigFileArgs extends com.pulumi.
      * 
      */
     @Import(name="exadataInfrastructureId", required=true)
-    private String exadataInfrastructureId;
+    private Output<String> exadataInfrastructureId;
 
     /**
      * @return The Exadata infrastructure [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String exadataInfrastructureId() {
+    public Output<String> exadataInfrastructureId() {
         return this.exadataInfrastructureId;
     }
 
@@ -42,13 +43,13 @@ public final class GetVmClusterNetworkDownloadConfigFileArgs extends com.pulumi.
      * 
      */
     @Import(name="vmClusterNetworkId", required=true)
-    private String vmClusterNetworkId;
+    private Output<String> vmClusterNetworkId;
 
     /**
      * @return The VM cluster network [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String vmClusterNetworkId() {
+    public Output<String> vmClusterNetworkId() {
         return this.vmClusterNetworkId;
     }
 
@@ -78,8 +79,23 @@ public final class GetVmClusterNetworkDownloadConfigFileArgs extends com.pulumi.
             $ = new GetVmClusterNetworkDownloadConfigFileArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder base64EncodeContent(@Nullable Boolean base64EncodeContent) {
+        public Builder base64EncodeContent(@Nullable Output<Boolean> base64EncodeContent) {
             $.base64EncodeContent = base64EncodeContent;
+            return this;
+        }
+
+        public Builder base64EncodeContent(Boolean base64EncodeContent) {
+            return base64EncodeContent(Output.of(base64EncodeContent));
+        }
+
+        /**
+         * @param exadataInfrastructureId The Exadata infrastructure [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exadataInfrastructureId(Output<String> exadataInfrastructureId) {
+            $.exadataInfrastructureId = exadataInfrastructureId;
             return this;
         }
 
@@ -90,7 +106,17 @@ public final class GetVmClusterNetworkDownloadConfigFileArgs extends com.pulumi.
          * 
          */
         public Builder exadataInfrastructureId(String exadataInfrastructureId) {
-            $.exadataInfrastructureId = exadataInfrastructureId;
+            return exadataInfrastructureId(Output.of(exadataInfrastructureId));
+        }
+
+        /**
+         * @param vmClusterNetworkId The VM cluster network [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vmClusterNetworkId(Output<String> vmClusterNetworkId) {
+            $.vmClusterNetworkId = vmClusterNetworkId;
             return this;
         }
 
@@ -101,8 +127,7 @@ public final class GetVmClusterNetworkDownloadConfigFileArgs extends com.pulumi.
          * 
          */
         public Builder vmClusterNetworkId(String vmClusterNetworkId) {
-            $.vmClusterNetworkId = vmClusterNetworkId;
-            return this;
+            return vmClusterNetworkId(Output.of(vmClusterNetworkId));
         }
 
         public GetVmClusterNetworkDownloadConfigFileArgs build() {

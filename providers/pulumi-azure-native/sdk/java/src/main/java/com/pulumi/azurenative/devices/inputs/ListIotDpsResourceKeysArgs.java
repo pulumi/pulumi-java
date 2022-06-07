@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.devices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListIotDpsResourceKeysArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="provisioningServiceName", required=true)
-    private String provisioningServiceName;
+    private Output<String> provisioningServiceName;
 
     /**
      * @return The provisioning service name to get the shared access keys for.
      * 
      */
-    public String provisioningServiceName() {
+    public Output<String> provisioningServiceName() {
         return this.provisioningServiceName;
     }
 
@@ -32,13 +33,13 @@ public final class ListIotDpsResourceKeysArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return resource group name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class ListIotDpsResourceKeysArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder provisioningServiceName(String provisioningServiceName) {
+        public Builder provisioningServiceName(Output<String> provisioningServiceName) {
             $.provisioningServiceName = provisioningServiceName;
+            return this;
+        }
+
+        /**
+         * @param provisioningServiceName The provisioning service name to get the shared access keys for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder provisioningServiceName(String provisioningServiceName) {
+            return provisioningServiceName(Output.of(provisioningServiceName));
+        }
+
+        /**
+         * @param resourceGroupName resource group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class ListIotDpsResourceKeysArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListIotDpsResourceKeysArgs build() {

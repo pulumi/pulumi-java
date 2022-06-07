@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointName", required=true)
-    private String endpointName;
+    private Output<String> endpointName;
 
     /**
      * @return The name of the Traffic Manager endpoint.
      * 
      */
-    public String endpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -32,13 +33,13 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointType", required=true)
-    private String endpointType;
+    private Output<String> endpointType;
 
     /**
      * @return The type of the Traffic Manager endpoint.
      * 
      */
-    public String endpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -47,13 +48,13 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
     /**
      * @return The name of the Traffic Manager profile.
      * 
      */
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -62,13 +63,13 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group containing the Traffic Manager endpoint.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endpointName(String endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
+            return this;
+        }
+
+        /**
+         * @param endpointName The name of the Traffic Manager endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointName(String endpointName) {
+            return endpointName(Output.of(endpointName));
+        }
+
+        /**
+         * @param endpointType The type of the Traffic Manager endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointType(Output<String> endpointType) {
+            $.endpointType = endpointType;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder endpointType(String endpointType) {
-            $.endpointType = endpointType;
+            return endpointType(Output.of(endpointType));
+        }
+
+        /**
+         * @param profileName The name of the Traffic Manager profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(Output<String> profileName) {
+            $.profileName = profileName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder profileName(String profileName) {
-            $.profileName = profileName;
+            return profileName(Output.of(profileName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group containing the Traffic Manager endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetEndpointArgs build() {

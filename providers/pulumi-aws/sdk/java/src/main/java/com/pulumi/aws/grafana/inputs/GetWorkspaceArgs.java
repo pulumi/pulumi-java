@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.grafana.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceId", required=true)
-    private String workspaceId;
+    private Output<String> workspaceId;
 
     /**
      * @return The Grafana workspace ID.
      * 
      */
-    public String workspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder workspaceId(String workspaceId) {
+        public Builder workspaceId(Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
+        }
+
+        /**
+         * @param workspaceId The Grafana workspace ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceId(String workspaceId) {
+            return workspaceId(Output.of(workspaceId));
         }
 
         public GetWorkspaceArgs build() {

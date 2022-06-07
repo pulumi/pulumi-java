@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.FileStorage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.FileStorage.inputs.GetMountTargetsFilter;
+import com.pulumi.oci.FileStorage.inputs.GetMountTargetsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain", required=true)
-    private String availabilityDomain;
+    private Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public String availabilityDomain() {
+    public Output<String> availabilityDomain() {
         return this.availabilityDomain;
     }
 
@@ -36,13 +37,13 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,13 +52,13 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. It does not have to be unique, and it is changeable.  Example: `My resource`
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -66,20 +67,20 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exportSetId")
-    private @Nullable String exportSetId;
+    private @Nullable Output<String> exportSetId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the export set.
      * 
      */
-    public Optional<String> exportSetId() {
+    public Optional<Output<String>> exportSetId() {
         return Optional.ofNullable(this.exportSetId);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetMountTargetsFilter> filters;
+    private @Nullable Output<List<GetMountTargetsFilterArgs>> filters;
 
-    public Optional<List<GetMountTargetsFilter>> filters() {
+    public Optional<Output<List<GetMountTargetsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -88,13 +89,13 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Filter results by [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for the resouce type.
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -103,13 +104,13 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Filter results by the specified lifecycle state. Must be a valid state for the resource type.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -149,8 +150,29 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(String availabilityDomain) {
+        public Builder availabilityDomain(Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -161,7 +183,17 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A user-friendly name. It does not have to be unique, and it is changeable.  Example: `My resource`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -171,8 +203,18 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param exportSetId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the export set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exportSetId(@Nullable Output<String> exportSetId) {
+            $.exportSetId = exportSetId;
             return this;
         }
 
@@ -182,17 +224,20 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder exportSetId(@Nullable String exportSetId) {
-            $.exportSetId = exportSetId;
-            return this;
+        public Builder exportSetId(String exportSetId) {
+            return exportSetId(Output.of(exportSetId));
         }
 
-        public Builder filters(@Nullable List<GetMountTargetsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetMountTargetsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetMountTargetsFilter... filters) {
+        public Builder filters(List<GetMountTargetsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetMountTargetsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -202,8 +247,29 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Filter results by [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for the resouce type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param state Filter results by the specified lifecycle state. Must be a valid state for the resource type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -213,9 +279,8 @@ public final class GetMountTargetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetMountTargetsArgs build() {

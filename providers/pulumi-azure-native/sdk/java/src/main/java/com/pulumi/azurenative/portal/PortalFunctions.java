@@ -5,12 +5,19 @@ package com.pulumi.azurenative.portal;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.portal.inputs.GetConsoleArgs;
+import com.pulumi.azurenative.portal.inputs.GetConsolePlainArgs;
 import com.pulumi.azurenative.portal.inputs.GetConsoleWithLocationArgs;
+import com.pulumi.azurenative.portal.inputs.GetConsoleWithLocationPlainArgs;
 import com.pulumi.azurenative.portal.inputs.GetDashboardArgs;
+import com.pulumi.azurenative.portal.inputs.GetDashboardPlainArgs;
 import com.pulumi.azurenative.portal.inputs.GetTenantConfigurationArgs;
+import com.pulumi.azurenative.portal.inputs.GetTenantConfigurationPlainArgs;
 import com.pulumi.azurenative.portal.inputs.GetUserSettingsArgs;
+import com.pulumi.azurenative.portal.inputs.GetUserSettingsPlainArgs;
 import com.pulumi.azurenative.portal.inputs.GetUserSettingsWithLocationArgs;
+import com.pulumi.azurenative.portal.inputs.GetUserSettingsWithLocationPlainArgs;
 import com.pulumi.azurenative.portal.inputs.ListListTenantConfigurationViolationArgs;
+import com.pulumi.azurenative.portal.inputs.ListListTenantConfigurationViolationPlainArgs;
 import com.pulumi.azurenative.portal.outputs.GetConsoleResult;
 import com.pulumi.azurenative.portal.outputs.GetConsoleWithLocationResult;
 import com.pulumi.azurenative.portal.outputs.GetDashboardResult;
@@ -18,6 +25,7 @@ import com.pulumi.azurenative.portal.outputs.GetTenantConfigurationResult;
 import com.pulumi.azurenative.portal.outputs.GetUserSettingsResult;
 import com.pulumi.azurenative.portal.outputs.GetUserSettingsWithLocationResult;
 import com.pulumi.azurenative.portal.outputs.ListListTenantConfigurationViolationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -29,7 +37,7 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetConsoleResult> getConsole(GetConsoleArgs args) {
+    public static Output<GetConsoleResult> getConsole(GetConsoleArgs args) {
         return getConsole(args, InvokeOptions.Empty);
     }
     /**
@@ -37,7 +45,23 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetConsoleResult> getConsole(GetConsoleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConsoleResult> getConsolePlain(GetConsolePlainArgs args) {
+        return getConsolePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Cloud shell console
+     * API Version: 2018-10-01.
+     * 
+     */
+    public static Output<GetConsoleResult> getConsole(GetConsoleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:portal:getConsole", TypeShape.of(GetConsoleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Cloud shell console
+     * API Version: 2018-10-01.
+     * 
+     */
+    public static CompletableFuture<GetConsoleResult> getConsolePlain(GetConsolePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getConsole", TypeShape.of(GetConsoleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -45,7 +69,7 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetConsoleWithLocationResult> getConsoleWithLocation(GetConsoleWithLocationArgs args) {
+    public static Output<GetConsoleWithLocationResult> getConsoleWithLocation(GetConsoleWithLocationArgs args) {
         return getConsoleWithLocation(args, InvokeOptions.Empty);
     }
     /**
@@ -53,7 +77,23 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetConsoleWithLocationResult> getConsoleWithLocation(GetConsoleWithLocationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConsoleWithLocationResult> getConsoleWithLocationPlain(GetConsoleWithLocationPlainArgs args) {
+        return getConsoleWithLocationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Cloud shell console
+     * API Version: 2018-10-01.
+     * 
+     */
+    public static Output<GetConsoleWithLocationResult> getConsoleWithLocation(GetConsoleWithLocationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:portal:getConsoleWithLocation", TypeShape.of(GetConsoleWithLocationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Cloud shell console
+     * API Version: 2018-10-01.
+     * 
+     */
+    public static CompletableFuture<GetConsoleWithLocationResult> getConsoleWithLocationPlain(GetConsoleWithLocationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getConsoleWithLocation", TypeShape.of(GetConsoleWithLocationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -61,7 +101,7 @@ public final class PortalFunctions {
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args) {
+    public static Output<GetDashboardResult> getDashboard(GetDashboardArgs args) {
         return getDashboard(args, InvokeOptions.Empty);
     }
     /**
@@ -69,7 +109,23 @@ public final class PortalFunctions {
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDashboardResult> getDashboardPlain(GetDashboardPlainArgs args) {
+        return getDashboardPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The shared dashboard resource definition.
+     * API Version: 2020-09-01-preview.
+     * 
+     */
+    public static Output<GetDashboardResult> getDashboard(GetDashboardArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:portal:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The shared dashboard resource definition.
+     * API Version: 2020-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetDashboardResult> getDashboardPlain(GetDashboardPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getDashboard", TypeShape.of(GetDashboardResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -77,7 +133,7 @@ public final class PortalFunctions {
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetTenantConfigurationResult> getTenantConfiguration(GetTenantConfigurationArgs args) {
+    public static Output<GetTenantConfigurationResult> getTenantConfiguration(GetTenantConfigurationArgs args) {
         return getTenantConfiguration(args, InvokeOptions.Empty);
     }
     /**
@@ -85,7 +141,23 @@ public final class PortalFunctions {
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetTenantConfigurationResult> getTenantConfiguration(GetTenantConfigurationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTenantConfigurationResult> getTenantConfigurationPlain(GetTenantConfigurationPlainArgs args) {
+        return getTenantConfigurationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Tenant configuration.
+     * API Version: 2020-09-01-preview.
+     * 
+     */
+    public static Output<GetTenantConfigurationResult> getTenantConfiguration(GetTenantConfigurationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:portal:getTenantConfiguration", TypeShape.of(GetTenantConfigurationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Tenant configuration.
+     * API Version: 2020-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetTenantConfigurationResult> getTenantConfigurationPlain(GetTenantConfigurationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getTenantConfiguration", TypeShape.of(GetTenantConfigurationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -93,7 +165,7 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetUserSettingsResult> getUserSettings(GetUserSettingsArgs args) {
+    public static Output<GetUserSettingsResult> getUserSettings(GetUserSettingsArgs args) {
         return getUserSettings(args, InvokeOptions.Empty);
     }
     /**
@@ -101,7 +173,23 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetUserSettingsResult> getUserSettings(GetUserSettingsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserSettingsResult> getUserSettingsPlain(GetUserSettingsPlainArgs args) {
+        return getUserSettingsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Response to get user settings
+     * API Version: 2018-10-01.
+     * 
+     */
+    public static Output<GetUserSettingsResult> getUserSettings(GetUserSettingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:portal:getUserSettings", TypeShape.of(GetUserSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Response to get user settings
+     * API Version: 2018-10-01.
+     * 
+     */
+    public static CompletableFuture<GetUserSettingsResult> getUserSettingsPlain(GetUserSettingsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getUserSettings", TypeShape.of(GetUserSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -109,7 +197,7 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetUserSettingsWithLocationResult> getUserSettingsWithLocation(GetUserSettingsWithLocationArgs args) {
+    public static Output<GetUserSettingsWithLocationResult> getUserSettingsWithLocation(GetUserSettingsWithLocationArgs args) {
         return getUserSettingsWithLocation(args, InvokeOptions.Empty);
     }
     /**
@@ -117,7 +205,23 @@ public final class PortalFunctions {
      * API Version: 2018-10-01.
      * 
      */
-    public static CompletableFuture<GetUserSettingsWithLocationResult> getUserSettingsWithLocation(GetUserSettingsWithLocationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetUserSettingsWithLocationResult> getUserSettingsWithLocationPlain(GetUserSettingsWithLocationPlainArgs args) {
+        return getUserSettingsWithLocationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Response to get user settings
+     * API Version: 2018-10-01.
+     * 
+     */
+    public static Output<GetUserSettingsWithLocationResult> getUserSettingsWithLocation(GetUserSettingsWithLocationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:portal:getUserSettingsWithLocation", TypeShape.of(GetUserSettingsWithLocationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Response to get user settings
+     * API Version: 2018-10-01.
+     * 
+     */
+    public static CompletableFuture<GetUserSettingsWithLocationResult> getUserSettingsWithLocationPlain(GetUserSettingsWithLocationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getUserSettingsWithLocation", TypeShape.of(GetUserSettingsWithLocationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -125,7 +229,7 @@ public final class PortalFunctions {
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolation() {
+    public static Output<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolation() {
         return listListTenantConfigurationViolation(ListListTenantConfigurationViolationArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -133,7 +237,15 @@ public final class PortalFunctions {
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolation(ListListTenantConfigurationViolationArgs args) {
+    public static CompletableFuture<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolationPlain() {
+        return listListTenantConfigurationViolationPlain(ListListTenantConfigurationViolationPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * List of list of items that violate tenant&#39;s configuration.
+     * API Version: 2020-09-01-preview.
+     * 
+     */
+    public static Output<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolation(ListListTenantConfigurationViolationArgs args) {
         return listListTenantConfigurationViolation(args, InvokeOptions.Empty);
     }
     /**
@@ -141,7 +253,23 @@ public final class PortalFunctions {
      * API Version: 2020-09-01-preview.
      * 
      */
-    public static CompletableFuture<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolation(ListListTenantConfigurationViolationArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolationPlain(ListListTenantConfigurationViolationPlainArgs args) {
+        return listListTenantConfigurationViolationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * List of list of items that violate tenant&#39;s configuration.
+     * API Version: 2020-09-01-preview.
+     * 
+     */
+    public static Output<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolation(ListListTenantConfigurationViolationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:portal:listListTenantConfigurationViolation", TypeShape.of(ListListTenantConfigurationViolationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List of list of items that violate tenant&#39;s configuration.
+     * API Version: 2020-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListListTenantConfigurationViolationResult> listListTenantConfigurationViolationPlain(ListListTenantConfigurationViolationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:listListTenantConfigurationViolation", TypeShape.of(ListListTenantConfigurationViolationResult.class), args, Utilities.withVersion(options));
     }
 }

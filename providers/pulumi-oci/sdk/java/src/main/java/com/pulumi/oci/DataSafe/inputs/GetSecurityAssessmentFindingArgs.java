@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetSecurityAssessmentFindingFilter;
+import com.pulumi.oci.DataSafe.inputs.GetSecurityAssessmentFindingFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,44 +19,44 @@ public final class GetSecurityAssessmentFindingArgs extends com.pulumi.resources
     public static final GetSecurityAssessmentFindingArgs Empty = new GetSecurityAssessmentFindingArgs();
 
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private @Nullable Output<String> accessLevel;
 
-    public Optional<String> accessLevel() {
+    public Optional<Output<String>> accessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
 
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSecurityAssessmentFindingFilter> filters;
+    private @Nullable Output<List<GetSecurityAssessmentFindingFilterArgs>> filters;
 
-    public Optional<List<GetSecurityAssessmentFindingFilter>> filters() {
+    public Optional<Output<List<GetSecurityAssessmentFindingFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
     @Import(name="findingKey")
-    private @Nullable String findingKey;
+    private @Nullable Output<String> findingKey;
 
-    public Optional<String> findingKey() {
+    public Optional<Output<String>> findingKey() {
         return Optional.ofNullable(this.findingKey);
     }
 
     @Import(name="securityAssessmentId", required=true)
-    private String securityAssessmentId;
+    private Output<String> securityAssessmentId;
 
-    public String securityAssessmentId() {
+    public Output<String> securityAssessmentId() {
         return this.securityAssessmentId;
     }
 
     @Import(name="severity")
-    private @Nullable String severity;
+    private @Nullable Output<String> severity;
 
-    public Optional<String> severity() {
+    public Optional<Output<String>> severity() {
         return Optional.ofNullable(this.severity);
     }
 
@@ -88,38 +89,62 @@ public final class GetSecurityAssessmentFindingArgs extends com.pulumi.resources
             $ = new GetSecurityAssessmentFindingArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
             return this;
         }
 
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
+        public Builder accessLevel(String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
             $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetSecurityAssessmentFindingFilter> filters) {
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        public Builder filters(@Nullable Output<List<GetSecurityAssessmentFindingFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSecurityAssessmentFindingFilter... filters) {
+        public Builder filters(List<GetSecurityAssessmentFindingFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSecurityAssessmentFindingFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
-        public Builder findingKey(@Nullable String findingKey) {
+        public Builder findingKey(@Nullable Output<String> findingKey) {
             $.findingKey = findingKey;
             return this;
         }
 
-        public Builder securityAssessmentId(String securityAssessmentId) {
+        public Builder findingKey(String findingKey) {
+            return findingKey(Output.of(findingKey));
+        }
+
+        public Builder securityAssessmentId(Output<String> securityAssessmentId) {
             $.securityAssessmentId = securityAssessmentId;
             return this;
         }
 
-        public Builder severity(@Nullable String severity) {
+        public Builder securityAssessmentId(String securityAssessmentId) {
+            return securityAssessmentId(Output.of(securityAssessmentId));
+        }
+
+        public Builder severity(@Nullable Output<String> severity) {
             $.severity = severity;
             return this;
+        }
+
+        public Builder severity(String severity) {
+            return severity(Output.of(severity));
         }
 
         public GetSecurityAssessmentFindingArgs build() {

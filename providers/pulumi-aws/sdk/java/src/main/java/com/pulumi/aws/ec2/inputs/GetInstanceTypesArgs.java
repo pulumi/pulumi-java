@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetInstanceTypesFilter;
+import com.pulumi.aws.ec2.inputs.GetInstanceTypesFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
@@ -20,13 +21,13 @@ public final class GetInstanceTypesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetInstanceTypesFilter> filters;
+    private @Nullable Output<List<GetInstanceTypesFilterArgs>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypes.html) for supported filters. Detailed below.
      * 
      */
-    public Optional<List<GetInstanceTypesFilter>> filters() {
+    public Optional<Output<List<GetInstanceTypesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -60,7 +61,7 @@ public final class GetInstanceTypesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetInstanceTypesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetInstanceTypesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -71,7 +72,17 @@ public final class GetInstanceTypesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(GetInstanceTypesFilter... filters) {
+        public Builder filters(List<GetInstanceTypesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypes.html) for supported filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetInstanceTypesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

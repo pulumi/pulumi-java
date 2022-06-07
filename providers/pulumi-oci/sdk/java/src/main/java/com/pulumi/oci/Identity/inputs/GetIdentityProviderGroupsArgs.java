@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetIdentityProviderGroupsFilter;
+import com.pulumi.oci.Identity.inputs.GetIdentityProviderGroupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetIdentityProviderGroupsArgs extends com.pulumi.resources.In
     public static final GetIdentityProviderGroupsArgs Empty = new GetIdentityProviderGroupsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetIdentityProviderGroupsFilter> filters;
+    private @Nullable Output<List<GetIdentityProviderGroupsFilterArgs>> filters;
 
-    public Optional<List<GetIdentityProviderGroupsFilter>> filters() {
+    public Optional<Output<List<GetIdentityProviderGroupsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetIdentityProviderGroupsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="identityProviderId", required=true)
-    private String identityProviderId;
+    private Output<String> identityProviderId;
 
     /**
      * @return The OCID of the identity provider.
      * 
      */
-    public String identityProviderId() {
+    public Output<String> identityProviderId() {
         return this.identityProviderId;
     }
 
@@ -43,13 +44,13 @@ public final class GetIdentityProviderGroupsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to only return resources that match the given name exactly.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -58,13 +59,13 @@ public final class GetIdentityProviderGroupsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -95,12 +96,16 @@ public final class GetIdentityProviderGroupsArgs extends com.pulumi.resources.In
             $ = new GetIdentityProviderGroupsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetIdentityProviderGroupsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetIdentityProviderGroupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetIdentityProviderGroupsFilter... filters) {
+        public Builder filters(List<GetIdentityProviderGroupsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetIdentityProviderGroupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -110,8 +115,29 @@ public final class GetIdentityProviderGroupsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder identityProviderId(String identityProviderId) {
+        public Builder identityProviderId(Output<String> identityProviderId) {
             $.identityProviderId = identityProviderId;
+            return this;
+        }
+
+        /**
+         * @param identityProviderId The OCID of the identity provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identityProviderId(String identityProviderId) {
+            return identityProviderId(Output.of(identityProviderId));
+        }
+
+        /**
+         * @param name A filter to only return resources that match the given name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -121,8 +147,18 @@ public final class GetIdentityProviderGroupsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -132,9 +168,8 @@ public final class GetIdentityProviderGroupsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetIdentityProviderGroupsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.retail_v2alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetServingConfigArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetServingConfigArgs Empty = new GetServingConfigArgs();
 
     @Import(name="catalogId", required=true)
-    private String catalogId;
+    private Output<String> catalogId;
 
-    public String catalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="servingConfigId", required=true)
-    private String servingConfigId;
+    private Output<String> servingConfigId;
 
-    public String servingConfigId() {
+    public Output<String> servingConfigId() {
         return this.servingConfigId;
     }
 
@@ -69,24 +70,40 @@ public final class GetServingConfigArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetServingConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder catalogId(String catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder servingConfigId(String servingConfigId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder servingConfigId(Output<String> servingConfigId) {
             $.servingConfigId = servingConfigId;
             return this;
+        }
+
+        public Builder servingConfigId(String servingConfigId) {
+            return servingConfigId(Output.of(servingConfigId));
         }
 
         public GetServingConfigArgs build() {

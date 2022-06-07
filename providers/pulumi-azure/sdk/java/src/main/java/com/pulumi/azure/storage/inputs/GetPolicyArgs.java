@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageAccountId", required=true)
-    private String storageAccountId;
+    private Output<String> storageAccountId;
 
     /**
      * @return Specifies the id of the storage account to retrieve the management policy for.
      * 
      */
-    public String storageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
 
@@ -57,9 +58,19 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder storageAccountId(String storageAccountId) {
+        public Builder storageAccountId(Output<String> storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;
+        }
+
+        /**
+         * @param storageAccountId Specifies the id of the storage account to retrieve the management policy for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageAccountId(String storageAccountId) {
+            return storageAccountId(Output.of(storageAccountId));
         }
 
         public GetPolicyArgs build() {

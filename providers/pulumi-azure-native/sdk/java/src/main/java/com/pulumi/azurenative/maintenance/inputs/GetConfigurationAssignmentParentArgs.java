@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.maintenance.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="configurationAssignmentName", required=true)
-    private String configurationAssignmentName;
+    private Output<String> configurationAssignmentName;
 
     /**
      * @return Configuration assignment name
      * 
      */
-    public String configurationAssignmentName() {
+    public Output<String> configurationAssignmentName() {
         return this.configurationAssignmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="providerName", required=true)
-    private String providerName;
+    private Output<String> providerName;
 
     /**
      * @return Resource provider name
      * 
      */
-    public String providerName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
 
@@ -47,13 +48,13 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Resource group name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return Resource identifier
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -77,13 +78,13 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceParentName", required=true)
-    private String resourceParentName;
+    private Output<String> resourceParentName;
 
     /**
      * @return Resource parent identifier
      * 
      */
-    public String resourceParentName() {
+    public Output<String> resourceParentName() {
         return this.resourceParentName;
     }
 
@@ -92,13 +93,13 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceParentType", required=true)
-    private String resourceParentType;
+    private Output<String> resourceParentType;
 
     /**
      * @return Resource parent type
      * 
      */
-    public String resourceParentType() {
+    public Output<String> resourceParentType() {
         return this.resourceParentType;
     }
 
@@ -107,13 +108,13 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceType", required=true)
-    private String resourceType;
+    private Output<String> resourceType;
 
     /**
      * @return Resource type
      * 
      */
-    public String resourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -153,8 +154,29 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder configurationAssignmentName(String configurationAssignmentName) {
+        public Builder configurationAssignmentName(Output<String> configurationAssignmentName) {
             $.configurationAssignmentName = configurationAssignmentName;
+            return this;
+        }
+
+        /**
+         * @param configurationAssignmentName Configuration assignment name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configurationAssignmentName(String configurationAssignmentName) {
+            return configurationAssignmentName(Output.of(configurationAssignmentName));
+        }
+
+        /**
+         * @param providerName Resource provider name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerName(Output<String> providerName) {
+            $.providerName = providerName;
             return this;
         }
 
@@ -165,7 +187,17 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
          * 
          */
         public Builder providerName(String providerName) {
-            $.providerName = providerName;
+            return providerName(Output.of(providerName));
+        }
+
+        /**
+         * @param resourceGroupName Resource group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -176,7 +208,17 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName Resource identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -187,7 +229,17 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param resourceParentName Resource parent identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceParentName(Output<String> resourceParentName) {
+            $.resourceParentName = resourceParentName;
             return this;
         }
 
@@ -198,7 +250,17 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceParentName(String resourceParentName) {
-            $.resourceParentName = resourceParentName;
+            return resourceParentName(Output.of(resourceParentName));
+        }
+
+        /**
+         * @param resourceParentType Resource parent type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceParentType(Output<String> resourceParentType) {
+            $.resourceParentType = resourceParentType;
             return this;
         }
 
@@ -209,7 +271,17 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceParentType(String resourceParentType) {
-            $.resourceParentType = resourceParentType;
+            return resourceParentType(Output.of(resourceParentType));
+        }
+
+        /**
+         * @param resourceType Resource type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceType(Output<String> resourceType) {
+            $.resourceType = resourceType;
             return this;
         }
 
@@ -220,8 +292,7 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceType(String resourceType) {
-            $.resourceType = resourceType;
-            return this;
+            return resourceType(Output.of(resourceType));
         }
 
         public GetConfigurationAssignmentParentArgs build() {

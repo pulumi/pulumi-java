@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.CloudGuard.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagedListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managedListId", required=true)
-    private String managedListId;
+    private Output<String> managedListId;
 
     /**
      * @return The cloudguard list OCID to be passed in the request.
      * 
      */
-    public String managedListId() {
+    public Output<String> managedListId() {
         return this.managedListId;
     }
 
@@ -57,9 +58,19 @@ public final class GetManagedListArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder managedListId(String managedListId) {
+        public Builder managedListId(Output<String> managedListId) {
             $.managedListId = managedListId;
             return this;
+        }
+
+        /**
+         * @param managedListId The cloudguard list OCID to be passed in the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedListId(String managedListId) {
+            return managedListId(Output.of(managedListId));
         }
 
         public GetManagedListArgs build() {

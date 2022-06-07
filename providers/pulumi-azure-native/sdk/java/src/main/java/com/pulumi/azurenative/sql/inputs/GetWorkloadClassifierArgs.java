@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="databaseName", required=true)
-    private String databaseName;
+    private Output<String> databaseName;
 
     /**
      * @return The name of the database.
      * 
      */
-    public String databaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -32,13 +33,13 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the server.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -62,13 +63,13 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="workloadClassifierName", required=true)
-    private String workloadClassifierName;
+    private Output<String> workloadClassifierName;
 
     /**
      * @return The name of the workload classifier.
      * 
      */
-    public String workloadClassifierName() {
+    public Output<String> workloadClassifierName() {
         return this.workloadClassifierName;
     }
 
@@ -77,13 +78,13 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="workloadGroupName", required=true)
-    private String workloadGroupName;
+    private Output<String> workloadGroupName;
 
     /**
      * @return The name of the workload group from which to receive the classifier from.
      * 
      */
-    public String workloadGroupName() {
+    public Output<String> workloadGroupName() {
         return this.workloadGroupName;
     }
 
@@ -121,8 +122,29 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder databaseName(String databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
+            return this;
+        }
+
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
+            return serverName(Output.of(serverName));
+        }
+
+        /**
+         * @param workloadClassifierName The name of the workload classifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workloadClassifierName(Output<String> workloadClassifierName) {
+            $.workloadClassifierName = workloadClassifierName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder workloadClassifierName(String workloadClassifierName) {
-            $.workloadClassifierName = workloadClassifierName;
+            return workloadClassifierName(Output.of(workloadClassifierName));
+        }
+
+        /**
+         * @param workloadGroupName The name of the workload group from which to receive the classifier from.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workloadGroupName(Output<String> workloadGroupName) {
+            $.workloadGroupName = workloadGroupName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder workloadGroupName(String workloadGroupName) {
-            $.workloadGroupName = workloadGroupName;
-            return this;
+            return workloadGroupName(Output.of(workloadGroupName));
         }
 
         public GetWorkloadClassifierArgs build() {

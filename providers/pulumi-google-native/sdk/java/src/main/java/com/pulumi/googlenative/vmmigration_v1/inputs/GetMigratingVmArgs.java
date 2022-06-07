@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.vmmigration_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetMigratingVmArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMigratingVmArgs Empty = new GetMigratingVmArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="migratingVmId", required=true)
-    private String migratingVmId;
+    private Output<String> migratingVmId;
 
-    public String migratingVmId() {
+    public Output<String> migratingVmId() {
         return this.migratingVmId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="sourceId", required=true)
-    private String sourceId;
+    private Output<String> sourceId;
 
-    public String sourceId() {
+    public Output<String> sourceId() {
         return this.sourceId;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private @Nullable Output<String> view;
 
-    public Optional<String> view() {
+    public Optional<Output<String>> view() {
         return Optional.ofNullable(this.view);
     }
 
@@ -77,29 +78,49 @@ public final class GetMigratingVmArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetMigratingVmArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder migratingVmId(String migratingVmId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder migratingVmId(Output<String> migratingVmId) {
             $.migratingVmId = migratingVmId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder migratingVmId(String migratingVmId) {
+            return migratingVmId(Output.of(migratingVmId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder sourceId(String sourceId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder sourceId(Output<String> sourceId) {
             $.sourceId = sourceId;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder sourceId(String sourceId) {
+            return sourceId(Output.of(sourceId));
+        }
+
+        public Builder view(@Nullable Output<String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(String view) {
+            return view(Output.of(view));
         }
 
         public GetMigratingVmArgs build() {

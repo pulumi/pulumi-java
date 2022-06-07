@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupsFilter;
+import com.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupsFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetLocalGatewayVirtualInterfaceGroupsArgs extends com.pulumi.
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters;
+    private @Nullable Output<List<GetLocalGatewayVirtualInterfaceGroupsFilterArgs>> filters;
 
     /**
      * @return One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaceGroups.html) for supported filters. Detailed below.
      * 
      */
-    public Optional<List<GetLocalGatewayVirtualInterfaceGroupsFilter>> filters() {
+    public Optional<Output<List<GetLocalGatewayVirtualInterfaceGroupsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -37,13 +38,13 @@ public final class GetLocalGatewayVirtualInterfaceGroupsArgs extends com.pulumi.
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Key-value map of resource tags, each pair of which must exactly match a pair on the desired local gateway route table.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -78,7 +79,7 @@ public final class GetLocalGatewayVirtualInterfaceGroupsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetLocalGatewayVirtualInterfaceGroupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -89,7 +90,17 @@ public final class GetLocalGatewayVirtualInterfaceGroupsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder filters(GetLocalGatewayVirtualInterfaceGroupsFilter... filters) {
+        public Builder filters(List<GetLocalGatewayVirtualInterfaceGroupsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaceGroups.html) for supported filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetLocalGatewayVirtualInterfaceGroupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -99,9 +110,19 @@ public final class GetLocalGatewayVirtualInterfaceGroupsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
+        }
+
+        /**
+         * @param tags Key-value map of resource tags, each pair of which must exactly match a pair on the desired local gateway route table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetLocalGatewayVirtualInterfaceGroupsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.connections.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagedApiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return The Azure location for this Managed API.
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagedApiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the Managed API.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetManagedApiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
+            return this;
+        }
+
+        /**
+         * @param location The Azure location for this Managed API.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param name Specifies the name of the Managed API.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetManagedApiArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetManagedApiArgs build() {

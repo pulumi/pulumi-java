@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends com.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -34,13 +35,13 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends com.
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
      */
-    public Optional<String> skipToken() {
+    public Optional<Output<String>> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
 
@@ -49,13 +50,13 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends com.
      * 
      */
     @Import(name="virtualNetworkName", required=true)
-    private String virtualNetworkName;
+    private Output<String> virtualNetworkName;
 
     /**
      * @return The name of the virtual network.
      * 
      */
-    public String virtualNetworkName() {
+    public Output<String> virtualNetworkName() {
         return this.virtualNetworkName;
     }
 
@@ -91,8 +92,29 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends com.
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param skipToken When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(@Nullable Output<String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends com.
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
+        public Builder skipToken(String skipToken) {
+            return skipToken(Output.of(skipToken));
+        }
+
+        /**
+         * @param virtualNetworkName The name of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualNetworkName(Output<String> virtualNetworkName) {
+            $.virtualNetworkName = virtualNetworkName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleArgs extends com.
          * 
          */
         public Builder virtualNetworkName(String virtualNetworkName) {
-            $.virtualNetworkName = virtualNetworkName;
-            return this;
+            return virtualNetworkName(Output.of(virtualNetworkName));
         }
 
         public ListNetworkManagerEffectiveSecurityAdminRuleArgs build() {

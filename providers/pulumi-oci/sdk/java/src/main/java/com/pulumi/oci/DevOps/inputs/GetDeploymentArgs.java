@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deploymentId", required=true)
-    private String deploymentId;
+    private Output<String> deploymentId;
 
     /**
      * @return Unique deployment identifier.
      * 
      */
-    public String deploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder deploymentId(String deploymentId) {
+        public Builder deploymentId(Output<String> deploymentId) {
             $.deploymentId = deploymentId;
             return this;
+        }
+
+        /**
+         * @param deploymentId Unique deployment identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentId(String deploymentId) {
+            return deploymentId(Output.of(deploymentId));
         }
 
         public GetDeploymentArgs build() {

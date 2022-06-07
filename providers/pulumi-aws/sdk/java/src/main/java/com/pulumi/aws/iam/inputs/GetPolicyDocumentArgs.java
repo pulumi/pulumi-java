@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.iam.inputs;
 
-import com.pulumi.aws.iam.inputs.GetPolicyDocumentStatement;
+import com.pulumi.aws.iam.inputs.GetPolicyDocumentStatementArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      */
     @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
     @Import(name="overrideJson")
-    private @Nullable String overrideJson;
+    private @Nullable Output<String> overrideJson;
 
     /**
      * @return - IAM policy document whose statements with non-blank `sid`s will override statements with the same `sid` from documents assigned to the `source_json`, `source_policy_documents`, and `override_policy_documents` arguments. Non-overriding statements will be added to the exported document.
@@ -35,7 +36,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
-    public Optional<String> overrideJson() {
+    public Optional<Output<String>> overrideJson() {
         return Optional.ofNullable(this.overrideJson);
     }
 
@@ -44,13 +45,13 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="overridePolicyDocuments")
-    private @Nullable List<String> overridePolicyDocuments;
+    private @Nullable Output<List<String>> overridePolicyDocuments;
 
     /**
      * @return List of IAM policy documents that are merged together into the exported document. In merging, statements with non-blank `sid`s will override statements with the same `sid` from earlier documents in the list. Statements with non-blank `sid`s will also override statements with the same `sid` from documents provided in the `source_json` and `source_policy_documents` arguments.  Non-overriding statements will be added to the exported document.
      * 
      */
-    public Optional<List<String>> overridePolicyDocuments() {
+    public Optional<Output<List<String>>> overridePolicyDocuments() {
         return Optional.ofNullable(this.overridePolicyDocuments);
     }
 
@@ -59,13 +60,13 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="policyId")
-    private @Nullable String policyId;
+    private @Nullable Output<String> policyId;
 
     /**
      * @return ID for the policy document.
      * 
      */
-    public Optional<String> policyId() {
+    public Optional<Output<String>> policyId() {
         return Optional.ofNullable(this.policyId);
     }
 
@@ -78,7 +79,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      */
     @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
     @Import(name="sourceJson")
-    private @Nullable String sourceJson;
+    private @Nullable Output<String> sourceJson;
 
     /**
      * @return - IAM policy document used as a base for the exported policy document. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
@@ -88,7 +89,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
-    public Optional<String> sourceJson() {
+    public Optional<Output<String>> sourceJson() {
         return Optional.ofNullable(this.sourceJson);
     }
 
@@ -97,13 +98,13 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourcePolicyDocuments")
-    private @Nullable List<String> sourcePolicyDocuments;
+    private @Nullable Output<List<String>> sourcePolicyDocuments;
 
     /**
      * @return List of IAM policy documents that are merged together into the exported document. Statements defined in `source_policy_documents` or `source_json` must have unique `sid`s. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
      * 
      */
-    public Optional<List<String>> sourcePolicyDocuments() {
+    public Optional<Output<List<String>>> sourcePolicyDocuments() {
         return Optional.ofNullable(this.sourcePolicyDocuments);
     }
 
@@ -112,13 +113,13 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="statements")
-    private @Nullable List<GetPolicyDocumentStatement> statements;
+    private @Nullable Output<List<GetPolicyDocumentStatementArgs>> statements;
 
     /**
      * @return Configuration block for a policy statement. Detailed below.
      * 
      */
-    public Optional<List<GetPolicyDocumentStatement>> statements() {
+    public Optional<Output<List<GetPolicyDocumentStatementArgs>>> statements() {
         return Optional.ofNullable(this.statements);
     }
 
@@ -127,13 +128,13 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="version")
-    private @Nullable String version;
+    private @Nullable Output<String> version;
 
     /**
      * @return IAM policy document version. Valid values are `2008-10-17` and `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
      * 
      */
-    public Optional<String> version() {
+    public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
 
@@ -177,8 +178,33 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
-        public Builder overrideJson(@Nullable String overrideJson) {
+        public Builder overrideJson(@Nullable Output<String> overrideJson) {
             $.overrideJson = overrideJson;
+            return this;
+        }
+
+        /**
+         * @param overrideJson - IAM policy document whose statements with non-blank `sid`s will override statements with the same `sid` from documents assigned to the `source_json`, `source_policy_documents`, and `override_policy_documents` arguments. Non-overriding statements will be added to the exported document.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use the attribute &#34;override_policy_documents&#34; instead.
+         * 
+         */
+        @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
+        public Builder overrideJson(String overrideJson) {
+            return overrideJson(Output.of(overrideJson));
+        }
+
+        /**
+         * @param overridePolicyDocuments List of IAM policy documents that are merged together into the exported document. In merging, statements with non-blank `sid`s will override statements with the same `sid` from earlier documents in the list. Statements with non-blank `sid`s will also override statements with the same `sid` from documents provided in the `source_json` and `source_policy_documents` arguments.  Non-overriding statements will be added to the exported document.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder overridePolicyDocuments(@Nullable Output<List<String>> overridePolicyDocuments) {
+            $.overridePolicyDocuments = overridePolicyDocuments;
             return this;
         }
 
@@ -188,9 +214,8 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder overridePolicyDocuments(@Nullable List<String> overridePolicyDocuments) {
-            $.overridePolicyDocuments = overridePolicyDocuments;
-            return this;
+        public Builder overridePolicyDocuments(List<String> overridePolicyDocuments) {
+            return overridePolicyDocuments(Output.of(overridePolicyDocuments));
         }
 
         /**
@@ -209,8 +234,33 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder policyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
+            return this;
+        }
+
+        /**
+         * @param policyId ID for the policy document.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyId(String policyId) {
+            return policyId(Output.of(policyId));
+        }
+
+        /**
+         * @param sourceJson - IAM policy document used as a base for the exported policy document. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use the attribute &#34;source_policy_documents&#34; instead.
+         * 
+         */
+        @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
+        public Builder sourceJson(@Nullable Output<String> sourceJson) {
+            $.sourceJson = sourceJson;
             return this;
         }
 
@@ -224,8 +274,18 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
-        public Builder sourceJson(@Nullable String sourceJson) {
-            $.sourceJson = sourceJson;
+        public Builder sourceJson(String sourceJson) {
+            return sourceJson(Output.of(sourceJson));
+        }
+
+        /**
+         * @param sourcePolicyDocuments List of IAM policy documents that are merged together into the exported document. Statements defined in `source_policy_documents` or `source_json` must have unique `sid`s. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourcePolicyDocuments(@Nullable Output<List<String>> sourcePolicyDocuments) {
+            $.sourcePolicyDocuments = sourcePolicyDocuments;
             return this;
         }
 
@@ -235,9 +295,8 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder sourcePolicyDocuments(@Nullable List<String> sourcePolicyDocuments) {
-            $.sourcePolicyDocuments = sourcePolicyDocuments;
-            return this;
+        public Builder sourcePolicyDocuments(List<String> sourcePolicyDocuments) {
+            return sourcePolicyDocuments(Output.of(sourcePolicyDocuments));
         }
 
         /**
@@ -256,7 +315,7 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder statements(@Nullable List<GetPolicyDocumentStatement> statements) {
+        public Builder statements(@Nullable Output<List<GetPolicyDocumentStatementArgs>> statements) {
             $.statements = statements;
             return this;
         }
@@ -267,7 +326,17 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder statements(GetPolicyDocumentStatement... statements) {
+        public Builder statements(List<GetPolicyDocumentStatementArgs> statements) {
+            return statements(Output.of(statements));
+        }
+
+        /**
+         * @param statements Configuration block for a policy statement. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statements(GetPolicyDocumentStatementArgs... statements) {
             return statements(List.of(statements));
         }
 
@@ -277,9 +346,19 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder version(@Nullable String version) {
+        public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
+        }
+
+        /**
+         * @param version IAM policy document version. Valid values are `2008-10-17` and `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
 
         public GetPolicyDocumentArgs build() {

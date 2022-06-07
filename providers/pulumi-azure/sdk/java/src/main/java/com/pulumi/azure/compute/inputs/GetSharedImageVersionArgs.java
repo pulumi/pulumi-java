@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="galleryName", required=true)
-    private String galleryName;
+    private Output<String> galleryName;
 
     /**
      * @return The name of the Shared Image Gallery in which the Shared Image exists.
      * 
      */
-    public String galleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -35,13 +36,13 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="imageName", required=true)
-    private String imageName;
+    private Output<String> imageName;
 
     /**
      * @return The name of the Shared Image in which this Version exists.
      * 
      */
-    public String imageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
 
@@ -50,13 +51,13 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the Image Version.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -65,13 +66,13 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Resource Group in which the Shared Image Gallery exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,13 +81,13 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sortVersionsBySemver")
-    private @Nullable Boolean sortVersionsBySemver;
+    private @Nullable Output<Boolean> sortVersionsBySemver;
 
     /**
      * @return Sort available versions taking SemVer versioning scheme into account. Defaults to `false`.
      * 
      */
-    public Optional<Boolean> sortVersionsBySemver() {
+    public Optional<Output<Boolean>> sortVersionsBySemver() {
         return Optional.ofNullable(this.sortVersionsBySemver);
     }
 
@@ -124,8 +125,29 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder galleryName(String galleryName) {
+        public Builder galleryName(Output<String> galleryName) {
             $.galleryName = galleryName;
+            return this;
+        }
+
+        /**
+         * @param galleryName The name of the Shared Image Gallery in which the Shared Image exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryName(String galleryName) {
+            return galleryName(Output.of(galleryName));
+        }
+
+        /**
+         * @param imageName The name of the Shared Image in which this Version exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageName(Output<String> imageName) {
+            $.imageName = imageName;
             return this;
         }
 
@@ -136,7 +158,17 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder imageName(String imageName) {
-            $.imageName = imageName;
+            return imageName(Output.of(imageName));
+        }
+
+        /**
+         * @param name The name of the Image Version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -147,7 +179,17 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Resource Group in which the Shared Image Gallery exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -158,7 +200,17 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sortVersionsBySemver Sort available versions taking SemVer versioning scheme into account. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sortVersionsBySemver(@Nullable Output<Boolean> sortVersionsBySemver) {
+            $.sortVersionsBySemver = sortVersionsBySemver;
             return this;
         }
 
@@ -168,9 +220,8 @@ public final class GetSharedImageVersionArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder sortVersionsBySemver(@Nullable Boolean sortVersionsBySemver) {
-            $.sortVersionsBySemver = sortVersionsBySemver;
-            return this;
+        public Builder sortVersionsBySemver(Boolean sortVersionsBySemver) {
+            return sortVersionsBySemver(Output.of(sortVersionsBySemver));
         }
 
         public GetSharedImageVersionArgs build() {

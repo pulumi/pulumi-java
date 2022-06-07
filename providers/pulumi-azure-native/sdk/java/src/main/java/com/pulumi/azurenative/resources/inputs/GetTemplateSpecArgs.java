@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.resources.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return Allows for expansion of additional Template Spec details in the response. Optional.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +50,13 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="templateSpecName", required=true)
-    private String templateSpecName;
+    private Output<String> templateSpecName;
 
     /**
      * @return Name of the Template Spec.
      * 
      */
-    public String templateSpecName() {
+    public Output<String> templateSpecName() {
         return this.templateSpecName;
     }
 
@@ -91,8 +92,29 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Allows for expansion of additional Template Spec details in the response. Optional.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param templateSpecName Name of the Template Spec.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder templateSpecName(Output<String> templateSpecName) {
+            $.templateSpecName = templateSpecName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetTemplateSpecArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder templateSpecName(String templateSpecName) {
-            $.templateSpecName = templateSpecName;
-            return this;
+            return templateSpecName(Output.of(templateSpecName));
         }
 
         public GetTemplateSpecArgs build() {

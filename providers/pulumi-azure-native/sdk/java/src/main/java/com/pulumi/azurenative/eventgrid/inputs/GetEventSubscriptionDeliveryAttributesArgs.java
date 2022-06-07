@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEventSubscriptionDeliveryAttributesArgs extends com.pulumi
      * 
      */
     @Import(name="eventSubscriptionName", required=true)
-    private String eventSubscriptionName;
+    private Output<String> eventSubscriptionName;
 
     /**
      * @return Name of the event subscription.
      * 
      */
-    public String eventSubscriptionName() {
+    public Output<String> eventSubscriptionName() {
         return this.eventSubscriptionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetEventSubscriptionDeliveryAttributesArgs extends com.pulumi
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return The scope of the event subscription. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use &#39;/subscriptions/{subscriptionId}/&#39; for a subscription, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for a resource group, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}&#39; for a resource, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}&#39; for an EventGrid topic.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -73,8 +74,29 @@ public final class GetEventSubscriptionDeliveryAttributesArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder eventSubscriptionName(String eventSubscriptionName) {
+        public Builder eventSubscriptionName(Output<String> eventSubscriptionName) {
             $.eventSubscriptionName = eventSubscriptionName;
+            return this;
+        }
+
+        /**
+         * @param eventSubscriptionName Name of the event subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventSubscriptionName(String eventSubscriptionName) {
+            return eventSubscriptionName(Output.of(eventSubscriptionName));
+        }
+
+        /**
+         * @param scope The scope of the event subscription. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use &#39;/subscriptions/{subscriptionId}/&#39; for a subscription, &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39; for a resource group, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}&#39; for a resource, and &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}&#39; for an EventGrid topic.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetEventSubscriptionDeliveryAttributesArgs extends com.pulumi
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetEventSubscriptionDeliveryAttributesArgs build() {

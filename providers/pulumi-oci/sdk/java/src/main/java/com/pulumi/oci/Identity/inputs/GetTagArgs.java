@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTagArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagName", required=true)
-    private String tagName;
+    private Output<String> tagName;
 
     /**
      * @return The name of the tag.
      * 
      */
-    public String tagName() {
+    public Output<String> tagName() {
         return this.tagName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTagArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagNamespaceId", required=true)
-    private String tagNamespaceId;
+    private Output<String> tagNamespaceId;
 
     /**
      * @return The OCID of the tag namespace.
      * 
      */
-    public String tagNamespaceId() {
+    public Output<String> tagNamespaceId() {
         return this.tagNamespaceId;
     }
 
@@ -73,8 +74,29 @@ public final class GetTagArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tagName(String tagName) {
+        public Builder tagName(Output<String> tagName) {
             $.tagName = tagName;
+            return this;
+        }
+
+        /**
+         * @param tagName The name of the tag.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tagName(String tagName) {
+            return tagName(Output.of(tagName));
+        }
+
+        /**
+         * @param tagNamespaceId The OCID of the tag namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tagNamespaceId(Output<String> tagNamespaceId) {
+            $.tagNamespaceId = tagNamespaceId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetTagArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tagNamespaceId(String tagNamespaceId) {
-            $.tagNamespaceId = tagNamespaceId;
-            return this;
+            return tagNamespaceId(Output.of(tagNamespaceId));
         }
 
         public GetTagArgs build() {

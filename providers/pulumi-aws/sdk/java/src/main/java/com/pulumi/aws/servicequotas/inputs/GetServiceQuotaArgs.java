@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.servicequotas.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quotaCode")
-    private @Nullable String quotaCode;
+    private @Nullable Output<String> quotaCode;
 
     /**
      * @return Quota code within the service. When configured, the data source directly looks up the service quota. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html). One of `quota_code` or `quota_name` must be specified.
      * 
      */
-    public Optional<String> quotaCode() {
+    public Optional<Output<String>> quotaCode() {
         return Optional.ofNullable(this.quotaCode);
     }
 
@@ -34,13 +35,13 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quotaName")
-    private @Nullable String quotaName;
+    private @Nullable Output<String> quotaName;
 
     /**
      * @return Quota name within the service. When configured, the data source searches through all service quotas to find the matching quota name. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html). One of `quota_name` or `quota_code` must be specified.
      * 
      */
-    public Optional<String> quotaName() {
+    public Optional<Output<String>> quotaName() {
         return Optional.ofNullable(this.quotaName);
     }
 
@@ -49,13 +50,13 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceCode", required=true)
-    private String serviceCode;
+    private Output<String> serviceCode;
 
     /**
      * @return Service code for the quota. Available values can be found with the `aws.servicequotas.getService` or [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
      * 
      */
-    public String serviceCode() {
+    public Output<String> serviceCode() {
         return this.serviceCode;
     }
 
@@ -91,8 +92,29 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder quotaCode(@Nullable String quotaCode) {
+        public Builder quotaCode(@Nullable Output<String> quotaCode) {
             $.quotaCode = quotaCode;
+            return this;
+        }
+
+        /**
+         * @param quotaCode Quota code within the service. When configured, the data source directly looks up the service quota. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html). One of `quota_code` or `quota_name` must be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder quotaCode(String quotaCode) {
+            return quotaCode(Output.of(quotaCode));
+        }
+
+        /**
+         * @param quotaName Quota name within the service. When configured, the data source searches through all service quotas to find the matching quota name. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html). One of `quota_name` or `quota_code` must be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder quotaName(@Nullable Output<String> quotaName) {
+            $.quotaName = quotaName;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder quotaName(@Nullable String quotaName) {
-            $.quotaName = quotaName;
+        public Builder quotaName(String quotaName) {
+            return quotaName(Output.of(quotaName));
+        }
+
+        /**
+         * @param serviceCode Service code for the quota. Available values can be found with the `aws.servicequotas.getService` or [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceCode(Output<String> serviceCode) {
+            $.serviceCode = serviceCode;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceCode(String serviceCode) {
-            $.serviceCode = serviceCode;
-            return this;
+            return serviceCode(Output.of(serviceCode));
         }
 
         public GetServiceQuotaArgs build() {

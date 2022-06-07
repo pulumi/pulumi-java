@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vlanId", required=true)
-    private String vlanId;
+    private Output<String> vlanId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN.
      * 
      */
-    public String vlanId() {
+    public Output<String> vlanId() {
         return this.vlanId;
     }
 
@@ -57,9 +58,19 @@ public final class GetVlanArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vlanId(String vlanId) {
+        public Builder vlanId(Output<String> vlanId) {
             $.vlanId = vlanId;
             return this;
+        }
+
+        /**
+         * @param vlanId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vlanId(String vlanId) {
+            return vlanId(Output.of(vlanId));
         }
 
         public GetVlanArgs build() {

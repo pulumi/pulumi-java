@@ -5,16 +5,27 @@ package com.pulumi.azurenative.mobilenetwork;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.mobilenetwork.inputs.GetAttachedDataNetworkArgs;
+import com.pulumi.azurenative.mobilenetwork.inputs.GetAttachedDataNetworkPlainArgs;
 import com.pulumi.azurenative.mobilenetwork.inputs.GetDataNetworkArgs;
+import com.pulumi.azurenative.mobilenetwork.inputs.GetDataNetworkPlainArgs;
 import com.pulumi.azurenative.mobilenetwork.inputs.GetMobileNetworkArgs;
+import com.pulumi.azurenative.mobilenetwork.inputs.GetMobileNetworkPlainArgs;
 import com.pulumi.azurenative.mobilenetwork.inputs.GetPacketCoreControlPlaneArgs;
+import com.pulumi.azurenative.mobilenetwork.inputs.GetPacketCoreControlPlanePlainArgs;
 import com.pulumi.azurenative.mobilenetwork.inputs.GetPacketCoreDataPlaneArgs;
+import com.pulumi.azurenative.mobilenetwork.inputs.GetPacketCoreDataPlanePlainArgs;
 import com.pulumi.azurenative.mobilenetwork.inputs.GetServiceArgs;
+import com.pulumi.azurenative.mobilenetwork.inputs.GetServicePlainArgs;
 import com.pulumi.azurenative.mobilenetwork.inputs.GetSimArgs;
+import com.pulumi.azurenative.mobilenetwork.inputs.GetSimPlainArgs;
 import com.pulumi.azurenative.mobilenetwork.inputs.GetSimPolicyArgs;
+import com.pulumi.azurenative.mobilenetwork.inputs.GetSimPolicyPlainArgs;
 import com.pulumi.azurenative.mobilenetwork.inputs.GetSiteArgs;
+import com.pulumi.azurenative.mobilenetwork.inputs.GetSitePlainArgs;
 import com.pulumi.azurenative.mobilenetwork.inputs.GetSliceArgs;
+import com.pulumi.azurenative.mobilenetwork.inputs.GetSlicePlainArgs;
 import com.pulumi.azurenative.mobilenetwork.inputs.ListMobileNetworkSimIdsArgs;
+import com.pulumi.azurenative.mobilenetwork.inputs.ListMobileNetworkSimIdsPlainArgs;
 import com.pulumi.azurenative.mobilenetwork.outputs.GetAttachedDataNetworkResult;
 import com.pulumi.azurenative.mobilenetwork.outputs.GetDataNetworkResult;
 import com.pulumi.azurenative.mobilenetwork.outputs.GetMobileNetworkResult;
@@ -26,6 +37,7 @@ import com.pulumi.azurenative.mobilenetwork.outputs.GetSimResult;
 import com.pulumi.azurenative.mobilenetwork.outputs.GetSiteResult;
 import com.pulumi.azurenative.mobilenetwork.outputs.GetSliceResult;
 import com.pulumi.azurenative.mobilenetwork.outputs.ListMobileNetworkSimIdsResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -37,7 +49,7 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetAttachedDataNetworkResult> getAttachedDataNetwork(GetAttachedDataNetworkArgs args) {
+    public static Output<GetAttachedDataNetworkResult> getAttachedDataNetwork(GetAttachedDataNetworkArgs args) {
         return getAttachedDataNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -45,7 +57,23 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetAttachedDataNetworkResult> getAttachedDataNetwork(GetAttachedDataNetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAttachedDataNetworkResult> getAttachedDataNetworkPlain(GetAttachedDataNetworkPlainArgs args) {
+        return getAttachedDataNetworkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Attached data network resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetAttachedDataNetworkResult> getAttachedDataNetwork(GetAttachedDataNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:mobilenetwork:getAttachedDataNetwork", TypeShape.of(GetAttachedDataNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Attached data network resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetAttachedDataNetworkResult> getAttachedDataNetworkPlain(GetAttachedDataNetworkPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mobilenetwork:getAttachedDataNetwork", TypeShape.of(GetAttachedDataNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -53,7 +81,7 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataNetworkResult> getDataNetwork(GetDataNetworkArgs args) {
+    public static Output<GetDataNetworkResult> getDataNetwork(GetDataNetworkArgs args) {
         return getDataNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -61,7 +89,23 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataNetworkResult> getDataNetwork(GetDataNetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataNetworkResult> getDataNetworkPlain(GetDataNetworkPlainArgs args) {
+        return getDataNetworkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Data network resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetDataNetworkResult> getDataNetwork(GetDataNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:mobilenetwork:getDataNetwork", TypeShape.of(GetDataNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Data network resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetDataNetworkResult> getDataNetworkPlain(GetDataNetworkPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mobilenetwork:getDataNetwork", TypeShape.of(GetDataNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -69,7 +113,7 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetMobileNetworkResult> getMobileNetwork(GetMobileNetworkArgs args) {
+    public static Output<GetMobileNetworkResult> getMobileNetwork(GetMobileNetworkArgs args) {
         return getMobileNetwork(args, InvokeOptions.Empty);
     }
     /**
@@ -77,7 +121,23 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetMobileNetworkResult> getMobileNetwork(GetMobileNetworkArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMobileNetworkResult> getMobileNetworkPlain(GetMobileNetworkPlainArgs args) {
+        return getMobileNetworkPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Mobile network resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetMobileNetworkResult> getMobileNetwork(GetMobileNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:mobilenetwork:getMobileNetwork", TypeShape.of(GetMobileNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Mobile network resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetMobileNetworkResult> getMobileNetworkPlain(GetMobileNetworkPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mobilenetwork:getMobileNetwork", TypeShape.of(GetMobileNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -85,7 +145,7 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetPacketCoreControlPlaneResult> getPacketCoreControlPlane(GetPacketCoreControlPlaneArgs args) {
+    public static Output<GetPacketCoreControlPlaneResult> getPacketCoreControlPlane(GetPacketCoreControlPlaneArgs args) {
         return getPacketCoreControlPlane(args, InvokeOptions.Empty);
     }
     /**
@@ -93,7 +153,23 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetPacketCoreControlPlaneResult> getPacketCoreControlPlane(GetPacketCoreControlPlaneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPacketCoreControlPlaneResult> getPacketCoreControlPlanePlain(GetPacketCoreControlPlanePlainArgs args) {
+        return getPacketCoreControlPlanePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Packet core control plane resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetPacketCoreControlPlaneResult> getPacketCoreControlPlane(GetPacketCoreControlPlaneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:mobilenetwork:getPacketCoreControlPlane", TypeShape.of(GetPacketCoreControlPlaneResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Packet core control plane resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPacketCoreControlPlaneResult> getPacketCoreControlPlanePlain(GetPacketCoreControlPlanePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mobilenetwork:getPacketCoreControlPlane", TypeShape.of(GetPacketCoreControlPlaneResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -101,7 +177,7 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetPacketCoreDataPlaneResult> getPacketCoreDataPlane(GetPacketCoreDataPlaneArgs args) {
+    public static Output<GetPacketCoreDataPlaneResult> getPacketCoreDataPlane(GetPacketCoreDataPlaneArgs args) {
         return getPacketCoreDataPlane(args, InvokeOptions.Empty);
     }
     /**
@@ -109,7 +185,23 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetPacketCoreDataPlaneResult> getPacketCoreDataPlane(GetPacketCoreDataPlaneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPacketCoreDataPlaneResult> getPacketCoreDataPlanePlain(GetPacketCoreDataPlanePlainArgs args) {
+        return getPacketCoreDataPlanePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Packet core data plane resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetPacketCoreDataPlaneResult> getPacketCoreDataPlane(GetPacketCoreDataPlaneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:mobilenetwork:getPacketCoreDataPlane", TypeShape.of(GetPacketCoreDataPlaneResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Packet core data plane resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPacketCoreDataPlaneResult> getPacketCoreDataPlanePlain(GetPacketCoreDataPlanePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mobilenetwork:getPacketCoreDataPlane", TypeShape.of(GetPacketCoreDataPlaneResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -117,7 +209,7 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -125,7 +217,23 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args) {
+        return getServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Service resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:mobilenetwork:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Service resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mobilenetwork:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -133,7 +241,7 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetSimResult> getSim(GetSimArgs args) {
+    public static Output<GetSimResult> getSim(GetSimArgs args) {
         return getSim(args, InvokeOptions.Empty);
     }
     /**
@@ -141,7 +249,23 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetSimResult> getSim(GetSimArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSimResult> getSimPlain(GetSimPlainArgs args) {
+        return getSimPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Sim resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetSimResult> getSim(GetSimArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:mobilenetwork:getSim", TypeShape.of(GetSimResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Sim resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSimResult> getSimPlain(GetSimPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mobilenetwork:getSim", TypeShape.of(GetSimResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -149,7 +273,7 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetSimPolicyResult> getSimPolicy(GetSimPolicyArgs args) {
+    public static Output<GetSimPolicyResult> getSimPolicy(GetSimPolicyArgs args) {
         return getSimPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -157,7 +281,23 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetSimPolicyResult> getSimPolicy(GetSimPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSimPolicyResult> getSimPolicyPlain(GetSimPolicyPlainArgs args) {
+        return getSimPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Sim policy resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetSimPolicyResult> getSimPolicy(GetSimPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:mobilenetwork:getSimPolicy", TypeShape.of(GetSimPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Sim policy resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSimPolicyResult> getSimPolicyPlain(GetSimPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mobilenetwork:getSimPolicy", TypeShape.of(GetSimPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -165,7 +305,7 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args) {
+    public static Output<GetSiteResult> getSite(GetSiteArgs args) {
         return getSite(args, InvokeOptions.Empty);
     }
     /**
@@ -173,7 +313,23 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSiteResult> getSitePlain(GetSitePlainArgs args) {
+        return getSitePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Site resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetSiteResult> getSite(GetSiteArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:mobilenetwork:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Site resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSiteResult> getSitePlain(GetSitePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mobilenetwork:getSite", TypeShape.of(GetSiteResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -181,7 +337,7 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetSliceResult> getSlice(GetSliceArgs args) {
+    public static Output<GetSliceResult> getSlice(GetSliceArgs args) {
         return getSlice(args, InvokeOptions.Empty);
     }
     /**
@@ -189,7 +345,23 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetSliceResult> getSlice(GetSliceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSliceResult> getSlicePlain(GetSlicePlainArgs args) {
+        return getSlicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Network slice resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetSliceResult> getSlice(GetSliceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:mobilenetwork:getSlice", TypeShape.of(GetSliceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Network slice resource.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSliceResult> getSlicePlain(GetSlicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mobilenetwork:getSlice", TypeShape.of(GetSliceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -197,7 +369,7 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<ListMobileNetworkSimIdsResult> listMobileNetworkSimIds(ListMobileNetworkSimIdsArgs args) {
+    public static Output<ListMobileNetworkSimIdsResult> listMobileNetworkSimIds(ListMobileNetworkSimIdsArgs args) {
         return listMobileNetworkSimIds(args, InvokeOptions.Empty);
     }
     /**
@@ -205,7 +377,23 @@ public final class MobilenetworkFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<ListMobileNetworkSimIdsResult> listMobileNetworkSimIds(ListMobileNetworkSimIdsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListMobileNetworkSimIdsResult> listMobileNetworkSimIdsPlain(ListMobileNetworkSimIdsPlainArgs args) {
+        return listMobileNetworkSimIdsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Response for list sim ids API service call.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<ListMobileNetworkSimIdsResult> listMobileNetworkSimIds(ListMobileNetworkSimIdsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:mobilenetwork:listMobileNetworkSimIds", TypeShape.of(ListMobileNetworkSimIdsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Response for list sim ids API service call.
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListMobileNetworkSimIdsResult> listMobileNetworkSimIdsPlain(ListMobileNetworkSimIdsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mobilenetwork:listMobileNetworkSimIds", TypeShape.of(ListMobileNetworkSimIdsResult.class), args, Utilities.withVersion(options));
     }
 }

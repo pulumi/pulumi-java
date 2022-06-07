@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetReportDefinitionsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetReportDefinitionsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
+    public Optional<Output<String>> accessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
 
@@ -37,13 +38,13 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="category")
-    private @Nullable String category;
+    private @Nullable Output<String> category;
 
     /**
      * @return An optional filter to return only resources that match the specified category.
      * 
      */
-    public Optional<String> category() {
+    public Optional<Output<String>> category() {
         return Optional.ofNullable(this.category);
     }
 
@@ -52,13 +53,13 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the specified compartment OCID.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -67,13 +68,13 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
@@ -82,13 +83,13 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataSource")
-    private @Nullable String dataSource;
+    private @Nullable Output<String> dataSource;
 
     /**
      * @return Specifies the name of a resource that provides data for the report. For example  alerts, events.
      * 
      */
-    public Optional<String> dataSource() {
+    public Optional<Output<String>> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
 
@@ -97,20 +98,20 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The name of the report definition to query.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetReportDefinitionsFilter> filters;
+    private @Nullable Output<List<GetReportDefinitionsFilterArgs>> filters;
 
-    public Optional<List<GetReportDefinitionsFilter>> filters() {
+    public Optional<Output<List<GetReportDefinitionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -119,13 +120,13 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="isSeeded")
-    private @Nullable Boolean isSeeded;
+    private @Nullable Output<Boolean> isSeeded;
 
     /**
      * @return A boolean flag indicating to list seeded report definitions. Set this parameter to get list of seeded report definitions.
      * 
      */
-    public Optional<Boolean> isSeeded() {
+    public Optional<Output<Boolean>> isSeeded() {
         return Optional.ofNullable(this.isSeeded);
     }
 
@@ -134,13 +135,13 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return An optional filter to return only resources that match the specified lifecycle state.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -182,8 +183,29 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param category An optional filter to return only resources that match the specified category.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder category(@Nullable Output<String> category) {
+            $.category = category;
             return this;
         }
 
@@ -193,8 +215,18 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder category(@Nullable String category) {
-            $.category = category;
+        public Builder category(String category) {
+            return category(Output.of(category));
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the specified compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -205,7 +237,17 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -215,8 +257,18 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param dataSource Specifies the name of a resource that provides data for the report. For example  alerts, events.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataSource(@Nullable Output<String> dataSource) {
+            $.dataSource = dataSource;
             return this;
         }
 
@@ -226,8 +278,18 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder dataSource(@Nullable String dataSource) {
-            $.dataSource = dataSource;
+        public Builder dataSource(String dataSource) {
+            return dataSource(Output.of(dataSource));
+        }
+
+        /**
+         * @param displayName The name of the report definition to query.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -237,17 +299,20 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetReportDefinitionsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetReportDefinitionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetReportDefinitionsFilter... filters) {
+        public Builder filters(List<GetReportDefinitionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetReportDefinitionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -257,8 +322,29 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder isSeeded(@Nullable Boolean isSeeded) {
+        public Builder isSeeded(@Nullable Output<Boolean> isSeeded) {
             $.isSeeded = isSeeded;
+            return this;
+        }
+
+        /**
+         * @param isSeeded A boolean flag indicating to list seeded report definitions. Set this parameter to get list of seeded report definitions.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isSeeded(Boolean isSeeded) {
+            return isSeeded(Output.of(isSeeded));
+        }
+
+        /**
+         * @param state An optional filter to return only resources that match the specified lifecycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -268,9 +354,8 @@ public final class GetReportDefinitionsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetReportDefinitionsArgs build() {

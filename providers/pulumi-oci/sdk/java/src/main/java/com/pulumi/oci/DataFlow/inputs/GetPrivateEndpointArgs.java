@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataFlow.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="privateEndpointId", required=true)
-    private String privateEndpointId;
+    private Output<String> privateEndpointId;
 
     /**
      * @return The unique ID for a private endpoint.
      * 
      */
-    public String privateEndpointId() {
+    public Output<String> privateEndpointId() {
         return this.privateEndpointId;
     }
 
@@ -57,9 +58,19 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder privateEndpointId(String privateEndpointId) {
+        public Builder privateEndpointId(Output<String> privateEndpointId) {
             $.privateEndpointId = privateEndpointId;
             return this;
+        }
+
+        /**
+         * @param privateEndpointId The unique ID for a private endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpointId(String privateEndpointId) {
+            return privateEndpointId(Output.of(privateEndpointId));
         }
 
         public GetPrivateEndpointArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetGithubEnterpriseConfigArgs extends com.pulumi.resources.In
     public static final GetGithubEnterpriseConfigArgs Empty = new GetGithubEnterpriseConfigArgs();
 
     @Import(name="configId")
-    private @Nullable String configId;
+    private @Nullable Output<String> configId;
 
-    public Optional<String> configId() {
+    public Optional<Output<String>> configId() {
         return Optional.ofNullable(this.configId);
     }
 
     @Import(name="githubEnterpriseConfigId", required=true)
-    private String githubEnterpriseConfigId;
+    private Output<String> githubEnterpriseConfigId;
 
-    public String githubEnterpriseConfigId() {
+    public Output<String> githubEnterpriseConfigId() {
         return this.githubEnterpriseConfigId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="projectId")
-    private @Nullable String projectId;
+    private @Nullable Output<String> projectId;
 
-    public Optional<String> projectId() {
+    public Optional<Output<String>> projectId() {
         return Optional.ofNullable(this.projectId);
     }
 
@@ -77,29 +78,49 @@ public final class GetGithubEnterpriseConfigArgs extends com.pulumi.resources.In
             $ = new GetGithubEnterpriseConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder configId(@Nullable String configId) {
+        public Builder configId(@Nullable Output<String> configId) {
             $.configId = configId;
             return this;
         }
 
-        public Builder githubEnterpriseConfigId(String githubEnterpriseConfigId) {
+        public Builder configId(String configId) {
+            return configId(Output.of(configId));
+        }
+
+        public Builder githubEnterpriseConfigId(Output<String> githubEnterpriseConfigId) {
             $.githubEnterpriseConfigId = githubEnterpriseConfigId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder githubEnterpriseConfigId(String githubEnterpriseConfigId) {
+            return githubEnterpriseConfigId(Output.of(githubEnterpriseConfigId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder projectId(@Nullable String projectId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
+        }
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
         }
 
         public GetGithubEnterpriseConfigArgs build() {

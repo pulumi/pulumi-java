@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.spanner_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetInstanceDatabaseIamPolicyArgs extends com.pulumi.resources
     public static final GetInstanceDatabaseIamPolicyArgs Empty = new GetInstanceDatabaseIamPolicyArgs();
 
     @Import(name="databaseId", required=true)
-    private String databaseId;
+    private Output<String> databaseId;
 
-    public String databaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetInstanceDatabaseIamPolicyArgs extends com.pulumi.resources
             $ = new GetInstanceDatabaseIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder databaseId(String databaseId) {
+        public Builder databaseId(Output<String> databaseId) {
             $.databaseId = databaseId;
             return this;
         }
 
-        public Builder instanceId(String instanceId) {
+        public Builder databaseId(String databaseId) {
+            return databaseId(Output.of(databaseId));
+        }
+
+        public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetInstanceDatabaseIamPolicyArgs build() {

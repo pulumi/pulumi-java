@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,37 +14,37 @@ public final class GetDebugSessionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDebugSessionArgs Empty = new GetDebugSessionArgs();
 
     @Import(name="apiId", required=true)
-    private String apiId;
+    private Output<String> apiId;
 
-    public String apiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
     @Import(name="debugsessionId", required=true)
-    private String debugsessionId;
+    private Output<String> debugsessionId;
 
-    public String debugsessionId() {
+    public Output<String> debugsessionId() {
         return this.debugsessionId;
     }
 
     @Import(name="environmentId", required=true)
-    private String environmentId;
+    private Output<String> environmentId;
 
-    public String environmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="revisionId", required=true)
-    private String revisionId;
+    private Output<String> revisionId;
 
-    public String revisionId() {
+    public Output<String> revisionId() {
         return this.revisionId;
     }
 
@@ -75,29 +76,49 @@ public final class GetDebugSessionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDebugSessionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder apiId(String apiId) {
+        public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
-        public Builder debugsessionId(String debugsessionId) {
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
+        }
+
+        public Builder debugsessionId(Output<String> debugsessionId) {
             $.debugsessionId = debugsessionId;
             return this;
         }
 
-        public Builder environmentId(String environmentId) {
+        public Builder debugsessionId(String debugsessionId) {
+            return debugsessionId(Output.of(debugsessionId));
+        }
+
+        public Builder environmentId(Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
-        public Builder revisionId(String revisionId) {
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public Builder revisionId(Output<String> revisionId) {
             $.revisionId = revisionId;
             return this;
+        }
+
+        public Builder revisionId(String revisionId) {
+            return revisionId(Output.of(revisionId));
         }
 
         public GetDebugSessionArgs build() {

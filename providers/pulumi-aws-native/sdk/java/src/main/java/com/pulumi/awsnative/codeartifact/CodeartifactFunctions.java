@@ -5,9 +5,12 @@ package com.pulumi.awsnative.codeartifact;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.codeartifact.inputs.GetDomainArgs;
+import com.pulumi.awsnative.codeartifact.inputs.GetDomainPlainArgs;
 import com.pulumi.awsnative.codeartifact.inputs.GetRepositoryArgs;
+import com.pulumi.awsnative.codeartifact.inputs.GetRepositoryPlainArgs;
 import com.pulumi.awsnative.codeartifact.outputs.GetDomainResult;
 import com.pulumi.awsnative.codeartifact.outputs.GetRepositoryResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -18,28 +21,56 @@ public final class CodeartifactFunctions {
      * The resource schema to create a CodeArtifact domain.
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
     /**
      * The resource schema to create a CodeArtifact domain.
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args) {
+        return getDomainPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The resource schema to create a CodeArtifact domain.
+     * 
+     */
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:codeartifact:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The resource schema to create a CodeArtifact domain.
+     * 
+     */
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codeartifact:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The resource schema to create a CodeArtifact repository.
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
         return getRepository(args, InvokeOptions.Empty);
     }
     /**
      * The resource schema to create a CodeArtifact repository.
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepositoryResult> getRepositoryPlain(GetRepositoryPlainArgs args) {
+        return getRepositoryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The resource schema to create a CodeArtifact repository.
+     * 
+     */
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:codeartifact:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The resource schema to create a CodeArtifact repository.
+     * 
+     */
+    public static CompletableFuture<GetRepositoryResult> getRepositoryPlain(GetRepositoryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codeartifact:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

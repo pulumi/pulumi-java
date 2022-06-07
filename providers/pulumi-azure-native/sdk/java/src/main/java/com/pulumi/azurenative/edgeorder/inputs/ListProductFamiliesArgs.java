@@ -3,8 +3,9 @@
 
 package com.pulumi.azurenative.edgeorder.inputs;
 
-import com.pulumi.azurenative.edgeorder.inputs.CustomerSubscriptionDetails;
-import com.pulumi.azurenative.edgeorder.inputs.FilterableProperty;
+import com.pulumi.azurenative.edgeorder.inputs.CustomerSubscriptionDetailsArgs;
+import com.pulumi.azurenative.edgeorder.inputs.FilterablePropertyArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -23,13 +24,13 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="customerSubscriptionDetails")
-    private @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
+    private @Nullable Output<CustomerSubscriptionDetailsArgs> customerSubscriptionDetails;
 
     /**
      * @return Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
      * 
      */
-    public Optional<CustomerSubscriptionDetails> customerSubscriptionDetails() {
+    public Optional<Output<CustomerSubscriptionDetailsArgs>> customerSubscriptionDetails() {
         return Optional.ofNullable(this.customerSubscriptionDetails);
     }
 
@@ -38,13 +39,13 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return $expand is supported on configurations parameter for product, which provides details on the configurations for the product.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -53,13 +54,13 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filterableProperties", required=true)
-    private Map<String,List<FilterableProperty>> filterableProperties;
+    private Output<Map<String,List<FilterablePropertyArgs>>> filterableProperties;
 
     /**
      * @return Dictionary of filterable properties on product family.
      * 
      */
-    public Map<String,List<FilterableProperty>> filterableProperties() {
+    public Output<Map<String,List<FilterablePropertyArgs>>> filterableProperties() {
         return this.filterableProperties;
     }
 
@@ -68,13 +69,13 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return $skipToken is supported on list of product families, which provides the next page in the list of product families.
      * 
      */
-    public Optional<String> skipToken() {
+    public Optional<Output<String>> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
 
@@ -111,8 +112,29 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder customerSubscriptionDetails(@Nullable CustomerSubscriptionDetails customerSubscriptionDetails) {
+        public Builder customerSubscriptionDetails(@Nullable Output<CustomerSubscriptionDetailsArgs> customerSubscriptionDetails) {
             $.customerSubscriptionDetails = customerSubscriptionDetails;
+            return this;
+        }
+
+        /**
+         * @param customerSubscriptionDetails Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customerSubscriptionDetails(CustomerSubscriptionDetailsArgs customerSubscriptionDetails) {
+            return customerSubscriptionDetails(Output.of(customerSubscriptionDetails));
+        }
+
+        /**
+         * @param expand $expand is supported on configurations parameter for product, which provides details on the configurations for the product.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable Output<String> expand) {
+            $.expand = expand;
             return this;
         }
 
@@ -122,8 +144,18 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
-            $.expand = expand;
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param filterableProperties Dictionary of filterable properties on product family.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filterableProperties(Output<Map<String,List<FilterablePropertyArgs>>> filterableProperties) {
+            $.filterableProperties = filterableProperties;
             return this;
         }
 
@@ -133,8 +165,18 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder filterableProperties(Map<String,List<FilterableProperty>> filterableProperties) {
-            $.filterableProperties = filterableProperties;
+        public Builder filterableProperties(Map<String,List<FilterablePropertyArgs>> filterableProperties) {
+            return filterableProperties(Output.of(filterableProperties));
+        }
+
+        /**
+         * @param skipToken $skipToken is supported on list of product families, which provides the next page in the list of product families.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(@Nullable Output<String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -144,9 +186,8 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
-            return this;
+        public Builder skipToken(String skipToken) {
+            return skipToken(Output.of(skipToken));
         }
 
         public ListProductFamiliesArgs build() {

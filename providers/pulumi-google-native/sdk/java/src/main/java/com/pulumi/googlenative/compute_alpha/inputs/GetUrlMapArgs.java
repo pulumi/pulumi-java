@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetUrlMapArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetUrlMapArgs Empty = new GetUrlMapArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="urlMap", required=true)
-    private String urlMap;
+    private Output<String> urlMap;
 
-    public String urlMap() {
+    public Output<String> urlMap() {
         return this.urlMap;
     }
 
@@ -53,14 +54,22 @@ public final class GetUrlMapArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetUrlMapArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder urlMap(String urlMap) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder urlMap(Output<String> urlMap) {
             $.urlMap = urlMap;
             return this;
+        }
+
+        public Builder urlMap(String urlMap) {
+            return urlMap(Output.of(urlMap));
         }
 
         public GetUrlMapArgs build() {

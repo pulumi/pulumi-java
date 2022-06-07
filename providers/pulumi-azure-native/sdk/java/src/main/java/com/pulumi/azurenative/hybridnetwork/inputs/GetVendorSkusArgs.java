@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.hybridnetwork.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVendorSkusArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skuName", required=true)
-    private String skuName;
+    private Output<String> skuName;
 
     /**
      * @return The name of the sku.
      * 
      */
-    public String skuName() {
+    public Output<String> skuName() {
         return this.skuName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVendorSkusArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vendorName", required=true)
-    private String vendorName;
+    private Output<String> vendorName;
 
     /**
      * @return The name of the vendor.
      * 
      */
-    public String vendorName() {
+    public Output<String> vendorName() {
         return this.vendorName;
     }
 
@@ -73,8 +74,29 @@ public final class GetVendorSkusArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder skuName(String skuName) {
+        public Builder skuName(Output<String> skuName) {
             $.skuName = skuName;
+            return this;
+        }
+
+        /**
+         * @param skuName The name of the sku.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skuName(String skuName) {
+            return skuName(Output.of(skuName));
+        }
+
+        /**
+         * @param vendorName The name of the vendor.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vendorName(Output<String> vendorName) {
+            $.vendorName = vendorName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetVendorSkusArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder vendorName(String vendorName) {
-            $.vendorName = vendorName;
-            return this;
+            return vendorName(Output.of(vendorName));
         }
 
         public GetVendorSkusArgs build() {

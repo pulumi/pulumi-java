@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -20,20 +21,20 @@ public final class ListPrivateStoreStopSellOffersPlansNotificationsArgs extends 
      * 
      */
     @Import(name="privateStoreId", required=true)
-    private String privateStoreId;
+    private Output<String> privateStoreId;
 
     /**
      * @return The store ID - must use the tenant ID
      * 
      */
-    public String privateStoreId() {
+    public Output<String> privateStoreId() {
         return this.privateStoreId;
     }
 
     @Import(name="subscriptions")
-    private @Nullable List<String> subscriptions;
+    private @Nullable Output<List<String>> subscriptions;
 
-    public Optional<List<String>> subscriptions() {
+    public Optional<Output<List<String>>> subscriptions() {
         return Optional.ofNullable(this.subscriptions);
     }
 
@@ -68,14 +69,28 @@ public final class ListPrivateStoreStopSellOffersPlansNotificationsArgs extends 
          * @return builder
          * 
          */
-        public Builder privateStoreId(String privateStoreId) {
+        public Builder privateStoreId(Output<String> privateStoreId) {
             $.privateStoreId = privateStoreId;
             return this;
         }
 
-        public Builder subscriptions(@Nullable List<String> subscriptions) {
+        /**
+         * @param privateStoreId The store ID - must use the tenant ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateStoreId(String privateStoreId) {
+            return privateStoreId(Output.of(privateStoreId));
+        }
+
+        public Builder subscriptions(@Nullable Output<List<String>> subscriptions) {
             $.subscriptions = subscriptions;
             return this;
+        }
+
+        public Builder subscriptions(List<String> subscriptions) {
+            return subscriptions(Output.of(subscriptions));
         }
 
         public Builder subscriptions(String... subscriptions) {

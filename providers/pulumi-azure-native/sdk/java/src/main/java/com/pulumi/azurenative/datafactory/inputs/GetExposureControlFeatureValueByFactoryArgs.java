@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
      * 
      */
     @Import(name="factoryName", required=true)
-    private String factoryName;
+    private Output<String> factoryName;
 
     /**
      * @return The factory name.
      * 
      */
-    public String factoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -34,13 +35,13 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
      * 
      */
     @Import(name="featureName")
-    private @Nullable String featureName;
+    private @Nullable Output<String> featureName;
 
     /**
      * @return The feature name.
      * 
      */
-    public Optional<String> featureName() {
+    public Optional<Output<String>> featureName() {
         return Optional.ofNullable(this.featureName);
     }
 
@@ -49,13 +50,13 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
      * 
      */
     @Import(name="featureType")
-    private @Nullable String featureType;
+    private @Nullable Output<String> featureType;
 
     /**
      * @return The feature type.
      * 
      */
-    public Optional<String> featureType() {
+    public Optional<Output<String>> featureType() {
         return Optional.ofNullable(this.featureType);
     }
 
@@ -64,13 +65,13 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,8 +108,29 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder factoryName(String factoryName) {
+        public Builder factoryName(Output<String> factoryName) {
             $.factoryName = factoryName;
+            return this;
+        }
+
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder factoryName(String factoryName) {
+            return factoryName(Output.of(factoryName));
+        }
+
+        /**
+         * @param featureName The feature name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureName(@Nullable Output<String> featureName) {
+            $.featureName = featureName;
             return this;
         }
 
@@ -118,8 +140,18 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder featureName(@Nullable String featureName) {
-            $.featureName = featureName;
+        public Builder featureName(String featureName) {
+            return featureName(Output.of(featureName));
+        }
+
+        /**
+         * @param featureType The feature type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureType(@Nullable Output<String> featureType) {
+            $.featureType = featureType;
             return this;
         }
 
@@ -129,8 +161,18 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder featureType(@Nullable String featureType) {
-            $.featureType = featureType;
+        public Builder featureType(String featureType) {
+            return featureType(Output.of(featureType));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExposureControlFeatureValueByFactoryArgs build() {

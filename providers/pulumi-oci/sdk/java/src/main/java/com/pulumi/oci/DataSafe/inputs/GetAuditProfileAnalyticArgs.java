@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,13 +22,13 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
+    public Optional<Output<String>> accessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
 
@@ -36,13 +37,13 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the specified compartment OCID.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,13 +52,13 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
@@ -66,13 +67,13 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="groupBies")
-    private @Nullable List<String> groupBies;
+    private @Nullable Output<List<String>> groupBies;
 
     /**
      * @return The group by parameter for summarize operation on audit.
      * 
      */
-    public Optional<List<String>> groupBies() {
+    public Optional<Output<List<String>>> groupBies() {
         return Optional.ofNullable(this.groupBies);
     }
 
@@ -109,8 +110,29 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the specified compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -121,7 +143,17 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -131,8 +163,18 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param groupBies The group by parameter for summarize operation on audit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupBies(@Nullable Output<List<String>> groupBies) {
+            $.groupBies = groupBies;
             return this;
         }
 
@@ -142,9 +184,8 @@ public final class GetAuditProfileAnalyticArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder groupBies(@Nullable List<String> groupBies) {
-            $.groupBies = groupBies;
-            return this;
+        public Builder groupBies(List<String> groupBies) {
+            return groupBies(Output.of(groupBies));
         }
 
         /**

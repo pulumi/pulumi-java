@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datalakestore.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the Data Lake Store account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Azure resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="virtualNetworkRuleName", required=true)
-    private String virtualNetworkRuleName;
+    private Output<String> virtualNetworkRuleName;
 
     /**
      * @return The name of the virtual network rule to retrieve.
      * 
      */
-    public String virtualNetworkRuleName() {
+    public Output<String> virtualNetworkRuleName() {
         return this.virtualNetworkRuleName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualNetworkRuleName The name of the virtual network rule to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualNetworkRuleName(Output<String> virtualNetworkRuleName) {
+            $.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
-            $.virtualNetworkRuleName = virtualNetworkRuleName;
-            return this;
+            return virtualNetworkRuleName(Output.of(virtualNetworkRuleName));
         }
 
         public GetVirtualNetworkRuleArgs build() {

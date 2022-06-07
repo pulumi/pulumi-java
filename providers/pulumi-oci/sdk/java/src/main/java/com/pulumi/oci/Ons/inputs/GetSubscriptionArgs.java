@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Ons.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subscription to retrieve.
      * 
      */
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder subscriptionId(String subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
+        }
+
+        /**
+         * @param subscriptionId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the subscription to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
 
         public GetSubscriptionArgs build() {

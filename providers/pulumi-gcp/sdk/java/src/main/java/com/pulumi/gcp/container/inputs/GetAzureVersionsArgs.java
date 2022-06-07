@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.container.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="location")
-    private @Nullable String location;
+    private @Nullable Output<String> location;
 
     /**
      * @return The location to list versions for.
      * 
      */
-    public Optional<String> location() {
+    public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
 
@@ -35,14 +36,14 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
     /**
      * @return ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
      * Defaults to the project that the provider is authenticated with.
      * 
      */
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -77,8 +78,30 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder location(@Nullable String location) {
+        public Builder location(@Nullable Output<String> location) {
             $.location = location;
+            return this;
+        }
+
+        /**
+         * @param location The location to list versions for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param project ID of the project to list available cluster versions for. Should match the project the cluster will be deployed to.
+         * Defaults to the project that the provider is authenticated with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(@Nullable Output<String> project) {
+            $.project = project;
             return this;
         }
 
@@ -89,9 +112,8 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
-            $.project = project;
-            return this;
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetAzureVersionsArgs build() {

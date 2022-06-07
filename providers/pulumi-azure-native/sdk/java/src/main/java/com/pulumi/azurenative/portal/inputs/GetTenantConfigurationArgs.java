@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.portal.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTenantConfigurationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="configurationName", required=true)
-    private String configurationName;
+    private Output<String> configurationName;
 
     /**
      * @return The configuration name. Value must be &#39;default&#39;
      * 
      */
-    public String configurationName() {
+    public Output<String> configurationName() {
         return this.configurationName;
     }
 
@@ -57,9 +58,19 @@ public final class GetTenantConfigurationArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder configurationName(String configurationName) {
+        public Builder configurationName(Output<String> configurationName) {
             $.configurationName = configurationName;
             return this;
+        }
+
+        /**
+         * @param configurationName The configuration name. Value must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configurationName(String configurationName) {
+            return configurationName(Output.of(configurationName));
         }
 
         public GetTenantConfigurationArgs build() {

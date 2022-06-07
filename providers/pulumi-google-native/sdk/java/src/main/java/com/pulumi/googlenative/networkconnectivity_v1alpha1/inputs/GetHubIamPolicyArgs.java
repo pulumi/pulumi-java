@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetHubIamPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHubIamPolicyArgs Empty = new GetHubIamPolicyArgs();
 
     @Import(name="hubId", required=true)
-    private String hubId;
+    private Output<String> hubId;
 
-    public String hubId() {
+    public Output<String> hubId() {
         return this.hubId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetHubIamPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetHubIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder hubId(String hubId) {
+        public Builder hubId(Output<String> hubId) {
             $.hubId = hubId;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder hubId(String hubId) {
+            return hubId(Output.of(hubId));
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetHubIamPolicyArgs build() {

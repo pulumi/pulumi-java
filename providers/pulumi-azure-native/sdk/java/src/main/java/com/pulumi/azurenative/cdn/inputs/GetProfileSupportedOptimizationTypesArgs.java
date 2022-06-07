@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.cdn.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetProfileSupportedOptimizationTypesArgs extends com.pulumi.r
      * 
      */
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
     /**
      * @return Name of the CDN profile which is unique within the resource group.
      * 
      */
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -32,13 +33,13 @@ public final class GetProfileSupportedOptimizationTypesArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetProfileSupportedOptimizationTypesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder profileName(String profileName) {
+        public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
+            return this;
+        }
+
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(String profileName) {
+            return profileName(Output.of(profileName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetProfileSupportedOptimizationTypesArgs extends com.pulumi.r
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetProfileSupportedOptimizationTypesArgs build() {

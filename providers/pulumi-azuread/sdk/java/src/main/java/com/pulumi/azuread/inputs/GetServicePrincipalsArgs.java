@@ -3,6 +3,7 @@
 
 package com.pulumi.azuread.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,13 +22,13 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="applicationIds")
-    private @Nullable List<String> applicationIds;
+    private @Nullable Output<List<String>> applicationIds;
 
     /**
      * @return A list of application IDs (client IDs) of the applications associated with the service principals.
      * 
      */
-    public Optional<List<String>> applicationIds() {
+    public Optional<Output<List<String>>> applicationIds() {
         return Optional.ofNullable(this.applicationIds);
     }
 
@@ -36,13 +37,13 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="displayNames")
-    private @Nullable List<String> displayNames;
+    private @Nullable Output<List<String>> displayNames;
 
     /**
      * @return A list of display names of the applications associated with the service principals.
      * 
      */
-    public Optional<List<String>> displayNames() {
+    public Optional<Output<List<String>>> displayNames() {
         return Optional.ofNullable(this.displayNames);
     }
 
@@ -51,13 +52,13 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ignoreMissing")
-    private @Nullable Boolean ignoreMissing;
+    private @Nullable Output<Boolean> ignoreMissing;
 
     /**
      * @return Ignore missing service principals and return all service principals that are found. The data source will still fail if no service principals are found. Defaults to false.
      * 
      */
-    public Optional<Boolean> ignoreMissing() {
+    public Optional<Output<Boolean>> ignoreMissing() {
         return Optional.ofNullable(this.ignoreMissing);
     }
 
@@ -66,13 +67,13 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="objectIds")
-    private @Nullable List<String> objectIds;
+    private @Nullable Output<List<String>> objectIds;
 
     /**
      * @return The object IDs of the service principals.
      * 
      */
-    public Optional<List<String>> objectIds() {
+    public Optional<Output<List<String>>> objectIds() {
         return Optional.ofNullable(this.objectIds);
     }
 
@@ -81,13 +82,13 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="returnAll")
-    private @Nullable Boolean returnAll;
+    private @Nullable Output<Boolean> returnAll;
 
     /**
      * @return When `true`, the data source will return all service principals. Cannot be used with `ignore_missing`. Defaults to false.
      * 
      */
-    public Optional<Boolean> returnAll() {
+    public Optional<Output<Boolean>> returnAll() {
         return Optional.ofNullable(this.returnAll);
     }
 
@@ -125,9 +126,19 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder applicationIds(@Nullable List<String> applicationIds) {
+        public Builder applicationIds(@Nullable Output<List<String>> applicationIds) {
             $.applicationIds = applicationIds;
             return this;
+        }
+
+        /**
+         * @param applicationIds A list of application IDs (client IDs) of the applications associated with the service principals.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationIds(List<String> applicationIds) {
+            return applicationIds(Output.of(applicationIds));
         }
 
         /**
@@ -146,9 +157,19 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder displayNames(@Nullable List<String> displayNames) {
+        public Builder displayNames(@Nullable Output<List<String>> displayNames) {
             $.displayNames = displayNames;
             return this;
+        }
+
+        /**
+         * @param displayNames A list of display names of the applications associated with the service principals.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayNames(List<String> displayNames) {
+            return displayNames(Output.of(displayNames));
         }
 
         /**
@@ -167,8 +188,29 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder ignoreMissing(@Nullable Boolean ignoreMissing) {
+        public Builder ignoreMissing(@Nullable Output<Boolean> ignoreMissing) {
             $.ignoreMissing = ignoreMissing;
+            return this;
+        }
+
+        /**
+         * @param ignoreMissing Ignore missing service principals and return all service principals that are found. The data source will still fail if no service principals are found. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ignoreMissing(Boolean ignoreMissing) {
+            return ignoreMissing(Output.of(ignoreMissing));
+        }
+
+        /**
+         * @param objectIds The object IDs of the service principals.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectIds(@Nullable Output<List<String>> objectIds) {
+            $.objectIds = objectIds;
             return this;
         }
 
@@ -178,9 +220,8 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder objectIds(@Nullable List<String> objectIds) {
-            $.objectIds = objectIds;
-            return this;
+        public Builder objectIds(List<String> objectIds) {
+            return objectIds(Output.of(objectIds));
         }
 
         /**
@@ -199,9 +240,19 @@ public final class GetServicePrincipalsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder returnAll(@Nullable Boolean returnAll) {
+        public Builder returnAll(@Nullable Output<Boolean> returnAll) {
             $.returnAll = returnAll;
             return this;
+        }
+
+        /**
+         * @param returnAll When `true`, the data source will return all service principals. Cannot be used with `ignore_missing`. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder returnAll(Boolean returnAll) {
+            return returnAll(Output.of(returnAll));
         }
 
         public GetServicePrincipalsArgs build() {

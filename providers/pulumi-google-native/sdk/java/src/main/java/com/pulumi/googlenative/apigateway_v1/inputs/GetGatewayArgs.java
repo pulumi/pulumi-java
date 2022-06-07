@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigateway_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetGatewayArgs Empty = new GetGatewayArgs();
 
     @Import(name="gatewayId", required=true)
-    private String gatewayId;
+    private Output<String> gatewayId;
 
-    public String gatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder gatewayId(String gatewayId) {
+        public Builder gatewayId(Output<String> gatewayId) {
             $.gatewayId = gatewayId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder gatewayId(String gatewayId) {
+            return gatewayId(Output.of(gatewayId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetGatewayArgs build() {

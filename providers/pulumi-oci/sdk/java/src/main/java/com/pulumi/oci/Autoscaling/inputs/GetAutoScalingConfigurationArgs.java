@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Autoscaling.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAutoScalingConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="autoScalingConfigurationId", required=true)
-    private String autoScalingConfigurationId;
+    private Output<String> autoScalingConfigurationId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the autoscaling configuration.
      * 
      */
-    public String autoScalingConfigurationId() {
+    public Output<String> autoScalingConfigurationId() {
         return this.autoScalingConfigurationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAutoScalingConfigurationArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder autoScalingConfigurationId(String autoScalingConfigurationId) {
+        public Builder autoScalingConfigurationId(Output<String> autoScalingConfigurationId) {
             $.autoScalingConfigurationId = autoScalingConfigurationId;
             return this;
+        }
+
+        /**
+         * @param autoScalingConfigurationId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the autoscaling configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autoScalingConfigurationId(String autoScalingConfigurationId) {
+            return autoScalingConfigurationId(Output.of(autoScalingConfigurationId));
         }
 
         public GetAutoScalingConfigurationArgs build() {

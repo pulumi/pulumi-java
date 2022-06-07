@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetAlertPolicyRulesFilter;
+import com.pulumi.oci.DataSafe.inputs.GetAlertPolicyRulesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetAlertPolicyRulesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="alertPolicyId", required=true)
-    private String alertPolicyId;
+    private Output<String> alertPolicyId;
 
     /**
      * @return The OCID of the alert policy.
      * 
      */
-    public String alertPolicyId() {
+    public Output<String> alertPolicyId() {
         return this.alertPolicyId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAlertPolicyRulesFilter> filters;
+    private @Nullable Output<List<GetAlertPolicyRulesFilterArgs>> filters;
 
-    public Optional<List<GetAlertPolicyRulesFilter>> filters() {
+    public Optional<Output<List<GetAlertPolicyRulesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetAlertPolicyRulesArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder alertPolicyId(String alertPolicyId) {
+        public Builder alertPolicyId(Output<String> alertPolicyId) {
             $.alertPolicyId = alertPolicyId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAlertPolicyRulesFilter> filters) {
+        /**
+         * @param alertPolicyId The OCID of the alert policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alertPolicyId(String alertPolicyId) {
+            return alertPolicyId(Output.of(alertPolicyId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetAlertPolicyRulesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAlertPolicyRulesFilter... filters) {
+        public Builder filters(List<GetAlertPolicyRulesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAlertPolicyRulesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

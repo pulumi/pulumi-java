@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetFirewallArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFirewallArgs Empty = new GetFirewallArgs();
 
     @Import(name="firewall", required=true)
-    private String firewall;
+    private Output<String> firewall;
 
-    public String firewall() {
+    public Output<String> firewall() {
         return this.firewall;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetFirewallArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFirewallArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder firewall(String firewall) {
+        public Builder firewall(Output<String> firewall) {
             $.firewall = firewall;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder firewall(String firewall) {
+            return firewall(Output.of(firewall));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetFirewallArgs build() {

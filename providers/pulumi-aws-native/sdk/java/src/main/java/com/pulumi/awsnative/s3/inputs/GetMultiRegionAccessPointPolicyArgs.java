@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.s3.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMultiRegionAccessPointPolicyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="mrapName", required=true)
-    private String mrapName;
+    private Output<String> mrapName;
 
     /**
      * @return The name of the Multi Region Access Point to apply policy
      * 
      */
-    public String mrapName() {
+    public Output<String> mrapName() {
         return this.mrapName;
     }
 
@@ -57,9 +58,19 @@ public final class GetMultiRegionAccessPointPolicyArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder mrapName(String mrapName) {
+        public Builder mrapName(Output<String> mrapName) {
             $.mrapName = mrapName;
             return this;
+        }
+
+        /**
+         * @param mrapName The name of the Multi Region Access Point to apply policy
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrapName(String mrapName) {
+            return mrapName(Output.of(mrapName));
         }
 
         public GetMultiRegionAccessPointPolicyArgs build() {

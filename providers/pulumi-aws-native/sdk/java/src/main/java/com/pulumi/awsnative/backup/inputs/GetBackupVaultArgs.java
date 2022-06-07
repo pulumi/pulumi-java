@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.backup.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetBackupVaultArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBackupVaultArgs Empty = new GetBackupVaultArgs();
 
     @Import(name="backupVaultName", required=true)
-    private String backupVaultName;
+    private Output<String> backupVaultName;
 
-    public String backupVaultName() {
+    public Output<String> backupVaultName() {
         return this.backupVaultName;
     }
 
@@ -43,9 +44,13 @@ public final class GetBackupVaultArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBackupVaultArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder backupVaultName(String backupVaultName) {
+        public Builder backupVaultName(Output<String> backupVaultName) {
             $.backupVaultName = backupVaultName;
             return this;
+        }
+
+        public Builder backupVaultName(String backupVaultName) {
+            return backupVaultName(Output.of(backupVaultName));
         }
 
         public GetBackupVaultArgs build() {

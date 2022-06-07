@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.digitaltwins.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the DigitalTwinsInstance.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the DigitalTwinsInstance.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="timeSeriesDatabaseConnectionName", required=true)
-    private String timeSeriesDatabaseConnectionName;
+    private Output<String> timeSeriesDatabaseConnectionName;
 
     /**
      * @return Name of time series database connection.
      * 
      */
-    public String timeSeriesDatabaseConnectionName() {
+    public Output<String> timeSeriesDatabaseConnectionName() {
         return this.timeSeriesDatabaseConnectionName;
     }
 
@@ -89,8 +90,29 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
+            return resourceName(Output.of(resourceName));
+        }
+
+        /**
+         * @param timeSeriesDatabaseConnectionName Name of time series database connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeSeriesDatabaseConnectionName(Output<String> timeSeriesDatabaseConnectionName) {
+            $.timeSeriesDatabaseConnectionName = timeSeriesDatabaseConnectionName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetTimeSeriesDatabaseConnectionArgs extends com.pulumi.resour
          * 
          */
         public Builder timeSeriesDatabaseConnectionName(String timeSeriesDatabaseConnectionName) {
-            $.timeSeriesDatabaseConnectionName = timeSeriesDatabaseConnectionName;
-            return this;
+            return timeSeriesDatabaseConnectionName(Output.of(timeSeriesDatabaseConnectionName));
         }
 
         public GetTimeSeriesDatabaseConnectionArgs build() {

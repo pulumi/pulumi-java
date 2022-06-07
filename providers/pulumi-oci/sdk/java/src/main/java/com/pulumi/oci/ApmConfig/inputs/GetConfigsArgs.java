@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ApmConfig.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ApmConfig.inputs.GetConfigsFilter;
+import com.pulumi.oci.ApmConfig.inputs.GetConfigsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetConfigsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apmDomainId", required=true)
-    private String apmDomainId;
+    private Output<String> apmDomainId;
 
     /**
      * @return The APM Domain Id the request is intended for.
      * 
      */
-    public String apmDomainId() {
+    public Output<String> apmDomainId() {
         return this.apmDomainId;
     }
 
@@ -36,13 +37,13 @@ public final class GetConfigsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="configType")
-    private @Nullable String configType;
+    private @Nullable Output<String> configType;
 
     /**
      * @return A filter to match only configuration items of the given type. Supported values are SPAN_FILTER, METRIC_GROUP, and APDEX.
      * 
      */
-    public Optional<String> configType() {
+    public Optional<Output<String>> configType() {
         return Optional.ofNullable(this.configType);
     }
 
@@ -51,20 +52,20 @@ public final class GetConfigsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetConfigsFilter> filters;
+    private @Nullable Output<List<GetConfigsFilterArgs>> filters;
 
-    public Optional<List<GetConfigsFilter>> filters() {
+    public Optional<Output<List<GetConfigsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -101,8 +102,29 @@ public final class GetConfigsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apmDomainId(String apmDomainId) {
+        public Builder apmDomainId(Output<String> apmDomainId) {
             $.apmDomainId = apmDomainId;
+            return this;
+        }
+
+        /**
+         * @param apmDomainId The APM Domain Id the request is intended for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apmDomainId(String apmDomainId) {
+            return apmDomainId(Output.of(apmDomainId));
+        }
+
+        /**
+         * @param configType A filter to match only configuration items of the given type. Supported values are SPAN_FILTER, METRIC_GROUP, and APDEX.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configType(@Nullable Output<String> configType) {
+            $.configType = configType;
             return this;
         }
 
@@ -112,8 +134,18 @@ public final class GetConfigsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder configType(@Nullable String configType) {
-            $.configType = configType;
+        public Builder configType(String configType) {
+            return configType(Output.of(configType));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -123,17 +155,20 @@ public final class GetConfigsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetConfigsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetConfigsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetConfigsFilter... filters) {
+        public Builder filters(List<GetConfigsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetConfigsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

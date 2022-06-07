@@ -5,9 +5,12 @@ package com.pulumi.azurenative.visualstudio;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.visualstudio.inputs.GetAccountArgs;
+import com.pulumi.azurenative.visualstudio.inputs.GetAccountPlainArgs;
 import com.pulumi.azurenative.visualstudio.inputs.GetExtensionArgs;
+import com.pulumi.azurenative.visualstudio.inputs.GetExtensionPlainArgs;
 import com.pulumi.azurenative.visualstudio.outputs.GetAccountResult;
 import com.pulumi.azurenative.visualstudio.outputs.GetExtensionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +22,7 @@ public final class VisualstudioFunctions {
      * API Version: 2014-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -27,7 +30,23 @@ public final class VisualstudioFunctions {
      * API Version: 2014-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args) {
+        return getAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The response to an account resource GET request.
+     * API Version: 2014-04-01-preview.
+     * 
+     */
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:visualstudio:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The response to an account resource GET request.
+     * API Version: 2014-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:visualstudio:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -35,7 +54,7 @@ public final class VisualstudioFunctions {
      * API Version: 2014-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args) {
+    public static Output<GetExtensionResult> getExtension(GetExtensionArgs args) {
         return getExtension(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +62,23 @@ public final class VisualstudioFunctions {
      * API Version: 2014-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetExtensionResult> getExtension(GetExtensionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetExtensionResult> getExtensionPlain(GetExtensionPlainArgs args) {
+        return getExtensionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The response to an extension resource GET request.
+     * API Version: 2014-04-01-preview.
+     * 
+     */
+    public static Output<GetExtensionResult> getExtension(GetExtensionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:visualstudio:getExtension", TypeShape.of(GetExtensionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The response to an extension resource GET request.
+     * API Version: 2014-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetExtensionResult> getExtensionPlain(GetExtensionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:visualstudio:getExtension", TypeShape.of(GetExtensionResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.OperatorAccessControl.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OperatorAccessControl.inputs.GetControlsFilter;
+import com.pulumi.oci.OperatorAccessControl.inputs.GetControlsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetControlsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetControlsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return OperatorControl that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetControlsFilter> filters;
+    private @Nullable Output<List<GetControlsFilterArgs>> filters;
 
-    public Optional<List<GetControlsFilter>> filters() {
+    public Optional<Output<List<GetControlsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetControlsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceType")
-    private @Nullable String resourceType;
+    private @Nullable Output<String> resourceType;
 
     /**
      * @return A filter to return only lists of resources that match the entire given service type.
      * 
      */
-    public Optional<String> resourceType() {
+    public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
 
@@ -73,13 +74,13 @@ public final class GetControlsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources whose lifecycleState matches the given OperatorControl lifecycleState.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,8 +118,29 @@ public final class GetControlsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return OperatorControl that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -128,17 +150,20 @@ public final class GetControlsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetControlsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetControlsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetControlsFilter... filters) {
+        public Builder filters(List<GetControlsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetControlsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -148,8 +173,29 @@ public final class GetControlsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * @param resourceType A filter to return only lists of resources that match the entire given service type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        /**
+         * @param state A filter to return only resources whose lifecycleState matches the given OperatorControl lifecycleState.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetControlsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetControlsArgs build() {

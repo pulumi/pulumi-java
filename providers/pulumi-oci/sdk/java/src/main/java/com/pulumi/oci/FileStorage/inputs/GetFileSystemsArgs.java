@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.FileStorage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.FileStorage.inputs.GetFileSystemsFilter;
+import com.pulumi.oci.FileStorage.inputs.GetFileSystemsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain", required=true)
-    private String availabilityDomain;
+    private Output<String> availabilityDomain;
 
     /**
      * @return The name of the availability domain.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public String availabilityDomain() {
+    public Output<String> availabilityDomain() {
         return this.availabilityDomain;
     }
 
@@ -36,13 +37,13 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,20 +52,20 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. It does not have to be unique, and it is changeable.  Example: `My resource`
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetFileSystemsFilter> filters;
+    private @Nullable Output<List<GetFileSystemsFilterArgs>> filters;
 
-    public Optional<List<GetFileSystemsFilter>> filters() {
+    public Optional<Output<List<GetFileSystemsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return Filter results by [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for the resouce type.
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -88,13 +89,13 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentFileSystemId")
-    private @Nullable String parentFileSystemId;
+    private @Nullable Output<String> parentFileSystemId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the file system that contains the source snapshot of a cloned file system. See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
      * 
      */
-    public Optional<String> parentFileSystemId() {
+    public Optional<Output<String>> parentFileSystemId() {
         return Optional.ofNullable(this.parentFileSystemId);
     }
 
@@ -103,13 +104,13 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceSnapshotId")
-    private @Nullable String sourceSnapshotId;
+    private @Nullable Output<String> sourceSnapshotId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the snapshot used to create a cloned file system. See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
      * 
      */
-    public Optional<String> sourceSnapshotId() {
+    public Optional<Output<String>> sourceSnapshotId() {
         return Optional.ofNullable(this.sourceSnapshotId);
     }
 
@@ -118,13 +119,13 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Filter results by the specified lifecycle state. Must be a valid state for the resource type.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -165,8 +166,29 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(String availabilityDomain) {
+        public Builder availabilityDomain(Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availability domain.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -177,7 +199,17 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A user-friendly name. It does not have to be unique, and it is changeable.  Example: `My resource`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -187,17 +219,20 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetFileSystemsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetFileSystemsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetFileSystemsFilter... filters) {
+        public Builder filters(List<GetFileSystemsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetFileSystemsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -207,8 +242,29 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id Filter results by [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). Must be an OCID of the correct type for the resouce type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param parentFileSystemId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the file system that contains the source snapshot of a cloned file system. See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentFileSystemId(@Nullable Output<String> parentFileSystemId) {
+            $.parentFileSystemId = parentFileSystemId;
             return this;
         }
 
@@ -218,8 +274,18 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder parentFileSystemId(@Nullable String parentFileSystemId) {
-            $.parentFileSystemId = parentFileSystemId;
+        public Builder parentFileSystemId(String parentFileSystemId) {
+            return parentFileSystemId(Output.of(parentFileSystemId));
+        }
+
+        /**
+         * @param sourceSnapshotId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the snapshot used to create a cloned file system. See [Cloning a File System](https://docs.cloud.oracle.com/iaas/Content/File/Tasks/cloningafilesystem.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceSnapshotId(@Nullable Output<String> sourceSnapshotId) {
+            $.sourceSnapshotId = sourceSnapshotId;
             return this;
         }
 
@@ -229,8 +295,18 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sourceSnapshotId(@Nullable String sourceSnapshotId) {
-            $.sourceSnapshotId = sourceSnapshotId;
+        public Builder sourceSnapshotId(String sourceSnapshotId) {
+            return sourceSnapshotId(Output.of(sourceSnapshotId));
+        }
+
+        /**
+         * @param state Filter results by the specified lifecycle state. Must be a valid state for the resource type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -240,9 +316,8 @@ public final class GetFileSystemsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetFileSystemsArgs build() {

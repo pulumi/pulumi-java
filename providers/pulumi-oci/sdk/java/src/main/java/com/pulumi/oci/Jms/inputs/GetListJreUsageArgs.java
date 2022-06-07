@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Jms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationId")
-    private @Nullable String applicationId;
+    private @Nullable Output<String> applicationId;
 
     /**
      * @return The Fleet-unique identifier of the application.
      * 
      */
-    public Optional<String> applicationId() {
+    public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
 
@@ -34,13 +35,13 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationName")
-    private @Nullable String applicationName;
+    private @Nullable Output<String> applicationName;
 
     /**
      * @return The name of the application.
      * 
      */
-    public Optional<String> applicationName() {
+    public Optional<Output<String>> applicationName() {
         return Optional.ofNullable(this.applicationName);
     }
 
@@ -49,13 +50,13 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -64,13 +65,13 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostId")
-    private @Nullable String hostId;
+    private @Nullable Output<String> hostId;
 
     /**
      * @return The host [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance.
      * 
      */
-    public Optional<String> hostId() {
+    public Optional<Output<String>> hostId() {
         return Optional.ofNullable(this.hostId);
     }
 
@@ -79,13 +80,13 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeEnd")
-    private @Nullable String timeEnd;
+    private @Nullable Output<String> timeEnd;
 
     /**
      * @return The end of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
      * 
      */
-    public Optional<String> timeEnd() {
+    public Optional<Output<String>> timeEnd() {
         return Optional.ofNullable(this.timeEnd);
     }
 
@@ -94,13 +95,13 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeStart")
-    private @Nullable String timeStart;
+    private @Nullable Output<String> timeStart;
 
     /**
      * @return The start of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
      * 
      */
-    public Optional<String> timeStart() {
+    public Optional<Output<String>> timeStart() {
         return Optional.ofNullable(this.timeStart);
     }
 
@@ -139,8 +140,29 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder applicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * @param applicationId The Fleet-unique identifier of the application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
+        }
+
+        /**
+         * @param applicationName The name of the application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationName(@Nullable Output<String> applicationName) {
+            $.applicationName = applicationName;
             return this;
         }
 
@@ -150,8 +172,18 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder applicationName(@Nullable String applicationName) {
-            $.applicationName = applicationName;
+        public Builder applicationName(String applicationName) {
+            return applicationName(Output.of(applicationName));
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -161,8 +193,18 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
-            $.compartmentId = compartmentId;
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param hostId The host [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostId(@Nullable Output<String> hostId) {
+            $.hostId = hostId;
             return this;
         }
 
@@ -172,8 +214,18 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder hostId(@Nullable String hostId) {
-            $.hostId = hostId;
+        public Builder hostId(String hostId) {
+            return hostId(Output.of(hostId));
+        }
+
+        /**
+         * @param timeEnd The end of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeEnd(@Nullable Output<String> timeEnd) {
+            $.timeEnd = timeEnd;
             return this;
         }
 
@@ -183,8 +235,18 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeEnd(@Nullable String timeEnd) {
-            $.timeEnd = timeEnd;
+        public Builder timeEnd(String timeEnd) {
+            return timeEnd(Output.of(timeEnd));
+        }
+
+        /**
+         * @param timeStart The start of the time period during which resources are searched (formatted according to [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeStart(@Nullable Output<String> timeStart) {
+            $.timeStart = timeStart;
             return this;
         }
 
@@ -194,9 +256,8 @@ public final class GetListJreUsageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeStart(@Nullable String timeStart) {
-            $.timeStart = timeStart;
-            return this;
+        public Builder timeStart(String timeStart) {
+            return timeStart(Output.of(timeStart));
         }
 
         public GetListJreUsageArgs build() {

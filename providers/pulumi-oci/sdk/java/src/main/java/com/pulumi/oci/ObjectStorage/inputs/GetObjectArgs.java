@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ObjectStorage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -17,9 +18,9 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetObjectArgs Empty = new GetObjectArgs();
 
     @Import(name="base64EncodeContent")
-    private @Nullable Boolean base64EncodeContent;
+    private @Nullable Output<Boolean> base64EncodeContent;
 
-    public Optional<Boolean> base64EncodeContent() {
+    public Optional<Output<Boolean>> base64EncodeContent() {
         return Optional.ofNullable(this.base64EncodeContent);
     }
 
@@ -28,13 +29,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
     /**
      * @return The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
      * 
      */
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -43,13 +44,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentLengthLimit")
-    private @Nullable Integer contentLengthLimit;
+    private @Nullable Output<Integer> contentLengthLimit;
 
     /**
      * @return The limit of the content length of the object body to download from the object store. The default is 1Mb.
      * 
      */
-    public Optional<Integer> contentLengthLimit() {
+    public Optional<Output<Integer>> contentLengthLimit() {
         return Optional.ofNullable(this.contentLengthLimit);
     }
 
@@ -58,13 +59,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseCacheControl")
-    private @Nullable String httpResponseCacheControl;
+    private @Nullable Output<String> httpResponseCacheControl;
 
     /**
      * @return Specify this query parameter to override the Cache-Control response header in the GetObject response.
      * 
      */
-    public Optional<String> httpResponseCacheControl() {
+    public Optional<Output<String>> httpResponseCacheControl() {
         return Optional.ofNullable(this.httpResponseCacheControl);
     }
 
@@ -73,13 +74,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseContentDisposition")
-    private @Nullable String httpResponseContentDisposition;
+    private @Nullable Output<String> httpResponseContentDisposition;
 
     /**
      * @return Specify this query parameter to override the value of the Content-Disposition response header in the GetObject response.
      * 
      */
-    public Optional<String> httpResponseContentDisposition() {
+    public Optional<Output<String>> httpResponseContentDisposition() {
         return Optional.ofNullable(this.httpResponseContentDisposition);
     }
 
@@ -88,13 +89,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseContentEncoding")
-    private @Nullable String httpResponseContentEncoding;
+    private @Nullable Output<String> httpResponseContentEncoding;
 
     /**
      * @return Specify this query parameter to override the Content-Encoding response header in the GetObject response.
      * 
      */
-    public Optional<String> httpResponseContentEncoding() {
+    public Optional<Output<String>> httpResponseContentEncoding() {
         return Optional.ofNullable(this.httpResponseContentEncoding);
     }
 
@@ -103,13 +104,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseContentLanguage")
-    private @Nullable String httpResponseContentLanguage;
+    private @Nullable Output<String> httpResponseContentLanguage;
 
     /**
      * @return Specify this query parameter to override the Content-Language response header in the GetObject response.
      * 
      */
-    public Optional<String> httpResponseContentLanguage() {
+    public Optional<Output<String>> httpResponseContentLanguage() {
         return Optional.ofNullable(this.httpResponseContentLanguage);
     }
 
@@ -118,13 +119,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseContentType")
-    private @Nullable String httpResponseContentType;
+    private @Nullable Output<String> httpResponseContentType;
 
     /**
      * @return Specify this query parameter to override the Content-Type response header in the GetObject response.
      * 
      */
-    public Optional<String> httpResponseContentType() {
+    public Optional<Output<String>> httpResponseContentType() {
         return Optional.ofNullable(this.httpResponseContentType);
     }
 
@@ -133,13 +134,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpResponseExpires")
-    private @Nullable String httpResponseExpires;
+    private @Nullable Output<String> httpResponseExpires;
 
     /**
      * @return Specify this query parameter to override the Expires response header in the GetObject response.
      * 
      */
-    public Optional<String> httpResponseExpires() {
+    public Optional<Output<String>> httpResponseExpires() {
         return Optional.ofNullable(this.httpResponseExpires);
     }
 
@@ -148,13 +149,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Object Storage namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -163,13 +164,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="object", required=true)
-    private String object;
+    private Output<String> object;
 
     /**
      * @return The name of the object. Avoid entering confidential information. Example: `test/object1.log`
      * 
      */
-    public String object() {
+    public Output<String> object() {
         return this.object;
     }
 
@@ -178,13 +179,13 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versionId")
-    private @Nullable String versionId;
+    private @Nullable Output<String> versionId;
 
     /**
      * @return VersionId used to identify a particular version of the object
      * 
      */
-    public Optional<String> versionId() {
+    public Optional<Output<String>> versionId() {
         return Optional.ofNullable(this.versionId);
     }
 
@@ -223,8 +224,23 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetObjectArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder base64EncodeContent(@Nullable Boolean base64EncodeContent) {
+        public Builder base64EncodeContent(@Nullable Output<Boolean> base64EncodeContent) {
             $.base64EncodeContent = base64EncodeContent;
+            return this;
+        }
+
+        public Builder base64EncodeContent(Boolean base64EncodeContent) {
+            return base64EncodeContent(Output.of(base64EncodeContent));
+        }
+
+        /**
+         * @param bucket The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucket(Output<String> bucket) {
+            $.bucket = bucket;
             return this;
         }
 
@@ -235,7 +251,17 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder bucket(String bucket) {
-            $.bucket = bucket;
+            return bucket(Output.of(bucket));
+        }
+
+        /**
+         * @param contentLengthLimit The limit of the content length of the object body to download from the object store. The default is 1Mb.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contentLengthLimit(@Nullable Output<Integer> contentLengthLimit) {
+            $.contentLengthLimit = contentLengthLimit;
             return this;
         }
 
@@ -245,8 +271,18 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contentLengthLimit(@Nullable Integer contentLengthLimit) {
-            $.contentLengthLimit = contentLengthLimit;
+        public Builder contentLengthLimit(Integer contentLengthLimit) {
+            return contentLengthLimit(Output.of(contentLengthLimit));
+        }
+
+        /**
+         * @param httpResponseCacheControl Specify this query parameter to override the Cache-Control response header in the GetObject response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder httpResponseCacheControl(@Nullable Output<String> httpResponseCacheControl) {
+            $.httpResponseCacheControl = httpResponseCacheControl;
             return this;
         }
 
@@ -256,8 +292,18 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseCacheControl(@Nullable String httpResponseCacheControl) {
-            $.httpResponseCacheControl = httpResponseCacheControl;
+        public Builder httpResponseCacheControl(String httpResponseCacheControl) {
+            return httpResponseCacheControl(Output.of(httpResponseCacheControl));
+        }
+
+        /**
+         * @param httpResponseContentDisposition Specify this query parameter to override the value of the Content-Disposition response header in the GetObject response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder httpResponseContentDisposition(@Nullable Output<String> httpResponseContentDisposition) {
+            $.httpResponseContentDisposition = httpResponseContentDisposition;
             return this;
         }
 
@@ -267,8 +313,18 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentDisposition(@Nullable String httpResponseContentDisposition) {
-            $.httpResponseContentDisposition = httpResponseContentDisposition;
+        public Builder httpResponseContentDisposition(String httpResponseContentDisposition) {
+            return httpResponseContentDisposition(Output.of(httpResponseContentDisposition));
+        }
+
+        /**
+         * @param httpResponseContentEncoding Specify this query parameter to override the Content-Encoding response header in the GetObject response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder httpResponseContentEncoding(@Nullable Output<String> httpResponseContentEncoding) {
+            $.httpResponseContentEncoding = httpResponseContentEncoding;
             return this;
         }
 
@@ -278,8 +334,18 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentEncoding(@Nullable String httpResponseContentEncoding) {
-            $.httpResponseContentEncoding = httpResponseContentEncoding;
+        public Builder httpResponseContentEncoding(String httpResponseContentEncoding) {
+            return httpResponseContentEncoding(Output.of(httpResponseContentEncoding));
+        }
+
+        /**
+         * @param httpResponseContentLanguage Specify this query parameter to override the Content-Language response header in the GetObject response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder httpResponseContentLanguage(@Nullable Output<String> httpResponseContentLanguage) {
+            $.httpResponseContentLanguage = httpResponseContentLanguage;
             return this;
         }
 
@@ -289,8 +355,18 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentLanguage(@Nullable String httpResponseContentLanguage) {
-            $.httpResponseContentLanguage = httpResponseContentLanguage;
+        public Builder httpResponseContentLanguage(String httpResponseContentLanguage) {
+            return httpResponseContentLanguage(Output.of(httpResponseContentLanguage));
+        }
+
+        /**
+         * @param httpResponseContentType Specify this query parameter to override the Content-Type response header in the GetObject response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder httpResponseContentType(@Nullable Output<String> httpResponseContentType) {
+            $.httpResponseContentType = httpResponseContentType;
             return this;
         }
 
@@ -300,8 +376,18 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseContentType(@Nullable String httpResponseContentType) {
-            $.httpResponseContentType = httpResponseContentType;
+        public Builder httpResponseContentType(String httpResponseContentType) {
+            return httpResponseContentType(Output.of(httpResponseContentType));
+        }
+
+        /**
+         * @param httpResponseExpires Specify this query parameter to override the Expires response header in the GetObject response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder httpResponseExpires(@Nullable Output<String> httpResponseExpires) {
+            $.httpResponseExpires = httpResponseExpires;
             return this;
         }
 
@@ -311,8 +397,18 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder httpResponseExpires(@Nullable String httpResponseExpires) {
-            $.httpResponseExpires = httpResponseExpires;
+        public Builder httpResponseExpires(String httpResponseExpires) {
+            return httpResponseExpires(Output.of(httpResponseExpires));
+        }
+
+        /**
+         * @param namespace The Object Storage namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(Output<String> namespace) {
+            $.namespace = namespace;
             return this;
         }
 
@@ -323,7 +419,17 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder namespace(String namespace) {
-            $.namespace = namespace;
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param object The name of the object. Avoid entering confidential information. Example: `test/object1.log`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder object(Output<String> object) {
+            $.object = object;
             return this;
         }
 
@@ -334,7 +440,17 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder object(String object) {
-            $.object = object;
+            return object(Output.of(object));
+        }
+
+        /**
+         * @param versionId VersionId used to identify a particular version of the object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionId(@Nullable Output<String> versionId) {
+            $.versionId = versionId;
             return this;
         }
 
@@ -344,9 +460,8 @@ public final class GetObjectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder versionId(@Nullable String versionId) {
-            $.versionId = versionId;
-            return this;
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
         }
 
         public GetObjectArgs build() {

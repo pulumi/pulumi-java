@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDataGuardAssociationsFilter;
+import com.pulumi.oci.Database.inputs.GetDataGuardAssociationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetDataGuardAssociationsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="databaseId", required=true)
-    private String databaseId;
+    private Output<String> databaseId;
 
     /**
      * @return The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String databaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDataGuardAssociationsFilter> filters;
+    private @Nullable Output<List<GetDataGuardAssociationsFilterArgs>> filters;
 
-    public Optional<List<GetDataGuardAssociationsFilter>> filters() {
+    public Optional<Output<List<GetDataGuardAssociationsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetDataGuardAssociationsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder databaseId(String databaseId) {
+        public Builder databaseId(Output<String> databaseId) {
             $.databaseId = databaseId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDataGuardAssociationsFilter> filters) {
+        /**
+         * @param databaseId The database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseId(String databaseId) {
+            return databaseId(Output.of(databaseId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetDataGuardAssociationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDataGuardAssociationsFilter... filters) {
+        public Builder filters(List<GetDataGuardAssociationsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDataGuardAssociationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

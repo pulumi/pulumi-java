@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.outposts.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -20,13 +21,13 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="arn", required=true)
-    private String arn;
+    private Output<String> arn;
 
     /**
      * @return Outpost Amazon Resource Name (ARN).
      * 
      */
-    public String arn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -35,13 +36,13 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="instanceType")
-    private @Nullable String instanceType;
+    private @Nullable Output<String> instanceType;
 
     /**
      * @return Desired instance type. Conflicts with `preferred_instance_types`.
      * 
      */
-    public Optional<String> instanceType() {
+    public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
 
@@ -50,13 +51,13 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="preferredInstanceTypes")
-    private @Nullable List<String> preferredInstanceTypes;
+    private @Nullable Output<List<String>> preferredInstanceTypes;
 
     /**
      * @return Ordered list of preferred instance types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. Conflicts with `instance_type`.
      * 
      */
-    public Optional<List<String>> preferredInstanceTypes() {
+    public Optional<Output<List<String>>> preferredInstanceTypes() {
         return Optional.ofNullable(this.preferredInstanceTypes);
     }
 
@@ -92,8 +93,29 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder arn(String arn) {
+        public Builder arn(Output<String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn Outpost Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param instanceType Desired instance type. Conflicts with `preferred_instance_types`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceType(@Nullable Output<String> instanceType) {
+            $.instanceType = instanceType;
             return this;
         }
 
@@ -103,8 +125,18 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder instanceType(@Nullable String instanceType) {
-            $.instanceType = instanceType;
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
+        }
+
+        /**
+         * @param preferredInstanceTypes Ordered list of preferred instance types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. Conflicts with `instance_type`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredInstanceTypes(@Nullable Output<List<String>> preferredInstanceTypes) {
+            $.preferredInstanceTypes = preferredInstanceTypes;
             return this;
         }
 
@@ -114,9 +146,8 @@ public final class GetOutpostInstanceTypeArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder preferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
-            $.preferredInstanceTypes = preferredInstanceTypes;
-            return this;
+        public Builder preferredInstanceTypes(List<String> preferredInstanceTypes) {
+            return preferredInstanceTypes(Output.of(preferredInstanceTypes));
         }
 
         /**

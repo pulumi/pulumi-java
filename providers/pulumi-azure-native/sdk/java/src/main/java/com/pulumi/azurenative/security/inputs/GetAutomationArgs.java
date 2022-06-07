@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAutomationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationName", required=true)
-    private String automationName;
+    private Output<String> automationName;
 
     /**
      * @return The security automation name.
      * 
      */
-    public String automationName() {
+    public Output<String> automationName() {
         return this.automationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAutomationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetAutomationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder automationName(String automationName) {
+        public Builder automationName(Output<String> automationName) {
             $.automationName = automationName;
+            return this;
+        }
+
+        /**
+         * @param automationName The security automation name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder automationName(String automationName) {
+            return automationName(Output.of(automationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAutomationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAutomationArgs build() {

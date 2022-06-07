@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetServiceTagsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return The Azure Region where the Service Tags exists. This value is not used to filter the results but for specifying the region to request. For filtering by region use `location_filter` instead.  More information can be found here: [Service Tags URL parameters](https://docs.microsoft.com/en-us/rest/api/virtualnetwork/servicetags/list#uri-parameters).
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -34,13 +35,13 @@ public final class GetServiceTagsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locationFilter")
-    private @Nullable String locationFilter;
+    private @Nullable Output<String> locationFilter;
 
     /**
      * @return Changes the scope of the service tags. Can be any value that is also valid for `location`. If this field is empty then all address prefixes are considered instead of only location specific ones.
      * 
      */
-    public Optional<String> locationFilter() {
+    public Optional<Output<String>> locationFilter() {
         return Optional.ofNullable(this.locationFilter);
     }
 
@@ -49,13 +50,13 @@ public final class GetServiceTagsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="service", required=true)
-    private String service;
+    private Output<String> service;
 
     /**
      * @return The type of the service for which address prefixes will be fetched. Available service tags can be found here: [Available service tags](https://docs.microsoft.com/en-us/azure/virtual-network/service-tags-overview#available-service-tags).
      * 
      */
-    public String service() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -91,8 +92,29 @@ public final class GetServiceTagsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
+            return this;
+        }
+
+        /**
+         * @param location The Azure Region where the Service Tags exists. This value is not used to filter the results but for specifying the region to request. For filtering by region use `location_filter` instead.  More information can be found here: [Service Tags URL parameters](https://docs.microsoft.com/en-us/rest/api/virtualnetwork/servicetags/list#uri-parameters).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param locationFilter Changes the scope of the service tags. Can be any value that is also valid for `location`. If this field is empty then all address prefixes are considered instead of only location specific ones.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder locationFilter(@Nullable Output<String> locationFilter) {
+            $.locationFilter = locationFilter;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetServiceTagsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder locationFilter(@Nullable String locationFilter) {
-            $.locationFilter = locationFilter;
+        public Builder locationFilter(String locationFilter) {
+            return locationFilter(Output.of(locationFilter));
+        }
+
+        /**
+         * @param service The type of the service for which address prefixes will be fetched. Available service tags can be found here: [Available service tags](https://docs.microsoft.com/en-us/azure/virtual-network/service-tags-overview#available-service-tags).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder service(Output<String> service) {
+            $.service = service;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetServiceTagsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder service(String service) {
-            $.service = service;
-            return this;
+            return service(Output.of(service));
         }
 
         public GetServiceTagsArgs build() {

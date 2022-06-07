@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ecr.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPullThroughCacheRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="ecrRepositoryPrefix", required=true)
-    private String ecrRepositoryPrefix;
+    private Output<String> ecrRepositoryPrefix;
 
     /**
      * @return The ECRRepositoryPrefix is a custom alias for upstream registry url.
      * 
      */
-    public String ecrRepositoryPrefix() {
+    public Output<String> ecrRepositoryPrefix() {
         return this.ecrRepositoryPrefix;
     }
 
@@ -57,9 +58,19 @@ public final class GetPullThroughCacheRuleArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder ecrRepositoryPrefix(String ecrRepositoryPrefix) {
+        public Builder ecrRepositoryPrefix(Output<String> ecrRepositoryPrefix) {
             $.ecrRepositoryPrefix = ecrRepositoryPrefix;
             return this;
+        }
+
+        /**
+         * @param ecrRepositoryPrefix The ECRRepositoryPrefix is a custom alias for upstream registry url.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ecrRepositoryPrefix(String ecrRepositoryPrefix) {
+            return ecrRepositoryPrefix(Output.of(ecrRepositoryPrefix));
         }
 
         public GetPullThroughCacheRuleArgs build() {

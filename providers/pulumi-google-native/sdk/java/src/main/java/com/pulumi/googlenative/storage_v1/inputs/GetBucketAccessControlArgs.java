@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.storage_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetBucketAccessControlArgs extends com.pulumi.resources.Invok
     public static final GetBucketAccessControlArgs Empty = new GetBucketAccessControlArgs();
 
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="entity", required=true)
-    private String entity;
+    private Output<String> entity;
 
-    public String entity() {
+    public Output<String> entity() {
         return this.entity;
     }
 
     @Import(name="userProject")
-    private @Nullable String userProject;
+    private @Nullable Output<String> userProject;
 
-    public Optional<String> userProject() {
+    public Optional<Output<String>> userProject() {
         return Optional.ofNullable(this.userProject);
     }
 
@@ -61,19 +62,31 @@ public final class GetBucketAccessControlArgs extends com.pulumi.resources.Invok
             $ = new GetBucketAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
-        public Builder entity(String entity) {
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        public Builder entity(Output<String> entity) {
             $.entity = entity;
             return this;
         }
 
-        public Builder userProject(@Nullable String userProject) {
+        public Builder entity(String entity) {
+            return entity(Output.of(entity));
+        }
+
+        public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
+        }
+
+        public Builder userProject(String userProject) {
+            return userProject(Output.of(userProject));
         }
 
         public GetBucketAccessControlArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetAccessPolicyIamPolicyArgs extends com.pulumi.resources.Inv
     public static final GetAccessPolicyIamPolicyArgs Empty = new GetAccessPolicyIamPolicyArgs();
 
     @Import(name="accessPolicyId", required=true)
-    private String accessPolicyId;
+    private Output<String> accessPolicyId;
 
-    public String accessPolicyId() {
+    public Output<String> accessPolicyId() {
         return this.accessPolicyId;
     }
 
@@ -43,9 +44,13 @@ public final class GetAccessPolicyIamPolicyArgs extends com.pulumi.resources.Inv
             $ = new GetAccessPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder accessPolicyId(String accessPolicyId) {
+        public Builder accessPolicyId(Output<String> accessPolicyId) {
             $.accessPolicyId = accessPolicyId;
             return this;
+        }
+
+        public Builder accessPolicyId(String accessPolicyId) {
+            return accessPolicyId(Output.of(accessPolicyId));
         }
 
         public GetAccessPolicyIamPolicyArgs build() {

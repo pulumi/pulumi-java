@@ -43,13 +43,13 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        final var vpc = Output.of(Ec2Functions.getVpc(GetVpcArgs.builder()
+        final var vpc = Ec2Functions.getVpc(GetVpcArgs.builder()
             .default_(true)
-            .build()));
+            .build());
 
-        final var subnets = Output.of(Ec2Functions.getSubnetIds(GetSubnetIdsArgs.builder()
+        final var subnets = Ec2Functions.getSubnetIds(GetSubnetIdsArgs.builder()
             .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))
-            .build()));
+            .build());
 
         var webSecurityGroup = new SecurityGroup("webSecurityGroup", SecurityGroupArgs.builder()        
             .vpcId(vpc.applyValue(getVpcResult -> getVpcResult.id()))

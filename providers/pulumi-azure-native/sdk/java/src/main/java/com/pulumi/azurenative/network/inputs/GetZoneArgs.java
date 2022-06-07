@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zoneName", required=true)
-    private String zoneName;
+    private Output<String> zoneName;
 
     /**
      * @return The name of the DNS zone (without a terminating dot).
      * 
      */
-    public String zoneName() {
+    public Output<String> zoneName() {
         return this.zoneName;
     }
 
@@ -73,8 +74,29 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param zoneName The name of the DNS zone (without a terminating dot).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder zoneName(Output<String> zoneName) {
+            $.zoneName = zoneName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder zoneName(String zoneName) {
-            $.zoneName = zoneName;
-            return this;
+            return zoneName(Output.of(zoneName));
         }
 
         public GetZoneArgs build() {

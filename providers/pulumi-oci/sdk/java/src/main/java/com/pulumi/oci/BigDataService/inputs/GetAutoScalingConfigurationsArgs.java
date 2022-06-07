@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.BigDataService.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.BigDataService.inputs.GetAutoScalingConfigurationsFilter;
+import com.pulumi.oci.BigDataService.inputs.GetAutoScalingConfigurationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,37 +18,37 @@ public final class GetAutoScalingConfigurationsArgs extends com.pulumi.resources
     public static final GetAutoScalingConfigurationsArgs Empty = new GetAutoScalingConfigurationsArgs();
 
     @Import(name="bdsInstanceId", required=true)
-    private String bdsInstanceId;
+    private Output<String> bdsInstanceId;
 
-    public String bdsInstanceId() {
+    public Output<String> bdsInstanceId() {
         return this.bdsInstanceId;
     }
 
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAutoScalingConfigurationsFilter> filters;
+    private @Nullable Output<List<GetAutoScalingConfigurationsFilterArgs>> filters;
 
-    public Optional<List<GetAutoScalingConfigurationsFilter>> filters() {
+    public Optional<Output<List<GetAutoScalingConfigurationsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -79,33 +80,53 @@ public final class GetAutoScalingConfigurationsArgs extends com.pulumi.resources
             $ = new GetAutoScalingConfigurationsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bdsInstanceId(String bdsInstanceId) {
+        public Builder bdsInstanceId(Output<String> bdsInstanceId) {
             $.bdsInstanceId = bdsInstanceId;
             return this;
         }
 
-        public Builder compartmentId(String compartmentId) {
+        public Builder bdsInstanceId(String bdsInstanceId) {
+            return bdsInstanceId(Output.of(bdsInstanceId));
+        }
+
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder displayName(@Nullable String displayName) {
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAutoScalingConfigurationsFilter> filters) {
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public Builder filters(@Nullable Output<List<GetAutoScalingConfigurationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAutoScalingConfigurationsFilter... filters) {
+        public Builder filters(List<GetAutoScalingConfigurationsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAutoScalingConfigurationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
+        }
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetAutoScalingConfigurationsArgs build() {

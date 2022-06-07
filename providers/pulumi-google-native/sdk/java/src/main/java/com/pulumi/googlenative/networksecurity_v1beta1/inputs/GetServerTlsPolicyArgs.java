@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetServerTlsPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetServerTlsPolicyArgs Empty = new GetServerTlsPolicyArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="serverTlsPolicyId", required=true)
-    private String serverTlsPolicyId;
+    private Output<String> serverTlsPolicyId;
 
-    public String serverTlsPolicyId() {
+    public Output<String> serverTlsPolicyId() {
         return this.serverTlsPolicyId;
     }
 
@@ -61,19 +62,31 @@ public final class GetServerTlsPolicyArgs extends com.pulumi.resources.InvokeArg
             $ = new GetServerTlsPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder serverTlsPolicyId(String serverTlsPolicyId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder serverTlsPolicyId(Output<String> serverTlsPolicyId) {
             $.serverTlsPolicyId = serverTlsPolicyId;
             return this;
+        }
+
+        public Builder serverTlsPolicyId(String serverTlsPolicyId) {
+            return serverTlsPolicyId(Output.of(serverTlsPolicyId));
         }
 
         public GetServerTlsPolicyArgs build() {

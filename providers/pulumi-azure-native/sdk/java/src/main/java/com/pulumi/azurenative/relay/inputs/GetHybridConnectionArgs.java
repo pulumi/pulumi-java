@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.relay.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hybridConnectionName", required=true)
-    private String hybridConnectionName;
+    private Output<String> hybridConnectionName;
 
     /**
      * @return The hybrid connection name.
      * 
      */
-    public String hybridConnectionName() {
+    public Output<String> hybridConnectionName() {
         return this.hybridConnectionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The namespace name
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder hybridConnectionName(String hybridConnectionName) {
+        public Builder hybridConnectionName(Output<String> hybridConnectionName) {
             $.hybridConnectionName = hybridConnectionName;
+            return this;
+        }
+
+        /**
+         * @param hybridConnectionName The hybrid connection name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hybridConnectionName(String hybridConnectionName) {
+            return hybridConnectionName(Output.of(hybridConnectionName));
+        }
+
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder namespaceName(String namespaceName) {
-            $.namespaceName = namespaceName;
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetHybridConnectionArgs build() {

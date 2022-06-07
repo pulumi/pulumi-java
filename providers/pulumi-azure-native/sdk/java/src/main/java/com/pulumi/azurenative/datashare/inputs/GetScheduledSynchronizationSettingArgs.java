@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datashare.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the share account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
      * 
      */
     @Import(name="shareName", required=true)
-    private String shareName;
+    private Output<String> shareName;
 
     /**
      * @return The name of the share.
      * 
      */
-    public String shareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -62,13 +63,13 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
      * 
      */
     @Import(name="synchronizationSettingName", required=true)
-    private String synchronizationSettingName;
+    private Output<String> synchronizationSettingName;
 
     /**
      * @return The name of the synchronizationSetting.
      * 
      */
-    public String synchronizationSettingName() {
+    public Output<String> synchronizationSettingName() {
         return this.synchronizationSettingName;
     }
 
@@ -105,8 +106,29 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param shareName The name of the share.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareName(Output<String> shareName) {
+            $.shareName = shareName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
          * 
          */
         public Builder shareName(String shareName) {
-            $.shareName = shareName;
+            return shareName(Output.of(shareName));
+        }
+
+        /**
+         * @param synchronizationSettingName The name of the synchronizationSetting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder synchronizationSettingName(Output<String> synchronizationSettingName) {
+            $.synchronizationSettingName = synchronizationSettingName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
          * 
          */
         public Builder synchronizationSettingName(String synchronizationSettingName) {
-            $.synchronizationSettingName = synchronizationSettingName;
-            return this;
+            return synchronizationSettingName(Output.of(synchronizationSettingName));
         }
 
         public GetScheduledSynchronizationSettingArgs build() {

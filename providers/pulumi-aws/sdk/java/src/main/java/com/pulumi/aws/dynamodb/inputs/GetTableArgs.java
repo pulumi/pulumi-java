@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.dynamodb.inputs;
 
-import com.pulumi.aws.dynamodb.inputs.GetTableServerSideEncryption;
+import com.pulumi.aws.dynamodb.inputs.GetTableServerSideEncryptionArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -21,27 +22,27 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the DynamoDB table.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="serverSideEncryption")
-    private @Nullable GetTableServerSideEncryption serverSideEncryption;
+    private @Nullable Output<GetTableServerSideEncryptionArgs> serverSideEncryption;
 
-    public Optional<GetTableServerSideEncryption> serverSideEncryption() {
+    public Optional<Output<GetTableServerSideEncryptionArgs>> serverSideEncryption() {
         return Optional.ofNullable(this.serverSideEncryption);
     }
 
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -77,19 +78,37 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
-        public Builder serverSideEncryption(@Nullable GetTableServerSideEncryption serverSideEncryption) {
+        /**
+         * @param name The name of the DynamoDB table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public Builder serverSideEncryption(@Nullable Output<GetTableServerSideEncryptionArgs> serverSideEncryption) {
             $.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder serverSideEncryption(GetTableServerSideEncryptionArgs serverSideEncryption) {
+            return serverSideEncryption(Output.of(serverSideEncryption));
+        }
+
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
+        }
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetTableArgs build() {

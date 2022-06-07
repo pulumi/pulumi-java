@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ManagementAgent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ManagementAgent.inputs.GetManagementAgentAvailableHistoriesFilter;
+import com.pulumi.oci.ManagementAgent.inputs.GetManagementAgentAvailableHistoriesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetManagementAgentAvailableHistoriesArgs extends com.pulumi.r
     public static final GetManagementAgentAvailableHistoriesArgs Empty = new GetManagementAgentAvailableHistoriesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetManagementAgentAvailableHistoriesFilter> filters;
+    private @Nullable Output<List<GetManagementAgentAvailableHistoriesFilterArgs>> filters;
 
-    public Optional<List<GetManagementAgentAvailableHistoriesFilter>> filters() {
+    public Optional<Output<List<GetManagementAgentAvailableHistoriesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetManagementAgentAvailableHistoriesArgs extends com.pulumi.r
      * 
      */
     @Import(name="managementAgentId", required=true)
-    private String managementAgentId;
+    private Output<String> managementAgentId;
 
     /**
      * @return Unique Management Agent identifier
      * 
      */
-    public String managementAgentId() {
+    public Output<String> managementAgentId() {
         return this.managementAgentId;
     }
 
@@ -43,13 +44,13 @@ public final class GetManagementAgentAvailableHistoriesArgs extends com.pulumi.r
      * 
      */
     @Import(name="timeAvailabilityStatusEndedGreaterThan")
-    private @Nullable String timeAvailabilityStatusEndedGreaterThan;
+    private @Nullable Output<String> timeAvailabilityStatusEndedGreaterThan;
 
     /**
      * @return Filter to limit the availability history results to that of time after the input time including the boundary record. Defaulted to current date minus one year. The date and time to be given as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
      * 
      */
-    public Optional<String> timeAvailabilityStatusEndedGreaterThan() {
+    public Optional<Output<String>> timeAvailabilityStatusEndedGreaterThan() {
         return Optional.ofNullable(this.timeAvailabilityStatusEndedGreaterThan);
     }
 
@@ -58,13 +59,13 @@ public final class GetManagementAgentAvailableHistoriesArgs extends com.pulumi.r
      * 
      */
     @Import(name="timeAvailabilityStatusStartedLessThan")
-    private @Nullable String timeAvailabilityStatusStartedLessThan;
+    private @Nullable Output<String> timeAvailabilityStatusStartedLessThan;
 
     /**
      * @return Filter to limit the availability history results to that of time before the input time including the boundary record Defaulted to current date. The date and time to be given as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
      * 
      */
-    public Optional<String> timeAvailabilityStatusStartedLessThan() {
+    public Optional<Output<String>> timeAvailabilityStatusStartedLessThan() {
         return Optional.ofNullable(this.timeAvailabilityStatusStartedLessThan);
     }
 
@@ -95,12 +96,16 @@ public final class GetManagementAgentAvailableHistoriesArgs extends com.pulumi.r
             $ = new GetManagementAgentAvailableHistoriesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetManagementAgentAvailableHistoriesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetManagementAgentAvailableHistoriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetManagementAgentAvailableHistoriesFilter... filters) {
+        public Builder filters(List<GetManagementAgentAvailableHistoriesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetManagementAgentAvailableHistoriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -110,8 +115,29 @@ public final class GetManagementAgentAvailableHistoriesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder managementAgentId(String managementAgentId) {
+        public Builder managementAgentId(Output<String> managementAgentId) {
             $.managementAgentId = managementAgentId;
+            return this;
+        }
+
+        /**
+         * @param managementAgentId Unique Management Agent identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementAgentId(String managementAgentId) {
+            return managementAgentId(Output.of(managementAgentId));
+        }
+
+        /**
+         * @param timeAvailabilityStatusEndedGreaterThan Filter to limit the availability history results to that of time after the input time including the boundary record. Defaulted to current date minus one year. The date and time to be given as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeAvailabilityStatusEndedGreaterThan(@Nullable Output<String> timeAvailabilityStatusEndedGreaterThan) {
+            $.timeAvailabilityStatusEndedGreaterThan = timeAvailabilityStatusEndedGreaterThan;
             return this;
         }
 
@@ -121,8 +147,18 @@ public final class GetManagementAgentAvailableHistoriesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder timeAvailabilityStatusEndedGreaterThan(@Nullable String timeAvailabilityStatusEndedGreaterThan) {
-            $.timeAvailabilityStatusEndedGreaterThan = timeAvailabilityStatusEndedGreaterThan;
+        public Builder timeAvailabilityStatusEndedGreaterThan(String timeAvailabilityStatusEndedGreaterThan) {
+            return timeAvailabilityStatusEndedGreaterThan(Output.of(timeAvailabilityStatusEndedGreaterThan));
+        }
+
+        /**
+         * @param timeAvailabilityStatusStartedLessThan Filter to limit the availability history results to that of time before the input time including the boundary record Defaulted to current date. The date and time to be given as described in [RFC 3339](https://tools.ietf.org/rfc/rfc3339), section 14.29.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeAvailabilityStatusStartedLessThan(@Nullable Output<String> timeAvailabilityStatusStartedLessThan) {
+            $.timeAvailabilityStatusStartedLessThan = timeAvailabilityStatusStartedLessThan;
             return this;
         }
 
@@ -132,9 +168,8 @@ public final class GetManagementAgentAvailableHistoriesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder timeAvailabilityStatusStartedLessThan(@Nullable String timeAvailabilityStatusStartedLessThan) {
-            $.timeAvailabilityStatusStartedLessThan = timeAvailabilityStatusStartedLessThan;
-            return this;
+        public Builder timeAvailabilityStatusStartedLessThan(String timeAvailabilityStatusStartedLessThan) {
+            return timeAvailabilityStatusStartedLessThan(Output.of(timeAvailabilityStatusStartedLessThan));
         }
 
         public GetManagementAgentAvailableHistoriesArgs build() {

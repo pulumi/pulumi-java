@@ -23,9 +23,9 @@ public class App {
         final var config = ctx.config();
         final var storageAccountNameParam = config.get("storageAccountNameParam");
         final var resourceGroupNameParam = config.get("resourceGroupNameParam");
-        final var resourceGroupVar = Output.of(CoreFunctions.getResourceGroup(GetResourceGroupArgs.builder()
+        final var resourceGroupVar = CoreFunctions.getResourceGroup(GetResourceGroupArgs.builder()
             .name(resourceGroupNameParam)
-            .build()));
+            .build());
 
         final var locationParam = config.get("locationParam").orElse(resourceGroupVar.applyValue(getResourceGroupResult -> getResourceGroupResult.location()));
         final var storageAccountTierParam = config.get("storageAccountTierParam").orElse("Standard");

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPublicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicationId", required=true)
-    private String publicationId;
+    private Output<String> publicationId;
 
     /**
      * @return The unique identifier for the publication.
      * 
      */
-    public String publicationId() {
+    public Output<String> publicationId() {
         return this.publicationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetPublicationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publicationId(String publicationId) {
+        public Builder publicationId(Output<String> publicationId) {
             $.publicationId = publicationId;
             return this;
+        }
+
+        /**
+         * @param publicationId The unique identifier for the publication.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicationId(String publicationId) {
+            return publicationId(Output.of(publicationId));
         }
 
         public GetPublicationArgs build() {

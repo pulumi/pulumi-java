@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPolicyExemptionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="policyExemptionName", required=true)
-    private String policyExemptionName;
+    private Output<String> policyExemptionName;
 
     /**
      * @return The name of the policy exemption to delete.
      * 
      */
-    public String policyExemptionName() {
+    public Output<String> policyExemptionName() {
         return this.policyExemptionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPolicyExemptionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return The scope of the policy exemption. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -73,8 +74,29 @@ public final class GetPolicyExemptionArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder policyExemptionName(String policyExemptionName) {
+        public Builder policyExemptionName(Output<String> policyExemptionName) {
             $.policyExemptionName = policyExemptionName;
+            return this;
+        }
+
+        /**
+         * @param policyExemptionName The name of the policy exemption to delete.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyExemptionName(String policyExemptionName) {
+            return policyExemptionName(Output.of(policyExemptionName));
+        }
+
+        /**
+         * @param scope The scope of the policy exemption. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPolicyExemptionArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetPolicyExemptionArgs build() {

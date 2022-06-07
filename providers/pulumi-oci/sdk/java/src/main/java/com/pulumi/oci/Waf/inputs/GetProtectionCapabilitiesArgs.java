@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Waf.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Waf.inputs.GetProtectionCapabilitiesFilter;
+import com.pulumi.oci.Waf.inputs.GetProtectionCapabilitiesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -37,20 +38,20 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetProtectionCapabilitiesFilter> filters;
+    private @Nullable Output<List<GetProtectionCapabilitiesFilterArgs>> filters;
 
-    public Optional<List<GetProtectionCapabilitiesFilter>> filters() {
+    public Optional<Output<List<GetProtectionCapabilitiesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -59,13 +60,13 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="groupTags")
-    private @Nullable List<String> groupTags;
+    private @Nullable Output<List<String>> groupTags;
 
     /**
      * @return A filter to return only resources that are accociated given group tag.
      * 
      */
-    public Optional<List<String>> groupTags() {
+    public Optional<Output<List<String>>> groupTags() {
         return Optional.ofNullable(this.groupTags);
     }
 
@@ -74,13 +75,13 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="isLatestVersions")
-    private @Nullable List<Boolean> isLatestVersions;
+    private @Nullable Output<List<Boolean>> isLatestVersions;
 
     /**
      * @return A filter to return only resources that matches given isLatestVersion.
      * 
      */
-    public Optional<List<Boolean>> isLatestVersions() {
+    public Optional<Output<List<Boolean>>> isLatestVersions() {
         return Optional.ofNullable(this.isLatestVersions);
     }
 
@@ -89,13 +90,13 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="key")
-    private @Nullable String key;
+    private @Nullable Output<String> key;
 
     /**
      * @return The unique key of protection capability to filter by.
      * 
      */
-    public Optional<String> key() {
+    public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
 
@@ -104,13 +105,13 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private @Nullable Output<String> type;
 
     /**
      * @return A filter to return only resources that matches given type.
      * 
      */
-    public Optional<String> type() {
+    public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
 
@@ -150,8 +151,29 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -161,17 +183,20 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetProtectionCapabilitiesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetProtectionCapabilitiesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetProtectionCapabilitiesFilter... filters) {
+        public Builder filters(List<GetProtectionCapabilitiesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetProtectionCapabilitiesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -181,9 +206,19 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder groupTags(@Nullable List<String> groupTags) {
+        public Builder groupTags(@Nullable Output<List<String>> groupTags) {
             $.groupTags = groupTags;
             return this;
+        }
+
+        /**
+         * @param groupTags A filter to return only resources that are accociated given group tag.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupTags(List<String> groupTags) {
+            return groupTags(Output.of(groupTags));
         }
 
         /**
@@ -202,9 +237,19 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder isLatestVersions(@Nullable List<Boolean> isLatestVersions) {
+        public Builder isLatestVersions(@Nullable Output<List<Boolean>> isLatestVersions) {
             $.isLatestVersions = isLatestVersions;
             return this;
+        }
+
+        /**
+         * @param isLatestVersions A filter to return only resources that matches given isLatestVersion.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isLatestVersions(List<Boolean> isLatestVersions) {
+            return isLatestVersions(Output.of(isLatestVersions));
         }
 
         /**
@@ -223,8 +268,29 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder key(@Nullable String key) {
+        public Builder key(@Nullable Output<String> key) {
             $.key = key;
+            return this;
+        }
+
+        /**
+         * @param key The unique key of protection capability to filter by.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder key(String key) {
+            return key(Output.of(key));
+        }
+
+        /**
+         * @param type A filter to return only resources that matches given type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable Output<String> type) {
+            $.type = type;
             return this;
         }
 
@@ -234,9 +300,8 @@ public final class GetProtectionCapabilitiesArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
-            $.type = type;
-            return this;
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         public GetProtectionCapabilitiesArgs build() {

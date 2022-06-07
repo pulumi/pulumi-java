@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.connect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contactFlowArn", required=true)
-    private String contactFlowArn;
+    private Output<String> contactFlowArn;
 
     /**
      * @return The identifier of the contact flow (ARN).
      * 
      */
-    public String contactFlowArn() {
+    public Output<String> contactFlowArn() {
         return this.contactFlowArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetContactFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder contactFlowArn(String contactFlowArn) {
+        public Builder contactFlowArn(Output<String> contactFlowArn) {
             $.contactFlowArn = contactFlowArn;
             return this;
+        }
+
+        /**
+         * @param contactFlowArn The identifier of the contact flow (ARN).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder contactFlowArn(String contactFlowArn) {
+            return contactFlowArn(Output.of(contactFlowArn));
         }
 
         public GetContactFlowArgs build() {

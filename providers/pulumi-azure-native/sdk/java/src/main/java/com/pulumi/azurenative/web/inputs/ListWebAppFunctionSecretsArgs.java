@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListWebAppFunctionSecretsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="functionName", required=true)
-    private String functionName;
+    private Output<String> functionName;
 
     /**
      * @return Function name.
      * 
      */
-    public String functionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -32,13 +33,13 @@ public final class ListWebAppFunctionSecretsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Site name.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class ListWebAppFunctionSecretsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class ListWebAppFunctionSecretsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder functionName(String functionName) {
+        public Builder functionName(Output<String> functionName) {
             $.functionName = functionName;
+            return this;
+        }
+
+        /**
+         * @param functionName Function name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionName(String functionName) {
+            return functionName(Output.of(functionName));
+        }
+
+        /**
+         * @param name Site name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListWebAppFunctionSecretsArgs extends com.pulumi.resources.In
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListWebAppFunctionSecretsArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListWebAppFunctionSecretsArgs build() {

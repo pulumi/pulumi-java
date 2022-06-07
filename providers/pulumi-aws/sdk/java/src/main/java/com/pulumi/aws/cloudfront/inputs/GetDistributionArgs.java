@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,20 +21,20 @@ public final class GetDistributionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
     /**
      * @return The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
      * 
      */
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -68,14 +69,28 @@ public final class GetDistributionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(String id) {
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
-        public Builder tags(@Nullable Map<String,String> tags) {
+        /**
+         * @param id The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
+        }
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetDistributionArgs build() {

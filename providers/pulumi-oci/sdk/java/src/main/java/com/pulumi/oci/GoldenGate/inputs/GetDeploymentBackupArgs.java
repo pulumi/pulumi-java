@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.GoldenGate.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeploymentBackupArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="deploymentBackupId", required=true)
-    private String deploymentBackupId;
+    private Output<String> deploymentBackupId;
 
     /**
      * @return A unique DeploymentBackup identifier.
      * 
      */
-    public String deploymentBackupId() {
+    public Output<String> deploymentBackupId() {
         return this.deploymentBackupId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDeploymentBackupArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder deploymentBackupId(String deploymentBackupId) {
+        public Builder deploymentBackupId(Output<String> deploymentBackupId) {
             $.deploymentBackupId = deploymentBackupId;
             return this;
+        }
+
+        /**
+         * @param deploymentBackupId A unique DeploymentBackup identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentBackupId(String deploymentBackupId) {
+            return deploymentBackupId(Output.of(deploymentBackupId));
         }
 
         public GetDeploymentBackupArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.billing.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMpaAccountScopeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="billingAccountName", required=true)
-    private String billingAccountName;
+    private Output<String> billingAccountName;
 
     /**
      * @return The Billing Account Name of the MPA account.
      * 
      */
-    public String billingAccountName() {
+    public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMpaAccountScopeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="customerName", required=true)
-    private String customerName;
+    private Output<String> customerName;
 
     /**
      * @return The Customer Name in the above Billing Account.
      * 
      */
-    public String customerName() {
+    public Output<String> customerName() {
         return this.customerName;
     }
 
@@ -73,8 +74,29 @@ public final class GetMpaAccountScopeArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder billingAccountName(String billingAccountName) {
+        public Builder billingAccountName(Output<String> billingAccountName) {
             $.billingAccountName = billingAccountName;
+            return this;
+        }
+
+        /**
+         * @param billingAccountName The Billing Account Name of the MPA account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccountName(String billingAccountName) {
+            return billingAccountName(Output.of(billingAccountName));
+        }
+
+        /**
+         * @param customerName The Customer Name in the above Billing Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customerName(Output<String> customerName) {
+            $.customerName = customerName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetMpaAccountScopeArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder customerName(String customerName) {
-            $.customerName = customerName;
-            return this;
+            return customerName(Output.of(customerName));
         }
 
         public GetMpaAccountScopeArgs build() {

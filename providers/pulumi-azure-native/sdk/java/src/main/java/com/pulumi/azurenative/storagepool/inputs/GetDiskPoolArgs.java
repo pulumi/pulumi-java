@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.storagepool.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDiskPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskPoolName", required=true)
-    private String diskPoolName;
+    private Output<String> diskPoolName;
 
     /**
      * @return The name of the Disk pool.
      * 
      */
-    public String diskPoolName() {
+    public Output<String> diskPoolName() {
         return this.diskPoolName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDiskPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetDiskPoolArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder diskPoolName(String diskPoolName) {
+        public Builder diskPoolName(Output<String> diskPoolName) {
             $.diskPoolName = diskPoolName;
+            return this;
+        }
+
+        /**
+         * @param diskPoolName The name of the Disk pool.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder diskPoolName(String diskPoolName) {
+            return diskPoolName(Output.of(diskPoolName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDiskPoolArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDiskPoolArgs build() {

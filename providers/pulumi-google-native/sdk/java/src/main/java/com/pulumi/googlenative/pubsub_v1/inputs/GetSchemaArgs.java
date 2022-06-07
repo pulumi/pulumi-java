@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.pubsub_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSchemaArgs Empty = new GetSchemaArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="schemaId", required=true)
-    private String schemaId;
+    private Output<String> schemaId;
 
-    public String schemaId() {
+    public Output<String> schemaId() {
         return this.schemaId;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private @Nullable Output<String> view;
 
-    public Optional<String> view() {
+    public Optional<Output<String>> view() {
         return Optional.ofNullable(this.view);
     }
 
@@ -61,19 +62,31 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSchemaArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder schemaId(String schemaId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder schemaId(Output<String> schemaId) {
             $.schemaId = schemaId;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder schemaId(String schemaId) {
+            return schemaId(Output.of(schemaId));
+        }
+
+        public Builder view(@Nullable Output<String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(String view) {
+            return view(Output.of(view));
         }
 
         public GetSchemaArgs build() {

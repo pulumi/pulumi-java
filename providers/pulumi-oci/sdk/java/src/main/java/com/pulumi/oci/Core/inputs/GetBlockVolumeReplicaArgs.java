@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBlockVolumeReplicaArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="blockVolumeReplicaId", required=true)
-    private String blockVolumeReplicaId;
+    private Output<String> blockVolumeReplicaId;
 
     /**
      * @return The OCID of the block volume replica.
      * 
      */
-    public String blockVolumeReplicaId() {
+    public Output<String> blockVolumeReplicaId() {
         return this.blockVolumeReplicaId;
     }
 
@@ -57,9 +58,19 @@ public final class GetBlockVolumeReplicaArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder blockVolumeReplicaId(String blockVolumeReplicaId) {
+        public Builder blockVolumeReplicaId(Output<String> blockVolumeReplicaId) {
             $.blockVolumeReplicaId = blockVolumeReplicaId;
             return this;
+        }
+
+        /**
+         * @param blockVolumeReplicaId The OCID of the block volume replica.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockVolumeReplicaId(String blockVolumeReplicaId) {
+            return blockVolumeReplicaId(Output.of(blockVolumeReplicaId));
         }
 
         public GetBlockVolumeReplicaArgs build() {

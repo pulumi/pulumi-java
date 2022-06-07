@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.emr.inputs;
 
 import com.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -18,13 +19,13 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="identityName", required=true)
-    private String identityName;
+    private Output<String> identityName;
 
     /**
      * @return The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
      * 
      */
-    public String identityName() {
+    public Output<String> identityName() {
         return this.identityName;
     }
 
@@ -33,13 +34,13 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="identityType", required=true)
-    private StudioSessionMappingIdentityType identityType;
+    private Output<StudioSessionMappingIdentityType> identityType;
 
     /**
      * @return Specifies whether the identity to map to the Studio is a user or a group.
      * 
      */
-    public StudioSessionMappingIdentityType identityType() {
+    public Output<StudioSessionMappingIdentityType> identityType() {
         return this.identityType;
     }
 
@@ -48,13 +49,13 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="studioId", required=true)
-    private String studioId;
+    private Output<String> studioId;
 
     /**
      * @return The ID of the Amazon EMR Studio to which the user or group will be mapped.
      * 
      */
-    public String studioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
@@ -90,8 +91,29 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder identityName(String identityName) {
+        public Builder identityName(Output<String> identityName) {
             $.identityName = identityName;
+            return this;
+        }
+
+        /**
+         * @param identityName The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identityName(String identityName) {
+            return identityName(Output.of(identityName));
+        }
+
+        /**
+         * @param identityType Specifies whether the identity to map to the Studio is a user or a group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identityType(Output<StudioSessionMappingIdentityType> identityType) {
+            $.identityType = identityType;
             return this;
         }
 
@@ -102,7 +124,17 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder identityType(StudioSessionMappingIdentityType identityType) {
-            $.identityType = identityType;
+            return identityType(Output.of(identityType));
+        }
+
+        /**
+         * @param studioId The ID of the Amazon EMR Studio to which the user or group will be mapped.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder studioId(Output<String> studioId) {
+            $.studioId = studioId;
             return this;
         }
 
@@ -113,8 +145,7 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder studioId(String studioId) {
-            $.studioId = studioId;
-            return this;
+            return studioId(Output.of(studioId));
         }
 
         public GetStudioSessionMappingArgs build() {

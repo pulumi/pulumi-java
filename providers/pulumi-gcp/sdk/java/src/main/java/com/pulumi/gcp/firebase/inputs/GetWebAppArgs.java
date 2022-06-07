@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.firebase.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWebAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appId", required=true)
-    private String appId;
+    private Output<String> appId;
 
     /**
      * @return The app_ip of name of the Firebase webApp.
      * 
      */
-    public String appId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -57,9 +58,19 @@ public final class GetWebAppArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder appId(String appId) {
+        public Builder appId(Output<String> appId) {
             $.appId = appId;
             return this;
+        }
+
+        /**
+         * @param appId The app_ip of name of the Firebase webApp.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
 
         public GetWebAppArgs build() {

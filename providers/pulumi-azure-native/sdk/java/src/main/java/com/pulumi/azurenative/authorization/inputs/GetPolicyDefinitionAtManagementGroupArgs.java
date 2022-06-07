@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPolicyDefinitionAtManagementGroupArgs extends com.pulumi.r
      * 
      */
     @Import(name="managementGroupId", required=true)
-    private String managementGroupId;
+    private Output<String> managementGroupId;
 
     /**
      * @return The ID of the management group.
      * 
      */
-    public String managementGroupId() {
+    public Output<String> managementGroupId() {
         return this.managementGroupId;
     }
 
@@ -32,13 +33,13 @@ public final class GetPolicyDefinitionAtManagementGroupArgs extends com.pulumi.r
      * 
      */
     @Import(name="policyDefinitionName", required=true)
-    private String policyDefinitionName;
+    private Output<String> policyDefinitionName;
 
     /**
      * @return The name of the policy definition to get.
      * 
      */
-    public String policyDefinitionName() {
+    public Output<String> policyDefinitionName() {
         return this.policyDefinitionName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPolicyDefinitionAtManagementGroupArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder managementGroupId(String managementGroupId) {
+        public Builder managementGroupId(Output<String> managementGroupId) {
             $.managementGroupId = managementGroupId;
+            return this;
+        }
+
+        /**
+         * @param managementGroupId The ID of the management group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managementGroupId(String managementGroupId) {
+            return managementGroupId(Output.of(managementGroupId));
+        }
+
+        /**
+         * @param policyDefinitionName The name of the policy definition to get.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyDefinitionName(Output<String> policyDefinitionName) {
+            $.policyDefinitionName = policyDefinitionName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPolicyDefinitionAtManagementGroupArgs extends com.pulumi.r
          * 
          */
         public Builder policyDefinitionName(String policyDefinitionName) {
-            $.policyDefinitionName = policyDefinitionName;
-            return this;
+            return policyDefinitionName(Output.of(policyDefinitionName));
         }
 
         public GetPolicyDefinitionAtManagementGroupArgs build() {

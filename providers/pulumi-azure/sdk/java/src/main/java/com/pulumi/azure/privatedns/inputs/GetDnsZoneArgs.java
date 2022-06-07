@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.privatedns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetDnsZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the Private DNS Zone.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +37,7 @@ public final class GetDnsZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName")
-    private @Nullable String resourceGroupName;
+    private @Nullable Output<String> resourceGroupName;
 
     /**
      * @return The Name of the Resource Group where the Private DNS Zone exists.
@@ -44,7 +45,7 @@ public final class GetDnsZoneArgs extends com.pulumi.resources.InvokeArgs {
      * DNS Zones in your subscription that matches `name` will be returned.
      * 
      */
-    public Optional<String> resourceGroupName() {
+    public Optional<Output<String>> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
 
@@ -79,8 +80,31 @@ public final class GetDnsZoneArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the Private DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The Name of the Resource Group where the Private DNS Zone exists.
+         * If the Name of the Resource Group is not provided, the first Private DNS Zone from the list of Private
+         * DNS Zones in your subscription that matches `name` will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -92,9 +116,8 @@ public final class GetDnsZoneArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDnsZoneArgs build() {

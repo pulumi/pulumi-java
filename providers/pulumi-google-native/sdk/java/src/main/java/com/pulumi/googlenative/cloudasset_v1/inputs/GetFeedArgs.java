@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudasset_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetFeedArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFeedArgs Empty = new GetFeedArgs();
 
     @Import(name="feedId", required=true)
-    private String feedId;
+    private Output<String> feedId;
 
-    public String feedId() {
+    public Output<String> feedId() {
         return this.feedId;
     }
 
     @Import(name="v1Id", required=true)
-    private String v1Id;
+    private Output<String> v1Id;
 
-    public String v1Id() {
+    public Output<String> v1Id() {
         return this.v1Id;
     }
 
     @Import(name="v1Id1", required=true)
-    private String v1Id1;
+    private Output<String> v1Id1;
 
-    public String v1Id1() {
+    public Output<String> v1Id1() {
         return this.v1Id1;
     }
 
@@ -59,19 +60,31 @@ public final class GetFeedArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFeedArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder feedId(String feedId) {
+        public Builder feedId(Output<String> feedId) {
             $.feedId = feedId;
             return this;
         }
 
-        public Builder v1Id(String v1Id) {
+        public Builder feedId(String feedId) {
+            return feedId(Output.of(feedId));
+        }
+
+        public Builder v1Id(Output<String> v1Id) {
             $.v1Id = v1Id;
             return this;
         }
 
-        public Builder v1Id1(String v1Id1) {
+        public Builder v1Id(String v1Id) {
+            return v1Id(Output.of(v1Id));
+        }
+
+        public Builder v1Id1(Output<String> v1Id1) {
             $.v1Id1 = v1Id1;
             return this;
+        }
+
+        public Builder v1Id1(String v1Id1) {
+            return v1Id1(Output.of(v1Id1));
         }
 
         public GetFeedArgs build() {

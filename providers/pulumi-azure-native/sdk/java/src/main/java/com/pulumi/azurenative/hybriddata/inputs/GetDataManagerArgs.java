@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.hybriddata.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDataManagerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataManagerName", required=true)
-    private String dataManagerName;
+    private Output<String> dataManagerName;
 
     /**
      * @return The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
      * 
      */
-    public String dataManagerName() {
+    public Output<String> dataManagerName() {
         return this.dataManagerName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDataManagerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Resource Group Name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetDataManagerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dataManagerName(String dataManagerName) {
+        public Builder dataManagerName(Output<String> dataManagerName) {
             $.dataManagerName = dataManagerName;
+            return this;
+        }
+
+        /**
+         * @param dataManagerName The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataManagerName(String dataManagerName) {
+            return dataManagerName(Output.of(dataManagerName));
+        }
+
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDataManagerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDataManagerArgs build() {

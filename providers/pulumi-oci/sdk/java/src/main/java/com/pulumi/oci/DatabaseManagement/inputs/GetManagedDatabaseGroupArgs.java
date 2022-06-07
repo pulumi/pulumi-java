@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagedDatabaseGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="managedDatabaseGroupId", required=true)
-    private String managedDatabaseGroupId;
+    private Output<String> managedDatabaseGroupId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database Group.
      * 
      */
-    public String managedDatabaseGroupId() {
+    public Output<String> managedDatabaseGroupId() {
         return this.managedDatabaseGroupId;
     }
 
@@ -57,9 +58,19 @@ public final class GetManagedDatabaseGroupArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder managedDatabaseGroupId(String managedDatabaseGroupId) {
+        public Builder managedDatabaseGroupId(Output<String> managedDatabaseGroupId) {
             $.managedDatabaseGroupId = managedDatabaseGroupId;
             return this;
+        }
+
+        /**
+         * @param managedDatabaseGroupId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database Group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedDatabaseGroupId(String managedDatabaseGroupId) {
+            return managedDatabaseGroupId(Output.of(managedDatabaseGroupId));
         }
 
         public GetManagedDatabaseGroupArgs build() {

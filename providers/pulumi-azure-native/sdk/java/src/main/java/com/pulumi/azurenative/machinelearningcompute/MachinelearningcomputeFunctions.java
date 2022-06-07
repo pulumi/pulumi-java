@@ -5,9 +5,12 @@ package com.pulumi.azurenative.machinelearningcompute;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.machinelearningcompute.inputs.GetOperationalizationClusterArgs;
+import com.pulumi.azurenative.machinelearningcompute.inputs.GetOperationalizationClusterPlainArgs;
 import com.pulumi.azurenative.machinelearningcompute.inputs.ListOperationalizationClusterKeysArgs;
+import com.pulumi.azurenative.machinelearningcompute.inputs.ListOperationalizationClusterKeysPlainArgs;
 import com.pulumi.azurenative.machinelearningcompute.outputs.GetOperationalizationClusterResult;
 import com.pulumi.azurenative.machinelearningcompute.outputs.ListOperationalizationClusterKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +22,7 @@ public final class MachinelearningcomputeFunctions {
      * API Version: 2017-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetOperationalizationClusterResult> getOperationalizationCluster(GetOperationalizationClusterArgs args) {
+    public static Output<GetOperationalizationClusterResult> getOperationalizationCluster(GetOperationalizationClusterArgs args) {
         return getOperationalizationCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -27,7 +30,23 @@ public final class MachinelearningcomputeFunctions {
      * API Version: 2017-08-01-preview.
      * 
      */
-    public static CompletableFuture<GetOperationalizationClusterResult> getOperationalizationCluster(GetOperationalizationClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetOperationalizationClusterResult> getOperationalizationClusterPlain(GetOperationalizationClusterPlainArgs args) {
+        return getOperationalizationClusterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Instance of an Azure ML Operationalization Cluster resource.
+     * API Version: 2017-08-01-preview.
+     * 
+     */
+    public static Output<GetOperationalizationClusterResult> getOperationalizationCluster(GetOperationalizationClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningcompute:getOperationalizationCluster", TypeShape.of(GetOperationalizationClusterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Instance of an Azure ML Operationalization Cluster resource.
+     * API Version: 2017-08-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetOperationalizationClusterResult> getOperationalizationClusterPlain(GetOperationalizationClusterPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningcompute:getOperationalizationCluster", TypeShape.of(GetOperationalizationClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -35,7 +54,7 @@ public final class MachinelearningcomputeFunctions {
      * API Version: 2017-08-01-preview.
      * 
      */
-    public static CompletableFuture<ListOperationalizationClusterKeysResult> listOperationalizationClusterKeys(ListOperationalizationClusterKeysArgs args) {
+    public static Output<ListOperationalizationClusterKeysResult> listOperationalizationClusterKeys(ListOperationalizationClusterKeysArgs args) {
         return listOperationalizationClusterKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +62,23 @@ public final class MachinelearningcomputeFunctions {
      * API Version: 2017-08-01-preview.
      * 
      */
-    public static CompletableFuture<ListOperationalizationClusterKeysResult> listOperationalizationClusterKeys(ListOperationalizationClusterKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListOperationalizationClusterKeysResult> listOperationalizationClusterKeysPlain(ListOperationalizationClusterKeysPlainArgs args) {
+        return listOperationalizationClusterKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Credentials to resources in the cluster.
+     * API Version: 2017-08-01-preview.
+     * 
+     */
+    public static Output<ListOperationalizationClusterKeysResult> listOperationalizationClusterKeys(ListOperationalizationClusterKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:machinelearningcompute:listOperationalizationClusterKeys", TypeShape.of(ListOperationalizationClusterKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Credentials to resources in the cluster.
+     * API Version: 2017-08-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListOperationalizationClusterKeysResult> listOperationalizationClusterKeysPlain(ListOperationalizationClusterKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningcompute:listOperationalizationClusterKeys", TypeShape.of(ListOperationalizationClusterKeysResult.class), args, Utilities.withVersion(options));
     }
 }

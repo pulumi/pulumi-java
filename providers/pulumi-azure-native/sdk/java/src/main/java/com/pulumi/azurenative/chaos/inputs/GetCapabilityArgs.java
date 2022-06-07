@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.chaos.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="capabilityName", required=true)
-    private String capabilityName;
+    private Output<String> capabilityName;
 
     /**
      * @return String that represents a Capability resource name.
      * 
      */
-    public String capabilityName() {
+    public Output<String> capabilityName() {
         return this.capabilityName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentProviderNamespace", required=true)
-    private String parentProviderNamespace;
+    private Output<String> parentProviderNamespace;
 
     /**
      * @return String that represents a resource provider namespace.
      * 
      */
-    public String parentProviderNamespace() {
+    public Output<String> parentProviderNamespace() {
         return this.parentProviderNamespace;
     }
 
@@ -47,13 +48,13 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentResourceName", required=true)
-    private String parentResourceName;
+    private Output<String> parentResourceName;
 
     /**
      * @return String that represents a resource name.
      * 
      */
-    public String parentResourceName() {
+    public Output<String> parentResourceName() {
         return this.parentResourceName;
     }
 
@@ -62,13 +63,13 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentResourceType", required=true)
-    private String parentResourceType;
+    private Output<String> parentResourceType;
 
     /**
      * @return String that represents a resource type.
      * 
      */
-    public String parentResourceType() {
+    public Output<String> parentResourceType() {
         return this.parentResourceType;
     }
 
@@ -77,13 +78,13 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return String that represents an Azure resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,13 +93,13 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetName", required=true)
-    private String targetName;
+    private Output<String> targetName;
 
     /**
      * @return String that represents a Target resource name.
      * 
      */
-    public String targetName() {
+    public Output<String> targetName() {
         return this.targetName;
     }
 
@@ -137,8 +138,29 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder capabilityName(String capabilityName) {
+        public Builder capabilityName(Output<String> capabilityName) {
             $.capabilityName = capabilityName;
+            return this;
+        }
+
+        /**
+         * @param capabilityName String that represents a Capability resource name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder capabilityName(String capabilityName) {
+            return capabilityName(Output.of(capabilityName));
+        }
+
+        /**
+         * @param parentProviderNamespace String that represents a resource provider namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentProviderNamespace(Output<String> parentProviderNamespace) {
+            $.parentProviderNamespace = parentProviderNamespace;
             return this;
         }
 
@@ -149,7 +171,17 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder parentProviderNamespace(String parentProviderNamespace) {
-            $.parentProviderNamespace = parentProviderNamespace;
+            return parentProviderNamespace(Output.of(parentProviderNamespace));
+        }
+
+        /**
+         * @param parentResourceName String that represents a resource name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentResourceName(Output<String> parentResourceName) {
+            $.parentResourceName = parentResourceName;
             return this;
         }
 
@@ -160,7 +192,17 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder parentResourceName(String parentResourceName) {
-            $.parentResourceName = parentResourceName;
+            return parentResourceName(Output.of(parentResourceName));
+        }
+
+        /**
+         * @param parentResourceType String that represents a resource type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parentResourceType(Output<String> parentResourceType) {
+            $.parentResourceType = parentResourceType;
             return this;
         }
 
@@ -171,7 +213,17 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder parentResourceType(String parentResourceType) {
-            $.parentResourceType = parentResourceType;
+            return parentResourceType(Output.of(parentResourceType));
+        }
+
+        /**
+         * @param resourceGroupName String that represents an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -182,7 +234,17 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param targetName String that represents a Target resource name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetName(Output<String> targetName) {
+            $.targetName = targetName;
             return this;
         }
 
@@ -193,8 +255,7 @@ public final class GetCapabilityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder targetName(String targetName) {
-            $.targetName = targetName;
-            return this;
+            return targetName(Output.of(targetName));
         }
 
         public GetCapabilityArgs build() {

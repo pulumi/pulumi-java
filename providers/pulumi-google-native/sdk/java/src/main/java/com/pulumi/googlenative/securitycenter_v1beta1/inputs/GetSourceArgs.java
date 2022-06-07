@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.securitycenter_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetSourceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSourceArgs Empty = new GetSourceArgs();
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="sourceId", required=true)
-    private String sourceId;
+    private Output<String> sourceId;
 
-    public String sourceId() {
+    public Output<String> sourceId() {
         return this.sourceId;
     }
 
@@ -51,14 +52,22 @@ public final class GetSourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSourceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
-        public Builder sourceId(String sourceId) {
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
+        }
+
+        public Builder sourceId(Output<String> sourceId) {
             $.sourceId = sourceId;
             return this;
+        }
+
+        public Builder sourceId(String sourceId) {
+            return sourceId(Output.of(sourceId));
         }
 
         public GetSourceArgs build() {

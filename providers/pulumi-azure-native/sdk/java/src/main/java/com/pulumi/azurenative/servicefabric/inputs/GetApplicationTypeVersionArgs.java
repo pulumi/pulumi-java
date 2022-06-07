@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.servicefabric.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="applicationTypeName", required=true)
-    private String applicationTypeName;
+    private Output<String> applicationTypeName;
 
     /**
      * @return The name of the application type name resource.
      * 
      */
-    public String applicationTypeName() {
+    public Output<String> applicationTypeName() {
         return this.applicationTypeName;
     }
 
@@ -32,13 +33,13 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return The name of the cluster resource.
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -47,13 +48,13 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="version", required=true)
-    private String version;
+    private Output<String> version;
 
     /**
      * @return The application type version.
      * 
      */
-    public String version() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -105,8 +106,29 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder applicationTypeName(String applicationTypeName) {
+        public Builder applicationTypeName(Output<String> applicationTypeName) {
             $.applicationTypeName = applicationTypeName;
+            return this;
+        }
+
+        /**
+         * @param applicationTypeName The name of the application type name resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationTypeName(String applicationTypeName) {
+            return applicationTypeName(Output.of(applicationTypeName));
+        }
+
+        /**
+         * @param clusterName The name of the cluster resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(Output<String> clusterName) {
+            $.clusterName = clusterName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
          * 
          */
         public Builder clusterName(String clusterName) {
-            $.clusterName = clusterName;
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param version The application type version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Output<String> version) {
+            $.version = version;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetApplicationTypeVersionArgs extends com.pulumi.resources.In
          * 
          */
         public Builder version(String version) {
-            $.version = version;
-            return this;
+            return version(Output.of(version));
         }
 
         public GetApplicationTypeVersionArgs build() {

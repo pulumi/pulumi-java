@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ApmTraces.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ApmTraces.inputs.GetQueryQuickPicksFilter;
+import com.pulumi.oci.ApmTraces.inputs.GetQueryQuickPicksFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetQueryQuickPicksArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="apmDomainId", required=true)
-    private String apmDomainId;
+    private Output<String> apmDomainId;
 
     /**
      * @return The APM Domain ID the request is intended for.
      * 
      */
-    public String apmDomainId() {
+    public Output<String> apmDomainId() {
         return this.apmDomainId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetQueryQuickPicksFilter> filters;
+    private @Nullable Output<List<GetQueryQuickPicksFilterArgs>> filters;
 
-    public Optional<List<GetQueryQuickPicksFilter>> filters() {
+    public Optional<Output<List<GetQueryQuickPicksFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetQueryQuickPicksArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder apmDomainId(String apmDomainId) {
+        public Builder apmDomainId(Output<String> apmDomainId) {
             $.apmDomainId = apmDomainId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetQueryQuickPicksFilter> filters) {
+        /**
+         * @param apmDomainId The APM Domain ID the request is intended for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apmDomainId(String apmDomainId) {
+            return apmDomainId(Output.of(apmDomainId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetQueryQuickPicksFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetQueryQuickPicksFilter... filters) {
+        public Builder filters(List<GetQueryQuickPicksFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetQueryQuickPicksFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

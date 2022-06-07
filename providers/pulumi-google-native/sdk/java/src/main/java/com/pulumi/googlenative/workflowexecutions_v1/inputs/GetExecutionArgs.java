@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.workflowexecutions_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetExecutionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetExecutionArgs Empty = new GetExecutionArgs();
 
     @Import(name="executionId", required=true)
-    private String executionId;
+    private Output<String> executionId;
 
-    public String executionId() {
+    public Output<String> executionId() {
         return this.executionId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private @Nullable Output<String> view;
 
-    public Optional<String> view() {
+    public Optional<Output<String>> view() {
         return Optional.ofNullable(this.view);
     }
 
     @Import(name="workflowId", required=true)
-    private String workflowId;
+    private Output<String> workflowId;
 
-    public String workflowId() {
+    public Output<String> workflowId() {
         return this.workflowId;
     }
 
@@ -77,29 +78,49 @@ public final class GetExecutionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetExecutionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder executionId(String executionId) {
+        public Builder executionId(Output<String> executionId) {
             $.executionId = executionId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder executionId(String executionId) {
+            return executionId(Output.of(executionId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder view(@Nullable Output<String> view) {
             $.view = view;
             return this;
         }
 
-        public Builder workflowId(String workflowId) {
+        public Builder view(String view) {
+            return view(Output.of(view));
+        }
+
+        public Builder workflowId(Output<String> workflowId) {
             $.workflowId = workflowId;
             return this;
+        }
+
+        public Builder workflowId(String workflowId) {
+            return workflowId(Output.of(workflowId));
         }
 
         public GetExecutionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.consumption.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBudgetSubscriptionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of this Consumption Budget.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetBudgetSubscriptionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
     /**
      * @return The ID of the subscription.
      * 
      */
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -73,8 +74,29 @@ public final class GetBudgetSubscriptionArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of this Consumption Budget.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param subscriptionId The ID of the subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(Output<String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetBudgetSubscriptionArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder subscriptionId(String subscriptionId) {
-            $.subscriptionId = subscriptionId;
-            return this;
+            return subscriptionId(Output.of(subscriptionId));
         }
 
         public GetBudgetSubscriptionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudchannel_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetCustomerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCustomerArgs Empty = new GetCustomerArgs();
 
     @Import(name="accountId", required=true)
-    private String accountId;
+    private Output<String> accountId;
 
-    public String accountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
     @Import(name="channelPartnerLinkId", required=true)
-    private String channelPartnerLinkId;
+    private Output<String> channelPartnerLinkId;
 
-    public String channelPartnerLinkId() {
+    public Output<String> channelPartnerLinkId() {
         return this.channelPartnerLinkId;
     }
 
     @Import(name="customerId", required=true)
-    private String customerId;
+    private Output<String> customerId;
 
-    public String customerId() {
+    public Output<String> customerId() {
         return this.customerId;
     }
 
@@ -59,19 +60,31 @@ public final class GetCustomerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCustomerArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder accountId(String accountId) {
+        public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
-        public Builder channelPartnerLinkId(String channelPartnerLinkId) {
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
+        }
+
+        public Builder channelPartnerLinkId(Output<String> channelPartnerLinkId) {
             $.channelPartnerLinkId = channelPartnerLinkId;
             return this;
         }
 
-        public Builder customerId(String customerId) {
+        public Builder channelPartnerLinkId(String channelPartnerLinkId) {
+            return channelPartnerLinkId(Output.of(channelPartnerLinkId));
+        }
+
+        public Builder customerId(Output<String> customerId) {
             $.customerId = customerId;
             return this;
+        }
+
+        public Builder customerId(String customerId) {
+            return customerId(Output.of(customerId));
         }
 
         public GetCustomerArgs build() {

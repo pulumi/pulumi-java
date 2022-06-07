@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="connectionName", required=true)
-    private String connectionName;
+    private Output<String> connectionName;
 
     /**
      * @return Connection name
      * 
      */
-    public String connectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
 
@@ -34,13 +35,13 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +50,13 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscriptionId")
-    private @Nullable String subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
     /**
      * @return Subscription Id
      * 
      */
-    public Optional<String> subscriptionId() {
+    public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
 
@@ -91,8 +92,29 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder connectionName(String connectionName) {
+        public Builder connectionName(Output<String> connectionName) {
             $.connectionName = connectionName;
+            return this;
+        }
+
+        /**
+         * @param connectionName Connection name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param subscriptionId Subscription Id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -113,9 +145,8 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            $.subscriptionId = subscriptionId;
-            return this;
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
 
         public GetConnectionArgs build() {

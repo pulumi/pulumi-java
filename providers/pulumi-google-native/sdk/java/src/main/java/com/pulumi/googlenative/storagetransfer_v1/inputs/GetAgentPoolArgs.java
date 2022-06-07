@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAgentPoolArgs Empty = new GetAgentPoolArgs();
 
     @Import(name="agentPoolId", required=true)
-    private String agentPoolId;
+    private Output<String> agentPoolId;
 
-    public String agentPoolId() {
+    public Output<String> agentPoolId() {
         return this.agentPoolId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAgentPoolArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder agentPoolId(String agentPoolId) {
+        public Builder agentPoolId(Output<String> agentPoolId) {
             $.agentPoolId = agentPoolId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder agentPoolId(String agentPoolId) {
+            return agentPoolId(Output.of(agentPoolId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetAgentPoolArgs build() {

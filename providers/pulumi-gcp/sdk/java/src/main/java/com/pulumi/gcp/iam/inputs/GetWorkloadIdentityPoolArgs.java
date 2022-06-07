@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +21,14 @@ public final class GetWorkloadIdentityPoolArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
     /**
      * @return The project in which the resource belongs. If it
      * is not provided, the provider project is used.
      * 
      */
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -37,14 +38,14 @@ public final class GetWorkloadIdentityPoolArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workloadIdentityPoolId", required=true)
-    private String workloadIdentityPoolId;
+    private Output<String> workloadIdentityPoolId;
 
     /**
      * @return The id of the pool which is the
      * final component of the resource name.
      * 
      */
-    public String workloadIdentityPoolId() {
+    public Output<String> workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
 
@@ -80,8 +81,31 @@ public final class GetWorkloadIdentityPoolArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
+            return this;
+        }
+
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        /**
+         * @param workloadIdentityPoolId The id of the pool which is the
+         * final component of the resource name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workloadIdentityPoolId(Output<String> workloadIdentityPoolId) {
+            $.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
         }
 
@@ -93,8 +117,7 @@ public final class GetWorkloadIdentityPoolArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
-            $.workloadIdentityPoolId = workloadIdentityPoolId;
-            return this;
+            return workloadIdentityPoolId(Output.of(workloadIdentityPoolId));
         }
 
         public GetWorkloadIdentityPoolArgs build() {

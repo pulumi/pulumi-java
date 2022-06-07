@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetBlobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadata")
-    private @Nullable Map<String,String> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
     /**
      * @return A map of custom blob metadata.
      * 
      */
-    public Optional<Map<String,String>> metadata() {
+    public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
 
@@ -35,13 +36,13 @@ public final class GetBlobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the Blob.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -50,13 +51,13 @@ public final class GetBlobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageAccountName", required=true)
-    private String storageAccountName;
+    private Output<String> storageAccountName;
 
     /**
      * @return The name of the Storage Account where the Container exists.
      * 
      */
-    public String storageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -65,13 +66,13 @@ public final class GetBlobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageContainerName", required=true)
-    private String storageContainerName;
+    private Output<String> storageContainerName;
 
     /**
      * @return The name of the Storage Container where the Blob exists.
      * 
      */
-    public String storageContainerName() {
+    public Output<String> storageContainerName() {
         return this.storageContainerName;
     }
 
@@ -108,8 +109,29 @@ public final class GetBlobArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder metadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
+            return this;
+        }
+
+        /**
+         * @param metadata A map of custom blob metadata.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
+        }
+
+        /**
+         * @param name The name of the Blob.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -120,7 +142,17 @@ public final class GetBlobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param storageAccountName The name of the Storage Account where the Container exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageAccountName(Output<String> storageAccountName) {
+            $.storageAccountName = storageAccountName;
             return this;
         }
 
@@ -131,7 +163,17 @@ public final class GetBlobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder storageAccountName(String storageAccountName) {
-            $.storageAccountName = storageAccountName;
+            return storageAccountName(Output.of(storageAccountName));
+        }
+
+        /**
+         * @param storageContainerName The name of the Storage Container where the Blob exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageContainerName(Output<String> storageContainerName) {
+            $.storageContainerName = storageContainerName;
             return this;
         }
 
@@ -142,8 +184,7 @@ public final class GetBlobArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder storageContainerName(String storageContainerName) {
-            $.storageContainerName = storageContainerName;
-            return this;
+            return storageContainerName(Output.of(storageContainerName));
         }
 
         public GetBlobArgs build() {

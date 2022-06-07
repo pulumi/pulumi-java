@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseMigration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="agentId", required=true)
-    private String agentId;
+    private Output<String> agentId;
 
     /**
      * @return The OCID of the agent
      * 
      */
-    public String agentId() {
+    public Output<String> agentId() {
         return this.agentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAgentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder agentId(String agentId) {
+        public Builder agentId(Output<String> agentId) {
             $.agentId = agentId;
             return this;
+        }
+
+        /**
+         * @param agentId The OCID of the agent
+         * 
+         * @return builder
+         * 
+         */
+        public Builder agentId(String agentId) {
+            return agentId(Output.of(agentId));
         }
 
         public GetAgentArgs build() {

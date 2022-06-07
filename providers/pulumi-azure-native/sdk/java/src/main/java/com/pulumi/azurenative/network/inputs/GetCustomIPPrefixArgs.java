@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="customIpPrefixName", required=true)
-    private String customIpPrefixName;
+    private Output<String> customIpPrefixName;
 
     /**
      * @return The name of the custom IP prefix.
      * 
      */
-    public String customIpPrefixName() {
+    public Output<String> customIpPrefixName() {
         return this.customIpPrefixName;
     }
 
@@ -34,13 +35,13 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return Expands referenced resources.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -49,13 +50,13 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,29 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder customIpPrefixName(String customIpPrefixName) {
+        public Builder customIpPrefixName(Output<String> customIpPrefixName) {
             $.customIpPrefixName = customIpPrefixName;
+            return this;
+        }
+
+        /**
+         * @param customIpPrefixName The name of the custom IP prefix.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customIpPrefixName(String customIpPrefixName) {
+            return customIpPrefixName(Output.of(customIpPrefixName));
+        }
+
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(@Nullable Output<String> expand) {
+            $.expand = expand;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
-            $.expand = expand;
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetCustomIPPrefixArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetCustomIPPrefixArgs build() {

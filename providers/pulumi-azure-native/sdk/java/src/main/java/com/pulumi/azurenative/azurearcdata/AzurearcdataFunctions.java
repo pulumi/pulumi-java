@@ -5,15 +5,21 @@ package com.pulumi.azurenative.azurearcdata;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.azurearcdata.inputs.GetActiveDirectoryConnectorArgs;
+import com.pulumi.azurenative.azurearcdata.inputs.GetActiveDirectoryConnectorPlainArgs;
 import com.pulumi.azurenative.azurearcdata.inputs.GetDataControllerArgs;
+import com.pulumi.azurenative.azurearcdata.inputs.GetDataControllerPlainArgs;
 import com.pulumi.azurenative.azurearcdata.inputs.GetPostgresInstanceArgs;
+import com.pulumi.azurenative.azurearcdata.inputs.GetPostgresInstancePlainArgs;
 import com.pulumi.azurenative.azurearcdata.inputs.GetSqlManagedInstanceArgs;
+import com.pulumi.azurenative.azurearcdata.inputs.GetSqlManagedInstancePlainArgs;
 import com.pulumi.azurenative.azurearcdata.inputs.GetSqlServerInstanceArgs;
+import com.pulumi.azurenative.azurearcdata.inputs.GetSqlServerInstancePlainArgs;
 import com.pulumi.azurenative.azurearcdata.outputs.GetActiveDirectoryConnectorResult;
 import com.pulumi.azurenative.azurearcdata.outputs.GetDataControllerResult;
 import com.pulumi.azurenative.azurearcdata.outputs.GetPostgresInstanceResult;
 import com.pulumi.azurenative.azurearcdata.outputs.GetSqlManagedInstanceResult;
 import com.pulumi.azurenative.azurearcdata.outputs.GetSqlServerInstanceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -25,7 +31,7 @@ public final class AzurearcdataFunctions {
      * API Version: 2022-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetActiveDirectoryConnectorResult> getActiveDirectoryConnector(GetActiveDirectoryConnectorArgs args) {
+    public static Output<GetActiveDirectoryConnectorResult> getActiveDirectoryConnector(GetActiveDirectoryConnectorArgs args) {
         return getActiveDirectoryConnector(args, InvokeOptions.Empty);
     }
     /**
@@ -33,7 +39,23 @@ public final class AzurearcdataFunctions {
      * API Version: 2022-03-01-preview.
      * 
      */
-    public static CompletableFuture<GetActiveDirectoryConnectorResult> getActiveDirectoryConnector(GetActiveDirectoryConnectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetActiveDirectoryConnectorResult> getActiveDirectoryConnectorPlain(GetActiveDirectoryConnectorPlainArgs args) {
+        return getActiveDirectoryConnectorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Active directory connector resource
+     * API Version: 2022-03-01-preview.
+     * 
+     */
+    public static Output<GetActiveDirectoryConnectorResult> getActiveDirectoryConnector(GetActiveDirectoryConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurearcdata:getActiveDirectoryConnector", TypeShape.of(GetActiveDirectoryConnectorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Active directory connector resource
+     * API Version: 2022-03-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetActiveDirectoryConnectorResult> getActiveDirectoryConnectorPlain(GetActiveDirectoryConnectorPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurearcdata:getActiveDirectoryConnector", TypeShape.of(GetActiveDirectoryConnectorResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -41,7 +63,7 @@ public final class AzurearcdataFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataControllerResult> getDataController(GetDataControllerArgs args) {
+    public static Output<GetDataControllerResult> getDataController(GetDataControllerArgs args) {
         return getDataController(args, InvokeOptions.Empty);
     }
     /**
@@ -49,7 +71,23 @@ public final class AzurearcdataFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetDataControllerResult> getDataController(GetDataControllerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDataControllerResult> getDataControllerPlain(GetDataControllerPlainArgs args) {
+        return getDataControllerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Data controller resource
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetDataControllerResult> getDataController(GetDataControllerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurearcdata:getDataController", TypeShape.of(GetDataControllerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Data controller resource
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetDataControllerResult> getDataControllerPlain(GetDataControllerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurearcdata:getDataController", TypeShape.of(GetDataControllerResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -57,7 +95,7 @@ public final class AzurearcdataFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPostgresInstanceResult> getPostgresInstance(GetPostgresInstanceArgs args) {
+    public static Output<GetPostgresInstanceResult> getPostgresInstance(GetPostgresInstanceArgs args) {
         return getPostgresInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -65,7 +103,23 @@ public final class AzurearcdataFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetPostgresInstanceResult> getPostgresInstance(GetPostgresInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPostgresInstanceResult> getPostgresInstancePlain(GetPostgresInstancePlainArgs args) {
+        return getPostgresInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A Postgres Instance.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetPostgresInstanceResult> getPostgresInstance(GetPostgresInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurearcdata:getPostgresInstance", TypeShape.of(GetPostgresInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A Postgres Instance.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPostgresInstanceResult> getPostgresInstancePlain(GetPostgresInstancePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurearcdata:getPostgresInstance", TypeShape.of(GetPostgresInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,7 +127,7 @@ public final class AzurearcdataFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlManagedInstanceResult> getSqlManagedInstance(GetSqlManagedInstanceArgs args) {
+    public static Output<GetSqlManagedInstanceResult> getSqlManagedInstance(GetSqlManagedInstanceArgs args) {
         return getSqlManagedInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -81,7 +135,23 @@ public final class AzurearcdataFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlManagedInstanceResult> getSqlManagedInstance(GetSqlManagedInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlManagedInstanceResult> getSqlManagedInstancePlain(GetSqlManagedInstancePlainArgs args) {
+        return getSqlManagedInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A SqlManagedInstance.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetSqlManagedInstanceResult> getSqlManagedInstance(GetSqlManagedInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurearcdata:getSqlManagedInstance", TypeShape.of(GetSqlManagedInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A SqlManagedInstance.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSqlManagedInstanceResult> getSqlManagedInstancePlain(GetSqlManagedInstancePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurearcdata:getSqlManagedInstance", TypeShape.of(GetSqlManagedInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -89,7 +159,7 @@ public final class AzurearcdataFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlServerInstanceResult> getSqlServerInstance(GetSqlServerInstanceArgs args) {
+    public static Output<GetSqlServerInstanceResult> getSqlServerInstance(GetSqlServerInstanceArgs args) {
         return getSqlServerInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -97,7 +167,23 @@ public final class AzurearcdataFunctions {
      * API Version: 2021-06-01-preview.
      * 
      */
-    public static CompletableFuture<GetSqlServerInstanceResult> getSqlServerInstance(GetSqlServerInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSqlServerInstanceResult> getSqlServerInstancePlain(GetSqlServerInstancePlainArgs args) {
+        return getSqlServerInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A SqlServerInstance.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static Output<GetSqlServerInstanceResult> getSqlServerInstance(GetSqlServerInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:azurearcdata:getSqlServerInstance", TypeShape.of(GetSqlServerInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A SqlServerInstance.
+     * API Version: 2021-06-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetSqlServerInstanceResult> getSqlServerInstancePlain(GetSqlServerInstancePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurearcdata:getSqlServerInstance", TypeShape.of(GetSqlServerInstanceResult.class), args, Utilities.withVersion(options));
     }
 }

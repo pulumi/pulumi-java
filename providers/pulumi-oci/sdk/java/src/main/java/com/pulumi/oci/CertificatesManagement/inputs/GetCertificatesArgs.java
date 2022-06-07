@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.CertificatesManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.CertificatesManagement.inputs.GetCertificatesFilter;
+import com.pulumi.oci.CertificatesManagement.inputs.GetCertificatesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateId")
-    private @Nullable String certificateId;
+    private @Nullable Output<String> certificateId;
 
     /**
      * @return The OCID of the certificate. If the parameter is set to null, the service lists all certificates.
      * 
      */
-    public Optional<String> certificateId() {
+    public Optional<Output<String>> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
 
@@ -36,20 +37,20 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return A filter that returns only resources that match the given compartment OCID.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetCertificatesFilter> filters;
+    private @Nullable Output<List<GetCertificatesFilterArgs>> filters;
 
-    public Optional<List<GetCertificatesFilter>> filters() {
+    public Optional<Output<List<GetCertificatesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="issuerCertificateAuthorityId")
-    private @Nullable String issuerCertificateAuthorityId;
+    private @Nullable Output<String> issuerCertificateAuthorityId;
 
     /**
      * @return The OCID of the certificate authority (CA). If the parameter is set to null, the service lists all CAs.
      * 
      */
-    public Optional<String> issuerCertificateAuthorityId() {
+    public Optional<Output<String>> issuerCertificateAuthorityId() {
         return Optional.ofNullable(this.issuerCertificateAuthorityId);
     }
 
@@ -73,13 +74,13 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter that returns only resources that match the specified name.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -88,13 +89,13 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter that returns only resources that match the given lifecycle state. The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -133,8 +134,29 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder certificateId(@Nullable String certificateId) {
+        public Builder certificateId(@Nullable Output<String> certificateId) {
             $.certificateId = certificateId;
+            return this;
+        }
+
+        /**
+         * @param certificateId The OCID of the certificate. If the parameter is set to null, the service lists all certificates.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateId(String certificateId) {
+            return certificateId(Output.of(certificateId));
+        }
+
+        /**
+         * @param compartmentId A filter that returns only resources that match the given compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -144,17 +166,20 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
-            $.compartmentId = compartmentId;
-            return this;
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(@Nullable List<GetCertificatesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetCertificatesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetCertificatesFilter... filters) {
+        public Builder filters(List<GetCertificatesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetCertificatesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -164,8 +189,29 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder issuerCertificateAuthorityId(@Nullable String issuerCertificateAuthorityId) {
+        public Builder issuerCertificateAuthorityId(@Nullable Output<String> issuerCertificateAuthorityId) {
             $.issuerCertificateAuthorityId = issuerCertificateAuthorityId;
+            return this;
+        }
+
+        /**
+         * @param issuerCertificateAuthorityId The OCID of the certificate authority (CA). If the parameter is set to null, the service lists all CAs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder issuerCertificateAuthorityId(String issuerCertificateAuthorityId) {
+            return issuerCertificateAuthorityId(Output.of(issuerCertificateAuthorityId));
+        }
+
+        /**
+         * @param name A filter that returns only resources that match the specified name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -175,8 +221,18 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state A filter that returns only resources that match the given lifecycle state. The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -186,9 +242,8 @@ public final class GetCertificatesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetCertificatesArgs build() {

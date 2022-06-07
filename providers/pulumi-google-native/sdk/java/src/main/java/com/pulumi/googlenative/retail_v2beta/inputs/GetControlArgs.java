@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.retail_v2beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetControlArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetControlArgs Empty = new GetControlArgs();
 
     @Import(name="catalogId", required=true)
-    private String catalogId;
+    private Output<String> catalogId;
 
-    public String catalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
     @Import(name="controlId", required=true)
-    private String controlId;
+    private Output<String> controlId;
 
-    public String controlId() {
+    public Output<String> controlId() {
         return this.controlId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -69,24 +70,40 @@ public final class GetControlArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetControlArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder catalogId(String catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
-        public Builder controlId(String controlId) {
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
+        }
+
+        public Builder controlId(Output<String> controlId) {
             $.controlId = controlId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder controlId(String controlId) {
+            return controlId(Output.of(controlId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetControlArgs build() {

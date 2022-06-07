@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetAutonomousContainerPatchesFilter;
+import com.pulumi.oci.Database.inputs.GetAutonomousContainerPatchesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetAutonomousContainerPatchesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="autonomousContainerDatabaseId", required=true)
-    private String autonomousContainerDatabaseId;
+    private Output<String> autonomousContainerDatabaseId;
 
     /**
      * @return The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String autonomousContainerDatabaseId() {
+    public Output<String> autonomousContainerDatabaseId() {
         return this.autonomousContainerDatabaseId;
     }
 
@@ -36,20 +37,20 @@ public final class GetAutonomousContainerPatchesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAutonomousContainerPatchesFilter> filters;
+    private @Nullable Output<List<GetAutonomousContainerPatchesFilterArgs>> filters;
 
-    public Optional<List<GetAutonomousContainerPatchesFilter>> filters() {
+    public Optional<Output<List<GetAutonomousContainerPatchesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -85,8 +86,29 @@ public final class GetAutonomousContainerPatchesArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder autonomousContainerDatabaseId(String autonomousContainerDatabaseId) {
+        public Builder autonomousContainerDatabaseId(Output<String> autonomousContainerDatabaseId) {
             $.autonomousContainerDatabaseId = autonomousContainerDatabaseId;
+            return this;
+        }
+
+        /**
+         * @param autonomousContainerDatabaseId The Autonomous Container Database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousContainerDatabaseId(String autonomousContainerDatabaseId) {
+            return autonomousContainerDatabaseId(Output.of(autonomousContainerDatabaseId));
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -97,16 +119,19 @@ public final class GetAutonomousContainerPatchesArgs extends com.pulumi.resource
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
-            return this;
+            return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(@Nullable List<GetAutonomousContainerPatchesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetAutonomousContainerPatchesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAutonomousContainerPatchesFilter... filters) {
+        public Builder filters(List<GetAutonomousContainerPatchesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAutonomousContainerPatchesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetInstanceTableIamPolicyArgs extends com.pulumi.resources.In
     public static final GetInstanceTableIamPolicyArgs Empty = new GetInstanceTableIamPolicyArgs();
 
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="tableId", required=true)
-    private String tableId;
+    private Output<String> tableId;
 
-    public String tableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
 
@@ -61,19 +62,31 @@ public final class GetInstanceTableIamPolicyArgs extends com.pulumi.resources.In
             $ = new GetInstanceTableIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder instanceId(String instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder tableId(String tableId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder tableId(Output<String> tableId) {
             $.tableId = tableId;
             return this;
+        }
+
+        public Builder tableId(String tableId) {
+            return tableId(Output.of(tableId));
         }
 
         public GetInstanceTableIamPolicyArgs build() {

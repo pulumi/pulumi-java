@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetAuthTokensFilter;
+import com.pulumi.oci.Identity.inputs.GetAuthTokensFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetAuthTokensArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAuthTokensArgs Empty = new GetAuthTokensArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetAuthTokensFilter> filters;
+    private @Nullable Output<List<GetAuthTokensFilterArgs>> filters;
 
-    public Optional<List<GetAuthTokensFilter>> filters() {
+    public Optional<Output<List<GetAuthTokensFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetAuthTokensArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId", required=true)
-    private String userId;
+    private Output<String> userId;
 
     /**
      * @return The OCID of the user.
      * 
      */
-    public String userId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -63,12 +64,16 @@ public final class GetAuthTokensArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAuthTokensArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetAuthTokensFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetAuthTokensFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAuthTokensFilter... filters) {
+        public Builder filters(List<GetAuthTokensFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAuthTokensFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetAuthTokensArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userId(String userId) {
+        public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
+        }
+
+        /**
+         * @param userId The OCID of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
         }
 
         public GetAuthTokensArgs build() {

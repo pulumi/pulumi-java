@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="factoryName", required=true)
-    private String factoryName;
+    private Output<String> factoryName;
 
     /**
      * @return The factory name.
      * 
      */
-    public String factoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="managedPrivateEndpointName", required=true)
-    private String managedPrivateEndpointName;
+    private Output<String> managedPrivateEndpointName;
 
     /**
      * @return Managed private endpoint name
      * 
      */
-    public String managedPrivateEndpointName() {
+    public Output<String> managedPrivateEndpointName() {
         return this.managedPrivateEndpointName;
     }
 
@@ -47,13 +48,13 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="managedVirtualNetworkName", required=true)
-    private String managedVirtualNetworkName;
+    private Output<String> managedVirtualNetworkName;
 
     /**
      * @return Managed virtual network name
      * 
      */
-    public String managedVirtualNetworkName() {
+    public Output<String> managedVirtualNetworkName() {
         return this.managedVirtualNetworkName;
     }
 
@@ -62,13 +63,13 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder factoryName(String factoryName) {
+        public Builder factoryName(Output<String> factoryName) {
             $.factoryName = factoryName;
+            return this;
+        }
+
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder factoryName(String factoryName) {
+            return factoryName(Output.of(factoryName));
+        }
+
+        /**
+         * @param managedPrivateEndpointName Managed private endpoint name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedPrivateEndpointName(Output<String> managedPrivateEndpointName) {
+            $.managedPrivateEndpointName = managedPrivateEndpointName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
          * 
          */
         public Builder managedPrivateEndpointName(String managedPrivateEndpointName) {
-            $.managedPrivateEndpointName = managedPrivateEndpointName;
+            return managedPrivateEndpointName(Output.of(managedPrivateEndpointName));
+        }
+
+        /**
+         * @param managedVirtualNetworkName Managed virtual network name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedVirtualNetworkName(Output<String> managedVirtualNetworkName) {
+            $.managedVirtualNetworkName = managedVirtualNetworkName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
          * 
          */
         public Builder managedVirtualNetworkName(String managedVirtualNetworkName) {
-            $.managedVirtualNetworkName = managedVirtualNetworkName;
+            return managedVirtualNetworkName(Output.of(managedVirtualNetworkName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetManagedPrivateEndpointArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetManagedPrivateEndpointArgs build() {

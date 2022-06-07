@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.OsubBillingSchedule.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OsubBillingSchedule.inputs.GetBillingScheduleFilter;
+import com.pulumi.oci.OsubBillingSchedule.inputs.GetBillingScheduleFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetBillingScheduleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBillingScheduleFilter> filters;
+    private @Nullable Output<List<GetBillingScheduleFilterArgs>> filters;
 
-    public Optional<List<GetBillingScheduleFilter>> filters() {
+    public Optional<Output<List<GetBillingScheduleFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetBillingScheduleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="subscribedServiceId")
-    private @Nullable String subscribedServiceId;
+    private @Nullable Output<String> subscribedServiceId;
 
     /**
      * @return This param is used to get only the billing schedules for a particular Subscribed Service
      * 
      */
-    public Optional<String> subscribedServiceId() {
+    public Optional<Output<String>> subscribedServiceId() {
         return Optional.ofNullable(this.subscribedServiceId);
     }
 
@@ -58,13 +59,13 @@ public final class GetBillingScheduleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
     /**
      * @return This param is used to get only the billing schedules for a particular Subscription Id
      * 
      */
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -73,13 +74,13 @@ public final class GetBillingScheduleArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="xOneOriginRegion")
-    private @Nullable String xOneOriginRegion;
+    private @Nullable Output<String> xOneOriginRegion;
 
     /**
      * @return The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
      * 
      */
-    public Optional<String> xOneOriginRegion() {
+    public Optional<Output<String>> xOneOriginRegion() {
         return Optional.ofNullable(this.xOneOriginRegion);
     }
 
@@ -117,17 +118,31 @@ public final class GetBillingScheduleArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBillingScheduleFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetBillingScheduleFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetBillingScheduleFilter... filters) {
+        public Builder filters(List<GetBillingScheduleFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetBillingScheduleFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -137,8 +152,29 @@ public final class GetBillingScheduleArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder subscribedServiceId(@Nullable String subscribedServiceId) {
+        public Builder subscribedServiceId(@Nullable Output<String> subscribedServiceId) {
             $.subscribedServiceId = subscribedServiceId;
+            return this;
+        }
+
+        /**
+         * @param subscribedServiceId This param is used to get only the billing schedules for a particular Subscribed Service
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscribedServiceId(String subscribedServiceId) {
+            return subscribedServiceId(Output.of(subscribedServiceId));
+        }
+
+        /**
+         * @param subscriptionId This param is used to get only the billing schedules for a particular Subscription Id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(Output<String> subscriptionId) {
+            $.subscriptionId = subscriptionId;
             return this;
         }
 
@@ -149,7 +185,17 @@ public final class GetBillingScheduleArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder subscriptionId(String subscriptionId) {
-            $.subscriptionId = subscriptionId;
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        /**
+         * @param xOneOriginRegion The Oracle Cloud Infrastructure home region name in case home region is not us-ashburn-1 (IAD), e.g. ap-mumbai-1, us-phoenix-1 etc.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder xOneOriginRegion(@Nullable Output<String> xOneOriginRegion) {
+            $.xOneOriginRegion = xOneOriginRegion;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetBillingScheduleArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder xOneOriginRegion(@Nullable String xOneOriginRegion) {
-            $.xOneOriginRegion = xOneOriginRegion;
-            return this;
+        public Builder xOneOriginRegion(String xOneOriginRegion) {
+            return xOneOriginRegion(Output.of(xOneOriginRegion));
         }
 
         public GetBillingScheduleArgs build() {

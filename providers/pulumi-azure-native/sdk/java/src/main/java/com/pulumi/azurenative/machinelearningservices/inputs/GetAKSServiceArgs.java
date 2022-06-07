@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private @Nullable Boolean expand;
+    private @Nullable Output<Boolean> expand;
 
     /**
      * @return Set to True to include Model details.
      * 
      */
-    public Optional<Boolean> expand() {
+    public Optional<Output<Boolean>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -35,13 +36,13 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group in which workspace is located.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -50,13 +51,13 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return Name of the Azure Machine Learning service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -65,13 +66,13 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return Name of Azure Machine Learning workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -108,8 +109,29 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(@Nullable Boolean expand) {
+        public Builder expand(@Nullable Output<Boolean> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Set to True to include Model details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(Boolean expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -120,7 +142,17 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName Name of the Azure Machine Learning service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -131,7 +163,17 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
+            return serviceName(Output.of(serviceName));
+        }
+
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -142,8 +184,7 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetAKSServiceArgs build() {

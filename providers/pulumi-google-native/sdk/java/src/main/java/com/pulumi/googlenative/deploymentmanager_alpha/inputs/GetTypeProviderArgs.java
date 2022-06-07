@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetTypeProviderArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTypeProviderArgs Empty = new GetTypeProviderArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="typeProvider", required=true)
-    private String typeProvider;
+    private Output<String> typeProvider;
 
-    public String typeProvider() {
+    public Output<String> typeProvider() {
         return this.typeProvider;
     }
 
@@ -53,14 +54,22 @@ public final class GetTypeProviderArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTypeProviderArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder typeProvider(String typeProvider) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder typeProvider(Output<String> typeProvider) {
             $.typeProvider = typeProvider;
             return this;
+        }
+
+        public Builder typeProvider(String typeProvider) {
+            return typeProvider(Output.of(typeProvider));
         }
 
         public GetTypeProviderArgs build() {

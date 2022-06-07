@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -34,13 +35,13 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="endTime", required=true)
-    private String endTime;
+    private Output<String> endTime;
 
     /**
      * @return The end time of the time range to retrieve the status summary of job executions in UTC in ISO-8601 format, which is &#34;yyyy-MM-dd&#39;T&#39;hh:mm:ss.sss&#39;Z&#39;&#34;.
      * 
      */
-    public String endTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
@@ -49,13 +50,13 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The identifier of the resource.
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -64,13 +65,13 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="managedDatabaseGroupId")
-    private @Nullable String managedDatabaseGroupId;
+    private @Nullable Output<String> managedDatabaseGroupId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database Group.
      * 
      */
-    public Optional<String> managedDatabaseGroupId() {
+    public Optional<Output<String>> managedDatabaseGroupId() {
         return Optional.ofNullable(this.managedDatabaseGroupId);
     }
 
@@ -79,13 +80,13 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="managedDatabaseId")
-    private @Nullable String managedDatabaseId;
+    private @Nullable Output<String> managedDatabaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
      * 
      */
-    public Optional<String> managedDatabaseId() {
+    public Optional<Output<String>> managedDatabaseId() {
         return Optional.ofNullable(this.managedDatabaseId);
     }
 
@@ -94,13 +95,13 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -109,13 +110,13 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="startTime", required=true)
-    private String startTime;
+    private Output<String> startTime;
 
     /**
      * @return The start time of the time range to retrieve the status summary of job executions in UTC in ISO-8601 format, which is &#34;yyyy-MM-dd&#39;T&#39;hh:mm:ss.sss&#39;Z&#39;&#34;.
      * 
      */
-    public String startTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -155,8 +156,29 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param endTime The end time of the time range to retrieve the status summary of job executions in UTC in ISO-8601 format, which is &#34;yyyy-MM-dd&#39;T&#39;hh:mm:ss.sss&#39;Z&#39;&#34;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endTime(Output<String> endTime) {
+            $.endTime = endTime;
             return this;
         }
 
@@ -167,7 +189,17 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder endTime(String endTime) {
-            $.endTime = endTime;
+            return endTime(Output.of(endTime));
+        }
+
+        /**
+         * @param id The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(@Nullable Output<String> id) {
+            $.id = id;
             return this;
         }
 
@@ -177,8 +209,18 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
-            $.id = id;
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param managedDatabaseGroupId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database Group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedDatabaseGroupId(@Nullable Output<String> managedDatabaseGroupId) {
+            $.managedDatabaseGroupId = managedDatabaseGroupId;
             return this;
         }
 
@@ -188,8 +230,18 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder managedDatabaseGroupId(@Nullable String managedDatabaseGroupId) {
-            $.managedDatabaseGroupId = managedDatabaseGroupId;
+        public Builder managedDatabaseGroupId(String managedDatabaseGroupId) {
+            return managedDatabaseGroupId(Output.of(managedDatabaseGroupId));
+        }
+
+        /**
+         * @param managedDatabaseId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedDatabaseId(@Nullable Output<String> managedDatabaseId) {
+            $.managedDatabaseId = managedDatabaseId;
             return this;
         }
 
@@ -199,8 +251,18 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder managedDatabaseId(@Nullable String managedDatabaseId) {
-            $.managedDatabaseId = managedDatabaseId;
+        public Builder managedDatabaseId(String managedDatabaseId) {
+            return managedDatabaseId(Output.of(managedDatabaseId));
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -210,8 +272,18 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param startTime The start time of the time range to retrieve the status summary of job executions in UTC in ISO-8601 format, which is &#34;yyyy-MM-dd&#39;T&#39;hh:mm:ss.sss&#39;Z&#39;&#34;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startTime(Output<String> startTime) {
+            $.startTime = startTime;
             return this;
         }
 
@@ -222,8 +294,7 @@ public final class GetJobExecutionsStatusArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder startTime(String startTime) {
-            $.startTime = startTime;
-            return this;
+            return startTime(Output.of(startTime));
         }
 
         public GetJobExecutionsStatusArgs build() {

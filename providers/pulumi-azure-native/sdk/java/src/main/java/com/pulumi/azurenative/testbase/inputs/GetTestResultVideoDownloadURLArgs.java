@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.testbase.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTestResultVideoDownloadURLArgs extends com.pulumi.resource
      * 
      */
     @Import(name="packageName", required=true)
-    private String packageName;
+    private Output<String> packageName;
 
     /**
      * @return The resource name of the Test Base Package.
      * 
      */
-    public String packageName() {
+    public Output<String> packageName() {
         return this.packageName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTestResultVideoDownloadURLArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetTestResultVideoDownloadURLArgs extends com.pulumi.resource
      * 
      */
     @Import(name="testBaseAccountName", required=true)
-    private String testBaseAccountName;
+    private Output<String> testBaseAccountName;
 
     /**
      * @return The resource name of the Test Base Account.
      * 
      */
-    public String testBaseAccountName() {
+    public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
@@ -62,13 +63,13 @@ public final class GetTestResultVideoDownloadURLArgs extends com.pulumi.resource
      * 
      */
     @Import(name="testResultName", required=true)
-    private String testResultName;
+    private Output<String> testResultName;
 
     /**
      * @return The Test Result Name. It equals to {osName}-{TestResultId} string.
      * 
      */
-    public String testResultName() {
+    public Output<String> testResultName() {
         return this.testResultName;
     }
 
@@ -105,8 +106,29 @@ public final class GetTestResultVideoDownloadURLArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder packageName(String packageName) {
+        public Builder packageName(Output<String> packageName) {
             $.packageName = packageName;
+            return this;
+        }
+
+        /**
+         * @param packageName The resource name of the Test Base Package.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packageName(String packageName) {
+            return packageName(Output.of(packageName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetTestResultVideoDownloadURLArgs extends com.pulumi.resource
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder testBaseAccountName(Output<String> testBaseAccountName) {
+            $.testBaseAccountName = testBaseAccountName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetTestResultVideoDownloadURLArgs extends com.pulumi.resource
          * 
          */
         public Builder testBaseAccountName(String testBaseAccountName) {
-            $.testBaseAccountName = testBaseAccountName;
+            return testBaseAccountName(Output.of(testBaseAccountName));
+        }
+
+        /**
+         * @param testResultName The Test Result Name. It equals to {osName}-{TestResultId} string.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder testResultName(Output<String> testResultName) {
+            $.testResultName = testResultName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetTestResultVideoDownloadURLArgs extends com.pulumi.resource
          * 
          */
         public Builder testResultName(String testResultName) {
-            $.testResultName = testResultName;
-            return this;
+            return testResultName(Output.of(testResultName));
         }
 
         public GetTestResultVideoDownloadURLArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSubnetworkArgs Empty = new GetSubnetworkArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-    private String region;
+    private Output<String> region;
 
-    public String region() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="subnetwork", required=true)
-    private String subnetwork;
+    private Output<String> subnetwork;
 
-    public String subnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork;
     }
 
@@ -61,19 +62,31 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSubnetworkArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder region(String region) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
-        public Builder subnetwork(String subnetwork) {
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public Builder subnetwork(Output<String> subnetwork) {
             $.subnetwork = subnetwork;
             return this;
+        }
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
         }
 
         public GetSubnetworkArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LogAnalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNamespaceScheduledTaskArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Logging Analytics namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -32,13 +33,13 @@ public final class GetNamespaceScheduledTaskArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="scheduledTaskId", required=true)
-    private String scheduledTaskId;
+    private Output<String> scheduledTaskId;
 
     /**
      * @return Unique scheduledTask id returned from task create. If invalid will lead to a 404 not found.
      * 
      */
-    public String scheduledTaskId() {
+    public Output<String> scheduledTaskId() {
         return this.scheduledTaskId;
     }
 
@@ -73,8 +74,29 @@ public final class GetNamespaceScheduledTaskArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder namespace(String namespace) {
+        public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * @param namespace The Logging Analytics namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param scheduledTaskId Unique scheduledTask id returned from task create. If invalid will lead to a 404 not found.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scheduledTaskId(Output<String> scheduledTaskId) {
+            $.scheduledTaskId = scheduledTaskId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetNamespaceScheduledTaskArgs extends com.pulumi.resources.In
          * 
          */
         public Builder scheduledTaskId(String scheduledTaskId) {
-            $.scheduledTaskId = scheduledTaskId;
-            return this;
+            return scheduledTaskId(Output.of(scheduledTaskId));
         }
 
         public GetNamespaceScheduledTaskArgs build() {

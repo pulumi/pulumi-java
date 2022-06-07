@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTargetAlertPolicyAssociationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="targetAlertPolicyAssociationId", required=true)
-    private String targetAlertPolicyAssociationId;
+    private Output<String> targetAlertPolicyAssociationId;
 
     /**
      * @return The OCID of the target-alert policy association.
      * 
      */
-    public String targetAlertPolicyAssociationId() {
+    public Output<String> targetAlertPolicyAssociationId() {
         return this.targetAlertPolicyAssociationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetTargetAlertPolicyAssociationArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder targetAlertPolicyAssociationId(String targetAlertPolicyAssociationId) {
+        public Builder targetAlertPolicyAssociationId(Output<String> targetAlertPolicyAssociationId) {
             $.targetAlertPolicyAssociationId = targetAlertPolicyAssociationId;
             return this;
+        }
+
+        /**
+         * @param targetAlertPolicyAssociationId The OCID of the target-alert policy association.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetAlertPolicyAssociationId(String targetAlertPolicyAssociationId) {
+            return targetAlertPolicyAssociationId(Output.of(targetAlertPolicyAssociationId));
         }
 
         public GetTargetAlertPolicyAssociationArgs build() {

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Marketplace.inputs.GetAcceptedAgreementsFilter;
+import com.pulumi.oci.Marketplace.inputs.GetAcceptedAgreementsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetAcceptedAgreementsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="acceptedAgreementId")
-    private @Nullable String acceptedAgreementId;
+    private @Nullable Output<String> acceptedAgreementId;
 
     /**
      * @return The unique identifier for the accepted terms of use agreement.
      * 
      */
-    public Optional<String> acceptedAgreementId() {
+    public Optional<Output<String>> acceptedAgreementId() {
         return Optional.ofNullable(this.acceptedAgreementId);
     }
 
@@ -36,13 +37,13 @@ public final class GetAcceptedAgreementsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The unique identifier for the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -51,20 +52,20 @@ public final class GetAcceptedAgreementsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The display name of the resource.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAcceptedAgreementsFilter> filters;
+    private @Nullable Output<List<GetAcceptedAgreementsFilterArgs>> filters;
 
-    public Optional<List<GetAcceptedAgreementsFilter>> filters() {
+    public Optional<Output<List<GetAcceptedAgreementsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetAcceptedAgreementsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="listingId")
-    private @Nullable String listingId;
+    private @Nullable Output<String> listingId;
 
     /**
      * @return The unique identifier for the listing.
      * 
      */
-    public Optional<String> listingId() {
+    public Optional<Output<String>> listingId() {
         return Optional.ofNullable(this.listingId);
     }
 
@@ -88,13 +89,13 @@ public final class GetAcceptedAgreementsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="packageVersion")
-    private @Nullable String packageVersion;
+    private @Nullable Output<String> packageVersion;
 
     /**
      * @return The version of the package. Package versions are unique within a listing.
      * 
      */
-    public Optional<String> packageVersion() {
+    public Optional<Output<String>> packageVersion() {
         return Optional.ofNullable(this.packageVersion);
     }
 
@@ -133,8 +134,29 @@ public final class GetAcceptedAgreementsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder acceptedAgreementId(@Nullable String acceptedAgreementId) {
+        public Builder acceptedAgreementId(@Nullable Output<String> acceptedAgreementId) {
             $.acceptedAgreementId = acceptedAgreementId;
+            return this;
+        }
+
+        /**
+         * @param acceptedAgreementId The unique identifier for the accepted terms of use agreement.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptedAgreementId(String acceptedAgreementId) {
+            return acceptedAgreementId(Output.of(acceptedAgreementId));
+        }
+
+        /**
+         * @param compartmentId The unique identifier for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -145,7 +167,17 @@ public final class GetAcceptedAgreementsArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName The display name of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -155,17 +187,20 @@ public final class GetAcceptedAgreementsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetAcceptedAgreementsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetAcceptedAgreementsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAcceptedAgreementsFilter... filters) {
+        public Builder filters(List<GetAcceptedAgreementsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAcceptedAgreementsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -175,8 +210,29 @@ public final class GetAcceptedAgreementsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder listingId(@Nullable String listingId) {
+        public Builder listingId(@Nullable Output<String> listingId) {
             $.listingId = listingId;
+            return this;
+        }
+
+        /**
+         * @param listingId The unique identifier for the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listingId(String listingId) {
+            return listingId(Output.of(listingId));
+        }
+
+        /**
+         * @param packageVersion The version of the package. Package versions are unique within a listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packageVersion(@Nullable Output<String> packageVersion) {
+            $.packageVersion = packageVersion;
             return this;
         }
 
@@ -186,9 +242,8 @@ public final class GetAcceptedAgreementsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder packageVersion(@Nullable String packageVersion) {
-            $.packageVersion = packageVersion;
-            return this;
+        public Builder packageVersion(String packageVersion) {
+            return packageVersion(Output.of(packageVersion));
         }
 
         public GetAcceptedAgreementsArgs build() {

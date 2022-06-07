@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.siterecovery.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFabricArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the Site Recovery Replication Fabric.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetFabricArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recoveryVaultName", required=true)
-    private String recoveryVaultName;
+    private Output<String> recoveryVaultName;
 
     /**
      * @return The name of the Recovery Services Vault that the Site Recovery Replication Fabric is associated witth.
      * 
      */
-    public String recoveryVaultName() {
+    public Output<String> recoveryVaultName() {
         return this.recoveryVaultName;
     }
 
@@ -47,13 +48,13 @@ public final class GetFabricArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group in which the associated Recovery Services Vault resides.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetFabricArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Specifies the name of the Site Recovery Replication Fabric.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param recoveryVaultName The name of the Recovery Services Vault that the Site Recovery Replication Fabric is associated witth.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder recoveryVaultName(Output<String> recoveryVaultName) {
+            $.recoveryVaultName = recoveryVaultName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetFabricArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder recoveryVaultName(String recoveryVaultName) {
-            $.recoveryVaultName = recoveryVaultName;
+            return recoveryVaultName(Output.of(recoveryVaultName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group in which the associated Recovery Services Vault resides.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetFabricArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetFabricArgs build() {

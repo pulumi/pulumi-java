@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.HealthChecks.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHttpMonitorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="monitorId", required=true)
-    private String monitorId;
+    private Output<String> monitorId;
 
     /**
      * @return The OCID of a monitor.
      * 
      */
-    public String monitorId() {
+    public Output<String> monitorId() {
         return this.monitorId;
     }
 
@@ -57,9 +58,19 @@ public final class GetHttpMonitorArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder monitorId(String monitorId) {
+        public Builder monitorId(Output<String> monitorId) {
             $.monitorId = monitorId;
             return this;
+        }
+
+        /**
+         * @param monitorId The OCID of a monitor.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monitorId(String monitorId) {
+            return monitorId(Output.of(monitorId));
         }
 
         public GetHttpMonitorArgs build() {

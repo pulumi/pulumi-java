@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.dashboard.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class Azurerm_portal_dashboardArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dashboardProperties")
-    private @Nullable String dashboardProperties;
+    private @Nullable Output<String> dashboardProperties;
 
     /**
      * @return JSON data representing dashboard body.
      * 
      */
-    public Optional<String> dashboardProperties() {
+    public Optional<Output<String>> dashboardProperties() {
         return Optional.ofNullable(this.dashboardProperties);
     }
 
@@ -34,13 +35,13 @@ public final class Azurerm_portal_dashboardArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the shared Azure Portal Dashboard.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,13 +50,13 @@ public final class Azurerm_portal_dashboardArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Specifies the name of the resource group the shared Azure Portal Dashboard is located in.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,29 @@ public final class Azurerm_portal_dashboardArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder dashboardProperties(@Nullable String dashboardProperties) {
+        public Builder dashboardProperties(@Nullable Output<String> dashboardProperties) {
             $.dashboardProperties = dashboardProperties;
+            return this;
+        }
+
+        /**
+         * @param dashboardProperties JSON data representing dashboard body.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dashboardProperties(String dashboardProperties) {
+            return dashboardProperties(Output.of(dashboardProperties));
+        }
+
+        /**
+         * @param name Specifies the name of the shared Azure Portal Dashboard.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class Azurerm_portal_dashboardArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Specifies the name of the resource group the shared Azure Portal Dashboard is located in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class Azurerm_portal_dashboardArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public Azurerm_portal_dashboardArgs build() {

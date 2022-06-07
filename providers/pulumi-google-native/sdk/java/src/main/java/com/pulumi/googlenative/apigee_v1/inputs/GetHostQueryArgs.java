@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetHostQueryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHostQueryArgs Empty = new GetHostQueryArgs();
 
     @Import(name="hostQueryId", required=true)
-    private String hostQueryId;
+    private Output<String> hostQueryId;
 
-    public String hostQueryId() {
+    public Output<String> hostQueryId() {
         return this.hostQueryId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -51,14 +52,22 @@ public final class GetHostQueryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetHostQueryArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder hostQueryId(String hostQueryId) {
+        public Builder hostQueryId(Output<String> hostQueryId) {
             $.hostQueryId = hostQueryId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder hostQueryId(String hostQueryId) {
+            return hostQueryId(Output.of(hostQueryId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetHostQueryArgs build() {

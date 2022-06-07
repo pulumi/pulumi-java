@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetClusterNetworkArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clusterNetworkId", required=true)
-    private String clusterNetworkId;
+    private Output<String> clusterNetworkId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the cluster network.
      * 
      */
-    public String clusterNetworkId() {
+    public Output<String> clusterNetworkId() {
         return this.clusterNetworkId;
     }
 
@@ -57,9 +58,19 @@ public final class GetClusterNetworkArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder clusterNetworkId(String clusterNetworkId) {
+        public Builder clusterNetworkId(Output<String> clusterNetworkId) {
             $.clusterNetworkId = clusterNetworkId;
             return this;
+        }
+
+        /**
+         * @param clusterNetworkId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the cluster network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterNetworkId(String clusterNetworkId) {
+            return clusterNetworkId(Output.of(clusterNetworkId));
         }
 
         public GetClusterNetworkArgs build() {

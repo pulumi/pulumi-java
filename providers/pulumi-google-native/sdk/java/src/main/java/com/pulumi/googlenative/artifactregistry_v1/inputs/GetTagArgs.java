@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.artifactregistry_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetTagArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTagArgs Empty = new GetTagArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="packageId", required=true)
-    private String packageId;
+    private Output<String> packageId;
 
-    public String packageId() {
+    public Output<String> packageId() {
         return this.packageId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
     @Import(name="tagId", required=true)
-    private String tagId;
+    private Output<String> tagId;
 
-    public String tagId() {
+    public Output<String> tagId() {
         return this.tagId;
     }
 
@@ -77,29 +78,49 @@ public final class GetTagArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTagArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder packageId(String packageId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder packageId(Output<String> packageId) {
             $.packageId = packageId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder packageId(String packageId) {
+            return packageId(Output.of(packageId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder repositoryId(String repositoryId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder repositoryId(Output<String> repositoryId) {
             $.repositoryId = repositoryId;
             return this;
         }
 
-        public Builder tagId(String tagId) {
+        public Builder repositoryId(String repositoryId) {
+            return repositoryId(Output.of(repositoryId));
+        }
+
+        public Builder tagId(Output<String> tagId) {
             $.tagId = tagId;
             return this;
+        }
+
+        public Builder tagId(String tagId) {
+            return tagId(Output.of(tagId));
         }
 
         public GetTagArgs build() {

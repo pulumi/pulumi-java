@@ -3,11 +3,13 @@
 
 package com.pulumi.googlenative.billingbudgets_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.billingbudgets_v1.inputs.GetBudgetArgs;
+import com.pulumi.googlenative.billingbudgets_v1.inputs.GetBudgetPlainArgs;
 import com.pulumi.googlenative.billingbudgets_v1.outputs.GetBudgetResult;
 import java.util.concurrent.CompletableFuture;
 
@@ -16,14 +18,28 @@ public final class Billingbudgets_v1Functions {
      * Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren&#39;t available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
      * 
      */
-    public static CompletableFuture<GetBudgetResult> getBudget(GetBudgetArgs args) {
+    public static Output<GetBudgetResult> getBudget(GetBudgetArgs args) {
         return getBudget(args, InvokeOptions.Empty);
     }
     /**
      * Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren&#39;t available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
      * 
      */
-    public static CompletableFuture<GetBudgetResult> getBudget(GetBudgetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBudgetResult> getBudgetPlain(GetBudgetPlainArgs args) {
+        return getBudgetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren&#39;t available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
+     * 
+     */
+    public static Output<GetBudgetResult> getBudget(GetBudgetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:billingbudgets/v1:getBudget", TypeShape.of(GetBudgetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren&#39;t available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
+     * 
+     */
+    public static CompletableFuture<GetBudgetResult> getBudgetPlain(GetBudgetPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:billingbudgets/v1:getBudget", TypeShape.of(GetBudgetResult.class), args, Utilities.withVersion(options));
     }
 }

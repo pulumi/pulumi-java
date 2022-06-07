@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.management.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHierarchySettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="groupId", required=true)
-    private String groupId;
+    private Output<String> groupId;
 
     /**
      * @return Management Group ID.
      * 
      */
-    public String groupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
@@ -57,9 +58,19 @@ public final class GetHierarchySettingArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder groupId(String groupId) {
+        public Builder groupId(Output<String> groupId) {
             $.groupId = groupId;
             return this;
+        }
+
+        /**
+         * @param groupId Management Group ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
 
         public GetHierarchySettingArgs build() {

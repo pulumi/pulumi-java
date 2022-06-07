@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Audit.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Audit.inputs.GetEventsFilter;
+import com.pulumi.oci.Audit.inputs.GetEventsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetEventsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetEventsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime", required=true)
-    private String endTime;
+    private Output<String> endTime;
 
     /**
      * @return Returns events that were processed before this end date and time, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
      * 
      */
-    public String endTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetEventsFilter> filters;
+    private @Nullable Output<List<GetEventsFilterArgs>> filters;
 
-    public Optional<List<GetEventsFilter>> filters() {
+    public Optional<Output<List<GetEventsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetEventsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime", required=true)
-    private String startTime;
+    private Output<String> startTime;
 
     /**
      * @return Returns events that were processed at or after this start date and time, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
      * 
      */
-    public String startTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -101,8 +102,29 @@ public final class GetEventsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param endTime Returns events that were processed before this end date and time, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endTime(Output<String> endTime) {
+            $.endTime = endTime;
             return this;
         }
 
@@ -113,16 +135,19 @@ public final class GetEventsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder endTime(String endTime) {
-            $.endTime = endTime;
-            return this;
+            return endTime(Output.of(endTime));
         }
 
-        public Builder filters(@Nullable List<GetEventsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetEventsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetEventsFilter... filters) {
+        public Builder filters(List<GetEventsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetEventsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -132,9 +157,19 @@ public final class GetEventsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder startTime(String startTime) {
+        public Builder startTime(Output<String> startTime) {
             $.startTime = startTime;
             return this;
+        }
+
+        /**
+         * @param startTime Returns events that were processed at or after this start date and time, expressed in [RFC 3339](https://tools.ietf.org/html/rfc3339) timestamp format.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
 
         public GetEventsArgs build() {

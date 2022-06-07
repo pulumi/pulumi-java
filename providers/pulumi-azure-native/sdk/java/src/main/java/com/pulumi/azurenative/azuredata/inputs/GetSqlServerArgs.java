@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.azuredata.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return The child resources to include in the response.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +50,13 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sqlServerName", required=true)
-    private String sqlServerName;
+    private Output<String> sqlServerName;
 
     /**
      * @return Name of the SQL Server.
      * 
      */
-    public String sqlServerName() {
+    public Output<String> sqlServerName() {
         return this.sqlServerName;
     }
 
@@ -64,13 +65,13 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sqlServerRegistrationName", required=true)
-    private String sqlServerRegistrationName;
+    private Output<String> sqlServerRegistrationName;
 
     /**
      * @return Name of the SQL Server registration.
      * 
      */
-    public String sqlServerRegistrationName() {
+    public Output<String> sqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
     }
 
@@ -107,8 +108,29 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The child resources to include in the response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sqlServerName Name of the SQL Server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlServerName(Output<String> sqlServerName) {
+            $.sqlServerName = sqlServerName;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder sqlServerName(String sqlServerName) {
-            $.sqlServerName = sqlServerName;
+            return sqlServerName(Output.of(sqlServerName));
+        }
+
+        /**
+         * @param sqlServerRegistrationName Name of the SQL Server registration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlServerRegistrationName(Output<String> sqlServerRegistrationName) {
+            $.sqlServerRegistrationName = sqlServerRegistrationName;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetSqlServerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
-            $.sqlServerRegistrationName = sqlServerRegistrationName;
-            return this;
+            return sqlServerRegistrationName(Output.of(sqlServerRegistrationName));
         }
 
         public GetSqlServerArgs build() {

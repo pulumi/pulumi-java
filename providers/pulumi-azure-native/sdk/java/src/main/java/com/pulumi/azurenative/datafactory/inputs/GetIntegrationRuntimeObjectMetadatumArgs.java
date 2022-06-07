@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datafactory.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="factoryName", required=true)
-    private String factoryName;
+    private Output<String> factoryName;
 
     /**
      * @return The factory name.
      * 
      */
-    public String factoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -34,13 +35,13 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="integrationRuntimeName", required=true)
-    private String integrationRuntimeName;
+    private Output<String> integrationRuntimeName;
 
     /**
      * @return The integration runtime name.
      * 
      */
-    public String integrationRuntimeName() {
+    public Output<String> integrationRuntimeName() {
         return this.integrationRuntimeName;
     }
 
@@ -49,13 +50,13 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="metadataPath")
-    private @Nullable String metadataPath;
+    private @Nullable Output<String> metadataPath;
 
     /**
      * @return Metadata path.
      * 
      */
-    public Optional<String> metadataPath() {
+    public Optional<Output<String>> metadataPath() {
         return Optional.ofNullable(this.metadataPath);
     }
 
@@ -64,13 +65,13 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,8 +108,29 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder factoryName(String factoryName) {
+        public Builder factoryName(Output<String> factoryName) {
             $.factoryName = factoryName;
+            return this;
+        }
+
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder factoryName(String factoryName) {
+            return factoryName(Output.of(factoryName));
+        }
+
+        /**
+         * @param integrationRuntimeName The integration runtime name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder integrationRuntimeName(Output<String> integrationRuntimeName) {
+            $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
          * 
          */
         public Builder integrationRuntimeName(String integrationRuntimeName) {
-            $.integrationRuntimeName = integrationRuntimeName;
+            return integrationRuntimeName(Output.of(integrationRuntimeName));
+        }
+
+        /**
+         * @param metadataPath Metadata path.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metadataPath(@Nullable Output<String> metadataPath) {
+            $.metadataPath = metadataPath;
             return this;
         }
 
@@ -129,8 +161,18 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder metadataPath(@Nullable String metadataPath) {
-            $.metadataPath = metadataPath;
+        public Builder metadataPath(String metadataPath) {
+            return metadataPath(Output.of(metadataPath));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetIntegrationRuntimeObjectMetadatumArgs build() {

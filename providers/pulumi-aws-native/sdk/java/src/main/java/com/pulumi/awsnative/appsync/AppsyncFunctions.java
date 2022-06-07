@@ -5,9 +5,12 @@ package com.pulumi.awsnative.appsync;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.appsync.inputs.GetDomainNameApiAssociationArgs;
+import com.pulumi.awsnative.appsync.inputs.GetDomainNameApiAssociationPlainArgs;
 import com.pulumi.awsnative.appsync.inputs.GetDomainNameArgs;
+import com.pulumi.awsnative.appsync.inputs.GetDomainNamePlainArgs;
 import com.pulumi.awsnative.appsync.outputs.GetDomainNameApiAssociationResult;
 import com.pulumi.awsnative.appsync.outputs.GetDomainNameResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -18,28 +21,56 @@ public final class AppsyncFunctions {
      * Resource Type definition for AWS::AppSync::DomainName
      * 
      */
-    public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args) {
+    public static Output<GetDomainNameResult> getDomainName(GetDomainNameArgs args) {
         return getDomainName(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::AppSync::DomainName
      * 
      */
-    public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainNameResult> getDomainNamePlain(GetDomainNamePlainArgs args) {
+        return getDomainNamePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::AppSync::DomainName
+     * 
+     */
+    public static Output<GetDomainNameResult> getDomainName(GetDomainNameArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:appsync:getDomainName", TypeShape.of(GetDomainNameResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::AppSync::DomainName
+     * 
+     */
+    public static CompletableFuture<GetDomainNameResult> getDomainNamePlain(GetDomainNamePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appsync:getDomainName", TypeShape.of(GetDomainNameResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::AppSync::DomainNameApiAssociation
      * 
      */
-    public static CompletableFuture<GetDomainNameApiAssociationResult> getDomainNameApiAssociation(GetDomainNameApiAssociationArgs args) {
+    public static Output<GetDomainNameApiAssociationResult> getDomainNameApiAssociation(GetDomainNameApiAssociationArgs args) {
         return getDomainNameApiAssociation(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::AppSync::DomainNameApiAssociation
      * 
      */
-    public static CompletableFuture<GetDomainNameApiAssociationResult> getDomainNameApiAssociation(GetDomainNameApiAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainNameApiAssociationResult> getDomainNameApiAssociationPlain(GetDomainNameApiAssociationPlainArgs args) {
+        return getDomainNameApiAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::AppSync::DomainNameApiAssociation
+     * 
+     */
+    public static Output<GetDomainNameApiAssociationResult> getDomainNameApiAssociation(GetDomainNameApiAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:appsync:getDomainNameApiAssociation", TypeShape.of(GetDomainNameApiAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::AppSync::DomainNameApiAssociation
+     * 
+     */
+    public static CompletableFuture<GetDomainNameApiAssociationResult> getDomainNameApiAssociationPlain(GetDomainNameApiAssociationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appsync:getDomainNameApiAssociation", TypeShape.of(GetDomainNameApiAssociationResult.class), args, Utilities.withVersion(options));
     }
 }

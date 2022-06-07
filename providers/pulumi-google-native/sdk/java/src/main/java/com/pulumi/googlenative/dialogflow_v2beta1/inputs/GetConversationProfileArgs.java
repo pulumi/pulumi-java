@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetConversationProfileArgs extends com.pulumi.resources.Invok
     public static final GetConversationProfileArgs Empty = new GetConversationProfileArgs();
 
     @Import(name="conversationProfileId", required=true)
-    private String conversationProfileId;
+    private Output<String> conversationProfileId;
 
-    public String conversationProfileId() {
+    public Output<String> conversationProfileId() {
         return this.conversationProfileId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetConversationProfileArgs extends com.pulumi.resources.Invok
             $ = new GetConversationProfileArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder conversationProfileId(String conversationProfileId) {
+        public Builder conversationProfileId(Output<String> conversationProfileId) {
             $.conversationProfileId = conversationProfileId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder conversationProfileId(String conversationProfileId) {
+            return conversationProfileId(Output.of(conversationProfileId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetConversationProfileArgs build() {

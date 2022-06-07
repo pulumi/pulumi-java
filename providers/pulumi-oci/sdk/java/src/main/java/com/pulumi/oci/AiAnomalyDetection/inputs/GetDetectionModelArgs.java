@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.AiAnomalyDetection.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDetectionModelArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="modelId", required=true)
-    private String modelId;
+    private Output<String> modelId;
 
     /**
      * @return The OCID of the Model.
      * 
      */
-    public String modelId() {
+    public Output<String> modelId() {
         return this.modelId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDetectionModelArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder modelId(String modelId) {
+        public Builder modelId(Output<String> modelId) {
             $.modelId = modelId;
             return this;
+        }
+
+        /**
+         * @param modelId The OCID of the Model.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder modelId(String modelId) {
+            return modelId(Output.of(modelId));
         }
 
         public GetDetectionModelArgs build() {

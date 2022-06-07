@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetDrgRouteTableRouteRulesFilter;
+import com.pulumi.oci.Core.inputs.GetDrgRouteTableRouteRulesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetDrgRouteTableRouteRulesArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="drgRouteTableId", required=true)
-    private String drgRouteTableId;
+    private Output<String> drgRouteTableId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table.
      * 
      */
-    public String drgRouteTableId() {
+    public Output<String> drgRouteTableId() {
         return this.drgRouteTableId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDrgRouteTableRouteRulesFilter> filters;
+    private @Nullable Output<List<GetDrgRouteTableRouteRulesFilterArgs>> filters;
 
-    public Optional<List<GetDrgRouteTableRouteRulesFilter>> filters() {
+    public Optional<Output<List<GetDrgRouteTableRouteRulesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetDrgRouteTableRouteRulesArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="routeType")
-    private @Nullable String routeType;
+    private @Nullable Output<String> routeType;
 
     /**
      * @return Static routes are specified through the DRG route table API. Dynamic routes are learned by the DRG from the DRG attachments through various routing protocols.
      * 
      */
-    public Optional<String> routeType() {
+    public Optional<Output<String>> routeType() {
         return Optional.ofNullable(this.routeType);
     }
 
@@ -85,17 +86,31 @@ public final class GetDrgRouteTableRouteRulesArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder drgRouteTableId(String drgRouteTableId) {
+        public Builder drgRouteTableId(Output<String> drgRouteTableId) {
             $.drgRouteTableId = drgRouteTableId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDrgRouteTableRouteRulesFilter> filters) {
+        /**
+         * @param drgRouteTableId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the DRG route table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder drgRouteTableId(String drgRouteTableId) {
+            return drgRouteTableId(Output.of(drgRouteTableId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetDrgRouteTableRouteRulesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDrgRouteTableRouteRulesFilter... filters) {
+        public Builder filters(List<GetDrgRouteTableRouteRulesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDrgRouteTableRouteRulesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -105,9 +120,19 @@ public final class GetDrgRouteTableRouteRulesArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder routeType(@Nullable String routeType) {
+        public Builder routeType(@Nullable Output<String> routeType) {
             $.routeType = routeType;
             return this;
+        }
+
+        /**
+         * @param routeType Static routes are specified through the DRG route table API. Dynamic routes are learned by the DRG from the DRG attachments through various routing protocols.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routeType(String routeType) {
+            return routeType(Output.of(routeType));
         }
 
         public GetDrgRouteTableRouteRulesArgs build() {

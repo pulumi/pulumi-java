@@ -5,7 +5,9 @@ package com.pulumi.aws.elasticsearch;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.elasticsearch.inputs.GetDomainArgs;
+import com.pulumi.aws.elasticsearch.inputs.GetDomainPlainArgs;
 import com.pulumi.aws.elasticsearch.outputs.GetDomainResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -39,7 +41,7 @@ public final class ElasticsearchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -69,7 +71,67 @@ public final class ElasticsearchFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args) {
+        return getDomainPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get information about an Elasticsearch Domain
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myDomain = Output.of(ElasticsearchFunctions.getDomain(GetDomainArgs.builder()
+     *             .domainName(&#34;my-domain-name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:elasticsearch/getDomain:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get information about an Elasticsearch Domain
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myDomain = Output.of(ElasticsearchFunctions.getDomain(GetDomainArgs.builder()
+     *             .domainName(&#34;my-domain-name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticsearch/getDomain:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
 }

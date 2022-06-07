@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetComputeImageCapabilitySchemasFilter;
+import com.pulumi.oci.Core.inputs.GetComputeImageCapabilitySchemasFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetComputeImageCapabilitySchemasArgs extends com.pulumi.resou
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the given compartment OCID exactly.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -36,20 +37,20 @@ public final class GetComputeImageCapabilitySchemasArgs extends com.pulumi.resou
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetComputeImageCapabilitySchemasFilter> filters;
+    private @Nullable Output<List<GetComputeImageCapabilitySchemasFilterArgs>> filters;
 
-    public Optional<List<GetComputeImageCapabilitySchemasFilter>> filters() {
+    public Optional<Output<List<GetComputeImageCapabilitySchemasFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetComputeImageCapabilitySchemasArgs extends com.pulumi.resou
      * 
      */
     @Import(name="imageId")
-    private @Nullable String imageId;
+    private @Nullable Output<String> imageId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of an image.
      * 
      */
-    public Optional<String> imageId() {
+    public Optional<Output<String>> imageId() {
         return Optional.ofNullable(this.imageId);
     }
 
@@ -101,8 +102,29 @@ public final class GetComputeImageCapabilitySchemasArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the given compartment OCID exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -112,17 +134,20 @@ public final class GetComputeImageCapabilitySchemasArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetComputeImageCapabilitySchemasFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetComputeImageCapabilitySchemasFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetComputeImageCapabilitySchemasFilter... filters) {
+        public Builder filters(List<GetComputeImageCapabilitySchemasFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetComputeImageCapabilitySchemasFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -132,9 +157,19 @@ public final class GetComputeImageCapabilitySchemasArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder imageId(@Nullable String imageId) {
+        public Builder imageId(@Nullable Output<String> imageId) {
             $.imageId = imageId;
             return this;
+        }
+
+        /**
+         * @param imageId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of an image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageId(String imageId) {
+            return imageId(Output.of(imageId));
         }
 
         public GetComputeImageCapabilitySchemasArgs build() {

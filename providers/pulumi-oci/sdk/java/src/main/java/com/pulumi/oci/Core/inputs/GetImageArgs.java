@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageId", required=true)
-    private String imageId;
+    private Output<String> imageId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the image.
      * 
      */
-    public String imageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
 
@@ -57,9 +58,19 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder imageId(String imageId) {
+        public Builder imageId(Output<String> imageId) {
             $.imageId = imageId;
             return this;
+        }
+
+        /**
+         * @param imageId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageId(String imageId) {
+            return imageId(Output.of(imageId));
         }
 
         public GetImageArgs build() {

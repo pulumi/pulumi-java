@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.gkebackup_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetBackupPlanBackupIamPolicyArgs extends com.pulumi.resources
     public static final GetBackupPlanBackupIamPolicyArgs Empty = new GetBackupPlanBackupIamPolicyArgs();
 
     @Import(name="backupId", required=true)
-    private String backupId;
+    private Output<String> backupId;
 
-    public String backupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
 
     @Import(name="backupPlanId", required=true)
-    private String backupPlanId;
+    private Output<String> backupPlanId;
 
-    public String backupPlanId() {
+    public Output<String> backupPlanId() {
         return this.backupPlanId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -77,29 +78,49 @@ public final class GetBackupPlanBackupIamPolicyArgs extends com.pulumi.resources
             $ = new GetBackupPlanBackupIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder backupId(String backupId) {
+        public Builder backupId(Output<String> backupId) {
             $.backupId = backupId;
             return this;
         }
 
-        public Builder backupPlanId(String backupPlanId) {
+        public Builder backupId(String backupId) {
+            return backupId(Output.of(backupId));
+        }
+
+        public Builder backupPlanId(Output<String> backupPlanId) {
             $.backupPlanId = backupPlanId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder backupPlanId(String backupPlanId) {
+            return backupPlanId(Output.of(backupPlanId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetBackupPlanBackupIamPolicyArgs build() {

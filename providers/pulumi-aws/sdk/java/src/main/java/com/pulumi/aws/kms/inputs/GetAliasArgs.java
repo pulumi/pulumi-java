@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The display name of the alias. The name must start with the word &#34;alias&#34; followed by a forward slash (alias/)
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -57,9 +58,19 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name The display name of the alias. The name must start with the word &#34;alias&#34; followed by a forward slash (alias/)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetAliasArgs build() {

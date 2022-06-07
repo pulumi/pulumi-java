@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="roleDefinitionId", required=true)
-    private String roleDefinitionId;
+    private Output<String> roleDefinitionId;
 
     /**
      * @return The ID of the role definition.
      * 
      */
-    public String roleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
 
@@ -32,13 +33,13 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return The scope of the role definition.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -73,8 +74,29 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder roleDefinitionId(String roleDefinitionId) {
+        public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
+            return this;
+        }
+
+        /**
+         * @param roleDefinitionId The ID of the role definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder roleDefinitionId(String roleDefinitionId) {
+            return roleDefinitionId(Output.of(roleDefinitionId));
+        }
+
+        /**
+         * @param scope The scope of the role definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetRoleDefinitionArgs build() {

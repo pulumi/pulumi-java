@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDatabasesFilter;
+import com.pulumi.oci.Database.inputs.GetDatabasesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,13 +37,13 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbHomeId")
-    private @Nullable String dbHomeId;
+    private @Nullable Output<String> dbHomeId;
 
     /**
      * @return A Database Home [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). *Note: Either `db_home_id` or `system_id` is required to make the LIST API call.
      * 
      */
-    public Optional<String> dbHomeId() {
+    public Optional<Output<String>> dbHomeId() {
         return Optional.ofNullable(this.dbHomeId);
     }
 
@@ -51,20 +52,20 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbName")
-    private @Nullable String dbName;
+    private @Nullable Output<String> dbName;
 
     /**
      * @return A filter to return only resources that match the entire database name given. The match is not case sensitive.
      * 
      */
-    public Optional<String> dbName() {
+    public Optional<Output<String>> dbName() {
         return Optional.ofNullable(this.dbName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDatabasesFilter> filters;
+    private @Nullable Output<List<GetDatabasesFilterArgs>> filters;
 
-    public Optional<List<GetDatabasesFilter>> filters() {
+    public Optional<Output<List<GetDatabasesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -88,13 +89,13 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="systemId")
-    private @Nullable String systemId;
+    private @Nullable Output<String> systemId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Exadata DB system that you want to filter the database results by. Applies only to Exadata DB systems.
      * 
      */
-    public Optional<String> systemId() {
+    public Optional<Output<String>> systemId() {
         return Optional.ofNullable(this.systemId);
     }
 
@@ -133,8 +134,29 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param dbHomeId A Database Home [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm). *Note: Either `db_home_id` or `system_id` is required to make the LIST API call.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbHomeId(@Nullable Output<String> dbHomeId) {
+            $.dbHomeId = dbHomeId;
             return this;
         }
 
@@ -144,8 +166,18 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbHomeId(@Nullable String dbHomeId) {
-            $.dbHomeId = dbHomeId;
+        public Builder dbHomeId(String dbHomeId) {
+            return dbHomeId(Output.of(dbHomeId));
+        }
+
+        /**
+         * @param dbName A filter to return only resources that match the entire database name given. The match is not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbName(@Nullable Output<String> dbName) {
+            $.dbName = dbName;
             return this;
         }
 
@@ -155,17 +187,20 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbName(@Nullable String dbName) {
-            $.dbName = dbName;
-            return this;
+        public Builder dbName(String dbName) {
+            return dbName(Output.of(dbName));
         }
 
-        public Builder filters(@Nullable List<GetDatabasesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabasesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDatabasesFilter... filters) {
+        public Builder filters(List<GetDatabasesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDatabasesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -175,8 +210,29 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param systemId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Exadata DB system that you want to filter the database results by. Applies only to Exadata DB systems.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder systemId(@Nullable Output<String> systemId) {
+            $.systemId = systemId;
             return this;
         }
 
@@ -186,9 +242,8 @@ public final class GetDatabasesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder systemId(@Nullable String systemId) {
-            $.systemId = systemId;
-            return this;
+        public Builder systemId(String systemId) {
+            return systemId(Output.of(systemId));
         }
 
         public GetDatabasesArgs build() {

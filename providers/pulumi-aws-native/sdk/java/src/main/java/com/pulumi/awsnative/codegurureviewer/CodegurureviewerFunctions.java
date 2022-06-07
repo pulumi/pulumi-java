@@ -5,7 +5,9 @@ package com.pulumi.awsnative.codegurureviewer;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.codegurureviewer.inputs.GetRepositoryAssociationArgs;
+import com.pulumi.awsnative.codegurureviewer.inputs.GetRepositoryAssociationPlainArgs;
 import com.pulumi.awsnative.codegurureviewer.outputs.GetRepositoryAssociationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class CodegurureviewerFunctions {
      * This resource schema represents the RepositoryAssociation resource in the Amazon CodeGuru Reviewer service.
      * 
      */
-    public static CompletableFuture<GetRepositoryAssociationResult> getRepositoryAssociation(GetRepositoryAssociationArgs args) {
+    public static Output<GetRepositoryAssociationResult> getRepositoryAssociation(GetRepositoryAssociationArgs args) {
         return getRepositoryAssociation(args, InvokeOptions.Empty);
     }
     /**
      * This resource schema represents the RepositoryAssociation resource in the Amazon CodeGuru Reviewer service.
      * 
      */
-    public static CompletableFuture<GetRepositoryAssociationResult> getRepositoryAssociation(GetRepositoryAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepositoryAssociationResult> getRepositoryAssociationPlain(GetRepositoryAssociationPlainArgs args) {
+        return getRepositoryAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This resource schema represents the RepositoryAssociation resource in the Amazon CodeGuru Reviewer service.
+     * 
+     */
+    public static Output<GetRepositoryAssociationResult> getRepositoryAssociation(GetRepositoryAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:codegurureviewer:getRepositoryAssociation", TypeShape.of(GetRepositoryAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This resource schema represents the RepositoryAssociation resource in the Amazon CodeGuru Reviewer service.
+     * 
+     */
+    public static CompletableFuture<GetRepositoryAssociationResult> getRepositoryAssociationPlain(GetRepositoryAssociationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codegurureviewer:getRepositoryAssociation", TypeShape.of(GetRepositoryAssociationResult.class), args, Utilities.withVersion(options));
     }
 }

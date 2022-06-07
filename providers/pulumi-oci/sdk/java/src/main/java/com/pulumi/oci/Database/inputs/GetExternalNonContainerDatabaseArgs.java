@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExternalNonContainerDatabaseArgs extends com.pulumi.resour
      * 
      */
     @Import(name="externalNonContainerDatabaseId", required=true)
-    private String externalNonContainerDatabaseId;
+    private Output<String> externalNonContainerDatabaseId;
 
     /**
      * @return The external non-container database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String externalNonContainerDatabaseId() {
+    public Output<String> externalNonContainerDatabaseId() {
         return this.externalNonContainerDatabaseId;
     }
 
@@ -57,9 +58,19 @@ public final class GetExternalNonContainerDatabaseArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder externalNonContainerDatabaseId(String externalNonContainerDatabaseId) {
+        public Builder externalNonContainerDatabaseId(Output<String> externalNonContainerDatabaseId) {
             $.externalNonContainerDatabaseId = externalNonContainerDatabaseId;
             return this;
+        }
+
+        /**
+         * @param externalNonContainerDatabaseId The external non-container database [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externalNonContainerDatabaseId(String externalNonContainerDatabaseId) {
+            return externalNonContainerDatabaseId(Output.of(externalNonContainerDatabaseId));
         }
 
         public GetExternalNonContainerDatabaseArgs build() {

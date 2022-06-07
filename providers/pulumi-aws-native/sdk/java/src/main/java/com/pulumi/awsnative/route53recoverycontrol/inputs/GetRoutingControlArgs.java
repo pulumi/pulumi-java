@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.route53recoverycontrol.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRoutingControlArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="routingControlArn", required=true)
-    private String routingControlArn;
+    private Output<String> routingControlArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the routing control.
      * 
      */
-    public String routingControlArn() {
+    public Output<String> routingControlArn() {
         return this.routingControlArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetRoutingControlArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder routingControlArn(String routingControlArn) {
+        public Builder routingControlArn(Output<String> routingControlArn) {
             $.routingControlArn = routingControlArn;
             return this;
+        }
+
+        /**
+         * @param routingControlArn The Amazon Resource Name (ARN) of the routing control.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routingControlArn(String routingControlArn) {
+            return routingControlArn(Output.of(routingControlArn));
         }
 
         public GetRoutingControlArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.cloudidentity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parent", required=true)
-    private String parent;
+    private Output<String> parent;
 
     /**
      * @return The parent resource under which to list all Groups. Must be of the form identitysources/{identity_source_id} for external- identity-mapped groups or customers/{customer_id} for Google Groups.
      * 
      */
-    public String parent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -57,9 +58,19 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder parent(String parent) {
+        public Builder parent(Output<String> parent) {
             $.parent = parent;
             return this;
+        }
+
+        /**
+         * @param parent The parent resource under which to list all Groups. Must be of the form identitysources/{identity_source_id} for external- identity-mapped groups or customers/{customer_id} for Google Groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
 
         public GetGroupsArgs build() {

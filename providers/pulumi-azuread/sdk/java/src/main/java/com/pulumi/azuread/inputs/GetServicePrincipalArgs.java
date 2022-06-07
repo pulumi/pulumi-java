@@ -3,6 +3,7 @@
 
 package com.pulumi.azuread.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="applicationId")
-    private @Nullable String applicationId;
+    private @Nullable Output<String> applicationId;
 
     /**
      * @return The application ID (client ID) of the application associated with this service principal.
      * 
      */
-    public Optional<String> applicationId() {
+    public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
 
@@ -34,13 +35,13 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The display name of the application associated with this service principal.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -49,13 +50,13 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="objectId")
-    private @Nullable String objectId;
+    private @Nullable Output<String> objectId;
 
     /**
      * @return The object ID of the service principal.
      * 
      */
-    public Optional<String> objectId() {
+    public Optional<Output<String>> objectId() {
         return Optional.ofNullable(this.objectId);
     }
 
@@ -91,8 +92,29 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder applicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * @param applicationId The application ID (client ID) of the application associated with this service principal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
+        }
+
+        /**
+         * @param displayName The display name of the application associated with this service principal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -102,8 +124,18 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param objectId The object ID of the service principal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectId(@Nullable Output<String> objectId) {
+            $.objectId = objectId;
             return this;
         }
 
@@ -113,9 +145,8 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder objectId(@Nullable String objectId) {
-            $.objectId = objectId;
-            return this;
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
 
         public GetServicePrincipalArgs build() {

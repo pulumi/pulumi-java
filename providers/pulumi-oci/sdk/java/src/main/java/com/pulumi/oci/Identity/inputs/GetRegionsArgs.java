@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetRegionsFilter;
+import com.pulumi.oci.Identity.inputs.GetRegionsFilterArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,9 +17,9 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRegionsArgs Empty = new GetRegionsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetRegionsFilter> filters;
+    private @Nullable Output<List<GetRegionsFilterArgs>> filters;
 
-    public Optional<List<GetRegionsFilter>> filters() {
+    public Optional<Output<List<GetRegionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -46,12 +47,16 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRegionsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetRegionsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetRegionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetRegionsFilter... filters) {
+        public Builder filters(List<GetRegionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetRegionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

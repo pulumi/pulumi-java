@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return Expands referenced resources.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="inboundNatRuleName", required=true)
-    private String inboundNatRuleName;
+    private Output<String> inboundNatRuleName;
 
     /**
      * @return The name of the inbound nat rule.
      * 
      */
-    public String inboundNatRuleName() {
+    public Output<String> inboundNatRuleName() {
         return this.inboundNatRuleName;
     }
 
@@ -49,13 +50,13 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="loadBalancerName", required=true)
-    private String loadBalancerName;
+    private Output<String> loadBalancerName;
 
     /**
      * @return The name of the load balancer.
      * 
      */
-    public String loadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -64,13 +65,13 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,8 +108,29 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param inboundNatRuleName The name of the inbound nat rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder inboundNatRuleName(Output<String> inboundNatRuleName) {
+            $.inboundNatRuleName = inboundNatRuleName;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder inboundNatRuleName(String inboundNatRuleName) {
-            $.inboundNatRuleName = inboundNatRuleName;
+            return inboundNatRuleName(Output.of(inboundNatRuleName));
+        }
+
+        /**
+         * @param loadBalancerName The name of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerName(Output<String> loadBalancerName) {
+            $.loadBalancerName = loadBalancerName;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder loadBalancerName(String loadBalancerName) {
-            $.loadBalancerName = loadBalancerName;
+            return loadBalancerName(Output.of(loadBalancerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetInboundNatRuleArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetInboundNatRuleArgs build() {

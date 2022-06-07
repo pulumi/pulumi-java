@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetApiArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetApiArgs Empty = new GetApiArgs();
 
     @Import(name="apiId", required=true)
-    private String apiId;
+    private Output<String> apiId;
 
-    public String apiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -51,14 +52,22 @@ public final class GetApiArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApiArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder apiId(String apiId) {
+        public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetApiArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logz.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListSubAccountVMHostsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="monitorName", required=true)
-    private String monitorName;
+    private Output<String> monitorName;
 
     /**
      * @return Monitor resource name
      * 
      */
-    public String monitorName() {
+    public Output<String> monitorName() {
         return this.monitorName;
     }
 
@@ -32,13 +33,13 @@ public final class ListSubAccountVMHostsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class ListSubAccountVMHostsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="subAccountName", required=true)
-    private String subAccountName;
+    private Output<String> subAccountName;
 
     /**
      * @return Sub Account resource name
      * 
      */
-    public String subAccountName() {
+    public Output<String> subAccountName() {
         return this.subAccountName;
     }
 
@@ -89,8 +90,29 @@ public final class ListSubAccountVMHostsArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder monitorName(String monitorName) {
+        public Builder monitorName(Output<String> monitorName) {
             $.monitorName = monitorName;
+            return this;
+        }
+
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder monitorName(String monitorName) {
+            return monitorName(Output.of(monitorName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListSubAccountVMHostsArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param subAccountName Sub Account resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subAccountName(Output<String> subAccountName) {
+            $.subAccountName = subAccountName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListSubAccountVMHostsArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder subAccountName(String subAccountName) {
-            $.subAccountName = subAccountName;
-            return this;
+            return subAccountName(Output.of(subAccountName));
         }
 
         public ListSubAccountVMHostsArgs build() {

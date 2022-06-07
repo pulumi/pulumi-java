@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.customproviders.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCustomResourceProviderArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCustomResourceProviderArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceProviderName", required=true)
-    private String resourceProviderName;
+    private Output<String> resourceProviderName;
 
     /**
      * @return The name of the resource provider.
      * 
      */
-    public String resourceProviderName() {
+    public Output<String> resourceProviderName() {
         return this.resourceProviderName;
     }
 
@@ -73,8 +74,29 @@ public final class GetCustomResourceProviderArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceProviderName The name of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceProviderName(Output<String> resourceProviderName) {
+            $.resourceProviderName = resourceProviderName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetCustomResourceProviderArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceProviderName(String resourceProviderName) {
-            $.resourceProviderName = resourceProviderName;
-            return this;
+            return resourceProviderName(Output.of(resourceProviderName));
         }
 
         public GetCustomResourceProviderArgs build() {

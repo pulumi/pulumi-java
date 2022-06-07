@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Blockchain.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Blockchain.inputs.GetBlockchainPlatformPatchesFilter;
+import com.pulumi.oci.Blockchain.inputs.GetBlockchainPlatformPatchesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetBlockchainPlatformPatchesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="blockchainPlatformId", required=true)
-    private String blockchainPlatformId;
+    private Output<String> blockchainPlatformId;
 
     /**
      * @return Unique service identifier.
      * 
      */
-    public String blockchainPlatformId() {
+    public Output<String> blockchainPlatformId() {
         return this.blockchainPlatformId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBlockchainPlatformPatchesFilter> filters;
+    private @Nullable Output<List<GetBlockchainPlatformPatchesFilterArgs>> filters;
 
-    public Optional<List<GetBlockchainPlatformPatchesFilter>> filters() {
+    public Optional<Output<List<GetBlockchainPlatformPatchesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetBlockchainPlatformPatchesArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder blockchainPlatformId(String blockchainPlatformId) {
+        public Builder blockchainPlatformId(Output<String> blockchainPlatformId) {
             $.blockchainPlatformId = blockchainPlatformId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBlockchainPlatformPatchesFilter> filters) {
+        /**
+         * @param blockchainPlatformId Unique service identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockchainPlatformId(String blockchainPlatformId) {
+            return blockchainPlatformId(Output.of(blockchainPlatformId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetBlockchainPlatformPatchesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetBlockchainPlatformPatchesFilter... filters) {
+        public Builder filters(List<GetBlockchainPlatformPatchesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetBlockchainPlatformPatchesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

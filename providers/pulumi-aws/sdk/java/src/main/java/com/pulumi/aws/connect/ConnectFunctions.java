@@ -5,14 +5,23 @@ package com.pulumi.aws.connect;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.connect.inputs.GetBotAssociationArgs;
+import com.pulumi.aws.connect.inputs.GetBotAssociationPlainArgs;
 import com.pulumi.aws.connect.inputs.GetContactFlowArgs;
 import com.pulumi.aws.connect.inputs.GetContactFlowModuleArgs;
+import com.pulumi.aws.connect.inputs.GetContactFlowModulePlainArgs;
+import com.pulumi.aws.connect.inputs.GetContactFlowPlainArgs;
 import com.pulumi.aws.connect.inputs.GetHoursOfOperationArgs;
+import com.pulumi.aws.connect.inputs.GetHoursOfOperationPlainArgs;
 import com.pulumi.aws.connect.inputs.GetInstanceArgs;
+import com.pulumi.aws.connect.inputs.GetInstancePlainArgs;
 import com.pulumi.aws.connect.inputs.GetLambdaFunctionAssociationArgs;
+import com.pulumi.aws.connect.inputs.GetLambdaFunctionAssociationPlainArgs;
 import com.pulumi.aws.connect.inputs.GetPromptArgs;
+import com.pulumi.aws.connect.inputs.GetPromptPlainArgs;
 import com.pulumi.aws.connect.inputs.GetQueueArgs;
+import com.pulumi.aws.connect.inputs.GetQueuePlainArgs;
 import com.pulumi.aws.connect.inputs.GetQuickConnectArgs;
+import com.pulumi.aws.connect.inputs.GetQuickConnectPlainArgs;
 import com.pulumi.aws.connect.outputs.GetBotAssociationResult;
 import com.pulumi.aws.connect.outputs.GetContactFlowModuleResult;
 import com.pulumi.aws.connect.outputs.GetContactFlowResult;
@@ -22,6 +31,7 @@ import com.pulumi.aws.connect.outputs.GetLambdaFunctionAssociationResult;
 import com.pulumi.aws.connect.outputs.GetPromptResult;
 import com.pulumi.aws.connect.outputs.GetQueueResult;
 import com.pulumi.aws.connect.outputs.GetQuickConnectResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -59,7 +69,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBotAssociationResult> getBotAssociation(GetBotAssociationArgs args) {
+    public static Output<GetBotAssociationResult> getBotAssociation(GetBotAssociationArgs args) {
         return getBotAssociation(args, InvokeOptions.Empty);
     }
     /**
@@ -93,7 +103,75 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetBotAssociationResult> getBotAssociation(GetBotAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBotAssociationResult> getBotAssociationPlain(GetBotAssociationPlainArgs args) {
+        return getBotAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about a specific Lex (V1) Bot associated with an Amazon Connect instance.
+     * 
+     * ## Example Usage
+     * ### By name
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getBotAssociation(GetBotAssociationArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .lexBot(GetBotAssociationLexBot.builder()
+     *                 .name(&#34;Test&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetBotAssociationResult> getBotAssociation(GetBotAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getBotAssociation:getBotAssociation", TypeShape.of(GetBotAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about a specific Lex (V1) Bot associated with an Amazon Connect instance.
+     * 
+     * ## Example Usage
+     * ### By name
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getBotAssociation(GetBotAssociationArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .lexBot(GetBotAssociationLexBot.builder()
+     *                 .name(&#34;Test&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetBotAssociationResult> getBotAssociationPlain(GetBotAssociationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getBotAssociation:getBotAssociation", TypeShape.of(GetBotAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -150,7 +228,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContactFlowResult> getContactFlow(GetContactFlowArgs args) {
+    public static Output<GetContactFlowResult> getContactFlow(GetContactFlowArgs args) {
         return getContactFlow(args, InvokeOptions.Empty);
     }
     /**
@@ -207,7 +285,121 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContactFlowResult> getContactFlow(GetContactFlowArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactFlowResult> getContactFlowPlain(GetContactFlowPlainArgs args) {
+        return getContactFlowPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about a specific Amazon Connect Contact Flow.
+     * 
+     * ## Example Usage
+     * 
+     * By name
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ConnectFunctions.getContactFlow(GetContactFlowArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;Test&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By contact_flow_id
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ConnectFunctions.getContactFlow(GetContactFlowArgs.builder()
+     *             .contactFlowId(&#34;cccccccc-bbbb-cccc-dddd-111111111111&#34;)
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetContactFlowResult> getContactFlow(GetContactFlowArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getContactFlow:getContactFlow", TypeShape.of(GetContactFlowResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about a specific Amazon Connect Contact Flow.
+     * 
+     * ## Example Usage
+     * 
+     * By name
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ConnectFunctions.getContactFlow(GetContactFlowArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;Test&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By contact_flow_id
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ConnectFunctions.getContactFlow(GetContactFlowArgs.builder()
+     *             .contactFlowId(&#34;cccccccc-bbbb-cccc-dddd-111111111111&#34;)
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetContactFlowResult> getContactFlowPlain(GetContactFlowPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getContactFlow:getContactFlow", TypeShape.of(GetContactFlowResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -264,7 +456,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args) {
+    public static Output<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args) {
         return getContactFlowModule(args, InvokeOptions.Empty);
     }
     /**
@@ -321,7 +513,121 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModulePlain(GetContactFlowModulePlainArgs args) {
+        return getContactFlowModulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about a specific Amazon Connect Contact Flow Module.
+     * 
+     * ## Example Usage
+     * 
+     * By `name`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getContactFlowModule(GetContactFlowModuleArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By `contact_flow_module_id`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getContactFlowModule(GetContactFlowModuleArgs.builder()
+     *             .contactFlowModuleId(&#34;cccccccc-bbbb-cccc-dddd-111111111111&#34;)
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetContactFlowModuleResult> getContactFlowModule(GetContactFlowModuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getContactFlowModule:getContactFlowModule", TypeShape.of(GetContactFlowModuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about a specific Amazon Connect Contact Flow Module.
+     * 
+     * ## Example Usage
+     * 
+     * By `name`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getContactFlowModule(GetContactFlowModuleArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By `contact_flow_module_id`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getContactFlowModule(GetContactFlowModuleArgs.builder()
+     *             .contactFlowModuleId(&#34;cccccccc-bbbb-cccc-dddd-111111111111&#34;)
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetContactFlowModuleResult> getContactFlowModulePlain(GetContactFlowModulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getContactFlowModule:getContactFlowModule", TypeShape.of(GetContactFlowModuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -378,7 +684,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args) {
+    public static Output<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args) {
         return getHoursOfOperation(args, InvokeOptions.Empty);
     }
     /**
@@ -435,7 +741,121 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperationPlain(GetHoursOfOperationPlainArgs args) {
+        return getHoursOfOperationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about a specific Amazon Connect Hours of Operation.
+     * 
+     * ## Example Usage
+     * 
+     * By `name`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ConnectFunctions.getHoursOfOperation(GetHoursOfOperationArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;Test&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By `hours_of_operation_id`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ConnectFunctions.getHoursOfOperation(GetHoursOfOperationArgs.builder()
+     *             .hoursOfOperationId(&#34;cccccccc-bbbb-cccc-dddd-111111111111&#34;)
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetHoursOfOperationResult> getHoursOfOperation(GetHoursOfOperationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getHoursOfOperation:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about a specific Amazon Connect Hours of Operation.
+     * 
+     * ## Example Usage
+     * 
+     * By `name`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ConnectFunctions.getHoursOfOperation(GetHoursOfOperationArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;Test&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By `hours_of_operation_id`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ConnectFunctions.getHoursOfOperation(GetHoursOfOperationArgs.builder()
+     *             .hoursOfOperationId(&#34;cccccccc-bbbb-cccc-dddd-111111111111&#34;)
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetHoursOfOperationResult> getHoursOfOperationPlain(GetHoursOfOperationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getHoursOfOperation:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -490,7 +910,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance() {
+    public static Output<GetInstanceResult> getInstance() {
         return getInstance(GetInstanceArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -545,7 +965,62 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+    public static CompletableFuture<GetInstanceResult> getInstancePlain() {
+        return getInstancePlain(GetInstancePlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about a specific Amazon Connect Instance.
+     * 
+     * ## Example Usage
+     * 
+     * By instance_alias
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var foo = Output.of(ConnectFunctions.getInstance(GetInstanceArgs.builder()
+     *             .instanceAlias(&#34;foo&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By instance_id
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var foo = Output.of(ConnectFunctions.getInstance(GetInstanceArgs.builder()
+     *             .instanceId(&#34;97afc98d-101a-ba98-ab97-ae114fc115ec&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
     /**
@@ -600,7 +1075,117 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args) {
+        return getInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about a specific Amazon Connect Instance.
+     * 
+     * ## Example Usage
+     * 
+     * By instance_alias
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var foo = Output.of(ConnectFunctions.getInstance(GetInstanceArgs.builder()
+     *             .instanceAlias(&#34;foo&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By instance_id
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var foo = Output.of(ConnectFunctions.getInstance(GetInstanceArgs.builder()
+     *             .instanceId(&#34;97afc98d-101a-ba98-ab97-ae114fc115ec&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about a specific Amazon Connect Instance.
+     * 
+     * ## Example Usage
+     * 
+     * By instance_alias
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var foo = Output.of(ConnectFunctions.getInstance(GetInstanceArgs.builder()
+     *             .instanceAlias(&#34;foo&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By instance_id
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var foo = Output.of(ConnectFunctions.getInstance(GetInstanceArgs.builder()
+     *             .instanceId(&#34;97afc98d-101a-ba98-ab97-ae114fc115ec&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -631,7 +1216,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs args) {
+    public static Output<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs args) {
         return getLambdaFunctionAssociation(args, InvokeOptions.Empty);
     }
     /**
@@ -662,7 +1247,69 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociationPlain(GetLambdaFunctionAssociationPlainArgs args) {
+        return getLambdaFunctionAssociationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about a specific Connect Lambda Function Association.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs.builder()
+     *             .functionArn(&#34;arn:aws:lambda:us-west-2:123456789123:function:abcdefg&#34;)
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getLambdaFunctionAssociation:getLambdaFunctionAssociation", TypeShape.of(GetLambdaFunctionAssociationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about a specific Connect Lambda Function Association.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getLambdaFunctionAssociation(GetLambdaFunctionAssociationArgs.builder()
+     *             .functionArn(&#34;arn:aws:lambda:us-west-2:123456789123:function:abcdefg&#34;)
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetLambdaFunctionAssociationResult> getLambdaFunctionAssociationPlain(GetLambdaFunctionAssociationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getLambdaFunctionAssociation:getLambdaFunctionAssociation", TypeShape.of(GetLambdaFunctionAssociationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -695,7 +1342,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPromptResult> getPrompt(GetPromptArgs args) {
+    public static Output<GetPromptResult> getPrompt(GetPromptArgs args) {
         return getPrompt(args, InvokeOptions.Empty);
     }
     /**
@@ -728,7 +1375,73 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPromptResult> getPrompt(GetPromptArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPromptResult> getPromptPlain(GetPromptPlainArgs args) {
+        return getPromptPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about a specific Amazon Connect Prompt.
+     * 
+     * ## Example Usage
+     * 
+     * By `name`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getPrompt(GetPromptArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;Beep.wav&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetPromptResult> getPrompt(GetPromptArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getPrompt:getPrompt", TypeShape.of(GetPromptResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about a specific Amazon Connect Prompt.
+     * 
+     * ## Example Usage
+     * 
+     * By `name`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getPrompt(GetPromptArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;Beep.wav&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetPromptResult> getPromptPlain(GetPromptPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getPrompt:getPrompt", TypeShape.of(GetPromptResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -785,7 +1498,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
+    public static Output<GetQueueResult> getQueue(GetQueueArgs args) {
         return getQueue(args, InvokeOptions.Empty);
     }
     /**
@@ -842,7 +1555,121 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueueResult> getQueuePlain(GetQueuePlainArgs args) {
+        return getQueuePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about a specific Amazon Connect Queue.
+     * 
+     * ## Example Usage
+     * 
+     * By `name`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getQueue(GetQueueArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;Example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By `queue_id`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getQueue(GetQueueArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .queueId(&#34;cccccccc-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getQueue:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about a specific Amazon Connect Queue.
+     * 
+     * ## Example Usage
+     * 
+     * By `name`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getQueue(GetQueueArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;Example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By `queue_id`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getQueue(GetQueueArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .queueId(&#34;cccccccc-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetQueueResult> getQueuePlain(GetQueuePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getQueue:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -899,7 +1726,7 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args) {
+    public static Output<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args) {
         return getQuickConnect(args, InvokeOptions.Empty);
     }
     /**
@@ -956,7 +1783,121 @@ public final class ConnectFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQuickConnectResult> getQuickConnectPlain(GetQuickConnectPlainArgs args) {
+        return getQuickConnectPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides details about a specific Amazon Connect Quick Connect.
+     * 
+     * ## Example Usage
+     * 
+     * By `name`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getQuickConnect(GetQuickConnectArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;Example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By `quick_connect_id`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getQuickConnect(GetQuickConnectArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .quickConnectId(&#34;cccccccc-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetQuickConnectResult> getQuickConnect(GetQuickConnectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:connect/getQuickConnect:getQuickConnect", TypeShape.of(GetQuickConnectResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about a specific Amazon Connect Quick Connect.
+     * 
+     * ## Example Usage
+     * 
+     * By `name`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getQuickConnect(GetQuickConnectArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .name(&#34;Example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * By `quick_connect_id`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ConnectFunctions.getQuickConnect(GetQuickConnectArgs.builder()
+     *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+     *             .quickConnectId(&#34;cccccccc-bbbb-cccc-dddd-111111111111&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetQuickConnectResult> getQuickConnectPlain(GetQuickConnectPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getQuickConnect:getQuickConnect", TypeShape.of(GetQuickConnectResult.class), args, Utilities.withVersion(options));
     }
 }

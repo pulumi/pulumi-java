@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.testbase.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="favoriteProcessResourceName", required=true)
-    private String favoriteProcessResourceName;
+    private Output<String> favoriteProcessResourceName;
 
     /**
      * @return The resource name of a favorite process in a package. If the process name contains characters that are not allowed in Azure Resource Name, we use &#39;actualProcessName&#39; in request body to submit the name.
      * 
      */
-    public String favoriteProcessResourceName() {
+    public Output<String> favoriteProcessResourceName() {
         return this.favoriteProcessResourceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="packageName", required=true)
-    private String packageName;
+    private Output<String> packageName;
 
     /**
      * @return The resource name of the Test Base Package.
      * 
      */
-    public String packageName() {
+    public Output<String> packageName() {
         return this.packageName;
     }
 
@@ -47,13 +48,13 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="testBaseAccountName", required=true)
-    private String testBaseAccountName;
+    private Output<String> testBaseAccountName;
 
     /**
      * @return The resource name of the Test Base Account.
      * 
      */
-    public String testBaseAccountName() {
+    public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
@@ -105,8 +106,29 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder favoriteProcessResourceName(String favoriteProcessResourceName) {
+        public Builder favoriteProcessResourceName(Output<String> favoriteProcessResourceName) {
             $.favoriteProcessResourceName = favoriteProcessResourceName;
+            return this;
+        }
+
+        /**
+         * @param favoriteProcessResourceName The resource name of a favorite process in a package. If the process name contains characters that are not allowed in Azure Resource Name, we use &#39;actualProcessName&#39; in request body to submit the name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder favoriteProcessResourceName(String favoriteProcessResourceName) {
+            return favoriteProcessResourceName(Output.of(favoriteProcessResourceName));
+        }
+
+        /**
+         * @param packageName The resource name of the Test Base Package.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packageName(Output<String> packageName) {
+            $.packageName = packageName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder packageName(String packageName) {
-            $.packageName = packageName;
+            return packageName(Output.of(packageName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder testBaseAccountName(Output<String> testBaseAccountName) {
+            $.testBaseAccountName = testBaseAccountName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder testBaseAccountName(String testBaseAccountName) {
-            $.testBaseAccountName = testBaseAccountName;
-            return this;
+            return testBaseAccountName(Output.of(testBaseAccountName));
         }
 
         public GetFavoriteProcessArgs build() {

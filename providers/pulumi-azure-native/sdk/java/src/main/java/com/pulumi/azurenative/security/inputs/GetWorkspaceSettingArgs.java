@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWorkspaceSettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="workspaceSettingName", required=true)
-    private String workspaceSettingName;
+    private Output<String> workspaceSettingName;
 
     /**
      * @return Name of the security setting
      * 
      */
-    public String workspaceSettingName() {
+    public Output<String> workspaceSettingName() {
         return this.workspaceSettingName;
     }
 
@@ -57,9 +58,19 @@ public final class GetWorkspaceSettingArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder workspaceSettingName(String workspaceSettingName) {
+        public Builder workspaceSettingName(Output<String> workspaceSettingName) {
             $.workspaceSettingName = workspaceSettingName;
             return this;
+        }
+
+        /**
+         * @param workspaceSettingName Name of the security setting
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceSettingName(String workspaceSettingName) {
+            return workspaceSettingName(Output.of(workspaceSettingName));
         }
 
         public GetWorkspaceSettingArgs build() {

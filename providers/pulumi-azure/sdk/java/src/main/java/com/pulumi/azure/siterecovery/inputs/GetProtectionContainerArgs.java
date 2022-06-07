@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.siterecovery.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the protection container.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="recoveryFabricName", required=true)
-    private String recoveryFabricName;
+    private Output<String> recoveryFabricName;
 
     /**
      * @return The name of the fabric that contains the protection container.
      * 
      */
-    public String recoveryFabricName() {
+    public Output<String> recoveryFabricName() {
         return this.recoveryFabricName;
     }
 
@@ -47,13 +48,13 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="recoveryVaultName", required=true)
-    private String recoveryVaultName;
+    private Output<String> recoveryVaultName;
 
     /**
      * @return The name of the Recovery Services Vault that the protection container is associated witth.
      * 
      */
-    public String recoveryVaultName() {
+    public Output<String> recoveryVaultName() {
         return this.recoveryVaultName;
     }
 
@@ -62,13 +63,13 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group in which the associated protection container resides.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Specifies the name of the protection container.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param recoveryFabricName The name of the fabric that contains the protection container.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder recoveryFabricName(Output<String> recoveryFabricName) {
+            $.recoveryFabricName = recoveryFabricName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder recoveryFabricName(String recoveryFabricName) {
-            $.recoveryFabricName = recoveryFabricName;
+            return recoveryFabricName(Output.of(recoveryFabricName));
+        }
+
+        /**
+         * @param recoveryVaultName The name of the Recovery Services Vault that the protection container is associated witth.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder recoveryVaultName(Output<String> recoveryVaultName) {
+            $.recoveryVaultName = recoveryVaultName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder recoveryVaultName(String recoveryVaultName) {
-            $.recoveryVaultName = recoveryVaultName;
+            return recoveryVaultName(Output.of(recoveryVaultName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group in which the associated protection container resides.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetProtectionContainerArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetProtectionContainerArgs build() {

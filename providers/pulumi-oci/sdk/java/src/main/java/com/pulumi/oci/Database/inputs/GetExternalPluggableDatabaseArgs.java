@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExternalPluggableDatabaseArgs extends com.pulumi.resources
      * 
      */
     @Import(name="externalPluggableDatabaseId", required=true)
-    private String externalPluggableDatabaseId;
+    private Output<String> externalPluggableDatabaseId;
 
     /**
      * @return The ExternalPluggableDatabaseId [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String externalPluggableDatabaseId() {
+    public Output<String> externalPluggableDatabaseId() {
         return this.externalPluggableDatabaseId;
     }
 
@@ -57,9 +58,19 @@ public final class GetExternalPluggableDatabaseArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder externalPluggableDatabaseId(String externalPluggableDatabaseId) {
+        public Builder externalPluggableDatabaseId(Output<String> externalPluggableDatabaseId) {
             $.externalPluggableDatabaseId = externalPluggableDatabaseId;
             return this;
+        }
+
+        /**
+         * @param externalPluggableDatabaseId The ExternalPluggableDatabaseId [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externalPluggableDatabaseId(String externalPluggableDatabaseId) {
+            return externalPluggableDatabaseId(Output.of(externalPluggableDatabaseId));
         }
 
         public GetExternalPluggableDatabaseArgs build() {

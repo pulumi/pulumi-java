@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Ocvp.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Ocvp.inputs.GetSddcsFilter;
+import com.pulumi.oci.Ocvp.inputs.GetSddcsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,13 +37,13 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computeAvailabilityDomain")
-    private @Nullable String computeAvailabilityDomain;
+    private @Nullable Output<String> computeAvailabilityDomain;
 
     /**
      * @return The name of the availability domain that the Compute instances are running in.  Example: `Uocm:PHX-AD-1`
      * 
      */
-    public Optional<String> computeAvailabilityDomain() {
+    public Optional<Output<String>> computeAvailabilityDomain() {
         return Optional.ofNullable(this.computeAvailabilityDomain);
     }
 
@@ -51,20 +52,20 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetSddcsFilter> filters;
+    private @Nullable Output<List<GetSddcsFilterArgs>> filters;
 
-    public Optional<List<GetSddcsFilter>> filters() {
+    public Optional<Output<List<GetSddcsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The lifecycle state of the resource.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,8 +118,29 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param computeAvailabilityDomain The name of the availability domain that the Compute instances are running in.  Example: `Uocm:PHX-AD-1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder computeAvailabilityDomain(@Nullable Output<String> computeAvailabilityDomain) {
+            $.computeAvailabilityDomain = computeAvailabilityDomain;
             return this;
         }
 
@@ -128,8 +150,18 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder computeAvailabilityDomain(@Nullable String computeAvailabilityDomain) {
-            $.computeAvailabilityDomain = computeAvailabilityDomain;
+        public Builder computeAvailabilityDomain(String computeAvailabilityDomain) {
+            return computeAvailabilityDomain(Output.of(computeAvailabilityDomain));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -139,17 +171,20 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetSddcsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetSddcsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSddcsFilter... filters) {
+        public Builder filters(List<GetSddcsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSddcsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -159,9 +194,19 @@ public final class GetSddcsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state The lifecycle state of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetSddcsArgs build() {

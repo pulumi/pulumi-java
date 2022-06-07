@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetReservationArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetReservationArgs Empty = new GetReservationArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="reservation", required=true)
-    private String reservation;
+    private Output<String> reservation;
 
-    public String reservation() {
+    public Output<String> reservation() {
         return this.reservation;
     }
 
     @Import(name="zone", required=true)
-    private String zone;
+    private Output<String> zone;
 
-    public String zone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -61,19 +62,31 @@ public final class GetReservationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetReservationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder reservation(String reservation) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder reservation(Output<String> reservation) {
             $.reservation = reservation;
             return this;
         }
 
-        public Builder zone(String zone) {
+        public Builder reservation(String reservation) {
+            return reservation(Output.of(reservation));
+        }
+
+        public Builder zone(Output<String> zone) {
             $.zone = zone;
             return this;
+        }
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public GetReservationArgs build() {

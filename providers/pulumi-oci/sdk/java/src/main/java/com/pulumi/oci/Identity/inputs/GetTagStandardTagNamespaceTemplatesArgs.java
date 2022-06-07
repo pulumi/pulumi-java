@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetTagStandardTagNamespaceTemplatesFilter;
+import com.pulumi.oci.Identity.inputs.GetTagStandardTagNamespaceTemplatesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetTagStandardTagNamespaceTemplatesArgs extends com.pulumi.re
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment (remember that the tenancy is simply the root compartment).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetTagStandardTagNamespaceTemplatesFilter> filters;
+    private @Nullable Output<List<GetTagStandardTagNamespaceTemplatesFilterArgs>> filters;
 
-    public Optional<List<GetTagStandardTagNamespaceTemplatesFilter>> filters() {
+    public Optional<Output<List<GetTagStandardTagNamespaceTemplatesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetTagStandardTagNamespaceTemplatesArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetTagStandardTagNamespaceTemplatesFilter> filters) {
+        /**
+         * @param compartmentId The OCID of the compartment (remember that the tenancy is simply the root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetTagStandardTagNamespaceTemplatesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetTagStandardTagNamespaceTemplatesFilter... filters) {
+        public Builder filters(List<GetTagStandardTagNamespaceTemplatesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetTagStandardTagNamespaceTemplatesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

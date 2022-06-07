@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datalakeanalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the Data Lake Analytics account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="computePolicyName", required=true)
-    private String computePolicyName;
+    private Output<String> computePolicyName;
 
     /**
      * @return The name of the compute policy to retrieve.
      * 
      */
-    public String computePolicyName() {
+    public Output<String> computePolicyName() {
         return this.computePolicyName;
     }
 
@@ -47,13 +48,13 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Azure resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the Data Lake Analytics account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param computePolicyName The name of the compute policy to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder computePolicyName(Output<String> computePolicyName) {
+            $.computePolicyName = computePolicyName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder computePolicyName(String computePolicyName) {
-            $.computePolicyName = computePolicyName;
+            return computePolicyName(Output.of(computePolicyName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetComputePolicyArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetComputePolicyArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.vmmigration_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetUtilizationReportArgs extends com.pulumi.resources.InvokeA
     public static final GetUtilizationReportArgs Empty = new GetUtilizationReportArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="sourceId", required=true)
-    private String sourceId;
+    private Output<String> sourceId;
 
-    public String sourceId() {
+    public Output<String> sourceId() {
         return this.sourceId;
     }
 
     @Import(name="utilizationReportId", required=true)
-    private String utilizationReportId;
+    private Output<String> utilizationReportId;
 
-    public String utilizationReportId() {
+    public Output<String> utilizationReportId() {
         return this.utilizationReportId;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private @Nullable Output<String> view;
 
-    public Optional<String> view() {
+    public Optional<Output<String>> view() {
         return Optional.ofNullable(this.view);
     }
 
@@ -77,29 +78,49 @@ public final class GetUtilizationReportArgs extends com.pulumi.resources.InvokeA
             $ = new GetUtilizationReportArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder sourceId(String sourceId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder sourceId(Output<String> sourceId) {
             $.sourceId = sourceId;
             return this;
         }
 
-        public Builder utilizationReportId(String utilizationReportId) {
+        public Builder sourceId(String sourceId) {
+            return sourceId(Output.of(sourceId));
+        }
+
+        public Builder utilizationReportId(Output<String> utilizationReportId) {
             $.utilizationReportId = utilizationReportId;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder utilizationReportId(String utilizationReportId) {
+            return utilizationReportId(Output.of(utilizationReportId));
+        }
+
+        public Builder view(@Nullable Output<String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(String view) {
+            return view(Output.of(view));
         }
 
         public GetUtilizationReportArgs build() {

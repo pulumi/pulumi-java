@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.networksecurity_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetServerTlsPolicyIamPolicyArgs extends com.pulumi.resources.
     public static final GetServerTlsPolicyIamPolicyArgs Empty = new GetServerTlsPolicyIamPolicyArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="serverTlsPolicyId", required=true)
-    private String serverTlsPolicyId;
+    private Output<String> serverTlsPolicyId;
 
-    public String serverTlsPolicyId() {
+    public Output<String> serverTlsPolicyId() {
         return this.serverTlsPolicyId;
     }
 
@@ -69,24 +70,40 @@ public final class GetServerTlsPolicyIamPolicyArgs extends com.pulumi.resources.
             $ = new GetServerTlsPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder serverTlsPolicyId(String serverTlsPolicyId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder serverTlsPolicyId(Output<String> serverTlsPolicyId) {
             $.serverTlsPolicyId = serverTlsPolicyId;
             return this;
+        }
+
+        public Builder serverTlsPolicyId(String serverTlsPolicyId) {
+            return serverTlsPolicyId(Output.of(serverTlsPolicyId));
         }
 
         public GetServerTlsPolicyIamPolicyArgs build() {

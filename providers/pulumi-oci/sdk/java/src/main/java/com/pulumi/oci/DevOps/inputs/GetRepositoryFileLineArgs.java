@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetRepositoryFileLineArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="filePath", required=true)
-    private String filePath;
+    private Output<String> filePath;
 
     /**
      * @return Path to a file within a repository.
      * 
      */
-    public String filePath() {
+    public Output<String> filePath() {
         return this.filePath;
     }
 
@@ -35,13 +36,13 @@ public final class GetRepositoryFileLineArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -50,13 +51,13 @@ public final class GetRepositoryFileLineArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="revision", required=true)
-    private String revision;
+    private Output<String> revision;
 
     /**
      * @return Retrieve file lines from specific revision.
      * 
      */
-    public String revision() {
+    public Output<String> revision() {
         return this.revision;
     }
 
@@ -65,13 +66,13 @@ public final class GetRepositoryFileLineArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="startLineNumber")
-    private @Nullable Integer startLineNumber;
+    private @Nullable Output<Integer> startLineNumber;
 
     /**
      * @return Line number from where to start returning file lines.
      * 
      */
-    public Optional<Integer> startLineNumber() {
+    public Optional<Output<Integer>> startLineNumber() {
         return Optional.ofNullable(this.startLineNumber);
     }
 
@@ -108,8 +109,29 @@ public final class GetRepositoryFileLineArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder filePath(String filePath) {
+        public Builder filePath(Output<String> filePath) {
             $.filePath = filePath;
+            return this;
+        }
+
+        /**
+         * @param filePath Path to a file within a repository.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filePath(String filePath) {
+            return filePath(Output.of(filePath));
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -120,7 +142,17 @@ public final class GetRepositoryFileLineArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
+            return repositoryId(Output.of(repositoryId));
+        }
+
+        /**
+         * @param revision Retrieve file lines from specific revision.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder revision(Output<String> revision) {
+            $.revision = revision;
             return this;
         }
 
@@ -131,7 +163,17 @@ public final class GetRepositoryFileLineArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder revision(String revision) {
-            $.revision = revision;
+            return revision(Output.of(revision));
+        }
+
+        /**
+         * @param startLineNumber Line number from where to start returning file lines.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startLineNumber(@Nullable Output<Integer> startLineNumber) {
+            $.startLineNumber = startLineNumber;
             return this;
         }
 
@@ -141,9 +183,8 @@ public final class GetRepositoryFileLineArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder startLineNumber(@Nullable Integer startLineNumber) {
-            $.startLineNumber = startLineNumber;
-            return this;
+        public Builder startLineNumber(Integer startLineNumber) {
+            return startLineNumber(Output.of(startLineNumber));
         }
 
         public GetRepositoryFileLineArgs build() {

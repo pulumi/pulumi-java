@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.servicedirectory_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetNamespaceServiceIamPolicyArgs extends com.pulumi.resources
     public static final GetNamespaceServiceIamPolicyArgs Empty = new GetNamespaceServiceIamPolicyArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="namespaceId", required=true)
-    private String namespaceId;
+    private Output<String> namespaceId;
 
-    public String namespaceId() {
+    public Output<String> namespaceId() {
         return this.namespaceId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="serviceId", required=true)
-    private String serviceId;
+    private Output<String> serviceId;
 
-    public String serviceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -69,24 +70,40 @@ public final class GetNamespaceServiceIamPolicyArgs extends com.pulumi.resources
             $ = new GetNamespaceServiceIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder namespaceId(String namespaceId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder namespaceId(Output<String> namespaceId) {
             $.namespaceId = namespaceId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder namespaceId(String namespaceId) {
+            return namespaceId(Output.of(namespaceId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder serviceId(String serviceId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder serviceId(Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
+        }
+
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
         }
 
         public GetNamespaceServiceIamPolicyArgs build() {

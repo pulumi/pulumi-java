@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Artifacts.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Artifacts.inputs.GetContainerRepositoriesFilter;
+import com.pulumi.oci.Artifacts.inputs.GetContainerRepositoriesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -37,13 +38,13 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are inspected depending on the the setting of `accessLevel`. Default is false. Can only be set to true when calling the API on the tenancy (root compartment).
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
@@ -52,20 +53,20 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetContainerRepositoriesFilter> filters;
+    private @Nullable Output<List<GetContainerRepositoriesFilterArgs>> filters;
 
-    public Optional<List<GetContainerRepositoriesFilter>> filters() {
+    public Optional<Output<List<GetContainerRepositoriesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -74,13 +75,13 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="isPublic")
-    private @Nullable Boolean isPublic;
+    private @Nullable Output<Boolean> isPublic;
 
     /**
      * @return A filter to return resources that match the isPublic value.
      * 
      */
-    public Optional<Boolean> isPublic() {
+    public Optional<Output<Boolean>> isPublic() {
         return Optional.ofNullable(this.isPublic);
     }
 
@@ -89,13 +90,13 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="repositoryId")
-    private @Nullable String repositoryId;
+    private @Nullable Output<String> repositoryId;
 
     /**
      * @return A filter to return container images only for the specified container repository OCID.
      * 
      */
-    public Optional<String> repositoryId() {
+    public Optional<Output<String>> repositoryId() {
         return Optional.ofNullable(this.repositoryId);
     }
 
@@ -104,13 +105,13 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state name exactly.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -150,8 +151,29 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are inspected depending on the the setting of `accessLevel`. Default is false. Can only be set to true when calling the API on the tenancy (root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -161,8 +183,18 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -172,17 +204,20 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetContainerRepositoriesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetContainerRepositoriesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetContainerRepositoriesFilter... filters) {
+        public Builder filters(List<GetContainerRepositoriesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetContainerRepositoriesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -192,8 +227,29 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder isPublic(@Nullable Boolean isPublic) {
+        public Builder isPublic(@Nullable Output<Boolean> isPublic) {
             $.isPublic = isPublic;
+            return this;
+        }
+
+        /**
+         * @param isPublic A filter to return resources that match the isPublic value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isPublic(Boolean isPublic) {
+            return isPublic(Output.of(isPublic));
+        }
+
+        /**
+         * @param repositoryId A filter to return container images only for the specified container repository OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(@Nullable Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -203,8 +259,18 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder repositoryId(@Nullable String repositoryId) {
-            $.repositoryId = repositoryId;
+        public Builder repositoryId(String repositoryId) {
+            return repositoryId(Output.of(repositoryId));
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -214,9 +280,8 @@ public final class GetContainerRepositoriesArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetContainerRepositoriesArgs build() {

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataConnectivity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataConnectivity.inputs.GetRegistryTypesFilter;
+import com.pulumi.oci.DataConnectivity.inputs.GetRegistryTypesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetRegistryTypesArgs Empty = new GetRegistryTypesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetRegistryTypesFilter> filters;
+    private @Nullable Output<List<GetRegistryTypesFilterArgs>> filters;
 
-    public Optional<List<GetRegistryTypesFilter>> filters() {
+    public Optional<Output<List<GetRegistryTypesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Used to filter by the name of the object.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -43,13 +44,13 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="registryId", required=true)
-    private String registryId;
+    private Output<String> registryId;
 
     /**
      * @return The registry Ocid.
      * 
      */
-    public String registryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 
@@ -58,13 +59,13 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type")
-    private @Nullable String type;
+    private @Nullable Output<String> type;
 
     /**
      * @return Type of the object to filter the results with.
      * 
      */
-    public Optional<String> type() {
+    public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
 
@@ -95,12 +96,16 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetRegistryTypesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetRegistryTypesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetRegistryTypesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetRegistryTypesFilter... filters) {
+        public Builder filters(List<GetRegistryTypesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetRegistryTypesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -110,8 +115,29 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Used to filter by the name of the object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param registryId The registry Ocid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryId(Output<String> registryId) {
+            $.registryId = registryId;
             return this;
         }
 
@@ -122,7 +148,17 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder registryId(String registryId) {
-            $.registryId = registryId;
+            return registryId(Output.of(registryId));
+        }
+
+        /**
+         * @param type Type of the object to filter the results with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable Output<String> type) {
+            $.type = type;
             return this;
         }
 
@@ -132,9 +168,8 @@ public final class GetRegistryTypesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder type(@Nullable String type) {
-            $.type = type;
-            return this;
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         public GetRegistryTypesArgs build() {

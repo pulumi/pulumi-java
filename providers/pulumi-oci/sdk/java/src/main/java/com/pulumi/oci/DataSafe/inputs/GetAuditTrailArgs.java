@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAuditTrailArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="auditTrailId", required=true)
-    private String auditTrailId;
+    private Output<String> auditTrailId;
 
     /**
      * @return The OCID of the audit trail.
      * 
      */
-    public String auditTrailId() {
+    public Output<String> auditTrailId() {
         return this.auditTrailId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAuditTrailArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder auditTrailId(String auditTrailId) {
+        public Builder auditTrailId(Output<String> auditTrailId) {
             $.auditTrailId = auditTrailId;
             return this;
+        }
+
+        /**
+         * @param auditTrailId The OCID of the audit trail.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder auditTrailId(String auditTrailId) {
+            return auditTrailId(Output.of(auditTrailId));
         }
 
         public GetAuditTrailArgs build() {

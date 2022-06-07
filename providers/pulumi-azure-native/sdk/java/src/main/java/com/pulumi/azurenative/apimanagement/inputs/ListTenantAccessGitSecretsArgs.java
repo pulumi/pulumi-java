@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListTenantAccessGitSecretsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="accessName", required=true)
-    private String accessName;
+    private Output<String> accessName;
 
     /**
      * @return The identifier of the Access configuration.
      * 
      */
-    public String accessName() {
+    public Output<String> accessName() {
         return this.accessName;
     }
 
@@ -32,13 +33,13 @@ public final class ListTenantAccessGitSecretsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class ListTenantAccessGitSecretsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -89,8 +90,29 @@ public final class ListTenantAccessGitSecretsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder accessName(String accessName) {
+        public Builder accessName(Output<String> accessName) {
             $.accessName = accessName;
+            return this;
+        }
+
+        /**
+         * @param accessName The identifier of the Access configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessName(String accessName) {
+            return accessName(Output.of(accessName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class ListTenantAccessGitSecretsArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class ListTenantAccessGitSecretsArgs extends com.pulumi.resources.I
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public ListTenantAccessGitSecretsArgs build() {

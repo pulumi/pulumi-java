@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.lb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLBRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadbalancerId", required=true)
-    private String loadbalancerId;
+    private Output<String> loadbalancerId;
 
     /**
      * @return The ID of the Load Balancer Rule.
      * 
      */
-    public String loadbalancerId() {
+    public Output<String> loadbalancerId() {
         return this.loadbalancerId;
     }
 
@@ -32,13 +33,13 @@ public final class GetLBRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of this Load Balancer Rule.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetLBRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder loadbalancerId(String loadbalancerId) {
+        public Builder loadbalancerId(Output<String> loadbalancerId) {
             $.loadbalancerId = loadbalancerId;
+            return this;
+        }
+
+        /**
+         * @param loadbalancerId The ID of the Load Balancer Rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadbalancerId(String loadbalancerId) {
+            return loadbalancerId(Output.of(loadbalancerId));
+        }
+
+        /**
+         * @param name The name of this Load Balancer Rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLBRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetLBRuleArgs build() {

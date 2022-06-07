@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetComputeGlobalImageCapabilitySchemasFilter;
+import com.pulumi.oci.Core.inputs.GetComputeGlobalImageCapabilitySchemasFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetComputeGlobalImageCapabilitySchemasArgs extends com.pulumi
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the given compartment OCID exactly.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -36,20 +37,20 @@ public final class GetComputeGlobalImageCapabilitySchemasArgs extends com.pulumi
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetComputeGlobalImageCapabilitySchemasFilter> filters;
+    private @Nullable Output<List<GetComputeGlobalImageCapabilitySchemasFilterArgs>> filters;
 
-    public Optional<List<GetComputeGlobalImageCapabilitySchemasFilter>> filters() {
+    public Optional<Output<List<GetComputeGlobalImageCapabilitySchemasFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -85,8 +86,29 @@ public final class GetComputeGlobalImageCapabilitySchemasArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the given compartment OCID exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -96,17 +118,20 @@ public final class GetComputeGlobalImageCapabilitySchemasArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetComputeGlobalImageCapabilitySchemasFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetComputeGlobalImageCapabilitySchemasFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetComputeGlobalImageCapabilitySchemasFilter... filters) {
+        public Builder filters(List<GetComputeGlobalImageCapabilitySchemasFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetComputeGlobalImageCapabilitySchemasFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

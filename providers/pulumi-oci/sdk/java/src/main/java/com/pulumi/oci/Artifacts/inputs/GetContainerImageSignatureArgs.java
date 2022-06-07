@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Artifacts.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetContainerImageSignatureArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="imageSignatureId", required=true)
-    private String imageSignatureId;
+    private Output<String> imageSignatureId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the container image signature.  Example: `ocid1.containersignature.oc1..exampleuniqueID`
      * 
      */
-    public String imageSignatureId() {
+    public Output<String> imageSignatureId() {
         return this.imageSignatureId;
     }
 
@@ -57,9 +58,19 @@ public final class GetContainerImageSignatureArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder imageSignatureId(String imageSignatureId) {
+        public Builder imageSignatureId(Output<String> imageSignatureId) {
             $.imageSignatureId = imageSignatureId;
             return this;
+        }
+
+        /**
+         * @param imageSignatureId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the container image signature.  Example: `ocid1.containersignature.oc1..exampleuniqueID`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageSignatureId(String imageSignatureId) {
+            return imageSignatureId(Output.of(imageSignatureId));
         }
 
         public GetContainerImageSignatureArgs build() {

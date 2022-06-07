@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWebAppPremierAddOnArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the app.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetWebAppPremierAddOnArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="premierAddOnName", required=true)
-    private String premierAddOnName;
+    private Output<String> premierAddOnName;
 
     /**
      * @return Add-on name.
      * 
      */
-    public String premierAddOnName() {
+    public Output<String> premierAddOnName() {
         return this.premierAddOnName;
     }
 
@@ -47,13 +48,13 @@ public final class GetWebAppPremierAddOnArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetWebAppPremierAddOnArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param premierAddOnName Add-on name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder premierAddOnName(Output<String> premierAddOnName) {
+            $.premierAddOnName = premierAddOnName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetWebAppPremierAddOnArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder premierAddOnName(String premierAddOnName) {
-            $.premierAddOnName = premierAddOnName;
+            return premierAddOnName(Output.of(premierAddOnName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetWebAppPremierAddOnArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetWebAppPremierAddOnArgs build() {

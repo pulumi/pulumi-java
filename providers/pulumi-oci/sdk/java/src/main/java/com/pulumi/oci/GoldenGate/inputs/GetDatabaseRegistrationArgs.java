@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.GoldenGate.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatabaseRegistrationArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="databaseRegistrationId", required=true)
-    private String databaseRegistrationId;
+    private Output<String> databaseRegistrationId;
 
     /**
      * @return A unique DatabaseRegistration identifier.
      * 
      */
-    public String databaseRegistrationId() {
+    public Output<String> databaseRegistrationId() {
         return this.databaseRegistrationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDatabaseRegistrationArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder databaseRegistrationId(String databaseRegistrationId) {
+        public Builder databaseRegistrationId(Output<String> databaseRegistrationId) {
             $.databaseRegistrationId = databaseRegistrationId;
             return this;
+        }
+
+        /**
+         * @param databaseRegistrationId A unique DatabaseRegistration identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseRegistrationId(String databaseRegistrationId) {
+            return databaseRegistrationId(Output.of(databaseRegistrationId));
         }
 
         public GetDatabaseRegistrationArgs build() {

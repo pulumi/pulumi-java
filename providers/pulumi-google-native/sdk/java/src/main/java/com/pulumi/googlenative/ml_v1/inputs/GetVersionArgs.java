@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.ml_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetVersionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetVersionArgs Empty = new GetVersionArgs();
 
     @Import(name="modelId", required=true)
-    private String modelId;
+    private Output<String> modelId;
 
-    public String modelId() {
+    public Output<String> modelId() {
         return this.modelId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="versionId", required=true)
-    private String versionId;
+    private Output<String> versionId;
 
-    public String versionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
 
@@ -61,19 +62,31 @@ public final class GetVersionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVersionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder modelId(String modelId) {
+        public Builder modelId(Output<String> modelId) {
             $.modelId = modelId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder modelId(String modelId) {
+            return modelId(Output.of(modelId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder versionId(String versionId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder versionId(Output<String> versionId) {
             $.versionId = versionId;
             return this;
+        }
+
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
         }
 
         public GetVersionArgs build() {

@@ -5,11 +5,15 @@ package com.pulumi.azurenative.powerplatform;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.powerplatform.inputs.GetAccountArgs;
+import com.pulumi.azurenative.powerplatform.inputs.GetAccountPlainArgs;
 import com.pulumi.azurenative.powerplatform.inputs.GetEnterprisePolicyArgs;
+import com.pulumi.azurenative.powerplatform.inputs.GetEnterprisePolicyPlainArgs;
 import com.pulumi.azurenative.powerplatform.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.powerplatform.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.powerplatform.outputs.GetAccountResult;
 import com.pulumi.azurenative.powerplatform.outputs.GetEnterprisePolicyResult;
 import com.pulumi.azurenative.powerplatform.outputs.GetPrivateEndpointConnectionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -21,7 +25,7 @@ public final class PowerplatformFunctions {
      * API Version: 2020-10-30-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
     /**
@@ -29,7 +33,23 @@ public final class PowerplatformFunctions {
      * API Version: 2020-10-30-preview.
      * 
      */
-    public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args) {
+        return getAccountPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of the account.
+     * API Version: 2020-10-30-preview.
+     * 
+     */
+    public static Output<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:powerplatform:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of the account.
+     * API Version: 2020-10-30-preview.
+     * 
+     */
+    public static CompletableFuture<GetAccountResult> getAccountPlain(GetAccountPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerplatform:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -37,7 +57,7 @@ public final class PowerplatformFunctions {
      * API Version: 2020-10-30-preview.
      * 
      */
-    public static CompletableFuture<GetEnterprisePolicyResult> getEnterprisePolicy(GetEnterprisePolicyArgs args) {
+    public static Output<GetEnterprisePolicyResult> getEnterprisePolicy(GetEnterprisePolicyArgs args) {
         return getEnterprisePolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -45,7 +65,23 @@ public final class PowerplatformFunctions {
      * API Version: 2020-10-30-preview.
      * 
      */
-    public static CompletableFuture<GetEnterprisePolicyResult> getEnterprisePolicy(GetEnterprisePolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEnterprisePolicyResult> getEnterprisePolicyPlain(GetEnterprisePolicyPlainArgs args) {
+        return getEnterprisePolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Definition of the EnterprisePolicy.
+     * API Version: 2020-10-30-preview.
+     * 
+     */
+    public static Output<GetEnterprisePolicyResult> getEnterprisePolicy(GetEnterprisePolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:powerplatform:getEnterprisePolicy", TypeShape.of(GetEnterprisePolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Definition of the EnterprisePolicy.
+     * API Version: 2020-10-30-preview.
+     * 
+     */
+    public static CompletableFuture<GetEnterprisePolicyResult> getEnterprisePolicyPlain(GetEnterprisePolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerplatform:getEnterprisePolicy", TypeShape.of(GetEnterprisePolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -53,7 +89,7 @@ public final class PowerplatformFunctions {
      * API Version: 2020-10-30-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -61,7 +97,23 @@ public final class PowerplatformFunctions {
      * API Version: 2020-10-30-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A private endpoint connection
+     * API Version: 2020-10-30-preview.
+     * 
+     */
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:powerplatform:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A private endpoint connection
+     * API Version: 2020-10-30-preview.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerplatform:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

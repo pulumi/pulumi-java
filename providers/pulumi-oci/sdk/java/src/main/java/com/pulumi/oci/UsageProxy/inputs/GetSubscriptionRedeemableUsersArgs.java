@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.UsageProxy.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionRedeemableUsersFilter;
+import com.pulumi.oci.UsageProxy.inputs.GetSubscriptionRedeemableUsersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetSubscriptionRedeemableUsersArgs extends com.pulumi.resourc
     public static final GetSubscriptionRedeemableUsersArgs Empty = new GetSubscriptionRedeemableUsersArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetSubscriptionRedeemableUsersFilter> filters;
+    private @Nullable Output<List<GetSubscriptionRedeemableUsersFilterArgs>> filters;
 
-    public Optional<List<GetSubscriptionRedeemableUsersFilter>> filters() {
+    public Optional<Output<List<GetSubscriptionRedeemableUsersFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetSubscriptionRedeemableUsersArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="subscriptionId", required=true)
-    private String subscriptionId;
+    private Output<String> subscriptionId;
 
     /**
      * @return The subscription ID for which rewards information is requested for.
      * 
      */
-    public String subscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
@@ -43,13 +44,13 @@ public final class GetSubscriptionRedeemableUsersArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="tenancyId", required=true)
-    private String tenancyId;
+    private Output<String> tenancyId;
 
     /**
      * @return The OCID of the tenancy.
      * 
      */
-    public String tenancyId() {
+    public Output<String> tenancyId() {
         return this.tenancyId;
     }
 
@@ -79,12 +80,16 @@ public final class GetSubscriptionRedeemableUsersArgs extends com.pulumi.resourc
             $ = new GetSubscriptionRedeemableUsersArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetSubscriptionRedeemableUsersFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetSubscriptionRedeemableUsersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetSubscriptionRedeemableUsersFilter... filters) {
+        public Builder filters(List<GetSubscriptionRedeemableUsersFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetSubscriptionRedeemableUsersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -94,8 +99,29 @@ public final class GetSubscriptionRedeemableUsersArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder subscriptionId(String subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
+            return this;
+        }
+
+        /**
+         * @param subscriptionId The subscription ID for which rewards information is requested for.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        /**
+         * @param tenancyId The OCID of the tenancy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tenancyId(Output<String> tenancyId) {
+            $.tenancyId = tenancyId;
             return this;
         }
 
@@ -106,8 +132,7 @@ public final class GetSubscriptionRedeemableUsersArgs extends com.pulumi.resourc
          * 
          */
         public Builder tenancyId(String tenancyId) {
-            $.tenancyId = tenancyId;
-            return this;
+            return tenancyId(Output.of(tenancyId));
         }
 
         public GetSubscriptionRedeemableUsersArgs build() {

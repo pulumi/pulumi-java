@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetAppCatalogListingResourceVersionsFilter;
+import com.pulumi.oci.Core.inputs.GetAppCatalogListingResourceVersionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetAppCatalogListingResourceVersionsArgs extends com.pulumi.r
     public static final GetAppCatalogListingResourceVersionsArgs Empty = new GetAppCatalogListingResourceVersionsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetAppCatalogListingResourceVersionsFilter> filters;
+    private @Nullable Output<List<GetAppCatalogListingResourceVersionsFilterArgs>> filters;
 
-    public Optional<List<GetAppCatalogListingResourceVersionsFilter>> filters() {
+    public Optional<Output<List<GetAppCatalogListingResourceVersionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetAppCatalogListingResourceVersionsArgs extends com.pulumi.r
      * 
      */
     @Import(name="listingId", required=true)
-    private String listingId;
+    private Output<String> listingId;
 
     /**
      * @return The OCID of the listing.
      * 
      */
-    public String listingId() {
+    public Output<String> listingId() {
         return this.listingId;
     }
 
@@ -63,12 +64,16 @@ public final class GetAppCatalogListingResourceVersionsArgs extends com.pulumi.r
             $ = new GetAppCatalogListingResourceVersionsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetAppCatalogListingResourceVersionsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetAppCatalogListingResourceVersionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAppCatalogListingResourceVersionsFilter... filters) {
+        public Builder filters(List<GetAppCatalogListingResourceVersionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAppCatalogListingResourceVersionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetAppCatalogListingResourceVersionsArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder listingId(String listingId) {
+        public Builder listingId(Output<String> listingId) {
             $.listingId = listingId;
             return this;
+        }
+
+        /**
+         * @param listingId The OCID of the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listingId(String listingId) {
+            return listingId(Output.of(listingId));
         }
 
         public GetAppCatalogListingResourceVersionsArgs build() {

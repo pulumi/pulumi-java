@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Optimizer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEnrollmentStatusArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enrollmentStatusId", required=true)
-    private String enrollmentStatusId;
+    private Output<String> enrollmentStatusId;
 
     /**
      * @return The unique OCID associated with the enrollment status.
      * 
      */
-    public String enrollmentStatusId() {
+    public Output<String> enrollmentStatusId() {
         return this.enrollmentStatusId;
     }
 
@@ -57,9 +58,19 @@ public final class GetEnrollmentStatusArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder enrollmentStatusId(String enrollmentStatusId) {
+        public Builder enrollmentStatusId(Output<String> enrollmentStatusId) {
             $.enrollmentStatusId = enrollmentStatusId;
             return this;
+        }
+
+        /**
+         * @param enrollmentStatusId The unique OCID associated with the enrollment status.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enrollmentStatusId(String enrollmentStatusId) {
+            return enrollmentStatusId(Output.of(enrollmentStatusId));
         }
 
         public GetEnrollmentStatusArgs build() {

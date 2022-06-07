@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dedicatedHostGroupName", required=true)
-    private String dedicatedHostGroupName;
+    private Output<String> dedicatedHostGroupName;
 
     /**
      * @return Specifies the name of the Dedicated Host Group the Dedicated Host is located in.
      * 
      */
-    public String dedicatedHostGroupName() {
+    public Output<String> dedicatedHostGroupName() {
         return this.dedicatedHostGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the Dedicated Host.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Specifies the name of the resource group the Dedicated Host is located in.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder dedicatedHostGroupName(String dedicatedHostGroupName) {
+        public Builder dedicatedHostGroupName(Output<String> dedicatedHostGroupName) {
             $.dedicatedHostGroupName = dedicatedHostGroupName;
+            return this;
+        }
+
+        /**
+         * @param dedicatedHostGroupName Specifies the name of the Dedicated Host Group the Dedicated Host is located in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dedicatedHostGroupName(String dedicatedHostGroupName) {
+            return dedicatedHostGroupName(Output.of(dedicatedHostGroupName));
+        }
+
+        /**
+         * @param name Specifies the name of the Dedicated Host.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Specifies the name of the resource group the Dedicated Host is located in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDedicatedHostArgs build() {

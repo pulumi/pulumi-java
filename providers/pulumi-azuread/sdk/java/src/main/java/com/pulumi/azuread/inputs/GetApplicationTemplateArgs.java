@@ -3,6 +3,7 @@
 
 package com.pulumi.azuread.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetApplicationTemplateArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Specifies the display name of the templated application.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -34,13 +35,13 @@ public final class GetApplicationTemplateArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="templateId")
-    private @Nullable String templateId;
+    private @Nullable Output<String> templateId;
 
     /**
      * @return Specifies the ID of the templated application.
      * 
      */
-    public Optional<String> templateId() {
+    public Optional<Output<String>> templateId() {
         return Optional.ofNullable(this.templateId);
     }
 
@@ -75,8 +76,29 @@ public final class GetApplicationTemplateArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * @param displayName Specifies the display name of the templated application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param templateId Specifies the ID of the templated application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder templateId(@Nullable Output<String> templateId) {
+            $.templateId = templateId;
             return this;
         }
 
@@ -86,9 +108,8 @@ public final class GetApplicationTemplateArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder templateId(@Nullable String templateId) {
-            $.templateId = templateId;
-            return this;
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
         }
 
         public GetApplicationTemplateArgs build() {

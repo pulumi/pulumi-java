@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeployArtifactArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="deployArtifactId", required=true)
-    private String deployArtifactId;
+    private Output<String> deployArtifactId;
 
     /**
      * @return Unique artifact identifier.
      * 
      */
-    public String deployArtifactId() {
+    public Output<String> deployArtifactId() {
         return this.deployArtifactId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDeployArtifactArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder deployArtifactId(String deployArtifactId) {
+        public Builder deployArtifactId(Output<String> deployArtifactId) {
             $.deployArtifactId = deployArtifactId;
             return this;
+        }
+
+        /**
+         * @param deployArtifactId Unique artifact identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deployArtifactId(String deployArtifactId) {
+            return deployArtifactId(Output.of(deployArtifactId));
         }
 
         public GetDeployArtifactArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dns_v1beta2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPolicyArgs Empty = new GetPolicyArgs();
 
     @Import(name="clientOperationId")
-    private @Nullable String clientOperationId;
+    private @Nullable Output<String> clientOperationId;
 
-    public Optional<String> clientOperationId() {
+    public Optional<Output<String>> clientOperationId() {
         return Optional.ofNullable(this.clientOperationId);
     }
 
     @Import(name="policy", required=true)
-    private String policy;
+    private Output<String> policy;
 
-    public String policy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder clientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             $.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder policy(String policy) {
+        public Builder clientOperationId(String clientOperationId) {
+            return clientOperationId(Output.of(clientOperationId));
+        }
+
+        public Builder policy(Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetPolicyArgs build() {

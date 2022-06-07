@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.organizations.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDelegatedServicesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accountId", required=true)
-    private String accountId;
+    private Output<String> accountId;
 
     /**
      * @return The account ID number of a delegated administrator account in the organization.
      * 
      */
-    public String accountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDelegatedServicesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder accountId(String accountId) {
+        public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
+        }
+
+        /**
+         * @param accountId The account ID number of a delegated administrator account in the organization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
 
         public GetDelegatedServicesArgs build() {

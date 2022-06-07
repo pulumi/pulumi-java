@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ObjectStorage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ObjectStorage.inputs.GetPreauthrequestsFilter;
+import com.pulumi.oci.ObjectStorage.inputs.GetPreauthrequestsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetPreauthrequestsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="bucket", required=true)
-    private String bucket;
+    private Output<String> bucket;
 
     /**
      * @return The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
      * 
      */
-    public String bucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetPreauthrequestsFilter> filters;
+    private @Nullable Output<List<GetPreauthrequestsFilterArgs>> filters;
 
-    public Optional<List<GetPreauthrequestsFilter>> filters() {
+    public Optional<Output<List<GetPreauthrequestsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetPreauthrequestsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Object Storage namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -58,13 +59,13 @@ public final class GetPreauthrequestsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="objectNamePrefix")
-    private @Nullable String objectNamePrefix;
+    private @Nullable Output<String> objectNamePrefix;
 
     /**
      * @return User-specified object name prefixes can be used to query and return a list of pre-authenticated requests.
      * 
      */
-    public Optional<String> objectNamePrefix() {
+    public Optional<Output<String>> objectNamePrefix() {
         return Optional.ofNullable(this.objectNamePrefix);
     }
 
@@ -101,17 +102,31 @@ public final class GetPreauthrequestsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder bucket(String bucket) {
+        public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetPreauthrequestsFilter> filters) {
+        /**
+         * @param bucket The name of the bucket. Avoid entering confidential information. Example: `my-new-bucket1`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
+        }
+
+        public Builder filters(@Nullable Output<List<GetPreauthrequestsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetPreauthrequestsFilter... filters) {
+        public Builder filters(List<GetPreauthrequestsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetPreauthrequestsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -121,8 +136,29 @@ public final class GetPreauthrequestsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder namespace(String namespace) {
+        public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * @param namespace The Object Storage namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param objectNamePrefix User-specified object name prefixes can be used to query and return a list of pre-authenticated requests.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
+            $.objectNamePrefix = objectNamePrefix;
             return this;
         }
 
@@ -132,9 +168,8 @@ public final class GetPreauthrequestsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
-            $.objectNamePrefix = objectNamePrefix;
-            return this;
+        public Builder objectNamePrefix(String objectNamePrefix) {
+            return objectNamePrefix(Output.of(objectNamePrefix));
         }
 
         public GetPreauthrequestsArgs build() {

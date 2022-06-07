@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.workspaces.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetConnectionAliasArgs extends com.pulumi.resources.InvokeArg
     public static final GetConnectionAliasArgs Empty = new GetConnectionAliasArgs();
 
     @Import(name="aliasId", required=true)
-    private String aliasId;
+    private Output<String> aliasId;
 
-    public String aliasId() {
+    public Output<String> aliasId() {
         return this.aliasId;
     }
 
@@ -43,9 +44,13 @@ public final class GetConnectionAliasArgs extends com.pulumi.resources.InvokeArg
             $ = new GetConnectionAliasArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder aliasId(String aliasId) {
+        public Builder aliasId(Output<String> aliasId) {
             $.aliasId = aliasId;
             return this;
+        }
+
+        public Builder aliasId(String aliasId) {
+            return aliasId(Output.of(aliasId));
         }
 
         public GetConnectionAliasArgs build() {

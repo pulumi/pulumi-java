@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.eks.inputs;
 
 import com.pulumi.awsnative.eks.enums.IdentityProviderConfigType;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -18,13 +19,13 @@ public final class GetIdentityProviderConfigArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return The name of the identity provider configuration.
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -33,13 +34,13 @@ public final class GetIdentityProviderConfigArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="identityProviderConfigName", required=true)
-    private String identityProviderConfigName;
+    private Output<String> identityProviderConfigName;
 
     /**
      * @return The name of the OIDC provider configuration.
      * 
      */
-    public String identityProviderConfigName() {
+    public Output<String> identityProviderConfigName() {
         return this.identityProviderConfigName;
     }
 
@@ -48,13 +49,13 @@ public final class GetIdentityProviderConfigArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-    private IdentityProviderConfigType type;
+    private Output<IdentityProviderConfigType> type;
 
     /**
      * @return The type of the identity provider configuration.
      * 
      */
-    public IdentityProviderConfigType type() {
+    public Output<IdentityProviderConfigType> type() {
         return this.type;
     }
 
@@ -90,8 +91,29 @@ public final class GetIdentityProviderConfigArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder clusterName(String clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * @param clusterName The name of the identity provider configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param identityProviderConfigName The name of the OIDC provider configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identityProviderConfigName(Output<String> identityProviderConfigName) {
+            $.identityProviderConfigName = identityProviderConfigName;
             return this;
         }
 
@@ -102,7 +124,17 @@ public final class GetIdentityProviderConfigArgs extends com.pulumi.resources.In
          * 
          */
         public Builder identityProviderConfigName(String identityProviderConfigName) {
-            $.identityProviderConfigName = identityProviderConfigName;
+            return identityProviderConfigName(Output.of(identityProviderConfigName));
+        }
+
+        /**
+         * @param type The type of the identity provider configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(Output<IdentityProviderConfigType> type) {
+            $.type = type;
             return this;
         }
 
@@ -113,8 +145,7 @@ public final class GetIdentityProviderConfigArgs extends com.pulumi.resources.In
          * 
          */
         public Builder type(IdentityProviderConfigType type) {
-            $.type = type;
-            return this;
+            return type(Output.of(type));
         }
 
         public GetIdentityProviderConfigArgs build() {

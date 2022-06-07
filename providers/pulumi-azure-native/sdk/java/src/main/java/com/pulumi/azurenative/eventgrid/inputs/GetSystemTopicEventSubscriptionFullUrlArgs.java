@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSystemTopicEventSubscriptionFullUrlArgs extends com.pulumi
      * 
      */
     @Import(name="eventSubscriptionName", required=true)
-    private String eventSubscriptionName;
+    private Output<String> eventSubscriptionName;
 
     /**
      * @return Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
      * 
      */
-    public String eventSubscriptionName() {
+    public Output<String> eventSubscriptionName() {
         return this.eventSubscriptionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSystemTopicEventSubscriptionFullUrlArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSystemTopicEventSubscriptionFullUrlArgs extends com.pulumi
      * 
      */
     @Import(name="systemTopicName", required=true)
-    private String systemTopicName;
+    private Output<String> systemTopicName;
 
     /**
      * @return Name of the system topic.
      * 
      */
-    public String systemTopicName() {
+    public Output<String> systemTopicName() {
         return this.systemTopicName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSystemTopicEventSubscriptionFullUrlArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder eventSubscriptionName(String eventSubscriptionName) {
+        public Builder eventSubscriptionName(Output<String> eventSubscriptionName) {
             $.eventSubscriptionName = eventSubscriptionName;
+            return this;
+        }
+
+        /**
+         * @param eventSubscriptionName Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventSubscriptionName(String eventSubscriptionName) {
+            return eventSubscriptionName(Output.of(eventSubscriptionName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSystemTopicEventSubscriptionFullUrlArgs extends com.pulumi
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param systemTopicName Name of the system topic.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder systemTopicName(Output<String> systemTopicName) {
+            $.systemTopicName = systemTopicName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSystemTopicEventSubscriptionFullUrlArgs extends com.pulumi
          * 
          */
         public Builder systemTopicName(String systemTopicName) {
-            $.systemTopicName = systemTopicName;
-            return this;
+            return systemTopicName(Output.of(systemTopicName));
         }
 
         public GetSystemTopicEventSubscriptionFullUrlArgs build() {

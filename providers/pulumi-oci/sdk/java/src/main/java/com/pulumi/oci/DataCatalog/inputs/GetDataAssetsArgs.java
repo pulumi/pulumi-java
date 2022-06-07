@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataCatalog.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataCatalog.inputs.GetDataAssetsFilter;
+import com.pulumi.oci.DataCatalog.inputs.GetDataAssetsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogId", required=true)
-    private String catalogId;
+    private Output<String> catalogId;
 
     /**
      * @return Unique catalog identifier.
      * 
      */
-    public String catalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
 
@@ -36,13 +37,13 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdById")
-    private @Nullable String createdById;
+    private @Nullable Output<String> createdById;
 
     /**
      * @return OCID of the user who created the resource.
      * 
      */
-    public Optional<String> createdById() {
+    public Optional<Output<String>> createdById() {
         return Optional.ofNullable(this.createdById);
     }
 
@@ -51,13 +52,13 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -66,13 +67,13 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNameContains")
-    private @Nullable String displayNameContains;
+    private @Nullable Output<String> displayNameContains;
 
     /**
      * @return A filter to return only resources that match display name pattern given. The match is not case sensitive. For Example : /folders?displayNameContains=Cu.* The above would match all folders with display name that starts with &#34;Cu&#34; or has the pattern &#34;Cu&#34; anywhere in between.
      * 
      */
-    public Optional<String> displayNameContains() {
+    public Optional<Output<String>> displayNameContains() {
         return Optional.ofNullable(this.displayNameContains);
     }
 
@@ -81,13 +82,13 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="externalKey")
-    private @Nullable String externalKey;
+    private @Nullable Output<String> externalKey;
 
     /**
      * @return Unique external identifier of this resource in the external source system.
      * 
      */
-    public Optional<String> externalKey() {
+    public Optional<Output<String>> externalKey() {
         return Optional.ofNullable(this.externalKey);
     }
 
@@ -96,20 +97,20 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields")
-    private @Nullable List<String> fields;
+    private @Nullable Output<List<String>> fields;
 
     /**
      * @return Specifies the fields to return in a data asset summary response.
      * 
      */
-    public Optional<List<String>> fields() {
+    public Optional<Output<List<String>>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDataAssetsFilter> filters;
+    private @Nullable Output<List<GetDataAssetsFilterArgs>> filters;
 
-    public Optional<List<GetDataAssetsFilter>> filters() {
+    public Optional<Output<List<GetDataAssetsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -118,13 +119,13 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -133,13 +134,13 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="typeKey")
-    private @Nullable String typeKey;
+    private @Nullable Output<String> typeKey;
 
     /**
      * @return The key of the object type.
      * 
      */
-    public Optional<String> typeKey() {
+    public Optional<Output<String>> typeKey() {
         return Optional.ofNullable(this.typeKey);
     }
 
@@ -181,8 +182,29 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder catalogId(String catalogId) {
+        public Builder catalogId(Output<String> catalogId) {
             $.catalogId = catalogId;
+            return this;
+        }
+
+        /**
+         * @param catalogId Unique catalog identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
+        }
+
+        /**
+         * @param createdById OCID of the user who created the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder createdById(@Nullable Output<String> createdById) {
+            $.createdById = createdById;
             return this;
         }
 
@@ -192,8 +214,18 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder createdById(@Nullable String createdById) {
-            $.createdById = createdById;
+        public Builder createdById(String createdById) {
+            return createdById(Output.of(createdById));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given. The match is not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -203,8 +235,18 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param displayNameContains A filter to return only resources that match display name pattern given. The match is not case sensitive. For Example : /folders?displayNameContains=Cu.* The above would match all folders with display name that starts with &#34;Cu&#34; or has the pattern &#34;Cu&#34; anywhere in between.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayNameContains(@Nullable Output<String> displayNameContains) {
+            $.displayNameContains = displayNameContains;
             return this;
         }
 
@@ -214,8 +256,18 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayNameContains(@Nullable String displayNameContains) {
-            $.displayNameContains = displayNameContains;
+        public Builder displayNameContains(String displayNameContains) {
+            return displayNameContains(Output.of(displayNameContains));
+        }
+
+        /**
+         * @param externalKey Unique external identifier of this resource in the external source system.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externalKey(@Nullable Output<String> externalKey) {
+            $.externalKey = externalKey;
             return this;
         }
 
@@ -225,8 +277,18 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder externalKey(@Nullable String externalKey) {
-            $.externalKey = externalKey;
+        public Builder externalKey(String externalKey) {
+            return externalKey(Output.of(externalKey));
+        }
+
+        /**
+         * @param fields Specifies the fields to return in a data asset summary response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fields(@Nullable Output<List<String>> fields) {
+            $.fields = fields;
             return this;
         }
 
@@ -236,9 +298,8 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fields(@Nullable List<String> fields) {
-            $.fields = fields;
-            return this;
+        public Builder fields(List<String> fields) {
+            return fields(Output.of(fields));
         }
 
         /**
@@ -251,12 +312,16 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
             return fields(List.of(fields));
         }
 
-        public Builder filters(@Nullable List<GetDataAssetsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDataAssetsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDataAssetsFilter... filters) {
+        public Builder filters(List<GetDataAssetsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDataAssetsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -266,8 +331,29 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param typeKey The key of the object type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder typeKey(@Nullable Output<String> typeKey) {
+            $.typeKey = typeKey;
             return this;
         }
 
@@ -277,9 +363,8 @@ public final class GetDataAssetsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder typeKey(@Nullable String typeKey) {
-            $.typeKey = typeKey;
-            return this;
+        public Builder typeKey(String typeKey) {
+            return typeKey(Output.of(typeKey));
         }
 
         public GetDataAssetsArgs build() {

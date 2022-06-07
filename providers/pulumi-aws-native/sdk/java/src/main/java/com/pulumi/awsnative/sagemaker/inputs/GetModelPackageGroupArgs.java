@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sagemaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetModelPackageGroupArgs extends com.pulumi.resources.InvokeA
     public static final GetModelPackageGroupArgs Empty = new GetModelPackageGroupArgs();
 
     @Import(name="modelPackageGroupArn", required=true)
-    private String modelPackageGroupArn;
+    private Output<String> modelPackageGroupArn;
 
-    public String modelPackageGroupArn() {
+    public Output<String> modelPackageGroupArn() {
         return this.modelPackageGroupArn;
     }
 
@@ -43,9 +44,13 @@ public final class GetModelPackageGroupArgs extends com.pulumi.resources.InvokeA
             $ = new GetModelPackageGroupArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder modelPackageGroupArn(String modelPackageGroupArn) {
+        public Builder modelPackageGroupArn(Output<String> modelPackageGroupArn) {
             $.modelPackageGroupArn = modelPackageGroupArn;
             return this;
+        }
+
+        public Builder modelPackageGroupArn(String modelPackageGroupArn) {
+            return modelPackageGroupArn(Output.of(modelPackageGroupArn));
         }
 
         public GetModelPackageGroupArgs build() {

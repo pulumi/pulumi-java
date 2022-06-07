@@ -6,25 +6,46 @@ package com.pulumi.azurenative.appplatform;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.appplatform.inputs.GetApiPortalArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetApiPortalCustomDomainArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetApiPortalCustomDomainPlainArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetApiPortalPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetAppArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetAppPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetAppResourceUploadUrlArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetAppResourceUploadUrlPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetBindingArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetBindingPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetBuildServiceBuildResultLogArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetBuildServiceBuildResultLogPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetBuildServiceBuilderArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetBuildServiceBuilderPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetBuildServiceResourceUploadUrlArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetBuildServiceResourceUploadUrlPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetBuildpackBindingArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetBuildpackBindingPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetCertificateArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetCertificatePlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetConfigurationServiceArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetConfigurationServicePlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetCustomDomainArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetCustomDomainPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetDeploymentArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetDeploymentLogFileUrlArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetDeploymentLogFileUrlPlainArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetDeploymentPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetGatewayArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetGatewayCustomDomainArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetGatewayCustomDomainPlainArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetGatewayPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetGatewayRouteConfigArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetGatewayRouteConfigPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetServiceArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetServicePlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetServiceRegistryArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetServiceRegistryPlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.GetStorageArgs;
+import com.pulumi.azurenative.appplatform.inputs.GetStoragePlainArgs;
 import com.pulumi.azurenative.appplatform.inputs.ListServiceTestKeysArgs;
+import com.pulumi.azurenative.appplatform.inputs.ListServiceTestKeysPlainArgs;
 import com.pulumi.azurenative.appplatform.outputs.GetApiPortalCustomDomainResult;
 import com.pulumi.azurenative.appplatform.outputs.GetApiPortalResult;
 import com.pulumi.azurenative.appplatform.outputs.GetAppResourceUploadUrlResult;
@@ -46,6 +67,7 @@ import com.pulumi.azurenative.appplatform.outputs.GetServiceRegistryResult;
 import com.pulumi.azurenative.appplatform.outputs.GetServiceResult;
 import com.pulumi.azurenative.appplatform.outputs.GetStorageResult;
 import com.pulumi.azurenative.appplatform.outputs.ListServiceTestKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -57,7 +79,7 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetApiPortalResult> getApiPortal(GetApiPortalArgs args) {
+    public static Output<GetApiPortalResult> getApiPortal(GetApiPortalArgs args) {
         return getApiPortal(args, InvokeOptions.Empty);
     }
     /**
@@ -65,7 +87,23 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetApiPortalResult> getApiPortal(GetApiPortalArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiPortalResult> getApiPortalPlain(GetApiPortalPlainArgs args) {
+        return getApiPortalPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * API portal resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetApiPortalResult> getApiPortal(GetApiPortalArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getApiPortal", TypeShape.of(GetApiPortalResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * API portal resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetApiPortalResult> getApiPortalPlain(GetApiPortalPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getApiPortal", TypeShape.of(GetApiPortalResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,7 +111,7 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetApiPortalCustomDomainResult> getApiPortalCustomDomain(GetApiPortalCustomDomainArgs args) {
+    public static Output<GetApiPortalCustomDomainResult> getApiPortalCustomDomain(GetApiPortalCustomDomainArgs args) {
         return getApiPortalCustomDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -81,7 +119,23 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetApiPortalCustomDomainResult> getApiPortalCustomDomain(GetApiPortalCustomDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApiPortalCustomDomainResult> getApiPortalCustomDomainPlain(GetApiPortalCustomDomainPlainArgs args) {
+        return getApiPortalCustomDomainPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Custom domain of the API portal
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetApiPortalCustomDomainResult> getApiPortalCustomDomain(GetApiPortalCustomDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getApiPortalCustomDomain", TypeShape.of(GetApiPortalCustomDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Custom domain of the API portal
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetApiPortalCustomDomainResult> getApiPortalCustomDomainPlain(GetApiPortalCustomDomainPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getApiPortalCustomDomain", TypeShape.of(GetApiPortalCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -89,7 +143,7 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args) {
+    public static Output<GetAppResult> getApp(GetAppArgs args) {
         return getApp(args, InvokeOptions.Empty);
     }
     /**
@@ -97,7 +151,23 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppResult> getAppPlain(GetAppPlainArgs args) {
+        return getAppPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * App resource payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * App resource payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<GetAppResult> getAppPlain(GetAppPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -105,7 +175,7 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetAppResourceUploadUrlResult> getAppResourceUploadUrl(GetAppResourceUploadUrlArgs args) {
+    public static Output<GetAppResourceUploadUrlResult> getAppResourceUploadUrl(GetAppResourceUploadUrlArgs args) {
         return getAppResourceUploadUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -113,7 +183,23 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetAppResourceUploadUrlResult> getAppResourceUploadUrl(GetAppResourceUploadUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAppResourceUploadUrlResult> getAppResourceUploadUrlPlain(GetAppResourceUploadUrlPlainArgs args) {
+        return getAppResourceUploadUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource upload definition payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<GetAppResourceUploadUrlResult> getAppResourceUploadUrl(GetAppResourceUploadUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getAppResourceUploadUrl", TypeShape.of(GetAppResourceUploadUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource upload definition payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<GetAppResourceUploadUrlResult> getAppResourceUploadUrlPlain(GetAppResourceUploadUrlPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getAppResourceUploadUrl", TypeShape.of(GetAppResourceUploadUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -121,7 +207,7 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetBindingResult> getBinding(GetBindingArgs args) {
+    public static Output<GetBindingResult> getBinding(GetBindingArgs args) {
         return getBinding(args, InvokeOptions.Empty);
     }
     /**
@@ -129,7 +215,23 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetBindingResult> getBinding(GetBindingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBindingResult> getBindingPlain(GetBindingPlainArgs args) {
+        return getBindingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Binding resource payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<GetBindingResult> getBinding(GetBindingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getBinding", TypeShape.of(GetBindingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Binding resource payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<GetBindingResult> getBindingPlain(GetBindingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBinding", TypeShape.of(GetBindingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -137,7 +239,7 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildServiceBuildResultLogResult> getBuildServiceBuildResultLog(GetBuildServiceBuildResultLogArgs args) {
+    public static Output<GetBuildServiceBuildResultLogResult> getBuildServiceBuildResultLog(GetBuildServiceBuildResultLogArgs args) {
         return getBuildServiceBuildResultLog(args, InvokeOptions.Empty);
     }
     /**
@@ -145,7 +247,23 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildServiceBuildResultLogResult> getBuildServiceBuildResultLog(GetBuildServiceBuildResultLogArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBuildServiceBuildResultLogResult> getBuildServiceBuildResultLogPlain(GetBuildServiceBuildResultLogPlainArgs args) {
+        return getBuildServiceBuildResultLogPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Build result log resource properties payload
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetBuildServiceBuildResultLogResult> getBuildServiceBuildResultLog(GetBuildServiceBuildResultLogArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getBuildServiceBuildResultLog", TypeShape.of(GetBuildServiceBuildResultLogResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Build result log resource properties payload
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetBuildServiceBuildResultLogResult> getBuildServiceBuildResultLogPlain(GetBuildServiceBuildResultLogPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildServiceBuildResultLog", TypeShape.of(GetBuildServiceBuildResultLogResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -153,7 +271,7 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildServiceBuilderResult> getBuildServiceBuilder(GetBuildServiceBuilderArgs args) {
+    public static Output<GetBuildServiceBuilderResult> getBuildServiceBuilder(GetBuildServiceBuilderArgs args) {
         return getBuildServiceBuilder(args, InvokeOptions.Empty);
     }
     /**
@@ -161,7 +279,23 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildServiceBuilderResult> getBuildServiceBuilder(GetBuildServiceBuilderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBuildServiceBuilderResult> getBuildServiceBuilderPlain(GetBuildServiceBuilderPlainArgs args) {
+        return getBuildServiceBuilderPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * KPack Builder resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetBuildServiceBuilderResult> getBuildServiceBuilder(GetBuildServiceBuilderArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getBuildServiceBuilder", TypeShape.of(GetBuildServiceBuilderResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * KPack Builder resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetBuildServiceBuilderResult> getBuildServiceBuilderPlain(GetBuildServiceBuilderPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildServiceBuilder", TypeShape.of(GetBuildServiceBuilderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -169,7 +303,7 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildServiceResourceUploadUrlResult> getBuildServiceResourceUploadUrl(GetBuildServiceResourceUploadUrlArgs args) {
+    public static Output<GetBuildServiceResourceUploadUrlResult> getBuildServiceResourceUploadUrl(GetBuildServiceResourceUploadUrlArgs args) {
         return getBuildServiceResourceUploadUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -177,7 +311,23 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildServiceResourceUploadUrlResult> getBuildServiceResourceUploadUrl(GetBuildServiceResourceUploadUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBuildServiceResourceUploadUrlResult> getBuildServiceResourceUploadUrlPlain(GetBuildServiceResourceUploadUrlPlainArgs args) {
+        return getBuildServiceResourceUploadUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource upload definition payload
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetBuildServiceResourceUploadUrlResult> getBuildServiceResourceUploadUrl(GetBuildServiceResourceUploadUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getBuildServiceResourceUploadUrl", TypeShape.of(GetBuildServiceResourceUploadUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource upload definition payload
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetBuildServiceResourceUploadUrlResult> getBuildServiceResourceUploadUrlPlain(GetBuildServiceResourceUploadUrlPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildServiceResourceUploadUrl", TypeShape.of(GetBuildServiceResourceUploadUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -185,7 +335,7 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildpackBindingResult> getBuildpackBinding(GetBuildpackBindingArgs args) {
+    public static Output<GetBuildpackBindingResult> getBuildpackBinding(GetBuildpackBindingArgs args) {
         return getBuildpackBinding(args, InvokeOptions.Empty);
     }
     /**
@@ -193,7 +343,23 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetBuildpackBindingResult> getBuildpackBinding(GetBuildpackBindingArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBuildpackBindingResult> getBuildpackBindingPlain(GetBuildpackBindingPlainArgs args) {
+        return getBuildpackBindingPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Buildpack Binding Resource object
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetBuildpackBindingResult> getBuildpackBinding(GetBuildpackBindingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getBuildpackBinding", TypeShape.of(GetBuildpackBindingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Buildpack Binding Resource object
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetBuildpackBindingResult> getBuildpackBindingPlain(GetBuildpackBindingPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildpackBinding", TypeShape.of(GetBuildpackBindingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -201,7 +367,7 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
@@ -209,7 +375,23 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args) {
+        return getCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Certificate resource payload.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Certificate resource payload.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -217,7 +399,7 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationServiceResult> getConfigurationService(GetConfigurationServiceArgs args) {
+    public static Output<GetConfigurationServiceResult> getConfigurationService(GetConfigurationServiceArgs args) {
         return getConfigurationService(args, InvokeOptions.Empty);
     }
     /**
@@ -225,7 +407,23 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetConfigurationServiceResult> getConfigurationService(GetConfigurationServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigurationServiceResult> getConfigurationServicePlain(GetConfigurationServicePlainArgs args) {
+        return getConfigurationServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Application Configuration Service resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetConfigurationServiceResult> getConfigurationService(GetConfigurationServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getConfigurationService", TypeShape.of(GetConfigurationServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Application Configuration Service resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetConfigurationServiceResult> getConfigurationServicePlain(GetConfigurationServicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getConfigurationService", TypeShape.of(GetConfigurationServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -233,7 +431,7 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetCustomDomainResult> getCustomDomain(GetCustomDomainArgs args) {
+    public static Output<GetCustomDomainResult> getCustomDomain(GetCustomDomainArgs args) {
         return getCustomDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -241,7 +439,23 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetCustomDomainResult> getCustomDomain(GetCustomDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCustomDomainResult> getCustomDomainPlain(GetCustomDomainPlainArgs args) {
+        return getCustomDomainPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Custom domain resource payload.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<GetCustomDomainResult> getCustomDomain(GetCustomDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getCustomDomain", TypeShape.of(GetCustomDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Custom domain resource payload.
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<GetCustomDomainResult> getCustomDomainPlain(GetCustomDomainPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getCustomDomain", TypeShape.of(GetCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -249,7 +463,7 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
+    public static Output<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
         return getDeployment(args, InvokeOptions.Empty);
     }
     /**
@@ -257,7 +471,23 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentResult> getDeploymentPlain(GetDeploymentPlainArgs args) {
+        return getDeploymentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Deployment resource payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Deployment resource payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<GetDeploymentResult> getDeploymentPlain(GetDeploymentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -265,7 +495,7 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentLogFileUrlResult> getDeploymentLogFileUrl(GetDeploymentLogFileUrlArgs args) {
+    public static Output<GetDeploymentLogFileUrlResult> getDeploymentLogFileUrl(GetDeploymentLogFileUrlArgs args) {
         return getDeploymentLogFileUrl(args, InvokeOptions.Empty);
     }
     /**
@@ -273,7 +503,23 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetDeploymentLogFileUrlResult> getDeploymentLogFileUrl(GetDeploymentLogFileUrlArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDeploymentLogFileUrlResult> getDeploymentLogFileUrlPlain(GetDeploymentLogFileUrlPlainArgs args) {
+        return getDeploymentLogFileUrlPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Log file URL payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<GetDeploymentLogFileUrlResult> getDeploymentLogFileUrl(GetDeploymentLogFileUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getDeploymentLogFileUrl", TypeShape.of(GetDeploymentLogFileUrlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Log file URL payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<GetDeploymentLogFileUrlResult> getDeploymentLogFileUrlPlain(GetDeploymentLogFileUrlPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getDeploymentLogFileUrl", TypeShape.of(GetDeploymentLogFileUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -281,7 +527,7 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
+    public static Output<GetGatewayResult> getGateway(GetGatewayArgs args) {
         return getGateway(args, InvokeOptions.Empty);
     }
     /**
@@ -289,7 +535,23 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayResult> getGatewayPlain(GetGatewayPlainArgs args) {
+        return getGatewayPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Spring Cloud Gateway resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetGatewayResult> getGateway(GetGatewayArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Spring Cloud Gateway resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetGatewayResult> getGatewayPlain(GetGatewayPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getGateway", TypeShape.of(GetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -297,7 +559,7 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetGatewayCustomDomainResult> getGatewayCustomDomain(GetGatewayCustomDomainArgs args) {
+    public static Output<GetGatewayCustomDomainResult> getGatewayCustomDomain(GetGatewayCustomDomainArgs args) {
         return getGatewayCustomDomain(args, InvokeOptions.Empty);
     }
     /**
@@ -305,7 +567,23 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetGatewayCustomDomainResult> getGatewayCustomDomain(GetGatewayCustomDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayCustomDomainResult> getGatewayCustomDomainPlain(GetGatewayCustomDomainPlainArgs args) {
+        return getGatewayCustomDomainPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Custom domain of the Spring Cloud Gateway
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetGatewayCustomDomainResult> getGatewayCustomDomain(GetGatewayCustomDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getGatewayCustomDomain", TypeShape.of(GetGatewayCustomDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Custom domain of the Spring Cloud Gateway
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetGatewayCustomDomainResult> getGatewayCustomDomainPlain(GetGatewayCustomDomainPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getGatewayCustomDomain", TypeShape.of(GetGatewayCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -313,7 +591,7 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetGatewayRouteConfigResult> getGatewayRouteConfig(GetGatewayRouteConfigArgs args) {
+    public static Output<GetGatewayRouteConfigResult> getGatewayRouteConfig(GetGatewayRouteConfigArgs args) {
         return getGatewayRouteConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -321,7 +599,23 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetGatewayRouteConfigResult> getGatewayRouteConfig(GetGatewayRouteConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetGatewayRouteConfigResult> getGatewayRouteConfigPlain(GetGatewayRouteConfigPlainArgs args) {
+        return getGatewayRouteConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Spring Cloud Gateway route config resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetGatewayRouteConfigResult> getGatewayRouteConfig(GetGatewayRouteConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getGatewayRouteConfig", TypeShape.of(GetGatewayRouteConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Spring Cloud Gateway route config resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetGatewayRouteConfigResult> getGatewayRouteConfigPlain(GetGatewayRouteConfigPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getGatewayRouteConfig", TypeShape.of(GetGatewayRouteConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -329,7 +623,7 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -337,7 +631,23 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args) {
+        return getServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Service resource
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Service resource
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -345,7 +655,7 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetServiceRegistryResult> getServiceRegistry(GetServiceRegistryArgs args) {
+    public static Output<GetServiceRegistryResult> getServiceRegistry(GetServiceRegistryArgs args) {
         return getServiceRegistry(args, InvokeOptions.Empty);
     }
     /**
@@ -353,7 +663,23 @@ public final class AppplatformFunctions {
      * API Version: 2022-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetServiceRegistryResult> getServiceRegistry(GetServiceRegistryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceRegistryResult> getServiceRegistryPlain(GetServiceRegistryPlainArgs args) {
+        return getServiceRegistryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Service Registry resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static Output<GetServiceRegistryResult> getServiceRegistry(GetServiceRegistryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getServiceRegistry", TypeShape.of(GetServiceRegistryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Service Registry resource
+     * API Version: 2022-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetServiceRegistryResult> getServiceRegistryPlain(GetServiceRegistryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getServiceRegistry", TypeShape.of(GetServiceRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -361,7 +687,7 @@ public final class AppplatformFunctions {
      * API Version: 2021-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetStorageResult> getStorage(GetStorageArgs args) {
+    public static Output<GetStorageResult> getStorage(GetStorageArgs args) {
         return getStorage(args, InvokeOptions.Empty);
     }
     /**
@@ -369,7 +695,23 @@ public final class AppplatformFunctions {
      * API Version: 2021-09-01-preview.
      * 
      */
-    public static CompletableFuture<GetStorageResult> getStorage(GetStorageArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStorageResult> getStoragePlain(GetStoragePlainArgs args) {
+        return getStoragePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Storage resource payload.
+     * API Version: 2021-09-01-preview.
+     * 
+     */
+    public static Output<GetStorageResult> getStorage(GetStorageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:getStorage", TypeShape.of(GetStorageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Storage resource payload.
+     * API Version: 2021-09-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetStorageResult> getStoragePlain(GetStoragePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getStorage", TypeShape.of(GetStorageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -377,7 +719,7 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<ListServiceTestKeysResult> listServiceTestKeys(ListServiceTestKeysArgs args) {
+    public static Output<ListServiceTestKeysResult> listServiceTestKeys(ListServiceTestKeysArgs args) {
         return listServiceTestKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -385,7 +727,23 @@ public final class AppplatformFunctions {
      * API Version: 2020-07-01.
      * 
      */
-    public static CompletableFuture<ListServiceTestKeysResult> listServiceTestKeys(ListServiceTestKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListServiceTestKeysResult> listServiceTestKeysPlain(ListServiceTestKeysPlainArgs args) {
+        return listServiceTestKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Test keys payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static Output<ListServiceTestKeysResult> listServiceTestKeys(ListServiceTestKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:appplatform:listServiceTestKeys", TypeShape.of(ListServiceTestKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Test keys payload
+     * API Version: 2020-07-01.
+     * 
+     */
+    public static CompletableFuture<ListServiceTestKeysResult> listServiceTestKeysPlain(ListServiceTestKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:listServiceTestKeys", TypeShape.of(ListServiceTestKeysResult.class), args, Utilities.withVersion(options));
     }
 }

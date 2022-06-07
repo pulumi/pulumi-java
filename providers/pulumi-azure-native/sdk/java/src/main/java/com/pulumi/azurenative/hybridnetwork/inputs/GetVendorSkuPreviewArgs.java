@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.hybridnetwork.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVendorSkuPreviewArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="previewSubscription", required=true)
-    private String previewSubscription;
+    private Output<String> previewSubscription;
 
     /**
      * @return Preview subscription ID.
      * 
      */
-    public String previewSubscription() {
+    public Output<String> previewSubscription() {
         return this.previewSubscription;
     }
 
@@ -32,13 +33,13 @@ public final class GetVendorSkuPreviewArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="skuName", required=true)
-    private String skuName;
+    private Output<String> skuName;
 
     /**
      * @return The name of the vendor sku.
      * 
      */
-    public String skuName() {
+    public Output<String> skuName() {
         return this.skuName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVendorSkuPreviewArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="vendorName", required=true)
-    private String vendorName;
+    private Output<String> vendorName;
 
     /**
      * @return The name of the vendor.
      * 
      */
-    public String vendorName() {
+    public Output<String> vendorName() {
         return this.vendorName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVendorSkuPreviewArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder previewSubscription(String previewSubscription) {
+        public Builder previewSubscription(Output<String> previewSubscription) {
             $.previewSubscription = previewSubscription;
+            return this;
+        }
+
+        /**
+         * @param previewSubscription Preview subscription ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder previewSubscription(String previewSubscription) {
+            return previewSubscription(Output.of(previewSubscription));
+        }
+
+        /**
+         * @param skuName The name of the vendor sku.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skuName(Output<String> skuName) {
+            $.skuName = skuName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVendorSkuPreviewArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder skuName(String skuName) {
-            $.skuName = skuName;
+            return skuName(Output.of(skuName));
+        }
+
+        /**
+         * @param vendorName The name of the vendor.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vendorName(Output<String> vendorName) {
+            $.vendorName = vendorName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVendorSkuPreviewArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder vendorName(String vendorName) {
-            $.vendorName = vendorName;
-            return this;
+            return vendorName(Output.of(vendorName));
         }
 
         public GetVendorSkuPreviewArgs build() {

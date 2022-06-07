@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetNetworkAclsFilter;
+import com.pulumi.aws.ec2.inputs.GetNetworkAclsFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetNetworkAclsFilter> filters;
+    private @Nullable Output<List<GetNetworkAclsFilterArgs>> filters;
 
     /**
      * @return Custom filter block as described below.
      * 
      */
-    public Optional<List<GetNetworkAclsFilter>> filters() {
+    public Optional<Output<List<GetNetworkAclsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -38,14 +39,14 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags, each pair of which must exactly match
      * a pair on the desired network ACLs.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -54,13 +55,13 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId")
-    private @Nullable String vpcId;
+    private @Nullable Output<String> vpcId;
 
     /**
      * @return The VPC ID that you want to filter from.
      * 
      */
-    public Optional<String> vpcId() {
+    public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
 
@@ -96,7 +97,7 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetNetworkAclsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetNetworkAclsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -107,7 +108,17 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetNetworkAclsFilter... filters) {
+        public Builder filters(List<GetNetworkAclsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetNetworkAclsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -118,8 +129,30 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
+            return this;
+        }
+
+        /**
+         * @param tags A map of tags, each pair of which must exactly match
+         * a pair on the desired network ACLs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param vpcId The VPC ID that you want to filter from.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcId(@Nullable Output<String> vpcId) {
+            $.vpcId = vpcId;
             return this;
         }
 
@@ -129,9 +162,8 @@ public final class GetNetworkAclsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vpcId(@Nullable String vpcId) {
-            $.vpcId = vpcId;
-            return this;
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
         }
 
         public GetNetworkAclsArgs build() {

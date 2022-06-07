@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.lambda.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="functionName", required=true)
-    private String functionName;
+    private Output<String> functionName;
 
     /**
      * @return Name of the aliased Lambda function.
      * 
      */
-    public String functionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the Lambda alias.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder functionName(String functionName) {
+        public Builder functionName(Output<String> functionName) {
             $.functionName = functionName;
+            return this;
+        }
+
+        /**
+         * @param functionName Name of the aliased Lambda function.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionName(String functionName) {
+            return functionName(Output.of(functionName));
+        }
+
+        /**
+         * @param name Name of the Lambda alias.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetAliasArgs build() {

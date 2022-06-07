@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
      * 
      */
     @Import(name="availabilityGroupListenerName", required=true)
-    private String availabilityGroupListenerName;
+    private Output<String> availabilityGroupListenerName;
 
     /**
      * @return Name of the availability group listener.
      * 
      */
-    public String availabilityGroupListenerName() {
+    public Output<String> availabilityGroupListenerName() {
         return this.availabilityGroupListenerName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sqlVirtualMachineGroupName", required=true)
-    private String sqlVirtualMachineGroupName;
+    private Output<String> sqlVirtualMachineGroupName;
 
     /**
      * @return Name of the SQL virtual machine group.
      * 
      */
-    public String sqlVirtualMachineGroupName() {
+    public Output<String> sqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder availabilityGroupListenerName(String availabilityGroupListenerName) {
+        public Builder availabilityGroupListenerName(Output<String> availabilityGroupListenerName) {
             $.availabilityGroupListenerName = availabilityGroupListenerName;
+            return this;
+        }
+
+        /**
+         * @param availabilityGroupListenerName Name of the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityGroupListenerName(String availabilityGroupListenerName) {
+            return availabilityGroupListenerName(Output.of(availabilityGroupListenerName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sqlVirtualMachineGroupName Name of the SQL virtual machine group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlVirtualMachineGroupName(Output<String> sqlVirtualMachineGroupName) {
+            $.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
          * 
          */
         public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
-            $.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
-            return this;
+            return sqlVirtualMachineGroupName(Output.of(sqlVirtualMachineGroupName));
         }
 
         public GetAvailabilityGroupListenerArgs build() {

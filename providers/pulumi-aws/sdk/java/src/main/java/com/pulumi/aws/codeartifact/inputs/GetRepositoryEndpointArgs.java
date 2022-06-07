@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.codeartifact.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domain", required=true)
-    private String domain;
+    private Output<String> domain;
 
     /**
      * @return The name of the domain that contains the repository.
      * 
      */
-    public String domain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -34,13 +35,13 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domainOwner")
-    private @Nullable String domainOwner;
+    private @Nullable Output<String> domainOwner;
 
     /**
      * @return The account number of the AWS account that owns the domain.
      * 
      */
-    public Optional<String> domainOwner() {
+    public Optional<Output<String>> domainOwner() {
         return Optional.ofNullable(this.domainOwner);
     }
 
@@ -49,13 +50,13 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="format", required=true)
-    private String format;
+    private Output<String> format;
 
     /**
      * @return Which endpoint of a repository to return. A repository has one endpoint for each package format: `npm`, `pypi`, `maven`, and `nuget`.
      * 
      */
-    public String format() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -64,13 +65,13 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="repository", required=true)
-    private String repository;
+    private Output<String> repository;
 
     /**
      * @return The name of the repository.
      * 
      */
-    public String repository() {
+    public Output<String> repository() {
         return this.repository;
     }
 
@@ -107,8 +108,29 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder domain(String domain) {
+        public Builder domain(Output<String> domain) {
             $.domain = domain;
+            return this;
+        }
+
+        /**
+         * @param domain The name of the domain that contains the repository.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
+        }
+
+        /**
+         * @param domainOwner The account number of the AWS account that owns the domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainOwner(@Nullable Output<String> domainOwner) {
+            $.domainOwner = domainOwner;
             return this;
         }
 
@@ -118,8 +140,18 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder domainOwner(@Nullable String domainOwner) {
-            $.domainOwner = domainOwner;
+        public Builder domainOwner(String domainOwner) {
+            return domainOwner(Output.of(domainOwner));
+        }
+
+        /**
+         * @param format Which endpoint of a repository to return. A repository has one endpoint for each package format: `npm`, `pypi`, `maven`, and `nuget`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder format(Output<String> format) {
+            $.format = format;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder format(String format) {
-            $.format = format;
+            return format(Output.of(format));
+        }
+
+        /**
+         * @param repository The name of the repository.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repository(Output<String> repository) {
+            $.repository = repository;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder repository(String repository) {
-            $.repository = repository;
-            return this;
+            return repository(Output.of(repository));
         }
 
         public GetRepositoryEndpointArgs build() {

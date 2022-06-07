@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.pubsub_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetSchemaIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetSchemaIamPolicyArgs Empty = new GetSchemaIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="schemaId", required=true)
-    private String schemaId;
+    private Output<String> schemaId;
 
-    public String schemaId() {
+    public Output<String> schemaId() {
         return this.schemaId;
     }
 
@@ -61,19 +62,31 @@ public final class GetSchemaIamPolicyArgs extends com.pulumi.resources.InvokeArg
             $ = new GetSchemaIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder schemaId(String schemaId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder schemaId(Output<String> schemaId) {
             $.schemaId = schemaId;
             return this;
+        }
+
+        public Builder schemaId(String schemaId) {
+            return schemaId(Output.of(schemaId));
         }
 
         public GetSchemaIamPolicyArgs build() {

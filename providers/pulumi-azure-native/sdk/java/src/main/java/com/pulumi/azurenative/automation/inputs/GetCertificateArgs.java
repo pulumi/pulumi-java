@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.automation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-    private String automationAccountName;
+    private Output<String> automationAccountName;
 
     /**
      * @return The name of the automation account.
      * 
      */
-    public String automationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateName", required=true)
-    private String certificateName;
+    private Output<String> certificateName;
 
     /**
      * @return The name of certificate.
      * 
      */
-    public String certificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
 
@@ -47,13 +48,13 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder automationAccountName(String automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
+            return this;
+        }
+
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder automationAccountName(String automationAccountName) {
+            return automationAccountName(Output.of(automationAccountName));
+        }
+
+        /**
+         * @param certificateName The name of certificate.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateName(Output<String> certificateName) {
+            $.certificateName = certificateName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder certificateName(String certificateName) {
-            $.certificateName = certificateName;
+            return certificateName(Output.of(certificateName));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetCertificateArgs build() {

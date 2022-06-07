@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameRegex")
-    private @Nullable String nameRegex;
+    private @Nullable Output<String> nameRegex;
 
     /**
      * @return A regex string to apply to the IAM roles list returned by AWS. This allows more advanced filtering not supported from the AWS API.
@@ -29,7 +30,7 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
      * options to narrow down the list AWS returns.
      * 
      */
-    public Optional<String> nameRegex() {
+    public Optional<Output<String>> nameRegex() {
         return Optional.ofNullable(this.nameRegex);
     }
 
@@ -38,13 +39,13 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pathPrefix")
-    private @Nullable String pathPrefix;
+    private @Nullable Output<String> pathPrefix;
 
     /**
      * @return The path prefix for filtering the results. For example, the prefix `/application_abc/component_xyz/` gets all roles whose path starts with `/application_abc/component_xyz/`. If it is not included, it defaults to a slash (`/`), listing all roles. For more details, check out [list-roles in the AWS CLI reference][1].
      * 
      */
-    public Optional<String> pathPrefix() {
+    public Optional<Output<String>> pathPrefix() {
         return Optional.ofNullable(this.pathPrefix);
     }
 
@@ -81,8 +82,31 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameRegex(@Nullable String nameRegex) {
+        public Builder nameRegex(@Nullable Output<String> nameRegex) {
             $.nameRegex = nameRegex;
+            return this;
+        }
+
+        /**
+         * @param nameRegex A regex string to apply to the IAM roles list returned by AWS. This allows more advanced filtering not supported from the AWS API.
+         * This filtering is done locally on what AWS returns, and could have a performance impact if the result is large. It is recommended to combine this with other
+         * options to narrow down the list AWS returns.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nameRegex(String nameRegex) {
+            return nameRegex(Output.of(nameRegex));
+        }
+
+        /**
+         * @param pathPrefix The path prefix for filtering the results. For example, the prefix `/application_abc/component_xyz/` gets all roles whose path starts with `/application_abc/component_xyz/`. If it is not included, it defaults to a slash (`/`), listing all roles. For more details, check out [list-roles in the AWS CLI reference][1].
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pathPrefix(@Nullable Output<String> pathPrefix) {
+            $.pathPrefix = pathPrefix;
             return this;
         }
 
@@ -92,9 +116,8 @@ public final class GetRolesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder pathPrefix(@Nullable String pathPrefix) {
-            $.pathPrefix = pathPrefix;
-            return this;
+        public Builder pathPrefix(String pathPrefix) {
+            return pathPrefix(Output.of(pathPrefix));
         }
 
         public GetRolesArgs build() {

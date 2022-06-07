@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.efs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAccessPointArgs Empty = new GetAccessPointArgs();
 
     @Import(name="accessPointId", required=true)
-    private String accessPointId;
+    private Output<String> accessPointId;
 
-    public String accessPointId() {
+    public Output<String> accessPointId() {
         return this.accessPointId;
     }
 
@@ -43,9 +44,13 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccessPointArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder accessPointId(String accessPointId) {
+        public Builder accessPointId(Output<String> accessPointId) {
             $.accessPointId = accessPointId;
             return this;
+        }
+
+        public Builder accessPointId(String accessPointId) {
+            return accessPointId(Output.of(accessPointId));
         }
 
         public GetAccessPointArgs build() {

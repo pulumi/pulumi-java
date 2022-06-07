@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,23 +14,23 @@ public final class GetInstanceAttachmentArgs extends com.pulumi.resources.Invoke
     public static final GetInstanceAttachmentArgs Empty = new GetInstanceAttachmentArgs();
 
     @Import(name="attachmentId", required=true)
-    private String attachmentId;
+    private Output<String> attachmentId;
 
-    public String attachmentId() {
+    public Output<String> attachmentId() {
         return this.attachmentId;
     }
 
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -59,19 +60,31 @@ public final class GetInstanceAttachmentArgs extends com.pulumi.resources.Invoke
             $ = new GetInstanceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder attachmentId(String attachmentId) {
+        public Builder attachmentId(Output<String> attachmentId) {
             $.attachmentId = attachmentId;
             return this;
         }
 
-        public Builder instanceId(String instanceId) {
+        public Builder attachmentId(String attachmentId) {
+            return attachmentId(Output.of(attachmentId));
+        }
+
+        public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetInstanceAttachmentArgs build() {

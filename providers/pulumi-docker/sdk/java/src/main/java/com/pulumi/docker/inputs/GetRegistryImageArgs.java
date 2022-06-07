@@ -3,6 +3,7 @@
 
 package com.pulumi.docker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="insecureSkipVerify")
-    private @Nullable Boolean insecureSkipVerify;
+    private @Nullable Output<Boolean> insecureSkipVerify;
 
     /**
      * @return If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
      * 
      */
-    public Optional<Boolean> insecureSkipVerify() {
+    public Optional<Output<Boolean>> insecureSkipVerify() {
         return Optional.ofNullable(this.insecureSkipVerify);
     }
 
@@ -35,13 +36,13 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the Docker image, including any tags. e.g. `alpine:latest`
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -76,8 +77,29 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder insecureSkipVerify(@Nullable Boolean insecureSkipVerify) {
+        public Builder insecureSkipVerify(@Nullable Output<Boolean> insecureSkipVerify) {
             $.insecureSkipVerify = insecureSkipVerify;
+            return this;
+        }
+
+        /**
+         * @param insecureSkipVerify If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder insecureSkipVerify(Boolean insecureSkipVerify) {
+            return insecureSkipVerify(Output.of(insecureSkipVerify));
+        }
+
+        /**
+         * @param name The name of the Docker image, including any tags. e.g. `alpine:latest`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -88,8 +110,7 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetRegistryImageArgs build() {

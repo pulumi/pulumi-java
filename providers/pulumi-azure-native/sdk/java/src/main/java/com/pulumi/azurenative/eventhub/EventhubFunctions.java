@@ -5,20 +5,35 @@ package com.pulumi.azurenative.eventhub;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.eventhub.inputs.GetClusterArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetClusterPlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.GetConsumerGroupArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetConsumerGroupPlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.GetDisasterRecoveryConfigArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetDisasterRecoveryConfigPlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.GetEventHubArgs;
 import com.pulumi.azurenative.eventhub.inputs.GetEventHubAuthorizationRuleArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetEventHubAuthorizationRulePlainArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetEventHubPlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.GetNamespaceArgs;
 import com.pulumi.azurenative.eventhub.inputs.GetNamespaceAuthorizationRuleArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetNamespaceAuthorizationRulePlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.GetNamespaceIpFilterRuleArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetNamespaceIpFilterRulePlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.GetNamespaceNetworkRuleSetArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetNamespaceNetworkRuleSetPlainArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetNamespacePlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.GetNamespaceVirtualNetworkRuleArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetNamespaceVirtualNetworkRulePlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.GetSchemaRegistryArgs;
+import com.pulumi.azurenative.eventhub.inputs.GetSchemaRegistryPlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.ListDisasterRecoveryConfigKeysArgs;
+import com.pulumi.azurenative.eventhub.inputs.ListDisasterRecoveryConfigKeysPlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.ListEventHubKeysArgs;
+import com.pulumi.azurenative.eventhub.inputs.ListEventHubKeysPlainArgs;
 import com.pulumi.azurenative.eventhub.inputs.ListNamespaceKeysArgs;
+import com.pulumi.azurenative.eventhub.inputs.ListNamespaceKeysPlainArgs;
 import com.pulumi.azurenative.eventhub.outputs.GetClusterResult;
 import com.pulumi.azurenative.eventhub.outputs.GetConsumerGroupResult;
 import com.pulumi.azurenative.eventhub.outputs.GetDisasterRecoveryConfigResult;
@@ -34,6 +49,7 @@ import com.pulumi.azurenative.eventhub.outputs.GetSchemaRegistryResult;
 import com.pulumi.azurenative.eventhub.outputs.ListDisasterRecoveryConfigKeysResult;
 import com.pulumi.azurenative.eventhub.outputs.ListEventHubKeysResult;
 import com.pulumi.azurenative.eventhub.outputs.ListNamespaceKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -45,7 +61,7 @@ public final class EventhubFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
     /**
@@ -53,7 +69,23 @@ public final class EventhubFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args) {
+        return getClusterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Single Event Hubs Cluster resource in List or Get operations.
+     * API Version: 2018-01-01-preview.
+     * 
+     */
+    public static Output<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Single Event Hubs Cluster resource in List or Get operations.
+     * API Version: 2018-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetClusterResult> getClusterPlain(GetClusterPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -61,7 +93,7 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetConsumerGroupResult> getConsumerGroup(GetConsumerGroupArgs args) {
+    public static Output<GetConsumerGroupResult> getConsumerGroup(GetConsumerGroupArgs args) {
         return getConsumerGroup(args, InvokeOptions.Empty);
     }
     /**
@@ -69,7 +101,23 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetConsumerGroupResult> getConsumerGroup(GetConsumerGroupArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConsumerGroupResult> getConsumerGroupPlain(GetConsumerGroupPlainArgs args) {
+        return getConsumerGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Single item in List or Get Consumer group operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static Output<GetConsumerGroupResult> getConsumerGroup(GetConsumerGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getConsumerGroup", TypeShape.of(GetConsumerGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Single item in List or Get Consumer group operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static CompletableFuture<GetConsumerGroupResult> getConsumerGroupPlain(GetConsumerGroupPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getConsumerGroup", TypeShape.of(GetConsumerGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -77,7 +125,7 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(GetDisasterRecoveryConfigArgs args) {
+    public static Output<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(GetDisasterRecoveryConfigArgs args) {
         return getDisasterRecoveryConfig(args, InvokeOptions.Empty);
     }
     /**
@@ -85,7 +133,23 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(GetDisasterRecoveryConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfigPlain(GetDisasterRecoveryConfigPlainArgs args) {
+        return getDisasterRecoveryConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Single item in List or Get Alias(Disaster Recovery configuration) operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static Output<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfig(GetDisasterRecoveryConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getDisasterRecoveryConfig", TypeShape.of(GetDisasterRecoveryConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Single item in List or Get Alias(Disaster Recovery configuration) operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static CompletableFuture<GetDisasterRecoveryConfigResult> getDisasterRecoveryConfigPlain(GetDisasterRecoveryConfigPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getDisasterRecoveryConfig", TypeShape.of(GetDisasterRecoveryConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -93,7 +157,7 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetEventHubResult> getEventHub(GetEventHubArgs args) {
+    public static Output<GetEventHubResult> getEventHub(GetEventHubArgs args) {
         return getEventHub(args, InvokeOptions.Empty);
     }
     /**
@@ -101,7 +165,23 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetEventHubResult> getEventHub(GetEventHubArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventHubResult> getEventHubPlain(GetEventHubPlainArgs args) {
+        return getEventHubPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Single item in List or Get Event Hub operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static Output<GetEventHubResult> getEventHub(GetEventHubArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getEventHub", TypeShape.of(GetEventHubResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Single item in List or Get Event Hub operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static CompletableFuture<GetEventHubResult> getEventHubPlain(GetEventHubPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getEventHub", TypeShape.of(GetEventHubResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -109,7 +189,7 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetEventHubAuthorizationRuleResult> getEventHubAuthorizationRule(GetEventHubAuthorizationRuleArgs args) {
+    public static Output<GetEventHubAuthorizationRuleResult> getEventHubAuthorizationRule(GetEventHubAuthorizationRuleArgs args) {
         return getEventHubAuthorizationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -117,7 +197,23 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetEventHubAuthorizationRuleResult> getEventHubAuthorizationRule(GetEventHubAuthorizationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEventHubAuthorizationRuleResult> getEventHubAuthorizationRulePlain(GetEventHubAuthorizationRulePlainArgs args) {
+        return getEventHubAuthorizationRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Single item in a List or Get AuthorizationRule operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static Output<GetEventHubAuthorizationRuleResult> getEventHubAuthorizationRule(GetEventHubAuthorizationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getEventHubAuthorizationRule", TypeShape.of(GetEventHubAuthorizationRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Single item in a List or Get AuthorizationRule operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static CompletableFuture<GetEventHubAuthorizationRuleResult> getEventHubAuthorizationRulePlain(GetEventHubAuthorizationRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getEventHubAuthorizationRule", TypeShape.of(GetEventHubAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -125,7 +221,7 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args) {
         return getNamespace(args, InvokeOptions.Empty);
     }
     /**
@@ -133,7 +229,23 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceResult> getNamespacePlain(GetNamespacePlainArgs args) {
+        return getNamespacePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Single Namespace item in List or Get Operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static Output<GetNamespaceResult> getNamespace(GetNamespaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Single Namespace item in List or Get Operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static CompletableFuture<GetNamespaceResult> getNamespacePlain(GetNamespacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getNamespace", TypeShape.of(GetNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -141,7 +253,7 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args) {
+    public static Output<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args) {
         return getNamespaceAuthorizationRule(args, InvokeOptions.Empty);
     }
     /**
@@ -149,7 +261,23 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRulePlain(GetNamespaceAuthorizationRulePlainArgs args) {
+        return getNamespaceAuthorizationRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Single item in a List or Get AuthorizationRule operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static Output<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRule(GetNamespaceAuthorizationRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getNamespaceAuthorizationRule", TypeShape.of(GetNamespaceAuthorizationRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Single item in a List or Get AuthorizationRule operation
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static CompletableFuture<GetNamespaceAuthorizationRuleResult> getNamespaceAuthorizationRulePlain(GetNamespaceAuthorizationRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getNamespaceAuthorizationRule", TypeShape.of(GetNamespaceAuthorizationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -157,7 +285,7 @@ public final class EventhubFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(GetNamespaceIpFilterRuleArgs args) {
+    public static Output<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(GetNamespaceIpFilterRuleArgs args) {
         return getNamespaceIpFilterRule(args, InvokeOptions.Empty);
     }
     /**
@@ -165,7 +293,23 @@ public final class EventhubFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(GetNamespaceIpFilterRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRulePlain(GetNamespaceIpFilterRulePlainArgs args) {
+        return getNamespaceIpFilterRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Single item in a List or Get IpFilterRules operation
+     * API Version: 2018-01-01-preview.
+     * 
+     */
+    public static Output<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRule(GetNamespaceIpFilterRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getNamespaceIpFilterRule", TypeShape.of(GetNamespaceIpFilterRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Single item in a List or Get IpFilterRules operation
+     * API Version: 2018-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetNamespaceIpFilterRuleResult> getNamespaceIpFilterRulePlain(GetNamespaceIpFilterRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getNamespaceIpFilterRule", TypeShape.of(GetNamespaceIpFilterRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -173,7 +317,7 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(GetNamespaceNetworkRuleSetArgs args) {
+    public static Output<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(GetNamespaceNetworkRuleSetArgs args) {
         return getNamespaceNetworkRuleSet(args, InvokeOptions.Empty);
     }
     /**
@@ -181,7 +325,23 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(GetNamespaceNetworkRuleSetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSetPlain(GetNamespaceNetworkRuleSetPlainArgs args) {
+        return getNamespaceNetworkRuleSetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Description of NetworkRuleSet resource.
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static Output<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSet(GetNamespaceNetworkRuleSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getNamespaceNetworkRuleSet", TypeShape.of(GetNamespaceNetworkRuleSetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Description of NetworkRuleSet resource.
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static CompletableFuture<GetNamespaceNetworkRuleSetResult> getNamespaceNetworkRuleSetPlain(GetNamespaceNetworkRuleSetPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getNamespaceNetworkRuleSet", TypeShape.of(GetNamespaceNetworkRuleSetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -189,7 +349,7 @@ public final class EventhubFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(GetNamespaceVirtualNetworkRuleArgs args) {
+    public static Output<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(GetNamespaceVirtualNetworkRuleArgs args) {
         return getNamespaceVirtualNetworkRule(args, InvokeOptions.Empty);
     }
     /**
@@ -197,7 +357,23 @@ public final class EventhubFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(GetNamespaceVirtualNetworkRuleArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRulePlain(GetNamespaceVirtualNetworkRulePlainArgs args) {
+        return getNamespaceVirtualNetworkRulePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Single item in a List or Get VirtualNetworkRules operation
+     * API Version: 2018-01-01-preview.
+     * 
+     */
+    public static Output<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRule(GetNamespaceVirtualNetworkRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getNamespaceVirtualNetworkRule", TypeShape.of(GetNamespaceVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Single item in a List or Get VirtualNetworkRules operation
+     * API Version: 2018-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetNamespaceVirtualNetworkRuleResult> getNamespaceVirtualNetworkRulePlain(GetNamespaceVirtualNetworkRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getNamespaceVirtualNetworkRule", TypeShape.of(GetNamespaceVirtualNetworkRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -205,7 +381,7 @@ public final class EventhubFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -213,7 +389,23 @@ public final class EventhubFunctions {
      * API Version: 2018-01-01-preview.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Properties of the PrivateEndpointConnection.
+     * API Version: 2018-01-01-preview.
+     * 
+     */
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Properties of the PrivateEndpointConnection.
+     * API Version: 2018-01-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -221,7 +413,7 @@ public final class EventhubFunctions {
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetSchemaRegistryResult> getSchemaRegistry(GetSchemaRegistryArgs args) {
+    public static Output<GetSchemaRegistryResult> getSchemaRegistry(GetSchemaRegistryArgs args) {
         return getSchemaRegistry(args, InvokeOptions.Empty);
     }
     /**
@@ -229,7 +421,23 @@ public final class EventhubFunctions {
      * API Version: 2021-11-01.
      * 
      */
-    public static CompletableFuture<GetSchemaRegistryResult> getSchemaRegistry(GetSchemaRegistryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSchemaRegistryResult> getSchemaRegistryPlain(GetSchemaRegistryPlainArgs args) {
+        return getSchemaRegistryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Single item in List or Get Schema Group operation
+     * API Version: 2021-11-01.
+     * 
+     */
+    public static Output<GetSchemaRegistryResult> getSchemaRegistry(GetSchemaRegistryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:getSchemaRegistry", TypeShape.of(GetSchemaRegistryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Single item in List or Get Schema Group operation
+     * API Version: 2021-11-01.
+     * 
+     */
+    public static CompletableFuture<GetSchemaRegistryResult> getSchemaRegistryPlain(GetSchemaRegistryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getSchemaRegistry", TypeShape.of(GetSchemaRegistryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -237,7 +445,7 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(ListDisasterRecoveryConfigKeysArgs args) {
+    public static Output<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(ListDisasterRecoveryConfigKeysArgs args) {
         return listDisasterRecoveryConfigKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -245,7 +453,23 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(ListDisasterRecoveryConfigKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeysPlain(ListDisasterRecoveryConfigKeysPlainArgs args) {
+        return listDisasterRecoveryConfigKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Namespace/EventHub Connection String
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static Output<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeys(ListDisasterRecoveryConfigKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:listDisasterRecoveryConfigKeys", TypeShape.of(ListDisasterRecoveryConfigKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Namespace/EventHub Connection String
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static CompletableFuture<ListDisasterRecoveryConfigKeysResult> listDisasterRecoveryConfigKeysPlain(ListDisasterRecoveryConfigKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:listDisasterRecoveryConfigKeys", TypeShape.of(ListDisasterRecoveryConfigKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -253,7 +477,7 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListEventHubKeysResult> listEventHubKeys(ListEventHubKeysArgs args) {
+    public static Output<ListEventHubKeysResult> listEventHubKeys(ListEventHubKeysArgs args) {
         return listEventHubKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -261,7 +485,23 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListEventHubKeysResult> listEventHubKeys(ListEventHubKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListEventHubKeysResult> listEventHubKeysPlain(ListEventHubKeysPlainArgs args) {
+        return listEventHubKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Namespace/EventHub Connection String
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static Output<ListEventHubKeysResult> listEventHubKeys(ListEventHubKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:listEventHubKeys", TypeShape.of(ListEventHubKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Namespace/EventHub Connection String
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static CompletableFuture<ListEventHubKeysResult> listEventHubKeysPlain(ListEventHubKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:listEventHubKeys", TypeShape.of(ListEventHubKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -269,7 +509,7 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args) {
+    public static Output<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args) {
         return listNamespaceKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -277,7 +517,23 @@ public final class EventhubFunctions {
      * API Version: 2017-04-01.
      * 
      */
-    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeysPlain(ListNamespaceKeysPlainArgs args) {
+        return listNamespaceKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Namespace/EventHub Connection String
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static Output<ListNamespaceKeysResult> listNamespaceKeys(ListNamespaceKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:eventhub:listNamespaceKeys", TypeShape.of(ListNamespaceKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Namespace/EventHub Connection String
+     * API Version: 2017-04-01.
+     * 
+     */
+    public static CompletableFuture<ListNamespaceKeysResult> listNamespaceKeysPlain(ListNamespaceKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:listNamespaceKeys", TypeShape.of(ListNamespaceKeysResult.class), args, Utilities.withVersion(options));
     }
 }

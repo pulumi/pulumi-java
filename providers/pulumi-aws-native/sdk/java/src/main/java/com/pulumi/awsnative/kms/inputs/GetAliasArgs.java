@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aliasName", required=true)
-    private String aliasName;
+    private Output<String> aliasName;
 
     /**
      * @return Specifies the alias name. This value must begin with alias/ followed by a name, such as alias/ExampleAlias. The alias name cannot begin with alias/aws/. The alias/aws/ prefix is reserved for AWS managed CMKs.
      * 
      */
-    public String aliasName() {
+    public Output<String> aliasName() {
         return this.aliasName;
     }
 
@@ -57,9 +58,19 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder aliasName(String aliasName) {
+        public Builder aliasName(Output<String> aliasName) {
             $.aliasName = aliasName;
             return this;
+        }
+
+        /**
+         * @param aliasName Specifies the alias name. This value must begin with alias/ followed by a name, such as alias/ExampleAlias. The alias name cannot begin with alias/aws/. The alias/aws/ prefix is reserved for AWS managed CMKs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aliasName(String aliasName) {
+            return aliasName(Output.of(aliasName));
         }
 
         public GetAliasArgs build() {

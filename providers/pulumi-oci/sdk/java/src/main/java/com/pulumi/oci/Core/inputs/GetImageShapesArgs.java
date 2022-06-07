@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetImageShapesFilter;
+import com.pulumi.oci.Core.inputs.GetImageShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetImageShapesArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetImageShapesArgs Empty = new GetImageShapesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetImageShapesFilter> filters;
+    private @Nullable Output<List<GetImageShapesFilterArgs>> filters;
 
-    public Optional<List<GetImageShapesFilter>> filters() {
+    public Optional<Output<List<GetImageShapesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetImageShapesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageId", required=true)
-    private String imageId;
+    private Output<String> imageId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the image.
      * 
      */
-    public String imageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
 
@@ -63,12 +64,16 @@ public final class GetImageShapesArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetImageShapesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetImageShapesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetImageShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetImageShapesFilter... filters) {
+        public Builder filters(List<GetImageShapesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetImageShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetImageShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder imageId(String imageId) {
+        public Builder imageId(Output<String> imageId) {
             $.imageId = imageId;
             return this;
+        }
+
+        /**
+         * @param imageId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageId(String imageId) {
+            return imageId(Output.of(imageId));
         }
 
         public GetImageShapesArgs build() {

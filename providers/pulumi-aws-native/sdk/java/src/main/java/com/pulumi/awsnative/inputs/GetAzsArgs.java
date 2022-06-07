@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +16,9 @@ public final class GetAzsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAzsArgs Empty = new GetAzsArgs();
 
     @Import(name="region")
-    private @Nullable String region;
+    private @Nullable Output<String> region;
 
-    public Optional<String> region() {
+    public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
 
@@ -45,9 +46,13 @@ public final class GetAzsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAzsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder region(@Nullable String region) {
+        public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
+        }
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
 
         public GetAzsArgs build() {

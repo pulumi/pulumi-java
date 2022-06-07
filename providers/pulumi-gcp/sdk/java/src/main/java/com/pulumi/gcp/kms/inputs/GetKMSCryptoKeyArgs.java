@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetKMSCryptoKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyRing", required=true)
-    private String keyRing;
+    private Output<String> keyRing;
 
     /**
      * @return The `id` of the Google Cloud Platform KeyRing to which the key belongs.
      * 
      */
-    public String keyRing() {
+    public Output<String> keyRing() {
         return this.keyRing;
     }
 
@@ -33,14 +34,14 @@ public final class GetKMSCryptoKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The CryptoKey&#39;s name.
      * A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -75,8 +76,30 @@ public final class GetKMSCryptoKeyArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyRing(String keyRing) {
+        public Builder keyRing(Output<String> keyRing) {
             $.keyRing = keyRing;
+            return this;
+        }
+
+        /**
+         * @param keyRing The `id` of the Google Cloud Platform KeyRing to which the key belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyRing(String keyRing) {
+            return keyRing(Output.of(keyRing));
+        }
+
+        /**
+         * @param name The CryptoKey&#39;s name.
+         * A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -88,8 +111,7 @@ public final class GetKMSCryptoKeyArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetKMSCryptoKeyArgs build() {

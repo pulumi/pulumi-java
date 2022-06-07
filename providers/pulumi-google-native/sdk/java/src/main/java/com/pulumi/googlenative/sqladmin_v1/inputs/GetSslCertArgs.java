@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.sqladmin_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetSslCertArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSslCertArgs Empty = new GetSslCertArgs();
 
     @Import(name="instance", required=true)
-    private String instance;
+    private Output<String> instance;
 
-    public String instance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="sha1Fingerprint", required=true)
-    private String sha1Fingerprint;
+    private Output<String> sha1Fingerprint;
 
-    public String sha1Fingerprint() {
+    public Output<String> sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 
@@ -61,19 +62,31 @@ public final class GetSslCertArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSslCertArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder instance(String instance) {
+        public Builder instance(Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder sha1Fingerprint(String sha1Fingerprint) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder sha1Fingerprint(Output<String> sha1Fingerprint) {
             $.sha1Fingerprint = sha1Fingerprint;
             return this;
+        }
+
+        public Builder sha1Fingerprint(String sha1Fingerprint) {
+            return sha1Fingerprint(Output.of(sha1Fingerprint));
         }
 
         public GetSslCertArgs build() {

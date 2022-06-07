@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetTagsFilter;
+import com.pulumi.oci.Identity.inputs.GetTagsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetTagsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTagsArgs Empty = new GetTagsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetTagsFilter> filters;
+    private @Nullable Output<List<GetTagsFilterArgs>> filters;
 
-    public Optional<List<GetTagsFilter>> filters() {
+    public Optional<Output<List<GetTagsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetTagsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -43,13 +44,13 @@ public final class GetTagsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagNamespaceId", required=true)
-    private String tagNamespaceId;
+    private Output<String> tagNamespaceId;
 
     /**
      * @return The OCID of the tag namespace.
      * 
      */
-    public String tagNamespaceId() {
+    public Output<String> tagNamespaceId() {
         return this.tagNamespaceId;
     }
 
@@ -79,12 +80,16 @@ public final class GetTagsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTagsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetTagsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetTagsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetTagsFilter... filters) {
+        public Builder filters(List<GetTagsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetTagsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -94,8 +99,29 @@ public final class GetTagsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param tagNamespaceId The OCID of the tag namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tagNamespaceId(Output<String> tagNamespaceId) {
+            $.tagNamespaceId = tagNamespaceId;
             return this;
         }
 
@@ -106,8 +132,7 @@ public final class GetTagsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tagNamespaceId(String tagNamespaceId) {
-            $.tagNamespaceId = tagNamespaceId;
-            return this;
+            return tagNamespaceId(Output.of(tagNamespaceId));
         }
 
         public GetTagsArgs build() {

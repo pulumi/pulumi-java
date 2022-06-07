@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.powerbi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Azure resource group
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends com.pulumi.reso
      * 
      */
     @Import(name="workspaceCollectionName", required=true)
-    private String workspaceCollectionName;
+    private Output<String> workspaceCollectionName;
 
     /**
      * @return Power BI Embedded Workspace Collection name
      * 
      */
-    public String workspaceCollectionName() {
+    public Output<String> workspaceCollectionName() {
         return this.workspaceCollectionName;
     }
 
@@ -73,8 +74,29 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName Azure resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceCollectionName Power BI Embedded Workspace Collection name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceCollectionName(Output<String> workspaceCollectionName) {
+            $.workspaceCollectionName = workspaceCollectionName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class ListWorkspaceCollectionAccessKeysArgs extends com.pulumi.reso
          * 
          */
         public Builder workspaceCollectionName(String workspaceCollectionName) {
-            $.workspaceCollectionName = workspaceCollectionName;
-            return this;
+            return workspaceCollectionName(Output.of(workspaceCollectionName));
         }
 
         public ListWorkspaceCollectionAccessKeysArgs build() {

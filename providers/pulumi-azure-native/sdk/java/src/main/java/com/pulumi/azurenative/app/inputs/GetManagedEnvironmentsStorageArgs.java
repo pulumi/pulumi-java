@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.app.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagedEnvironmentsStorageArgs extends com.pulumi.resource
      * 
      */
     @Import(name="envName", required=true)
-    private String envName;
+    private Output<String> envName;
 
     /**
      * @return Name of the Environment.
      * 
      */
-    public String envName() {
+    public Output<String> envName() {
         return this.envName;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagedEnvironmentsStorageArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the storage.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetManagedEnvironmentsStorageArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetManagedEnvironmentsStorageArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder envName(String envName) {
+        public Builder envName(Output<String> envName) {
             $.envName = envName;
+            return this;
+        }
+
+        /**
+         * @param envName Name of the Environment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder envName(String envName) {
+            return envName(Output.of(envName));
+        }
+
+        /**
+         * @param name Name of the storage.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetManagedEnvironmentsStorageArgs extends com.pulumi.resource
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetManagedEnvironmentsStorageArgs extends com.pulumi.resource
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetManagedEnvironmentsStorageArgs build() {

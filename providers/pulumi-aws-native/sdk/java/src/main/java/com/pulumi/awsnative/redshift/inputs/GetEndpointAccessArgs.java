@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.redshift.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEndpointAccessArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="endpointName", required=true)
-    private String endpointName;
+    private Output<String> endpointName;
 
     /**
      * @return The name of the endpoint.
      * 
      */
-    public String endpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -57,9 +58,19 @@ public final class GetEndpointAccessArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder endpointName(String endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
+        }
+
+        /**
+         * @param endpointName The name of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointName(String endpointName) {
+            return endpointName(Output.of(endpointName));
         }
 
         public GetEndpointAccessArgs build() {

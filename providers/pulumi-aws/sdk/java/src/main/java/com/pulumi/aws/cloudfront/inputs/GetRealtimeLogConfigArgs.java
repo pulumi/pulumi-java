@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.cloudfront.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRealtimeLogConfigArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The unique name to identify this real-time log configuration.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -57,9 +58,19 @@ public final class GetRealtimeLogConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name The unique name to identify this real-time log configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetRealtimeLogConfigArgs build() {

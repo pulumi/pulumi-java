@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
      * 
      */
     @Import(name="diskAccessName", required=true)
-    private String diskAccessName;
+    private Output<String> diskAccessName;
 
     /**
      * @return The name of the disk access resource that is being created. The name can&#39;t be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
      * 
      */
-    public String diskAccessName() {
+    public Output<String> diskAccessName() {
         return this.diskAccessName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
      * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
-    private String privateEndpointConnectionName;
+    private Output<String> privateEndpointConnectionName;
 
     /**
      * @return The name of the private endpoint connection
      * 
      */
-    public String privateEndpointConnectionName() {
+    public Output<String> privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
 
@@ -47,13 +48,13 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder diskAccessName(String diskAccessName) {
+        public Builder diskAccessName(Output<String> diskAccessName) {
             $.diskAccessName = diskAccessName;
+            return this;
+        }
+
+        /**
+         * @param diskAccessName The name of the disk access resource that is being created. The name can&#39;t be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder diskAccessName(String diskAccessName) {
+            return diskAccessName(Output.of(diskAccessName));
+        }
+
+        /**
+         * @param privateEndpointConnectionName The name of the private endpoint connection
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateEndpointConnectionName(Output<String> privateEndpointConnectionName) {
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
          * 
          */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
-            $.privateEndpointConnectionName = privateEndpointConnectionName;
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetDiskAccessAPrivateEndpointConnectionArgs extends com.pulum
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDiskAccessAPrivateEndpointConnectionArgs build() {

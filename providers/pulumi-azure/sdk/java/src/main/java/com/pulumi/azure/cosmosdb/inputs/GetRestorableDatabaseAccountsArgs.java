@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.cosmosdb.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRestorableDatabaseAccountsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
     /**
      * @return The location where the Cosmos DB Database Account.
      * 
      */
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -32,13 +33,13 @@ public final class GetRestorableDatabaseAccountsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of this Cosmos DB Database Account.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetRestorableDatabaseAccountsArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
+            return this;
+        }
+
+        /**
+         * @param location The location where the Cosmos DB Database Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        /**
+         * @param name The name of this Cosmos DB Database Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetRestorableDatabaseAccountsArgs extends com.pulumi.resource
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetRestorableDatabaseAccountsArgs build() {

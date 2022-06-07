@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseMigration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetJobAdvisorReportArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="jobId", required=true)
-    private String jobId;
+    private Output<String> jobId;
 
     /**
      * @return The OCID of the job
      * 
      */
-    public String jobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
 
@@ -57,9 +58,19 @@ public final class GetJobAdvisorReportArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder jobId(String jobId) {
+        public Builder jobId(Output<String> jobId) {
             $.jobId = jobId;
             return this;
+        }
+
+        /**
+         * @param jobId The OCID of the job
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobId(String jobId) {
+            return jobId(Output.of(jobId));
         }
 
         public GetJobAdvisorReportArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetByoipRangeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="byoipRangeId", required=true)
-    private String byoipRangeId;
+    private Output<String> byoipRangeId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the `ByoipRange` resource containing the BYOIP CIDR block.
      * 
      */
-    public String byoipRangeId() {
+    public Output<String> byoipRangeId() {
         return this.byoipRangeId;
     }
 
@@ -57,9 +58,19 @@ public final class GetByoipRangeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder byoipRangeId(String byoipRangeId) {
+        public Builder byoipRangeId(Output<String> byoipRangeId) {
             $.byoipRangeId = byoipRangeId;
             return this;
+        }
+
+        /**
+         * @param byoipRangeId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the `ByoipRange` resource containing the BYOIP CIDR block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder byoipRangeId(String byoipRangeId) {
+            return byoipRangeId(Output.of(byoipRangeId));
         }
 
         public GetByoipRangeArgs build() {

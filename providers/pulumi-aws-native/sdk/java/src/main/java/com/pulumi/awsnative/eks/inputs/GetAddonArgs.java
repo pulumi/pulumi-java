@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.eks.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addonName", required=true)
-    private String addonName;
+    private Output<String> addonName;
 
     /**
      * @return Name of Addon
      * 
      */
-    public String addonName() {
+    public Output<String> addonName() {
         return this.addonName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return Name of Cluster
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -73,8 +74,29 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder addonName(String addonName) {
+        public Builder addonName(Output<String> addonName) {
             $.addonName = addonName;
+            return this;
+        }
+
+        /**
+         * @param addonName Name of Addon
+         * 
+         * @return builder
+         * 
+         */
+        public Builder addonName(String addonName) {
+            return addonName(Output.of(addonName));
+        }
+
+        /**
+         * @param clusterName Name of Cluster
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(Output<String> clusterName) {
+            $.clusterName = clusterName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder clusterName(String clusterName) {
-            $.clusterName = clusterName;
-            return this;
+            return clusterName(Output.of(clusterName));
         }
 
         public GetAddonArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.essentialcontacts_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetOrganizationContactArgs extends com.pulumi.resources.Invok
     public static final GetOrganizationContactArgs Empty = new GetOrganizationContactArgs();
 
     @Import(name="contactId", required=true)
-    private String contactId;
+    private Output<String> contactId;
 
-    public String contactId() {
+    public Output<String> contactId() {
         return this.contactId;
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -51,14 +52,22 @@ public final class GetOrganizationContactArgs extends com.pulumi.resources.Invok
             $ = new GetOrganizationContactArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder contactId(String contactId) {
+        public Builder contactId(Output<String> contactId) {
             $.contactId = contactId;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder contactId(String contactId) {
+            return contactId(Output.of(contactId));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetOrganizationContactArgs build() {

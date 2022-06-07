@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.datasync.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="agentArn", required=true)
-    private String agentArn;
+    private Output<String> agentArn;
 
     /**
      * @return The DataSync Agent ARN.
      * 
      */
-    public String agentArn() {
+    public Output<String> agentArn() {
         return this.agentArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetAgentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder agentArn(String agentArn) {
+        public Builder agentArn(Output<String> agentArn) {
             $.agentArn = agentArn;
             return this;
+        }
+
+        /**
+         * @param agentArn The DataSync Agent ARN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder agentArn(String agentArn) {
+            return agentArn(Output.of(agentArn));
         }
 
         public GetAgentArgs build() {

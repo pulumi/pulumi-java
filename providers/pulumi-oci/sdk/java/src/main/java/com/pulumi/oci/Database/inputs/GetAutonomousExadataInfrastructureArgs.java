@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAutonomousExadataInfrastructureArgs extends com.pulumi.res
      * 
      */
     @Import(name="autonomousExadataInfrastructureId", required=true)
-    private String autonomousExadataInfrastructureId;
+    private Output<String> autonomousExadataInfrastructureId;
 
     /**
      * @return The Autonomous Exadata Infrastructure  [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String autonomousExadataInfrastructureId() {
+    public Output<String> autonomousExadataInfrastructureId() {
         return this.autonomousExadataInfrastructureId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAutonomousExadataInfrastructureArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder autonomousExadataInfrastructureId(String autonomousExadataInfrastructureId) {
+        public Builder autonomousExadataInfrastructureId(Output<String> autonomousExadataInfrastructureId) {
             $.autonomousExadataInfrastructureId = autonomousExadataInfrastructureId;
             return this;
+        }
+
+        /**
+         * @param autonomousExadataInfrastructureId The Autonomous Exadata Infrastructure  [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autonomousExadataInfrastructureId(String autonomousExadataInfrastructureId) {
+            return autonomousExadataInfrastructureId(Output.of(autonomousExadataInfrastructureId));
         }
 
         public GetAutonomousExadataInfrastructureArgs build() {

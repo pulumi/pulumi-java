@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Ocvp.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExsiHostArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="esxiHostId", required=true)
-    private String esxiHostId;
+    private Output<String> esxiHostId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the ESXi host.
      * 
      */
-    public String esxiHostId() {
+    public Output<String> esxiHostId() {
         return this.esxiHostId;
     }
 
@@ -57,9 +58,19 @@ public final class GetExsiHostArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder esxiHostId(String esxiHostId) {
+        public Builder esxiHostId(Output<String> esxiHostId) {
             $.esxiHostId = esxiHostId;
             return this;
+        }
+
+        /**
+         * @param esxiHostId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the ESXi host.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder esxiHostId(String esxiHostId) {
+            return esxiHostId(Output.of(esxiHostId));
         }
 
         public GetExsiHostArgs build() {

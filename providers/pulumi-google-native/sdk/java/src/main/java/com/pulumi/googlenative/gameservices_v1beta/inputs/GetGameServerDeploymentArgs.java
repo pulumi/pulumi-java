@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.gameservices_v1beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetGameServerDeploymentArgs extends com.pulumi.resources.Invo
     public static final GetGameServerDeploymentArgs Empty = new GetGameServerDeploymentArgs();
 
     @Import(name="gameServerDeploymentId", required=true)
-    private String gameServerDeploymentId;
+    private Output<String> gameServerDeploymentId;
 
-    public String gameServerDeploymentId() {
+    public Output<String> gameServerDeploymentId() {
         return this.gameServerDeploymentId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetGameServerDeploymentArgs extends com.pulumi.resources.Invo
             $ = new GetGameServerDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder gameServerDeploymentId(String gameServerDeploymentId) {
+        public Builder gameServerDeploymentId(Output<String> gameServerDeploymentId) {
             $.gameServerDeploymentId = gameServerDeploymentId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder gameServerDeploymentId(String gameServerDeploymentId) {
+            return gameServerDeploymentId(Output.of(gameServerDeploymentId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetGameServerDeploymentArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscriptionId")
-    private @Nullable String subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
     /**
      * @return Specifies the ID of the subscription. If this argument is omitted, the subscription ID of the current Azure Resource Manager provider is used.
      * 
      */
-    public Optional<String> subscriptionId() {
+    public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
 
@@ -59,9 +60,19 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder subscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
+        }
+
+        /**
+         * @param subscriptionId Specifies the ID of the subscription. If this argument is omitted, the subscription ID of the current Azure Resource Manager provider is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
 
         public GetSubscriptionArgs build() {

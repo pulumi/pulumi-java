@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiManagementName", required=true)
-    private String apiManagementName;
+    private Output<String> apiManagementName;
 
     /**
      * @return The Name of the API Management Service in which this Group exists.
      * 
      */
-    public String apiManagementName() {
+    public Output<String> apiManagementName() {
         return this.apiManagementName;
     }
 
@@ -32,13 +33,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The Name of the API Management Group.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The Name of the Resource Group in which the API Management Service exists.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apiManagementName(String apiManagementName) {
+        public Builder apiManagementName(Output<String> apiManagementName) {
             $.apiManagementName = apiManagementName;
+            return this;
+        }
+
+        /**
+         * @param apiManagementName The Name of the API Management Service in which this Group exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiManagementName(String apiManagementName) {
+            return apiManagementName(Output.of(apiManagementName));
+        }
+
+        /**
+         * @param name The Name of the API Management Group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The Name of the Resource Group in which the API Management Service exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetGroupArgs build() {

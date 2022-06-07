@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.wisdom.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetKnowledgeBaseArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetKnowledgeBaseArgs Empty = new GetKnowledgeBaseArgs();
 
     @Import(name="knowledgeBaseId", required=true)
-    private String knowledgeBaseId;
+    private Output<String> knowledgeBaseId;
 
-    public String knowledgeBaseId() {
+    public Output<String> knowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 
@@ -43,9 +44,13 @@ public final class GetKnowledgeBaseArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetKnowledgeBaseArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder knowledgeBaseId(String knowledgeBaseId) {
+        public Builder knowledgeBaseId(Output<String> knowledgeBaseId) {
             $.knowledgeBaseId = knowledgeBaseId;
             return this;
+        }
+
+        public Builder knowledgeBaseId(String knowledgeBaseId) {
+            return knowledgeBaseId(Output.of(knowledgeBaseId));
         }
 
         public GetKnowledgeBaseArgs build() {

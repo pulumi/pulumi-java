@@ -5,7 +5,9 @@ package com.pulumi.azure.privatedns;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.privatedns.inputs.GetDnsZoneArgs;
+import com.pulumi.azure.privatedns.inputs.GetDnsZonePlainArgs;
 import com.pulumi.azure.privatedns.outputs.GetDnsZoneResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -41,7 +43,7 @@ public final class PrivatednsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDnsZoneResult> getDnsZone(GetDnsZoneArgs args) {
+    public static Output<GetDnsZoneResult> getDnsZone(GetDnsZoneArgs args) {
         return getDnsZone(args, InvokeOptions.Empty);
     }
     /**
@@ -73,7 +75,71 @@ public final class PrivatednsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDnsZoneResult> getDnsZone(GetDnsZoneArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDnsZoneResult> getDnsZonePlain(GetDnsZonePlainArgs args) {
+        return getDnsZonePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Private DNS Zone.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(PrivatednsFunctions.getDnsZone(GetDnsZoneArgs.builder()
+     *             .name(&#34;contoso.internal&#34;)
+     *             .resourceGroupName(&#34;contoso-dns&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;privateDnsZoneId&#34;, example.apply(getDnsZoneResult -&gt; getDnsZoneResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetDnsZoneResult> getDnsZone(GetDnsZoneArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:privatedns/getDnsZone:getDnsZone", TypeShape.of(GetDnsZoneResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Private DNS Zone.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(PrivatednsFunctions.getDnsZone(GetDnsZoneArgs.builder()
+     *             .name(&#34;contoso.internal&#34;)
+     *             .resourceGroupName(&#34;contoso-dns&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;privateDnsZoneId&#34;, example.apply(getDnsZoneResult -&gt; getDnsZoneResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetDnsZoneResult> getDnsZonePlain(GetDnsZonePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:privatedns/getDnsZone:getDnsZone", TypeShape.of(GetDnsZoneResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dialogflow_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetConversationModelArgs extends com.pulumi.resources.InvokeA
     public static final GetConversationModelArgs Empty = new GetConversationModelArgs();
 
     @Import(name="conversationModelId", required=true)
-    private String conversationModelId;
+    private Output<String> conversationModelId;
 
-    public String conversationModelId() {
+    public Output<String> conversationModelId() {
         return this.conversationModelId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetConversationModelArgs extends com.pulumi.resources.InvokeA
             $ = new GetConversationModelArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder conversationModelId(String conversationModelId) {
+        public Builder conversationModelId(Output<String> conversationModelId) {
             $.conversationModelId = conversationModelId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder conversationModelId(String conversationModelId) {
+            return conversationModelId(Output.of(conversationModelId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetConversationModelArgs build() {

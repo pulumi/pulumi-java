@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.OsManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OsManagement.inputs.GetManagedInstanceGroupsFilter;
+import com.pulumi.oci.OsManagement.inputs.GetManagedInstanceGroupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetManagedInstanceGroupsFilter> filters;
+    private @Nullable Output<List<GetManagedInstanceGroupsFilterArgs>> filters;
 
-    public Optional<List<GetManagedInstanceGroupsFilter>> filters() {
+    public Optional<Output<List<GetManagedInstanceGroupsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="osFamily")
-    private @Nullable String osFamily;
+    private @Nullable Output<String> osFamily;
 
     /**
      * @return The OS family for which to list resources.
      * 
      */
-    public Optional<String> osFamily() {
+    public Optional<Output<String>> osFamily() {
         return Optional.ofNullable(this.osFamily);
     }
 
@@ -73,13 +74,13 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The current lifecycle state for the object.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,8 +118,29 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -128,17 +150,20 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetManagedInstanceGroupsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedInstanceGroupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetManagedInstanceGroupsFilter... filters) {
+        public Builder filters(List<GetManagedInstanceGroupsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetManagedInstanceGroupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -148,8 +173,29 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder osFamily(@Nullable String osFamily) {
+        public Builder osFamily(@Nullable Output<String> osFamily) {
             $.osFamily = osFamily;
+            return this;
+        }
+
+        /**
+         * @param osFamily The OS family for which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder osFamily(String osFamily) {
+            return osFamily(Output.of(osFamily));
+        }
+
+        /**
+         * @param state The current lifecycle state for the object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetManagedInstanceGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetManagedInstanceGroupsArgs build() {

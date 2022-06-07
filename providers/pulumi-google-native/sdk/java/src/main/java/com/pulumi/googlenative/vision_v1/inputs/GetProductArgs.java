@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.vision_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetProductArgs Empty = new GetProductArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="productId", required=true)
-    private String productId;
+    private Output<String> productId;
 
-    public String productId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetProductArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder productId(String productId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder productId(Output<String> productId) {
             $.productId = productId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetProductArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.opensearchservice.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDomainArgs Empty = new GetDomainArgs();
 
     @Import(name="domainName", required=true)
-    private String domainName;
+    private Output<String> domainName;
 
-    public String domainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -43,9 +44,13 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDomainArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder domainName(String domainName) {
+        public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
+        }
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
 
         public GetDomainArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.automation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="automationAccountName", required=true)
-    private String automationAccountName;
+    private Output<String> automationAccountName;
 
     /**
      * @return The name of the automation account.
      * 
      */
-    public String automationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="hybridRunbookWorkerGroupName", required=true)
-    private String hybridRunbookWorkerGroupName;
+    private Output<String> hybridRunbookWorkerGroupName;
 
     /**
      * @return The hybrid runbook worker group name
      * 
      */
-    public String hybridRunbookWorkerGroupName() {
+    public Output<String> hybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="hybridRunbookWorkerId", required=true)
-    private String hybridRunbookWorkerId;
+    private Output<String> hybridRunbookWorkerId;
 
     /**
      * @return The hybrid runbook worker id
      * 
      */
-    public String hybridRunbookWorkerId() {
+    public Output<String> hybridRunbookWorkerId() {
         return this.hybridRunbookWorkerId;
     }
 
@@ -62,13 +63,13 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of an Azure Resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder automationAccountName(String automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
+            return this;
+        }
+
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder automationAccountName(String automationAccountName) {
+            return automationAccountName(Output.of(automationAccountName));
+        }
+
+        /**
+         * @param hybridRunbookWorkerGroupName The hybrid runbook worker group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hybridRunbookWorkerGroupName(Output<String> hybridRunbookWorkerGroupName) {
+            $.hybridRunbookWorkerGroupName = hybridRunbookWorkerGroupName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder hybridRunbookWorkerGroupName(String hybridRunbookWorkerGroupName) {
-            $.hybridRunbookWorkerGroupName = hybridRunbookWorkerGroupName;
+            return hybridRunbookWorkerGroupName(Output.of(hybridRunbookWorkerGroupName));
+        }
+
+        /**
+         * @param hybridRunbookWorkerId The hybrid runbook worker id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hybridRunbookWorkerId(Output<String> hybridRunbookWorkerId) {
+            $.hybridRunbookWorkerId = hybridRunbookWorkerId;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder hybridRunbookWorkerId(String hybridRunbookWorkerId) {
-            $.hybridRunbookWorkerId = hybridRunbookWorkerId;
+            return hybridRunbookWorkerId(Output.of(hybridRunbookWorkerId));
+        }
+
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetHybridRunbookWorkerArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetHybridRunbookWorkerArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.baremetalsolution_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetProvisioningConfigArgs extends com.pulumi.resources.Invoke
     public static final GetProvisioningConfigArgs Empty = new GetProvisioningConfigArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="provisioningConfigId", required=true)
-    private String provisioningConfigId;
+    private Output<String> provisioningConfigId;
 
-    public String provisioningConfigId() {
+    public Output<String> provisioningConfigId() {
         return this.provisioningConfigId;
     }
 
@@ -61,19 +62,31 @@ public final class GetProvisioningConfigArgs extends com.pulumi.resources.Invoke
             $ = new GetProvisioningConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder provisioningConfigId(String provisioningConfigId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder provisioningConfigId(Output<String> provisioningConfigId) {
             $.provisioningConfigId = provisioningConfigId;
             return this;
+        }
+
+        public Builder provisioningConfigId(String provisioningConfigId) {
+            return provisioningConfigId(Output.of(provisioningConfigId));
         }
 
         public GetProvisioningConfigArgs build() {

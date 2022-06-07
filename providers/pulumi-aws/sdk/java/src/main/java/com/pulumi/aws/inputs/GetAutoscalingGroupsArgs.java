@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.inputs;
 
-import com.pulumi.aws.inputs.GetAutoscalingGroupsFilter;
+import com.pulumi.aws.inputs.GetAutoscalingGroupsFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
@@ -20,13 +21,13 @@ public final class GetAutoscalingGroupsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetAutoscalingGroupsFilter> filters;
+    private @Nullable Output<List<GetAutoscalingGroupsFilterArgs>> filters;
 
     /**
      * @return A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
      * 
      */
-    public Optional<List<GetAutoscalingGroupsFilter>> filters() {
+    public Optional<Output<List<GetAutoscalingGroupsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -60,7 +61,7 @@ public final class GetAutoscalingGroupsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetAutoscalingGroupsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetAutoscalingGroupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -71,7 +72,17 @@ public final class GetAutoscalingGroupsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder filters(GetAutoscalingGroupsFilter... filters) {
+        public Builder filters(List<GetAutoscalingGroupsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetAutoscalingGroupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

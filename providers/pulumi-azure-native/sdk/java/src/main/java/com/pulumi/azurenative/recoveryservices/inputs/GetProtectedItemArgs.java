@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.recoveryservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containerName", required=true)
-    private String containerName;
+    private Output<String> containerName;
 
     /**
      * @return Container name associated with the backed up item.
      * 
      */
-    public String containerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -34,13 +35,13 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fabricName", required=true)
-    private String fabricName;
+    private Output<String> fabricName;
 
     /**
      * @return Fabric name associated with the backed up item.
      * 
      */
-    public String fabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -49,13 +50,13 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filter")
-    private @Nullable String filter;
+    private @Nullable Output<String> filter;
 
     /**
      * @return OData filter options.
      * 
      */
-    public Optional<String> filter() {
+    public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
 
@@ -64,13 +65,13 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="protectedItemName", required=true)
-    private String protectedItemName;
+    private Output<String> protectedItemName;
 
     /**
      * @return Backed up item name whose details are to be fetched.
      * 
      */
-    public String protectedItemName() {
+    public Output<String> protectedItemName() {
         return this.protectedItemName;
     }
 
@@ -79,13 +80,13 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the recovery services vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -94,13 +95,13 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vaultName", required=true)
-    private String vaultName;
+    private Output<String> vaultName;
 
     /**
      * @return The name of the recovery services vault.
      * 
      */
-    public String vaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -139,8 +140,29 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder containerName(String containerName) {
+        public Builder containerName(Output<String> containerName) {
             $.containerName = containerName;
+            return this;
+        }
+
+        /**
+         * @param containerName Container name associated with the backed up item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
+        }
+
+        /**
+         * @param fabricName Fabric name associated with the backed up item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fabricName(Output<String> fabricName) {
+            $.fabricName = fabricName;
             return this;
         }
 
@@ -151,7 +173,17 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder fabricName(String fabricName) {
-            $.fabricName = fabricName;
+            return fabricName(Output.of(fabricName));
+        }
+
+        /**
+         * @param filter OData filter options.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filter(@Nullable Output<String> filter) {
+            $.filter = filter;
             return this;
         }
 
@@ -161,8 +193,18 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filter(@Nullable String filter) {
-            $.filter = filter;
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
+        }
+
+        /**
+         * @param protectedItemName Backed up item name whose details are to be fetched.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder protectedItemName(Output<String> protectedItemName) {
+            $.protectedItemName = protectedItemName;
             return this;
         }
 
@@ -173,7 +215,17 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder protectedItemName(String protectedItemName) {
-            $.protectedItemName = protectedItemName;
+            return protectedItemName(Output.of(protectedItemName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -184,7 +236,17 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vaultName(Output<String> vaultName) {
+            $.vaultName = vaultName;
             return this;
         }
 
@@ -195,8 +257,7 @@ public final class GetProtectedItemArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder vaultName(String vaultName) {
-            $.vaultName = vaultName;
-            return this;
+            return vaultName(Output.of(vaultName));
         }
 
         public GetProtectedItemArgs build() {

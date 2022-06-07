@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.cloudfront.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFunctionArgs Empty = new GetFunctionArgs();
 
     @Import(name="functionARN", required=true)
-    private String functionARN;
+    private Output<String> functionARN;
 
-    public String functionARN() {
+    public Output<String> functionARN() {
         return this.functionARN;
     }
 
@@ -43,9 +44,13 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFunctionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder functionARN(String functionARN) {
+        public Builder functionARN(Output<String> functionARN) {
             $.functionARN = functionARN;
             return this;
+        }
+
+        public Builder functionARN(String functionARN) {
+            return functionARN(Output.of(functionARN));
         }
 
         public GetFunctionArgs build() {

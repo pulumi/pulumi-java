@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.connect.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
     /**
      * @return Reference to the hosting Amazon Connect Instance
      * 
      */
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -35,13 +36,13 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Returns information on a specific Quick Connect by name
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -50,13 +51,13 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quickConnectId")
-    private @Nullable String quickConnectId;
+    private @Nullable Output<String> quickConnectId;
 
     /**
      * @return Returns information on a specific Quick Connect by Quick Connect id
      * 
      */
-    public Optional<String> quickConnectId() {
+    public Optional<Output<String>> quickConnectId() {
         return Optional.ofNullable(this.quickConnectId);
     }
 
@@ -65,13 +66,13 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags to assign to the Quick Connect.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -108,8 +109,29 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceId(String instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * @param instanceId Reference to the hosting Amazon Connect Instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        /**
+         * @param name Returns information on a specific Quick Connect by name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -119,8 +141,18 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param quickConnectId Returns information on a specific Quick Connect by Quick Connect id
+         * 
+         * @return builder
+         * 
+         */
+        public Builder quickConnectId(@Nullable Output<String> quickConnectId) {
+            $.quickConnectId = quickConnectId;
             return this;
         }
 
@@ -130,8 +162,18 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder quickConnectId(@Nullable String quickConnectId) {
-            $.quickConnectId = quickConnectId;
+        public Builder quickConnectId(String quickConnectId) {
+            return quickConnectId(Output.of(quickConnectId));
+        }
+
+        /**
+         * @param tags A map of tags to assign to the Quick Connect.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -141,9 +183,8 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetQuickConnectArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.keyvault.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="algorithm", required=true)
-    private String algorithm;
+    private Output<String> algorithm;
 
     /**
      * @return The Algorithm which should be used to Decrypt/Encrypt this Value. Possible values are `RSA1_5`, `RSA-OAEP` and `RSA-OAEP-256`.
      * 
      */
-    public String algorithm() {
+    public Output<String> algorithm() {
         return this.algorithm;
     }
 
@@ -34,13 +35,13 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="encryptedData")
-    private @Nullable String encryptedData;
+    private @Nullable Output<String> encryptedData;
 
     /**
      * @return The Base64 URL Encoded Encrypted Data which should be decrypted into `plain_text_value`.
      * 
      */
-    public Optional<String> encryptedData() {
+    public Optional<Output<String>> encryptedData() {
         return Optional.ofNullable(this.encryptedData);
     }
 
@@ -49,13 +50,13 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="keyVaultKeyId", required=true)
-    private String keyVaultKeyId;
+    private Output<String> keyVaultKeyId;
 
     /**
      * @return The ID of the Key Vault Key which should be used to Decrypt/Encrypt this Value.
      * 
      */
-    public String keyVaultKeyId() {
+    public Output<String> keyVaultKeyId() {
         return this.keyVaultKeyId;
     }
 
@@ -64,13 +65,13 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="plainTextValue")
-    private @Nullable String plainTextValue;
+    private @Nullable Output<String> plainTextValue;
 
     /**
      * @return The plain-text value which should be Encrypted into `encrypted_data`.
      * 
      */
-    public Optional<String> plainTextValue() {
+    public Optional<Output<String>> plainTextValue() {
         return Optional.ofNullable(this.plainTextValue);
     }
 
@@ -107,8 +108,29 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder algorithm(String algorithm) {
+        public Builder algorithm(Output<String> algorithm) {
             $.algorithm = algorithm;
+            return this;
+        }
+
+        /**
+         * @param algorithm The Algorithm which should be used to Decrypt/Encrypt this Value. Possible values are `RSA1_5`, `RSA-OAEP` and `RSA-OAEP-256`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder algorithm(String algorithm) {
+            return algorithm(Output.of(algorithm));
+        }
+
+        /**
+         * @param encryptedData The Base64 URL Encoded Encrypted Data which should be decrypted into `plain_text_value`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encryptedData(@Nullable Output<String> encryptedData) {
+            $.encryptedData = encryptedData;
             return this;
         }
 
@@ -118,8 +140,18 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder encryptedData(@Nullable String encryptedData) {
-            $.encryptedData = encryptedData;
+        public Builder encryptedData(String encryptedData) {
+            return encryptedData(Output.of(encryptedData));
+        }
+
+        /**
+         * @param keyVaultKeyId The ID of the Key Vault Key which should be used to Decrypt/Encrypt this Value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyVaultKeyId(Output<String> keyVaultKeyId) {
+            $.keyVaultKeyId = keyVaultKeyId;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder keyVaultKeyId(String keyVaultKeyId) {
-            $.keyVaultKeyId = keyVaultKeyId;
+            return keyVaultKeyId(Output.of(keyVaultKeyId));
+        }
+
+        /**
+         * @param plainTextValue The plain-text value which should be Encrypted into `encrypted_data`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder plainTextValue(@Nullable Output<String> plainTextValue) {
+            $.plainTextValue = plainTextValue;
             return this;
         }
 
@@ -140,9 +182,8 @@ public final class GetEncryptedValueArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder plainTextValue(@Nullable String plainTextValue) {
-            $.plainTextValue = plainTextValue;
-            return this;
+        public Builder plainTextValue(String plainTextValue) {
+            return plainTextValue(Output.of(plainTextValue));
         }
 
         public GetEncryptedValueArgs build() {

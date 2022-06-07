@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.mssql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the MS SQL Database.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverId", required=true)
-    private String serverId;
+    private Output<String> serverId;
 
     /**
      * @return The id of the MS SQL Server on which to create the database.
      * 
      */
-    public String serverId() {
+    public Output<String> serverId() {
         return this.serverId;
     }
 
@@ -73,8 +74,29 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the MS SQL Database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param serverId The id of the MS SQL Server on which to create the database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverId(Output<String> serverId) {
+            $.serverId = serverId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serverId(String serverId) {
-            $.serverId = serverId;
-            return this;
+            return serverId(Output.of(serverId));
         }
 
         public GetDatabaseArgs build() {

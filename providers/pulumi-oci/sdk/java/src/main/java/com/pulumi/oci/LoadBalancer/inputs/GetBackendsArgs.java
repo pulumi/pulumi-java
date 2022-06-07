@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.LoadBalancer.inputs.GetBackendsFilter;
+import com.pulumi.oci.LoadBalancer.inputs.GetBackendsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetBackendsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backendsetName", required=true)
-    private String backendsetName;
+    private Output<String> backendsetName;
 
     /**
      * @return The name of the backend set associated with the backend servers.  Example: `example_backend_set`
      * 
      */
-    public String backendsetName() {
+    public Output<String> backendsetName() {
         return this.backendsetName;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetBackendsFilter> filters;
+    private @Nullable Output<List<GetBackendsFilterArgs>> filters;
 
-    public Optional<List<GetBackendsFilter>> filters() {
+    public Optional<Output<List<GetBackendsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetBackendsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancerId", required=true)
-    private String loadBalancerId;
+    private Output<String> loadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the backend set and servers.
      * 
      */
-    public String loadBalancerId() {
+    public Output<String> loadBalancerId() {
         return this.loadBalancerId;
     }
 
@@ -85,17 +86,31 @@ public final class GetBackendsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder backendsetName(String backendsetName) {
+        public Builder backendsetName(Output<String> backendsetName) {
             $.backendsetName = backendsetName;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetBackendsFilter> filters) {
+        /**
+         * @param backendsetName The name of the backend set associated with the backend servers.  Example: `example_backend_set`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backendsetName(String backendsetName) {
+            return backendsetName(Output.of(backendsetName));
+        }
+
+        public Builder filters(@Nullable Output<List<GetBackendsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetBackendsFilter... filters) {
+        public Builder filters(List<GetBackendsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetBackendsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -105,9 +120,19 @@ public final class GetBackendsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder loadBalancerId(String loadBalancerId) {
+        public Builder loadBalancerId(Output<String> loadBalancerId) {
             $.loadBalancerId = loadBalancerId;
             return this;
+        }
+
+        /**
+         * @param loadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the backend set and servers.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerId(String loadBalancerId) {
+            return loadBalancerId(Output.of(loadBalancerId));
         }
 
         public GetBackendsArgs build() {

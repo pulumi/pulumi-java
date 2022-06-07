@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetKeyPairFilter;
+import com.pulumi.aws.ec2.inputs.GetKeyPairFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetKeyPairFilter> filters;
+    private @Nullable Output<List<GetKeyPairFilterArgs>> filters;
 
     /**
      * @return Custom filter block as described below.
      * 
      */
-    public Optional<List<GetKeyPairFilter>> filters() {
+    public Optional<Output<List<GetKeyPairFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -37,13 +38,13 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyName")
-    private @Nullable String keyName;
+    private @Nullable Output<String> keyName;
 
     /**
      * @return The Key Pair name.
      * 
      */
-    public Optional<String> keyName() {
+    public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
 
@@ -52,13 +53,13 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyPairId")
-    private @Nullable String keyPairId;
+    private @Nullable Output<String> keyPairId;
 
     /**
      * @return The Key Pair ID.
      * 
      */
-    public Optional<String> keyPairId() {
+    public Optional<Output<String>> keyPairId() {
         return Optional.ofNullable(this.keyPairId);
     }
 
@@ -67,13 +68,13 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Any tags assigned to the Key Pair.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -110,7 +111,7 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetKeyPairFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetKeyPairFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -121,7 +122,17 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetKeyPairFilter... filters) {
+        public Builder filters(List<GetKeyPairFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetKeyPairFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -131,8 +142,29 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
+            return this;
+        }
+
+        /**
+         * @param keyName The Key Pair name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
+        }
+
+        /**
+         * @param keyPairId The Key Pair ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyPairId(@Nullable Output<String> keyPairId) {
+            $.keyPairId = keyPairId;
             return this;
         }
 
@@ -142,8 +174,18 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyPairId(@Nullable String keyPairId) {
-            $.keyPairId = keyPairId;
+        public Builder keyPairId(String keyPairId) {
+            return keyPairId(Output.of(keyPairId));
+        }
+
+        /**
+         * @param tags Any tags assigned to the Key Pair.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -153,9 +195,8 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetKeyPairArgs build() {

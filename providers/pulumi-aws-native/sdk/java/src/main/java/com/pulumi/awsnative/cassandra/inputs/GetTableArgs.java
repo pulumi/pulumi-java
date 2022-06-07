@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.cassandra.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyspaceName", required=true)
-    private String keyspaceName;
+    private Output<String> keyspaceName;
 
     /**
      * @return Name for Cassandra keyspace
      * 
      */
-    public String keyspaceName() {
+    public Output<String> keyspaceName() {
         return this.keyspaceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableName", required=true)
-    private String tableName;
+    private Output<String> tableName;
 
     /**
      * @return Name for Cassandra table
      * 
      */
-    public String tableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -73,8 +74,29 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder keyspaceName(String keyspaceName) {
+        public Builder keyspaceName(Output<String> keyspaceName) {
             $.keyspaceName = keyspaceName;
+            return this;
+        }
+
+        /**
+         * @param keyspaceName Name for Cassandra keyspace
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyspaceName(String keyspaceName) {
+            return keyspaceName(Output.of(keyspaceName));
+        }
+
+        /**
+         * @param tableName Name for Cassandra table
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tableName(Output<String> tableName) {
+            $.tableName = tableName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder tableName(String tableName) {
-            $.tableName = tableName;
-            return this;
+            return tableName(Output.of(tableName));
         }
 
         public GetTableArgs build() {

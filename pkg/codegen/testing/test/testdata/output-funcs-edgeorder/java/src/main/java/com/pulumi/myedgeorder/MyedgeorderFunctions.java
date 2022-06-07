@@ -3,12 +3,15 @@
 
 package com.pulumi.myedgeorder;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.myedgeorder.Utilities;
 import com.pulumi.myedgeorder.inputs.ListConfigurationsArgs;
+import com.pulumi.myedgeorder.inputs.ListConfigurationsPlainArgs;
 import com.pulumi.myedgeorder.inputs.ListProductFamiliesArgs;
+import com.pulumi.myedgeorder.inputs.ListProductFamiliesPlainArgs;
 import com.pulumi.myedgeorder.outputs.ListConfigurationsResult;
 import com.pulumi.myedgeorder.outputs.ListProductFamiliesResult;
 import java.util.concurrent.CompletableFuture;
@@ -19,7 +22,7 @@ public final class MyedgeorderFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args) {
+    public static Output<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args) {
         return listConfigurations(args, InvokeOptions.Empty);
     }
     /**
@@ -27,7 +30,23 @@ public final class MyedgeorderFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListConfigurationsResult> listConfigurationsPlain(ListConfigurationsPlainArgs args) {
+        return listConfigurationsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The list of configurations.
+     * API Version: 2020-12-01-preview.
+     * 
+     */
+    public static Output<ListConfigurationsResult> listConfigurations(ListConfigurationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The list of configurations.
+     * API Version: 2020-12-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListConfigurationsResult> listConfigurationsPlain(ListConfigurationsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("myedgeorder::listConfigurations", TypeShape.of(ListConfigurationsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -35,7 +54,7 @@ public final class MyedgeorderFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args) {
+    public static Output<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args) {
         return listProductFamilies(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +62,23 @@ public final class MyedgeorderFunctions {
      * API Version: 2020-12-01-preview.
      * 
      */
-    public static CompletableFuture<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListProductFamiliesResult> listProductFamiliesPlain(ListProductFamiliesPlainArgs args) {
+        return listProductFamiliesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The list of product families.
+     * API Version: 2020-12-01-preview.
+     * 
+     */
+    public static Output<ListProductFamiliesResult> listProductFamilies(ListProductFamiliesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The list of product families.
+     * API Version: 2020-12-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListProductFamiliesResult> listProductFamiliesPlain(ListProductFamiliesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("myedgeorder::listProductFamilies", TypeShape.of(ListProductFamiliesResult.class), args, Utilities.withVersion(options));
     }
 }

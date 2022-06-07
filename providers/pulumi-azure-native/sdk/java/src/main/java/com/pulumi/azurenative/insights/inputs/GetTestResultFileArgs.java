@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,13 +22,13 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="continuationToken")
-    private @Nullable String continuationToken;
+    private @Nullable Output<String> continuationToken;
 
     /**
      * @return The continuation token.
      * 
      */
-    public Optional<String> continuationToken() {
+    public Optional<Output<String>> continuationToken() {
         return Optional.ofNullable(this.continuationToken);
     }
 
@@ -36,13 +37,13 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="downloadAs", required=true)
-    private String downloadAs;
+    private Output<String> downloadAs;
 
     /**
      * @return The format to use when returning the webtest result.
      * 
      */
-    public String downloadAs() {
+    public Output<String> downloadAs() {
         return this.downloadAs;
     }
 
@@ -51,13 +52,13 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="geoLocationId", required=true)
-    private String geoLocationId;
+    private Output<String> geoLocationId;
 
     /**
      * @return The location ID where the webtest was physically run.
      * 
      */
-    public String geoLocationId() {
+    public Output<String> geoLocationId() {
         return this.geoLocationId;
     }
 
@@ -66,13 +67,13 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,13 +82,13 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="testSuccessfulCriteria")
-    private @Nullable Boolean testSuccessfulCriteria;
+    private @Nullable Output<Boolean> testSuccessfulCriteria;
 
     /**
      * @return The success state criteria for the webtest result.
      * 
      */
-    public Optional<Boolean> testSuccessfulCriteria() {
+    public Optional<Output<Boolean>> testSuccessfulCriteria() {
         return Optional.ofNullable(this.testSuccessfulCriteria);
     }
 
@@ -96,13 +97,13 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeStamp", required=true)
-    private Integer timeStamp;
+    private Output<Integer> timeStamp;
 
     /**
      * @return The posix (epoch) time stamp for the webtest result.
      * 
      */
-    public Integer timeStamp() {
+    public Output<Integer> timeStamp() {
         return this.timeStamp;
     }
 
@@ -111,13 +112,13 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="webTestName", required=true)
-    private String webTestName;
+    private Output<String> webTestName;
 
     /**
      * @return The name of the Application Insights webtest resource.
      * 
      */
-    public String webTestName() {
+    public Output<String> webTestName() {
         return this.webTestName;
     }
 
@@ -157,8 +158,29 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder continuationToken(@Nullable String continuationToken) {
+        public Builder continuationToken(@Nullable Output<String> continuationToken) {
             $.continuationToken = continuationToken;
+            return this;
+        }
+
+        /**
+         * @param continuationToken The continuation token.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder continuationToken(String continuationToken) {
+            return continuationToken(Output.of(continuationToken));
+        }
+
+        /**
+         * @param downloadAs The format to use when returning the webtest result.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder downloadAs(Output<String> downloadAs) {
+            $.downloadAs = downloadAs;
             return this;
         }
 
@@ -169,7 +191,17 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder downloadAs(String downloadAs) {
-            $.downloadAs = downloadAs;
+            return downloadAs(Output.of(downloadAs));
+        }
+
+        /**
+         * @param geoLocationId The location ID where the webtest was physically run.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder geoLocationId(Output<String> geoLocationId) {
+            $.geoLocationId = geoLocationId;
             return this;
         }
 
@@ -180,7 +212,17 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder geoLocationId(String geoLocationId) {
-            $.geoLocationId = geoLocationId;
+            return geoLocationId(Output.of(geoLocationId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -191,7 +233,17 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param testSuccessfulCriteria The success state criteria for the webtest result.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder testSuccessfulCriteria(@Nullable Output<Boolean> testSuccessfulCriteria) {
+            $.testSuccessfulCriteria = testSuccessfulCriteria;
             return this;
         }
 
@@ -201,8 +253,18 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder testSuccessfulCriteria(@Nullable Boolean testSuccessfulCriteria) {
-            $.testSuccessfulCriteria = testSuccessfulCriteria;
+        public Builder testSuccessfulCriteria(Boolean testSuccessfulCriteria) {
+            return testSuccessfulCriteria(Output.of(testSuccessfulCriteria));
+        }
+
+        /**
+         * @param timeStamp The posix (epoch) time stamp for the webtest result.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeStamp(Output<Integer> timeStamp) {
+            $.timeStamp = timeStamp;
             return this;
         }
 
@@ -213,7 +275,17 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder timeStamp(Integer timeStamp) {
-            $.timeStamp = timeStamp;
+            return timeStamp(Output.of(timeStamp));
+        }
+
+        /**
+         * @param webTestName The name of the Application Insights webtest resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder webTestName(Output<String> webTestName) {
+            $.webTestName = webTestName;
             return this;
         }
 
@@ -224,8 +296,7 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder webTestName(String webTestName) {
-            $.webTestName = webTestName;
-            return this;
+            return webTestName(Output.of(webTestName));
         }
 
         public GetTestResultFileArgs build() {

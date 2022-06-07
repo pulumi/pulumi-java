@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.rds.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,20 +21,20 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterIdentifier", required=true)
-    private String clusterIdentifier;
+    private Output<String> clusterIdentifier;
 
     /**
      * @return The cluster identifier of the RDS cluster.
      * 
      */
-    public String clusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -68,14 +69,28 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterIdentifier(String clusterIdentifier) {
+        public Builder clusterIdentifier(Output<String> clusterIdentifier) {
             $.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
-        public Builder tags(@Nullable Map<String,String> tags) {
+        /**
+         * @param clusterIdentifier The cluster identifier of the RDS cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterIdentifier(String clusterIdentifier) {
+            return clusterIdentifier(Output.of(clusterIdentifier));
+        }
+
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
+        }
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetClusterArgs build() {

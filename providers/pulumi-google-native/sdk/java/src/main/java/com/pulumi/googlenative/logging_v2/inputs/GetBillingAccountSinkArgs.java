@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.logging_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetBillingAccountSinkArgs extends com.pulumi.resources.Invoke
     public static final GetBillingAccountSinkArgs Empty = new GetBillingAccountSinkArgs();
 
     @Import(name="billingAccountId", required=true)
-    private String billingAccountId;
+    private Output<String> billingAccountId;
 
-    public String billingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="sinkId", required=true)
-    private String sinkId;
+    private Output<String> sinkId;
 
-    public String sinkId() {
+    public Output<String> sinkId() {
         return this.sinkId;
     }
 
@@ -51,14 +52,22 @@ public final class GetBillingAccountSinkArgs extends com.pulumi.resources.Invoke
             $ = new GetBillingAccountSinkArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder billingAccountId(String billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             $.billingAccountId = billingAccountId;
             return this;
         }
 
-        public Builder sinkId(String sinkId) {
+        public Builder billingAccountId(String billingAccountId) {
+            return billingAccountId(Output.of(billingAccountId));
+        }
+
+        public Builder sinkId(Output<String> sinkId) {
             $.sinkId = sinkId;
             return this;
+        }
+
+        public Builder sinkId(String sinkId) {
+            return sinkId(Output.of(sinkId));
         }
 
         public GetBillingAccountSinkArgs build() {

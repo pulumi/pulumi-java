@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudresourcemanager_v2beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetFolderIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetFolderIamPolicyArgs Empty = new GetFolderIamPolicyArgs();
 
     @Import(name="folderId", required=true)
-    private String folderId;
+    private Output<String> folderId;
 
-    public String folderId() {
+    public Output<String> folderId() {
         return this.folderId;
     }
 
@@ -43,9 +44,13 @@ public final class GetFolderIamPolicyArgs extends com.pulumi.resources.InvokeArg
             $ = new GetFolderIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder folderId(String folderId) {
+        public Builder folderId(Output<String> folderId) {
             $.folderId = folderId;
             return this;
+        }
+
+        public Builder folderId(String folderId) {
+            return folderId(Output.of(folderId));
         }
 
         public GetFolderIamPolicyArgs build() {

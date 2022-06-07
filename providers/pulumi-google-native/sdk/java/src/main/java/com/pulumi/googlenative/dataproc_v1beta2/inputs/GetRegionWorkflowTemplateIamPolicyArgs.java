@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetRegionWorkflowTemplateIamPolicyArgs extends com.pulumi.res
     public static final GetRegionWorkflowTemplateIamPolicyArgs Empty = new GetRegionWorkflowTemplateIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="regionId", required=true)
-    private String regionId;
+    private Output<String> regionId;
 
-    public String regionId() {
+    public Output<String> regionId() {
         return this.regionId;
     }
 
     @Import(name="workflowTemplateId", required=true)
-    private String workflowTemplateId;
+    private Output<String> workflowTemplateId;
 
-    public String workflowTemplateId() {
+    public Output<String> workflowTemplateId() {
         return this.workflowTemplateId;
     }
 
@@ -69,24 +70,40 @@ public final class GetRegionWorkflowTemplateIamPolicyArgs extends com.pulumi.res
             $ = new GetRegionWorkflowTemplateIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder regionId(String regionId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder regionId(Output<String> regionId) {
             $.regionId = regionId;
             return this;
         }
 
-        public Builder workflowTemplateId(String workflowTemplateId) {
+        public Builder regionId(String regionId) {
+            return regionId(Output.of(regionId));
+        }
+
+        public Builder workflowTemplateId(Output<String> workflowTemplateId) {
             $.workflowTemplateId = workflowTemplateId;
             return this;
+        }
+
+        public Builder workflowTemplateId(String workflowTemplateId) {
+            return workflowTemplateId(Output.of(workflowTemplateId));
         }
 
         public GetRegionWorkflowTemplateIamPolicyArgs build() {

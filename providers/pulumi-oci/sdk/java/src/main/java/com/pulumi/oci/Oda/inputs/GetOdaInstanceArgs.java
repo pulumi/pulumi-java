@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Oda.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOdaInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odaInstanceId", required=true)
-    private String odaInstanceId;
+    private Output<String> odaInstanceId;
 
     /**
      * @return Unique Digital Assistant instance identifier.
      * 
      */
-    public String odaInstanceId() {
+    public Output<String> odaInstanceId() {
         return this.odaInstanceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetOdaInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder odaInstanceId(String odaInstanceId) {
+        public Builder odaInstanceId(Output<String> odaInstanceId) {
             $.odaInstanceId = odaInstanceId;
             return this;
+        }
+
+        /**
+         * @param odaInstanceId Unique Digital Assistant instance identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder odaInstanceId(String odaInstanceId) {
+            return odaInstanceId(Output.of(odaInstanceId));
         }
 
         public GetOdaInstanceArgs build() {

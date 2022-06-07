@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Ons.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNotificationTopicArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="topicId", required=true)
-    private String topicId;
+    private Output<String> topicId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the topic to retrieve.
      * 
      */
-    public String topicId() {
+    public Output<String> topicId() {
         return this.topicId;
     }
 
@@ -57,9 +58,19 @@ public final class GetNotificationTopicArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder topicId(String topicId) {
+        public Builder topicId(Output<String> topicId) {
             $.topicId = topicId;
             return this;
+        }
+
+        /**
+         * @param topicId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the topic to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder topicId(String topicId) {
+            return topicId(Output.of(topicId));
         }
 
         public GetNotificationTopicArgs build() {

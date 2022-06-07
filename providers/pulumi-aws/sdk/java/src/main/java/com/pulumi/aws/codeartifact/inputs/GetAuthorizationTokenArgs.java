@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.codeartifact.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domain", required=true)
-    private String domain;
+    private Output<String> domain;
 
     /**
      * @return The name of the domain that is in scope for the generated authorization token.
      * 
      */
-    public String domain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -35,13 +36,13 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domainOwner")
-    private @Nullable String domainOwner;
+    private @Nullable Output<String> domainOwner;
 
     /**
      * @return The account number of the AWS account that owns the domain.
      * 
      */
-    public Optional<String> domainOwner() {
+    public Optional<Output<String>> domainOwner() {
         return Optional.ofNullable(this.domainOwner);
     }
 
@@ -50,13 +51,13 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="durationSeconds")
-    private @Nullable Integer durationSeconds;
+    private @Nullable Output<Integer> durationSeconds;
 
     /**
      * @return The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
      * 
      */
-    public Optional<Integer> durationSeconds() {
+    public Optional<Output<Integer>> durationSeconds() {
         return Optional.ofNullable(this.durationSeconds);
     }
 
@@ -92,8 +93,29 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder domain(String domain) {
+        public Builder domain(Output<String> domain) {
             $.domain = domain;
+            return this;
+        }
+
+        /**
+         * @param domain The name of the domain that is in scope for the generated authorization token.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
+        }
+
+        /**
+         * @param domainOwner The account number of the AWS account that owns the domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainOwner(@Nullable Output<String> domainOwner) {
+            $.domainOwner = domainOwner;
             return this;
         }
 
@@ -103,8 +125,18 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder domainOwner(@Nullable String domainOwner) {
-            $.domainOwner = domainOwner;
+        public Builder domainOwner(String domainOwner) {
+            return domainOwner(Output.of(domainOwner));
+        }
+
+        /**
+         * @param durationSeconds The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder durationSeconds(@Nullable Output<Integer> durationSeconds) {
+            $.durationSeconds = durationSeconds;
             return this;
         }
 
@@ -114,9 +146,8 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            $.durationSeconds = durationSeconds;
-            return this;
+        public Builder durationSeconds(Integer durationSeconds) {
+            return durationSeconds(Output.of(durationSeconds));
         }
 
         public GetAuthorizationTokenArgs build() {

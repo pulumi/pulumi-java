@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOperationsInsightsWarehouseUserArgs extends com.pulumi.res
      * 
      */
     @Import(name="operationsInsightsWarehouseUserId", required=true)
-    private String operationsInsightsWarehouseUserId;
+    private Output<String> operationsInsightsWarehouseUserId;
 
     /**
      * @return Unique Operations Insights Warehouse User identifier
      * 
      */
-    public String operationsInsightsWarehouseUserId() {
+    public Output<String> operationsInsightsWarehouseUserId() {
         return this.operationsInsightsWarehouseUserId;
     }
 
@@ -57,9 +58,19 @@ public final class GetOperationsInsightsWarehouseUserArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder operationsInsightsWarehouseUserId(String operationsInsightsWarehouseUserId) {
+        public Builder operationsInsightsWarehouseUserId(Output<String> operationsInsightsWarehouseUserId) {
             $.operationsInsightsWarehouseUserId = operationsInsightsWarehouseUserId;
             return this;
+        }
+
+        /**
+         * @param operationsInsightsWarehouseUserId Unique Operations Insights Warehouse User identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationsInsightsWarehouseUserId(String operationsInsightsWarehouseUserId) {
+            return operationsInsightsWarehouseUserId(Output.of(operationsInsightsWarehouseUserId));
         }
 
         public GetOperationsInsightsWarehouseUserArgs build() {

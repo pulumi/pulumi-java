@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.containerinstance.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetContainerGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="containerGroupName", required=true)
-    private String containerGroupName;
+    private Output<String> containerGroupName;
 
     /**
      * @return The name of the container group.
      * 
      */
-    public String containerGroupName() {
+    public Output<String> containerGroupName() {
         return this.containerGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetContainerGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetContainerGroupArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder containerGroupName(String containerGroupName) {
+        public Builder containerGroupName(Output<String> containerGroupName) {
             $.containerGroupName = containerGroupName;
+            return this;
+        }
+
+        /**
+         * @param containerGroupName The name of the container group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerGroupName(String containerGroupName) {
+            return containerGroupName(Output.of(containerGroupName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetContainerGroupArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetContainerGroupArgs build() {

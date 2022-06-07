@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.alertsmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="alertRuleName", required=true)
-    private String alertRuleName;
+    private Output<String> alertRuleName;
 
     /**
      * @return The name of the alert rule.
      * 
      */
-    public String alertRuleName() {
+    public Output<String> alertRuleName() {
         return this.alertRuleName;
     }
 
@@ -35,13 +36,13 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="expandDetector")
-    private @Nullable Boolean expandDetector;
+    private @Nullable Output<Boolean> expandDetector;
 
     /**
      * @return Indicates if Smart Detector should be expanded.
      * 
      */
-    public Optional<Boolean> expandDetector() {
+    public Optional<Output<Boolean>> expandDetector() {
         return Optional.ofNullable(this.expandDetector);
     }
 
@@ -50,13 +51,13 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,8 +93,29 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder alertRuleName(String alertRuleName) {
+        public Builder alertRuleName(Output<String> alertRuleName) {
             $.alertRuleName = alertRuleName;
+            return this;
+        }
+
+        /**
+         * @param alertRuleName The name of the alert rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alertRuleName(String alertRuleName) {
+            return alertRuleName(Output.of(alertRuleName));
+        }
+
+        /**
+         * @param expandDetector Indicates if Smart Detector should be expanded.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expandDetector(@Nullable Output<Boolean> expandDetector) {
+            $.expandDetector = expandDetector;
             return this;
         }
 
@@ -103,8 +125,18 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder expandDetector(@Nullable Boolean expandDetector) {
-            $.expandDetector = expandDetector;
+        public Builder expandDetector(Boolean expandDetector) {
+            return expandDetector(Output.of(expandDetector));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -115,8 +147,7 @@ public final class GetSmartDetectorAlertRuleArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetSmartDetectorAlertRuleArgs build() {

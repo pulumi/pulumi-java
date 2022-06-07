@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetImageShapeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageId", required=true)
-    private String imageId;
+    private Output<String> imageId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the image.
      * 
      */
-    public String imageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
 
@@ -32,13 +33,13 @@ public final class GetImageShapeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shapeName", required=true)
-    private String shapeName;
+    private Output<String> shapeName;
 
     /**
      * @return Shape name.
      * 
      */
-    public String shapeName() {
+    public Output<String> shapeName() {
         return this.shapeName;
     }
 
@@ -73,8 +74,29 @@ public final class GetImageShapeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder imageId(String imageId) {
+        public Builder imageId(Output<String> imageId) {
             $.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * @param imageId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageId(String imageId) {
+            return imageId(Output.of(imageId));
+        }
+
+        /**
+         * @param shapeName Shape name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shapeName(Output<String> shapeName) {
+            $.shapeName = shapeName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetImageShapeArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder shapeName(String shapeName) {
-            $.shapeName = shapeName;
-            return this;
+            return shapeName(Output.of(shapeName));
         }
 
         public GetImageShapeArgs build() {

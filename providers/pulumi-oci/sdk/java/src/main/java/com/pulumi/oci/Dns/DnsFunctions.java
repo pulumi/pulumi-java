@@ -3,24 +3,40 @@
 
 package com.pulumi.oci.Dns;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Dns.inputs.GetRecordsArgs;
+import com.pulumi.oci.Dns.inputs.GetRecordsPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetResolverArgs;
 import com.pulumi.oci.Dns.inputs.GetResolverEndpointArgs;
+import com.pulumi.oci.Dns.inputs.GetResolverEndpointPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetResolverEndpointsArgs;
+import com.pulumi.oci.Dns.inputs.GetResolverEndpointsPlainArgs;
+import com.pulumi.oci.Dns.inputs.GetResolverPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetResolversArgs;
+import com.pulumi.oci.Dns.inputs.GetResolversPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetRrsetArgs;
+import com.pulumi.oci.Dns.inputs.GetRrsetPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetSteeringPoliciesArgs;
+import com.pulumi.oci.Dns.inputs.GetSteeringPoliciesPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetSteeringPolicyArgs;
 import com.pulumi.oci.Dns.inputs.GetSteeringPolicyAttachmentArgs;
+import com.pulumi.oci.Dns.inputs.GetSteeringPolicyAttachmentPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetSteeringPolicyAttachmentsArgs;
+import com.pulumi.oci.Dns.inputs.GetSteeringPolicyAttachmentsPlainArgs;
+import com.pulumi.oci.Dns.inputs.GetSteeringPolicyPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetTsigKeyArgs;
+import com.pulumi.oci.Dns.inputs.GetTsigKeyPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetTsigKeysArgs;
+import com.pulumi.oci.Dns.inputs.GetTsigKeysPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetViewArgs;
+import com.pulumi.oci.Dns.inputs.GetViewPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetViewsArgs;
+import com.pulumi.oci.Dns.inputs.GetViewsPlainArgs;
 import com.pulumi.oci.Dns.inputs.GetZonesArgs;
+import com.pulumi.oci.Dns.inputs.GetZonesPlainArgs;
 import com.pulumi.oci.Dns.outputs.GetRecordsResult;
 import com.pulumi.oci.Dns.outputs.GetResolverEndpointResult;
 import com.pulumi.oci.Dns.outputs.GetResolverEndpointsResult;
@@ -44,14 +60,28 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRecordsResult> getRecords(GetRecordsArgs args) {
+    public static Output<GetRecordsResult> getRecords(GetRecordsArgs args) {
         return getRecords(args, InvokeOptions.Empty);
     }
     /**
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRecordsResult> getRecords(GetRecordsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRecordsResult> getRecordsPlain(GetRecordsPlainArgs args) {
+        return getRecordsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetRecordsResult> getRecords(GetRecordsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getRecords:getRecords", TypeShape.of(GetRecordsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRecordsResult> getRecordsPlain(GetRecordsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getRecords:getRecords", TypeShape.of(GetRecordsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -64,7 +94,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverResult> getResolver(GetResolverArgs args) {
+    public static Output<GetResolverResult> getResolver(GetResolverArgs args) {
         return getResolver(args, InvokeOptions.Empty);
     }
     /**
@@ -77,7 +107,33 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverResult> getResolver(GetResolverArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResolverResult> getResolverPlain(GetResolverPlainArgs args) {
+        return getResolverPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Resolver resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about a specific resolver. Note that attempting to get a
+     * resolver in the DELETED lifecycleState will result in a `404` response to be
+     * consistent with other operations of the API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetResolverResult> getResolver(GetResolverArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getResolver:getResolver", TypeShape.of(GetResolverResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Resolver resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about a specific resolver. Note that attempting to get a
+     * resolver in the DELETED lifecycleState will result in a `404` response to be
+     * consistent with other operations of the API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetResolverResult> getResolverPlain(GetResolverPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getResolver:getResolver", TypeShape.of(GetResolverResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -90,7 +146,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args) {
+    public static Output<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args) {
         return getResolverEndpoint(args, InvokeOptions.Empty);
     }
     /**
@@ -103,7 +159,33 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpointPlain(GetResolverEndpointPlainArgs args) {
+        return getResolverEndpointPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Resolver Endpoint resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about a specific resolver endpoint. Note that attempting to get a resolver endpoint
+     * in the DELETED lifecycle state will result in a `404` response to be consistent with other operations of the
+     * API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetResolverEndpointResult> getResolverEndpoint(GetResolverEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getResolverEndpoint:getResolverEndpoint", TypeShape.of(GetResolverEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Resolver Endpoint resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about a specific resolver endpoint. Note that attempting to get a resolver endpoint
+     * in the DELETED lifecycle state will result in a `404` response to be consistent with other operations of the
+     * API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetResolverEndpointResult> getResolverEndpointPlain(GetResolverEndpointPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getResolverEndpoint:getResolverEndpoint", TypeShape.of(GetResolverEndpointResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -117,7 +199,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverEndpointsResult> getResolverEndpoints(GetResolverEndpointsArgs args) {
+    public static Output<GetResolverEndpointsResult> getResolverEndpoints(GetResolverEndpointsArgs args) {
         return getResolverEndpoints(args, InvokeOptions.Empty);
     }
     /**
@@ -131,7 +213,35 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolverEndpointsResult> getResolverEndpoints(GetResolverEndpointsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResolverEndpointsResult> getResolverEndpointsPlain(GetResolverEndpointsPlainArgs args) {
+        return getResolverEndpointsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Resolver Endpoints in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all endpoints within a resolver. The collection can be filtered by name or lifecycle state.
+     * It can be sorted on creation time or name both in ASC or DESC order. Note that when no lifecycleState
+     * query parameter is provided, the collection does not include resolver endpoints in the DELETED
+     * lifecycle state to be consistent with other operations of the API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetResolverEndpointsResult> getResolverEndpoints(GetResolverEndpointsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getResolverEndpoints:getResolverEndpoints", TypeShape.of(GetResolverEndpointsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Resolver Endpoints in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all endpoints within a resolver. The collection can be filtered by name or lifecycle state.
+     * It can be sorted on creation time or name both in ASC or DESC order. Note that when no lifecycleState
+     * query parameter is provided, the collection does not include resolver endpoints in the DELETED
+     * lifecycle state to be consistent with other operations of the API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetResolverEndpointsResult> getResolverEndpointsPlain(GetResolverEndpointsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getResolverEndpoints:getResolverEndpoints", TypeShape.of(GetResolverEndpointsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -147,7 +257,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolversResult> getResolvers(GetResolversArgs args) {
+    public static Output<GetResolversResult> getResolvers(GetResolversArgs args) {
         return getResolvers(args, InvokeOptions.Empty);
     }
     /**
@@ -163,7 +273,39 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetResolversResult> getResolvers(GetResolversArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetResolversResult> getResolversPlain(GetResolversPlainArgs args) {
+        return getResolversPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Resolvers in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all resolvers within a compartment. The collection can
+     * be filtered by display name, id, or lifecycle state. It can be sorted
+     * on creation time or displayName both in ASC or DESC order. Note that
+     * when no lifecycleState query parameter is provided, the collection
+     * does not include resolvers in the DELETED lifecycleState to be consistent
+     * with other operations of the API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetResolversResult> getResolvers(GetResolversArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getResolvers:getResolvers", TypeShape.of(GetResolversResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Resolvers in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all resolvers within a compartment. The collection can
+     * be filtered by display name, id, or lifecycle state. It can be sorted
+     * on creation time or displayName both in ASC or DESC order. Note that
+     * when no lifecycleState query parameter is provided, the collection
+     * does not include resolvers in the DELETED lifecycleState to be consistent
+     * with other operations of the API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetResolversResult> getResolversPlain(GetResolversPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getResolvers:getResolvers", TypeShape.of(GetResolversResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -177,7 +319,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRrsetResult> getRrset(GetRrsetArgs args) {
+    public static Output<GetRrsetResult> getRrset(GetRrsetArgs args) {
         return getRrset(args, InvokeOptions.Empty);
     }
     /**
@@ -191,7 +333,35 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetRrsetResult> getRrset(GetRrsetArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRrsetResult> getRrsetPlain(GetRrsetPlainArgs args) {
+        return getRrsetPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Rrset resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all records in the specified RRSet. The results are sorted by `recordHash` by default. For
+     * private zones, the scope query parameter is required with a value of `PRIVATE`. When the zone name is
+     * provided as a path parameter and `PRIVATE` is used for the scope query parameter then the viewId query
+     * parameter is required.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetRrsetResult> getRrset(GetRrsetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getRrset:getRrset", TypeShape.of(GetRrsetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Rrset resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all records in the specified RRSet. The results are sorted by `recordHash` by default. For
+     * private zones, the scope query parameter is required with a value of `PRIVATE`. When the zone name is
+     * provided as a path parameter and `PRIVATE` is used for the scope query parameter then the viewId query
+     * parameter is required.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRrsetResult> getRrsetPlain(GetRrsetPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getRrset:getRrset", TypeShape.of(GetRrsetResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -202,7 +372,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPoliciesResult> getSteeringPolicies(GetSteeringPoliciesArgs args) {
+    public static Output<GetSteeringPoliciesResult> getSteeringPolicies(GetSteeringPoliciesArgs args) {
         return getSteeringPolicies(args, InvokeOptions.Empty);
     }
     /**
@@ -213,7 +383,29 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPoliciesResult> getSteeringPolicies(GetSteeringPoliciesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSteeringPoliciesResult> getSteeringPoliciesPlain(GetSteeringPoliciesPlainArgs args) {
+        return getSteeringPoliciesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Steering Policies in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all steering policies in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSteeringPoliciesResult> getSteeringPolicies(GetSteeringPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getSteeringPolicies:getSteeringPolicies", TypeShape.of(GetSteeringPoliciesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Steering Policies in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all steering policies in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSteeringPoliciesResult> getSteeringPoliciesPlain(GetSteeringPoliciesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getSteeringPolicies:getSteeringPolicies", TypeShape.of(GetSteeringPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -224,7 +416,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyResult> getSteeringPolicy(GetSteeringPolicyArgs args) {
+    public static Output<GetSteeringPolicyResult> getSteeringPolicy(GetSteeringPolicyArgs args) {
         return getSteeringPolicy(args, InvokeOptions.Empty);
     }
     /**
@@ -235,7 +427,29 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyResult> getSteeringPolicy(GetSteeringPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSteeringPolicyResult> getSteeringPolicyPlain(GetSteeringPolicyPlainArgs args) {
+        return getSteeringPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Steering Policy resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about the specified steering policy.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSteeringPolicyResult> getSteeringPolicy(GetSteeringPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getSteeringPolicy:getSteeringPolicy", TypeShape.of(GetSteeringPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Steering Policy resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about the specified steering policy.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSteeringPolicyResult> getSteeringPolicyPlain(GetSteeringPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getSteeringPolicy:getSteeringPolicy", TypeShape.of(GetSteeringPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -246,7 +460,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyAttachmentResult> getSteeringPolicyAttachment(GetSteeringPolicyAttachmentArgs args) {
+    public static Output<GetSteeringPolicyAttachmentResult> getSteeringPolicyAttachment(GetSteeringPolicyAttachmentArgs args) {
         return getSteeringPolicyAttachment(args, InvokeOptions.Empty);
     }
     /**
@@ -257,7 +471,29 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyAttachmentResult> getSteeringPolicyAttachment(GetSteeringPolicyAttachmentArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSteeringPolicyAttachmentResult> getSteeringPolicyAttachmentPlain(GetSteeringPolicyAttachmentPlainArgs args) {
+        return getSteeringPolicyAttachmentPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Steering Policy Attachment resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about the specified steering policy attachment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSteeringPolicyAttachmentResult> getSteeringPolicyAttachment(GetSteeringPolicyAttachmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getSteeringPolicyAttachment:getSteeringPolicyAttachment", TypeShape.of(GetSteeringPolicyAttachmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Steering Policy Attachment resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about the specified steering policy attachment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSteeringPolicyAttachmentResult> getSteeringPolicyAttachmentPlain(GetSteeringPolicyAttachmentPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getSteeringPolicyAttachment:getSteeringPolicyAttachment", TypeShape.of(GetSteeringPolicyAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -268,7 +504,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyAttachmentsResult> getSteeringPolicyAttachments(GetSteeringPolicyAttachmentsArgs args) {
+    public static Output<GetSteeringPolicyAttachmentsResult> getSteeringPolicyAttachments(GetSteeringPolicyAttachmentsArgs args) {
         return getSteeringPolicyAttachments(args, InvokeOptions.Empty);
     }
     /**
@@ -279,7 +515,29 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetSteeringPolicyAttachmentsResult> getSteeringPolicyAttachments(GetSteeringPolicyAttachmentsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSteeringPolicyAttachmentsResult> getSteeringPolicyAttachmentsPlain(GetSteeringPolicyAttachmentsPlainArgs args) {
+        return getSteeringPolicyAttachmentsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Steering Policy Attachments in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Lists the steering policy attachments in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSteeringPolicyAttachmentsResult> getSteeringPolicyAttachments(GetSteeringPolicyAttachmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getSteeringPolicyAttachments:getSteeringPolicyAttachments", TypeShape.of(GetSteeringPolicyAttachmentsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Steering Policy Attachments in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Lists the steering policy attachments in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSteeringPolicyAttachmentsResult> getSteeringPolicyAttachmentsPlain(GetSteeringPolicyAttachmentsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getSteeringPolicyAttachments:getSteeringPolicyAttachments", TypeShape.of(GetSteeringPolicyAttachmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -290,7 +548,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTsigKeyResult> getTsigKey(GetTsigKeyArgs args) {
+    public static Output<GetTsigKeyResult> getTsigKey(GetTsigKeyArgs args) {
         return getTsigKey(args, InvokeOptions.Empty);
     }
     /**
@@ -301,7 +559,29 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTsigKeyResult> getTsigKey(GetTsigKeyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTsigKeyResult> getTsigKeyPlain(GetTsigKeyPlainArgs args) {
+        return getTsigKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Tsig Key resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about the specified TSIG key.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTsigKeyResult> getTsigKey(GetTsigKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getTsigKey:getTsigKey", TypeShape.of(GetTsigKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Tsig Key resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about the specified TSIG key.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTsigKeyResult> getTsigKeyPlain(GetTsigKeyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getTsigKey:getTsigKey", TypeShape.of(GetTsigKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -312,7 +592,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTsigKeysResult> getTsigKeys(GetTsigKeysArgs args) {
+    public static Output<GetTsigKeysResult> getTsigKeys(GetTsigKeysArgs args) {
         return getTsigKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -323,7 +603,29 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTsigKeysResult> getTsigKeys(GetTsigKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTsigKeysResult> getTsigKeysPlain(GetTsigKeysPlainArgs args) {
+        return getTsigKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Tsig Keys in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all TSIG keys in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTsigKeysResult> getTsigKeys(GetTsigKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getTsigKeys:getTsigKeys", TypeShape.of(GetTsigKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Tsig Keys in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all TSIG keys in the specified compartment.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTsigKeysResult> getTsigKeysPlain(GetTsigKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getTsigKeys:getTsigKeys", TypeShape.of(GetTsigKeysResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -336,7 +638,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetViewResult> getView(GetViewArgs args) {
+    public static Output<GetViewResult> getView(GetViewArgs args) {
         return getView(args, InvokeOptions.Empty);
     }
     /**
@@ -349,7 +651,33 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetViewResult> getView(GetViewArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetViewResult> getViewPlain(GetViewPlainArgs args) {
+        return getViewPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific View resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about a specific view. Note that attempting to get a
+     * view in the DELETED lifecycleState will result in a `404` response to be
+     * consistent with other operations of the API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetViewResult> getView(GetViewArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getView:getView", TypeShape.of(GetViewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific View resource in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets information about a specific view. Note that attempting to get a
+     * view in the DELETED lifecycleState will result in a `404` response to be
+     * consistent with other operations of the API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetViewResult> getViewPlain(GetViewPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getView:getView", TypeShape.of(GetViewResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -365,7 +693,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetViewsResult> getViews(GetViewsArgs args) {
+    public static Output<GetViewsResult> getViews(GetViewsArgs args) {
         return getViews(args, InvokeOptions.Empty);
     }
     /**
@@ -381,7 +709,39 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetViewsResult> getViews(GetViewsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetViewsResult> getViewsPlain(GetViewsPlainArgs args) {
+        return getViewsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Views in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all views within a compartment. The collection can
+     * be filtered by display name, id, or lifecycle state. It can be sorted
+     * on creation time or displayName both in ASC or DESC order. Note that
+     * when no lifecycleState query parameter is provided, the collection
+     * does not include views in the DELETED lifecycleState to be consistent
+     * with other operations of the API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetViewsResult> getViews(GetViewsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getViews:getViews", TypeShape.of(GetViewsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Views in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all views within a compartment. The collection can
+     * be filtered by display name, id, or lifecycle state. It can be sorted
+     * on creation time or displayName both in ASC or DESC order. Note that
+     * when no lifecycleState query parameter is provided, the collection
+     * does not include views in the DELETED lifecycleState to be consistent
+     * with other operations of the API. Requires a `PRIVATE` scope query parameter.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetViewsResult> getViewsPlain(GetViewsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getViews:getViews", TypeShape.of(GetViewsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -395,7 +755,7 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetZonesResult> getZones(GetZonesArgs args) {
+    public static Output<GetZonesResult> getZones(GetZonesArgs args) {
         return getZones(args, InvokeOptions.Empty);
     }
     /**
@@ -409,7 +769,35 @@ public final class DnsFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetZonesResult> getZones(GetZonesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetZonesResult> getZonesPlain(GetZonesPlainArgs args) {
+        return getZonesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Zones in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all zones in the specified compartment. The collection
+     * can be filtered by name, time created, scope, associated view, and zone type.
+     * Additionally, for Private DNS, the `scope` query parameter is required when
+     * listing private zones.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetZonesResult> getZones(GetZonesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Dns/getZones:getZones", TypeShape.of(GetZonesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Zones in Oracle Cloud Infrastructure DNS service.
+     * 
+     * Gets a list of all zones in the specified compartment. The collection
+     * can be filtered by name, time created, scope, associated view, and zone type.
+     * Additionally, for Private DNS, the `scope` query parameter is required when
+     * listing private zones.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetZonesResult> getZonesPlain(GetZonesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Dns/getZones:getZones", TypeShape.of(GetZonesResult.class), args, Utilities.withVersion(options));
     }
 }

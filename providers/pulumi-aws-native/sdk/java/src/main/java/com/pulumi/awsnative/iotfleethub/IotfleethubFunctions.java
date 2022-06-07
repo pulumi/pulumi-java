@@ -5,7 +5,9 @@ package com.pulumi.awsnative.iotfleethub;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.iotfleethub.inputs.GetApplicationArgs;
+import com.pulumi.awsnative.iotfleethub.inputs.GetApplicationPlainArgs;
 import com.pulumi.awsnative.iotfleethub.outputs.GetApplicationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class IotfleethubFunctions {
      * Resource schema for AWS::IoTFleetHub::Application
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::IoTFleetHub::Application
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args) {
+        return getApplicationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::IoTFleetHub::Application
+     * 
+     */
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:iotfleethub:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::IoTFleetHub::Application
+     * 
+     */
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotfleethub:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.networkmanager.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTransitGatewayRegistrationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="globalNetworkId", required=true)
-    private String globalNetworkId;
+    private Output<String> globalNetworkId;
 
     /**
      * @return The ID of the global network.
      * 
      */
-    public String globalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -32,13 +33,13 @@ public final class GetTransitGatewayRegistrationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="transitGatewayArn", required=true)
-    private String transitGatewayArn;
+    private Output<String> transitGatewayArn;
 
     /**
      * @return The Amazon Resource Name (ARN) of the transit gateway.
      * 
      */
-    public String transitGatewayArn() {
+    public Output<String> transitGatewayArn() {
         return this.transitGatewayArn;
     }
 
@@ -73,8 +74,29 @@ public final class GetTransitGatewayRegistrationArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder globalNetworkId(String globalNetworkId) {
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
+            return this;
+        }
+
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder globalNetworkId(String globalNetworkId) {
+            return globalNetworkId(Output.of(globalNetworkId));
+        }
+
+        /**
+         * @param transitGatewayArn The Amazon Resource Name (ARN) of the transit gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayArn(Output<String> transitGatewayArn) {
+            $.transitGatewayArn = transitGatewayArn;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetTransitGatewayRegistrationArgs extends com.pulumi.resource
          * 
          */
         public Builder transitGatewayArn(String transitGatewayArn) {
-            $.transitGatewayArn = transitGatewayArn;
-            return this;
+            return transitGatewayArn(Output.of(transitGatewayArn));
         }
 
         public GetTransitGatewayRegistrationArgs build() {

@@ -5,15 +5,25 @@ package com.pulumi.awsnative.lightsail;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.lightsail.inputs.GetAlarmArgs;
+import com.pulumi.awsnative.lightsail.inputs.GetAlarmPlainArgs;
 import com.pulumi.awsnative.lightsail.inputs.GetBucketArgs;
+import com.pulumi.awsnative.lightsail.inputs.GetBucketPlainArgs;
 import com.pulumi.awsnative.lightsail.inputs.GetCertificateArgs;
+import com.pulumi.awsnative.lightsail.inputs.GetCertificatePlainArgs;
 import com.pulumi.awsnative.lightsail.inputs.GetContainerArgs;
+import com.pulumi.awsnative.lightsail.inputs.GetContainerPlainArgs;
 import com.pulumi.awsnative.lightsail.inputs.GetDatabaseArgs;
+import com.pulumi.awsnative.lightsail.inputs.GetDatabasePlainArgs;
 import com.pulumi.awsnative.lightsail.inputs.GetDiskArgs;
+import com.pulumi.awsnative.lightsail.inputs.GetDiskPlainArgs;
 import com.pulumi.awsnative.lightsail.inputs.GetInstanceArgs;
+import com.pulumi.awsnative.lightsail.inputs.GetInstancePlainArgs;
 import com.pulumi.awsnative.lightsail.inputs.GetLoadBalancerArgs;
+import com.pulumi.awsnative.lightsail.inputs.GetLoadBalancerPlainArgs;
 import com.pulumi.awsnative.lightsail.inputs.GetLoadBalancerTlsCertificateArgs;
+import com.pulumi.awsnative.lightsail.inputs.GetLoadBalancerTlsCertificatePlainArgs;
 import com.pulumi.awsnative.lightsail.inputs.GetStaticIpArgs;
+import com.pulumi.awsnative.lightsail.inputs.GetStaticIpPlainArgs;
 import com.pulumi.awsnative.lightsail.outputs.GetAlarmResult;
 import com.pulumi.awsnative.lightsail.outputs.GetBucketResult;
 import com.pulumi.awsnative.lightsail.outputs.GetCertificateResult;
@@ -24,6 +34,7 @@ import com.pulumi.awsnative.lightsail.outputs.GetInstanceResult;
 import com.pulumi.awsnative.lightsail.outputs.GetLoadBalancerResult;
 import com.pulumi.awsnative.lightsail.outputs.GetLoadBalancerTlsCertificateResult;
 import com.pulumi.awsnative.lightsail.outputs.GetStaticIpResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -34,140 +45,280 @@ public final class LightsailFunctions {
      * Resource Type definition for AWS::Lightsail::Alarm
      * 
      */
-    public static CompletableFuture<GetAlarmResult> getAlarm(GetAlarmArgs args) {
+    public static Output<GetAlarmResult> getAlarm(GetAlarmArgs args) {
         return getAlarm(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Lightsail::Alarm
      * 
      */
-    public static CompletableFuture<GetAlarmResult> getAlarm(GetAlarmArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAlarmResult> getAlarmPlain(GetAlarmPlainArgs args) {
+        return getAlarmPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Alarm
+     * 
+     */
+    public static Output<GetAlarmResult> getAlarm(GetAlarmArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lightsail:getAlarm", TypeShape.of(GetAlarmResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Alarm
+     * 
+     */
+    public static CompletableFuture<GetAlarmResult> getAlarmPlain(GetAlarmPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getAlarm", TypeShape.of(GetAlarmResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lightsail::Bucket
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
+    public static Output<GetBucketResult> getBucket(GetBucketArgs args) {
         return getBucket(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Lightsail::Bucket
      * 
      */
-    public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBucketResult> getBucketPlain(GetBucketPlainArgs args) {
+        return getBucketPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Bucket
+     * 
+     */
+    public static Output<GetBucketResult> getBucket(GetBucketArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lightsail:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Bucket
+     * 
+     */
+    public static CompletableFuture<GetBucketResult> getBucketPlain(GetBucketPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args) {
         return getCertificate(args, InvokeOptions.Empty);
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args) {
+        return getCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
+    public static Output<GetCertificateResult> getCertificate(GetCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lightsail:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
+    public static CompletableFuture<GetCertificateResult> getCertificatePlain(GetCertificatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getCertificate", TypeShape.of(GetCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lightsail::Container
      * 
      */
-    public static CompletableFuture<GetContainerResult> getContainer(GetContainerArgs args) {
+    public static Output<GetContainerResult> getContainer(GetContainerArgs args) {
         return getContainer(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Lightsail::Container
      * 
      */
-    public static CompletableFuture<GetContainerResult> getContainer(GetContainerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetContainerResult> getContainerPlain(GetContainerPlainArgs args) {
+        return getContainerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Container
+     * 
+     */
+    public static Output<GetContainerResult> getContainer(GetContainerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lightsail:getContainer", TypeShape.of(GetContainerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Container
+     * 
+     */
+    public static CompletableFuture<GetContainerResult> getContainerPlain(GetContainerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getContainer", TypeShape.of(GetContainerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lightsail::Database
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Lightsail::Database
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseResult> getDatabasePlain(GetDatabasePlainArgs args) {
+        return getDatabasePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Database
+     * 
+     */
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lightsail:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Database
+     * 
+     */
+    public static CompletableFuture<GetDatabaseResult> getDatabasePlain(GetDatabasePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lightsail::Disk
      * 
      */
-    public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args) {
+    public static Output<GetDiskResult> getDisk(GetDiskArgs args) {
         return getDisk(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Lightsail::Disk
      * 
      */
-    public static CompletableFuture<GetDiskResult> getDisk(GetDiskArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDiskResult> getDiskPlain(GetDiskPlainArgs args) {
+        return getDiskPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Disk
+     * 
+     */
+    public static Output<GetDiskResult> getDisk(GetDiskArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lightsail:getDisk", TypeShape.of(GetDiskResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Disk
+     * 
+     */
+    public static CompletableFuture<GetDiskResult> getDiskPlain(GetDiskPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getDisk", TypeShape.of(GetDiskResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lightsail::Instance
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Lightsail::Instance
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args) {
+        return getInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Instance
+     * 
+     */
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lightsail:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Instance
+     * 
+     */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lightsail::LoadBalancer
      * 
      */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
+    public static Output<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args) {
         return getLoadBalancer(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Lightsail::LoadBalancer
      * 
      */
-    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancerPlain(GetLoadBalancerPlainArgs args) {
+        return getLoadBalancerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::LoadBalancer
+     * 
+     */
+    public static Output<GetLoadBalancerResult> getLoadBalancer(GetLoadBalancerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lightsail:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::LoadBalancer
+     * 
+     */
+    public static CompletableFuture<GetLoadBalancerResult> getLoadBalancerPlain(GetLoadBalancerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lightsail::LoadBalancerTlsCertificate
      * 
      */
-    public static CompletableFuture<GetLoadBalancerTlsCertificateResult> getLoadBalancerTlsCertificate(GetLoadBalancerTlsCertificateArgs args) {
+    public static Output<GetLoadBalancerTlsCertificateResult> getLoadBalancerTlsCertificate(GetLoadBalancerTlsCertificateArgs args) {
         return getLoadBalancerTlsCertificate(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Lightsail::LoadBalancerTlsCertificate
      * 
      */
-    public static CompletableFuture<GetLoadBalancerTlsCertificateResult> getLoadBalancerTlsCertificate(GetLoadBalancerTlsCertificateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetLoadBalancerTlsCertificateResult> getLoadBalancerTlsCertificatePlain(GetLoadBalancerTlsCertificatePlainArgs args) {
+        return getLoadBalancerTlsCertificatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::LoadBalancerTlsCertificate
+     * 
+     */
+    public static Output<GetLoadBalancerTlsCertificateResult> getLoadBalancerTlsCertificate(GetLoadBalancerTlsCertificateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lightsail:getLoadBalancerTlsCertificate", TypeShape.of(GetLoadBalancerTlsCertificateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::LoadBalancerTlsCertificate
+     * 
+     */
+    public static CompletableFuture<GetLoadBalancerTlsCertificateResult> getLoadBalancerTlsCertificatePlain(GetLoadBalancerTlsCertificatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getLoadBalancerTlsCertificate", TypeShape.of(GetLoadBalancerTlsCertificateResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::Lightsail::StaticIp
      * 
      */
-    public static CompletableFuture<GetStaticIpResult> getStaticIp(GetStaticIpArgs args) {
+    public static Output<GetStaticIpResult> getStaticIp(GetStaticIpArgs args) {
         return getStaticIp(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Lightsail::StaticIp
      * 
      */
-    public static CompletableFuture<GetStaticIpResult> getStaticIp(GetStaticIpArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStaticIpResult> getStaticIpPlain(GetStaticIpPlainArgs args) {
+        return getStaticIpPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::StaticIp
+     * 
+     */
+    public static Output<GetStaticIpResult> getStaticIp(GetStaticIpArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lightsail:getStaticIp", TypeShape.of(GetStaticIpResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::StaticIp
+     * 
+     */
+    public static CompletableFuture<GetStaticIpResult> getStaticIpPlain(GetStaticIpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getStaticIp", TypeShape.of(GetStaticIpResult.class), args, Utilities.withVersion(options));
     }
 }

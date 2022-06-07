@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.hanaonazure.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="providerInstanceName", required=true)
-    private String providerInstanceName;
+    private Output<String> providerInstanceName;
 
     /**
      * @return Name of the provider instance.
      * 
      */
-    public String providerInstanceName() {
+    public Output<String> providerInstanceName() {
         return this.providerInstanceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sapMonitorName", required=true)
-    private String sapMonitorName;
+    private Output<String> sapMonitorName;
 
     /**
      * @return Name of the SAP monitor resource.
      * 
      */
-    public String sapMonitorName() {
+    public Output<String> sapMonitorName() {
         return this.sapMonitorName;
     }
 
@@ -89,8 +90,29 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder providerInstanceName(String providerInstanceName) {
+        public Builder providerInstanceName(Output<String> providerInstanceName) {
             $.providerInstanceName = providerInstanceName;
+            return this;
+        }
+
+        /**
+         * @param providerInstanceName Name of the provider instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerInstanceName(String providerInstanceName) {
+            return providerInstanceName(Output.of(providerInstanceName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param sapMonitorName Name of the SAP monitor resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sapMonitorName(Output<String> sapMonitorName) {
+            $.sapMonitorName = sapMonitorName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetProviderInstanceArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder sapMonitorName(String sapMonitorName) {
-            $.sapMonitorName = sapMonitorName;
-            return this;
+            return sapMonitorName(Output.of(sapMonitorName));
         }
 
         public GetProviderInstanceArgs build() {

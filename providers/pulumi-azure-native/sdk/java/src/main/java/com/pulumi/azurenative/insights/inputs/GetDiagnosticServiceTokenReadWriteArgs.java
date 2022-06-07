@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDiagnosticServiceTokenReadWriteArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceUri", required=true)
-    private String resourceUri;
+    private Output<String> resourceUri;
 
     /**
      * @return The identifier of the resource.
      * 
      */
-    public String resourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -57,9 +58,19 @@ public final class GetDiagnosticServiceTokenReadWriteArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder resourceUri(String resourceUri) {
+        public Builder resourceUri(Output<String> resourceUri) {
             $.resourceUri = resourceUri;
             return this;
+        }
+
+        /**
+         * @param resourceUri The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceUri(String resourceUri) {
+            return resourceUri(Output.of(resourceUri));
         }
 
         public GetDiagnosticServiceTokenReadWriteArgs build() {

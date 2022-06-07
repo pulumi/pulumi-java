@@ -5,9 +5,12 @@ package com.pulumi.azure.backup;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.backup.inputs.GetPolicyFileshareArgs;
+import com.pulumi.azure.backup.inputs.GetPolicyFilesharePlainArgs;
 import com.pulumi.azure.backup.inputs.GetPolicyVMArgs;
+import com.pulumi.azure.backup.inputs.GetPolicyVMPlainArgs;
 import com.pulumi.azure.backup.outputs.GetPolicyFileshareResult;
 import com.pulumi.azure.backup.outputs.GetPolicyVMResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -43,7 +46,7 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyFileshareResult> getPolicyFileshare(GetPolicyFileshareArgs args) {
+    public static Output<GetPolicyFileshareResult> getPolicyFileshare(GetPolicyFileshareArgs args) {
         return getPolicyFileshare(args, InvokeOptions.Empty);
     }
     /**
@@ -75,7 +78,71 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyFileshareResult> getPolicyFileshare(GetPolicyFileshareArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyFileshareResult> getPolicyFilesharePlain(GetPolicyFilesharePlainArgs args) {
+        return getPolicyFilesharePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing File Share Backup Policy.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var policy = Output.of(BackupFunctions.getPolicyFileshare(GetPolicyFileshareArgs.builder()
+     *             .name(&#34;policy&#34;)
+     *             .recoveryVaultName(&#34;recovery_vault&#34;)
+     *             .resourceGroupName(&#34;resource_group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetPolicyFileshareResult> getPolicyFileshare(GetPolicyFileshareArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:backup/getPolicyFileshare:getPolicyFileshare", TypeShape.of(GetPolicyFileshareResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing File Share Backup Policy.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var policy = Output.of(BackupFunctions.getPolicyFileshare(GetPolicyFileshareArgs.builder()
+     *             .name(&#34;policy&#34;)
+     *             .recoveryVaultName(&#34;recovery_vault&#34;)
+     *             .resourceGroupName(&#34;resource_group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetPolicyFileshareResult> getPolicyFilesharePlain(GetPolicyFilesharePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:backup/getPolicyFileshare:getPolicyFileshare", TypeShape.of(GetPolicyFileshareResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -107,7 +174,7 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyVMResult> getPolicyVM(GetPolicyVMArgs args) {
+    public static Output<GetPolicyVMResult> getPolicyVM(GetPolicyVMArgs args) {
         return getPolicyVM(args, InvokeOptions.Empty);
     }
     /**
@@ -139,7 +206,71 @@ public final class BackupFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetPolicyVMResult> getPolicyVM(GetPolicyVMArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPolicyVMResult> getPolicyVMPlain(GetPolicyVMPlainArgs args) {
+        return getPolicyVMPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing VM Backup Policy.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var policy = Output.of(BackupFunctions.getPolicyVM(GetPolicyVMArgs.builder()
+     *             .name(&#34;policy&#34;)
+     *             .recoveryVaultName(&#34;recovery_vault&#34;)
+     *             .resourceGroupName(&#34;resource_group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetPolicyVMResult> getPolicyVM(GetPolicyVMArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:backup/getPolicyVM:getPolicyVM", TypeShape.of(GetPolicyVMResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing VM Backup Policy.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var policy = Output.of(BackupFunctions.getPolicyVM(GetPolicyVMArgs.builder()
+     *             .name(&#34;policy&#34;)
+     *             .recoveryVaultName(&#34;recovery_vault&#34;)
+     *             .resourceGroupName(&#34;resource_group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetPolicyVMResult> getPolicyVMPlain(GetPolicyVMPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:backup/getPolicyVM:getPolicyVM", TypeShape.of(GetPolicyVMResult.class), args, Utilities.withVersion(options));
     }
 }

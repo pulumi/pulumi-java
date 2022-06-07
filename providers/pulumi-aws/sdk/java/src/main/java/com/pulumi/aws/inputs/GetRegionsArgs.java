@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.inputs;
 
-import com.pulumi.aws.inputs.GetRegionsFilter;
+import com.pulumi.aws.inputs.GetRegionsFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
@@ -21,13 +22,13 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allRegions")
-    private @Nullable Boolean allRegions;
+    private @Nullable Output<Boolean> allRegions;
 
     /**
      * @return If true the source will query all regions regardless of availability.
      * 
      */
-    public Optional<Boolean> allRegions() {
+    public Optional<Output<Boolean>> allRegions() {
         return Optional.ofNullable(this.allRegions);
     }
 
@@ -36,13 +37,13 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetRegionsFilter> filters;
+    private @Nullable Output<List<GetRegionsFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) to use as filters. Detailed below.
      * 
      */
-    public Optional<List<GetRegionsFilter>> filters() {
+    public Optional<Output<List<GetRegionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -77,9 +78,19 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder allRegions(@Nullable Boolean allRegions) {
+        public Builder allRegions(@Nullable Output<Boolean> allRegions) {
             $.allRegions = allRegions;
             return this;
+        }
+
+        /**
+         * @param allRegions If true the source will query all regions regardless of availability.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder allRegions(Boolean allRegions) {
+            return allRegions(Output.of(allRegions));
         }
 
         /**
@@ -88,7 +99,7 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetRegionsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetRegionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -99,7 +110,17 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetRegionsFilter... filters) {
+        public Builder filters(List<GetRegionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Configuration block(s) to use as filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetRegionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

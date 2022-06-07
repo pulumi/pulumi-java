@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFastConnectProviderServiceKeyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="providerServiceId", required=true)
-    private String providerServiceId;
+    private Output<String> providerServiceId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the provider service.
      * 
      */
-    public String providerServiceId() {
+    public Output<String> providerServiceId() {
         return this.providerServiceId;
     }
 
@@ -32,13 +33,13 @@ public final class GetFastConnectProviderServiceKeyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="providerServiceKeyName", required=true)
-    private String providerServiceKeyName;
+    private Output<String> providerServiceKeyName;
 
     /**
      * @return The provider service key that the provider gives you when you set up a virtual circuit connection from the provider to Oracle Cloud Infrastructure. You can set up that connection and get your provider service key at the provider&#39;s website or portal. For the portal location, see the `description` attribute of the [FastConnectProviderService](https://docs.cloud.oracle.com/iaas/api/#/en/iaas/latest/FastConnectProviderService/).
      * 
      */
-    public String providerServiceKeyName() {
+    public Output<String> providerServiceKeyName() {
         return this.providerServiceKeyName;
     }
 
@@ -73,8 +74,29 @@ public final class GetFastConnectProviderServiceKeyArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder providerServiceId(String providerServiceId) {
+        public Builder providerServiceId(Output<String> providerServiceId) {
             $.providerServiceId = providerServiceId;
+            return this;
+        }
+
+        /**
+         * @param providerServiceId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the provider service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerServiceId(String providerServiceId) {
+            return providerServiceId(Output.of(providerServiceId));
+        }
+
+        /**
+         * @param providerServiceKeyName The provider service key that the provider gives you when you set up a virtual circuit connection from the provider to Oracle Cloud Infrastructure. You can set up that connection and get your provider service key at the provider&#39;s website or portal. For the portal location, see the `description` attribute of the [FastConnectProviderService](https://docs.cloud.oracle.com/iaas/api/#/en/iaas/latest/FastConnectProviderService/).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder providerServiceKeyName(Output<String> providerServiceKeyName) {
+            $.providerServiceKeyName = providerServiceKeyName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetFastConnectProviderServiceKeyArgs extends com.pulumi.resou
          * 
          */
         public Builder providerServiceKeyName(String providerServiceKeyName) {
-            $.providerServiceKeyName = providerServiceKeyName;
-            return this;
+            return providerServiceKeyName(Output.of(providerServiceKeyName));
         }
 
         public GetFastConnectProviderServiceKeyArgs build() {

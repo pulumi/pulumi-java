@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetAnnotationSpecSetArgs extends com.pulumi.resources.InvokeA
     public static final GetAnnotationSpecSetArgs Empty = new GetAnnotationSpecSetArgs();
 
     @Import(name="annotationSpecSetId", required=true)
-    private String annotationSpecSetId;
+    private Output<String> annotationSpecSetId;
 
-    public String annotationSpecSetId() {
+    public Output<String> annotationSpecSetId() {
         return this.annotationSpecSetId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetAnnotationSpecSetArgs extends com.pulumi.resources.InvokeA
             $ = new GetAnnotationSpecSetArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder annotationSpecSetId(String annotationSpecSetId) {
+        public Builder annotationSpecSetId(Output<String> annotationSpecSetId) {
             $.annotationSpecSetId = annotationSpecSetId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder annotationSpecSetId(String annotationSpecSetId) {
+            return annotationSpecSetId(Output.of(annotationSpecSetId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetAnnotationSpecSetArgs build() {

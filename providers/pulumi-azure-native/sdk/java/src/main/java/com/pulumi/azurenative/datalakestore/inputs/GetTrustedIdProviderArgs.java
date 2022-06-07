@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datalakestore.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTrustedIdProviderArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the Data Lake Store account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetTrustedIdProviderArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the Azure resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetTrustedIdProviderArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="trustedIdProviderName", required=true)
-    private String trustedIdProviderName;
+    private Output<String> trustedIdProviderName;
 
     /**
      * @return The name of the trusted identity provider to retrieve.
      * 
      */
-    public String trustedIdProviderName() {
+    public Output<String> trustedIdProviderName() {
         return this.trustedIdProviderName;
     }
 
@@ -89,8 +90,29 @@ public final class GetTrustedIdProviderArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the Data Lake Store account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetTrustedIdProviderArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param trustedIdProviderName The name of the trusted identity provider to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trustedIdProviderName(Output<String> trustedIdProviderName) {
+            $.trustedIdProviderName = trustedIdProviderName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetTrustedIdProviderArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder trustedIdProviderName(String trustedIdProviderName) {
-            $.trustedIdProviderName = trustedIdProviderName;
-            return this;
+            return trustedIdProviderName(Output.of(trustedIdProviderName));
         }
 
         public GetTrustedIdProviderArgs build() {

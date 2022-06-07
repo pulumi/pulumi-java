@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.OperatorAccessControl.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OperatorAccessControl.inputs.GetActionsFilter;
+import com.pulumi.oci.OperatorAccessControl.inputs.GetActionsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetActionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetActionsFilter> filters;
+    private @Nullable Output<List<GetActionsFilterArgs>> filters;
 
-    public Optional<List<GetActionsFilter>> filters() {
+    public Optional<Output<List<GetActionsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetActionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -58,13 +59,13 @@ public final class GetActionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceType")
-    private @Nullable String resourceType;
+    private @Nullable Output<String> resourceType;
 
     /**
      * @return A filter to return only lists of resources that match the entire given service type.
      * 
      */
-    public Optional<String> resourceType() {
+    public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
 
@@ -73,13 +74,13 @@ public final class GetActionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources whose lifecycleState matches the given OperatorAction lifecycleState.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,17 +118,31 @@ public final class GetActionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetActionsFilter> filters) {
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetActionsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetActionsFilter... filters) {
+        public Builder filters(List<GetActionsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetActionsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -137,8 +152,29 @@ public final class GetActionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceType A filter to return only lists of resources that match the entire given service type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceType(@Nullable Output<String> resourceType) {
+            $.resourceType = resourceType;
             return this;
         }
 
@@ -148,8 +184,18 @@ public final class GetActionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceType(@Nullable String resourceType) {
-            $.resourceType = resourceType;
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        /**
+         * @param state A filter to return only resources whose lifecycleState matches the given OperatorAction lifecycleState.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetActionsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetActionsArgs build() {

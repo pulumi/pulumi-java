@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDbSystemPatchesFilter;
+import com.pulumi.oci.Database.inputs.GetDbSystemPatchesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetDbSystemPatchesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dbSystemId", required=true)
-    private String dbSystemId;
+    private Output<String> dbSystemId;
 
     /**
      * @return The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String dbSystemId() {
+    public Output<String> dbSystemId() {
         return this.dbSystemId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDbSystemPatchesFilter> filters;
+    private @Nullable Output<List<GetDbSystemPatchesFilterArgs>> filters;
 
-    public Optional<List<GetDbSystemPatchesFilter>> filters() {
+    public Optional<Output<List<GetDbSystemPatchesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -69,17 +70,31 @@ public final class GetDbSystemPatchesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder dbSystemId(String dbSystemId) {
+        public Builder dbSystemId(Output<String> dbSystemId) {
             $.dbSystemId = dbSystemId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbSystemPatchesFilter> filters) {
+        /**
+         * @param dbSystemId The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbSystemId(String dbSystemId) {
+            return dbSystemId(Output.of(dbSystemId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetDbSystemPatchesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDbSystemPatchesFilter... filters) {
+        public Builder filters(List<GetDbSystemPatchesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDbSystemPatchesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Jms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Jms.inputs.GetInstallationSitesFilter;
+import com.pulumi.oci.Jms.inputs.GetInstallationSitesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="applicationId")
-    private @Nullable String applicationId;
+    private @Nullable Output<String> applicationId;
 
     /**
      * @return The Fleet-unique identifier of the related application.
      * 
      */
-    public Optional<String> applicationId() {
+    public Optional<Output<String>> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetInstallationSitesFilter> filters;
+    private @Nullable Output<List<GetInstallationSitesFilterArgs>> filters;
 
-    public Optional<List<GetInstallationSitesFilter>> filters() {
+    public Optional<Output<List<GetInstallationSitesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="fleetId", required=true)
-    private String fleetId;
+    private Output<String> fleetId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Fleet.
      * 
      */
-    public String fleetId() {
+    public Output<String> fleetId() {
         return this.fleetId;
     }
 
@@ -58,13 +59,13 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="installationPath")
-    private @Nullable String installationPath;
+    private @Nullable Output<String> installationPath;
 
     /**
      * @return The file system path of the installation.
      * 
      */
-    public Optional<String> installationPath() {
+    public Optional<Output<String>> installationPath() {
         return Optional.ofNullable(this.installationPath);
     }
 
@@ -73,13 +74,13 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="jreDistribution")
-    private @Nullable String jreDistribution;
+    private @Nullable Output<String> jreDistribution;
 
     /**
      * @return The distribution of the related Java Runtime.
      * 
      */
-    public Optional<String> jreDistribution() {
+    public Optional<Output<String>> jreDistribution() {
         return Optional.ofNullable(this.jreDistribution);
     }
 
@@ -88,13 +89,13 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="jreSecurityStatus")
-    private @Nullable String jreSecurityStatus;
+    private @Nullable Output<String> jreSecurityStatus;
 
     /**
      * @return The security status of the Java Runtime.
      * 
      */
-    public Optional<String> jreSecurityStatus() {
+    public Optional<Output<String>> jreSecurityStatus() {
         return Optional.ofNullable(this.jreSecurityStatus);
     }
 
@@ -103,13 +104,13 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="jreVendor")
-    private @Nullable String jreVendor;
+    private @Nullable Output<String> jreVendor;
 
     /**
      * @return The vendor of the related Java Runtime.
      * 
      */
-    public Optional<String> jreVendor() {
+    public Optional<Output<String>> jreVendor() {
         return Optional.ofNullable(this.jreVendor);
     }
 
@@ -118,13 +119,13 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="jreVersion")
-    private @Nullable String jreVersion;
+    private @Nullable Output<String> jreVersion;
 
     /**
      * @return The version of the related Java Runtime.
      * 
      */
-    public Optional<String> jreVersion() {
+    public Optional<Output<String>> jreVersion() {
         return Optional.ofNullable(this.jreVersion);
     }
 
@@ -133,13 +134,13 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="managedInstanceId")
-    private @Nullable String managedInstanceId;
+    private @Nullable Output<String> managedInstanceId;
 
     /**
      * @return The Fleet-unique identifier of the related managed instance.
      * 
      */
-    public Optional<String> managedInstanceId() {
+    public Optional<Output<String>> managedInstanceId() {
         return Optional.ofNullable(this.managedInstanceId);
     }
 
@@ -148,13 +149,13 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="osFamilies")
-    private @Nullable List<String> osFamilies;
+    private @Nullable Output<List<String>> osFamilies;
 
     /**
      * @return The operating system type.
      * 
      */
-    public Optional<List<String>> osFamilies() {
+    public Optional<Output<List<String>>> osFamilies() {
         return Optional.ofNullable(this.osFamilies);
     }
 
@@ -197,17 +198,31 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder applicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetInstallationSitesFilter> filters) {
+        /**
+         * @param applicationId The Fleet-unique identifier of the related application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetInstallationSitesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetInstallationSitesFilter... filters) {
+        public Builder filters(List<GetInstallationSitesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetInstallationSitesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -217,8 +232,29 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder fleetId(String fleetId) {
+        public Builder fleetId(Output<String> fleetId) {
             $.fleetId = fleetId;
+            return this;
+        }
+
+        /**
+         * @param fleetId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Fleet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fleetId(String fleetId) {
+            return fleetId(Output.of(fleetId));
+        }
+
+        /**
+         * @param installationPath The file system path of the installation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder installationPath(@Nullable Output<String> installationPath) {
+            $.installationPath = installationPath;
             return this;
         }
 
@@ -228,8 +264,18 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder installationPath(@Nullable String installationPath) {
-            $.installationPath = installationPath;
+        public Builder installationPath(String installationPath) {
+            return installationPath(Output.of(installationPath));
+        }
+
+        /**
+         * @param jreDistribution The distribution of the related Java Runtime.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jreDistribution(@Nullable Output<String> jreDistribution) {
+            $.jreDistribution = jreDistribution;
             return this;
         }
 
@@ -239,8 +285,18 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder jreDistribution(@Nullable String jreDistribution) {
-            $.jreDistribution = jreDistribution;
+        public Builder jreDistribution(String jreDistribution) {
+            return jreDistribution(Output.of(jreDistribution));
+        }
+
+        /**
+         * @param jreSecurityStatus The security status of the Java Runtime.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jreSecurityStatus(@Nullable Output<String> jreSecurityStatus) {
+            $.jreSecurityStatus = jreSecurityStatus;
             return this;
         }
 
@@ -250,8 +306,18 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder jreSecurityStatus(@Nullable String jreSecurityStatus) {
-            $.jreSecurityStatus = jreSecurityStatus;
+        public Builder jreSecurityStatus(String jreSecurityStatus) {
+            return jreSecurityStatus(Output.of(jreSecurityStatus));
+        }
+
+        /**
+         * @param jreVendor The vendor of the related Java Runtime.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jreVendor(@Nullable Output<String> jreVendor) {
+            $.jreVendor = jreVendor;
             return this;
         }
 
@@ -261,8 +327,18 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder jreVendor(@Nullable String jreVendor) {
-            $.jreVendor = jreVendor;
+        public Builder jreVendor(String jreVendor) {
+            return jreVendor(Output.of(jreVendor));
+        }
+
+        /**
+         * @param jreVersion The version of the related Java Runtime.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jreVersion(@Nullable Output<String> jreVersion) {
+            $.jreVersion = jreVersion;
             return this;
         }
 
@@ -272,8 +348,18 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder jreVersion(@Nullable String jreVersion) {
-            $.jreVersion = jreVersion;
+        public Builder jreVersion(String jreVersion) {
+            return jreVersion(Output.of(jreVersion));
+        }
+
+        /**
+         * @param managedInstanceId The Fleet-unique identifier of the related managed instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedInstanceId(@Nullable Output<String> managedInstanceId) {
+            $.managedInstanceId = managedInstanceId;
             return this;
         }
 
@@ -283,8 +369,18 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder managedInstanceId(@Nullable String managedInstanceId) {
-            $.managedInstanceId = managedInstanceId;
+        public Builder managedInstanceId(String managedInstanceId) {
+            return managedInstanceId(Output.of(managedInstanceId));
+        }
+
+        /**
+         * @param osFamilies The operating system type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder osFamilies(@Nullable Output<List<String>> osFamilies) {
+            $.osFamilies = osFamilies;
             return this;
         }
 
@@ -294,9 +390,8 @@ public final class GetInstallationSitesArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder osFamilies(@Nullable List<String> osFamilies) {
-            $.osFamilies = osFamilies;
-            return this;
+        public Builder osFamilies(List<String> osFamilies) {
+            return osFamilies(Output.of(osFamilies));
         }
 
         /**

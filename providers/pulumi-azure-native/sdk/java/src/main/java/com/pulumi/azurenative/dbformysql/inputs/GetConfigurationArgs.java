@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.dbformysql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="configurationName", required=true)
-    private String configurationName;
+    private Output<String> configurationName;
 
     /**
      * @return The name of the server configuration.
      * 
      */
-    public String configurationName() {
+    public Output<String> configurationName() {
         return this.configurationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the server.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -89,8 +90,29 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder configurationName(String configurationName) {
+        public Builder configurationName(Output<String> configurationName) {
             $.configurationName = configurationName;
+            return this;
+        }
+
+        /**
+         * @param configurationName The name of the server configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configurationName(String configurationName) {
+            return configurationName(Output.of(configurationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetConfigurationArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
-            return this;
+            return serverName(Output.of(serverName));
         }
 
         public GetConfigurationArgs build() {

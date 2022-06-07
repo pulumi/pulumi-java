@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTransitGatewayMulticastDomainArgs extends com.pulumi.resou
      * 
      */
     @Import(name="transitGatewayMulticastDomainId", required=true)
-    private String transitGatewayMulticastDomainId;
+    private Output<String> transitGatewayMulticastDomainId;
 
     /**
      * @return The ID of the transit gateway multicast domain.
      * 
      */
-    public String transitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
@@ -57,9 +58,19 @@ public final class GetTransitGatewayMulticastDomainArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
+        public Builder transitGatewayMulticastDomainId(Output<String> transitGatewayMulticastDomainId) {
             $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
+        }
+
+        /**
+         * @param transitGatewayMulticastDomainId The ID of the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
+            return transitGatewayMulticastDomainId(Output.of(transitGatewayMulticastDomainId));
         }
 
         public GetTransitGatewayMulticastDomainArgs build() {

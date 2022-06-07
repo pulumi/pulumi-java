@@ -3,14 +3,19 @@
 
 package com.pulumi.googlenative.runtimeconfig_v1beta1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.runtimeconfig_v1beta1.inputs.GetConfigArgs;
 import com.pulumi.googlenative.runtimeconfig_v1beta1.inputs.GetConfigIamPolicyArgs;
+import com.pulumi.googlenative.runtimeconfig_v1beta1.inputs.GetConfigIamPolicyPlainArgs;
+import com.pulumi.googlenative.runtimeconfig_v1beta1.inputs.GetConfigPlainArgs;
 import com.pulumi.googlenative.runtimeconfig_v1beta1.inputs.GetVariableArgs;
+import com.pulumi.googlenative.runtimeconfig_v1beta1.inputs.GetVariablePlainArgs;
 import com.pulumi.googlenative.runtimeconfig_v1beta1.inputs.GetWaiterArgs;
+import com.pulumi.googlenative.runtimeconfig_v1beta1.inputs.GetWaiterPlainArgs;
 import com.pulumi.googlenative.runtimeconfig_v1beta1.outputs.GetConfigIamPolicyResult;
 import com.pulumi.googlenative.runtimeconfig_v1beta1.outputs.GetConfigResult;
 import com.pulumi.googlenative.runtimeconfig_v1beta1.outputs.GetVariableResult;
@@ -22,56 +27,112 @@ public final class Runtimeconfig_v1beta1Functions {
      * Gets information about a RuntimeConfig resource.
      * 
      */
-    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args) {
+    public static Output<GetConfigResult> getConfig(GetConfigArgs args) {
         return getConfig(args, InvokeOptions.Empty);
     }
     /**
      * Gets information about a RuntimeConfig resource.
      * 
      */
-    public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigResult> getConfigPlain(GetConfigPlainArgs args) {
+        return getConfigPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets information about a RuntimeConfig resource.
+     * 
+     */
+    public static Output<GetConfigResult> getConfig(GetConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:runtimeconfig/v1beta1:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets information about a RuntimeConfig resource.
+     * 
+     */
+    public static CompletableFuture<GetConfigResult> getConfigPlain(GetConfigPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:runtimeconfig/v1beta1:getConfig", TypeShape.of(GetConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetConfigIamPolicyResult> getConfigIamPolicy(GetConfigIamPolicyArgs args) {
+    public static Output<GetConfigIamPolicyResult> getConfigIamPolicy(GetConfigIamPolicyArgs args) {
         return getConfigIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetConfigIamPolicyResult> getConfigIamPolicy(GetConfigIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConfigIamPolicyResult> getConfigIamPolicyPlain(GetConfigIamPolicyPlainArgs args) {
+        return getConfigIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static Output<GetConfigIamPolicyResult> getConfigIamPolicy(GetConfigIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:runtimeconfig/v1beta1:getConfigIamPolicy", TypeShape.of(GetConfigIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetConfigIamPolicyResult> getConfigIamPolicyPlain(GetConfigIamPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:runtimeconfig/v1beta1:getConfigIamPolicy", TypeShape.of(GetConfigIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about a single variable.
      * 
      */
-    public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args) {
+    public static Output<GetVariableResult> getVariable(GetVariableArgs args) {
         return getVariable(args, InvokeOptions.Empty);
     }
     /**
      * Gets information about a single variable.
      * 
      */
-    public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVariableResult> getVariablePlain(GetVariablePlainArgs args) {
+        return getVariablePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets information about a single variable.
+     * 
+     */
+    public static Output<GetVariableResult> getVariable(GetVariableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:runtimeconfig/v1beta1:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets information about a single variable.
+     * 
+     */
+    public static CompletableFuture<GetVariableResult> getVariablePlain(GetVariablePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:runtimeconfig/v1beta1:getVariable", TypeShape.of(GetVariableResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets information about a single waiter.
      * 
      */
-    public static CompletableFuture<GetWaiterResult> getWaiter(GetWaiterArgs args) {
+    public static Output<GetWaiterResult> getWaiter(GetWaiterArgs args) {
         return getWaiter(args, InvokeOptions.Empty);
     }
     /**
      * Gets information about a single waiter.
      * 
      */
-    public static CompletableFuture<GetWaiterResult> getWaiter(GetWaiterArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWaiterResult> getWaiterPlain(GetWaiterPlainArgs args) {
+        return getWaiterPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets information about a single waiter.
+     * 
+     */
+    public static Output<GetWaiterResult> getWaiter(GetWaiterArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:runtimeconfig/v1beta1:getWaiter", TypeShape.of(GetWaiterResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets information about a single waiter.
+     * 
+     */
+    public static CompletableFuture<GetWaiterResult> getWaiterPlain(GetWaiterPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:runtimeconfig/v1beta1:getWaiter", TypeShape.of(GetWaiterResult.class), args, Utilities.withVersion(options));
     }
 }

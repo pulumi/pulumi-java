@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabasesAsmPropertiesFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetManagedDatabasesAsmPropertiesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetManagedDatabasesAsmPropertiesArgs extends com.pulumi.resou
     public static final GetManagedDatabasesAsmPropertiesArgs Empty = new GetManagedDatabasesAsmPropertiesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetManagedDatabasesAsmPropertiesFilter> filters;
+    private @Nullable Output<List<GetManagedDatabasesAsmPropertiesFilterArgs>> filters;
 
-    public Optional<List<GetManagedDatabasesAsmPropertiesFilter>> filters() {
+    public Optional<Output<List<GetManagedDatabasesAsmPropertiesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetManagedDatabasesAsmPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="managedDatabaseId", required=true)
-    private String managedDatabaseId;
+    private Output<String> managedDatabaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
      * 
      */
-    public String managedDatabaseId() {
+    public Output<String> managedDatabaseId() {
         return this.managedDatabaseId;
     }
 
@@ -43,13 +44,13 @@ public final class GetManagedDatabasesAsmPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -79,12 +80,16 @@ public final class GetManagedDatabasesAsmPropertiesArgs extends com.pulumi.resou
             $ = new GetManagedDatabasesAsmPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetManagedDatabasesAsmPropertiesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetManagedDatabasesAsmPropertiesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetManagedDatabasesAsmPropertiesFilter... filters) {
+        public Builder filters(List<GetManagedDatabasesAsmPropertiesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetManagedDatabasesAsmPropertiesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -94,8 +99,29 @@ public final class GetManagedDatabasesAsmPropertiesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder managedDatabaseId(String managedDatabaseId) {
+        public Builder managedDatabaseId(Output<String> managedDatabaseId) {
             $.managedDatabaseId = managedDatabaseId;
+            return this;
+        }
+
+        /**
+         * @param managedDatabaseId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedDatabaseId(String managedDatabaseId) {
+            return managedDatabaseId(Output.of(managedDatabaseId));
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -105,9 +131,8 @@ public final class GetManagedDatabasesAsmPropertiesArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
-            return this;
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetManagedDatabasesAsmPropertiesArgs build() {

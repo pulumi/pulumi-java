@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.fms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
     @Import(name="snsTopicArn", required=true)
-    private String snsTopicArn;
+    private Output<String> snsTopicArn;
 
-    public String snsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
 
@@ -43,9 +44,13 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
             $ = new GetNotificationChannelArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder snsTopicArn(String snsTopicArn) {
+        public Builder snsTopicArn(Output<String> snsTopicArn) {
             $.snsTopicArn = snsTopicArn;
             return this;
+        }
+
+        public Builder snsTopicArn(String snsTopicArn) {
+            return snsTopicArn(Output.of(snsTopicArn));
         }
 
         public GetNotificationChannelArgs build() {

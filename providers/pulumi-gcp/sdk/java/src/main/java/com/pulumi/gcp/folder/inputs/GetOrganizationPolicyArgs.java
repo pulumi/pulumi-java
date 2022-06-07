@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.folder.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="constraint", required=true)
-    private String constraint;
+    private Output<String> constraint;
 
     /**
      * @return (Required) The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
      * 
      */
-    public String constraint() {
+    public Output<String> constraint() {
         return this.constraint;
     }
 
@@ -32,13 +33,13 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="folder", required=true)
-    private String folder;
+    private Output<String> folder;
 
     /**
      * @return The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
      * 
      */
-    public String folder() {
+    public Output<String> folder() {
         return this.folder;
     }
 
@@ -73,8 +74,29 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder constraint(String constraint) {
+        public Builder constraint(Output<String> constraint) {
             $.constraint = constraint;
+            return this;
+        }
+
+        /**
+         * @param constraint (Required) The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder constraint(String constraint) {
+            return constraint(Output.of(constraint));
+        }
+
+        /**
+         * @param folder The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(Output<String> folder) {
+            $.folder = folder;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetOrganizationPolicyArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder folder(String folder) {
-            $.folder = folder;
-            return this;
+            return folder(Output.of(folder));
         }
 
         public GetOrganizationPolicyArgs build() {

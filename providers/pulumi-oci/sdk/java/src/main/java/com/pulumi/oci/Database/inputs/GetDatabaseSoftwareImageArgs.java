@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatabaseSoftwareImageArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="databaseSoftwareImageId", required=true)
-    private String databaseSoftwareImageId;
+    private Output<String> databaseSoftwareImageId;
 
     /**
      * @return The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String databaseSoftwareImageId() {
+    public Output<String> databaseSoftwareImageId() {
         return this.databaseSoftwareImageId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDatabaseSoftwareImageArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder databaseSoftwareImageId(String databaseSoftwareImageId) {
+        public Builder databaseSoftwareImageId(Output<String> databaseSoftwareImageId) {
             $.databaseSoftwareImageId = databaseSoftwareImageId;
             return this;
+        }
+
+        /**
+         * @param databaseSoftwareImageId The DB system [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseSoftwareImageId(String databaseSoftwareImageId) {
+            return databaseSoftwareImageId(Output.of(databaseSoftwareImageId));
         }
 
         public GetDatabaseSoftwareImageArgs build() {

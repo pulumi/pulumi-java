@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetDomainConfigurationArgs extends com.pulumi.resources.Invok
     public static final GetDomainConfigurationArgs Empty = new GetDomainConfigurationArgs();
 
     @Import(name="domainConfigurationName", required=true)
-    private String domainConfigurationName;
+    private Output<String> domainConfigurationName;
 
-    public String domainConfigurationName() {
+    public Output<String> domainConfigurationName() {
         return this.domainConfigurationName;
     }
 
@@ -43,9 +44,13 @@ public final class GetDomainConfigurationArgs extends com.pulumi.resources.Invok
             $ = new GetDomainConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder domainConfigurationName(String domainConfigurationName) {
+        public Builder domainConfigurationName(Output<String> domainConfigurationName) {
             $.domainConfigurationName = domainConfigurationName;
             return this;
+        }
+
+        public Builder domainConfigurationName(String domainConfigurationName) {
+            return domainConfigurationName(Output.of(domainConfigurationName));
         }
 
         public GetDomainConfigurationArgs build() {

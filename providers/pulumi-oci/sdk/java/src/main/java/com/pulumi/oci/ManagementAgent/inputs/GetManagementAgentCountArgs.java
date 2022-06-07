@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ManagementAgent.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,13 +22,13 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment to which a request will be scoped.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,13 +37,13 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="groupBies", required=true)
-    private List<String> groupBies;
+    private Output<List<String>> groupBies;
 
     /**
      * @return The field by which to group Management Agents. Currently, only one groupBy dimension is supported at a time.
      * 
      */
-    public List<String> groupBies() {
+    public Output<List<String>> groupBies() {
         return this.groupBies;
     }
 
@@ -51,13 +52,13 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="hasPlugins")
-    private @Nullable Boolean hasPlugins;
+    private @Nullable Output<Boolean> hasPlugins;
 
     /**
      * @return When set to true then agents that have at least one plugin deployed will be returned. When set to false only agents that have no plugins deployed will be returned.
      * 
      */
-    public Optional<Boolean> hasPlugins() {
+    public Optional<Output<Boolean>> hasPlugins() {
         return Optional.ofNullable(this.hasPlugins);
     }
 
@@ -66,13 +67,13 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="installType")
-    private @Nullable String installType;
+    private @Nullable Output<String> installType;
 
     /**
      * @return A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.
      * 
      */
-    public Optional<String> installType() {
+    public Optional<Output<String>> installType() {
         return Optional.ofNullable(this.installType);
     }
 
@@ -109,8 +110,29 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment to which a request will be scoped.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param groupBies The field by which to group Management Agents. Currently, only one groupBy dimension is supported at a time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupBies(Output<List<String>> groupBies) {
+            $.groupBies = groupBies;
             return this;
         }
 
@@ -121,8 +143,7 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder groupBies(List<String> groupBies) {
-            $.groupBies = groupBies;
-            return this;
+            return groupBies(Output.of(groupBies));
         }
 
         /**
@@ -141,8 +162,29 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder hasPlugins(@Nullable Boolean hasPlugins) {
+        public Builder hasPlugins(@Nullable Output<Boolean> hasPlugins) {
             $.hasPlugins = hasPlugins;
+            return this;
+        }
+
+        /**
+         * @param hasPlugins When set to true then agents that have at least one plugin deployed will be returned. When set to false only agents that have no plugins deployed will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hasPlugins(Boolean hasPlugins) {
+            return hasPlugins(Output.of(hasPlugins));
+        }
+
+        /**
+         * @param installType A filter to return either agents or gateway types depending upon install type selected by user. By default both install type will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder installType(@Nullable Output<String> installType) {
+            $.installType = installType;
             return this;
         }
 
@@ -152,9 +194,8 @@ public final class GetManagementAgentCountArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder installType(@Nullable String installType) {
-            $.installType = installType;
-            return this;
+        public Builder installType(String installType) {
+            return installType(Output.of(installType));
         }
 
         public GetManagementAgentCountArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,9 +17,9 @@ public final class GetExadataInfrastructureDownloadConfigFileArgs extends com.pu
     public static final GetExadataInfrastructureDownloadConfigFileArgs Empty = new GetExadataInfrastructureDownloadConfigFileArgs();
 
     @Import(name="base64EncodeContent")
-    private @Nullable Boolean base64EncodeContent;
+    private @Nullable Output<Boolean> base64EncodeContent;
 
-    public Optional<Boolean> base64EncodeContent() {
+    public Optional<Output<Boolean>> base64EncodeContent() {
         return Optional.ofNullable(this.base64EncodeContent);
     }
 
@@ -27,13 +28,13 @@ public final class GetExadataInfrastructureDownloadConfigFileArgs extends com.pu
      * 
      */
     @Import(name="exadataInfrastructureId", required=true)
-    private String exadataInfrastructureId;
+    private Output<String> exadataInfrastructureId;
 
     /**
      * @return The Exadata infrastructure [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String exadataInfrastructureId() {
+    public Output<String> exadataInfrastructureId() {
         return this.exadataInfrastructureId;
     }
 
@@ -62,8 +63,23 @@ public final class GetExadataInfrastructureDownloadConfigFileArgs extends com.pu
             $ = new GetExadataInfrastructureDownloadConfigFileArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder base64EncodeContent(@Nullable Boolean base64EncodeContent) {
+        public Builder base64EncodeContent(@Nullable Output<Boolean> base64EncodeContent) {
             $.base64EncodeContent = base64EncodeContent;
+            return this;
+        }
+
+        public Builder base64EncodeContent(Boolean base64EncodeContent) {
+            return base64EncodeContent(Output.of(base64EncodeContent));
+        }
+
+        /**
+         * @param exadataInfrastructureId The Exadata infrastructure [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exadataInfrastructureId(Output<String> exadataInfrastructureId) {
+            $.exadataInfrastructureId = exadataInfrastructureId;
             return this;
         }
 
@@ -74,8 +90,7 @@ public final class GetExadataInfrastructureDownloadConfigFileArgs extends com.pu
          * 
          */
         public Builder exadataInfrastructureId(String exadataInfrastructureId) {
-            $.exadataInfrastructureId = exadataInfrastructureId;
-            return this;
+            return exadataInfrastructureId(Output.of(exadataInfrastructureId));
         }
 
         public GetExadataInfrastructureDownloadConfigFileArgs build() {

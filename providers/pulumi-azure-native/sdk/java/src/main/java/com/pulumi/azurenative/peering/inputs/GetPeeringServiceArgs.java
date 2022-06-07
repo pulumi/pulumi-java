@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.peering.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPeeringServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="peeringServiceName", required=true)
-    private String peeringServiceName;
+    private Output<String> peeringServiceName;
 
     /**
      * @return The name of the peering.
      * 
      */
-    public String peeringServiceName() {
+    public Output<String> peeringServiceName() {
         return this.peeringServiceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPeeringServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPeeringServiceArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder peeringServiceName(String peeringServiceName) {
+        public Builder peeringServiceName(Output<String> peeringServiceName) {
             $.peeringServiceName = peeringServiceName;
+            return this;
+        }
+
+        /**
+         * @param peeringServiceName The name of the peering.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peeringServiceName(String peeringServiceName) {
+            return peeringServiceName(Output.of(peeringServiceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPeeringServiceArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPeeringServiceArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.networkmanagement_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetConnectivityTestArgs extends com.pulumi.resources.InvokeAr
     public static final GetConnectivityTestArgs Empty = new GetConnectivityTestArgs();
 
     @Import(name="connectivityTestId", required=true)
-    private String connectivityTestId;
+    private Output<String> connectivityTestId;
 
-    public String connectivityTestId() {
+    public Output<String> connectivityTestId() {
         return this.connectivityTestId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetConnectivityTestArgs extends com.pulumi.resources.InvokeAr
             $ = new GetConnectivityTestArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder connectivityTestId(String connectivityTestId) {
+        public Builder connectivityTestId(Output<String> connectivityTestId) {
             $.connectivityTestId = connectivityTestId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder connectivityTestId(String connectivityTestId) {
+            return connectivityTestId(Output.of(connectivityTestId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetConnectivityTestArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.vmwarecloudsimple.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDedicatedCloudServiceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dedicatedCloudServiceName", required=true)
-    private String dedicatedCloudServiceName;
+    private Output<String> dedicatedCloudServiceName;
 
     /**
      * @return dedicated cloud Service name
      * 
      */
-    public String dedicatedCloudServiceName() {
+    public Output<String> dedicatedCloudServiceName() {
         return this.dedicatedCloudServiceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDedicatedCloudServiceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetDedicatedCloudServiceArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder dedicatedCloudServiceName(String dedicatedCloudServiceName) {
+        public Builder dedicatedCloudServiceName(Output<String> dedicatedCloudServiceName) {
             $.dedicatedCloudServiceName = dedicatedCloudServiceName;
+            return this;
+        }
+
+        /**
+         * @param dedicatedCloudServiceName dedicated cloud Service name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dedicatedCloudServiceName(String dedicatedCloudServiceName) {
+            return dedicatedCloudServiceName(Output.of(dedicatedCloudServiceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDedicatedCloudServiceArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDedicatedCloudServiceArgs build() {

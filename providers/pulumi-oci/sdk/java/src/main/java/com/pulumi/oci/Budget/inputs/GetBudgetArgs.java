@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Budget.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBudgetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="budgetId", required=true)
-    private String budgetId;
+    private Output<String> budgetId;
 
     /**
      * @return The unique Budget OCID
      * 
      */
-    public String budgetId() {
+    public Output<String> budgetId() {
         return this.budgetId;
     }
 
@@ -57,9 +58,19 @@ public final class GetBudgetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder budgetId(String budgetId) {
+        public Builder budgetId(Output<String> budgetId) {
             $.budgetId = budgetId;
             return this;
+        }
+
+        /**
+         * @param budgetId The unique Budget OCID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder budgetId(String budgetId) {
+            return budgetId(Output.of(budgetId));
         }
 
         public GetBudgetArgs build() {

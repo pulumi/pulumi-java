@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apikeys_v2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
     @Import(name="keyId", required=true)
-    private String keyId;
+    private Output<String> keyId;
 
-    public String keyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKeyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder keyId(String keyId) {
+        public Builder keyId(Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetKeyArgs build() {

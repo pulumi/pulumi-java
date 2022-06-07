@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetInstanceDevicesFilter;
+import com.pulumi.oci.Core.inputs.GetInstanceDevicesFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,9 +19,9 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
     public static final GetInstanceDevicesArgs Empty = new GetInstanceDevicesArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetInstanceDevicesFilter> filters;
+    private @Nullable Output<List<GetInstanceDevicesFilterArgs>> filters;
 
-    public Optional<List<GetInstanceDevicesFilter>> filters() {
+    public Optional<Output<List<GetInstanceDevicesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -29,13 +30,13 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="instanceId", required=true)
-    private String instanceId;
+    private Output<String> instanceId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance.
      * 
      */
-    public String instanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -44,13 +45,13 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isAvailable")
-    private @Nullable Boolean isAvailable;
+    private @Nullable Output<Boolean> isAvailable;
 
     /**
      * @return A filter to return only available devices or only used devices.
      * 
      */
-    public Optional<Boolean> isAvailable() {
+    public Optional<Output<Boolean>> isAvailable() {
         return Optional.ofNullable(this.isAvailable);
     }
 
@@ -59,13 +60,13 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only devices that match the given name exactly.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -96,12 +97,16 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
             $ = new GetInstanceDevicesArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetInstanceDevicesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetInstanceDevicesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetInstanceDevicesFilter... filters) {
+        public Builder filters(List<GetInstanceDevicesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetInstanceDevicesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -111,8 +116,29 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder instanceId(String instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * @param instanceId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
+        }
+
+        /**
+         * @param isAvailable A filter to return only available devices or only used devices.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isAvailable(@Nullable Output<Boolean> isAvailable) {
+            $.isAvailable = isAvailable;
             return this;
         }
 
@@ -122,8 +148,18 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder isAvailable(@Nullable Boolean isAvailable) {
-            $.isAvailable = isAvailable;
+        public Builder isAvailable(Boolean isAvailable) {
+            return isAvailable(Output.of(isAvailable));
+        }
+
+        /**
+         * @param name A filter to return only devices that match the given name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -133,9 +169,8 @@ public final class GetInstanceDevicesArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
-            return this;
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetInstanceDevicesArgs build() {

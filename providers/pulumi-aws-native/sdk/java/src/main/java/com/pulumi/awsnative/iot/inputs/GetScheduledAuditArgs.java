@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetScheduledAuditArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scheduledAuditName", required=true)
-    private String scheduledAuditName;
+    private Output<String> scheduledAuditName;
 
     /**
      * @return The name you want to give to the scheduled audit.
      * 
      */
-    public String scheduledAuditName() {
+    public Output<String> scheduledAuditName() {
         return this.scheduledAuditName;
     }
 
@@ -57,9 +58,19 @@ public final class GetScheduledAuditArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder scheduledAuditName(String scheduledAuditName) {
+        public Builder scheduledAuditName(Output<String> scheduledAuditName) {
             $.scheduledAuditName = scheduledAuditName;
             return this;
+        }
+
+        /**
+         * @param scheduledAuditName The name you want to give to the scheduled audit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scheduledAuditName(String scheduledAuditName) {
+            return scheduledAuditName(Output.of(scheduledAuditName));
         }
 
         public GetScheduledAuditArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.appengine_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetDomainMappingArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetDomainMappingArgs Empty = new GetDomainMappingArgs();
 
     @Import(name="appId", required=true)
-    private String appId;
+    private Output<String> appId;
 
-    public String appId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
     @Import(name="domainMappingId", required=true)
-    private String domainMappingId;
+    private Output<String> domainMappingId;
 
-    public String domainMappingId() {
+    public Output<String> domainMappingId() {
         return this.domainMappingId;
     }
 
@@ -51,14 +52,22 @@ public final class GetDomainMappingArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetDomainMappingArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder appId(String appId) {
+        public Builder appId(Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
-        public Builder domainMappingId(String domainMappingId) {
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
+        }
+
+        public Builder domainMappingId(Output<String> domainMappingId) {
             $.domainMappingId = domainMappingId;
             return this;
+        }
+
+        public Builder domainMappingId(String domainMappingId) {
+            return domainMappingId(Output.of(domainMappingId));
         }
 
         public GetDomainMappingArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.gkehub_v1alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetFeatureArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFeatureArgs Empty = new GetFeatureArgs();
 
     @Import(name="featureId", required=true)
-    private String featureId;
+    private Output<String> featureId;
 
-    public String featureId() {
+    public Output<String> featureId() {
         return this.featureId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetFeatureArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFeatureArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder featureId(String featureId) {
+        public Builder featureId(Output<String> featureId) {
             $.featureId = featureId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder featureId(String featureId) {
+            return featureId(Output.of(featureId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetFeatureArgs build() {

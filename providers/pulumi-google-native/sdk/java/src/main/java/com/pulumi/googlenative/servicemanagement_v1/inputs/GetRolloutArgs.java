@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRolloutArgs Empty = new GetRolloutArgs();
 
     @Import(name="rolloutId", required=true)
-    private String rolloutId;
+    private Output<String> rolloutId;
 
-    public String rolloutId() {
+    public Output<String> rolloutId() {
         return this.rolloutId;
     }
 
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -51,14 +52,22 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRolloutArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder rolloutId(String rolloutId) {
+        public Builder rolloutId(Output<String> rolloutId) {
             $.rolloutId = rolloutId;
             return this;
         }
 
-        public Builder serviceName(String serviceName) {
+        public Builder rolloutId(String rolloutId) {
+            return rolloutId(Output.of(rolloutId));
+        }
+
+        public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
+        }
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
 
         public GetRolloutArgs build() {

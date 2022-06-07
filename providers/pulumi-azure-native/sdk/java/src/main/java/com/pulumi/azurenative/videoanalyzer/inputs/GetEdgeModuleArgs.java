@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.videoanalyzer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The Azure Video Analyzer account name.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="edgeModuleName", required=true)
-    private String edgeModuleName;
+    private Output<String> edgeModuleName;
 
     /**
      * @return The name of the edge module to retrieve.
      * 
      */
-    public String edgeModuleName() {
+    public Output<String> edgeModuleName() {
         return this.edgeModuleName;
     }
 
@@ -47,13 +48,13 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param edgeModuleName The name of the edge module to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder edgeModuleName(Output<String> edgeModuleName) {
+            $.edgeModuleName = edgeModuleName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder edgeModuleName(String edgeModuleName) {
-            $.edgeModuleName = edgeModuleName;
+            return edgeModuleName(Output.of(edgeModuleName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetEdgeModuleArgs build() {

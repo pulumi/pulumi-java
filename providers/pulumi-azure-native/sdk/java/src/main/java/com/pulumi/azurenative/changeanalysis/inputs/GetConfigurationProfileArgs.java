@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.changeanalysis.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConfigurationProfileArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="profileName", required=true)
-    private String profileName;
+    private Output<String> profileName;
 
     /**
      * @return The name of the configuration profile. The profile name should be set to &#39;default&#39;, all other names will be overwritten.
      * 
      */
-    public String profileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -57,9 +58,19 @@ public final class GetConfigurationProfileArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder profileName(String profileName) {
+        public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
             return this;
+        }
+
+        /**
+         * @param profileName The name of the configuration profile. The profile name should be set to &#39;default&#39;, all other names will be overwritten.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder profileName(String profileName) {
+            return profileName(Output.of(profileName));
         }
 
         public GetConfigurationProfileArgs build() {

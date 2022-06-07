@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVolumeGroupReplicaArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="volumeGroupReplicaId", required=true)
-    private String volumeGroupReplicaId;
+    private Output<String> volumeGroupReplicaId;
 
     /**
      * @return The OCID of the volume replica group.
      * 
      */
-    public String volumeGroupReplicaId() {
+    public Output<String> volumeGroupReplicaId() {
         return this.volumeGroupReplicaId;
     }
 
@@ -57,9 +58,19 @@ public final class GetVolumeGroupReplicaArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder volumeGroupReplicaId(String volumeGroupReplicaId) {
+        public Builder volumeGroupReplicaId(Output<String> volumeGroupReplicaId) {
             $.volumeGroupReplicaId = volumeGroupReplicaId;
             return this;
+        }
+
+        /**
+         * @param volumeGroupReplicaId The OCID of the volume replica group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder volumeGroupReplicaId(String volumeGroupReplicaId) {
+            return volumeGroupReplicaId(Output.of(volumeGroupReplicaId));
         }
 
         public GetVolumeGroupReplicaArgs build() {

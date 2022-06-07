@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iottwinmaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetComponentTypeArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="componentTypeId", required=true)
-    private String componentTypeId;
+    private Output<String> componentTypeId;
 
     /**
      * @return The ID of the component type.
      * 
      */
-    public String componentTypeId() {
+    public Output<String> componentTypeId() {
         return this.componentTypeId;
     }
 
@@ -32,13 +33,13 @@ public final class GetComponentTypeArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="workspaceId", required=true)
-    private String workspaceId;
+    private Output<String> workspaceId;
 
     /**
      * @return The ID of the workspace that contains the component type.
      * 
      */
-    public String workspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -73,8 +74,29 @@ public final class GetComponentTypeArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder componentTypeId(String componentTypeId) {
+        public Builder componentTypeId(Output<String> componentTypeId) {
             $.componentTypeId = componentTypeId;
+            return this;
+        }
+
+        /**
+         * @param componentTypeId The ID of the component type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder componentTypeId(String componentTypeId) {
+            return componentTypeId(Output.of(componentTypeId));
+        }
+
+        /**
+         * @param workspaceId The ID of the workspace that contains the component type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceId(Output<String> workspaceId) {
+            $.workspaceId = workspaceId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetComponentTypeArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder workspaceId(String workspaceId) {
-            $.workspaceId = workspaceId;
-            return this;
+            return workspaceId(Output.of(workspaceId));
         }
 
         public GetComponentTypeArgs build() {

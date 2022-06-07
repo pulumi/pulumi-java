@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workflowName", required=true)
-    private String workflowName;
+    private Output<String> workflowName;
 
     /**
      * @return The workflow name.
      * 
      */
-    public String workflowName() {
+    public Output<String> workflowName() {
         return this.workflowName;
     }
 
@@ -73,8 +74,29 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workflowName(Output<String> workflowName) {
+            $.workflowName = workflowName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder workflowName(String workflowName) {
-            $.workflowName = workflowName;
-            return this;
+            return workflowName(Output.of(workflowName));
         }
 
         public GetWorkflowArgs build() {

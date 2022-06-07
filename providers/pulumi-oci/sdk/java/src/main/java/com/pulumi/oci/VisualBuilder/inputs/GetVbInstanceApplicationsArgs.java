@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.VisualBuilder.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetVbInstanceApplicationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="idcsOpenId")
-    private @Nullable String idcsOpenId;
+    private @Nullable Output<String> idcsOpenId;
 
     /**
      * @return Encrypted IDCS Open ID token which allows access to Visual Builder REST apis
      * 
      */
-    public Optional<String> idcsOpenId() {
+    public Optional<Output<String>> idcsOpenId() {
         return Optional.ofNullable(this.idcsOpenId);
     }
 
@@ -34,13 +35,13 @@ public final class GetVbInstanceApplicationsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="vbInstanceId", required=true)
-    private String vbInstanceId;
+    private Output<String> vbInstanceId;
 
     /**
      * @return Unique Vb Instance identifier.
      * 
      */
-    public String vbInstanceId() {
+    public Output<String> vbInstanceId() {
         return this.vbInstanceId;
     }
 
@@ -75,8 +76,29 @@ public final class GetVbInstanceApplicationsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder idcsOpenId(@Nullable String idcsOpenId) {
+        public Builder idcsOpenId(@Nullable Output<String> idcsOpenId) {
             $.idcsOpenId = idcsOpenId;
+            return this;
+        }
+
+        /**
+         * @param idcsOpenId Encrypted IDCS Open ID token which allows access to Visual Builder REST apis
+         * 
+         * @return builder
+         * 
+         */
+        public Builder idcsOpenId(String idcsOpenId) {
+            return idcsOpenId(Output.of(idcsOpenId));
+        }
+
+        /**
+         * @param vbInstanceId Unique Vb Instance identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vbInstanceId(Output<String> vbInstanceId) {
+            $.vbInstanceId = vbInstanceId;
             return this;
         }
 
@@ -87,8 +109,7 @@ public final class GetVbInstanceApplicationsArgs extends com.pulumi.resources.In
          * 
          */
         public Builder vbInstanceId(String vbInstanceId) {
-            $.vbInstanceId = vbInstanceId;
-            return this;
+            return vbInstanceId(Output.of(vbInstanceId));
         }
 
         public GetVbInstanceApplicationsArgs build() {

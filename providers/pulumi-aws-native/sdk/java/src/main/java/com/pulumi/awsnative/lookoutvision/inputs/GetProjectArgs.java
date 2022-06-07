@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lookoutvision.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
     @Import(name="projectName", required=true)
-    private String projectName;
+    private Output<String> projectName;
 
-    public String projectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
@@ -43,9 +44,13 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetProjectArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder projectName(String projectName) {
+        public Builder projectName(Output<String> projectName) {
             $.projectName = projectName;
             return this;
+        }
+
+        public Builder projectName(String projectName) {
+            return projectName(Output.of(projectName));
         }
 
         public GetProjectArgs build() {

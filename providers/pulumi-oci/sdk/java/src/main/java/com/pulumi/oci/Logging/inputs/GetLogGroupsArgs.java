@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Logging.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Logging.inputs.GetLogGroupsFilter;
+import com.pulumi.oci.Logging.inputs.GetLogGroupsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return Compartment OCID to list resources in. See compartmentIdInSubtree for nested compartments traversal.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -37,20 +38,20 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Resource name
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetLogGroupsFilter> filters;
+    private @Nullable Output<List<GetLogGroupsFilterArgs>> filters;
 
-    public Optional<List<GetLogGroupsFilter>> filters() {
+    public Optional<Output<List<GetLogGroupsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -59,13 +60,13 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isCompartmentIdInSubtree")
-    private @Nullable Boolean isCompartmentIdInSubtree;
+    private @Nullable Output<Boolean> isCompartmentIdInSubtree;
 
     /**
      * @return Specifies whether or not nested compartments should be traversed. Defaults to false.
      * 
      */
-    public Optional<Boolean> isCompartmentIdInSubtree() {
+    public Optional<Output<Boolean>> isCompartmentIdInSubtree() {
         return Optional.ofNullable(this.isCompartmentIdInSubtree);
     }
 
@@ -102,8 +103,29 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId Compartment OCID to list resources in. See compartmentIdInSubtree for nested compartments traversal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName Resource name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -113,17 +135,20 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetLogGroupsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetLogGroupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetLogGroupsFilter... filters) {
+        public Builder filters(List<GetLogGroupsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetLogGroupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -133,9 +158,19 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isCompartmentIdInSubtree(@Nullable Boolean isCompartmentIdInSubtree) {
+        public Builder isCompartmentIdInSubtree(@Nullable Output<Boolean> isCompartmentIdInSubtree) {
             $.isCompartmentIdInSubtree = isCompartmentIdInSubtree;
             return this;
+        }
+
+        /**
+         * @param isCompartmentIdInSubtree Specifies whether or not nested compartments should be traversed. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isCompartmentIdInSubtree(Boolean isCompartmentIdInSubtree) {
+            return isCompartmentIdInSubtree(Output.of(isCompartmentIdInSubtree));
         }
 
         public GetLogGroupsArgs build() {

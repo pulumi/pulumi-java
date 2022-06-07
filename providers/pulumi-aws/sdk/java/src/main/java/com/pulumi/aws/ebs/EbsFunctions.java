@@ -5,15 +5,20 @@ package com.pulumi.aws.ebs;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.ebs.inputs.GetEbsVolumesArgs;
+import com.pulumi.aws.ebs.inputs.GetEbsVolumesPlainArgs;
 import com.pulumi.aws.ebs.inputs.GetSnapshotArgs;
 import com.pulumi.aws.ebs.inputs.GetSnapshotIdsArgs;
+import com.pulumi.aws.ebs.inputs.GetSnapshotIdsPlainArgs;
+import com.pulumi.aws.ebs.inputs.GetSnapshotPlainArgs;
 import com.pulumi.aws.ebs.inputs.GetVolumeArgs;
+import com.pulumi.aws.ebs.inputs.GetVolumePlainArgs;
 import com.pulumi.aws.ebs.outputs.GetDefaultKmsKeyResult;
 import com.pulumi.aws.ebs.outputs.GetEbsVolumesResult;
 import com.pulumi.aws.ebs.outputs.GetEncryptionByDefaultResult;
 import com.pulumi.aws.ebs.outputs.GetSnapshotIdsResult;
 import com.pulumi.aws.ebs.outputs.GetSnapshotResult;
 import com.pulumi.aws.ebs.outputs.GetVolumeResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -52,7 +57,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKey() {
+    public static Output<GetDefaultKmsKeyResult> getDefaultKmsKey() {
         return getDefaultKmsKey(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -86,7 +91,41 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKey(InvokeArgs args) {
+    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKeyPlain() {
+        return getDefaultKmsKeyPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the default EBS encryption KMS key in the current region.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(EbsFunctions.getDefaultKmsKey());
+     * 
+     *         var example = new Volume(&#34;example&#34;, VolumeArgs.builder()        
+     *             .availabilityZone(&#34;us-west-2a&#34;)
+     *             .encrypted(true)
+     *             .kmsKeyId(current.apply(getDefaultKmsKeyResult -&gt; getDefaultKmsKeyResult.getKeyArn()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetDefaultKmsKeyResult> getDefaultKmsKey(InvokeArgs args) {
         return getDefaultKmsKey(args, InvokeOptions.Empty);
     }
     /**
@@ -120,7 +159,75 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKey(InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKeyPlain(InvokeArgs args) {
+        return getDefaultKmsKeyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get the default EBS encryption KMS key in the current region.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(EbsFunctions.getDefaultKmsKey());
+     * 
+     *         var example = new Volume(&#34;example&#34;, VolumeArgs.builder()        
+     *             .availabilityZone(&#34;us-west-2a&#34;)
+     *             .encrypted(true)
+     *             .kmsKeyId(current.apply(getDefaultKmsKeyResult -&gt; getDefaultKmsKeyResult.getKeyArn()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetDefaultKmsKeyResult> getDefaultKmsKey(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getDefaultKmsKey:getDefaultKmsKey", TypeShape.of(GetDefaultKmsKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the default EBS encryption KMS key in the current region.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(EbsFunctions.getDefaultKmsKey());
+     * 
+     *         var example = new Volume(&#34;example&#34;, VolumeArgs.builder()        
+     *             .availabilityZone(&#34;us-west-2a&#34;)
+     *             .encrypted(true)
+     *             .kmsKeyId(current.apply(getDefaultKmsKeyResult -&gt; getDefaultKmsKeyResult.getKeyArn()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetDefaultKmsKeyResult> getDefaultKmsKeyPlain(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getDefaultKmsKey:getDefaultKmsKey", TypeShape.of(GetDefaultKmsKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -129,7 +236,7 @@ public final class EbsFunctions {
      * This data source can be useful for getting a list of volume IDs with (for example) matching tags.
      * 
      */
-    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumes() {
+    public static Output<GetEbsVolumesResult> getEbsVolumes() {
         return getEbsVolumes(GetEbsVolumesArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -138,7 +245,16 @@ public final class EbsFunctions {
      * This data source can be useful for getting a list of volume IDs with (for example) matching tags.
      * 
      */
-    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumes(GetEbsVolumesArgs args) {
+    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumesPlain() {
+        return getEbsVolumesPlain(GetEbsVolumesPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * `aws.ebs.getEbsVolumes` provides identifying information for EBS volumes matching given criteria.
+     * 
+     * This data source can be useful for getting a list of volume IDs with (for example) matching tags.
+     * 
+     */
+    public static Output<GetEbsVolumesResult> getEbsVolumes(GetEbsVolumesArgs args) {
         return getEbsVolumes(args, InvokeOptions.Empty);
     }
     /**
@@ -147,7 +263,25 @@ public final class EbsFunctions {
      * This data source can be useful for getting a list of volume IDs with (for example) matching tags.
      * 
      */
-    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumes(GetEbsVolumesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumesPlain(GetEbsVolumesPlainArgs args) {
+        return getEbsVolumesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * `aws.ebs.getEbsVolumes` provides identifying information for EBS volumes matching given criteria.
+     * 
+     * This data source can be useful for getting a list of volume IDs with (for example) matching tags.
+     * 
+     */
+    public static Output<GetEbsVolumesResult> getEbsVolumes(GetEbsVolumesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getEbsVolumes:getEbsVolumes", TypeShape.of(GetEbsVolumesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * `aws.ebs.getEbsVolumes` provides identifying information for EBS volumes matching given criteria.
+     * 
+     * This data source can be useful for getting a list of volume IDs with (for example) matching tags.
+     * 
+     */
+    public static CompletableFuture<GetEbsVolumesResult> getEbsVolumesPlain(GetEbsVolumesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getEbsVolumes:getEbsVolumes", TypeShape.of(GetEbsVolumesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -175,7 +309,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefault() {
+    public static Output<GetEncryptionByDefaultResult> getEncryptionByDefault() {
         return getEncryptionByDefault(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -203,7 +337,35 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefault(InvokeArgs args) {
+    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefaultPlain() {
+        return getEncryptionByDefaultPlain(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Provides a way to check whether default EBS encryption is enabled for your AWS account in the current AWS region.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(EbsFunctions.getEncryptionByDefault());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetEncryptionByDefaultResult> getEncryptionByDefault(InvokeArgs args) {
         return getEncryptionByDefault(args, InvokeOptions.Empty);
     }
     /**
@@ -231,7 +393,63 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefault(InvokeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefaultPlain(InvokeArgs args) {
+        return getEncryptionByDefaultPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Provides a way to check whether default EBS encryption is enabled for your AWS account in the current AWS region.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(EbsFunctions.getEncryptionByDefault());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetEncryptionByDefaultResult> getEncryptionByDefault(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getEncryptionByDefault:getEncryptionByDefault", TypeShape.of(GetEncryptionByDefaultResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides a way to check whether default EBS encryption is enabled for your AWS account in the current AWS region.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(EbsFunctions.getEncryptionByDefault());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetEncryptionByDefaultResult> getEncryptionByDefaultPlain(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getEncryptionByDefault:getEncryptionByDefault", TypeShape.of(GetEncryptionByDefaultResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -271,7 +489,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot() {
+    public static Output<GetSnapshotResult> getSnapshot() {
         return getSnapshot(GetSnapshotArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -311,7 +529,47 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
+    public static CompletableFuture<GetSnapshotResult> getSnapshotPlain() {
+        return getSnapshotPlain(GetSnapshotPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ebsVolume = Output.of(EbsFunctions.getSnapshot(GetSnapshotArgs.builder()
+     *             .filters(            
+     *                 GetSnapshotFilter.builder()
+     *                     .name(&#34;volume-size&#34;)
+     *                     .values(&#34;40&#34;)
+     *                     .build(),
+     *                 GetSnapshotFilter.builder()
+     *                     .name(&#34;tag:Name&#34;)
+     *                     .values(&#34;Example&#34;)
+     *                     .build())
+     *             .mostRecent(true)
+     *             .owners(&#34;self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
         return getSnapshot(args, InvokeOptions.Empty);
     }
     /**
@@ -351,7 +609,87 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotResult> getSnapshotPlain(GetSnapshotPlainArgs args) {
+        return getSnapshotPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ebsVolume = Output.of(EbsFunctions.getSnapshot(GetSnapshotArgs.builder()
+     *             .filters(            
+     *                 GetSnapshotFilter.builder()
+     *                     .name(&#34;volume-size&#34;)
+     *                     .values(&#34;40&#34;)
+     *                     .build(),
+     *                 GetSnapshotFilter.builder()
+     *                     .name(&#34;tag:Name&#34;)
+     *                     .values(&#34;Example&#34;)
+     *                     .build())
+     *             .mostRecent(true)
+     *             .owners(&#34;self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetSnapshotResult> getSnapshot(GetSnapshotArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ebsVolume = Output.of(EbsFunctions.getSnapshot(GetSnapshotArgs.builder()
+     *             .filters(            
+     *                 GetSnapshotFilter.builder()
+     *                     .name(&#34;volume-size&#34;)
+     *                     .values(&#34;40&#34;)
+     *                     .build(),
+     *                 GetSnapshotFilter.builder()
+     *                     .name(&#34;tag:Name&#34;)
+     *                     .values(&#34;Example&#34;)
+     *                     .build())
+     *             .mostRecent(true)
+     *             .owners(&#34;self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetSnapshotResult> getSnapshotPlain(GetSnapshotPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -391,7 +729,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIds() {
+    public static Output<GetSnapshotIdsResult> getSnapshotIds() {
         return getSnapshotIds(GetSnapshotIdsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -431,7 +769,47 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIds(GetSnapshotIdsArgs args) {
+    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIdsPlain() {
+        return getSnapshotIdsPlain(GetSnapshotIdsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get a list of EBS Snapshot IDs matching the specified
+     * criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ebsVolumes = Output.of(EbsFunctions.getSnapshotIds(GetSnapshotIdsArgs.builder()
+     *             .filters(            
+     *                 GetSnapshotIdsFilter.builder()
+     *                     .name(&#34;volume-size&#34;)
+     *                     .values(&#34;40&#34;)
+     *                     .build(),
+     *                 GetSnapshotIdsFilter.builder()
+     *                     .name(&#34;tag:Name&#34;)
+     *                     .values(&#34;Example&#34;)
+     *                     .build())
+     *             .owners(&#34;self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetSnapshotIdsResult> getSnapshotIds(GetSnapshotIdsArgs args) {
         return getSnapshotIds(args, InvokeOptions.Empty);
     }
     /**
@@ -471,7 +849,87 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIds(GetSnapshotIdsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIdsPlain(GetSnapshotIdsPlainArgs args) {
+        return getSnapshotIdsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get a list of EBS Snapshot IDs matching the specified
+     * criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ebsVolumes = Output.of(EbsFunctions.getSnapshotIds(GetSnapshotIdsArgs.builder()
+     *             .filters(            
+     *                 GetSnapshotIdsFilter.builder()
+     *                     .name(&#34;volume-size&#34;)
+     *                     .values(&#34;40&#34;)
+     *                     .build(),
+     *                 GetSnapshotIdsFilter.builder()
+     *                     .name(&#34;tag:Name&#34;)
+     *                     .values(&#34;Example&#34;)
+     *                     .build())
+     *             .owners(&#34;self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetSnapshotIdsResult> getSnapshotIds(GetSnapshotIdsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getSnapshotIds:getSnapshotIds", TypeShape.of(GetSnapshotIdsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get a list of EBS Snapshot IDs matching the specified
+     * criteria.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ebsVolumes = Output.of(EbsFunctions.getSnapshotIds(GetSnapshotIdsArgs.builder()
+     *             .filters(            
+     *                 GetSnapshotIdsFilter.builder()
+     *                     .name(&#34;volume-size&#34;)
+     *                     .values(&#34;40&#34;)
+     *                     .build(),
+     *                 GetSnapshotIdsFilter.builder()
+     *                     .name(&#34;tag:Name&#34;)
+     *                     .values(&#34;Example&#34;)
+     *                     .build())
+     *             .owners(&#34;self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetSnapshotIdsResult> getSnapshotIdsPlain(GetSnapshotIdsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getSnapshotIds:getSnapshotIds", TypeShape.of(GetSnapshotIdsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -511,7 +969,7 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume() {
+    public static Output<GetVolumeResult> getVolume() {
         return getVolume(GetVolumeArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -551,7 +1009,47 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args) {
+    public static CompletableFuture<GetVolumeResult> getVolumePlain() {
+        return getVolumePlain(GetVolumePlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get information about an EBS volume for use in other
+     * resources.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ebsVolume = Output.of(EbsFunctions.getVolume(GetVolumeArgs.builder()
+     *             .filters(            
+     *                 GetVolumeFilter.builder()
+     *                     .name(&#34;volume-type&#34;)
+     *                     .values(&#34;gp2&#34;)
+     *                     .build(),
+     *                 GetVolumeFilter.builder()
+     *                     .name(&#34;tag:Name&#34;)
+     *                     .values(&#34;Example&#34;)
+     *                     .build())
+     *             .mostRecent(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetVolumeResult> getVolume(GetVolumeArgs args) {
         return getVolume(args, InvokeOptions.Empty);
     }
     /**
@@ -591,7 +1089,87 @@ public final class EbsFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVolumeResult> getVolumePlain(GetVolumePlainArgs args) {
+        return getVolumePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to get information about an EBS volume for use in other
+     * resources.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ebsVolume = Output.of(EbsFunctions.getVolume(GetVolumeArgs.builder()
+     *             .filters(            
+     *                 GetVolumeFilter.builder()
+     *                     .name(&#34;volume-type&#34;)
+     *                     .values(&#34;gp2&#34;)
+     *                     .build(),
+     *                 GetVolumeFilter.builder()
+     *                     .name(&#34;tag:Name&#34;)
+     *                     .values(&#34;Example&#34;)
+     *                     .build())
+     *             .mostRecent(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetVolumeResult> getVolume(GetVolumeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws:ebs/getVolume:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get information about an EBS volume for use in other
+     * resources.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ebsVolume = Output.of(EbsFunctions.getVolume(GetVolumeArgs.builder()
+     *             .filters(            
+     *                 GetVolumeFilter.builder()
+     *                     .name(&#34;volume-type&#34;)
+     *                     .values(&#34;gp2&#34;)
+     *                     .build(),
+     *                 GetVolumeFilter.builder()
+     *                     .name(&#34;tag:Name&#34;)
+     *                     .values(&#34;Example&#34;)
+     *                     .build())
+     *             .mostRecent(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetVolumeResult> getVolumePlain(GetVolumePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getVolume:getVolume", TypeShape.of(GetVolumeResult.class), args, Utilities.withVersion(options));
     }
 }

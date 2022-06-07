@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.firebase_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetWebAppArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetWebAppArgs Empty = new GetWebAppArgs();
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="webAppId", required=true)
-    private String webAppId;
+    private Output<String> webAppId;
 
-    public String webAppId() {
+    public Output<String> webAppId() {
         return this.webAppId;
     }
 
@@ -53,14 +54,22 @@ public final class GetWebAppArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWebAppArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder webAppId(String webAppId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder webAppId(Output<String> webAppId) {
             $.webAppId = webAppId;
             return this;
+        }
+
+        public Builder webAppId(String webAppId) {
+            return webAppId(Output.of(webAppId));
         }
 
         public GetWebAppArgs build() {

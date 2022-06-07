@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExpressRoutePortAuthorizationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="authorizationName", required=true)
-    private String authorizationName;
+    private Output<String> authorizationName;
 
     /**
      * @return The name of the authorization.
      * 
      */
-    public String authorizationName() {
+    public Output<String> authorizationName() {
         return this.authorizationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExpressRoutePortAuthorizationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="expressRoutePortName", required=true)
-    private String expressRoutePortName;
+    private Output<String> expressRoutePortName;
 
     /**
      * @return The name of the express route port.
      * 
      */
-    public String expressRoutePortName() {
+    public Output<String> expressRoutePortName() {
         return this.expressRoutePortName;
     }
 
@@ -47,13 +48,13 @@ public final class GetExpressRoutePortAuthorizationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetExpressRoutePortAuthorizationArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder authorizationName(String authorizationName) {
+        public Builder authorizationName(Output<String> authorizationName) {
             $.authorizationName = authorizationName;
+            return this;
+        }
+
+        /**
+         * @param authorizationName The name of the authorization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authorizationName(String authorizationName) {
+            return authorizationName(Output.of(authorizationName));
+        }
+
+        /**
+         * @param expressRoutePortName The name of the express route port.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expressRoutePortName(Output<String> expressRoutePortName) {
+            $.expressRoutePortName = expressRoutePortName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetExpressRoutePortAuthorizationArgs extends com.pulumi.resou
          * 
          */
         public Builder expressRoutePortName(String expressRoutePortName) {
-            $.expressRoutePortName = expressRoutePortName;
+            return expressRoutePortName(Output.of(expressRoutePortName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetExpressRoutePortAuthorizationArgs extends com.pulumi.resou
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExpressRoutePortAuthorizationArgs build() {

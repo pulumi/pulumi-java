@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.edgeorder.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return $expand is supported on device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Device Details for order item provides details on the devices of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="orderItemName", required=true)
-    private String orderItemName;
+    private Output<String> orderItemName;
 
     /**
      * @return The name of the order item
      * 
      */
-    public String orderItemName() {
+    public Output<String> orderItemName() {
         return this.orderItemName;
     }
 
@@ -49,13 +50,13 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,29 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand $expand is supported on device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Device Details for order item provides details on the devices of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param orderItemName The name of the order item
+         * 
+         * @return builder
+         * 
+         */
+        public Builder orderItemName(Output<String> orderItemName) {
+            $.orderItemName = orderItemName;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder orderItemName(String orderItemName) {
-            $.orderItemName = orderItemName;
+            return orderItemName(Output.of(orderItemName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetOrderItemByNameArgs build() {

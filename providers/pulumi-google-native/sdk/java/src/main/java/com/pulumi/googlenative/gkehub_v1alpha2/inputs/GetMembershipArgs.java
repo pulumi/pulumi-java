@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetMembershipArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMembershipArgs Empty = new GetMembershipArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="membershipId", required=true)
-    private String membershipId;
+    private Output<String> membershipId;
 
-    public String membershipId() {
+    public Output<String> membershipId() {
         return this.membershipId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -61,19 +62,31 @@ public final class GetMembershipArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetMembershipArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder membershipId(String membershipId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder membershipId(Output<String> membershipId) {
             $.membershipId = membershipId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder membershipId(String membershipId) {
+            return membershipId(Output.of(membershipId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetMembershipArgs build() {

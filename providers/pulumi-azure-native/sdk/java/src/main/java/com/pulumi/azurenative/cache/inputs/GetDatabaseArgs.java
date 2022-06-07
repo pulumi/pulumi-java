@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.cache.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return The name of the RedisEnterprise cluster.
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-    private String databaseName;
+    private Output<String> databaseName;
 
     /**
      * @return The name of the database.
      * 
      */
-    public String databaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -47,13 +48,13 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterName(String clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * @param clusterName The name of the RedisEnterprise cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder databaseName(Output<String> databaseName) {
+            $.databaseName = databaseName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder databaseName(String databaseName) {
-            $.databaseName = databaseName;
+            return databaseName(Output.of(databaseName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDatabaseArgs build() {

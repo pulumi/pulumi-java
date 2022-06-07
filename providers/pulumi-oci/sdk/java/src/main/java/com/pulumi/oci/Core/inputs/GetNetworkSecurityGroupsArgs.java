@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetNetworkSecurityGroupsFilter;
+import com.pulumi.oci.Core.inputs.GetNetworkSecurityGroupsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -36,20 +37,20 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetNetworkSecurityGroupsFilter> filters;
+    private @Nullable Output<List<GetNetworkSecurityGroupsFilterArgs>> filters;
 
-    public Optional<List<GetNetworkSecurityGroupsFilter>> filters() {
+    public Optional<Output<List<GetNetworkSecurityGroupsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -73,13 +74,13 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="vcnId")
-    private @Nullable String vcnId;
+    private @Nullable Output<String> vcnId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
      * 
      */
-    public Optional<String> vcnId() {
+    public Optional<Output<String>> vcnId() {
         return Optional.ofNullable(this.vcnId);
     }
 
@@ -88,13 +89,13 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="vlanId")
-    private @Nullable String vlanId;
+    private @Nullable Output<String> vlanId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN.
      * 
      */
-    public Optional<String> vlanId() {
+    public Optional<Output<String>> vlanId() {
         return Optional.ofNullable(this.vlanId);
     }
 
@@ -133,8 +134,29 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -144,17 +166,20 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetNetworkSecurityGroupsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetNetworkSecurityGroupsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetNetworkSecurityGroupsFilter... filters) {
+        public Builder filters(List<GetNetworkSecurityGroupsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetNetworkSecurityGroupsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -164,8 +189,29 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state A filter to return only resources that match the specified lifecycle state. The value is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param vcnId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vcnId(@Nullable Output<String> vcnId) {
+            $.vcnId = vcnId;
             return this;
         }
 
@@ -175,8 +221,18 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder vcnId(@Nullable String vcnId) {
-            $.vcnId = vcnId;
+        public Builder vcnId(String vcnId) {
+            return vcnId(Output.of(vcnId));
+        }
+
+        /**
+         * @param vlanId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VLAN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vlanId(@Nullable Output<String> vlanId) {
+            $.vlanId = vlanId;
             return this;
         }
 
@@ -186,9 +242,8 @@ public final class GetNetworkSecurityGroupsArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder vlanId(@Nullable String vlanId) {
-            $.vlanId = vlanId;
-            return this;
+        public Builder vlanId(String vlanId) {
+            return vlanId(Output.of(vlanId));
         }
 
         public GetNetworkSecurityGroupsArgs build() {

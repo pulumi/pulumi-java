@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.cloudfront.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetRealtimeLogConfigArgs extends com.pulumi.resources.InvokeA
     public static final GetRealtimeLogConfigArgs Empty = new GetRealtimeLogConfigArgs();
 
     @Import(name="arn", required=true)
-    private String arn;
+    private Output<String> arn;
 
-    public String arn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -43,9 +44,13 @@ public final class GetRealtimeLogConfigArgs extends com.pulumi.resources.InvokeA
             $ = new GetRealtimeLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder arn(String arn) {
+        public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
+        }
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
 
         public GetRealtimeLogConfigArgs build() {

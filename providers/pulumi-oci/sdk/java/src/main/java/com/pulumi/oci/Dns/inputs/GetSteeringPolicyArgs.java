@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Dns.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSteeringPolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="steeringPolicyId", required=true)
-    private String steeringPolicyId;
+    private Output<String> steeringPolicyId;
 
     /**
      * @return The OCID of the target steering policy.
      * 
      */
-    public String steeringPolicyId() {
+    public Output<String> steeringPolicyId() {
         return this.steeringPolicyId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSteeringPolicyArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder steeringPolicyId(String steeringPolicyId) {
+        public Builder steeringPolicyId(Output<String> steeringPolicyId) {
             $.steeringPolicyId = steeringPolicyId;
             return this;
+        }
+
+        /**
+         * @param steeringPolicyId The OCID of the target steering policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder steeringPolicyId(String steeringPolicyId) {
+            return steeringPolicyId(Output.of(steeringPolicyId));
         }
 
         public GetSteeringPolicyArgs build() {

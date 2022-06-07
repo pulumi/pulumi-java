@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.customproviders.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="associationName", required=true)
-    private String associationName;
+    private Output<String> associationName;
 
     /**
      * @return The name of the association.
      * 
      */
-    public String associationName() {
+    public Output<String> associationName() {
         return this.associationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return The scope of the association.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -73,8 +74,29 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder associationName(String associationName) {
+        public Builder associationName(Output<String> associationName) {
             $.associationName = associationName;
+            return this;
+        }
+
+        /**
+         * @param associationName The name of the association.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder associationName(String associationName) {
+            return associationName(Output.of(associationName));
+        }
+
+        /**
+         * @param scope The scope of the association.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAssociationArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetAssociationArgs build() {

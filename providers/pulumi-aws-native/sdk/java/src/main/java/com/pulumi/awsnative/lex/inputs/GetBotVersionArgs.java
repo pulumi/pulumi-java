@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lex.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetBotVersionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBotVersionArgs Empty = new GetBotVersionArgs();
 
     @Import(name="botId", required=true)
-    private String botId;
+    private Output<String> botId;
 
-    public String botId() {
+    public Output<String> botId() {
         return this.botId;
     }
 
     @Import(name="botVersion", required=true)
-    private String botVersion;
+    private Output<String> botVersion;
 
-    public String botVersion() {
+    public Output<String> botVersion() {
         return this.botVersion;
     }
 
@@ -51,14 +52,22 @@ public final class GetBotVersionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBotVersionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder botId(String botId) {
+        public Builder botId(Output<String> botId) {
             $.botId = botId;
             return this;
         }
 
-        public Builder botVersion(String botVersion) {
+        public Builder botId(String botId) {
+            return botId(Output.of(botId));
+        }
+
+        public Builder botVersion(Output<String> botVersion) {
             $.botVersion = botVersion;
             return this;
+        }
+
+        public Builder botVersion(String botVersion) {
+            return botVersion(Output.of(botVersion));
         }
 
         public GetBotVersionArgs build() {

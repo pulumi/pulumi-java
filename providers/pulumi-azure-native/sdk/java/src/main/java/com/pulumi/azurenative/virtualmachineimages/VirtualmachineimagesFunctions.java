@@ -5,7 +5,9 @@ package com.pulumi.azurenative.virtualmachineimages;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.virtualmachineimages.inputs.GetVirtualMachineImageTemplateArgs;
+import com.pulumi.azurenative.virtualmachineimages.inputs.GetVirtualMachineImageTemplatePlainArgs;
 import com.pulumi.azurenative.virtualmachineimages.outputs.GetVirtualMachineImageTemplateResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -17,7 +19,7 @@ public final class VirtualmachineimagesFunctions {
      * API Version: 2020-02-14.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineImageTemplateResult> getVirtualMachineImageTemplate(GetVirtualMachineImageTemplateArgs args) {
+    public static Output<GetVirtualMachineImageTemplateResult> getVirtualMachineImageTemplate(GetVirtualMachineImageTemplateArgs args) {
         return getVirtualMachineImageTemplate(args, InvokeOptions.Empty);
     }
     /**
@@ -25,7 +27,23 @@ public final class VirtualmachineimagesFunctions {
      * API Version: 2020-02-14.
      * 
      */
-    public static CompletableFuture<GetVirtualMachineImageTemplateResult> getVirtualMachineImageTemplate(GetVirtualMachineImageTemplateArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetVirtualMachineImageTemplateResult> getVirtualMachineImageTemplatePlain(GetVirtualMachineImageTemplatePlainArgs args) {
+        return getVirtualMachineImageTemplatePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
+     * API Version: 2020-02-14.
+     * 
+     */
+    public static Output<GetVirtualMachineImageTemplateResult> getVirtualMachineImageTemplate(GetVirtualMachineImageTemplateArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:virtualmachineimages:getVirtualMachineImageTemplate", TypeShape.of(GetVirtualMachineImageTemplateResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
+     * API Version: 2020-02-14.
+     * 
+     */
+    public static CompletableFuture<GetVirtualMachineImageTemplateResult> getVirtualMachineImageTemplatePlain(GetVirtualMachineImageTemplatePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:virtualmachineimages:getVirtualMachineImageTemplate", TypeShape.of(GetVirtualMachineImageTemplateResult.class), args, Utilities.withVersion(options));
     }
 }

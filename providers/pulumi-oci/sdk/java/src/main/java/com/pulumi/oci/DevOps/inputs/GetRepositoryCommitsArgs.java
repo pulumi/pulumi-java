@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DevOps.inputs.GetRepositoryCommitsFilter;
+import com.pulumi.oci.DevOps.inputs.GetRepositoryCommitsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="authorName")
-    private @Nullable String authorName;
+    private @Nullable Output<String> authorName;
 
     /**
      * @return A filter to return any commits that are pushed by the requested author.
      * 
      */
-    public Optional<String> authorName() {
+    public Optional<Output<String>> authorName() {
         return Optional.ofNullable(this.authorName);
     }
 
@@ -36,13 +37,13 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="commitMessage")
-    private @Nullable String commitMessage;
+    private @Nullable Output<String> commitMessage;
 
     /**
      * @return A filter to return any commits that contains the given message.
      * 
      */
-    public Optional<String> commitMessage() {
+    public Optional<Output<String>> commitMessage() {
         return Optional.ofNullable(this.commitMessage);
     }
 
@@ -51,13 +52,13 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="excludeRefName")
-    private @Nullable String excludeRefName;
+    private @Nullable Output<String> excludeRefName;
 
     /**
      * @return A filter to exclude commits that match the given reference name.
      * 
      */
-    public Optional<String> excludeRefName() {
+    public Optional<Output<String>> excludeRefName() {
         return Optional.ofNullable(this.excludeRefName);
     }
 
@@ -66,20 +67,20 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filePath")
-    private @Nullable String filePath;
+    private @Nullable Output<String> filePath;
 
     /**
      * @return A filter to return only commits that affect any of the specified paths.
      * 
      */
-    public Optional<String> filePath() {
+    public Optional<Output<String>> filePath() {
         return Optional.ofNullable(this.filePath);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetRepositoryCommitsFilter> filters;
+    private @Nullable Output<List<GetRepositoryCommitsFilterArgs>> filters;
 
-    public Optional<List<GetRepositoryCommitsFilter>> filters() {
+    public Optional<Output<List<GetRepositoryCommitsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -88,13 +89,13 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="refName")
-    private @Nullable String refName;
+    private @Nullable Output<String> refName;
 
     /**
      * @return A filter to return only resources that match the given reference name.
      * 
      */
-    public Optional<String> refName() {
+    public Optional<Output<String>> refName() {
         return Optional.ofNullable(this.refName);
     }
 
@@ -103,13 +104,13 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -118,13 +119,13 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="timestampGreaterThanOrEqualTo")
-    private @Nullable String timestampGreaterThanOrEqualTo;
+    private @Nullable Output<String> timestampGreaterThanOrEqualTo;
 
     /**
      * @return A filter to return commits only created after the specified timestamp value.
      * 
      */
-    public Optional<String> timestampGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timestampGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timestampGreaterThanOrEqualTo);
     }
 
@@ -133,13 +134,13 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="timestampLessThanOrEqualTo")
-    private @Nullable String timestampLessThanOrEqualTo;
+    private @Nullable Output<String> timestampLessThanOrEqualTo;
 
     /**
      * @return A filter to return commits only created before the specified timestamp value.
      * 
      */
-    public Optional<String> timestampLessThanOrEqualTo() {
+    public Optional<Output<String>> timestampLessThanOrEqualTo() {
         return Optional.ofNullable(this.timestampLessThanOrEqualTo);
     }
 
@@ -181,8 +182,29 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder authorName(@Nullable String authorName) {
+        public Builder authorName(@Nullable Output<String> authorName) {
             $.authorName = authorName;
+            return this;
+        }
+
+        /**
+         * @param authorName A filter to return any commits that are pushed by the requested author.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authorName(String authorName) {
+            return authorName(Output.of(authorName));
+        }
+
+        /**
+         * @param commitMessage A filter to return any commits that contains the given message.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder commitMessage(@Nullable Output<String> commitMessage) {
+            $.commitMessage = commitMessage;
             return this;
         }
 
@@ -192,8 +214,18 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder commitMessage(@Nullable String commitMessage) {
-            $.commitMessage = commitMessage;
+        public Builder commitMessage(String commitMessage) {
+            return commitMessage(Output.of(commitMessage));
+        }
+
+        /**
+         * @param excludeRefName A filter to exclude commits that match the given reference name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludeRefName(@Nullable Output<String> excludeRefName) {
+            $.excludeRefName = excludeRefName;
             return this;
         }
 
@@ -203,8 +235,18 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder excludeRefName(@Nullable String excludeRefName) {
-            $.excludeRefName = excludeRefName;
+        public Builder excludeRefName(String excludeRefName) {
+            return excludeRefName(Output.of(excludeRefName));
+        }
+
+        /**
+         * @param filePath A filter to return only commits that affect any of the specified paths.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filePath(@Nullable Output<String> filePath) {
+            $.filePath = filePath;
             return this;
         }
 
@@ -214,17 +256,20 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder filePath(@Nullable String filePath) {
-            $.filePath = filePath;
-            return this;
+        public Builder filePath(String filePath) {
+            return filePath(Output.of(filePath));
         }
 
-        public Builder filters(@Nullable List<GetRepositoryCommitsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetRepositoryCommitsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetRepositoryCommitsFilter... filters) {
+        public Builder filters(List<GetRepositoryCommitsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetRepositoryCommitsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -234,8 +279,29 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder refName(@Nullable String refName) {
+        public Builder refName(@Nullable Output<String> refName) {
             $.refName = refName;
+            return this;
+        }
+
+        /**
+         * @param refName A filter to return only resources that match the given reference name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder refName(String refName) {
+            return refName(Output.of(refName));
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -246,7 +312,17 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
+            return repositoryId(Output.of(repositoryId));
+        }
+
+        /**
+         * @param timestampGreaterThanOrEqualTo A filter to return commits only created after the specified timestamp value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timestampGreaterThanOrEqualTo(@Nullable Output<String> timestampGreaterThanOrEqualTo) {
+            $.timestampGreaterThanOrEqualTo = timestampGreaterThanOrEqualTo;
             return this;
         }
 
@@ -256,8 +332,18 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder timestampGreaterThanOrEqualTo(@Nullable String timestampGreaterThanOrEqualTo) {
-            $.timestampGreaterThanOrEqualTo = timestampGreaterThanOrEqualTo;
+        public Builder timestampGreaterThanOrEqualTo(String timestampGreaterThanOrEqualTo) {
+            return timestampGreaterThanOrEqualTo(Output.of(timestampGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timestampLessThanOrEqualTo A filter to return commits only created before the specified timestamp value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timestampLessThanOrEqualTo(@Nullable Output<String> timestampLessThanOrEqualTo) {
+            $.timestampLessThanOrEqualTo = timestampLessThanOrEqualTo;
             return this;
         }
 
@@ -267,9 +353,8 @@ public final class GetRepositoryCommitsArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder timestampLessThanOrEqualTo(@Nullable String timestampLessThanOrEqualTo) {
-            $.timestampLessThanOrEqualTo = timestampLessThanOrEqualTo;
-            return this;
+        public Builder timestampLessThanOrEqualTo(String timestampLessThanOrEqualTo) {
+            return timestampLessThanOrEqualTo(Output.of(timestampLessThanOrEqualTo));
         }
 
         public GetRepositoryCommitsArgs build() {

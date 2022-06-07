@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPolicyAssignmentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="policyAssignmentName", required=true)
-    private String policyAssignmentName;
+    private Output<String> policyAssignmentName;
 
     /**
      * @return The name of the policy assignment to get.
      * 
      */
-    public String policyAssignmentName() {
+    public Output<String> policyAssignmentName() {
         return this.policyAssignmentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPolicyAssignmentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return The scope of the policy assignment. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -73,8 +74,29 @@ public final class GetPolicyAssignmentArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder policyAssignmentName(String policyAssignmentName) {
+        public Builder policyAssignmentName(Output<String> policyAssignmentName) {
             $.policyAssignmentName = policyAssignmentName;
+            return this;
+        }
+
+        /**
+         * @param policyAssignmentName The name of the policy assignment to get.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyAssignmentName(String policyAssignmentName) {
+            return policyAssignmentName(Output.of(policyAssignmentName));
+        }
+
+        /**
+         * @param scope The scope of the policy assignment. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPolicyAssignmentArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetPolicyAssignmentArgs build() {

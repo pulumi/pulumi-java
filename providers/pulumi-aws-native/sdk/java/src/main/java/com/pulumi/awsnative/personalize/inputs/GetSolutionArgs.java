@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.personalize.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetSolutionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSolutionArgs Empty = new GetSolutionArgs();
 
     @Import(name="solutionArn", required=true)
-    private String solutionArn;
+    private Output<String> solutionArn;
 
-    public String solutionArn() {
+    public Output<String> solutionArn() {
         return this.solutionArn;
     }
 
@@ -43,9 +44,13 @@ public final class GetSolutionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSolutionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder solutionArn(String solutionArn) {
+        public Builder solutionArn(Output<String> solutionArn) {
             $.solutionArn = solutionArn;
             return this;
+        }
+
+        public Builder solutionArn(String solutionArn) {
+            return solutionArn(Output.of(solutionArn));
         }
 
         public GetSolutionArgs build() {

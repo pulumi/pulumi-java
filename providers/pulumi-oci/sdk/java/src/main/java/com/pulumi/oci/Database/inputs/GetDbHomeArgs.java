@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDbHomeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dbHomeId", required=true)
-    private String dbHomeId;
+    private Output<String> dbHomeId;
 
     /**
      * @return The Database Home [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String dbHomeId() {
+    public Output<String> dbHomeId() {
         return this.dbHomeId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDbHomeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder dbHomeId(String dbHomeId) {
+        public Builder dbHomeId(Output<String> dbHomeId) {
             $.dbHomeId = dbHomeId;
             return this;
+        }
+
+        /**
+         * @param dbHomeId The Database Home [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbHomeId(String dbHomeId) {
+            return dbHomeId(Output.of(dbHomeId));
         }
 
         public GetDbHomeArgs build() {

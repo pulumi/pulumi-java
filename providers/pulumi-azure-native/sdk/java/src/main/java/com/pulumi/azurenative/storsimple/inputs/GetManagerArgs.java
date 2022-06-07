@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.storsimple.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managerName", required=true)
-    private String managerName;
+    private Output<String> managerName;
 
     /**
      * @return The manager name
      * 
      */
-    public String managerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -32,13 +33,13 @@ public final class GetManagerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetManagerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder managerName(String managerName) {
+        public Builder managerName(Output<String> managerName) {
             $.managerName = managerName;
+            return this;
+        }
+
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managerName(String managerName) {
+            return managerName(Output.of(managerName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetManagerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetManagerArgs build() {

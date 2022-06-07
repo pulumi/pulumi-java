@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualHubIpConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ipConfigName", required=true)
-    private String ipConfigName;
+    private Output<String> ipConfigName;
 
     /**
      * @return The name of the ipconfig.
      * 
      */
-    public String ipConfigName() {
+    public Output<String> ipConfigName() {
         return this.ipConfigName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualHubIpConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name of the VirtualHub.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVirtualHubIpConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="virtualHubName", required=true)
-    private String virtualHubName;
+    private Output<String> virtualHubName;
 
     /**
      * @return The name of the VirtualHub.
      * 
      */
-    public String virtualHubName() {
+    public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVirtualHubIpConfigurationArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ipConfigName(String ipConfigName) {
+        public Builder ipConfigName(Output<String> ipConfigName) {
             $.ipConfigName = ipConfigName;
+            return this;
+        }
+
+        /**
+         * @param ipConfigName The name of the ipconfig.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipConfigName(String ipConfigName) {
+            return ipConfigName(Output.of(ipConfigName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVirtualHubIpConfigurationArgs extends com.pulumi.resources
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualHubName(Output<String> virtualHubName) {
+            $.virtualHubName = virtualHubName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVirtualHubIpConfigurationArgs extends com.pulumi.resources
          * 
          */
         public Builder virtualHubName(String virtualHubName) {
-            $.virtualHubName = virtualHubName;
-            return this;
+            return virtualHubName(Output.of(virtualHubName));
         }
 
         public GetVirtualHubIpConfigurationArgs build() {

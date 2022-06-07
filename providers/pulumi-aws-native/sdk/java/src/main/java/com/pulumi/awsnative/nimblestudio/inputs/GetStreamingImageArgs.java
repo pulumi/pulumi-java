@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.nimblestudio.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetStreamingImageArgs extends com.pulumi.resources.InvokeArgs
     public static final GetStreamingImageArgs Empty = new GetStreamingImageArgs();
 
     @Import(name="streamingImageId", required=true)
-    private String streamingImageId;
+    private Output<String> streamingImageId;
 
-    public String streamingImageId() {
+    public Output<String> streamingImageId() {
         return this.streamingImageId;
     }
 
@@ -24,13 +25,13 @@ public final class GetStreamingImageArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="studioId", required=true)
-    private String studioId;
+    private Output<String> studioId;
 
     /**
      * @return &lt;p&gt;The studioId. &lt;/p&gt;
      * 
      */
-    public String studioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
@@ -59,8 +60,23 @@ public final class GetStreamingImageArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetStreamingImageArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder streamingImageId(String streamingImageId) {
+        public Builder streamingImageId(Output<String> streamingImageId) {
             $.streamingImageId = streamingImageId;
+            return this;
+        }
+
+        public Builder streamingImageId(String streamingImageId) {
+            return streamingImageId(Output.of(streamingImageId));
+        }
+
+        /**
+         * @param studioId &lt;p&gt;The studioId. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder studioId(Output<String> studioId) {
+            $.studioId = studioId;
             return this;
         }
 
@@ -71,8 +87,7 @@ public final class GetStreamingImageArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder studioId(String studioId) {
-            $.studioId = studioId;
-            return this;
+            return studioId(Output.of(studioId));
         }
 
         public GetStreamingImageArgs build() {

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Database.inputs.GetDbServersFilter;
+import com.pulumi.oci.Database.inputs.GetDbServersFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetDbServersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,13 +37,13 @@ public final class GetDbServersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given. The match is not case sensitive.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -51,20 +52,20 @@ public final class GetDbServersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exadataInfrastructureId", required=true)
-    private String exadataInfrastructureId;
+    private Output<String> exadataInfrastructureId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the ExadataInfrastructure.
      * 
      */
-    public String exadataInfrastructureId() {
+    public Output<String> exadataInfrastructureId() {
         return this.exadataInfrastructureId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDbServersFilter> filters;
+    private @Nullable Output<List<GetDbServersFilterArgs>> filters;
 
-    public Optional<List<GetDbServersFilter>> filters() {
+    public Optional<Output<List<GetDbServersFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetDbServersArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state exactly.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,8 +118,29 @@ public final class GetDbServersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given. The match is not case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -128,8 +150,18 @@ public final class GetDbServersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param exadataInfrastructureId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the ExadataInfrastructure.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exadataInfrastructureId(Output<String> exadataInfrastructureId) {
+            $.exadataInfrastructureId = exadataInfrastructureId;
             return this;
         }
 
@@ -140,16 +172,19 @@ public final class GetDbServersArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder exadataInfrastructureId(String exadataInfrastructureId) {
-            $.exadataInfrastructureId = exadataInfrastructureId;
-            return this;
+            return exadataInfrastructureId(Output.of(exadataInfrastructureId));
         }
 
-        public Builder filters(@Nullable List<GetDbServersFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDbServersFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDbServersFilter... filters) {
+        public Builder filters(List<GetDbServersFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDbServersFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -159,9 +194,19 @@ public final class GetDbServersArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetDbServersArgs build() {

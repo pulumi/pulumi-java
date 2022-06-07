@@ -5,9 +5,12 @@ package com.pulumi.awsnative.lookoutmetrics;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.lookoutmetrics.inputs.GetAlertArgs;
+import com.pulumi.awsnative.lookoutmetrics.inputs.GetAlertPlainArgs;
 import com.pulumi.awsnative.lookoutmetrics.inputs.GetAnomalyDetectorArgs;
+import com.pulumi.awsnative.lookoutmetrics.inputs.GetAnomalyDetectorPlainArgs;
 import com.pulumi.awsnative.lookoutmetrics.outputs.GetAlertResult;
 import com.pulumi.awsnative.lookoutmetrics.outputs.GetAnomalyDetectorResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -18,28 +21,56 @@ public final class LookoutmetricsFunctions {
      * Resource Type definition for AWS::LookoutMetrics::Alert
      * 
      */
-    public static CompletableFuture<GetAlertResult> getAlert(GetAlertArgs args) {
+    public static Output<GetAlertResult> getAlert(GetAlertArgs args) {
         return getAlert(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::LookoutMetrics::Alert
      * 
      */
-    public static CompletableFuture<GetAlertResult> getAlert(GetAlertArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAlertResult> getAlertPlain(GetAlertPlainArgs args) {
+        return getAlertPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::LookoutMetrics::Alert
+     * 
+     */
+    public static Output<GetAlertResult> getAlert(GetAlertArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lookoutmetrics:getAlert", TypeShape.of(GetAlertResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::LookoutMetrics::Alert
+     * 
+     */
+    public static CompletableFuture<GetAlertResult> getAlertPlain(GetAlertPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lookoutmetrics:getAlert", TypeShape.of(GetAlertResult.class), args, Utilities.withVersion(options));
     }
     /**
      * An Amazon Lookout for Metrics Detector
      * 
      */
-    public static CompletableFuture<GetAnomalyDetectorResult> getAnomalyDetector(GetAnomalyDetectorArgs args) {
+    public static Output<GetAnomalyDetectorResult> getAnomalyDetector(GetAnomalyDetectorArgs args) {
         return getAnomalyDetector(args, InvokeOptions.Empty);
     }
     /**
      * An Amazon Lookout for Metrics Detector
      * 
      */
-    public static CompletableFuture<GetAnomalyDetectorResult> getAnomalyDetector(GetAnomalyDetectorArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAnomalyDetectorResult> getAnomalyDetectorPlain(GetAnomalyDetectorPlainArgs args) {
+        return getAnomalyDetectorPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An Amazon Lookout for Metrics Detector
+     * 
+     */
+    public static Output<GetAnomalyDetectorResult> getAnomalyDetector(GetAnomalyDetectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:lookoutmetrics:getAnomalyDetector", TypeShape.of(GetAnomalyDetectorResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An Amazon Lookout for Metrics Detector
+     * 
+     */
+    public static CompletableFuture<GetAnomalyDetectorResult> getAnomalyDetectorPlain(GetAnomalyDetectorPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lookoutmetrics:getAnomalyDetector", TypeShape.of(GetAnomalyDetectorResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataFlow.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,9 +17,9 @@ public final class GetRunLogArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRunLogArgs Empty = new GetRunLogArgs();
 
     @Import(name="base64EncodeContent")
-    private @Nullable Boolean base64EncodeContent;
+    private @Nullable Output<Boolean> base64EncodeContent;
 
-    public Optional<Boolean> base64EncodeContent() {
+    public Optional<Output<Boolean>> base64EncodeContent() {
         return Optional.ofNullable(this.base64EncodeContent);
     }
 
@@ -27,13 +28,13 @@ public final class GetRunLogArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the log. Avoid entering confidential information.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -42,13 +43,13 @@ public final class GetRunLogArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="runId", required=true)
-    private String runId;
+    private Output<String> runId;
 
     /**
      * @return The unique ID for the run
      * 
      */
-    public String runId() {
+    public Output<String> runId() {
         return this.runId;
     }
 
@@ -78,8 +79,23 @@ public final class GetRunLogArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRunLogArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder base64EncodeContent(@Nullable Boolean base64EncodeContent) {
+        public Builder base64EncodeContent(@Nullable Output<Boolean> base64EncodeContent) {
             $.base64EncodeContent = base64EncodeContent;
+            return this;
+        }
+
+        public Builder base64EncodeContent(Boolean base64EncodeContent) {
+            return base64EncodeContent(Output.of(base64EncodeContent));
+        }
+
+        /**
+         * @param name The name of the log. Avoid entering confidential information.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -90,7 +106,17 @@ public final class GetRunLogArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param runId The unique ID for the run
+         * 
+         * @return builder
+         * 
+         */
+        public Builder runId(Output<String> runId) {
+            $.runId = runId;
             return this;
         }
 
@@ -101,8 +127,7 @@ public final class GetRunLogArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder runId(String runId) {
-            $.runId = runId;
-            return this;
+            return runId(Output.of(runId));
         }
 
         public GetRunLogArgs build() {

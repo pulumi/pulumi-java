@@ -5,7 +5,9 @@ package com.pulumi.awsnative.opensearchservice;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.opensearchservice.inputs.GetDomainArgs;
+import com.pulumi.awsnative.opensearchservice.inputs.GetDomainPlainArgs;
 import com.pulumi.awsnative.opensearchservice.outputs.GetDomainResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class OpensearchserviceFunctions {
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
     /**
      * An example resource schema demonstrating some basic constructs and validation rules.
      * 
      */
-    public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args) {
+        return getDomainPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
+    public static Output<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:opensearchservice:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
+    public static CompletableFuture<GetDomainResult> getDomainPlain(GetDomainPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:opensearchservice:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }
 }

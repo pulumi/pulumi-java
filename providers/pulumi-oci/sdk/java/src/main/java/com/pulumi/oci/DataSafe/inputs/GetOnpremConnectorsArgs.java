@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataSafe.inputs.GetOnpremConnectorsFilter;
+import com.pulumi.oci.DataSafe.inputs.GetOnpremConnectorsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="accessLevel")
-    private @Nullable String accessLevel;
+    private @Nullable Output<String> accessLevel;
 
     /**
      * @return Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
      * 
      */
-    public Optional<String> accessLevel() {
+    public Optional<Output<String>> accessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
 
@@ -37,13 +38,13 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return A filter to return only resources that match the specified compartment OCID.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -52,13 +53,13 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
@@ -67,20 +68,20 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the specified display name.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetOnpremConnectorsFilter> filters;
+    private @Nullable Output<List<GetOnpremConnectorsFilterArgs>> filters;
 
-    public Optional<List<GetOnpremConnectorsFilter>> filters() {
+    public Optional<Output<List<GetOnpremConnectorsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -89,13 +90,13 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="onPremConnectorId")
-    private @Nullable String onPremConnectorId;
+    private @Nullable Output<String> onPremConnectorId;
 
     /**
      * @return A filter to return only the on-premises connector that matches the specified id.
      * 
      */
-    public Optional<String> onPremConnectorId() {
+    public Optional<Output<String>> onPremConnectorId() {
         return Optional.ofNullable(this.onPremConnectorId);
     }
 
@@ -104,13 +105,13 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="onPremConnectorLifecycleState")
-    private @Nullable String onPremConnectorLifecycleState;
+    private @Nullable Output<String> onPremConnectorLifecycleState;
 
     /**
      * @return A filter to return only on-premises connector resources that match the specified lifecycle state.
      * 
      */
-    public Optional<String> onPremConnectorLifecycleState() {
+    public Optional<Output<String>> onPremConnectorLifecycleState() {
         return Optional.ofNullable(this.onPremConnectorLifecycleState);
     }
 
@@ -150,8 +151,29 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder accessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable Output<String> accessLevel) {
             $.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * @param accessLevel Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED. Setting this to ACCESSIBLE returns only those compartments for which the user has INSPECT permissions directly or indirectly (permissions can be on a resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessLevel(String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
+        }
+
+        /**
+         * @param compartmentId A filter to return only resources that match the specified compartment OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -162,7 +184,17 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree Default is false. When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the &#39;accessLevel&#39; setting.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -172,8 +204,18 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the specified display name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -183,17 +225,20 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetOnpremConnectorsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetOnpremConnectorsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetOnpremConnectorsFilter... filters) {
+        public Builder filters(List<GetOnpremConnectorsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetOnpremConnectorsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -203,8 +248,29 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder onPremConnectorId(@Nullable String onPremConnectorId) {
+        public Builder onPremConnectorId(@Nullable Output<String> onPremConnectorId) {
             $.onPremConnectorId = onPremConnectorId;
+            return this;
+        }
+
+        /**
+         * @param onPremConnectorId A filter to return only the on-premises connector that matches the specified id.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onPremConnectorId(String onPremConnectorId) {
+            return onPremConnectorId(Output.of(onPremConnectorId));
+        }
+
+        /**
+         * @param onPremConnectorLifecycleState A filter to return only on-premises connector resources that match the specified lifecycle state.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onPremConnectorLifecycleState(@Nullable Output<String> onPremConnectorLifecycleState) {
+            $.onPremConnectorLifecycleState = onPremConnectorLifecycleState;
             return this;
         }
 
@@ -214,9 +280,8 @@ public final class GetOnpremConnectorsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder onPremConnectorLifecycleState(@Nullable String onPremConnectorLifecycleState) {
-            $.onPremConnectorLifecycleState = onPremConnectorLifecycleState;
-            return this;
+        public Builder onPremConnectorLifecycleState(String onPremConnectorLifecycleState) {
+            return onPremConnectorLifecycleState(Output.of(onPremConnectorLifecycleState));
         }
 
         public GetOnpremConnectorsArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.portal.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConsoleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="consoleName", required=true)
-    private String consoleName;
+    private Output<String> consoleName;
 
     /**
      * @return The name of the console
      * 
      */
-    public String consoleName() {
+    public Output<String> consoleName() {
         return this.consoleName;
     }
 
@@ -57,9 +58,19 @@ public final class GetConsoleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder consoleName(String consoleName) {
+        public Builder consoleName(Output<String> consoleName) {
             $.consoleName = consoleName;
             return this;
+        }
+
+        /**
+         * @param consoleName The name of the console
+         * 
+         * @return builder
+         * 
+         */
+        public Builder consoleName(String consoleName) {
+            return consoleName(Output.of(consoleName));
         }
 
         public GetConsoleArgs build() {

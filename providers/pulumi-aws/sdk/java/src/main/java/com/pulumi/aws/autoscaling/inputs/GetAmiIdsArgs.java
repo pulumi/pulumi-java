@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.autoscaling.inputs;
 
-import com.pulumi.aws.autoscaling.inputs.GetAmiIdsFilter;
+import com.pulumi.aws.autoscaling.inputs.GetAmiIdsFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
@@ -20,13 +21,13 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetAmiIdsFilter> filters;
+    private @Nullable Output<List<GetAmiIdsFilterArgs>> filters;
 
     /**
      * @return A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
      * 
      */
-    public Optional<List<GetAmiIdsFilter>> filters() {
+    public Optional<Output<List<GetAmiIdsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -60,7 +61,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetAmiIdsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -71,7 +72,17 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetAmiIdsFilter... filters) {
+        public Builder filters(List<GetAmiIdsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters A filter used to scope the list e.g., by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetAmiIdsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

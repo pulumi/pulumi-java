@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.metastore_v1alpha.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetMetadataImportArgs extends com.pulumi.resources.InvokeArgs
     public static final GetMetadataImportArgs Empty = new GetMetadataImportArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="metadataImportId", required=true)
-    private String metadataImportId;
+    private Output<String> metadataImportId;
 
-    public String metadataImportId() {
+    public Output<String> metadataImportId() {
         return this.metadataImportId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="serviceId", required=true)
-    private String serviceId;
+    private Output<String> serviceId;
 
-    public String serviceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -69,24 +70,40 @@ public final class GetMetadataImportArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetMetadataImportArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder metadataImportId(String metadataImportId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder metadataImportId(Output<String> metadataImportId) {
             $.metadataImportId = metadataImportId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder metadataImportId(String metadataImportId) {
+            return metadataImportId(Output.of(metadataImportId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder serviceId(String serviceId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder serviceId(Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
+        }
+
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
         }
 
         public GetMetadataImportArgs build() {

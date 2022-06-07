@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDiagnosticArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diagnosticId", required=true)
-    private String diagnosticId;
+    private Output<String> diagnosticId;
 
     /**
      * @return Diagnostic identifier. Must be unique in the current API Management service instance.
      * 
      */
-    public String diagnosticId() {
+    public Output<String> diagnosticId() {
         return this.diagnosticId;
     }
 
@@ -32,13 +33,13 @@ public final class GetDiagnosticArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetDiagnosticArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetDiagnosticArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder diagnosticId(String diagnosticId) {
+        public Builder diagnosticId(Output<String> diagnosticId) {
             $.diagnosticId = diagnosticId;
+            return this;
+        }
+
+        /**
+         * @param diagnosticId Diagnostic identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder diagnosticId(String diagnosticId) {
+            return diagnosticId(Output.of(diagnosticId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetDiagnosticArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetDiagnosticArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetDiagnosticArgs build() {

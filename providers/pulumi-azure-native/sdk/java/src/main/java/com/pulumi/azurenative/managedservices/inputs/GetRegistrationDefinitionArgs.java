@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.managedservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRegistrationDefinitionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="registrationDefinitionId", required=true)
-    private String registrationDefinitionId;
+    private Output<String> registrationDefinitionId;
 
     /**
      * @return Guid of the registration definition.
      * 
      */
-    public String registrationDefinitionId() {
+    public Output<String> registrationDefinitionId() {
         return this.registrationDefinitionId;
     }
 
@@ -32,13 +33,13 @@ public final class GetRegistrationDefinitionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return Scope of the resource.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -73,8 +74,29 @@ public final class GetRegistrationDefinitionArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder registrationDefinitionId(String registrationDefinitionId) {
+        public Builder registrationDefinitionId(Output<String> registrationDefinitionId) {
             $.registrationDefinitionId = registrationDefinitionId;
+            return this;
+        }
+
+        /**
+         * @param registrationDefinitionId Guid of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registrationDefinitionId(String registrationDefinitionId) {
+            return registrationDefinitionId(Output.of(registrationDefinitionId));
+        }
+
+        /**
+         * @param scope Scope of the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetRegistrationDefinitionArgs extends com.pulumi.resources.In
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetRegistrationDefinitionArgs build() {

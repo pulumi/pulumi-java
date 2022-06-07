@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.mobilenetwork.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSimArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSimArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="simName", required=true)
-    private String simName;
+    private Output<String> simName;
 
     /**
      * @return The name of the SIM.
      * 
      */
-    public String simName() {
+    public Output<String> simName() {
         return this.simName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSimArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param simName The name of the SIM.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder simName(Output<String> simName) {
+            $.simName = simName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSimArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder simName(String simName) {
-            $.simName = simName;
-            return this;
+            return simName(Output.of(simName));
         }
 
         public GetSimArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.resources.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeploymentAtScopeArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deploymentName", required=true)
-    private String deploymentName;
+    private Output<String> deploymentName;
 
     /**
      * @return The name of the deployment.
      * 
      */
-    public String deploymentName() {
+    public Output<String> deploymentName() {
         return this.deploymentName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDeploymentAtScopeArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return The resource scope.
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -73,8 +74,29 @@ public final class GetDeploymentAtScopeArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder deploymentName(String deploymentName) {
+        public Builder deploymentName(Output<String> deploymentName) {
             $.deploymentName = deploymentName;
+            return this;
+        }
+
+        /**
+         * @param deploymentName The name of the deployment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentName(String deploymentName) {
+            return deploymentName(Output.of(deploymentName));
+        }
+
+        /**
+         * @param scope The resource scope.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDeploymentAtScopeArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetDeploymentAtScopeArgs build() {

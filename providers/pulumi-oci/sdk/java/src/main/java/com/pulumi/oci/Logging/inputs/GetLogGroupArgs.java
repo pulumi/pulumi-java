@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Logging.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLogGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logGroupId", required=true)
-    private String logGroupId;
+    private Output<String> logGroupId;
 
     /**
      * @return OCID of a log group to work with.
      * 
      */
-    public String logGroupId() {
+    public Output<String> logGroupId() {
         return this.logGroupId;
     }
 
@@ -57,9 +58,19 @@ public final class GetLogGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder logGroupId(String logGroupId) {
+        public Builder logGroupId(Output<String> logGroupId) {
             $.logGroupId = logGroupId;
             return this;
+        }
+
+        /**
+         * @param logGroupId OCID of a log group to work with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logGroupId(String logGroupId) {
+            return logGroupId(Output.of(logGroupId));
         }
 
         public GetLogGroupArgs build() {

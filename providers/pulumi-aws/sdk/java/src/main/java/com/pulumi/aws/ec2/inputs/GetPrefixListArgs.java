@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetPrefixListFilter;
+import com.pulumi.aws.ec2.inputs.GetPrefixListFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -21,13 +22,13 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetPrefixListFilter> filters;
+    private @Nullable Output<List<GetPrefixListFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Optional<List<GetPrefixListFilter>> filters() {
+    public Optional<Output<List<GetPrefixListFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -36,13 +37,13 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the filter field. Valid values can be found in the [EC2 DescribePrefixLists API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribePrefixLists.html).
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -51,13 +52,13 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prefixListId")
-    private @Nullable String prefixListId;
+    private @Nullable Output<String> prefixListId;
 
     /**
      * @return The ID of the prefix list to select.
      * 
      */
-    public Optional<String> prefixListId() {
+    public Optional<Output<String>> prefixListId() {
         return Optional.ofNullable(this.prefixListId);
     }
 
@@ -93,7 +94,7 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetPrefixListFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetPrefixListFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -104,7 +105,17 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetPrefixListFilter... filters) {
+        public Builder filters(List<GetPrefixListFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetPrefixListFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -114,8 +125,29 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the filter field. Valid values can be found in the [EC2 DescribePrefixLists API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribePrefixLists.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param prefixListId The ID of the prefix list to select.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder prefixListId(@Nullable Output<String> prefixListId) {
+            $.prefixListId = prefixListId;
             return this;
         }
 
@@ -125,9 +157,8 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder prefixListId(@Nullable String prefixListId) {
-            $.prefixListId = prefixListId;
-            return this;
+        public Builder prefixListId(String prefixListId) {
+            return prefixListId(Output.of(prefixListId));
         }
 
         public GetPrefixListArgs build() {

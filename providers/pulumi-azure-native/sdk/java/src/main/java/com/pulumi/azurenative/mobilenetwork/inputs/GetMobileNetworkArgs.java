@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.mobilenetwork.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetMobileNetworkArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="mobileNetworkName", required=true)
-    private String mobileNetworkName;
+    private Output<String> mobileNetworkName;
 
     /**
      * @return The name of the mobile network.
      * 
      */
-    public String mobileNetworkName() {
+    public Output<String> mobileNetworkName() {
         return this.mobileNetworkName;
     }
 
@@ -32,13 +33,13 @@ public final class GetMobileNetworkArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetMobileNetworkArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder mobileNetworkName(String mobileNetworkName) {
+        public Builder mobileNetworkName(Output<String> mobileNetworkName) {
             $.mobileNetworkName = mobileNetworkName;
+            return this;
+        }
+
+        /**
+         * @param mobileNetworkName The name of the mobile network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mobileNetworkName(String mobileNetworkName) {
+            return mobileNetworkName(Output.of(mobileNetworkName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetMobileNetworkArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetMobileNetworkArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.logic.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
      * 
      */
     @Import(name="actionName", required=true)
-    private String actionName;
+    private Output<String> actionName;
 
     /**
      * @return The workflow action name.
      * 
      */
-    public String actionName() {
+    public Output<String> actionName() {
         return this.actionName;
     }
 
@@ -32,13 +33,13 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
      * 
      */
     @Import(name="repetitionName", required=true)
-    private String repetitionName;
+    private Output<String> repetitionName;
 
     /**
      * @return The workflow repetition.
      * 
      */
-    public String repetitionName() {
+    public Output<String> repetitionName() {
         return this.repetitionName;
     }
 
@@ -47,13 +48,13 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
      * 
      */
     @Import(name="runName", required=true)
-    private String runName;
+    private Output<String> runName;
 
     /**
      * @return The workflow run name.
      * 
      */
-    public String runName() {
+    public Output<String> runName() {
         return this.runName;
     }
 
@@ -77,13 +78,13 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
      * 
      */
     @Import(name="workflowName", required=true)
-    private String workflowName;
+    private Output<String> workflowName;
 
     /**
      * @return The workflow name.
      * 
      */
-    public String workflowName() {
+    public Output<String> workflowName() {
         return this.workflowName;
     }
 
@@ -121,8 +122,29 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
          * @return builder
          * 
          */
-        public Builder actionName(String actionName) {
+        public Builder actionName(Output<String> actionName) {
             $.actionName = actionName;
+            return this;
+        }
+
+        /**
+         * @param actionName The workflow action name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder actionName(String actionName) {
+            return actionName(Output.of(actionName));
+        }
+
+        /**
+         * @param repetitionName The workflow repetition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repetitionName(Output<String> repetitionName) {
+            $.repetitionName = repetitionName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
          * 
          */
         public Builder repetitionName(String repetitionName) {
-            $.repetitionName = repetitionName;
+            return repetitionName(Output.of(repetitionName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param runName The workflow run name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder runName(Output<String> runName) {
+            $.runName = runName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
          * 
          */
         public Builder runName(String runName) {
-            $.runName = runName;
+            return runName(Output.of(runName));
+        }
+
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workflowName(Output<String> workflowName) {
+            $.workflowName = workflowName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
          * 
          */
         public Builder workflowName(String workflowName) {
-            $.workflowName = workflowName;
-            return this;
+            return workflowName(Output.of(workflowName));
         }
 
         public ListWorkflowRunActionRepetitionExpressionTracesArgs build() {

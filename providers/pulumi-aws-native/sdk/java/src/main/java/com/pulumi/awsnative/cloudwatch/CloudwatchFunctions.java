@@ -5,9 +5,12 @@ package com.pulumi.awsnative.cloudwatch;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.cloudwatch.inputs.GetCompositeAlarmArgs;
+import com.pulumi.awsnative.cloudwatch.inputs.GetCompositeAlarmPlainArgs;
 import com.pulumi.awsnative.cloudwatch.inputs.GetMetricStreamArgs;
+import com.pulumi.awsnative.cloudwatch.inputs.GetMetricStreamPlainArgs;
 import com.pulumi.awsnative.cloudwatch.outputs.GetCompositeAlarmResult;
 import com.pulumi.awsnative.cloudwatch.outputs.GetMetricStreamResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -18,28 +21,56 @@ public final class CloudwatchFunctions {
      * The AWS::CloudWatch::CompositeAlarm type specifies an alarm which aggregates the states of other Alarms (Metric or Composite Alarms) as defined by the AlarmRule expression
      * 
      */
-    public static CompletableFuture<GetCompositeAlarmResult> getCompositeAlarm(GetCompositeAlarmArgs args) {
+    public static Output<GetCompositeAlarmResult> getCompositeAlarm(GetCompositeAlarmArgs args) {
         return getCompositeAlarm(args, InvokeOptions.Empty);
     }
     /**
      * The AWS::CloudWatch::CompositeAlarm type specifies an alarm which aggregates the states of other Alarms (Metric or Composite Alarms) as defined by the AlarmRule expression
      * 
      */
-    public static CompletableFuture<GetCompositeAlarmResult> getCompositeAlarm(GetCompositeAlarmArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetCompositeAlarmResult> getCompositeAlarmPlain(GetCompositeAlarmPlainArgs args) {
+        return getCompositeAlarmPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The AWS::CloudWatch::CompositeAlarm type specifies an alarm which aggregates the states of other Alarms (Metric or Composite Alarms) as defined by the AlarmRule expression
+     * 
+     */
+    public static Output<GetCompositeAlarmResult> getCompositeAlarm(GetCompositeAlarmArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:cloudwatch:getCompositeAlarm", TypeShape.of(GetCompositeAlarmResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The AWS::CloudWatch::CompositeAlarm type specifies an alarm which aggregates the states of other Alarms (Metric or Composite Alarms) as defined by the AlarmRule expression
+     * 
+     */
+    public static CompletableFuture<GetCompositeAlarmResult> getCompositeAlarmPlain(GetCompositeAlarmPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudwatch:getCompositeAlarm", TypeShape.of(GetCompositeAlarmResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for Metric Stream
      * 
      */
-    public static CompletableFuture<GetMetricStreamResult> getMetricStream(GetMetricStreamArgs args) {
+    public static Output<GetMetricStreamResult> getMetricStream(GetMetricStreamArgs args) {
         return getMetricStream(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for Metric Stream
      * 
      */
-    public static CompletableFuture<GetMetricStreamResult> getMetricStream(GetMetricStreamArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetMetricStreamResult> getMetricStreamPlain(GetMetricStreamPlainArgs args) {
+        return getMetricStreamPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for Metric Stream
+     * 
+     */
+    public static Output<GetMetricStreamResult> getMetricStream(GetMetricStreamArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:cloudwatch:getMetricStream", TypeShape.of(GetMetricStreamResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for Metric Stream
+     * 
+     */
+    public static CompletableFuture<GetMetricStreamResult> getMetricStreamPlain(GetMetricStreamPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudwatch:getMetricStream", TypeShape.of(GetMetricStreamResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.recoveryservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
      * 
      */
     @Import(name="fabricName", required=true)
-    private String fabricName;
+    private Output<String> fabricName;
 
     /**
      * @return Fabric name.
      * 
      */
-    public String fabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -32,13 +33,13 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
      * 
      */
     @Import(name="mappingName", required=true)
-    private String mappingName;
+    private Output<String> mappingName;
 
     /**
      * @return Protection Container mapping name.
      * 
      */
-    public String mappingName() {
+    public Output<String> mappingName() {
         return this.mappingName;
     }
 
@@ -47,13 +48,13 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
      * 
      */
     @Import(name="protectionContainerName", required=true)
-    private String protectionContainerName;
+    private Output<String> protectionContainerName;
 
     /**
      * @return Protection container name.
      * 
      */
-    public String protectionContainerName() {
+    public Output<String> protectionContainerName() {
         return this.protectionContainerName;
     }
 
@@ -62,13 +63,13 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the recovery services vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,13 +78,13 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
      * 
      */
     @Import(name="resourceName", required=true)
-    private String resourceName;
+    private Output<String> resourceName;
 
     /**
      * @return The name of the recovery services vault.
      * 
      */
-    public String resourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -121,8 +122,29 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
          * @return builder
          * 
          */
-        public Builder fabricName(String fabricName) {
+        public Builder fabricName(Output<String> fabricName) {
             $.fabricName = fabricName;
+            return this;
+        }
+
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fabricName(String fabricName) {
+            return fabricName(Output.of(fabricName));
+        }
+
+        /**
+         * @param mappingName Protection Container mapping name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mappingName(Output<String> mappingName) {
+            $.mappingName = mappingName;
             return this;
         }
 
@@ -133,7 +155,17 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
          * 
          */
         public Builder mappingName(String mappingName) {
-            $.mappingName = mappingName;
+            return mappingName(Output.of(mappingName));
+        }
+
+        /**
+         * @param protectionContainerName Protection container name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder protectionContainerName(Output<String> protectionContainerName) {
+            $.protectionContainerName = protectionContainerName;
             return this;
         }
 
@@ -144,7 +176,17 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
          * 
          */
         public Builder protectionContainerName(String protectionContainerName) {
-            $.protectionContainerName = protectionContainerName;
+            return protectionContainerName(Output.of(protectionContainerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -155,7 +197,17 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceName(Output<String> resourceName) {
+            $.resourceName = resourceName;
             return this;
         }
 
@@ -166,8 +218,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
          * 
          */
         public Builder resourceName(String resourceName) {
-            $.resourceName = resourceName;
-            return this;
+            return resourceName(Output.of(resourceName));
         }
 
         public GetReplicationProtectionContainerMappingArgs build() {

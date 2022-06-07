@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.blueprint.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="blueprintName", required=true)
-    private String blueprintName;
+    private Output<String> blueprintName;
 
     /**
      * @return Name of the blueprint definition.
      * 
      */
-    public String blueprintName() {
+    public Output<String> blueprintName() {
         return this.blueprintName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceScope", required=true)
-    private String resourceScope;
+    private Output<String> resourceScope;
 
     /**
      * @return The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
      * 
      */
-    public String resourceScope() {
+    public Output<String> resourceScope() {
         return this.resourceScope;
     }
 
@@ -47,13 +48,13 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="versionId", required=true)
-    private String versionId;
+    private Output<String> versionId;
 
     /**
      * @return Version of the published blueprint definition.
      * 
      */
-    public String versionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
 
@@ -89,8 +90,29 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder blueprintName(String blueprintName) {
+        public Builder blueprintName(Output<String> blueprintName) {
             $.blueprintName = blueprintName;
+            return this;
+        }
+
+        /**
+         * @param blueprintName Name of the blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blueprintName(String blueprintName) {
+            return blueprintName(Output.of(blueprintName));
+        }
+
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceScope(Output<String> resourceScope) {
+            $.resourceScope = resourceScope;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceScope(String resourceScope) {
-            $.resourceScope = resourceScope;
+            return resourceScope(Output.of(resourceScope));
+        }
+
+        /**
+         * @param versionId Version of the published blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder versionId(Output<String> versionId) {
+            $.versionId = versionId;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder versionId(String versionId) {
-            $.versionId = versionId;
-            return this;
+            return versionId(Output.of(versionId));
         }
 
         public GetPublishedBlueprintArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.media.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListMediaServiceKeysArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="mediaServiceName", required=true)
-    private String mediaServiceName;
+    private Output<String> mediaServiceName;
 
     /**
      * @return Name of the Media Service.
      * 
      */
-    public String mediaServiceName() {
+    public Output<String> mediaServiceName() {
         return this.mediaServiceName;
     }
 
@@ -32,13 +33,13 @@ public final class ListMediaServiceKeysArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class ListMediaServiceKeysArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder mediaServiceName(String mediaServiceName) {
+        public Builder mediaServiceName(Output<String> mediaServiceName) {
             $.mediaServiceName = mediaServiceName;
+            return this;
+        }
+
+        /**
+         * @param mediaServiceName Name of the Media Service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mediaServiceName(String mediaServiceName) {
+            return mediaServiceName(Output.of(mediaServiceName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class ListMediaServiceKeysArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListMediaServiceKeysArgs build() {

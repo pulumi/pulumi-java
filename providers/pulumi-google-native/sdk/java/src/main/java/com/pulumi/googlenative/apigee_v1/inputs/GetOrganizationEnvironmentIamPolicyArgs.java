@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.apigee_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetOrganizationEnvironmentIamPolicyArgs extends com.pulumi.re
     public static final GetOrganizationEnvironmentIamPolicyArgs Empty = new GetOrganizationEnvironmentIamPolicyArgs();
 
     @Import(name="environmentId", required=true)
-    private String environmentId;
+    private Output<String> environmentId;
 
-    public String environmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="organizationId", required=true)
-    private String organizationId;
+    private Output<String> organizationId;
 
-    public String organizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -61,19 +62,31 @@ public final class GetOrganizationEnvironmentIamPolicyArgs extends com.pulumi.re
             $ = new GetOrganizationEnvironmentIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder environmentId(String environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
+        }
+
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder organizationId(String organizationId) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder organizationId(Output<String> organizationId) {
             $.organizationId = organizationId;
             return this;
+        }
+
+        public Builder organizationId(String organizationId) {
+            return organizationId(Output.of(organizationId));
         }
 
         public GetOrganizationEnvironmentIamPolicyArgs build() {

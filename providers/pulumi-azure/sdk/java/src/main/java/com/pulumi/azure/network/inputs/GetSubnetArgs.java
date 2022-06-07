@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the Subnet.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Specifies the name of the resource group the Virtual Network is located in.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="virtualNetworkName", required=true)
-    private String virtualNetworkName;
+    private Output<String> virtualNetworkName;
 
     /**
      * @return Specifies the name of the Virtual Network this Subnet is located within.
      * 
      */
-    public String virtualNetworkName() {
+    public Output<String> virtualNetworkName() {
         return this.virtualNetworkName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Specifies the name of the Subnet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Specifies the name of the resource group the Virtual Network is located in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualNetworkName Specifies the name of the Virtual Network this Subnet is located within.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualNetworkName(Output<String> virtualNetworkName) {
+            $.virtualNetworkName = virtualNetworkName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder virtualNetworkName(String virtualNetworkName) {
-            $.virtualNetworkName = virtualNetworkName;
-            return this;
+            return virtualNetworkName(Output.of(virtualNetworkName));
         }
 
         public GetSubnetArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.msk.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetBatchScramSecretArgs extends com.pulumi.resources.InvokeAr
     public static final GetBatchScramSecretArgs Empty = new GetBatchScramSecretArgs();
 
     @Import(name="clusterArn", required=true)
-    private String clusterArn;
+    private Output<String> clusterArn;
 
-    public String clusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn;
     }
 
@@ -43,9 +44,13 @@ public final class GetBatchScramSecretArgs extends com.pulumi.resources.InvokeAr
             $ = new GetBatchScramSecretArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder clusterArn(String clusterArn) {
+        public Builder clusterArn(Output<String> clusterArn) {
             $.clusterArn = clusterArn;
             return this;
+        }
+
+        public Builder clusterArn(String clusterArn) {
+            return clusterArn(Output.of(clusterArn));
         }
 
         public GetBatchScramSecretArgs build() {

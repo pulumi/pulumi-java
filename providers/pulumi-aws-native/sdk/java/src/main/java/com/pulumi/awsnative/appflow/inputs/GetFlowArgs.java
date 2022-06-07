@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.appflow.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFlowArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="flowName", required=true)
-    private String flowName;
+    private Output<String> flowName;
 
     /**
      * @return Name of the flow.
      * 
      */
-    public String flowName() {
+    public Output<String> flowName() {
         return this.flowName;
     }
 
@@ -57,9 +58,19 @@ public final class GetFlowArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder flowName(String flowName) {
+        public Builder flowName(Output<String> flowName) {
             $.flowName = flowName;
             return this;
+        }
+
+        /**
+         * @param flowName Name of the flow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder flowName(String flowName) {
+            return flowName(Output.of(flowName));
         }
 
         public GetFlowArgs build() {

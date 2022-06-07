@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Oce.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetOceInstanceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oceInstanceId", required=true)
-    private String oceInstanceId;
+    private Output<String> oceInstanceId;
 
     /**
      * @return unique OceInstance identifier
      * 
      */
-    public String oceInstanceId() {
+    public Output<String> oceInstanceId() {
         return this.oceInstanceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetOceInstanceArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder oceInstanceId(String oceInstanceId) {
+        public Builder oceInstanceId(Output<String> oceInstanceId) {
             $.oceInstanceId = oceInstanceId;
             return this;
+        }
+
+        /**
+         * @param oceInstanceId unique OceInstance identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder oceInstanceId(String oceInstanceId) {
+            return oceInstanceId(Output.of(oceInstanceId));
         }
 
         public GetOceInstanceArgs build() {

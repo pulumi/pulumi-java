@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.storsimple.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="bandwidthSettingName", required=true)
-    private String bandwidthSettingName;
+    private Output<String> bandwidthSettingName;
 
     /**
      * @return The name of bandwidth setting to be fetched.
      * 
      */
-    public String bandwidthSettingName() {
+    public Output<String> bandwidthSettingName() {
         return this.bandwidthSettingName;
     }
 
@@ -32,13 +33,13 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="managerName", required=true)
-    private String managerName;
+    private Output<String> managerName;
 
     /**
      * @return The manager name
      * 
      */
-    public String managerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -47,13 +48,13 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder bandwidthSettingName(String bandwidthSettingName) {
+        public Builder bandwidthSettingName(Output<String> bandwidthSettingName) {
             $.bandwidthSettingName = bandwidthSettingName;
+            return this;
+        }
+
+        /**
+         * @param bandwidthSettingName The name of bandwidth setting to be fetched.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bandwidthSettingName(String bandwidthSettingName) {
+            return bandwidthSettingName(Output.of(bandwidthSettingName));
+        }
+
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managerName(Output<String> managerName) {
+            $.managerName = managerName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder managerName(String managerName) {
-            $.managerName = managerName;
+            return managerName(Output.of(managerName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetBandwidthSettingArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetBandwidthSettingArgs build() {

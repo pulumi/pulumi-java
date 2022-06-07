@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Mysql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="channelId", required=true)
-    private String channelId;
+    private Output<String> channelId;
 
     /**
      * @return The Channel [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String channelId() {
+    public Output<String> channelId() {
         return this.channelId;
     }
 
@@ -57,9 +58,19 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder channelId(String channelId) {
+        public Builder channelId(Output<String> channelId) {
             $.channelId = channelId;
             return this;
+        }
+
+        /**
+         * @param channelId The Channel [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder channelId(String channelId) {
+            return channelId(Output.of(channelId));
         }
 
         public GetChannelArgs build() {

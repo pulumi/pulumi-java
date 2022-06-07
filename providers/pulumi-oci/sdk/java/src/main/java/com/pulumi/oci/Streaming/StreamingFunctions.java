@@ -3,15 +3,22 @@
 
 package com.pulumi.oci.Streaming;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.Streaming.inputs.GetConnectHarnessArgs;
+import com.pulumi.oci.Streaming.inputs.GetConnectHarnessPlainArgs;
 import com.pulumi.oci.Streaming.inputs.GetConnectHarnessesArgs;
+import com.pulumi.oci.Streaming.inputs.GetConnectHarnessesPlainArgs;
 import com.pulumi.oci.Streaming.inputs.GetStreamArgs;
+import com.pulumi.oci.Streaming.inputs.GetStreamPlainArgs;
 import com.pulumi.oci.Streaming.inputs.GetStreamPoolArgs;
+import com.pulumi.oci.Streaming.inputs.GetStreamPoolPlainArgs;
 import com.pulumi.oci.Streaming.inputs.GetStreamPoolsArgs;
+import com.pulumi.oci.Streaming.inputs.GetStreamPoolsPlainArgs;
 import com.pulumi.oci.Streaming.inputs.GetStreamsArgs;
+import com.pulumi.oci.Streaming.inputs.GetStreamsPlainArgs;
 import com.pulumi.oci.Streaming.outputs.GetConnectHarnessResult;
 import com.pulumi.oci.Streaming.outputs.GetConnectHarnessesResult;
 import com.pulumi.oci.Streaming.outputs.GetStreamPoolResult;
@@ -30,7 +37,7 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConnectHarnessResult> getConnectHarness(GetConnectHarnessArgs args) {
+    public static Output<GetConnectHarnessResult> getConnectHarness(GetConnectHarnessArgs args) {
         return getConnectHarness(args, InvokeOptions.Empty);
     }
     /**
@@ -41,7 +48,29 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConnectHarnessResult> getConnectHarness(GetConnectHarnessArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectHarnessResult> getConnectHarnessPlain(GetConnectHarnessPlainArgs args) {
+        return getConnectHarnessPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Connect Harness resource in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * Gets detailed information about a connect harness.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetConnectHarnessResult> getConnectHarness(GetConnectHarnessArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Streaming/getConnectHarness:getConnectHarness", TypeShape.of(GetConnectHarnessResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Connect Harness resource in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * Gets detailed information about a connect harness.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetConnectHarnessResult> getConnectHarnessPlain(GetConnectHarnessPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Streaming/getConnectHarness:getConnectHarness", TypeShape.of(GetConnectHarnessResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -52,7 +81,7 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConnectHarnessesResult> getConnectHarnesses(GetConnectHarnessesArgs args) {
+    public static Output<GetConnectHarnessesResult> getConnectHarnesses(GetConnectHarnessesArgs args) {
         return getConnectHarnesses(args, InvokeOptions.Empty);
     }
     /**
@@ -63,7 +92,29 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetConnectHarnessesResult> getConnectHarnesses(GetConnectHarnessesArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetConnectHarnessesResult> getConnectHarnessesPlain(GetConnectHarnessesPlainArgs args) {
+        return getConnectHarnessesPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Connect Harnesses in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * Lists the connectharness.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetConnectHarnessesResult> getConnectHarnesses(GetConnectHarnessesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Streaming/getConnectHarnesses:getConnectHarnesses", TypeShape.of(GetConnectHarnessesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Connect Harnesses in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * Lists the connectharness.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetConnectHarnessesResult> getConnectHarnessesPlain(GetConnectHarnessesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Streaming/getConnectHarnesses:getConnectHarnesses", TypeShape.of(GetConnectHarnessesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -74,7 +125,7 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
+    public static Output<GetStreamResult> getStream(GetStreamArgs args) {
         return getStream(args, InvokeOptions.Empty);
     }
     /**
@@ -85,7 +136,29 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamResult> getStreamPlain(GetStreamPlainArgs args) {
+        return getStreamPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Stream resource in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * Gets detailed information about a stream, including the number of partitions.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Streaming/getStream:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Stream resource in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * Gets detailed information about a stream, including the number of partitions.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetStreamResult> getStreamPlain(GetStreamPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Streaming/getStream:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -96,7 +169,7 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStreamPoolResult> getStreamPool(GetStreamPoolArgs args) {
+    public static Output<GetStreamPoolResult> getStreamPool(GetStreamPoolArgs args) {
         return getStreamPool(args, InvokeOptions.Empty);
     }
     /**
@@ -107,7 +180,29 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStreamPoolResult> getStreamPool(GetStreamPoolArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamPoolResult> getStreamPoolPlain(GetStreamPoolPlainArgs args) {
+        return getStreamPoolPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Stream Pool resource in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * Gets detailed information about the stream pool, such as Kafka settings.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetStreamPoolResult> getStreamPool(GetStreamPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Streaming/getStreamPool:getStreamPool", TypeShape.of(GetStreamPoolResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Stream Pool resource in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * Gets detailed information about the stream pool, such as Kafka settings.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetStreamPoolResult> getStreamPoolPlain(GetStreamPoolPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Streaming/getStreamPool:getStreamPool", TypeShape.of(GetStreamPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -118,7 +213,7 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStreamPoolsResult> getStreamPools(GetStreamPoolsArgs args) {
+    public static Output<GetStreamPoolsResult> getStreamPools(GetStreamPoolsArgs args) {
         return getStreamPools(args, InvokeOptions.Empty);
     }
     /**
@@ -129,7 +224,29 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStreamPoolsResult> getStreamPools(GetStreamPoolsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamPoolsResult> getStreamPoolsPlain(GetStreamPoolsPlainArgs args) {
+        return getStreamPoolsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Stream Pools in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * List the stream pools for a given compartment ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetStreamPoolsResult> getStreamPools(GetStreamPoolsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Streaming/getStreamPools:getStreamPools", TypeShape.of(GetStreamPoolsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Stream Pools in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * List the stream pools for a given compartment ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetStreamPoolsResult> getStreamPoolsPlain(GetStreamPoolsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Streaming/getStreamPools:getStreamPools", TypeShape.of(GetStreamPoolsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -143,7 +260,7 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStreamsResult> getStreams() {
+    public static Output<GetStreamsResult> getStreams() {
         return getStreams(GetStreamsArgs.Empty, InvokeOptions.Empty);
     }
     /**
@@ -157,7 +274,21 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStreamsResult> getStreams(GetStreamsArgs args) {
+    public static CompletableFuture<GetStreamsResult> getStreamsPlain() {
+        return getStreamsPlain(GetStreamsPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Streams in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * Lists the streams in the given compartment id.
+     * If the compartment id is specified, it will list streams in the compartment, regardless of their stream pool.
+     * If the stream pool id is specified, the action will be scoped to that stream pool.
+     * The compartment id and stream pool id cannot be specified at the same time.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetStreamsResult> getStreams(GetStreamsArgs args) {
         return getStreams(args, InvokeOptions.Empty);
     }
     /**
@@ -171,7 +302,35 @@ public final class StreamingFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetStreamsResult> getStreams(GetStreamsArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamsResult> getStreamsPlain(GetStreamsPlainArgs args) {
+        return getStreamsPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Streams in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * Lists the streams in the given compartment id.
+     * If the compartment id is specified, it will list streams in the compartment, regardless of their stream pool.
+     * If the stream pool id is specified, the action will be scoped to that stream pool.
+     * The compartment id and stream pool id cannot be specified at the same time.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetStreamsResult> getStreams(GetStreamsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:Streaming/getStreams:getStreams", TypeShape.of(GetStreamsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Streams in Oracle Cloud Infrastructure Streaming service.
+     * 
+     * Lists the streams in the given compartment id.
+     * If the compartment id is specified, it will list streams in the compartment, regardless of their stream pool.
+     * If the stream pool id is specified, the action will be scoped to that stream pool.
+     * The compartment id and stream pool id cannot be specified at the same time.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetStreamsResult> getStreamsPlain(GetStreamsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:Streaming/getStreams:getStreams", TypeShape.of(GetStreamsResult.class), args, Utilities.withVersion(options));
     }
 }

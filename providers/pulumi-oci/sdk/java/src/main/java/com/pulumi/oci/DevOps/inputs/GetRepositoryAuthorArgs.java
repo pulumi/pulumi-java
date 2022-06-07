@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetRepositoryAuthorArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="refName")
-    private @Nullable String refName;
+    private @Nullable Output<String> refName;
 
     /**
      * @return A filter to return only resources that match the given reference name.
      * 
      */
-    public Optional<String> refName() {
+    public Optional<Output<String>> refName() {
         return Optional.ofNullable(this.refName);
     }
 
@@ -34,13 +35,13 @@ public final class GetRepositoryAuthorArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -75,8 +76,29 @@ public final class GetRepositoryAuthorArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder refName(@Nullable String refName) {
+        public Builder refName(@Nullable Output<String> refName) {
             $.refName = refName;
+            return this;
+        }
+
+        /**
+         * @param refName A filter to return only resources that match the given reference name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder refName(String refName) {
+            return refName(Output.of(refName));
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(Output<String> repositoryId) {
+            $.repositoryId = repositoryId;
             return this;
         }
 
@@ -87,8 +109,7 @@ public final class GetRepositoryAuthorArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder repositoryId(String repositoryId) {
-            $.repositoryId = repositoryId;
-            return this;
+            return repositoryId(Output.of(repositoryId));
         }
 
         public GetRepositoryAuthorArgs build() {

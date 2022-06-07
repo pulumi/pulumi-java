@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Identity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Identity.inputs.GetFaultDomainsFilter;
+import com.pulumi.oci.Identity.inputs.GetFaultDomainsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetFaultDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain", required=true)
-    private String availabilityDomain;
+    private Output<String> availabilityDomain;
 
     /**
      * @return The name of the availibilityDomain.
      * 
      */
-    public String availabilityDomain() {
+    public Output<String> availabilityDomain() {
         return this.availabilityDomain;
     }
 
@@ -36,20 +37,20 @@ public final class GetFaultDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment (remember that the tenancy is simply the root compartment).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetFaultDomainsFilter> filters;
+    private @Nullable Output<List<GetFaultDomainsFilterArgs>> filters;
 
-    public Optional<List<GetFaultDomainsFilter>> filters() {
+    public Optional<Output<List<GetFaultDomainsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -85,8 +86,29 @@ public final class GetFaultDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(String availabilityDomain) {
+        public Builder availabilityDomain(Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the availibilityDomain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment (remember that the tenancy is simply the root compartment).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -97,16 +119,19 @@ public final class GetFaultDomainsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
-            return this;
+            return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(@Nullable List<GetFaultDomainsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetFaultDomainsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetFaultDomainsFilter... filters) {
+        public Builder filters(List<GetFaultDomainsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetFaultDomainsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

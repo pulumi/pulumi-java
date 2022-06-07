@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetOrganizationSecurityPolicyArgs extends com.pulumi.resource
     public static final GetOrganizationSecurityPolicyArgs Empty = new GetOrganizationSecurityPolicyArgs();
 
     @Import(name="securityPolicy", required=true)
-    private String securityPolicy;
+    private Output<String> securityPolicy;
 
-    public String securityPolicy() {
+    public Output<String> securityPolicy() {
         return this.securityPolicy;
     }
 
@@ -43,9 +44,13 @@ public final class GetOrganizationSecurityPolicyArgs extends com.pulumi.resource
             $ = new GetOrganizationSecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder securityPolicy(String securityPolicy) {
+        public Builder securityPolicy(Output<String> securityPolicy) {
             $.securityPolicy = securityPolicy;
             return this;
+        }
+
+        public Builder securityPolicy(String securityPolicy) {
+            return securityPolicy(Output.of(securityPolicy));
         }
 
         public GetOrganizationSecurityPolicyArgs build() {

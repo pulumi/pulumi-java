@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDbNodeConsoleConnectionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="dbNodeId", required=true)
-    private String dbNodeId;
+    private Output<String> dbNodeId;
 
     /**
      * @return The database node [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String dbNodeId() {
+    public Output<String> dbNodeId() {
         return this.dbNodeId;
     }
 
@@ -32,13 +33,13 @@ public final class GetDbNodeConsoleConnectionArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
     /**
      * @return The OCID of the console connection.
      * 
      */
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -73,8 +74,29 @@ public final class GetDbNodeConsoleConnectionArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder dbNodeId(String dbNodeId) {
+        public Builder dbNodeId(Output<String> dbNodeId) {
             $.dbNodeId = dbNodeId;
+            return this;
+        }
+
+        /**
+         * @param dbNodeId The database node [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dbNodeId(String dbNodeId) {
+            return dbNodeId(Output.of(dbNodeId));
+        }
+
+        /**
+         * @param id The OCID of the console connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(Output<String> id) {
+            $.id = id;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDbNodeConsoleConnectionArgs extends com.pulumi.resources.I
          * 
          */
         public Builder id(String id) {
-            $.id = id;
-            return this;
+            return id(Output.of(id));
         }
 
         public GetDbNodeConsoleConnectionArgs build() {

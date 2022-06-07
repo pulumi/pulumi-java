@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.inputs;
 
-import com.pulumi.aws.inputs.GetAmiIdsFilter;
+import com.pulumi.aws.inputs.GetAmiIdsFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,14 +24,14 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executableUsers")
-    private @Nullable List<String> executableUsers;
+    private @Nullable Output<List<String>> executableUsers;
 
     /**
      * @return Limit search to users with *explicit* launch
      * permission on  the image. Valid items are the numeric account ID or `self`.
      * 
      */
-    public Optional<List<String>> executableUsers() {
+    public Optional<Output<List<String>>> executableUsers() {
         return Optional.ofNullable(this.executableUsers);
     }
 
@@ -41,7 +42,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetAmiIdsFilter> filters;
+    private @Nullable Output<List<GetAmiIdsFilterArgs>> filters;
 
     /**
      * @return One or more name/value pairs to filter off of. There
@@ -49,7 +50,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * [describe-images in the AWS CLI reference][1].
      * 
      */
-    public Optional<List<GetAmiIdsFilter>> filters() {
+    public Optional<Output<List<GetAmiIdsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -62,7 +63,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameRegex")
-    private @Nullable String nameRegex;
+    private @Nullable Output<String> nameRegex;
 
     /**
      * @return A regex string to apply to the AMI list returned
@@ -72,7 +73,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * options to narrow down the list AWS returns.
      * 
      */
-    public Optional<String> nameRegex() {
+    public Optional<Output<String>> nameRegex() {
         return Optional.ofNullable(this.nameRegex);
     }
 
@@ -81,13 +82,13 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owners", required=true)
-    private List<String> owners;
+    private Output<List<String>> owners;
 
     /**
      * @return List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
      * 
      */
-    public List<String> owners() {
+    public Output<List<String>> owners() {
         return this.owners;
     }
 
@@ -96,13 +97,13 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortAscending")
-    private @Nullable Boolean sortAscending;
+    private @Nullable Output<Boolean> sortAscending;
 
     /**
      * @return Used to sort AMIs by creation time.
      * 
      */
-    public Optional<Boolean> sortAscending() {
+    public Optional<Output<Boolean>> sortAscending() {
         return Optional.ofNullable(this.sortAscending);
     }
 
@@ -141,9 +142,20 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder executableUsers(@Nullable List<String> executableUsers) {
+        public Builder executableUsers(@Nullable Output<List<String>> executableUsers) {
             $.executableUsers = executableUsers;
             return this;
+        }
+
+        /**
+         * @param executableUsers Limit search to users with *explicit* launch
+         * permission on  the image. Valid items are the numeric account ID or `self`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder executableUsers(List<String> executableUsers) {
+            return executableUsers(Output.of(executableUsers));
         }
 
         /**
@@ -165,7 +177,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetAmiIdsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -178,7 +190,19 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetAmiIdsFilter... filters) {
+        public Builder filters(List<GetAmiIdsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters One or more name/value pairs to filter off of. There
+         * are several valid keys, for a full reference, check out
+         * [describe-images in the AWS CLI reference][1].
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetAmiIdsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -192,8 +216,33 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder nameRegex(@Nullable String nameRegex) {
+        public Builder nameRegex(@Nullable Output<String> nameRegex) {
             $.nameRegex = nameRegex;
+            return this;
+        }
+
+        /**
+         * @param nameRegex A regex string to apply to the AMI list returned
+         * by AWS. This allows more advanced filtering not supported from the AWS API.
+         * This filtering is done locally on what AWS returns, and could have a performance
+         * impact if the result is large. It is recommended to combine this with other
+         * options to narrow down the list AWS returns.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nameRegex(String nameRegex) {
+            return nameRegex(Output.of(nameRegex));
+        }
+
+        /**
+         * @param owners List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder owners(Output<List<String>> owners) {
+            $.owners = owners;
             return this;
         }
 
@@ -204,8 +253,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder owners(List<String> owners) {
-            $.owners = owners;
-            return this;
+            return owners(Output.of(owners));
         }
 
         /**
@@ -224,9 +272,19 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sortAscending(@Nullable Boolean sortAscending) {
+        public Builder sortAscending(@Nullable Output<Boolean> sortAscending) {
             $.sortAscending = sortAscending;
             return this;
+        }
+
+        /**
+         * @param sortAscending Used to sort AMIs by creation time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sortAscending(Boolean sortAscending) {
+            return sortAscending(Output.of(sortAscending));
         }
 
         public GetAmiIdsArgs build() {

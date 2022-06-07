@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Mysql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Mysql.inputs.GetMysqlConfigurationsFilter;
+import com.pulumi.oci.Mysql.inputs.GetMysqlConfigurationsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,13 +37,13 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="configurationId")
-    private @Nullable String configurationId;
+    private @Nullable Output<String> configurationId;
 
     /**
      * @return The requested Configuration instance.
      * 
      */
-    public Optional<String> configurationId() {
+    public Optional<Output<String>> configurationId() {
         return Optional.ofNullable(this.configurationId);
     }
 
@@ -51,20 +52,20 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only the resource matching the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetMysqlConfigurationsFilter> filters;
+    private @Nullable Output<List<GetMysqlConfigurationsFilterArgs>> filters;
 
-    public Optional<List<GetMysqlConfigurationsFilter>> filters() {
+    public Optional<Output<List<GetMysqlConfigurationsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="shapeName")
-    private @Nullable String shapeName;
+    private @Nullable Output<String> shapeName;
 
     /**
      * @return The requested Shape name.
      * 
      */
-    public Optional<String> shapeName() {
+    public Optional<Output<String>> shapeName() {
         return Optional.ofNullable(this.shapeName);
     }
 
@@ -88,13 +89,13 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Configuration Lifecycle State
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -103,13 +104,13 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="types")
-    private @Nullable List<String> types;
+    private @Nullable Output<List<String>> types;
 
     /**
      * @return The requested Configuration types.
      * 
      */
-    public Optional<List<String>> types() {
+    public Optional<Output<List<String>>> types() {
         return Optional.ofNullable(this.types);
     }
 
@@ -149,8 +150,29 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param configurationId The requested Configuration instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder configurationId(@Nullable Output<String> configurationId) {
+            $.configurationId = configurationId;
             return this;
         }
 
@@ -160,8 +182,18 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder configurationId(@Nullable String configurationId) {
-            $.configurationId = configurationId;
+        public Builder configurationId(String configurationId) {
+            return configurationId(Output.of(configurationId));
+        }
+
+        /**
+         * @param displayName A filter to return only the resource matching the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -171,17 +203,20 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetMysqlConfigurationsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetMysqlConfigurationsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetMysqlConfigurationsFilter... filters) {
+        public Builder filters(List<GetMysqlConfigurationsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetMysqlConfigurationsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -191,8 +226,29 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder shapeName(@Nullable String shapeName) {
+        public Builder shapeName(@Nullable Output<String> shapeName) {
             $.shapeName = shapeName;
+            return this;
+        }
+
+        /**
+         * @param shapeName The requested Shape name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shapeName(String shapeName) {
+            return shapeName(Output.of(shapeName));
+        }
+
+        /**
+         * @param state Configuration Lifecycle State
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -202,8 +258,18 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param types The requested Configuration types.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder types(@Nullable Output<List<String>> types) {
+            $.types = types;
             return this;
         }
 
@@ -213,9 +279,8 @@ public final class GetMysqlConfigurationsArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder types(@Nullable List<String> types) {
-            $.types = types;
-            return this;
+        public Builder types(List<String> types) {
+            return types(Output.of(types));
         }
 
         /**

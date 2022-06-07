@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ebs.inputs;
 
-import com.pulumi.aws.ebs.inputs.GetVolumeFilter;
+import com.pulumi.aws.ebs.inputs.GetVolumeFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetVolumeFilter> filters;
+    private @Nullable Output<List<GetVolumeFilterArgs>> filters;
 
     /**
      * @return One or more name/value pairs to filter off of. There are
@@ -33,7 +34,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * [describe-volumes in the AWS CLI reference][1].
      * 
      */
-    public Optional<List<GetVolumeFilter>> filters() {
+    public Optional<Output<List<GetVolumeFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,14 +44,14 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-    private @Nullable Boolean mostRecent;
+    private @Nullable Output<Boolean> mostRecent;
 
     /**
      * @return If more than one result is returned, use the most
      * recent Volume.
      * 
      */
-    public Optional<Boolean> mostRecent() {
+    public Optional<Output<Boolean>> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
 
@@ -59,13 +60,13 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags for the resource.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -103,7 +104,7 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetVolumeFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetVolumeFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -116,7 +117,19 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetVolumeFilter... filters) {
+        public Builder filters(List<GetVolumeFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters One or more name/value pairs to filter off of. There are
+         * several valid keys, for a full reference, check out
+         * [describe-volumes in the AWS CLI reference][1].
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetVolumeFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -127,8 +140,30 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Output<Boolean> mostRecent) {
             $.mostRecent = mostRecent;
+            return this;
+        }
+
+        /**
+         * @param mostRecent If more than one result is returned, use the most
+         * recent Volume.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mostRecent(Boolean mostRecent) {
+            return mostRecent(Output.of(mostRecent));
+        }
+
+        /**
+         * @param tags A map of tags for the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -138,9 +173,8 @@ public final class GetVolumeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetVolumeArgs build() {

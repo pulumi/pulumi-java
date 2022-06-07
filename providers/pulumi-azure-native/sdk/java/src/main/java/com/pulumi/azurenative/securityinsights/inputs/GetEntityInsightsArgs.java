@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.securityinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,13 +22,13 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="addDefaultExtendedTimeRange")
-    private @Nullable Boolean addDefaultExtendedTimeRange;
+    private @Nullable Output<Boolean> addDefaultExtendedTimeRange;
 
     /**
      * @return Indicates if query time range should be extended with default time range of the query. Default value is false
      * 
      */
-    public Optional<Boolean> addDefaultExtendedTimeRange() {
+    public Optional<Output<Boolean>> addDefaultExtendedTimeRange() {
         return Optional.ofNullable(this.addDefaultExtendedTimeRange);
     }
 
@@ -36,13 +37,13 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="endTime", required=true)
-    private String endTime;
+    private Output<String> endTime;
 
     /**
      * @return The end timeline date, so the results returned are before this date.
      * 
      */
-    public String endTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
@@ -51,13 +52,13 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="entityId", required=true)
-    private String entityId;
+    private Output<String> entityId;
 
     /**
      * @return entity ID
      * 
      */
-    public String entityId() {
+    public Output<String> entityId() {
         return this.entityId;
     }
 
@@ -66,13 +67,13 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="insightQueryIds")
-    private @Nullable List<String> insightQueryIds;
+    private @Nullable Output<List<String>> insightQueryIds;
 
     /**
      * @return List of Insights Query Id. If empty, default value is all insights of this entity
      * 
      */
-    public Optional<List<String>> insightQueryIds() {
+    public Optional<Output<List<String>>> insightQueryIds() {
         return Optional.ofNullable(this.insightQueryIds);
     }
 
@@ -81,13 +82,13 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-    private String operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     /**
      * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    public String operationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -96,13 +97,13 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,13 +112,13 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="startTime", required=true)
-    private String startTime;
+    private Output<String> startTime;
 
     /**
      * @return The start timeline date, so the results returned are after this date.
      * 
      */
-    public String startTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -126,13 +127,13 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of the workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -173,8 +174,29 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder addDefaultExtendedTimeRange(@Nullable Boolean addDefaultExtendedTimeRange) {
+        public Builder addDefaultExtendedTimeRange(@Nullable Output<Boolean> addDefaultExtendedTimeRange) {
             $.addDefaultExtendedTimeRange = addDefaultExtendedTimeRange;
+            return this;
+        }
+
+        /**
+         * @param addDefaultExtendedTimeRange Indicates if query time range should be extended with default time range of the query. Default value is false
+         * 
+         * @return builder
+         * 
+         */
+        public Builder addDefaultExtendedTimeRange(Boolean addDefaultExtendedTimeRange) {
+            return addDefaultExtendedTimeRange(Output.of(addDefaultExtendedTimeRange));
+        }
+
+        /**
+         * @param endTime The end timeline date, so the results returned are before this date.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endTime(Output<String> endTime) {
+            $.endTime = endTime;
             return this;
         }
 
@@ -185,7 +207,17 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder endTime(String endTime) {
-            $.endTime = endTime;
+            return endTime(Output.of(endTime));
+        }
+
+        /**
+         * @param entityId entity ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder entityId(Output<String> entityId) {
+            $.entityId = entityId;
             return this;
         }
 
@@ -196,7 +228,17 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder entityId(String entityId) {
-            $.entityId = entityId;
+            return entityId(Output.of(entityId));
+        }
+
+        /**
+         * @param insightQueryIds List of Insights Query Id. If empty, default value is all insights of this entity
+         * 
+         * @return builder
+         * 
+         */
+        public Builder insightQueryIds(@Nullable Output<List<String>> insightQueryIds) {
+            $.insightQueryIds = insightQueryIds;
             return this;
         }
 
@@ -206,9 +248,8 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder insightQueryIds(@Nullable List<String> insightQueryIds) {
-            $.insightQueryIds = insightQueryIds;
-            return this;
+        public Builder insightQueryIds(List<String> insightQueryIds) {
+            return insightQueryIds(Output.of(insightQueryIds));
         }
 
         /**
@@ -227,8 +268,29 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
+            return this;
+        }
+
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -239,7 +301,17 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param startTime The start timeline date, so the results returned are after this date.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startTime(Output<String> startTime) {
+            $.startTime = startTime;
             return this;
         }
 
@@ -250,7 +322,17 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder startTime(String startTime) {
-            $.startTime = startTime;
+            return startTime(Output.of(startTime));
+        }
+
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -261,8 +343,7 @@ public final class GetEntityInsightsArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetEntityInsightsArgs build() {

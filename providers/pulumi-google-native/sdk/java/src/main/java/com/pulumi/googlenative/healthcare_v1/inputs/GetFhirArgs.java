@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.healthcare_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,44 +16,44 @@ public final class GetFhirArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFhirArgs Empty = new GetFhirArgs();
 
     @Import(name="datasetId", required=true)
-    private String datasetId;
+    private Output<String> datasetId;
 
-    public String datasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="fhirId", required=true)
-    private String fhirId;
+    private Output<String> fhirId;
 
-    public String fhirId() {
+    public Output<String> fhirId() {
         return this.fhirId;
     }
 
     @Import(name="fhirId1", required=true)
-    private String fhirId1;
+    private Output<String> fhirId1;
 
-    public String fhirId1() {
+    public Output<String> fhirId1() {
         return this.fhirId1;
     }
 
     @Import(name="fhirStoreId", required=true)
-    private String fhirStoreId;
+    private Output<String> fhirStoreId;
 
-    public String fhirStoreId() {
+    public Output<String> fhirStoreId() {
         return this.fhirStoreId;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -85,34 +86,58 @@ public final class GetFhirArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFhirArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder datasetId(String datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
-        public Builder fhirId(String fhirId) {
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
+        }
+
+        public Builder fhirId(Output<String> fhirId) {
             $.fhirId = fhirId;
             return this;
         }
 
-        public Builder fhirId1(String fhirId1) {
+        public Builder fhirId(String fhirId) {
+            return fhirId(Output.of(fhirId));
+        }
+
+        public Builder fhirId1(Output<String> fhirId1) {
             $.fhirId1 = fhirId1;
             return this;
         }
 
-        public Builder fhirStoreId(String fhirStoreId) {
+        public Builder fhirId1(String fhirId1) {
+            return fhirId1(Output.of(fhirId1));
+        }
+
+        public Builder fhirStoreId(Output<String> fhirStoreId) {
             $.fhirStoreId = fhirStoreId;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder fhirStoreId(String fhirStoreId) {
+            return fhirStoreId(Output.of(fhirStoreId));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetFhirArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.containerregistry.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="exportPipelineName", required=true)
-    private String exportPipelineName;
+    private Output<String> exportPipelineName;
 
     /**
      * @return The name of the export pipeline.
      * 
      */
-    public String exportPipelineName() {
+    public Output<String> exportPipelineName() {
         return this.exportPipelineName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="registryName", required=true)
-    private String registryName;
+    private Output<String> registryName;
 
     /**
      * @return The name of the container registry.
      * 
      */
-    public String registryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -47,13 +48,13 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group to which the container registry belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder exportPipelineName(String exportPipelineName) {
+        public Builder exportPipelineName(Output<String> exportPipelineName) {
             $.exportPipelineName = exportPipelineName;
+            return this;
+        }
+
+        /**
+         * @param exportPipelineName The name of the export pipeline.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exportPipelineName(String exportPipelineName) {
+            return exportPipelineName(Output.of(exportPipelineName));
+        }
+
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder registryName(Output<String> registryName) {
+            $.registryName = registryName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder registryName(String registryName) {
-            $.registryName = registryName;
+            return registryName(Output.of(registryName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetExportPipelineArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExportPipelineArgs build() {

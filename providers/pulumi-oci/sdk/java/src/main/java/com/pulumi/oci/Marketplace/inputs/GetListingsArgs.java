@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Marketplace.inputs.GetListingsFilter;
+import com.pulumi.oci.Marketplace.inputs.GetListingsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="categories")
-    private @Nullable List<String> categories;
+    private @Nullable Output<List<String>> categories;
 
     /**
      * @return Name of the product category or categories. If you specify multiple categories, then Marketplace returns any listing with one or more matching categories.
      * 
      */
-    public Optional<List<String>> categories() {
+    public Optional<Output<List<String>>> categories() {
         return Optional.ofNullable(this.categories);
     }
 
@@ -37,20 +38,20 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The unique identifier for the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetListingsFilter> filters;
+    private @Nullable Output<List<GetListingsFilterArgs>> filters;
 
-    public Optional<List<GetListingsFilter>> filters() {
+    public Optional<Output<List<GetListingsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -59,13 +60,13 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageId")
-    private @Nullable String imageId;
+    private @Nullable Output<String> imageId;
 
     /**
      * @return The image identifier of the listing.
      * 
      */
-    public Optional<String> imageId() {
+    public Optional<Output<String>> imageId() {
         return Optional.ofNullable(this.imageId);
     }
 
@@ -74,13 +75,13 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isFeatured")
-    private @Nullable Boolean isFeatured;
+    private @Nullable Output<Boolean> isFeatured;
 
     /**
      * @return Indicates whether to show only featured listings. If this is set to `false` or is omitted, then all listings will be returned.
      * 
      */
-    public Optional<Boolean> isFeatured() {
+    public Optional<Output<Boolean>> isFeatured() {
         return Optional.ofNullable(this.isFeatured);
     }
 
@@ -89,13 +90,13 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="listingId")
-    private @Nullable String listingId;
+    private @Nullable Output<String> listingId;
 
     /**
      * @return The unique identifier for the listing.
      * 
      */
-    public Optional<String> listingId() {
+    public Optional<Output<String>> listingId() {
         return Optional.ofNullable(this.listingId);
     }
 
@@ -104,13 +105,13 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="listingTypes")
-    private @Nullable List<String> listingTypes;
+    private @Nullable Output<List<String>> listingTypes;
 
     /**
      * @return The type of the listing.
      * 
      */
-    public Optional<List<String>> listingTypes() {
+    public Optional<Output<List<String>>> listingTypes() {
         return Optional.ofNullable(this.listingTypes);
     }
 
@@ -119,13 +120,13 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="names")
-    private @Nullable List<String> names;
+    private @Nullable Output<List<String>> names;
 
     /**
      * @return The name of the listing.
      * 
      */
-    public Optional<List<String>> names() {
+    public Optional<Output<List<String>>> names() {
         return Optional.ofNullable(this.names);
     }
 
@@ -134,13 +135,13 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operatingSystems")
-    private @Nullable List<String> operatingSystems;
+    private @Nullable Output<List<String>> operatingSystems;
 
     /**
      * @return The operating system of the listing.
      * 
      */
-    public Optional<List<String>> operatingSystems() {
+    public Optional<Output<List<String>>> operatingSystems() {
         return Optional.ofNullable(this.operatingSystems);
     }
 
@@ -149,13 +150,13 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="packageType")
-    private @Nullable String packageType;
+    private @Nullable Output<String> packageType;
 
     /**
      * @return A filter to return only packages that match the given package type exactly.
      * 
      */
-    public Optional<String> packageType() {
+    public Optional<Output<String>> packageType() {
         return Optional.ofNullable(this.packageType);
     }
 
@@ -164,13 +165,13 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pricings")
-    private @Nullable List<String> pricings;
+    private @Nullable Output<List<String>> pricings;
 
     /**
      * @return Name of the pricing type. If multiple pricing types are provided, then any listing with one or more matching pricing models will be returned.
      * 
      */
-    public Optional<List<String>> pricings() {
+    public Optional<Output<List<String>>> pricings() {
         return Optional.ofNullable(this.pricings);
     }
 
@@ -179,13 +180,13 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publisherId")
-    private @Nullable String publisherId;
+    private @Nullable Output<String> publisherId;
 
     /**
      * @return Limit results to just this publisher.
      * 
      */
-    public Optional<String> publisherId() {
+    public Optional<Output<String>> publisherId() {
         return Optional.ofNullable(this.publisherId);
     }
 
@@ -230,9 +231,19 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder categories(@Nullable List<String> categories) {
+        public Builder categories(@Nullable Output<List<String>> categories) {
             $.categories = categories;
             return this;
+        }
+
+        /**
+         * @param categories Name of the product category or categories. If you specify multiple categories, then Marketplace returns any listing with one or more matching categories.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder categories(List<String> categories) {
+            return categories(Output.of(categories));
         }
 
         /**
@@ -251,17 +262,31 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetListingsFilter> filters) {
+        /**
+         * @param compartmentId The unique identifier for the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetListingsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetListingsFilter... filters) {
+        public Builder filters(List<GetListingsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetListingsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -271,8 +296,29 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder imageId(@Nullable String imageId) {
+        public Builder imageId(@Nullable Output<String> imageId) {
             $.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * @param imageId The image identifier of the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageId(String imageId) {
+            return imageId(Output.of(imageId));
+        }
+
+        /**
+         * @param isFeatured Indicates whether to show only featured listings. If this is set to `false` or is omitted, then all listings will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isFeatured(@Nullable Output<Boolean> isFeatured) {
+            $.isFeatured = isFeatured;
             return this;
         }
 
@@ -282,8 +328,18 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isFeatured(@Nullable Boolean isFeatured) {
-            $.isFeatured = isFeatured;
+        public Builder isFeatured(Boolean isFeatured) {
+            return isFeatured(Output.of(isFeatured));
+        }
+
+        /**
+         * @param listingId The unique identifier for the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listingId(@Nullable Output<String> listingId) {
+            $.listingId = listingId;
             return this;
         }
 
@@ -293,8 +349,18 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder listingId(@Nullable String listingId) {
-            $.listingId = listingId;
+        public Builder listingId(String listingId) {
+            return listingId(Output.of(listingId));
+        }
+
+        /**
+         * @param listingTypes The type of the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder listingTypes(@Nullable Output<List<String>> listingTypes) {
+            $.listingTypes = listingTypes;
             return this;
         }
 
@@ -304,9 +370,8 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder listingTypes(@Nullable List<String> listingTypes) {
-            $.listingTypes = listingTypes;
-            return this;
+        public Builder listingTypes(List<String> listingTypes) {
+            return listingTypes(Output.of(listingTypes));
         }
 
         /**
@@ -325,9 +390,19 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder names(@Nullable List<String> names) {
+        public Builder names(@Nullable Output<List<String>> names) {
             $.names = names;
             return this;
+        }
+
+        /**
+         * @param names The name of the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder names(List<String> names) {
+            return names(Output.of(names));
         }
 
         /**
@@ -346,9 +421,19 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder operatingSystems(@Nullable List<String> operatingSystems) {
+        public Builder operatingSystems(@Nullable Output<List<String>> operatingSystems) {
             $.operatingSystems = operatingSystems;
             return this;
+        }
+
+        /**
+         * @param operatingSystems The operating system of the listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operatingSystems(List<String> operatingSystems) {
+            return operatingSystems(Output.of(operatingSystems));
         }
 
         /**
@@ -367,8 +452,29 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder packageType(@Nullable String packageType) {
+        public Builder packageType(@Nullable Output<String> packageType) {
             $.packageType = packageType;
+            return this;
+        }
+
+        /**
+         * @param packageType A filter to return only packages that match the given package type exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packageType(String packageType) {
+            return packageType(Output.of(packageType));
+        }
+
+        /**
+         * @param pricings Name of the pricing type. If multiple pricing types are provided, then any listing with one or more matching pricing models will be returned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pricings(@Nullable Output<List<String>> pricings) {
+            $.pricings = pricings;
             return this;
         }
 
@@ -378,9 +484,8 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder pricings(@Nullable List<String> pricings) {
-            $.pricings = pricings;
-            return this;
+        public Builder pricings(List<String> pricings) {
+            return pricings(Output.of(pricings));
         }
 
         /**
@@ -399,9 +504,19 @@ public final class GetListingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder publisherId(@Nullable String publisherId) {
+        public Builder publisherId(@Nullable Output<String> publisherId) {
             $.publisherId = publisherId;
             return this;
+        }
+
+        /**
+         * @param publisherId Limit results to just this publisher.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publisherId(String publisherId) {
+            return publisherId(Output.of(publisherId));
         }
 
         public GetListingsArgs build() {

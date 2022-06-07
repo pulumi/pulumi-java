@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LoadBalancer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBackendSetHealthArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="backendSetName", required=true)
-    private String backendSetName;
+    private Output<String> backendSetName;
 
     /**
      * @return The name of the backend set to retrieve the health status for.  Example: `example_backend_set`
      * 
      */
-    public String backendSetName() {
+    public Output<String> backendSetName() {
         return this.backendSetName;
     }
 
@@ -32,13 +33,13 @@ public final class GetBackendSetHealthArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="loadBalancerId", required=true)
-    private String loadBalancerId;
+    private Output<String> loadBalancerId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the backend set health status to be retrieved.
      * 
      */
-    public String loadBalancerId() {
+    public Output<String> loadBalancerId() {
         return this.loadBalancerId;
     }
 
@@ -73,8 +74,29 @@ public final class GetBackendSetHealthArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder backendSetName(String backendSetName) {
+        public Builder backendSetName(Output<String> backendSetName) {
             $.backendSetName = backendSetName;
+            return this;
+        }
+
+        /**
+         * @param backendSetName The name of the backend set to retrieve the health status for.  Example: `example_backend_set`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder backendSetName(String backendSetName) {
+            return backendSetName(Output.of(backendSetName));
+        }
+
+        /**
+         * @param loadBalancerId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the load balancer associated with the backend set health status to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loadBalancerId(Output<String> loadBalancerId) {
+            $.loadBalancerId = loadBalancerId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetBackendSetHealthArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder loadBalancerId(String loadBalancerId) {
-            $.loadBalancerId = loadBalancerId;
-            return this;
+            return loadBalancerId(Output.of(loadBalancerId));
         }
 
         public GetBackendSetHealthArgs build() {

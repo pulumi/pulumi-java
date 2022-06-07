@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.LogAnalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.LogAnalytics.inputs.GetLogAnalyticsObjectCollectionRulesFilter;
+import com.pulumi.oci.LogAnalytics.inputs.GetLogAnalyticsObjectCollectionRulesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetLogAnalyticsObjectCollectionRulesArgs extends com.pulumi.r
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetLogAnalyticsObjectCollectionRulesFilter> filters;
+    private @Nullable Output<List<GetLogAnalyticsObjectCollectionRulesFilterArgs>> filters;
 
-    public Optional<List<GetLogAnalyticsObjectCollectionRulesFilter>> filters() {
+    public Optional<Output<List<GetLogAnalyticsObjectCollectionRulesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetLogAnalyticsObjectCollectionRulesArgs extends com.pulumi.r
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return rules only matching with this name.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -58,13 +59,13 @@ public final class GetLogAnalyticsObjectCollectionRulesArgs extends com.pulumi.r
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Logging Analytics namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -73,13 +74,13 @@ public final class GetLogAnalyticsObjectCollectionRulesArgs extends com.pulumi.r
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return Lifecycle state filter.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,17 +118,31 @@ public final class GetLogAnalyticsObjectCollectionRulesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetLogAnalyticsObjectCollectionRulesFilter> filters) {
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetLogAnalyticsObjectCollectionRulesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetLogAnalyticsObjectCollectionRulesFilter... filters) {
+        public Builder filters(List<GetLogAnalyticsObjectCollectionRulesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetLogAnalyticsObjectCollectionRulesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -137,8 +152,29 @@ public final class GetLogAnalyticsObjectCollectionRulesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name A filter to return rules only matching with this name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param namespace The Logging Analytics namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(Output<String> namespace) {
+            $.namespace = namespace;
             return this;
         }
 
@@ -149,7 +185,17 @@ public final class GetLogAnalyticsObjectCollectionRulesArgs extends com.pulumi.r
          * 
          */
         public Builder namespace(String namespace) {
-            $.namespace = namespace;
+            return namespace(Output.of(namespace));
+        }
+
+        /**
+         * @param state Lifecycle state filter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetLogAnalyticsObjectCollectionRulesArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetLogAnalyticsObjectCollectionRulesArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.apimanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="gatewayId", required=true)
-    private String gatewayId;
+    private Output<String> gatewayId;
 
     /**
      * @return Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
      * 
      */
-    public String gatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
 
@@ -32,13 +33,13 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="hcId", required=true)
-    private String hcId;
+    private Output<String> hcId;
 
     /**
      * @return Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.
      * 
      */
-    public String hcId() {
+    public Output<String> hcId() {
         return this.hcId;
     }
 
@@ -47,13 +48,13 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -105,8 +106,29 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder gatewayId(String gatewayId) {
+        public Builder gatewayId(Output<String> gatewayId) {
             $.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * @param gatewayId Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayId(String gatewayId) {
+            return gatewayId(Output.of(gatewayId));
+        }
+
+        /**
+         * @param hcId Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hcId(Output<String> hcId) {
+            $.hcId = hcId;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
          * 
          */
         public Builder hcId(String hcId) {
-            $.hcId = hcId;
+            return hcId(Output.of(hcId));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetGatewayHostnameConfigurationArgs build() {

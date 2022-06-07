@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.costmanagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSettingArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="settingName", required=true)
-    private String settingName;
+    private Output<String> settingName;
 
     /**
      * @return Name of the setting. Allowed values: myscope
      * 
      */
-    public String settingName() {
+    public Output<String> settingName() {
         return this.settingName;
     }
 
@@ -57,9 +58,19 @@ public final class GetSettingArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder settingName(String settingName) {
+        public Builder settingName(Output<String> settingName) {
             $.settingName = settingName;
             return this;
+        }
+
+        /**
+         * @param settingName Name of the setting. Allowed values: myscope
+         * 
+         * @return builder
+         * 
+         */
+        public Builder settingName(String settingName) {
+            return settingName(Output.of(settingName));
         }
 
         public GetSettingArgs build() {

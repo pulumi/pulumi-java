@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDrgRouteDistributionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="drgRouteDistributionId", required=true)
-    private String drgRouteDistributionId;
+    private Output<String> drgRouteDistributionId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route distribution.
      * 
      */
-    public String drgRouteDistributionId() {
+    public Output<String> drgRouteDistributionId() {
         return this.drgRouteDistributionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDrgRouteDistributionArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder drgRouteDistributionId(String drgRouteDistributionId) {
+        public Builder drgRouteDistributionId(Output<String> drgRouteDistributionId) {
             $.drgRouteDistributionId = drgRouteDistributionId;
             return this;
+        }
+
+        /**
+         * @param drgRouteDistributionId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the route distribution.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder drgRouteDistributionId(String drgRouteDistributionId) {
+            return drgRouteDistributionId(Output.of(drgRouteDistributionId));
         }
 
         public GetDrgRouteDistributionArgs build() {

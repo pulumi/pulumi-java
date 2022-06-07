@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.recoveryservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="fabricName", required=true)
-    private String fabricName;
+    private Output<String> fabricName;
 
     /**
      * @return Fabric name associated with the backed up item.
      * 
      */
-    public String fabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -32,13 +33,13 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="intentObjectName", required=true)
-    private String intentObjectName;
+    private Output<String> intentObjectName;
 
     /**
      * @return Backed up item name whose details are to be fetched.
      * 
      */
-    public String intentObjectName() {
+    public Output<String> intentObjectName() {
         return this.intentObjectName;
     }
 
@@ -47,13 +48,13 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group where the recovery services vault is present.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -62,13 +63,13 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="vaultName", required=true)
-    private String vaultName;
+    private Output<String> vaultName;
 
     /**
      * @return The name of the recovery services vault.
      * 
      */
-    public String vaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 
@@ -105,8 +106,29 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder fabricName(String fabricName) {
+        public Builder fabricName(Output<String> fabricName) {
             $.fabricName = fabricName;
+            return this;
+        }
+
+        /**
+         * @param fabricName Fabric name associated with the backed up item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fabricName(String fabricName) {
+            return fabricName(Output.of(fabricName));
+        }
+
+        /**
+         * @param intentObjectName Backed up item name whose details are to be fetched.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder intentObjectName(Output<String> intentObjectName) {
+            $.intentObjectName = intentObjectName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder intentObjectName(String intentObjectName) {
-            $.intentObjectName = intentObjectName;
+            return intentObjectName(Output.of(intentObjectName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vaultName(Output<String> vaultName) {
+            $.vaultName = vaultName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder vaultName(String vaultName) {
-            $.vaultName = vaultName;
-            return this;
+            return vaultName(Output.of(vaultName));
         }
 
         public GetProtectionIntentArgs build() {

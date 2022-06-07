@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.appplatform.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAppResourceUploadUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="appName", required=true)
-    private String appName;
+    private Output<String> appName;
 
     /**
      * @return The name of the App resource.
      * 
      */
-    public String appName() {
+    public Output<String> appName() {
         return this.appName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAppResourceUploadUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetAppResourceUploadUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the Service resource.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetAppResourceUploadUrlArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder appName(String appName) {
+        public Builder appName(Output<String> appName) {
             $.appName = appName;
+            return this;
+        }
+
+        /**
+         * @param appName The name of the App resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appName(String appName) {
+            return appName(Output.of(appName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetAppResourceUploadUrlArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetAppResourceUploadUrlArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
-            return this;
+            return serviceName(Output.of(serviceName));
         }
 
         public GetAppResourceUploadUrlArgs build() {

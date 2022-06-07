@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Database.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExternalContainerDatabaseArgs extends com.pulumi.resources
      * 
      */
     @Import(name="externalContainerDatabaseId", required=true)
-    private String externalContainerDatabaseId;
+    private Output<String> externalContainerDatabaseId;
 
     /**
      * @return The ExternalContainerDatabase [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String externalContainerDatabaseId() {
+    public Output<String> externalContainerDatabaseId() {
         return this.externalContainerDatabaseId;
     }
 
@@ -57,9 +58,19 @@ public final class GetExternalContainerDatabaseArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder externalContainerDatabaseId(String externalContainerDatabaseId) {
+        public Builder externalContainerDatabaseId(Output<String> externalContainerDatabaseId) {
             $.externalContainerDatabaseId = externalContainerDatabaseId;
             return this;
+        }
+
+        /**
+         * @param externalContainerDatabaseId The ExternalContainerDatabase [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externalContainerDatabaseId(String externalContainerDatabaseId) {
+            return externalContainerDatabaseId(Output.of(externalContainerDatabaseId));
         }
 
         public GetExternalContainerDatabaseArgs build() {

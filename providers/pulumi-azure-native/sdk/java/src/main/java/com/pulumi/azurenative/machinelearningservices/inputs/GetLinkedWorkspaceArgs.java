@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.machinelearningservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLinkedWorkspaceArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="linkName", required=true)
-    private String linkName;
+    private Output<String> linkName;
 
     /**
      * @return Friendly name of the linked workspace
      * 
      */
-    public String linkName() {
+    public Output<String> linkName() {
         return this.linkName;
     }
 
@@ -32,13 +33,13 @@ public final class GetLinkedWorkspaceArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group in which workspace is located.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetLinkedWorkspaceArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return Name of Azure Machine Learning workspace.
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetLinkedWorkspaceArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder linkName(String linkName) {
+        public Builder linkName(Output<String> linkName) {
             $.linkName = linkName;
+            return this;
+        }
+
+        /**
+         * @param linkName Friendly name of the linked workspace
+         * 
+         * @return builder
+         * 
+         */
+        public Builder linkName(String linkName) {
+            return linkName(Output.of(linkName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetLinkedWorkspaceArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetLinkedWorkspaceArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetLinkedWorkspaceArgs build() {

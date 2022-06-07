@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ciphertext", required=true)
-    private String ciphertext;
+    private Output<String> ciphertext;
 
     /**
      * @return The ciphertext to be decrypted, encoded in base64
      * 
      */
-    public String ciphertext() {
+    public Output<String> ciphertext() {
         return this.ciphertext;
     }
 
@@ -34,13 +35,13 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="crc32")
-    private @Nullable String crc32;
+    private @Nullable Output<String> crc32;
 
     /**
      * @return The crc32 checksum of the `ciphertext` in hexadecimal notation. If not specified, it will be computed.
      * 
      */
-    public Optional<String> crc32() {
+    public Optional<Output<String>> crc32() {
         return Optional.ofNullable(this.crc32);
     }
 
@@ -51,7 +52,7 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cryptoKeyVersion", required=true)
-    private String cryptoKeyVersion;
+    private Output<String> cryptoKeyVersion;
 
     /**
      * @return The id of the CryptoKey version that will be used to
@@ -59,7 +60,7 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
      * `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}`.
      * 
      */
-    public String cryptoKeyVersion() {
+    public Output<String> cryptoKeyVersion() {
         return this.cryptoKeyVersion;
     }
 
@@ -95,8 +96,29 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder ciphertext(String ciphertext) {
+        public Builder ciphertext(Output<String> ciphertext) {
             $.ciphertext = ciphertext;
+            return this;
+        }
+
+        /**
+         * @param ciphertext The ciphertext to be decrypted, encoded in base64
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ciphertext(String ciphertext) {
+            return ciphertext(Output.of(ciphertext));
+        }
+
+        /**
+         * @param crc32 The crc32 checksum of the `ciphertext` in hexadecimal notation. If not specified, it will be computed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder crc32(@Nullable Output<String> crc32) {
+            $.crc32 = crc32;
             return this;
         }
 
@@ -106,8 +128,20 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder crc32(@Nullable String crc32) {
-            $.crc32 = crc32;
+        public Builder crc32(String crc32) {
+            return crc32(Output.of(crc32));
+        }
+
+        /**
+         * @param cryptoKeyVersion The id of the CryptoKey version that will be used to
+         * decrypt the provided ciphertext. This is represented by the format
+         * `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cryptoKeyVersion(Output<String> cryptoKeyVersion) {
+            $.cryptoKeyVersion = cryptoKeyVersion;
             return this;
         }
 
@@ -120,8 +154,7 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder cryptoKeyVersion(String cryptoKeyVersion) {
-            $.cryptoKeyVersion = cryptoKeyVersion;
-            return this;
+            return cryptoKeyVersion(Output.of(cryptoKeyVersion));
         }
 
         public GetKMSSecretAsymmetricArgs build() {

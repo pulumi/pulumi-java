@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.portal.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUserSettingsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userSettingsName", required=true)
-    private String userSettingsName;
+    private Output<String> userSettingsName;
 
     /**
      * @return The name of the user settings
      * 
      */
-    public String userSettingsName() {
+    public Output<String> userSettingsName() {
         return this.userSettingsName;
     }
 
@@ -57,9 +58,19 @@ public final class GetUserSettingsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userSettingsName(String userSettingsName) {
+        public Builder userSettingsName(Output<String> userSettingsName) {
             $.userSettingsName = userSettingsName;
             return this;
+        }
+
+        /**
+         * @param userSettingsName The name of the user settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userSettingsName(String userSettingsName) {
+            return userSettingsName(Output.of(userSettingsName));
         }
 
         public GetUserSettingsArgs build() {

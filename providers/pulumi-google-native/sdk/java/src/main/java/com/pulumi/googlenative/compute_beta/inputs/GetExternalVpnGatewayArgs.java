@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.compute_beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetExternalVpnGatewayArgs extends com.pulumi.resources.Invoke
     public static final GetExternalVpnGatewayArgs Empty = new GetExternalVpnGatewayArgs();
 
     @Import(name="externalVpnGateway", required=true)
-    private String externalVpnGateway;
+    private Output<String> externalVpnGateway;
 
-    public String externalVpnGateway() {
+    public Output<String> externalVpnGateway() {
         return this.externalVpnGateway;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
@@ -53,14 +54,22 @@ public final class GetExternalVpnGatewayArgs extends com.pulumi.resources.Invoke
             $ = new GetExternalVpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder externalVpnGateway(String externalVpnGateway) {
+        public Builder externalVpnGateway(Output<String> externalVpnGateway) {
             $.externalVpnGateway = externalVpnGateway;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder externalVpnGateway(String externalVpnGateway) {
+            return externalVpnGateway(Output.of(externalVpnGateway));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
+        }
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
 
         public GetExternalVpnGatewayArgs build() {

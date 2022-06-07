@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Mysql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Mysql.inputs.GetShapesFilter;
+import com.pulumi.oci.Mysql.inputs.GetShapesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityDomain")
-    private @Nullable String availabilityDomain;
+    private @Nullable Output<String> availabilityDomain;
 
     /**
      * @return The name of the Availability Domain.
      * 
      */
-    public Optional<String> availabilityDomain() {
+    public Optional<Output<String>> availabilityDomain() {
         return Optional.ofNullable(this.availabilityDomain);
     }
 
@@ -36,20 +37,20 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetShapesFilter> filters;
+    private @Nullable Output<List<GetShapesFilterArgs>> filters;
 
-    public Optional<List<GetShapesFilter>> filters() {
+    public Optional<Output<List<GetShapesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isSupportedFors")
-    private @Nullable List<String> isSupportedFors;
+    private @Nullable Output<List<String>> isSupportedFors;
 
     /**
      * @return Return shapes that are supported by the service feature.
      * 
      */
-    public Optional<List<String>> isSupportedFors() {
+    public Optional<Output<List<String>>> isSupportedFors() {
         return Optional.ofNullable(this.isSupportedFors);
     }
 
@@ -73,13 +74,13 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return Name
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -117,8 +118,29 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityDomain(@Nullable String availabilityDomain) {
+        public Builder availabilityDomain(@Nullable Output<String> availabilityDomain) {
             $.availabilityDomain = availabilityDomain;
+            return this;
+        }
+
+        /**
+         * @param availabilityDomain The name of the Availability Domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityDomain(String availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
+        }
+
+        /**
+         * @param compartmentId The compartment [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -129,16 +151,19 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
-            return this;
+            return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(@Nullable List<GetShapesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetShapesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetShapesFilter... filters) {
+        public Builder filters(List<GetShapesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetShapesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -148,9 +173,19 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder isSupportedFors(@Nullable List<String> isSupportedFors) {
+        public Builder isSupportedFors(@Nullable Output<List<String>> isSupportedFors) {
             $.isSupportedFors = isSupportedFors;
             return this;
+        }
+
+        /**
+         * @param isSupportedFors Return shapes that are supported by the service feature.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isSupportedFors(List<String> isSupportedFors) {
+            return isSupportedFors(Output.of(isSupportedFors));
         }
 
         /**
@@ -169,9 +204,19 @@ public final class GetShapesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
+        }
+
+        /**
+         * @param name Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetShapesArgs build() {

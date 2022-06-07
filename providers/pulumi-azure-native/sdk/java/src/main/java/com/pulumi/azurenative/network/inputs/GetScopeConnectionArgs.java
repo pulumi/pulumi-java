@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="networkManagerName", required=true)
-    private String networkManagerName;
+    private Output<String> networkManagerName;
 
     /**
      * @return The name of the network manager.
      * 
      */
-    public String networkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -32,13 +33,13 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scopeConnectionName", required=true)
-    private String scopeConnectionName;
+    private Output<String> scopeConnectionName;
 
     /**
      * @return Name for the cross-tenant connection.
      * 
      */
-    public String scopeConnectionName() {
+    public Output<String> scopeConnectionName() {
         return this.scopeConnectionName;
     }
 
@@ -89,8 +90,29 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder networkManagerName(String networkManagerName) {
+        public Builder networkManagerName(Output<String> networkManagerName) {
             $.networkManagerName = networkManagerName;
+            return this;
+        }
+
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkManagerName(String networkManagerName) {
+            return networkManagerName(Output.of(networkManagerName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param scopeConnectionName Name for the cross-tenant connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scopeConnectionName(Output<String> scopeConnectionName) {
+            $.scopeConnectionName = scopeConnectionName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder scopeConnectionName(String scopeConnectionName) {
-            $.scopeConnectionName = scopeConnectionName;
-            return this;
+            return scopeConnectionName(Output.of(scopeConnectionName));
         }
 
         public GetScopeConnectionArgs build() {

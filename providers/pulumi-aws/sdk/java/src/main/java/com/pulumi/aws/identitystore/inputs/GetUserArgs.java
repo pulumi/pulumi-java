@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.identitystore.inputs;
 
-import com.pulumi.aws.identitystore.inputs.GetUserFilter;
+import com.pulumi.aws.identitystore.inputs.GetUserFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -21,13 +22,13 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters", required=true)
-    private List<GetUserFilter> filters;
+    private Output<List<GetUserFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
      * 
      */
-    public List<GetUserFilter> filters() {
+    public Output<List<GetUserFilterArgs>> filters() {
         return this.filters;
     }
 
@@ -36,13 +37,13 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identityStoreId", required=true)
-    private String identityStoreId;
+    private Output<String> identityStoreId;
 
     /**
      * @return The Identity Store ID associated with the Single Sign-On Instance.
      * 
      */
-    public String identityStoreId() {
+    public Output<String> identityStoreId() {
         return this.identityStoreId;
     }
 
@@ -51,13 +52,13 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId")
-    private @Nullable String userId;
+    private @Nullable Output<String> userId;
 
     /**
      * @return The identifier for a user in the Identity Store.
      * 
      */
-    public Optional<String> userId() {
+    public Optional<Output<String>> userId() {
         return Optional.ofNullable(this.userId);
     }
 
@@ -93,7 +94,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(List<GetUserFilter> filters) {
+        public Builder filters(Output<List<GetUserFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -104,7 +105,17 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetUserFilter... filters) {
+        public Builder filters(List<GetUserFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetUserFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -114,8 +125,29 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder identityStoreId(String identityStoreId) {
+        public Builder identityStoreId(Output<String> identityStoreId) {
             $.identityStoreId = identityStoreId;
+            return this;
+        }
+
+        /**
+         * @param identityStoreId The Identity Store ID associated with the Single Sign-On Instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identityStoreId(String identityStoreId) {
+            return identityStoreId(Output.of(identityStoreId));
+        }
+
+        /**
+         * @param userId The identifier for a user in the Identity Store.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userId(@Nullable Output<String> userId) {
+            $.userId = userId;
             return this;
         }
 
@@ -125,9 +157,8 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder userId(@Nullable String userId) {
-            $.userId = userId;
-            return this;
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
         }
 
         public GetUserArgs build() {

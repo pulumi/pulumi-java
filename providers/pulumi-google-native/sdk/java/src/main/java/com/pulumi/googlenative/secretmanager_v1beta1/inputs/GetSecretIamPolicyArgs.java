@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetSecretIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetSecretIamPolicyArgs Empty = new GetSecretIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-    private @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable Output<String> optionsRequestedPolicyVersion;
 
-    public Optional<String> optionsRequestedPolicyVersion() {
+    public Optional<Output<String>> optionsRequestedPolicyVersion() {
         return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="secretId", required=true)
-    private String secretId;
+    private Output<String> secretId;
 
-    public String secretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
@@ -61,19 +62,31 @@ public final class GetSecretIamPolicyArgs extends com.pulumi.resources.InvokeArg
             $ = new GetSecretIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable Output<String> optionsRequestedPolicyVersion) {
             $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder optionsRequestedPolicyVersion(String optionsRequestedPolicyVersion) {
+            return optionsRequestedPolicyVersion(Output.of(optionsRequestedPolicyVersion));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder secretId(String secretId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder secretId(Output<String> secretId) {
             $.secretId = secretId;
             return this;
+        }
+
+        public Builder secretId(String secretId) {
+            return secretId(Output.of(secretId));
         }
 
         public GetSecretIamPolicyArgs build() {

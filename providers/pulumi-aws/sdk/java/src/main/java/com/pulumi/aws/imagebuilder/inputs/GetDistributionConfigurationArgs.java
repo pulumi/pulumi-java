@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetDistributionConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="arn", required=true)
-    private String arn;
+    private Output<String> arn;
 
     /**
      * @return Amazon Resource Name (ARN) of the distribution configuration.
      * 
      */
-    public String arn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -35,13 +36,13 @@ public final class GetDistributionConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Key-value map of resource tags for the distribution configuration.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -76,8 +77,29 @@ public final class GetDistributionConfigurationArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder arn(String arn) {
+        public Builder arn(Output<String> arn) {
             $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn Amazon Resource Name (ARN) of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param tags Key-value map of resource tags for the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -87,9 +109,8 @@ public final class GetDistributionConfigurationArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
-            return this;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
 
         public GetDistributionConfigurationArgs build() {

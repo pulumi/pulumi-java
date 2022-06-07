@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLogProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logProfileName", required=true)
-    private String logProfileName;
+    private Output<String> logProfileName;
 
     /**
      * @return The name of the log profile.
      * 
      */
-    public String logProfileName() {
+    public Output<String> logProfileName() {
         return this.logProfileName;
     }
 
@@ -57,9 +58,19 @@ public final class GetLogProfileArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder logProfileName(String logProfileName) {
+        public Builder logProfileName(Output<String> logProfileName) {
             $.logProfileName = logProfileName;
             return this;
+        }
+
+        /**
+         * @param logProfileName The name of the log profile.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logProfileName(String logProfileName) {
+            return logProfileName(Output.of(logProfileName));
         }
 
         public GetLogProfileArgs build() {

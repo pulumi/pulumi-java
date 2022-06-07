@@ -6,14 +6,20 @@ package com.pulumi.azurenative.webpubsub;
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.webpubsub.inputs.GetWebPubSubArgs;
 import com.pulumi.azurenative.webpubsub.inputs.GetWebPubSubHubArgs;
+import com.pulumi.azurenative.webpubsub.inputs.GetWebPubSubHubPlainArgs;
+import com.pulumi.azurenative.webpubsub.inputs.GetWebPubSubPlainArgs;
 import com.pulumi.azurenative.webpubsub.inputs.GetWebPubSubPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.webpubsub.inputs.GetWebPubSubPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.webpubsub.inputs.GetWebPubSubSharedPrivateLinkResourceArgs;
+import com.pulumi.azurenative.webpubsub.inputs.GetWebPubSubSharedPrivateLinkResourcePlainArgs;
 import com.pulumi.azurenative.webpubsub.inputs.ListWebPubSubKeysArgs;
+import com.pulumi.azurenative.webpubsub.inputs.ListWebPubSubKeysPlainArgs;
 import com.pulumi.azurenative.webpubsub.outputs.GetWebPubSubHubResult;
 import com.pulumi.azurenative.webpubsub.outputs.GetWebPubSubPrivateEndpointConnectionResult;
 import com.pulumi.azurenative.webpubsub.outputs.GetWebPubSubResult;
 import com.pulumi.azurenative.webpubsub.outputs.GetWebPubSubSharedPrivateLinkResourceResult;
 import com.pulumi.azurenative.webpubsub.outputs.ListWebPubSubKeysResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -25,7 +31,7 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetWebPubSubResult> getWebPubSub(GetWebPubSubArgs args) {
+    public static Output<GetWebPubSubResult> getWebPubSub(GetWebPubSubArgs args) {
         return getWebPubSub(args, InvokeOptions.Empty);
     }
     /**
@@ -33,7 +39,23 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetWebPubSubResult> getWebPubSub(GetWebPubSubArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebPubSubResult> getWebPubSubPlain(GetWebPubSubPlainArgs args) {
+        return getWebPubSubPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A class represent a resource.
+     * API Version: 2021-04-01-preview.
+     * 
+     */
+    public static Output<GetWebPubSubResult> getWebPubSub(GetWebPubSubArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:webpubsub:getWebPubSub", TypeShape.of(GetWebPubSubResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A class represent a resource.
+     * API Version: 2021-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetWebPubSubResult> getWebPubSubPlain(GetWebPubSubPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSub", TypeShape.of(GetWebPubSubResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -41,7 +63,7 @@ public final class WebpubsubFunctions {
      * API Version: 2021-10-01.
      * 
      */
-    public static CompletableFuture<GetWebPubSubHubResult> getWebPubSubHub(GetWebPubSubHubArgs args) {
+    public static Output<GetWebPubSubHubResult> getWebPubSubHub(GetWebPubSubHubArgs args) {
         return getWebPubSubHub(args, InvokeOptions.Empty);
     }
     /**
@@ -49,7 +71,23 @@ public final class WebpubsubFunctions {
      * API Version: 2021-10-01.
      * 
      */
-    public static CompletableFuture<GetWebPubSubHubResult> getWebPubSubHub(GetWebPubSubHubArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebPubSubHubResult> getWebPubSubHubPlain(GetWebPubSubHubPlainArgs args) {
+        return getWebPubSubHubPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A hub setting
+     * API Version: 2021-10-01.
+     * 
+     */
+    public static Output<GetWebPubSubHubResult> getWebPubSubHub(GetWebPubSubHubArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:webpubsub:getWebPubSubHub", TypeShape.of(GetWebPubSubHubResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A hub setting
+     * API Version: 2021-10-01.
+     * 
+     */
+    public static CompletableFuture<GetWebPubSubHubResult> getWebPubSubHubPlain(GetWebPubSubHubPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSubHub", TypeShape.of(GetWebPubSubHubResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -57,7 +95,7 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> getWebPubSubPrivateEndpointConnection(GetWebPubSubPrivateEndpointConnectionArgs args) {
+    public static Output<GetWebPubSubPrivateEndpointConnectionResult> getWebPubSubPrivateEndpointConnection(GetWebPubSubPrivateEndpointConnectionArgs args) {
         return getWebPubSubPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -65,7 +103,23 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> getWebPubSubPrivateEndpointConnection(GetWebPubSubPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> getWebPubSubPrivateEndpointConnectionPlain(GetWebPubSubPrivateEndpointConnectionPlainArgs args) {
+        return getWebPubSubPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A private endpoint connection to an azure resource
+     * API Version: 2021-04-01-preview.
+     * 
+     */
+    public static Output<GetWebPubSubPrivateEndpointConnectionResult> getWebPubSubPrivateEndpointConnection(GetWebPubSubPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:webpubsub:getWebPubSubPrivateEndpointConnection", TypeShape.of(GetWebPubSubPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A private endpoint connection to an azure resource
+     * API Version: 2021-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> getWebPubSubPrivateEndpointConnectionPlain(GetWebPubSubPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSubPrivateEndpointConnection", TypeShape.of(GetWebPubSubPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -73,7 +127,7 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetWebPubSubSharedPrivateLinkResourceResult> getWebPubSubSharedPrivateLinkResource(GetWebPubSubSharedPrivateLinkResourceArgs args) {
+    public static Output<GetWebPubSubSharedPrivateLinkResourceResult> getWebPubSubSharedPrivateLinkResource(GetWebPubSubSharedPrivateLinkResourceArgs args) {
         return getWebPubSubSharedPrivateLinkResource(args, InvokeOptions.Empty);
     }
     /**
@@ -81,7 +135,23 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<GetWebPubSubSharedPrivateLinkResourceResult> getWebPubSubSharedPrivateLinkResource(GetWebPubSubSharedPrivateLinkResourceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWebPubSubSharedPrivateLinkResourceResult> getWebPubSubSharedPrivateLinkResourcePlain(GetWebPubSubSharedPrivateLinkResourcePlainArgs args) {
+        return getWebPubSubSharedPrivateLinkResourcePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Describes a Shared Private Link Resource
+     * API Version: 2021-04-01-preview.
+     * 
+     */
+    public static Output<GetWebPubSubSharedPrivateLinkResourceResult> getWebPubSubSharedPrivateLinkResource(GetWebPubSubSharedPrivateLinkResourceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:webpubsub:getWebPubSubSharedPrivateLinkResource", TypeShape.of(GetWebPubSubSharedPrivateLinkResourceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Describes a Shared Private Link Resource
+     * API Version: 2021-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<GetWebPubSubSharedPrivateLinkResourceResult> getWebPubSubSharedPrivateLinkResourcePlain(GetWebPubSubSharedPrivateLinkResourcePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSubSharedPrivateLinkResource", TypeShape.of(GetWebPubSubSharedPrivateLinkResourceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -89,7 +159,7 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<ListWebPubSubKeysResult> listWebPubSubKeys(ListWebPubSubKeysArgs args) {
+    public static Output<ListWebPubSubKeysResult> listWebPubSubKeys(ListWebPubSubKeysArgs args) {
         return listWebPubSubKeys(args, InvokeOptions.Empty);
     }
     /**
@@ -97,7 +167,23 @@ public final class WebpubsubFunctions {
      * API Version: 2021-04-01-preview.
      * 
      */
-    public static CompletableFuture<ListWebPubSubKeysResult> listWebPubSubKeys(ListWebPubSubKeysArgs args, InvokeOptions options) {
+    public static CompletableFuture<ListWebPubSubKeysResult> listWebPubSubKeysPlain(ListWebPubSubKeysPlainArgs args) {
+        return listWebPubSubKeysPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * A class represents the access keys of the resource.
+     * API Version: 2021-04-01-preview.
+     * 
+     */
+    public static Output<ListWebPubSubKeysResult> listWebPubSubKeys(ListWebPubSubKeysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:webpubsub:listWebPubSubKeys", TypeShape.of(ListWebPubSubKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * A class represents the access keys of the resource.
+     * API Version: 2021-04-01-preview.
+     * 
+     */
+    public static CompletableFuture<ListWebPubSubKeysResult> listWebPubSubKeysPlain(ListWebPubSubKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:listWebPubSubKeys", TypeShape.of(ListWebPubSubKeysResult.class), args, Utilities.withVersion(options));
     }
 }

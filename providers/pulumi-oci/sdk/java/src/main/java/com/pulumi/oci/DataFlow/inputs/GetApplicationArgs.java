@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataFlow.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationId", required=true)
-    private String applicationId;
+    private Output<String> applicationId;
 
     /**
      * @return The unique ID for an application.
      * 
      */
-    public String applicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -57,9 +58,19 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder applicationId(String applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
+        }
+
+        /**
+         * @param applicationId The unique ID for an application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
 
         public GetApplicationArgs build() {

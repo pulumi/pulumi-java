@@ -5,7 +5,9 @@ package com.pulumi.awsnative.opsworkscm;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.opsworkscm.inputs.GetServerArgs;
+import com.pulumi.awsnative.opsworkscm.inputs.GetServerPlainArgs;
 import com.pulumi.awsnative.opsworkscm.outputs.GetServerResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class OpsworkscmFunctions {
      * Resource Type definition for AWS::OpsWorksCM::Server
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args) {
+    public static Output<GetServerResult> getServer(GetServerArgs args) {
         return getServer(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::OpsWorksCM::Server
      * 
      */
-    public static CompletableFuture<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServerResult> getServerPlain(GetServerPlainArgs args) {
+        return getServerPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::OpsWorksCM::Server
+     * 
+     */
+    public static Output<GetServerResult> getServer(GetServerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:opsworkscm:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::OpsWorksCM::Server
+     * 
+     */
+    public static CompletableFuture<GetServerResult> getServerPlain(GetServerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:opsworkscm:getServer", TypeShape.of(GetServerResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Opsi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Opsi.inputs.GetOperationsInsightsPrivateEndpointsFilter;
+import com.pulumi.oci.Opsi.inputs.GetOperationsInsightsPrivateEndpointsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -37,13 +38,13 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
      * 
      */
     @Import(name="compartmentIdInSubtree")
-    private @Nullable Boolean compartmentIdInSubtree;
+    private @Nullable Output<Boolean> compartmentIdInSubtree;
 
     /**
      * @return A flag to search all resources within a given compartment and all sub-compartments.
      * 
      */
-    public Optional<Boolean> compartmentIdInSubtree() {
+    public Optional<Output<Boolean>> compartmentIdInSubtree() {
         return Optional.ofNullable(this.compartmentIdInSubtree);
     }
 
@@ -52,20 +53,20 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetOperationsInsightsPrivateEndpointsFilter> filters;
+    private @Nullable Output<List<GetOperationsInsightsPrivateEndpointsFilterArgs>> filters;
 
-    public Optional<List<GetOperationsInsightsPrivateEndpointsFilter>> filters() {
+    public Optional<Output<List<GetOperationsInsightsPrivateEndpointsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -74,13 +75,13 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
      * 
      */
     @Import(name="isUsedForRacDbs")
-    private @Nullable Boolean isUsedForRacDbs;
+    private @Nullable Output<Boolean> isUsedForRacDbs;
 
     /**
      * @return The option to filter OPSI private endpoints that can used for RAC. Should be used along with vcnId query parameter.
      * 
      */
-    public Optional<Boolean> isUsedForRacDbs() {
+    public Optional<Output<Boolean>> isUsedForRacDbs() {
         return Optional.ofNullable(this.isUsedForRacDbs);
     }
 
@@ -89,13 +90,13 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
      * 
      */
     @Import(name="opsiPrivateEndpointId")
-    private @Nullable String opsiPrivateEndpointId;
+    private @Nullable Output<String> opsiPrivateEndpointId;
 
     /**
      * @return Unique Operations Insights PrivateEndpoint identifier
      * 
      */
-    public Optional<String> opsiPrivateEndpointId() {
+    public Optional<Output<String>> opsiPrivateEndpointId() {
         return Optional.ofNullable(this.opsiPrivateEndpointId);
     }
 
@@ -104,13 +105,13 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
      * 
      */
     @Import(name="states")
-    private @Nullable List<String> states;
+    private @Nullable Output<List<String>> states;
 
     /**
      * @return Lifecycle states
      * 
      */
-    public Optional<List<String>> states() {
+    public Optional<Output<List<String>>> states() {
         return Optional.ofNullable(this.states);
     }
 
@@ -119,13 +120,13 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
      * 
      */
     @Import(name="vcnId")
-    private @Nullable String vcnId;
+    private @Nullable Output<String> vcnId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
      * 
      */
-    public Optional<String> vcnId() {
+    public Optional<Output<String>> vcnId() {
         return Optional.ofNullable(this.vcnId);
     }
 
@@ -166,8 +167,29 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param compartmentIdInSubtree A flag to search all resources within a given compartment and all sub-compartments.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentIdInSubtree(@Nullable Output<Boolean> compartmentIdInSubtree) {
+            $.compartmentIdInSubtree = compartmentIdInSubtree;
             return this;
         }
 
@@ -177,8 +199,18 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder compartmentIdInSubtree(@Nullable Boolean compartmentIdInSubtree) {
-            $.compartmentIdInSubtree = compartmentIdInSubtree;
+        public Builder compartmentIdInSubtree(Boolean compartmentIdInSubtree) {
+            return compartmentIdInSubtree(Output.of(compartmentIdInSubtree));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -188,17 +220,20 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetOperationsInsightsPrivateEndpointsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetOperationsInsightsPrivateEndpointsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetOperationsInsightsPrivateEndpointsFilter... filters) {
+        public Builder filters(List<GetOperationsInsightsPrivateEndpointsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetOperationsInsightsPrivateEndpointsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -208,8 +243,29 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder isUsedForRacDbs(@Nullable Boolean isUsedForRacDbs) {
+        public Builder isUsedForRacDbs(@Nullable Output<Boolean> isUsedForRacDbs) {
             $.isUsedForRacDbs = isUsedForRacDbs;
+            return this;
+        }
+
+        /**
+         * @param isUsedForRacDbs The option to filter OPSI private endpoints that can used for RAC. Should be used along with vcnId query parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isUsedForRacDbs(Boolean isUsedForRacDbs) {
+            return isUsedForRacDbs(Output.of(isUsedForRacDbs));
+        }
+
+        /**
+         * @param opsiPrivateEndpointId Unique Operations Insights PrivateEndpoint identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder opsiPrivateEndpointId(@Nullable Output<String> opsiPrivateEndpointId) {
+            $.opsiPrivateEndpointId = opsiPrivateEndpointId;
             return this;
         }
 
@@ -219,8 +275,18 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder opsiPrivateEndpointId(@Nullable String opsiPrivateEndpointId) {
-            $.opsiPrivateEndpointId = opsiPrivateEndpointId;
+        public Builder opsiPrivateEndpointId(String opsiPrivateEndpointId) {
+            return opsiPrivateEndpointId(Output.of(opsiPrivateEndpointId));
+        }
+
+        /**
+         * @param states Lifecycle states
+         * 
+         * @return builder
+         * 
+         */
+        public Builder states(@Nullable Output<List<String>> states) {
+            $.states = states;
             return this;
         }
 
@@ -230,9 +296,8 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder states(@Nullable List<String> states) {
-            $.states = states;
-            return this;
+        public Builder states(List<String> states) {
+            return states(Output.of(states));
         }
 
         /**
@@ -251,9 +316,19 @@ public final class GetOperationsInsightsPrivateEndpointsArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder vcnId(@Nullable String vcnId) {
+        public Builder vcnId(@Nullable Output<String> vcnId) {
             $.vcnId = vcnId;
             return this;
+        }
+
+        /**
+         * @param vcnId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vcnId(String vcnId) {
+            return vcnId(Output.of(vcnId));
         }
 
         public GetOperationsInsightsPrivateEndpointsArgs build() {

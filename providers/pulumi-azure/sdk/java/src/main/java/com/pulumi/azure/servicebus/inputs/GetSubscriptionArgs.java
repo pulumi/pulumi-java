@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.servicebus.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Specifies the name of the ServiceBus Subscription.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -34,13 +35,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespaceName")
-    private @Nullable String namespaceName;
+    private @Nullable Output<String> namespaceName;
 
     /**
      * @return The name of the ServiceBus Namespace.
      * 
      */
-    public Optional<String> namespaceName() {
+    public Optional<Output<String>> namespaceName() {
         return Optional.ofNullable(this.namespaceName);
     }
 
@@ -49,20 +50,20 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName")
-    private @Nullable String resourceGroupName;
+    private @Nullable Output<String> resourceGroupName;
 
     /**
      * @return Specifies the name of the Resource Group where the ServiceBus Namespace exists.
      * 
      */
-    public Optional<String> resourceGroupName() {
+    public Optional<Output<String>> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
 
     @Import(name="topicId")
-    private @Nullable String topicId;
+    private @Nullable Output<String> topicId;
 
-    public Optional<String> topicId() {
+    public Optional<Output<String>> topicId() {
         return Optional.ofNullable(this.topicId);
     }
 
@@ -71,13 +72,13 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="topicName")
-    private @Nullable String topicName;
+    private @Nullable Output<String> topicName;
 
     /**
      * @return The name of the ServiceBus Topic.
      * 
      */
-    public Optional<String> topicName() {
+    public Optional<Output<String>> topicName() {
         return Optional.ofNullable(this.topicName);
     }
 
@@ -115,8 +116,29 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Specifies the name of the ServiceBus Subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param namespaceName The name of the ServiceBus Namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(@Nullable Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -126,8 +148,18 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder namespaceName(@Nullable String namespaceName) {
-            $.namespaceName = namespaceName;
+        public Builder namespaceName(String namespaceName) {
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param resourceGroupName Specifies the name of the Resource Group where the ServiceBus Namespace exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -137,13 +169,27 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public Builder topicId(@Nullable Output<String> topicId) {
+            $.topicId = topicId;
             return this;
         }
 
-        public Builder topicId(@Nullable String topicId) {
-            $.topicId = topicId;
+        public Builder topicId(String topicId) {
+            return topicId(Output.of(topicId));
+        }
+
+        /**
+         * @param topicName The name of the ServiceBus Topic.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder topicName(@Nullable Output<String> topicName) {
+            $.topicName = topicName;
             return this;
         }
 
@@ -153,9 +199,8 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder topicName(@Nullable String topicName) {
-            $.topicName = topicName;
-            return this;
+        public Builder topicName(String topicName) {
+            return topicName(Output.of(topicName));
         }
 
         public GetSubscriptionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.lex.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBotAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="botName", required=true)
-    private String botName;
+    private Output<String> botName;
 
     /**
      * @return The name of the bot.
      * 
      */
-    public String botName() {
+    public Output<String> botName() {
         return this.botName;
     }
 
@@ -32,13 +33,13 @@ public final class GetBotAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the bot alias. The name is case sensitive.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetBotAliasArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder botName(String botName) {
+        public Builder botName(Output<String> botName) {
             $.botName = botName;
+            return this;
+        }
+
+        /**
+         * @param botName The name of the bot.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder botName(String botName) {
+            return botName(Output.of(botName));
+        }
+
+        /**
+         * @param name The name of the bot alias. The name is case sensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetBotAliasArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetBotAliasArgs build() {

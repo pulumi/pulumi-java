@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.refactorspaces.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEnvironmentArgs Empty = new GetEnvironmentArgs();
 
     @Import(name="environmentIdentifier", required=true)
-    private String environmentIdentifier;
+    private Output<String> environmentIdentifier;
 
-    public String environmentIdentifier() {
+    public Output<String> environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
@@ -43,9 +44,13 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder environmentIdentifier(String environmentIdentifier) {
+        public Builder environmentIdentifier(Output<String> environmentIdentifier) {
             $.environmentIdentifier = environmentIdentifier;
             return this;
+        }
+
+        public Builder environmentIdentifier(String environmentIdentifier) {
+            return environmentIdentifier(Output.of(environmentIdentifier));
         }
 
         public GetEnvironmentArgs build() {

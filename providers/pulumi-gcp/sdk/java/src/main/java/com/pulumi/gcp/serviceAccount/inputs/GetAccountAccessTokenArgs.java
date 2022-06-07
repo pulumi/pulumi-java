@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.serviceAccount.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -20,13 +21,13 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="delegates")
-    private @Nullable List<String> delegates;
+    private @Nullable Output<List<String>> delegates;
 
     /**
      * @return Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. `[&#34;projects/-/serviceAccounts/delegate-svc-account@project-id.iam.gserviceaccount.com&#34;]`)
      * 
      */
-    public Optional<List<String>> delegates() {
+    public Optional<Output<List<String>>> delegates() {
         return Optional.ofNullable(this.delegates);
     }
 
@@ -35,13 +36,13 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="lifetime")
-    private @Nullable String lifetime;
+    private @Nullable Output<String> lifetime;
 
     /**
      * @return Lifetime of the impersonated token (defaults to its max: `3600s`).
      * 
      */
-    public Optional<String> lifetime() {
+    public Optional<Output<String>> lifetime() {
         return Optional.ofNullable(this.lifetime);
     }
 
@@ -50,13 +51,13 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="scopes", required=true)
-    private List<String> scopes;
+    private Output<List<String>> scopes;
 
     /**
      * @return The scopes the new credential should have (e.g. `[&#34;cloud-platform&#34;]`)
      * 
      */
-    public List<String> scopes() {
+    public Output<List<String>> scopes() {
         return this.scopes;
     }
 
@@ -65,13 +66,13 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetServiceAccount", required=true)
-    private String targetServiceAccount;
+    private Output<String> targetServiceAccount;
 
     /**
      * @return The service account _to_ impersonate (e.g. `service_B@your-project-id.iam.gserviceaccount.com`)
      * 
      */
-    public String targetServiceAccount() {
+    public Output<String> targetServiceAccount() {
         return this.targetServiceAccount;
     }
 
@@ -108,9 +109,19 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder delegates(@Nullable List<String> delegates) {
+        public Builder delegates(@Nullable Output<List<String>> delegates) {
             $.delegates = delegates;
             return this;
+        }
+
+        /**
+         * @param delegates Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. `[&#34;projects/-/serviceAccounts/delegate-svc-account@project-id.iam.gserviceaccount.com&#34;]`)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder delegates(List<String> delegates) {
+            return delegates(Output.of(delegates));
         }
 
         /**
@@ -129,8 +140,29 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder lifetime(@Nullable String lifetime) {
+        public Builder lifetime(@Nullable Output<String> lifetime) {
             $.lifetime = lifetime;
+            return this;
+        }
+
+        /**
+         * @param lifetime Lifetime of the impersonated token (defaults to its max: `3600s`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lifetime(String lifetime) {
+            return lifetime(Output.of(lifetime));
+        }
+
+        /**
+         * @param scopes The scopes the new credential should have (e.g. `[&#34;cloud-platform&#34;]`)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scopes(Output<List<String>> scopes) {
+            $.scopes = scopes;
             return this;
         }
 
@@ -141,8 +173,7 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder scopes(List<String> scopes) {
-            $.scopes = scopes;
-            return this;
+            return scopes(Output.of(scopes));
         }
 
         /**
@@ -161,9 +192,19 @@ public final class GetAccountAccessTokenArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder targetServiceAccount(String targetServiceAccount) {
+        public Builder targetServiceAccount(Output<String> targetServiceAccount) {
             $.targetServiceAccount = targetServiceAccount;
             return this;
+        }
+
+        /**
+         * @param targetServiceAccount The service account _to_ impersonate (e.g. `service_B@your-project-id.iam.gserviceaccount.com`)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetServiceAccount(String targetServiceAccount) {
+            return targetServiceAccount(Output.of(targetServiceAccount));
         }
 
         public GetAccountAccessTokenArgs build() {

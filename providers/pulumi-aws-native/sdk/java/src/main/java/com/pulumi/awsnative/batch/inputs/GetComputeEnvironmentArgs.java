@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.batch.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetComputeEnvironmentArgs extends com.pulumi.resources.Invoke
     public static final GetComputeEnvironmentArgs Empty = new GetComputeEnvironmentArgs();
 
     @Import(name="computeEnvironmentArn", required=true)
-    private String computeEnvironmentArn;
+    private Output<String> computeEnvironmentArn;
 
-    public String computeEnvironmentArn() {
+    public Output<String> computeEnvironmentArn() {
         return this.computeEnvironmentArn;
     }
 
@@ -43,9 +44,13 @@ public final class GetComputeEnvironmentArgs extends com.pulumi.resources.Invoke
             $ = new GetComputeEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder computeEnvironmentArn(String computeEnvironmentArn) {
+        public Builder computeEnvironmentArn(Output<String> computeEnvironmentArn) {
             $.computeEnvironmentArn = computeEnvironmentArn;
             return this;
+        }
+
+        public Builder computeEnvironmentArn(String computeEnvironmentArn) {
+            return computeEnvironmentArn(Output.of(computeEnvironmentArn));
         }
 
         public GetComputeEnvironmentArgs build() {

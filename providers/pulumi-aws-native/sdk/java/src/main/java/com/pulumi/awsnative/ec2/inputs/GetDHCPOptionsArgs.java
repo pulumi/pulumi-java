@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetDHCPOptionsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDHCPOptionsArgs Empty = new GetDHCPOptionsArgs();
 
     @Import(name="dhcpOptionsId", required=true)
-    private String dhcpOptionsId;
+    private Output<String> dhcpOptionsId;
 
-    public String dhcpOptionsId() {
+    public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
 
@@ -43,9 +44,13 @@ public final class GetDHCPOptionsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDHCPOptionsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder dhcpOptionsId(String dhcpOptionsId) {
+        public Builder dhcpOptionsId(Output<String> dhcpOptionsId) {
             $.dhcpOptionsId = dhcpOptionsId;
             return this;
+        }
+
+        public Builder dhcpOptionsId(String dhcpOptionsId) {
+            return dhcpOptionsId(Output.of(dhcpOptionsId));
         }
 
         public GetDHCPOptionsArgs build() {

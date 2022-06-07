@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.xray.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetSamplingRuleArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSamplingRuleArgs Empty = new GetSamplingRuleArgs();
 
     @Import(name="ruleARN", required=true)
-    private String ruleARN;
+    private Output<String> ruleARN;
 
-    public String ruleARN() {
+    public Output<String> ruleARN() {
         return this.ruleARN;
     }
 
@@ -43,9 +44,13 @@ public final class GetSamplingRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSamplingRuleArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder ruleARN(String ruleARN) {
+        public Builder ruleARN(Output<String> ruleARN) {
             $.ruleARN = ruleARN;
             return this;
+        }
+
+        public Builder ruleARN(String ruleARN) {
+            return ruleARN(Output.of(ruleARN));
         }
 
         public GetSamplingRuleArgs build() {

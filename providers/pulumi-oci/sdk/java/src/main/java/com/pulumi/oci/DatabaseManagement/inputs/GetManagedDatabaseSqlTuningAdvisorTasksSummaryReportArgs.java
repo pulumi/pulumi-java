@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="beginExecIdGreaterThanOrEqualTo")
-    private @Nullable String beginExecIdGreaterThanOrEqualTo;
+    private @Nullable Output<String> beginExecIdGreaterThanOrEqualTo;
 
     /**
      * @return The optional greater than or equal to filter on the execution ID related to a specific SQL Tuning Advisor task. This is applicable only for Auto SQL Tuning tasks.
      * 
      */
-    public Optional<String> beginExecIdGreaterThanOrEqualTo() {
+    public Optional<Output<String>> beginExecIdGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.beginExecIdGreaterThanOrEqualTo);
     }
 
@@ -34,13 +35,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="endExecIdLessThanOrEqualTo")
-    private @Nullable String endExecIdLessThanOrEqualTo;
+    private @Nullable Output<String> endExecIdLessThanOrEqualTo;
 
     /**
      * @return The optional less than or equal to query parameter to filter on the execution ID related to a specific SQL Tuning Advisor task. This is applicable only for Auto SQL Tuning tasks.
      * 
      */
-    public Optional<String> endExecIdLessThanOrEqualTo() {
+    public Optional<Output<String>> endExecIdLessThanOrEqualTo() {
         return Optional.ofNullable(this.endExecIdLessThanOrEqualTo);
     }
 
@@ -49,13 +50,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="managedDatabaseId", required=true)
-    private String managedDatabaseId;
+    private Output<String> managedDatabaseId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
      * 
      */
-    public String managedDatabaseId() {
+    public Output<String> managedDatabaseId() {
         return this.managedDatabaseId;
     }
 
@@ -64,13 +65,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="searchPeriod")
-    private @Nullable String searchPeriod;
+    private @Nullable Output<String> searchPeriod;
 
     /**
      * @return How far back the API will search for begin and end exec id. Unused if neither exec ids nor time filter query params are supplied. This is applicable only for Auto SQL Tuning tasks.
      * 
      */
-    public Optional<String> searchPeriod() {
+    public Optional<Output<String>> searchPeriod() {
         return Optional.ofNullable(this.searchPeriod);
     }
 
@@ -79,13 +80,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="sqlTuningAdvisorTaskId", required=true)
-    private String sqlTuningAdvisorTaskId;
+    private Output<String> sqlTuningAdvisorTaskId;
 
     /**
      * @return The SQL tuning task identifier. This is not the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
      * 
      */
-    public String sqlTuningAdvisorTaskId() {
+    public Output<String> sqlTuningAdvisorTaskId() {
         return this.sqlTuningAdvisorTaskId;
     }
 
@@ -94,13 +95,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="timeGreaterThanOrEqualTo")
-    private @Nullable String timeGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeGreaterThanOrEqualTo;
 
     /**
      * @return The optional greater than or equal to query parameter to filter the timestamp. This is applicable only for Auto SQL Tuning tasks.
      * 
      */
-    public Optional<String> timeGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timeGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timeGreaterThanOrEqualTo);
     }
 
@@ -109,13 +110,13 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
      * 
      */
     @Import(name="timeLessThanOrEqualTo")
-    private @Nullable String timeLessThanOrEqualTo;
+    private @Nullable Output<String> timeLessThanOrEqualTo;
 
     /**
      * @return The optional less than or equal to query parameter to filter the timestamp. This is applicable only for Auto SQL Tuning tasks.
      * 
      */
-    public Optional<String> timeLessThanOrEqualTo() {
+    public Optional<Output<String>> timeLessThanOrEqualTo() {
         return Optional.ofNullable(this.timeLessThanOrEqualTo);
     }
 
@@ -155,8 +156,29 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder beginExecIdGreaterThanOrEqualTo(@Nullable String beginExecIdGreaterThanOrEqualTo) {
+        public Builder beginExecIdGreaterThanOrEqualTo(@Nullable Output<String> beginExecIdGreaterThanOrEqualTo) {
             $.beginExecIdGreaterThanOrEqualTo = beginExecIdGreaterThanOrEqualTo;
+            return this;
+        }
+
+        /**
+         * @param beginExecIdGreaterThanOrEqualTo The optional greater than or equal to filter on the execution ID related to a specific SQL Tuning Advisor task. This is applicable only for Auto SQL Tuning tasks.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder beginExecIdGreaterThanOrEqualTo(String beginExecIdGreaterThanOrEqualTo) {
+            return beginExecIdGreaterThanOrEqualTo(Output.of(beginExecIdGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param endExecIdLessThanOrEqualTo The optional less than or equal to query parameter to filter on the execution ID related to a specific SQL Tuning Advisor task. This is applicable only for Auto SQL Tuning tasks.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endExecIdLessThanOrEqualTo(@Nullable Output<String> endExecIdLessThanOrEqualTo) {
+            $.endExecIdLessThanOrEqualTo = endExecIdLessThanOrEqualTo;
             return this;
         }
 
@@ -166,8 +188,18 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder endExecIdLessThanOrEqualTo(@Nullable String endExecIdLessThanOrEqualTo) {
-            $.endExecIdLessThanOrEqualTo = endExecIdLessThanOrEqualTo;
+        public Builder endExecIdLessThanOrEqualTo(String endExecIdLessThanOrEqualTo) {
+            return endExecIdLessThanOrEqualTo(Output.of(endExecIdLessThanOrEqualTo));
+        }
+
+        /**
+         * @param managedDatabaseId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Managed Database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedDatabaseId(Output<String> managedDatabaseId) {
+            $.managedDatabaseId = managedDatabaseId;
             return this;
         }
 
@@ -178,7 +210,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * 
          */
         public Builder managedDatabaseId(String managedDatabaseId) {
-            $.managedDatabaseId = managedDatabaseId;
+            return managedDatabaseId(Output.of(managedDatabaseId));
+        }
+
+        /**
+         * @param searchPeriod How far back the API will search for begin and end exec id. Unused if neither exec ids nor time filter query params are supplied. This is applicable only for Auto SQL Tuning tasks.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder searchPeriod(@Nullable Output<String> searchPeriod) {
+            $.searchPeriod = searchPeriod;
             return this;
         }
 
@@ -188,8 +230,18 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder searchPeriod(@Nullable String searchPeriod) {
-            $.searchPeriod = searchPeriod;
+        public Builder searchPeriod(String searchPeriod) {
+            return searchPeriod(Output.of(searchPeriod));
+        }
+
+        /**
+         * @param sqlTuningAdvisorTaskId The SQL tuning task identifier. This is not the [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sqlTuningAdvisorTaskId(Output<String> sqlTuningAdvisorTaskId) {
+            $.sqlTuningAdvisorTaskId = sqlTuningAdvisorTaskId;
             return this;
         }
 
@@ -200,7 +252,17 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * 
          */
         public Builder sqlTuningAdvisorTaskId(String sqlTuningAdvisorTaskId) {
-            $.sqlTuningAdvisorTaskId = sqlTuningAdvisorTaskId;
+            return sqlTuningAdvisorTaskId(Output.of(sqlTuningAdvisorTaskId));
+        }
+
+        /**
+         * @param timeGreaterThanOrEqualTo The optional greater than or equal to query parameter to filter the timestamp. This is applicable only for Auto SQL Tuning tasks.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeGreaterThanOrEqualTo(@Nullable Output<String> timeGreaterThanOrEqualTo) {
+            $.timeGreaterThanOrEqualTo = timeGreaterThanOrEqualTo;
             return this;
         }
 
@@ -210,8 +272,18 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder timeGreaterThanOrEqualTo(@Nullable String timeGreaterThanOrEqualTo) {
-            $.timeGreaterThanOrEqualTo = timeGreaterThanOrEqualTo;
+        public Builder timeGreaterThanOrEqualTo(String timeGreaterThanOrEqualTo) {
+            return timeGreaterThanOrEqualTo(Output.of(timeGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeLessThanOrEqualTo The optional less than or equal to query parameter to filter the timestamp. This is applicable only for Auto SQL Tuning tasks.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeLessThanOrEqualTo(@Nullable Output<String> timeLessThanOrEqualTo) {
+            $.timeLessThanOrEqualTo = timeLessThanOrEqualTo;
             return this;
         }
 
@@ -221,9 +293,8 @@ public final class GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs exte
          * @return builder
          * 
          */
-        public Builder timeLessThanOrEqualTo(@Nullable String timeLessThanOrEqualTo) {
-            $.timeLessThanOrEqualTo = timeLessThanOrEqualTo;
-            return this;
+        public Builder timeLessThanOrEqualTo(String timeLessThanOrEqualTo) {
+            return timeLessThanOrEqualTo(Output.of(timeLessThanOrEqualTo));
         }
 
         public GetManagedDatabaseSqlTuningAdvisorTasksSummaryReportArgs build() {

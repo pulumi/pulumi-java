@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.sentinel.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAlertRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logAnalyticsWorkspaceId", required=true)
-    private String logAnalyticsWorkspaceId;
+    private Output<String> logAnalyticsWorkspaceId;
 
     /**
      * @return The ID of the Log Analytics Workspace this Sentinel Alert Rule belongs to.
      * 
      */
-    public String logAnalyticsWorkspaceId() {
+    public Output<String> logAnalyticsWorkspaceId() {
         return this.logAnalyticsWorkspaceId;
     }
 
@@ -32,13 +33,13 @@ public final class GetAlertRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name which should be used for this Sentinel Alert Rule.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,29 @@ public final class GetAlertRuleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder logAnalyticsWorkspaceId(String logAnalyticsWorkspaceId) {
+        public Builder logAnalyticsWorkspaceId(Output<String> logAnalyticsWorkspaceId) {
             $.logAnalyticsWorkspaceId = logAnalyticsWorkspaceId;
+            return this;
+        }
+
+        /**
+         * @param logAnalyticsWorkspaceId The ID of the Log Analytics Workspace this Sentinel Alert Rule belongs to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logAnalyticsWorkspaceId(String logAnalyticsWorkspaceId) {
+            return logAnalyticsWorkspaceId(Output.of(logAnalyticsWorkspaceId));
+        }
+
+        /**
+         * @param name The name which should be used for this Sentinel Alert Rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAlertRuleArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
-            return this;
+            return name(Output.of(name));
         }
 
         public GetAlertRuleArgs build() {

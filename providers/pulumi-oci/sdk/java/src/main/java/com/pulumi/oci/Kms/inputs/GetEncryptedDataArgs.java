@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Kms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
@@ -21,13 +22,13 @@ public final class GetEncryptedDataArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="associatedData")
-    private @Nullable Map<String,Object> associatedData;
+    private @Nullable Output<Map<String,Object>> associatedData;
 
     /**
      * @return Information that can be used to provide an encryption context for the encrypted data. The length of the string representation of the associatedData must be fewer than 4096 characters.
      * 
      */
-    public Optional<Map<String,Object>> associatedData() {
+    public Optional<Output<Map<String,Object>>> associatedData() {
         return Optional.ofNullable(this.associatedData);
     }
 
@@ -36,13 +37,13 @@ public final class GetEncryptedDataArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="cryptoEndpoint", required=true)
-    private String cryptoEndpoint;
+    private Output<String> cryptoEndpoint;
 
     /**
      * @return The service endpoint to perform cryptographic operations against. Cryptographic operations include &#39;Encrypt,&#39; &#39;Decrypt,&#39; and &#39;GenerateDataEncryptionKey&#39; operations. see Vault Crypto endpoint.
      * 
      */
-    public String cryptoEndpoint() {
+    public Output<String> cryptoEndpoint() {
         return this.cryptoEndpoint;
     }
 
@@ -51,13 +52,13 @@ public final class GetEncryptedDataArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="keyId", required=true)
-    private String keyId;
+    private Output<String> keyId;
 
     /**
      * @return The OCID of the key to encrypt with.
      * 
      */
-    public String keyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 
@@ -66,13 +67,13 @@ public final class GetEncryptedDataArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="plaintext", required=true)
-    private String plaintext;
+    private Output<String> plaintext;
 
     /**
      * @return The plaintext data to encrypt.
      * 
      */
-    public String plaintext() {
+    public Output<String> plaintext() {
         return this.plaintext;
     }
 
@@ -109,8 +110,29 @@ public final class GetEncryptedDataArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder associatedData(@Nullable Map<String,Object> associatedData) {
+        public Builder associatedData(@Nullable Output<Map<String,Object>> associatedData) {
             $.associatedData = associatedData;
+            return this;
+        }
+
+        /**
+         * @param associatedData Information that can be used to provide an encryption context for the encrypted data. The length of the string representation of the associatedData must be fewer than 4096 characters.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder associatedData(Map<String,Object> associatedData) {
+            return associatedData(Output.of(associatedData));
+        }
+
+        /**
+         * @param cryptoEndpoint The service endpoint to perform cryptographic operations against. Cryptographic operations include &#39;Encrypt,&#39; &#39;Decrypt,&#39; and &#39;GenerateDataEncryptionKey&#39; operations. see Vault Crypto endpoint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cryptoEndpoint(Output<String> cryptoEndpoint) {
+            $.cryptoEndpoint = cryptoEndpoint;
             return this;
         }
 
@@ -121,7 +143,17 @@ public final class GetEncryptedDataArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder cryptoEndpoint(String cryptoEndpoint) {
-            $.cryptoEndpoint = cryptoEndpoint;
+            return cryptoEndpoint(Output.of(cryptoEndpoint));
+        }
+
+        /**
+         * @param keyId The OCID of the key to encrypt with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyId(Output<String> keyId) {
+            $.keyId = keyId;
             return this;
         }
 
@@ -132,7 +164,17 @@ public final class GetEncryptedDataArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder keyId(String keyId) {
-            $.keyId = keyId;
+            return keyId(Output.of(keyId));
+        }
+
+        /**
+         * @param plaintext The plaintext data to encrypt.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder plaintext(Output<String> plaintext) {
+            $.plaintext = plaintext;
             return this;
         }
 
@@ -143,8 +185,7 @@ public final class GetEncryptedDataArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder plaintext(String plaintext) {
-            $.plaintext = plaintext;
-            return this;
+            return plaintext(Output.of(plaintext));
         }
 
         public GetEncryptedDataArgs build() {

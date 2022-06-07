@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DatabaseManagement.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseManagement.inputs.GetDbManagementPrivateEndpointsFilter;
+import com.pulumi.oci.DatabaseManagement.inputs.GetDbManagementPrivateEndpointsFilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,20 +23,20 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDbManagementPrivateEndpointsFilter> filters;
+    private @Nullable Output<List<GetDbManagementPrivateEndpointsFilterArgs>> filters;
 
-    public Optional<List<GetDbManagementPrivateEndpointsFilter>> filters() {
+    public Optional<Output<List<GetDbManagementPrivateEndpointsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -44,13 +45,13 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="isCluster")
-    private @Nullable Boolean isCluster;
+    private @Nullable Output<Boolean> isCluster;
 
     /**
      * @return The option to filter Database Management private endpoints that can used for Oracle Databases in a cluster. This should be used along with the vcnId query parameter.
      * 
      */
-    public Optional<Boolean> isCluster() {
+    public Optional<Output<Boolean>> isCluster() {
         return Optional.ofNullable(this.isCluster);
     }
 
@@ -59,13 +60,13 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return A filter to return only resources that match the entire name.
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -74,13 +75,13 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return The lifecycle state of a resource.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -89,13 +90,13 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="vcnId")
-    private @Nullable String vcnId;
+    private @Nullable Output<String> vcnId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
      * 
      */
-    public Optional<String> vcnId() {
+    public Optional<Output<String>> vcnId() {
         return Optional.ofNullable(this.vcnId);
     }
 
@@ -134,17 +135,31 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetDbManagementPrivateEndpointsFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetDbManagementPrivateEndpointsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDbManagementPrivateEndpointsFilter... filters) {
+        public Builder filters(List<GetDbManagementPrivateEndpointsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDbManagementPrivateEndpointsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -154,8 +169,29 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder isCluster(@Nullable Boolean isCluster) {
+        public Builder isCluster(@Nullable Output<Boolean> isCluster) {
             $.isCluster = isCluster;
+            return this;
+        }
+
+        /**
+         * @param isCluster The option to filter Database Management private endpoints that can used for Oracle Databases in a cluster. This should be used along with the vcnId query parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder isCluster(Boolean isCluster) {
+            return isCluster(Output.of(isCluster));
+        }
+
+        /**
+         * @param name A filter to return only resources that match the entire name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -165,8 +201,18 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param state The lifecycle state of a resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -176,8 +222,18 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param vcnId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the VCN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vcnId(@Nullable Output<String> vcnId) {
+            $.vcnId = vcnId;
             return this;
         }
 
@@ -187,9 +243,8 @@ public final class GetDbManagementPrivateEndpointsArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder vcnId(@Nullable String vcnId) {
-            $.vcnId = vcnId;
-            return this;
+        public Builder vcnId(String vcnId) {
+            return vcnId(Output.of(vcnId));
         }
 
         public GetDbManagementPrivateEndpointsArgs build() {

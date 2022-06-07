@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.cloudidentity.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGroupMembershipsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="group", required=true)
-    private String group;
+    private Output<String> group;
 
     /**
      * @return The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
      * 
      */
-    public String group() {
+    public Output<String> group() {
         return this.group;
     }
 
@@ -57,9 +58,19 @@ public final class GetGroupMembershipsArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder group(String group) {
+        public Builder group(Output<String> group) {
             $.group = group;
             return this;
+        }
+
+        /**
+         * @param group The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder group(String group) {
+            return group(Output.of(group));
         }
 
         public GetGroupMembershipsArgs build() {

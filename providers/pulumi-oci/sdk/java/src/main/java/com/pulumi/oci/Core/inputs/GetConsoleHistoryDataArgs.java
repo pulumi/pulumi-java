@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="consoleHistoryId", required=true)
-    private String consoleHistoryId;
+    private Output<String> consoleHistoryId;
 
     /**
      * @return The OCID of the console history.
      * 
      */
-    public String consoleHistoryId() {
+    public Output<String> consoleHistoryId() {
         return this.consoleHistoryId;
     }
 
@@ -35,13 +36,13 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="length")
-    private @Nullable Integer length;
+    private @Nullable Output<Integer> length;
 
     /**
      * @return Length of the snapshot data to retrieve. Cannot be less than 10240.
      * 
      */
-    public Optional<Integer> length() {
+    public Optional<Output<Integer>> length() {
         return Optional.ofNullable(this.length);
     }
 
@@ -50,13 +51,13 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="offset")
-    private @Nullable Integer offset;
+    private @Nullable Output<Integer> offset;
 
     /**
      * @return Offset of the snapshot data to retrieve.
      * 
      */
-    public Optional<Integer> offset() {
+    public Optional<Output<Integer>> offset() {
         return Optional.ofNullable(this.offset);
     }
 
@@ -92,8 +93,29 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder consoleHistoryId(String consoleHistoryId) {
+        public Builder consoleHistoryId(Output<String> consoleHistoryId) {
             $.consoleHistoryId = consoleHistoryId;
+            return this;
+        }
+
+        /**
+         * @param consoleHistoryId The OCID of the console history.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder consoleHistoryId(String consoleHistoryId) {
+            return consoleHistoryId(Output.of(consoleHistoryId));
+        }
+
+        /**
+         * @param length Length of the snapshot data to retrieve. Cannot be less than 10240.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder length(@Nullable Output<Integer> length) {
+            $.length = length;
             return this;
         }
 
@@ -103,8 +125,18 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder length(@Nullable Integer length) {
-            $.length = length;
+        public Builder length(Integer length) {
+            return length(Output.of(length));
+        }
+
+        /**
+         * @param offset Offset of the snapshot data to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder offset(@Nullable Output<Integer> offset) {
+            $.offset = offset;
             return this;
         }
 
@@ -114,9 +146,8 @@ public final class GetConsoleHistoryDataArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder offset(@Nullable Integer offset) {
-            $.offset = offset;
-            return this;
+        public Builder offset(Integer offset) {
+            return offset(Output.of(offset));
         }
 
         public GetConsoleHistoryDataArgs build() {

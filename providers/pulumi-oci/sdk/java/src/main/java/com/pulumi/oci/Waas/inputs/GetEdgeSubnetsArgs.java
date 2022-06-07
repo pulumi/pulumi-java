@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Waas.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Waas.inputs.GetEdgeSubnetsFilter;
+import com.pulumi.oci.Waas.inputs.GetEdgeSubnetsFilterArgs;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,9 +17,9 @@ public final class GetEdgeSubnetsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEdgeSubnetsArgs Empty = new GetEdgeSubnetsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetEdgeSubnetsFilter> filters;
+    private @Nullable Output<List<GetEdgeSubnetsFilterArgs>> filters;
 
-    public Optional<List<GetEdgeSubnetsFilter>> filters() {
+    public Optional<Output<List<GetEdgeSubnetsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -46,12 +47,16 @@ public final class GetEdgeSubnetsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEdgeSubnetsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetEdgeSubnetsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetEdgeSubnetsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetEdgeSubnetsFilter... filters) {
+        public Builder filters(List<GetEdgeSubnetsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetEdgeSubnetsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

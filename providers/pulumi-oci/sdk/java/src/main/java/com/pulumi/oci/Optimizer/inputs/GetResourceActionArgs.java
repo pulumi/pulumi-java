@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Optimizer.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetResourceActionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceActionId", required=true)
-    private String resourceActionId;
+    private Output<String> resourceActionId;
 
     /**
      * @return The unique OCID associated with the resource action.
      * 
      */
-    public String resourceActionId() {
+    public Output<String> resourceActionId() {
         return this.resourceActionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetResourceActionArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder resourceActionId(String resourceActionId) {
+        public Builder resourceActionId(Output<String> resourceActionId) {
             $.resourceActionId = resourceActionId;
             return this;
+        }
+
+        /**
+         * @param resourceActionId The unique OCID associated with the resource action.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceActionId(String resourceActionId) {
+            return resourceActionId(Output.of(resourceActionId));
         }
 
         public GetResourceActionArgs build() {

@@ -3,10 +3,11 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetInstanceTypeFpga;
-import com.pulumi.aws.ec2.inputs.GetInstanceTypeGpus;
-import com.pulumi.aws.ec2.inputs.GetInstanceTypeInferenceAccelerator;
-import com.pulumi.aws.ec2.inputs.GetInstanceTypeInstanceDisk;
+import com.pulumi.aws.ec2.inputs.GetInstanceTypeFpgaArgs;
+import com.pulumi.aws.ec2.inputs.GetInstanceTypeGpusArgs;
+import com.pulumi.aws.ec2.inputs.GetInstanceTypeInferenceAcceleratorArgs;
+import com.pulumi.aws.ec2.inputs.GetInstanceTypeInstanceDiskArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,13 +26,13 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultCores")
-    private @Nullable Integer defaultCores;
+    private @Nullable Output<Integer> defaultCores;
 
     /**
      * @return The default number of cores for the instance type.
      * 
      */
-    public Optional<Integer> defaultCores() {
+    public Optional<Output<Integer>> defaultCores() {
         return Optional.ofNullable(this.defaultCores);
     }
 
@@ -40,13 +41,13 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultThreadsPerCore")
-    private @Nullable Integer defaultThreadsPerCore;
+    private @Nullable Output<Integer> defaultThreadsPerCore;
 
     /**
      * @return The  default  number of threads per core for the instance type.
      * 
      */
-    public Optional<Integer> defaultThreadsPerCore() {
+    public Optional<Output<Integer>> defaultThreadsPerCore() {
         return Optional.ofNullable(this.defaultThreadsPerCore);
     }
 
@@ -59,7 +60,7 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fpgas")
-    private @Nullable List<GetInstanceTypeFpga> fpgas;
+    private @Nullable Output<List<GetInstanceTypeFpgaArgs>> fpgas;
 
     /**
      * @return Describes the FPGA accelerator settings for the instance type.
@@ -69,7 +70,7 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * * `fpgas.#.name` - The name of the FPGA accelerator.
      * 
      */
-    public Optional<List<GetInstanceTypeFpga>> fpgas() {
+    public Optional<Output<List<GetInstanceTypeFpgaArgs>>> fpgas() {
         return Optional.ofNullable(this.fpgas);
     }
 
@@ -82,7 +83,7 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gpuses")
-    private @Nullable List<GetInstanceTypeGpus> gpuses;
+    private @Nullable Output<List<GetInstanceTypeGpusArgs>> gpuses;
 
     /**
      * @return Describes the GPU accelerators for the instance type.
@@ -92,7 +93,7 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * * `gpus.#.name` - The name of the GPU accelerator.
      * 
      */
-    public Optional<List<GetInstanceTypeGpus>> gpuses() {
+    public Optional<Output<List<GetInstanceTypeGpusArgs>>> gpuses() {
         return Optional.ofNullable(this.gpuses);
     }
 
@@ -105,7 +106,7 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hypervisor")
-    private @Nullable String hypervisor;
+    private @Nullable Output<String> hypervisor;
 
     /**
      * @return Indicates the hypervisor used for the instance type.
@@ -115,14 +116,14 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * * `inference_accelerators.#.name` - The name of the Inference accelerator.
      * 
      */
-    public Optional<String> hypervisor() {
+    public Optional<Output<String>> hypervisor() {
         return Optional.ofNullable(this.hypervisor);
     }
 
     @Import(name="inferenceAccelerators")
-    private @Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators;
+    private @Nullable Output<List<GetInstanceTypeInferenceAcceleratorArgs>> inferenceAccelerators;
 
-    public Optional<List<GetInstanceTypeInferenceAccelerator>> inferenceAccelerators() {
+    public Optional<Output<List<GetInstanceTypeInferenceAcceleratorArgs>>> inferenceAccelerators() {
         return Optional.ofNullable(this.inferenceAccelerators);
     }
 
@@ -134,7 +135,7 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceDisks")
-    private @Nullable List<GetInstanceTypeInstanceDisk> instanceDisks;
+    private @Nullable Output<List<GetInstanceTypeInstanceDiskArgs>> instanceDisks;
 
     /**
      * @return Describes the disks for the instance type.
@@ -143,7 +144,7 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * * `instance_disks.#.type` - The type of disk.
      * 
      */
-    public Optional<List<GetInstanceTypeInstanceDisk>> instanceDisks() {
+    public Optional<Output<List<GetInstanceTypeInstanceDiskArgs>>> instanceDisks() {
         return Optional.ofNullable(this.instanceDisks);
     }
 
@@ -152,13 +153,13 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceType", required=true)
-    private String instanceType;
+    private Output<String> instanceType;
 
     /**
      * @return Instance
      * 
      */
-    public String instanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -167,13 +168,13 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maximumIpv6AddressesPerInterface")
-    private @Nullable Integer maximumIpv6AddressesPerInterface;
+    private @Nullable Output<Integer> maximumIpv6AddressesPerInterface;
 
     /**
      * @return The maximum number of IPv6 addresses per network interface.
      * 
      */
-    public Optional<Integer> maximumIpv6AddressesPerInterface() {
+    public Optional<Output<Integer>> maximumIpv6AddressesPerInterface() {
         return Optional.ofNullable(this.maximumIpv6AddressesPerInterface);
     }
 
@@ -182,13 +183,13 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="totalFpgaMemory")
-    private @Nullable Integer totalFpgaMemory;
+    private @Nullable Output<Integer> totalFpgaMemory;
 
     /**
      * @return The total memory of all FPGA accelerators for the instance type (in MiB).
      * 
      */
-    public Optional<Integer> totalFpgaMemory() {
+    public Optional<Output<Integer>> totalFpgaMemory() {
         return Optional.ofNullable(this.totalFpgaMemory);
     }
 
@@ -197,13 +198,13 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="totalGpuMemory")
-    private @Nullable Integer totalGpuMemory;
+    private @Nullable Output<Integer> totalGpuMemory;
 
     /**
      * @return The total size of the memory for the GPU accelerators for the instance type (in MiB).
      * 
      */
-    public Optional<Integer> totalGpuMemory() {
+    public Optional<Output<Integer>> totalGpuMemory() {
         return Optional.ofNullable(this.totalGpuMemory);
     }
 
@@ -212,13 +213,13 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="totalInstanceStorage")
-    private @Nullable Integer totalInstanceStorage;
+    private @Nullable Output<Integer> totalInstanceStorage;
 
     /**
      * @return The total size of the instance disks, in GB.
      * 
      */
-    public Optional<Integer> totalInstanceStorage() {
+    public Optional<Output<Integer>> totalInstanceStorage() {
         return Optional.ofNullable(this.totalInstanceStorage);
     }
 
@@ -263,8 +264,29 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder defaultCores(@Nullable Integer defaultCores) {
+        public Builder defaultCores(@Nullable Output<Integer> defaultCores) {
             $.defaultCores = defaultCores;
+            return this;
+        }
+
+        /**
+         * @param defaultCores The default number of cores for the instance type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultCores(Integer defaultCores) {
+            return defaultCores(Output.of(defaultCores));
+        }
+
+        /**
+         * @param defaultThreadsPerCore The  default  number of threads per core for the instance type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultThreadsPerCore(@Nullable Output<Integer> defaultThreadsPerCore) {
+            $.defaultThreadsPerCore = defaultThreadsPerCore;
             return this;
         }
 
@@ -274,9 +296,8 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder defaultThreadsPerCore(@Nullable Integer defaultThreadsPerCore) {
-            $.defaultThreadsPerCore = defaultThreadsPerCore;
-            return this;
+        public Builder defaultThreadsPerCore(Integer defaultThreadsPerCore) {
+            return defaultThreadsPerCore(Output.of(defaultThreadsPerCore));
         }
 
         /**
@@ -289,7 +310,7 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fpgas(@Nullable List<GetInstanceTypeFpga> fpgas) {
+        public Builder fpgas(@Nullable Output<List<GetInstanceTypeFpgaArgs>> fpgas) {
             $.fpgas = fpgas;
             return this;
         }
@@ -304,7 +325,21 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder fpgas(GetInstanceTypeFpga... fpgas) {
+        public Builder fpgas(List<GetInstanceTypeFpgaArgs> fpgas) {
+            return fpgas(Output.of(fpgas));
+        }
+
+        /**
+         * @param fpgas Describes the FPGA accelerator settings for the instance type.
+         * * `fpgas.#.count` - The count of FPGA accelerators for the instance type.
+         * * `fpgas.#.manufacturer` - The manufacturer of the FPGA accelerator.
+         * * `fpgas.#.memory_size` - The size (in MiB) for the memory available to the FPGA accelerator.
+         * * `fpgas.#.name` - The name of the FPGA accelerator.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fpgas(GetInstanceTypeFpgaArgs... fpgas) {
             return fpgas(List.of(fpgas));
         }
 
@@ -318,7 +353,7 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder gpuses(@Nullable List<GetInstanceTypeGpus> gpuses) {
+        public Builder gpuses(@Nullable Output<List<GetInstanceTypeGpusArgs>> gpuses) {
             $.gpuses = gpuses;
             return this;
         }
@@ -333,7 +368,21 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder gpuses(GetInstanceTypeGpus... gpuses) {
+        public Builder gpuses(List<GetInstanceTypeGpusArgs> gpuses) {
+            return gpuses(Output.of(gpuses));
+        }
+
+        /**
+         * @param gpuses Describes the GPU accelerators for the instance type.
+         * * `gpus.#.count` - The number of GPUs for the instance type.
+         * * `gpus.#.manufacturer` - The manufacturer of the GPU accelerator.
+         * * `gpus.#.memory_size` - The size (in MiB) for the memory available to the GPU accelerator.
+         * * `gpus.#.name` - The name of the GPU accelerator.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gpuses(GetInstanceTypeGpusArgs... gpuses) {
             return gpuses(List.of(gpuses));
         }
 
@@ -347,17 +396,35 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder hypervisor(@Nullable String hypervisor) {
+        public Builder hypervisor(@Nullable Output<String> hypervisor) {
             $.hypervisor = hypervisor;
             return this;
         }
 
-        public Builder inferenceAccelerators(@Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators) {
+        /**
+         * @param hypervisor Indicates the hypervisor used for the instance type.
+         * * `inference_accelerators` Describes the Inference accelerators for the instance type.
+         * * `inference_accelerators.#.count` - The number of Inference accelerators for the instance type.
+         * * `inference_accelerators.#.manufacturer` - The manufacturer of the Inference accelerator.
+         * * `inference_accelerators.#.name` - The name of the Inference accelerator.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hypervisor(String hypervisor) {
+            return hypervisor(Output.of(hypervisor));
+        }
+
+        public Builder inferenceAccelerators(@Nullable Output<List<GetInstanceTypeInferenceAcceleratorArgs>> inferenceAccelerators) {
             $.inferenceAccelerators = inferenceAccelerators;
             return this;
         }
 
-        public Builder inferenceAccelerators(GetInstanceTypeInferenceAccelerator... inferenceAccelerators) {
+        public Builder inferenceAccelerators(List<GetInstanceTypeInferenceAcceleratorArgs> inferenceAccelerators) {
+            return inferenceAccelerators(Output.of(inferenceAccelerators));
+        }
+
+        public Builder inferenceAccelerators(GetInstanceTypeInferenceAcceleratorArgs... inferenceAccelerators) {
             return inferenceAccelerators(List.of(inferenceAccelerators));
         }
 
@@ -370,7 +437,7 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceDisks(@Nullable List<GetInstanceTypeInstanceDisk> instanceDisks) {
+        public Builder instanceDisks(@Nullable Output<List<GetInstanceTypeInstanceDiskArgs>> instanceDisks) {
             $.instanceDisks = instanceDisks;
             return this;
         }
@@ -384,7 +451,20 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceDisks(GetInstanceTypeInstanceDisk... instanceDisks) {
+        public Builder instanceDisks(List<GetInstanceTypeInstanceDiskArgs> instanceDisks) {
+            return instanceDisks(Output.of(instanceDisks));
+        }
+
+        /**
+         * @param instanceDisks Describes the disks for the instance type.
+         * * `instance_disks.#.count` - The number of disks with this configuration.
+         * * `instance_disks.#.size` - The size of the disk in GB.
+         * * `instance_disks.#.type` - The type of disk.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceDisks(GetInstanceTypeInstanceDiskArgs... instanceDisks) {
             return instanceDisks(List.of(instanceDisks));
         }
 
@@ -394,8 +474,29 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder instanceType(String instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             $.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * @param instanceType Instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
+        }
+
+        /**
+         * @param maximumIpv6AddressesPerInterface The maximum number of IPv6 addresses per network interface.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maximumIpv6AddressesPerInterface(@Nullable Output<Integer> maximumIpv6AddressesPerInterface) {
+            $.maximumIpv6AddressesPerInterface = maximumIpv6AddressesPerInterface;
             return this;
         }
 
@@ -405,8 +506,18 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder maximumIpv6AddressesPerInterface(@Nullable Integer maximumIpv6AddressesPerInterface) {
-            $.maximumIpv6AddressesPerInterface = maximumIpv6AddressesPerInterface;
+        public Builder maximumIpv6AddressesPerInterface(Integer maximumIpv6AddressesPerInterface) {
+            return maximumIpv6AddressesPerInterface(Output.of(maximumIpv6AddressesPerInterface));
+        }
+
+        /**
+         * @param totalFpgaMemory The total memory of all FPGA accelerators for the instance type (in MiB).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder totalFpgaMemory(@Nullable Output<Integer> totalFpgaMemory) {
+            $.totalFpgaMemory = totalFpgaMemory;
             return this;
         }
 
@@ -416,8 +527,18 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder totalFpgaMemory(@Nullable Integer totalFpgaMemory) {
-            $.totalFpgaMemory = totalFpgaMemory;
+        public Builder totalFpgaMemory(Integer totalFpgaMemory) {
+            return totalFpgaMemory(Output.of(totalFpgaMemory));
+        }
+
+        /**
+         * @param totalGpuMemory The total size of the memory for the GPU accelerators for the instance type (in MiB).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder totalGpuMemory(@Nullable Output<Integer> totalGpuMemory) {
+            $.totalGpuMemory = totalGpuMemory;
             return this;
         }
 
@@ -427,8 +548,18 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder totalGpuMemory(@Nullable Integer totalGpuMemory) {
-            $.totalGpuMemory = totalGpuMemory;
+        public Builder totalGpuMemory(Integer totalGpuMemory) {
+            return totalGpuMemory(Output.of(totalGpuMemory));
+        }
+
+        /**
+         * @param totalInstanceStorage The total size of the instance disks, in GB.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder totalInstanceStorage(@Nullable Output<Integer> totalInstanceStorage) {
+            $.totalInstanceStorage = totalInstanceStorage;
             return this;
         }
 
@@ -438,9 +569,8 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder totalInstanceStorage(@Nullable Integer totalInstanceStorage) {
-            $.totalInstanceStorage = totalInstanceStorage;
-            return this;
+        public Builder totalInstanceStorage(Integer totalInstanceStorage) {
+            return totalInstanceStorage(Output.of(totalInstanceStorage));
         }
 
         public GetInstanceTypeArgs build() {

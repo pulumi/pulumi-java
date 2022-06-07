@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ApiGateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ApiGateway.inputs.GetDeploymentsFilter;
+import com.pulumi.oci.ApiGateway.inputs.GetDeploymentsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ocid of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDeploymentsFilter> filters;
+    private @Nullable Output<List<GetDeploymentsFilterArgs>> filters;
 
-    public Optional<List<GetDeploymentsFilter>> filters() {
+    public Optional<Output<List<GetDeploymentsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayId")
-    private @Nullable String gatewayId;
+    private @Nullable Output<String> gatewayId;
 
     /**
      * @return Filter deployments by the gateway ocid.
      * 
      */
-    public Optional<String> gatewayId() {
+    public Optional<Output<String>> gatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
 
@@ -73,13 +74,13 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources that match the given lifecycle state.  Example: `SUCCEEDED`
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -117,8 +118,29 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The ocid of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A user-friendly name. Does not have to be unique, and it&#39;s changeable.  Example: `My new resource`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -128,17 +150,20 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetDeploymentsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDeploymentsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDeploymentsFilter... filters) {
+        public Builder filters(List<GetDeploymentsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDeploymentsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -148,8 +173,29 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder gatewayId(@Nullable String gatewayId) {
+        public Builder gatewayId(@Nullable Output<String> gatewayId) {
             $.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * @param gatewayId Filter deployments by the gateway ocid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayId(String gatewayId) {
+            return gatewayId(Output.of(gatewayId));
+        }
+
+        /**
+         * @param state A filter to return only resources that match the given lifecycle state.  Example: `SUCCEEDED`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -159,9 +205,8 @@ public final class GetDeploymentsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetDeploymentsArgs build() {

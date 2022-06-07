@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iam.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRoleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="roleName", required=true)
-    private String roleName;
+    private Output<String> roleName;
 
     /**
      * @return A name for the IAM role, up to 64 characters in length.
      * 
      */
-    public String roleName() {
+    public Output<String> roleName() {
         return this.roleName;
     }
 
@@ -57,9 +58,19 @@ public final class GetRoleArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder roleName(String roleName) {
+        public Builder roleName(Output<String> roleName) {
             $.roleName = roleName;
             return this;
+        }
+
+        /**
+         * @param roleName A name for the IAM role, up to 64 characters in length.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder roleName(String roleName) {
+            return roleName(Output.of(roleName));
         }
 
         public GetRoleArgs build() {

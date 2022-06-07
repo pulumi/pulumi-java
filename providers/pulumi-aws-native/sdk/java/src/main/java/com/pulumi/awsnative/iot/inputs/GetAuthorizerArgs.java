@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetAuthorizerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAuthorizerArgs Empty = new GetAuthorizerArgs();
 
     @Import(name="authorizerName", required=true)
-    private String authorizerName;
+    private Output<String> authorizerName;
 
-    public String authorizerName() {
+    public Output<String> authorizerName() {
         return this.authorizerName;
     }
 
@@ -43,9 +44,13 @@ public final class GetAuthorizerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAuthorizerArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder authorizerName(String authorizerName) {
+        public Builder authorizerName(Output<String> authorizerName) {
             $.authorizerName = authorizerName;
             return this;
+        }
+
+        public Builder authorizerName(String authorizerName) {
+            return authorizerName(Output.of(authorizerName));
         }
 
         public GetAuthorizerArgs build() {

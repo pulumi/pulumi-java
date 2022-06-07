@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.avs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="dnsZoneId", required=true)
-    private String dnsZoneId;
+    private Output<String> dnsZoneId;
 
     /**
      * @return NSX DNS Zone identifier. Generally the same as the DNS Zone&#39;s display name
      * 
      */
-    public String dnsZoneId() {
+    public Output<String> dnsZoneId() {
         return this.dnsZoneId;
     }
 
@@ -32,13 +33,13 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="privateCloudName", required=true)
-    private String privateCloudName;
+    private Output<String> privateCloudName;
 
     /**
      * @return Name of the private cloud
      * 
      */
-    public String privateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -47,13 +48,13 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder dnsZoneId(String dnsZoneId) {
+        public Builder dnsZoneId(Output<String> dnsZoneId) {
             $.dnsZoneId = dnsZoneId;
+            return this;
+        }
+
+        /**
+         * @param dnsZoneId NSX DNS Zone identifier. Generally the same as the DNS Zone&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dnsZoneId(String dnsZoneId) {
+            return dnsZoneId(Output.of(dnsZoneId));
+        }
+
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateCloudName(Output<String> privateCloudName) {
+            $.privateCloudName = privateCloudName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
          * 
          */
         public Builder privateCloudName(String privateCloudName) {
-            $.privateCloudName = privateCloudName;
+            return privateCloudName(Output.of(privateCloudName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetWorkloadNetworkDnsZoneArgs extends com.pulumi.resources.In
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetWorkloadNetworkDnsZoneArgs build() {

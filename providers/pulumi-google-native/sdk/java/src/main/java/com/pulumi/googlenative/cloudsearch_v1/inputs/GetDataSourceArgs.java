@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,16 +16,16 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
     @Import(name="datasourceId", required=true)
-    private String datasourceId;
+    private Output<String> datasourceId;
 
-    public String datasourceId() {
+    public Output<String> datasourceId() {
         return this.datasourceId;
     }
 
     @Import(name="debugOptionsEnableDebugging")
-    private @Nullable String debugOptionsEnableDebugging;
+    private @Nullable Output<String> debugOptionsEnableDebugging;
 
-    public Optional<String> debugOptionsEnableDebugging() {
+    public Optional<Output<String>> debugOptionsEnableDebugging() {
         return Optional.ofNullable(this.debugOptionsEnableDebugging);
     }
 
@@ -53,14 +54,22 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder datasourceId(String datasourceId) {
+        public Builder datasourceId(Output<String> datasourceId) {
             $.datasourceId = datasourceId;
             return this;
         }
 
-        public Builder debugOptionsEnableDebugging(@Nullable String debugOptionsEnableDebugging) {
+        public Builder datasourceId(String datasourceId) {
+            return datasourceId(Output.of(datasourceId));
+        }
+
+        public Builder debugOptionsEnableDebugging(@Nullable Output<String> debugOptionsEnableDebugging) {
             $.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
             return this;
+        }
+
+        public Builder debugOptionsEnableDebugging(String debugOptionsEnableDebugging) {
+            return debugOptionsEnableDebugging(Output.of(debugOptionsEnableDebugging));
         }
 
         public GetDataSourceArgs build() {

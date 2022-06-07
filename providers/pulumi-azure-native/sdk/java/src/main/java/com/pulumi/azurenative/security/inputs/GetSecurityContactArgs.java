@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecurityContactArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="securityContactName", required=true)
-    private String securityContactName;
+    private Output<String> securityContactName;
 
     /**
      * @return Name of the security contact object
      * 
      */
-    public String securityContactName() {
+    public Output<String> securityContactName() {
         return this.securityContactName;
     }
 
@@ -57,9 +58,19 @@ public final class GetSecurityContactArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder securityContactName(String securityContactName) {
+        public Builder securityContactName(Output<String> securityContactName) {
             $.securityContactName = securityContactName;
             return this;
+        }
+
+        /**
+         * @param securityContactName Name of the security contact object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityContactName(String securityContactName) {
+            return securityContactName(Output.of(securityContactName));
         }
 
         public GetSecurityContactArgs build() {

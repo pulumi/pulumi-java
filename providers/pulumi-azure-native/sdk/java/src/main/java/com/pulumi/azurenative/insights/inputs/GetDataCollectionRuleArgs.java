@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.insights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDataCollectionRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dataCollectionRuleName", required=true)
-    private String dataCollectionRuleName;
+    private Output<String> dataCollectionRuleName;
 
     /**
      * @return The name of the data collection rule. The name is case insensitive.
      * 
      */
-    public String dataCollectionRuleName() {
+    public Output<String> dataCollectionRuleName() {
         return this.dataCollectionRuleName;
     }
 
@@ -32,13 +33,13 @@ public final class GetDataCollectionRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetDataCollectionRuleArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder dataCollectionRuleName(String dataCollectionRuleName) {
+        public Builder dataCollectionRuleName(Output<String> dataCollectionRuleName) {
             $.dataCollectionRuleName = dataCollectionRuleName;
+            return this;
+        }
+
+        /**
+         * @param dataCollectionRuleName The name of the data collection rule. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataCollectionRuleName(String dataCollectionRuleName) {
+            return dataCollectionRuleName(Output.of(dataCollectionRuleName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDataCollectionRuleArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDataCollectionRuleArgs build() {

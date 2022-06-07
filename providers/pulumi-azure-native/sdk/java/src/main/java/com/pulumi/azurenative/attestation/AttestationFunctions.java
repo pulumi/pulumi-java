@@ -5,9 +5,12 @@ package com.pulumi.azurenative.attestation;
 
 import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.attestation.inputs.GetAttestationProviderArgs;
+import com.pulumi.azurenative.attestation.inputs.GetAttestationProviderPlainArgs;
 import com.pulumi.azurenative.attestation.inputs.GetPrivateEndpointConnectionArgs;
+import com.pulumi.azurenative.attestation.inputs.GetPrivateEndpointConnectionPlainArgs;
 import com.pulumi.azurenative.attestation.outputs.GetAttestationProviderResult;
 import com.pulumi.azurenative.attestation.outputs.GetPrivateEndpointConnectionResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -19,7 +22,7 @@ public final class AttestationFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetAttestationProviderResult> getAttestationProvider(GetAttestationProviderArgs args) {
+    public static Output<GetAttestationProviderResult> getAttestationProvider(GetAttestationProviderArgs args) {
         return getAttestationProvider(args, InvokeOptions.Empty);
     }
     /**
@@ -27,7 +30,23 @@ public final class AttestationFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetAttestationProviderResult> getAttestationProvider(GetAttestationProviderArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetAttestationProviderResult> getAttestationProviderPlain(GetAttestationProviderPlainArgs args) {
+        return getAttestationProviderPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Attestation service response message.
+     * API Version: 2020-10-01.
+     * 
+     */
+    public static Output<GetAttestationProviderResult> getAttestationProvider(GetAttestationProviderArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:attestation:getAttestationProvider", TypeShape.of(GetAttestationProviderResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Attestation service response message.
+     * API Version: 2020-10-01.
+     * 
+     */
+    public static CompletableFuture<GetAttestationProviderResult> getAttestationProviderPlain(GetAttestationProviderPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:attestation:getAttestationProvider", TypeShape.of(GetAttestationProviderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -35,7 +54,7 @@ public final class AttestationFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args) {
         return getPrivateEndpointConnection(args, InvokeOptions.Empty);
     }
     /**
@@ -43,7 +62,23 @@ public final class AttestationFunctions {
      * API Version: 2020-10-01.
      * 
      */
-    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args) {
+        return getPrivateEndpointConnectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2020-10-01.
+     * 
+     */
+    public static Output<GetPrivateEndpointConnectionResult> getPrivateEndpointConnection(GetPrivateEndpointConnectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure-native:attestation:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The Private Endpoint Connection resource.
+     * API Version: 2020-10-01.
+     * 
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> getPrivateEndpointConnectionPlain(GetPrivateEndpointConnectionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:attestation:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args, Utilities.withVersion(options));
     }
 }

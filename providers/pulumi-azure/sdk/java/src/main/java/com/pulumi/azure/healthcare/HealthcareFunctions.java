@@ -5,9 +5,12 @@ package com.pulumi.azure.healthcare;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.healthcare.inputs.GetServiceArgs;
+import com.pulumi.azure.healthcare.inputs.GetServicePlainArgs;
 import com.pulumi.azure.healthcare.inputs.GetWorkspaceArgs;
+import com.pulumi.azure.healthcare.inputs.GetWorkspacePlainArgs;
 import com.pulumi.azure.healthcare.outputs.GetServiceResult;
 import com.pulumi.azure.healthcare.outputs.GetWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -44,7 +47,7 @@ public final class HealthcareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -77,7 +80,73 @@ public final class HealthcareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args) {
+        return getServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Healthcare Service
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(HealthcareFunctions.getService(GetServiceArgs.builder()
+     *             .name(&#34;example-healthcare_service&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .location(&#34;westus2&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;healthcareServiceId&#34;, example.apply(getServiceResult -&gt; getServiceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:healthcare/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Healthcare Service
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(HealthcareFunctions.getService(GetServiceArgs.builder()
+     *             .name(&#34;example-healthcare_service&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .location(&#34;westus2&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;healthcareServiceId&#34;, example.apply(getServiceResult -&gt; getServiceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:healthcare/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -109,7 +178,7 @@ public final class HealthcareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
@@ -141,7 +210,71 @@ public final class HealthcareFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceResult> getWorkspacePlain(GetWorkspacePlainArgs args) {
+        return getWorkspacePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Use this data source to access information about an existing Healthcare Workspace
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(HealthcareFunctions.getWorkspace(GetWorkspaceArgs.builder()
+     *             .name(&#34;example-healthcare_service&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;healthcareWorkspaceId&#34;, example.apply(getWorkspaceResult -&gt; getWorkspaceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:healthcare/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to access information about an existing Healthcare Workspace
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(HealthcareFunctions.getWorkspace(GetWorkspaceArgs.builder()
+     *             .name(&#34;example-healthcare_service&#34;)
+     *             .resourceGroupName(&#34;example-resources&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;healthcareWorkspaceId&#34;, example.apply(getWorkspaceResult -&gt; getWorkspaceResult.getId()));
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetWorkspaceResult> getWorkspacePlain(GetWorkspacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:healthcare/getWorkspace:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

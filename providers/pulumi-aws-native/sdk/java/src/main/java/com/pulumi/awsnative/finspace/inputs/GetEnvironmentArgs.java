@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.finspace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environmentId", required=true)
-    private String environmentId;
+    private Output<String> environmentId;
 
     /**
      * @return Unique identifier for representing FinSpace Environment
      * 
      */
-    public String environmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder environmentId(String environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
+        }
+
+        /**
+         * @param environmentId Unique identifier for representing FinSpace Environment
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
         }
 
         public GetEnvironmentArgs build() {

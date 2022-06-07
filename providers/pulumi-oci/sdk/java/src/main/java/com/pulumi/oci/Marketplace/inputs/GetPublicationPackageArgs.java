@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPublicationPackageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="packageVersion", required=true)
-    private String packageVersion;
+    private Output<String> packageVersion;
 
     /**
      * @return The version of the package. Package versions are unique within a listing.
      * 
      */
-    public String packageVersion() {
+    public Output<String> packageVersion() {
         return this.packageVersion;
     }
 
@@ -32,13 +33,13 @@ public final class GetPublicationPackageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publicationId", required=true)
-    private String publicationId;
+    private Output<String> publicationId;
 
     /**
      * @return The unique identifier for the publication.
      * 
      */
-    public String publicationId() {
+    public Output<String> publicationId() {
         return this.publicationId;
     }
 
@@ -73,8 +74,29 @@ public final class GetPublicationPackageArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder packageVersion(String packageVersion) {
+        public Builder packageVersion(Output<String> packageVersion) {
             $.packageVersion = packageVersion;
+            return this;
+        }
+
+        /**
+         * @param packageVersion The version of the package. Package versions are unique within a listing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder packageVersion(String packageVersion) {
+            return packageVersion(Output.of(packageVersion));
+        }
+
+        /**
+         * @param publicationId The unique identifier for the publication.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicationId(Output<String> publicationId) {
+            $.publicationId = publicationId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPublicationPackageArgs extends com.pulumi.resources.Invoke
          * 
          */
         public Builder publicationId(String publicationId) {
-            $.publicationId = publicationId;
-            return this;
+            return publicationId(Output.of(publicationId));
         }
 
         public GetPublicationPackageArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Marketplace.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAcceptedAgreementArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="acceptedAgreementId", required=true)
-    private String acceptedAgreementId;
+    private Output<String> acceptedAgreementId;
 
     /**
      * @return The unique identifier for the accepted terms of use agreement.
      * 
      */
-    public String acceptedAgreementId() {
+    public Output<String> acceptedAgreementId() {
         return this.acceptedAgreementId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAcceptedAgreementArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder acceptedAgreementId(String acceptedAgreementId) {
+        public Builder acceptedAgreementId(Output<String> acceptedAgreementId) {
             $.acceptedAgreementId = acceptedAgreementId;
             return this;
+        }
+
+        /**
+         * @param acceptedAgreementId The unique identifier for the accepted terms of use agreement.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder acceptedAgreementId(String acceptedAgreementId) {
+            return acceptedAgreementId(Output.of(acceptedAgreementId));
         }
 
         public GetAcceptedAgreementArgs build() {

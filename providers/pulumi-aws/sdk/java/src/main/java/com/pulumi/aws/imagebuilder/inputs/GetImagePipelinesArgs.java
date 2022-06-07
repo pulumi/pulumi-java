@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
-import com.pulumi.aws.imagebuilder.inputs.GetImagePipelinesFilter;
+import com.pulumi.aws.imagebuilder.inputs.GetImagePipelinesFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
@@ -20,13 +21,13 @@ public final class GetImagePipelinesArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetImagePipelinesFilter> filters;
+    private @Nullable Output<List<GetImagePipelinesFilterArgs>> filters;
 
     /**
      * @return Configuration block(s) for filtering. Detailed below.
      * 
      */
-    public Optional<List<GetImagePipelinesFilter>> filters() {
+    public Optional<Output<List<GetImagePipelinesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -60,7 +61,7 @@ public final class GetImagePipelinesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetImagePipelinesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetImagePipelinesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -71,7 +72,17 @@ public final class GetImagePipelinesArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder filters(GetImagePipelinesFilter... filters) {
+        public Builder filters(List<GetImagePipelinesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Configuration block(s) for filtering. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetImagePipelinesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 

@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.route53.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="ownerId")
-    private @Nullable String ownerId;
+    private @Nullable Output<String> ownerId;
 
     /**
      * @return When the desired resolver rules are shared with another AWS account, the account ID of the account that the rules are shared with.
      * 
      */
-    public Optional<String> ownerId() {
+    public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
 
@@ -34,13 +35,13 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resolverEndpointId")
-    private @Nullable String resolverEndpointId;
+    private @Nullable Output<String> resolverEndpointId;
 
     /**
      * @return The ID of the outbound resolver endpoint for the desired resolver rules.
      * 
      */
-    public Optional<String> resolverEndpointId() {
+    public Optional<Output<String>> resolverEndpointId() {
         return Optional.ofNullable(this.resolverEndpointId);
     }
 
@@ -49,13 +50,13 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="ruleType")
-    private @Nullable String ruleType;
+    private @Nullable Output<String> ruleType;
 
     /**
      * @return The rule type of the desired resolver rules. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
      * 
      */
-    public Optional<String> ruleType() {
+    public Optional<Output<String>> ruleType() {
         return Optional.ofNullable(this.ruleType);
     }
 
@@ -64,13 +65,13 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="shareStatus")
-    private @Nullable String shareStatus;
+    private @Nullable Output<String> shareStatus;
 
     /**
      * @return Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account. Valid values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
      * 
      */
-    public Optional<String> shareStatus() {
+    public Optional<Output<String>> shareStatus() {
         return Optional.ofNullable(this.shareStatus);
     }
 
@@ -107,8 +108,29 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder ownerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * @param ownerId When the desired resolver rules are shared with another AWS account, the account ID of the account that the rules are shared with.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
+        }
+
+        /**
+         * @param resolverEndpointId The ID of the outbound resolver endpoint for the desired resolver rules.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resolverEndpointId(@Nullable Output<String> resolverEndpointId) {
+            $.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
@@ -118,8 +140,18 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
-            $.resolverEndpointId = resolverEndpointId;
+        public Builder resolverEndpointId(String resolverEndpointId) {
+            return resolverEndpointId(Output.of(resolverEndpointId));
+        }
+
+        /**
+         * @param ruleType The rule type of the desired resolver rules. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleType(@Nullable Output<String> ruleType) {
+            $.ruleType = ruleType;
             return this;
         }
 
@@ -129,8 +161,18 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder ruleType(@Nullable String ruleType) {
-            $.ruleType = ruleType;
+        public Builder ruleType(String ruleType) {
+            return ruleType(Output.of(ruleType));
+        }
+
+        /**
+         * @param shareStatus Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account. Valid values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareStatus(@Nullable Output<String> shareStatus) {
+            $.shareStatus = shareStatus;
             return this;
         }
 
@@ -140,9 +182,8 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder shareStatus(@Nullable String shareStatus) {
-            $.shareStatus = shareStatus;
-            return this;
+        public Builder shareStatus(String shareStatus) {
+            return shareStatus(Output.of(shareStatus));
         }
 
         public GetResolverRulesArgs build() {

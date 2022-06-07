@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.storagesync.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageSyncServiceName", required=true)
-    private String storageSyncServiceName;
+    private Output<String> storageSyncServiceName;
 
     /**
      * @return Name of Storage Sync Service resource.
      * 
      */
-    public String storageSyncServiceName() {
+    public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncGroupName", required=true)
-    private String syncGroupName;
+    private Output<String> syncGroupName;
 
     /**
      * @return Name of Sync Group resource.
      * 
      */
-    public String syncGroupName() {
+    public Output<String> syncGroupName() {
         return this.syncGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param storageSyncServiceName Name of Storage Sync Service resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
+            $.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder storageSyncServiceName(String storageSyncServiceName) {
-            $.storageSyncServiceName = storageSyncServiceName;
+            return storageSyncServiceName(Output.of(storageSyncServiceName));
+        }
+
+        /**
+         * @param syncGroupName Name of Sync Group resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder syncGroupName(Output<String> syncGroupName) {
+            $.syncGroupName = syncGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSyncGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder syncGroupName(String syncGroupName) {
-            $.syncGroupName = syncGroupName;
-            return this;
+            return syncGroupName(Output.of(syncGroupName));
         }
 
         public GetSyncGroupArgs build() {

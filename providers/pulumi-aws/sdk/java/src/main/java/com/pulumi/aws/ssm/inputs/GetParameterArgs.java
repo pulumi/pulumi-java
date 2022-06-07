@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.ssm.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the parameter.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -35,13 +36,13 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="withDecryption")
-    private @Nullable Boolean withDecryption;
+    private @Nullable Output<Boolean> withDecryption;
 
     /**
      * @return Whether to return decrypted `SecureString` value. Defaults to `true`.
      * 
      */
-    public Optional<Boolean> withDecryption() {
+    public Optional<Output<Boolean>> withDecryption() {
         return Optional.ofNullable(this.withDecryption);
     }
 
@@ -76,8 +77,29 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param withDecryption Whether to return decrypted `SecureString` value. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder withDecryption(@Nullable Output<Boolean> withDecryption) {
+            $.withDecryption = withDecryption;
             return this;
         }
 
@@ -87,9 +109,8 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder withDecryption(@Nullable Boolean withDecryption) {
-            $.withDecryption = withDecryption;
-            return this;
+        public Builder withDecryption(Boolean withDecryption) {
+            return withDecryption(Output.of(withDecryption));
         }
 
         public GetParameterArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.blueprint.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDefinitionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the Blueprint.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class GetDefinitionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scopeId", required=true)
-    private String scopeId;
+    private Output<String> scopeId;
 
     /**
      * @return The ID of the Subscription or Management Group, as the scope at which the blueprint definition is stored.
      * 
      */
-    public String scopeId() {
+    public Output<String> scopeId() {
         return this.scopeId;
     }
 
@@ -73,8 +74,29 @@ public final class GetDefinitionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the Blueprint.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param scopeId The ID of the Subscription or Management Group, as the scope at which the blueprint definition is stored.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scopeId(Output<String> scopeId) {
+            $.scopeId = scopeId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetDefinitionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder scopeId(String scopeId) {
-            $.scopeId = scopeId;
-            return this;
+            return scopeId(Output.of(scopeId));
         }
 
         public GetDefinitionArgs build() {

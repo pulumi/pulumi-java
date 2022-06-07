@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.HealthChecks.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.HealthChecks.inputs.GetHttpMonitorsFilter;
+import com.pulumi.oci.HealthChecks.inputs.GetHttpMonitorsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return Filters results by compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Filters results that exactly match the `displayName` field.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetHttpMonitorsFilter> filters;
+    private @Nullable Output<List<GetHttpMonitorsFilterArgs>> filters;
 
-    public Optional<List<GetHttpMonitorsFilter>> filters() {
+    public Optional<Output<List<GetHttpMonitorsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="homeRegion")
-    private @Nullable String homeRegion;
+    private @Nullable Output<String> homeRegion;
 
     /**
      * @return Filters results that match the `homeRegion`.
      * 
      */
-    public Optional<String> homeRegion() {
+    public Optional<Output<String>> homeRegion() {
         return Optional.ofNullable(this.homeRegion);
     }
 
@@ -101,8 +102,29 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId Filters results by compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName Filters results that exactly match the `displayName` field.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -112,17 +134,20 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetHttpMonitorsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetHttpMonitorsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetHttpMonitorsFilter... filters) {
+        public Builder filters(List<GetHttpMonitorsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetHttpMonitorsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -132,9 +157,19 @@ public final class GetHttpMonitorsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder homeRegion(@Nullable String homeRegion) {
+        public Builder homeRegion(@Nullable Output<String> homeRegion) {
             $.homeRegion = homeRegion;
             return this;
+        }
+
+        /**
+         * @param homeRegion Filters results that match the `homeRegion`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder homeRegion(String homeRegion) {
+            return homeRegion(Output.of(homeRegion));
         }
 
         public GetHttpMonitorsArgs build() {

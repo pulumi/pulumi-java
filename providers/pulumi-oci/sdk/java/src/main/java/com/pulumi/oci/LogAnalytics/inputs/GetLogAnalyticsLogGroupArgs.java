@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.LogAnalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLogAnalyticsLogGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="logAnalyticsLogGroupId", required=true)
-    private String logAnalyticsLogGroupId;
+    private Output<String> logAnalyticsLogGroupId;
 
     /**
      * @return unique logAnalytics log group identifier
      * 
      */
-    public String logAnalyticsLogGroupId() {
+    public Output<String> logAnalyticsLogGroupId() {
         return this.logAnalyticsLogGroupId;
     }
 
@@ -32,13 +33,13 @@ public final class GetLogAnalyticsLogGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="namespace", required=true)
-    private String namespace;
+    private Output<String> namespace;
 
     /**
      * @return The Logging Analytics namespace used for the request.
      * 
      */
-    public String namespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -73,8 +74,29 @@ public final class GetLogAnalyticsLogGroupArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder logAnalyticsLogGroupId(String logAnalyticsLogGroupId) {
+        public Builder logAnalyticsLogGroupId(Output<String> logAnalyticsLogGroupId) {
             $.logAnalyticsLogGroupId = logAnalyticsLogGroupId;
+            return this;
+        }
+
+        /**
+         * @param logAnalyticsLogGroupId unique logAnalytics log group identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logAnalyticsLogGroupId(String logAnalyticsLogGroupId) {
+            return logAnalyticsLogGroupId(Output.of(logAnalyticsLogGroupId));
+        }
+
+        /**
+         * @param namespace The Logging Analytics namespace used for the request.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespace(Output<String> namespace) {
+            $.namespace = namespace;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLogAnalyticsLogGroupArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder namespace(String namespace) {
-            $.namespace = namespace;
-            return this;
+            return namespace(Output.of(namespace));
         }
 
         public GetLogAnalyticsLogGroupArgs build() {

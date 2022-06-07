@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotanalytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDatastoreArgs Empty = new GetDatastoreArgs();
 
     @Import(name="datastoreName", required=true)
-    private String datastoreName;
+    private Output<String> datastoreName;
 
-    public String datastoreName() {
+    public Output<String> datastoreName() {
         return this.datastoreName;
     }
 
@@ -43,9 +44,13 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDatastoreArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder datastoreName(String datastoreName) {
+        public Builder datastoreName(Output<String> datastoreName) {
             $.datastoreName = datastoreName;
             return this;
+        }
+
+        public Builder datastoreName(String datastoreName) {
+            return datastoreName(Output.of(datastoreName));
         }
 
         public GetDatastoreArgs build() {

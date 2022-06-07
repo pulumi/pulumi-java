@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverName", required=true)
-    private String serverName;
+    private Output<String> serverName;
 
     /**
      * @return The name of the server on which the sync agent is hosted.
      * 
      */
-    public String serverName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncAgentName", required=true)
-    private String syncAgentName;
+    private Output<String> syncAgentName;
 
     /**
      * @return The name of the sync agent.
      * 
      */
-    public String syncAgentName() {
+    public Output<String> syncAgentName() {
         return this.syncAgentName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serverName The name of the server on which the sync agent is hosted.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverName(Output<String> serverName) {
+            $.serverName = serverName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serverName(String serverName) {
-            $.serverName = serverName;
+            return serverName(Output.of(serverName));
+        }
+
+        /**
+         * @param syncAgentName The name of the sync agent.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder syncAgentName(Output<String> syncAgentName) {
+            $.syncAgentName = syncAgentName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSyncAgentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder syncAgentName(String syncAgentName) {
-            $.syncAgentName = syncAgentName;
-            return this;
+            return syncAgentName(Output.of(syncAgentName));
         }
 
         public GetSyncAgentArgs build() {

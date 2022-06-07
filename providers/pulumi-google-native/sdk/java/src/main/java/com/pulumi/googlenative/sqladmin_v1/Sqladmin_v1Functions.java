@@ -3,14 +3,19 @@
 
 package com.pulumi.googlenative.sqladmin_v1;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.sqladmin_v1.inputs.GetBackupRunArgs;
+import com.pulumi.googlenative.sqladmin_v1.inputs.GetBackupRunPlainArgs;
 import com.pulumi.googlenative.sqladmin_v1.inputs.GetDatabaseArgs;
+import com.pulumi.googlenative.sqladmin_v1.inputs.GetDatabasePlainArgs;
 import com.pulumi.googlenative.sqladmin_v1.inputs.GetInstanceArgs;
+import com.pulumi.googlenative.sqladmin_v1.inputs.GetInstancePlainArgs;
 import com.pulumi.googlenative.sqladmin_v1.inputs.GetSslCertArgs;
+import com.pulumi.googlenative.sqladmin_v1.inputs.GetSslCertPlainArgs;
 import com.pulumi.googlenative.sqladmin_v1.outputs.GetBackupRunResult;
 import com.pulumi.googlenative.sqladmin_v1.outputs.GetDatabaseResult;
 import com.pulumi.googlenative.sqladmin_v1.outputs.GetInstanceResult;
@@ -22,56 +27,112 @@ public final class Sqladmin_v1Functions {
      * Retrieves a resource containing information about a backup run.
      * 
      */
-    public static CompletableFuture<GetBackupRunResult> getBackupRun(GetBackupRunArgs args) {
+    public static Output<GetBackupRunResult> getBackupRun(GetBackupRunArgs args) {
         return getBackupRun(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a resource containing information about a backup run.
      * 
      */
-    public static CompletableFuture<GetBackupRunResult> getBackupRun(GetBackupRunArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetBackupRunResult> getBackupRunPlain(GetBackupRunPlainArgs args) {
+        return getBackupRunPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a resource containing information about a backup run.
+     * 
+     */
+    public static Output<GetBackupRunResult> getBackupRun(GetBackupRunArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:sqladmin/v1:getBackupRun", TypeShape.of(GetBackupRunResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a resource containing information about a backup run.
+     * 
+     */
+    public static CompletableFuture<GetBackupRunResult> getBackupRunPlain(GetBackupRunPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sqladmin/v1:getBackupRun", TypeShape.of(GetBackupRunResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a resource containing information about a database inside a Cloud SQL instance.
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args) {
         return getDatabase(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a resource containing information about a database inside a Cloud SQL instance.
      * 
      */
-    public static CompletableFuture<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetDatabaseResult> getDatabasePlain(GetDatabasePlainArgs args) {
+        return getDatabasePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a resource containing information about a database inside a Cloud SQL instance.
+     * 
+     */
+    public static Output<GetDatabaseResult> getDatabase(GetDatabaseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:sqladmin/v1:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a resource containing information about a database inside a Cloud SQL instance.
+     * 
+     */
+    public static CompletableFuture<GetDatabaseResult> getDatabasePlain(GetDatabasePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sqladmin/v1:getDatabase", TypeShape.of(GetDatabaseResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a resource containing information about a Cloud SQL instance.
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args) {
         return getInstance(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a resource containing information about a Cloud SQL instance.
      * 
      */
-    public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args) {
+        return getInstancePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a resource containing information about a Cloud SQL instance.
+     * 
+     */
+    public static Output<GetInstanceResult> getInstance(GetInstanceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:sqladmin/v1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a resource containing information about a Cloud SQL instance.
+     * 
+     */
+    public static CompletableFuture<GetInstanceResult> getInstancePlain(GetInstancePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sqladmin/v1:getInstance", TypeShape.of(GetInstanceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a particular SSL certificate. Does not include the private key (required for usage). The private key must be saved from the response to initial creation.
      * 
      */
-    public static CompletableFuture<GetSslCertResult> getSslCert(GetSslCertArgs args) {
+    public static Output<GetSslCertResult> getSslCert(GetSslCertArgs args) {
         return getSslCert(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a particular SSL certificate. Does not include the private key (required for usage). The private key must be saved from the response to initial creation.
      * 
      */
-    public static CompletableFuture<GetSslCertResult> getSslCert(GetSslCertArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetSslCertResult> getSslCertPlain(GetSslCertPlainArgs args) {
+        return getSslCertPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a particular SSL certificate. Does not include the private key (required for usage). The private key must be saved from the response to initial creation.
+     * 
+     */
+    public static Output<GetSslCertResult> getSslCert(GetSslCertArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:sqladmin/v1:getSslCert", TypeShape.of(GetSslCertResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a particular SSL certificate. Does not include the private key (required for usage). The private key must be saved from the response to initial creation.
+     * 
+     */
+    public static CompletableFuture<GetSslCertResult> getSslCertPlain(GetSslCertPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sqladmin/v1:getSslCert", TypeShape.of(GetSslCertResult.class), args, Utilities.withVersion(options));
     }
 }

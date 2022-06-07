@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.OspGateway.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.OspGateway.inputs.GetInvoicesInvoiceLinesFilter;
+import com.pulumi.oci.OspGateway.inputs.GetInvoicesInvoiceLinesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetInvoicesInvoiceLinesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetInvoicesInvoiceLinesFilter> filters;
+    private @Nullable Output<List<GetInvoicesInvoiceLinesFilterArgs>> filters;
 
-    public Optional<List<GetInvoicesInvoiceLinesFilter>> filters() {
+    public Optional<Output<List<GetInvoicesInvoiceLinesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetInvoicesInvoiceLinesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="internalInvoiceId", required=true)
-    private String internalInvoiceId;
+    private Output<String> internalInvoiceId;
 
     /**
      * @return The identifier of the invoice.
      * 
      */
-    public String internalInvoiceId() {
+    public Output<String> internalInvoiceId() {
         return this.internalInvoiceId;
     }
 
@@ -58,13 +59,13 @@ public final class GetInvoicesInvoiceLinesArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="ospHomeRegion", required=true)
-    private String ospHomeRegion;
+    private Output<String> ospHomeRegion;
 
     /**
      * @return The home region&#39;s public name of the logged in user.
      * 
      */
-    public String ospHomeRegion() {
+    public Output<String> ospHomeRegion() {
         return this.ospHomeRegion;
     }
 
@@ -101,17 +102,31 @@ public final class GetInvoicesInvoiceLinesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetInvoicesInvoiceLinesFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetInvoicesInvoiceLinesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetInvoicesInvoiceLinesFilter... filters) {
+        public Builder filters(List<GetInvoicesInvoiceLinesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetInvoicesInvoiceLinesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -121,8 +136,29 @@ public final class GetInvoicesInvoiceLinesArgs extends com.pulumi.resources.Invo
          * @return builder
          * 
          */
-        public Builder internalInvoiceId(String internalInvoiceId) {
+        public Builder internalInvoiceId(Output<String> internalInvoiceId) {
             $.internalInvoiceId = internalInvoiceId;
+            return this;
+        }
+
+        /**
+         * @param internalInvoiceId The identifier of the invoice.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder internalInvoiceId(String internalInvoiceId) {
+            return internalInvoiceId(Output.of(internalInvoiceId));
+        }
+
+        /**
+         * @param ospHomeRegion The home region&#39;s public name of the logged in user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ospHomeRegion(Output<String> ospHomeRegion) {
+            $.ospHomeRegion = ospHomeRegion;
             return this;
         }
 
@@ -133,8 +169,7 @@ public final class GetInvoicesInvoiceLinesArgs extends com.pulumi.resources.Invo
          * 
          */
         public Builder ospHomeRegion(String ospHomeRegion) {
-            $.ospHomeRegion = ospHomeRegion;
-            return this;
+            return ospHomeRegion(Output.of(ospHomeRegion));
         }
 
         public GetInvoicesInvoiceLinesArgs build() {

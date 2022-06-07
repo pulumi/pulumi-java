@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the App Service plan.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,13 +33,13 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
      * 
      */
     @Import(name="namespaceName", required=true)
-    private String namespaceName;
+    private Output<String> namespaceName;
 
     /**
      * @return The name of the Service Bus namespace.
      * 
      */
-    public String namespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -47,13 +48,13 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
      * 
      */
     @Import(name="relayName", required=true)
-    private String relayName;
+    private Output<String> relayName;
 
     /**
      * @return The name of the Service Bus relay.
      * 
      */
-    public String relayName() {
+    public Output<String> relayName() {
         return this.relayName;
     }
 
@@ -62,13 +63,13 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,8 +106,29 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder name(String name) {
+        public Builder name(Output<String> name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Name of the App Service plan.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param namespaceName The name of the Service Bus namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder namespaceName(Output<String> namespaceName) {
+            $.namespaceName = namespaceName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
          * 
          */
         public Builder namespaceName(String namespaceName) {
-            $.namespaceName = namespaceName;
+            return namespaceName(Output.of(namespaceName));
+        }
+
+        /**
+         * @param relayName The name of the Service Bus relay.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relayName(Output<String> relayName) {
+            $.relayName = relayName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
          * 
          */
         public Builder relayName(String relayName) {
-            $.relayName = relayName;
+            return relayName(Output.of(relayName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends com.pulumi
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListAppServicePlanHybridConnectionKeysArgs build() {

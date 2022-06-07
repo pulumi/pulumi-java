@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudchannel_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetChannelPartnerLinkArgs extends com.pulumi.resources.Invoke
     public static final GetChannelPartnerLinkArgs Empty = new GetChannelPartnerLinkArgs();
 
     @Import(name="accountId", required=true)
-    private String accountId;
+    private Output<String> accountId;
 
-    public String accountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
     @Import(name="channelPartnerLinkId", required=true)
-    private String channelPartnerLinkId;
+    private Output<String> channelPartnerLinkId;
 
-    public String channelPartnerLinkId() {
+    public Output<String> channelPartnerLinkId() {
         return this.channelPartnerLinkId;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private @Nullable Output<String> view;
 
-    public Optional<String> view() {
+    public Optional<Output<String>> view() {
         return Optional.ofNullable(this.view);
     }
 
@@ -61,19 +62,31 @@ public final class GetChannelPartnerLinkArgs extends com.pulumi.resources.Invoke
             $ = new GetChannelPartnerLinkArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder accountId(String accountId) {
+        public Builder accountId(Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
-        public Builder channelPartnerLinkId(String channelPartnerLinkId) {
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
+        }
+
+        public Builder channelPartnerLinkId(Output<String> channelPartnerLinkId) {
             $.channelPartnerLinkId = channelPartnerLinkId;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder channelPartnerLinkId(String channelPartnerLinkId) {
+            return channelPartnerLinkId(Output.of(channelPartnerLinkId));
+        }
+
+        public Builder view(@Nullable Output<String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(String view) {
+            return view(Output.of(view));
         }
 
         public GetChannelPartnerLinkArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datashare.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the share account.
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,13 +35,13 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +50,13 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-    private String shareSubscriptionName;
+    private Output<String> shareSubscriptionName;
 
     /**
      * @return The name of the shareSubscription.
      * 
      */
-    public String shareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -64,13 +65,13 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @Import(name="skipToken")
-    private @Nullable String skipToken;
+    private @Nullable Output<String> skipToken;
 
     /**
      * @return Continuation token
      * 
      */
-    public Optional<String> skipToken() {
+    public Optional<Output<String>> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
 
@@ -107,8 +108,29 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param shareSubscriptionName The name of the shareSubscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
          * 
          */
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            $.shareSubscriptionName = shareSubscriptionName;
+            return shareSubscriptionName(Output.of(shareSubscriptionName));
+        }
+
+        /**
+         * @param skipToken Continuation token
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipToken(@Nullable Output<String> skipToken) {
+            $.skipToken = skipToken;
             return this;
         }
 
@@ -140,9 +182,8 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
          * @return builder
          * 
          */
-        public Builder skipToken(@Nullable String skipToken) {
-            $.skipToken = skipToken;
-            return this;
+        public Builder skipToken(String skipToken) {
+            return skipToken(Output.of(skipToken));
         }
 
         public ListShareSubscriptionSourceShareSynchronizationSettingsArgs build() {

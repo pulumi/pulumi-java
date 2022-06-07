@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.avs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWorkloadNetworkDhcpArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dhcpId", required=true)
-    private String dhcpId;
+    private Output<String> dhcpId;
 
     /**
      * @return NSX DHCP identifier. Generally the same as the DHCP display name
      * 
      */
-    public String dhcpId() {
+    public Output<String> dhcpId() {
         return this.dhcpId;
     }
 
@@ -32,13 +33,13 @@ public final class GetWorkloadNetworkDhcpArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateCloudName", required=true)
-    private String privateCloudName;
+    private Output<String> privateCloudName;
 
     /**
      * @return Name of the private cloud
      * 
      */
-    public String privateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -47,13 +48,13 @@ public final class GetWorkloadNetworkDhcpArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetWorkloadNetworkDhcpArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder dhcpId(String dhcpId) {
+        public Builder dhcpId(Output<String> dhcpId) {
             $.dhcpId = dhcpId;
+            return this;
+        }
+
+        /**
+         * @param dhcpId NSX DHCP identifier. Generally the same as the DHCP display name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dhcpId(String dhcpId) {
+            return dhcpId(Output.of(dhcpId));
+        }
+
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateCloudName(Output<String> privateCloudName) {
+            $.privateCloudName = privateCloudName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetWorkloadNetworkDhcpArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder privateCloudName(String privateCloudName) {
-            $.privateCloudName = privateCloudName;
+            return privateCloudName(Output.of(privateCloudName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetWorkloadNetworkDhcpArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetWorkloadNetworkDhcpArgs build() {

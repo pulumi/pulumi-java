@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
      * 
      */
     @Import(name="peer")
-    private @Nullable String peer;
+    private @Nullable Output<String> peer;
 
     /**
      * @return The IP address of the peer to retrieve the status of.
      * 
      */
-    public Optional<String> peer() {
+    public Optional<Output<String>> peer() {
         return Optional.ofNullable(this.peer);
     }
 
@@ -34,13 +35,13 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +50,13 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
      * 
      */
     @Import(name="virtualNetworkGatewayName", required=true)
-    private String virtualNetworkGatewayName;
+    private Output<String> virtualNetworkGatewayName;
 
     /**
      * @return The name of the virtual network gateway.
      * 
      */
-    public String virtualNetworkGatewayName() {
+    public Output<String> virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 
@@ -91,8 +92,29 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder peer(@Nullable String peer) {
+        public Builder peer(@Nullable Output<String> peer) {
             $.peer = peer;
+            return this;
+        }
+
+        /**
+         * @param peer The IP address of the peer to retrieve the status of.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peer(String peer) {
+            return peer(Output.of(peer));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualNetworkGatewayName The name of the virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualNetworkGatewayName(Output<String> virtualNetworkGatewayName) {
+            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends com.pulumi.
          * 
          */
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
-            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
-            return this;
+            return virtualNetworkGatewayName(Output.of(virtualNetworkGatewayName));
         }
 
         public GetVirtualNetworkGatewayBgpPeerStatusArgs build() {

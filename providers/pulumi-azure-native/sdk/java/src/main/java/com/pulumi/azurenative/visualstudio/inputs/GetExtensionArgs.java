@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.visualstudio.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountResourceName", required=true)
-    private String accountResourceName;
+    private Output<String> accountResourceName;
 
     /**
      * @return The name of the Visual Studio Team Services account resource.
      * 
      */
-    public String accountResourceName() {
+    public Output<String> accountResourceName() {
         return this.accountResourceName;
     }
 
@@ -32,13 +33,13 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="extensionResourceName", required=true)
-    private String extensionResourceName;
+    private Output<String> extensionResourceName;
 
     /**
      * @return The name of the extension.
      * 
      */
-    public String extensionResourceName() {
+    public Output<String> extensionResourceName() {
         return this.extensionResourceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group within the Azure subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountResourceName(String accountResourceName) {
+        public Builder accountResourceName(Output<String> accountResourceName) {
             $.accountResourceName = accountResourceName;
+            return this;
+        }
+
+        /**
+         * @param accountResourceName The name of the Visual Studio Team Services account resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountResourceName(String accountResourceName) {
+            return accountResourceName(Output.of(accountResourceName));
+        }
+
+        /**
+         * @param extensionResourceName The name of the extension.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder extensionResourceName(Output<String> extensionResourceName) {
+            $.extensionResourceName = extensionResourceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder extensionResourceName(String extensionResourceName) {
-            $.extensionResourceName = extensionResourceName;
+            return extensionResourceName(Output.of(extensionResourceName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetExtensionArgs build() {

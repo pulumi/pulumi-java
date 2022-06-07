@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.apigatewayv2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiId", required=true)
-    private String apiId;
+    private Output<String> apiId;
 
     /**
      * @return The API identifier.
      * 
      */
-    public String apiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -35,13 +36,13 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exportVersion")
-    private @Nullable String exportVersion;
+    private @Nullable Output<String> exportVersion;
 
     /**
      * @return The version of the API Gateway export algorithm. API Gateway uses the latest version by default. Currently, the only supported version is `1.0`.
      * 
      */
-    public Optional<String> exportVersion() {
+    public Optional<Output<String>> exportVersion() {
         return Optional.ofNullable(this.exportVersion);
     }
 
@@ -50,13 +51,13 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeExtensions")
-    private @Nullable Boolean includeExtensions;
+    private @Nullable Output<Boolean> includeExtensions;
 
     /**
      * @return Specifies whether to include API Gateway extensions in the exported API definition. API Gateway extensions are included by default.
      * 
      */
-    public Optional<Boolean> includeExtensions() {
+    public Optional<Output<Boolean>> includeExtensions() {
         return Optional.ofNullable(this.includeExtensions);
     }
 
@@ -65,13 +66,13 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputType", required=true)
-    private String outputType;
+    private Output<String> outputType;
 
     /**
      * @return The output type of the exported definition file. Valid values are `JSON` and `YAML`.
      * 
      */
-    public String outputType() {
+    public Output<String> outputType() {
         return this.outputType;
     }
 
@@ -80,13 +81,13 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="specification", required=true)
-    private String specification;
+    private Output<String> specification;
 
     /**
      * @return The version of the API specification to use. `OAS30`, for OpenAPI 3.0, is the only supported value.
      * 
      */
-    public String specification() {
+    public Output<String> specification() {
         return this.specification;
     }
 
@@ -95,13 +96,13 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageName")
-    private @Nullable String stageName;
+    private @Nullable Output<String> stageName;
 
     /**
      * @return The name of the API stage to export. If you don&#39;t specify this property, a representation of the latest API configuration is exported.
      * 
      */
-    public Optional<String> stageName() {
+    public Optional<Output<String>> stageName() {
         return Optional.ofNullable(this.stageName);
     }
 
@@ -140,8 +141,29 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder apiId(String apiId) {
+        public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
+            return this;
+        }
+
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
+        }
+
+        /**
+         * @param exportVersion The version of the API Gateway export algorithm. API Gateway uses the latest version by default. Currently, the only supported version is `1.0`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exportVersion(@Nullable Output<String> exportVersion) {
+            $.exportVersion = exportVersion;
             return this;
         }
 
@@ -151,8 +173,18 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder exportVersion(@Nullable String exportVersion) {
-            $.exportVersion = exportVersion;
+        public Builder exportVersion(String exportVersion) {
+            return exportVersion(Output.of(exportVersion));
+        }
+
+        /**
+         * @param includeExtensions Specifies whether to include API Gateway extensions in the exported API definition. API Gateway extensions are included by default.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeExtensions(@Nullable Output<Boolean> includeExtensions) {
+            $.includeExtensions = includeExtensions;
             return this;
         }
 
@@ -162,8 +194,18 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder includeExtensions(@Nullable Boolean includeExtensions) {
-            $.includeExtensions = includeExtensions;
+        public Builder includeExtensions(Boolean includeExtensions) {
+            return includeExtensions(Output.of(includeExtensions));
+        }
+
+        /**
+         * @param outputType The output type of the exported definition file. Valid values are `JSON` and `YAML`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder outputType(Output<String> outputType) {
+            $.outputType = outputType;
             return this;
         }
 
@@ -174,7 +216,17 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder outputType(String outputType) {
-            $.outputType = outputType;
+            return outputType(Output.of(outputType));
+        }
+
+        /**
+         * @param specification The version of the API specification to use. `OAS30`, for OpenAPI 3.0, is the only supported value.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder specification(Output<String> specification) {
+            $.specification = specification;
             return this;
         }
 
@@ -185,7 +237,17 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder specification(String specification) {
-            $.specification = specification;
+            return specification(Output.of(specification));
+        }
+
+        /**
+         * @param stageName The name of the API stage to export. If you don&#39;t specify this property, a representation of the latest API configuration is exported.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stageName(@Nullable Output<String> stageName) {
+            $.stageName = stageName;
             return this;
         }
 
@@ -195,9 +257,8 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder stageName(@Nullable String stageName) {
-            $.stageName = stageName;
-            return this;
+        public Builder stageName(String stageName) {
+            return stageName(Output.of(stageName));
         }
 
         public GetExportArgs build() {

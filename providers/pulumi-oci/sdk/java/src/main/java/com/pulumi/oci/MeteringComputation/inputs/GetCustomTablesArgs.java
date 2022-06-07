@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.MeteringComputation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.MeteringComputation.inputs.GetCustomTablesFilter;
+import com.pulumi.oci.MeteringComputation.inputs.GetCustomTablesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetCustomTablesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The compartment ID in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetCustomTablesFilter> filters;
+    private @Nullable Output<List<GetCustomTablesFilterArgs>> filters;
 
-    public Optional<List<GetCustomTablesFilter>> filters() {
+    public Optional<Output<List<GetCustomTablesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetCustomTablesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="savedReportId", required=true)
-    private String savedReportId;
+    private Output<String> savedReportId;
 
     /**
      * @return The saved report ID in which to list resources.
      * 
      */
-    public String savedReportId() {
+    public Output<String> savedReportId() {
         return this.savedReportId;
     }
 
@@ -85,17 +86,31 @@ public final class GetCustomTablesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetCustomTablesFilter> filters) {
+        /**
+         * @param compartmentId The compartment ID in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetCustomTablesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetCustomTablesFilter... filters) {
+        public Builder filters(List<GetCustomTablesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetCustomTablesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -105,9 +120,19 @@ public final class GetCustomTablesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder savedReportId(String savedReportId) {
+        public Builder savedReportId(Output<String> savedReportId) {
             $.savedReportId = savedReportId;
             return this;
+        }
+
+        /**
+         * @param savedReportId The saved report ID in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder savedReportId(String savedReportId) {
+            return savedReportId(Output.of(savedReportId));
         }
 
         public GetCustomTablesArgs build() {

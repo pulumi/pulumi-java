@@ -5,7 +5,9 @@ package com.pulumi.awsnative.kinesis;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.kinesis.inputs.GetStreamArgs;
+import com.pulumi.awsnative.kinesis.inputs.GetStreamPlainArgs;
 import com.pulumi.awsnative.kinesis.outputs.GetStreamResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class KinesisFunctions {
      * Resource Type definition for AWS::Kinesis::Stream
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
+    public static Output<GetStreamResult> getStream(GetStreamArgs args) {
         return getStream(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::Kinesis::Stream
      * 
      */
-    public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetStreamResult> getStreamPlain(GetStreamPlainArgs args) {
+        return getStreamPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::Kinesis::Stream
+     * 
+     */
+    public static Output<GetStreamResult> getStream(GetStreamArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:kinesis:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Kinesis::Stream
+     * 
+     */
+    public static CompletableFuture<GetStreamResult> getStreamPlain(GetStreamPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesis:getStream", TypeShape.of(GetStreamResult.class), args, Utilities.withVersion(options));
     }
 }

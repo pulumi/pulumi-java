@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.netapp.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-    private String accountName;
+    private Output<String> accountName;
 
     /**
      * @return The name of the NetApp account
      * 
      */
-    public String accountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumeGroupName", required=true)
-    private String volumeGroupName;
+    private Output<String> volumeGroupName;
 
     /**
      * @return The name of the volumeGroup
      * 
      */
-    public String volumeGroupName() {
+    public Output<String> volumeGroupName() {
         return this.volumeGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder accountName(String accountName) {
+        public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * @param accountName The name of the NetApp account
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param volumeGroupName The name of the volumeGroup
+         * 
+         * @return builder
+         * 
+         */
+        public Builder volumeGroupName(Output<String> volumeGroupName) {
+            $.volumeGroupName = volumeGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVolumeGroupArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder volumeGroupName(String volumeGroupName) {
-            $.volumeGroupName = volumeGroupName;
-            return this;
+            return volumeGroupName(Output.of(volumeGroupName));
         }
 
         public GetVolumeGroupArgs build() {

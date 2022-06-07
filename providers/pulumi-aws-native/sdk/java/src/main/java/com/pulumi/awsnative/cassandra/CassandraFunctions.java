@@ -5,9 +5,12 @@ package com.pulumi.awsnative.cassandra;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.cassandra.inputs.GetKeyspaceArgs;
+import com.pulumi.awsnative.cassandra.inputs.GetKeyspacePlainArgs;
 import com.pulumi.awsnative.cassandra.inputs.GetTableArgs;
+import com.pulumi.awsnative.cassandra.inputs.GetTablePlainArgs;
 import com.pulumi.awsnative.cassandra.outputs.GetKeyspaceResult;
 import com.pulumi.awsnative.cassandra.outputs.GetTableResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -18,28 +21,56 @@ public final class CassandraFunctions {
      * Resource schema for AWS::Cassandra::Keyspace
      * 
      */
-    public static CompletableFuture<GetKeyspaceResult> getKeyspace(GetKeyspaceArgs args) {
+    public static Output<GetKeyspaceResult> getKeyspace(GetKeyspaceArgs args) {
         return getKeyspace(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::Cassandra::Keyspace
      * 
      */
-    public static CompletableFuture<GetKeyspaceResult> getKeyspace(GetKeyspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetKeyspaceResult> getKeyspacePlain(GetKeyspacePlainArgs args) {
+        return getKeyspacePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::Cassandra::Keyspace
+     * 
+     */
+    public static Output<GetKeyspaceResult> getKeyspace(GetKeyspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:cassandra:getKeyspace", TypeShape.of(GetKeyspaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::Cassandra::Keyspace
+     * 
+     */
+    public static CompletableFuture<GetKeyspaceResult> getKeyspacePlain(GetKeyspacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cassandra:getKeyspace", TypeShape.of(GetKeyspaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::Cassandra::Table
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
+    public static Output<GetTableResult> getTable(GetTableArgs args) {
         return getTable(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::Cassandra::Table
      * 
      */
-    public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTableResult> getTablePlain(GetTablePlainArgs args) {
+        return getTablePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::Cassandra::Table
+     * 
+     */
+    public static Output<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:cassandra:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::Cassandra::Table
+     * 
+     */
+    public static CompletableFuture<GetTableResult> getTablePlain(GetTablePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cassandra:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }
 }

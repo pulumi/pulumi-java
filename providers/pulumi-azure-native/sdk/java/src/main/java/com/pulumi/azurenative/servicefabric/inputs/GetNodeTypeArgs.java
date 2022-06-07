@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.servicefabric.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-    private String clusterName;
+    private Output<String> clusterName;
 
     /**
      * @return The name of the cluster resource.
      * 
      */
-    public String clusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -32,13 +33,13 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nodeTypeName", required=true)
-    private String nodeTypeName;
+    private Output<String> nodeTypeName;
 
     /**
      * @return The name of the node type.
      * 
      */
-    public String nodeTypeName() {
+    public Output<String> nodeTypeName() {
         return this.nodeTypeName;
     }
 
@@ -47,13 +48,13 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterName(String clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * @param clusterName The name of the cluster resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param nodeTypeName The name of the node type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder nodeTypeName(Output<String> nodeTypeName) {
+            $.nodeTypeName = nodeTypeName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder nodeTypeName(String nodeTypeName) {
-            $.nodeTypeName = nodeTypeName;
+            return nodeTypeName(Output.of(nodeTypeName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetNodeTypeArgs build() {

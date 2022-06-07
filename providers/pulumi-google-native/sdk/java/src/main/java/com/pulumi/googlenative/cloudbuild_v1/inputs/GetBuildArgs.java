@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,37 +16,37 @@ public final class GetBuildArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBuildArgs Empty = new GetBuildArgs();
 
     @Import(name="buildId", required=true)
-    private String buildId;
+    private Output<String> buildId;
 
-    public String buildId() {
+    public Output<String> buildId() {
         return this.buildId;
     }
 
     @Import(name="id", required=true)
-    private String id;
+    private Output<String> id;
 
-    public String id() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="projectId", required=true)
-    private String projectId;
+    private Output<String> projectId;
 
-    public String projectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
@@ -77,29 +78,49 @@ public final class GetBuildArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetBuildArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder buildId(String buildId) {
+        public Builder buildId(Output<String> buildId) {
             $.buildId = buildId;
             return this;
         }
 
-        public Builder id(String id) {
+        public Builder buildId(String buildId) {
+            return buildId(Output.of(buildId));
+        }
+
+        public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder projectId(String projectId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
+        }
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
         }
 
         public GetBuildArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.migrate.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSolutionConfigArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="migrateProjectName", required=true)
-    private String migrateProjectName;
+    private Output<String> migrateProjectName;
 
     /**
      * @return Name of the Azure Migrate project.
      * 
      */
-    public String migrateProjectName() {
+    public Output<String> migrateProjectName() {
         return this.migrateProjectName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSolutionConfigArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the Azure Resource Group that migrate project is part of.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetSolutionConfigArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="solutionName", required=true)
-    private String solutionName;
+    private Output<String> solutionName;
 
     /**
      * @return Unique name of a migration solution within a migrate project.
      * 
      */
-    public String solutionName() {
+    public Output<String> solutionName() {
         return this.solutionName;
     }
 
@@ -89,8 +90,29 @@ public final class GetSolutionConfigArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder migrateProjectName(String migrateProjectName) {
+        public Builder migrateProjectName(Output<String> migrateProjectName) {
             $.migrateProjectName = migrateProjectName;
+            return this;
+        }
+
+        /**
+         * @param migrateProjectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder migrateProjectName(String migrateProjectName) {
+            return migrateProjectName(Output.of(migrateProjectName));
+        }
+
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that migrate project is part of.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetSolutionConfigArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param solutionName Unique name of a migration solution within a migrate project.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder solutionName(Output<String> solutionName) {
+            $.solutionName = solutionName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetSolutionConfigArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder solutionName(String solutionName) {
-            $.solutionName = solutionName;
-            return this;
+            return solutionName(Output.of(solutionName));
         }
 
         public GetSolutionConfigArgs build() {

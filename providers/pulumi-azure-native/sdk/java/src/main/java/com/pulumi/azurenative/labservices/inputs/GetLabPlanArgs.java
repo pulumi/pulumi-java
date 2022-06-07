@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.labservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLabPlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labPlanName", required=true)
-    private String labPlanName;
+    private Output<String> labPlanName;
 
     /**
      * @return The name of the lab plan that uniquely identifies it within containing resource group. Used in resource URIs and in UI.
      * 
      */
-    public String labPlanName() {
+    public Output<String> labPlanName() {
         return this.labPlanName;
     }
 
@@ -32,13 +33,13 @@ public final class GetLabPlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetLabPlanArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder labPlanName(String labPlanName) {
+        public Builder labPlanName(Output<String> labPlanName) {
             $.labPlanName = labPlanName;
+            return this;
+        }
+
+        /**
+         * @param labPlanName The name of the lab plan that uniquely identifies it within containing resource group. Used in resource URIs and in UI.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder labPlanName(String labPlanName) {
+            return labPlanName(Output.of(labPlanName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetLabPlanArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetLabPlanArgs build() {

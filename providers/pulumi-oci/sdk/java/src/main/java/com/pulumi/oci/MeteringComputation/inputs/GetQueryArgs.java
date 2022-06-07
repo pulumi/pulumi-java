@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.MeteringComputation.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryId", required=true)
-    private String queryId;
+    private Output<String> queryId;
 
     /**
      * @return The query unique OCID.
      * 
      */
-    public String queryId() {
+    public Output<String> queryId() {
         return this.queryId;
     }
 
@@ -57,9 +58,19 @@ public final class GetQueryArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder queryId(String queryId) {
+        public Builder queryId(Output<String> queryId) {
             $.queryId = queryId;
             return this;
+        }
+
+        /**
+         * @param queryId The query unique OCID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder queryId(String queryId) {
+            return queryId(Output.of(queryId));
         }
 
         public GetQueryArgs build() {

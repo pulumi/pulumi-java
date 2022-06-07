@@ -3,6 +3,7 @@
 
 package com.pulumi.azuread.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return The display name for the group.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -35,13 +36,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mailEnabled")
-    private @Nullable Boolean mailEnabled;
+    private @Nullable Output<Boolean> mailEnabled;
 
     /**
      * @return Whether the group is mail-enabled.
      * 
      */
-    public Optional<Boolean> mailEnabled() {
+    public Optional<Output<Boolean>> mailEnabled() {
         return Optional.ofNullable(this.mailEnabled);
     }
 
@@ -50,13 +51,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectId")
-    private @Nullable String objectId;
+    private @Nullable Output<String> objectId;
 
     /**
      * @return Specifies the object ID of the group.
      * 
      */
-    public Optional<String> objectId() {
+    public Optional<Output<String>> objectId() {
         return Optional.ofNullable(this.objectId);
     }
 
@@ -65,13 +66,13 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityEnabled")
-    private @Nullable Boolean securityEnabled;
+    private @Nullable Output<Boolean> securityEnabled;
 
     /**
      * @return Whether the group is a security group.
      * 
      */
-    public Optional<Boolean> securityEnabled() {
+    public Optional<Output<Boolean>> securityEnabled() {
         return Optional.ofNullable(this.securityEnabled);
     }
 
@@ -108,8 +109,29 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * @param displayName The display name for the group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param mailEnabled Whether the group is mail-enabled.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mailEnabled(@Nullable Output<Boolean> mailEnabled) {
+            $.mailEnabled = mailEnabled;
             return this;
         }
 
@@ -119,8 +141,18 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder mailEnabled(@Nullable Boolean mailEnabled) {
-            $.mailEnabled = mailEnabled;
+        public Builder mailEnabled(Boolean mailEnabled) {
+            return mailEnabled(Output.of(mailEnabled));
+        }
+
+        /**
+         * @param objectId Specifies the object ID of the group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectId(@Nullable Output<String> objectId) {
+            $.objectId = objectId;
             return this;
         }
 
@@ -130,8 +162,18 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder objectId(@Nullable String objectId) {
-            $.objectId = objectId;
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
+        }
+
+        /**
+         * @param securityEnabled Whether the group is a security group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityEnabled(@Nullable Output<Boolean> securityEnabled) {
+            $.securityEnabled = securityEnabled;
             return this;
         }
 
@@ -141,9 +183,8 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder securityEnabled(@Nullable Boolean securityEnabled) {
-            $.securityEnabled = securityEnabled;
-            return this;
+        public Builder securityEnabled(Boolean securityEnabled) {
+            return securityEnabled(Output.of(securityEnabled));
         }
 
         public GetGroupArgs build() {

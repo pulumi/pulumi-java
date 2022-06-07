@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRouteArgs Empty = new GetRouteArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="privateConnectionId", required=true)
-    private String privateConnectionId;
+    private Output<String> privateConnectionId;
 
-    public String privateConnectionId() {
+    public Output<String> privateConnectionId() {
         return this.privateConnectionId;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="routeId", required=true)
-    private String routeId;
+    private Output<String> routeId;
 
-    public String routeId() {
+    public Output<String> routeId() {
         return this.routeId;
     }
 
@@ -69,24 +70,40 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRouteArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder privateConnectionId(String privateConnectionId) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder privateConnectionId(Output<String> privateConnectionId) {
             $.privateConnectionId = privateConnectionId;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder privateConnectionId(String privateConnectionId) {
+            return privateConnectionId(Output.of(privateConnectionId));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder routeId(String routeId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder routeId(Output<String> routeId) {
             $.routeId = routeId;
             return this;
+        }
+
+        public Builder routeId(String routeId) {
+            return routeId(Output.of(routeId));
         }
 
         public GetRouteArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ContainerEngine.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetClusterOptionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="clusterOptionId", required=true)
-    private String clusterOptionId;
+    private Output<String> clusterOptionId;
 
     /**
      * @return The id of the option set to retrieve. Use &#34;all&#34; get all options, or use a cluster ID to get options specific to the provided cluster.
      * 
      */
-    public String clusterOptionId() {
+    public Output<String> clusterOptionId() {
         return this.clusterOptionId;
     }
 
@@ -34,13 +35,13 @@ public final class GetClusterOptionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compartmentId")
-    private @Nullable String compartmentId;
+    private @Nullable Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public Optional<String> compartmentId() {
+    public Optional<Output<String>> compartmentId() {
         return Optional.ofNullable(this.compartmentId);
     }
 
@@ -75,8 +76,29 @@ public final class GetClusterOptionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder clusterOptionId(String clusterOptionId) {
+        public Builder clusterOptionId(Output<String> clusterOptionId) {
             $.clusterOptionId = clusterOptionId;
+            return this;
+        }
+
+        /**
+         * @param clusterOptionId The id of the option set to retrieve. Use &#34;all&#34; get all options, or use a cluster ID to get options specific to the provided cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterOptionId(String clusterOptionId) {
+            return clusterOptionId(Output.of(clusterOptionId));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(@Nullable Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -86,9 +108,8 @@ public final class GetClusterOptionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder compartmentId(@Nullable String compartmentId) {
-            $.compartmentId = compartmentId;
-            return this;
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
         }
 
         public GetClusterOptionArgs build() {

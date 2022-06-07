@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetServiceConsumerIamPolicyArgs extends com.pulumi.resources.
     public static final GetServiceConsumerIamPolicyArgs Empty = new GetServiceConsumerIamPolicyArgs();
 
     @Import(name="consumerId", required=true)
-    private String consumerId;
+    private Output<String> consumerId;
 
-    public String consumerId() {
+    public Output<String> consumerId() {
         return this.consumerId;
     }
 
     @Import(name="serviceId", required=true)
-    private String serviceId;
+    private Output<String> serviceId;
 
-    public String serviceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -51,14 +52,22 @@ public final class GetServiceConsumerIamPolicyArgs extends com.pulumi.resources.
             $ = new GetServiceConsumerIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder consumerId(String consumerId) {
+        public Builder consumerId(Output<String> consumerId) {
             $.consumerId = consumerId;
             return this;
         }
 
-        public Builder serviceId(String serviceId) {
+        public Builder consumerId(String consumerId) {
+            return consumerId(Output.of(consumerId));
+        }
+
+        public Builder serviceId(Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
+        }
+
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
         }
 
         public GetServiceConsumerIamPolicyArgs build() {

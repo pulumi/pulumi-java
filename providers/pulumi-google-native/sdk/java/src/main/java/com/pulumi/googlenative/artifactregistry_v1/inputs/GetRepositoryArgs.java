@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.artifactregistry_v1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,23 +16,23 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRepositoryArgs Empty = new GetRepositoryArgs();
 
     @Import(name="location", required=true)
-    private String location;
+    private Output<String> location;
 
-    public String location() {
+    public Output<String> location() {
         return this.location;
     }
 
     @Import(name="project")
-    private @Nullable String project;
+    private @Nullable Output<String> project;
 
-    public Optional<String> project() {
+    public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -61,19 +62,31 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder location(String location) {
+        public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
-        public Builder project(@Nullable String project) {
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
-        public Builder repositoryId(String repositoryId) {
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public Builder repositoryId(Output<String> repositoryId) {
             $.repositoryId = repositoryId;
             return this;
+        }
+
+        public Builder repositoryId(String repositoryId) {
+            return repositoryId(Output.of(repositoryId));
         }
 
         public GetRepositoryArgs build() {

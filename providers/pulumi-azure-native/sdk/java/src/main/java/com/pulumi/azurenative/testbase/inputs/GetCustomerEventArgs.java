@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.testbase.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="customerEventName", required=true)
-    private String customerEventName;
+    private Output<String> customerEventName;
 
     /**
      * @return The resource name of the Test Base Customer event.
      * 
      */
-    public String customerEventName() {
+    public Output<String> customerEventName() {
         return this.customerEventName;
     }
 
@@ -32,13 +33,13 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="testBaseAccountName", required=true)
-    private String testBaseAccountName;
+    private Output<String> testBaseAccountName;
 
     /**
      * @return The resource name of the Test Base Account.
      * 
      */
-    public String testBaseAccountName() {
+    public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
@@ -89,8 +90,29 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder customerEventName(String customerEventName) {
+        public Builder customerEventName(Output<String> customerEventName) {
             $.customerEventName = customerEventName;
+            return this;
+        }
+
+        /**
+         * @param customerEventName The resource name of the Test Base Customer event.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customerEventName(String customerEventName) {
+            return customerEventName(Output.of(customerEventName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder testBaseAccountName(Output<String> testBaseAccountName) {
+            $.testBaseAccountName = testBaseAccountName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetCustomerEventArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder testBaseAccountName(String testBaseAccountName) {
-            $.testBaseAccountName = testBaseAccountName;
-            return this;
+            return testBaseAccountName(Output.of(testBaseAccountName));
         }
 
         public GetCustomerEventArgs build() {

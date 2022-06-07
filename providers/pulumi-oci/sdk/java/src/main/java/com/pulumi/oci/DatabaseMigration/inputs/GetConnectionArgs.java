@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DatabaseMigration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="connectionId", required=true)
-    private String connectionId;
+    private Output<String> connectionId;
 
     /**
      * @return The OCID of the database connection
      * 
      */
-    public String connectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetConnectionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder connectionId(String connectionId) {
+        public Builder connectionId(Output<String> connectionId) {
             $.connectionId = connectionId;
             return this;
+        }
+
+        /**
+         * @param connectionId The OCID of the database connection
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionId(String connectionId) {
+            return connectionId(Output.of(connectionId));
         }
 
         public GetConnectionArgs build() {

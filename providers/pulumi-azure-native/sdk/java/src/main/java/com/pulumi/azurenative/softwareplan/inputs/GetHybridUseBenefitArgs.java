@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.softwareplan.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetHybridUseBenefitArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="planId", required=true)
-    private String planId;
+    private Output<String> planId;
 
     /**
      * @return This is a unique identifier for a plan. Should be a guid.
      * 
      */
-    public String planId() {
+    public Output<String> planId() {
         return this.planId;
     }
 
@@ -32,13 +33,13 @@ public final class GetHybridUseBenefitArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scope", required=true)
-    private String scope;
+    private Output<String> scope;
 
     /**
      * @return The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
      * 
      */
-    public String scope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -73,8 +74,29 @@ public final class GetHybridUseBenefitArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder planId(String planId) {
+        public Builder planId(Output<String> planId) {
             $.planId = planId;
+            return this;
+        }
+
+        /**
+         * @param planId This is a unique identifier for a plan. Should be a guid.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder planId(String planId) {
+            return planId(Output.of(planId));
+        }
+
+        /**
+         * @param scope The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scope(Output<String> scope) {
+            $.scope = scope;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetHybridUseBenefitArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder scope(String scope) {
-            $.scope = scope;
-            return this;
+            return scope(Output.of(scope));
         }
 
         public GetHybridUseBenefitArgs build() {

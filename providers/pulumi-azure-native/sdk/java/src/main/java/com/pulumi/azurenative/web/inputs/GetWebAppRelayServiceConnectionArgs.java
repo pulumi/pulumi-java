@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.web.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="entityName", required=true)
-    private String entityName;
+    private Output<String> entityName;
 
     /**
      * @return Name of the hybrid connection.
      * 
      */
-    public String entityName() {
+    public Output<String> entityName() {
         return this.entityName;
     }
 
@@ -32,13 +33,13 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return Name of the app.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group to which the resource belongs.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder entityName(String entityName) {
+        public Builder entityName(Output<String> entityName) {
             $.entityName = entityName;
+            return this;
+        }
+
+        /**
+         * @param entityName Name of the hybrid connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder entityName(String entityName) {
+            return entityName(Output.of(entityName));
+        }
+
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetWebAppRelayServiceConnectionArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.ec2_getAmi.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -21,14 +22,14 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executableUsers")
-    private @Nullable List<String> executableUsers;
+    private @Nullable Output<List<String>> executableUsers;
 
     /**
      * @return Limit search to users with *explicit* launch permission on
      * the image. Valid items are the numeric account ID or `self`.
      * 
      */
-    public Optional<List<String>> executableUsers() {
+    public Optional<Output<List<String>>> executableUsers() {
         return Optional.ofNullable(this.executableUsers);
     }
 
@@ -37,13 +38,13 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owners", required=true)
-    private List<String> owners;
+    private Output<List<String>> owners;
 
     /**
      * @return List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
      * 
      */
-    public List<String> owners() {
+    public Output<List<String>> owners() {
         return this.owners;
     }
 
@@ -79,9 +80,20 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder executableUsers(@Nullable List<String> executableUsers) {
+        public Builder executableUsers(@Nullable Output<List<String>> executableUsers) {
             $.executableUsers = executableUsers;
             return this;
+        }
+
+        /**
+         * @param executableUsers Limit search to users with *explicit* launch permission on
+         * the image. Valid items are the numeric account ID or `self`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder executableUsers(List<String> executableUsers) {
+            return executableUsers(Output.of(executableUsers));
         }
 
         /**
@@ -101,9 +113,19 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder owners(List<String> owners) {
+        public Builder owners(Output<List<String>> owners) {
             $.owners = owners;
             return this;
+        }
+
+        /**
+         * @param owners List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder owners(List<String> owners) {
+            return owners(Output.of(owners));
         }
 
         /**

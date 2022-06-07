@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Bastion.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSessionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sessionId", required=true)
-    private String sessionId;
+    private Output<String> sessionId;
 
     /**
      * @return The unique identifier (OCID) of the session.
      * 
      */
-    public String sessionId() {
+    public Output<String> sessionId() {
         return this.sessionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetSessionArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sessionId(String sessionId) {
+        public Builder sessionId(Output<String> sessionId) {
             $.sessionId = sessionId;
             return this;
+        }
+
+        /**
+         * @param sessionId The unique identifier (OCID) of the session.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sessionId(String sessionId) {
+            return sessionId(Output.of(sessionId));
         }
 
         public GetSessionArgs build() {

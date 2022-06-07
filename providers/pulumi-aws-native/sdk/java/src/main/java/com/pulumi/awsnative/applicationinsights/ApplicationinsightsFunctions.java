@@ -5,7 +5,9 @@ package com.pulumi.awsnative.applicationinsights;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.applicationinsights.inputs.GetApplicationArgs;
+import com.pulumi.awsnative.applicationinsights.inputs.GetApplicationPlainArgs;
 import com.pulumi.awsnative.applicationinsights.outputs.GetApplicationResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -16,14 +18,28 @@ public final class ApplicationinsightsFunctions {
      * Resource schema for AWS::ApplicationInsights::Application
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
     /**
      * Resource schema for AWS::ApplicationInsights::Application
      * 
      */
-    public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args) {
+        return getApplicationPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource schema for AWS::ApplicationInsights::Application
+     * 
+     */
+    public static Output<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:applicationinsights:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::ApplicationInsights::Application
+     * 
+     */
+    public static CompletableFuture<GetApplicationResult> getApplicationPlain(GetApplicationPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:applicationinsights:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
 }

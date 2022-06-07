@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.devopsguru.inputs;
 
 import com.pulumi.awsnative.devopsguru.enums.ResourceCollectionType;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.Objects;
 
@@ -17,13 +18,13 @@ public final class GetResourceCollectionArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceCollectionType", required=true)
-    private ResourceCollectionType resourceCollectionType;
+    private Output<ResourceCollectionType> resourceCollectionType;
 
     /**
      * @return The type of ResourceCollection
      * 
      */
-    public ResourceCollectionType resourceCollectionType() {
+    public Output<ResourceCollectionType> resourceCollectionType() {
         return this.resourceCollectionType;
     }
 
@@ -57,9 +58,19 @@ public final class GetResourceCollectionArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder resourceCollectionType(ResourceCollectionType resourceCollectionType) {
+        public Builder resourceCollectionType(Output<ResourceCollectionType> resourceCollectionType) {
             $.resourceCollectionType = resourceCollectionType;
             return this;
+        }
+
+        /**
+         * @param resourceCollectionType The type of ResourceCollection
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceCollectionType(ResourceCollectionType resourceCollectionType) {
+            return resourceCollectionType(Output.of(resourceCollectionType));
         }
 
         public GetResourceCollectionArgs build() {

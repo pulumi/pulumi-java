@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.rds.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGlobalClusterArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="globalClusterIdentifier", required=true)
-    private String globalClusterIdentifier;
+    private Output<String> globalClusterIdentifier;
 
     /**
      * @return The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
      * 
      */
-    public String globalClusterIdentifier() {
+    public Output<String> globalClusterIdentifier() {
         return this.globalClusterIdentifier;
     }
 
@@ -57,9 +58,19 @@ public final class GetGlobalClusterArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder globalClusterIdentifier(String globalClusterIdentifier) {
+        public Builder globalClusterIdentifier(Output<String> globalClusterIdentifier) {
             $.globalClusterIdentifier = globalClusterIdentifier;
             return this;
+        }
+
+        /**
+         * @param globalClusterIdentifier The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder globalClusterIdentifier(String globalClusterIdentifier) {
+            return globalClusterIdentifier(Output.of(globalClusterIdentifier));
         }
 
         public GetGlobalClusterArgs build() {

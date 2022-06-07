@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetConnectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="connectorName", required=true)
-    private String connectorName;
+    private Output<String> connectorName;
 
     /**
      * @return Name of the cloud account connector
      * 
      */
-    public String connectorName() {
+    public Output<String> connectorName() {
         return this.connectorName;
     }
 
@@ -57,9 +58,19 @@ public final class GetConnectorArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder connectorName(String connectorName) {
+        public Builder connectorName(Output<String> connectorName) {
             $.connectorName = connectorName;
             return this;
+        }
+
+        /**
+         * @param connectorName Name of the cloud account connector
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectorName(String connectorName) {
+            return connectorName(Output.of(connectorName));
         }
 
         public GetConnectorArgs build() {

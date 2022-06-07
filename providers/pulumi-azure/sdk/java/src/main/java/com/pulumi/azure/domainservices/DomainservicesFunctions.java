@@ -5,7 +5,9 @@ package com.pulumi.azure.domainservices;
 
 import com.pulumi.azure.Utilities;
 import com.pulumi.azure.domainservices.inputs.GetServiceArgs;
+import com.pulumi.azure.domainservices.inputs.GetServicePlainArgs;
 import com.pulumi.azure.domainservices.outputs.GetServiceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -42,7 +44,7 @@ public final class DomainservicesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+    public static Output<GetServiceResult> getService(GetServiceArgs args) {
         return getService(args, InvokeOptions.Empty);
     }
     /**
@@ -75,7 +77,73 @@ public final class DomainservicesFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args) {
+        return getServicePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets information about an Active Directory Domain Service.
+     * 
+     * &gt; **Supported Modes:** At present this data source only supports **User Forest** mode and _not_ **Resource Forest** mode. [Read more](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/concepts-resource-forest) about the different operation modes for this service.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DomainservicesFunctions.getService(GetServiceArgs.builder()
+     *             .name(&#34;example-aadds&#34;)
+     *             .resourceGroupName(&#34;example-aadds-rg&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("azure:domainservices/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets information about an Active Directory Domain Service.
+     * 
+     * &gt; **Supported Modes:** At present this data source only supports **User Forest** mode and _not_ **Resource Forest** mode. [Read more](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/concepts-resource-forest) about the different operation modes for this service.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DomainservicesFunctions.getService(GetServiceArgs.builder()
+     *             .name(&#34;example-aadds&#34;)
+     *             .resourceGroupName(&#34;example-aadds-rg&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetServiceResult> getServicePlain(GetServicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure:domainservices/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
 }

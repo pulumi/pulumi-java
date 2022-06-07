@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ivs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRecordingConfigurationArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="arn", required=true)
-    private String arn;
+    private Output<String> arn;
 
     /**
      * @return Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
      * 
      */
-    public String arn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -57,9 +58,19 @@ public final class GetRecordingConfigurationArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder arn(String arn) {
+        public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
+        }
+
+        /**
+         * @param arn Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
 
         public GetRecordingConfigurationArgs build() {

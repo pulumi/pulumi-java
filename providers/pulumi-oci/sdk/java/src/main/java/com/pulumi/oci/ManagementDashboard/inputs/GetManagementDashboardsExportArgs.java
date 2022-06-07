@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ManagementDashboard.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetManagementDashboardsExportArgs extends com.pulumi.resource
      * 
      */
     @Import(name="exportDashboardId", required=true)
-    private String exportDashboardId;
+    private Output<String> exportDashboardId;
 
     /**
      * @return List of dashboardIds in plain text. The syntax is &#39;{&#34;dashboardIds&#34;:[&#34;dashboardId1&#34;, &#34;dashboardId2&#34;, ...]}&#39;. Escaping is needed when using in Oracle Cloud Infrastructure CLI. For example, &#34;{\&#34;dashboardIds\&#34;:[\&#34;ocid1.managementdashboard.oc1..dashboardId1\&#34;]}&#34; .
      * 
      */
-    public String exportDashboardId() {
+    public Output<String> exportDashboardId() {
         return this.exportDashboardId;
     }
 
@@ -57,9 +58,19 @@ public final class GetManagementDashboardsExportArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder exportDashboardId(String exportDashboardId) {
+        public Builder exportDashboardId(Output<String> exportDashboardId) {
             $.exportDashboardId = exportDashboardId;
             return this;
+        }
+
+        /**
+         * @param exportDashboardId List of dashboardIds in plain text. The syntax is &#39;{&#34;dashboardIds&#34;:[&#34;dashboardId1&#34;, &#34;dashboardId2&#34;, ...]}&#39;. Escaping is needed when using in Oracle Cloud Infrastructure CLI. For example, &#34;{\&#34;dashboardIds\&#34;:[\&#34;ocid1.managementdashboard.oc1..dashboardId1\&#34;]}&#34; .
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exportDashboardId(String exportDashboardId) {
+            return exportDashboardId(Output.of(exportDashboardId));
         }
 
         public GetManagementDashboardsExportArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.personalize.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="schemaArn", required=true)
-    private String schemaArn;
+    private Output<String> schemaArn;
 
     /**
      * @return Arn for the schema.
      * 
      */
-    public String schemaArn() {
+    public Output<String> schemaArn() {
         return this.schemaArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder schemaArn(String schemaArn) {
+        public Builder schemaArn(Output<String> schemaArn) {
             $.schemaArn = schemaArn;
             return this;
+        }
+
+        /**
+         * @param schemaArn Arn for the schema.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder schemaArn(String schemaArn) {
+            return schemaArn(Output.of(schemaArn));
         }
 
         public GetSchemaArgs build() {

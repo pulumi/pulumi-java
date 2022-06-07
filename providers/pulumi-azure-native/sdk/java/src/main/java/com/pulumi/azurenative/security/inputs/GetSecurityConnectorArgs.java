@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.security.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetSecurityConnectorArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetSecurityConnectorArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="securityConnectorName", required=true)
-    private String securityConnectorName;
+    private Output<String> securityConnectorName;
 
     /**
      * @return The security connector name.
      * 
      */
-    public String securityConnectorName() {
+    public Output<String> securityConnectorName() {
         return this.securityConnectorName;
     }
 
@@ -73,8 +74,29 @@ public final class GetSecurityConnectorArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param securityConnectorName The security connector name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityConnectorName(Output<String> securityConnectorName) {
+            $.securityConnectorName = securityConnectorName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetSecurityConnectorArgs extends com.pulumi.resources.InvokeA
          * 
          */
         public Builder securityConnectorName(String securityConnectorName) {
-            $.securityConnectorName = securityConnectorName;
-            return this;
+            return securityConnectorName(Output.of(securityConnectorName));
         }
 
         public GetSecurityConnectorArgs build() {

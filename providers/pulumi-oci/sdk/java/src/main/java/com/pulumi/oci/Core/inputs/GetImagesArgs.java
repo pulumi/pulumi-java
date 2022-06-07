@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetImagesFilter;
+import com.pulumi.oci.Core.inputs.GetImagesFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,20 +37,20 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the given display name exactly.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetImagesFilter> filters;
+    private @Nullable Output<List<GetImagesFilterArgs>> filters;
 
-    public Optional<List<GetImagesFilter>> filters() {
+    public Optional<Output<List<GetImagesFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operatingSystem")
-    private @Nullable String operatingSystem;
+    private @Nullable Output<String> operatingSystem;
 
     /**
      * @return The image&#39;s operating system.  Example: `Oracle Linux`
      * 
      */
-    public Optional<String> operatingSystem() {
+    public Optional<Output<String>> operatingSystem() {
         return Optional.ofNullable(this.operatingSystem);
     }
 
@@ -73,13 +74,13 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operatingSystemVersion")
-    private @Nullable String operatingSystemVersion;
+    private @Nullable Output<String> operatingSystemVersion;
 
     /**
      * @return The image&#39;s operating system version.  Example: `7.2`
      * 
      */
-    public Optional<String> operatingSystemVersion() {
+    public Optional<Output<String>> operatingSystemVersion() {
         return Optional.ofNullable(this.operatingSystemVersion);
     }
 
@@ -88,13 +89,13 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shape")
-    private @Nullable String shape;
+    private @Nullable Output<String> shape;
 
     /**
      * @return Shape name.
      * 
      */
-    public Optional<String> shape() {
+    public Optional<Output<String>> shape() {
         return Optional.ofNullable(this.shape);
     }
 
@@ -103,13 +104,13 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortBy")
-    private @Nullable String sortBy;
+    private @Nullable Output<String> sortBy;
 
     /**
      * @return Sort the resources returned, by creation time or display name. Example `TIMECREATED` or `DISPLAYNAME`.
      * 
      */
-    public Optional<String> sortBy() {
+    public Optional<Output<String>> sortBy() {
         return Optional.ofNullable(this.sortBy);
     }
 
@@ -118,13 +119,13 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortOrder")
-    private @Nullable String sortOrder;
+    private @Nullable Output<String> sortOrder;
 
     /**
      * @return The sort order to use, either ascending (`ASC`) or descending (`DESC`).
      * 
      */
-    public Optional<String> sortOrder() {
+    public Optional<Output<String>> sortOrder() {
         return Optional.ofNullable(this.sortOrder);
     }
 
@@ -133,13 +134,13 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -181,8 +182,29 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the given display name exactly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -192,17 +214,20 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
-            return this;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
 
-        public Builder filters(@Nullable List<GetImagesFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetImagesFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetImagesFilter... filters) {
+        public Builder filters(List<GetImagesFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetImagesFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -212,8 +237,29 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder operatingSystem(@Nullable String operatingSystem) {
+        public Builder operatingSystem(@Nullable Output<String> operatingSystem) {
             $.operatingSystem = operatingSystem;
+            return this;
+        }
+
+        /**
+         * @param operatingSystem The image&#39;s operating system.  Example: `Oracle Linux`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operatingSystem(String operatingSystem) {
+            return operatingSystem(Output.of(operatingSystem));
+        }
+
+        /**
+         * @param operatingSystemVersion The image&#39;s operating system version.  Example: `7.2`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operatingSystemVersion(@Nullable Output<String> operatingSystemVersion) {
+            $.operatingSystemVersion = operatingSystemVersion;
             return this;
         }
 
@@ -223,8 +269,18 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder operatingSystemVersion(@Nullable String operatingSystemVersion) {
-            $.operatingSystemVersion = operatingSystemVersion;
+        public Builder operatingSystemVersion(String operatingSystemVersion) {
+            return operatingSystemVersion(Output.of(operatingSystemVersion));
+        }
+
+        /**
+         * @param shape Shape name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder shape(@Nullable Output<String> shape) {
+            $.shape = shape;
             return this;
         }
 
@@ -234,8 +290,18 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder shape(@Nullable String shape) {
-            $.shape = shape;
+        public Builder shape(String shape) {
+            return shape(Output.of(shape));
+        }
+
+        /**
+         * @param sortBy Sort the resources returned, by creation time or display name. Example `TIMECREATED` or `DISPLAYNAME`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sortBy(@Nullable Output<String> sortBy) {
+            $.sortBy = sortBy;
             return this;
         }
 
@@ -245,8 +311,18 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sortBy(@Nullable String sortBy) {
-            $.sortBy = sortBy;
+        public Builder sortBy(String sortBy) {
+            return sortBy(Output.of(sortBy));
+        }
+
+        /**
+         * @param sortOrder The sort order to use, either ascending (`ASC`) or descending (`DESC`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sortOrder(@Nullable Output<String> sortOrder) {
+            $.sortOrder = sortOrder;
             return this;
         }
 
@@ -256,8 +332,18 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder sortOrder(@Nullable String sortOrder) {
-            $.sortOrder = sortOrder;
+        public Builder sortOrder(String sortOrder) {
+            return sortOrder(Output.of(sortOrder));
+        }
+
+        /**
+         * @param state A filter to only return resources that match the given lifecycle state.  The state value is case-insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -267,9 +353,8 @@ public final class GetImagesArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
-            return this;
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
 
         public GetImagesArgs build() {

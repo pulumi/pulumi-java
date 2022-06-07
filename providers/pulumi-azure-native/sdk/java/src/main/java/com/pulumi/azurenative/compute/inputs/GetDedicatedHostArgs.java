@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return The expand expression to apply on the operation.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="hostGroupName", required=true)
-    private String hostGroupName;
+    private Output<String> hostGroupName;
 
     /**
      * @return The name of the dedicated host group.
      * 
      */
-    public String hostGroupName() {
+    public Output<String> hostGroupName() {
         return this.hostGroupName;
     }
 
@@ -49,13 +50,13 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="hostName", required=true)
-    private String hostName;
+    private Output<String> hostName;
 
     /**
      * @return The name of the dedicated host.
      * 
      */
-    public String hostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -64,13 +65,13 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,8 +108,29 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param hostGroupName The name of the dedicated host group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostGroupName(Output<String> hostGroupName) {
+            $.hostGroupName = hostGroupName;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder hostGroupName(String hostGroupName) {
-            $.hostGroupName = hostGroupName;
+            return hostGroupName(Output.of(hostGroupName));
+        }
+
+        /**
+         * @param hostName The name of the dedicated host.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hostName(Output<String> hostName) {
+            $.hostName = hostName;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder hostName(String hostName) {
-            $.hostName = hostName;
+            return hostName(Output.of(hostName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -141,8 +183,7 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetDedicatedHostArgs build() {

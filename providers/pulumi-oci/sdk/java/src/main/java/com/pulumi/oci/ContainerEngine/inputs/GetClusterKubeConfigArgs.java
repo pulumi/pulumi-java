@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.ContainerEngine.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,13 +21,13 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="clusterId", required=true)
-    private String clusterId;
+    private Output<String> clusterId;
 
     /**
      * @return The OCID of the cluster.
      * 
      */
-    public String clusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -35,13 +36,13 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="endpoint")
-    private @Nullable String endpoint;
+    private @Nullable Output<String> endpoint;
 
     /**
      * @return The endpoint to target. A cluster may have multiple endpoints exposed but the kubeconfig can only target one at a time.
      * 
      */
-    public Optional<String> endpoint() {
+    public Optional<Output<String>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
 
@@ -50,13 +51,13 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="expiration")
-    private @Nullable Integer expiration;
+    private @Nullable Output<Integer> expiration;
 
     /**
      * @return Deprecated. This field is no longer used.
      * 
      */
-    public Optional<Integer> expiration() {
+    public Optional<Output<Integer>> expiration() {
         return Optional.ofNullable(this.expiration);
     }
 
@@ -65,13 +66,13 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tokenVersion")
-    private @Nullable String tokenVersion;
+    private @Nullable Output<String> tokenVersion;
 
     /**
      * @return The version of the kubeconfig token. Supported value 2.0.0
      * 
      */
-    public Optional<String> tokenVersion() {
+    public Optional<Output<String>> tokenVersion() {
         return Optional.ofNullable(this.tokenVersion);
     }
 
@@ -108,8 +109,29 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder clusterId(String clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * @param clusterId The OCID of the cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
+        }
+
+        /**
+         * @param endpoint The endpoint to target. A cluster may have multiple endpoints exposed but the kubeconfig can only target one at a time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpoint(@Nullable Output<String> endpoint) {
+            $.endpoint = endpoint;
             return this;
         }
 
@@ -119,8 +141,18 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder endpoint(@Nullable String endpoint) {
-            $.endpoint = endpoint;
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
+        }
+
+        /**
+         * @param expiration Deprecated. This field is no longer used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expiration(@Nullable Output<Integer> expiration) {
+            $.expiration = expiration;
             return this;
         }
 
@@ -130,8 +162,18 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder expiration(@Nullable Integer expiration) {
-            $.expiration = expiration;
+        public Builder expiration(Integer expiration) {
+            return expiration(Output.of(expiration));
+        }
+
+        /**
+         * @param tokenVersion The version of the kubeconfig token. Supported value 2.0.0
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tokenVersion(@Nullable Output<String> tokenVersion) {
+            $.tokenVersion = tokenVersion;
             return this;
         }
 
@@ -141,9 +183,8 @@ public final class GetClusterKubeConfigArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder tokenVersion(@Nullable String tokenVersion) {
-            $.tokenVersion = tokenVersion;
-            return this;
+        public Builder tokenVersion(String tokenVersion) {
+            return tokenVersion(Output.of(tokenVersion));
         }
 
         public GetClusterKubeConfigArgs build() {

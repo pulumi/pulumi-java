@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iottwinmaker.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="entityId", required=true)
-    private String entityId;
+    private Output<String> entityId;
 
     /**
      * @return The ID of the entity.
      * 
      */
-    public String entityId() {
+    public Output<String> entityId() {
         return this.entityId;
     }
 
@@ -32,13 +33,13 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceId", required=true)
-    private String workspaceId;
+    private Output<String> workspaceId;
 
     /**
      * @return The ID of the workspace.
      * 
      */
-    public String workspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -73,8 +74,29 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder entityId(String entityId) {
+        public Builder entityId(Output<String> entityId) {
             $.entityId = entityId;
+            return this;
+        }
+
+        /**
+         * @param entityId The ID of the entity.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder entityId(String entityId) {
+            return entityId(Output.of(entityId));
+        }
+
+        /**
+         * @param workspaceId The ID of the workspace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceId(Output<String> workspaceId) {
+            $.workspaceId = workspaceId;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetEntityArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder workspaceId(String workspaceId) {
-            $.workspaceId = workspaceId;
-            return this;
+            return workspaceId(Output.of(workspaceId));
         }
 
         public GetEntityArgs build() {

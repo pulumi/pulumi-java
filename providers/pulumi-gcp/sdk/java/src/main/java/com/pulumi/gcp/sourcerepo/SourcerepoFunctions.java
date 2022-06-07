@@ -3,11 +3,13 @@
 
 package com.pulumi.gcp.sourcerepo;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.sourcerepo.inputs.GetRepositoryArgs;
+import com.pulumi.gcp.sourcerepo.inputs.GetRepositoryPlainArgs;
 import com.pulumi.gcp.sourcerepo.outputs.GetRepositoryResult;
 import java.util.concurrent.CompletableFuture;
 
@@ -42,7 +44,7 @@ public final class SourcerepoFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
         return getRepository(args, InvokeOptions.Empty);
     }
     /**
@@ -75,7 +77,73 @@ public final class SourcerepoFunctions {
      * ```
      * 
      */
-    public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRepositoryResult> getRepositoryPlain(GetRepositoryPlainArgs args) {
+        return getRepositoryPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Get infomation about an existing Google Cloud Source Repository.
+     * For more information see [the official documentation](https://cloud.google.com/source-repositories)
+     * and
+     * [API](https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-repo = Output.of(SourcerepoFunctions.getRepository(GetRepositoryArgs.builder()
+     *             .name(&#34;my-repository&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static Output<GetRepositoryResult> getRepository(GetRepositoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("gcp:sourcerepo/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get infomation about an existing Google Cloud Source Repository.
+     * For more information see [the official documentation](https://cloud.google.com/source-repositories)
+     * and
+     * [API](https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos).
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-repo = Output.of(SourcerepoFunctions.getRepository(GetRepositoryArgs.builder()
+     *             .name(&#34;my-repository&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
+    public static CompletableFuture<GetRepositoryResult> getRepositoryPlain(GetRepositoryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:sourcerepo/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args, Utilities.withVersion(options));
     }
 }

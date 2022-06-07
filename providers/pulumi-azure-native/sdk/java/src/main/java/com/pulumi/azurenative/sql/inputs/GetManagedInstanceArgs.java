@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.sql.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return The child resources to include in the response.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="managedInstanceName", required=true)
-    private String managedInstanceName;
+    private Output<String> managedInstanceName;
 
     /**
      * @return The name of the managed instance.
      * 
      */
-    public String managedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -49,13 +50,13 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,29 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The child resources to include in the response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedInstanceName(Output<String> managedInstanceName) {
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder managedInstanceName(String managedInstanceName) {
-            $.managedInstanceName = managedInstanceName;
+            return managedInstanceName(Output.of(managedInstanceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetManagedInstanceArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azure.storage.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
@@ -20,13 +21,13 @@ public final class GetStorageContainerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="metadata")
-    private @Nullable Map<String,String> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
     /**
      * @return A mapping of MetaData for this Container.
      * 
      */
-    public Optional<Map<String,String>> metadata() {
+    public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
 
@@ -35,13 +36,13 @@ public final class GetStorageContainerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the Container.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -50,13 +51,13 @@ public final class GetStorageContainerArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="storageAccountName", required=true)
-    private String storageAccountName;
+    private Output<String> storageAccountName;
 
     /**
      * @return The name of the Storage Account where the Container exists.
      * 
      */
-    public String storageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -92,8 +93,29 @@ public final class GetStorageContainerArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder metadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
+            return this;
+        }
+
+        /**
+         * @param metadata A mapping of MetaData for this Container.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
+        }
+
+        /**
+         * @param name The name of the Container.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -104,7 +126,17 @@ public final class GetStorageContainerArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param storageAccountName The name of the Storage Account where the Container exists.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder storageAccountName(Output<String> storageAccountName) {
+            $.storageAccountName = storageAccountName;
             return this;
         }
 
@@ -115,8 +147,7 @@ public final class GetStorageContainerArgs extends com.pulumi.resources.InvokeAr
          * 
          */
         public Builder storageAccountName(String storageAccountName) {
-            $.storageAccountName = storageAccountName;
-            return this;
+            return storageAccountName(Output.of(storageAccountName));
         }
 
         public GetStorageContainerArgs build() {

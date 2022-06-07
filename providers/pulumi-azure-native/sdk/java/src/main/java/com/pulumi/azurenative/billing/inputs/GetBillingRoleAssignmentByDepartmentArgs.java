@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.billing.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
      * 
      */
     @Import(name="billingAccountName", required=true)
-    private String billingAccountName;
+    private Output<String> billingAccountName;
 
     /**
      * @return The ID that uniquely identifies a billing account.
      * 
      */
-    public String billingAccountName() {
+    public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
      * 
      */
     @Import(name="billingRoleAssignmentName", required=true)
-    private String billingRoleAssignmentName;
+    private Output<String> billingRoleAssignmentName;
 
     /**
      * @return The ID that uniquely identifies a role assignment.
      * 
      */
-    public String billingRoleAssignmentName() {
+    public Output<String> billingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
     }
 
@@ -47,13 +48,13 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
      * 
      */
     @Import(name="departmentName", required=true)
-    private String departmentName;
+    private Output<String> departmentName;
 
     /**
      * @return The ID that uniquely identifies a department.
      * 
      */
-    public String departmentName() {
+    public Output<String> departmentName() {
         return this.departmentName;
     }
 
@@ -89,8 +90,29 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder billingAccountName(String billingAccountName) {
+        public Builder billingAccountName(Output<String> billingAccountName) {
             $.billingAccountName = billingAccountName;
+            return this;
+        }
+
+        /**
+         * @param billingAccountName The ID that uniquely identifies a billing account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccountName(String billingAccountName) {
+            return billingAccountName(Output.of(billingAccountName));
+        }
+
+        /**
+         * @param billingRoleAssignmentName The ID that uniquely identifies a role assignment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingRoleAssignmentName(Output<String> billingRoleAssignmentName) {
+            $.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
          * 
          */
         public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
-            $.billingRoleAssignmentName = billingRoleAssignmentName;
+            return billingRoleAssignmentName(Output.of(billingRoleAssignmentName));
+        }
+
+        /**
+         * @param departmentName The ID that uniquely identifies a department.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder departmentName(Output<String> departmentName) {
+            $.departmentName = departmentName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
          * 
          */
         public Builder departmentName(String departmentName) {
-            $.departmentName = departmentName;
-            return this;
+            return departmentName(Output.of(departmentName));
         }
 
         public GetBillingRoleAssignmentByDepartmentArgs build() {

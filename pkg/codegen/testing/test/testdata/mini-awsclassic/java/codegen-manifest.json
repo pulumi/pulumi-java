@@ -10,6 +10,7 @@
     "src/main/java/com/pulumi/aws/config_endpoints/inputs/Endpoints.java",
     "src/main/java/com/pulumi/aws/ec2_getAmi/Ec2_getAmiFunctions.java",
     "src/main/java/com/pulumi/aws/ec2_getAmi/inputs/GetAmiArgs.java",
+    "src/main/java/com/pulumi/aws/ec2_getAmi/inputs/GetAmiPlainArgs.java",
     "src/main/java/com/pulumi/aws/ec2_getAmi/outputs/GetAmiResult.java",
     "src/main/java/com/pulumi/aws/iam_instanceProfile/InstanceProfile.java",
     "src/main/java/com/pulumi/aws/iam_instanceProfile/InstanceProfileArgs.java",

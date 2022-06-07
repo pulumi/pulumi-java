@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.Analytics.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAnalyticsInstanceArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="analyticsInstanceId", required=true)
-    private String analyticsInstanceId;
+    private Output<String> analyticsInstanceId;
 
     /**
      * @return The OCID of the AnalyticsInstance.
      * 
      */
-    public String analyticsInstanceId() {
+    public Output<String> analyticsInstanceId() {
         return this.analyticsInstanceId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAnalyticsInstanceArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder analyticsInstanceId(String analyticsInstanceId) {
+        public Builder analyticsInstanceId(Output<String> analyticsInstanceId) {
             $.analyticsInstanceId = analyticsInstanceId;
             return this;
+        }
+
+        /**
+         * @param analyticsInstanceId The OCID of the AnalyticsInstance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder analyticsInstanceId(String analyticsInstanceId) {
+            return analyticsInstanceId(Output.of(analyticsInstanceId));
         }
 
         public GetAnalyticsInstanceArgs build() {

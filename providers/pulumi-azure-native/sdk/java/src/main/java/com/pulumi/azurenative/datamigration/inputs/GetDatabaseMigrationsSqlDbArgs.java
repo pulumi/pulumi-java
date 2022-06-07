@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.datamigration.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return Complete migration details be included in the response.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="migrationOperationId")
-    private @Nullable String migrationOperationId;
+    private @Nullable Output<String> migrationOperationId;
 
     /**
      * @return Optional migration operation ID. If this is provided, then details of migration operation for that ID are retrieved. If not provided (default), then details related to most recent or current operation are retrieved.
      * 
      */
-    public Optional<String> migrationOperationId() {
+    public Optional<Output<String>> migrationOperationId() {
         return Optional.ofNullable(this.migrationOperationId);
     }
 
@@ -49,20 +50,20 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="sqlDbInstanceName", required=true)
-    private String sqlDbInstanceName;
+    private Output<String> sqlDbInstanceName;
 
-    public String sqlDbInstanceName() {
+    public Output<String> sqlDbInstanceName() {
         return this.sqlDbInstanceName;
     }
 
@@ -71,13 +72,13 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="targetDbName", required=true)
-    private String targetDbName;
+    private Output<String> targetDbName;
 
     /**
      * @return The name of the target database.
      * 
      */
-    public String targetDbName() {
+    public Output<String> targetDbName() {
         return this.targetDbName;
     }
 
@@ -115,8 +116,29 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand Complete migration details be included in the response.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param migrationOperationId Optional migration operation ID. If this is provided, then details of migration operation for that ID are retrieved. If not provided (default), then details related to most recent or current operation are retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder migrationOperationId(@Nullable Output<String> migrationOperationId) {
+            $.migrationOperationId = migrationOperationId;
             return this;
         }
 
@@ -126,8 +148,18 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder migrationOperationId(@Nullable String migrationOperationId) {
-            $.migrationOperationId = migrationOperationId;
+        public Builder migrationOperationId(String migrationOperationId) {
+            return migrationOperationId(Output.of(migrationOperationId));
+        }
+
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -138,12 +170,26 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public Builder sqlDbInstanceName(Output<String> sqlDbInstanceName) {
+            $.sqlDbInstanceName = sqlDbInstanceName;
             return this;
         }
 
         public Builder sqlDbInstanceName(String sqlDbInstanceName) {
-            $.sqlDbInstanceName = sqlDbInstanceName;
+            return sqlDbInstanceName(Output.of(sqlDbInstanceName));
+        }
+
+        /**
+         * @param targetDbName The name of the target database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetDbName(Output<String> targetDbName) {
+            $.targetDbName = targetDbName;
             return this;
         }
 
@@ -154,8 +200,7 @@ public final class GetDatabaseMigrationsSqlDbArgs extends com.pulumi.resources.I
          * 
          */
         public Builder targetDbName(String targetDbName) {
-            $.targetDbName = targetDbName;
-            return this;
+            return targetDbName(Output.of(targetDbName));
         }
 
         public GetDatabaseMigrationsSqlDbArgs build() {

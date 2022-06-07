@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Jms.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Jms.inputs.GetFleetBlocklistsFilter;
+import com.pulumi.oci.Jms.inputs.GetFleetBlocklistsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
     public static final GetFleetBlocklistsArgs Empty = new GetFleetBlocklistsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetFleetBlocklistsFilter> filters;
+    private @Nullable Output<List<GetFleetBlocklistsFilterArgs>> filters;
 
-    public Optional<List<GetFleetBlocklistsFilter>> filters() {
+    public Optional<Output<List<GetFleetBlocklistsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="fleetId", required=true)
-    private String fleetId;
+    private Output<String> fleetId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Fleet.
      * 
      */
-    public String fleetId() {
+    public Output<String> fleetId() {
         return this.fleetId;
     }
 
@@ -43,13 +44,13 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="managedInstanceId")
-    private @Nullable String managedInstanceId;
+    private @Nullable Output<String> managedInstanceId;
 
     /**
      * @return The Fleet-unique identifier of the related managed instance.
      * 
      */
-    public Optional<String> managedInstanceId() {
+    public Optional<Output<String>> managedInstanceId() {
         return Optional.ofNullable(this.managedInstanceId);
     }
 
@@ -58,13 +59,13 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="operation")
-    private @Nullable String operation;
+    private @Nullable Output<String> operation;
 
     /**
      * @return The operation type.
      * 
      */
-    public Optional<String> operation() {
+    public Optional<Output<String>> operation() {
         return Optional.ofNullable(this.operation);
     }
 
@@ -95,12 +96,16 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
             $ = new GetFleetBlocklistsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetFleetBlocklistsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetFleetBlocklistsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetFleetBlocklistsFilter... filters) {
+        public Builder filters(List<GetFleetBlocklistsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetFleetBlocklistsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -110,8 +115,29 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder fleetId(String fleetId) {
+        public Builder fleetId(Output<String> fleetId) {
             $.fleetId = fleetId;
+            return this;
+        }
+
+        /**
+         * @param fleetId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the Fleet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fleetId(String fleetId) {
+            return fleetId(Output.of(fleetId));
+        }
+
+        /**
+         * @param managedInstanceId The Fleet-unique identifier of the related managed instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedInstanceId(@Nullable Output<String> managedInstanceId) {
+            $.managedInstanceId = managedInstanceId;
             return this;
         }
 
@@ -121,8 +147,18 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder managedInstanceId(@Nullable String managedInstanceId) {
-            $.managedInstanceId = managedInstanceId;
+        public Builder managedInstanceId(String managedInstanceId) {
+            return managedInstanceId(Output.of(managedInstanceId));
+        }
+
+        /**
+         * @param operation The operation type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operation(@Nullable Output<String> operation) {
+            $.operation = operation;
             return this;
         }
 
@@ -132,9 +168,8 @@ public final class GetFleetBlocklistsArgs extends com.pulumi.resources.InvokeArg
          * @return builder
          * 
          */
-        public Builder operation(@Nullable String operation) {
-            $.operation = operation;
-            return this;
+        public Builder operation(String operation) {
+            return operation(Output.of(operation));
         }
 
         public GetFleetBlocklistsArgs build() {

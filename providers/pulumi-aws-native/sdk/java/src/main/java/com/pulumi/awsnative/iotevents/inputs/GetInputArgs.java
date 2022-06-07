@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iotevents.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetInputArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputName", required=true)
-    private String inputName;
+    private Output<String> inputName;
 
     /**
      * @return The name of the input.
      * 
      */
-    public String inputName() {
+    public Output<String> inputName() {
         return this.inputName;
     }
 
@@ -57,9 +58,19 @@ public final class GetInputArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder inputName(String inputName) {
+        public Builder inputName(Output<String> inputName) {
             $.inputName = inputName;
             return this;
+        }
+
+        /**
+         * @param inputName The name of the input.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder inputName(String inputName) {
+            return inputName(Output.of(inputName));
         }
 
         public GetInputArgs build() {

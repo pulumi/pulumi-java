@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DataFlow.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DataFlow.inputs.GetRunLogsFilter;
+import com.pulumi.oci.DataFlow.inputs.GetRunLogsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetRunLogsArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRunLogsArgs Empty = new GetRunLogsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetRunLogsFilter> filters;
+    private @Nullable Output<List<GetRunLogsFilterArgs>> filters;
 
-    public Optional<List<GetRunLogsFilter>> filters() {
+    public Optional<Output<List<GetRunLogsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetRunLogsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="runId", required=true)
-    private String runId;
+    private Output<String> runId;
 
     /**
      * @return The unique ID for the run
      * 
      */
-    public String runId() {
+    public Output<String> runId() {
         return this.runId;
     }
 
@@ -63,12 +64,16 @@ public final class GetRunLogsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRunLogsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetRunLogsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetRunLogsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetRunLogsFilter... filters) {
+        public Builder filters(List<GetRunLogsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetRunLogsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetRunLogsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder runId(String runId) {
+        public Builder runId(Output<String> runId) {
             $.runId = runId;
             return this;
+        }
+
+        /**
+         * @param runId The unique ID for the run
+         * 
+         * @return builder
+         * 
+         */
+        public Builder runId(String runId) {
+            return runId(Output.of(runId));
         }
 
         public GetRunLogsArgs build() {

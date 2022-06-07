@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.policyinsights.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAttestationAtResourceGroupArgs extends com.pulumi.resource
      * 
      */
     @Import(name="attestationName", required=true)
-    private String attestationName;
+    private Output<String> attestationName;
 
     /**
      * @return The name of the attestation.
      * 
      */
-    public String attestationName() {
+    public Output<String> attestationName() {
         return this.attestationName;
     }
 
@@ -32,13 +33,13 @@ public final class GetAttestationAtResourceGroupArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetAttestationAtResourceGroupArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder attestationName(String attestationName) {
+        public Builder attestationName(Output<String> attestationName) {
             $.attestationName = attestationName;
+            return this;
+        }
+
+        /**
+         * @param attestationName The name of the attestation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder attestationName(String attestationName) {
+            return attestationName(Output.of(attestationName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetAttestationAtResourceGroupArgs extends com.pulumi.resource
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetAttestationAtResourceGroupArgs build() {

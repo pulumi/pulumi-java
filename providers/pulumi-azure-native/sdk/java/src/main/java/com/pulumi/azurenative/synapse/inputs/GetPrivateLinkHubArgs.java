@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.synapse.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetPrivateLinkHubArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="privateLinkHubName", required=true)
-    private String privateLinkHubName;
+    private Output<String> privateLinkHubName;
 
     /**
      * @return Name of the privateLinkHub
      * 
      */
-    public String privateLinkHubName() {
+    public Output<String> privateLinkHubName() {
         return this.privateLinkHubName;
     }
 
@@ -32,13 +33,13 @@ public final class GetPrivateLinkHubArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -73,8 +74,29 @@ public final class GetPrivateLinkHubArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder privateLinkHubName(String privateLinkHubName) {
+        public Builder privateLinkHubName(Output<String> privateLinkHubName) {
             $.privateLinkHubName = privateLinkHubName;
+            return this;
+        }
+
+        /**
+         * @param privateLinkHubName Name of the privateLinkHub
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateLinkHubName(String privateLinkHubName) {
+            return privateLinkHubName(Output.of(privateLinkHubName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -85,8 +107,7 @@ public final class GetPrivateLinkHubArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetPrivateLinkHubArgs build() {

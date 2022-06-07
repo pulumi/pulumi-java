@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.run_v1alpha1.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetJobArgs Empty = new GetJobArgs();
 
     @Import(name="jobId", required=true)
-    private String jobId;
+    private Output<String> jobId;
 
-    public String jobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
 
     @Import(name="namespaceId", required=true)
-    private String namespaceId;
+    private Output<String> namespaceId;
 
-    public String namespaceId() {
+    public Output<String> namespaceId() {
         return this.namespaceId;
     }
 
@@ -51,14 +52,22 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetJobArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder jobId(String jobId) {
+        public Builder jobId(Output<String> jobId) {
             $.jobId = jobId;
             return this;
         }
 
-        public Builder namespaceId(String namespaceId) {
+        public Builder jobId(String jobId) {
+            return jobId(Output.of(jobId));
+        }
+
+        public Builder namespaceId(Output<String> namespaceId) {
             $.namespaceId = namespaceId;
             return this;
+        }
+
+        public Builder namespaceId(String namespaceId) {
+            return namespaceId(Output.of(namespaceId));
         }
 
         public GetJobArgs build() {

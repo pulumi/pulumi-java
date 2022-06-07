@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="connectionName", required=true)
-    private String connectionName;
+    private Output<String> connectionName;
 
     /**
      * @return The name of the vpn connection.
      * 
      */
-    public String connectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="gatewayName", required=true)
-    private String gatewayName;
+    private Output<String> gatewayName;
 
     /**
      * @return The name of the gateway.
      * 
      */
-    public String gatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name of the VpnGateway.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder connectionName(String connectionName) {
+        public Builder connectionName(Output<String> connectionName) {
             $.connectionName = connectionName;
+            return this;
+        }
+
+        /**
+         * @param connectionName The name of the vpn connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
+        }
+
+        /**
+         * @param gatewayName The name of the gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gatewayName(Output<String> gatewayName) {
+            $.gatewayName = gatewayName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder gatewayName(String gatewayName) {
-            $.gatewayName = gatewayName;
+            return gatewayName(Output.of(gatewayName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name of the VpnGateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVpnConnectionArgs extends com.pulumi.resources.InvokeArgs 
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetVpnConnectionArgs build() {

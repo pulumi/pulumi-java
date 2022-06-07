@@ -4,6 +4,7 @@
 package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.azurenative.apimanagement.enums.KeyType;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
@@ -19,13 +20,13 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="expiry", required=true)
-    private String expiry;
+    private Output<String> expiry;
 
     /**
      * @return The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public String expiry() {
+    public Output<String> expiry() {
         return this.expiry;
     }
 
@@ -34,13 +35,13 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="keyType", required=true)
-    private KeyType keyType;
+    private Output<KeyType> keyType;
 
     /**
      * @return The Key to be used to generate token for user.
      * 
      */
-    public KeyType keyType() {
+    public Output<KeyType> keyType() {
         return this.keyType;
     }
 
@@ -49,13 +50,13 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,13 +65,13 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the API Management service.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -79,13 +80,13 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userId", required=true)
-    private String userId;
+    private Output<String> userId;
 
     /**
      * @return User identifier. Must be unique in the current API Management service instance.
      * 
      */
-    public String userId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -123,8 +124,29 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
          * @return builder
          * 
          */
-        public Builder expiry(String expiry) {
+        public Builder expiry(Output<String> expiry) {
             $.expiry = expiry;
+            return this;
+        }
+
+        /**
+         * @param expiry The Expiry time of the Token. Maximum token expiry time is set to 30 days. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expiry(String expiry) {
+            return expiry(Output.of(expiry));
+        }
+
+        /**
+         * @param keyType The Key to be used to generate token for user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyType(Output<KeyType> keyType) {
+            $.keyType = keyType;
             return this;
         }
 
@@ -135,7 +157,17 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder keyType(KeyType keyType) {
-            $.keyType = keyType;
+            return keyType(Output.of(keyType));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -146,7 +178,17 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -157,7 +199,17 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
+            return serviceName(Output.of(serviceName));
+        }
+
+        /**
+         * @param userId User identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userId(Output<String> userId) {
+            $.userId = userId;
             return this;
         }
 
@@ -168,13 +220,12 @@ public final class GetUserSharedAccessTokenArgs extends com.pulumi.resources.Inv
          * 
          */
         public Builder userId(String userId) {
-            $.userId = userId;
-            return this;
+            return userId(Output.of(userId));
         }
 
         public GetUserSharedAccessTokenArgs build() {
             $.expiry = Objects.requireNonNull($.expiry, "expected parameter 'expiry' to be non-null");
-            $.keyType = Codegen.objectProp("keyType", KeyType.class).arg($.keyType).def(KeyType.Primary).require();
+            $.keyType = Codegen.objectProp("keyType", KeyType.class).output().arg($.keyType).def(KeyType.Primary).require();
             $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
             $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
             $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");

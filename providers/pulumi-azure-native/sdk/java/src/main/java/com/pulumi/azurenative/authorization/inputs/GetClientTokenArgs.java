@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.authorization.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetClientTokenArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpoint")
-    private @Nullable String endpoint;
+    private @Nullable Output<String> endpoint;
 
     /**
      * @return Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.
      * 
      */
-    public Optional<String> endpoint() {
+    public Optional<Output<String>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
 
@@ -59,9 +60,19 @@ public final class GetClientTokenArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder endpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
+        }
+
+        /**
+         * @param endpoint Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
 
         public GetClientTokenArgs build() {

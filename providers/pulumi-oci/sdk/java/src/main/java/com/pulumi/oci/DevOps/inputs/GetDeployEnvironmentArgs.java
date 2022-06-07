@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetDeployEnvironmentArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deployEnvironmentId", required=true)
-    private String deployEnvironmentId;
+    private Output<String> deployEnvironmentId;
 
     /**
      * @return Unique environment identifier.
      * 
      */
-    public String deployEnvironmentId() {
+    public Output<String> deployEnvironmentId() {
         return this.deployEnvironmentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetDeployEnvironmentArgs extends com.pulumi.resources.InvokeA
          * @return builder
          * 
          */
-        public Builder deployEnvironmentId(String deployEnvironmentId) {
+        public Builder deployEnvironmentId(Output<String> deployEnvironmentId) {
             $.deployEnvironmentId = deployEnvironmentId;
             return this;
+        }
+
+        /**
+         * @param deployEnvironmentId Unique environment identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deployEnvironmentId(String deployEnvironmentId) {
+            return deployEnvironmentId(Output.of(deployEnvironmentId));
         }
 
         public GetDeployEnvironmentArgs build() {

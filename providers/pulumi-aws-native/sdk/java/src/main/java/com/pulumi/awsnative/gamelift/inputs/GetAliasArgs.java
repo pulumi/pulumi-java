@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.gamelift.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aliasId", required=true)
-    private String aliasId;
+    private Output<String> aliasId;
 
     /**
      * @return Unique alias ID
      * 
      */
-    public String aliasId() {
+    public Output<String> aliasId() {
         return this.aliasId;
     }
 
@@ -57,9 +58,19 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder aliasId(String aliasId) {
+        public Builder aliasId(Output<String> aliasId) {
             $.aliasId = aliasId;
             return this;
+        }
+
+        /**
+         * @param aliasId Unique alias ID
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aliasId(String aliasId) {
+            return aliasId(Output.of(aliasId));
         }
 
         public GetAliasArgs build() {

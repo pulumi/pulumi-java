@@ -3,6 +3,7 @@
 
 package com.pulumi.azuread.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetAdministrativeUnitArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return Specifies the display name of the administrative unit.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -34,13 +35,13 @@ public final class GetAdministrativeUnitArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="objectId")
-    private @Nullable String objectId;
+    private @Nullable Output<String> objectId;
 
     /**
      * @return Specifies the object ID of the administrative unit.
      * 
      */
-    public Optional<String> objectId() {
+    public Optional<Output<String>> objectId() {
         return Optional.ofNullable(this.objectId);
     }
 
@@ -75,8 +76,29 @@ public final class GetAdministrativeUnitArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * @param displayName Specifies the display name of the administrative unit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param objectId Specifies the object ID of the administrative unit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectId(@Nullable Output<String> objectId) {
+            $.objectId = objectId;
             return this;
         }
 
@@ -86,9 +108,8 @@ public final class GetAdministrativeUnitArgs extends com.pulumi.resources.Invoke
          * @return builder
          * 
          */
-        public Builder objectId(@Nullable String objectId) {
-            $.objectId = objectId;
-            return this;
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
 
         public GetAdministrativeUnitArgs build() {

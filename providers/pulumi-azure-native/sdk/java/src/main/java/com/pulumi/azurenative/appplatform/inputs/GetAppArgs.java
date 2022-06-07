@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.appplatform.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appName", required=true)
-    private String appName;
+    private Output<String> appName;
 
     /**
      * @return The name of the App resource.
      * 
      */
-    public String appName() {
+    public Output<String> appName() {
         return this.appName;
     }
 
@@ -34,13 +35,13 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -49,13 +50,13 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-    private String serviceName;
+    private Output<String> serviceName;
 
     /**
      * @return The name of the Service resource.
      * 
      */
-    public String serviceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -64,13 +65,13 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncStatus")
-    private @Nullable String syncStatus;
+    private @Nullable Output<String> syncStatus;
 
     /**
      * @return Indicates whether sync status
      * 
      */
-    public Optional<String> syncStatus() {
+    public Optional<Output<String>> syncStatus() {
         return Optional.ofNullable(this.syncStatus);
     }
 
@@ -107,8 +108,29 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder appName(String appName) {
+        public Builder appName(Output<String> appName) {
             $.appName = appName;
+            return this;
+        }
+
+        /**
+         * @param appName The name of the App resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appName(String appName) {
+            return appName(Output.of(appName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -119,7 +141,17 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceName(Output<String> serviceName) {
+            $.serviceName = serviceName;
             return this;
         }
 
@@ -130,7 +162,17 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder serviceName(String serviceName) {
-            $.serviceName = serviceName;
+            return serviceName(Output.of(serviceName));
+        }
+
+        /**
+         * @param syncStatus Indicates whether sync status
+         * 
+         * @return builder
+         * 
+         */
+        public Builder syncStatus(@Nullable Output<String> syncStatus) {
+            $.syncStatus = syncStatus;
             return this;
         }
 
@@ -140,9 +182,8 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder syncStatus(@Nullable String syncStatus) {
-            $.syncStatus = syncStatus;
-            return this;
+        public Builder syncStatus(String syncStatus) {
+            return syncStatus(Output.of(syncStatus));
         }
 
         public GetAppArgs build() {

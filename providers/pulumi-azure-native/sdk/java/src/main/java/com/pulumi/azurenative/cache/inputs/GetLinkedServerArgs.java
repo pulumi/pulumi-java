@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.cache.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkedServerName", required=true)
-    private String linkedServerName;
+    private Output<String> linkedServerName;
 
     /**
      * @return The name of the linked server.
      * 
      */
-    public String linkedServerName() {
+    public Output<String> linkedServerName() {
         return this.linkedServerName;
     }
 
@@ -32,13 +33,13 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-    private String name;
+    private Output<String> name;
 
     /**
      * @return The name of the redis cache.
      * 
      */
-    public String name() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,13 +48,13 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder linkedServerName(String linkedServerName) {
+        public Builder linkedServerName(Output<String> linkedServerName) {
             $.linkedServerName = linkedServerName;
+            return this;
+        }
+
+        /**
+         * @param linkedServerName The name of the linked server.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder linkedServerName(String linkedServerName) {
+            return linkedServerName(Output.of(linkedServerName));
+        }
+
+        /**
+         * @param name The name of the redis cache.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder name(String name) {
-            $.name = name;
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetLinkedServerArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetLinkedServerArgs build() {

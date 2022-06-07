@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
      * 
      */
     @Import(name="natRuleName", required=true)
-    private String natRuleName;
+    private Output<String> natRuleName;
 
     /**
      * @return The name of the nat rule.
      * 
      */
-    public String natRuleName() {
+    public Output<String> natRuleName() {
         return this.natRuleName;
     }
 
@@ -32,13 +33,13 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The resource group name of the Virtual Network Gateway.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,13 +48,13 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
      * 
      */
     @Import(name="virtualNetworkGatewayName", required=true)
-    private String virtualNetworkGatewayName;
+    private Output<String> virtualNetworkGatewayName;
 
     /**
      * @return The name of the gateway.
      * 
      */
-    public String virtualNetworkGatewayName() {
+    public Output<String> virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 
@@ -89,8 +90,29 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder natRuleName(String natRuleName) {
+        public Builder natRuleName(Output<String> natRuleName) {
             $.natRuleName = natRuleName;
+            return this;
+        }
+
+        /**
+         * @param natRuleName The name of the nat rule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natRuleName(String natRuleName) {
+            return natRuleName(Output.of(natRuleName));
+        }
+
+        /**
+         * @param resourceGroupName The resource group name of the Virtual Network Gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param virtualNetworkGatewayName The name of the gateway.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualNetworkGatewayName(Output<String> virtualNetworkGatewayName) {
+            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetVirtualNetworkGatewayNatRuleArgs extends com.pulumi.resour
          * 
          */
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
-            $.virtualNetworkGatewayName = virtualNetworkGatewayName;
-            return this;
+            return virtualNetworkGatewayName(Output.of(virtualNetworkGatewayName));
         }
 
         public GetVirtualNetworkGatewayNatRuleArgs build() {

@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.synapse.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetIpFirewallRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group. The name is case insensitive.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,13 +33,13 @@ public final class GetIpFirewallRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ruleName", required=true)
-    private String ruleName;
+    private Output<String> ruleName;
 
     /**
      * @return The IP firewall rule name
      * 
      */
-    public String ruleName() {
+    public Output<String> ruleName() {
         return this.ruleName;
     }
 
@@ -47,13 +48,13 @@ public final class GetIpFirewallRuleArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="workspaceName", required=true)
-    private String workspaceName;
+    private Output<String> workspaceName;
 
     /**
      * @return The name of the workspace
      * 
      */
-    public String workspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -89,8 +90,29 @@ public final class GetIpFirewallRuleArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder resourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        /**
+         * @param ruleName The IP firewall rule name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ruleName(Output<String> ruleName) {
+            $.ruleName = ruleName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetIpFirewallRuleArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder ruleName(String ruleName) {
-            $.ruleName = ruleName;
+            return ruleName(Output.of(ruleName));
+        }
+
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workspaceName(Output<String> workspaceName) {
+            $.workspaceName = workspaceName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetIpFirewallRuleArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder workspaceName(String workspaceName) {
-            $.workspaceName = workspaceName;
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
 
         public GetIpFirewallRuleArgs build() {

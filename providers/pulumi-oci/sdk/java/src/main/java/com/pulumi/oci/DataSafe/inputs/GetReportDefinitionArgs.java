@@ -3,6 +3,7 @@
 
 package com.pulumi.oci.DataSafe.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetReportDefinitionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="reportDefinitionId", required=true)
-    private String reportDefinitionId;
+    private Output<String> reportDefinitionId;
 
     /**
      * @return Unique report definition identifier
      * 
      */
-    public String reportDefinitionId() {
+    public Output<String> reportDefinitionId() {
         return this.reportDefinitionId;
     }
 
@@ -57,9 +58,19 @@ public final class GetReportDefinitionArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder reportDefinitionId(String reportDefinitionId) {
+        public Builder reportDefinitionId(Output<String> reportDefinitionId) {
             $.reportDefinitionId = reportDefinitionId;
             return this;
+        }
+
+        /**
+         * @param reportDefinitionId Unique report definition identifier
+         * 
+         * @return builder
+         * 
+         */
+        public Builder reportDefinitionId(String reportDefinitionId) {
+            return reportDefinitionId(Output.of(reportDefinitionId));
         }
 
         public GetReportDefinitionArgs build() {

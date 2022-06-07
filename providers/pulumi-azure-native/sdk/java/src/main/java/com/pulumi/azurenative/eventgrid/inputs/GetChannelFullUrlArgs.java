@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetChannelFullUrlArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="channelName", required=true)
-    private String channelName;
+    private Output<String> channelName;
 
     /**
      * @return Name of the Channel.
      * 
      */
-    public String channelName() {
+    public Output<String> channelName() {
         return this.channelName;
     }
 
@@ -32,13 +33,13 @@ public final class GetChannelFullUrlArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="partnerNamespaceName", required=true)
-    private String partnerNamespaceName;
+    private Output<String> partnerNamespaceName;
 
     /**
      * @return Name of the partner namespace.
      * 
      */
-    public String partnerNamespaceName() {
+    public Output<String> partnerNamespaceName() {
         return this.partnerNamespaceName;
     }
 
@@ -47,13 +48,13 @@ public final class GetChannelFullUrlArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group within the partners subscription.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,29 @@ public final class GetChannelFullUrlArgs extends com.pulumi.resources.InvokeArgs
          * @return builder
          * 
          */
-        public Builder channelName(String channelName) {
+        public Builder channelName(Output<String> channelName) {
             $.channelName = channelName;
+            return this;
+        }
+
+        /**
+         * @param channelName Name of the Channel.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder channelName(String channelName) {
+            return channelName(Output.of(channelName));
+        }
+
+        /**
+         * @param partnerNamespaceName Name of the partner namespace.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder partnerNamespaceName(Output<String> partnerNamespaceName) {
+            $.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetChannelFullUrlArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder partnerNamespaceName(String partnerNamespaceName) {
-            $.partnerNamespaceName = partnerNamespaceName;
+            return partnerNamespaceName(Output.of(partnerNamespaceName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group within the partners subscription.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetChannelFullUrlArgs extends com.pulumi.resources.InvokeArgs
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetChannelFullUrlArgs build() {

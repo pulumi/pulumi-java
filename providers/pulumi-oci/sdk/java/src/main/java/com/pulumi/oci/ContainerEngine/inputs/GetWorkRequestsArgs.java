@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.ContainerEngine.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.ContainerEngine.inputs.GetWorkRequestsFilter;
+import com.pulumi.oci.ContainerEngine.inputs.GetWorkRequestsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetWorkRequestsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterId")
-    private @Nullable String clusterId;
+    private @Nullable Output<String> clusterId;
 
     /**
      * @return The OCID of the cluster.
      * 
      */
-    public Optional<String> clusterId() {
+    public Optional<Output<String>> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
 
@@ -36,20 +37,20 @@ public final class GetWorkRequestsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The OCID of the compartment.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetWorkRequestsFilter> filters;
+    private @Nullable Output<List<GetWorkRequestsFilterArgs>> filters;
 
-    public Optional<List<GetWorkRequestsFilter>> filters() {
+    public Optional<Output<List<GetWorkRequestsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -58,13 +59,13 @@ public final class GetWorkRequestsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceId")
-    private @Nullable String resourceId;
+    private @Nullable Output<String> resourceId;
 
     /**
      * @return The OCID of the resource associated with a work request
      * 
      */
-    public Optional<String> resourceId() {
+    public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 
@@ -73,13 +74,13 @@ public final class GetWorkRequestsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceType")
-    private @Nullable String resourceType;
+    private @Nullable Output<String> resourceType;
 
     /**
      * @return Type of the resource associated with a work request
      * 
      */
-    public Optional<String> resourceType() {
+    public Optional<Output<String>> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
 
@@ -88,13 +89,13 @@ public final class GetWorkRequestsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="statuses")
-    private @Nullable List<String> statuses;
+    private @Nullable Output<List<String>> statuses;
 
     /**
      * @return A work request status to filter on. Can have multiple parameters of this name.
      * 
      */
-    public Optional<List<String>> statuses() {
+    public Optional<Output<List<String>>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
 
@@ -133,8 +134,29 @@ public final class GetWorkRequestsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder clusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable Output<String> clusterId) {
             $.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * @param clusterId The OCID of the cluster.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
+        }
+
+        /**
+         * @param compartmentId The OCID of the compartment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(Output<String> compartmentId) {
+            $.compartmentId = compartmentId;
             return this;
         }
 
@@ -145,16 +167,19 @@ public final class GetWorkRequestsArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder compartmentId(String compartmentId) {
-            $.compartmentId = compartmentId;
-            return this;
+            return compartmentId(Output.of(compartmentId));
         }
 
-        public Builder filters(@Nullable List<GetWorkRequestsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetWorkRequestsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetWorkRequestsFilter... filters) {
+        public Builder filters(List<GetWorkRequestsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetWorkRequestsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -164,8 +189,29 @@ public final class GetWorkRequestsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * @param resourceId The OCID of the resource associated with a work request
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        /**
+         * @param resourceType Type of the resource associated with a work request
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceType(@Nullable Output<String> resourceType) {
+            $.resourceType = resourceType;
             return this;
         }
 
@@ -175,8 +221,18 @@ public final class GetWorkRequestsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder resourceType(@Nullable String resourceType) {
-            $.resourceType = resourceType;
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        /**
+         * @param statuses A work request status to filter on. Can have multiple parameters of this name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder statuses(@Nullable Output<List<String>> statuses) {
+            $.statuses = statuses;
             return this;
         }
 
@@ -186,9 +242,8 @@ public final class GetWorkRequestsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder statuses(@Nullable List<String> statuses) {
-            $.statuses = statuses;
-            return this;
+        public Builder statuses(List<String> statuses) {
+            return statuses(Output.of(statuses));
         }
 
         /**

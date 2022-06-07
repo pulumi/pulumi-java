@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
      * 
      */
     @Import(name="subnetId", required=true)
-    private String subnetId;
+    private Output<String> subnetId;
 
     /**
      * @return The IDs of the subnets to associate with the transit gateway multicast domain.
      * 
      */
-    public String subnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -32,13 +33,13 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
      * 
      */
     @Import(name="transitGatewayAttachmentId", required=true)
-    private String transitGatewayAttachmentId;
+    private Output<String> transitGatewayAttachmentId;
 
     /**
      * @return The ID of the transit gateway attachment.
      * 
      */
-    public String transitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
@@ -47,13 +48,13 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
      * 
      */
     @Import(name="transitGatewayMulticastDomainId", required=true)
-    private String transitGatewayMulticastDomainId;
+    private Output<String> transitGatewayMulticastDomainId;
 
     /**
      * @return The ID of the transit gateway multicast domain.
      * 
      */
-    public String transitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
@@ -89,8 +90,29 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
          * @return builder
          * 
          */
-        public Builder subnetId(String subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
+            return this;
+        }
+
+        /**
+         * @param subnetId The IDs of the subnets to associate with the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        /**
+         * @param transitGatewayAttachmentId The ID of the transit gateway attachment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayAttachmentId(Output<String> transitGatewayAttachmentId) {
+            $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
@@ -101,7 +123,17 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
          * 
          */
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
-            $.transitGatewayAttachmentId = transitGatewayAttachmentId;
+            return transitGatewayAttachmentId(Output.of(transitGatewayAttachmentId));
+        }
+
+        /**
+         * @param transitGatewayMulticastDomainId The ID of the transit gateway multicast domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayMulticastDomainId(Output<String> transitGatewayMulticastDomainId) {
+            $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
         }
 
@@ -112,8 +144,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends com.p
          * 
          */
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
-            $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
-            return this;
+            return transitGatewayMulticastDomainId(Output.of(transitGatewayMulticastDomainId));
         }
 
         public GetTransitGatewayMulticastDomainAssociationArgs build() {

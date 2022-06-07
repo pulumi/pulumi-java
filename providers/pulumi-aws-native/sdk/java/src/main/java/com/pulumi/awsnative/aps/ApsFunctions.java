@@ -5,9 +5,12 @@ package com.pulumi.awsnative.aps;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.aps.inputs.GetRuleGroupsNamespaceArgs;
+import com.pulumi.awsnative.aps.inputs.GetRuleGroupsNamespacePlainArgs;
 import com.pulumi.awsnative.aps.inputs.GetWorkspaceArgs;
+import com.pulumi.awsnative.aps.inputs.GetWorkspacePlainArgs;
 import com.pulumi.awsnative.aps.outputs.GetRuleGroupsNamespaceResult;
 import com.pulumi.awsnative.aps.outputs.GetWorkspaceResult;
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -18,28 +21,56 @@ public final class ApsFunctions {
      * RuleGroupsNamespace schema for cloudformation.
      * 
      */
-    public static CompletableFuture<GetRuleGroupsNamespaceResult> getRuleGroupsNamespace(GetRuleGroupsNamespaceArgs args) {
+    public static Output<GetRuleGroupsNamespaceResult> getRuleGroupsNamespace(GetRuleGroupsNamespaceArgs args) {
         return getRuleGroupsNamespace(args, InvokeOptions.Empty);
     }
     /**
      * RuleGroupsNamespace schema for cloudformation.
      * 
      */
-    public static CompletableFuture<GetRuleGroupsNamespaceResult> getRuleGroupsNamespace(GetRuleGroupsNamespaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetRuleGroupsNamespaceResult> getRuleGroupsNamespacePlain(GetRuleGroupsNamespacePlainArgs args) {
+        return getRuleGroupsNamespacePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * RuleGroupsNamespace schema for cloudformation.
+     * 
+     */
+    public static Output<GetRuleGroupsNamespaceResult> getRuleGroupsNamespace(GetRuleGroupsNamespaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:aps:getRuleGroupsNamespace", TypeShape.of(GetRuleGroupsNamespaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * RuleGroupsNamespace schema for cloudformation.
+     * 
+     */
+    public static CompletableFuture<GetRuleGroupsNamespaceResult> getRuleGroupsNamespacePlain(GetRuleGroupsNamespacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:aps:getRuleGroupsNamespace", TypeShape.of(GetRuleGroupsNamespaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource Type definition for AWS::APS::Workspace
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {
         return getWorkspace(args, InvokeOptions.Empty);
     }
     /**
      * Resource Type definition for AWS::APS::Workspace
      * 
      */
-    public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetWorkspaceResult> getWorkspacePlain(GetWorkspacePlainArgs args) {
+        return getWorkspacePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Resource Type definition for AWS::APS::Workspace
+     * 
+     */
+    public static Output<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("aws-native:aps:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::APS::Workspace
+     * 
+     */
+    public static CompletableFuture<GetWorkspaceResult> getWorkspacePlain(GetWorkspacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:aps:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args, Utilities.withVersion(options));
     }
 }

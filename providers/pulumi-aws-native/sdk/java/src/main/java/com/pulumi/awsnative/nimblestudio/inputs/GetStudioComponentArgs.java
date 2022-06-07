@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.nimblestudio.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,9 +14,9 @@ public final class GetStudioComponentArgs extends com.pulumi.resources.InvokeArg
     public static final GetStudioComponentArgs Empty = new GetStudioComponentArgs();
 
     @Import(name="studioComponentId", required=true)
-    private String studioComponentId;
+    private Output<String> studioComponentId;
 
-    public String studioComponentId() {
+    public Output<String> studioComponentId() {
         return this.studioComponentId;
     }
 
@@ -24,13 +25,13 @@ public final class GetStudioComponentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="studioId", required=true)
-    private String studioId;
+    private Output<String> studioId;
 
     /**
      * @return &lt;p&gt;The studioId. &lt;/p&gt;
      * 
      */
-    public String studioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
 
@@ -59,8 +60,23 @@ public final class GetStudioComponentArgs extends com.pulumi.resources.InvokeArg
             $ = new GetStudioComponentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder studioComponentId(String studioComponentId) {
+        public Builder studioComponentId(Output<String> studioComponentId) {
             $.studioComponentId = studioComponentId;
+            return this;
+        }
+
+        public Builder studioComponentId(String studioComponentId) {
+            return studioComponentId(Output.of(studioComponentId));
+        }
+
+        /**
+         * @param studioId &lt;p&gt;The studioId. &lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
+        public Builder studioId(Output<String> studioId) {
+            $.studioId = studioId;
             return this;
         }
 
@@ -71,8 +87,7 @@ public final class GetStudioComponentArgs extends com.pulumi.resources.InvokeArg
          * 
          */
         public Builder studioId(String studioId) {
-            $.studioId = studioId;
-            return this;
+            return studioId(Output.of(studioId));
         }
 
         public GetStudioComponentArgs build() {

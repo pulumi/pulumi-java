@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.iot.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetFleetMetricArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metricName", required=true)
-    private String metricName;
+    private Output<String> metricName;
 
     /**
      * @return The name of the fleet metric
      * 
      */
-    public String metricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -57,9 +58,19 @@ public final class GetFleetMetricArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder metricName(String metricName) {
+        public Builder metricName(Output<String> metricName) {
             $.metricName = metricName;
             return this;
+        }
+
+        /**
+         * @param metricName The name of the fleet metric
+         * 
+         * @return builder
+         * 
+         */
+        public Builder metricName(String metricName) {
+            return metricName(Output.of(metricName));
         }
 
         public GetFleetMetricArgs build() {

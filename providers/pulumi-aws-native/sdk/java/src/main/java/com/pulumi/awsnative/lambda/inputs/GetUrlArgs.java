@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lambda.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetUrlArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="functionArn", required=true)
-    private String functionArn;
+    private Output<String> functionArn;
 
     /**
      * @return The full Amazon Resource Name (ARN) of the function associated with the Function URL.
      * 
      */
-    public String functionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 
@@ -57,9 +58,19 @@ public final class GetUrlArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder functionArn(String functionArn) {
+        public Builder functionArn(Output<String> functionArn) {
             $.functionArn = functionArn;
             return this;
+        }
+
+        /**
+         * @param functionArn The full Amazon Resource Name (ARN) of the function associated with the Function URL.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder functionArn(String functionArn) {
+            return functionArn(Output.of(functionArn));
         }
 
         public GetUrlArgs build() {

@@ -3,13 +3,18 @@
 
 package com.pulumi.oci.ApmTraces;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.oci.ApmTraces.inputs.GetQueryQuickPicksArgs;
+import com.pulumi.oci.ApmTraces.inputs.GetQueryQuickPicksPlainArgs;
 import com.pulumi.oci.ApmTraces.inputs.GetTraceAggregatedSnapshotDataArgs;
+import com.pulumi.oci.ApmTraces.inputs.GetTraceAggregatedSnapshotDataPlainArgs;
 import com.pulumi.oci.ApmTraces.inputs.GetTraceArgs;
+import com.pulumi.oci.ApmTraces.inputs.GetTracePlainArgs;
 import com.pulumi.oci.ApmTraces.inputs.GetTraceSnapshotDataArgs;
+import com.pulumi.oci.ApmTraces.inputs.GetTraceSnapshotDataPlainArgs;
 import com.pulumi.oci.ApmTraces.outputs.GetQueryQuickPicksResult;
 import com.pulumi.oci.ApmTraces.outputs.GetTraceAggregatedSnapshotDataResult;
 import com.pulumi.oci.ApmTraces.outputs.GetTraceResult;
@@ -27,7 +32,7 @@ public final class ApmTracesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQueryQuickPicksResult> getQueryQuickPicks(GetQueryQuickPicksArgs args) {
+    public static Output<GetQueryQuickPicksResult> getQueryQuickPicks(GetQueryQuickPicksArgs args) {
         return getQueryQuickPicks(args, InvokeOptions.Empty);
     }
     /**
@@ -39,7 +44,31 @@ public final class ApmTracesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetQueryQuickPicksResult> getQueryQuickPicks(GetQueryQuickPicksArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetQueryQuickPicksResult> getQueryQuickPicksPlain(GetQueryQuickPicksPlainArgs args) {
+        return getQueryQuickPicksPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides the list of Query Quick Picks in Oracle Cloud Infrastructure Apm Traces service.
+     * 
+     * Returns a list of predefined Quick Pick queries intended to assist the user
+     * to choose a query to run.  There is no sorting applied on the results.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetQueryQuickPicksResult> getQueryQuickPicks(GetQueryQuickPicksArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApmTraces/getQueryQuickPicks:getQueryQuickPicks", TypeShape.of(GetQueryQuickPicksResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides the list of Query Quick Picks in Oracle Cloud Infrastructure Apm Traces service.
+     * 
+     * Returns a list of predefined Quick Pick queries intended to assist the user
+     * to choose a query to run.  There is no sorting applied on the results.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetQueryQuickPicksResult> getQueryQuickPicksPlain(GetQueryQuickPicksPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApmTraces/getQueryQuickPicks:getQueryQuickPicks", TypeShape.of(GetQueryQuickPicksResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -50,7 +79,7 @@ public final class ApmTracesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTraceResult> getTrace(GetTraceArgs args) {
+    public static Output<GetTraceResult> getTrace(GetTraceArgs args) {
         return getTrace(args, InvokeOptions.Empty);
     }
     /**
@@ -61,7 +90,29 @@ public final class ApmTracesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTraceResult> getTrace(GetTraceArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTraceResult> getTracePlain(GetTracePlainArgs args) {
+        return getTracePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Trace resource in Oracle Cloud Infrastructure Apm Traces service.
+     * 
+     * Gets the trace details identified by traceId.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTraceResult> getTrace(GetTraceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApmTraces/getTrace:getTrace", TypeShape.of(GetTraceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Trace resource in Oracle Cloud Infrastructure Apm Traces service.
+     * 
+     * Gets the trace details identified by traceId.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTraceResult> getTracePlain(GetTracePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApmTraces/getTrace:getTrace", TypeShape.of(GetTraceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -72,7 +123,7 @@ public final class ApmTracesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTraceAggregatedSnapshotDataResult> getTraceAggregatedSnapshotData(GetTraceAggregatedSnapshotDataArgs args) {
+    public static Output<GetTraceAggregatedSnapshotDataResult> getTraceAggregatedSnapshotData(GetTraceAggregatedSnapshotDataArgs args) {
         return getTraceAggregatedSnapshotData(args, InvokeOptions.Empty);
     }
     /**
@@ -83,7 +134,29 @@ public final class ApmTracesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTraceAggregatedSnapshotDataResult> getTraceAggregatedSnapshotData(GetTraceAggregatedSnapshotDataArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTraceAggregatedSnapshotDataResult> getTraceAggregatedSnapshotDataPlain(GetTraceAggregatedSnapshotDataPlainArgs args) {
+        return getTraceAggregatedSnapshotDataPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Trace Aggregated Snapshot Data resource in Oracle Cloud Infrastructure Apm Traces service.
+     * 
+     * Gets the aggregated snapshot identified by trace ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTraceAggregatedSnapshotDataResult> getTraceAggregatedSnapshotData(GetTraceAggregatedSnapshotDataArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApmTraces/getTraceAggregatedSnapshotData:getTraceAggregatedSnapshotData", TypeShape.of(GetTraceAggregatedSnapshotDataResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Trace Aggregated Snapshot Data resource in Oracle Cloud Infrastructure Apm Traces service.
+     * 
+     * Gets the aggregated snapshot identified by trace ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTraceAggregatedSnapshotDataResult> getTraceAggregatedSnapshotDataPlain(GetTraceAggregatedSnapshotDataPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApmTraces/getTraceAggregatedSnapshotData:getTraceAggregatedSnapshotData", TypeShape.of(GetTraceAggregatedSnapshotDataResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -94,7 +167,7 @@ public final class ApmTracesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTraceSnapshotDataResult> getTraceSnapshotData(GetTraceSnapshotDataArgs args) {
+    public static Output<GetTraceSnapshotDataResult> getTraceSnapshotData(GetTraceSnapshotDataArgs args) {
         return getTraceSnapshotData(args, InvokeOptions.Empty);
     }
     /**
@@ -105,7 +178,29 @@ public final class ApmTracesFunctions {
      * ## Example Usage
      * 
      */
-    public static CompletableFuture<GetTraceSnapshotDataResult> getTraceSnapshotData(GetTraceSnapshotDataArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetTraceSnapshotDataResult> getTraceSnapshotDataPlain(GetTraceSnapshotDataPlainArgs args) {
+        return getTraceSnapshotDataPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source provides details about a specific Trace Snapshot Data resource in Oracle Cloud Infrastructure Apm Traces service.
+     * 
+     * Gets the trace snapshots data identified by trace ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetTraceSnapshotDataResult> getTraceSnapshotData(GetTraceSnapshotDataArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("oci:ApmTraces/getTraceSnapshotData:getTraceSnapshotData", TypeShape.of(GetTraceSnapshotDataResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source provides details about a specific Trace Snapshot Data resource in Oracle Cloud Infrastructure Apm Traces service.
+     * 
+     * Gets the trace snapshots data identified by trace ID.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTraceSnapshotDataResult> getTraceSnapshotDataPlain(GetTraceSnapshotDataPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("oci:ApmTraces/getTraceSnapshotData:getTraceSnapshotData", TypeShape.of(GetTraceSnapshotDataResult.class), args, Utilities.withVersion(options));
     }
 }

@@ -3,6 +3,7 @@
 
 package com.pulumi.gcp.gameservices.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGameServerDeploymentRolloutArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="deploymentId", required=true)
-    private String deploymentId;
+    private Output<String> deploymentId;
 
     /**
      * @return The deployment to get the rollout state from. Only 1 rollout must be associated with each deployment.
      * 
      */
-    public String deploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
 
@@ -57,9 +58,19 @@ public final class GetGameServerDeploymentRolloutArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder deploymentId(String deploymentId) {
+        public Builder deploymentId(Output<String> deploymentId) {
             $.deploymentId = deploymentId;
             return this;
+        }
+
+        /**
+         * @param deploymentId The deployment to get the rollout state from. Only 1 rollout must be associated with each deployment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deploymentId(String deploymentId) {
+            return deploymentId(Output.of(deploymentId));
         }
 
         public GetGameServerDeploymentRolloutArgs build() {

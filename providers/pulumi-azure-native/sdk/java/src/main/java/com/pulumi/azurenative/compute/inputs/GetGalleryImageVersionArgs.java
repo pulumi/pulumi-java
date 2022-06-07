@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.compute.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="expand")
-    private @Nullable String expand;
+    private @Nullable Output<String> expand;
 
     /**
      * @return The expand expression to apply on the operation.
      * 
      */
-    public Optional<String> expand() {
+    public Optional<Output<String>> expand() {
         return Optional.ofNullable(this.expand);
     }
 
@@ -34,13 +35,13 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="galleryImageName", required=true)
-    private String galleryImageName;
+    private Output<String> galleryImageName;
 
     /**
      * @return The name of the gallery image definition in which the Image Version resides.
      * 
      */
-    public String galleryImageName() {
+    public Output<String> galleryImageName() {
         return this.galleryImageName;
     }
 
@@ -49,13 +50,13 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="galleryImageVersionName", required=true)
-    private String galleryImageVersionName;
+    private Output<String> galleryImageVersionName;
 
     /**
      * @return The name of the gallery image version to be retrieved.
      * 
      */
-    public String galleryImageVersionName() {
+    public Output<String> galleryImageVersionName() {
         return this.galleryImageVersionName;
     }
 
@@ -64,13 +65,13 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="galleryName", required=true)
-    private String galleryName;
+    private Output<String> galleryName;
 
     /**
      * @return The name of the Shared Image Gallery in which the Image Definition resides.
      * 
      */
-    public String galleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -79,13 +80,13 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -123,8 +124,29 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
          * @return builder
          * 
          */
-        public Builder expand(@Nullable String expand) {
+        public Builder expand(@Nullable Output<String> expand) {
             $.expand = expand;
+            return this;
+        }
+
+        /**
+         * @param expand The expand expression to apply on the operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
+        }
+
+        /**
+         * @param galleryImageName The name of the gallery image definition in which the Image Version resides.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryImageName(Output<String> galleryImageName) {
+            $.galleryImageName = galleryImageName;
             return this;
         }
 
@@ -135,7 +157,17 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder galleryImageName(String galleryImageName) {
-            $.galleryImageName = galleryImageName;
+            return galleryImageName(Output.of(galleryImageName));
+        }
+
+        /**
+         * @param galleryImageVersionName The name of the gallery image version to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryImageVersionName(Output<String> galleryImageVersionName) {
+            $.galleryImageVersionName = galleryImageVersionName;
             return this;
         }
 
@@ -146,7 +178,17 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder galleryImageVersionName(String galleryImageVersionName) {
-            $.galleryImageVersionName = galleryImageVersionName;
+            return galleryImageVersionName(Output.of(galleryImageVersionName));
+        }
+
+        /**
+         * @param galleryName The name of the Shared Image Gallery in which the Image Definition resides.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder galleryName(Output<String> galleryName) {
+            $.galleryName = galleryName;
             return this;
         }
 
@@ -157,7 +199,17 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder galleryName(String galleryName) {
-            $.galleryName = galleryName;
+            return galleryName(Output.of(galleryName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -168,8 +220,7 @@ public final class GetGalleryImageVersionArgs extends com.pulumi.resources.Invok
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public GetGalleryImageVersionArgs build() {

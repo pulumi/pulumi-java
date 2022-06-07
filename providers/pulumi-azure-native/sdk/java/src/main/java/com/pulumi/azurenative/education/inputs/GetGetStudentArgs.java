@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.education.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetGetStudentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="billingAccountName", required=true)
-    private String billingAccountName;
+    private Output<String> billingAccountName;
 
     /**
      * @return Billing account name.
      * 
      */
-    public String billingAccountName() {
+    public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -32,13 +33,13 @@ public final class GetGetStudentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="billingProfileName", required=true)
-    private String billingProfileName;
+    private Output<String> billingProfileName;
 
     /**
      * @return Billing profile name.
      * 
      */
-    public String billingProfileName() {
+    public Output<String> billingProfileName() {
         return this.billingProfileName;
     }
 
@@ -47,13 +48,13 @@ public final class GetGetStudentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="invoiceSectionName", required=true)
-    private String invoiceSectionName;
+    private Output<String> invoiceSectionName;
 
     /**
      * @return Invoice section name.
      * 
      */
-    public String invoiceSectionName() {
+    public Output<String> invoiceSectionName() {
         return this.invoiceSectionName;
     }
 
@@ -62,13 +63,13 @@ public final class GetGetStudentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="studentAlias", required=true)
-    private String studentAlias;
+    private Output<String> studentAlias;
 
     /**
      * @return Student alias.
      * 
      */
-    public String studentAlias() {
+    public Output<String> studentAlias() {
         return this.studentAlias;
     }
 
@@ -105,8 +106,29 @@ public final class GetGetStudentArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder billingAccountName(String billingAccountName) {
+        public Builder billingAccountName(Output<String> billingAccountName) {
             $.billingAccountName = billingAccountName;
+            return this;
+        }
+
+        /**
+         * @param billingAccountName Billing account name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingAccountName(String billingAccountName) {
+            return billingAccountName(Output.of(billingAccountName));
+        }
+
+        /**
+         * @param billingProfileName Billing profile name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingProfileName(Output<String> billingProfileName) {
+            $.billingProfileName = billingProfileName;
             return this;
         }
 
@@ -117,7 +139,17 @@ public final class GetGetStudentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder billingProfileName(String billingProfileName) {
-            $.billingProfileName = billingProfileName;
+            return billingProfileName(Output.of(billingProfileName));
+        }
+
+        /**
+         * @param invoiceSectionName Invoice section name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder invoiceSectionName(Output<String> invoiceSectionName) {
+            $.invoiceSectionName = invoiceSectionName;
             return this;
         }
 
@@ -128,7 +160,17 @@ public final class GetGetStudentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder invoiceSectionName(String invoiceSectionName) {
-            $.invoiceSectionName = invoiceSectionName;
+            return invoiceSectionName(Output.of(invoiceSectionName));
+        }
+
+        /**
+         * @param studentAlias Student alias.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder studentAlias(Output<String> studentAlias) {
+            $.studentAlias = studentAlias;
             return this;
         }
 
@@ -139,8 +181,7 @@ public final class GetGetStudentArgs extends com.pulumi.resources.InvokeArgs {
          * 
          */
         public Builder studentAlias(String studentAlias) {
-            $.studentAlias = studentAlias;
-            return this;
+            return studentAlias(Output.of(studentAlias));
         }
 
         public GetGetStudentArgs build() {

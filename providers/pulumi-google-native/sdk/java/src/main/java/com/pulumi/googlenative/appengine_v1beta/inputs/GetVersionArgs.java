@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.appengine_v1beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -15,30 +16,30 @@ public final class GetVersionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetVersionArgs Empty = new GetVersionArgs();
 
     @Import(name="appId", required=true)
-    private String appId;
+    private Output<String> appId;
 
-    public String appId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
     @Import(name="serviceId", required=true)
-    private String serviceId;
+    private Output<String> serviceId;
 
-    public String serviceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
     @Import(name="versionId", required=true)
-    private String versionId;
+    private Output<String> versionId;
 
-    public String versionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
 
     @Import(name="view")
-    private @Nullable String view;
+    private @Nullable Output<String> view;
 
-    public Optional<String> view() {
+    public Optional<Output<String>> view() {
         return Optional.ofNullable(this.view);
     }
 
@@ -69,24 +70,40 @@ public final class GetVersionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVersionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder appId(String appId) {
+        public Builder appId(Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
-        public Builder serviceId(String serviceId) {
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
+        }
+
+        public Builder serviceId(Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
         }
 
-        public Builder versionId(String versionId) {
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
+        }
+
+        public Builder versionId(Output<String> versionId) {
             $.versionId = versionId;
             return this;
         }
 
-        public Builder view(@Nullable String view) {
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
+        }
+
+        public Builder view(@Nullable Output<String> view) {
             $.view = view;
             return this;
+        }
+
+        public Builder view(String view) {
+            return view(Output.of(view));
         }
 
         public GetVersionArgs build() {

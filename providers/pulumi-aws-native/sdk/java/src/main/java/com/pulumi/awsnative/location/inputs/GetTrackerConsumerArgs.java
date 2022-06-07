@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.location.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetTrackerConsumerArgs extends com.pulumi.resources.InvokeArg
     public static final GetTrackerConsumerArgs Empty = new GetTrackerConsumerArgs();
 
     @Import(name="consumerArn", required=true)
-    private String consumerArn;
+    private Output<String> consumerArn;
 
-    public String consumerArn() {
+    public Output<String> consumerArn() {
         return this.consumerArn;
     }
 
     @Import(name="trackerName", required=true)
-    private String trackerName;
+    private Output<String> trackerName;
 
-    public String trackerName() {
+    public Output<String> trackerName() {
         return this.trackerName;
     }
 
@@ -51,14 +52,22 @@ public final class GetTrackerConsumerArgs extends com.pulumi.resources.InvokeArg
             $ = new GetTrackerConsumerArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder consumerArn(String consumerArn) {
+        public Builder consumerArn(Output<String> consumerArn) {
             $.consumerArn = consumerArn;
             return this;
         }
 
-        public Builder trackerName(String trackerName) {
+        public Builder consumerArn(String consumerArn) {
+            return consumerArn(Output.of(consumerArn));
+        }
+
+        public Builder trackerName(Output<String> trackerName) {
             $.trackerName = trackerName;
             return this;
+        }
+
+        public Builder trackerName(String trackerName) {
+            return trackerName(Output.of(trackerName));
         }
 
         public GetTrackerConsumerArgs build() {

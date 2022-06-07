@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeTableId", required=true)
-    private String routeTableId;
+    private Output<String> routeTableId;
 
     /**
      * @return The route table ID.
      * 
      */
-    public String routeTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
 
@@ -57,9 +58,19 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder routeTableId(String routeTableId) {
+        public Builder routeTableId(Output<String> routeTableId) {
             $.routeTableId = routeTableId;
             return this;
+        }
+
+        /**
+         * @param routeTableId The route table ID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder routeTableId(String routeTableId) {
+            return routeTableId(Output.of(routeTableId));
         }
 
         public GetRouteTableArgs build() {

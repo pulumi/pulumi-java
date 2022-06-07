@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetSubnetFilter;
+import com.pulumi.aws.ec2.inputs.GetSubnetFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,13 +24,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZone")
-    private @Nullable String availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
     /**
      * @return Availability zone where the subnet must reside.
      * 
      */
-    public Optional<String> availabilityZone() {
+    public Optional<Output<String>> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
 
@@ -38,13 +39,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZoneId")
-    private @Nullable String availabilityZoneId;
+    private @Nullable Output<String> availabilityZoneId;
 
     /**
      * @return ID of the Availability Zone for the subnet. This argument is not supported in all regions or partitions. If necessary, use `availability_zone` instead.
      * 
      */
-    public Optional<String> availabilityZoneId() {
+    public Optional<Output<String>> availabilityZoneId() {
         return Optional.ofNullable(this.availabilityZoneId);
     }
 
@@ -53,13 +54,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cidrBlock")
-    private @Nullable String cidrBlock;
+    private @Nullable Output<String> cidrBlock;
 
     /**
      * @return CIDR block of the desired subnet.
      * 
      */
-    public Optional<String> cidrBlock() {
+    public Optional<Output<String>> cidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
 
@@ -68,13 +69,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultForAz")
-    private @Nullable Boolean defaultForAz;
+    private @Nullable Output<Boolean> defaultForAz;
 
     /**
      * @return Whether the desired subnet must be the default subnet for its associated availability zone.
      * 
      */
-    public Optional<Boolean> defaultForAz() {
+    public Optional<Output<Boolean>> defaultForAz() {
         return Optional.ofNullable(this.defaultForAz);
     }
 
@@ -83,13 +84,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetSubnetFilter> filters;
+    private @Nullable Output<List<GetSubnetFilterArgs>> filters;
 
     /**
      * @return Configuration block. Detailed below.
      * 
      */
-    public Optional<List<GetSubnetFilter>> filters() {
+    public Optional<Output<List<GetSubnetFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -98,13 +99,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return ID of the specific subnet to retrieve.
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -113,13 +114,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipv6CidrBlock")
-    private @Nullable String ipv6CidrBlock;
+    private @Nullable Output<String> ipv6CidrBlock;
 
     /**
      * @return IPv6 CIDR block of the desired subnet.
      * 
      */
-    public Optional<String> ipv6CidrBlock() {
+    public Optional<Output<String>> ipv6CidrBlock() {
         return Optional.ofNullable(this.ipv6CidrBlock);
     }
 
@@ -128,13 +129,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return State that the desired subnet must have.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -143,13 +144,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return Map of tags, each pair of which must exactly match a pair on the desired subnet.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -158,13 +159,13 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId")
-    private @Nullable String vpcId;
+    private @Nullable Output<String> vpcId;
 
     /**
      * @return ID of the VPC that the desired subnet belongs to.
      * 
      */
-    public Optional<String> vpcId() {
+    public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
 
@@ -207,8 +208,29 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
+            return this;
+        }
+
+        /**
+         * @param availabilityZone Availability zone where the subnet must reside.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
+        }
+
+        /**
+         * @param availabilityZoneId ID of the Availability Zone for the subnet. This argument is not supported in all regions or partitions. If necessary, use `availability_zone` instead.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
+            $.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
@@ -218,8 +240,18 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
-            $.availabilityZoneId = availabilityZoneId;
+        public Builder availabilityZoneId(String availabilityZoneId) {
+            return availabilityZoneId(Output.of(availabilityZoneId));
+        }
+
+        /**
+         * @param cidrBlock CIDR block of the desired subnet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
+            $.cidrBlock = cidrBlock;
             return this;
         }
 
@@ -229,8 +261,18 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder cidrBlock(@Nullable String cidrBlock) {
-            $.cidrBlock = cidrBlock;
+        public Builder cidrBlock(String cidrBlock) {
+            return cidrBlock(Output.of(cidrBlock));
+        }
+
+        /**
+         * @param defaultForAz Whether the desired subnet must be the default subnet for its associated availability zone.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultForAz(@Nullable Output<Boolean> defaultForAz) {
+            $.defaultForAz = defaultForAz;
             return this;
         }
 
@@ -240,9 +282,8 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder defaultForAz(@Nullable Boolean defaultForAz) {
-            $.defaultForAz = defaultForAz;
-            return this;
+        public Builder defaultForAz(Boolean defaultForAz) {
+            return defaultForAz(Output.of(defaultForAz));
         }
 
         /**
@@ -251,7 +292,7 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetSubnetFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetSubnetFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -262,7 +303,17 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder filters(GetSubnetFilter... filters) {
+        public Builder filters(List<GetSubnetFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Configuration block. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetSubnetFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -272,8 +323,29 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id ID of the specific subnet to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param ipv6CidrBlock IPv6 CIDR block of the desired subnet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
+            $.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
@@ -283,8 +355,18 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            $.ipv6CidrBlock = ipv6CidrBlock;
+        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+            return ipv6CidrBlock(Output.of(ipv6CidrBlock));
+        }
+
+        /**
+         * @param state State that the desired subnet must have.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<String> state) {
+            $.state = state;
             return this;
         }
 
@@ -294,8 +376,18 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
-            $.state = state;
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param tags Map of tags, each pair of which must exactly match a pair on the desired subnet.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -305,8 +397,18 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param vpcId ID of the VPC that the desired subnet belongs to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcId(@Nullable Output<String> vpcId) {
+            $.vpcId = vpcId;
             return this;
         }
 
@@ -316,9 +418,8 @@ public final class GetSubnetArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder vpcId(@Nullable String vpcId) {
-            $.vpcId = vpcId;
-            return this;
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
         }
 
         public GetSubnetArgs build() {

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Waas.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Waas.inputs.GetAddressListsFilter;
+import com.pulumi.oci.Waas.inputs.GetAddressListsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,20 +22,20 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment. This number is generated when the compartment is created.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
     @Import(name="filters")
-    private @Nullable List<GetAddressListsFilter> filters;
+    private @Nullable Output<List<GetAddressListsFilterArgs>> filters;
 
-    public Optional<List<GetAddressListsFilter>> filters() {
+    public Optional<Output<List<GetAddressListsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -43,13 +44,13 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ids")
-    private @Nullable List<String> ids;
+    private @Nullable Output<List<String>> ids;
 
     /**
      * @return Filter address lists using a list of address lists OCIDs.
      * 
      */
-    public Optional<List<String>> ids() {
+    public Optional<Output<List<String>>> ids() {
         return Optional.ofNullable(this.ids);
     }
 
@@ -58,13 +59,13 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="names")
-    private @Nullable List<String> names;
+    private @Nullable Output<List<String>> names;
 
     /**
      * @return Filter address lists using a list of names.
      * 
      */
-    public Optional<List<String>> names() {
+    public Optional<Output<List<String>>> names() {
         return Optional.ofNullable(this.names);
     }
 
@@ -73,13 +74,13 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="states")
-    private @Nullable List<String> states;
+    private @Nullable Output<List<String>> states;
 
     /**
      * @return Filter address lists using a list of lifecycle states.
      * 
      */
-    public Optional<List<String>> states() {
+    public Optional<Output<List<String>>> states() {
         return Optional.ofNullable(this.states);
     }
 
@@ -88,13 +89,13 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedGreaterThanOrEqualTo")
-    private @Nullable String timeCreatedGreaterThanOrEqualTo;
+    private @Nullable Output<String> timeCreatedGreaterThanOrEqualTo;
 
     /**
      * @return A filter that matches address lists created on or after the specified date-time.
      * 
      */
-    public Optional<String> timeCreatedGreaterThanOrEqualTo() {
+    public Optional<Output<String>> timeCreatedGreaterThanOrEqualTo() {
         return Optional.ofNullable(this.timeCreatedGreaterThanOrEqualTo);
     }
 
@@ -103,13 +104,13 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeCreatedLessThan")
-    private @Nullable String timeCreatedLessThan;
+    private @Nullable Output<String> timeCreatedLessThan;
 
     /**
      * @return A filter that matches address lists created before the specified date-time.
      * 
      */
-    public Optional<String> timeCreatedLessThan() {
+    public Optional<Output<String>> timeCreatedLessThan() {
         return Optional.ofNullable(this.timeCreatedLessThan);
     }
 
@@ -149,17 +150,31 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
             return this;
         }
 
-        public Builder filters(@Nullable List<GetAddressListsFilter> filters) {
+        /**
+         * @param compartmentId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the compartment. This number is generated when the compartment is created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        public Builder filters(@Nullable Output<List<GetAddressListsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetAddressListsFilter... filters) {
+        public Builder filters(List<GetAddressListsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetAddressListsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -169,9 +184,19 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder ids(@Nullable List<String> ids) {
+        public Builder ids(@Nullable Output<List<String>> ids) {
             $.ids = ids;
             return this;
+        }
+
+        /**
+         * @param ids Filter address lists using a list of address lists OCIDs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ids(List<String> ids) {
+            return ids(Output.of(ids));
         }
 
         /**
@@ -190,9 +215,19 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder names(@Nullable List<String> names) {
+        public Builder names(@Nullable Output<List<String>> names) {
             $.names = names;
             return this;
+        }
+
+        /**
+         * @param names Filter address lists using a list of names.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder names(List<String> names) {
+            return names(Output.of(names));
         }
 
         /**
@@ -211,9 +246,19 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder states(@Nullable List<String> states) {
+        public Builder states(@Nullable Output<List<String>> states) {
             $.states = states;
             return this;
+        }
+
+        /**
+         * @param states Filter address lists using a list of lifecycle states.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder states(List<String> states) {
+            return states(Output.of(states));
         }
 
         /**
@@ -232,8 +277,29 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable String timeCreatedGreaterThanOrEqualTo) {
+        public Builder timeCreatedGreaterThanOrEqualTo(@Nullable Output<String> timeCreatedGreaterThanOrEqualTo) {
             $.timeCreatedGreaterThanOrEqualTo = timeCreatedGreaterThanOrEqualTo;
+            return this;
+        }
+
+        /**
+         * @param timeCreatedGreaterThanOrEqualTo A filter that matches address lists created on or after the specified date-time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedGreaterThanOrEqualTo(String timeCreatedGreaterThanOrEqualTo) {
+            return timeCreatedGreaterThanOrEqualTo(Output.of(timeCreatedGreaterThanOrEqualTo));
+        }
+
+        /**
+         * @param timeCreatedLessThan A filter that matches address lists created before the specified date-time.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreatedLessThan(@Nullable Output<String> timeCreatedLessThan) {
+            $.timeCreatedLessThan = timeCreatedLessThan;
             return this;
         }
 
@@ -243,9 +309,8 @@ public final class GetAddressListsArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder timeCreatedLessThan(@Nullable String timeCreatedLessThan) {
-            $.timeCreatedLessThan = timeCreatedLessThan;
-            return this;
+        public Builder timeCreatedLessThan(String timeCreatedLessThan) {
+            return timeCreatedLessThan(Output.of(timeCreatedLessThan));
         }
 
         public GetAddressListsArgs build() {

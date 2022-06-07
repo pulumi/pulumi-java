@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -19,13 +20,13 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
      * 
      */
     @Import(name="filterName")
-    private @Nullable String filterName;
+    private @Nullable Output<String> filterName;
 
     /**
      * @return Describes the name of the column which values will be returned
      * 
      */
-    public Optional<String> filterName() {
+    public Optional<Output<String>> filterName() {
         return Optional.ofNullable(this.filterName);
     }
 
@@ -34,13 +35,13 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
      * 
      */
     @Import(name="firewallPolicyName", required=true)
-    private String firewallPolicyName;
+    private Output<String> firewallPolicyName;
 
     /**
      * @return The name of the Firewall Policy.
      * 
      */
-    public String firewallPolicyName() {
+    public Output<String> firewallPolicyName() {
         return this.firewallPolicyName;
     }
 
@@ -49,13 +50,13 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-    private String resourceGroupName;
+    private Output<String> resourceGroupName;
 
     /**
      * @return The name of the resource group.
      * 
      */
-    public String resourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,29 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
          * @return builder
          * 
          */
-        public Builder filterName(@Nullable String filterName) {
+        public Builder filterName(@Nullable Output<String> filterName) {
             $.filterName = filterName;
+            return this;
+        }
+
+        /**
+         * @param filterName Describes the name of the column which values will be returned
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filterName(String filterName) {
+            return filterName(Output.of(filterName));
+        }
+
+        /**
+         * @param firewallPolicyName The name of the Firewall Policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder firewallPolicyName(Output<String> firewallPolicyName) {
+            $.firewallPolicyName = firewallPolicyName;
             return this;
         }
 
@@ -103,7 +125,17 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
          * 
          */
         public Builder firewallPolicyName(String firewallPolicyName) {
-            $.firewallPolicyName = firewallPolicyName;
+            return firewallPolicyName(Output.of(firewallPolicyName));
+        }
+
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
 
@@ -114,8 +146,7 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
          * 
          */
         public Builder resourceGroupName(String resourceGroupName) {
-            $.resourceGroupName = resourceGroupName;
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
 
         public ListFirewallPolicyIdpsSignaturesFilterValueArgs build() {

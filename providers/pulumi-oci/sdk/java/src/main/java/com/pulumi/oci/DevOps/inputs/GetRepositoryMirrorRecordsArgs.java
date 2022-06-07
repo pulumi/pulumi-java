@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DevOps.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DevOps.inputs.GetRepositoryMirrorRecordsFilter;
+import com.pulumi.oci.DevOps.inputs.GetRepositoryMirrorRecordsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetRepositoryMirrorRecordsArgs extends com.pulumi.resources.I
     public static final GetRepositoryMirrorRecordsArgs Empty = new GetRepositoryMirrorRecordsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetRepositoryMirrorRecordsFilter> filters;
+    private @Nullable Output<List<GetRepositoryMirrorRecordsFilterArgs>> filters;
 
-    public Optional<List<GetRepositoryMirrorRecordsFilter>> filters() {
+    public Optional<Output<List<GetRepositoryMirrorRecordsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetRepositoryMirrorRecordsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="repositoryId", required=true)
-    private String repositoryId;
+    private Output<String> repositoryId;
 
     /**
      * @return Unique repository identifier.
      * 
      */
-    public String repositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
 
@@ -63,12 +64,16 @@ public final class GetRepositoryMirrorRecordsArgs extends com.pulumi.resources.I
             $ = new GetRepositoryMirrorRecordsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetRepositoryMirrorRecordsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetRepositoryMirrorRecordsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetRepositoryMirrorRecordsFilter... filters) {
+        public Builder filters(List<GetRepositoryMirrorRecordsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetRepositoryMirrorRecordsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetRepositoryMirrorRecordsArgs extends com.pulumi.resources.I
          * @return builder
          * 
          */
-        public Builder repositoryId(String repositoryId) {
+        public Builder repositoryId(Output<String> repositoryId) {
             $.repositoryId = repositoryId;
             return this;
+        }
+
+        /**
+         * @param repositoryId Unique repository identifier.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repositoryId(String repositoryId) {
+            return repositoryId(Output.of(repositoryId));
         }
 
         public GetRepositoryMirrorRecordsArgs build() {

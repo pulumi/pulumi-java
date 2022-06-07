@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.DatabaseTools.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.DatabaseTools.inputs.GetDatabaseToolsPrivateEndpointsFilter;
+import com.pulumi.oci.DatabaseTools.inputs.GetDatabaseToolsPrivateEndpointsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,13 +22,13 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="compartmentId", required=true)
-    private String compartmentId;
+    private Output<String> compartmentId;
 
     /**
      * @return The ID of the compartment in which to list resources.
      * 
      */
-    public String compartmentId() {
+    public Output<String> compartmentId() {
         return this.compartmentId;
     }
 
@@ -36,13 +37,13 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="displayName")
-    private @Nullable String displayName;
+    private @Nullable Output<String> displayName;
 
     /**
      * @return A filter to return only resources that match the entire display name given.
      * 
      */
-    public Optional<String> displayName() {
+    public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
@@ -51,20 +52,20 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="endpointServiceId")
-    private @Nullable String endpointServiceId;
+    private @Nullable Output<String> endpointServiceId;
 
     /**
      * @return A filter to return only resources their type matches the given type.
      * 
      */
-    public Optional<String> endpointServiceId() {
+    public Optional<Output<String>> endpointServiceId() {
         return Optional.ofNullable(this.endpointServiceId);
     }
 
     @Import(name="filters")
-    private @Nullable List<GetDatabaseToolsPrivateEndpointsFilter> filters;
+    private @Nullable Output<List<GetDatabaseToolsPrivateEndpointsFilterArgs>> filters;
 
-    public Optional<List<GetDatabaseToolsPrivateEndpointsFilter>> filters() {
+    public Optional<Output<List<GetDatabaseToolsPrivateEndpointsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -73,13 +74,13 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="state")
-    private @Nullable String state;
+    private @Nullable Output<String> state;
 
     /**
      * @return A filter to return only resources their lifecycleState matches the given lifecycleState.
      * 
      */
-    public Optional<String> state() {
+    public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
 
@@ -88,13 +89,13 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="subnetId")
-    private @Nullable String subnetId;
+    private @Nullable Output<String> subnetId;
 
     /**
      * @return A filter to return only resources their subnetId matches the given subnetId.
      * 
      */
-    public Optional<String> subnetId() {
+    public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
 
@@ -133,8 +134,29 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder compartmentId(String compartmentId) {
+        public Builder compartmentId(Output<String> compartmentId) {
             $.compartmentId = compartmentId;
+            return this;
+        }
+
+        /**
+         * @param compartmentId The ID of the compartment in which to list resources.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder compartmentId(String compartmentId) {
+            return compartmentId(Output.of(compartmentId));
+        }
+
+        /**
+         * @param displayName A filter to return only resources that match the entire display name given.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(@Nullable Output<String> displayName) {
+            $.displayName = displayName;
             return this;
         }
 
@@ -144,8 +166,18 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder displayName(@Nullable String displayName) {
-            $.displayName = displayName;
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param endpointServiceId A filter to return only resources their type matches the given type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endpointServiceId(@Nullable Output<String> endpointServiceId) {
+            $.endpointServiceId = endpointServiceId;
             return this;
         }
 
@@ -155,17 +187,20 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder endpointServiceId(@Nullable String endpointServiceId) {
-            $.endpointServiceId = endpointServiceId;
-            return this;
+        public Builder endpointServiceId(String endpointServiceId) {
+            return endpointServiceId(Output.of(endpointServiceId));
         }
 
-        public Builder filters(@Nullable List<GetDatabaseToolsPrivateEndpointsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetDatabaseToolsPrivateEndpointsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetDatabaseToolsPrivateEndpointsFilter... filters) {
+        public Builder filters(List<GetDatabaseToolsPrivateEndpointsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetDatabaseToolsPrivateEndpointsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -175,8 +210,29 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder state(@Nullable String state) {
+        public Builder state(@Nullable Output<String> state) {
             $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state A filter to return only resources their lifecycleState matches the given lifecycleState.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        /**
+         * @param subnetId A filter to return only resources their subnetId matches the given subnetId.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subnetId(@Nullable Output<String> subnetId) {
+            $.subnetId = subnetId;
             return this;
         }
 
@@ -186,9 +242,8 @@ public final class GetDatabaseToolsPrivateEndpointsArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder subnetId(@Nullable String subnetId) {
-            $.subnetId = subnetId;
-            return this;
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
 
         public GetDatabaseToolsPrivateEndpointsArgs build() {

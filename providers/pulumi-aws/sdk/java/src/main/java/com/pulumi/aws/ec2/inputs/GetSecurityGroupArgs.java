@@ -3,7 +3,8 @@
 
 package com.pulumi.aws.ec2.inputs;
 
-import com.pulumi.aws.ec2.inputs.GetSecurityGroupFilter;
+import com.pulumi.aws.ec2.inputs.GetSecurityGroupFilterArgs;
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
@@ -22,13 +23,13 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-    private @Nullable List<GetSecurityGroupFilter> filters;
+    private @Nullable Output<List<GetSecurityGroupFilterArgs>> filters;
 
     /**
      * @return Custom filter block as described below.
      * 
      */
-    public Optional<List<GetSecurityGroupFilter>> filters() {
+    public Optional<Output<List<GetSecurityGroupFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -37,13 +38,13 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id")
-    private @Nullable String id;
+    private @Nullable Output<String> id;
 
     /**
      * @return The id of the specific security group to retrieve.
      * 
      */
-    public Optional<String> id() {
+    public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
 
@@ -53,14 +54,14 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-    private @Nullable String name;
+    private @Nullable Output<String> name;
 
     /**
      * @return The name of the field to filter by, as defined by
      * [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSecurityGroups.html).
      * 
      */
-    public Optional<String> name() {
+    public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
@@ -70,14 +71,14 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tags")
-    private @Nullable Map<String,String> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
     /**
      * @return A map of tags, each pair of which must exactly match
      * a pair on the desired security group.
      * 
      */
-    public Optional<Map<String,String>> tags() {
+    public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
 
@@ -86,13 +87,13 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vpcId")
-    private @Nullable String vpcId;
+    private @Nullable Output<String> vpcId;
 
     /**
      * @return The id of the VPC that the desired security group belongs to.
      * 
      */
-    public Optional<String> vpcId() {
+    public Optional<Output<String>> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
 
@@ -130,7 +131,7 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(@Nullable List<GetSecurityGroupFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetSecurityGroupFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
@@ -141,7 +142,17 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder filters(GetSecurityGroupFilter... filters) {
+        public Builder filters(List<GetSecurityGroupFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filters(GetSecurityGroupFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -151,8 +162,30 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id(@Nullable Output<String> id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param id The id of the specific security group to retrieve.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        /**
+         * @param name The name of the field to filter by, as defined by
+         * [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSecurityGroups.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
@@ -163,8 +196,19 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder name(@Nullable String name) {
-            $.name = name;
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param tags A map of tags, each pair of which must exactly match
+         * a pair on the desired security group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
+            $.tags = tags;
             return this;
         }
 
@@ -175,8 +219,18 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder tags(@Nullable Map<String,String> tags) {
-            $.tags = tags;
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        /**
+         * @param vpcId The id of the VPC that the desired security group belongs to.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcId(@Nullable Output<String> vpcId) {
+            $.vpcId = vpcId;
             return this;
         }
 
@@ -186,9 +240,8 @@ public final class GetSecurityGroupArgs extends com.pulumi.resources.InvokeArgs 
          * @return builder
          * 
          */
-        public Builder vpcId(@Nullable String vpcId) {
-            $.vpcId = vpcId;
-            return this;
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
         }
 
         public GetSecurityGroupArgs build() {

@@ -3,8 +3,9 @@
 
 package com.pulumi.oci.Core.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.oci.Core.inputs.GetIpsecConnectionTunnelsFilter;
+import com.pulumi.oci.Core.inputs.GetIpsecConnectionTunnelsFilterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,9 +18,9 @@ public final class GetIpsecConnectionTunnelsArgs extends com.pulumi.resources.In
     public static final GetIpsecConnectionTunnelsArgs Empty = new GetIpsecConnectionTunnelsArgs();
 
     @Import(name="filters")
-    private @Nullable List<GetIpsecConnectionTunnelsFilter> filters;
+    private @Nullable Output<List<GetIpsecConnectionTunnelsFilterArgs>> filters;
 
-    public Optional<List<GetIpsecConnectionTunnelsFilter>> filters() {
+    public Optional<Output<List<GetIpsecConnectionTunnelsFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
@@ -28,13 +29,13 @@ public final class GetIpsecConnectionTunnelsArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="ipsecId", required=true)
-    private String ipsecId;
+    private Output<String> ipsecId;
 
     /**
      * @return The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPSec connection.
      * 
      */
-    public String ipsecId() {
+    public Output<String> ipsecId() {
         return this.ipsecId;
     }
 
@@ -63,12 +64,16 @@ public final class GetIpsecConnectionTunnelsArgs extends com.pulumi.resources.In
             $ = new GetIpsecConnectionTunnelsArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder filters(@Nullable List<GetIpsecConnectionTunnelsFilter> filters) {
+        public Builder filters(@Nullable Output<List<GetIpsecConnectionTunnelsFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
-        public Builder filters(GetIpsecConnectionTunnelsFilter... filters) {
+        public Builder filters(List<GetIpsecConnectionTunnelsFilterArgs> filters) {
+            return filters(Output.of(filters));
+        }
+
+        public Builder filters(GetIpsecConnectionTunnelsFilterArgs... filters) {
             return filters(List.of(filters));
         }
 
@@ -78,9 +83,19 @@ public final class GetIpsecConnectionTunnelsArgs extends com.pulumi.resources.In
          * @return builder
          * 
          */
-        public Builder ipsecId(String ipsecId) {
+        public Builder ipsecId(Output<String> ipsecId) {
             $.ipsecId = ipsecId;
             return this;
+        }
+
+        /**
+         * @param ipsecId The [OCID](https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of the IPSec connection.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipsecId(String ipsecId) {
+            return ipsecId(Output.of(ipsecId));
         }
 
         public GetIpsecConnectionTunnelsArgs build() {

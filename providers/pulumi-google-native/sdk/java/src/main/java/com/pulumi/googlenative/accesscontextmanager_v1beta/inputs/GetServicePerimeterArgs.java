@@ -3,6 +3,7 @@
 
 package com.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -13,16 +14,16 @@ public final class GetServicePerimeterArgs extends com.pulumi.resources.InvokeAr
     public static final GetServicePerimeterArgs Empty = new GetServicePerimeterArgs();
 
     @Import(name="accessPolicyId", required=true)
-    private String accessPolicyId;
+    private Output<String> accessPolicyId;
 
-    public String accessPolicyId() {
+    public Output<String> accessPolicyId() {
         return this.accessPolicyId;
     }
 
     @Import(name="servicePerimeterId", required=true)
-    private String servicePerimeterId;
+    private Output<String> servicePerimeterId;
 
-    public String servicePerimeterId() {
+    public Output<String> servicePerimeterId() {
         return this.servicePerimeterId;
     }
 
@@ -51,14 +52,22 @@ public final class GetServicePerimeterArgs extends com.pulumi.resources.InvokeAr
             $ = new GetServicePerimeterArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder accessPolicyId(String accessPolicyId) {
+        public Builder accessPolicyId(Output<String> accessPolicyId) {
             $.accessPolicyId = accessPolicyId;
             return this;
         }
 
-        public Builder servicePerimeterId(String servicePerimeterId) {
+        public Builder accessPolicyId(String accessPolicyId) {
+            return accessPolicyId(Output.of(accessPolicyId));
+        }
+
+        public Builder servicePerimeterId(Output<String> servicePerimeterId) {
             $.servicePerimeterId = servicePerimeterId;
             return this;
+        }
+
+        public Builder servicePerimeterId(String servicePerimeterId) {
+            return servicePerimeterId(Output.of(servicePerimeterId));
         }
 
         public GetServicePerimeterArgs build() {

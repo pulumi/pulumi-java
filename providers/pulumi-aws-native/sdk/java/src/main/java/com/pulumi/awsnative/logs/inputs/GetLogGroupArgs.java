@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.logs.inputs;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
@@ -17,13 +18,13 @@ public final class GetLogGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logGroupName", required=true)
-    private String logGroupName;
+    private Output<String> logGroupName;
 
     /**
      * @return The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
      * 
      */
-    public String logGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
 
@@ -57,9 +58,19 @@ public final class GetLogGroupArgs extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder logGroupName(String logGroupName) {
+        public Builder logGroupName(Output<String> logGroupName) {
             $.logGroupName = logGroupName;
             return this;
+        }
+
+        /**
+         * @param logGroupName The name of the log group. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID for the log group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logGroupName(String logGroupName) {
+            return logGroupName(Output.of(logGroupName));
         }
 
         public GetLogGroupArgs build() {

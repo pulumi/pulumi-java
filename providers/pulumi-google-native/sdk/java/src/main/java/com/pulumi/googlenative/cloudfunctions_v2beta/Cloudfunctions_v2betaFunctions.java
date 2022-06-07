@@ -3,12 +3,15 @@
 
 package com.pulumi.googlenative.cloudfunctions_v2beta;
 
+import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.cloudfunctions_v2beta.inputs.GetFunctionArgs;
 import com.pulumi.googlenative.cloudfunctions_v2beta.inputs.GetFunctionIamPolicyArgs;
+import com.pulumi.googlenative.cloudfunctions_v2beta.inputs.GetFunctionIamPolicyPlainArgs;
+import com.pulumi.googlenative.cloudfunctions_v2beta.inputs.GetFunctionPlainArgs;
 import com.pulumi.googlenative.cloudfunctions_v2beta.outputs.GetFunctionIamPolicyResult;
 import com.pulumi.googlenative.cloudfunctions_v2beta.outputs.GetFunctionResult;
 import java.util.concurrent.CompletableFuture;
@@ -18,28 +21,56 @@ public final class Cloudfunctions_v2betaFunctions {
      * Returns a function with the given name from the requested project.
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
+    public static Output<GetFunctionResult> getFunction(GetFunctionArgs args) {
         return getFunction(args, InvokeOptions.Empty);
     }
     /**
      * Returns a function with the given name from the requested project.
      * 
      */
-    public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFunctionResult> getFunctionPlain(GetFunctionPlainArgs args) {
+        return getFunctionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Returns a function with the given name from the requested project.
+     * 
+     */
+    public static Output<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:cloudfunctions/v2beta:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns a function with the given name from the requested project.
+     * 
+     */
+    public static CompletableFuture<GetFunctionResult> getFunctionPlain(GetFunctionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudfunctions/v2beta:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetFunctionIamPolicyResult> getFunctionIamPolicy(GetFunctionIamPolicyArgs args) {
+    public static Output<GetFunctionIamPolicyResult> getFunctionIamPolicy(GetFunctionIamPolicyArgs args) {
         return getFunctionIamPolicy(args, InvokeOptions.Empty);
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * 
      */
-    public static CompletableFuture<GetFunctionIamPolicyResult> getFunctionIamPolicy(GetFunctionIamPolicyArgs args, InvokeOptions options) {
+    public static CompletableFuture<GetFunctionIamPolicyResult> getFunctionIamPolicyPlain(GetFunctionIamPolicyPlainArgs args) {
+        return getFunctionIamPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static Output<GetFunctionIamPolicyResult> getFunctionIamPolicy(GetFunctionIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("google-native:cloudfunctions/v2beta:getFunctionIamPolicy", TypeShape.of(GetFunctionIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetFunctionIamPolicyResult> getFunctionIamPolicyPlain(GetFunctionIamPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudfunctions/v2beta:getFunctionIamPolicy", TypeShape.of(GetFunctionIamPolicyResult.class), args, Utilities.withVersion(options));
     }
 }
