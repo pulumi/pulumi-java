@@ -239,25 +239,26 @@ func getJavaBaseNew(
 	if err != nil {
 		panic(err)
 	}
-	prepareProject := testSpecificOptions.PrepareProject
+	prepareProject := func(info *engine.Projinfo) error {
+		deps, err := jtests.ParsePinVersionsFromEnv(t, providers)
+		if err != nil {
+			return err
+		}
+		_, err = jtests.Pin(info.Root, deps)
+		return err
+	}
 	opts := integration.ProgramTestOptions{
 		Dir: filepath.Join(repoRoot, "examples", dir),
 		Env: []string{fmt.Sprintf("PULUMI_REPO_ROOT=%s", repoRoot)},
-		PrepareProject: func(info *engine.Projinfo) error {
-			if prepareProject != nil {
-				if err := prepareProject(info); err != nil {
-					return err
-				}
-			}
-			deps, err := jtests.ParsePinVersionsFromEnv(t, providers)
-			if err != nil {
-				return err
-			}
-			_, err = jtests.Pin(info.Root, deps)
-			return err
-		},
 	}
-	opts = opts.With(getBaseOptions()).With(testSpecificOptions)
+	opts = opts.With(getBaseOptions()).
+		With(testSpecificOptions).
+		With(integration.ProgramTestOptions{
+			PrepareProject: combinePrepareProject(
+				prepareProject,
+				testSpecificOptions.PrepareProject,
+			),
+		})
 	if previewOnly {
 		opts = opts.With(integration.ProgramTestOptions{
 			SkipRefresh:            true,
@@ -268,6 +269,20 @@ func getJavaBaseNew(
 		opts.ExtraRuntimeValidation = nil
 	}
 	return opts
+}
+
+func combinePrepareProject(f1, f2 func(info *engine.Projinfo) error) func(info *engine.Projinfo) error {
+	return func(info *engine.Projinfo) error {
+		if f1 != nil {
+			if err := f1(info); err != nil {
+				return err
+			}
+		}
+		if f2 != nil {
+			return f2(info)
+		}
+		return nil
+	}
 }
 
 func getJavaBase(t *testing.T, dir string, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
