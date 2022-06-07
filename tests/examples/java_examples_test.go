@@ -160,17 +160,20 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("aws-native-java-s3-folder", func(t *testing.T) {
-		test := getJavaBase(t, "aws-native-java-s3-folder", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"aws:region":        "us-west-2",
-				"aws-native:region": "us-west-2",
-			},
+		test := getJavaBaseNew(t,
+			"aws-native-java-s3-folder",
+			[]string{"aws", "aws-native"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"aws:region":        "us-west-2",
+					"aws-native:region": "us-west-2",
+				},
 
-			// TODO failing here, potentially a
-			// provider bug. We need to recheck
-			// after upgrading to latest.
-			SkipRefresh: true,
-		})
+				// TODO failing here, potentially a
+				// provider bug. We need to recheck
+				// after upgrading to latest.
+				SkipRefresh: true,
+			})
 		integration.ProgramTest(t, &test)
 	})
 
