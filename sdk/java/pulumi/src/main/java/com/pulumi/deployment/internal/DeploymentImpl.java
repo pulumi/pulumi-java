@@ -85,6 +85,7 @@ import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
@@ -837,14 +838,17 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return gatherExplicitDependenciesAsync(options.getDependsOn())
                     .thenApply(ImmutableSet::copyOf)
                     .thenCompose(explicitDirectDependencies -> {
-                        log.excessive("Gathered explicit dependencies: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
+                        log.excessive(
+                                "Gathered explicit dependencies: t=%s, name=%s, custom=%s, remote=%s, explicitDirectDependencies=%S",
+                                type, name, custom, remote, explicitDirectDependencies
+                        );
 
                         // Serialize out all our props to their final values. In doing so, we'll also collect all
                         // the Resources pointed to by any Dependency objects we encounter, adding them to 'propertyDependencies'.
                         log.excessive("Serializing properties: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
                         return Internal.from(args).toMapAsync(this.log).thenCompose(
-                                map -> this.featureSupport.monitorSupportsResourceReferences().thenCompose(
-                                        supportsResourceReferences -> serialization.serializeResourcePropertiesAsync(label, map, supportsResourceReferences).thenCompose(
+                                props -> this.featureSupport.monitorSupportsResourceReferences().thenCompose(
+                                        supportsResourceReferences -> serialization.serializeResourcePropertiesAsync(label, props, supportsResourceReferences).thenCompose(
                                                 serializationResult -> {
                                                     var serializedProps = serializationResult.serialized;
                                                     var propertyToDirectDependencies = serializationResult.propertyToDependentResources;
@@ -854,35 +858,43 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                     // If no parent was provided, parent to the root resource.
                                                     log.excessive("Getting parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
 
+                                                    // If no parent was provided, parent to the root resource.
                                                     var parentUrn = options.getParent().isPresent()
                                                             ? Internal.of(options.getParent().get().getUrn()).getValueOptional()
                                                             : this.rootResource.getRootResourceAsync(type);
                                                     return parentUrn.thenCompose(
                                                             (Optional<String> pUrn) -> {
                                                                 log.excessive("Got parent urn: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
-                                                                var providerRef = custom
-                                                                        ? CompletableFutures.flipOptional(options.getProvider().map(p -> Internal.from(p).getRegistrationId()))
-                                                                        : CompletableFuture.completedFuture(Optional.<String>empty());
+
+                                                                // Construct the provider reference, if we were given a provider to use.
+                                                                final CompletableFuture<Optional<String>> providerRef;
+                                                                if (custom) {
+                                                                    providerRef = CompletableFutures.flipOptional(options.getProvider().map(p -> Internal.from(p).getRegistrationId()));
+                                                                } else {
+                                                                    providerRef = CompletableFuture.completedFuture(Optional.<String>empty());
+                                                                }
 
                                                                 return providerRef.thenCompose(
                                                                         (Optional<String> pRef) -> {
+                                                                            // For remote resources, merge any provider opts into a single dict,
+                                                                            // and then create a new dict with all the resolved provider refs.
                                                                             final CompletableFuture<ImmutableMap<String, String>> providerFutures;
                                                                             if (remote && options instanceof ComponentResourceOptions) {
                                                                                 var componentOpts = (ComponentResourceOptions) options;
 
-                                                                                // TODO: C# had the following logic here:
-                                                                                //          "If only the Provider opt is set, move it to the Providers list for further processing."
-                                                                                //       But our ComponentResourceOptions should guarantee the desired semantics.
-                                                                                //       It would be great to add more tests and maybe remove 'provider' in favour of 'providers' only
+                                                                                log.excessive("Processing a remote ComponentResource: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
+
+                                                                                BiFunction<Optional<ProviderResource>, List<ProviderResource>, Map<String, CompletableFuture<String>>> convertProviders =
+                                                                                        (provider, providers) -> Stream.concat(provider.stream(), providers.stream())
+                                                                                                .map(Internal::from)
+                                                                                                .collect(toMap(
+                                                                                                        ProviderResource.ProviderResourceInternal::getPackage,
+                                                                                                        ProviderResource.ProviderResourceInternal::getRegistrationId
+                                                                                                ));
 
                                                                                 providerFutures = CompletableFutures.allOf(
-                                                                                                componentOpts.getProviders().stream()
-                                                                                                        .map(Internal::from)
-                                                                                                        .collect(toMap(
-                                                                                                                ProviderResource.ProviderResourceInternal::getPackage,
-                                                                                                                ProviderResource.ProviderResourceInternal::getRegistrationId
-                                                                                                        )))
-                                                                                        .thenApply(ImmutableMap::copyOf);
+                                                                                        convertProviders.apply(componentOpts.getProvider(), componentOpts.getProviders())
+                                                                                ).thenApply(ImmutableMap::copyOf);
                                                                             } else {
                                                                                 providerFutures = CompletableFuture.completedFuture(ImmutableMap.of());
                                                                             }
@@ -892,22 +904,18 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                 // the dependency graph and optimize operations accordingly.
 
                                                                                 // The list of all dependencies (implicit or explicit).
-                                                                                var allDirectDependencies = new HashSet<>(explicitDirectDependencies);
-
-                                                                                var allDirectDependencyUrnsFuture =
+                                                                                var allTransitiveDependencyUrns =
                                                                                         CompletableFutures.builder(getAllTransitivelyReferencedResourceUrnsAsync(explicitDirectDependencies));
-                                                                                var propertyToDirectDependencyUrnFutures = new HashMap<String, CompletableFuture<ImmutableSet<String>>>();
 
+                                                                                var propertyToDirectDependencyUrnFutures = new HashMap<String, CompletableFuture<ImmutableSet<String>>>();
                                                                                 for (var entry : propertyToDirectDependencies.entrySet()) {
                                                                                     var propertyName = entry.getKey();
                                                                                     var directDependencies = entry.getValue();
 
-                                                                                    allDirectDependencies.addAll(directDependencies);
-
                                                                                     var urns = getAllTransitivelyReferencedResourceUrnsAsync(
                                                                                             ImmutableSet.copyOf(directDependencies)
                                                                                     );
-                                                                                    allDirectDependencyUrnsFuture.accumulate(urns, (s1, s2) -> Sets.union(s1, s2).immutableCopy());
+                                                                                    allTransitiveDependencyUrns.accumulate(urns, (s1, s2) -> Sets.union(s1, s2).immutableCopy());
                                                                                     propertyToDirectDependencyUrnFutures.put(propertyName, urns);
                                                                                 }
 
@@ -915,7 +923,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                         CompletableFutures.allOf(propertyToDirectDependencyUrnFutures)
                                                                                                 .thenApply(ImmutableMap::copyOf);
 
-                                                                                return allDirectDependencyUrnsFuture.build().thenCompose(
+                                                                                return allTransitiveDependencyUrns.build().thenCompose(
                                                                                         allDirectDependencyUrns -> propertyToDirectDependencyUrnsFuture.thenCompose(
                                                                                                 propertyToDirectDependencyUrns -> {
 
@@ -963,20 +971,20 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // of their child resources.  This way, a Component acts as an aggregation really of all the
             // reachable resources it parents.  This walking will stop when it hits custom resources.
             //
-            // This function also terminates at remote components, whose children are not known to the Node SDK directly.
+            // This function also terminates at remote components, whose children are not known to the Java SDK directly.
             // Remote components will always wait on all of their children, so ensuring we return the remote component
-            // itself here and waiting on it will accomplish waiting on all of it's children regardless of whether they
+            // itself here and waiting on it will accomplish waiting on all of its children regardless of whether they
             // are returned explicitly here.
             //
             // In other words, if we had:
             //
             //                  Comp1
-            //              /     |     \
+            //               /    |    \
             //          Cust1   Comp2  Remote1
-            //                  /   \       \
-            //              Cust2   Cust3  Comp3
-            //              /                 \
-            //          Cust4                Cust5
+            //                  /   \      \
+            //             Cust2   Cust3  Comp3
+            //              /                \
+            //         Cust4                 Cust5
             //
             // Then the transitively reachable resources of Comp1 will be [Cust1, Cust2, Cust3, Remote1]. It
             // will *not* include:
@@ -1392,14 +1400,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         );
 
                         log.debug(String.format(
-                                "Registering resource monitor start: t=%s, name=%s, custom=%s, remote=%s",
-                                type, name, custom, remote
+                                "Registering resource monitor start: t=%s, name=%s, custom=%s, remote=%s, request=%s",
+                                type, name, custom, remote, request
                         ));
                         return this.monitor.registerResourceAsync(resource, request)
                                 .thenApply(result -> {
                                     log.debug(String.format(
-                                            "Registering resource monitor end: t=%s, name=%s, custom=%s, remote=%s",
-                                            type, name, custom, remote
+                                            "Registering resource monitor end: t=%s, name=%s, custom=%s, remote=%s, result=%s",
+                                            type, name, custom, remote, result
                                     ));
 
                                     var dependencies = result.getPropertyDependenciesMap().entrySet().stream()

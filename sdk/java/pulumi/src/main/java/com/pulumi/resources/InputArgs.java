@@ -58,6 +58,7 @@ public abstract class InputArgs {
                     );
         }
 
+        // TODO: this method should probably be move to the serializer
         @InternalUse
         public CompletableFuture<ImmutableMap<String, Output<?>>> toMapAsync(Log log) {
             BiFunction<String, Object, CompletableFuture<Output<String>>> convertToJson = (context, input) -> {
