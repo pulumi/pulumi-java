@@ -441,22 +441,7 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Setup versioning env vars
-        run: |
-          echo PULUMI_JAVA_SDK_VERSION=0.3.1-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_AWS_PROVIDER_SDK_VERSION=5.5.0-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_AWS_APIGATEWAY_PROVIDER_SDK_VERSION=0.0.9-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_AWS_NATIVE_PROVIDER_SDK_VERSION=0.16.2-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_AWSX_PROVIDER_SDK_VERSION=0.0.1-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_AZURE_PROVIDER_SDK_VERSION=0.0.1-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_AZURE_NATIVE_PROVIDER_SDK_VERSION=1.65.0-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_AZUREAD_PROVIDER_SDK_VERSION=5.23.0-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_DOCKER_PROVIDER_SDK_VERSION=3.3.0-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_EKS_PROVIDER_SDK_VERSION=0.37.2-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_GCP_PROVIDER_SDK_VERSION=6.24.0-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_GOOGLE_NATIVE_PROVIDER_SDK_VERSION=0.18.3-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_KUBERNETES_PROVIDER_SDK_VERSION=3.20.0-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_OCI_PROVIDER_SDK_VERSION=0.1.1-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
-          echo PULUMI_RANDOM_PROVIDER_SDK_VERSION=4.7.0-alpha.1654580046+09e7ed3a | tee $GITHUB_ENV
+        run: cat old_versions.txt | tee $GITHUB_ENV
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
