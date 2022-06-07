@@ -8,7 +8,7 @@ import com.pulumi.aws.ec2.InstanceArgs;
 import com.pulumi.aws.ec2.SecurityGroup;
 import com.pulumi.aws.ec2.SecurityGroupArgs;
 import com.pulumi.aws.ec2.inputs.GetAmiArgs;
-import com.pulumi.aws.ec2.inputs.GetAmiFilter;
+import com.pulumi.aws.ec2.inputs.GetAmiFilterArgs;
 import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
 import com.pulumi.aws.ec2.outputs.GetAmiResult;
 import com.pulumi.core.Output;
