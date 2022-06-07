@@ -75,18 +75,21 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("aws-java-webserver", func(t *testing.T) {
-		test := getJavaBase(t, "aws-java-webserver", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"aws:region": "us-east-1",
-			},
-			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-				o := stackInfo.Outputs
-				publicIp := o["publicIp"].(string)
-				publicHostName := o["publicHostName"].(string)
-				assert.True(t, strings.Contains(publicIp, "."))
-				assert.True(t, strings.Contains(publicHostName, "."))
-			},
-		})
+		test := getJavaBaseNew(t,
+			"aws-java-webserver",
+			[]string{"aws"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"aws:region": "us-east-1",
+				},
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					publicIp := o["publicIp"].(string)
+					publicHostName := o["publicHostName"].(string)
+					assert.True(t, strings.Contains(publicIp, "."))
+					assert.True(t, strings.Contains(publicHostName, "."))
+				},
+			})
 		integration.ProgramTest(t, &test)
 	})
 
