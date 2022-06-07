@@ -183,22 +183,38 @@ func TestExamples(t *testing.T) {
 		integration.ProgramTest(t, &test)
 	})
 
-	t.Run("azure-function-graal-spring", func(t *testing.T) {
-		test := getJavaBase(t, "azure-function-graal-spring", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"azure-native:location": "westus",
-			},
-			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-				o := stackInfo.Outputs
-				functionName := o["functionName"].(string)
-				endpoint := o["endpoint"].(string)
-				assert.True(t, len(functionName) > 0)
-				assert.True(t, strings.HasPrefix(endpoint, "https"))
-				assertHTTPResult(t, o["endpoint"], nil, func(body string) bool {
-					return assert.Contains(t, body, "{\"message\":\"Hello from Spring, Pulumi!\"}")
-				})
-			},
-		})
+	t.Run("azure-java-function-graal-spring", func(t *testing.T) {
+		test := getJavaBaseNew(t,
+			"azure-java-function-graal-spring",
+			[]string{"azure-native"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"azure-native:location": "westus",
+				},
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					functionName := o["functionName"].(string)
+					endpoint := o["endpoint"].(string)
+					assert.True(t, len(functionName) > 0)
+					assert.True(t, strings.HasPrefix(endpoint, "https"))
+					assertHTTPResult(t, o["endpoint"], nil, func(body string) bool {
+						return assert.Contains(t, body, "{\"message\":\"Hello from Spring, Pulumi!\"}")
+					})
+				},
+				PrepareProject: func(info *engine.Projinfo) error {
+					cmd := exec.Command("gradle", "app:packageDistribution")
+					cmd.Dir = info.Root
+					var buf bytes.Buffer
+					cmd.Stdout = &buf
+					cmd.Stderr = &buf
+					err := cmd.Run()
+					if err != nil {
+						t.Logf("gradle app:packageDistribution: %v", err)
+						t.Log(buf.String())
+					}
+					return err
+				},
+			})
 		integration.ProgramTest(t, &test)
 	})
 
@@ -223,10 +239,16 @@ func getJavaBaseNew(
 	if err != nil {
 		panic(err)
 	}
+	prepareProject := testSpecificOptions.PrepareProject
 	opts := integration.ProgramTestOptions{
 		Dir: filepath.Join(repoRoot, "examples", dir),
 		Env: []string{fmt.Sprintf("PULUMI_REPO_ROOT=%s", repoRoot)},
 		PrepareProject: func(info *engine.Projinfo) error {
+			if prepareProject != nil {
+				if err := prepareProject(info); err != nil {
+					return err
+				}
+			}
 			deps, err := jtests.ParsePinVersionsFromEnv(t, providers)
 			if err != nil {
 				return err
