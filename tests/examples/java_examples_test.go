@@ -119,13 +119,16 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("gcp-java-gke-hello-world", func(t *testing.T) {
-		test := getJavaBase(t, "gcp-java-gke-hello-world", integration.ProgramTestOptions{
-			Config: map[string]string{
-				// Try `gcloud projects list`
-				"gcp:project": "pulumi-development",
-				"gcp:zone":    "us-west1-a",
-			},
-		})
+		test := getJavaBaseNew(t,
+			"gcp-java-gke-hello-world",
+			[]string{"gcp"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					// Try `gcloud projects list`
+					"gcp:project": "pulumi-development",
+					"gcp:zone":    "us-west1-a",
+				},
+			})
 
 		integration.ProgramTest(t, &test)
 	})
