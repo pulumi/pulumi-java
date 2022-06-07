@@ -99,7 +99,8 @@ public class DeploymentTests {
             var context = new ContextInternal(
                     this.options.getProjectName(),
                     this.options.getStackName(),
-                    loggingContext, configContext, outputsContext
+                    loggingContext, configContext, outputsContext,
+                    this.options.resourceTransformations()
             );
             var pulumi = new PulumiTestInternal(this.runner, mockEngine, mockMonitor, context);
             return pulumi.runTestAsync(stackCallback);

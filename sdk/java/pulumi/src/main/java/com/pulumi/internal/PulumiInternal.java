@@ -13,10 +13,10 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.Runner.Result;
+import com.pulumi.resources.StackOptions;
 import com.pulumi.resources.internal.Stack;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -25,7 +25,7 @@ import static java.util.Objects.requireNonNull;
 
 @InternalUse
 @ParametersAreNonnullByDefault
-public class PulumiInternal implements Pulumi {
+public class PulumiInternal implements Pulumi, Pulumi.API {
 
     protected final Runner runner;
     protected final ContextInternal stackContext;
@@ -37,7 +37,7 @@ public class PulumiInternal implements Pulumi {
     }
 
     @InternalUse
-    public static PulumiInternal fromEnvironment() {
+    public static PulumiInternal fromEnvironment(StackOptions options) {
         var deployment = DeploymentImpl.fromEnvironment();
         var instance = Deployment.getInstance();
         var projectName = deployment.getProjectName();
@@ -51,11 +51,16 @@ public class PulumiInternal implements Pulumi {
         var outputFactory = new OutputFactory(runner);
         var outputs = new OutputContextInternal(outputFactory);
 
-        var ctx = new ContextInternal(projectName, stackName, logging, config, outputs);
+        var ctx = new ContextInternal(
+                projectName, stackName, logging, config, outputs, options.resourceTransformations()
+        );
         return new PulumiInternal(runner, ctx);
     }
 
-    @InternalUse
+    public void run(Consumer<Context> stack) {
+        System.exit(runAsync(stack).join());
+    }
+
     public CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
         return runAsyncResult(stackCallback).thenApply(r -> r.exitCode());
     }
@@ -66,7 +71,7 @@ public class PulumiInternal implements Pulumi {
                 () -> Stack.factory(
                         this.stackContext.projectName(),
                         this.stackContext.stackName(),
-                        List.of() // TODO: set stack transformations here
+                        this.stackContext.resourceTransformations()
                 ).apply(() -> {
                     // before user code was executed
                     stackCallback.accept(this.stackContext); // MUST run before accessing mutable variables

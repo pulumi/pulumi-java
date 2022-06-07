@@ -7,8 +7,10 @@ import com.pulumi.context.LoggingContext;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.Strings;
 import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.resources.ResourceTransformation;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
 import java.util.Map;
 
 import static com.pulumi.core.internal.Objects.require;
@@ -24,19 +26,22 @@ public class ContextInternal implements Context {
     private final ConfigContextInternal config;
     private final OutputContextInternal outputs;
     private final ImmutableMap.Builder<String, Output<?>> exports;
+    private final List<ResourceTransformation> resourceTransformations;
 
     public ContextInternal(
             String projectName,
             String stackName,
             LoggingContextInternal logging,
             ConfigContextInternal config,
-            OutputContextInternal outputs
+            OutputContextInternal outputs,
+            List<ResourceTransformation> resourceTransformations
     ) {
         this.projectName = require(Strings::isNonEmptyOrNull, projectName, () -> "expected a project name, got empty string or null");
         this.stackName = require(Strings::isNonEmptyOrNull, stackName, () -> "expected a stack name, got empty string or null");
         this.logging = requireNonNull(logging);
         this.config = requireNonNull(config);
         this.outputs = requireNonNull(outputs);
+        this.resourceTransformations = requireNonNull(resourceTransformations);
         this.exports = ImmutableMap.builder();
     }
 
@@ -78,7 +83,13 @@ public class ContextInternal implements Context {
         return config.config(name);
     }
 
+    @InternalUse
     public Map<String, Output<?>> exports() {
         return this.exports.build();
+    }
+
+    @InternalUse
+    public List<ResourceTransformation> resourceTransformations() {
+        return this.resourceTransformations;
     }
 }
