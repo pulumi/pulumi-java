@@ -11,4 +11,6 @@
   `Stack`, please use the `Pulumi.run` form to define resources in
   your stack as shown in the README.
 
+- Fix #478: New API Pulumi.withOptions adds support for stack transformations
+
 ### Bug Fixes
