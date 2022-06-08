@@ -3,8 +3,7 @@
 package main
 
 import (
-	"fmt"
-	"path/filepath"
+	"io/fs"
 	"strings"
 
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
@@ -15,7 +14,7 @@ type gradle struct{}
 var _ javaExecutorFactory = &gradle{}
 
 func (g gradle) tryConfigureExecutor(opts javaExecutorOptions) (*javaExecutor, error) {
-	ok, err := g.isGradleProject(opts)
+	ok, err := g.isGradleProject(opts.wd, opts)
 	if err != nil {
 		return nil, err
 	}
@@ -28,42 +27,42 @@ func (g gradle) tryConfigureExecutor(opts javaExecutorOptions) (*javaExecutor, e
 	}
 	probePaths := []string{opts.useExecutor}
 	if opts.useExecutor == "" {
-		probePaths = []string{filepath.Join(gradleRoot, "gradlew"), "gradle"}
+		probePaths = []string{"./gradlew", "gradle"}
 	}
-	cmd, err := lookupPath(probePaths...)
+	cmd, err := lookupPath(gradleRoot, probePaths...)
 	if err != nil {
 		return nil, err
 	}
-	logging.V(3).Infof("Detected Gradle Java executor: `%s`", cmd)
+	logging.V(3).Infof("Detected Gradle Java executor (root: `%s`): `%s`",
+		gradleRoot.Path(), cmd)
 	return g.newGradleExecutor(cmd)
 }
 
-func (gradle) findGradleRoot(wd string) (string, error) {
+func (gradle) findGradleRoot(workdir parentFS) (parentFS, error) {
 	gradleRootMarkers := []string{
 		"settings.gradle",
 		"settings.gradle.kts",
 	}
-	d := wd
+	d := workdir
 	for {
 		for _, p := range gradleRootMarkers {
-			isGradleRoot, err := fileExists(filepath.Join(d, p))
+			isGradleRoot, err := fileExists(d, p)
 			if err != nil {
-				return "", err
+				return nil, err
 			}
 			if isGradleRoot {
 				return d, nil
 			}
 		}
-		nextD := filepath.Dir(d)
-		if nextD == d {
-			return "", fmt.Errorf("No ancestor dir with settings.gradle(.kts)? found"+
-				" for %s", wd)
+		if !d.HasParent() {
+			// Abort search and assume workdir is the root
+			return workdir, nil
 		}
-		d = nextD
+		d = d.Parent()
 	}
 }
 
-func (gradle) isGradleProject(opts javaExecutorOptions) (bool, error) {
+func (gradle) isGradleProject(dir fs.FS, opts javaExecutorOptions) (bool, error) {
 	if strings.Contains(opts.useExecutor, "gradle") {
 		return true, nil
 	}
@@ -73,7 +72,7 @@ func (gradle) isGradleProject(opts javaExecutorOptions) (bool, error) {
 		"build.gradle",
 	}
 	for _, p := range gradleMarkers {
-		isGradle, err := fileExists(filepath.Join(opts.wd, p))
+		isGradle, err := fileExists(dir, p)
 		if err != nil {
 			return false, err
 		}

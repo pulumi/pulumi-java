@@ -3,7 +3,6 @@
 package main
 
 import (
-	"path/filepath"
 	"strings"
 )
 
@@ -21,9 +20,9 @@ func (m maven) tryConfigureExecutor(opts javaExecutorOptions) (*javaExecutor, er
 	}
 	probePaths := []string{opts.useExecutor}
 	if opts.useExecutor == "" {
-		probePaths = []string{"mvn", filepath.Join(opts.wd, "mvnw")}
+		probePaths = []string{"./mvnw", "mvn"}
 	}
-	cmd, err := lookupPath(probePaths...)
+	cmd, err := lookupPath(opts.wd, probePaths...)
 	if err != nil {
 		return nil, err
 	}
@@ -34,7 +33,7 @@ func (maven) isMavenProject(opts javaExecutorOptions) (bool, error) {
 	if strings.Contains(opts.useExecutor, "mvn") {
 		return true, nil
 	}
-	return fileExists(filepath.Join(opts.wd, "pom.xml"))
+	return fileExists(opts.wd, "pom.xml")
 }
 
 func (maven) newMavenExecutor(cmd string) (*javaExecutor, error) {

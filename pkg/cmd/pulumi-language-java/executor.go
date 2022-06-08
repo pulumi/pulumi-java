@@ -18,7 +18,7 @@ type javaExecutor struct {
 // Information available to pick an executor.
 type javaExecutorOptions struct {
 	// current working directory
-	wd string
+	wd parentFS
 
 	// runtime.options.binary setting from Pulumi.yaml, if any
 	binary string

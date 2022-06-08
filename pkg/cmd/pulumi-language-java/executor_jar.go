@@ -19,7 +19,7 @@ func (j jarexec) tryConfigureExecutor(opts javaExecutorOptions) (*javaExecutor, 
 	if suffix != ".jar" {
 		return nil, nil
 	}
-	cmd, err := lookupPath("java")
+	cmd, err := lookupPath(opts.wd, "java")
 	if err != nil {
 		return nil, err
 	}

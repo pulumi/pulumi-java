@@ -27,9 +27,9 @@ func (j jbang) tryConfigureExecutor(opts javaExecutorOptions) (*javaExecutor, er
 	}
 	probePaths := []string{opts.useExecutor}
 	if opts.useExecutor == "" {
-		probePaths = []string{"jbang", filepath.Join(opts.wd, "jbang")}
+		probePaths = []string{"./jbang", "jbang"}
 	}
-	cmd, err := lookupPath(probePaths...)
+	cmd, err := lookupPath(opts.wd, probePaths...)
 	if err != nil {
 		return nil, err
 	}
@@ -47,7 +47,7 @@ func (j jbang) isJBangProject(opts javaExecutorOptions) (bool, error) {
 	if strings.Contains(opts.useExecutor, "jbang") {
 		return true, nil
 	}
-	return fileExists(filepath.Join(opts.wd, "jbang.properties"))
+	return fileExists(opts.wd, "jbang.properties")
 }
 
 func (j jbang) newJBangExecutor(cmd string, script string) (*javaExecutor, error) {

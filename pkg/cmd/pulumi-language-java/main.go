@@ -52,7 +52,7 @@ func main() {
 	javaExec, err := configureExecutor(javaExecutorOptions{
 		binary:      binary,
 		useExecutor: useExecutor,
-		wd:          wd,
+		wd:          &osDirFS{wd},
 	})
 	if err != nil {
 		cmdutil.Exit(err)
