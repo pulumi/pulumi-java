@@ -34,7 +34,12 @@ func (gradle) isGradleProject(opts javaExecutorOptions) (bool, error) {
 	if strings.Contains(opts.useExecutor, "gradle") {
 		return true, nil
 	}
-	for _, p := range []string{"settings.gradle", "settings.gradle.kts"} {
+	gradleMarkers := []string{
+		"settings.gradle",
+		"settings.gradle.kts",
+		"build.gradle",
+	}
+	for _, p := range gradleMarkers {
 		isGradle, err := fileExists(filepath.Join(opts.wd, p))
 		if err != nil {
 			return false, err
