@@ -1,6 +1,6 @@
 // Copyright 2022, Pulumi Corporation.  All rights reserved.
 
-package main
+package fsys
 
 import (
 	"fmt"
@@ -12,13 +12,29 @@ import (
 
 // Implements parentFS for testing. Unlike the prod implementation,
 // path operations do not vary by OS but are unix-y.
+//
+// files is an in-memory filesystem
+//
+// workdir is a relative path to the current working dir in the
+// in-memory filesystem
+//
+// globalPath maps short executable names to full paths to emulate
+// PATH resolution in LookPath.
+func TestFS(
+	workdir string,
+	globalPath map[string]string,
+	files fstest.MapFS,
+) ParentFS {
+	return &testFS{workdir, globalPath, files}
+}
+
 type testFS struct {
 	path  string
 	exes  map[string]string
 	mapfs fstest.MapFS
 }
 
-var _ parentFS = &testFS{}
+var _ ParentFS = &testFS{}
 
 func (t testFS) fs() fs.FS {
 	sub, err := fs.Sub(t.mapfs, t.path)
@@ -44,13 +60,13 @@ func (t testFS) HasParent() bool {
 	return path.Dir(t.path) != t.path
 }
 
-func (t testFS) Parent() parentFS {
+func (t testFS) Parent() ParentFS {
 	return testFS{path.Dir(t.path), t.exes, t.mapfs}
 }
 
 func (t testFS) LookPath(exe string) (string, error) {
 	if strings.Contains(exe, "/") {
-		ok, err := fileExists(t.fs(), path.Join(".", exe))
+		ok, err := FileExists(t.fs(), path.Join(".", exe))
 		if err != nil {
 			return "", err
 		}

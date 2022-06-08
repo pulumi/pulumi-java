@@ -1,35 +1,37 @@
 // Copyright 2022, Pulumi Corporation.  All rights reserved.
 
-package main
+package executors
 
 import (
 	"io/fs"
 	"strings"
 
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
+
+	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
 )
 
 type gradle struct{}
 
 var _ javaExecutorFactory = &gradle{}
 
-func (g gradle) tryConfigureExecutor(opts javaExecutorOptions) (*javaExecutor, error) {
-	ok, err := g.isGradleProject(opts.wd, opts)
+func (g gradle) tryConfigureExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
+	ok, err := g.isGradleProject(opts.WD, opts)
 	if err != nil {
 		return nil, err
 	}
 	if !ok {
 		return nil, nil
 	}
-	gradleRoot, err := g.findGradleRoot(opts.wd)
+	gradleRoot, err := g.findGradleRoot(opts.WD)
 	if err != nil {
 		return nil, err
 	}
-	probePaths := []string{opts.useExecutor}
-	if opts.useExecutor == "" {
+	probePaths := []string{opts.UseExecutor}
+	if opts.UseExecutor == "" {
 		probePaths = []string{"./gradlew", "gradle"}
 	}
-	cmd, err := lookupPath(gradleRoot, probePaths...)
+	cmd, err := fsys.LookPath(gradleRoot, probePaths...)
 	if err != nil {
 		return nil, err
 	}
@@ -38,7 +40,7 @@ func (g gradle) tryConfigureExecutor(opts javaExecutorOptions) (*javaExecutor, e
 	return g.newGradleExecutor(cmd)
 }
 
-func (gradle) findGradleRoot(workdir parentFS) (parentFS, error) {
+func (gradle) findGradleRoot(workdir fsys.ParentFS) (fsys.ParentFS, error) {
 	gradleRootMarkers := []string{
 		"settings.gradle",
 		"settings.gradle.kts",
@@ -46,7 +48,7 @@ func (gradle) findGradleRoot(workdir parentFS) (parentFS, error) {
 	d := workdir
 	for {
 		for _, p := range gradleRootMarkers {
-			isGradleRoot, err := fileExists(d, p)
+			isGradleRoot, err := fsys.FileExists(d, p)
 			if err != nil {
 				return nil, err
 			}
@@ -62,8 +64,8 @@ func (gradle) findGradleRoot(workdir parentFS) (parentFS, error) {
 	}
 }
 
-func (gradle) isGradleProject(dir fs.FS, opts javaExecutorOptions) (bool, error) {
-	if strings.Contains(opts.useExecutor, "gradle") {
+func (gradle) isGradleProject(dir fs.FS, opts JavaExecutorOptions) (bool, error) {
+	if strings.Contains(opts.UseExecutor, "gradle") {
 		return true, nil
 	}
 	gradleMarkers := []string{
@@ -72,7 +74,7 @@ func (gradle) isGradleProject(dir fs.FS, opts javaExecutorOptions) (bool, error)
 		"build.gradle",
 	}
 	for _, p := range gradleMarkers {
-		isGradle, err := fileExists(dir, p)
+		isGradle, err := fsys.FileExists(dir, p)
 		if err != nil {
 			return false, err
 		}
@@ -83,12 +85,12 @@ func (gradle) isGradleProject(dir fs.FS, opts javaExecutorOptions) (bool, error)
 	return false, nil
 }
 
-func (gradle) newGradleExecutor(cmd string) (*javaExecutor, error) {
-	return &javaExecutor{
-		cmd:       cmd,
-		buildArgs: []string{"build", "--console=plain"},
-		runArgs:   []string{"run", "--console=plain"},
-		pluginArgs: []string{
+func (gradle) newGradleExecutor(cmd string) (*JavaExecutor, error) {
+	return &JavaExecutor{
+		Cmd:       cmd,
+		BuildArgs: []string{"build", "--console=plain"},
+		RunArgs:   []string{"run", "--console=plain"},
+		PluginArgs: []string{
 			/* STDOUT needs to be clean of gradle output, because we expect a JSON with plugin results */
 			"-q", // must first due to a bug https://github.com/gradle/gradle/issues/5098
 			"run", "--console=plain",
