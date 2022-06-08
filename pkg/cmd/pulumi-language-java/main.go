@@ -8,10 +8,8 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"os/exec"
-	"path/filepath"
 	"strings"
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
@@ -37,8 +35,8 @@ func main() {
 
 	// You can use the below flag to request that the language host load a specific executor instead of probing the
 	// PATH.  This can be used during testing to override the default location.
-	var givenExecutor string
-	flag.StringVar(&givenExecutor, "use-executor", "",
+	var useExecutor string
+	flag.StringVar(&useExecutor, "use-executor", "",
 		"Use the given program as the executor instead of looking for one on PATH")
 
 	flag.Parse()
@@ -46,54 +44,18 @@ func main() {
 	logging.InitLogging(false, 0, false)
 	cmdutil.InitTracing("pulumi-language-java", "pulumi-language-java", tracing)
 
-	var javaExec *javaExecutor
-	switch {
-	case givenExecutor != "":
-		logging.V(3).Infof("language host asked to use specific executor: `%s`", givenExecutor)
-		var err error
-		javaExec, err = resolveExecutor(givenExecutor)
-		if err != nil {
-			cmdutil.Exit(err)
-		}
-	case binary != "":
-		logging.V(3).Infof("language host asked to use a specific file: `%s`", binary)
+	wd, err := os.Getwd()
+	if err != nil {
+		cmdutil.Exit(fmt.Errorf("could not get the working directory: %w", err))
+	}
 
-		suffix := strings.ToLower(filepath.Ext(binary))
-
-		switch suffix {
-		case ".jar":
-			cmd, err := lookupPath("java")
-			if err != nil {
-				cmdutil.Exit(err)
-			}
-			javaExec, err = newJarExecutor(cmd, binary)
-			if err != nil {
-				cmdutil.Exit(err)
-			}
-		case ".java", ".kt", ".groovy":
-			cmd, err := probeJBangExecutor()
-			if err != nil {
-				cmdutil.Exit(err)
-			}
-			javaExec, err = newJBangExecutor(cmd, binary)
-			if err != nil {
-				cmdutil.Exit(err)
-			}
-		default:
-			cmdutil.Exit(fmt.Errorf("Cannot run binary %s with extension %s. "+
-				"Expecting a .jar or a JBang entry-point (.java, .kt, or .groovy)",
-				binary, suffix))
-		}
-	default:
-		pathExec, err := probeExecutor()
-		if err != nil {
-			cmdutil.Exit(err)
-		}
-		logging.V(3).Infof("language host identified executor from path: `%s`", pathExec)
-		javaExec, err = resolveExecutor(pathExec)
-		if err != nil {
-			cmdutil.Exit(err)
-		}
+	javaExec, err := configureExecutor(javaExecutorOptions{
+		binary:      binary,
+		useExecutor: useExecutor,
+		wd:          wd,
+	})
+	if err != nil {
+		cmdutil.Exit(err)
 	}
 
 	// Optionally pluck out the engine so we can do logging, etc.
@@ -121,13 +83,6 @@ func main() {
 	if err := <-done; err != nil {
 		cmdutil.Exit(errors.Wrapf(err, "language host RPC stopped serving"))
 	}
-}
-
-type javaExecutor struct {
-	cmd        string
-	buildArgs  []string
-	runArgs    []string
-	pluginArgs []string
 }
 
 // javaLanguageHost implements the LanguageRuntimeServer interface
@@ -397,119 +352,4 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 
 	logging.V(5).Infof("InstallDependencies(Directory=%s): done", req.Directory)
 	return nil
-}
-
-func probeExecutor() (string, error) {
-	pwd, err := os.Getwd()
-	if err != nil {
-		return "", errors.Wrap(err, "could not get the working directory")
-	}
-	files, err := ioutil.ReadDir(pwd)
-	if err != nil {
-		return "", errors.Wrap(err, "could not read the working directory")
-	}
-	mvn := "mvn"
-	// detect mvn wrapper
-	for _, file := range files {
-		if !file.IsDir() && file.Name() == "mvnw" {
-			mvn = "./mvnw"
-		}
-	}
-	gradle := "gradle"
-	// detect gradle wrapper
-	for _, file := range files {
-		if !file.IsDir() && file.Name() == "gradlew" {
-			gradle = "./gradlew"
-		}
-	}
-
-	// detect maven or gradle
-	for _, file := range files {
-		if !file.IsDir() {
-			switch file.Name() {
-			case "pom.xml":
-				return mvn, nil
-			case "settings.gradle", "settings.gradle.kts":
-				return gradle, nil
-			case "jbang.properties":
-				return resolveJBangPath(files)
-			}
-		}
-	}
-	return "", errors.New("did not found an executor, expected one of: gradle (settings.gradle), maven (pom.xml)")
-}
-
-func resolveExecutor(exec string) (*javaExecutor, error) {
-	logging.V(3).Infof("Finding executor for: `%s`", exec)
-
-	switch exec {
-	case "gradle", "./gradlew":
-		cmd, err := lookupPath(exec)
-		if err != nil {
-			return nil, err
-		}
-		return newGradleExecutor(cmd)
-	case "mvn", "./mvnw":
-		cmd, err := lookupPath(exec)
-		if err != nil {
-			return nil, err
-		}
-		return newMavenExecutor(cmd)
-	case jbangGlobal, jbangLocal:
-		cmd, err := lookupPath(exec)
-		if err != nil {
-			return nil, err
-		}
-		return newJBangExecutor(cmd, "src/main.java")
-	default:
-		return nil, errors.Errorf("did not recognize executor '%s', "+
-			"expected one of: gradle, mvn, gradlew, mvnw, jbang", exec)
-	}
-}
-
-func newGradleExecutor(cmd string) (*javaExecutor, error) {
-	return &javaExecutor{
-		cmd:       cmd,
-		buildArgs: []string{"build", "--console=plain"},
-		runArgs:   []string{"run", "--console=plain"},
-		pluginArgs: []string{
-			/* STDOUT needs to be clean of gradle output, because we expect a JSON with plugin results */
-			"-q", // must first due to a bug https://github.com/gradle/gradle/issues/5098
-			"run", "--console=plain",
-			"-PmainClass=com.pulumi.bootstrap.internal.Main",
-			"--args=packages",
-		},
-	}, nil
-}
-
-func newMavenExecutor(cmd string) (*javaExecutor, error) {
-	return &javaExecutor{
-		cmd:       cmd,
-		buildArgs: []string{"--no-transfer-progress", "compile"},
-		runArgs:   []string{"--no-transfer-progress", "compile", "exec:java"},
-		pluginArgs: []string{
-			/* move normal output to STDERR, because we need STDOUT for JSON with plugin results */
-			"-Dorg.slf4j.simpleLogger.logFile=System.err",
-			"--no-transfer-progress", "compile", "exec:java",
-			"-DmainClass=com.pulumi.bootstrap.internal.Main",
-			"-DmainArgs=packages",
-		},
-	}, nil
-}
-
-func newJarExecutor(cmd string, path string) (*javaExecutor, error) {
-	return &javaExecutor{
-		cmd:        cmd,
-		buildArgs:  nil, // not supported
-		runArgs:    []string{"-jar", filepath.Clean(path)},
-		pluginArgs: []string{"-cp", filepath.Clean(path), "com.pulumi.bootstrap.internal.Main", "packages"},
-	}, nil
-}
-
-func lookupPath(file string) (string, error) {
-	pathExec, err := exec.LookPath(file)
-	if err != nil {
-		return "", errors.Wrapf(err, "could not find `%s` on the $PATH", file)
-	}
-	return pathExec, nil
 }
