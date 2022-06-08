@@ -20,7 +20,7 @@ func TestGradleSimple(t *testing.T) {
 		})
 	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
-	assert.Equal(t, "/usr/bin/gradle", exec.cmd)
+	assert.Equal(t, "/usr/bin/gradle", exec.Cmd)
 }
 
 func TestGradleKTS(t *testing.T) {
@@ -32,7 +32,7 @@ func TestGradleKTS(t *testing.T) {
 		})
 	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
-	assert.Equal(t, "/usr/bin/gradle", exec.cmd)
+	assert.Equal(t, "/usr/bin/gradle", exec.Cmd)
 }
 
 func TestGradlew(t *testing.T) {
@@ -45,7 +45,7 @@ func TestGradlew(t *testing.T) {
 		})
 	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
-	assert.Equal(t, "./gradlew", exec.cmd)
+	assert.Equal(t, "./gradlew", exec.Cmd)
 }
 
 func TestGradleMultiProject(t *testing.T) {
@@ -59,7 +59,7 @@ func TestGradleMultiProject(t *testing.T) {
 		})
 	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
-	assert.Equal(t, "./gradlew", exec.cmd)
+	assert.Equal(t, "./gradlew", exec.Cmd)
 }
 
 func TestGradleUseExecutor(t *testing.T) {
@@ -79,14 +79,14 @@ func TestGradleUseExecutor(t *testing.T) {
 		UseExecutor: "./custom-gradlew",
 	})
 	assert.NoError(t, err)
-	assert.Equal(t, "./custom-gradlew", exec.cmd)
+	assert.Equal(t, "./custom-gradlew", exec.Cmd)
 
 	exec, err = ConfigureExecutor(JavaExecutorOptions{
 		WD:          fs,
 		UseExecutor: "/bin/custom-gradle",
 	})
 	assert.NoError(t, err)
-	assert.Equal(t, "/bin/custom-gradle", exec.cmd)
+	assert.Equal(t, "/bin/custom-gradle", exec.Cmd)
 
 	// Even if no marker settings.gradle files are found,
 	// UseExecutor forces the use of gradle.
@@ -103,7 +103,7 @@ func TestGradleUseExecutor(t *testing.T) {
 		UseExecutor: "gradle",
 	})
 	assert.NoError(t, err)
-	assert.Equal(t, "/usr/bin/gradle", exec.cmd)
+	assert.Equal(t, "/usr/bin/gradle", exec.Cmd)
 }
 
 func TestMavenSimple(t *testing.T) {
@@ -114,7 +114,7 @@ func TestMavenSimple(t *testing.T) {
 		})
 	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
-	assert.Equal(t, "/usr/bin/mvn", exec.cmd)
+	assert.Equal(t, "/usr/bin/mvn", exec.Cmd)
 }
 
 func TestMavenW(t *testing.T) {
@@ -126,7 +126,7 @@ func TestMavenW(t *testing.T) {
 		})
 	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
-	assert.Equal(t, "./mvnw", exec.cmd)
+	assert.Equal(t, "./mvnw", exec.Cmd)
 }
 
 func TestMavenUseExecutor(t *testing.T) {
@@ -145,14 +145,14 @@ func TestMavenUseExecutor(t *testing.T) {
 		UseExecutor: "./custom-mvnw",
 	})
 	assert.NoError(t, err)
-	assert.Equal(t, "./custom-mvnw", exec.cmd)
+	assert.Equal(t, "./custom-mvnw", exec.Cmd)
 
 	exec, err = ConfigureExecutor(JavaExecutorOptions{
 		WD:          fs,
 		UseExecutor: "/bin/custom-mvn",
 	})
 	assert.NoError(t, err)
-	assert.Equal(t, "/bin/custom-mvn", exec.cmd)
+	assert.Equal(t, "/bin/custom-mvn", exec.Cmd)
 
 	// Even if no marker pom.xml files are found,
 	// UseExecutor forces the use of gradle.
@@ -168,7 +168,7 @@ func TestMavenUseExecutor(t *testing.T) {
 		UseExecutor: "mvn",
 	})
 	assert.NoError(t, err)
-	assert.Equal(t, "/usr/bin/mvn", exec.cmd)
+	assert.Equal(t, "/usr/bin/mvn", exec.Cmd)
 }
 
 func TestJarExecSimple(t *testing.T) {
@@ -180,8 +180,8 @@ func TestJarExecSimple(t *testing.T) {
 		Binary: "dist/hello.jar",
 	})
 	assert.NoError(t, err)
-	assert.Equal(t, "/usr/bin/java", exec.cmd)
-	assert.Equal(t, []string{"-jar", "dist/hello.jar"}, exec.runArgs)
+	assert.Equal(t, "/usr/bin/java", exec.Cmd)
+	assert.Equal(t, []string{"-jar", "dist/hello.jar"}, exec.RunArgs)
 }
 
 func TestJBangSimple(t *testing.T) {
@@ -195,8 +195,8 @@ func TestJBangSimple(t *testing.T) {
 		WD: fsys,
 	})
 	assert.NoError(t, err)
-	assert.Equal(t, "/usr/bin/jbang", exec.cmd)
-	assert.Equal(t, []string{"--quiet", "run", "src/main.java"}, exec.runArgs)
+	assert.Equal(t, "/usr/bin/jbang", exec.Cmd)
+	assert.Equal(t, []string{"--quiet", "run", "src/main.java"}, exec.RunArgs)
 }
 
 func TestJBangCustomMainFile(t *testing.T) {
@@ -210,8 +210,8 @@ func TestJBangCustomMainFile(t *testing.T) {
 		Binary: "src/custom.java",
 	})
 	assert.NoError(t, err)
-	assert.Equal(t, "/usr/bin/jbang", exec.cmd)
-	assert.Equal(t, []string{"--quiet", "run", "src/custom.java"}, exec.runArgs)
+	assert.Equal(t, "/usr/bin/jbang", exec.Cmd)
+	assert.Equal(t, []string{"--quiet", "run", "src/custom.java"}, exec.RunArgs)
 }
 
 func TestJBangUseExecutor(t *testing.T) {
@@ -223,6 +223,6 @@ func TestJBangUseExecutor(t *testing.T) {
 		WD:          fsys,
 	})
 	assert.NoError(t, err)
-	assert.Equal(t, "/usr/bin/jbang", exec.cmd)
-	assert.Equal(t, []string{"--quiet", "run", "src/main.java"}, exec.runArgs)
+	assert.Equal(t, "/usr/bin/jbang", exec.Cmd)
+	assert.Equal(t, []string{"--quiet", "run", "src/main.java"}, exec.RunArgs)
 }
