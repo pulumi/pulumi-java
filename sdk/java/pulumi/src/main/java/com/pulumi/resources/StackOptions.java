@@ -1,7 +1,5 @@
 package com.pulumi.resources;
 
-import com.pulumi.core.internal.Copyable;
-
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
@@ -13,7 +11,7 @@ import static java.util.Objects.requireNonNull;
  * @see StackOptions is a bag of optional settings that control a stack's behavior.
  */
 @ParametersAreNonnullByDefault
-public class StackOptions implements Copyable<StackOptions> {
+public class StackOptions {
 
     public static final StackOptions Empty = new Builder().build();
 
@@ -38,12 +36,6 @@ public class StackOptions implements Copyable<StackOptions> {
      */
     public List<ResourceTransformation> resourceTransformations() {
         return this.resourceTransformations;
-    }
-
-    public StackOptions copy() {
-        return new StackOptions(
-                this.resourceTransformations
-        );
     }
 
     /**
@@ -100,11 +92,11 @@ public class StackOptions implements Copyable<StackOptions> {
      * @return a new {@link StackOptions} with merged values
      */
     public static StackOptions merge(@Nullable StackOptions options1, @Nullable StackOptions options2) {
-        options1 = options1 != null ? options1.copy() : Empty;
-        options2 = options2 != null ? options2.copy() : Empty;
+        var opt1 = options1 != null ? options1 : Empty;
+        var opt2 = options2 != null ? options2 : Empty;
 
         var resourceTransformations = requireNonNull(mergeNullableList(
-                options1.resourceTransformations, options2.resourceTransformations
+                opt1.resourceTransformations, opt2.resourceTransformations
         ));
         return new StackOptions(resourceTransformations);
     }
