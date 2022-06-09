@@ -8,7 +8,7 @@ import (
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
 )
 
-// Abstracts interactions with a Java project, abiltiy to build, run
+// Abstracts interactions with a Java project, ability to build, run
 // Java code, and detect plugin dependencies.
 type JavaExecutor struct {
 	// Path to the command to run.
@@ -31,7 +31,7 @@ type JavaExecutor struct {
 
 // Information available to pick an executor.
 type JavaExecutorOptions struct {
-	// Current working directory. Abstract to facilitiate testing.
+	// Current working directory. Abstract to enable testing.
 	WD fsys.ParentFS
 
 	// The value of `runtime.options.binary` setting from
