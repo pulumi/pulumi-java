@@ -1,6 +1,7 @@
 package com.pulumi;
 
 import com.pulumi.internal.PulumiInternal;
+import com.pulumi.resources.StackOptions;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
@@ -25,7 +26,7 @@ public interface Pulumi {
      * @see #runAsync(Consumer)
      */
     static void run(Consumer<Context> stack) {
-        System.exit(runAsync(stack).join());
+        withOptions(StackOptions.Empty).run(stack);
     }
 
     /**
@@ -34,9 +35,45 @@ public interface Pulumi {
      * @param stack the stack to run in Pulumi runtime
      * @return a future exit code from Pulumi runtime after running the stack
      * @see #run(Consumer)
+     * @see #withOptions(StackOptions)
      */
     static CompletableFuture<Integer> runAsync(Consumer<Context> stack) {
-        var pulumi = PulumiInternal.fromEnvironment();
-        return pulumi.runAsync(stack);
+        return withOptions(StackOptions.Empty).runAsync(stack);
+    }
+
+    /**
+     * @param options the {@link StackOptions} to use
+     * @return a Pulumi program entrypoint with given {@link StackOptions}
+     * @see #run(Consumer)
+     * @see #runAsync(Consumer)
+     */
+    static Pulumi.API withOptions(StackOptions options) {
+        return PulumiInternal.fromEnvironment(options);
+    }
+
+    /**
+     * Pulumi entrypoint operations.
+     */
+    interface API {
+
+        /**
+         * Run a Pulumi stack callback and wait for result.
+         * <br>
+         * In case of an error terminates the process with {@link System#exit(int)}
+         *
+         * @param stack the stack to run in Pulumi runtime
+         * @see #runAsync(Consumer)
+         */
+        void run(Consumer<Context> stack);
+
+        /**
+         * Run a Pulumi stack callback asynchronously.
+         *
+         * @param stack the stack to run in Pulumi runtime
+         * @return a future exit code from Pulumi runtime after running the stack
+         * @see #run(Consumer)
+         * @see #withOptions(StackOptions)
+         */
+        CompletableFuture<Integer> runAsync(Consumer<Context> stack);
     }
 }
