@@ -21,6 +21,26 @@ func TestGradleSimple(t *testing.T) {
 	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
 	assert.Equal(t, "/usr/bin/gradle", exec.Cmd)
+	assert.Equal(t, ".", exec.Dir)
+	assert.Equal(t,
+		[]string{":app:run", "--console=plain"},
+		exec.RunArgs)
+}
+
+func TestGradleCurrentDir(t *testing.T) {
+	fsys := fsys.TestFS(".",
+		map[string]string{"gradle": "/usr/bin/gradle"},
+		fstest.MapFS{
+			"settings.gradle": {},
+			"build.gradle":    {},
+		})
+	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
+	assert.NoError(t, err)
+	assert.Equal(t, "/usr/bin/gradle", exec.Cmd)
+	assert.Equal(t, ".", exec.Dir)
+	assert.Equal(t,
+		[]string{"run", "--console=plain"},
+		exec.RunArgs)
 }
 
 func TestGradleKTS(t *testing.T) {
