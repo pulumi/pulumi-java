@@ -13,8 +13,9 @@
 
 - Fix #478: New API Pulumi.withOptions adds support for stack transformations
 
-- [provider] Added Gradle support for subprojects. For example, given
-  this directory structure:
+- [provider] [#576](https://github.com/pulumi/pulumi-java/issues/576)
+  Added Gradle support for subprojects. For example, given this
+  directory structure:
 
   ```
   proj/settings.gradle
@@ -25,7 +26,5 @@
   Running `cd proj/subproj && pulumi up` will now locate the project
   root and run `gradle :subproj:run` from within `proj`. This makes sure
   Gradle features such as plugins work as expeceted.
-
-  [#576](https://github.com/pulumi/pulumi-java/issues/576)
 
 ### Bug Fixes
