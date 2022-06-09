@@ -85,7 +85,6 @@ import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.google.common.collect.ImmutableSet.toImmutableSet;
@@ -884,8 +883,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                                                                                 log.excessive("Processing a remote ComponentResource: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
 
-                                                                                BiFunction<Optional<ProviderResource>, List<ProviderResource>, Map<String, CompletableFuture<String>>> convertProviders =
-                                                                                        (provider, providers) -> Stream.concat(provider.stream(), providers.stream())
+                                                                                Function<List<ProviderResource>, Map<String, CompletableFuture<String>>> convertProviders =
+                                                                                        (providers) -> providers.stream()
                                                                                                 .map(Internal::from)
                                                                                                 .collect(toMap(
                                                                                                         ProviderResource.ProviderResourceInternal::getPackage,
@@ -893,7 +892,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                 ));
 
                                                                                 providerFutures = CompletableFutures.allOf(
-                                                                                        convertProviders.apply(componentOpts.getProvider(), componentOpts.getProviders())
+                                                                                        convertProviders.apply(componentOpts.getProviders())
                                                                                 ).thenApply(ImmutableMap::copyOf);
                                                                             } else {
                                                                                 providerFutures = CompletableFuture.completedFuture(ImmutableMap.of());
