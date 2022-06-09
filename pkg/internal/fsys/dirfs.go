@@ -31,6 +31,10 @@ func (o osDirFS) Path() string {
 	return o.dir
 }
 
+func (o osDirFS) Base() string {
+	return filepath.Base(o.dir)
+}
+
 func (o osDirFS) Open(name string) (fs.File, error) {
 	return o.fs().Open(name)
 }

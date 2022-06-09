@@ -152,7 +152,7 @@ func (host *javaLanguageHost) determinePulumiPackages(
 	// Run our classpath introspection from the SDK and parse the resulting JSON
 	cmd := host.exec.Cmd
 	args := host.exec.PluginArgs
-	output, err := host.runJavaCommand(ctx, cmd, args)
+	output, err := host.runJavaCommand(ctx, host.exec.Dir, cmd, args)
 	if err != nil {
 		// Plugin determination is an advisory feature so it does not need to escalate to an error.
 		logging.V(3).Infof("language host could not run plugin discovery command successfully, "+
@@ -178,7 +178,7 @@ func (host *javaLanguageHost) determinePulumiPackages(
 }
 
 func (host *javaLanguageHost) runJavaCommand(
-	ctx context.Context, name string, args []string) (string, error) {
+	ctx context.Context, dir, name string, args []string) (string, error) {
 
 	commandStr := strings.Join(args, " ")
 	if logging.V(5) {
@@ -194,6 +194,9 @@ func (host *javaLanguageHost) runJavaCommand(
 
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	cmd := exec.Command(name, args...) // nolint: gas // intentionally running dynamic program name.
+	if dir != "" {
+		cmd.Dir = dir
+	}
 
 	cmd.Stdout = infoWriter
 	cmd.Stderr = errorWriter
@@ -241,6 +244,9 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	var errResult string
 	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
+	if host.exec.Dir != "" {
+		cmd.Dir = host.exec.Dir
+	}
 
 	var stdoutBuf bytes.Buffer
 	var stderrBuf bytes.Buffer
@@ -345,6 +351,9 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 
 	// intentionally running dynamic program name.
 	cmd := exec.Command(host.exec.Cmd, host.exec.BuildArgs...) // nolint: gas
+	if host.exec.Dir != "" {
+		cmd.Dir = host.exec.Dir
+	}
 	cmd.Stdout = stdout
 	cmd.Stderr = stderr
 

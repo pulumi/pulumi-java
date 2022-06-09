@@ -60,6 +60,10 @@ func TestGradleMultiProject(t *testing.T) {
 	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
 	assert.Equal(t, "./gradlew", exec.Cmd)
+	assert.Equal(t, ".", exec.Dir)
+	assert.Equal(t,
+		[]string{":services:app-cluster:run", "--console=plain"},
+		exec.RunArgs)
 }
 
 func TestGradleUseExecutor(t *testing.T) {

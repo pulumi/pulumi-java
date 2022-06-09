@@ -11,21 +11,35 @@ import (
 // Abstracts interactions with a Java project, abiltiy to build, run
 // Java code, and detect plugin dependencies.
 type JavaExecutor struct {
-	Cmd        string
-	BuildArgs  []string
-	RunArgs    []string
+	// Path to the command to run.
+	Cmd string
+
+	// Optional dir to run the command in.
+	Dir string
+
+	// Command to run the Java code - the main entrypoint.
+	RunArgs []string
+
+	// Command args to resolve dependencies and build; this will
+	// be called after `pulumi new` on Gradle templates. Optional.
+	BuildArgs []string
+
+	// Command to autodetect and print Pulumi plugins depended on
+	// by the Java program.
 	PluginArgs []string
 }
 
 // Information available to pick an executor.
 type JavaExecutorOptions struct {
-	// current working directory
+	// Current working directory. Abstract to facilitiate testing.
 	WD fsys.ParentFS
 
-	// runtime.options.binary setting from Pulumi.yaml, if any
+	// The value of `runtime.options.binary` setting from
+	// `Pulumi.yaml`. Optional.
 	Binary string
 
-	// runtime.options.use-executor setting from Pulumi.yaml, if any
+	// The value of `runtime.options.use-executor` setting from
+	// `Pulumi.yaml`. Optional.
 	UseExecutor string
 }
 

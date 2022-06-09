@@ -12,8 +12,16 @@ import (
 type ParentFS interface {
 	fs.FS
 
+	// Full path for the current dir.
 	Path() string
+
+	// Base path for the current dir (similar to path.Base(this.Path()))
+	Base() string
+
+	// True unless the current dir is a root dir.
 	HasParent() bool
+
+	// Resolves parent dir if HasParent() == true
 	Parent() ParentFS
 
 	// Like LookPath from os/exec but local executable paths are

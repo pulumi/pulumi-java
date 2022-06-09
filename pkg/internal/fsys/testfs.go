@@ -48,6 +48,10 @@ func (t testFS) Path() string {
 	return t.path
 }
 
+func (t testFS) Base() string {
+	return path.Base(t.path)
+}
+
 func (t testFS) Open(name string) (fs.File, error) {
 	return t.fs().Open(name)
 }
