@@ -10,16 +10,19 @@ import com.pulumi.core.internal.OutputInternal;
 
 public class OutputTests {
 
+    @Deprecated // use PulumiTest#extractValue
     @CanIgnoreReturnValue
     public static <T> T waitForValue(Output<T> io) {
         return waitFor(io).getValueNullable();
     }
 
+    @Deprecated // use PulumiTest#extractValue
     @CanIgnoreReturnValue
     public static <T> OutputData<T> waitFor(Output<T> io) {
         return Internal.of(io).getDataAsync().join();
     }
 
+    @Deprecated
     @CanIgnoreReturnValue
     public static <T1, T2>
     Tuple2<OutputData<T1>, OutputData<T2>>
@@ -30,6 +33,7 @@ public class OutputTests {
         );
     }
 
+    @Deprecated
     @CanIgnoreReturnValue
     public static <T1, T2, T3>
     Tuple3<OutputData<T1>, OutputData<T2>, OutputData<T3>>

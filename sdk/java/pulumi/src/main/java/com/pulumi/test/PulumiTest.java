@@ -1,7 +1,10 @@
 package com.pulumi.test;
 
 import com.pulumi.Context;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.Internal;
 
+import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
@@ -18,4 +21,23 @@ public interface PulumiTest {
      */
     CompletableFuture<TestResult> runTestAsync(Consumer<Context> stack);
 
+
+    /**
+     * Extract the value from an {@link Output} blocking.
+     * @param output the {@link Output} to extract value from
+     * @return the underlying value of the given {@link Output}
+     */
+    @Nullable
+    static <T> T extractValue(Output<T> output) {
+        return extractValueAsync(output).join();
+    }
+
+    /**
+     * Extract the future value from an {@link Output} asynchronously.
+     * @param output the {@link Output} to extract future value from
+     * @return the underlying future value of the given {@link Output}
+     */
+    static <T> CompletableFuture<T> extractValueAsync(Output<T> output) {
+        return Internal.of(output).getValueNullable();
+    }
 }
