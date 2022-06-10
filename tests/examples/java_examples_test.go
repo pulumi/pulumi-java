@@ -227,6 +227,15 @@ func TestExamples(t *testing.T) {
 		})
 		integration.ProgramTest(t, &test)
 	})
+
+	t.Run("testing-unit-java", func(t *testing.T) {
+		test := getJavaBase(t, "testing-unit-java", integration.ProgramTestOptions{
+			Config: map[string]string{
+				"aws:region": "us-east-2",
+			},
+		})
+		integration.ProgramTest(t, &test)
+	})
 }
 
 func getJavaBaseNew(
