@@ -21,7 +21,6 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.deployment.MockDeployment;
 import com.pulumi.deployment.MocksTest;
-import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
@@ -47,7 +46,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class ConverterTests {
 
-    private final static Log log = DeploymentTests.mockLog();
+    private final static Log log = PulumiTestInternal.mockLog();
 
     private static Value createSecretValue(Value value) {
         return Value.newBuilder().setStructValue(

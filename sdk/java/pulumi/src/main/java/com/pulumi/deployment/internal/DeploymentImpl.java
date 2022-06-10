@@ -343,7 +343,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @InternalUse
         @VisibleForTesting
-        static ImmutableMap<String, String> parseConfig(String envConfigJson) {
+        public static ImmutableMap<String, String> parseConfig(String envConfigJson) {
             var parsedConfig = ImmutableMap.<String, String>builder();
 
             var gson = new Gson();
@@ -366,7 +366,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @InternalUse
         @VisibleForTesting
-        static ImmutableSet<String> parseConfigSecretKeys(String envConfigSecretKeysJson) {
+        public static ImmutableSet<String> parseConfigSecretKeys(String envConfigSecretKeysJson) {
             var parsedConfigSecretKeys = ImmutableSet.<String>builder();
 
             var gson = new Gson();
