@@ -1,6 +1,7 @@
 package com.pulumi.deployment;
 
 import com.pulumi.core.Tuples;
+import com.pulumi.test.Mocks;
 
 import java.util.Map;
 import java.util.Optional;

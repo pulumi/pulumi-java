@@ -20,6 +20,7 @@ import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.internal.Stack;
+import com.pulumi.test.Mocks;
 import com.pulumi.test.internal.PulumiTestInternal;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;

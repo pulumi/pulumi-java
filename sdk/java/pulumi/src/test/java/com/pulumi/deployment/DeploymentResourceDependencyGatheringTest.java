@@ -9,6 +9,7 @@ import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
+import com.pulumi.test.Mocks;
 import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;

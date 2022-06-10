@@ -11,6 +11,7 @@ import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.resources.Resource;
 import com.pulumi.serialization.internal.Deserializer;
 import com.pulumi.serialization.internal.Serializer;
+import com.pulumi.test.Mocks;
 import pulumirpc.Provider.CallRequest;
 import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeResponse;
