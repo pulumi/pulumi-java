@@ -1,8 +1,11 @@
-package com.pulumi.deployment;
+package com.pulumi.test.internal;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.CallOptions;
+import com.pulumi.deployment.Deployment;
+import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.DeploymentInstanceHolder;
 import com.pulumi.deployment.internal.DeploymentInternal;

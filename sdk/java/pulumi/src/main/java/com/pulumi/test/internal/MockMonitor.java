@@ -1,4 +1,4 @@
-package com.pulumi.deployment;
+package com.pulumi.test.internal;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
@@ -7,6 +7,7 @@ import com.pulumi.Log;
 import com.pulumi.core.internal.Maps;
 import com.pulumi.core.internal.Urn;
 import com.pulumi.core.internal.annotations.InternalUse;
+import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.resources.Resource;
 import com.pulumi.serialization.internal.Deserializer;
