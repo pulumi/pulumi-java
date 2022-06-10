@@ -4,13 +4,12 @@ import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
 import com.pulumi.core.Tuples;
 import com.pulumi.deployment.MockCallArgs;
-import com.pulumi.deployment.MockMonitor;
 import com.pulumi.deployment.MockResourceArgs;
 import com.pulumi.deployment.Mocks;
 import com.pulumi.deployment.internal.DeploymentImpl;
-import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.StackReference;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -20,11 +19,11 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
+import java.util.function.Supplier;
 import java.util.logging.Level;
 
-import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static com.pulumi.test.PulumiTest.extractValue;
+import static com.pulumi.test.internal.PulumiTestInternal.logger;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -36,20 +35,20 @@ class StackTest {
 
     @Test
     void testValidStackInstantiationSucceeds() {
-        var mock = DeploymentMockBuilder.builder()
+        var test = PulumiTestInternal.builder()
                 .deploymentFactory(state -> Mockito.spy(new DeploymentImpl(state)))
+                .standardLogger(logger(Level.OFF))
                 .build();
-        mock.standardLogger.setLevel(Level.OFF);
 
-        var result = mock.runTestAsync(ctx -> {
-            ctx.export("foo", Output.of("bar"));
-        }).join();
+        var result = test.runTest(
+                ctx -> ctx.export("foo", Output.of("bar"))
+        );
 
         var foo = extractValue(result.output("foo", String.class));
         assertThat(foo).isEqualTo("bar");
 
         ArgumentCaptor<Resource> resourceCaptor = ArgumentCaptor.forClass(Resource.class);
-        verify(mock.deployment, times(1))
+        verify(test.readOrRegisterResource(), times(1))
                 .readOrRegisterResource(resourceCaptor.capture(), anyBoolean(), any(), any(), any(), any());
         assertThat(resourceCaptor.getAllValues())
                 .hasSize(1)
@@ -59,7 +58,7 @@ class StackTest {
         ArgumentCaptor<Output<Map<String, Output<?>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
         ArgumentCaptor<Resource> resourceOutputCaptor = ArgumentCaptor.forClass(Resource.class);
 
-        verify(mock.deployment, times(1))
+        verify(test.registerResourceOutputs(), times(1))
                 .registerResourceOutputs(resourceOutputCaptor.capture(), outputsCaptor.capture());
 
         assertThat(resourceOutputCaptor.getValue()).isInstanceOf(Stack.class);
@@ -69,16 +68,14 @@ class StackTest {
 
     @Test
     void testStackWithNullOutputsThrows() {
-        var mock = DeploymentMockBuilder.builder()
+        var test = PulumiTestInternal.builder()
                 .deploymentFactory(state -> Mockito.spy(new DeploymentImpl(state)))
+                .standardLogger(logger(Level.OFF))
                 .build();
-        mock.standardLogger.setLevel(Level.OFF);
 
-        var resultFuture = mock.runTestAsync(
+        var result = test.runTest(
                 ctx -> ctx.export("foo", null)
         );
-
-        var result = resultFuture.join();
 
         assertThat(result.exceptions()).hasSize(2);
         assertThat(result.exceptions().get(0))
@@ -93,14 +90,14 @@ class StackTest {
         assertThat(result.outputs()).isEmpty();
 
         ArgumentCaptor<Resource> resourceCaptor = ArgumentCaptor.forClass(Resource.class);
-        verify(mock.deployment, times(1))
+        verify(test.readOrRegisterResource(), times(1))
                 .readOrRegisterResource(resourceCaptor.capture(), anyBoolean(), any(), any(), any(), any());
         assertThat(resourceCaptor.getAllValues())
                 .hasSize(1)
                 .hasExactlyElementsOfTypes(Stack.class);
 
         //noinspection unchecked
-        verify(mock.deployment, times(1))
+        verify(test.registerResourceOutputs(), times(1))
                 .registerResourceOutputs(any(Resource.class), any(Output.class));
 
         assertThat(result.outputs()).isEmpty();
@@ -109,19 +106,27 @@ class StackTest {
     @Test
     void testImmediateStackReference() {
         var monitorMocks = new RecurrentStackMocks();
-        var mock = DeploymentMockBuilder.builder()
+        var test = PulumiTestInternal.builder()
+                .mocks(monitorMocks)
                 .deploymentFactory(state -> Mockito.spy(new DeploymentImpl(state)))
-                .setMocks(monitorMocks)
                 .build();
-        monitorMocks.setMock(mock);
 
-        var result = mock.runTestAsync(ctx -> {
-            assertThat(((MockMonitor) mock.monitor).resources)
+        monitorMocks.setStack(() -> {
+            var stack = test.monitor().resources.stream()
+                    .filter(r -> r instanceof Stack)
+                    .map(r -> (Stack) r)
+                    .findFirst()
+                    .orElseThrow();
+            return Map.entry(test.options().stackName(), stack);
+        });
+
+        var result = test.runTest(ctx -> {
+            assertThat(test.monitor().resources)
                     .hasSize(1)
                     .hasExactlyElementsOfTypes(Stack.class);
             var ref = new StackReference(ctx.stackName());
             ctx.export("ref", Output.of(ref));
-        }).join();
+        });
 
         var ref = extractValue(result.output("ref", StackReference.class));
         assertThat(extractValue(ref.getOutput("ref"))).isNotNull();
@@ -130,7 +135,7 @@ class StackTest {
         assertThat(result.errors()).isEmpty();
 
         ArgumentCaptor<Resource> resourceCaptor = ArgumentCaptor.forClass(Resource.class);
-        verify(mock.deployment, times(2))
+        verify(test.readOrRegisterResource(), times(2))
                 .readOrRegisterResource(resourceCaptor.capture(), anyBoolean(), any(), any(), any(), any());
         assertThat(resourceCaptor.getAllValues())
                 .hasSize(2)
@@ -140,7 +145,7 @@ class StackTest {
         ArgumentCaptor<Output<Map<String, Output<?>>>> outputsCaptor = ArgumentCaptor.forClass(Output.class);
         ArgumentCaptor<Resource> resourceOutputCaptor = ArgumentCaptor.forClass(Resource.class);
 
-        verify(mock.deployment, times(1))
+        verify(test.registerResourceOutputs(), times(1))
                 .registerResourceOutputs(resourceOutputCaptor.capture(), outputsCaptor.capture());
 
         assertThat(resourceOutputCaptor.getValue()).isInstanceOf(Stack.class);
@@ -149,30 +154,20 @@ class StackTest {
     }
 
     private static final class RecurrentStackMocks implements Mocks {
-        private DeploymentTests.DeploymentMock mock;
 
-        private Optional<Stack> queryStack() {
-            if (!(mock.monitor instanceof MockMonitor)) {
-                throw new IllegalStateException("Expected monitor to be an instanceof MockMonitor");
-            }
-            var mockMonitor = (MockMonitor) mock.monitor;
-            return mockMonitor.resources.stream()
-                    .filter(r -> r instanceof Stack)
-                    .map(r -> (Stack) r)
-                    .findFirst();
-        }
+        private Supplier<Map.Entry<String, Stack>> stack;
 
         @Override
         public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
-            requireNonNull(this.mock, "forgot to call setMock?");
+            requireNonNull(this.stack, "forgot to call setStack?");
             requireNonNull(args.type);
             switch (args.type) {
                 case "pulumi:pulumi:StackReference":
                     return CompletableFuture.completedFuture(
                             Tuples.of(
-                                    Optional.of(mock.options.stackName()),
+                                    Optional.of(this.stack.get().getKey()),
                                     ImmutableMap.of("outputs",
-                                            ImmutableMap.of("ref", queryStack().orElseThrow())
+                                            ImmutableMap.of("ref", this.stack.get().getValue())
                                     )
                             )
                     );
@@ -186,13 +181,13 @@ class StackTest {
             return CompletableFuture.completedFuture(null);
         }
 
-        public void setMock(DeploymentTests.DeploymentMock mock) {
-            this.mock = mock;
+        public void setStack(Supplier<Map.Entry<String, Stack>> stack) {
+            this.stack = stack;
         }
     }
 
     @AfterEach
     void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTestInternal.cleanup();
     }
 }

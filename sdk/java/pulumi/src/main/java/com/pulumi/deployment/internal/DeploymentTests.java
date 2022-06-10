@@ -98,7 +98,7 @@ public class DeploymentTests {
                     this.options.resourceTransformations()
             );
             var pulumi = new PulumiTestInternal(
-                    this.runner, mockEngine, mockMonitor, this.log,
+                    this.options, this.runner, mockEngine, mockMonitor, this.log,
                     this.deployment, this.deployment, context
             );
             return pulumi.runTestAsync(stackCallback);
