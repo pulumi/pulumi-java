@@ -9,12 +9,15 @@ import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.resources.CallArgs;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.Resource;
+import com.pulumi.resources.ResourceArgs;
+import com.pulumi.resources.ResourceOptions;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
 
 /**
  * Metadata of the deployment that is currently running. Accessible via @see {@link com.pulumi.deployment.Deployment#getInstance()}.
@@ -117,8 +120,13 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     }
 
     @Override
+    public void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy) {
+        this.deployment.readOrRegisterResource(resource, remote, newDependency, args, options, lazy);
+    }
+
+    @Override
     public void registerResourceOutputs(Resource resource, Output<Map<String, Output<?>>> outputs) {
-        deployment.registerResourceOutputs(resource, outputs);
+        this.deployment.registerResourceOutputs(resource, outputs);
     }
 
     @InternalUse
