@@ -4,6 +4,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.internal.DeploymentInstanceHolder;
+import com.pulumi.deployment.internal.RegisterResourceOutputs;
 import com.pulumi.resources.CallArgs;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.Resource;
@@ -14,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 @InternalUse
-public interface Deployment {
+public interface Deployment extends RegisterResourceOutputs {
 
     /**
      * The current running deployment instance. This is only available from inside the function

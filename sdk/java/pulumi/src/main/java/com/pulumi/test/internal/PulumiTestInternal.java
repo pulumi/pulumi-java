@@ -28,6 +28,7 @@ import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.Engine;
 import com.pulumi.deployment.internal.EngineLogger;
 import com.pulumi.deployment.internal.Monitor;
+import com.pulumi.deployment.internal.RegisterResourceOutputs;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.internal.PulumiInternal;
@@ -56,18 +57,22 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     private final MockEngine engine;
     private final MockMonitor monitor;
 
+    private final RegisterResourceOutputs registerResourceOutputs;
+
     @InternalUse
     public PulumiTestInternal(
             Runner runner,
             MockEngine engine,
             MockMonitor monitor,
             Log log,
+            RegisterResourceOutputs registerResourceOutputs,
             ContextInternal stackContext
     ) {
         super(runner, stackContext);
         this.log = requireNonNull(log);
         this.engine = requireNonNull(engine);
         this.monitor = requireNonNull(monitor);
+        this.registerResourceOutputs = requireNonNull(registerResourceOutputs);
     }
 
     /**
@@ -92,6 +97,13 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     @InternalUse
     public Monitor monitor() {
         return this.monitor;
+    }
+
+    /**
+     * @return return the {@link RegisterResourceOutputs} used by the test
+     */
+    public RegisterResourceOutputs registerResourceOutputs() {
+        return this.registerResourceOutputs;
     }
 
     /**
@@ -338,7 +350,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
                     this.options.resourceTransformations()
             );
             return new PulumiTestInternal(
-                    this.runner, this.engine, this.monitor, this.log, context
+                    this.runner, this.engine, this.monitor, this.log, deployment, context
             );
         }
     }

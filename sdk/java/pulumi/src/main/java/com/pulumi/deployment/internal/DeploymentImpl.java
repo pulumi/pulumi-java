@@ -144,7 +144,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 this.log, state.runner, this.invoke, this.readResource,
                 this.registerResource, this.converter, state.isDryRun
         );
-        this.registerResourceOutputs = new RegisterResourceOutputs(
+        this.registerResourceOutputs = new RegisterResourceOutputsInternal(
                 this.log, state.runner, state.monitor, this.featureSupport, this.serialization
         );
     }
@@ -1483,7 +1483,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.registerResourceOutputs.registerResourceOutputs(resource, outputs);
     }
 
-    private static final class RegisterResourceOutputs {
+    private static final class RegisterResourceOutputsInternal implements RegisterResourceOutputs {
 
         private final Log log;
         private final Runner runner;
@@ -1491,7 +1491,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final FeatureSupport featureSupport;
         private final PropertiesSerializer serialization;
 
-        private RegisterResourceOutputs(
+        private RegisterResourceOutputsInternal(
                 Log log,
                 Runner runner,
                 Monitor monitor,
