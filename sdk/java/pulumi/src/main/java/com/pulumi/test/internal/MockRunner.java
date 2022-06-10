@@ -1,4 +1,4 @@
-package com.pulumi.deployment;
+package com.pulumi.test.internal;
 
 import com.pulumi.deployment.internal.Runner;
 
