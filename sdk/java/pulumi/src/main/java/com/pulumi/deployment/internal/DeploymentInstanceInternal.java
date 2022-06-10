@@ -12,6 +12,7 @@ import com.pulumi.resources.Resource;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
@@ -113,6 +114,11 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     @Override
     public void call(String token, CallArgs args) {
         deployment.call(token, args);
+    }
+
+    @Override
+    public void registerResourceOutputs(Resource resource, Output<Map<String, Output<?>>> outputs) {
+        deployment.registerResourceOutputs(resource, outputs);
     }
 
     @InternalUse
