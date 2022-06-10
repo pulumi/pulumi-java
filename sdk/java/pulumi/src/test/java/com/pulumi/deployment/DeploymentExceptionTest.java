@@ -2,6 +2,7 @@ package com.pulumi.deployment;
 
 import com.pulumi.core.Tuples;
 import com.pulumi.core.internal.Internal;
+import com.pulumi.test.Mocks;
 import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;

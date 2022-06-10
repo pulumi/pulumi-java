@@ -1,6 +1,8 @@
-package com.pulumi.deployment;
+package com.pulumi.test;
 
 import com.pulumi.core.Tuples;
+import com.pulumi.deployment.MockCallArgs;
+import com.pulumi.deployment.MockResourceArgs;
 
 import java.util.Map;
 import java.util.Optional;

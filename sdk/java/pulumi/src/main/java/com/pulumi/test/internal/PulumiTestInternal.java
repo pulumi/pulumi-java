@@ -20,7 +20,6 @@ import com.pulumi.deployment.EmptyMocks;
 import com.pulumi.deployment.MockEngine;
 import com.pulumi.deployment.MockMonitor;
 import com.pulumi.deployment.MockRunner;
-import com.pulumi.deployment.Mocks;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.DeploymentInstanceInternal;
 import com.pulumi.deployment.internal.DeploymentInternal;
@@ -32,6 +31,7 @@ import com.pulumi.deployment.internal.RegisterResourceOutputs;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.internal.PulumiInternal;
+import com.pulumi.test.Mocks;
 import com.pulumi.test.PulumiTest;
 import com.pulumi.test.TestResult;
 
