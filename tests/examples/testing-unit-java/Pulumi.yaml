@@ -1,3 +1,3 @@
 name: testing-unit-java
-runtime: java
 description: An example that applies unit testing to Java and AWS resources.
+runtime: java

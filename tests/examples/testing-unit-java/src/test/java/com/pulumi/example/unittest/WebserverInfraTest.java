@@ -3,23 +3,16 @@ package com.pulumi.example.unittest;
 import com.pulumi.aws.ec2.Instance;
 import com.pulumi.aws.ec2.SecurityGroup;
 import com.pulumi.aws.ec2.outputs.SecurityGroupIngress;
-import com.pulumi.core.Tuples;
-import com.pulumi.deployment.MockCallArgs;
-import com.pulumi.deployment.MockResourceArgs;
-import com.pulumi.deployment.Mocks;
-import com.pulumi.deployment.internal.DeploymentTests;
-import com.pulumi.test.TestResult;
+import com.pulumi.test.Mocks;
+import com.pulumi.test.PulumiTest;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
 
-import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static com.pulumi.test.PulumiTest.extractValue;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatPredicate;
@@ -27,24 +20,17 @@ import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 
 class WebserverInfraTest {
 
-    private static DeploymentTests.DeploymentMock test;
-    private static TestResult result;
-
-    @BeforeAll
-    public static void mockSetup() {
-        test = DeploymentTests.DeploymentMockBuilder.builder()
-                .setMocks(new MyMocks())
-                .build();
-        result = test.runTestAsync(WebserverInfra::stack).join();
-    }
-
     @AfterAll
     static void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTest.cleanup();
     }
 
     @TestFactory
     Stream<DynamicTest> testInstanceHasNameTag() {
+        var result = PulumiTest
+                .withMocks(new MyMocks())
+                .runTest(WebserverInfra::stack);
+
         var instance = result.resources().stream()
                 .filter(r -> r instanceof Instance)
                 .map(r -> (Instance) r)
@@ -87,15 +73,10 @@ class WebserverInfraTest {
     // Mock the engine state.
     public static class MyMocks implements Mocks {
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             return CompletableFuture.completedFuture(
-                    Tuples.of(Optional.of(args.name + "_id"), args.inputs)
+                    ResourceResult.of(Optional.of(args.name + "_id"), args.inputs)
             );
-        }
-
-        @Override
-        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
-            return CompletableFuture.completedFuture(null); // not used
         }
     }
 }
