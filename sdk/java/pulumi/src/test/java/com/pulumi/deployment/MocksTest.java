@@ -13,7 +13,6 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Internal;
-import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.InMemoryLogger;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.CustomResource;
@@ -21,6 +20,7 @@ import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.internal.Stack;
+import com.pulumi.test.internal.PulumiTestInternal;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import org.junit.jupiter.api.AfterEach;
@@ -34,9 +34,9 @@ import java.util.concurrent.CompletionException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static com.pulumi.test.PulumiTest.extractValue;
 import static com.pulumi.test.internal.PulumiTestInternal.extractOutputData;
+import static com.pulumi.test.internal.PulumiTestInternal.logger;
 import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.toList;
@@ -45,18 +45,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MocksTest {
 
     @AfterEach
-    public void printInternalErrorCount() {
-        cleanupDeploymentMocks();
+    public void cleanup() {
+        PulumiTestInternal.cleanup();
     }
 
     @Test
     void testCustomMocks() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(true).build())
-                .setMocks(new MyMocks())
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(true).build())
+                .mocks(new MyMocks())
                 .build();
 
-        var result = mock.runTestAsync(MocksTest::myStack).join()
+        var result = test.runTest(MocksTest::myStack)
                 .throwOnError();
 
         var instance = result.resources().stream()
@@ -88,12 +88,12 @@ public class MocksTest {
 
     @Test
     void testCustomWithResourceReference() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(false).build())
-                .setMocks(new MyMocks())
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(false).build())
+                .mocks(new MyMocks())
                 .build();
 
-        var result = mock.runTestAsync(MocksTest::myStack).join()
+        var result = test.runTest(MocksTest::myStack)
                 .throwOnError();
 
         var myCustom = result.resources().stream()
@@ -112,12 +112,12 @@ public class MocksTest {
 
     @Test
     void testStack() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(true).build())
-                .setMocks(new MyMocks())
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(true).build())
+                .mocks(new MyMocks())
                 .build();
 
-        var result = mock.runTestAsync(MocksTest::myStack).join();
+        var result = test.runTest(MocksTest::myStack);
         var publicIp = extractValue(result.output("publicIp", String.class));
         assertThat(publicIp).isEqualTo("203.0.113.12");
     }
@@ -125,15 +125,14 @@ public class MocksTest {
     // Test inspired by https://github.com/pulumi/pulumi/issues/8163
     @Test
     void testInvokeThrowing() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(false).build())
-                .setMocks(new ThrowingMocks())
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(false).build())
+                .mocks(new ThrowingMocks())
+                .standardLogger(logger(Level.OFF))
                 .build();
 
-        mock.standardLogger.setLevel(Level.OFF);
-
-        var result = mock.runTestAsync(ctx -> {
-            var invokeResult = mock.deployment.invokeAsync(
+        var result = test.runTest(ctx -> {
+            var invokeResult = Deployment.getInstance().invokeAsync(
                     "aws:iam/getRole:getRole",
                     TypeShape.of(GetRoleResult.class),
                     new GetRoleArgs("doesNotExistTypoEcsTaskExecutionRole")
@@ -148,7 +147,7 @@ public class MocksTest {
 
             ctx.export("result", Output.of("x"));
             ctx.export("instance", publicIp);
-        }).join();
+        });
 
         var resources = result.resources();
         var exceptions = result.exceptions();
@@ -184,13 +183,13 @@ public class MocksTest {
     @Test
     void testStackWithInvalidSchema() {
         var log = InMemoryLogger.getLogger("MocksTest#testStackWithInvalidSchema");
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(false).build())
-                .setMocks(new MyInvalidMocks())
-                .setStandardLogger(log)
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(false).build())
+                .mocks(new MyInvalidMocks())
+                .standardLogger(log)
                 .build();
 
-        var result = mock.runTestAsync(MocksTest::myStack).join();
+        var result = test.runTest(MocksTest::myStack);
         var resources = result.resources();
         assertThat(resources).isNotEmpty();
 

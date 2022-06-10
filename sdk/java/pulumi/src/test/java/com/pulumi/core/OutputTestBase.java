@@ -1,8 +1,8 @@
 package com.pulumi.core;
 
 import com.pulumi.core.internal.Internal;
-import com.pulumi.deployment.MocksTest;
 import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -11,8 +11,6 @@ import org.junit.jupiter.api.TestInstance;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static com.pulumi.test.internal.PulumiTestInternal.extractOutputData;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -22,9 +20,8 @@ public abstract class OutputTestBase {
 
     @BeforeAll
     public void mockSetup() {
-        DeploymentMockBuilder.builder()
-                .setMocks(new MocksTest.MyMocks())
-                .setOptions(TestOptions.builder()
+        PulumiTestInternal.builder()
+                .options(TestOptions.builder()
                         .preview(isPreview())
                         .build())
                 .build();
@@ -32,7 +29,7 @@ public abstract class OutputTestBase {
 
     @AfterAll
     void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTestInternal.cleanup();
     }
 
     @Test

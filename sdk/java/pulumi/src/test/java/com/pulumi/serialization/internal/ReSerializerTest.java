@@ -5,6 +5,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.deployment.MockDeployment;
 import com.pulumi.deployment.MocksTest;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DynamicNode;
@@ -18,35 +19,32 @@ import java.util.stream.Stream;
 
 import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Maps.newHashMap;
-import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMock;
-import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.DynamicContainer.dynamicContainer;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
 
 class ReSerializerTest {
 
-    private static DeploymentMock mock;
+    private static PulumiTestInternal test;
 
     @BeforeAll
     public static void mockSetup() {
-        mock = DeploymentMockBuilder.builder()
-                .setMocks(new MocksTest.MyMocks())
+        test = PulumiTestInternal.builder()
+                .mocks(new MocksTest.MyMocks())
                 .deploymentFactory(MockDeployment::new)
                 .build();
     }
 
     @AfterAll
     static void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTestInternal.cleanup();
     }
 
 
     @Nullable
     private Object reSerialize(@Nullable Object o) {
-        var deserializer = new Deserializer(mock.log);
-        var serialized = new Serializer(mock.log)
+        var deserializer = new Deserializer(test.log());
+        var serialized = new Serializer(test.log())
                 .serializeAsync("ReSerializerTest", o, true);
 
         return serialized

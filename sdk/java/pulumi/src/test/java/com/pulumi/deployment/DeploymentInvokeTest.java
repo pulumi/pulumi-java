@@ -12,9 +12,9 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.core.internal.OutputInternal;
-import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.InvokeArgs;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +24,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static com.pulumi.test.internal.PulumiTestInternal.extractOutputData;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -32,14 +31,14 @@ public class DeploymentInvokeTest {
 
     @AfterEach
     void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTestInternal.cleanup();
     }
 
     @Test
     void testCustomInvokes() {
-        DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(true).build())
-                .setMocks(new Mocks() {
+        PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(true).build())
+                .mocks(new Mocks() {
                     @Override
                     public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
                         return CompletableFuture.completedFuture(null);
@@ -111,12 +110,12 @@ public class DeploymentInvokeTest {
 
     @Test
     void testInvokeDoesNotCallMonitorWhenInputsNotKnown() {
-        var mocks = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(true).build())
-                .setMocks(new Mocks() {
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(true).build())
+                .mocks(new Mocks() {
                     @Override
                     public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
-                       throw new RuntimeException("new Resource not implemented");
+                        throw new RuntimeException("new Resource not implemented");
                     }
 
                     @Override
@@ -125,11 +124,11 @@ public class DeploymentInvokeTest {
                     }
                 })
                 .build();
-        var result = mocks.runTestAsync(ctx -> {
+        var result = test.runTest(ctx -> {
             var unk = new OutputInternal<String>(OutputData.unknown());
             var args = new IdentityArgs(unk);
             ctx.export("out", IdentityFunctions.invokeIdentity(args, new InvokeOptions()));
-        }).join().throwOnError();
+        }).throwOnError();
         assertThat(extractOutputData(result.output("out")).isKnown()).isFalse();
     }
 

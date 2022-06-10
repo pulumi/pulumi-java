@@ -25,6 +25,7 @@ import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -40,7 +41,6 @@ import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -156,7 +156,7 @@ class ConverterTests {
 
         @AfterEach
         void cleanup() {
-            cleanupDeploymentMocks();
+            PulumiTestInternal.cleanup();
         }
 
         @Test
@@ -224,9 +224,9 @@ class ConverterTests {
 
         @Test
         void testNullInPreviewProducesFalseKnown() {
-            DeploymentTests.DeploymentMockBuilder.builder()
-                    .setMocks(new MocksTest.MyMocks())
-                    .setOptions(TestOptions.builder().preview(true).build())
+            PulumiTestInternal.builder()
+                    .mocks(new MocksTest.MyMocks())
+                    .options(TestOptions.builder().preview(true).build())
                     .deploymentFactory(MockDeployment::new)
                     .build();
 
@@ -242,9 +242,9 @@ class ConverterTests {
 
         @Test
         void testNullInNormalProducesFalseKnown() {
-            DeploymentTests.DeploymentMockBuilder.builder()
-                    .setMocks(new MocksTest.MyMocks())
-                    .setOptions(TestOptions.builder().preview(false).build())
+            PulumiTestInternal.builder()
+                    .mocks(new MocksTest.MyMocks())
+                    .options(TestOptions.builder().preview(false).build())
                     .deploymentFactory(MockDeployment::new)
                     .build();
 
@@ -600,8 +600,8 @@ class ConverterTests {
             var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var value = Value.newBuilder().setStructValue(Struct.newBuilder()
-                            .putFields("myString", Value.newBuilder().setStringValue("foo").build())
-                            .putFields("myBoolean", Value.newBuilder().setStringValue(Constants.UnknownValue).build())
+                    .putFields("myString", Value.newBuilder().setStringValue("foo").build())
+                    .putFields("myBoolean", Value.newBuilder().setStringValue(Constants.UnknownValue).build())
                     .build()).build();
             var data = converter.convertValue("test", value, SimpleStruct.class);
             assertThat(data.isKnown()).isFalse();
