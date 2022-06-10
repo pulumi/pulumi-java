@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
 
-import static com.pulumi.core.OutputTests.waitFor;
+import static com.pulumi.test.PulumiTest.extractValue;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ResourceArgsTest {
@@ -44,8 +44,8 @@ class ResourceArgsTest {
         assertThat(map).containsKey("s");
         assertThat(map).containsKey("array");
 
-        assertThat(waitFor(map.get("s")).getValueNullable()).isNull();
-        assertThat(waitFor(map.get("array")).getValueNullable()).isNull();
+        assertThat(extractValue(map.get("s"))).isNull();
+        assertThat(extractValue(map.get("array"))).isNull();
     }
 
     @Test
@@ -58,8 +58,8 @@ class ResourceArgsTest {
         assertThat(map).containsKey("s");
         assertThat(map).containsKey("array");
 
-        assertThat(waitFor(map.get("s")).getValueNullable()).isEqualTo("s");
-        assertThat(waitFor(map.get("array")).getValueNullable()).isEqualTo(List.of(true, false));
+        assertThat(extractValue(map.get("s"))).isEqualTo("s");
+        assertThat(extractValue(map.get("array"))).isEqualTo(List.of(true, false));
     }
 
     public static class JsonResourceArgs1 extends ResourceArgs {
@@ -98,7 +98,7 @@ class ResourceArgsTest {
         assertThat(map).containsKey("array");
         assertThat(map).containsKey("map");
 
-        assertThat(waitFor(map.get("array")).getValueNullable()).isNotNull().isEqualTo("[true,false]");
-        assertThat(waitFor(map.get("map")).getValueNullable()).isNotNull().isEqualTo("{\"k1\":1.0,\"k2\":2.0}");
+        assertThat(extractValue(map.get("array"))).isNotNull().isEqualTo("[true,false]");
+        assertThat(extractValue(map.get("map"))).isNotNull().isEqualTo("{\"k1\":1.0,\"k2\":2.0}");
     }
 }

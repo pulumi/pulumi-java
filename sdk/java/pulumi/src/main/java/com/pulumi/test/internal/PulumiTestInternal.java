@@ -1,8 +1,12 @@
 package com.pulumi.test.internal;
 
 import com.google.common.collect.ImmutableList;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.pulumi.Context;
 import com.pulumi.context.internal.ContextInternal;
+import com.pulumi.core.Output;
+import com.pulumi.core.internal.Internal;
+import com.pulumi.core.internal.OutputData;
 import com.pulumi.deployment.MockEngine;
 import com.pulumi.deployment.MockMonitor;
 import com.pulumi.deployment.internal.Runner;
@@ -42,4 +46,10 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
                 this.stackContext.exports()
         ));
     }
+
+    @CanIgnoreReturnValue
+    public static <T> OutputData<T> extractOutputData(Output<T> output) {
+        return Internal.of(output).getDataAsync().join();
+    }
+
 }

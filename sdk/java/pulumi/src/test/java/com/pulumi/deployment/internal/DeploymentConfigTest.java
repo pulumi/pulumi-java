@@ -3,9 +3,9 @@ package com.pulumi.deployment.internal;
 import com.pulumi.deployment.internal.DeploymentImpl.Config;
 import org.junit.jupiter.api.Test;
 
-import static com.pulumi.core.OutputTests.waitForValue;
 import static com.pulumi.deployment.internal.DeploymentTests.parseConfig;
 import static com.pulumi.deployment.internal.DeploymentTests.parseConfigSecretKeys;
+import static com.pulumi.test.PulumiTest.extractValue;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentConfigTest {
@@ -54,7 +54,7 @@ public class DeploymentConfigTest {
         var awsConfig = new com.pulumi.Config(config, "aws");
 
         assertThat(projectConfig.get("name")).hasValue("minimal");
-        assertThat(waitForValue(projectConfig.getSecret("secret"))).hasValue("a secret");
+        assertThat(extractValue(projectConfig.getSecret("secret"))).hasValue("a secret");
         assertThat(awsConfig.get("region")).hasValue("us-east-1");
     }
 }

@@ -4,7 +4,6 @@ import com.google.common.base.Functions;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.Context;
 import com.pulumi.core.Output;
-import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
@@ -35,8 +34,9 @@ import java.util.concurrent.CompletionException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
-import static com.pulumi.core.OutputTests.waitForValue;
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.test.PulumiTest.extractValue;
+import static com.pulumi.test.internal.PulumiTestInternal.extractOutputData;
 import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.toList;
@@ -65,19 +65,19 @@ public class MocksTest {
                 .findFirst();
         assertThat(instance).isPresent();
 
-        var ip = OutputTests.waitFor(instance.get().publicIp);
+        var ip = extractOutputData(instance.get().publicIp);
         assertThat(ip.getValueNullable()).isEqualTo("203.0.113.12");
         assertThat(ip.isKnown()).isTrue();
         assertThat(ip.isSecret()).isFalse();
         assertThat(ip.getResources()).contains(instance.get()).hasSize(1);
 
-        var id = OutputTests.waitFor(instance.get().getId());
+        var id = extractOutputData(instance.get().getId());
         assertThat(id.getValueNullable()).isEqualTo("i-1234567890abcdef0");
         assertThat(id.isKnown()).isTrue();
         assertThat(id.isSecret()).isFalse();
         assertThat(id.getResources()).contains(instance.get()).hasSize(1);
 
-        var urn = OutputTests.waitFor(instance.get().getUrn());
+        var urn = extractOutputData(instance.get().getUrn());
         assertThat(urn.getValueNullable()).isEqualTo(
                 "urn:pulumi:stack::project::pulumi:pulumi:Stack$aws:ec2/instance:Instance::instance"
         );
@@ -102,11 +102,11 @@ public class MocksTest {
                 .findFirst();
         assertThat(myCustom).isPresent();
 
-        var instance = OutputTests.waitFor(myCustom.get().instance).getValueNullable();
+        var instance = extractValue(myCustom.get().instance);
         assertThat(instance).isNotNull();
         assertThat(instance).isInstanceOf(Instance.class);
 
-        var ip = OutputTests.waitFor(instance.publicIp).getValueNullable();
+        var ip = extractValue(instance.publicIp);
         assertThat(ip).isEqualTo("203.0.113.12");
     }
 
@@ -118,7 +118,7 @@ public class MocksTest {
                 .build();
 
         var result = mock.runTestAsync(MocksTest::myStack).join();
-        var publicIp = waitForValue(result.output("publicIp", String.class));
+        var publicIp = extractValue(result.output("publicIp", String.class));
         assertThat(publicIp).isEqualTo("203.0.113.12");
     }
 
