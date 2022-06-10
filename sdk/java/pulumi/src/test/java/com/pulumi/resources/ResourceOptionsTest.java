@@ -2,7 +2,6 @@ package com.pulumi.resources;
 
 import com.pulumi.core.Alias;
 import com.pulumi.core.Output;
-import com.pulumi.core.OutputTests;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -11,6 +10,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static com.pulumi.test.PulumiTest.extractValue;
 import static com.pulumi.test.internal.assertj.PulumiAssertions.assertThatNullable;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -79,13 +79,13 @@ class ResourceOptionsTest {
     @MethodSource
     void testMergeSharedOptions(ResourceOptions options1, ResourceOptions options2, ResourceOptions expected) {
         options1 = ResourceOptions.mergeSharedOptions(options1, options2);
-        assertThat(options1.id != null ? OutputTests.waitFor(options1.id).getValueNullable() : null)
-                .isEqualTo(expected.id != null ? OutputTests.waitFor(expected.id).getValueNullable() : null); // FIXME
+        assertThat(options1.id != null ? extractValue(options1.id) : null)
+                .isEqualTo(expected.id != null ? extractValue(expected.id) : null);
         assertThat(options1.parent).isEqualTo(expected.parent);
         assertThatNullable(
-                OutputTests.waitFor(options1.dependsOn).getValueNullable()
+                extractValue(options1.dependsOn)
         ).containsAll(
-                OutputTests.waitFor(expected.dependsOn).getValueNullable()
+                extractValue(expected.dependsOn)
         );
         assertThat(options1.protect).isEqualTo(expected.protect);
         assertThatNullable(options1.ignoreChanges).containsAll(expected.ignoreChanges);

@@ -2,7 +2,6 @@ package com.pulumi.resources;
 
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.Context;
-import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.MockCallArgs;
@@ -20,6 +19,7 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.test.PulumiTest.extractValue;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ResourceTest {
@@ -50,7 +50,7 @@ public class ResourceTest {
                 .orElse(null);
         assertThat(resource).isNotNull();
 
-        var urn = OutputTests.waitFor(resource.getUrn()).getValueNullable();
+        var urn = extractValue(resource.getUrn());
         var provider = Internal.from(resource).getProvider(resource.getResourceType());
 
         assertThat(provider).isPresent();

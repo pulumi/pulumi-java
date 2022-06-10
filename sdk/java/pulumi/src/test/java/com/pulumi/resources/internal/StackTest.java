@@ -2,7 +2,6 @@ package com.pulumi.resources.internal;
 
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
-import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
 import com.pulumi.deployment.MockCallArgs;
 import com.pulumi.deployment.MockMonitor;
@@ -23,9 +22,9 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.logging.Level;
 
-import static com.pulumi.core.OutputTests.waitForValue;
 import static com.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.test.PulumiTest.extractValue;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -46,7 +45,7 @@ class StackTest {
             ctx.export("foo", Output.of("bar"));
         }).join();
 
-        var foo = waitForValue(result.output("foo", String.class));
+        var foo = extractValue(result.output("foo", String.class));
         assertThat(foo).isEqualTo("bar");
 
         ArgumentCaptor<Resource> resourceCaptor = ArgumentCaptor.forClass(Resource.class);
@@ -64,7 +63,7 @@ class StackTest {
                 .registerResourceOutputs(resourceOutputCaptor.capture(), outputsCaptor.capture());
 
         assertThat(resourceOutputCaptor.getValue()).isInstanceOf(Stack.class);
-        var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
+        var values = extractValue(outputsCaptor.getValue());
         assertThat(result.outputs()).containsExactlyEntriesOf(values);
     }
 
@@ -124,8 +123,8 @@ class StackTest {
             ctx.export("ref", Output.of(ref));
         }).join();
 
-        var ref = waitForValue(result.output("ref", StackReference.class));
-        assertThat(waitForValue(ref.getOutput("ref"))).isNotNull();
+        var ref = extractValue(result.output("ref", StackReference.class));
+        assertThat(extractValue(ref.getOutput("ref"))).isNotNull();
 
         assertThat(result.exceptions()).isEmpty();
         assertThat(result.errors()).isEmpty();
@@ -145,7 +144,7 @@ class StackTest {
                 .registerResourceOutputs(resourceOutputCaptor.capture(), outputsCaptor.capture());
 
         assertThat(resourceOutputCaptor.getValue()).isInstanceOf(Stack.class);
-        var values = OutputTests.waitFor(outputsCaptor.getValue()).getValueNullable();
+        var values = extractValue(outputsCaptor.getValue());
         assertThat(result.outputs()).containsExactlyEntriesOf(values);
     }
 

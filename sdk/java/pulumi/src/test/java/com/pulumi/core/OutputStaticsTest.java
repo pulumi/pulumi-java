@@ -5,18 +5,20 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
-import static org.assertj.core.api.Assertions.*;
+import static com.pulumi.test.internal.PulumiTestInternal.extractOutputData;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.Assertions.entry;
 
 public class OutputStaticsTest {
 
     @Test
     void testListConcatNull() {
         var result = Output.concatList(null, null);
-        var data = OutputTests.waitFor(result);
+        var data = extractOutputData(result);
 
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
@@ -27,7 +29,7 @@ public class OutputStaticsTest {
     void testListConcatCoercesNullToEmpty() {
         var nullList = Output.ofNullable((List<Object>)null);
         var result = Output.concatList(nullList, nullList);
-        var data = OutputTests.waitFor(result);
+        var data = extractOutputData(result);
 
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
@@ -49,26 +51,28 @@ public class OutputStaticsTest {
                 .build();
 
         var result = Output.concatList(list1, list2);
-        var data = OutputTests.waitFor(result);
+        var data = extractOutputData(result);
 
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).hasSize(4);
         assertThat(data.getValueNullable()).containsOnly(
                 "V1",
-                OutputTests.waitFor(outV2).getValueNullable(),
-                OutputTests.waitFor(outV3).getValueNullable(),
+                extractOutputData(outV2).getValueNullable(),
+                extractOutputData(outV3).getValueNullable(),
                 "V4"
         );
 
         // Check that the input maps haven't changed
-        OutputTests.waitFor(
+        extractOutputData(
                 Output.tuple(list1, outV2)
                         .applyValue(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).contains("V1", t.t2);
                     return (Void) null;
-                }),
+                })
+        );
+        extractOutputData(
                 Output.tuple(list2, outV3).applyValue(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).containsOnly(t.t2, "V4");
@@ -80,7 +84,7 @@ public class OutputStaticsTest {
     @Test
     void testMapConcatNull() {
         var result = Output.concatMap(null, null);
-        var data = OutputTests.waitFor(result);
+        var data = extractOutputData(result);
 
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
@@ -92,7 +96,7 @@ public class OutputStaticsTest {
         var result = Output.concatMap(
                 Output.ofNullable((Map<String,Object>)null),
                 Output.ofNullable((Map<String,Object>)null));
-        var data = OutputTests.waitFor(result);
+        var data = extractOutputData(result);
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
         assertThat(data.getValueNullable()).isNotNull().isEmpty();
@@ -115,7 +119,7 @@ public class OutputStaticsTest {
                 .build();
 
         var result = Output.concatMap(map1, map2);
-        var data = OutputTests.waitFor(result);
+        var data = extractOutputData(result);
 
         assertThat(data.isSecret()).isFalse();
         assertThat(data.isKnown()).isTrue();
@@ -125,12 +129,14 @@ public class OutputStaticsTest {
         }
 
         // Check that the input maps haven't changed
-        OutputTests.waitFor(
+        extractOutputData(
                 Output.tuple(map1, outV3wrong).applyValue(t -> {
                     assertThat(t.t1).hasSize(3);
                     assertThat(t.t1).contains(entry("K3", t.t2));
                     return (Void) null;
-                }),
+                })
+        );
+        extractOutputData(
                 Output.tuple(map2, outV3).applyValue(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).contains(entry("K3", t.t2));
@@ -148,7 +154,7 @@ public class OutputStaticsTest {
                 ))
                 .build();
 
-        var data = OutputTests.waitFor(sample.dict);
+        var data = extractOutputData(sample.dict);
         assertThat(data.getValueNullable()).hasSize(2);
         assertThat(data.getValueNullable()).containsValue(Either.ofLeft("testValue"));
         assertThat(data.getValueNullable()).containsValue(Either.ofRight(123));
@@ -162,7 +168,7 @@ public class OutputStaticsTest {
                         Either.ofRight(123)
                 ))
                 .build();
-        var data = OutputTests.waitFor(sample.list);
+        var data = extractOutputData(sample.list);
         assertThat(data.getValueNullable()).hasSize(2);
         assertThat(data.getValueNullable()).containsOnlyOnce(Either.ofLeft("testValue"));
         assertThat(data.getValueNullable()).containsOnlyOnce(Either.ofRight(123));
@@ -208,17 +214,17 @@ public class OutputStaticsTest {
     void testNullableSecretifyOutput() {
         Output<String> res0_ = Output.ofNullable((String) null);
         Output<String> res0 = res0_.asSecret();
-        var data0 = OutputTests.waitFor(res0);
+        var data0 = extractOutputData(res0);
         assertThat(data0.getValueNullable()).isEqualTo(null);
         assertThat(data0.isSecret()).isTrue();
         assertThat(data0.isKnown()).isTrue();
 
         // stringify should not modify the original Output
-        var data0_ = OutputTests.waitFor(res0_);
+        var data0_ = extractOutputData(res0_);
         assertThat(data0_.isSecret()).isFalse();
 
         Output<String> res1 = Output.of("test1").asSecret();
-        var data1 = OutputTests.waitFor(res1);
+        var data1 = extractOutputData(res1);
         assertThat(data1.getValueNullable()).isEqualTo("test1");
         assertThat(data1.isSecret()).isTrue();
         assertThat(data1.isKnown()).isTrue();
@@ -231,21 +237,21 @@ public class OutputStaticsTest {
     void testExpectedNPEs() {
 
         assertThatThrownBy(() ->
-                OutputTests.waitFor(
+                extractOutputData(
                         Output.<Integer>ofNullable(null)
                                 .applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
 
         assertThatThrownBy(() ->
-                OutputTests.waitFor(
+                extractOutputData(
                         Output.<Integer>of(CompletableFuture.supplyAsync(() -> null))
                                 .applyValue(x -> x + 1)
                 )
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
 
         assertThatThrownBy(() ->
-                OutputTests.waitFor(
+                extractOutputData(
                         Output.of(1)
                                 .apply(__ -> Output.<Integer>ofNullable(null))
                                 .applyValue(x -> x + 1)
@@ -253,7 +259,7 @@ public class OutputStaticsTest {
         ).isInstanceOf(CompletionException.class).hasCauseInstanceOf(NullPointerException.class);
 
         assertThatThrownBy(() ->
-                OutputTests.waitFor(
+                extractOutputData(
                         Output.of(1)
                                 .apply(__ -> Output.of(CompletableFuture.<Integer>supplyAsync(() -> null)))
                                 .applyValue(x -> x + 1)

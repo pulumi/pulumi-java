@@ -10,7 +10,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-import static com.pulumi.core.OutputTests.waitForValue;
+import static com.pulumi.test.PulumiTest.extractValue;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
@@ -74,7 +74,7 @@ class UrnTest {
             String expected
     ) {
         var urn = Urn.create(stack, project, parentUrn, type, name);
-        var value = waitForValue(urn);
+        var value = extractValue(urn);
         assertThat(value).isEqualTo(expected);
     }
 

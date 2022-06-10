@@ -3,7 +3,6 @@ package com.pulumi.deployment;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
-import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
@@ -26,6 +25,7 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.test.internal.PulumiTestInternal.extractOutputData;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentInvokeTest {
@@ -130,7 +130,7 @@ public class DeploymentInvokeTest {
             var args = new IdentityArgs(unk);
             ctx.export("out", IdentityFunctions.invokeIdentity(args, new InvokeOptions()));
         }).join().throwOnError();
-        assertThat(OutputTests.waitFor(result.output("out")).isKnown()).isFalse();
+        assertThat(extractOutputData(result.output("out")).isKnown()).isFalse();
     }
 
     static class IdentityFunctions {
