@@ -226,7 +226,7 @@ class ConverterTests {
         void testNullInPreviewProducesFalseKnown() {
             DeploymentTests.DeploymentMockBuilder.builder()
                     .setMocks(new MocksTest.MyMocks())
-                    .setOptions(new TestOptions(true))
+                    .setOptions(TestOptions.builder().preview(true).build())
                     .deploymentFactory(MockDeployment::new)
                     .build();
 
@@ -244,7 +244,7 @@ class ConverterTests {
         void testNullInNormalProducesFalseKnown() {
             DeploymentTests.DeploymentMockBuilder.builder()
                     .setMocks(new MocksTest.MyMocks())
-                    .setOptions(new TestOptions(false))
+                    .setOptions(TestOptions.builder().preview(false).build())
                     .deploymentFactory(MockDeployment::new)
                     .build();
 

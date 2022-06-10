@@ -35,7 +35,7 @@ public class ConstructorConfusionTest {
     @Test
     void tryConstructNotConfusedByTwoN3Constructors() {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
+                .setOptions(TestOptions.builder().preview(true).build())
                 .setMocks(new ConfusionMocks())
                 .build();
         var resourcePackages = new ResourcePackages(Log.ignore());

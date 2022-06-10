@@ -38,7 +38,7 @@ public class DeploymentInvokeTest {
     @Test
     void testCustomInvokes() {
         DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
+                .setOptions(TestOptions.builder().preview(true).build())
                 .setMocks(new Mocks() {
                     @Override
                     public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
@@ -112,7 +112,7 @@ public class DeploymentInvokeTest {
     @Test
     void testInvokeDoesNotCallMonitorWhenInputsNotKnown() {
         var mocks = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
+                .setOptions(TestOptions.builder().preview(true).build())
                 .setMocks(new Mocks() {
                     @Override
                     public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {

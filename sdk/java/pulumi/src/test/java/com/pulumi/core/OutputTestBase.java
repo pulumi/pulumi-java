@@ -23,7 +23,9 @@ public abstract class OutputTestBase {
     public void mockSetup() {
         DeploymentMockBuilder.builder()
                 .setMocks(new MocksTest.MyMocks())
-                .setOptions(new TestOptions(isPreview()))
+                .setOptions(TestOptions.builder()
+                        .preview(isPreview())
+                        .build())
                 .build();
     }
 
