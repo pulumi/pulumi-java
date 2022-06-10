@@ -9,11 +9,11 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.deployment.MockCallArgs;
 import com.pulumi.deployment.MockResourceArgs;
 import com.pulumi.deployment.Mocks;
-import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -29,14 +29,14 @@ public class ConstructorConfusionTest {
 
     @AfterEach
     public void cleanupMocks() {
-        DeploymentTests.cleanupDeploymentMocks();
+        PulumiTestInternal.cleanup();
     }
 
     @Test
     void tryConstructNotConfusedByTwoN3Constructors() {
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(true).build())
-                .setMocks(new ConfusionMocks())
+        var mock = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(true).build())
+                .mocks(new ConfusionMocks())
                 .build();
         var resourcePackages = new ResourcePackages(Log.ignore());
         var result = mock.runTestAsync(

@@ -7,8 +7,8 @@ import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.MockCallArgs;
 import com.pulumi.deployment.MockResourceArgs;
 import com.pulumi.deployment.Mocks;
-import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -18,30 +18,29 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static com.pulumi.test.PulumiTest.extractValue;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ResourceTest {
 
-    private static DeploymentTests.DeploymentMock mock;
+    private static PulumiTestInternal test;
 
     @BeforeAll
     public static void mockSetup() {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(false).build())
-                .setMocks(new MyMocks())
+        test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(false).build())
+                .mocks(new MyMocks())
                 .build();
     }
 
     @AfterAll
     static void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTestInternal.cleanup();
     }
 
     @Test
     void testProviderPropagation() {
-        var result = mock.runTestAsync(MyStack::init).join()
+        var result = test.runTestAsync(MyStack::init).join()
                 .throwOnError();
 
         var resource = result.resources().stream()

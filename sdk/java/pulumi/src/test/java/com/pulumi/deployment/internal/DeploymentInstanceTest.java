@@ -1,12 +1,14 @@
 package com.pulumi.deployment.internal;
 
+import com.pulumi.deployment.Deployment;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.CompletionException;
 import java.util.logging.Level;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.test.internal.PulumiTestInternal.logger;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
@@ -14,7 +16,7 @@ public class DeploymentInstanceTest {
 
     @AfterEach
     void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTestInternal.cleanup();
     }
 
     @Test
@@ -24,19 +26,17 @@ public class DeploymentInstanceTest {
                 .isThrownBy(DeploymentImpl::getInstance)
                 .withMessageContaining("Trying to acquire Deployment#instance before");
 
-        var mock = DeploymentTests.DeploymentMockBuilder.builder()
+        var test = PulumiTestInternal.builder()
+                .standardLogger(logger(Level.OFF))
                 .build();
-        mock.standardLogger.setLevel(Level.OFF);
 
         // confirm we've initialized the global singleton holder
         assertThat(DeploymentImpl.getInstance()).isNotNull();
 
-        var result = mock.runTestAsync(
-                ctx -> {
+        var result = test.runTest(ctx -> {
                     // try to double-set the Deployment#instance
-                    DeploymentImpl.setInstance(new DeploymentInstanceInternal(mock.deployment));
-                }
-        ).join();
+                    DeploymentImpl.setInstance(Deployment.getInstance());
+        });
 
         assertThat(result.exceptions()).hasSize(2);
         assertThat(result.exceptions().get(0))

@@ -2,9 +2,8 @@ package com.pulumi.deployment;
 
 import com.pulumi.core.Tuples;
 import com.pulumi.core.internal.Internal;
-import com.pulumi.deployment.internal.DeploymentTests;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import com.pulumi.test.internal.PulumiTestInternal;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -14,30 +13,25 @@ import java.util.concurrent.CompletionException;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
+import static com.pulumi.test.internal.PulumiTestInternal.logger;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentExceptionTest {
 
-    private static DeploymentTests.DeploymentMock mock;
-
-    @BeforeAll
-    public static void mockSetup() {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setMocks(new MyIncorrectMocks())
-                .build();
-    }
-
-    @AfterAll
-    static void cleanup() {
-        cleanupDeploymentMocks();
+    @AfterEach
+    void cleanup() {
+        PulumiTestInternal.cleanup();
     }
 
     @Test
     void testUrnFutureDoesNotHangOnException() {
-        mock.standardLogger.setLevel(Level.OFF);
-        var result = mock.runTestAsync(ctx -> {
+        var test = PulumiTestInternal.builder()
+                .mocks(new MyIncorrectMocks())
+                .standardLogger(logger(Level.OFF))
+                .build();
+
+        var result = test.runTestAsync(ctx -> {
             var instance = new MocksTest.Instance("i1", null, null);
             var out = instance.getUrn();
             Internal.of(out).getDataAsync().orTimeout(1, TimeUnit.SECONDS).join();

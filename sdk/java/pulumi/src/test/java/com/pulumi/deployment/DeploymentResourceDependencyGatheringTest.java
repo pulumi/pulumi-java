@@ -5,11 +5,11 @@ import com.pulumi.Context;
 import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
 import com.pulumi.core.annotations.ResourceType;
-import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -20,28 +20,28 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DeploymentResourceDependencyGatheringTest {
-    private static DeploymentTests.DeploymentMock mock;
+
+    private static PulumiTestInternal test;
 
     @BeforeAll
     public static void mockSetup() {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(true).build())
-                .setMocks(new MyMocks(true))
+        test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(true).build())
+                .mocks(new MyMocks(true))
                 .build();
     }
 
     @AfterAll
     static void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTestInternal.cleanup();
     }
 
     @Test
     void testDeploysResourcesWithUnknownDependsOn() {
-        var result = mock.runTestAsync(DeploysResourcesWithUnknownDependsOnStack::init).join();
+        var result = test.runTest(DeploysResourcesWithUnknownDependsOnStack::init);
         assertThat(result.exceptions()).isNotNull();
         assertThat(result.exceptions()).isEmpty();
     }
@@ -56,6 +56,7 @@ public class DeploymentResourceDependencyGatheringTest {
     }
 
     public static final class MyArgs extends ResourceArgs {
+        // Empty
     }
 
     @ResourceType(type = "test:DeploymentResourceDependencyGatheringTests:resource")

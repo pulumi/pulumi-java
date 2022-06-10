@@ -12,7 +12,6 @@ import com.pulumi.core.internal.Constants;
 import com.pulumi.deployment.MockCallArgs;
 import com.pulumi.deployment.MockResourceArgs;
 import com.pulumi.deployment.Mocks;
-import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
@@ -20,6 +19,7 @@ import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -30,7 +30,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static com.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static com.pulumi.serialization.internal.ConverterTests.deserializeFromValue;
 import static com.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
 import static com.pulumi.test.PulumiTest.extractValue;
@@ -46,22 +45,20 @@ class ResourceRefPropertyTest {
                     .build()
                     .getType();
 
-    private static DeploymentTests.DeploymentMock mock;
-
     @AfterEach
     public void cleanup() {
-        cleanupDeploymentMocks();
+        PulumiTestInternal.cleanup();
     }
 
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testSerializeCustomResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(isPreview).build())
-                .setMocks(new MyMocks(isPreview))
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(isPreview).build())
+                .mocks(new MyMocks(isPreview))
                 .build();
 
-        var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
+        var result = test.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
         var res = result.resources().stream()
                 .filter(r -> r instanceof MyCustomResource)
@@ -81,12 +78,12 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testSerializeCustomResourceDownlevel(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(isPreview).build())
-                .setMocks(new MyMocks(isPreview))
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(isPreview).build())
+                .mocks(new MyMocks(isPreview))
                 .build();
 
-        var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
+        var result = test.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
         var res = result.resources().stream()
                 .filter(r -> r instanceof MyCustomResource)
@@ -104,11 +101,11 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testDeserializeCustomResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(isPreview).build())
-                .setMocks(new MyMocks(isPreview))
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(isPreview).build())
+                .mocks(new MyMocks(isPreview))
                 .build();
-        var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeCustomResourceStack).join();
+        var result = test.runTestAsync(ResourceRefPropertyTest::deserializeCustomResourceStack).join();
         var values = extractValue(result.output("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
@@ -118,11 +115,11 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testDeserializeMissingCustomResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(isPreview).build())
-                .setMocks(new MyMocks(isPreview))
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(isPreview).build())
+                .mocks(new MyMocks(isPreview))
                 .build();
-        var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeMissingCustomResourceStack).join();
+        var result = test.runTestAsync(ResourceRefPropertyTest::deserializeMissingCustomResourceStack).join();
         var values = extractValue(result.output("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
@@ -131,12 +128,12 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testSerializeComponentResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(isPreview).build())
-                .setMocks(new MyMocks(isPreview))
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(isPreview).build())
+                .mocks(new MyMocks(isPreview))
                 .build();
 
-        var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
+        var result = test.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
         var res = result.resources().stream()
                 .filter(r -> r instanceof MyComponentResource)
@@ -154,12 +151,12 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testSerializeComponentResourceDownlevel(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(isPreview).build())
-                .setMocks(new MyMocks(isPreview))
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(isPreview).build())
+                .mocks(new MyMocks(isPreview))
                 .build();
 
-        var result = mock.runTestAsync(ResourceRefPropertyTest::myStack).join()
+        var result = test.runTestAsync(ResourceRefPropertyTest::myStack).join()
                 .throwOnError();
         var res = result.resources().stream()
                 .filter(r -> r instanceof MyComponentResource)
@@ -177,12 +174,12 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testDeserializeComponentResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(isPreview).build())
-                .setMocks(new MyMocks(isPreview))
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(isPreview).build())
+                .mocks(new MyMocks(isPreview))
                 .build();
 
-        var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeComponentResourceStack).join();
+        var result = test.runTestAsync(ResourceRefPropertyTest::deserializeComponentResourceStack).join();
         var values = extractValue(result.output("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
@@ -191,11 +188,11 @@ class ResourceRefPropertyTest {
     @ParameterizedTest
     @ValueSource(booleans = {false, true})
     void testDeserializeMissingComponentResource(boolean isPreview) {
-        mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(TestOptions.builder().preview(isPreview).build())
-                .setMocks(new MyMocks(isPreview))
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(isPreview).build())
+                .mocks(new MyMocks(isPreview))
                 .build();
-        var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeMissingComponentResourceStack).join();
+        var result = test.runTestAsync(ResourceRefPropertyTest::deserializeMissingComponentResourceStack).join();
         var values = extractValue(result.output("values", ValuesClass));
         assertThat(values).isNotNull();
         assertThat(values.get("expectedUrn")).isEqualTo(values.get("actualUrn"));
