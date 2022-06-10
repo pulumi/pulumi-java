@@ -28,6 +28,7 @@ import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.Engine;
 import com.pulumi.deployment.internal.EngineLogger;
 import com.pulumi.deployment.internal.Monitor;
+import com.pulumi.deployment.internal.ReadOrRegisterResource;
 import com.pulumi.deployment.internal.RegisterResourceOutputs;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.TestOptions;
@@ -57,6 +58,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     private final MockEngine engine;
     private final MockMonitor monitor;
 
+    private final ReadOrRegisterResource readOrRegisterResource;
     private final RegisterResourceOutputs registerResourceOutputs;
 
     @InternalUse
@@ -65,6 +67,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             MockEngine engine,
             MockMonitor monitor,
             Log log,
+            ReadOrRegisterResource readOrRegisterResource,
             RegisterResourceOutputs registerResourceOutputs,
             ContextInternal stackContext
     ) {
@@ -72,6 +75,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         this.log = requireNonNull(log);
         this.engine = requireNonNull(engine);
         this.monitor = requireNonNull(monitor);
+        this.readOrRegisterResource = requireNonNull(readOrRegisterResource);
         this.registerResourceOutputs = requireNonNull(registerResourceOutputs);
     }
 
@@ -97,6 +101,13 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     @InternalUse
     public Monitor monitor() {
         return this.monitor;
+    }
+
+    /**
+     * @return return the {@link ReadOrRegisterResource} used by the test
+     */
+    public ReadOrRegisterResource readOrRegisterResource() {
+        return this.readOrRegisterResource;
     }
 
     /**
@@ -350,7 +361,8 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
                     this.options.resourceTransformations()
             );
             return new PulumiTestInternal(
-                    this.runner, this.engine, this.monitor, this.log, deployment, context
+                    this.runner, this.engine, this.monitor, this.log,
+                    deployment, deployment, context
             );
         }
     }

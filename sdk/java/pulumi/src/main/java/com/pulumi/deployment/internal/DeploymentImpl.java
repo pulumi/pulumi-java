@@ -140,7 +140,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 this.log, this.prepare, state.monitor,
                 DeploymentState.DisableResourceReferences
         );
-        this.readOrRegisterResource = new ReadOrRegisterResource(
+        this.readOrRegisterResource = new ReadOrRegisterResourceInternal(
                 this.log, state.runner, this.invoke, this.readResource,
                 this.registerResource, this.converter, state.isDryRun
         );
@@ -1086,7 +1086,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
     }
 
-    private static final class ReadOrRegisterResource {
+    private static final class ReadOrRegisterResourceInternal implements ReadOrRegisterResource {
 
         private final Log log;
         private final Runner runner;
@@ -1096,7 +1096,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private final Converter converter;
         private final boolean isDryRun;
 
-        private ReadOrRegisterResource(
+        private ReadOrRegisterResourceInternal(
                 Log log,
                 Runner runner,
                 Invoke invoke,
@@ -1114,6 +1114,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.isDryRun = isDryRun;
         }
 
+        @Override
         public void readOrRegisterResource(
                 Resource resource, boolean remote, Function<String, Resource> newDependency,
                 ResourceArgs args, ResourceOptions options, Resource.LazyFields lazy
