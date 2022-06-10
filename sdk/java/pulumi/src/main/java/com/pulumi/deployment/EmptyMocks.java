@@ -1,10 +1,8 @@
 package com.pulumi.deployment;
 
-import com.pulumi.core.Tuples;
 import com.pulumi.test.Mocks;
 
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static java.lang.String.format;
@@ -12,7 +10,7 @@ import static java.lang.String.format;
 public class EmptyMocks implements Mocks {
 
     @Override
-    public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+    public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
         throw new IllegalArgumentException(
                 "EmptyMocks have not implementation, use setMocks with a correct implementation. "
                         + format("Unknown resource '%s'", args.type)
@@ -20,7 +18,7 @@ public class EmptyMocks implements Mocks {
     }
 
     @Override
-    public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
+    public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
         return CompletableFuture.completedFuture(null);
     }
 }

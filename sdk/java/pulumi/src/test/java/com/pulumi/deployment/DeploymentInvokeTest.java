@@ -3,7 +3,6 @@ package com.pulumi.deployment;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
-import com.pulumi.core.Tuples;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.core.annotations.CustomType.Constructor;
@@ -22,7 +21,6 @@ import org.junit.jupiter.api.Test;
 import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static com.pulumi.test.internal.PulumiTestInternal.extractOutputData;
@@ -41,12 +39,12 @@ public class DeploymentInvokeTest {
                 .options(TestOptions.builder().preview(true).build())
                 .mocks(new Mocks() {
                     @Override
-                    public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+                    public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
                         return CompletableFuture.completedFuture(null);
                     }
 
                     @Override
-                    public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
+                    public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
                         return CompletableFuture.completedFuture(
                                 ImmutableMap.of(
                                         "result",
@@ -115,12 +113,12 @@ public class DeploymentInvokeTest {
                 .options(TestOptions.builder().preview(true).build())
                 .mocks(new Mocks() {
                     @Override
-                    public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+                    public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
                         throw new RuntimeException("new Resource not implemented");
                     }
 
                     @Override
-                    public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
+                    public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
                         throw new RuntimeException("callAsync not implemented");
                     }
                 })

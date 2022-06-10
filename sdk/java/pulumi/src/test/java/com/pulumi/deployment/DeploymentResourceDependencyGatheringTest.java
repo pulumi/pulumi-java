@@ -3,7 +3,6 @@ package com.pulumi.deployment;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.Context;
 import com.pulumi.core.OutputTests;
-import com.pulumi.core.Tuples;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.CustomResource;
@@ -75,16 +74,16 @@ public class DeploymentResourceDependencyGatheringTest {
         }
 
         @Override
-        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
+        public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
             throw new IllegalStateException(String.format("Unknown function %s", args.token));
         }
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             Objects.requireNonNull(args.type);
             if ("test:DeploymentResourceDependencyGatheringTests:resource".equals(args.type)) {
                 return CompletableFuture.completedFuture(
-                        Tuples.of(Optional.ofNullable(this.isPreview ? null : "id"), ImmutableMap.<String, Object>of())
+                        ResourceResult.of(Optional.ofNullable(this.isPreview ? null : "id"), ImmutableMap.<String, Object>of())
                 );
             }
             throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));
