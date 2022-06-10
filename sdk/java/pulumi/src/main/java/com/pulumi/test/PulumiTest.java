@@ -3,7 +3,6 @@ package com.pulumi.test;
 import com.pulumi.Context;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.Internal;
-import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.test.internal.PulumiTestInternal;
 
 import javax.annotation.Nullable;

@@ -1,4 +1,4 @@
-package com.pulumi.deployment.internal;
+package com.pulumi.test;
 
 import com.pulumi.resources.ResourceTransformation;
 
