@@ -15,6 +15,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
+	jtests "github.com/pulumi/pulumi-java/tests/internal"
 	"github.com/pulumi/pulumi/pkg/v3/engine"
 	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
 )
@@ -55,64 +56,79 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("azure-java-static-website", func(t *testing.T) {
-		test := getJavaBase(t, "azure-java-static-website", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"azure-native:location": "westus",
-			},
-			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-				o := stackInfo.Outputs
-				cdnEndpoint := o["cdnEndpoint"].(string)
-				staticEndpoint := o["staticEndpoint"].(string)
-				assert.True(t, strings.HasPrefix(cdnEndpoint, "https"))
-				assert.True(t, strings.HasPrefix(staticEndpoint, "https"))
-			},
-		})
+		test := getJavaBaseNew(t,
+			"azure-java-static-website",
+			[]string{"azure-native"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"azure-native:location": "westus",
+				},
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					cdnEndpoint := o["cdnEndpoint"].(string)
+					staticEndpoint := o["staticEndpoint"].(string)
+					assert.True(t, strings.HasPrefix(cdnEndpoint, "https"))
+					assert.True(t, strings.HasPrefix(staticEndpoint, "https"))
+				},
+			})
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("aws-java-webserver", func(t *testing.T) {
-		test := getJavaBase(t, "aws-java-webserver", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"aws:region": "us-east-1",
-			},
-			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-				o := stackInfo.Outputs
-				publicIp := o["publicIp"].(string)
-				publicHostName := o["publicHostName"].(string)
-				assert.True(t, strings.Contains(publicIp, "."))
-				assert.True(t, strings.Contains(publicHostName, "."))
-			},
-		})
+		test := getJavaBaseNew(t,
+			"aws-java-webserver",
+			[]string{"aws"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"aws:region": "us-east-1",
+				},
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					publicIp := o["publicIp"].(string)
+					publicHostName := o["publicHostName"].(string)
+					assert.True(t, strings.Contains(publicIp, "."))
+					assert.True(t, strings.Contains(publicHostName, "."))
+				},
+			})
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("azure-java-appservice-sql", func(t *testing.T) {
-		test := getJavaBase(t, "azure-java-appservice-sql", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"azure-native:location":                 "westus",
-				"azure-java-appservice-sql:sqlPassword": "not-a-real-password",
-			},
-		})
+		test := getJavaBaseNew(t,
+			"azure-java-appservice-sql",
+			[]string{"azure-native"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"azure-native:location":                 "westus",
+					"azure-java-appservice-sql:sqlPassword": "not-a-real-password",
+				},
+			})
 		integration.ProgramTest(t, &test)
 	})
 
-	t.Run("eks-minimal", func(t *testing.T) {
-		test := getJavaBase(t, "eks-minimal", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"aws:region": "us-west-1",
-			},
-		})
+	t.Run("aws-java-eks-minimal", func(t *testing.T) {
+		test := getJavaBaseNew(t,
+			"aws-java-eks-minimal",
+			[]string{"eks", "aws", "kubernetes"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"aws:region": "us-west-1",
+				},
+			})
 		integration.ProgramTest(t, &test)
 	})
 
 	t.Run("gcp-java-gke-hello-world", func(t *testing.T) {
-		test := getJavaBase(t, "gcp-java-gke-hello-world", integration.ProgramTestOptions{
-			Config: map[string]string{
-				// Try `gcloud projects list`
-				"gcp:project": "pulumi-development",
-				"gcp:zone":    "us-west1-a",
-			},
-		})
+		test := getJavaBaseNew(t,
+			"gcp-java-gke-hello-world",
+			[]string{"gcp"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					// Try `gcloud projects list`
+					"gcp:project": "pulumi-development",
+					"gcp:zone":    "us-west1-a",
+				},
+			})
 
 		integration.ProgramTest(t, &test)
 	})
@@ -150,36 +166,55 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("aws-native-java-s3-folder", func(t *testing.T) {
-		test := getJavaBase(t, "aws-native-java-s3-folder", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"aws:region":        "us-west-2",
-				"aws-native:region": "us-west-2",
-			},
+		test := getJavaBaseNew(t,
+			"aws-native-java-s3-folder",
+			[]string{"aws", "aws-native"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"aws:region":        "us-west-2",
+					"aws-native:region": "us-west-2",
+				},
 
-			// TODO failing here, potentially a
-			// provider bug. We need to recheck
-			// after upgrading to latest.
-			SkipRefresh: true,
-		})
+				// TODO failing here, potentially a
+				// provider bug. We need to recheck
+				// after upgrading to latest.
+				SkipRefresh: true,
+			})
 		integration.ProgramTest(t, &test)
 	})
 
-	t.Run("azure-function-graal-spring", func(t *testing.T) {
-		test := getJavaBase(t, "azure-function-graal-spring", integration.ProgramTestOptions{
-			Config: map[string]string{
-				"azure-native:location": "westus",
-			},
-			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
-				o := stackInfo.Outputs
-				functionName := o["functionName"].(string)
-				endpoint := o["endpoint"].(string)
-				assert.True(t, len(functionName) > 0)
-				assert.True(t, strings.HasPrefix(endpoint, "https"))
-				assertHTTPResult(t, o["endpoint"], nil, func(body string) bool {
-					return assert.Contains(t, body, "{\"message\":\"Hello from Spring, Pulumi!\"}")
-				})
-			},
-		})
+	t.Run("azure-java-function-graal-spring", func(t *testing.T) {
+		test := getJavaBaseNew(t,
+			"azure-java-function-graal-spring",
+			[]string{"azure-native"},
+			integration.ProgramTestOptions{
+				Config: map[string]string{
+					"azure-native:location": "westus",
+				},
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					functionName := o["functionName"].(string)
+					endpoint := o["endpoint"].(string)
+					assert.True(t, len(functionName) > 0)
+					assert.True(t, strings.HasPrefix(endpoint, "https"))
+					assertHTTPResult(t, o["endpoint"], nil, func(body string) bool {
+						return assert.Contains(t, body, "{\"message\":\"Hello from Spring, Pulumi!\"}")
+					})
+				},
+				PrepareProject: func(info *engine.Projinfo) error {
+					cmd := exec.Command("gradle", "app:packageDistribution")
+					cmd.Dir = info.Root
+					var buf bytes.Buffer
+					cmd.Stdout = &buf
+					cmd.Stderr = &buf
+					err := cmd.Run()
+					if err != nil {
+						t.Logf("gradle app:packageDistribution: %v", err)
+						t.Log(buf.String())
+					}
+					return err
+				},
+			})
 		integration.ProgramTest(t, &test)
 	})
 
@@ -192,6 +227,62 @@ func TestExamples(t *testing.T) {
 		})
 		integration.ProgramTest(t, &test)
 	})
+}
+
+func getJavaBaseNew(
+	t *testing.T,
+	dir string,
+	providers []string,
+	testSpecificOptions integration.ProgramTestOptions,
+) integration.ProgramTestOptions {
+	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
+	if err != nil {
+		panic(err)
+	}
+	prepareProject := func(info *engine.Projinfo) error {
+		deps, err := jtests.ParsePinVersionsFromEnv(t, providers)
+		if err != nil {
+			return err
+		}
+		_, err = jtests.Pin(info.Root, deps)
+		return err
+	}
+	opts := integration.ProgramTestOptions{
+		Dir: filepath.Join(repoRoot, "examples", dir),
+		Env: []string{fmt.Sprintf("PULUMI_REPO_ROOT=%s", repoRoot)},
+	}
+	opts = opts.With(getBaseOptions()).
+		With(testSpecificOptions).
+		With(integration.ProgramTestOptions{
+			PrepareProject: combinePrepareProject(
+				prepareProject,
+				testSpecificOptions.PrepareProject,
+			),
+		})
+	if previewOnly {
+		opts = opts.With(integration.ProgramTestOptions{
+			SkipRefresh:            true,
+			SkipEmptyPreviewUpdate: true,
+			SkipExportImport:       true,
+			SkipUpdate:             true,
+		})
+		opts.ExtraRuntimeValidation = nil
+	}
+	return opts
+}
+
+func combinePrepareProject(f1, f2 func(info *engine.Projinfo) error) func(info *engine.Projinfo) error {
+	return func(info *engine.Projinfo) error {
+		if f1 != nil {
+			if err := f1(info); err != nil {
+				return err
+			}
+		}
+		if f2 != nil {
+			return f2(info)
+		}
+		return nil
+	}
 }
 
 func getJavaBase(t *testing.T, dir string, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {

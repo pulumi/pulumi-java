@@ -4,3 +4,8 @@
 [submodule "templates"]
 	path = templates
 	url = https://github.com/pulumi/templates
+        branch = pulumi-java/main
+[submodule "examples"]
+	path = examples
+	url = https://github.com/pulumi/examples
+	branch = pulumi-java/main
