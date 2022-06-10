@@ -1,7 +1,7 @@
 package com.pulumi.core;
 
 import com.pulumi.core.internal.Internal;
-import com.pulumi.deployment.internal.TestOptions;
+import com.pulumi.test.TestOptions;
 import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;

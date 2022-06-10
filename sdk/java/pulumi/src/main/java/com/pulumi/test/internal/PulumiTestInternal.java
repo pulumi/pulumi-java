@@ -25,11 +25,11 @@ import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.deployment.internal.ReadOrRegisterResource;
 import com.pulumi.deployment.internal.RegisterResourceOutputs;
 import com.pulumi.deployment.internal.Runner;
-import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.internal.PulumiInternal;
 import com.pulumi.test.EmptyMocks;
 import com.pulumi.test.Mocks;
 import com.pulumi.test.PulumiTest;
+import com.pulumi.test.TestOptions;
 import com.pulumi.test.TestResult;
 
 import javax.annotation.Nullable;
