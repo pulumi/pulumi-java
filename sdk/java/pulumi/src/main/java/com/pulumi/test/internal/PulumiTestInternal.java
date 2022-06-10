@@ -24,7 +24,6 @@ import com.pulumi.deployment.Mocks;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.DeploymentInstanceInternal;
 import com.pulumi.deployment.internal.DeploymentInternal;
-import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.Engine;
 import com.pulumi.deployment.internal.EngineLogger;
 import com.pulumi.deployment.internal.Monitor;
@@ -42,10 +41,10 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static com.pulumi.deployment.internal.DeploymentTests.defaultLogger;
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -156,7 +155,9 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
      * @see PulumiTest#cleanup()
      */
     public static void cleanup() {
-        DeploymentTests.cleanupDeploymentMocks();
+        // ensure we don't get the error:
+        //   java.lang.IllegalStateException: Deployment.getInstance should only be set once at the beginning of a 'run' call.
+        DeploymentImpl.internalUnsafeDestroyInstance();
     }
 
     @InternalUse
@@ -378,9 +379,45 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         }
     }
 
+    @InternalUse
     public static Logger logger(Level level) {
         var standardLogger = Logger.getLogger(PulumiTestInternal.class.getName());
         standardLogger.setLevel(level);
         return standardLogger;
+    }
+
+    @InternalUse
+    public static Logger defaultLogger() {
+        return logger(Level.INFO);
+    }
+
+    @InternalUse
+    public static Log mockLog() {
+        return mockLog(defaultLogger(), MockEngine::new);
+    }
+
+    @InternalUse
+    public static Log mockLog(Logger logger) {
+        return mockLog(logger, MockEngine::new);
+    }
+
+    @InternalUse
+    public static Log mockLog(Logger logger, Supplier<Engine> engine) {
+        return new Log(new DeploymentImpl.DefaultEngineLogger(logger, MockRunner::new, engine));
+    }
+
+    @InternalUse
+    public static DeploymentImpl.Config config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
+        return new DeploymentImpl.Config(allConfig, configSecretKeys);
+    }
+
+    @InternalUse
+    public static ImmutableMap<String, String> parseConfig(String configJson) {
+        return DeploymentImpl.Config.parseConfig(configJson);
+    }
+
+    @InternalUse
+    public static ImmutableSet<String> parseConfigSecretKeys(String secretKeysJson) {
+        return DeploymentImpl.Config.parseConfigSecretKeys(secretKeysJson);
     }
 }

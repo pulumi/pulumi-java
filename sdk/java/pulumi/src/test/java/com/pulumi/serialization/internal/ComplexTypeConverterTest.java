@@ -6,9 +6,9 @@ import com.pulumi.Log;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.core.annotations.CustomType.Constructor;
 import com.pulumi.core.annotations.CustomType.Parameter;
-import com.pulumi.deployment.internal.DeploymentTests;
 import com.pulumi.deployment.internal.InMemoryLogger;
 import com.pulumi.serialization.internal.ConverterTests.ContainerSize;
+import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -25,7 +25,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class ComplexTypeConverterTest {
 
-    private final static Log log = DeploymentTests.mockLog();
+    private final static Log log = PulumiTestInternal.mockLog();
 
     @CustomType
     public static class ComplexType1 {
@@ -220,7 +220,7 @@ class ComplexTypeConverterTest {
     @Test
     void testUnexpectedNullableComplexType() {
         var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testUnexpectedNullableComplexType");
-        var inMemoryLog = DeploymentTests.mockLog(logger);
+        var inMemoryLog = PulumiTestInternal.mockLog(logger);
         var deserializer = new Deserializer(log);
         var converter = new Converter(inMemoryLog, deserializer);
 
@@ -256,7 +256,7 @@ class ComplexTypeConverterTest {
     @Test
     void testEscapedComplexType() {
         var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testEscapedComplexType");
-        var inMemoryLog = DeploymentTests.mockLog(logger);
+        var inMemoryLog = PulumiTestInternal.mockLog(logger);
         var deserializer = new Deserializer(log);
         var converter = new Converter(inMemoryLog, deserializer);
 

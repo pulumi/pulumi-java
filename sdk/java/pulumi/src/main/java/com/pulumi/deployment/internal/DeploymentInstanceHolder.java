@@ -11,9 +11,6 @@ import java.util.concurrent.atomic.AtomicReference;
 @InternalUse
 public abstract class DeploymentInstanceHolder {
 
-    // TODO: maybe using a state machine for the uninitialized and initialized deployment would make sense
-    //       not only it need the deployment instance, but also a stack - initialized after 'run' is called
-    //       and config, ale probably more stuff... it's a god object...
     private static final AtomicReference<DeploymentInstance> instance = new AtomicReference<>();
 
     /**
@@ -45,8 +42,7 @@ public abstract class DeploymentInstanceHolder {
 
     @InternalUse
     @VisibleForTesting
-    static void internalUnsafeDestroyInstance() {
+    public static void internalUnsafeDestroyInstance() {
         instance.set(null);
     }
-
 }
