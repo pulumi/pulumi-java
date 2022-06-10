@@ -115,13 +115,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     private final RootResource rootResource;
 
     @InternalUse
-    DeploymentImpl() {
-        this(DeploymentState.fromEnvironment());
-    }
-
-    // TODO private Deployment(InlineDeploymentSettings settings)
-
-    @InternalUse
     @VisibleForTesting
     public DeploymentImpl(
             DeploymentState state
@@ -277,7 +270,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private ImmutableSet<String> configSecretKeys;
 
         @VisibleForTesting
-        Config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
+        public Config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
             this.allConfig = Objects.requireNonNull(allConfig);
             this.configSecretKeys = Objects.requireNonNull(configSecretKeys);
         }
@@ -1635,7 +1628,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         @InternalUse
         @VisibleForTesting
-        DeploymentState(
+        public DeploymentState(
                 DeploymentImpl.Config config,
                 Logger standardLogger,
                 String projectName,
@@ -1912,7 +1905,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @ParametersAreNonnullByDefault
     @InternalUse
     @VisibleForTesting
-    static class DefaultEngineLogger implements EngineLogger {
+    public static final class DefaultEngineLogger implements EngineLogger {
         private final Supplier<Runner> runner;
         private final Supplier<Engine> engine;
         private final Logger standardLogger;

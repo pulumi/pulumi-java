@@ -13,7 +13,7 @@ import static java.util.Objects.requireNonNull;
 @ParametersAreNonnullByDefault
 public class StackOptions {
 
-    public static final StackOptions Empty = new Builder().build();
+    public static final StackOptions Empty = builder().build();
 
     private final List<ResourceTransformation> resourceTransformations;
 
