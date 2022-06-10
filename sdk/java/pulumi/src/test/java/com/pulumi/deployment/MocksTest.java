@@ -52,7 +52,7 @@ public class MocksTest {
     @Test
     void testCustomMocks() {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
+                .setOptions(TestOptions.builder().preview(true).build())
                 .setMocks(new MyMocks())
                 .build();
 
@@ -89,7 +89,7 @@ public class MocksTest {
     @Test
     void testCustomWithResourceReference() {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(false))
+                .setOptions(TestOptions.builder().preview(false).build())
                 .setMocks(new MyMocks())
                 .build();
 
@@ -113,7 +113,7 @@ public class MocksTest {
     @Test
     void testStack() {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
+                .setOptions(TestOptions.builder().preview(true).build())
                 .setMocks(new MyMocks())
                 .build();
 
@@ -126,7 +126,7 @@ public class MocksTest {
     @Test
     void testInvokeThrowing() {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(false))
+                .setOptions(TestOptions.builder().preview(false).build())
                 .setMocks(new ThrowingMocks())
                 .build();
 
@@ -185,7 +185,7 @@ public class MocksTest {
     void testStackWithInvalidSchema() {
         var log = InMemoryLogger.getLogger("MocksTest#testStackWithInvalidSchema");
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(false))
+                .setOptions(TestOptions.builder().preview(false).build())
                 .setMocks(new MyInvalidMocks())
                 .setStandardLogger(log)
                 .build();

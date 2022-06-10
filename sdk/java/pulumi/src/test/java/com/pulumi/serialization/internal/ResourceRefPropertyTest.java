@@ -57,7 +57,7 @@ class ResourceRefPropertyTest {
     @ValueSource(booleans = {false, true})
     void testSerializeCustomResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(isPreview))
+                .setOptions(TestOptions.builder().preview(isPreview).build())
                 .setMocks(new MyMocks(isPreview))
                 .build();
 
@@ -82,7 +82,7 @@ class ResourceRefPropertyTest {
     @ValueSource(booleans = {false, true})
     void testSerializeCustomResourceDownlevel(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(isPreview))
+                .setOptions(TestOptions.builder().preview(isPreview).build())
                 .setMocks(new MyMocks(isPreview))
                 .build();
 
@@ -105,7 +105,7 @@ class ResourceRefPropertyTest {
     @ValueSource(booleans = {false, true})
     void testDeserializeCustomResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(isPreview))
+                .setOptions(TestOptions.builder().preview(isPreview).build())
                 .setMocks(new MyMocks(isPreview))
                 .build();
         var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeCustomResourceStack).join();
@@ -119,7 +119,7 @@ class ResourceRefPropertyTest {
     @ValueSource(booleans = {false, true})
     void testDeserializeMissingCustomResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(isPreview))
+                .setOptions(TestOptions.builder().preview(isPreview).build())
                 .setMocks(new MyMocks(isPreview))
                 .build();
         var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeMissingCustomResourceStack).join();
@@ -132,7 +132,7 @@ class ResourceRefPropertyTest {
     @ValueSource(booleans = {false, true})
     void testSerializeComponentResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(isPreview))
+                .setOptions(TestOptions.builder().preview(isPreview).build())
                 .setMocks(new MyMocks(isPreview))
                 .build();
 
@@ -155,7 +155,7 @@ class ResourceRefPropertyTest {
     @ValueSource(booleans = {false, true})
     void testSerializeComponentResourceDownlevel(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(isPreview))
+                .setOptions(TestOptions.builder().preview(isPreview).build())
                 .setMocks(new MyMocks(isPreview))
                 .build();
 
@@ -178,7 +178,7 @@ class ResourceRefPropertyTest {
     @ValueSource(booleans = {false, true})
     void testDeserializeComponentResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(isPreview))
+                .setOptions(TestOptions.builder().preview(isPreview).build())
                 .setMocks(new MyMocks(isPreview))
                 .build();
 
@@ -192,7 +192,7 @@ class ResourceRefPropertyTest {
     @ValueSource(booleans = {false, true})
     void testDeserializeMissingComponentResource(boolean isPreview) {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(isPreview))
+                .setOptions(TestOptions.builder().preview(isPreview).build())
                 .setMocks(new MyMocks(isPreview))
                 .build();
         var result = mock.runTestAsync(ResourceRefPropertyTest::deserializeMissingComponentResourceStack).join();

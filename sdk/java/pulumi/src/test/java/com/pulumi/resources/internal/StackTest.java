@@ -171,7 +171,7 @@ class StackTest {
                 case "pulumi:pulumi:StackReference":
                     return CompletableFuture.completedFuture(
                             Tuples.of(
-                                    Optional.of(mock.options.getStackName()),
+                                    Optional.of(mock.options.stackName()),
                                     ImmutableMap.of("outputs",
                                             ImmutableMap.of("ref", queryStack().orElseThrow())
                                     )

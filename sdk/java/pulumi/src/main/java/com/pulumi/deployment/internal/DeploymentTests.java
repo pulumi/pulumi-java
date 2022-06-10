@@ -91,14 +91,14 @@ public class DeploymentTests {
             var mockMonitor = (MockMonitor) this.monitor;
 
             Function<String, Config> configFactory = (name) -> new Config(this.config, name);
-            var configContext = new ConfigContextInternal(this.options.getProjectName(), configFactory);
+            var configContext = new ConfigContextInternal(this.options.projectName(), configFactory);
             var loggingContext = new LoggingContextInternal(this.log);
             var outputFactory = new OutputFactory(this.runner);
             var outputsContext = new OutputContextInternal(outputFactory);
 
             var context = new ContextInternal(
-                    this.options.getProjectName(),
-                    this.options.getStackName(),
+                    this.options.projectName(),
+                    this.options.stackName(),
                     loggingContext, configContext, outputsContext,
                     this.options.resourceTransformations()
             );
@@ -208,7 +208,7 @@ public class DeploymentTests {
                 this.log = new Log(this.logger, DeploymentImpl.DeploymentState.ExcessiveDebugOutput);
             }
             if (this.options == null) {
-                this.options = new TestOptions();
+                this.options = TestOptions.builder().build();
             }
             // FIXME: this runner is being ignored right now in DeploymentState
             if (this.runner == null) {
@@ -231,9 +231,9 @@ public class DeploymentTests {
                 this.state = new DeploymentImpl.DeploymentState(
                         this.config,
                         this.standardLogger,
-                        this.options.getProjectName(),
-                        this.options.getStackName(),
-                        this.options.isPreview(),
+                        this.options.projectName(),
+                        this.options.stackName(),
+                        this.options.preview(),
                         this.engine,
                         this.monitor
                 );

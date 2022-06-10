@@ -29,7 +29,7 @@ public class ResourceTest {
     @BeforeAll
     public static void mockSetup() {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(false))
+                .setOptions(TestOptions.builder().preview(false).build())
                 .setMocks(new MyMocks())
                 .build();
     }

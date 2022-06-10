@@ -29,7 +29,7 @@ public class DeploymentResourceDependencyGatheringTest {
     @BeforeAll
     public static void mockSetup() {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(true))
+                .setOptions(TestOptions.builder().preview(true).build())
                 .setMocks(new MyMocks(true))
                 .build();
     }
