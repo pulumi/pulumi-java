@@ -54,6 +54,8 @@ import static java.util.Objects.requireNonNull;
 @InternalUse
 public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
 
+    private final TestOptions options;
+
     private final Log log;
     private final MockEngine engine;
     private final MockMonitor monitor;
@@ -63,6 +65,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
 
     @InternalUse
     public PulumiTestInternal(
+            TestOptions options,
             Runner runner,
             MockEngine engine,
             MockMonitor monitor,
@@ -72,6 +75,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             ContextInternal stackContext
     ) {
         super(runner, stackContext);
+        this.options = requireNonNull(options);
         this.log = requireNonNull(log);
         this.engine = requireNonNull(engine);
         this.monitor = requireNonNull(monitor);
@@ -80,7 +84,14 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     }
 
     /**
-     * @return return the {@link Runner} used by the test
+     * @return the {@link TestOptions} for this test
+     */
+    public TestOptions options() {
+        return this.options;
+    }
+
+    /**
+     * @return the {@link Runner} used by the test
      */
     @InternalUse
     public Runner runner() {
@@ -88,10 +99,10 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     }
 
     /**
-     * @return return the {@link Engine} used by the test
+     * @return the {@link Engine} used by the test
      */
     @InternalUse
-    public Engine engine() {
+    public MockEngine engine() {
         return this.engine;
     }
 
@@ -99,7 +110,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
      * @return return the {@link Monitor} used by the test
      */
     @InternalUse
-    public Monitor monitor() {
+    public MockMonitor monitor() {
         return this.monitor;
     }
 
@@ -361,14 +372,14 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
                     this.options.resourceTransformations()
             );
             return new PulumiTestInternal(
-                    this.runner, this.engine, this.monitor, this.log,
+                    this.options, this.runner, this.engine, this.monitor, this.log,
                     deployment, deployment, context
             );
         }
     }
 
     public static Logger logger(Level level) {
-        var standardLogger = Logger.getLogger(DeploymentTests.class.getName());
+        var standardLogger = Logger.getLogger(PulumiTestInternal.class.getName());
         standardLogger.setLevel(level);
         return standardLogger;
     }
