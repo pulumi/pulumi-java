@@ -84,7 +84,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
+        uses: gradle/gradle-build-action@e88ed3e650b26bd116cfee53cf198c1f6856682d
         with:
           arguments: build
           build-root-directory: sdk/java
@@ -152,7 +152,7 @@ jobs:
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Publish Pulumi Java SDK locally to enable codegen tests
-        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
+        uses: gradle/gradle-build-action@e88ed3e650b26bd116cfee53cf198c1f6856682d
         env:
           # Override to match gen_test.go
           PULUMI_JAVA_SDK_VERSION: 0.0.1
@@ -229,7 +229,7 @@ jobs:
       - name: Codegen the provider code
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Build and unit-test
-        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
+        uses: gradle/gradle-build-action@e88ed3e650b26bd116cfee53cf198c1f6856682d
         with:
           arguments: build
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
@@ -258,7 +258,7 @@ jobs:
         continue-on-error: true
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Rebuild Java provider SDK from ${{ github.event.pull_request.base.ref }}
-        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
+        uses: gradle/gradle-build-action@e88ed3e650b26bd116cfee53cf198c1f6856682d
         continue-on-error: true
         with:
           gradle-version: 7.4.1
@@ -331,7 +331,7 @@ jobs:
       - name: Codegen the provider code
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Build and unit-test
-        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
+        uses: gradle/gradle-build-action@e88ed3e650b26bd116cfee53cf198c1f6856682d
         with:
           arguments: build
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
@@ -360,7 +360,7 @@ jobs:
         continue-on-error: true
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Rebuild Java provider SDK from ${{ github.event.pull_request.base.ref }}
-        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
+        uses: gradle/gradle-build-action@e88ed3e650b26bd116cfee53cf198c1f6856682d
         continue-on-error: true
         with:
           gradle-version: 7.4.1

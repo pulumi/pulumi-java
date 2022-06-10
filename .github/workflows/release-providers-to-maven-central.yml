@@ -97,7 +97,7 @@ jobs:
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
         if: startsWith(github.ref, format('refs/tags/{0}/v', matrix.provider))
       - name: Publish Provider Java SDK
-        uses: gradle/gradle-build-action@9b814496b50909128c6a52622b416c5ffa04db49
+        uses: gradle/gradle-build-action@e88ed3e650b26bd116cfee53cf198c1f6856682d
         if: startsWith(github.ref, format('refs/tags/{0}/v', matrix.provider))
         with:
           arguments: publish
