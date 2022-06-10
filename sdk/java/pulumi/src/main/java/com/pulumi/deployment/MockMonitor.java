@@ -73,7 +73,7 @@ public class MockMonitor implements Monitor {
                     )));
             toBeSerialized = CompletableFuture.completedFuture(registeredResource);
         } else {
-            toBeSerialized = mocks.callAsync(new MockCallArgs(request.getTok(), args, request.getProvider()));
+            toBeSerialized = mocks.callAsync(new Mocks.CallArgs(request.getTok(), args, request.getProvider()));
         }
 
         return toBeSerialized
@@ -87,7 +87,7 @@ public class MockMonitor implements Monitor {
         var args = deserializeToMap(request.getArgs());
 
         var toBeSerialized = mocks.callAsync(
-                new MockCallArgs(request.getTok(), args, request.getProvider())
+                new Mocks.CallArgs(request.getTok(), args, request.getProvider())
         );
         return toBeSerialized
                 .thenCompose(this::serializeToStruct)
@@ -96,15 +96,15 @@ public class MockMonitor implements Monitor {
 
     @Override
     public CompletableFuture<ReadResourceResponse> readResourceAsync(Resource resource, ReadResourceRequest request) {
-        return mocks.newResourceAsync(new MockResourceArgs(
+        return mocks.newResourceAsync(new Mocks.ResourceArgs(
                 request.getType(),
                 request.getName(),
                 deserializeToMap(request.getProperties()),
                 request.getProvider(),
                 request.getId()
         )).thenCompose(idAndState -> {
-            var id = idAndState.t1;
-            var state = idAndState.t2;
+            var id = idAndState.id;
+            var state = idAndState.state;
             var urn = Urn.create(
                     Deployment.getInstance().getStackName(),
                     Deployment.getInstance().getProjectName(),
@@ -150,15 +150,15 @@ public class MockMonitor implements Monitor {
             );
         }
 
-        return mocks.newResourceAsync(new MockResourceArgs(
+        return mocks.newResourceAsync(new Mocks.ResourceArgs(
                 request.getType(),
                 request.getName(),
                 deserializeToMap(request.getObject()),
                 request.getProvider(),
                 request.getImportId()
         )).thenCompose(idAndState -> {
-            var id = idAndState.t1;
-            var state = idAndState.t2;
+            var id = idAndState.id;
+            var state = idAndState.state;
             var urn = Urn.create(
                     Deployment.getInstance().getStackName(),
                     Deployment.getInstance().getProjectName(),

@@ -4,7 +4,6 @@ import com.google.common.base.Functions;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.Context;
 import com.pulumi.core.Output;
-import com.pulumi.core.Tuples;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.core.annotations.CustomType.Constructor;
@@ -278,37 +277,32 @@ public class MocksTest {
     public static class MyMocks implements Mocks {
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             requireNonNull(args.type);
             switch (args.type) {
                 case "aws:ec2/instance:Instance":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.of("i-1234567890abcdef0"), ImmutableMap.of("publicIp", "203.0.113.12"))
+                            ResourceResult.of(Optional.of("i-1234567890abcdef0"), ImmutableMap.of("publicIp", "203.0.113.12"))
                     );
                 case "pkg:index:MyCustom":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.of(args.name + "_id"), args.inputs)
+                            ResourceResult.of(Optional.of(args.name + "_id"), args.inputs)
                     );
                 default:
                     throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));
             }
-        }
-
-        @Override
-        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
-            return CompletableFuture.completedFuture(null);
         }
     }
 
     public static class ThrowingMocks implements Mocks {
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             throw new RuntimeException("Not used");
         }
 
         @Override
-        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
+        public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
             throw Status.fromCode(Status.Code.UNKNOWN).withDescription("error code 404").asRuntimeException();
         }
     }
@@ -316,25 +310,20 @@ public class MocksTest {
     public static class MyInvalidMocks implements Mocks {
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             requireNonNull(args.type);
             switch (args.type) {
                 case "aws:ec2/instance:Instance":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.of("i-1234567890abcdef0"), ImmutableMap.of("publicIp", 0xcb00710c))
+                            ResourceResult.of(Optional.of("i-1234567890abcdef0"), ImmutableMap.of("publicIp", 0xcb00710c))
                     );
                 case "pkg:index:MyCustom":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.of(args.name + "_id"), args.inputs)
+                            ResourceResult.of(Optional.of(args.name + "_id"), args.inputs)
                     );
                 default:
                     throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));
             }
-        }
-
-        @Override
-        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
-            return CompletableFuture.completedFuture(null);
         }
     }
 }

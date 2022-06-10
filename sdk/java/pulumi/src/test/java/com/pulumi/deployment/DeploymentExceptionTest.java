@@ -1,14 +1,11 @@
 package com.pulumi.deployment;
 
-import com.pulumi.core.Tuples;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.test.Mocks;
 import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.TimeUnit;
@@ -53,7 +50,7 @@ public class DeploymentExceptionTest {
     static class MyIncorrectMocks implements Mocks {
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             requireNonNull(args.type);
             switch (args.type) {
                 case "aws:ec2/instance:Instance":
@@ -61,11 +58,6 @@ public class DeploymentExceptionTest {
                 default:
                     throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));
             }
-        }
-
-        @Override
-        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
-            return CompletableFuture.completedFuture(null);
         }
     }
 }

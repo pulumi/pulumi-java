@@ -2,9 +2,6 @@ package com.pulumi.resources.internal;
 
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
-import com.pulumi.core.Tuples;
-import com.pulumi.deployment.MockCallArgs;
-import com.pulumi.deployment.MockResourceArgs;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.StackReference;
@@ -158,13 +155,13 @@ class StackTest {
         private Supplier<Map.Entry<String, Stack>> stack;
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             requireNonNull(this.stack, "forgot to call setStack?");
             requireNonNull(args.type);
             switch (args.type) {
                 case "pulumi:pulumi:StackReference":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(
+                            ResourceResult.of(
                                     Optional.of(this.stack.get().getKey()),
                                     ImmutableMap.of("outputs",
                                             ImmutableMap.of("ref", this.stack.get().getValue())
@@ -174,11 +171,6 @@ class StackTest {
                 default:
                     throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));
             }
-        }
-
-        @Override
-        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
-            return CompletableFuture.completedFuture(null);
         }
 
         public void setStack(Supplier<Map.Entry<String, Stack>> stack) {

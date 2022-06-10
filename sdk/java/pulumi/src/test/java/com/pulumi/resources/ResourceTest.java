@@ -2,10 +2,7 @@ package com.pulumi.resources;
 
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.Context;
-import com.pulumi.core.Tuples;
 import com.pulumi.core.internal.Internal;
-import com.pulumi.deployment.MockCallArgs;
-import com.pulumi.deployment.MockResourceArgs;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.test.Mocks;
 import com.pulumi.test.internal.PulumiTestInternal;
@@ -76,18 +73,18 @@ public class ResourceTest {
     static class MyMocks implements Mocks {
 
         @Override
-        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
+        public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
             throw new IllegalStateException(String.format("Unknown function %s", args.token));
         }
 
         @Override
-        public CompletableFuture<Tuples.Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             Objects.requireNonNull(args.type);
             switch (args.type) {
                 case "pulumi:providers:test":
                 case "test:a/b:c":
                     return CompletableFuture.completedFuture(
-                            Tuples.of(Optional.empty(), ImmutableMap.<String, Object>of())
+                            ResourceResult.of(Optional.empty(), ImmutableMap.<String, Object>of())
                     );
                 default:
                     throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));

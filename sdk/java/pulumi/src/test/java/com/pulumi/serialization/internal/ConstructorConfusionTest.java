@@ -3,11 +3,7 @@ package com.pulumi.serialization.internal;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.Log;
 import com.pulumi.core.Output;
-import com.pulumi.core.Tuples;
-import com.pulumi.core.Tuples.Tuple2;
 import com.pulumi.core.annotations.ResourceType;
-import com.pulumi.deployment.MockCallArgs;
-import com.pulumi.deployment.MockResourceArgs;
 import com.pulumi.deployment.internal.TestOptions;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
@@ -18,7 +14,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nullable;
-import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
@@ -52,19 +47,14 @@ public class ConstructorConfusionTest {
 
     public static class ConfusionMocks implements Mocks {
         @Override
-        public CompletableFuture<Tuple2<Optional<String>, Object>> newResourceAsync(MockResourceArgs args) {
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
             requireNonNull(args.type);
             switch (args.type) {
                 case "test:index/MinifiedConfigMap":
-                    return CompletableFuture.completedFuture(Tuples.of(Optional.of("i-1234567890abcdef0"), ImmutableMap.of()));
+                    return CompletableFuture.completedFuture(ResourceResult.of(Optional.of("i-1234567890abcdef0"), ImmutableMap.of()));
                 default:
                     throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));
             }
-        }
-
-        @Override
-        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
-            return CompletableFuture.completedFuture(null);
         }
     }
 
