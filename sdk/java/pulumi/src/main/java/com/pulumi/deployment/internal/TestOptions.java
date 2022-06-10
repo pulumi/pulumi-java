@@ -11,6 +11,8 @@ import static java.util.Objects.requireNonNull;
  */
 public class TestOptions {
 
+    public static final TestOptions Empty = builder().build();
+
     private final String projectName;
     private final String stackName;
     private final boolean preview;

@@ -29,13 +29,16 @@ import java.util.logging.Logger;
 
 import static java.util.Objects.requireNonNull;
 
+@Deprecated
 public class DeploymentTests {
 
+    @Deprecated
     private DeploymentTests() {
         throw new UnsupportedOperationException("static class");
     }
 
     // TODO: should be possible to merge this with MockDeployment and PulumiTestInternal
+    @Deprecated
     public static final class DeploymentMock {
         public final TestOptions options;
         public final Runner runner;
@@ -72,14 +75,6 @@ public class DeploymentTests {
             this.log = requireNonNull(log);
         }
 
-        public void overrideConfig(String key, String value) {
-            this.config.setConfig(key, value);
-        }
-
-        public void overrideConfig(ImmutableMap<String, String> config, @Nullable Iterable<String> secretKeys) {
-            this.config.setAllConfig(config, secretKeys);
-        }
-
         public CompletableFuture<TestResult> runTestAsync(Consumer<Context> stackCallback) {
             if (!(this.engine instanceof MockEngine)) {
                 throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
@@ -102,11 +97,14 @@ public class DeploymentTests {
                     loggingContext, configContext, outputsContext,
                     this.options.resourceTransformations()
             );
-            var pulumi = new PulumiTestInternal(this.runner, mockEngine, mockMonitor, context);
+            var pulumi = new PulumiTestInternal(
+                    this.runner, mockEngine, mockMonitor, this.log, context
+            );
             return pulumi.runTestAsync(stackCallback);
         }
     }
 
+    @Deprecated
     public static final class DeploymentMockBuilder {
 
         @Nullable
@@ -208,7 +206,7 @@ public class DeploymentTests {
                 this.log = new Log(this.logger, DeploymentImpl.DeploymentState.ExcessiveDebugOutput);
             }
             if (this.options == null) {
-                this.options = TestOptions.builder().build();
+                this.options = TestOptions.Empty;
             }
             // FIXME: this runner is being ignored right now in DeploymentState
             if (this.runner == null) {
