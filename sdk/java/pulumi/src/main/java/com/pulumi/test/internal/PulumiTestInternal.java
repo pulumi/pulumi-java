@@ -231,10 +231,12 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         private DeploymentImpl.DeploymentState state;
         @Nullable
         private Function<DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory;
+        @Nullable
+        private Function<MockMonitor, MockMonitor> monitorDecorator;
 
         /**
-         * @param options the {@link TestOptions} to use
-         * @return a Pulumi test program entrypoint with given {@link TestOptions}
+         * @param options the {@link TestOptions} to use in the test
+         * @return this Pulumi test {@link Builder}
          * @see PulumiTest.API#withOptions(TestOptions)
          */
         public Builder options(TestOptions options) {
@@ -244,7 +246,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
 
         /**
          * @param mocks the {@link com.pulumi.deployment.internal.Monitor} mocks to use
-         * @return a Pulumi test program entrypoint with given {@link TestOptions}
+         * @return this Pulumi test {@link Builder}
          * @see PulumiTest.API#withMocks(Mocks)
          */
         public Builder mocks(Mocks mocks) {
@@ -252,6 +254,10 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             return this;
         }
 
+        /**
+         * @param standardLogger the standard logger to use
+         * @return this Pulumi test {@link Builder}
+         */
         public PulumiTestInternal.Builder standardLogger(Logger standardLogger) {
             this.standardLogger = requireNonNull(standardLogger);
             return this;
@@ -291,12 +297,25 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
          * Modify the deployment factory used in the test
          *
          * @param deploymentFactory the factory for
-         * @return this {@link Builder}
+         * @return this Pulumi test {@link Builder}
          */
         public Builder deploymentFactory(
                 Function<DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory
         ) {
             this.deploymentFactory = requireNonNull(deploymentFactory);
+            return this;
+        }
+
+        /**
+         * Decorate the {@link MockMonitor} instance for this test.
+         *
+         * @param monitorDecorator the decorator, by default {@link Function#identity()}
+         * @return this Pulumi test {@link Builder}
+         */
+        public Builder monitorDecorator(
+                Function<MockMonitor, MockMonitor> monitorDecorator
+        ) {
+            this.monitorDecorator = requireNonNull(monitorDecorator);
             return this;
         }
 
@@ -332,8 +351,11 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             if (this.mocks == null) {
                 this.mocks = new EmptyMocks();
             }
+            if (this.monitorDecorator == null) {
+                this.monitorDecorator = Function.identity();
+            }
             if (this.monitor == null) {
-                this.monitor = new MockMonitor(this.mocks, this.log);
+                this.monitor = monitorDecorator.apply(new MockMonitor(this.mocks, this.log));
             }
             if (this.config == null) {
                 this.config = new DeploymentImpl.Config(ImmutableMap.of(), ImmutableSet.of());
