@@ -1,44 +1,52 @@
 package com.pulumi.resources;
 
 import com.google.common.collect.ImmutableMap;
-import com.pulumi.Context;
 import com.pulumi.core.internal.Internal;
+import com.pulumi.resources.internal.Stack;
 import com.pulumi.test.Mocks;
 import com.pulumi.test.TestOptions;
 import com.pulumi.test.internal.PulumiTestInternal;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mockito;
+import pulumirpc.Resource.RegisterResourceRequest;
 
-import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static com.pulumi.test.PulumiTest.extractValue;
+import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 public class ResourceTest {
 
-    private static PulumiTestInternal test;
-
-    @BeforeAll
-    public static void mockSetup() {
-        test = PulumiTestInternal.builder()
-                .options(TestOptions.builder().preview(false).build())
-                .mocks(new MyMocks())
-                .build();
-    }
-
-    @AfterAll
-    static void cleanup() {
+    @AfterEach
+    void cleanup() {
         PulumiTestInternal.cleanup();
     }
 
     @Test
     void testProviderPropagation() {
-        var result = test.runTestAsync(MyStack::init).join()
-                .throwOnError();
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(false).build())
+                .mocks(new ProviderPropagationMocks())
+                .build();
+        var result = test.runTest(ctx -> {
+                    var mod = "test";
+                    var provider = new ProviderResource(
+                            mod, "testProvider", ResourceArgs.Empty, CustomResourceOptions.Empty
+                    );
+
+                    new CustomResource(
+                            mod + ":a/b:c", "testResource", ResourceArgs.Empty,
+                            CustomResourceOptions.builder()
+                                    .provider(provider)
+                                    .build()
+                    );
+                }).throwOnError();
 
         var resource = result.resources().stream()
                 .filter(r -> r.getResourceName().equals("testResource"))
@@ -54,35 +62,61 @@ public class ResourceTest {
         assertThat(provider.get().getResourceType()).isEqualTo("pulumi:providers:test");
     }
 
-    public static class MyStack {
-        public static void init(Context ctx) {
-            var mod = "test";
-            var provider = new ProviderResource(
-                    mod, "testProvider", ResourceArgs.Empty, CustomResourceOptions.Empty
-            );
+    @Test
+    void testReplaceOnChanges() {
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder().preview(false).build())
+                .monitorDecorator(Mockito::spy)
+                .mocks(new ReplaceOnChangesMocks())
+                .build();
 
-            var resource = new CustomResource(
-                    mod + ":a/b:c", "testResource", ResourceArgs.Empty,
-                    CustomResourceOptions.builder()
-                            .provider(provider)
-                            .build()
-            );
-        }
+        var result = test.runTest(ctx ->
+                new MyResource("testResource", CustomResourceOptions.builder().replaceOnChanges("foo").build())
+        );
+
+        assertThat(result.resources())
+                .hasSize(2)
+                .hasExactlyElementsOfTypes(Stack.class, MyResource.class);
+
+        var resourceCaptor = ArgumentCaptor.forClass(Resource.class);
+        var requestCaptor = ArgumentCaptor.forClass(RegisterResourceRequest.class);
+        verify(test.monitor(), times(2)).registerResourceAsync(resourceCaptor.capture(), requestCaptor.capture());
+
+        assertThat(resourceCaptor.getAllValues().get(1)).isInstanceOf(MyResource.class);
+        assertThat(requestCaptor.getAllValues().get(1).getReplaceOnChangesList())
+                .containsExactly("foo");
     }
 
-    static class MyMocks implements Mocks {
-
-        @Override
-        public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
-            throw new IllegalStateException(String.format("Unknown function %s", args.token));
-        }
+    static class ProviderPropagationMocks implements Mocks {
 
         @Override
         public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
-            Objects.requireNonNull(args.type);
+            requireNonNull(args.type);
             switch (args.type) {
                 case "pulumi:providers:test":
                 case "test:a/b:c":
+                    return CompletableFuture.completedFuture(
+                            ResourceResult.of(Optional.empty(), ImmutableMap.<String, Object>of())
+                    );
+                default:
+                    throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));
+            }
+        }
+    }
+
+    static class MyResource extends CustomResource {
+        public MyResource(String name, CustomResourceOptions options) {
+            super("test:index:MyResource", name, ResourceArgs.Empty, options);
+        }
+    }
+
+    static class ReplaceOnChangesMocks implements Mocks {
+
+        @Override
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
+            requireNonNull(args.type);
+            switch (args.type) {
+                case "test:index:MyResource":
                     return CompletableFuture.completedFuture(
                             ResourceResult.of(Optional.empty(), ImmutableMap.<String, Object>of())
                     );
