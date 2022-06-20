@@ -508,7 +508,13 @@ public class Converter {
 
         var builder = ImmutableList.builder();
         var elementType = targetType.getParameter(0)
-                .orElseThrow(() -> new IllegalArgumentException("Expected a parameter type for the List, got none"));
+                .orElseGet(() -> {
+                    log.debug(String.format(
+                            "%s; Expected a parameter type for a List, got none. Using Object as parameter type.",
+                            context
+                    ));
+                    return TypeShape.of(Object.class);
+                });
         //noinspection unchecked
         var objects = (List<Object>) value;
         for (int i = 0, objectsSize = objects.size(); i < objectsSize; i++) {
@@ -530,7 +536,13 @@ public class Converter {
 
         var builder = ImmutableMap.<String, Object>builder();
         var valueType = targetType.getParameter(1)
-                .orElseThrow(() -> new IllegalArgumentException("Expected a key parameter type for the Map, got none"));
+                .orElseGet(() -> {
+                    log.debug(String.format(
+                            "%s; Expected a value parameter type for the Map, got none. Using Object as parameter type.",
+                            context
+                    ));
+                    return TypeShape.of(Object.class);
+                });
 
         //noinspection unchecked
         var objects = (Map<String, Object>) value;
