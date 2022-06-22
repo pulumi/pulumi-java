@@ -16,7 +16,7 @@ type gradle struct{}
 
 var _ javaExecutorFactory = &gradle{}
 
-func (g gradle) tryConfigureExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
+func (g gradle) NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
 	ok, err := g.isGradleProject(opts.WD, opts)
 	if err != nil {
 		return nil, err

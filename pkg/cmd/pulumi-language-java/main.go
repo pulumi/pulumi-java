@@ -52,7 +52,7 @@ func main() {
 		cmdutil.Exit(fmt.Errorf("could not get the working directory: %w", err))
 	}
 
-	javaExec, err := executors.ConfigureExecutor(executors.JavaExecutorOptions{
+	javaExec, err := executors.NewJavaExecutor(executors.JavaExecutorOptions{
 		Binary:      binary,
 		UseExecutor: useExecutor,
 		WD:          fsys.DirFS(wd),

@@ -15,7 +15,7 @@ type jbang struct{}
 
 var _ javaExecutorFactory = &jbang{}
 
-func (j jbang) tryConfigureExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
+func (j jbang) NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
 	ok, err := j.isJBangProject(opts)
 	if err != nil {
 		return nil, err

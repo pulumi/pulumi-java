@@ -46,16 +46,16 @@ type JavaExecutorOptions struct {
 type javaExecutorFactory interface {
 	// Tries configuring an executor from the given options. May
 	// return nil if options are not-applicable.
-	tryConfigureExecutor(JavaExecutorOptions) (*JavaExecutor, error)
+	NewJavaExecutor(JavaExecutorOptions) (*JavaExecutor, error)
 }
 
-func ConfigureExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
+func NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
 	e, err := combineJavaExecutorFactories(
 		&jarexec{},
 		&maven{},
 		&gradle{},
 		&jbang{},
-	).tryConfigureExecutor(opts)
+	).NewJavaExecutor(opts)
 	if err != nil {
 		return nil, err
 	}
@@ -67,9 +67,9 @@ func ConfigureExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
 
 type combinedJavaExecutorFactory []javaExecutorFactory
 
-func (c combinedJavaExecutorFactory) tryConfigureExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
+func (c combinedJavaExecutorFactory) NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
 	for _, v := range c {
-		e, err := v.tryConfigureExecutor(opts)
+		e, err := v.NewJavaExecutor(opts)
 		if err != nil {
 			return nil, err
 		}

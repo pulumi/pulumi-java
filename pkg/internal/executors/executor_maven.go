@@ -12,7 +12,7 @@ type maven struct{}
 
 var _ javaExecutorFactory = &maven{}
 
-func (m maven) tryConfigureExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
+func (m maven) NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
 	ok, err := m.isMavenProject(opts)
 	if err != nil {
 		return nil, err

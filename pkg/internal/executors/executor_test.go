@@ -18,7 +18,7 @@ func TestGradleSimple(t *testing.T) {
 			"settings.gradle":  {},
 			"app/build.gradle": {},
 		})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
 	assert.Equal(t, "/usr/bin/gradle", exec.Cmd)
 	assert.Equal(t, ".", exec.Dir)
@@ -34,7 +34,7 @@ func TestGradleCurrentDir(t *testing.T) {
 			"settings.gradle": {},
 			"build.gradle":    {},
 		})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
 	assert.Equal(t, "/usr/bin/gradle", exec.Cmd)
 	assert.Equal(t, ".", exec.Dir)
@@ -50,7 +50,7 @@ func TestGradleKTS(t *testing.T) {
 			"settings.gradle.kts": {},
 			"app/build.gradle":    {},
 		})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
 	assert.Equal(t, "/usr/bin/gradle", exec.Cmd)
 }
@@ -63,7 +63,7 @@ func TestGradlew(t *testing.T) {
 			"gradlew":          {},
 			"settings.gradle":  {},
 		})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
 	assert.Equal(t, "./gradlew", exec.Cmd)
 }
@@ -77,7 +77,7 @@ func TestGradleMultiProject(t *testing.T) {
 			"gradlew":                            {},
 			"settings.gradle":                    {},
 		})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
 	assert.Equal(t, "./gradlew", exec.Cmd)
 	assert.Equal(t, ".", exec.Dir)
@@ -98,14 +98,14 @@ func TestGradleUseExecutor(t *testing.T) {
 			"settings.gradle":  {},
 			"app/build.gradle": {},
 		})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
 		WD:          fs,
 		UseExecutor: "./custom-gradlew",
 	})
 	assert.NoError(t, err)
 	assert.Equal(t, "./custom-gradlew", exec.Cmd)
 
-	exec, err = ConfigureExecutor(JavaExecutorOptions{
+	exec, err = NewJavaExecutor(JavaExecutorOptions{
 		WD:          fs,
 		UseExecutor: "/bin/custom-gradle",
 	})
@@ -122,7 +122,7 @@ func TestGradleUseExecutor(t *testing.T) {
 			"app/hello.txt": {},
 		})
 
-	exec, err = ConfigureExecutor(JavaExecutorOptions{
+	exec, err = NewJavaExecutor(JavaExecutorOptions{
 		WD:          fs,
 		UseExecutor: "gradle",
 	})
@@ -136,7 +136,7 @@ func TestMavenSimple(t *testing.T) {
 		fstest.MapFS{
 			"pom.xml": {},
 		})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
 	assert.Equal(t, "/usr/bin/mvn", exec.Cmd)
 }
@@ -148,7 +148,7 @@ func TestMavenW(t *testing.T) {
 			"mvnw":    {},
 			"pom.xml": {},
 		})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{WD: fsys})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
 	assert.Equal(t, "./mvnw", exec.Cmd)
 }
@@ -164,14 +164,14 @@ func TestMavenUseExecutor(t *testing.T) {
 			"custom-mvnw": {},
 			"pom.xml":     {},
 		})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
 		WD:          fs,
 		UseExecutor: "./custom-mvnw",
 	})
 	assert.NoError(t, err)
 	assert.Equal(t, "./custom-mvnw", exec.Cmd)
 
-	exec, err = ConfigureExecutor(JavaExecutorOptions{
+	exec, err = NewJavaExecutor(JavaExecutorOptions{
 		WD:          fs,
 		UseExecutor: "/bin/custom-mvn",
 	})
@@ -187,7 +187,7 @@ func TestMavenUseExecutor(t *testing.T) {
 		fstest.MapFS{
 			"hello.txt": {},
 		})
-	exec, err = ConfigureExecutor(JavaExecutorOptions{
+	exec, err = NewJavaExecutor(JavaExecutorOptions{
 		WD:          fs,
 		UseExecutor: "mvn",
 	})
@@ -199,7 +199,7 @@ func TestJarExecSimple(t *testing.T) {
 	fsys := fsys.TestFS(".",
 		map[string]string{"java": "/usr/bin/java"},
 		fstest.MapFS{"dist/hello.jar": {}})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
 		WD:     fsys,
 		Binary: "dist/hello.jar",
 	})
@@ -215,7 +215,7 @@ func TestJBangSimple(t *testing.T) {
 			"src/main.java":    {},
 			"jbang.properties": {},
 		})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
 		WD: fsys,
 	})
 	assert.NoError(t, err)
@@ -229,7 +229,7 @@ func TestJBangCustomMainFile(t *testing.T) {
 		fstest.MapFS{
 			"src/custom.java": {},
 		})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
 		WD:     fsys,
 		Binary: "src/custom.java",
 	})
@@ -242,7 +242,7 @@ func TestJBangUseExecutor(t *testing.T) {
 	fsys := fsys.TestFS(".",
 		map[string]string{"jbang": "/usr/bin/jbang"},
 		fstest.MapFS{})
-	exec, err := ConfigureExecutor(JavaExecutorOptions{
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
 		UseExecutor: "jbang",
 		WD:          fsys,
 	})

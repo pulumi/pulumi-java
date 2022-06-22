@@ -13,7 +13,7 @@ type jarexec struct{}
 
 var _ javaExecutorFactory = &jarexec{}
 
-func (j jarexec) tryConfigureExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
+func (j jarexec) NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
 	if opts.Binary == "" {
 		return nil, nil
 	}
