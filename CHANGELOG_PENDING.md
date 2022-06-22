@@ -11,7 +11,8 @@
   `Stack`, please use the `Pulumi.run` form to define resources in
   your stack as shown in the README.
 
-- Fix #478: New API Pulumi.withOptions adds support for stack transformations
+- [sdk] [#478](https://github.com/pulumi/pulumi-java/issues/478):
+  support stack transformations with new `Pulumi.withOptions` API
 
 - [provider] [#576](https://github.com/pulumi/pulumi-java/issues/576)
   Added Gradle support for subprojects. For example, given this
@@ -26,5 +27,6 @@
   Running `cd proj/subproj && pulumi up` will now locate the project
   root and run `gradle :subproj:run` from within `proj`. This makes sure
   Gradle features such as plugins work as expeceted.
+
 
 ### Bug Fixes
