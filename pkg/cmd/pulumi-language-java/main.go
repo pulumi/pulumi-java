@@ -8,10 +8,8 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"os/exec"
-	"path/filepath"
 	"strings"
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
@@ -23,6 +21,9 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/version"
 	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 	"google.golang.org/grpc"
+
+	"github.com/pulumi/pulumi-java/pkg/internal/executors"
+	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
 )
 
 // Launches the language host RPC endpoint, which in turn fires up an RPC server implementing the
@@ -37,8 +38,8 @@ func main() {
 
 	// You can use the below flag to request that the language host load a specific executor instead of probing the
 	// PATH.  This can be used during testing to override the default location.
-	var givenExecutor string
-	flag.StringVar(&givenExecutor, "use-executor", "",
+	var useExecutor string
+	flag.StringVar(&useExecutor, "use-executor", "",
 		"Use the given program as the executor instead of looking for one on PATH")
 
 	flag.Parse()
@@ -46,54 +47,18 @@ func main() {
 	logging.InitLogging(false, 0, false)
 	cmdutil.InitTracing("pulumi-language-java", "pulumi-language-java", tracing)
 
-	var javaExec *javaExecutor
-	switch {
-	case givenExecutor != "":
-		logging.V(3).Infof("language host asked to use specific executor: `%s`", givenExecutor)
-		var err error
-		javaExec, err = resolveExecutor(givenExecutor)
-		if err != nil {
-			cmdutil.Exit(err)
-		}
-	case binary != "":
-		logging.V(3).Infof("language host asked to use a specific file: `%s`", binary)
+	wd, err := os.Getwd()
+	if err != nil {
+		cmdutil.Exit(fmt.Errorf("could not get the working directory: %w", err))
+	}
 
-		suffix := strings.ToLower(filepath.Ext(binary))
-
-		switch suffix {
-		case ".jar":
-			cmd, err := lookupPath("java")
-			if err != nil {
-				cmdutil.Exit(err)
-			}
-			javaExec, err = newJarExecutor(cmd, binary)
-			if err != nil {
-				cmdutil.Exit(err)
-			}
-		case ".java", ".kt", ".groovy":
-			cmd, err := probeJBangExecutor()
-			if err != nil {
-				cmdutil.Exit(err)
-			}
-			javaExec, err = newJBangExecutor(cmd, binary)
-			if err != nil {
-				cmdutil.Exit(err)
-			}
-		default:
-			cmdutil.Exit(fmt.Errorf("Cannot run binary %s with extension %s. "+
-				"Expecting a .jar or a JBang entry-point (.java, .kt, or .groovy)",
-				binary, suffix))
-		}
-	default:
-		pathExec, err := probeExecutor()
-		if err != nil {
-			cmdutil.Exit(err)
-		}
-		logging.V(3).Infof("language host identified executor from path: `%s`", pathExec)
-		javaExec, err = resolveExecutor(pathExec)
-		if err != nil {
-			cmdutil.Exit(err)
-		}
+	javaExec, err := executors.NewJavaExecutor(executors.JavaExecutorOptions{
+		Binary:      binary,
+		UseExecutor: useExecutor,
+		WD:          fsys.DirFS(wd),
+	})
+	if err != nil {
+		cmdutil.Exit(err)
 	}
 
 	// Optionally pluck out the engine so we can do logging, etc.
@@ -123,22 +88,15 @@ func main() {
 	}
 }
 
-type javaExecutor struct {
-	cmd        string
-	buildArgs  []string
-	runArgs    []string
-	pluginArgs []string
-}
-
 // javaLanguageHost implements the LanguageRuntimeServer interface
 // for use as an API endpoint.
 type javaLanguageHost struct {
-	exec          *javaExecutor
+	exec          *executors.JavaExecutor
 	engineAddress string
 	tracing       string
 }
 
-func newLanguageHost(exec *javaExecutor, engineAddress, tracing string) pulumirpc.LanguageRuntimeServer {
+func newLanguageHost(exec *executors.JavaExecutor, engineAddress, tracing string) pulumirpc.LanguageRuntimeServer {
 	return &javaLanguageHost{
 		exec:          exec,
 		engineAddress: engineAddress,
@@ -192,9 +150,9 @@ func (host *javaLanguageHost) determinePulumiPackages(
 	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
 
 	// Run our classpath introspection from the SDK and parse the resulting JSON
-	cmd := host.exec.cmd
-	args := host.exec.pluginArgs
-	output, err := host.runJavaCommand(ctx, cmd, args)
+	cmd := host.exec.Cmd
+	args := host.exec.PluginArgs
+	output, err := host.runJavaCommand(ctx, host.exec.Dir, cmd, args)
 	if err != nil {
 		// Plugin determination is an advisory feature so it does not need to escalate to an error.
 		logging.V(3).Infof("language host could not run plugin discovery command successfully, "+
@@ -220,7 +178,7 @@ func (host *javaLanguageHost) determinePulumiPackages(
 }
 
 func (host *javaLanguageHost) runJavaCommand(
-	ctx context.Context, name string, args []string) (string, error) {
+	ctx context.Context, dir, name string, args []string) (string, error) {
 
 	commandStr := strings.Join(args, " ")
 	if logging.V(5) {
@@ -236,6 +194,9 @@ func (host *javaLanguageHost) runJavaCommand(
 
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	cmd := exec.Command(name, args...) // nolint: gas // intentionally running dynamic program name.
+	if dir != "" {
+		cmd.Dir = dir
+	}
 
 	cmd.Stdout = infoWriter
 	cmd.Stderr = errorWriter
@@ -272,8 +233,8 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	}
 
 	// Run from source.
-	executable := host.exec.cmd
-	args := host.exec.runArgs
+	executable := host.exec.Cmd
+	args := host.exec.RunArgs
 
 	if logging.V(5) {
 		commandStr := strings.Join(args, " ")
@@ -283,6 +244,9 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	var errResult string
 	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
+	if host.exec.Dir != "" {
+		cmd.Dir = host.exec.Dir
+	}
 
 	var stdoutBuf bytes.Buffer
 	var stderrBuf bytes.Buffer
@@ -372,7 +336,7 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 	server pulumirpc.LanguageRuntime_InstallDependenciesServer) error {
 
 	// Executor may not support the build command (for example, jar executor).
-	if host.exec.buildArgs == nil {
+	if host.exec.BuildArgs == nil {
 		logging.V(5).Infof("InstallDependencies(Directory=%s): skipping", req.Directory)
 		return nil
 	}
@@ -386,7 +350,10 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 	defer closer.Close()
 
 	// intentionally running dynamic program name.
-	cmd := exec.Command(host.exec.cmd, host.exec.buildArgs...) // nolint: gas
+	cmd := exec.Command(host.exec.Cmd, host.exec.BuildArgs...) // nolint: gas
+	if host.exec.Dir != "" {
+		cmd.Dir = host.exec.Dir
+	}
 	cmd.Stdout = stdout
 	cmd.Stderr = stderr
 
@@ -397,119 +364,4 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 
 	logging.V(5).Infof("InstallDependencies(Directory=%s): done", req.Directory)
 	return nil
-}
-
-func probeExecutor() (string, error) {
-	pwd, err := os.Getwd()
-	if err != nil {
-		return "", errors.Wrap(err, "could not get the working directory")
-	}
-	files, err := ioutil.ReadDir(pwd)
-	if err != nil {
-		return "", errors.Wrap(err, "could not read the working directory")
-	}
-	mvn := "mvn"
-	// detect mvn wrapper
-	for _, file := range files {
-		if !file.IsDir() && file.Name() == "mvnw" {
-			mvn = "./mvnw"
-		}
-	}
-	gradle := "gradle"
-	// detect gradle wrapper
-	for _, file := range files {
-		if !file.IsDir() && file.Name() == "gradlew" {
-			gradle = "./gradlew"
-		}
-	}
-
-	// detect maven or gradle
-	for _, file := range files {
-		if !file.IsDir() {
-			switch file.Name() {
-			case "pom.xml":
-				return mvn, nil
-			case "settings.gradle", "settings.gradle.kts":
-				return gradle, nil
-			case "jbang.properties":
-				return resolveJBangPath(files)
-			}
-		}
-	}
-	return "", errors.New("did not found an executor, expected one of: gradle (settings.gradle), maven (pom.xml)")
-}
-
-func resolveExecutor(exec string) (*javaExecutor, error) {
-	logging.V(3).Infof("Finding executor for: `%s`", exec)
-
-	switch exec {
-	case "gradle", "./gradlew":
-		cmd, err := lookupPath(exec)
-		if err != nil {
-			return nil, err
-		}
-		return newGradleExecutor(cmd)
-	case "mvn", "./mvnw":
-		cmd, err := lookupPath(exec)
-		if err != nil {
-			return nil, err
-		}
-		return newMavenExecutor(cmd)
-	case jbangGlobal, jbangLocal:
-		cmd, err := lookupPath(exec)
-		if err != nil {
-			return nil, err
-		}
-		return newJBangExecutor(cmd, "src/main.java")
-	default:
-		return nil, errors.Errorf("did not recognize executor '%s', "+
-			"expected one of: gradle, mvn, gradlew, mvnw, jbang", exec)
-	}
-}
-
-func newGradleExecutor(cmd string) (*javaExecutor, error) {
-	return &javaExecutor{
-		cmd:       cmd,
-		buildArgs: []string{"build", "--console=plain"},
-		runArgs:   []string{"run", "--console=plain"},
-		pluginArgs: []string{
-			/* STDOUT needs to be clean of gradle output, because we expect a JSON with plugin results */
-			"-q", // must first due to a bug https://github.com/gradle/gradle/issues/5098
-			"run", "--console=plain",
-			"-PmainClass=com.pulumi.bootstrap.internal.Main",
-			"--args=packages",
-		},
-	}, nil
-}
-
-func newMavenExecutor(cmd string) (*javaExecutor, error) {
-	return &javaExecutor{
-		cmd:       cmd,
-		buildArgs: []string{"--no-transfer-progress", "compile"},
-		runArgs:   []string{"--no-transfer-progress", "compile", "exec:java"},
-		pluginArgs: []string{
-			/* move normal output to STDERR, because we need STDOUT for JSON with plugin results */
-			"-Dorg.slf4j.simpleLogger.logFile=System.err",
-			"--no-transfer-progress", "compile", "exec:java",
-			"-DmainClass=com.pulumi.bootstrap.internal.Main",
-			"-DmainArgs=packages",
-		},
-	}, nil
-}
-
-func newJarExecutor(cmd string, path string) (*javaExecutor, error) {
-	return &javaExecutor{
-		cmd:        cmd,
-		buildArgs:  nil, // not supported
-		runArgs:    []string{"-jar", filepath.Clean(path)},
-		pluginArgs: []string{"-cp", filepath.Clean(path), "com.pulumi.bootstrap.internal.Main", "packages"},
-	}, nil
-}
-
-func lookupPath(file string) (string, error) {
-	pathExec, err := exec.LookPath(file)
-	if err != nil {
-		return "", errors.Wrapf(err, "could not find `%s` on the $PATH", file)
-	}
-	return pathExec, nil
 }
