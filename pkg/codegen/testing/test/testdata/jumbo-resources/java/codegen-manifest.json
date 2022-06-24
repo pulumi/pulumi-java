@@ -1,0 +1,14 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/jumbo/ACustomResource.java",
+    "src/main/java/com/pulumi/jumbo/ACustomResourceArgs.java",
+    "src/main/java/com/pulumi/jumbo/Provider.java",
+    "src/main/java/com/pulumi/jumbo/ProviderArgs.java",
+    "src/main/java/com/pulumi/jumbo/Utilities.java",
+    "src/main/java/com/pulumi/jumbo/inputs/ACustomTypeArgs.java",
+    "src/main/java/com/pulumi/jumbo/outputs/ACustomType.java"
+  ]
+}

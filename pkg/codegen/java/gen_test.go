@@ -39,6 +39,10 @@ var javaSpecificTests = []*test.SDKTest{
 		Directory:   "output-funcs-edgeorder",
 		Description: "Testing EdgeOrder functions which return Output<T>",
 	},
+	{
+		Directory:   "jumbo-resources",
+		Description: "Testing resources with more than 255 properties",
+	},
 }
 
 func adaptTest(t *test.SDKTest) *test.SDKTest {
