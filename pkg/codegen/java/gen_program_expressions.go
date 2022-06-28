@@ -310,7 +310,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	case "range":
 		g.genRange(w, expr, false)
 	case "readFile":
-		g.Fgenf(w, "Files.readString(%v)", expr.Args[0])
+		g.Fgenf(w, "Files.readString(Paths.get(%v))", expr.Args[0])
 	case "readDir":
 		g.Fgenf(w, "readDir(%.v)", expr.Args[0])
 	case "secret":
