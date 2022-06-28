@@ -7,7 +7,7 @@ plugins {
     id("maven-publish")
 }
 
-version = "{{ .Version }}"
+version = System.getenv("PACKAGE_VERSION") || "{{ .Version }}"
 
 def signingKey = System.getenv("SIGNING_KEY")
 def signingPassword = System.getenv("SIGNING_PASSWORD")
