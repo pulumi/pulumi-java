@@ -26,6 +26,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -36,8 +37,10 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.function.Function;
 
+import static com.pulumi.core.internal.PulumiCollectors.toSingleton;
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
 /**
@@ -288,14 +291,9 @@ public class Converter {
             return tryConvertMap(context, value, targetType);
         }
 
-        var propertyTypeAnnotation = targetType.getAnnotation(CustomType.class);
-        if (propertyTypeAnnotation.isPresent()) {
+        var hasAnnotatedConstructor = targetType.hasAnnotatedConstructor(CustomType.Constructor.class);
+        if (hasAnnotatedConstructor) {
             var constructor = targetType.getAnnotatedConstructor(CustomType.Constructor.class);
-            var constructorAnnotation = Optional.ofNullable(
-                    constructor.getAnnotation(CustomType.Constructor.class)
-            ).orElseThrow(() -> new IllegalStateException(String.format(
-                    "Expected a single constructor annotated with '@%s'.", CustomType.Constructor.class.getSimpleName()
-            ))); // validated before
 
             //noinspection unchecked
             var argumentsMap = (Map<String, Object>) tryEnsureType(context, value, TypeShape.of(Map.class));
@@ -326,11 +324,7 @@ public class Converter {
             }
             for (int i = 0, n = constructorParameters.length; i < n; i++) {
                 var parameter = constructorParameters[i];
-                // we cannot use parameter.getName(), because it will be just e.g. 'arg0'
-                var parameterName = Optional.ofNullable(
-                        parameter.getAnnotation(CustomType.Parameter.class)
-                ).map(CustomType.Parameter::value);
-
+                var parameterName = extractParameterName(parameter);
                 if (parameterName.isEmpty()) {
                     throw new IllegalArgumentException(String.format(
                             "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
@@ -379,6 +373,63 @@ public class Converter {
             try {
                 return constructor.newInstance(arguments);
             } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
+                throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
+            }
+        }
+
+        var hasAnnotatedBuilder = targetType.hasAnnotatedClass(CustomType.Builder.class);
+        if (hasAnnotatedBuilder) {
+            var builderType = targetType.getAnnotatedClass(CustomType.Builder.class);
+
+            //noinspection unchecked
+            var argumentsMap = (Map<String, Object>) tryEnsureType(context, value, TypeShape.of(Map.class));
+
+            // create the builder object
+            final Object builder;
+            try {
+                builder = builderType.getDeclaredConstructor().newInstance();
+            } catch (InvocationTargetException | InstantiationException
+                     | IllegalAccessException | NoSuchMethodException e) {
+                throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
+            }
+            // call setters for all arguments
+            var setters = processSetters(builderType, Function.identity());
+            argumentsMap.forEach((name, argument) -> {
+                try {
+                    if (!setters.containsKey(name)) {
+                        throw new IllegalArgumentException(String.format(
+                                "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\")",
+                                targetType.getTypeName(),
+                                CustomType.class.getTypeName(),
+                                CustomType.Setter.class.getTypeName(),
+                                name
+                        ));
+                    }
+                    // validate null and @Nullable presence
+                    if (argument == null
+                            && !(extractSetterParameter(setters.get(name)).isAnnotationPresent(Nullable.class))) {
+                        log.debug(String.format(
+                                "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\"). " +
+                                        "Setter '%s' parameter named '%s' lacks @%s annotation, " +
+                                        "so the value is required, but there is no value to deserialize.",
+                                targetType.getTypeName(),
+                                CustomType.class.getTypeName(),
+                                CustomType.Setter.class.getTypeName(),
+                                name,
+                                setters.get(name),
+                                setters.get(name).getName(),
+                                Nullable.class.getTypeName()
+                        ));
+                    }
+                    setters.get(name).invoke(builder, argument);
+                } catch (IllegalAccessException | InvocationTargetException e) {
+                    throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
+                }
+            });
+            // call .build()
+            try {
+                return builderType.getDeclaredMethod("build").invoke(builder);
+            } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
                 throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
             }
         }
@@ -666,25 +717,80 @@ public class Converter {
 
         var propertyTypeAnnotation = targetType.getAnnotation(CustomType.class);
         if (propertyTypeAnnotation.isPresent()) {
-            var constructor = targetType.getAnnotatedConstructor(CustomType.Constructor.class);
-
-            Parameter[] parameters = constructor.getParameters();
-            for (Parameter parameter : parameters) {
-                checkTargetType(
+            var hasAnnotatedConstructor = targetType.hasAnnotatedConstructor(CustomType.Constructor.class);
+            var hasAnnotatedBuilder = targetType.hasAnnotatedClass(CustomType.Builder.class);
+            if (hasAnnotatedConstructor && hasAnnotatedBuilder) {
+                throw new IllegalArgumentException(String.format(
+                        "%s; Invalid custom type '%s' while deserializing. " +
+                                "Expected a constructor annotated with %s " +
+                                "or a builder annotated with %s, but got both.",
+                        context, targetType.getTypeName(),
+                        CustomType.Constructor.class.getTypeName(),
+                        CustomType.Builder.class.getTypeName()
+                ));
+            }
+            if (hasAnnotatedConstructor) {
+                var constructor = targetType.getAnnotatedConstructor(CustomType.Constructor.class);
+                Arrays.stream(constructor.getParameters()).forEach(parameter -> checkTargetType(
                         String.format("%s(%s)", targetType.getTypeName(), parameter.getName()),
                         TypeShape.extract(parameter), // check nested target type
                         seenTypes
-                );
+                ));
+                return;
             }
-
-            return;
+            if (hasAnnotatedBuilder) {
+                var builder = targetType.getAnnotatedClass(CustomType.Builder.class);
+                collectSetters(builder).forEach((name, parameter) -> checkTargetType(
+                        String.format("%s(%s)", targetType.getTypeName(), name),
+                        TypeShape.extract(parameter), // check nested target type
+                        seenTypes
+                ));
+                return;
+            }
         }
 
         throw new UnsupportedOperationException(String.format(
                 "%s; Invalid type '%s' while deserializing. Allowed types are: " +
                         "String, Boolean, Integer, Double, List<> and Map<String, Object> or " +
-                        "a class explicitly marked with the @%s.",
+                        "a class explicitly annotated with the @%s.",
                 context, targetType.getTypeName(), CustomType.class.getSimpleName()
         ));
+    }
+
+    private static Map<String, Parameter> collectSetters(Class<?> builder) {
+        return processSetters(builder, m -> extractSetterParameter(m));
+    }
+
+    private static <T> Map<String, T> processSetters(Class<?> builder, Function<Method, T> processor) {
+        return Arrays.stream(builder.getDeclaredMethods())
+                .filter(s -> s.isAnnotationPresent(CustomType.Setter.class))
+                .peek(s -> s.setAccessible(true))
+                .collect(toMap(
+                        s -> extractParameterName(extractSetterParameter(s))
+                                .orElseThrow(() -> new IllegalArgumentException(
+                                        String.format("Expected setter named '%s' annotated with @%s " +
+                                                        "to have a parameter annotated with @%s",
+                                                s.getName(), CustomType.Setter.class.getTypeName(),
+                                                CustomType.Parameter.class.getTypeName()
+                                        ))),
+                        processor
+                ));
+    }
+
+    private static Parameter extractSetterParameter(Method method) {
+        return Arrays.stream(method.getParameters()).collect(toSingleton(
+                cause -> new IllegalArgumentException(String.format(
+                        "Expected setter named '%s' annotated with @%s to have exactly one parameter",
+                        method.getName(), CustomType.Setter.class.getSimpleName()
+                ))
+        ));
+    }
+
+    private static Optional<String> extractParameterName(Parameter parameter) {
+        // we cannot just use parameter.getName(),
+        // because it will be different at runtime e.g. 'arg0', 'arg1', etc.
+        return Optional.ofNullable(
+                parameter.getAnnotation(CustomType.Parameter.class)
+        ).map(CustomType.Parameter::value);
     }
 }

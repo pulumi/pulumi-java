@@ -12,7 +12,11 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.lang.reflect.Type;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
 
 import static com.pulumi.core.internal.PulumiCollectors.toSingleton;
 import static java.util.stream.Collectors.joining;
@@ -75,18 +79,37 @@ public final class TypeShape<T> {
                 ))));
     }
 
+    public <A extends Annotation> boolean hasAnnotatedConstructor(Class<A> constructorAnnotation) {
+        return Arrays.stream(this.type.getDeclaredConstructors())
+                .anyMatch(c -> c.isAnnotationPresent(constructorAnnotation));
+    }
+
     public <A extends Annotation> Method getAnnotatedMethod(Class<A> methodAnnotation) {
         return Arrays.stream(this.getType().getDeclaredMethods())
                 .filter(m -> m.isAnnotationPresent(methodAnnotation))
-                .peek(c -> c.setAccessible(true))
+                .peek(m -> m.setAccessible(true))
                 .collect(toSingleton(cause -> new IllegalArgumentException(String.format(
                         "Expected target type '%s' to have exactly one method annotated with @%s, got: %s",
                         getTypeName(), methodAnnotation.getSimpleName(), cause
                 ))));
     }
 
+    public <A extends Annotation> Class<?> getAnnotatedClass(Class<A> classAnnotation) {
+        return Arrays.stream(this.getType().getDeclaredClasses())
+                .filter(c -> c.isAnnotationPresent(classAnnotation))
+                .collect(toSingleton(cause -> new IllegalArgumentException(String.format(
+                        "Expected target type '%s' to have exactly one declared class annotated with @%s, got: %s",
+                        getTypeName(), classAnnotation.getSimpleName(), cause
+                ))));
+    }
+
+    public <A extends Annotation> boolean hasAnnotatedClass(Class<A> classAnnotation) {
+        return Arrays.stream(this.getType().getDeclaredClasses())
+                .anyMatch(c -> c.isAnnotationPresent(classAnnotation));
+    }
+
     /**
-     * Returns true if the type and all of the parameters are assignable from the given other shape.
+     * Returns true if the type and all the parameters are assignable from the given other shape.
      *
      * @see Class#isAssignableFrom(Class)
      */
@@ -98,7 +121,6 @@ public final class TypeShape<T> {
         if (this.getParameterCount() != other.getParameterCount()) {
             return false;
         }
-        ImmutableList<TypeShape<?>> typeShapes = this.getParameters();
         for (int i = 0; i < this.getParameters().size(); i++) {
             TypeShape<?> thisParam = this.getParameters().get(i);
             TypeShape<?> otherParam = other.getParameters().get(i);
