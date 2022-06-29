@@ -61,9 +61,11 @@ func newGradleTemplateContext(
 	packageInfo *PackageInfo,
 ) gradleTemplateContext {
 
-	version := *pkg.Version
+	var version semver.Version
 	if pkg.Version == nil {
 		version = semver.MustParse("0.1.0")
+	} else {
+		version = *pkg.Version
 	}
 
 	ctx := gradleTemplateContext{

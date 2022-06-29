@@ -16,6 +16,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/spf13/viper"
 	"os"
 
 	"github.com/blang/semver"
@@ -78,6 +79,15 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 
 	cmd.Flags().StringVar(&versionArg, "version", "",
 		"semantic version for the generated package")
+
+	err := viper.BindEnv("version", "PACKAGE_VERSION")
+	if err != nil {
+		return nil
+	}
+	err = viper.BindPFlag("version", cmd.Flags().Lookup("version"))
+	if err != nil {
+		return nil
+	}
 
 	cmd.Flags().StringVar(&schemaArg, "schema", "",
 		"URL or local path to a package schema")
