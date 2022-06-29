@@ -108,7 +108,7 @@ func generateJava(cfg generateJavaOptions) error {
 		}
 	}
 
-	if cfg.VersionFile == "" && cfg.VersionFile != "" {
+	if cfg.Version != nil && cfg.VersionFile != "" {
 		f := filepath.Join(outDir, cfg.VersionFile)
 		bytes := []byte(cfg.Version.String())
 		if err := emitFile(f, bytes); err != nil {
