@@ -7,7 +7,7 @@ plugins {
     id("maven-publish")
 }
 
-def resolvedVersion = System.getenv("PROJECT_VERSION") ?:
+def resolvedVersion = System.getenv("PACKAGE_VERSION") ?:
     (project.version == "unspecified"
          ? "{{ .Version }}"
          : project.version)

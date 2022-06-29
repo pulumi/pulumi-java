@@ -8,7 +8,7 @@
   Improved version handling in `pulumi-java-gen`: now `--version`
   argument is optional and the version of the generated package need
   not be known at SDK code generation time and is not spliced into the
-  code. To set the version at build time use `gradle -Pversion=1.2.3
-  build` or `PROJECT_VERSION=1.2.3 gradle build`.
+  code. To set the version at build time use
+  `gradle -Pversion=1.2.3 build` or `PACKAGE_VERSION=1.2.3 gradle build`.
 
 ### Bug Fixes
