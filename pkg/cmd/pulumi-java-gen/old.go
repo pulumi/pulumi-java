@@ -68,9 +68,11 @@ func oldStyleMain() {
 		pkgInfo = p
 	}
 
+	version := semver.MustParse(cfg.Version)
+
 	opts := generateJavaOptions{
 		Schema:      cfg.Schema,
-		Version:     semver.MustParse(cfg.Version),
+		Version:     &version,
 		RootDir:     rootDir,
 		OutputDir:   cfg.Out,
 		PackageInfo: pkgInfo,

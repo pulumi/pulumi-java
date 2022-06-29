@@ -8,7 +8,6 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/blang/semver"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
 
@@ -61,17 +60,15 @@ func newGradleTemplateContext(
 	packageInfo *PackageInfo,
 ) gradleTemplateContext {
 
-	var version semver.Version
-	if pkg.Version == nil {
-		version = semver.MustParse("0.1.0")
-	} else {
-		version = *pkg.Version
-	}
-
 	ctx := gradleTemplateContext{
-		Version:       version.String(),
 		ProjectURL:    pkg.Repository,
 		ProjectGitURL: formatGitURL(pkg.Repository),
+	}
+
+	if pkg.Version != nil {
+		ctx.Version = pkg.Version.String()
+	} else {
+		ctx.Version = "0.0.1"
 	}
 
 	if packageInfo.Packages != nil {

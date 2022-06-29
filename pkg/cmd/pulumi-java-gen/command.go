@@ -77,9 +77,7 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 	var versionArg, javaSdkVersionArg, schemaArg, outArg, overrideArg, buildArg string
 
 	cmd.Flags().StringVar(&versionArg, "version", "",
-		"semantic version for the generated package")
-
-	contract.AssertNoError(cmd.MarkFlagRequired("version"))
+		"default semantic version for the generated package")
 
 	cmd.Flags().StringVar(&schemaArg, "schema", "",
 		"URL or local path to a package schema")
@@ -103,14 +101,18 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 			return err
 		}
 
-		ver, err := semver.Parse(versionArg)
-		if err != nil {
-			return err
+		var version *semver.Version
+		if versionArg != "" {
+			ver, err := semver.Parse(versionArg)
+			if err != nil {
+				return err
+			}
+			version = &ver
 		}
 
 		opts := generateJavaOptions{
 			Schema:    schemaArg,
-			Version:   ver,
+			Version:   version,
 			RootDir:   rootDir,
 			OutputDir: outArg,
 		}

@@ -17,7 +17,6 @@ package main
 import (
 	"fmt"
 	"path/filepath"
-	"strings"
 
 	"github.com/blang/semver"
 
@@ -29,9 +28,6 @@ import (
 type generateJavaOptions struct {
 	// URL or path to a file containing a Pulumi Package schema
 	Schema string
-
-	// Version for the generated code
-	Version semver.Version
 
 	// Root dir to resolve relative paths against
 	RootDir string
@@ -45,13 +41,17 @@ type generateJavaOptions struct {
 	// Paths to folders to mix into the generated code by copying
 	Overlays []string
 
-	// Deprecated: path to version.txt to emit; in the future will
-	// be always computed and not customizable
+	// Deprecated: path to version.txt to emit; in the
+	// future Gradle and Maven will emit this.
 	VersionFile string
 
-	// Deprecated: path to plugins.json metadata to emit; in the
-	// future will be always computed and not customizable
+	// Deprecated: path to plugin.json resource to emit; in the
+	// future Gradle and Maven will emit this.
 	PluginFile string
+
+	// Deprecated: version to write into the emitted plugin.json
+	// and version.txt files.
+	Version *semver.Version
 
 	// Deprecated: expanding templates in overlays will be removed
 	// once provider SDK builds move out of pulumi/pulumi-java repo.
@@ -74,8 +74,7 @@ func generateJava(cfg generateJavaOptions) error {
 		return fmt.Errorf("failed to import Pulumi schema: %w", err)
 	}
 
-	version := cfg.Version
-	pkg.Version = &version
+	pkg.Version = cfg.Version
 
 	var pkgInfo javagen.PackageInfo
 	if raw, ok := pkg.Language["java"]; ok {
@@ -109,14 +108,7 @@ func generateJava(cfg generateJavaOptions) error {
 		}
 	}
 
-	if cfg.VersionFile == "" {
-		parts := strings.Split(pkgInfo.BasePackageOrDefault(), ".")
-		cfg.VersionFile = filepath.Join(append(
-			[]string{"src", "main", "resources"},
-			append(parts, pkg.Name, "version.txt")...)...)
-	}
-
-	{
+	if cfg.Version != nil && cfg.VersionFile != "" {
 		f := filepath.Join(outDir, cfg.VersionFile)
 		bytes := []byte(cfg.Version.String())
 		if err := emitFile(f, bytes); err != nil {
@@ -124,14 +116,7 @@ func generateJava(cfg generateJavaOptions) error {
 		}
 	}
 
-	if cfg.PluginFile == "" {
-		parts := strings.Split(pkgInfo.BasePackageOrDefault(), ".")
-		cfg.PluginFile = filepath.Join(append(
-			[]string{"src", "main", "resources"},
-			append(parts, pkg.Name, "plugin.json")...)...)
-	}
-
-	{
+	if cfg.Version != nil && cfg.PluginFile != "" {
 		pulumiPlugin := &plugin.PulumiPluginJSON{
 			Resource: true,
 			Name:     pkg.Name,
