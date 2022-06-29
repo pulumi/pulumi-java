@@ -7,7 +7,10 @@ plugins {
     id("maven-publish")
 }
 
-version = "0.0.1"
+def resolvedVersion = System.getenv("PROJECT_VERSION") ?:
+    (project.version == "unspecified"
+         ? "0.0.1"
+         : project.version)
 
 def signingKey = System.getenv("SIGNING_KEY")
 def signingPassword = System.getenv("SIGNING_PASSWORD")
@@ -55,12 +58,28 @@ task javadocJar(type: Jar) {
     classifier = 'javadoc'
 }
 
+build {
+    doFirst {
+        def resourcesDir = sourceSets.main.output.resourcesDir
+        def subDir = project.name.replace(".", "/")
+        def outDir = file("$resourcesDir/$subDir")
+        outDir.mkdirs()
+        new File(outDir, "version.txt").text = resolvedVersion
+        def info = new Object()
+        info.metaClass.resource = true
+        info.metaClass.name = ""
+        info.metaClass.version = resolvedVersion
+        def infoJson = new groovy.json.JsonBuilder(info).toPrettyString()
+        new File(outDir, "plugin.json").text = infoJson
+    }
+}
+
 publishing {
     publications {
         mainPublication(MavenPublication) {
             groupId = ""
             artifactId = ""
-            version = version
+            version = resolvedVersion
             from components.java
             artifact sourcesJar
             artifact javadocJar
