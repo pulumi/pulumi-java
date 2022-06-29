@@ -110,10 +110,11 @@ func generateJava(cfg generateJavaOptions) error {
 	}
 
 	if cfg.VersionFile == "" && cfg.VersionFile != "" {
-		parts := strings.Split(pkgInfo.BasePackageOrDefault(), ".")
-		cfg.VersionFile = filepath.Join(append(
-			[]string{"src", "main", "resources"},
-			append(parts, pkg.Name, "version.txt")...)...)
+		f := filepath.Join(outDir, cfg.VersionFile)
+		bytes := []byte(cfg.Version.String())
+		if err := emitFile(f, bytes); err != nil {
+			return fmt.Errorf("failed to generate version file at %s: %w", f, err)
+		}
 	}
 
 	if cfg.Version != nil && cfg.PluginFile != "" {
