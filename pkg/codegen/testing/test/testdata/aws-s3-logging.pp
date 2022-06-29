@@ -6,6 +6,11 @@ resource bucket "aws:s3:Bucket" {
 	}]
 }
 
+resource indexFile "aws:s3:BucketObject" {
+	bucket = bucket.id
+	source = readFile("./index.html")
+}
+
 output targetBucket {
 	value = bucket.loggings[0].targetBucket
 }
