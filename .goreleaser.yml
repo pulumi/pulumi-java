@@ -45,8 +45,5 @@ archives:
 snapshot:
   name_template: "{{ .Tag }}-SNAPSHOT"
 
-changelog:
-  skip: true
-
 checksum:
   name_template: 'checksums.txt'
