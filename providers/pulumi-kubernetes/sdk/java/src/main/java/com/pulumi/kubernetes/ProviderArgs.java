@@ -50,6 +50,21 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * If present and set to true, the provider will delete resources associated with an unreachable Kubernetes cluster from Pulumi state
+     * 
+     */
+    @Import(name="deleteUnreachable", json=true)
+    private @Nullable Output<Boolean> deleteUnreachable;
+
+    /**
+     * @return If present and set to true, the provider will delete resources associated with an unreachable Kubernetes cluster from Pulumi state
+     * 
+     */
+    public Optional<Output<Boolean>> deleteUnreachable() {
+        return Optional.ofNullable(this.deleteUnreachable);
+    }
+
+    /**
      * BETA FEATURE - If present and set to true, allow ConfigMaps to be mutated.
      * This feature is in developer preview, and is disabled by default.
      * 
@@ -75,37 +90,68 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * BETA FEATURE - If present and set to true, enable server-side diff calculations.
-     * This feature is in developer preview, and is disabled by default.
+     * Deprecated. If present and set to true, enable server-side diff calculations.
+     * 
+     * @deprecated
+     * This option has been replaced by `enableServerSideApply`.
      * 
      */
+    @Deprecated /* This option has been replaced by `enableServerSideApply`. */
     @Import(name="enableDryRun", json=true)
     private @Nullable Output<Boolean> enableDryRun;
 
     /**
-     * @return BETA FEATURE - If present and set to true, enable server-side diff calculations.
-     * This feature is in developer preview, and is disabled by default.
+     * @return Deprecated. If present and set to true, enable server-side diff calculations.
+     * 
+     * @deprecated
+     * This option has been replaced by `enableServerSideApply`.
      * 
      */
+    @Deprecated /* This option has been replaced by `enableServerSideApply`. */
     public Optional<Output<Boolean>> enableDryRun() {
         return Optional.ofNullable(this.enableDryRun);
     }
 
     /**
-     * BETA FEATURE - If present and set to true, replace CRDs on update rather than patching.
-     * This feature is in developer preview, and is disabled by default.
+     * Obsolete. This option has no effect.
+     * 
+     * @deprecated
+     * This option is deprecated, and will be removed in a future release.
      * 
      */
+    @Deprecated /* This option is deprecated, and will be removed in a future release. */
     @Import(name="enableReplaceCRD", json=true)
     private @Nullable Output<Boolean> enableReplaceCRD;
 
     /**
-     * @return BETA FEATURE - If present and set to true, replace CRDs on update rather than patching.
+     * @return Obsolete. This option has no effect.
+     * 
+     * @deprecated
+     * This option is deprecated, and will be removed in a future release.
+     * 
+     */
+    @Deprecated /* This option is deprecated, and will be removed in a future release. */
+    public Optional<Output<Boolean>> enableReplaceCRD() {
+        return Optional.ofNullable(this.enableReplaceCRD);
+    }
+
+    /**
+     * BETA FEATURE - If present and set to true, enable Server-Side Apply mode.
+     * See https://github.com/pulumi/pulumi-kubernetes/issues/2011 for additional details.
      * This feature is in developer preview, and is disabled by default.
      * 
      */
-    public Optional<Output<Boolean>> enableReplaceCRD() {
-        return Optional.ofNullable(this.enableReplaceCRD);
+    @Import(name="enableServerSideApply", json=true)
+    private @Nullable Output<Boolean> enableServerSideApply;
+
+    /**
+     * @return BETA FEATURE - If present and set to true, enable Server-Side Apply mode.
+     * See https://github.com/pulumi/pulumi-kubernetes/issues/2011 for additional details.
+     * This feature is in developer preview, and is disabled by default.
+     * 
+     */
+    public Optional<Output<Boolean>> enableServerSideApply() {
+        return Optional.ofNullable(this.enableServerSideApply);
     }
 
     /**
@@ -242,9 +288,11 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     private ProviderArgs(ProviderArgs $) {
         this.cluster = $.cluster;
         this.context = $.context;
+        this.deleteUnreachable = $.deleteUnreachable;
         this.enableConfigMapMutable = $.enableConfigMapMutable;
         this.enableDryRun = $.enableDryRun;
         this.enableReplaceCRD = $.enableReplaceCRD;
+        this.enableServerSideApply = $.enableServerSideApply;
         this.helmReleaseSettings = $.helmReleaseSettings;
         this.kubeClientSettings = $.kubeClientSettings;
         this.kubeconfig = $.kubeconfig;
@@ -315,6 +363,27 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param deleteUnreachable If present and set to true, the provider will delete resources associated with an unreachable Kubernetes cluster from Pulumi state
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deleteUnreachable(@Nullable Output<Boolean> deleteUnreachable) {
+            $.deleteUnreachable = deleteUnreachable;
+            return this;
+        }
+
+        /**
+         * @param deleteUnreachable If present and set to true, the provider will delete resources associated with an unreachable Kubernetes cluster from Pulumi state
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deleteUnreachable(Boolean deleteUnreachable) {
+            return deleteUnreachable(Output.of(deleteUnreachable));
+        }
+
+        /**
          * @param enableConfigMapMutable BETA FEATURE - If present and set to true, allow ConfigMaps to be mutated.
          * This feature is in developer preview, and is disabled by default.
          * 
@@ -346,49 +415,86 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param enableDryRun BETA FEATURE - If present and set to true, enable server-side diff calculations.
-         * This feature is in developer preview, and is disabled by default.
+         * @param enableDryRun Deprecated. If present and set to true, enable server-side diff calculations.
          * 
          * @return builder
          * 
+         * @deprecated
+         * This option has been replaced by `enableServerSideApply`.
+         * 
          */
+        @Deprecated /* This option has been replaced by `enableServerSideApply`. */
         public Builder enableDryRun(@Nullable Output<Boolean> enableDryRun) {
             $.enableDryRun = enableDryRun;
             return this;
         }
 
         /**
-         * @param enableDryRun BETA FEATURE - If present and set to true, enable server-side diff calculations.
-         * This feature is in developer preview, and is disabled by default.
+         * @param enableDryRun Deprecated. If present and set to true, enable server-side diff calculations.
          * 
          * @return builder
          * 
+         * @deprecated
+         * This option has been replaced by `enableServerSideApply`.
+         * 
          */
+        @Deprecated /* This option has been replaced by `enableServerSideApply`. */
         public Builder enableDryRun(Boolean enableDryRun) {
             return enableDryRun(Output.of(enableDryRun));
         }
 
         /**
-         * @param enableReplaceCRD BETA FEATURE - If present and set to true, replace CRDs on update rather than patching.
-         * This feature is in developer preview, and is disabled by default.
+         * @param enableReplaceCRD Obsolete. This option has no effect.
          * 
          * @return builder
          * 
+         * @deprecated
+         * This option is deprecated, and will be removed in a future release.
+         * 
          */
+        @Deprecated /* This option is deprecated, and will be removed in a future release. */
         public Builder enableReplaceCRD(@Nullable Output<Boolean> enableReplaceCRD) {
             $.enableReplaceCRD = enableReplaceCRD;
             return this;
         }
 
         /**
-         * @param enableReplaceCRD BETA FEATURE - If present and set to true, replace CRDs on update rather than patching.
+         * @param enableReplaceCRD Obsolete. This option has no effect.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This option is deprecated, and will be removed in a future release.
+         * 
+         */
+        @Deprecated /* This option is deprecated, and will be removed in a future release. */
+        public Builder enableReplaceCRD(Boolean enableReplaceCRD) {
+            return enableReplaceCRD(Output.of(enableReplaceCRD));
+        }
+
+        /**
+         * @param enableServerSideApply BETA FEATURE - If present and set to true, enable Server-Side Apply mode.
+         * See https://github.com/pulumi/pulumi-kubernetes/issues/2011 for additional details.
          * This feature is in developer preview, and is disabled by default.
          * 
          * @return builder
          * 
          */
-        public Builder enableReplaceCRD(Boolean enableReplaceCRD) {
-            return enableReplaceCRD(Output.of(enableReplaceCRD));
+        public Builder enableServerSideApply(@Nullable Output<Boolean> enableServerSideApply) {
+            $.enableServerSideApply = enableServerSideApply;
+            return this;
+        }
+
+        /**
+         * @param enableServerSideApply BETA FEATURE - If present and set to true, enable Server-Side Apply mode.
+         * See https://github.com/pulumi/pulumi-kubernetes/issues/2011 for additional details.
+         * This feature is in developer preview, and is disabled by default.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableServerSideApply(Boolean enableServerSideApply) {
+            return enableServerSideApply(Output.of(enableServerSideApply));
         }
 
         /**
@@ -566,6 +672,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             $.enableConfigMapMutable = Codegen.booleanProp("enableConfigMapMutable").output().arg($.enableConfigMapMutable).env("PULUMI_K8S_ENABLE_CONFIGMAP_MUTABLE").getNullable();
             $.enableDryRun = Codegen.booleanProp("enableDryRun").output().arg($.enableDryRun).env("PULUMI_K8S_ENABLE_DRY_RUN").getNullable();
             $.enableReplaceCRD = Codegen.booleanProp("enableReplaceCRD").output().arg($.enableReplaceCRD).env("PULUMI_K8S_ENABLE_REPLACE_CRD").getNullable();
+            $.enableServerSideApply = Codegen.booleanProp("enableServerSideApply").output().arg($.enableServerSideApply).env("PULUMI_K8S_ENABLE_SERVER_SIDE_APPLY").getNullable();
             $.kubeconfig = Codegen.stringProp("kubeconfig").output().arg($.kubeconfig).env("KUBECONFIG").getNullable();
             $.suppressDeprecationWarnings = Codegen.booleanProp("suppressDeprecationWarnings").output().arg($.suppressDeprecationWarnings).env("PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS").getNullable();
             $.suppressHelmHookWarnings = Codegen.booleanProp("suppressHelmHookWarnings").output().arg($.suppressHelmHookWarnings).env("PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS").getNullable();

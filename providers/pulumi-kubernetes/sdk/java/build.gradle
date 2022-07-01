@@ -6,7 +6,7 @@ plugins {
     id("maven-publish")
 }
 
-version = System.getenv("PULUMI_KUBERNETES_PROVIDER_SDK_VERSION") ?: "3.19.1";
+version = System.getenv("PULUMI_KUBERNETES_PROVIDER_SDK_VERSION") ?: "3.19.4";
 
 java {
     toolchain {

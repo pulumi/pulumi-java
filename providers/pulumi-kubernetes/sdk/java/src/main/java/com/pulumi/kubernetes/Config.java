@@ -26,6 +26,13 @@ public final class Config {
         return Codegen.stringProp("context").config(config).get();
     }
 /**
+ * If present and set to true, the provider will delete resources associated with an unreachable Kubernetes cluster from Pulumi state
+ * 
+ */
+    public Optional<Boolean> deleteUnreachable() {
+        return Codegen.booleanProp("deleteUnreachable").config(config).get();
+    }
+/**
  * BETA FEATURE - If present and set to true, allow ConfigMaps to be mutated.
  * This feature is in developer preview, and is disabled by default.
  * 
@@ -38,28 +45,27 @@ public final class Config {
         return Codegen.booleanProp("enableConfigMapMutable").config(config).get();
     }
 /**
- * BETA FEATURE - If present and set to true, enable server-side diff calculations.
- * This feature is in developer preview, and is disabled by default.
- * 
- * This config can be specified in the following ways, using this precedence:
- * 1. This `enableDryRun` parameter.
- * 2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.
+ * Deprecated. If present and set to true, enable server-side diff calculations.
  * 
  */
     public Optional<Boolean> enableDryRun() {
         return Codegen.booleanProp("enableDryRun").config(config).get();
     }
 /**
- * BETA FEATURE - If present and set to true, replace CRDs on update rather than patching.
- * This feature is in developer preview, and is disabled by default.
- * 
- * This config can be specified in the following ways, using this precedence:
- * 1. This `enableReplaceCRD` parameter.
- * 2. The `PULUMI_K8S_ENABLE_REPLACE_CRD` environment variable.
+ * Obsolete. This option has no effect.
  * 
  */
     public Optional<Boolean> enableReplaceCRD() {
         return Codegen.booleanProp("enableReplaceCRD").config(config).get();
+    }
+/**
+ * BETA FEATURE - If present and set to true, enable Server-Side Apply mode.
+ * See https://github.com/pulumi/pulumi-kubernetes/issues/2011 for additional details.
+ * This feature is in developer preview, and is disabled by default.
+ * 
+ */
+    public Optional<Boolean> enableServerSideApply() {
+        return Codegen.booleanProp("enableServerSideApply").config(config).get();
     }
 /**
  * The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.

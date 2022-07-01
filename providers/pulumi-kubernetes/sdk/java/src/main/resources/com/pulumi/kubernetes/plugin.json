@@ -1,5 +1,5 @@
 {
   "resource": true,
   "name": "kubernetes",
-  "version": "3.19.1"
+  "version": "3.19.4"
 }
