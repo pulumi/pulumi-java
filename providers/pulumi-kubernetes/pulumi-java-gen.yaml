@@ -3,6 +3,7 @@ out: sdk/java
 overlays:
 - ../build-templates
 pluginFile: src/main/resources/com/pulumi/kubernetes/plugin.json
-schema: https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/v3.19.1/provider/cmd/pulumi-resource-kubernetes/schema.json
-version: 3.19.1
+# TODO: change hash back to tagged version after next provider release
+schema: https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/817b39f8b3cd9485054a61cbc80c607534ddd037/provider/cmd/pulumi-resource-kubernetes/schema.json
+version: 3.19.4
 versionFile: src/main/resources/com/pulumi/kubernetes/version.txt
