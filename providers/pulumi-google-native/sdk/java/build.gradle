@@ -6,7 +6,7 @@ plugins {
     id("maven-publish")
 }
 
-version = System.getenv("PULUMI_GOOGLE_NATIVE_PROVIDER_SDK_VERSION") ?: "0.18.2";
+version = System.getenv("PULUMI_GOOGLE_NATIVE_PROVIDER_SDK_VERSION") ?: "0.20.0";
 
 java {
     toolchain {
