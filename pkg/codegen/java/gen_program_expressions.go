@@ -32,7 +32,9 @@ func (g *generator) lowerExpression(expr model.Expression, typ model.Type) model
 	applyPromises := false
 	expr, diags := pcl.RewriteApplies(expr, nameInfo(0), applyPromises)
 	contract.Assert(len(diags) == 0)
-	return pcl.RewriteConversions(expr, typ)
+	expr, diags = pcl.RewriteConversions(expr, typ)
+	contract.Assert(len(diags) == 0)
+	return expr
 }
 
 func (g *generator) GetPrecedence(expr model.Expression) int {
