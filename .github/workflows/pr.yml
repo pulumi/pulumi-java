@@ -172,7 +172,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-build }}
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-test-go-${{ hashFiles('**/go.sum') }}
-      - run: cd pkg && go test ./...
+      - run: cd pkg && go test -timeout 15m ./...
 
   providers:
     # See Note 1.
