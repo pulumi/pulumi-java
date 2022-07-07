@@ -82,6 +82,8 @@ func adaptTest(t *test.SDKTest) *test.SDKTest {
 		t.Skip = codegen.NewStringSet("java/any") // go-only
 	case "enum-reference-python":
 		t.Skip = codegen.NewStringSet("java/any") // python only
+	case "go-nested-collections":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
 	}
 	return t
 }
