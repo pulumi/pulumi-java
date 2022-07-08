@@ -35,6 +35,11 @@ type PackageInfo struct {
 
 	// If set to "gradle" generates a basic set of Gradle build files.
 	BuildFiles string `json:"buildFiles"`
+
+	// If non-empty and BuildFiles="gradle", enables the use of a
+	// given version of io.github.gradle-nexus.publish-plugin in
+	// the generated Gradle build files.
+	GradleNexusPublishPluginVersion string `json:"gradleNexusPublishPluginVersion"`
 }
 
 func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
@@ -52,6 +57,9 @@ func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
 		for k, v := range overrides.Packages {
 			result.Packages[k] = v
 		}
+	}
+	if overrides.GradleNexusPublishPluginVersion != "" {
+		result.GradleNexusPublishPluginVersion = overrides.GradleNexusPublishPluginVersion
 	}
 	return result
 }
