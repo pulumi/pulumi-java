@@ -5,12 +5,15 @@ plugins {
     id("signing")
     id("java-library")
     id("maven-publish")
-    {{if .GradleNexusPublishPluginEnabled -}}
+    {{- if .GradleNexusPublishPluginEnabled }}
     id("io.github.gradle-nexus.publish-plugin") version "{{.GradleNexusPublishPluginVersion}}"
     {{- end }}
 }
 
+{{- if .GroupID }}
+
 group = "{{ .GroupID }}"
+{{- end }}
 
 def resolvedVersion = System.getenv("PACKAGE_VERSION") ?:
     (project.version == "unspecified"
@@ -19,9 +22,9 @@ def resolvedVersion = System.getenv("PACKAGE_VERSION") ?:
 
 def signingKey = System.getenv("SIGNING_KEY")
 def signingPassword = System.getenv("SIGNING_PASSWORD")
-{{if .GradleNexusPublishPluginEnabled -}}
+{{- if .GradleNexusPublishPluginEnabled }}
 def publishRepoURL = System.getenv("PUBLISH_REPO_URL") ?: "https://s01.oss.sonatype.org"
-{{- else -}}
+{{- else }}
 def publishRepoURL = System.getenv("PUBLISH_REPO_URL")
 {{- end}}
 def publishRepoUsername = System.getenv("PUBLISH_REPO_USERNAME")
@@ -123,7 +126,7 @@ publishing {
             }
         }
     }
-    {{if .GradleNexusPublishPluginEnabled -}}{{- else -}}
+    {{- if .GradleNexusPublishPluginEnabled -}}{{- else }}
 
     if (publishRepoURL) {
         repositories {
@@ -147,7 +150,8 @@ javadoc {
     options.jFlags("-Xmx2g", "-Xms512m")
 }
 
-{{if .GradleNexusPublishPluginEnabled -}}
+{{- if .GradleNexusPublishPluginEnabled }}
+
 if (publishRepoUsername) {
     nexusPublishing {
         repositories {
