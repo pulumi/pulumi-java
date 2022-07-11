@@ -7,6 +7,8 @@ plugins {
     id("maven-publish")
 }
 
+group = "com.pulumi"
+
 def resolvedVersion = System.getenv("PACKAGE_VERSION") ?:
     (project.version == "unspecified"
          ? "0.0.1"
