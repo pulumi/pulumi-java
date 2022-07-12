@@ -60,7 +60,12 @@ public @interface CustomType {
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.METHOD)
     @interface Setter {
-        /* Empty */
+        /**
+         * We need to know the name of a parameter expected by the deserializer,
+         * and unfortunately Java compiler does not give this information through reflection (by default)
+         * @return name of a parameter
+         */
+        String value();
     }
 
     /**

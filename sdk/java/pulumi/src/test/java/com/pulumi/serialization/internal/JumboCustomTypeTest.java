@@ -40,5 +40,4 @@ public class JumboCustomTypeTest {
         assertThat(o.bar255()).hasValue("bar255");
         assertThat(o.bar256()).hasValue("bar256");
     }
-
 }
