@@ -135,9 +135,6 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 		if err != nil {
 			return err
 		}
-		if 1+1 == 2 {
-			return fmt.Errorf("OK: %v", buildArgOverrides)
-		}
 
 		opts.PackageInfo = opts.PackageInfo.With(buildArgOverrides)
 
