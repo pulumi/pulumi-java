@@ -7,19 +7,10 @@ on:
   push:
     tags:
       - aws-native/v*.*.*
-      - aws/v*.*.*
-      - aws-apigateway/v*.*.*
-      - awsx/v*.*.*
       - azure-native/v*.*.*
-      - azure/v*.*.*
-      - azuread/v*.*.*
       - docker/v*.*.*
-      - eks/v*.*.*
-      - gcp/v*.*.*
       - google-native/v*.*.*
       - kubernetes/v*.*.*
-      - oci/v*.*.*
-      - random/v*.*.*
     paths-ignore:
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
@@ -52,20 +43,11 @@ jobs:
       fail-fast: false
       matrix:
         provider:
-        - aws
         - aws-native
-        - aws-apigateway
-        - awsx
-        - azure
         - azure-native
-        - azuread
         - docker
-        - eks
-        - gcp
         - google-native
         - kubernetes
-        - oci
-        - random
     steps:
       - uses: actions/checkout@v3
         if: startsWith(github.ref, format('refs/tags/{0}/v', matrix.provider))
