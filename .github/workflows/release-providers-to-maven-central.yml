@@ -7,19 +7,9 @@ on:
   push:
     tags:
       - aws-native/v*.*.*
-      - aws/v*.*.*
-      - aws-apigateway/v*.*.*
-      - awsx/v*.*.*
       - azure-native/v*.*.*
-      - azure/v*.*.*
-      - azuread/v*.*.*
-      - docker/v*.*.*
-      - eks/v*.*.*
-      - gcp/v*.*.*
       - google-native/v*.*.*
       - kubernetes/v*.*.*
-      - oci/v*.*.*
-      - random/v*.*.*
     paths-ignore:
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'

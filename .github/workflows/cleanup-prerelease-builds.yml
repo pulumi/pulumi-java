@@ -21,20 +21,10 @@ jobs:
       fail-fast: false
       matrix:
         provider:
-        - aws
-        - aws-apigateway
         - aws-native
-        - awsx
-        - azure
         - azure-native
-        - azuread
-        - docker
-        - eks
-        - gcp
         - google-native
         - kubernetes
-        - oci
-        - random
     steps:
       - uses: actions/delete-package-versions@v3
         with:
