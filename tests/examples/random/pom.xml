@@ -31,26 +31,21 @@
             <artifactId>pulumi</artifactId>
             <version>0.1.0</version>
           </dependency>
-          <dependency>
-            <groupId>com.pulumi</groupId>
-            <artifactId>random</artifactId>
-            <version>4.3.1</version>
-          </dependency>
         </dependencies>
       </profile>
     </profiles>
 
     <dependencies>
-        <dependency>
-            <groupId>com.pulumi</groupId>
-            <artifactId>pulumi</artifactId>
-            <version>${env.PULUMI_JAVA_SDK_VERSION}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.pulumi</groupId>
-            <artifactId>random</artifactId>
-            <version>${env.PULUMI_RANDOM_PROVIDER_SDK_VERSION}</version>
-        </dependency>
+      <dependency>
+        <groupId>com.pulumi</groupId>
+        <artifactId>pulumi</artifactId>
+        <version>${env.PULUMI_JAVA_SDK_VERSION}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.pulumi</groupId>
+        <artifactId>random</artifactId>
+        <version>4.3.1</version>
+      </dependency>
     </dependencies>
 
     <build>
