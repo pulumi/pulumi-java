@@ -1,8 +1,12 @@
 ### Improvements
 
-- Health checks for pulumi-language-java.
-  [#728](https://github.com/pulumi/pulumi-java/pull/728)
-- [codegen] #390: support resources with over 255 parameters
-- [pulumi-google-native] #381: all Java packages changed to be more intuitive, unfortunately this is a breaking change
+- [provider] [#728](https://github.com/pulumi/pulumi-java/pull/728):
+  Added health checks to `pulumi-language-java` so that it never
+  leaks as an orphan process when the managing `pulumi` process
+  terminates
 
 ### Bug Fixes
+
+- [codegen] [#735](https://github.com/pulumi/pulumi-java/issues/735)
+  Fix a bug introduced in 0.4.1: `gradle publish` stopped generating
+  resources required by Pulumi and published broken packages.
