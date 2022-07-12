@@ -1567,7 +1567,7 @@ public final class JumboCustomType {
     	      this.bar99 = defaults.bar99;
         }
 
-        @Setter("bar1")
+        @Setter
         public Builder bar1(@Nullable String bar1) {
             this.bar1 = bar1;
             return this;

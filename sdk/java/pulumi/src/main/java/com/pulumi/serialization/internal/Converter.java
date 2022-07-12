@@ -18,6 +18,7 @@ import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.core.annotations.EnumType;
 import com.pulumi.core.internal.Maps;
+import com.pulumi.core.internal.Optionals;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.resources.Resource;
 
@@ -765,15 +766,7 @@ public class Converter {
         return Arrays.stream(builder.getDeclaredMethods())
                 .filter(s -> s.isAnnotationPresent(CustomType.Setter.class))
                 .peek(s -> s.setAccessible(true))
-                .collect(toMap(
-                        s -> extractSetterName(s).orElseThrow(() -> new IllegalArgumentException(
-                                String.format("Expected setter named '%s' annotated with @%s " +
-                                                "to have a parameter annotated with @%s",
-                                        s.getName(), CustomType.Setter.class.getTypeName(),
-                                        CustomType.Parameter.class.getTypeName()
-                                ))),
-                        processor
-                ));
+                .collect(toMap(s -> extractSetterName(s), processor));
     }
 
     private static Parameter extractSetterParameter(Method method) {
@@ -793,11 +786,15 @@ public class Converter {
         ).map(CustomType.Parameter::value);
     }
 
-    private static Optional<String> extractSetterName(Method method) {
+    private static String extractSetterName(Method method) {
         // we cannot just use parameter.getName(),
         // because it will be different at runtime e.g. 'arg0', 'arg1', etc.
-        return Optional.ofNullable(
-                method.getAnnotation(CustomType.Setter.class)
-        ).map(CustomType.Setter::value);
+        // also codegen must escape the names in edge cases, e.g. 'default_'
+        // so using the setter name in every case would not work
+        var annotation = method.getAnnotation(CustomType.Setter.class);
+        return Optional.ofNullable(annotation)
+                .map(CustomType.Setter::value)
+                .flatMap(Optionals::ofBlank)
+                .orElseGet(() -> method.getName()); // fallback to the method name for the default value
     }
 }
