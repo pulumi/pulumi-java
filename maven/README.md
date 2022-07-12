@@ -15,6 +15,3 @@ token env vars set:
 ```
 
 See `doc/packages.md`.
-
-The `dummy` project is included to help prefetching correct versioned
-provider jars into a local maven repo for testing.
