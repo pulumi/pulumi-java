@@ -766,13 +766,12 @@ public class Converter {
                 .filter(s -> s.isAnnotationPresent(CustomType.Setter.class))
                 .peek(s -> s.setAccessible(true))
                 .collect(toMap(
-                        s -> extractParameterName(extractSetterParameter(s))
-                                .orElseThrow(() -> new IllegalArgumentException(
-                                        String.format("Expected setter named '%s' annotated with @%s " +
-                                                        "to have a parameter annotated with @%s",
-                                                s.getName(), CustomType.Setter.class.getTypeName(),
-                                                CustomType.Parameter.class.getTypeName()
-                                        ))),
+                        s -> extractSetterName(s).orElseThrow(() -> new IllegalArgumentException(
+                                String.format("Expected setter named '%s' annotated with @%s " +
+                                                "to have a parameter annotated with @%s",
+                                        s.getName(), CustomType.Setter.class.getTypeName(),
+                                        CustomType.Parameter.class.getTypeName()
+                                ))),
                         processor
                 ));
     }
@@ -792,5 +791,13 @@ public class Converter {
         return Optional.ofNullable(
                 parameter.getAnnotation(CustomType.Parameter.class)
         ).map(CustomType.Parameter::value);
+    }
+
+    private static Optional<String> extractSetterName(Method method) {
+        // we cannot just use parameter.getName(),
+        // because it will be different at runtime e.g. 'arg0', 'arg1', etc.
+        return Optional.ofNullable(
+                method.getAnnotation(CustomType.Setter.class)
+        ).map(CustomType.Setter::value);
     }
 }
