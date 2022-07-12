@@ -1,8 +1,0 @@
-artifactID: aws-native
-version: 0.16.1
-schema: https://raw.githubusercontent.com/pulumi/pulumi-aws-native/v0.16.1/provider/cmd/pulumi-resource-aws-native/schema.json
-out: sdk/java
-versionFile: src/main/resources/com/pulumi/aws-native/version.txt
-pluginFile: src/main/resources/com/pulumi/aws-native/plugin.json
-overlays:
-  - "../build-templates"
