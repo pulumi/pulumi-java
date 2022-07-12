@@ -11,6 +11,7 @@ import (
 	"os"
 	"os/exec"
 	"strings"
+	"time"
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
 	"github.com/pkg/errors"
@@ -43,6 +44,7 @@ func main() {
 		"Use the given program as the executor instead of looking for one on PATH")
 
 	flag.Parse()
+	var cancelChannel chan bool
 	args := flag.Args()
 	logging.InitLogging(false, 0, false)
 	cmdutil.InitTracing("pulumi-language-java", "pulumi-language-java", tracing)
@@ -65,10 +67,16 @@ func main() {
 	var engineAddress string
 	if len(args) > 0 {
 		engineAddress = args[0]
+		var err error
+		cancelChannel, err = setupHealthChecks(engineAddress)
+
+		if err != nil {
+			cmdutil.Exit(errors.Wrapf(err, "could not start health check host RPC server"))
+		}
 	}
 
 	// Fire up a gRPC server, letting the kernel choose a free port.
-	port, done, err := rpcutil.Serve(0, nil, []func(*grpc.Server) error{
+	port, done, err := rpcutil.Serve(0, cancelChannel, []func(*grpc.Server) error{
 		func(srv *grpc.Server) error {
 			host := newLanguageHost(javaExec, engineAddress, tracing)
 			pulumirpc.RegisterLanguageRuntimeServer(srv, host)
@@ -86,6 +94,24 @@ func main() {
 	if err := <-done; err != nil {
 		cmdutil.Exit(errors.Wrapf(err, "language host RPC stopped serving"))
 	}
+}
+
+func setupHealthChecks(engineAddress string) (chan bool, error) {
+	// If we have a host cancel our cancellation context if it fails the healthcheck
+	ctx, cancel := context.WithCancel(context.Background())
+
+	// map the context Done channel to the rpcutil boolean cancel channel
+	cancelChannel := make(chan bool)
+	go func() {
+		<-ctx.Done()
+		close(cancelChannel)
+	}()
+	err := rpcutil.Healthcheck(ctx, engineAddress, 5*time.Minute, cancel)
+
+	if err != nil {
+		return nil, err
+	}
+	return cancelChannel, nil
 }
 
 // javaLanguageHost implements the LanguageRuntimeServer interface
