@@ -8,11 +8,6 @@ on:
       - main
     tags:
       - sdk/v*.*.*
-      - aws-native/v*.*.*
-      - azure-native/v*.*.*
-      - docker/v*.*.*
-      - google-native/v*.*.*
-      - kubernetes/v*.*.*
     paths-ignore:
       - 'CHANGELOG.md'
       - 'CHANGELOG_PENDING.md'
