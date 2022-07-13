@@ -58,8 +58,8 @@ task javadocJar(type: Jar) {
     classifier = 'javadoc'
 }
 
-build {
-    doFirst {
+def genPulumiResources = tasks.register('genPulumiResources') {
+    doLast {
         def resourcesDir = sourceSets.main.output.resourcesDir
         def subDir = project.name.replace(".", "/")
         def outDir = file("$resourcesDir/$subDir")
@@ -72,6 +72,10 @@ build {
         def infoJson = new groovy.json.JsonBuilder(info).toPrettyString()
         new File(outDir, "plugin.json").text = infoJson
     }
+}
+
+jar.configure {
+    dependsOn genPulumiResources
 }
 
 publishing {
