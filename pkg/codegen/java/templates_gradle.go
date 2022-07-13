@@ -38,21 +38,23 @@ var settingsGradleTemplate string
 var buildGradleTemplate string
 
 type gradleTemplateContext struct {
-	Version              string
-	GroupID              string
-	ArtifactID           string
-	ProjectName          string
-	RootProjectName      string
-	ProjectURL           string
-	ProjectGitURL        string
-	ProjectDescription   string
-	ProjectInceptionYear string
-	Dependencies         map[string]string
-	DeveloperID          string
-	DeveloperName        string
-	DeveloperEmail       string
-	LicenceName          string
-	LicenceURL           string
+	Version                         string
+	GroupID                         string
+	ArtifactID                      string
+	ProjectName                     string
+	RootProjectName                 string
+	ProjectURL                      string
+	ProjectGitURL                   string
+	ProjectDescription              string
+	ProjectInceptionYear            string
+	Dependencies                    map[string]string
+	DeveloperID                     string
+	DeveloperName                   string
+	DeveloperEmail                  string
+	LicenceName                     string
+	LicenceURL                      string
+	GradleNexusPublishPluginEnabled bool
+	GradleNexusPublishPluginVersion string
 }
 
 func newGradleTemplateContext(
@@ -63,6 +65,11 @@ func newGradleTemplateContext(
 	ctx := gradleTemplateContext{
 		ProjectURL:    pkg.Repository,
 		ProjectGitURL: formatGitURL(pkg.Repository),
+	}
+
+	if packageInfo.GradleNexusPublishPluginVersion != "" {
+		ctx.GradleNexusPublishPluginEnabled = true
+		ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
 	}
 
 	if pkg.Version != nil {
