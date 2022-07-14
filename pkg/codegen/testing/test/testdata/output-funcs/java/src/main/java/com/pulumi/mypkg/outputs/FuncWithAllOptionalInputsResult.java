@@ -9,13 +9,9 @@ import java.util.Objects;
 
 @CustomType
 public final class FuncWithAllOptionalInputsResult {
-    private final String r;
+    private String r;
 
-    @CustomType.Constructor
-    private FuncWithAllOptionalInputsResult(@CustomType.Parameter("r") String r) {
-        this.r = r;
-    }
-
+    private FuncWithAllOptionalInputsResult() {}
     public String r() {
         return this.r;
     }
@@ -27,24 +23,24 @@ public final class FuncWithAllOptionalInputsResult {
     public static Builder builder(FuncWithAllOptionalInputsResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String r;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(FuncWithAllOptionalInputsResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.r = defaults.r;
         }
 
+        @CustomType.Setter
         public Builder r(String r) {
             this.r = Objects.requireNonNull(r);
             return this;
-        }        public FuncWithAllOptionalInputsResult build() {
-            return new FuncWithAllOptionalInputsResult(r);
+        }
+        public FuncWithAllOptionalInputsResult build() {
+            final var o = new FuncWithAllOptionalInputsResult();
+            o.r = r;
+            return o;
         }
     }
 }

@@ -15,13 +15,9 @@ public final class SiteConfigResponse {
      * @return .NET Framework version.
      * 
      */
-    private final @Nullable String netFrameworkVersion;
+    private @Nullable String netFrameworkVersion;
 
-    @CustomType.Constructor
-    private SiteConfigResponse(@CustomType.Parameter("netFrameworkVersion") @Nullable String netFrameworkVersion) {
-        this.netFrameworkVersion = netFrameworkVersion;
-    }
-
+    private SiteConfigResponse() {}
     /**
      * @return .NET Framework version.
      * 
@@ -37,24 +33,24 @@ public final class SiteConfigResponse {
     public static Builder builder(SiteConfigResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String netFrameworkVersion;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(SiteConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.netFrameworkVersion = defaults.netFrameworkVersion;
         }
 
+        @CustomType.Setter
         public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
             this.netFrameworkVersion = netFrameworkVersion;
             return this;
-        }        public SiteConfigResponse build() {
-            return new SiteConfigResponse(netFrameworkVersion);
+        }
+        public SiteConfigResponse build() {
+            final var o = new SiteConfigResponse();
+            o.netFrameworkVersion = netFrameworkVersion;
+            return o;
         }
     }
 }

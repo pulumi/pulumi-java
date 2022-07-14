@@ -8,10 +8,7 @@ import java.util.Objects;
 
 @CustomType
 public final class SuppressionResponse {
-    @CustomType.Constructor
-    private SuppressionResponse() {
-    }
-
+    private SuppressionResponse() {}
 
     public static Builder builder() {
         return new Builder();
@@ -20,18 +17,16 @@ public final class SuppressionResponse {
     public static Builder builder(SuppressionResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(SuppressionResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
+
         public SuppressionResponse build() {
-            return new SuppressionResponse();
+            final var o = new SuppressionResponse();
+            return o;
         }
     }
 }

@@ -17,91 +17,64 @@ public final class SsisParameterResponse {
      * @return Parameter type.
      * 
      */
-    private final @Nullable String dataType;
+    private @Nullable String dataType;
     /**
      * @return Default value of parameter.
      * 
      */
-    private final @Nullable String defaultValue;
+    private @Nullable String defaultValue;
     /**
      * @return Parameter description.
      * 
      */
-    private final @Nullable String description;
+    private @Nullable String description;
     /**
      * @return Design default value of parameter.
      * 
      */
-    private final @Nullable String designDefaultValue;
+    private @Nullable String designDefaultValue;
     /**
      * @return Parameter id.
      * 
      */
-    private final @Nullable Double id;
+    private @Nullable Double id;
     /**
      * @return Parameter name.
      * 
      */
-    private final @Nullable String name;
+    private @Nullable String name;
     /**
      * @return Whether parameter is required.
      * 
      */
-    private final @Nullable Boolean required;
+    private @Nullable Boolean required;
     /**
      * @return Whether parameter is sensitive.
      * 
      */
-    private final @Nullable Boolean sensitive;
+    private @Nullable Boolean sensitive;
     /**
      * @return Default sensitive value of parameter.
      * 
      */
-    private final @Nullable String sensitiveDefaultValue;
+    private @Nullable String sensitiveDefaultValue;
     /**
      * @return Parameter value set.
      * 
      */
-    private final @Nullable Boolean valueSet;
+    private @Nullable Boolean valueSet;
     /**
      * @return Parameter value type.
      * 
      */
-    private final @Nullable String valueType;
+    private @Nullable String valueType;
     /**
      * @return Parameter reference variable.
      * 
      */
-    private final @Nullable String variable;
+    private @Nullable String variable;
 
-    @CustomType.Constructor
-    private SsisParameterResponse(
-        @CustomType.Parameter("dataType") @Nullable String dataType,
-        @CustomType.Parameter("defaultValue") @Nullable String defaultValue,
-        @CustomType.Parameter("description") @Nullable String description,
-        @CustomType.Parameter("designDefaultValue") @Nullable String designDefaultValue,
-        @CustomType.Parameter("id") @Nullable Double id,
-        @CustomType.Parameter("name") @Nullable String name,
-        @CustomType.Parameter("required") @Nullable Boolean required,
-        @CustomType.Parameter("sensitive") @Nullable Boolean sensitive,
-        @CustomType.Parameter("sensitiveDefaultValue") @Nullable String sensitiveDefaultValue,
-        @CustomType.Parameter("valueSet") @Nullable Boolean valueSet,
-        @CustomType.Parameter("valueType") @Nullable String valueType,
-        @CustomType.Parameter("variable") @Nullable String variable) {
-        this.dataType = dataType;
-        this.defaultValue = defaultValue;
-        this.description = description;
-        this.designDefaultValue = designDefaultValue;
-        this.id = id;
-        this.name = name;
-        this.required = required;
-        this.sensitive = sensitive;
-        this.sensitiveDefaultValue = sensitiveDefaultValue;
-        this.valueSet = valueSet;
-        this.valueType = valueType;
-        this.variable = variable;
-    }
-
+    private SsisParameterResponse() {}
     /**
      * @return Parameter type.
      * 
@@ -194,7 +167,7 @@ public final class SsisParameterResponse {
     public static Builder builder(SsisParameterResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String dataType;
         private @Nullable String defaultValue;
@@ -208,11 +181,7 @@ public final class SsisParameterResponse {
         private @Nullable Boolean valueSet;
         private @Nullable String valueType;
         private @Nullable String variable;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(SsisParameterResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.dataType = defaults.dataType;
@@ -229,55 +198,81 @@ public final class SsisParameterResponse {
     	      this.variable = defaults.variable;
         }
 
+        @CustomType.Setter
         public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
+        @CustomType.Setter
         public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
+        @CustomType.Setter
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
+        @CustomType.Setter
         public Builder designDefaultValue(@Nullable String designDefaultValue) {
             this.designDefaultValue = designDefaultValue;
             return this;
         }
+        @CustomType.Setter
         public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
+        @CustomType.Setter
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
         public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }
+        @CustomType.Setter
         public Builder sensitive(@Nullable Boolean sensitive) {
             this.sensitive = sensitive;
             return this;
         }
+        @CustomType.Setter
         public Builder sensitiveDefaultValue(@Nullable String sensitiveDefaultValue) {
             this.sensitiveDefaultValue = sensitiveDefaultValue;
             return this;
         }
+        @CustomType.Setter
         public Builder valueSet(@Nullable Boolean valueSet) {
             this.valueSet = valueSet;
             return this;
         }
+        @CustomType.Setter
         public Builder valueType(@Nullable String valueType) {
             this.valueType = valueType;
             return this;
         }
+        @CustomType.Setter
         public Builder variable(@Nullable String variable) {
             this.variable = variable;
             return this;
-        }        public SsisParameterResponse build() {
-            return new SsisParameterResponse(dataType, defaultValue, description, designDefaultValue, id, name, required, sensitive, sensitiveDefaultValue, valueSet, valueType, variable);
+        }
+        public SsisParameterResponse build() {
+            final var o = new SsisParameterResponse();
+            o.dataType = dataType;
+            o.defaultValue = defaultValue;
+            o.description = description;
+            o.designDefaultValue = designDefaultValue;
+            o.id = id;
+            o.name = name;
+            o.required = required;
+            o.sensitive = sensitive;
+            o.sensitiveDefaultValue = sensitiveDefaultValue;
+            o.valueSet = valueSet;
+            o.valueType = valueType;
+            o.variable = variable;
+            return o;
         }
     }
 }

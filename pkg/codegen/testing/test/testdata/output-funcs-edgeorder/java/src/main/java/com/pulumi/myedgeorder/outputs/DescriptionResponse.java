@@ -15,49 +15,34 @@ public final class DescriptionResponse {
      * @return Attributes for the product system.
      * 
      */
-    private final List<String> attributes;
+    private List<String> attributes;
     /**
      * @return Type of description.
      * 
      */
-    private final String descriptionType;
+    private String descriptionType;
     /**
      * @return Keywords for the product system.
      * 
      */
-    private final List<String> keywords;
+    private List<String> keywords;
     /**
      * @return Links for the product system.
      * 
      */
-    private final List<LinkResponse> links;
+    private List<LinkResponse> links;
     /**
      * @return Long description of the product system.
      * 
      */
-    private final String longDescription;
+    private String longDescription;
     /**
      * @return Short description of the product system.
      * 
      */
-    private final String shortDescription;
+    private String shortDescription;
 
-    @CustomType.Constructor
-    private DescriptionResponse(
-        @CustomType.Parameter("attributes") List<String> attributes,
-        @CustomType.Parameter("descriptionType") String descriptionType,
-        @CustomType.Parameter("keywords") List<String> keywords,
-        @CustomType.Parameter("links") List<LinkResponse> links,
-        @CustomType.Parameter("longDescription") String longDescription,
-        @CustomType.Parameter("shortDescription") String shortDescription) {
-        this.attributes = attributes;
-        this.descriptionType = descriptionType;
-        this.keywords = keywords;
-        this.links = links;
-        this.longDescription = longDescription;
-        this.shortDescription = shortDescription;
-    }
-
+    private DescriptionResponse() {}
     /**
      * @return Attributes for the product system.
      * 
@@ -108,7 +93,7 @@ public final class DescriptionResponse {
     public static Builder builder(DescriptionResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private List<String> attributes;
         private String descriptionType;
@@ -116,11 +101,7 @@ public final class DescriptionResponse {
         private List<LinkResponse> links;
         private String longDescription;
         private String shortDescription;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(DescriptionResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.attributes = defaults.attributes;
@@ -131,6 +112,7 @@ public final class DescriptionResponse {
     	      this.shortDescription = defaults.shortDescription;
         }
 
+        @CustomType.Setter
         public Builder attributes(List<String> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
@@ -138,10 +120,12 @@ public final class DescriptionResponse {
         public Builder attributes(String... attributes) {
             return attributes(List.of(attributes));
         }
+        @CustomType.Setter
         public Builder descriptionType(String descriptionType) {
             this.descriptionType = Objects.requireNonNull(descriptionType);
             return this;
         }
+        @CustomType.Setter
         public Builder keywords(List<String> keywords) {
             this.keywords = Objects.requireNonNull(keywords);
             return this;
@@ -149,6 +133,7 @@ public final class DescriptionResponse {
         public Builder keywords(String... keywords) {
             return keywords(List.of(keywords));
         }
+        @CustomType.Setter
         public Builder links(List<LinkResponse> links) {
             this.links = Objects.requireNonNull(links);
             return this;
@@ -156,15 +141,25 @@ public final class DescriptionResponse {
         public Builder links(LinkResponse... links) {
             return links(List.of(links));
         }
+        @CustomType.Setter
         public Builder longDescription(String longDescription) {
             this.longDescription = Objects.requireNonNull(longDescription);
             return this;
         }
+        @CustomType.Setter
         public Builder shortDescription(String shortDescription) {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
-        }        public DescriptionResponse build() {
-            return new DescriptionResponse(attributes, descriptionType, keywords, links, longDescription, shortDescription);
+        }
+        public DescriptionResponse build() {
+            final var o = new DescriptionResponse();
+            o.attributes = attributes;
+            o.descriptionType = descriptionType;
+            o.keywords = keywords;
+            o.links = links;
+            o.longDescription = longDescription;
+            o.shortDescription = shortDescription;
+            return o;
         }
     }
 }

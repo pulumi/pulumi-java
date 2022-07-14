@@ -12,17 +12,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ObjectWithNodeOptionalInputs {
-    private final @Nullable Integer bar;
-    private final String foo;
+    private @Nullable Integer bar;
+    private String foo;
 
-    @CustomType.Constructor
-    private ObjectWithNodeOptionalInputs(
-        @CustomType.Parameter("bar") @Nullable Integer bar,
-        @CustomType.Parameter("foo") String foo) {
-        this.bar = bar;
-        this.foo = foo;
-    }
-
+    private ObjectWithNodeOptionalInputs() {}
     public Optional<Integer> bar() {
         return Optional.ofNullable(this.bar);
     }
@@ -37,30 +30,32 @@ public final class ObjectWithNodeOptionalInputs {
     public static Builder builder(ObjectWithNodeOptionalInputs defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable Integer bar;
         private String foo;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(ObjectWithNodeOptionalInputs defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.bar = defaults.bar;
     	      this.foo = defaults.foo;
         }
 
+        @CustomType.Setter
         public Builder bar(@Nullable Integer bar) {
             this.bar = bar;
             return this;
         }
+        @CustomType.Setter
         public Builder foo(String foo) {
             this.foo = Objects.requireNonNull(foo);
             return this;
-        }        public ObjectWithNodeOptionalInputs build() {
-            return new ObjectWithNodeOptionalInputs(bar, foo);
+        }
+        public ObjectWithNodeOptionalInputs build() {
+            final var o = new ObjectWithNodeOptionalInputs();
+            o.bar = bar;
+            o.foo = foo;
+            return o;
         }
     }
 }

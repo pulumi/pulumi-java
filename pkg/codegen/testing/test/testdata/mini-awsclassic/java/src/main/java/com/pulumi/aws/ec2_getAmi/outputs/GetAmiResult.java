@@ -14,13 +14,9 @@ public final class GetAmiResult {
      * for machine images.
      * 
      */
-    private final String kernelId;
+    private String kernelId;
 
-    @CustomType.Constructor
-    private GetAmiResult(@CustomType.Parameter("kernelId") String kernelId) {
-        this.kernelId = kernelId;
-    }
-
+    private GetAmiResult() {}
     /**
      * @return The kernel associated with the image, if any. Only applicable
      * for machine images.
@@ -37,24 +33,24 @@ public final class GetAmiResult {
     public static Builder builder(GetAmiResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String kernelId;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(GetAmiResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.kernelId = defaults.kernelId;
         }
 
+        @CustomType.Setter
         public Builder kernelId(String kernelId) {
             this.kernelId = Objects.requireNonNull(kernelId);
             return this;
-        }        public GetAmiResult build() {
-            return new GetAmiResult(kernelId);
+        }
+        public GetAmiResult build() {
+            final var o = new GetAmiResult();
+            o.kernelId = kernelId;
+            return o;
         }
     }
 }

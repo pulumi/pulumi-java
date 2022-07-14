@@ -16,34 +16,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Object {
-    private final @Nullable String bar;
-    private final @Nullable List<ConfigMap> configs;
-    private final @Nullable Resource foo;
+    private @Nullable String bar;
+    private @Nullable List<ConfigMap> configs;
+    private @Nullable Resource foo;
     /**
      * @return List of lists of other objects
      * 
      */
-    private final @Nullable List<List<SomeOtherObject>> others;
+    private @Nullable List<List<SomeOtherObject>> others;
     /**
      * @return Mapping from string to list of some other object
      * 
      */
-    private final @Nullable Map<String,List<SomeOtherObject>> stillOthers;
+    private @Nullable Map<String,List<SomeOtherObject>> stillOthers;
 
-    @CustomType.Constructor
-    private Object(
-        @CustomType.Parameter("bar") @Nullable String bar,
-        @CustomType.Parameter("configs") @Nullable List<ConfigMap> configs,
-        @CustomType.Parameter("foo") @Nullable Resource foo,
-        @CustomType.Parameter("others") @Nullable List<List<SomeOtherObject>> others,
-        @CustomType.Parameter("stillOthers") @Nullable Map<String,List<SomeOtherObject>> stillOthers) {
-        this.bar = bar;
-        this.configs = configs;
-        this.foo = foo;
-        this.others = others;
-        this.stillOthers = stillOthers;
-    }
-
+    private Object() {}
     public Optional<String> bar() {
         return Optional.ofNullable(this.bar);
     }
@@ -75,18 +62,14 @@ public final class Object {
     public static Builder builder(Object defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String bar;
         private @Nullable List<ConfigMap> configs;
         private @Nullable Resource foo;
         private @Nullable List<List<SomeOtherObject>> others;
         private @Nullable Map<String,List<SomeOtherObject>> stillOthers;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(Object defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.bar = defaults.bar;
@@ -96,10 +79,12 @@ public final class Object {
     	      this.stillOthers = defaults.stillOthers;
         }
 
+        @CustomType.Setter
         public Builder bar(@Nullable String bar) {
             this.bar = bar;
             return this;
         }
+        @CustomType.Setter
         public Builder configs(@Nullable List<ConfigMap> configs) {
             this.configs = configs;
             return this;
@@ -107,19 +92,29 @@ public final class Object {
         public Builder configs(ConfigMap... configs) {
             return configs(List.of(configs));
         }
+        @CustomType.Setter
         public Builder foo(@Nullable Resource foo) {
             this.foo = foo;
             return this;
         }
+        @CustomType.Setter
         public Builder others(@Nullable List<List<SomeOtherObject>> others) {
             this.others = others;
             return this;
         }
+        @CustomType.Setter
         public Builder stillOthers(@Nullable Map<String,List<SomeOtherObject>> stillOthers) {
             this.stillOthers = stillOthers;
             return this;
-        }        public Object build() {
-            return new Object(bar, configs, foo, others, stillOthers);
+        }
+        public Object build() {
+            final var o = new Object();
+            o.bar = bar;
+            o.configs = configs;
+            o.foo = foo;
+            o.others = others;
+            o.stillOthers = stillOthers;
+            return o;
         }
     }
 }

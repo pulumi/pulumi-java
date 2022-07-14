@@ -17,21 +17,14 @@ public final class ListConfigurationsResult {
      * @return Link for the next set of configurations.
      * 
      */
-    private final @Nullable String nextLink;
+    private @Nullable String nextLink;
     /**
      * @return List of configurations.
      * 
      */
-    private final List<ConfigurationResponse> value;
+    private List<ConfigurationResponse> value;
 
-    @CustomType.Constructor
-    private ListConfigurationsResult(
-        @CustomType.Parameter("nextLink") @Nullable String nextLink,
-        @CustomType.Parameter("value") List<ConfigurationResponse> value) {
-        this.nextLink = nextLink;
-        this.value = value;
-    }
-
+    private ListConfigurationsResult() {}
     /**
      * @return Link for the next set of configurations.
      * 
@@ -54,33 +47,35 @@ public final class ListConfigurationsResult {
     public static Builder builder(ListConfigurationsResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String nextLink;
         private List<ConfigurationResponse> value;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(ListConfigurationsResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.nextLink = defaults.nextLink;
     	      this.value = defaults.value;
         }
 
+        @CustomType.Setter
         public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
+        @CustomType.Setter
         public Builder value(List<ConfigurationResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
         public Builder value(ConfigurationResponse... value) {
             return value(List.of(value));
-        }        public ListConfigurationsResult build() {
-            return new ListConfigurationsResult(nextLink, value);
+        }
+        public ListConfigurationsResult build() {
+            final var o = new ListConfigurationsResult();
+            o.nextLink = nextLink;
+            o.value = value;
+            return o;
         }
     }
 }

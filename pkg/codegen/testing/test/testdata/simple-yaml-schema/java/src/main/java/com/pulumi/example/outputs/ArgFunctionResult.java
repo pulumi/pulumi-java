@@ -11,13 +11,9 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ArgFunctionResult {
-    private final @Nullable Resource result;
+    private @Nullable Resource result;
 
-    @CustomType.Constructor
-    private ArgFunctionResult(@CustomType.Parameter("result") @Nullable Resource result) {
-        this.result = result;
-    }
-
+    private ArgFunctionResult() {}
     public Optional<Resource> result() {
         return Optional.ofNullable(this.result);
     }
@@ -29,24 +25,24 @@ public final class ArgFunctionResult {
     public static Builder builder(ArgFunctionResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable Resource result;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(ArgFunctionResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.result = defaults.result;
         }
 
+        @CustomType.Setter
         public Builder result(@Nullable Resource result) {
             this.result = result;
             return this;
-        }        public ArgFunctionResult build() {
-            return new ArgFunctionResult(result);
+        }
+        public ArgFunctionResult build() {
+            final var o = new ArgFunctionResult();
+            o.result = result;
+            return o;
         }
     }
 }

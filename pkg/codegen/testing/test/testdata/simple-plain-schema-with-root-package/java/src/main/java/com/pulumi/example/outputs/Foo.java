@@ -13,29 +13,14 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Foo {
-    private final Boolean a;
-    private final @Nullable Boolean b;
-    private final Integer c;
-    private final @Nullable Integer d;
-    private final String e;
-    private final @Nullable String f;
+    private Boolean a;
+    private @Nullable Boolean b;
+    private Integer c;
+    private @Nullable Integer d;
+    private String e;
+    private @Nullable String f;
 
-    @CustomType.Constructor
-    private Foo(
-        @CustomType.Parameter("a") Boolean a,
-        @CustomType.Parameter("b") @Nullable Boolean b,
-        @CustomType.Parameter("c") Integer c,
-        @CustomType.Parameter("d") @Nullable Integer d,
-        @CustomType.Parameter("e") String e,
-        @CustomType.Parameter("f") @Nullable String f) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        this.e = e;
-        this.f = f;
-    }
-
+    private Foo() {}
     public Boolean a() {
         return this.a;
     }
@@ -62,7 +47,7 @@ public final class Foo {
     public static Builder builder(Foo defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private Boolean a;
         private @Nullable Boolean b;
@@ -70,11 +55,7 @@ public final class Foo {
         private @Nullable Integer d;
         private String e;
         private @Nullable String f;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(Foo defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.a = defaults.a;
@@ -85,31 +66,45 @@ public final class Foo {
     	      this.f = defaults.f;
         }
 
+        @CustomType.Setter
         public Builder a(Boolean a) {
             this.a = Objects.requireNonNull(a);
             return this;
         }
+        @CustomType.Setter
         public Builder b(@Nullable Boolean b) {
             this.b = b;
             return this;
         }
+        @CustomType.Setter
         public Builder c(Integer c) {
             this.c = Objects.requireNonNull(c);
             return this;
         }
+        @CustomType.Setter
         public Builder d(@Nullable Integer d) {
             this.d = d;
             return this;
         }
+        @CustomType.Setter
         public Builder e(String e) {
             this.e = Objects.requireNonNull(e);
             return this;
         }
+        @CustomType.Setter
         public Builder f(@Nullable String f) {
             this.f = f;
             return this;
-        }        public Foo build() {
-            return new Foo(a, b, c, d, e, f);
+        }
+        public Foo build() {
+            final var o = new Foo();
+            o.a = a;
+            o.b = b;
+            o.c = c;
+            o.d = d;
+            o.e = e;
+            o.f = f;
+            return o;
         }
     }
 }

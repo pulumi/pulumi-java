@@ -15,35 +15,24 @@ public final class Pav2MeterDetailsResponse {
      * Expected value is &#39;Pav2&#39;.
      * 
      */
-    private final String billingType;
+    private String billingType;
     /**
      * @return Charging type.
      * 
      */
-    private final String chargingType;
+    private String chargingType;
     /**
      * @return Validation status of requested data center and transport.
      * 
      */
-    private final String meterGuid;
+    private String meterGuid;
     /**
      * @return Billing unit applicable for Pav2 billing
      * 
      */
-    private final Double multiplier;
+    private Double multiplier;
 
-    @CustomType.Constructor
-    private Pav2MeterDetailsResponse(
-        @CustomType.Parameter("billingType") String billingType,
-        @CustomType.Parameter("chargingType") String chargingType,
-        @CustomType.Parameter("meterGuid") String meterGuid,
-        @CustomType.Parameter("multiplier") Double multiplier) {
-        this.billingType = billingType;
-        this.chargingType = chargingType;
-        this.meterGuid = meterGuid;
-        this.multiplier = multiplier;
-    }
-
+    private Pav2MeterDetailsResponse() {}
     /**
      * @return Represents billing type.
      * Expected value is &#39;Pav2&#39;.
@@ -81,17 +70,13 @@ public final class Pav2MeterDetailsResponse {
     public static Builder builder(Pav2MeterDetailsResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String billingType;
         private String chargingType;
         private String meterGuid;
         private Double multiplier;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(Pav2MeterDetailsResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.billingType = defaults.billingType;
@@ -100,23 +85,33 @@ public final class Pav2MeterDetailsResponse {
     	      this.multiplier = defaults.multiplier;
         }
 
+        @CustomType.Setter
         public Builder billingType(String billingType) {
             this.billingType = Objects.requireNonNull(billingType);
             return this;
         }
+        @CustomType.Setter
         public Builder chargingType(String chargingType) {
             this.chargingType = Objects.requireNonNull(chargingType);
             return this;
         }
+        @CustomType.Setter
         public Builder meterGuid(String meterGuid) {
             this.meterGuid = Objects.requireNonNull(meterGuid);
             return this;
         }
+        @CustomType.Setter
         public Builder multiplier(Double multiplier) {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
-        }        public Pav2MeterDetailsResponse build() {
-            return new Pav2MeterDetailsResponse(billingType, chargingType, meterGuid, multiplier);
+        }
+        public Pav2MeterDetailsResponse build() {
+            final var o = new Pav2MeterDetailsResponse();
+            o.billingType = billingType;
+            o.chargingType = chargingType;
+            o.meterGuid = meterGuid;
+            o.multiplier = multiplier;
+            return o;
         }
     }
 }

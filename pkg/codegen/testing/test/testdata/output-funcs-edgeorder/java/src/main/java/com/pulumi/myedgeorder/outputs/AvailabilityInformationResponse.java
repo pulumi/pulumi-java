@@ -13,28 +13,19 @@ public final class AvailabilityInformationResponse {
      * @return Current availability stage of the product. Availability stage
      * 
      */
-    private final String availabilityStage;
+    private String availabilityStage;
     /**
      * @return Reason why the product is disabled.
      * 
      */
-    private final String disabledReason;
+    private String disabledReason;
     /**
      * @return Message for why the product is disabled.
      * 
      */
-    private final String disabledReasonMessage;
+    private String disabledReasonMessage;
 
-    @CustomType.Constructor
-    private AvailabilityInformationResponse(
-        @CustomType.Parameter("availabilityStage") String availabilityStage,
-        @CustomType.Parameter("disabledReason") String disabledReason,
-        @CustomType.Parameter("disabledReasonMessage") String disabledReasonMessage) {
-        this.availabilityStage = availabilityStage;
-        this.disabledReason = disabledReason;
-        this.disabledReasonMessage = disabledReasonMessage;
-    }
-
+    private AvailabilityInformationResponse() {}
     /**
      * @return Current availability stage of the product. Availability stage
      * 
@@ -64,16 +55,12 @@ public final class AvailabilityInformationResponse {
     public static Builder builder(AvailabilityInformationResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String availabilityStage;
         private String disabledReason;
         private String disabledReasonMessage;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(AvailabilityInformationResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.availabilityStage = defaults.availabilityStage;
@@ -81,19 +68,27 @@ public final class AvailabilityInformationResponse {
     	      this.disabledReasonMessage = defaults.disabledReasonMessage;
         }
 
+        @CustomType.Setter
         public Builder availabilityStage(String availabilityStage) {
             this.availabilityStage = Objects.requireNonNull(availabilityStage);
             return this;
         }
+        @CustomType.Setter
         public Builder disabledReason(String disabledReason) {
             this.disabledReason = Objects.requireNonNull(disabledReason);
             return this;
         }
+        @CustomType.Setter
         public Builder disabledReasonMessage(String disabledReasonMessage) {
             this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage);
             return this;
-        }        public AvailabilityInformationResponse build() {
-            return new AvailabilityInformationResponse(availabilityStage, disabledReason, disabledReasonMessage);
+        }
+        public AvailabilityInformationResponse build() {
+            final var o = new AvailabilityInformationResponse();
+            o.availabilityStage = availabilityStage;
+            o.disabledReason = disabledReason;
+            o.disabledReasonMessage = disabledReasonMessage;
+            return o;
         }
     }
 }

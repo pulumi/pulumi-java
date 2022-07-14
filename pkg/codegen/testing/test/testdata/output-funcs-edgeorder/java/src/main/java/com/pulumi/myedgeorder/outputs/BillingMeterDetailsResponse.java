@@ -16,35 +16,24 @@ public final class BillingMeterDetailsResponse {
      * @return Frequency of recurrence
      * 
      */
-    private final String frequency;
+    private String frequency;
     /**
      * @return Represents MeterDetails
      * 
      */
-    private final Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
+    private Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
     /**
      * @return Represents Metering type (eg one-time or recurrent)
      * 
      */
-    private final String meteringType;
+    private String meteringType;
     /**
      * @return Represents Billing type name
      * 
      */
-    private final String name;
+    private String name;
 
-    @CustomType.Constructor
-    private BillingMeterDetailsResponse(
-        @CustomType.Parameter("frequency") String frequency,
-        @CustomType.Parameter("meterDetails") Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails,
-        @CustomType.Parameter("meteringType") String meteringType,
-        @CustomType.Parameter("name") String name) {
-        this.frequency = frequency;
-        this.meterDetails = meterDetails;
-        this.meteringType = meteringType;
-        this.name = name;
-    }
-
+    private BillingMeterDetailsResponse() {}
     /**
      * @return Frequency of recurrence
      * 
@@ -81,17 +70,13 @@ public final class BillingMeterDetailsResponse {
     public static Builder builder(BillingMeterDetailsResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String frequency;
         private Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
         private String meteringType;
         private String name;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(BillingMeterDetailsResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.frequency = defaults.frequency;
@@ -100,23 +85,33 @@ public final class BillingMeterDetailsResponse {
     	      this.name = defaults.name;
         }
 
+        @CustomType.Setter
         public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
+        @CustomType.Setter
         public Builder meterDetails(Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails) {
             this.meterDetails = Objects.requireNonNull(meterDetails);
             return this;
         }
+        @CustomType.Setter
         public Builder meteringType(String meteringType) {
             this.meteringType = Objects.requireNonNull(meteringType);
             return this;
         }
+        @CustomType.Setter
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
-        }        public BillingMeterDetailsResponse build() {
-            return new BillingMeterDetailsResponse(frequency, meterDetails, meteringType, name);
+        }
+        public BillingMeterDetailsResponse build() {
+            final var o = new BillingMeterDetailsResponse();
+            o.frequency = frequency;
+            o.meterDetails = meterDetails;
+            o.meteringType = meteringType;
+            o.name = name;
+            return o;
         }
     }
 }

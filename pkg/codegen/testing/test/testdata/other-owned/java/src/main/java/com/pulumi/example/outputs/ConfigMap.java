@@ -11,13 +11,9 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConfigMap {
-    private final @Nullable String config;
+    private @Nullable String config;
 
-    @CustomType.Constructor
-    private ConfigMap(@CustomType.Parameter("config") @Nullable String config) {
-        this.config = config;
-    }
-
+    private ConfigMap() {}
     public Optional<String> config() {
         return Optional.ofNullable(this.config);
     }
@@ -29,24 +25,24 @@ public final class ConfigMap {
     public static Builder builder(ConfigMap defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String config;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(ConfigMap defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.config = defaults.config;
         }
 
+        @CustomType.Setter
         public Builder config(@Nullable String config) {
             this.config = config;
             return this;
-        }        public ConfigMap build() {
-            return new ConfigMap(config);
+        }
+        public ConfigMap build() {
+            final var o = new ConfigMap();
+            o.config = config;
+            return o;
         }
     }
 }
