@@ -267,267 +267,9 @@ public final class ACustomType {
     private @Nullable String bar97;
     private @Nullable String bar98;
     private @Nullable String bar99;
+    private @Nullable String default_;
 
-    @CustomType.Constructor
-
-    private ACustomType() {
-        this.bar1 = null;
-        this.bar10 = null;
-        this.bar100 = null;
-        this.bar101 = null;
-        this.bar102 = null;
-        this.bar103 = null;
-        this.bar104 = null;
-        this.bar105 = null;
-        this.bar106 = null;
-        this.bar107 = null;
-        this.bar108 = null;
-        this.bar109 = null;
-        this.bar11 = null;
-        this.bar110 = null;
-        this.bar111 = null;
-        this.bar112 = null;
-        this.bar113 = null;
-        this.bar114 = null;
-        this.bar115 = null;
-        this.bar116 = null;
-        this.bar117 = null;
-        this.bar118 = null;
-        this.bar119 = null;
-        this.bar12 = null;
-        this.bar120 = null;
-        this.bar121 = null;
-        this.bar122 = null;
-        this.bar123 = null;
-        this.bar124 = null;
-        this.bar125 = null;
-        this.bar126 = null;
-        this.bar127 = null;
-        this.bar128 = null;
-        this.bar129 = null;
-        this.bar13 = null;
-        this.bar130 = null;
-        this.bar131 = null;
-        this.bar132 = null;
-        this.bar133 = null;
-        this.bar134 = null;
-        this.bar135 = null;
-        this.bar136 = null;
-        this.bar137 = null;
-        this.bar138 = null;
-        this.bar139 = null;
-        this.bar14 = null;
-        this.bar140 = null;
-        this.bar141 = null;
-        this.bar142 = null;
-        this.bar143 = null;
-        this.bar144 = null;
-        this.bar145 = null;
-        this.bar146 = null;
-        this.bar147 = null;
-        this.bar148 = null;
-        this.bar149 = null;
-        this.bar15 = null;
-        this.bar150 = null;
-        this.bar151 = null;
-        this.bar152 = null;
-        this.bar153 = null;
-        this.bar154 = null;
-        this.bar155 = null;
-        this.bar156 = null;
-        this.bar157 = null;
-        this.bar158 = null;
-        this.bar159 = null;
-        this.bar16 = null;
-        this.bar160 = null;
-        this.bar161 = null;
-        this.bar162 = null;
-        this.bar163 = null;
-        this.bar164 = null;
-        this.bar165 = null;
-        this.bar166 = null;
-        this.bar167 = null;
-        this.bar168 = null;
-        this.bar169 = null;
-        this.bar17 = null;
-        this.bar170 = null;
-        this.bar171 = null;
-        this.bar172 = null;
-        this.bar173 = null;
-        this.bar174 = null;
-        this.bar175 = null;
-        this.bar176 = null;
-        this.bar177 = null;
-        this.bar178 = null;
-        this.bar179 = null;
-        this.bar18 = null;
-        this.bar180 = null;
-        this.bar181 = null;
-        this.bar182 = null;
-        this.bar183 = null;
-        this.bar184 = null;
-        this.bar185 = null;
-        this.bar186 = null;
-        this.bar187 = null;
-        this.bar188 = null;
-        this.bar189 = null;
-        this.bar19 = null;
-        this.bar190 = null;
-        this.bar191 = null;
-        this.bar192 = null;
-        this.bar193 = null;
-        this.bar194 = null;
-        this.bar195 = null;
-        this.bar196 = null;
-        this.bar197 = null;
-        this.bar198 = null;
-        this.bar199 = null;
-        this.bar2 = null;
-        this.bar20 = null;
-        this.bar200 = null;
-        this.bar201 = null;
-        this.bar202 = null;
-        this.bar203 = null;
-        this.bar204 = null;
-        this.bar205 = null;
-        this.bar206 = null;
-        this.bar207 = null;
-        this.bar208 = null;
-        this.bar209 = null;
-        this.bar21 = null;
-        this.bar210 = null;
-        this.bar211 = null;
-        this.bar212 = null;
-        this.bar213 = null;
-        this.bar214 = null;
-        this.bar215 = null;
-        this.bar216 = null;
-        this.bar217 = null;
-        this.bar218 = null;
-        this.bar219 = null;
-        this.bar22 = null;
-        this.bar220 = null;
-        this.bar221 = null;
-        this.bar222 = null;
-        this.bar223 = null;
-        this.bar224 = null;
-        this.bar225 = null;
-        this.bar226 = null;
-        this.bar227 = null;
-        this.bar228 = null;
-        this.bar229 = null;
-        this.bar23 = null;
-        this.bar230 = null;
-        this.bar231 = null;
-        this.bar232 = null;
-        this.bar233 = null;
-        this.bar234 = null;
-        this.bar235 = null;
-        this.bar236 = null;
-        this.bar237 = null;
-        this.bar238 = null;
-        this.bar239 = null;
-        this.bar24 = null;
-        this.bar240 = null;
-        this.bar241 = null;
-        this.bar242 = null;
-        this.bar243 = null;
-        this.bar244 = null;
-        this.bar245 = null;
-        this.bar246 = null;
-        this.bar247 = null;
-        this.bar248 = null;
-        this.bar249 = null;
-        this.bar25 = null;
-        this.bar250 = null;
-        this.bar251 = null;
-        this.bar252 = null;
-        this.bar253 = null;
-        this.bar254 = null;
-        this.bar255 = null;
-        this.bar256 = null;
-        this.bar26 = null;
-        this.bar27 = null;
-        this.bar28 = null;
-        this.bar29 = null;
-        this.bar3 = null;
-        this.bar30 = null;
-        this.bar31 = null;
-        this.bar32 = null;
-        this.bar33 = null;
-        this.bar34 = null;
-        this.bar35 = null;
-        this.bar36 = null;
-        this.bar37 = null;
-        this.bar38 = null;
-        this.bar39 = null;
-        this.bar4 = null;
-        this.bar40 = null;
-        this.bar41 = null;
-        this.bar42 = null;
-        this.bar43 = null;
-        this.bar44 = null;
-        this.bar45 = null;
-        this.bar46 = null;
-        this.bar47 = null;
-        this.bar48 = null;
-        this.bar49 = null;
-        this.bar5 = null;
-        this.bar50 = null;
-        this.bar51 = null;
-        this.bar52 = null;
-        this.bar53 = null;
-        this.bar54 = null;
-        this.bar55 = null;
-        this.bar56 = null;
-        this.bar57 = null;
-        this.bar58 = null;
-        this.bar59 = null;
-        this.bar6 = null;
-        this.bar60 = null;
-        this.bar61 = null;
-        this.bar62 = null;
-        this.bar63 = null;
-        this.bar64 = null;
-        this.bar65 = null;
-        this.bar66 = null;
-        this.bar67 = null;
-        this.bar68 = null;
-        this.bar69 = null;
-        this.bar7 = null;
-        this.bar70 = null;
-        this.bar71 = null;
-        this.bar72 = null;
-        this.bar73 = null;
-        this.bar74 = null;
-        this.bar75 = null;
-        this.bar76 = null;
-        this.bar77 = null;
-        this.bar78 = null;
-        this.bar79 = null;
-        this.bar8 = null;
-        this.bar80 = null;
-        this.bar81 = null;
-        this.bar82 = null;
-        this.bar83 = null;
-        this.bar84 = null;
-        this.bar85 = null;
-        this.bar86 = null;
-        this.bar87 = null;
-        this.bar88 = null;
-        this.bar89 = null;
-        this.bar9 = null;
-        this.bar90 = null;
-        this.bar91 = null;
-        this.bar92 = null;
-        this.bar93 = null;
-        this.bar94 = null;
-        this.bar95 = null;
-        this.bar96 = null;
-        this.bar97 = null;
-        this.bar98 = null;
-        this.bar99 = null;
-    }
+    private ACustomType() {}
     public Optional<String> bar1() {
         return Optional.ofNullable(this.bar1);
     }
@@ -1296,6 +1038,9 @@ public final class ACustomType {
     public Optional<String> bar99() {
         return Optional.ofNullable(this.bar99);
     }
+    public Optional<String> default_() {
+        return Optional.ofNullable(this.default_);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -1304,7 +1049,7 @@ public final class ACustomType {
     public static Builder builder(ACustomType defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String bar1;
         private @Nullable String bar10;
@@ -1562,11 +1307,8 @@ public final class ACustomType {
         private @Nullable String bar97;
         private @Nullable String bar98;
         private @Nullable String bar99;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        private @Nullable String default_;
+        public Builder() {}
         public Builder(ACustomType defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.bar1 = defaults.bar1;
@@ -1825,1291 +1567,1554 @@ public final class ACustomType {
     	      this.bar97 = defaults.bar97;
     	      this.bar98 = defaults.bar98;
     	      this.bar99 = defaults.bar99;
+    	      this.default_ = defaults.default_;
         }
 
+        @CustomType.Setter
         public Builder bar1(@Nullable String bar1) {
             this.bar1 = bar1;
             return this;
         }
+        @CustomType.Setter
         public Builder bar10(@Nullable String bar10) {
             this.bar10 = bar10;
             return this;
         }
+        @CustomType.Setter
         public Builder bar100(@Nullable String bar100) {
             this.bar100 = bar100;
             return this;
         }
+        @CustomType.Setter
         public Builder bar101(@Nullable String bar101) {
             this.bar101 = bar101;
             return this;
         }
+        @CustomType.Setter
         public Builder bar102(@Nullable String bar102) {
             this.bar102 = bar102;
             return this;
         }
+        @CustomType.Setter
         public Builder bar103(@Nullable String bar103) {
             this.bar103 = bar103;
             return this;
         }
+        @CustomType.Setter
         public Builder bar104(@Nullable String bar104) {
             this.bar104 = bar104;
             return this;
         }
+        @CustomType.Setter
         public Builder bar105(@Nullable String bar105) {
             this.bar105 = bar105;
             return this;
         }
+        @CustomType.Setter
         public Builder bar106(@Nullable String bar106) {
             this.bar106 = bar106;
             return this;
         }
+        @CustomType.Setter
         public Builder bar107(@Nullable String bar107) {
             this.bar107 = bar107;
             return this;
         }
+        @CustomType.Setter
         public Builder bar108(@Nullable String bar108) {
             this.bar108 = bar108;
             return this;
         }
+        @CustomType.Setter
         public Builder bar109(@Nullable String bar109) {
             this.bar109 = bar109;
             return this;
         }
+        @CustomType.Setter
         public Builder bar11(@Nullable String bar11) {
             this.bar11 = bar11;
             return this;
         }
+        @CustomType.Setter
         public Builder bar110(@Nullable String bar110) {
             this.bar110 = bar110;
             return this;
         }
+        @CustomType.Setter
         public Builder bar111(@Nullable String bar111) {
             this.bar111 = bar111;
             return this;
         }
+        @CustomType.Setter
         public Builder bar112(@Nullable String bar112) {
             this.bar112 = bar112;
             return this;
         }
+        @CustomType.Setter
         public Builder bar113(@Nullable String bar113) {
             this.bar113 = bar113;
             return this;
         }
+        @CustomType.Setter
         public Builder bar114(@Nullable String bar114) {
             this.bar114 = bar114;
             return this;
         }
+        @CustomType.Setter
         public Builder bar115(@Nullable String bar115) {
             this.bar115 = bar115;
             return this;
         }
+        @CustomType.Setter
         public Builder bar116(@Nullable String bar116) {
             this.bar116 = bar116;
             return this;
         }
+        @CustomType.Setter
         public Builder bar117(@Nullable String bar117) {
             this.bar117 = bar117;
             return this;
         }
+        @CustomType.Setter
         public Builder bar118(@Nullable String bar118) {
             this.bar118 = bar118;
             return this;
         }
+        @CustomType.Setter
         public Builder bar119(@Nullable String bar119) {
             this.bar119 = bar119;
             return this;
         }
+        @CustomType.Setter
         public Builder bar12(@Nullable String bar12) {
             this.bar12 = bar12;
             return this;
         }
+        @CustomType.Setter
         public Builder bar120(@Nullable String bar120) {
             this.bar120 = bar120;
             return this;
         }
+        @CustomType.Setter
         public Builder bar121(@Nullable String bar121) {
             this.bar121 = bar121;
             return this;
         }
+        @CustomType.Setter
         public Builder bar122(@Nullable String bar122) {
             this.bar122 = bar122;
             return this;
         }
+        @CustomType.Setter
         public Builder bar123(@Nullable String bar123) {
             this.bar123 = bar123;
             return this;
         }
+        @CustomType.Setter
         public Builder bar124(@Nullable String bar124) {
             this.bar124 = bar124;
             return this;
         }
+        @CustomType.Setter
         public Builder bar125(@Nullable String bar125) {
             this.bar125 = bar125;
             return this;
         }
+        @CustomType.Setter
         public Builder bar126(@Nullable String bar126) {
             this.bar126 = bar126;
             return this;
         }
+        @CustomType.Setter
         public Builder bar127(@Nullable String bar127) {
             this.bar127 = bar127;
             return this;
         }
+        @CustomType.Setter
         public Builder bar128(@Nullable String bar128) {
             this.bar128 = bar128;
             return this;
         }
+        @CustomType.Setter
         public Builder bar129(@Nullable String bar129) {
             this.bar129 = bar129;
             return this;
         }
+        @CustomType.Setter
         public Builder bar13(@Nullable String bar13) {
             this.bar13 = bar13;
             return this;
         }
+        @CustomType.Setter
         public Builder bar130(@Nullable String bar130) {
             this.bar130 = bar130;
             return this;
         }
+        @CustomType.Setter
         public Builder bar131(@Nullable String bar131) {
             this.bar131 = bar131;
             return this;
         }
+        @CustomType.Setter
         public Builder bar132(@Nullable String bar132) {
             this.bar132 = bar132;
             return this;
         }
+        @CustomType.Setter
         public Builder bar133(@Nullable String bar133) {
             this.bar133 = bar133;
             return this;
         }
+        @CustomType.Setter
         public Builder bar134(@Nullable String bar134) {
             this.bar134 = bar134;
             return this;
         }
+        @CustomType.Setter
         public Builder bar135(@Nullable String bar135) {
             this.bar135 = bar135;
             return this;
         }
+        @CustomType.Setter
         public Builder bar136(@Nullable String bar136) {
             this.bar136 = bar136;
             return this;
         }
+        @CustomType.Setter
         public Builder bar137(@Nullable String bar137) {
             this.bar137 = bar137;
             return this;
         }
+        @CustomType.Setter
         public Builder bar138(@Nullable String bar138) {
             this.bar138 = bar138;
             return this;
         }
+        @CustomType.Setter
         public Builder bar139(@Nullable String bar139) {
             this.bar139 = bar139;
             return this;
         }
+        @CustomType.Setter
         public Builder bar14(@Nullable String bar14) {
             this.bar14 = bar14;
             return this;
         }
+        @CustomType.Setter
         public Builder bar140(@Nullable String bar140) {
             this.bar140 = bar140;
             return this;
         }
+        @CustomType.Setter
         public Builder bar141(@Nullable String bar141) {
             this.bar141 = bar141;
             return this;
         }
+        @CustomType.Setter
         public Builder bar142(@Nullable String bar142) {
             this.bar142 = bar142;
             return this;
         }
+        @CustomType.Setter
         public Builder bar143(@Nullable String bar143) {
             this.bar143 = bar143;
             return this;
         }
+        @CustomType.Setter
         public Builder bar144(@Nullable String bar144) {
             this.bar144 = bar144;
             return this;
         }
+        @CustomType.Setter
         public Builder bar145(@Nullable String bar145) {
             this.bar145 = bar145;
             return this;
         }
+        @CustomType.Setter
         public Builder bar146(@Nullable String bar146) {
             this.bar146 = bar146;
             return this;
         }
+        @CustomType.Setter
         public Builder bar147(@Nullable String bar147) {
             this.bar147 = bar147;
             return this;
         }
+        @CustomType.Setter
         public Builder bar148(@Nullable String bar148) {
             this.bar148 = bar148;
             return this;
         }
+        @CustomType.Setter
         public Builder bar149(@Nullable String bar149) {
             this.bar149 = bar149;
             return this;
         }
+        @CustomType.Setter
         public Builder bar15(@Nullable String bar15) {
             this.bar15 = bar15;
             return this;
         }
+        @CustomType.Setter
         public Builder bar150(@Nullable String bar150) {
             this.bar150 = bar150;
             return this;
         }
+        @CustomType.Setter
         public Builder bar151(@Nullable String bar151) {
             this.bar151 = bar151;
             return this;
         }
+        @CustomType.Setter
         public Builder bar152(@Nullable String bar152) {
             this.bar152 = bar152;
             return this;
         }
+        @CustomType.Setter
         public Builder bar153(@Nullable String bar153) {
             this.bar153 = bar153;
             return this;
         }
+        @CustomType.Setter
         public Builder bar154(@Nullable String bar154) {
             this.bar154 = bar154;
             return this;
         }
+        @CustomType.Setter
         public Builder bar155(@Nullable String bar155) {
             this.bar155 = bar155;
             return this;
         }
+        @CustomType.Setter
         public Builder bar156(@Nullable String bar156) {
             this.bar156 = bar156;
             return this;
         }
+        @CustomType.Setter
         public Builder bar157(@Nullable String bar157) {
             this.bar157 = bar157;
             return this;
         }
+        @CustomType.Setter
         public Builder bar158(@Nullable String bar158) {
             this.bar158 = bar158;
             return this;
         }
+        @CustomType.Setter
         public Builder bar159(@Nullable String bar159) {
             this.bar159 = bar159;
             return this;
         }
+        @CustomType.Setter
         public Builder bar16(@Nullable String bar16) {
             this.bar16 = bar16;
             return this;
         }
+        @CustomType.Setter
         public Builder bar160(@Nullable String bar160) {
             this.bar160 = bar160;
             return this;
         }
+        @CustomType.Setter
         public Builder bar161(@Nullable String bar161) {
             this.bar161 = bar161;
             return this;
         }
+        @CustomType.Setter
         public Builder bar162(@Nullable String bar162) {
             this.bar162 = bar162;
             return this;
         }
+        @CustomType.Setter
         public Builder bar163(@Nullable String bar163) {
             this.bar163 = bar163;
             return this;
         }
+        @CustomType.Setter
         public Builder bar164(@Nullable String bar164) {
             this.bar164 = bar164;
             return this;
         }
+        @CustomType.Setter
         public Builder bar165(@Nullable String bar165) {
             this.bar165 = bar165;
             return this;
         }
+        @CustomType.Setter
         public Builder bar166(@Nullable String bar166) {
             this.bar166 = bar166;
             return this;
         }
+        @CustomType.Setter
         public Builder bar167(@Nullable String bar167) {
             this.bar167 = bar167;
             return this;
         }
+        @CustomType.Setter
         public Builder bar168(@Nullable String bar168) {
             this.bar168 = bar168;
             return this;
         }
+        @CustomType.Setter
         public Builder bar169(@Nullable String bar169) {
             this.bar169 = bar169;
             return this;
         }
+        @CustomType.Setter
         public Builder bar17(@Nullable String bar17) {
             this.bar17 = bar17;
             return this;
         }
+        @CustomType.Setter
         public Builder bar170(@Nullable String bar170) {
             this.bar170 = bar170;
             return this;
         }
+        @CustomType.Setter
         public Builder bar171(@Nullable String bar171) {
             this.bar171 = bar171;
             return this;
         }
+        @CustomType.Setter
         public Builder bar172(@Nullable String bar172) {
             this.bar172 = bar172;
             return this;
         }
+        @CustomType.Setter
         public Builder bar173(@Nullable String bar173) {
             this.bar173 = bar173;
             return this;
         }
+        @CustomType.Setter
         public Builder bar174(@Nullable String bar174) {
             this.bar174 = bar174;
             return this;
         }
+        @CustomType.Setter
         public Builder bar175(@Nullable String bar175) {
             this.bar175 = bar175;
             return this;
         }
+        @CustomType.Setter
         public Builder bar176(@Nullable String bar176) {
             this.bar176 = bar176;
             return this;
         }
+        @CustomType.Setter
         public Builder bar177(@Nullable String bar177) {
             this.bar177 = bar177;
             return this;
         }
+        @CustomType.Setter
         public Builder bar178(@Nullable String bar178) {
             this.bar178 = bar178;
             return this;
         }
+        @CustomType.Setter
         public Builder bar179(@Nullable String bar179) {
             this.bar179 = bar179;
             return this;
         }
+        @CustomType.Setter
         public Builder bar18(@Nullable String bar18) {
             this.bar18 = bar18;
             return this;
         }
+        @CustomType.Setter
         public Builder bar180(@Nullable String bar180) {
             this.bar180 = bar180;
             return this;
         }
+        @CustomType.Setter
         public Builder bar181(@Nullable String bar181) {
             this.bar181 = bar181;
             return this;
         }
+        @CustomType.Setter
         public Builder bar182(@Nullable String bar182) {
             this.bar182 = bar182;
             return this;
         }
+        @CustomType.Setter
         public Builder bar183(@Nullable String bar183) {
             this.bar183 = bar183;
             return this;
         }
+        @CustomType.Setter
         public Builder bar184(@Nullable String bar184) {
             this.bar184 = bar184;
             return this;
         }
+        @CustomType.Setter
         public Builder bar185(@Nullable String bar185) {
             this.bar185 = bar185;
             return this;
         }
+        @CustomType.Setter
         public Builder bar186(@Nullable String bar186) {
             this.bar186 = bar186;
             return this;
         }
+        @CustomType.Setter
         public Builder bar187(@Nullable String bar187) {
             this.bar187 = bar187;
             return this;
         }
+        @CustomType.Setter
         public Builder bar188(@Nullable String bar188) {
             this.bar188 = bar188;
             return this;
         }
+        @CustomType.Setter
         public Builder bar189(@Nullable String bar189) {
             this.bar189 = bar189;
             return this;
         }
+        @CustomType.Setter
         public Builder bar19(@Nullable String bar19) {
             this.bar19 = bar19;
             return this;
         }
+        @CustomType.Setter
         public Builder bar190(@Nullable String bar190) {
             this.bar190 = bar190;
             return this;
         }
+        @CustomType.Setter
         public Builder bar191(@Nullable String bar191) {
             this.bar191 = bar191;
             return this;
         }
+        @CustomType.Setter
         public Builder bar192(@Nullable String bar192) {
             this.bar192 = bar192;
             return this;
         }
+        @CustomType.Setter
         public Builder bar193(@Nullable String bar193) {
             this.bar193 = bar193;
             return this;
         }
+        @CustomType.Setter
         public Builder bar194(@Nullable String bar194) {
             this.bar194 = bar194;
             return this;
         }
+        @CustomType.Setter
         public Builder bar195(@Nullable String bar195) {
             this.bar195 = bar195;
             return this;
         }
+        @CustomType.Setter
         public Builder bar196(@Nullable String bar196) {
             this.bar196 = bar196;
             return this;
         }
+        @CustomType.Setter
         public Builder bar197(@Nullable String bar197) {
             this.bar197 = bar197;
             return this;
         }
+        @CustomType.Setter
         public Builder bar198(@Nullable String bar198) {
             this.bar198 = bar198;
             return this;
         }
+        @CustomType.Setter
         public Builder bar199(@Nullable String bar199) {
             this.bar199 = bar199;
             return this;
         }
+        @CustomType.Setter
         public Builder bar2(@Nullable String bar2) {
             this.bar2 = bar2;
             return this;
         }
+        @CustomType.Setter
         public Builder bar20(@Nullable String bar20) {
             this.bar20 = bar20;
             return this;
         }
+        @CustomType.Setter
         public Builder bar200(@Nullable String bar200) {
             this.bar200 = bar200;
             return this;
         }
+        @CustomType.Setter
         public Builder bar201(@Nullable String bar201) {
             this.bar201 = bar201;
             return this;
         }
+        @CustomType.Setter
         public Builder bar202(@Nullable String bar202) {
             this.bar202 = bar202;
             return this;
         }
+        @CustomType.Setter
         public Builder bar203(@Nullable String bar203) {
             this.bar203 = bar203;
             return this;
         }
+        @CustomType.Setter
         public Builder bar204(@Nullable String bar204) {
             this.bar204 = bar204;
             return this;
         }
+        @CustomType.Setter
         public Builder bar205(@Nullable String bar205) {
             this.bar205 = bar205;
             return this;
         }
+        @CustomType.Setter
         public Builder bar206(@Nullable String bar206) {
             this.bar206 = bar206;
             return this;
         }
+        @CustomType.Setter
         public Builder bar207(@Nullable String bar207) {
             this.bar207 = bar207;
             return this;
         }
+        @CustomType.Setter
         public Builder bar208(@Nullable String bar208) {
             this.bar208 = bar208;
             return this;
         }
+        @CustomType.Setter
         public Builder bar209(@Nullable String bar209) {
             this.bar209 = bar209;
             return this;
         }
+        @CustomType.Setter
         public Builder bar21(@Nullable String bar21) {
             this.bar21 = bar21;
             return this;
         }
+        @CustomType.Setter
         public Builder bar210(@Nullable String bar210) {
             this.bar210 = bar210;
             return this;
         }
+        @CustomType.Setter
         public Builder bar211(@Nullable String bar211) {
             this.bar211 = bar211;
             return this;
         }
+        @CustomType.Setter
         public Builder bar212(@Nullable String bar212) {
             this.bar212 = bar212;
             return this;
         }
+        @CustomType.Setter
         public Builder bar213(@Nullable String bar213) {
             this.bar213 = bar213;
             return this;
         }
+        @CustomType.Setter
         public Builder bar214(@Nullable String bar214) {
             this.bar214 = bar214;
             return this;
         }
+        @CustomType.Setter
         public Builder bar215(@Nullable String bar215) {
             this.bar215 = bar215;
             return this;
         }
+        @CustomType.Setter
         public Builder bar216(@Nullable String bar216) {
             this.bar216 = bar216;
             return this;
         }
+        @CustomType.Setter
         public Builder bar217(@Nullable String bar217) {
             this.bar217 = bar217;
             return this;
         }
+        @CustomType.Setter
         public Builder bar218(@Nullable String bar218) {
             this.bar218 = bar218;
             return this;
         }
+        @CustomType.Setter
         public Builder bar219(@Nullable String bar219) {
             this.bar219 = bar219;
             return this;
         }
+        @CustomType.Setter
         public Builder bar22(@Nullable String bar22) {
             this.bar22 = bar22;
             return this;
         }
+        @CustomType.Setter
         public Builder bar220(@Nullable String bar220) {
             this.bar220 = bar220;
             return this;
         }
+        @CustomType.Setter
         public Builder bar221(@Nullable String bar221) {
             this.bar221 = bar221;
             return this;
         }
+        @CustomType.Setter
         public Builder bar222(@Nullable String bar222) {
             this.bar222 = bar222;
             return this;
         }
+        @CustomType.Setter
         public Builder bar223(@Nullable String bar223) {
             this.bar223 = bar223;
             return this;
         }
+        @CustomType.Setter
         public Builder bar224(@Nullable String bar224) {
             this.bar224 = bar224;
             return this;
         }
+        @CustomType.Setter
         public Builder bar225(@Nullable String bar225) {
             this.bar225 = bar225;
             return this;
         }
+        @CustomType.Setter
         public Builder bar226(@Nullable String bar226) {
             this.bar226 = bar226;
             return this;
         }
+        @CustomType.Setter
         public Builder bar227(@Nullable String bar227) {
             this.bar227 = bar227;
             return this;
         }
+        @CustomType.Setter
         public Builder bar228(@Nullable String bar228) {
             this.bar228 = bar228;
             return this;
         }
+        @CustomType.Setter
         public Builder bar229(@Nullable String bar229) {
             this.bar229 = bar229;
             return this;
         }
+        @CustomType.Setter
         public Builder bar23(@Nullable String bar23) {
             this.bar23 = bar23;
             return this;
         }
+        @CustomType.Setter
         public Builder bar230(@Nullable String bar230) {
             this.bar230 = bar230;
             return this;
         }
+        @CustomType.Setter
         public Builder bar231(@Nullable String bar231) {
             this.bar231 = bar231;
             return this;
         }
+        @CustomType.Setter
         public Builder bar232(@Nullable String bar232) {
             this.bar232 = bar232;
             return this;
         }
+        @CustomType.Setter
         public Builder bar233(@Nullable String bar233) {
             this.bar233 = bar233;
             return this;
         }
+        @CustomType.Setter
         public Builder bar234(@Nullable String bar234) {
             this.bar234 = bar234;
             return this;
         }
+        @CustomType.Setter
         public Builder bar235(@Nullable String bar235) {
             this.bar235 = bar235;
             return this;
         }
+        @CustomType.Setter
         public Builder bar236(@Nullable String bar236) {
             this.bar236 = bar236;
             return this;
         }
+        @CustomType.Setter
         public Builder bar237(@Nullable String bar237) {
             this.bar237 = bar237;
             return this;
         }
+        @CustomType.Setter
         public Builder bar238(@Nullable String bar238) {
             this.bar238 = bar238;
             return this;
         }
+        @CustomType.Setter
         public Builder bar239(@Nullable String bar239) {
             this.bar239 = bar239;
             return this;
         }
+        @CustomType.Setter
         public Builder bar24(@Nullable String bar24) {
             this.bar24 = bar24;
             return this;
         }
+        @CustomType.Setter
         public Builder bar240(@Nullable String bar240) {
             this.bar240 = bar240;
             return this;
         }
+        @CustomType.Setter
         public Builder bar241(@Nullable String bar241) {
             this.bar241 = bar241;
             return this;
         }
+        @CustomType.Setter
         public Builder bar242(@Nullable String bar242) {
             this.bar242 = bar242;
             return this;
         }
+        @CustomType.Setter
         public Builder bar243(@Nullable String bar243) {
             this.bar243 = bar243;
             return this;
         }
+        @CustomType.Setter
         public Builder bar244(@Nullable String bar244) {
             this.bar244 = bar244;
             return this;
         }
+        @CustomType.Setter
         public Builder bar245(@Nullable String bar245) {
             this.bar245 = bar245;
             return this;
         }
+        @CustomType.Setter
         public Builder bar246(@Nullable String bar246) {
             this.bar246 = bar246;
             return this;
         }
+        @CustomType.Setter
         public Builder bar247(@Nullable String bar247) {
             this.bar247 = bar247;
             return this;
         }
+        @CustomType.Setter
         public Builder bar248(@Nullable String bar248) {
             this.bar248 = bar248;
             return this;
         }
+        @CustomType.Setter
         public Builder bar249(@Nullable String bar249) {
             this.bar249 = bar249;
             return this;
         }
+        @CustomType.Setter
         public Builder bar25(@Nullable String bar25) {
             this.bar25 = bar25;
             return this;
         }
+        @CustomType.Setter
         public Builder bar250(@Nullable String bar250) {
             this.bar250 = bar250;
             return this;
         }
+        @CustomType.Setter
         public Builder bar251(@Nullable String bar251) {
             this.bar251 = bar251;
             return this;
         }
+        @CustomType.Setter
         public Builder bar252(@Nullable String bar252) {
             this.bar252 = bar252;
             return this;
         }
+        @CustomType.Setter
         public Builder bar253(@Nullable String bar253) {
             this.bar253 = bar253;
             return this;
         }
+        @CustomType.Setter
         public Builder bar254(@Nullable String bar254) {
             this.bar254 = bar254;
             return this;
         }
+        @CustomType.Setter
         public Builder bar255(@Nullable String bar255) {
             this.bar255 = bar255;
             return this;
         }
+        @CustomType.Setter
         public Builder bar256(@Nullable String bar256) {
             this.bar256 = bar256;
             return this;
         }
+        @CustomType.Setter
         public Builder bar26(@Nullable String bar26) {
             this.bar26 = bar26;
             return this;
         }
+        @CustomType.Setter
         public Builder bar27(@Nullable String bar27) {
             this.bar27 = bar27;
             return this;
         }
+        @CustomType.Setter
         public Builder bar28(@Nullable String bar28) {
             this.bar28 = bar28;
             return this;
         }
+        @CustomType.Setter
         public Builder bar29(@Nullable String bar29) {
             this.bar29 = bar29;
             return this;
         }
+        @CustomType.Setter
         public Builder bar3(@Nullable String bar3) {
             this.bar3 = bar3;
             return this;
         }
+        @CustomType.Setter
         public Builder bar30(@Nullable String bar30) {
             this.bar30 = bar30;
             return this;
         }
+        @CustomType.Setter
         public Builder bar31(@Nullable String bar31) {
             this.bar31 = bar31;
             return this;
         }
+        @CustomType.Setter
         public Builder bar32(@Nullable String bar32) {
             this.bar32 = bar32;
             return this;
         }
+        @CustomType.Setter
         public Builder bar33(@Nullable String bar33) {
             this.bar33 = bar33;
             return this;
         }
+        @CustomType.Setter
         public Builder bar34(@Nullable String bar34) {
             this.bar34 = bar34;
             return this;
         }
+        @CustomType.Setter
         public Builder bar35(@Nullable String bar35) {
             this.bar35 = bar35;
             return this;
         }
+        @CustomType.Setter
         public Builder bar36(@Nullable String bar36) {
             this.bar36 = bar36;
             return this;
         }
+        @CustomType.Setter
         public Builder bar37(@Nullable String bar37) {
             this.bar37 = bar37;
             return this;
         }
+        @CustomType.Setter
         public Builder bar38(@Nullable String bar38) {
             this.bar38 = bar38;
             return this;
         }
+        @CustomType.Setter
         public Builder bar39(@Nullable String bar39) {
             this.bar39 = bar39;
             return this;
         }
+        @CustomType.Setter
         public Builder bar4(@Nullable String bar4) {
             this.bar4 = bar4;
             return this;
         }
+        @CustomType.Setter
         public Builder bar40(@Nullable String bar40) {
             this.bar40 = bar40;
             return this;
         }
+        @CustomType.Setter
         public Builder bar41(@Nullable String bar41) {
             this.bar41 = bar41;
             return this;
         }
+        @CustomType.Setter
         public Builder bar42(@Nullable String bar42) {
             this.bar42 = bar42;
             return this;
         }
+        @CustomType.Setter
         public Builder bar43(@Nullable String bar43) {
             this.bar43 = bar43;
             return this;
         }
+        @CustomType.Setter
         public Builder bar44(@Nullable String bar44) {
             this.bar44 = bar44;
             return this;
         }
+        @CustomType.Setter
         public Builder bar45(@Nullable String bar45) {
             this.bar45 = bar45;
             return this;
         }
+        @CustomType.Setter
         public Builder bar46(@Nullable String bar46) {
             this.bar46 = bar46;
             return this;
         }
+        @CustomType.Setter
         public Builder bar47(@Nullable String bar47) {
             this.bar47 = bar47;
             return this;
         }
+        @CustomType.Setter
         public Builder bar48(@Nullable String bar48) {
             this.bar48 = bar48;
             return this;
         }
+        @CustomType.Setter
         public Builder bar49(@Nullable String bar49) {
             this.bar49 = bar49;
             return this;
         }
+        @CustomType.Setter
         public Builder bar5(@Nullable String bar5) {
             this.bar5 = bar5;
             return this;
         }
+        @CustomType.Setter
         public Builder bar50(@Nullable String bar50) {
             this.bar50 = bar50;
             return this;
         }
+        @CustomType.Setter
         public Builder bar51(@Nullable String bar51) {
             this.bar51 = bar51;
             return this;
         }
+        @CustomType.Setter
         public Builder bar52(@Nullable String bar52) {
             this.bar52 = bar52;
             return this;
         }
+        @CustomType.Setter
         public Builder bar53(@Nullable String bar53) {
             this.bar53 = bar53;
             return this;
         }
+        @CustomType.Setter
         public Builder bar54(@Nullable String bar54) {
             this.bar54 = bar54;
             return this;
         }
+        @CustomType.Setter
         public Builder bar55(@Nullable String bar55) {
             this.bar55 = bar55;
             return this;
         }
+        @CustomType.Setter
         public Builder bar56(@Nullable String bar56) {
             this.bar56 = bar56;
             return this;
         }
+        @CustomType.Setter
         public Builder bar57(@Nullable String bar57) {
             this.bar57 = bar57;
             return this;
         }
+        @CustomType.Setter
         public Builder bar58(@Nullable String bar58) {
             this.bar58 = bar58;
             return this;
         }
+        @CustomType.Setter
         public Builder bar59(@Nullable String bar59) {
             this.bar59 = bar59;
             return this;
         }
+        @CustomType.Setter
         public Builder bar6(@Nullable String bar6) {
             this.bar6 = bar6;
             return this;
         }
+        @CustomType.Setter
         public Builder bar60(@Nullable String bar60) {
             this.bar60 = bar60;
             return this;
         }
+        @CustomType.Setter
         public Builder bar61(@Nullable String bar61) {
             this.bar61 = bar61;
             return this;
         }
+        @CustomType.Setter
         public Builder bar62(@Nullable String bar62) {
             this.bar62 = bar62;
             return this;
         }
+        @CustomType.Setter
         public Builder bar63(@Nullable String bar63) {
             this.bar63 = bar63;
             return this;
         }
+        @CustomType.Setter
         public Builder bar64(@Nullable String bar64) {
             this.bar64 = bar64;
             return this;
         }
+        @CustomType.Setter
         public Builder bar65(@Nullable String bar65) {
             this.bar65 = bar65;
             return this;
         }
+        @CustomType.Setter
         public Builder bar66(@Nullable String bar66) {
             this.bar66 = bar66;
             return this;
         }
+        @CustomType.Setter
         public Builder bar67(@Nullable String bar67) {
             this.bar67 = bar67;
             return this;
         }
+        @CustomType.Setter
         public Builder bar68(@Nullable String bar68) {
             this.bar68 = bar68;
             return this;
         }
+        @CustomType.Setter
         public Builder bar69(@Nullable String bar69) {
             this.bar69 = bar69;
             return this;
         }
+        @CustomType.Setter
         public Builder bar7(@Nullable String bar7) {
             this.bar7 = bar7;
             return this;
         }
+        @CustomType.Setter
         public Builder bar70(@Nullable String bar70) {
             this.bar70 = bar70;
             return this;
         }
+        @CustomType.Setter
         public Builder bar71(@Nullable String bar71) {
             this.bar71 = bar71;
             return this;
         }
+        @CustomType.Setter
         public Builder bar72(@Nullable String bar72) {
             this.bar72 = bar72;
             return this;
         }
+        @CustomType.Setter
         public Builder bar73(@Nullable String bar73) {
             this.bar73 = bar73;
             return this;
         }
+        @CustomType.Setter
         public Builder bar74(@Nullable String bar74) {
             this.bar74 = bar74;
             return this;
         }
+        @CustomType.Setter
         public Builder bar75(@Nullable String bar75) {
             this.bar75 = bar75;
             return this;
         }
+        @CustomType.Setter
         public Builder bar76(@Nullable String bar76) {
             this.bar76 = bar76;
             return this;
         }
+        @CustomType.Setter
         public Builder bar77(@Nullable String bar77) {
             this.bar77 = bar77;
             return this;
         }
+        @CustomType.Setter
         public Builder bar78(@Nullable String bar78) {
             this.bar78 = bar78;
             return this;
         }
+        @CustomType.Setter
         public Builder bar79(@Nullable String bar79) {
             this.bar79 = bar79;
             return this;
         }
+        @CustomType.Setter
         public Builder bar8(@Nullable String bar8) {
             this.bar8 = bar8;
             return this;
         }
+        @CustomType.Setter
         public Builder bar80(@Nullable String bar80) {
             this.bar80 = bar80;
             return this;
         }
+        @CustomType.Setter
         public Builder bar81(@Nullable String bar81) {
             this.bar81 = bar81;
             return this;
         }
+        @CustomType.Setter
         public Builder bar82(@Nullable String bar82) {
             this.bar82 = bar82;
             return this;
         }
+        @CustomType.Setter
         public Builder bar83(@Nullable String bar83) {
             this.bar83 = bar83;
             return this;
         }
+        @CustomType.Setter
         public Builder bar84(@Nullable String bar84) {
             this.bar84 = bar84;
             return this;
         }
+        @CustomType.Setter
         public Builder bar85(@Nullable String bar85) {
             this.bar85 = bar85;
             return this;
         }
+        @CustomType.Setter
         public Builder bar86(@Nullable String bar86) {
             this.bar86 = bar86;
             return this;
         }
+        @CustomType.Setter
         public Builder bar87(@Nullable String bar87) {
             this.bar87 = bar87;
             return this;
         }
+        @CustomType.Setter
         public Builder bar88(@Nullable String bar88) {
             this.bar88 = bar88;
             return this;
         }
+        @CustomType.Setter
         public Builder bar89(@Nullable String bar89) {
             this.bar89 = bar89;
             return this;
         }
+        @CustomType.Setter
         public Builder bar9(@Nullable String bar9) {
             this.bar9 = bar9;
             return this;
         }
+        @CustomType.Setter
         public Builder bar90(@Nullable String bar90) {
             this.bar90 = bar90;
             return this;
         }
+        @CustomType.Setter
         public Builder bar91(@Nullable String bar91) {
             this.bar91 = bar91;
             return this;
         }
+        @CustomType.Setter
         public Builder bar92(@Nullable String bar92) {
             this.bar92 = bar92;
             return this;
         }
+        @CustomType.Setter
         public Builder bar93(@Nullable String bar93) {
             this.bar93 = bar93;
             return this;
         }
+        @CustomType.Setter
         public Builder bar94(@Nullable String bar94) {
             this.bar94 = bar94;
             return this;
         }
+        @CustomType.Setter
         public Builder bar95(@Nullable String bar95) {
             this.bar95 = bar95;
             return this;
         }
+        @CustomType.Setter
         public Builder bar96(@Nullable String bar96) {
             this.bar96 = bar96;
             return this;
         }
+        @CustomType.Setter
         public Builder bar97(@Nullable String bar97) {
             this.bar97 = bar97;
             return this;
         }
+        @CustomType.Setter
         public Builder bar98(@Nullable String bar98) {
             this.bar98 = bar98;
             return this;
         }
+        @CustomType.Setter
         public Builder bar99(@Nullable String bar99) {
             this.bar99 = bar99;
             return this;
-        }        public ACustomType build() {
-            final var built = new ACustomType();
-
-            built.bar1 = bar1;
-            built.bar10 = bar10;
-            built.bar100 = bar100;
-            built.bar101 = bar101;
-            built.bar102 = bar102;
-            built.bar103 = bar103;
-            built.bar104 = bar104;
-            built.bar105 = bar105;
-            built.bar106 = bar106;
-            built.bar107 = bar107;
-            built.bar108 = bar108;
-            built.bar109 = bar109;
-            built.bar11 = bar11;
-            built.bar110 = bar110;
-            built.bar111 = bar111;
-            built.bar112 = bar112;
-            built.bar113 = bar113;
-            built.bar114 = bar114;
-            built.bar115 = bar115;
-            built.bar116 = bar116;
-            built.bar117 = bar117;
-            built.bar118 = bar118;
-            built.bar119 = bar119;
-            built.bar12 = bar12;
-            built.bar120 = bar120;
-            built.bar121 = bar121;
-            built.bar122 = bar122;
-            built.bar123 = bar123;
-            built.bar124 = bar124;
-            built.bar125 = bar125;
-            built.bar126 = bar126;
-            built.bar127 = bar127;
-            built.bar128 = bar128;
-            built.bar129 = bar129;
-            built.bar13 = bar13;
-            built.bar130 = bar130;
-            built.bar131 = bar131;
-            built.bar132 = bar132;
-            built.bar133 = bar133;
-            built.bar134 = bar134;
-            built.bar135 = bar135;
-            built.bar136 = bar136;
-            built.bar137 = bar137;
-            built.bar138 = bar138;
-            built.bar139 = bar139;
-            built.bar14 = bar14;
-            built.bar140 = bar140;
-            built.bar141 = bar141;
-            built.bar142 = bar142;
-            built.bar143 = bar143;
-            built.bar144 = bar144;
-            built.bar145 = bar145;
-            built.bar146 = bar146;
-            built.bar147 = bar147;
-            built.bar148 = bar148;
-            built.bar149 = bar149;
-            built.bar15 = bar15;
-            built.bar150 = bar150;
-            built.bar151 = bar151;
-            built.bar152 = bar152;
-            built.bar153 = bar153;
-            built.bar154 = bar154;
-            built.bar155 = bar155;
-            built.bar156 = bar156;
-            built.bar157 = bar157;
-            built.bar158 = bar158;
-            built.bar159 = bar159;
-            built.bar16 = bar16;
-            built.bar160 = bar160;
-            built.bar161 = bar161;
-            built.bar162 = bar162;
-            built.bar163 = bar163;
-            built.bar164 = bar164;
-            built.bar165 = bar165;
-            built.bar166 = bar166;
-            built.bar167 = bar167;
-            built.bar168 = bar168;
-            built.bar169 = bar169;
-            built.bar17 = bar17;
-            built.bar170 = bar170;
-            built.bar171 = bar171;
-            built.bar172 = bar172;
-            built.bar173 = bar173;
-            built.bar174 = bar174;
-            built.bar175 = bar175;
-            built.bar176 = bar176;
-            built.bar177 = bar177;
-            built.bar178 = bar178;
-            built.bar179 = bar179;
-            built.bar18 = bar18;
-            built.bar180 = bar180;
-            built.bar181 = bar181;
-            built.bar182 = bar182;
-            built.bar183 = bar183;
-            built.bar184 = bar184;
-            built.bar185 = bar185;
-            built.bar186 = bar186;
-            built.bar187 = bar187;
-            built.bar188 = bar188;
-            built.bar189 = bar189;
-            built.bar19 = bar19;
-            built.bar190 = bar190;
-            built.bar191 = bar191;
-            built.bar192 = bar192;
-            built.bar193 = bar193;
-            built.bar194 = bar194;
-            built.bar195 = bar195;
-            built.bar196 = bar196;
-            built.bar197 = bar197;
-            built.bar198 = bar198;
-            built.bar199 = bar199;
-            built.bar2 = bar2;
-            built.bar20 = bar20;
-            built.bar200 = bar200;
-            built.bar201 = bar201;
-            built.bar202 = bar202;
-            built.bar203 = bar203;
-            built.bar204 = bar204;
-            built.bar205 = bar205;
-            built.bar206 = bar206;
-            built.bar207 = bar207;
-            built.bar208 = bar208;
-            built.bar209 = bar209;
-            built.bar21 = bar21;
-            built.bar210 = bar210;
-            built.bar211 = bar211;
-            built.bar212 = bar212;
-            built.bar213 = bar213;
-            built.bar214 = bar214;
-            built.bar215 = bar215;
-            built.bar216 = bar216;
-            built.bar217 = bar217;
-            built.bar218 = bar218;
-            built.bar219 = bar219;
-            built.bar22 = bar22;
-            built.bar220 = bar220;
-            built.bar221 = bar221;
-            built.bar222 = bar222;
-            built.bar223 = bar223;
-            built.bar224 = bar224;
-            built.bar225 = bar225;
-            built.bar226 = bar226;
-            built.bar227 = bar227;
-            built.bar228 = bar228;
-            built.bar229 = bar229;
-            built.bar23 = bar23;
-            built.bar230 = bar230;
-            built.bar231 = bar231;
-            built.bar232 = bar232;
-            built.bar233 = bar233;
-            built.bar234 = bar234;
-            built.bar235 = bar235;
-            built.bar236 = bar236;
-            built.bar237 = bar237;
-            built.bar238 = bar238;
-            built.bar239 = bar239;
-            built.bar24 = bar24;
-            built.bar240 = bar240;
-            built.bar241 = bar241;
-            built.bar242 = bar242;
-            built.bar243 = bar243;
-            built.bar244 = bar244;
-            built.bar245 = bar245;
-            built.bar246 = bar246;
-            built.bar247 = bar247;
-            built.bar248 = bar248;
-            built.bar249 = bar249;
-            built.bar25 = bar25;
-            built.bar250 = bar250;
-            built.bar251 = bar251;
-            built.bar252 = bar252;
-            built.bar253 = bar253;
-            built.bar254 = bar254;
-            built.bar255 = bar255;
-            built.bar256 = bar256;
-            built.bar26 = bar26;
-            built.bar27 = bar27;
-            built.bar28 = bar28;
-            built.bar29 = bar29;
-            built.bar3 = bar3;
-            built.bar30 = bar30;
-            built.bar31 = bar31;
-            built.bar32 = bar32;
-            built.bar33 = bar33;
-            built.bar34 = bar34;
-            built.bar35 = bar35;
-            built.bar36 = bar36;
-            built.bar37 = bar37;
-            built.bar38 = bar38;
-            built.bar39 = bar39;
-            built.bar4 = bar4;
-            built.bar40 = bar40;
-            built.bar41 = bar41;
-            built.bar42 = bar42;
-            built.bar43 = bar43;
-            built.bar44 = bar44;
-            built.bar45 = bar45;
-            built.bar46 = bar46;
-            built.bar47 = bar47;
-            built.bar48 = bar48;
-            built.bar49 = bar49;
-            built.bar5 = bar5;
-            built.bar50 = bar50;
-            built.bar51 = bar51;
-            built.bar52 = bar52;
-            built.bar53 = bar53;
-            built.bar54 = bar54;
-            built.bar55 = bar55;
-            built.bar56 = bar56;
-            built.bar57 = bar57;
-            built.bar58 = bar58;
-            built.bar59 = bar59;
-            built.bar6 = bar6;
-            built.bar60 = bar60;
-            built.bar61 = bar61;
-            built.bar62 = bar62;
-            built.bar63 = bar63;
-            built.bar64 = bar64;
-            built.bar65 = bar65;
-            built.bar66 = bar66;
-            built.bar67 = bar67;
-            built.bar68 = bar68;
-            built.bar69 = bar69;
-            built.bar7 = bar7;
-            built.bar70 = bar70;
-            built.bar71 = bar71;
-            built.bar72 = bar72;
-            built.bar73 = bar73;
-            built.bar74 = bar74;
-            built.bar75 = bar75;
-            built.bar76 = bar76;
-            built.bar77 = bar77;
-            built.bar78 = bar78;
-            built.bar79 = bar79;
-            built.bar8 = bar8;
-            built.bar80 = bar80;
-            built.bar81 = bar81;
-            built.bar82 = bar82;
-            built.bar83 = bar83;
-            built.bar84 = bar84;
-            built.bar85 = bar85;
-            built.bar86 = bar86;
-            built.bar87 = bar87;
-            built.bar88 = bar88;
-            built.bar89 = bar89;
-            built.bar9 = bar9;
-            built.bar90 = bar90;
-            built.bar91 = bar91;
-            built.bar92 = bar92;
-            built.bar93 = bar93;
-            built.bar94 = bar94;
-            built.bar95 = bar95;
-            built.bar96 = bar96;
-            built.bar97 = bar97;
-            built.bar98 = bar98;
-            built.bar99 = bar99;
-            return built;
+        }
+        @CustomType.Setter("default")
+        public Builder default_(@Nullable String default_) {
+            this.default_ = default_;
+            return this;
+        }
+        public ACustomType build() {
+            final var o = new ACustomType();
+            o.bar1 = bar1;
+            o.bar10 = bar10;
+            o.bar100 = bar100;
+            o.bar101 = bar101;
+            o.bar102 = bar102;
+            o.bar103 = bar103;
+            o.bar104 = bar104;
+            o.bar105 = bar105;
+            o.bar106 = bar106;
+            o.bar107 = bar107;
+            o.bar108 = bar108;
+            o.bar109 = bar109;
+            o.bar11 = bar11;
+            o.bar110 = bar110;
+            o.bar111 = bar111;
+            o.bar112 = bar112;
+            o.bar113 = bar113;
+            o.bar114 = bar114;
+            o.bar115 = bar115;
+            o.bar116 = bar116;
+            o.bar117 = bar117;
+            o.bar118 = bar118;
+            o.bar119 = bar119;
+            o.bar12 = bar12;
+            o.bar120 = bar120;
+            o.bar121 = bar121;
+            o.bar122 = bar122;
+            o.bar123 = bar123;
+            o.bar124 = bar124;
+            o.bar125 = bar125;
+            o.bar126 = bar126;
+            o.bar127 = bar127;
+            o.bar128 = bar128;
+            o.bar129 = bar129;
+            o.bar13 = bar13;
+            o.bar130 = bar130;
+            o.bar131 = bar131;
+            o.bar132 = bar132;
+            o.bar133 = bar133;
+            o.bar134 = bar134;
+            o.bar135 = bar135;
+            o.bar136 = bar136;
+            o.bar137 = bar137;
+            o.bar138 = bar138;
+            o.bar139 = bar139;
+            o.bar14 = bar14;
+            o.bar140 = bar140;
+            o.bar141 = bar141;
+            o.bar142 = bar142;
+            o.bar143 = bar143;
+            o.bar144 = bar144;
+            o.bar145 = bar145;
+            o.bar146 = bar146;
+            o.bar147 = bar147;
+            o.bar148 = bar148;
+            o.bar149 = bar149;
+            o.bar15 = bar15;
+            o.bar150 = bar150;
+            o.bar151 = bar151;
+            o.bar152 = bar152;
+            o.bar153 = bar153;
+            o.bar154 = bar154;
+            o.bar155 = bar155;
+            o.bar156 = bar156;
+            o.bar157 = bar157;
+            o.bar158 = bar158;
+            o.bar159 = bar159;
+            o.bar16 = bar16;
+            o.bar160 = bar160;
+            o.bar161 = bar161;
+            o.bar162 = bar162;
+            o.bar163 = bar163;
+            o.bar164 = bar164;
+            o.bar165 = bar165;
+            o.bar166 = bar166;
+            o.bar167 = bar167;
+            o.bar168 = bar168;
+            o.bar169 = bar169;
+            o.bar17 = bar17;
+            o.bar170 = bar170;
+            o.bar171 = bar171;
+            o.bar172 = bar172;
+            o.bar173 = bar173;
+            o.bar174 = bar174;
+            o.bar175 = bar175;
+            o.bar176 = bar176;
+            o.bar177 = bar177;
+            o.bar178 = bar178;
+            o.bar179 = bar179;
+            o.bar18 = bar18;
+            o.bar180 = bar180;
+            o.bar181 = bar181;
+            o.bar182 = bar182;
+            o.bar183 = bar183;
+            o.bar184 = bar184;
+            o.bar185 = bar185;
+            o.bar186 = bar186;
+            o.bar187 = bar187;
+            o.bar188 = bar188;
+            o.bar189 = bar189;
+            o.bar19 = bar19;
+            o.bar190 = bar190;
+            o.bar191 = bar191;
+            o.bar192 = bar192;
+            o.bar193 = bar193;
+            o.bar194 = bar194;
+            o.bar195 = bar195;
+            o.bar196 = bar196;
+            o.bar197 = bar197;
+            o.bar198 = bar198;
+            o.bar199 = bar199;
+            o.bar2 = bar2;
+            o.bar20 = bar20;
+            o.bar200 = bar200;
+            o.bar201 = bar201;
+            o.bar202 = bar202;
+            o.bar203 = bar203;
+            o.bar204 = bar204;
+            o.bar205 = bar205;
+            o.bar206 = bar206;
+            o.bar207 = bar207;
+            o.bar208 = bar208;
+            o.bar209 = bar209;
+            o.bar21 = bar21;
+            o.bar210 = bar210;
+            o.bar211 = bar211;
+            o.bar212 = bar212;
+            o.bar213 = bar213;
+            o.bar214 = bar214;
+            o.bar215 = bar215;
+            o.bar216 = bar216;
+            o.bar217 = bar217;
+            o.bar218 = bar218;
+            o.bar219 = bar219;
+            o.bar22 = bar22;
+            o.bar220 = bar220;
+            o.bar221 = bar221;
+            o.bar222 = bar222;
+            o.bar223 = bar223;
+            o.bar224 = bar224;
+            o.bar225 = bar225;
+            o.bar226 = bar226;
+            o.bar227 = bar227;
+            o.bar228 = bar228;
+            o.bar229 = bar229;
+            o.bar23 = bar23;
+            o.bar230 = bar230;
+            o.bar231 = bar231;
+            o.bar232 = bar232;
+            o.bar233 = bar233;
+            o.bar234 = bar234;
+            o.bar235 = bar235;
+            o.bar236 = bar236;
+            o.bar237 = bar237;
+            o.bar238 = bar238;
+            o.bar239 = bar239;
+            o.bar24 = bar24;
+            o.bar240 = bar240;
+            o.bar241 = bar241;
+            o.bar242 = bar242;
+            o.bar243 = bar243;
+            o.bar244 = bar244;
+            o.bar245 = bar245;
+            o.bar246 = bar246;
+            o.bar247 = bar247;
+            o.bar248 = bar248;
+            o.bar249 = bar249;
+            o.bar25 = bar25;
+            o.bar250 = bar250;
+            o.bar251 = bar251;
+            o.bar252 = bar252;
+            o.bar253 = bar253;
+            o.bar254 = bar254;
+            o.bar255 = bar255;
+            o.bar256 = bar256;
+            o.bar26 = bar26;
+            o.bar27 = bar27;
+            o.bar28 = bar28;
+            o.bar29 = bar29;
+            o.bar3 = bar3;
+            o.bar30 = bar30;
+            o.bar31 = bar31;
+            o.bar32 = bar32;
+            o.bar33 = bar33;
+            o.bar34 = bar34;
+            o.bar35 = bar35;
+            o.bar36 = bar36;
+            o.bar37 = bar37;
+            o.bar38 = bar38;
+            o.bar39 = bar39;
+            o.bar4 = bar4;
+            o.bar40 = bar40;
+            o.bar41 = bar41;
+            o.bar42 = bar42;
+            o.bar43 = bar43;
+            o.bar44 = bar44;
+            o.bar45 = bar45;
+            o.bar46 = bar46;
+            o.bar47 = bar47;
+            o.bar48 = bar48;
+            o.bar49 = bar49;
+            o.bar5 = bar5;
+            o.bar50 = bar50;
+            o.bar51 = bar51;
+            o.bar52 = bar52;
+            o.bar53 = bar53;
+            o.bar54 = bar54;
+            o.bar55 = bar55;
+            o.bar56 = bar56;
+            o.bar57 = bar57;
+            o.bar58 = bar58;
+            o.bar59 = bar59;
+            o.bar6 = bar6;
+            o.bar60 = bar60;
+            o.bar61 = bar61;
+            o.bar62 = bar62;
+            o.bar63 = bar63;
+            o.bar64 = bar64;
+            o.bar65 = bar65;
+            o.bar66 = bar66;
+            o.bar67 = bar67;
+            o.bar68 = bar68;
+            o.bar69 = bar69;
+            o.bar7 = bar7;
+            o.bar70 = bar70;
+            o.bar71 = bar71;
+            o.bar72 = bar72;
+            o.bar73 = bar73;
+            o.bar74 = bar74;
+            o.bar75 = bar75;
+            o.bar76 = bar76;
+            o.bar77 = bar77;
+            o.bar78 = bar78;
+            o.bar79 = bar79;
+            o.bar8 = bar8;
+            o.bar80 = bar80;
+            o.bar81 = bar81;
+            o.bar82 = bar82;
+            o.bar83 = bar83;
+            o.bar84 = bar84;
+            o.bar85 = bar85;
+            o.bar86 = bar86;
+            o.bar87 = bar87;
+            o.bar88 = bar88;
+            o.bar89 = bar89;
+            o.bar9 = bar9;
+            o.bar90 = bar90;
+            o.bar91 = bar91;
+            o.bar92 = bar92;
+            o.bar93 = bar93;
+            o.bar94 = bar94;
+            o.bar95 = bar95;
+            o.bar96 = bar96;
+            o.bar97 = bar97;
+            o.bar98 = bar98;
+            o.bar99 = bar99;
+            o.default_ = default_;
+            return o;
         }
     }
 }
