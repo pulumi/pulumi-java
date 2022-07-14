@@ -1807,6 +1807,13 @@ public final class ACustomTypeArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.bar99);
     }
 
+    @Import(name="default")
+    private @Nullable Output<String> default_;
+
+    public Optional<Output<String>> default_() {
+        return Optional.ofNullable(this.default_);
+    }
+
     private ACustomTypeArgs() {}
 
     private ACustomTypeArgs(ACustomTypeArgs $) {
@@ -2066,6 +2073,7 @@ public final class ACustomTypeArgs extends com.pulumi.resources.ResourceArgs {
         this.bar97 = $.bar97;
         this.bar98 = $.bar98;
         this.bar99 = $.bar99;
+        this.default_ = $.default_;
     }
 
     public static Builder builder() {
@@ -4388,6 +4396,15 @@ public final class ACustomTypeArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder bar99(String bar99) {
             return bar99(Output.of(bar99));
+        }
+
+        public Builder default_(@Nullable Output<String> default_) {
+            $.default_ = default_;
+            return this;
+        }
+
+        public Builder default_(String default_) {
+            return default_(Output.of(default_));
         }
 
         public ACustomTypeArgs build() {

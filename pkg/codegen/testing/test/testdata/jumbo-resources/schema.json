@@ -773,6 +773,9 @@
         },
         "bar256": {
           "type": "string"
+        },
+        "default": {
+          "type": "string"
         }
       },
       "type": "object"
