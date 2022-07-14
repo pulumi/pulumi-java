@@ -15,13 +15,9 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
      * @return The skip token.
      * 
      */
-    private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
-    @CustomType.Constructor
-    private ListIntegrationAccountKeyVaultKeysResult(@CustomType.Parameter("skipToken") @Nullable String skipToken) {
-        this.skipToken = skipToken;
-    }
-
+    private ListIntegrationAccountKeyVaultKeysResult() {}
     /**
      * @return The skip token.
      * 
@@ -37,24 +33,24 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
     public static Builder builder(ListIntegrationAccountKeyVaultKeysResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String skipToken;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(ListIntegrationAccountKeyVaultKeysResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.skipToken = defaults.skipToken;
         }
 
+        @CustomType.Setter
         public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
-        }        public ListIntegrationAccountKeyVaultKeysResult build() {
-            return new ListIntegrationAccountKeyVaultKeysResult(skipToken);
+        }
+        public ListIntegrationAccountKeyVaultKeysResult build() {
+            final var o = new ListIntegrationAccountKeyVaultKeysResult();
+            o.skipToken = skipToken;
+            return o;
         }
     }
 }

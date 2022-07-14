@@ -15,13 +15,9 @@ public final class IndexingPolicyResponse {
      * @return List of composite path list
      * 
      */
-    private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
+    private @Nullable List<List<CompositePathResponse>> compositeIndexes;
 
-    @CustomType.Constructor
-    private IndexingPolicyResponse(@CustomType.Parameter("compositeIndexes") @Nullable List<List<CompositePathResponse>> compositeIndexes) {
-        this.compositeIndexes = compositeIndexes;
-    }
-
+    private IndexingPolicyResponse() {}
     /**
      * @return List of composite path list
      * 
@@ -37,24 +33,24 @@ public final class IndexingPolicyResponse {
     public static Builder builder(IndexingPolicyResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable List<List<CompositePathResponse>> compositeIndexes;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(IndexingPolicyResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.compositeIndexes = defaults.compositeIndexes;
         }
 
+        @CustomType.Setter
         public Builder compositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
             this.compositeIndexes = compositeIndexes;
             return this;
-        }        public IndexingPolicyResponse build() {
-            return new IndexingPolicyResponse(compositeIndexes);
+        }
+        public IndexingPolicyResponse build() {
+            final var o = new IndexingPolicyResponse();
+            o.compositeIndexes = compositeIndexes;
+            return o;
         }
     }
 }

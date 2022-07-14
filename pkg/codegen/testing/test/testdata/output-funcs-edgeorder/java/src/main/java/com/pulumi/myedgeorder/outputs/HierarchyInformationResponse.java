@@ -15,35 +15,24 @@ public final class HierarchyInformationResponse {
      * @return Represents configuration name that uniquely identifies configuration
      * 
      */
-    private final @Nullable String configurationName;
+    private @Nullable String configurationName;
     /**
      * @return Represents product family name that uniquely identifies product family
      * 
      */
-    private final @Nullable String productFamilyName;
+    private @Nullable String productFamilyName;
     /**
      * @return Represents product line name that uniquely identifies product line
      * 
      */
-    private final @Nullable String productLineName;
+    private @Nullable String productLineName;
     /**
      * @return Represents product name that uniquely identifies product
      * 
      */
-    private final @Nullable String productName;
+    private @Nullable String productName;
 
-    @CustomType.Constructor
-    private HierarchyInformationResponse(
-        @CustomType.Parameter("configurationName") @Nullable String configurationName,
-        @CustomType.Parameter("productFamilyName") @Nullable String productFamilyName,
-        @CustomType.Parameter("productLineName") @Nullable String productLineName,
-        @CustomType.Parameter("productName") @Nullable String productName) {
-        this.configurationName = configurationName;
-        this.productFamilyName = productFamilyName;
-        this.productLineName = productLineName;
-        this.productName = productName;
-    }
-
+    private HierarchyInformationResponse() {}
     /**
      * @return Represents configuration name that uniquely identifies configuration
      * 
@@ -80,17 +69,13 @@ public final class HierarchyInformationResponse {
     public static Builder builder(HierarchyInformationResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String configurationName;
         private @Nullable String productFamilyName;
         private @Nullable String productLineName;
         private @Nullable String productName;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(HierarchyInformationResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.configurationName = defaults.configurationName;
@@ -99,23 +84,33 @@ public final class HierarchyInformationResponse {
     	      this.productName = defaults.productName;
         }
 
+        @CustomType.Setter
         public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = configurationName;
             return this;
         }
+        @CustomType.Setter
         public Builder productFamilyName(@Nullable String productFamilyName) {
             this.productFamilyName = productFamilyName;
             return this;
         }
+        @CustomType.Setter
         public Builder productLineName(@Nullable String productLineName) {
             this.productLineName = productLineName;
             return this;
         }
+        @CustomType.Setter
         public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
-        }        public HierarchyInformationResponse build() {
-            return new HierarchyInformationResponse(configurationName, productFamilyName, productLineName, productName);
+        }
+        public HierarchyInformationResponse build() {
+            final var o = new HierarchyInformationResponse();
+            o.configurationName = configurationName;
+            o.productFamilyName = productFamilyName;
+            o.productLineName = productLineName;
+            o.productName = productName;
+            return o;
         }
     }
 }

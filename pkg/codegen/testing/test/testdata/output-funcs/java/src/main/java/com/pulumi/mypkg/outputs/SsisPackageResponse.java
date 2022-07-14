@@ -18,64 +18,45 @@ public final class SsisPackageResponse {
      * @return Metadata description.
      * 
      */
-    private final @Nullable String description;
+    private @Nullable String description;
     /**
      * @return Folder id which contains package.
      * 
      */
-    private final @Nullable Double folderId;
+    private @Nullable Double folderId;
     /**
      * @return Metadata id.
      * 
      */
-    private final @Nullable Double id;
+    private @Nullable Double id;
     /**
      * @return Metadata name.
      * 
      */
-    private final @Nullable String name;
+    private @Nullable String name;
     /**
      * @return Parameters in package
      * 
      */
-    private final @Nullable List<SsisParameterResponse> parameters;
+    private @Nullable List<SsisParameterResponse> parameters;
     /**
      * @return Project id which contains package.
      * 
      */
-    private final @Nullable Double projectId;
+    private @Nullable Double projectId;
     /**
      * @return Project version which contains package.
      * 
      */
-    private final @Nullable Double projectVersion;
+    private @Nullable Double projectVersion;
     /**
      * @return The type of SSIS object metadata.
      * Expected value is &#39;Package&#39;.
      * 
      */
-    private final String type;
+    private String type;
 
-    @CustomType.Constructor
-    private SsisPackageResponse(
-        @CustomType.Parameter("description") @Nullable String description,
-        @CustomType.Parameter("folderId") @Nullable Double folderId,
-        @CustomType.Parameter("id") @Nullable Double id,
-        @CustomType.Parameter("name") @Nullable String name,
-        @CustomType.Parameter("parameters") @Nullable List<SsisParameterResponse> parameters,
-        @CustomType.Parameter("projectId") @Nullable Double projectId,
-        @CustomType.Parameter("projectVersion") @Nullable Double projectVersion,
-        @CustomType.Parameter("type") String type) {
-        this.description = description;
-        this.folderId = folderId;
-        this.id = id;
-        this.name = name;
-        this.parameters = parameters;
-        this.projectId = projectId;
-        this.projectVersion = projectVersion;
-        this.type = type;
-    }
-
+    private SsisPackageResponse() {}
     /**
      * @return Metadata description.
      * 
@@ -141,7 +122,7 @@ public final class SsisPackageResponse {
     public static Builder builder(SsisPackageResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String description;
         private @Nullable Double folderId;
@@ -151,11 +132,7 @@ public final class SsisPackageResponse {
         private @Nullable Double projectId;
         private @Nullable Double projectVersion;
         private String type;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(SsisPackageResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
@@ -168,22 +145,27 @@ public final class SsisPackageResponse {
     	      this.type = defaults.type;
         }
 
+        @CustomType.Setter
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
+        @CustomType.Setter
         public Builder folderId(@Nullable Double folderId) {
             this.folderId = folderId;
             return this;
         }
+        @CustomType.Setter
         public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
+        @CustomType.Setter
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
         public Builder parameters(@Nullable List<SsisParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
@@ -191,19 +173,32 @@ public final class SsisPackageResponse {
         public Builder parameters(SsisParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
+        @CustomType.Setter
         public Builder projectId(@Nullable Double projectId) {
             this.projectId = projectId;
             return this;
         }
+        @CustomType.Setter
         public Builder projectVersion(@Nullable Double projectVersion) {
             this.projectVersion = projectVersion;
             return this;
         }
+        @CustomType.Setter
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }        public SsisPackageResponse build() {
-            return new SsisPackageResponse(description, folderId, id, name, parameters, projectId, projectVersion, type);
+        }
+        public SsisPackageResponse build() {
+            final var o = new SsisPackageResponse();
+            o.description = description;
+            o.folderId = folderId;
+            o.id = id;
+            o.name = name;
+            o.parameters = parameters;
+            o.projectId = projectId;
+            o.projectVersion = projectVersion;
+            o.type = type;
+            return o;
         }
     }
 }

@@ -21,21 +21,14 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
      * @return The link to the next page of results, if any remaining results exist.
      * 
      */
-    private final @Nullable String nextLink;
+    private @Nullable String nextLink;
     /**
      * @return List of SSIS object metadata.
      * 
      */
-    private final @Nullable List<Object> value;
+    private @Nullable List<Object> value;
 
-    @CustomType.Constructor
-    private GetIntegrationRuntimeObjectMetadatumResult(
-        @CustomType.Parameter("nextLink") @Nullable String nextLink,
-        @CustomType.Parameter("value") @Nullable List<Object> value) {
-        this.nextLink = nextLink;
-        this.value = value;
-    }
-
+    private GetIntegrationRuntimeObjectMetadatumResult() {}
     /**
      * @return The link to the next page of results, if any remaining results exist.
      * 
@@ -58,33 +51,35 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
     public static Builder builder(GetIntegrationRuntimeObjectMetadatumResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String nextLink;
         private @Nullable List<Object> value;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(GetIntegrationRuntimeObjectMetadatumResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.nextLink = defaults.nextLink;
     	      this.value = defaults.value;
         }
 
+        @CustomType.Setter
         public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
+        @CustomType.Setter
         public Builder value(@Nullable List<Object> value) {
             this.value = value;
             return this;
         }
         public Builder value(Object... value) {
             return value(List.of(value));
-        }        public GetIntegrationRuntimeObjectMetadatumResult build() {
-            return new GetIntegrationRuntimeObjectMetadatumResult(nextLink, value);
+        }
+        public GetIntegrationRuntimeObjectMetadatumResult build() {
+            final var o = new GetIntegrationRuntimeObjectMetadatumResult();
+            o.nextLink = nextLink;
+            o.value = value;
+            return o;
         }
     }
 }

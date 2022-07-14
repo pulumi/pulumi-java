@@ -17,56 +17,39 @@ public final class SsisVariableResponse {
      * @return Variable type.
      * 
      */
-    private final @Nullable String dataType;
+    private @Nullable String dataType;
     /**
      * @return Variable description.
      * 
      */
-    private final @Nullable String description;
+    private @Nullable String description;
     /**
      * @return Variable id.
      * 
      */
-    private final @Nullable Double id;
+    private @Nullable Double id;
     /**
      * @return Variable name.
      * 
      */
-    private final @Nullable String name;
+    private @Nullable String name;
     /**
      * @return Whether variable is sensitive.
      * 
      */
-    private final @Nullable Boolean sensitive;
+    private @Nullable Boolean sensitive;
     /**
      * @return Variable sensitive value.
      * 
      */
-    private final @Nullable String sensitiveValue;
+    private @Nullable String sensitiveValue;
     /**
      * @return Variable value.
      * 
      */
-    private final @Nullable String value;
+    private @Nullable String value;
 
-    @CustomType.Constructor
-    private SsisVariableResponse(
-        @CustomType.Parameter("dataType") @Nullable String dataType,
-        @CustomType.Parameter("description") @Nullable String description,
-        @CustomType.Parameter("id") @Nullable Double id,
-        @CustomType.Parameter("name") @Nullable String name,
-        @CustomType.Parameter("sensitive") @Nullable Boolean sensitive,
-        @CustomType.Parameter("sensitiveValue") @Nullable String sensitiveValue,
-        @CustomType.Parameter("value") @Nullable String value) {
-        this.dataType = dataType;
-        this.description = description;
-        this.id = id;
-        this.name = name;
-        this.sensitive = sensitive;
-        this.sensitiveValue = sensitiveValue;
-        this.value = value;
-    }
-
+    private SsisVariableResponse() {}
     /**
      * @return Variable type.
      * 
@@ -124,7 +107,7 @@ public final class SsisVariableResponse {
     public static Builder builder(SsisVariableResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String dataType;
         private @Nullable String description;
@@ -133,11 +116,7 @@ public final class SsisVariableResponse {
         private @Nullable Boolean sensitive;
         private @Nullable String sensitiveValue;
         private @Nullable String value;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(SsisVariableResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.dataType = defaults.dataType;
@@ -149,35 +128,51 @@ public final class SsisVariableResponse {
     	      this.value = defaults.value;
         }
 
+        @CustomType.Setter
         public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
+        @CustomType.Setter
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
+        @CustomType.Setter
         public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
+        @CustomType.Setter
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
         public Builder sensitive(@Nullable Boolean sensitive) {
             this.sensitive = sensitive;
             return this;
         }
+        @CustomType.Setter
         public Builder sensitiveValue(@Nullable String sensitiveValue) {
             this.sensitiveValue = sensitiveValue;
             return this;
         }
+        @CustomType.Setter
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;
-        }        public SsisVariableResponse build() {
-            return new SsisVariableResponse(dataType, description, id, name, sensitive, sensitiveValue, value);
+        }
+        public SsisVariableResponse build() {
+            final var o = new SsisVariableResponse();
+            o.dataType = dataType;
+            o.description = description;
+            o.id = id;
+            o.name = name;
+            o.sensitive = sensitive;
+            o.sensitiveValue = sensitiveValue;
+            o.value = value;
+            return o;
         }
     }
 }

@@ -11,13 +11,9 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OutputOnlyObjectType {
-    private final @Nullable String foo;
+    private @Nullable String foo;
 
-    @CustomType.Constructor
-    private OutputOnlyObjectType(@CustomType.Parameter("foo") @Nullable String foo) {
-        this.foo = foo;
-    }
-
+    private OutputOnlyObjectType() {}
     public Optional<String> foo() {
         return Optional.ofNullable(this.foo);
     }
@@ -29,24 +25,24 @@ public final class OutputOnlyObjectType {
     public static Builder builder(OutputOnlyObjectType defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String foo;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(OutputOnlyObjectType defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.foo = defaults.foo;
         }
 
+        @CustomType.Setter
         public Builder foo(@Nullable String foo) {
             this.foo = foo;
             return this;
-        }        public OutputOnlyObjectType build() {
-            return new OutputOnlyObjectType(foo);
+        }
+        public OutputOnlyObjectType build() {
+            final var o = new OutputOnlyObjectType();
+            o.foo = foo;
+            return o;
         }
     }
 }

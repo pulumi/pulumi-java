@@ -13,21 +13,14 @@ public final class LinkResponse {
      * @return Type of link
      * 
      */
-    private final String linkType;
+    private String linkType;
     /**
      * @return Url of the link
      * 
      */
-    private final String linkUrl;
+    private String linkUrl;
 
-    @CustomType.Constructor
-    private LinkResponse(
-        @CustomType.Parameter("linkType") String linkType,
-        @CustomType.Parameter("linkUrl") String linkUrl) {
-        this.linkType = linkType;
-        this.linkUrl = linkUrl;
-    }
-
+    private LinkResponse() {}
     /**
      * @return Type of link
      * 
@@ -50,30 +43,32 @@ public final class LinkResponse {
     public static Builder builder(LinkResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String linkType;
         private String linkUrl;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(LinkResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.linkType = defaults.linkType;
     	      this.linkUrl = defaults.linkUrl;
         }
 
+        @CustomType.Setter
         public Builder linkType(String linkType) {
             this.linkType = Objects.requireNonNull(linkType);
             return this;
         }
+        @CustomType.Setter
         public Builder linkUrl(String linkUrl) {
             this.linkUrl = Objects.requireNonNull(linkUrl);
             return this;
-        }        public LinkResponse build() {
-            return new LinkResponse(linkType, linkUrl);
+        }
+        public LinkResponse build() {
+            final var o = new LinkResponse();
+            o.linkType = linkType;
+            o.linkUrl = linkUrl;
+            return o;
         }
     }
 }

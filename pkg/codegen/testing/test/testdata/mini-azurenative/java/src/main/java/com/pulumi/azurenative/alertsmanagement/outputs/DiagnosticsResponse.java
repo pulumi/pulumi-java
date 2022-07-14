@@ -8,10 +8,7 @@ import java.util.Objects;
 
 @CustomType
 public final class DiagnosticsResponse {
-    @CustomType.Constructor
-    private DiagnosticsResponse() {
-    }
-
+    private DiagnosticsResponse() {}
 
     public static Builder builder() {
         return new Builder();
@@ -20,18 +17,16 @@ public final class DiagnosticsResponse {
     public static Builder builder(DiagnosticsResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(DiagnosticsResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
+
         public DiagnosticsResponse build() {
-            return new DiagnosticsResponse();
+            final var o = new DiagnosticsResponse();
+            return o;
         }
     }
 }

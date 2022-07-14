@@ -13,20 +13,11 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Laser {
-    private final @Nullable Cat animal;
-    private final @Nullable Boolean batteries;
-    private final @Nullable Double light;
+    private @Nullable Cat animal;
+    private @Nullable Boolean batteries;
+    private @Nullable Double light;
 
-    @CustomType.Constructor
-    private Laser(
-        @CustomType.Parameter("animal") @Nullable Cat animal,
-        @CustomType.Parameter("batteries") @Nullable Boolean batteries,
-        @CustomType.Parameter("light") @Nullable Double light) {
-        this.animal = animal;
-        this.batteries = batteries;
-        this.light = light;
-    }
-
+    private Laser() {}
     public Optional<Cat> animal() {
         return Optional.ofNullable(this.animal);
     }
@@ -44,16 +35,12 @@ public final class Laser {
     public static Builder builder(Laser defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable Cat animal;
         private @Nullable Boolean batteries;
         private @Nullable Double light;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(Laser defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.animal = defaults.animal;
@@ -61,19 +48,27 @@ public final class Laser {
     	      this.light = defaults.light;
         }
 
+        @CustomType.Setter
         public Builder animal(@Nullable Cat animal) {
             this.animal = animal;
             return this;
         }
+        @CustomType.Setter
         public Builder batteries(@Nullable Boolean batteries) {
             this.batteries = batteries;
             return this;
         }
+        @CustomType.Setter
         public Builder light(@Nullable Double light) {
             this.light = light;
             return this;
-        }        public Laser build() {
-            return new Laser(animal, batteries, light);
+        }
+        public Laser build() {
+            final var o = new Laser();
+            o.animal = animal;
+            o.batteries = batteries;
+            o.light = light;
+            return o;
         }
     }
 }

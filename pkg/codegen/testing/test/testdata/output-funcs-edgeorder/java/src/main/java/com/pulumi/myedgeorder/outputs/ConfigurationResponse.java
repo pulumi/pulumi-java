@@ -22,70 +22,49 @@ public final class ConfigurationResponse {
      * @return Availability information of the product system.
      * 
      */
-    private final AvailabilityInformationResponse availabilityInformation;
+    private AvailabilityInformationResponse availabilityInformation;
     /**
      * @return Cost information for the product system.
      * 
      */
-    private final CostInformationResponse costInformation;
+    private CostInformationResponse costInformation;
     /**
      * @return Description related to the product system.
      * 
      */
-    private final DescriptionResponse description;
+    private DescriptionResponse description;
     /**
      * @return Dimensions of the configuration
      * 
      */
-    private final DimensionsResponse dimensions;
+    private DimensionsResponse dimensions;
     /**
      * @return Display Name for the product system.
      * 
      */
-    private final String displayName;
+    private String displayName;
     /**
      * @return list of filters supported for a product
      * 
      */
-    private final List<FilterablePropertyResponse> filterableProperties;
+    private List<FilterablePropertyResponse> filterableProperties;
     /**
      * @return Hierarchy information of a product.
      * 
      */
-    private final HierarchyInformationResponse hierarchyInformation;
+    private HierarchyInformationResponse hierarchyInformation;
     /**
      * @return Image information for the product system.
      * 
      */
-    private final List<ImageInformationResponse> imageInformation;
+    private List<ImageInformationResponse> imageInformation;
     /**
      * @return Specifications of the configuration
      * 
      */
-    private final List<SpecificationResponse> specifications;
+    private List<SpecificationResponse> specifications;
 
-    @CustomType.Constructor
-    private ConfigurationResponse(
-        @CustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
-        @CustomType.Parameter("costInformation") CostInformationResponse costInformation,
-        @CustomType.Parameter("description") DescriptionResponse description,
-        @CustomType.Parameter("dimensions") DimensionsResponse dimensions,
-        @CustomType.Parameter("displayName") String displayName,
-        @CustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
-        @CustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
-        @CustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
-        @CustomType.Parameter("specifications") List<SpecificationResponse> specifications) {
-        this.availabilityInformation = availabilityInformation;
-        this.costInformation = costInformation;
-        this.description = description;
-        this.dimensions = dimensions;
-        this.displayName = displayName;
-        this.filterableProperties = filterableProperties;
-        this.hierarchyInformation = hierarchyInformation;
-        this.imageInformation = imageInformation;
-        this.specifications = specifications;
-    }
-
+    private ConfigurationResponse() {}
     /**
      * @return Availability information of the product system.
      * 
@@ -157,7 +136,7 @@ public final class ConfigurationResponse {
     public static Builder builder(ConfigurationResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private AvailabilityInformationResponse availabilityInformation;
         private CostInformationResponse costInformation;
@@ -168,11 +147,7 @@ public final class ConfigurationResponse {
         private HierarchyInformationResponse hierarchyInformation;
         private List<ImageInformationResponse> imageInformation;
         private List<SpecificationResponse> specifications;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(ConfigurationResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.availabilityInformation = defaults.availabilityInformation;
@@ -186,26 +161,32 @@ public final class ConfigurationResponse {
     	      this.specifications = defaults.specifications;
         }
 
+        @CustomType.Setter
         public Builder availabilityInformation(AvailabilityInformationResponse availabilityInformation) {
             this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
             return this;
         }
+        @CustomType.Setter
         public Builder costInformation(CostInformationResponse costInformation) {
             this.costInformation = Objects.requireNonNull(costInformation);
             return this;
         }
+        @CustomType.Setter
         public Builder description(DescriptionResponse description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
+        @CustomType.Setter
         public Builder dimensions(DimensionsResponse dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
+        @CustomType.Setter
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
+        @CustomType.Setter
         public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
             this.filterableProperties = Objects.requireNonNull(filterableProperties);
             return this;
@@ -213,10 +194,12 @@ public final class ConfigurationResponse {
         public Builder filterableProperties(FilterablePropertyResponse... filterableProperties) {
             return filterableProperties(List.of(filterableProperties));
         }
+        @CustomType.Setter
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
+        @CustomType.Setter
         public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
             this.imageInformation = Objects.requireNonNull(imageInformation);
             return this;
@@ -224,14 +207,26 @@ public final class ConfigurationResponse {
         public Builder imageInformation(ImageInformationResponse... imageInformation) {
             return imageInformation(List.of(imageInformation));
         }
+        @CustomType.Setter
         public Builder specifications(List<SpecificationResponse> specifications) {
             this.specifications = Objects.requireNonNull(specifications);
             return this;
         }
         public Builder specifications(SpecificationResponse... specifications) {
             return specifications(List.of(specifications));
-        }        public ConfigurationResponse build() {
-            return new ConfigurationResponse(availabilityInformation, costInformation, description, dimensions, displayName, filterableProperties, hierarchyInformation, imageInformation, specifications);
+        }
+        public ConfigurationResponse build() {
+            final var o = new ConfigurationResponse();
+            o.availabilityInformation = availabilityInformation;
+            o.costInformation = costInformation;
+            o.description = description;
+            o.dimensions = dimensions;
+            o.displayName = displayName;
+            o.filterableProperties = filterableProperties;
+            o.hierarchyInformation = hierarchyInformation;
+            o.imageInformation = imageInformation;
+            o.specifications = specifications;
+            return o;
         }
     }
 }

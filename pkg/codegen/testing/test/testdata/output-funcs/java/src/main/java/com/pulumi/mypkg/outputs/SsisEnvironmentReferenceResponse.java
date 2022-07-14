@@ -16,35 +16,24 @@ public final class SsisEnvironmentReferenceResponse {
      * @return Environment folder name.
      * 
      */
-    private final @Nullable String environmentFolderName;
+    private @Nullable String environmentFolderName;
     /**
      * @return Environment name.
      * 
      */
-    private final @Nullable String environmentName;
+    private @Nullable String environmentName;
     /**
      * @return Environment reference id.
      * 
      */
-    private final @Nullable Double id;
+    private @Nullable Double id;
     /**
      * @return Reference type
      * 
      */
-    private final @Nullable String referenceType;
+    private @Nullable String referenceType;
 
-    @CustomType.Constructor
-    private SsisEnvironmentReferenceResponse(
-        @CustomType.Parameter("environmentFolderName") @Nullable String environmentFolderName,
-        @CustomType.Parameter("environmentName") @Nullable String environmentName,
-        @CustomType.Parameter("id") @Nullable Double id,
-        @CustomType.Parameter("referenceType") @Nullable String referenceType) {
-        this.environmentFolderName = environmentFolderName;
-        this.environmentName = environmentName;
-        this.id = id;
-        this.referenceType = referenceType;
-    }
-
+    private SsisEnvironmentReferenceResponse() {}
     /**
      * @return Environment folder name.
      * 
@@ -81,17 +70,13 @@ public final class SsisEnvironmentReferenceResponse {
     public static Builder builder(SsisEnvironmentReferenceResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String environmentFolderName;
         private @Nullable String environmentName;
         private @Nullable Double id;
         private @Nullable String referenceType;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(SsisEnvironmentReferenceResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.environmentFolderName = defaults.environmentFolderName;
@@ -100,23 +85,33 @@ public final class SsisEnvironmentReferenceResponse {
     	      this.referenceType = defaults.referenceType;
         }
 
+        @CustomType.Setter
         public Builder environmentFolderName(@Nullable String environmentFolderName) {
             this.environmentFolderName = environmentFolderName;
             return this;
         }
+        @CustomType.Setter
         public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = environmentName;
             return this;
         }
+        @CustomType.Setter
         public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
+        @CustomType.Setter
         public Builder referenceType(@Nullable String referenceType) {
             this.referenceType = referenceType;
             return this;
-        }        public SsisEnvironmentReferenceResponse build() {
-            return new SsisEnvironmentReferenceResponse(environmentFolderName, environmentName, id, referenceType);
+        }
+        public SsisEnvironmentReferenceResponse build() {
+            final var o = new SsisEnvironmentReferenceResponse();
+            o.environmentFolderName = environmentFolderName;
+            o.environmentName = environmentName;
+            o.id = id;
+            o.referenceType = referenceType;
+            return o;
         }
     }
 }

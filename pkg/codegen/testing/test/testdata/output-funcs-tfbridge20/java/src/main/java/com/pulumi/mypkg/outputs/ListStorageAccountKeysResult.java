@@ -14,13 +14,9 @@ public final class ListStorageAccountKeysResult {
      * @return Gets the list of storage account keys and their properties for the specified storage account.
      * 
      */
-    private final List<StorageAccountKeyResponse> keys;
+    private List<StorageAccountKeyResponse> keys;
 
-    @CustomType.Constructor
-    private ListStorageAccountKeysResult(@CustomType.Parameter("keys") List<StorageAccountKeyResponse> keys) {
-        this.keys = keys;
-    }
-
+    private ListStorageAccountKeysResult() {}
     /**
      * @return Gets the list of storage account keys and their properties for the specified storage account.
      * 
@@ -36,27 +32,27 @@ public final class ListStorageAccountKeysResult {
     public static Builder builder(ListStorageAccountKeysResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private List<StorageAccountKeyResponse> keys;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(ListStorageAccountKeysResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.keys = defaults.keys;
         }
 
+        @CustomType.Setter
         public Builder keys(List<StorageAccountKeyResponse> keys) {
             this.keys = Objects.requireNonNull(keys);
             return this;
         }
         public Builder keys(StorageAccountKeyResponse... keys) {
             return keys(List.of(keys));
-        }        public ListStorageAccountKeysResult build() {
-            return new ListStorageAccountKeysResult(keys);
+        }
+        public ListStorageAccountKeysResult build() {
+            final var o = new ListStorageAccountKeysResult();
+            o.keys = keys;
+            return o;
         }
     }
 }

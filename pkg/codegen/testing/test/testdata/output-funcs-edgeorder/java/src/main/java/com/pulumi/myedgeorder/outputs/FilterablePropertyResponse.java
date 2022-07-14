@@ -14,21 +14,14 @@ public final class FilterablePropertyResponse {
      * @return Values to be filtered.
      * 
      */
-    private final List<String> supportedValues;
+    private List<String> supportedValues;
     /**
      * @return Type of product filter.
      * 
      */
-    private final String type;
+    private String type;
 
-    @CustomType.Constructor
-    private FilterablePropertyResponse(
-        @CustomType.Parameter("supportedValues") List<String> supportedValues,
-        @CustomType.Parameter("type") String type) {
-        this.supportedValues = supportedValues;
-        this.type = type;
-    }
-
+    private FilterablePropertyResponse() {}
     /**
      * @return Values to be filtered.
      * 
@@ -51,21 +44,18 @@ public final class FilterablePropertyResponse {
     public static Builder builder(FilterablePropertyResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private List<String> supportedValues;
         private String type;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(FilterablePropertyResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.supportedValues = defaults.supportedValues;
     	      this.type = defaults.type;
         }
 
+        @CustomType.Setter
         public Builder supportedValues(List<String> supportedValues) {
             this.supportedValues = Objects.requireNonNull(supportedValues);
             return this;
@@ -73,11 +63,16 @@ public final class FilterablePropertyResponse {
         public Builder supportedValues(String... supportedValues) {
             return supportedValues(List.of(supportedValues));
         }
+        @CustomType.Setter
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }        public FilterablePropertyResponse build() {
-            return new FilterablePropertyResponse(supportedValues, type);
+        }
+        public FilterablePropertyResponse build() {
+            final var o = new FilterablePropertyResponse();
+            o.supportedValues = supportedValues;
+            o.type = type;
+            return o;
         }
     }
 }

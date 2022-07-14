@@ -15,13 +15,9 @@ public final class SqlContainerGetPropertiesResponseResource {
      * @return The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
      * 
      */
-    private final @Nullable IndexingPolicyResponse indexingPolicy;
+    private @Nullable IndexingPolicyResponse indexingPolicy;
 
-    @CustomType.Constructor
-    private SqlContainerGetPropertiesResponseResource(@CustomType.Parameter("indexingPolicy") @Nullable IndexingPolicyResponse indexingPolicy) {
-        this.indexingPolicy = indexingPolicy;
-    }
-
+    private SqlContainerGetPropertiesResponseResource() {}
     /**
      * @return The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
      * 
@@ -37,24 +33,24 @@ public final class SqlContainerGetPropertiesResponseResource {
     public static Builder builder(SqlContainerGetPropertiesResponseResource defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable IndexingPolicyResponse indexingPolicy;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(SqlContainerGetPropertiesResponseResource defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.indexingPolicy = defaults.indexingPolicy;
         }
 
+        @CustomType.Setter
         public Builder indexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
             this.indexingPolicy = indexingPolicy;
             return this;
-        }        public SqlContainerGetPropertiesResponseResource build() {
-            return new SqlContainerGetPropertiesResponseResource(indexingPolicy);
+        }
+        public SqlContainerGetPropertiesResponseResource build() {
+            final var o = new SqlContainerGetPropertiesResponseResource();
+            o.indexingPolicy = indexingPolicy;
+            return o;
         }
     }
 }

@@ -21,63 +21,44 @@ public final class ProductLineResponse {
      * @return Availability information of the product system.
      * 
      */
-    private final AvailabilityInformationResponse availabilityInformation;
+    private AvailabilityInformationResponse availabilityInformation;
     /**
      * @return Cost information for the product system.
      * 
      */
-    private final CostInformationResponse costInformation;
+    private CostInformationResponse costInformation;
     /**
      * @return Description related to the product system.
      * 
      */
-    private final DescriptionResponse description;
+    private DescriptionResponse description;
     /**
      * @return Display Name for the product system.
      * 
      */
-    private final String displayName;
+    private String displayName;
     /**
      * @return list of filters supported for a product
      * 
      */
-    private final List<FilterablePropertyResponse> filterableProperties;
+    private List<FilterablePropertyResponse> filterableProperties;
     /**
      * @return Hierarchy information of a product.
      * 
      */
-    private final HierarchyInformationResponse hierarchyInformation;
+    private HierarchyInformationResponse hierarchyInformation;
     /**
      * @return Image information for the product system.
      * 
      */
-    private final List<ImageInformationResponse> imageInformation;
+    private List<ImageInformationResponse> imageInformation;
     /**
      * @return List of products in the product line
      * 
      */
-    private final List<ProductResponse> products;
+    private List<ProductResponse> products;
 
-    @CustomType.Constructor
-    private ProductLineResponse(
-        @CustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
-        @CustomType.Parameter("costInformation") CostInformationResponse costInformation,
-        @CustomType.Parameter("description") DescriptionResponse description,
-        @CustomType.Parameter("displayName") String displayName,
-        @CustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
-        @CustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
-        @CustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
-        @CustomType.Parameter("products") List<ProductResponse> products) {
-        this.availabilityInformation = availabilityInformation;
-        this.costInformation = costInformation;
-        this.description = description;
-        this.displayName = displayName;
-        this.filterableProperties = filterableProperties;
-        this.hierarchyInformation = hierarchyInformation;
-        this.imageInformation = imageInformation;
-        this.products = products;
-    }
-
+    private ProductLineResponse() {}
     /**
      * @return Availability information of the product system.
      * 
@@ -142,7 +123,7 @@ public final class ProductLineResponse {
     public static Builder builder(ProductLineResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private AvailabilityInformationResponse availabilityInformation;
         private CostInformationResponse costInformation;
@@ -152,11 +133,7 @@ public final class ProductLineResponse {
         private HierarchyInformationResponse hierarchyInformation;
         private List<ImageInformationResponse> imageInformation;
         private List<ProductResponse> products;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(ProductLineResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.availabilityInformation = defaults.availabilityInformation;
@@ -169,22 +146,27 @@ public final class ProductLineResponse {
     	      this.products = defaults.products;
         }
 
+        @CustomType.Setter
         public Builder availabilityInformation(AvailabilityInformationResponse availabilityInformation) {
             this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
             return this;
         }
+        @CustomType.Setter
         public Builder costInformation(CostInformationResponse costInformation) {
             this.costInformation = Objects.requireNonNull(costInformation);
             return this;
         }
+        @CustomType.Setter
         public Builder description(DescriptionResponse description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
+        @CustomType.Setter
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
+        @CustomType.Setter
         public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
             this.filterableProperties = Objects.requireNonNull(filterableProperties);
             return this;
@@ -192,10 +174,12 @@ public final class ProductLineResponse {
         public Builder filterableProperties(FilterablePropertyResponse... filterableProperties) {
             return filterableProperties(List.of(filterableProperties));
         }
+        @CustomType.Setter
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
+        @CustomType.Setter
         public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
             this.imageInformation = Objects.requireNonNull(imageInformation);
             return this;
@@ -203,14 +187,25 @@ public final class ProductLineResponse {
         public Builder imageInformation(ImageInformationResponse... imageInformation) {
             return imageInformation(List.of(imageInformation));
         }
+        @CustomType.Setter
         public Builder products(List<ProductResponse> products) {
             this.products = Objects.requireNonNull(products);
             return this;
         }
         public Builder products(ProductResponse... products) {
             return products(List.of(products));
-        }        public ProductLineResponse build() {
-            return new ProductLineResponse(availabilityInformation, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation, products);
+        }
+        public ProductLineResponse build() {
+            final var o = new ProductLineResponse();
+            o.availabilityInformation = availabilityInformation;
+            o.costInformation = costInformation;
+            o.description = description;
+            o.displayName = displayName;
+            o.filterableProperties = filterableProperties;
+            o.hierarchyInformation = hierarchyInformation;
+            o.imageInformation = imageInformation;
+            o.products = products;
+            return o;
         }
     }
 }

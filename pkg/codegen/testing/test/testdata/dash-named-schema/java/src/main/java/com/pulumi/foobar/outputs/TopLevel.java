@@ -11,13 +11,9 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TopLevel {
-    private final @Nullable String buzz;
+    private @Nullable String buzz;
 
-    @CustomType.Constructor
-    private TopLevel(@CustomType.Parameter("buzz") @Nullable String buzz) {
-        this.buzz = buzz;
-    }
-
+    private TopLevel() {}
     public Optional<String> buzz() {
         return Optional.ofNullable(this.buzz);
     }
@@ -29,24 +25,24 @@ public final class TopLevel {
     public static Builder builder(TopLevel defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String buzz;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(TopLevel defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.buzz = defaults.buzz;
         }
 
+        @CustomType.Setter
         public Builder buzz(@Nullable String buzz) {
             this.buzz = buzz;
             return this;
-        }        public TopLevel build() {
-            return new TopLevel(buzz);
+        }
+        public TopLevel build() {
+            final var o = new TopLevel();
+            o.buzz = buzz;
+            return o;
         }
     }
 }

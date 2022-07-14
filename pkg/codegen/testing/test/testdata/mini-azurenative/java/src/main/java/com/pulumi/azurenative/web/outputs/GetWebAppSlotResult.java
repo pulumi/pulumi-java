@@ -15,13 +15,9 @@ public final class GetWebAppSlotResult {
      * @return Configuration of the app.
      * 
      */
-    private final @Nullable SiteConfigResponse siteConfig;
+    private @Nullable SiteConfigResponse siteConfig;
 
-    @CustomType.Constructor
-    private GetWebAppSlotResult(@CustomType.Parameter("siteConfig") @Nullable SiteConfigResponse siteConfig) {
-        this.siteConfig = siteConfig;
-    }
-
+    private GetWebAppSlotResult() {}
     /**
      * @return Configuration of the app.
      * 
@@ -37,24 +33,24 @@ public final class GetWebAppSlotResult {
     public static Builder builder(GetWebAppSlotResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable SiteConfigResponse siteConfig;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(GetWebAppSlotResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.siteConfig = defaults.siteConfig;
         }
 
+        @CustomType.Setter
         public Builder siteConfig(@Nullable SiteConfigResponse siteConfig) {
             this.siteConfig = siteConfig;
             return this;
-        }        public GetWebAppSlotResult build() {
-            return new GetWebAppSlotResult(siteConfig);
+        }
+        public GetWebAppSlotResult build() {
+            final var o = new GetWebAppSlotResult();
+            o.siteConfig = siteConfig;
+            return o;
         }
     }
 }
