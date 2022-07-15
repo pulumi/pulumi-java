@@ -67,52 +67,32 @@ func TestGenerateJavaProgram(t *testing.T) {
 	})
 }
 
-func compileSingleFile(name string, t *testing.T) {
-	pclFiles := pclTestFilePaths(testdataPath)
-	assert.NotEmpty(t, pclFiles)
-	for _, pclFile := range pclFiles {
-		if pclFile.FileName == name {
-			t.Logf("Compiling %s", pclFile)
-			pclFileContents, err := ioutil.ReadFile(pclFile.FilePath)
-			assert.Nilf(t, err, "Could not read contents of PCL file %s", pclFile)
-			compiledFile, diagnostics, err := compilePclToJava(pclFileContents, testdataPath)
-			assert.Nilf(t, err, "Could not compile %s", pclFile)
-			if diagnostics != nil {
-				for _, diagError := range diagnostics.Errs() {
-					t.Logf("    Diagnostics: %s", diagError.Error())
-				}
-			}
-			outputDirName := strings.ReplaceAll(pclFile.FileName, ".pp", "-pp")
-			outputDir := filepath.Join(testdataPath, outputDirName)
-			if !directoryExists(outputDir) {
-				err := os.Mkdir(outputDir, os.ModePerm)
-				assert.Nilf(t, err, "Could not create directory %s", outputDir)
-			}
-
-			outputFile := filepath.Join(outputDir, "MyStack.java")
-			err = ioutil.WriteFile(outputFile, compiledFile, 0600)
-			assert.Nilf(t, err, "Could not write compiled Java file %s", outputFile)
-			t.Logf("Written compiled file %s", outputFile)
-		}
-	}
+func runSingleProgramGenTest(t *testing.T, name string) {
+	test.TestProgramCodegen(t, test.ProgramCodegenOptions{
+		Language:   "java",
+		Extension:  "java",
+		OutputFile: "MyStack.java",
+		GenProgram: GenerateProgram,
+		TestCases:  []test.ProgramTest{{Directory: name}},
+	})
 }
 
 func TestAwsStaticWebsite(t *testing.T) {
-	compileSingleFile("aws-s3-folder.pp", t)
+	runSingleProgramGenTest(t, "aws-s3-folder")
 }
 
 func TestAwsFargate(t *testing.T) {
-	compileSingleFile("aws-fargate.pp", t)
+	runSingleProgramGenTest(t, "aws-fargate")
 }
 
 func TestAwsWebserver(t *testing.T) {
-	compileSingleFile("aws-webserver.pp", t)
+	runSingleProgramGenTest(t, "aws-webserver")
 }
 
 func TestSimpleInvokeWithRange(t *testing.T) {
-	compileSingleFile("simple-invoke-with-range.pp", t)
+	runSingleProgramGenTest(t, "simple-invoke-with-range")
 }
 
 func TestAzureNativeExample(t *testing.T) {
-	compileSingleFile("azure-native.pp", t)
+	runSingleProgramGenTest(t, "azure-native")
 }
