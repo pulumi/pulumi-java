@@ -28,7 +28,6 @@ func TestGenerateJavaProgram(t *testing.T) {
 		if !strings.HasSuffix(name, "-pp") {
 			continue
 		}
-		t.Logf("Testing %s: %q", f.Name(), strings.TrimSuffix(name, "-pp"))
 		tests = append(tests, test.ProgramTest{
 			Directory: strings.TrimSuffix(name, "-pp"),
 		})
