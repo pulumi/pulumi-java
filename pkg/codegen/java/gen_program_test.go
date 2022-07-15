@@ -2,7 +2,6 @@ package java
 
 import (
 	"io/ioutil"
-	"os"
 	"path/filepath"
 	"strings"
 	"testing"
@@ -14,30 +13,6 @@ import (
 type PclTestFile struct {
 	FileName string
 	FilePath string
-}
-
-func pclTestFilePaths(dir string) []PclTestFile {
-	var paths []PclTestFile
-	files, err := ioutil.ReadDir(dir)
-	if err != nil {
-		return paths
-	}
-
-	for _, file := range files {
-		if strings.HasSuffix(file.Name(), ".pp") {
-			fullPath, _ := filepath.Abs(filepath.Join(dir, file.Name()))
-			pclTestFile := PclTestFile{FileName: file.Name(), FilePath: fullPath}
-			paths = append(paths, pclTestFile)
-		}
-	}
-
-	return paths
-}
-
-// Returns whether the input directory path already exists
-func directoryExists(dir string) bool {
-	info, err := os.Stat(dir)
-	return err == nil && info.IsDir()
 }
 
 var testdataPath = filepath.Join("..", "testing", "test", "testdata")

@@ -16,10 +16,8 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/model"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/model/format"
-	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/syntax"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
-	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/utils"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/encoding"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
@@ -909,29 +907,4 @@ func (g *generator) genNYI(w io.Writer, reason string, vs ...interface{}) {
 		Detail:   message,
 	})
 	g.Fgenf(w, "\"TODO: %s\"", fmt.Sprintf(reason, vs...))
-}
-
-func compilePclToJava(source []byte, schemaPath string) ([]byte, hcl.Diagnostics, error) {
-	parser := syntax.NewParser()
-	err := parser.ParseFile(bytes.NewReader(source), "")
-	if err != nil {
-		return nil, nil, err
-	}
-	program, programDiags, err := pcl.BindProgram(parser.Files, pcl.PluginHost(utils.NewHost(schemaPath)))
-	if err != nil {
-		return nil, nil, err
-	}
-
-	if programDiags != nil && programDiags.HasErrors() {
-		for _, diagnosticError := range programDiags.Errs() {
-			panic(diagnosticError.Error())
-		}
-	}
-
-	javaPrograms, diagnostics, err := GenerateProgram(program)
-	if err != nil {
-		return nil, nil, err
-	}
-
-	return javaPrograms["MyStack.java"], diagnostics, nil
 }
