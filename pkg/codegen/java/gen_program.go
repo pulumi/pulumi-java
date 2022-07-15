@@ -423,6 +423,7 @@ func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallE
 					g.warnf(functionCall.Args[1].SyntaxNode().Range().Ptr(),
 						"cannot determine invoke argument type: the schema for %q has not inputs",
 						funcName)
+					return imports
 				}
 				argumentExprType := functionSchema.Inputs.InputShape
 				for _, importDef := range collectObjectImports(argumentsExpr, argumentExprType) {
