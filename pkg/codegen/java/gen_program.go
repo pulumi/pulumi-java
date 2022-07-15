@@ -421,7 +421,7 @@ func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallE
 				argumentsExpr := invokeArgumentsExpr.(*model.ObjectConsExpression)
 				if functionSchema.Inputs == nil {
 					g.warnf(functionCall.Args[1].SyntaxNode().Range().Ptr(),
-						"cannot determine invoke argument type: the schema for %q has not inputs",
+						"cannot determine invoke argument type: the schema for %q has no inputs",
 						funcName)
 					return imports
 				}
