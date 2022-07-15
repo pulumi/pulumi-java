@@ -417,6 +417,12 @@ func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallE
 			switch invokeArgumentsExpr.(type) {
 			case *model.ObjectConsExpression:
 				argumentsExpr := invokeArgumentsExpr.(*model.ObjectConsExpression)
+				if functionSchema.Inputs == nil {
+					g.warnf(functionCall.Args[1].SyntaxNode().Range().Ptr(),
+						"cannot determine invoke argument type: the schema for %q has no inputs",
+						funcName)
+					return imports
+				}
 				argumentExprType := functionSchema.Inputs.InputShape
 				for _, importDef := range collectObjectImports(argumentsExpr, argumentExprType) {
 					imports = append(imports, importDef)
@@ -907,4 +913,12 @@ func (g *generator) genNYI(w io.Writer, reason string, vs ...interface{}) {
 		Detail:   message,
 	})
 	g.Fgenf(w, "\"TODO: %s\"", fmt.Sprintf(reason, vs...))
+}
+
+func (g *generator) warnf(location *hcl.Range, reason string, args ...interface{}) {
+	g.diagnostics = append(g.diagnostics, &hcl.Diagnostic{
+		Severity: hcl.DiagWarning,
+		Summary:  fmt.Sprintf(reason, args...),
+		Subject:  location,
+	})
 }

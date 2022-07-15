@@ -39,23 +39,6 @@ build_sdk::
 ensure_sdk::
 	cd sdk/java && make ensure
 
-providers_generate_all::
-	./scripts/providers-generate-all.sh
-
-providers_all::
-	./scripts/providers-install-all.sh
-
-# Example: make provider.random.build
-provider.%.build:	provider.%.generate
-	cd providers/pulumi-$*/sdk/java && gradle --console=plain build
-
-# Example: make provider.random.generate
-provider.%.generate:	bin/pulumi-java-gen
-	./bin/pulumi-java-gen -config providers/pulumi-$*/pulumi-java-gen.yaml
-
-provider.%.publish:	bin/pulumi-java-builder
-	cd providers/pulumi-$*/sdk/java && ../../../../bin/pulumi-java-builder publish
-
 sdk.publish:	bin/pulumi-java-builder
 	cd sdk/java && ../../bin/pulumi-java-builder publish --dir ./pulumi --pkg com.pulumi.pulumi
 
@@ -63,10 +46,6 @@ sdk.publish:	bin/pulumi-java-builder
 lint:: lint_pkg
 lint_pkg:
 	cd pkg && golangci-lint run -c ../.golangci.yml --timeout 5m
-
-# Example: make provider.random.install
-provider.%.install:	provider.%.build
-	cd providers/pulumi-$*/sdk/java && gradle --console=plain publishToMavenLocal
 
 # Run a custom integration test or example.
 # Example: make test_example.aws-java-webserver
