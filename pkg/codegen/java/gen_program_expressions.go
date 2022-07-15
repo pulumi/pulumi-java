@@ -33,7 +33,7 @@ func (g *generator) lowerExpression(expr model.Expression, typ model.Type) model
 	expr, diags := pcl.RewriteApplies(expr, nameInfo(0), applyPromises)
 	contract.Assert(len(diags) == 0)
 	expr, diags = pcl.RewriteConversions(expr, typ)
-	contract.Assert(len(diags) == 0)
+	g.diagnostics = append(g.diagnostics, diags...)
 	return expr
 }
 
