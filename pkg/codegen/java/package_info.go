@@ -89,7 +89,7 @@ type PackageInfo struct {
 	// specify the desired version:
 	//
 	//     dependencies:
-	//         "com.pulumi:pulumi": "5.4.0"
+	//       "com.pulumi:aws": "5.4.0"
 	Dependencies map[string]string `json:"dependencies,omitempty"`
 
 	// If non-empty and BuildFiles="gradle", enables the use of a
