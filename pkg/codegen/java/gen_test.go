@@ -124,9 +124,8 @@ func TestGeneratePackage(t *testing.T) {
 func generatePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
 	pkgInfo := PackageInfo{
 		BuildFiles: "gradle",
-		Packages: map[string]string{
+		Dependencies: map[string]string{
 			"com.pulumi:pulumi": "0.0.1",
-
 			// There are some sprinkled unit tests that
 			// complement testing the generated code at
 			// runtime, and this is the union of all their
