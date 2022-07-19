@@ -22,10 +22,10 @@ const defaultBasePackage = "com.pulumi."
 // These options affect how GeneratePackage generates and lays out
 // Java SDKs for Pulumi Packages.
 //
-// The options are typically set in the `.language.java` section of
+// The options are typically set in the .language.java section of
 // the Schema, but can also be overridden during code generation:
 //
-//     pulumi-java-gen generate --override overrides.json`
+//     pulumi-java-gen generate --override overrides.json
 //
 // See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific-extensions
 type PackageInfo struct {
