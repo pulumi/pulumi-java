@@ -27,7 +27,7 @@ func TestNewGradleTemplateContext(t *testing.T) {
 	assert.Equal(t, "support@pulumi.com", tctx.DeveloperEmail)
 	assert.Equal(t, "The Apache License, Version 2.0", tctx.LicenceName)
 	assert.Equal(t, "http://www.apache.org/licenses/LICENSE-2.0.txt", tctx.LicenceURL)
-	assert.Equal(t, info.Packages, tctx.Dependencies)
+	assert.Equal(t, info.Dependencies, tctx.Dependencies)
 }
 
 func TestGenGradleProject(t *testing.T) {
@@ -54,6 +54,6 @@ func eksExample() (*schema.Package, *PackageInfo) {
 		"com.pulumi:aws":        "5.4.0",
 		"com.pulumi:kubernetes": "3.19.1",
 	}
-	info := &PackageInfo{Packages: deps}
+	info := &PackageInfo{Dependencies: deps}
 	return pkg, info
 }
