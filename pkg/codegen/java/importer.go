@@ -21,54 +21,9 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
 
-const defaultBasePackage = "com.pulumi."
-
 // PropertyInfo represents a Java language-specific info for a property.
 type PropertyInfo struct {
 	Name string `json:"name,omitempty"`
-}
-
-// PackageInfo represents a Java language-specific info for a package.
-type PackageInfo struct {
-	Packages    map[string]string `json:"packages,omitempty"`
-	BasePackage string            `json:"basePackage"`
-
-	// If set to "gradle" generates a basic set of Gradle build files.
-	BuildFiles string `json:"buildFiles"`
-
-	// If non-empty and BuildFiles="gradle", enables the use of a
-	// given version of io.github.gradle-nexus.publish-plugin in
-	// the generated Gradle build files.
-	GradleNexusPublishPluginVersion string `json:"gradleNexusPublishPluginVersion"`
-}
-
-func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
-	result := i
-	if overrides.BuildFiles != "" {
-		result.BuildFiles = overrides.BuildFiles
-	}
-	if overrides.BasePackage != "" {
-		result.BasePackage = ""
-	}
-	if overrides.Packages != nil && len(overrides.Packages) > 0 {
-		if result.Packages == nil {
-			result.Packages = map[string]string{}
-		}
-		for k, v := range overrides.Packages {
-			result.Packages[k] = v
-		}
-	}
-	if overrides.GradleNexusPublishPluginVersion != "" {
-		result.GradleNexusPublishPluginVersion = overrides.GradleNexusPublishPluginVersion
-	}
-	return result
-}
-
-func (i PackageInfo) BasePackageOrDefault() string {
-	if len(i.BasePackage) > 0 {
-		return ensureEndsWithDot(i.BasePackage)
-	}
-	return ensureEndsWithDot(defaultBasePackage)
 }
 
 func ensureEndsWithDot(s string) string {
