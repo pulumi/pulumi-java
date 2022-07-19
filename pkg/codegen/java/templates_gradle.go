@@ -78,8 +78,8 @@ func newGradleTemplateContext(
 		ctx.Version = "0.0.1"
 	}
 
-	if packageInfo.Packages != nil {
-		ctx.Dependencies = packageInfo.Packages
+	if packageInfo.Dependencies != nil {
+		ctx.Dependencies = packageInfo.Dependencies
 	} else {
 		ctx.Dependencies = map[string]string{}
 	}
