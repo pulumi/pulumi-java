@@ -52,10 +52,6 @@ type generateJavaOptions struct {
 	// Deprecated: version to write into the emitted plugin.json
 	// and version.txt files.
 	Version *semver.Version
-
-	// Deprecated: expanding templates in overlays will be removed
-	// once provider SDK builds move out of pulumi/pulumi-java repo.
-	OverlayTemplateConfig OverlayTemplateConfig
 }
 
 func generateJava(cfg generateJavaOptions) error {
@@ -87,7 +83,7 @@ func generateJava(cfg generateJavaOptions) error {
 	pkgInfo = pkgInfo.With(cfg.PackageInfo)
 	pkg.Language["java"] = pkgInfo
 
-	extraFiles, err := readOverlays(cfg.RootDir, cfg.Overlays, cfg.OverlayTemplateConfig)
+	extraFiles, err := readOverlays(cfg.RootDir, cfg.Overlays)
 	if err != nil {
 		return err
 	}
