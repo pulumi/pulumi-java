@@ -22,7 +22,6 @@ import (
 
 	javagen "github.com/pulumi/pulumi-java/pkg/codegen/java"
 	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 )
 
 type generateJavaOptions struct {
@@ -41,21 +40,8 @@ type generateJavaOptions struct {
 	// Paths to folders to mix into the generated code by copying
 	Overlays []string
 
-	// Deprecated: path to version.txt to emit; in the
-	// future Gradle and Maven will emit this.
-	VersionFile string
-
-	// Deprecated: path to plugin.json resource to emit; in the
-	// future Gradle and Maven will emit this.
-	PluginFile string
-
-	// Deprecated: version to write into the emitted plugin.json
-	// and version.txt files.
+	// Optional version to set on the package.
 	Version *semver.Version
-
-	// Deprecated: expanding templates in overlays will be removed
-	// once provider SDK builds move out of pulumi/pulumi-java repo.
-	OverlayTemplateConfig OverlayTemplateConfig
 }
 
 func generateJava(cfg generateJavaOptions) error {
@@ -87,7 +73,7 @@ func generateJava(cfg generateJavaOptions) error {
 	pkgInfo = pkgInfo.With(cfg.PackageInfo)
 	pkg.Language["java"] = pkgInfo
 
-	extraFiles, err := readOverlays(cfg.RootDir, cfg.Overlays, cfg.OverlayTemplateConfig)
+	extraFiles, err := readOverlays(cfg.RootDir, cfg.Overlays)
 	if err != nil {
 		return err
 	}
@@ -105,32 +91,6 @@ func generateJava(cfg generateJavaOptions) error {
 	for f, bytes := range files {
 		if err := emitFile(filepath.Join(outDir, f), bytes); err != nil {
 			return err
-		}
-	}
-
-	if cfg.Version != nil && cfg.VersionFile != "" {
-		f := filepath.Join(outDir, cfg.VersionFile)
-		bytes := []byte(cfg.Version.String())
-		if err := emitFile(f, bytes); err != nil {
-			return fmt.Errorf("failed to generate version file at %s: %w", f, err)
-		}
-	}
-
-	if cfg.Version != nil && cfg.PluginFile != "" {
-		pulumiPlugin := &plugin.PulumiPluginJSON{
-			Resource: true,
-			Name:     pkg.Name,
-			Version:  cfg.Version.String(),
-			Server:   pkg.PluginDownloadURL,
-		}
-
-		f := filepath.Join(outDir, cfg.PluginFile)
-		bytes, err := (pulumiPlugin).JSON()
-		if err != nil {
-			return fmt.Errorf("failed to serialize plugin file at %s: %w", f, err)
-		}
-		if err := emitFile(f, bytes); err != nil {
-			return fmt.Errorf("failed to generate plugin file at %s: %w", f, err)
 		}
 	}
 

@@ -22,10 +22,6 @@ import (
 )
 
 func main() {
-	if isOldStyleArgs(os.Args) {
-		oldStyleMain()
-		return
-	}
 	if err := newPulumiJavaGenCmd().Execute(); err != nil {
 		_, err := fmt.Fprintf(os.Stderr, "An error occurred: %v\n", err)
 		contract.IgnoreError(err)
