@@ -114,6 +114,14 @@ func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
 			result.Packages[k] = v
 		}
 	}
+	if overrides.Dependencies != nil && len(overrides.Dependencies) > 0 {
+		if result.Dependencies == nil {
+			result.Dependencies = map[string]string{}
+		}
+		for k, v := range overrides.Dependencies {
+			result.Dependencies[k] = v
+		}
+	}
 	if overrides.GradleNexusPublishPluginVersion != "" {
 		result.GradleNexusPublishPluginVersion = overrides.GradleNexusPublishPluginVersion
 	}

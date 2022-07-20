@@ -144,7 +144,7 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 				return err
 			}
 			opts.PackageInfo = opts.PackageInfo.With(java.PackageInfo{
-				Packages: map[string]string{
+				Dependencies: map[string]string{
 					"com.pulumi:pulumi": parsedVersion.String(),
 				},
 			})
