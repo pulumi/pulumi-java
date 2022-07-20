@@ -14,6 +14,10 @@
 
 package java
 
+import (
+	"github.com/blang/semver"
+)
+
 const defaultBasePackage = "com.pulumi."
 
 // PackageInfo defines Java-specific extensions to Pulumi Packages
@@ -114,6 +118,14 @@ func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
 			result.Packages[k] = v
 		}
 	}
+	if overrides.Dependencies != nil && len(overrides.Dependencies) > 0 {
+		if result.Dependencies == nil {
+			result.Dependencies = map[string]string{}
+		}
+		for k, v := range overrides.Dependencies {
+			result.Dependencies[k] = v
+		}
+	}
 	if overrides.GradleNexusPublishPluginVersion != "" {
 		result.GradleNexusPublishPluginVersion = overrides.GradleNexusPublishPluginVersion
 	}
@@ -125,4 +137,21 @@ func (i PackageInfo) BasePackageOrDefault() string {
 		return ensureEndsWithDot(i.BasePackage)
 	}
 	return ensureEndsWithDot(defaultBasePackage)
+}
+
+// Makes sure Depdendencies contains the "com.pulumi:pulumi" key if it
+// does not already. If the key is missing, uses ver as the new
+// version to depend on.
+func (i PackageInfo) WithJavaSdkDependencyDefault(ver semver.Version) PackageInfo {
+	key := "com.pulumi:pulumi"
+
+	if i.Dependencies != nil {
+		if _, ok := i.Dependencies[key]; ok {
+			return i
+		}
+	}
+
+	return i.With(PackageInfo{Dependencies: map[string]string{
+		key: ver.String(),
+	}})
 }
