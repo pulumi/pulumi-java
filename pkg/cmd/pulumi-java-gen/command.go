@@ -143,11 +143,8 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 			if err != nil {
 				return err
 			}
-			opts.PackageInfo = opts.PackageInfo.With(java.PackageInfo{
-				Dependencies: map[string]string{
-					"com.pulumi:pulumi": parsedVersion.String(),
-				},
-			})
+			opts.PackageInfo = opts.PackageInfo.
+				WithJavaSdkDependencyDefault(parsedVersion)
 		}
 
 		return generateJava(opts)
