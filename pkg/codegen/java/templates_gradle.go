@@ -84,12 +84,6 @@ func newGradleTemplateContext(
 		ctx.Dependencies = map[string]string{}
 	}
 
-	// TODO do not depend on Nullable class in generated code
-	jsr305 := "com.google.code.findbugs:jsr305"
-	if _, got := ctx.Dependencies[jsr305]; !got {
-		ctx.Dependencies[jsr305] = "3.0.2"
-	}
-
 	if pkg.License == "Apache-2.0" {
 		ctx.LicenceName = "The Apache License, Version 2.0"
 		ctx.LicenceURL = "http://www.apache.org/licenses/LICENSE-2.0.txt"
