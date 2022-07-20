@@ -139,12 +139,9 @@ func (i PackageInfo) BasePackageOrDefault() string {
 	return ensureEndsWithDot(defaultBasePackage)
 }
 
-// Makes sure Depdendencies contains the "com.pulumi:pulumi" key if it
-// does not already. If the key is missing, uses ver as the new
-// version to depend on.
-func (i PackageInfo) WithJavaSdkDependencyDefault(ver semver.Version) PackageInfo {
-	key := "com.pulumi:pulumi"
-
+// Makes sure Depdendencies contains the key if it does not already.
+// If the key is missing, uses ver as the new version to depend on.
+func (i PackageInfo) WithDependencyDefault(key string, ver semver.Version) PackageInfo {
 	if i.Dependencies != nil {
 		if _, ok := i.Dependencies[key]; ok {
 			return i
@@ -154,4 +151,24 @@ func (i PackageInfo) WithJavaSdkDependencyDefault(ver semver.Version) PackageInf
 	return i.With(PackageInfo{Dependencies: map[string]string{
 		key: ver.String(),
 	}})
+}
+
+// Makes sure Depdendencies contains the "com.pulumi:pulumi" key if it
+// does not already. If the key is missing, uses ver as the new
+// version to depend on.
+func (i PackageInfo) WithJavaSdkDependencyDefault(ver semver.Version) PackageInfo {
+	return i.WithDependencyDefault("com.pulumi:pulumi", ver)
+}
+
+// Makes sure dependencies are added for libraries that the generated
+// code may link against.
+func (i PackageInfo) WithDefaultDependencies() PackageInfo {
+	return i.
+		// Generated code may reference JsonElemeent class.
+		WithDependencyDefault("com.google.code.gson:gson",
+			semver.MustParse("2.8.9")).
+		// TODO consider removing this; this is needed when
+		// the generated code depends on the Nullable class
+		WithDependencyDefault("com.google.code.findbugs:jsr305",
+			semver.MustParse("3.0.2"))
 }
