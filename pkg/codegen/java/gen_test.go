@@ -142,7 +142,7 @@ func generatePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		},
 	}
 	pkg.Language = map[string]interface{}{
-		"java": pkgInfo,
+		"java": pkgInfo.WithDefaultDependencies(),
 	}
 	return GeneratePackage(tool, pkg, extraFiles)
 }
