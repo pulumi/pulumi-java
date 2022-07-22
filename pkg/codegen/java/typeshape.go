@@ -3,6 +3,7 @@
 package java
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 
@@ -84,6 +85,10 @@ func (ts TypeShape) ToCodeCommentedAnnotations(imports *names.Imports) string {
 }
 
 func (ts TypeShape) ToCodeWithOptions(imports *names.Imports, opts TypeShapeStringOptions) string {
+	// guard against unexpected output, should not happen outside of tests
+	if ts.Type.String() == "" {
+		return ""
+	}
 	var annotationsString string
 	if !opts.SkipAnnotations {
 		annotationsString = strings.Join(ts.Annotations, " ")
@@ -118,6 +123,65 @@ func (ts TypeShape) ToCodeWithOptions(imports *names.Imports, opts TypeShapeStri
 	}
 
 	return fmt.Sprintf("%s%s%s%s", annotationsString, imports.Ref(ts.Type), parametersString, classLiteral)
+}
+
+func (ts TypeShape) ToTree(imports *names.Imports) (string, string) {
+	refs := []string{}
+	refs, tree := ts.toTreeInternal(refs, imports)
+	treeJSON, err := json.Marshal(tree)
+	if err != nil {
+		panic(err)
+	}
+	return strings.Join(refs, ","), string(treeJSON)
+}
+
+func (ts TypeShape) toTreeInternal(refs []string, imports *names.Imports) ([]string, []interface{}) {
+	refIndex := func(classLiteral string) (int, bool) {
+		return sliceIndex(len(refs), func(i int) bool {
+			return refs[i] == classLiteral
+		})
+	}
+	requireRefIndex := func(classLiteral string) int {
+		classRef, ok := refIndex(classLiteral)
+		if !ok {
+			panic(fmt.Errorf(
+				"expected a class reference index for a class literal: '%s'", classLiteral,
+			))
+		}
+		return classRef
+	}
+	rootClassLiteral := ts.ToCodeClassLiteral(imports)
+	// guard against unexpected output, should not happen outside of tests
+	if rootClassLiteral == "" {
+		return []string{}, []interface{}{}
+	}
+	_, ok := refIndex(rootClassLiteral)
+	if !ok {
+		refs = append(refs, rootClassLiteral)
+	}
+	classRef := requireRefIndex(rootClassLiteral)
+	tree := []interface{}{classRef}
+
+	for _, param := range ts.Parameters {
+		subRefs, subTree := param.toTreeInternal(refs, imports)
+		refs = subRefs
+		if len(subTree) == 1 {
+			tree = append(tree, subTree[0])
+		} else {
+			tree = append(tree, subTree)
+		}
+	}
+
+	return refs, tree
+}
+
+func sliceIndex(limit int, predicate func(i int) bool) (int, bool) {
+	for i := 0; i < limit; i++ {
+		if predicate(i) {
+			return i, true
+		}
+	}
+	return -1, false
 }
 
 func (ts TypeShape) ParameterTypes(imports *names.Imports) []string {
