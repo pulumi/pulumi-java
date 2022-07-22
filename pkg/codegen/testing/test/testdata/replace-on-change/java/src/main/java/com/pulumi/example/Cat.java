@@ -19,31 +19,31 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::Cat")
 public class Cat extends com.pulumi.resources.CustomResource {
-    @Export(name="foes", type=Map.class, parameters={String.class, Toy.class})
+    @Export(name="foes", typeString="java.util.Map<String,Toy>")
     private Output</* @Nullable */ Map<String,Toy>> foes;
 
     public Output<Optional<Map<String,Toy>>> foes() {
         return Codegen.optional(this.foes);
     }
-    @Export(name="friends", type=List.class, parameters={Toy.class})
+    @Export(name="friends", typeString="java.util.List<Toy>")
     private Output</* @Nullable */ List<Toy>> friends;
 
     public Output<Optional<List<Toy>>> friends() {
         return Codegen.optional(this.friends);
     }
-    @Export(name="name", type=String.class, parameters={})
+    @Export(name="name", typeString="java.lang.String")
     private Output</* @Nullable */ String> name;
 
     public Output<Optional<String>> name() {
         return Codegen.optional(this.name);
     }
-    @Export(name="other", type=God.class, parameters={})
+    @Export(name="other", typeString="com.pulumi.example.God")
     private Output</* @Nullable */ God> other;
 
     public Output<Optional<God>> other() {
         return Codegen.optional(this.other);
     }
-    @Export(name="toy", type=Toy.class, parameters={})
+    @Export(name="toy", typeString="com.pulumi.example.outputs.Toy")
     private Output</* @Nullable */ Toy> toy;
 
     public Output<Optional<Toy>> toy() {

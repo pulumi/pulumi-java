@@ -16,13 +16,13 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::NoRecursive")
 public class NoRecursive extends com.pulumi.resources.CustomResource {
-    @Export(name="rec", type=Rec.class, parameters={})
+    @Export(name="rec", typeString="com.pulumi.example.outputs.Rec")
     private Output</* @Nullable */ Rec> rec;
 
     public Output<Optional<Rec>> rec() {
         return Codegen.optional(this.rec);
     }
-    @Export(name="replace", type=String.class, parameters={})
+    @Export(name="replace", typeString="java.lang.String")
     private Output</* @Nullable */ String> replace;
 
     public Output<Optional<String>> replace() {
