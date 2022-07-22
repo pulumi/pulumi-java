@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="azure-native:web:WebAppRelayServiceConnection")
 public class WebAppRelayServiceConnection extends com.pulumi.resources.CustomResource {
-    @Export(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> resourceType;
 
     public Output<Optional<String>> resourceType() {
@@ -25,7 +25,7 @@ public class WebAppRelayServiceConnection extends com.pulumi.resources.CustomRes
      * Resource type.
      * 
      */
-    @Export(name="type", type=String.class, parameters={})
+    @Export(name="type", refs={String.class}, tree="[0]")
     private Output<String> type;
 
     /**

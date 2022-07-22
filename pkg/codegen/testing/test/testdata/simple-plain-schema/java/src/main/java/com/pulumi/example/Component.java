@@ -19,55 +19,55 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::Component")
 public class Component extends com.pulumi.resources.ComponentResource {
-    @Export(name="a", type=Boolean.class, parameters={})
+    @Export(name="a", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> a;
 
     public Output<Boolean> a() {
         return this.a;
     }
-    @Export(name="b", type=Boolean.class, parameters={})
+    @Export(name="b", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> b;
 
     public Output<Optional<Boolean>> b() {
         return Codegen.optional(this.b);
     }
-    @Export(name="bar", type=Foo.class, parameters={})
+    @Export(name="bar", refs={Foo.class}, tree="[0]")
     private Output</* @Nullable */ Foo> bar;
 
     public Output<Optional<Foo>> bar() {
         return Codegen.optional(this.bar);
     }
-    @Export(name="baz", type=List.class, parameters={Foo.class})
+    @Export(name="baz", refs={List.class,Foo.class}, tree="[0,1]")
     private Output</* @Nullable */ List<Foo>> baz;
 
     public Output<Optional<List<Foo>>> baz() {
         return Codegen.optional(this.baz);
     }
-    @Export(name="c", type=Integer.class, parameters={})
+    @Export(name="c", refs={Integer.class}, tree="[0]")
     private Output<Integer> c;
 
     public Output<Integer> c() {
         return this.c;
     }
-    @Export(name="d", type=Integer.class, parameters={})
+    @Export(name="d", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> d;
 
     public Output<Optional<Integer>> d() {
         return Codegen.optional(this.d);
     }
-    @Export(name="e", type=String.class, parameters={})
+    @Export(name="e", refs={String.class}, tree="[0]")
     private Output<String> e;
 
     public Output<String> e() {
         return this.e;
     }
-    @Export(name="f", type=String.class, parameters={})
+    @Export(name="f", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> f;
 
     public Output<Optional<String>> f() {
         return Codegen.optional(this.f);
     }
-    @Export(name="foo", type=Foo.class, parameters={})
+    @Export(name="foo", refs={Foo.class}, tree="[0]")
     private Output</* @Nullable */ Foo> foo;
 
     public Output<Optional<Foo>> foo() {

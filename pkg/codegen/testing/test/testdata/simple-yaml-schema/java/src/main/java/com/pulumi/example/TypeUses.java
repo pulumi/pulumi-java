@@ -23,49 +23,49 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::TypeUses")
 public class TypeUses extends com.pulumi.resources.CustomResource {
-    @Export(name="alpha", type=OutputOnlyEnumType.class, parameters={})
+    @Export(name="alpha", refs={OutputOnlyEnumType.class}, tree="[0]")
     private Output</* @Nullable */ OutputOnlyEnumType> alpha;
 
     public Output<Optional<OutputOnlyEnumType>> alpha() {
         return Codegen.optional(this.alpha);
     }
-    @Export(name="bar", type=SomeOtherObject.class, parameters={})
+    @Export(name="bar", refs={SomeOtherObject.class}, tree="[0]")
     private Output</* @Nullable */ SomeOtherObject> bar;
 
     public Output<Optional<SomeOtherObject>> bar() {
         return Codegen.optional(this.bar);
     }
-    @Export(name="baz", type=ObjectWithNodeOptionalInputs.class, parameters={})
+    @Export(name="baz", refs={ObjectWithNodeOptionalInputs.class}, tree="[0]")
     private Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz;
 
     public Output<Optional<ObjectWithNodeOptionalInputs>> baz() {
         return Codegen.optional(this.baz);
     }
-    @Export(name="beta", type=List.class, parameters={OutputOnlyObjectType.class})
+    @Export(name="beta", refs={List.class,OutputOnlyObjectType.class}, tree="[0,1]")
     private Output</* @Nullable */ List<OutputOnlyObjectType>> beta;
 
     public Output<Optional<List<OutputOnlyObjectType>>> beta() {
         return Codegen.optional(this.beta);
     }
-    @Export(name="foo", type=Object.class, parameters={})
+    @Export(name="foo", refs={Object.class}, tree="[0]")
     private Output</* @Nullable */ Object> foo;
 
     public Output<Optional<Object>> foo() {
         return Codegen.optional(this.foo);
     }
-    @Export(name="gamma", type=Map.class, parameters={String.class, OutputOnlyEnumType.class})
+    @Export(name="gamma", refs={Map.class,String.class,OutputOnlyEnumType.class}, tree="[0,1,2]")
     private Output</* @Nullable */ Map<String,OutputOnlyEnumType>> gamma;
 
     public Output<Optional<Map<String,OutputOnlyEnumType>>> gamma() {
         return Codegen.optional(this.gamma);
     }
-    @Export(name="qux", type=RubberTreeVariety.class, parameters={})
+    @Export(name="qux", refs={RubberTreeVariety.class}, tree="[0]")
     private Output</* @Nullable */ RubberTreeVariety> qux;
 
     public Output<Optional<RubberTreeVariety>> qux() {
         return Codegen.optional(this.qux);
     }
-    @Export(name="zed", type=OutputOnlyObjectType.class, parameters={})
+    @Export(name="zed", refs={OutputOnlyObjectType.class}, tree="[0]")
     private Output</* @Nullable */ OutputOnlyObjectType> zed;
 
     public Output<Optional<OutputOnlyObjectType>> zed() {

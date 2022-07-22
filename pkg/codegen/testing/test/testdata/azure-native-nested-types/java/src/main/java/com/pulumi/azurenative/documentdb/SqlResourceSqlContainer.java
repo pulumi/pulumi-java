@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="azure-native:documentdb:SqlResourceSqlContainer")
 public class SqlResourceSqlContainer extends com.pulumi.resources.CustomResource {
-    @Export(name="resource", type=SqlContainerGetPropertiesResponseResource.class, parameters={})
+    @Export(name="resource", refs={SqlContainerGetPropertiesResponseResource.class}, tree="[0]")
     private Output</* @Nullable */ SqlContainerGetPropertiesResponseResource> resource;
 
     public Output<Optional<SqlContainerGetPropertiesResponseResource>> resource() {

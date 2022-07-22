@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="foo-bar:submodule1:ModuleResource")
 public class ModuleResource extends com.pulumi.resources.CustomResource {
-    @Export(name="thing", type=TopLevel.class, parameters={})
+    @Export(name="thing", refs={TopLevel.class}, tree="[0]")
     private Output</* @Nullable */ TopLevel> thing;
 
     public Output<Optional<TopLevel>> thing() {
