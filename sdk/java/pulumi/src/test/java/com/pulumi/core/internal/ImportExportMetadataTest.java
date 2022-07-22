@@ -20,22 +20,22 @@ class ImportExportMetadataTest {
     @SuppressWarnings("unused")
     public static class Tester {
 
-        @Export(name = "complex1", type = Either.class, parameters = {Integer.class, String.class})
+        @Export(name = "complex1", refs = {Either.class, Integer.class, String.class}, tree = "[0,1,2]")
         public final Output<Either<Integer, String>> complex1 = Output.of(Either.ofLeft(1));
 
-        @Export(name = "complex2", type = Either.class, parameters = {Integer.class, String.class})
+        @Export(name = "complex2", refs = {Either.class, Integer.class, String.class}, tree = "[0,1,2]")
         public final Output<Either<Integer, String>> complex2 = Output.of(Either.ofRight("1"));
 
-        @Export(name = "foo", type = String.class)
+        @Export(name = "foo", refs = String.class)
         final Output<String> explicitFoo = Output.of("");
 
-        @Export(type = String.class)
+        @Export(refs = String.class)
         private final Output<String> implicitFoo = Output.of("");
 
-        @Export(type = Map.class, parameters = {String.class, Integer.class})
+        @Export(refs = {Map.class, String.class, Integer.class}, tree = "[0,1,2]")
         public final Output<Map<String, Integer>> implicitBaz = Output.of(Map.of());
 
-        @Export(type = Double.class)
+        @Export(refs = Double.class)
         private Output<Double> incomplete;
 
         @Import(name = "bar")

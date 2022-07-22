@@ -13,8 +13,8 @@ import java.lang.annotation.Target;
  * Requirements:
  * <ul>
  *     <li>annotate a field of type @see {@link com.pulumi.core.Output}</li>
- *     <li>the type {@code T} of the @see {@link com.pulumi.core.Output} needs to be given explicitly using {@code type} parameter</li>
- *     <li>if the type {@code T} is also generic, the list of its generic parameter types mus be given using {@code parameters} parameter</li>
+ *     <li>the type {@code T} of the @see {@link com.pulumi.core.Output} needs to be given explicitly using {@link #tree()} and {@link #refs()} parameters</li>
+ *     <li>if the type {@code T} is also generic, the tree shape of its generic parameter types must be given using {@link #tree()} parameter otherwise it can be omitted</li>
  * </ul>
  */
 @Retention(RetentionPolicy.RUNTIME)
@@ -29,12 +29,27 @@ public @interface Export {
 
     /**
      * @return the generic type parameter of the annotated @see {@link com.pulumi.core.Output}
+     * @deprecated use {@link #tree()} and {@link #refs()}
      */
-    Class<?> type();
+    @Deprecated
+    Class<?> type() default Object.class;
 
     /**
      * @return the generic type parameters of the @see {@link #type()}
      * If not set, the assumption is that the @see {@link #type()} is not a generic type.
+     * @deprecated use {@link #tree()} and {@link #refs()}
      */
+    @Deprecated
     Class<?>[] parameters() default {};
+
+    /**
+     * @return the generic type parameter tree shape of the annotated @see {@link com.pulumi.core.Output}
+     */
+    String tree() default "";
+
+    /**
+     * @return the generic type parameters of the @see {@link #tree()}
+     * If not set, the assumption is that this is not a generic type.
+     */
+    Class<?>[] refs() default {};
 }

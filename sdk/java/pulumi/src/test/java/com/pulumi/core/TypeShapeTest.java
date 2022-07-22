@@ -30,6 +30,7 @@ class TypeShapeTest {
     public static Stream<Arguments> testTypeShapeFromTree() {
         return Stream.of(
                 arguments("", new Class<?>[]{}, "java.lang.Void"),
+                arguments("[]", new Class<?>[]{}, "java.lang.Void"),
                 arguments("", new Class<?>[]{Integer.class}, "java.lang.Integer"),
                 arguments("[0,1]", new Class<?>[]{List.class, Integer.class}, "java.util.List<java.lang.Integer>"),
                 arguments(
@@ -41,9 +42,9 @@ class TypeShapeTest {
                         "java.util.List<java.util.List<java.util.List<java.lang.String>>>"
                 ),
                 arguments(
-                        "[0,[1,2,[3,2]],[1,2,[3,2]]]",
+                        "[0,[1,2,[3,2]],[1,[3,2],2]]",
                         new Class<?>[]{Either.class, Map.class, String.class, List.class},
-                        "com.pulumi.core.Either<java.util.Map<java.lang.String,java.util.List<java.lang.String>>,java.util.Map<java.lang.String,java.util.List<java.lang.String>>>"
+                        "com.pulumi.core.Either<java.util.Map<java.lang.String,java.util.List<java.lang.String>>,java.util.Map<java.util.List<java.lang.String>,java.lang.String>>"
                 )
         );
     }

@@ -135,7 +135,6 @@ public final class TypeShape<T> {
 
     /**
      * Create a string representations of this {@link TypeShape}.
-     * The reverse operation is {@link #fromString(String)}.
      *
      * @return a string representation of this {@link TypeShape}
      */
@@ -178,7 +177,7 @@ public final class TypeShape<T> {
     /**
      * Parse a tree representation of a Java generic type.
      *
-     * @param refs the class references for the generic type
+     * @param refs     the class references for the generic type
      * @param treeJson the generic type tree shape as JSON
      * @return a {@link TypeShape} described by the tree representation
      */
@@ -211,7 +210,7 @@ public final class TypeShape<T> {
         TypeShape.Builder<?> builder = TypeShape.builder(refs[rootIndex]);
         for (int i = 1; i < tree.size(); i++) {
             var obj = tree.get(i);
-            if (obj instanceof List){
+            if (obj instanceof List) {
                 //noinspection rawtypes
                 builder.addParameter(fromTreeInner(refs, treeJson, (List) obj));
                 continue;

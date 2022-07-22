@@ -18,10 +18,10 @@ class OutputCompletionSourceTest {
 
     @SuppressWarnings("unused")
     private static class Tester {
-        @Export(type = String.class)
+        @Export(refs = {String.class})
         Output<String> foo;
 
-        @Export(type = Either.class, parameters = {Integer.class, String.class})
+        @Export(refs = {Either.class, Integer.class, String.class}, tree = "[0,1,2]")
         private Output<Either<Integer, String>> complex1;
     }
 
