@@ -19,55 +19,55 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::Component")
 public class Component extends com.pulumi.resources.ComponentResource {
-    @Export(name="a", type=Boolean.class, parameters={})
+    @Export(name="a", typeString="java.lang.Boolean")
     private Output<Boolean> a;
 
     public Output<Boolean> a() {
         return this.a;
     }
-    @Export(name="b", type=Boolean.class, parameters={})
+    @Export(name="b", typeString="java.lang.Boolean")
     private Output</* @Nullable */ Boolean> b;
 
     public Output<Optional<Boolean>> b() {
         return Codegen.optional(this.b);
     }
-    @Export(name="bar", type=Foo.class, parameters={})
+    @Export(name="bar", typeString="com.pulumi.example.outputs.Foo")
     private Output</* @Nullable */ Foo> bar;
 
     public Output<Optional<Foo>> bar() {
         return Codegen.optional(this.bar);
     }
-    @Export(name="baz", type=List.class, parameters={Foo.class})
+    @Export(name="baz", typeString="java.util.List<Foo>")
     private Output</* @Nullable */ List<Foo>> baz;
 
     public Output<Optional<List<Foo>>> baz() {
         return Codegen.optional(this.baz);
     }
-    @Export(name="c", type=Integer.class, parameters={})
+    @Export(name="c", typeString="java.lang.Integer")
     private Output<Integer> c;
 
     public Output<Integer> c() {
         return this.c;
     }
-    @Export(name="d", type=Integer.class, parameters={})
+    @Export(name="d", typeString="java.lang.Integer")
     private Output</* @Nullable */ Integer> d;
 
     public Output<Optional<Integer>> d() {
         return Codegen.optional(this.d);
     }
-    @Export(name="e", type=String.class, parameters={})
+    @Export(name="e", typeString="java.lang.String")
     private Output<String> e;
 
     public Output<String> e() {
         return this.e;
     }
-    @Export(name="f", type=String.class, parameters={})
+    @Export(name="f", typeString="java.lang.String")
     private Output</* @Nullable */ String> f;
 
     public Output<Optional<String>> f() {
         return Codegen.optional(this.f);
     }
-    @Export(name="foo", type=Foo.class, parameters={})
+    @Export(name="foo", typeString="com.pulumi.example.outputs.Foo")
     private Output</* @Nullable */ Foo> foo;
 
     public Output<Optional<Foo>> foo() {

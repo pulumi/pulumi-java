@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::OtherResource")
 public class OtherResource extends com.pulumi.resources.ComponentResource {
-    @Export(name="foo", type=Resource.class, parameters={})
+    @Export(name="foo", typeString="com.pulumi.example.Resource")
     private Output</* @Nullable */ Resource> foo;
 
     public Output<Optional<Resource>> foo() {

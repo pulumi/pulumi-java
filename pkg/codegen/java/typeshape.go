@@ -26,6 +26,8 @@ type TypeShapeStringOptions struct {
 	AppendClassLiteral bool
 	// useful to append [].class
 	AppendClassArrayLiteral bool
+	// useful where a fully qualified type is needed
+	FullyQualified bool
 }
 
 func (ts TypeShape) Equal(other TypeShape) bool {
@@ -116,8 +118,14 @@ func (ts TypeShape) ToCodeWithOptions(imports *names.Imports, opts TypeShapeStri
 	if opts.AppendClassArrayLiteral {
 		classLiteral = "[].class"
 	}
+	var theType string
+	if opts.FullyQualified {
+		theType = ts.Type.String()
+	} else {
+		theType = imports.Ref(ts.Type)
+	}
 
-	return fmt.Sprintf("%s%s%s%s", annotationsString, imports.Ref(ts.Type), parametersString, classLiteral)
+	return fmt.Sprintf("%s%s%s%s", annotationsString, theType, parametersString, classLiteral)
 }
 
 func (ts TypeShape) ParameterTypes(imports *names.Imports) []string {

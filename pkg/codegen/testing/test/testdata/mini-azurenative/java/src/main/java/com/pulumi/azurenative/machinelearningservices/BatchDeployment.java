@@ -22,7 +22,7 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
      * 
      */
-    @Export(name="kind", type=String.class, parameters={})
+    @Export(name="kind", typeString="java.lang.String")
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -36,7 +36,7 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @Export(name="location", type=String.class, parameters={})
+    @Export(name="location", typeString="java.lang.String")
     private Output<String> location;
 
     /**
@@ -50,7 +50,7 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @Export(name="name", type=String.class, parameters={})
+    @Export(name="name", typeString="java.lang.String")
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", typeString="java.util.Map<String,String>")
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -78,7 +78,7 @@ public class BatchDeployment extends com.pulumi.resources.CustomResource {
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
-    @Export(name="type", type=String.class, parameters={})
+    @Export(name="type", typeString="java.lang.String")
     private Output<String> type;
 
     /**

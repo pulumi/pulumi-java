@@ -209,7 +209,7 @@ public class MocksTest {
 
     @ResourceType(type = "aws:ec2/instance:Instance")
     public static class Instance extends CustomResource {
-        @Export(type = String.class)
+        @Export(typeString="java.lang.String")
         public Output<String> publicIp;
 
         public Instance(String name, InstanceArgs args, @Nullable CustomResourceOptions options) {
@@ -222,7 +222,7 @@ public class MocksTest {
     }
 
     public static class MyCustom extends CustomResource {
-        @Export(type = Instance.class)
+        @Export(typeString = "com.pulumi.deployment.MocksTest.Instance")
         public Output<Instance> instance;
 
         public MyCustom(String name, MyCustomArgs args, @Nullable CustomResourceOptions options) {

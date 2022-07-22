@@ -13,10 +13,13 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.lang.reflect.Type;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.function.Function;
 
 import static com.pulumi.core.internal.PulumiCollectors.toSingleton;
 import static java.util.stream.Collectors.joining;
@@ -131,6 +134,12 @@ public final class TypeShape<T> {
         return true;
     }
 
+    /**
+     * Create a string representations of this {@link TypeShape}.
+     * The reverse operation is {@link #fromString(String)}.
+     *
+     * @return a string representation of this {@link TypeShape}
+     */
     public String asString() {
         var builder = new StringBuilder();
         builder.append(getTypeName());
@@ -150,12 +159,14 @@ public final class TypeShape<T> {
                 .toString();
     }
 
+    @InternalUse
     public static TypeShape<?> extract(Parameter parameter) {
         var parameterClass = parameter.getType();
         var token = TypeToken.of(parameter.getParameterizedType());
         return extract(parameterClass, token);
     }
 
+    @InternalUse
     private static TypeShape<?> extract(Class<?> type, TypeToken<?> resolverToken) {
         var builder = TypeShape.builder(type);
         for (var param : type.getTypeParameters()) {
@@ -164,6 +175,97 @@ public final class TypeShape<T> {
         }
         return builder.build();
     }
+
+    /**
+     * Parse a string representation of a Java generic type.
+     * The reverse operation is {@link #asString()}.
+     *
+     * @param typeString the generic type string representation
+     * @return a {@link TypeShape} described by the string representation
+     */
+    @InternalUse
+    public static TypeShape<?> fromString(String typeString) {
+        // memoize class instances
+        final var classCache = new HashMap<String, Class<?>>();
+        Function<String, Class<?>> mapClass =
+                (className) -> classCache.computeIfAbsent(className, __ -> {
+                    try {
+                        return Class.forName(className);
+                    } catch (ClassNotFoundException e) {
+                        // allow path separators (.) as inner class name separators
+                        final int lastDotIndex = className.lastIndexOf('.');
+                        if (lastDotIndex != -1) {
+                            try {
+                                var classNameDollar = className.substring(0, lastDotIndex)
+                                        + '$' + className.substring(lastDotIndex + 1);
+                                return Class.forName(classNameDollar);
+                            } catch (final ClassNotFoundException ex) {
+                                throw new IllegalArgumentException(String.format(
+                                        "Expected to find class '%s', got error: %s",
+                                        className, ex.getMessage()
+                                ), ex);
+                            }
+                        }
+                        throw new IllegalArgumentException(String.format(
+                                "Expected to find class '%s', got error: %s",
+                                className, e.getMessage()
+                        ), e);
+                    }
+                });
+
+        if (typeString.isBlank()) {
+            return TypeShape.Empty;
+        }
+
+        var chars = typeString.toCharArray();
+        final var levels = new LinkedList<TypeShape.Builder<?>>();
+
+        var leftBracketCounter = 0;
+        var rightBracketCounter = 0;
+        var buffer = new StringBuilder();
+        for (int i = 0; i < chars.length; i++) {
+            char current = chars[i];
+            var isLastChar = i == chars.length - 1;
+            if (current == '<') {
+                leftBracketCounter++;
+                var token = buffer.toString();
+                buffer.setLength(0);
+                levels.add(TypeShape.builder(mapClass.apply(token)));
+            } else if (current == ',') {
+                if (buffer.length() != 0) { // not the separator between two generics
+                    var token = buffer.toString();
+                    buffer.setLength(0);
+                    levels.getLast().addParameter(mapClass.apply(token));
+                }
+            } else if (current == '>') {
+                rightBracketCounter++;
+                if (buffer.length() != 0) { // not the last '>'
+                    var token = buffer.toString();
+                    buffer.setLength(0);
+                    levels.getLast().addParameter(mapClass.apply(token));
+                }
+                if (!isLastChar) {
+                    var finished = levels.removeLast().build();
+                    levels.getLast().addParameter(finished);
+                }
+            } else if (isLastChar) { // last element
+                buffer.append(current);
+                var token = buffer.toString();
+                buffer.setLength(0);
+                levels.add(TypeShape.builder(mapClass.apply(token)));
+            } else {
+                buffer.append(current);
+            }
+        }
+        if (leftBracketCounter != rightBracketCounter) {
+            throw new IllegalArgumentException(String.format(
+                    "Expected equal number of brackets. Found %d left braces and %d right brackets in: %s",
+                    leftBracketCounter, rightBracketCounter, typeString
+            ));
+        }
+        return levels.isEmpty() ? TypeShape.Empty : levels.removeLast().build();
+    }
+
 
     @InternalUse
     public com.google.gson.reflect.TypeToken<?> toGSON() {

@@ -17,19 +17,19 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::TypeUses")
 public class TypeUses extends com.pulumi.resources.CustomResource {
-    @Export(name="bar", type=SomeOtherObject.class, parameters={})
+    @Export(name="bar", typeString="com.pulumi.example.outputs.SomeOtherObject")
     private Output</* @Nullable */ SomeOtherObject> bar;
 
     public Output<Optional<SomeOtherObject>> bar() {
         return Codegen.optional(this.bar);
     }
-    @Export(name="baz", type=ObjectWithNodeOptionalInputs.class, parameters={})
+    @Export(name="baz", typeString="com.pulumi.example.outputs.ObjectWithNodeOptionalInputs")
     private Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz;
 
     public Output<Optional<ObjectWithNodeOptionalInputs>> baz() {
         return Codegen.optional(this.baz);
     }
-    @Export(name="foo", type=Object.class, parameters={})
+    @Export(name="foo", typeString="com.pulumi.example.outputs.Object")
     private Output</* @Nullable */ Object> foo;
 
     public Output<Optional<Object>> foo() {
