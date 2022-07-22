@@ -965,18 +965,15 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 			fprintf(w, "     */\n")
 		}
 
-		outputExportParameters := strings.Join(
-			propertyType.ParameterTypesTransformed(func(ts TypeShape) string {
-				return ts.ToCodeClassLiteral(ctx.imports)
-			}),
-			", ",
-		)
-		outputExportType := propertyType.ToCodeClassLiteral(ctx.imports)
+		outputExportTypeString := propertyType.ToCodeWithOptions(ctx.imports, TypeShapeStringOptions{
+			SkipAnnotations: true,
+			FullyQualified:  true,
+		})
 		outputParameterType := propertyType.ToCodeCommentedAnnotations(ctx.imports)
 		printObsoleteAttribute(ctx, prop.DeprecationMessage, "    ")
 		fprintf(w,
-			"    @%s(name=\"%s\", type=%s, parameters={%s})\n",
-			ctx.ref(names.Export), wireName, outputExportType, outputExportParameters)
+			"    @%s(name=\"%s\", typeString=\"%s\")\n",
+			ctx.ref(names.Export), wireName, outputExportTypeString)
 		fprintf(w,
 			"    private %s<%s> %s;\n", ctx.imports.Ref(names.Output), outputParameterType, propertyName)
 		fprintf(w, "\n")
