@@ -25,19 +25,19 @@ public class StackReference extends CustomResource {
     /**
      * The name of the referenced stack.
      */
-    @Export(name = "name", type = String.class)
+    @Export(name = "name", typeString="java.lang.String")
     private Output<String> name;
 
     /**
      * The outputs of the referenced stack.
      */
-    @Export(name = "outputs", type = Map.class, parameters = {String.class, Object.class})
+    @Export(name = "outputs", typeString = "java.util.Map<java.lang.String,java.lang.Object>")
     public Output<Map<String, Object>> outputs;
 
     /**
      * The names of any stack outputs which contain secrets.
      */
-    @Export(name = "secretOutputNames", type = List.class, parameters = String.class)
+    @Export(name = "secretOutputNames", typeString = "java.util.List<java.lang.String>")
     public Output<List<String>> secretOutputNames;
 
     /**

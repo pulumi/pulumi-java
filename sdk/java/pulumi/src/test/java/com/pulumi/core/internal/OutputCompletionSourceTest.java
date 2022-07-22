@@ -18,10 +18,10 @@ class OutputCompletionSourceTest {
 
     @SuppressWarnings("unused")
     private static class Tester {
-        @Export(type = String.class)
+        @Export(typeString="java.lang.String")
         Output<String> foo;
 
-        @Export(type = Either.class, parameters = {Integer.class, String.class})
+        @Export(typeString = "com.pulumi.core.Either<java.lang.Integer,java.lang.String>")
         private Output<Either<Integer, String>> complex1;
     }
 
