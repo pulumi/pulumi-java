@@ -17,6 +17,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/executable"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/version"
@@ -25,6 +26,7 @@ import (
 
 	"github.com/pulumi/pulumi-java/pkg/internal/executors"
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
+	"google.golang.org/protobuf/types/known/emptypb"
 )
 
 // Launches the language host RPC endpoint, which in turn fires up an RPC server implementing the
@@ -390,4 +392,59 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 
 	logging.V(5).Infof("InstallDependencies(Directory=%s): done", req.Directory)
 	return nil
+}
+
+func (host *javaLanguageHost) GetProgramDependencies(ctx context.Context, req *pulumirpc.GetProgramDependenciesRequest) (*pulumirpc.GetProgramDependenciesResponse, error) {
+	// TODO: Implement dependency fetcher for Java
+	return &pulumirpc.GetProgramDependenciesResponse{}, nil
+}
+
+func (host *javaLanguageHost) About(ctx context.Context, req *emptypb.Empty) (*pulumirpc.AboutResponse, error) {
+	getResponse := func(execString string, args ...string) (string, string, error) {
+		ex, err := executable.FindExecutable(execString)
+		if err != nil {
+			return "", "", fmt.Errorf("could not find executable '%s': %w", execString, err)
+		}
+		cmd := exec.Command(ex, args...)
+		var out []byte
+		if out, err = cmd.Output(); err != nil {
+			cmd := ex
+			if len(args) != 0 {
+				cmd += " " + strings.Join(args, " ")
+			}
+			return "", "", fmt.Errorf("failed to execute '%s'", cmd)
+		}
+		return ex, strings.TrimSpace(string(out)), nil
+	}
+
+	java, version, err := getResponse("java", "--version")
+	if err != nil {
+		return nil, err
+	}
+
+	metadata := make(map[string]string)
+	metadata["java"] = strings.Split(java, "\n")[0]
+	_, javac, err := getResponse("javac", "--version")
+	if err != nil {
+		javac = "unknown"
+	}
+	metadata["javac"] = strings.TrimPrefix(javac, "javac ")
+	if _, maven, err := getResponse("mvn", "--version"); err == nil {
+		// We add this only if there are no errors
+		metadata["maven"] = strings.Split(maven, "\n")[0]
+	}
+	if _, gradle, err := getResponse("gradle", "--version"); err == nil {
+		for _, line := range strings.Split(gradle, "\n") {
+			if strings.HasPrefix(line, "Gradle") {
+				metadata["gradle"] = strings.TrimPrefix(line, "Gradle ")
+				break
+			}
+		}
+	}
+
+	return &pulumirpc.AboutResponse{
+		Executable: java,
+		Version:    version,
+		Metadata:   metadata,
+	}, nil
 }
