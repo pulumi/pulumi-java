@@ -394,7 +394,8 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 	return nil
 }
 
-func (host *javaLanguageHost) GetProgramDependencies(ctx context.Context, req *pulumirpc.GetProgramDependenciesRequest) (*pulumirpc.GetProgramDependenciesResponse, error) {
+func (host *javaLanguageHost) GetProgramDependencies(
+	ctx context.Context, req *pulumirpc.GetProgramDependenciesRequest) (*pulumirpc.GetProgramDependenciesResponse, error) {
 	// TODO: Implement dependency fetcher for Java
 	return &pulumirpc.GetProgramDependenciesResponse{}, nil
 }
