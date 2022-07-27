@@ -126,7 +126,7 @@ class StackTest {
         });
 
         var ref = extractValue(result.output("ref", StackReference.class));
-        assertThat(extractValue(ref.getOutput("ref"))).isNotNull();
+        assertThat(extractValue(ref.output("ref"))).isNotNull();
 
         assertThat(result.exceptions()).isEmpty();
         assertThat(result.errors()).isEmpty();
