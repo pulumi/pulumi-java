@@ -51,7 +51,8 @@ func isReservedMethod(s string) bool {
 func isReservedResourceMethod(s string) bool {
 	switch s {
 	// These names conflict with methods on Resource.
-	case "getResourceType", "getResourceName", "getChildResources", "getUrn", "getId":
+	case "getResourceType", "getResourceName", "getChildResources", "getUrn", "getId",
+		"pulumiResourceType", "pulumiResourceName", "pulumiChildResources", "urn", "id":
 		return true
 	default:
 		return isReservedMethod(s)

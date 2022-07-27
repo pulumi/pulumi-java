@@ -33,7 +33,7 @@ public final class PropertiesSerializer {
 
     /**
      * Walks the props object passed in, awaiting all interior promises besides those
-     * for @see {@link Resource#getUrn()} and @see {@link CustomResource#getId()},
+     * for @see {@link Resource#urn()} and @see {@link CustomResource#id()},
      * creating a reasonable POJO object that can be remoted over to registerResource.
      */
     public CompletableFuture<SerializationResult> serializeResourcePropertiesAsync(

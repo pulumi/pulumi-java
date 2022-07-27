@@ -70,13 +70,13 @@ public class MocksTest {
         assertThat(ip.isSecret()).isFalse();
         assertThat(ip.getResources()).contains(instance.get()).hasSize(1);
 
-        var id = extractOutputData(instance.get().getId());
+        var id = extractOutputData(instance.get().id());
         assertThat(id.getValueNullable()).isEqualTo("i-1234567890abcdef0");
         assertThat(id.isKnown()).isTrue();
         assertThat(id.isSecret()).isFalse();
         assertThat(id.getResources()).contains(instance.get()).hasSize(1);
 
-        var urn = extractOutputData(instance.get().getUrn());
+        var urn = extractOutputData(instance.get().urn());
         assertThat(urn.getValueNullable()).isEqualTo(
                 "urn:pulumi:stack::project::pulumi:pulumi:Stack$aws:ec2/instance:Instance::instance"
         );
