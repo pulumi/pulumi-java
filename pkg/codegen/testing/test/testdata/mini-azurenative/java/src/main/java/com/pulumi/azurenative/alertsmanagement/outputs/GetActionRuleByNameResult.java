@@ -51,7 +51,7 @@ public final class GetActionRuleByNameResult {
      * @return Azure resource Id
      * 
      */
-    public String id() {
+    public String id_() {
         return this.id;
     }
     /**
@@ -116,8 +116,8 @@ public final class GetActionRuleByNameResult {
     	      this.type = defaults.type;
         }
 
-        @CustomType.Setter
-        public Builder id(String id) {
+        @CustomType.Setter("id")
+        public Builder id_(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

@@ -37,7 +37,7 @@ public final class GetAmiIdsResult {
      * @return The provider-assigned unique ID for this managed resource.
      * 
      */
-    public String id() {
+    public String id_() {
         return this.id;
     }
     public List<String> ids() {
@@ -97,8 +97,8 @@ public final class GetAmiIdsResult {
         public Builder filters(GetAmiIdsFilter... filters) {
             return filters(List.of(filters));
         }
-        @CustomType.Setter
-        public Builder id(String id) {
+        @CustomType.Setter("id")
+        public Builder id_(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

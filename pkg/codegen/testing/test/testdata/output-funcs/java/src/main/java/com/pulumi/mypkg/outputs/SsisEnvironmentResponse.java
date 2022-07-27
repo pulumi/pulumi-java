@@ -65,7 +65,7 @@ public final class SsisEnvironmentResponse {
      * @return Metadata id.
      * 
      */
-    public Optional<Double> id() {
+    public Optional<Double> id_() {
         return Optional.ofNullable(this.id);
     }
     /**
@@ -127,8 +127,8 @@ public final class SsisEnvironmentResponse {
             this.folderId = folderId;
             return this;
         }
-        @CustomType.Setter
-        public Builder id(@Nullable Double id) {
+        @CustomType.Setter("id")
+        public Builder id_(@Nullable Double id) {
             this.id = id;
             return this;
         }
