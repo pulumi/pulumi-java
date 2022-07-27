@@ -22,23 +22,14 @@ import java.util.concurrent.CompletableFuture;
  */
 public class StackReference extends CustomResource {
 
-    /**
-     * The name of the referenced stack.
-     */
     @Export(name = "name", type = String.class)
     private Output<String> name;
 
-    /**
-     * The outputs of the referenced stack.
-     */
     @Export(name = "outputs", type = Map.class, parameters = {String.class, Object.class})
-    public Output<Map<String, Object>> outputs;
+    private Output<Map<String, Object>> outputs;
 
-    /**
-     * The names of any stack outputs which contain secrets.
-     */
     @Export(name = "secretOutputNames", type = List.class, parameters = String.class)
-    public Output<List<String>> secretOutputNames;
+    private Output<List<String>> secretOutputNames;
 
     /**
      * Create a {@link StackReference} resource with the given unique name.
@@ -90,15 +81,63 @@ public class StackReference extends CustomResource {
         return args == null ? Output.of(name) : args.name().orElse(Output.of(name));
     }
 
+    /**
+     * The name of the referenced stack.
+     *
+     * @return the stack name
+     * @deprecated use {@link #name()}
+     */
+    @Deprecated
     public Output<String> getName() {
+        return name();
+    }
+
+    /**
+     * The name of the referenced stack.
+     *
+     * @return the stack name
+     */
+    public Output<String> name() {
         return name;
     }
 
+    /**
+     * The outputs of the referenced stack.
+     *
+     * @return the stack outputs
+     * @deprecated use {@link #outputs()}
+     */
+    @Deprecated
     public Output<Map<String, Object>> getOutputs() {
+        return outputs();
+    }
+
+    /**
+     * The outputs of the referenced stack.
+     *
+     * @return the stack outputs
+     */
+    public Output<Map<String, Object>> outputs() {
         return outputs.applyValue(ImmutableMap::copyOf);
     }
 
+    /**
+     * The secret output names of the referenced stack.
+     *
+     * @return the names of the secret outputs
+     * @deprecated use {@link #secretOutputNames()}
+     */
+    @Deprecated
     public Output<List<String>> getSecretOutputNames() {
+        return secretOutputNames();
+    }
+
+    /**
+     * The secret output names of the referenced stack.
+     *
+     * @return the names of the secret outputs
+     */
+    public Output<List<String>> secretOutputNames() {
         return secretOutputNames.applyValue(ImmutableList::copyOf);
     }
 
@@ -108,9 +147,11 @@ public class StackReference extends CustomResource {
      *
      * @param name The name of the stack output to fetch.
      * @return An {@link Output} containing the requested value.
+     * @deprecated use {@link #output(String)}
      */
+    @Deprecated
     public Output<?> getOutput(String name) {
-        return this.getOutput(Output.of(name));
+        return output(name);
     }
 
     /**
@@ -120,7 +161,31 @@ public class StackReference extends CustomResource {
      * @param name The name of the stack output to fetch.
      * @return An {@link Output} containing the requested value.
      */
+    public Output<?> output(String name) {
+        return output(Output.of(name));
+    }
+
+    /**
+     * Fetches the value of the named stack output, or {@code null} if the stack output was not found.
+     * <p>
+     *
+     * @param name The name of the stack output to fetch.
+     * @return An {@link Output} containing the requested value.
+     * @deprecated use {@link #output(Output)}
+     */
+    @Deprecated
     public Output<?> getOutput(Output<String> name) {
+        return output(name);
+    }
+
+    /**
+     * Fetches the value of the named stack output, or {@code null} if the stack output was not found.
+     * <p>
+     *
+     * @param name The name of the stack output to fetch.
+     * @return An {@link Output} containing the requested value.
+     */
+    public Output<?> output(Output<String> name) {
         // Note that this is subtly different from "apply" here. A default "apply" will set the secret bit if any
         // of the inputs are a secret, and this.outputs is always a secret if it contains any secrets.
         // We do this dance, so we can ensure that the Output we return is not needlessly tainted as a secret.
@@ -165,6 +230,7 @@ public class StackReference extends CustomResource {
      *
      * @param name The name of the stack output to fetch.
      * @return The value of the referenced stack output.
+     * @throws UnsupportedOperationException if the output is secret
      */
     public CompletableFuture<?> getValueAsync(String name) {
         return this.getValueAsync(Output.of(name));
@@ -179,9 +245,10 @@ public class StackReference extends CustomResource {
      *
      * @param name The name of the stack output to fetch.
      * @return The value of the referenced stack output.
+     * @throws UnsupportedOperationException if the output is secret
      */
     public CompletableFuture<?> getValueAsync(Output<String> name) {
-        return Internal.of(this.getOutput(name)).getDataAsync()
+        return Internal.of(this.output(name)).getDataAsync()
                 .thenApply(data -> {
                     if (data.isSecret()) {
                         throw new UnsupportedOperationException(
