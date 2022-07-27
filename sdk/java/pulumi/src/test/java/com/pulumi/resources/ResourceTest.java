@@ -49,17 +49,17 @@ public class ResourceTest {
                 }).throwOnError();
 
         var resource = result.resources().stream()
-                .filter(r -> r.getResourceName().equals("testResource"))
+                .filter(r -> r.pulumiResourceName().equals("testResource"))
                 .findFirst()
                 .orElse(null);
         assertThat(resource).isNotNull();
 
-        var urn = extractValue(resource.getUrn());
-        var provider = Internal.from(resource).getProvider(resource.getResourceType());
+        var urn = extractValue(resource.urn());
+        var provider = Internal.from(resource).getProvider(resource.pulumiResourceType());
 
         assertThat(provider).isPresent();
-        assertThat(provider.get().getResourceName()).isEqualTo("testProvider");
-        assertThat(provider.get().getResourceType()).isEqualTo("pulumi:providers:test");
+        assertThat(provider.get().pulumiResourceName()).isEqualTo("testProvider");
+        assertThat(provider.get().pulumiResourceType()).isEqualTo("pulumi:providers:test");
     }
 
     @Test

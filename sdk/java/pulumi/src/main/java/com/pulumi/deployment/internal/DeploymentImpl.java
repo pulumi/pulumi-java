@@ -822,8 +822,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 String label, Resource res, boolean custom, boolean remote,
                 ResourceArgs args, ResourceOptions options) {
 
-            var type = res.getResourceType();
-            var name = res.getResourceName();
+            var type = res.pulumiResourceType();
+            var name = res.pulumiResourceName();
 
             // Before we can proceed, all our dependencies must be finished.
             log.excessive("Gathering explicit dependencies: t=%s, name=%s, custom=%s, remote=%s", type, name, custom, remote);
@@ -852,7 +852,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
                                                     // If no parent was provided, parent to the root resource.
                                                     var parentUrn = options.getParent().isPresent()
-                                                            ? Internal.of(options.getParent().get().getUrn()).getValueOptional()
+                                                            ? Internal.of(options.getParent().get().urn()).getValueOptional()
                                                             : this.rootResource.getRootResourceAsync(type);
                                                     return parentUrn.thenCompose(
                                                             (Optional<String> pUrn) -> {
@@ -996,7 +996,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         }
                         return false; // Unreachable
                     })
-                    .map(resource -> Internal.of(resource.getUrn()).getValueOrDefault(""))
+                    .map(resource -> Internal.of(resource.urn()).getValueOrDefault(""))
                     .collect(toImmutableSet());
             return CompletableFutures.allOf(transitivelyReachableCustomResources)
                     .thenApply(ts -> ts.stream()
@@ -1007,7 +1007,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
         /**
          * Recursively walk the resources passed in, returning them and all resources reachable
-         * from @see {@link Resource#getChildResources()} through any **Component** resources we encounter.
+         * from @see {@link Resource#pulumiChildResources()} through any **Component** resources we encounter.
          */
         private ImmutableSet<Resource> getTransitivelyReferencedChildResourcesOfComponentResources(
                 ImmutableSet<Resource> resources
@@ -1025,8 +1025,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 if (builder.add(resource)) {
                     if (resource instanceof ComponentResource) {
                         var childResources = ImmutableSet.<Resource>builder();
-                        synchronized (resource.getChildResources()) {
-                            childResources.addAll(resource.getChildResources());
+                        synchronized (resource.pulumiChildResources()) {
+                            childResources.addAll(resource.pulumiChildResources());
                         }
                         addTransitivelyReferencedChildResourcesOfComponentResources(childResources.build(), builder);
                     }
@@ -1136,7 +1136,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             var completionSources = OutputCompletionSource.from(resource);
 
             this.runner.registerTask(
-                    String.format("readOrRegisterResource: %s-%s", resource.getResourceType(), resource.getResourceName()),
+                    String.format("readOrRegisterResource: %s-%s", resource.pulumiResourceType(), resource.pulumiResourceName()),
                     completeResourceAsync(resource, remote, newDependency, args, options, completionSources, lazy)
             );
         }
@@ -1160,7 +1160,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         var dependencies = response.dependencies;
                         log.excessive(
                                 "Read response for resource: t=%s, name=%s, urn=%s, id=%s, remote=%s, data=%s",
-                                resource.getResourceType(), resource.getResourceName(), urn, id, remote, data
+                                resource.pulumiResourceType(), resource.pulumiResourceName(), urn, id, remote, data
                         );
 
                         lazy.urn().completeOrThrow(new OutputInternal(
@@ -1245,7 +1245,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 // Before we can proceed, all our dependencies must be finished.
                 log.excessive(
                         "Reading existing resource: t=%s, name=%s, urn=%s, remote=%s",
-                        resource.getResourceType(), resource.getResourceName(), options.getUrn().get(), remote
+                        resource.pulumiResourceType(), resource.pulumiResourceName(), options.getUrn().get(), remote
                 );
                 return this.invoke.invokeRawAsync(
                         "pulumi:pulumi:getResource",
@@ -1317,8 +1317,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private CompletableFuture<RawResourceResult> readResourceAsync(
                 Resource resource, String id, ResourceArgs args, ResourceOptions options
         ) {
-            var name = resource.getResourceName();
-            var type = resource.getResourceType();
+            var name = resource.pulumiResourceName();
+            var type = resource.pulumiResourceType();
             var label = String.format("resource:%s[%s]#...", name, type);
             log.debug(String.format("Reading resource: id=%s, type=%s, name=%s", id, type, name));
 
@@ -1372,8 +1372,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private CompletableFuture<RawResourceResult> registerResourceAsync(
                 Resource resource, boolean remote, Function<String, Resource> newDependency, ResourceArgs args,
                 ResourceOptions options) {
-            var name = resource.getResourceName();
-            var type = resource.getResourceType();
+            var name = resource.pulumiResourceName();
+            var type = resource.pulumiResourceType();
             var custom = resource instanceof CustomResource;
 
             log.debug(String.format(
@@ -1510,7 +1510,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             // RegisterResourceOutputs is called in a fire-and-forget manner.  Make sure we keep track of
             // this task so that the application will not quit until this async work completes.
             this.runner.registerTask(
-                    String.format("DeploymentInternalInternal.registerResourceOutputs: %s-%s", resource.getResourceType(), resource.getResourceName()),
+                    String.format(
+                            "DeploymentInternalInternal.registerResourceOutputs: %s-%s",
+                            resource.pulumiResourceType(), resource.pulumiResourceName()
+                    ),
                     registerResourceOutputsAsync(resource, outputs));
         }
 
@@ -1519,7 +1522,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         ) {
             var opLabel = "monitor.registerResourceOutputs(...)";
 
-            var urnFuture = Internal.of(resource.getUrn())
+            var urnFuture = Internal.of(resource.urn())
                     .getValueOrDefault("");
             var propsFuture = Internal.of(outputs)
                     .getValueOrDefault(Map.of());
@@ -1594,7 +1597,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         private CompletableFuture<Optional<String>> setRootResourceWorkerAsync(Stack stack) {
-            return Internal.of(stack.getUrn())
+            return Internal.of(stack.urn())
                     .getValueNullable()
                     .thenCompose(
                             resUrn -> this.engine.setRootResourceAsync(
@@ -2062,7 +2065,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         private static CompletableFuture<String> resourceUrnOrEmpty(@Nullable Resource resource) {
             if (resource != null) {
                 try {
-                    return Internal.of(resource.getUrn()).getValueOrDefault("");
+                    return Internal.of(resource.urn()).getValueOrDefault("");
                 } catch (Throwable ignore) {
                     // getting the urn for a resource may itself fail, in that case we don't want to
                     // fail to send a logging message. we'll just send the logging message unassociated

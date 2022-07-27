@@ -31,7 +31,7 @@ public class DeploymentExceptionTest {
 
         var result = test.runTestAsync(ctx -> {
             var instance = new MocksTest.Instance("i1", null, null);
-            var out = instance.getUrn();
+            var out = instance.urn();
             Internal.of(out).getDataAsync().orTimeout(1, TimeUnit.SECONDS).join();
         }).join();
 

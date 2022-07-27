@@ -194,7 +194,7 @@ public abstract class Resource {
             options.aliases = options.aliases == null ? new ArrayList<>() : copyNullableList(options.aliases);
             for (var parentAlias : options.parent.aliases) {
                 options.aliases.add(
-                        urnInheritedChildAlias(this.name, options.parent.getResourceName(), parentAlias, this.type)
+                        urnInheritedChildAlias(this.name, options.parent.pulumiResourceName(), parentAlias, this.type)
                 );
             }
 
@@ -261,15 +261,41 @@ public abstract class Resource {
 
     /**
      * The type assigned to the resource at construction.
+     *
+     * @return the type of the resource
+     * @deprecated use {@link #pulumiResourceType()}
      */
+    @Deprecated
     public String getResourceType() {
         return type;
     }
 
     /**
-     * The name assigned to the resource at construction.
+     * The Pulumi type assigned to the resource at construction.
+     *
+     * @return the type of the Pulumi resource
      */
+    public String pulumiResourceType() {
+        return type;
+    }
+
+    /**
+     * The name assigned to the resource at construction.
+     *
+     * @return the name of the resource
+     * @deprecated use {@link #pulumiResourceName()}
+     */
+    @Deprecated
     public String getResourceName() {
+        return name;
+    }
+
+    /**
+     * The Pulumi name assigned to the resource at construction.
+     *
+     * @return the name of the Pulumi resource
+     */
+    public String pulumiResourceName() {
         return name;
     }
 
@@ -287,15 +313,54 @@ public abstract class Resource {
      * This would be pretty nonsensical as there is zero need for a custom resource to
      * ever need to reference the urn of a component resource.
      * So it's acceptable if that sort of pattern failed in practice.
+     *
+     * @return the child resources of this resource
+     * @deprecated use {@link #pulumiChildResources()}
      */
+    @Deprecated
     public Set<Resource> getChildResources() {
         return childResources;
     }
 
     /**
-     * Urn is the stable logical URN used to distinctly address a resource, both before and after deployments.
+     * The child resources of this Pulumi resource. We use these (only from a @see {@link ComponentResource}) to
+     * allow code to "dependOn" a @see {@link ComponentResource} and have that effectively mean that it is
+     * depending on all the @see {@link ComponentResource} children of that component.
+     * <p>
+     * Important! We only walk through @see {@link ComponentResource}s. They're the only resources that
+     * serve as an aggregation of other primitive (i.e.custom) resources.
+     * While a custom resource can be a parent of other resources, we don't want to ever depend
+     * on those child resource.
+     * If we do, it's simple to end up in a situation where we end up depending on a
+     * child resource that has a data cycle dependency due to the data passed into it.
+     * This would be pretty nonsensical as there is zero need for a custom resource to
+     * ever need to reference the urn of a component resource.
+     * So it's acceptable if that sort of pattern failed in practice.
+     *
+     * @return the child resources of this Pulumi resource
      */
+    public Set<Resource> pulumiChildResources() {
+        return childResources;
+    }
+
+    /**
+     * Urn is the stable logical URN used to distinctly address a resource, both before and after deployments.
+     *
+     * @return the stable logical URN
+     * @deprecated use {@link #urn()}
+     */
+    @Deprecated
     public Output<String> getUrn() {
+        return this.urn;
+    }
+
+    /**
+     * Pulumi URN is the stable logical identifier used to distinctly address a resource,
+     * both before and after deployments.
+     *
+     * @return the stable logical Pulumi URN
+     */
+    public Output<String> urn() {
         return this.urn;
     }
 
@@ -340,7 +405,7 @@ public abstract class Resource {
 
             var parentInfo = getParentInfo(defaultParent, a);
             var parentUrn = Optional.ofNullable(parentInfo.parent)
-                    .map(p -> p.getUrn())
+                    .map(p -> p.urn())
                     .or(() -> Optional.ofNullable(parentInfo.parentUrn));
 
 
