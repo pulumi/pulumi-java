@@ -396,6 +396,8 @@ func pulumiImport(pkg string, module string, member string) string {
 	module = cleanModule(module)
 	if ignoreModule(module) {
 		return "com.pulumi." + sanitizeImport(pkg) + "." + member
+	} else if module == "" {
+		return "com.pulumi." + sanitizeImport(pkg)
 	}
 	return "com.pulumi." + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
 }
@@ -416,16 +418,22 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 	fullyQualifiedTypeName := objectType.Token
 	nameParts := strings.Split(fullyQualifiedTypeName, ":")
 	objectTypeName := names.Title(nameParts[len(nameParts)-1])
-	pkg := nameParts[0]
-	module := nameParts[1]
+	pkg, module, name := nameParts[0], nameParts[1], nameParts[2]
+	pkgName := pkg
+	moduleName := module
+	if pkg == "pulumi" && module == "providers" {
+		pkgName = name
+		moduleName = ""
+	}
+
 	if objectType.IsInputShape() {
 		if !strings.HasSuffix(objectTypeName, "Args") {
 			objectTypeName = objectTypeName + "Args"
 		}
 
-		imports = append(imports, pulumiInputImport(pkg, module, objectTypeName))
+		imports = append(imports, pulumiInputImport(pkgName, moduleName, objectTypeName))
 	} else {
-		imports = append(imports, pulumiImport(pkg, module, objectTypeName))
+		imports = append(imports, pulumiImport(pkgName, moduleName, objectTypeName))
 	}
 
 	// then check whether one of the properties of this object is an object too
@@ -469,12 +477,18 @@ func reduceInputTypeFromArray(arrayType *schema.ArrayType) *schema.ArrayType {
 func collectResourceImports(resource *pcl.Resource) []string {
 	imports := make([]string, 0)
 	pkg, module, name, _ := resource.DecomposeToken()
-	resourceImport := pulumiImport(pkg, module, name)
+	pkgName := pkg
+	moduleName := module
+	if pkg == "pulumi" && module == "providers" {
+		pkgName = name
+		moduleName = ""
+	}
+	resourceImport := pulumiImport(pkgName, moduleName, name)
 	imports = append(imports, resourceImport)
 	if len(resource.Inputs) > 0 || hasCustomResourceOptions(resource) {
 		// import args type name
 		argsTypeName := resourceArgsTypeName(resource)
-		resourceArgsImport := pulumiImport(pkg, module, argsTypeName)
+		resourceArgsImport := pulumiImport(pkgName, moduleName, argsTypeName)
 		imports = append(imports, resourceArgsImport)
 		resourceProperties := typedResourceProperties(resource)
 		for _, inputProperty := range resource.Inputs {
@@ -527,6 +541,10 @@ func (g *generator) functionImportDef(tokenArg model.Expression) (string, string
 	pkg, module, member, _ := pcl.DecomposeToken(token, tokenRange)
 	pkg = sanitizeImport(pkg)
 	module = sanitizeImport(module)
+	member = sanitizeImport(member)
+	if pkg == "pulumi" && module == "providers" {
+		return pulumiImport(member, "", ""), member
+	}
 	if ignoreModule(module) {
 		importDef := "com.pulumi." + pkg + "." + names.Title(pkg) + "Functions"
 		return importDef, member
