@@ -60,8 +60,8 @@ public class ProviderResource extends CustomResource {
     private CompletableFuture<String> registrationIdAsync() {
         // If we were given providers, wait for them to resolve and construct provider references from them.
         // A provider reference is a well-known string (two ::-separated values) that the engine interprets.
-        var providerUrn = Internal.of(this.getUrn()).getValueOrDefault("");
-        var providerId = Internal.of(this.getId()).getDataAsync()
+        var providerUrn = Internal.of(this.urn()).getValueOrDefault("");
+        var providerId = Internal.of(this.id()).getDataAsync()
                 .thenApply(data -> data.filter(String::isBlank).orElse(Constants.UnknownValue));
 
         return providerUrn.thenCompose(

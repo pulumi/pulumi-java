@@ -18,7 +18,7 @@ public final class WebAppRelayServiceConnectionArgs extends com.pulumi.resources
     @Import(name="resourceType")
     private @Nullable Output<String> resourceType;
 
-    public Optional<Output<String>> resourceType() {
+    public Optional<Output<String>> resourceType_() {
         return Optional.ofNullable(this.resourceType);
     }
 
@@ -46,13 +46,13 @@ public final class WebAppRelayServiceConnectionArgs extends com.pulumi.resources
             $ = new WebAppRelayServiceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder resourceType(@Nullable Output<String> resourceType) {
+        public Builder resourceType_(@Nullable Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
-        public Builder resourceType(String resourceType) {
-            return resourceType(Output.of(resourceType));
+        public Builder resourceType_(String resourceType) {
+            return resourceType_(Output.of(resourceType));
         }
 
         public WebAppRelayServiceConnectionArgs build() {

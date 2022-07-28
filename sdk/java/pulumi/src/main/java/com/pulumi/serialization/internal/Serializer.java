@@ -208,11 +208,11 @@ public class Serializer {
 
             this.dependentResources.add(customResource);
 
-            return serializeAsync(String.format("%s.id", ctx), customResource.getId(), keepResources).thenCompose(
+            return serializeAsync(String.format("%s.id", ctx), customResource.id(), keepResources).thenCompose(
                     /* @Nullable */ id -> {
                         if (keepResources) {
                             //noinspection ConstantConditions
-                            return serializeAsync(String.format("%s.urn", ctx), customResource.getUrn(), keepResources).thenApply(
+                            return serializeAsync(String.format("%s.urn", ctx), customResource.urn(), keepResources).thenApply(
                                     /* @Nullable */ urn -> {
                                         var result = new HashMap<String, /* @Nullable */ Object>();
                                         result.put(Constants.SpecialSigKey, Constants.SpecialResourceSig);
@@ -248,7 +248,7 @@ public class Serializer {
             // deadlocks.
             log.excessive(String.format("Serialize property[%s]: Encountered ComponentResource", ctx));
 
-            return serializeAsync(String.format("%s.urn", ctx), componentResource.getUrn(), keepResources).thenApply(
+            return serializeAsync(String.format("%s.urn", ctx), componentResource.urn(), keepResources).thenApply(
                     /* @Nullable */ urn -> {
                         if (keepResources) {
                             var result = new HashMap<String, /* @Nullable */ Object>();

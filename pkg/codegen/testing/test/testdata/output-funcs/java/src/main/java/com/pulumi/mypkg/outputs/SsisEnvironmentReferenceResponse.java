@@ -52,7 +52,7 @@ public final class SsisEnvironmentReferenceResponse {
      * @return Environment reference id.
      * 
      */
-    public Optional<Double> id() {
+    public Optional<Double> id_() {
         return Optional.ofNullable(this.id);
     }
     /**
@@ -95,8 +95,8 @@ public final class SsisEnvironmentReferenceResponse {
             this.environmentName = environmentName;
             return this;
         }
-        @CustomType.Setter
-        public Builder id(@Nullable Double id) {
+        @CustomType.Setter("id")
+        public Builder id_(@Nullable Double id) {
             this.id = id;
             return this;
         }

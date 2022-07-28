@@ -67,7 +67,7 @@ public final class Stack extends ComponentResource {
      * @return the outputs of this {@link Stack}
      */
     @InternalUse
-    public Output<Map<String, Output<?>>> getOutputs() {
+    public Output<Map<String, Output<?>>> outputs() {
         return this.outputs;
     }
 

@@ -48,7 +48,8 @@ func isReservedMethod(s string) bool {
 func isReservedResourceMethod(s string) bool {
 	switch s {
 	// These names conflict with methods on Resource.
-	case "getResourceType", "getResourceName", "getChildResources", "getUrn":
+	case "getResourceType", "getResourceName", "getChildResources", "getUrn", "getId",
+		"resourceType", "resourceName", "childResources", "urn", "id":
 		return true
 	// These names conflict with methods on our builders.
 	case "builder":

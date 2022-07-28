@@ -30,7 +30,7 @@ public final class KeyVaultReferenceArgs extends com.pulumi.resources.ResourceAr
      * @return The resource id.
      * 
      */
-    public Optional<Output<String>> id() {
+    public Optional<Output<String>> id_() {
         return Optional.ofNullable(this.id);
     }
 
@@ -80,7 +80,7 @@ public final class KeyVaultReferenceArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder id(@Nullable Output<String> id) {
+        public Builder id_(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
@@ -91,8 +91,8 @@ public final class KeyVaultReferenceArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder id(String id) {
-            return id(Output.of(id));
+        public Builder id_(String id) {
+            return id_(Output.of(id));
         }
 
         /**

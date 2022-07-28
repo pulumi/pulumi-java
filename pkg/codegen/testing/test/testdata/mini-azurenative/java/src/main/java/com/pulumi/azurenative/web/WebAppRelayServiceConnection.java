@@ -18,7 +18,7 @@ public class WebAppRelayServiceConnection extends com.pulumi.resources.CustomRes
     @Export(name="resourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceType;
 
-    public Output<Optional<String>> resourceType() {
+    public Output<Optional<String>> resourceType_() {
         return Codegen.optional(this.resourceType);
     }
     /**

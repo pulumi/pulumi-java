@@ -29,7 +29,7 @@ public final class KeyVaultReference extends com.pulumi.resources.InvokeArgs {
      * @return The resource id.
      * 
      */
-    public Optional<String> id() {
+    public Optional<String> id_() {
         return Optional.ofNullable(this.id);
     }
 
@@ -79,7 +79,7 @@ public final class KeyVaultReference extends com.pulumi.resources.InvokeArgs {
          * @return builder
          * 
          */
-        public Builder id(@Nullable String id) {
+        public Builder id_(@Nullable String id) {
             $.id = id;
             return this;
         }
