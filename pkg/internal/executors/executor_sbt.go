@@ -3,7 +3,6 @@
 package executors
 
 import (
-	"os"
 	"strings"
 
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
@@ -41,7 +40,7 @@ func (sbt) isSbtProject(opts JavaExecutorOptions) (bool, error) {
 		"build.sbt",
 	}
 	for _, p := range sbtMarkers {
-		_, err := os.Stat(opts.WD.Path() + "/" + p)
+		_, err := fsys.FileExists(opts.WD, p)
 		if err == nil {
 			return true, nil
 		}
