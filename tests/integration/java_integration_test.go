@@ -75,6 +75,17 @@ func TestIntegrations(t *testing.T) {
 		})
 		integration.ProgramTest(t, &test)
 	})
+	t.Run("stack-transformation2", func(t *testing.T) {
+		dir := filepath.Join(getCwd(t), "stack-transformation2")
+		test := getJavaBase(t, integration.ProgramTestOptions{
+			Dir:                    dir,
+			Quick:                  true,
+			DebugUpdates:           false,
+			DebugLogLevel:          0,
+			ExtraRuntimeValidation: stackTransformationValidator(),
+		})
+		integration.ProgramTest(t, &test)
+	})
 }
 
 func getJavaBase(t *testing.T, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {

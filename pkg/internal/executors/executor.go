@@ -55,12 +55,13 @@ func NewJavaExecutor(opts JavaExecutorOptions) (*JavaExecutor, error) {
 		&maven{},
 		&gradle{},
 		&jbang{},
+		&sbt{},
 	).NewJavaExecutor(opts)
 	if err != nil {
 		return nil, err
 	}
 	if e == nil {
-		return nil, fmt.Errorf("Failed to configure executor, tried: jar, maven, gradle, jbang")
+		return nil, fmt.Errorf("failed to configure executor, tried: jar, maven, gradle, jbang, sbt")
 	}
 	return e, nil
 }
