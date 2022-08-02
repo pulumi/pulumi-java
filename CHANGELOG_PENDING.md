@@ -2,5 +2,7 @@
 
 ### Bug Fixes
 
-- [codegen] #702: Fixes `pulumi convert` when targeting Java. 
-  This was done by generating maven configuration (`pom.xml`) and moving the generated Java files to a proper package. 
+- [codegen] [#702](https://github.com/pulumi/pulumi-java/issues/702): 
+  Fixes `pulumi convert` (when targeting Java). Now a maven 
+  configuration (`pom.xml` with dependencies) is created and
+  the generated Java files are moved to a proper package. 
