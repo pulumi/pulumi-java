@@ -3,11 +3,9 @@
 package integration
 
 import (
-	"fmt"
 	"github.com/pulumi/pulumi/pkg/v3/engine"
 	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
 	"os"
-	"path/filepath"
 	"testing"
 )
 
@@ -20,12 +18,7 @@ func getCwd(t *testing.T) string {
 }
 
 func getJavaBase(t *testing.T, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
-	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
-	if err != nil {
-		panic(err)
-	}
 	opts := integration.ProgramTestOptions{
-		Env: []string{fmt.Sprintf("PULUMI_REPO_ROOT=%s", repoRoot)},
 		Config: map[string]string{
 			"org": "pulumi-bot",
 		},
