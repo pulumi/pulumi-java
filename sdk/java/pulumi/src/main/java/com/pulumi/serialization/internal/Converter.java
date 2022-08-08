@@ -138,43 +138,23 @@ public class Converter {
         if (value == null) {
             if (targetIsOptional) {
                 // A null value coerces to a Optional.empty.
+                var empty = Optional.empty();
+                //noinspection unchecked,rawtypes
                 return tryEnsureType(
                         String.format("%s %s", context, targetType.getTypeName()),
-                        Optional.empty(),
-                        targetType
+                        empty, (TypeShape<Optional>) targetType, empty
                 );
             }
 
-            // We're null and we're NOT converting to an Optional
+            // We're null, and we're NOT converting to an Optional
             // We check for primitives and primitives wrappers here
-            if (boolean.class.isAssignableFrom(targetType.getType())
-                    || Boolean.class.isAssignableFrom(targetType.getType())) {
-                return false;
-            }
-            if (String.class.isAssignableFrom(targetType.getType())) {
-                return "";
-            }
-            if (double.class.isAssignableFrom(targetType.getType())
-                    || Double.class.isAssignableFrom(targetType.getType())) {
-                return 0.0;
-            }
-            if (int.class.isAssignableFrom(targetType.getType())
-                    || Integer.class.isAssignableFrom(targetType.getType())) {
-                return 1;
-            }
-            if (JsonElement.class.isAssignableFrom(targetType.getType())) {
-                return JsonNull.INSTANCE;
-            }
-
-            // for all other types, can just return the null value right back out as a legal
-            // reference type value.
-            return null;
+            return defaultValue(targetType, null);
         }
 
         // We're Optional
         var valueIsOptional = Optional.class.isAssignableFrom(value.getClass());
         if (valueIsOptional) {
-            // We're Optional and we're converting to Optional<T>, just map the value
+            // We're Optional, and we're converting to Optional<T>, just map the value
             if (targetIsOptional) {
                 var valueType = targetType.getParameter(0)
                         .orElseThrow(() -> new IllegalArgumentException("Expected the parameter type of the Optional, got none"));
@@ -211,22 +191,26 @@ public class Converter {
         // We're NOT an Optional and we're NOT converting to Optional<T>, just continue
 
         if (String.class.isAssignableFrom(targetType.getType())) {
-            return tryEnsureType(context, value, targetType);
+            //noinspection unchecked
+            return tryEnsureType(context, value, (TypeShape<String>) targetType, "");
         }
 
         if (boolean.class.isAssignableFrom(targetType.getType())
                 || Boolean.class.isAssignableFrom(targetType.getType())) {
-            return tryEnsureType(context, value, targetType);
+            //noinspection unchecked
+            return tryEnsureType(context, value, (TypeShape<Boolean>) targetType, false);
         }
 
         if (double.class.isAssignableFrom(targetType.getType())
                 || Double.class.isAssignableFrom(targetType.getType())) {
-            return tryEnsureType(context, value, targetType);
+            //noinspection unchecked
+            return tryEnsureType(context, value, (TypeShape<Double>) targetType, 0.0);
         }
 
         if (int.class.isAssignableFrom(targetType.getType())
                 || Integer.class.isAssignableFrom(targetType.getType())) {
-            return tryEnsureType(context, value, TypeShape.of(Double.class)).intValue();
+            //noinspection ConstantConditions
+            return tryEnsureType(context, value, TypeShape.of(Double.class), 0.0).intValue();
         }
 
         if (Object.class.equals(targetType.getType())) {
@@ -235,17 +219,17 @@ public class Converter {
 
         if (Archive.class.isAssignableFrom(targetType.getType())) {
             try {
-                return tryEnsureType(context, value, targetType);
+                return tryEnsureType(context, value, targetType, null);
             } catch (UnsupportedOperationException ex) {
-                return tryEnsureType(context, new InvalidArchive(), targetType);
+                return tryEnsureType(context, new InvalidArchive(), targetType, null);
             }
         }
 
         if (AssetOrArchive.class.isAssignableFrom(targetType.getType())) {
             try {
-                return tryEnsureType(context, value, targetType);
+                return tryEnsureType(context, value, targetType, null);
             } catch (UnsupportedOperationException ex) {
-                return tryEnsureType(context, new InvalidAsset(), targetType);
+                return tryEnsureType(context, new InvalidAsset(), targetType, null);
             }
         }
 
@@ -254,7 +238,7 @@ public class Converter {
         }
 
         if (Resource.class.isAssignableFrom(targetType.getType())) {
-            return tryEnsureType(context, value, targetType);
+            return tryEnsureType(context, value, targetType, null);
         }
 
         if (targetType.getType().isEnum()) {
@@ -271,14 +255,18 @@ public class Converter {
                         }
                     })
                     .findFirst()
-                    .orElseThrow(() -> new IllegalArgumentException(String.format(
-                            "Expected value that match any of enum '%s' constants: [%s], got: '%s'",
-                            targetType.getType().getTypeName(),
-                            constants.stream()
-                                    .map(Object::toString)
-                                    .collect(joining(", ")),
-                            value
-                    )));
+                    .orElseGet(() -> {
+                        this.log.warn(String.format(
+                                "%s; Expected value that match any of enum '%s' constants: [%s], got: '%s'",
+                                context,
+                                targetType.getType().getSimpleName(),
+                                constants.stream()
+                                        .map(Object::toString)
+                                        .collect(joining(", ")),
+                                value
+                        ));
+                        return null;
+                    });
         }
 
         if (Either.class.isAssignableFrom(targetType.getType())) {
@@ -298,7 +286,7 @@ public class Converter {
             var constructor = targetType.getAnnotatedConstructor(CustomType.Constructor.class);
 
             //noinspection unchecked
-            var argumentsMap = (Map<String, Object>) tryEnsureType(context, value, TypeShape.of(Map.class));
+            var argumentsMap = (Map<String, Object>) tryEnsureType(context, value, TypeShape.of(Map.class), Map.of());
             var constructorParameters = constructor.getParameters();
             var arguments = new Object[constructorParameters.length];
 
@@ -383,8 +371,10 @@ public class Converter {
         if (hasAnnotatedBuilder) {
             var builderType = targetType.getAnnotatedClass(CustomType.Builder.class);
 
-            //noinspection unchecked
-            var argumentsMap = new HashMap<String, Object>(tryEnsureType(context, value, TypeShape.of(Map.class)));
+            //noinspection unchecked,ConstantConditions
+            var argumentsMap = new HashMap<String, Object>(
+                    tryEnsureType(context, value, TypeShape.of(Map.class), new HashMap<String, Object>())
+            );
 
             // create the builder object
             final Object builder;
@@ -471,6 +461,39 @@ public class Converter {
         }
     }
 
+    @Nullable
+    private <T> T defaultValue(TypeShape<?> targetType, @Nullable T default_) {
+        var raw = defaultValueRaw(targetType);
+        //noinspection unchecked
+        return raw == null ? default_ : (T) raw;
+    }
+
+    @Nullable
+    private Object defaultValueRaw(TypeShape<?> targetType) {
+        if (boolean.class.isAssignableFrom(targetType.getType())
+                || Boolean.class.isAssignableFrom(targetType.getType())) {
+            return false;
+        }
+        if (String.class.isAssignableFrom(targetType.getType())) {
+            return "";
+        }
+        if (double.class.isAssignableFrom(targetType.getType())
+                || Double.class.isAssignableFrom(targetType.getType())) {
+            return 0.0;
+        }
+        if (int.class.isAssignableFrom(targetType.getType())
+                || Integer.class.isAssignableFrom(targetType.getType())) {
+            return 0;
+        }
+        if (JsonElement.class.isAssignableFrom(targetType.getType())) {
+            return JsonNull.INSTANCE;
+        }
+
+        // for all other types, can just return the null value right back out as a legal
+        // reference type value.
+        return null;
+    }
+
     private JsonElement tryConvertJsonElement(String context, Object value) {
         var gson = new Gson();
         StringWriter stringWriter = new StringWriter();
@@ -518,7 +541,7 @@ public class Converter {
             jsonWriter.beginObject();
             //noinspection unchecked,rawtypes,rawtypes
             for (var e : (Set<Map.Entry>) ((Map) value).entrySet()) {
-                jsonWriter.name(tryEnsureType(context, e.getKey(), TypeShape.of(String.class)));
+                jsonWriter.name(tryEnsureType(context, e.getKey(), TypeShape.of(String.class), ""));
                 tryWriteJson(context, jsonWriter, e.getValue());
             }
             jsonWriter.endObject();
@@ -530,38 +553,47 @@ public class Converter {
         ));
     }
 
-    private <T> T tryEnsureType(String context, Object value, TypeShape<T> targetType) {
-        if (targetType.getType().isInstance(value)
+    private <T> boolean canBeCast(Object value, TypeShape<T> targetType) {
+        return targetType.getType().isInstance(value)
                 || (boolean.class.isAssignableFrom(targetType.getType()) && value instanceof Boolean)
                 || (double.class.isAssignableFrom(targetType.getType()) && value instanceof Double)
                 || (int.class.isAssignableFrom(targetType.getType()) && value instanceof Integer)
-        ) {
+                || (int.class.isAssignableFrom(targetType.getType()) && value instanceof Double)
+                || (Integer.class.isAssignableFrom(targetType.getType()) && value instanceof Double);
+    }
+
+    @Nullable
+    private <T> T tryEnsureType(String context, Object value, TypeShape<T> targetType, T default_) {
+        if (canBeCast(value, targetType)) {
             //noinspection unchecked
             return (T) value;
         } else {
-            throw new UnsupportedOperationException(String.format(
+            this.log.warn(String.format(
                     "%s; Expected '%s' but got '%s' while deserializing.",
                     context, targetType.getTypeName(), value.getClass().getTypeName()
             ));
+            return defaultValue(targetType, default_);
         }
     }
 
+    @Nullable
     private Either<Object, Object> tryConvertOneOf(String context, Object value, TypeShape<?> targetType) {
         var leftType = targetType.getParameter(0)
                 .orElseThrow(() -> new IllegalStateException("Expected a left parameter type for the Either, got none"));
         var rightType = targetType.getParameter(1)
-                .orElseThrow(() -> new IllegalStateException("Expected a left parameter type for the Either, got none"));
+                .orElseThrow(() -> new IllegalStateException("Expected a right parameter type for the Either, got none"));
 
         try {
-            return Either.ofLeft(
-                    tryConvertObjectInner(
-                            String.format("%s.left", context),
-                            value,
-                            leftType
-                    )
-            );
-        } catch (Exception leftException) {
-            try {
+            if (canBeCast(value, leftType)) {
+                return Either.ofLeft(
+                        tryConvertObjectInner(
+                                String.format("%s.left", context),
+                                value,
+                                leftType
+                        )
+                );
+            }
+            if (canBeCast(value, rightType)) {
                 return Either.ofRight(
                         tryConvertObjectInner(
                                 String.format("%s.right", context),
@@ -569,13 +601,20 @@ public class Converter {
                                 rightType
                         )
                 );
-            } catch (Exception rightException) {
-                throw new IllegalArgumentException(String.format(
-                        "%s; Can't convert OneOf to Either, got exceptions for both left and right, left: '%s', right: '%s'; Showing stack trace only for the right.",
-                        context, leftException.getMessage(), rightException.getMessage()
-                ), rightException);
             }
+            this.log.warn(String.format(
+                    "%s; Can't convert OneOf to Either, couldn't match '%s' to either '%s' or '%s'",
+                    context,
+                    value == null ? "null" : value.getClass().getTypeName(),
+                    leftType.getTypeName(),
+                    rightType.getTypeName()
+            ));
+        } catch (Exception e) {
+            this.log.warn(String.format(
+                    "%s; Can't convert OneOf to Either: %s", context, e.getMessage()
+            ));
         }
+        return null;
     }
 
     private ImmutableList<Object> tryConvertList(String context, Object value, TypeShape<?> targetType) {
@@ -592,7 +631,7 @@ public class Converter {
         var objects = (List<Object>) value;
         for (int i = 0, objectsSize = objects.size(); i < objectsSize; i++) {
             builder.add(tryConvertObjectInner(
-                    String.format("%s[%d]", targetType.getTypeName(), i),
+                    String.format("%s[%d]", context, i),
                     objects.get(i),
                     elementType
             ));
@@ -615,7 +654,7 @@ public class Converter {
         var objects = (Map<String, Object>) value;
         for (var entry : objects.entrySet()) {
             builder.put(entry.getKey(), tryConvertObjectInner(
-                    String.format("%s[%s]", targetType.getTypeName(), entry.getKey()),
+                    String.format("%s[%s]", context, entry.getKey()),
                     entry.getValue(),
                     valueType
             ));
