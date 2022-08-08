@@ -191,7 +191,7 @@ public abstract class Resource {
             options.protect = options.protect || options.parent.protect; // TODO: is this logic good?
 
             // Make a copy of the aliases array, and add to it any implicit aliases inherited from its parent
-            options.aliases = options.aliases == null ? new ArrayList<>() : copyNullableList(options.aliases);
+            options.aliases = options.aliases == null ? new ArrayList<>() : new ArrayList<>(options.aliases);
             for (var parentAlias : options.parent.aliases) {
                 options.aliases.add(
                         urnInheritedChildAlias(this.name, options.parent.pulumiResourceName(), parentAlias, this.type)
