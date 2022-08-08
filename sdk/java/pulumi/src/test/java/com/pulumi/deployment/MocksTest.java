@@ -38,7 +38,6 @@ import static com.pulumi.test.internal.PulumiTestInternal.extractOutputData;
 import static com.pulumi.test.internal.PulumiTestInternal.logger;
 import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
-import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MocksTest {
@@ -193,13 +192,15 @@ public class MocksTest {
         assertThat(resources).isNotEmpty();
 
         var exceptions = result.exceptions();
-        assertThat(exceptions).isNotEmpty();
-        assertThat(exceptions.stream().map(Throwable::getMessage).collect(toList()))
-                .haveAtLeastOne(containsString("Instance.publicIp; Expected 'java.lang.String' but got 'java.lang.Double' while deserializing."));
+        assertThat(exceptions).isEmpty();
+
+        assertThat(log.getMessages()).haveAtLeastOne(containsString(
+                "Instance.publicIp; Expected 'java.lang.String' but got 'java.lang.Double' while deserializing."
+        ));
 
         var publicIp = result.output("publicIp");
         var ipFuture = Internal.of(publicIp).getDataAsync();
-        assertThat(ipFuture).isCompletedExceptionally();
+        assertThat(ipFuture).isCompleted();
 
         // Wait for all exceptions to propagate. If we do not, these exceptions contaminate the next test.
         // TODO properly isolate tests.

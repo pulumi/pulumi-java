@@ -373,7 +373,7 @@ class ComplexTypeConverterTest {
     void testUnexpectedNullableComplexType() {
         var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testUnexpectedNullableComplexType");
         var inMemoryLog = PulumiTestInternal.mockLog(logger);
-        var deserializer = new Deserializer(log);
+        var deserializer = new Deserializer(inMemoryLog);
         var converter = new Converter(inMemoryLog, deserializer);
 
         var map = new HashMap<String, Object>();
@@ -447,5 +447,73 @@ class ComplexTypeConverterTest {
                         "to have a setter annotated with @%s(\"private\"), got: $private",
                         Setter.class.getTypeName()
                 ));
+    }
+
+    @Test
+    void testComplexTypeTypeMismatches() {
+        var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testComplexTypeTypeMismatches");
+        var inMemoryLog = PulumiTestInternal.mockLog(logger);
+        var deserializer = new Deserializer(inMemoryLog);
+        var converter = new Converter(inMemoryLog, deserializer);
+        var serialized = serializeToValueAsync(ImmutableMap.<String, Object>builder()
+                .put("s", 24)
+                .put("b", "hi")
+                .put("i", "string")
+                .put("d", true)
+                .put("list", ImmutableList.of(false, 99, true, "hello"))
+                .put("map", ImmutableMap.<String, Object>builder()
+                        .put("k", 10)
+                        .put("v", "hello")
+                        .build())
+                .put("private", "test")
+                .put("size", "bigger")
+                .put("color", true)
+                .build()).join();
+
+        var data = converter.convertValue(
+                "ComplexTypeTypeMismatches", serialized, ComplexType1.class
+        );
+
+        assertThat(data.getValueNullable()).isNotNull();
+        assertThat(data.getValueNullable().s).isEqualTo("");
+        assertThat(data.getValueNullable().b).isEqualTo(false);
+        assertThat(data.getValueNullable().i).isEqualTo(0);
+        assertThat(data.getValueNullable().d).isEqualTo(0.0);
+        assertThat(((ImmutableList) data.getValueNullable().list)).hasSameElementsAs(ImmutableList.of(false, false, true, false));
+        assertThat(((ImmutableMap) data.getValueNullable().map)).containsAllEntriesOf(ImmutableMap.of("k", 10, "v", 0));
+        assertThat(data.getValueNullable().$private).isEqualTo("test");
+        assertThat(data.getValueNullable().size).isNull();
+        assertThat(data.getValueNullable().color).isNull();
+
+        assertThat(data.isKnown()).isTrue();
+
+        assertThat(logger.getMessages()).hasSize(9);
+        assertThat(logger.getMessages()).haveExactly(1, containsString(
+                "$ComplexType1(s); Expected 'java.lang.String' but got 'java.lang.Double' while deserializing."
+        ));
+        assertThat(logger.getMessages()).haveExactly(1, containsString(
+                "$ComplexType1(b); Expected 'boolean' but got 'java.lang.String' while deserializing."
+        ));
+        assertThat(logger.getMessages()).haveExactly(1, containsString(
+                "$ComplexType1(i); Expected 'java.lang.Double' but got 'java.lang.String' while deserializing."
+        ));
+        assertThat(logger.getMessages()).haveExactly(1, containsString(
+                "$ComplexType1(d); Expected 'double' but got 'java.lang.Boolean' while deserializing."
+        ));
+        assertThat(logger.getMessages()).haveExactly(1, containsString(
+                "$ComplexType1(list)[1]; Expected 'java.lang.Boolean' but got 'java.lang.Double' while deserializing."
+        ));
+        assertThat(logger.getMessages()).haveExactly(1, containsString(
+                "$ComplexType1(list)[3]; Expected 'java.lang.Boolean' but got 'java.lang.String' while deserializing."
+        ));
+        assertThat(logger.getMessages()).haveExactly(1, containsString(
+                "$ComplexType1(map)[v]; Expected 'java.lang.Double' but got 'java.lang.String' while deserializing."
+        ));
+        assertThat(logger.getMessages()).haveExactly(1, containsString(
+                "$ComplexType1(size); Expected value that match any of enum 'ContainerSize' constants: [FourInch, SixInch, EightInch], got: 'bigger'"
+        ));
+        assertThat(logger.getMessages()).haveExactly(1, containsString(
+                "$ComplexType1(color); Expected value that match any of enum 'ContainerColor' constants: [ContainerColor{value=red}, ContainerColor{value=blue}, ContainerColor{value=yellow}], got: 'true'"
+        ));
     }
 }

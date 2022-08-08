@@ -19,6 +19,7 @@ import com.pulumi.core.annotations.EnumType;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Constants;
 import com.pulumi.deployment.MocksTest;
+import com.pulumi.deployment.internal.InMemoryLogger;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.test.TestOptions;
@@ -36,8 +37,10 @@ import javax.annotation.CheckReturnValue;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.logging.Level;
 import java.util.stream.Stream;
 
+import static com.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -210,14 +213,17 @@ class ConverterTests {
         }
 
         @Test
-        void testNonBooleanThrows() {
-            var deserializer = new Deserializer(log);
+        void testNonBooleanLogs() {
+            var logger = InMemoryLogger.getLogger(Level.FINEST, "BooleanConverterTest#testNonBooleanLogs");
+            var inMemoryLog = PulumiTestInternal.mockLog(logger);
+            var deserializer = new Deserializer(inMemoryLog);
+            var converter = new Converter(inMemoryLog, deserializer);
             var wrongValue = Value.newBuilder().setStringValue("").build();
-            var converter = new Converter(log, deserializer);
-            assertThatThrownBy(
-                    () -> converter.convertValue("BooleanConverterTests", wrongValue, Boolean.class)
-            ).isInstanceOf(UnsupportedOperationException.class)
-                    .hasMessageContaining("Expected 'java.lang.Boolean' but got 'java.lang.String' while deserializing");
+
+            var result = converter.convertValue("BooleanConverterTests", wrongValue, Boolean.class).getValueNullable();
+            assertThat(result).isFalse();
+            assertThat(logger.getMessages())
+                    .haveAtLeastOne(containsString("Expected 'java.lang.Boolean' but got 'java.lang.String' while deserializing"));
         }
 
         @Test
@@ -269,15 +275,16 @@ class ConverterTests {
         }
 
         @Test
-        void testEmptyStringThrows() {
-            var deserializer = new Deserializer(log);
-            var converter = new Converter(log, deserializer);
+        void testEmptyStringLogs() {
+            var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testEmptyStringLogs");
+            var inMemoryLog = PulumiTestInternal.mockLog(logger);
+            var deserializer = new Deserializer(inMemoryLog);
+            var converter = new Converter(inMemoryLog, deserializer);
             var wrongValue = Value.newBuilder().setStringValue("").build();
-            assertThatThrownBy(
-                    () -> converter.convertValue("BooleanConverterTests", wrongValue, Boolean.class)
-            ).isInstanceOf(UnsupportedOperationException.class)
-                    .hasMessageContaining("Expected 'java.lang.Boolean' but got 'java.lang.String' while deserializing");
-
+            converter.convertValue("BooleanConverterTests#testEmptyStringLogs", wrongValue, Boolean.class);
+            assertThat(logger.getMessages()).haveExactly(1, containsString(
+                    "Expected 'java.lang.Boolean' but got 'java.lang.String' while deserializing"
+            ));
         }
 
         @Test
@@ -423,13 +430,17 @@ class ConverterTests {
         }
 
         @ParameterizedTest
-        @MethodSource("com.pulumi.serialization.internal.ConverterTests#testConvertingNonconvertibleValuesThrows")
-        void testConvertingNonconvertibleValuesThrows(Class<?> targetType, Value value) {
-            var deserializer = new Deserializer(log);
-            var converter = new Converter(log, deserializer);
-            assertThatThrownBy(() -> converter.convertValue("EnumConverterTests", value, targetType))
-                    .isInstanceOf(UnsupportedOperationException.class)
-                    .hasMessageContaining("Expected value that match any of enum");
+        @MethodSource("com.pulumi.serialization.internal.ConverterTests#testConvertingNonconvertibleValuesLogs")
+        void testConvertingNonconvertibleValuesLogs(Class<?> targetType, Value value) {
+            var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testEmptyStringLogs");
+            var inMemoryLog = PulumiTestInternal.mockLog(logger);
+            var deserializer = new Deserializer(inMemoryLog);
+            var converter = new Converter(inMemoryLog, deserializer);
+            var result = converter.convertValue("EnumConverterTests", value, targetType);
+            assertThat(result.getValueNullable()).isNull();
+            assertThat(logger.getMessages()).haveExactly(1, containsString(String.format(
+                    "Expected value that match any of enum '%s'", targetType.getSimpleName()
+            )));
         }
     }
 
@@ -441,7 +452,7 @@ class ConverterTests {
             var deserializer = new Deserializer(log);
             var converter = new Converter(log, deserializer);
             var data = converter.convertValue(
-                    "EitherConverterTests", Value.newBuilder().setNumberValue(1).build(), TypeShape.either(Integer.class, String.class));
+                    "EitherConverterTests#testLeft", Value.newBuilder().setNumberValue(1).build(), TypeShape.either(Integer.class, String.class));
             assertThat(data.isKnown()).isTrue();
             assertThat(data.getValueNullable()).isNotNull();
             assertThat(data.getValueNullable().isLeft()).isTrue();
@@ -454,11 +465,27 @@ class ConverterTests {
             var converter = new Converter(log, deserializer);
             var value = Value.newBuilder().setStringValue("foo").build();
             var data = converter.convertValue(
-                    "EitherConverterTests", value, TypeShape.either(Integer.class, String.class));
+                    "EitherConverterTests#testRight", value, TypeShape.either(Integer.class, String.class));
             assertThat(data.isKnown()).isTrue();
             assertThat(data.getValueNullable()).isNotNull();
             assertThat(data.getValueNullable().isRight()).isTrue();
             assertThat(data.getValueNullable().right()).isEqualTo("foo");
+        }
+
+        @Test
+        void testWrongLogs() {
+            var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testWrongLogs");
+            var inMemoryLog = PulumiTestInternal.mockLog(logger);
+            var deserializer = new Deserializer(inMemoryLog);
+            var converter = new Converter(inMemoryLog, deserializer);
+            var value = Value.newBuilder().setBoolValue(true).build();
+            var data = converter.convertValue(
+                    "EitherConverterTests#testWrongLogs", value, TypeShape.either(Integer.class, String.class));
+            assertThat(data.isKnown()).isTrue();
+            assertThat(data.getValueNullable()).isNull();
+            assertThat(logger.getMessages()).haveAtLeastOne(containsString(
+                    "Can't convert OneOf to Either, couldn't match 'java.lang.Boolean' to either 'java.lang.Integer' or 'java.lang.String'"
+            ));
         }
     }
 
@@ -828,11 +855,17 @@ class ConverterTests {
     }
 
     @SuppressWarnings("unused")
-    private static Stream<Arguments> testConvertingNonconvertibleValuesThrows() {
+    private static Stream<Arguments> testConvertingNonconvertibleValuesLogs() {
         return Stream.of(
-                arguments(ContainerColor.class, Value.newBuilder().setNumberValue(1.0).build()),
-                arguments(ContainerBrightness.class, Value.newBuilder().setStringValue("hello").build()),
-                arguments(ContainerSize.class, Value.newBuilder().setStringValue("hello").build())
+                arguments(ContainerColor.class, Value.newBuilder().setNumberValue(1.0).build(),
+                        "Expected target type EnumConverterTests#ContainerColor to have a constructor with a single Double parameter."
+                ),
+                arguments(ContainerBrightness.class, Value.newBuilder().setStringValue("hello").build(),
+                        "Expected target type EnumConverterTests#ContainerBrightness to have a constructor with a single String parameter."
+                ),
+                arguments(ContainerSize.class, Value.newBuilder().setStringValue("hello").build(),
+                        "Expected Double but got String deserializing"
+                )
         );
     }
 
