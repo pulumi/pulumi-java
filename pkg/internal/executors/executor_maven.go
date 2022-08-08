@@ -41,8 +41,19 @@ func (maven) isMavenProject(opts JavaExecutorOptions) (bool, error) {
 func (maven) newMavenExecutor(cmd string) (*JavaExecutor, error) {
 	return &JavaExecutor{
 		Cmd:       cmd,
-		BuildArgs: []string{"--no-transfer-progress", "compile"},
-		RunArgs:   []string{"--no-transfer-progress", "compile", "exec:java"},
+		BuildArgs: []string{
+			/* only output warning or higher to reduce noise */
+			"-Dorg.slf4j.simpleLogger.defaultLogLevel=warn",
+			"--no-transfer-progress",
+			"compile",
+		},
+		RunArgs:   []string{
+			/* only output warning or higher to reduce noise */
+			"-Dorg.slf4j.simpleLogger.defaultLogLevel=warn",
+			"--no-transfer-progress",
+			"compile",
+			"exec:java",
+		},
 		PluginArgs: []string{
 			/* move normal output to STDERR, because we need STDOUT for JSON with plugin results */
 			"-Dorg.slf4j.simpleLogger.logFile=System.err",
