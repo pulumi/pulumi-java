@@ -396,33 +396,45 @@ public class Converter {
             // call setters for all arguments
             var setters = processSetters(builderType, Function.identity());
             argumentsMap.forEach((name, argument) -> {
+                if (!setters.containsKey(name)) {
+                    throw new IllegalArgumentException(String.format(
+                            "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\")",
+                            targetType.getTypeName(),
+                            CustomType.class.getTypeName(),
+                            CustomType.Setter.class.getTypeName(),
+                            name
+                    ));
+                }
+                // validate null and @Nullable presence
+                if (argument == null
+                        && !(extractSetterParameter(setters.get(name)).isAnnotationPresent(Nullable.class))) {
+                    log.debug(String.format(
+                            "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\"). " +
+                                    "Setter '%s' parameter named '%s' lacks @%s annotation, " +
+                                    "so the value is required, but there is no value to deserialize.",
+                            targetType.getTypeName(),
+                            CustomType.class.getTypeName(),
+                            CustomType.Setter.class.getTypeName(),
+                            name,
+                            setters.get(name),
+                            setters.get(name).getName(),
+                            Nullable.class.getTypeName()
+                    ));
+                }
                 try {
-                    if (!setters.containsKey(name)) {
-                        throw new IllegalArgumentException(String.format(
-                                "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\")",
-                                targetType.getTypeName(),
-                                CustomType.class.getTypeName(),
-                                CustomType.Setter.class.getTypeName(),
-                                name
-                        ));
-                    }
-                    // validate null and @Nullable presence
-                    if (argument == null
-                            && !(extractSetterParameter(setters.get(name)).isAnnotationPresent(Nullable.class))) {
-                        log.debug(String.format(
-                                "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\"). " +
-                                        "Setter '%s' parameter named '%s' lacks @%s annotation, " +
-                                        "so the value is required, but there is no value to deserialize.",
-                                targetType.getTypeName(),
-                                CustomType.class.getTypeName(),
-                                CustomType.Setter.class.getTypeName(),
-                                name,
-                                setters.get(name),
-                                setters.get(name).getName(),
-                                Nullable.class.getTypeName()
-                        ));
-                    }
-                    setters.get(name).invoke(builder, argument);
+                    var convertedArgument = tryConvertObjectInner(
+                            String.format("%s(%s)", targetType.getTypeName(), name),
+                            argument,
+                            TypeShape.extract(extractSetterParameter(setters.get(name)))
+                    );
+                    setters.get(name).invoke(builder, convertedArgument);
+                } catch (IllegalArgumentException e) {
+                    throw new IllegalStateException(String.format(
+                            "Error invoking setter '%s' (on '%s'), setter parameters: '%s', argument type: '%s'",
+                            name, targetType.getTypeName(),
+                            Arrays.toString(setters.get(name).getParameterTypes()),
+                            argument == null ? "null" : argument.getClass()
+                    ), e);
                 } catch (IllegalAccessException | InvocationTargetException e) {
                     throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
                 }
