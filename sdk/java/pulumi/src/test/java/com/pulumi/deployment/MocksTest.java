@@ -6,8 +6,7 @@ import com.pulumi.Context;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.core.annotations.CustomType.Constructor;
-import com.pulumi.core.annotations.CustomType.Parameter;
+import com.pulumi.core.annotations.CustomType.Setter;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.annotations.ResourceType;
@@ -254,16 +253,49 @@ public class MocksTest {
 
     @CustomType
     public static final class GetRoleResult {
+        private @Nullable String arn;
+        private @Nullable String id;
+
         /**
          * The Amazon Resource Name (ARN) specifying the role.
          */
-        public final String arn;
-        public final String id;
+        @Nullable
+        public String arn() {
+            return arn;
+        }
 
-        @Constructor
-        private GetRoleResult(@Parameter("arn") String arn, @Parameter("id") String id) {
-            this.arn = arn;
-            this.id = id;
+        @Nullable
+        public String id() {
+            return id;
+        }
+
+        @CustomType.Builder
+        private static final class Builder {
+            private final GetRoleResult $;
+
+            private Builder() {
+                this.$ = new GetRoleResult();
+            }
+
+            private Builder(GetRoleResult defaults) {
+                this.$ = defaults;
+            }
+
+            @Setter("arn")
+            private Builder arn(@Nullable String arn) {
+                this.$.arn = arn;
+                return this;
+            }
+
+            @Setter("id")
+            private Builder id(@Nullable String id) {
+                this.$.id = id;
+                return this;
+            }
+
+            private GetRoleResult build() {
+                return this.$;
+            }
         }
     }
 

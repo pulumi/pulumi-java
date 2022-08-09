@@ -4,18 +4,19 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.pulumi.Log;
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.core.annotations.CustomType.Constructor;
-import com.pulumi.core.annotations.CustomType.Parameter;
+import com.pulumi.core.annotations.CustomType.Setter;
 import com.pulumi.deployment.internal.InMemoryLogger;
 import com.pulumi.serialization.internal.ConverterTests.ContainerSize;
 import com.pulumi.test.internal.PulumiTestInternal;
 import org.junit.jupiter.api.Test;
 
+import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 
+import static com.google.common.base.Preconditions.checkNotNull;
 import static com.pulumi.serialization.internal.ConverterTests.ContainerColor;
 import static com.pulumi.serialization.internal.ConverterTests.ContainerColor.Blue;
 import static com.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
@@ -29,37 +30,127 @@ class ComplexTypeConverterTest {
 
     @CustomType
     public static class ComplexType1 {
-        public final String s;
-        public final boolean b;
-        public final int i;
-        public final double d;
-        public final ImmutableList<Boolean> list;
-        public final ImmutableMap<String, Integer> map;
-        public final Object $private;
-        public final ContainerSize size;
-        public final ContainerColor color;
+        private @Nullable String s;
+        private boolean b;
+        private int i;
+        private double d;
+        private @Nullable ImmutableList<Boolean> list;
+        private @Nullable ImmutableMap<String, Integer> map;
+        private @Nullable Object $private;
+        private @Nullable ContainerSize size;
+        private @Nullable ContainerColor color;
 
-        @Constructor
-        public ComplexType1(
-                @Parameter("s") String s,
-                @Parameter("b") boolean b,
-                @Parameter("i") int i,
-                @Parameter("d") double d,
-                @Parameter("list") ImmutableList<Boolean> list,
-                @Parameter("map") ImmutableMap<String, Integer> map,
-                @Parameter("private") Object $private,
-                @Parameter("size") ContainerSize size,
-                @Parameter("color") ContainerColor color
-        ) {
-            this.s = s;
-            this.b = b;
-            this.i = i;
-            this.d = d;
-            this.list = list;
-            this.map = map;
-            this.$private = $private;
-            this.size = size;
-            this.color = color;
+        @Nullable
+        public String s() {
+            return s;
+        }
+
+        public boolean b() {
+            return b;
+        }
+
+        public int i() {
+            return i;
+        }
+
+        public double d() {
+            return d;
+        }
+
+        @Nullable
+        public ImmutableList<Boolean> list() {
+            return list;
+        }
+
+        @Nullable
+        public ImmutableMap<String, Integer> map() {
+            return map;
+        }
+
+        @Nullable
+        public Object $private() {
+            return $private;
+        }
+
+        @Nullable
+        public ContainerSize size() {
+            return size;
+        }
+
+        @Nullable
+        public ContainerColor color() {
+            return color;
+        }
+
+        @CustomType.Builder
+        public static final class Builder {
+            private final ComplexType1 $;
+
+            public Builder() {
+                this.$ = new ComplexType1();
+            }
+
+            public Builder(ComplexType1 defaults) {
+                this.$ = checkNotNull(defaults);
+            }
+
+            @Setter("s")
+            public Builder s(@Nullable String s) {
+                this.$.s = s;
+                return this;
+            }
+
+            @Setter("b")
+            public Builder b(boolean b) {
+                this.$.b = b;
+                return this;
+            }
+
+            @Setter("i")
+            public Builder i(int i) {
+                this.$.i = i;
+                return this;
+            }
+
+            @Setter("d")
+            public Builder d(double d) {
+                this.$.d = d;
+                return this;
+            }
+
+            @Setter("list")
+            public Builder list(@Nullable ImmutableList<Boolean> list) {
+                this.$.list = list;
+                return this;
+            }
+
+            @Setter("map")
+            public Builder map(@Nullable ImmutableMap<String, Integer> map) {
+                this.$.map = map;
+                return this;
+            }
+
+            @Setter("private")
+            public Builder $private(Object $private) {
+                this.$.$private = $private;
+                return this;
+            }
+
+            @Setter("size")
+            public Builder size(@Nullable ContainerSize size) {
+                this.$.size = size;
+                return this;
+            }
+
+            @Setter("color")
+            public Builder color(@Nullable ContainerColor color) {
+                this.$.color = color;
+                return this;
+            }
+
+            public ComplexType1 build() {
+                return this.$;
+            }
         }
     }
 
@@ -80,7 +171,7 @@ class ComplexTypeConverterTest {
                 .build()
         ).join();
         var data = converter.convertValue(
-                "ComplexTypeConverterTest", serialized, ComplexType1.class
+                "TestComplexType1", serialized, ComplexType1.class
         );
 
         assertThat(data.getValueNullable()).isNotNull();
@@ -99,19 +190,55 @@ class ComplexTypeConverterTest {
 
     @CustomType
     public static class ComplexType2 {
-        public final ComplexType1 c;
-        public final ImmutableList<ComplexType1> c2List;
-        public final ImmutableMap<String, ComplexType1> c2Map;
+        private @Nullable ComplexType1 c;
+        private @Nullable ImmutableList<ComplexType1> c2List;
+        private @Nullable ImmutableMap<String, ComplexType1> c2Map;
 
-        @Constructor
-        public ComplexType2(
-                @Parameter("c") ComplexType1 c,
-                @Parameter("c2List") ImmutableList<ComplexType1> c2List,
-                @Parameter("c2Map") ImmutableMap<String, ComplexType1> c2Map
-        ) {
-            this.c = c;
-            this.c2List = c2List;
-            this.c2Map = c2Map;
+        public ComplexType1 c() {
+            return c;
+        }
+
+        public ImmutableList<ComplexType1> c2List() {
+            return c2List;
+        }
+
+        public ImmutableMap<String, ComplexType1> c2Map() {
+            return c2Map;
+        }
+
+        @CustomType.Builder
+        public static final class Builder {
+            private final ComplexType2 $;
+
+            public Builder() {
+                this.$ = new ComplexType2();
+            }
+
+            public Builder(ComplexType2 defaults) {
+                this.$ = checkNotNull(defaults);
+            }
+
+            @Setter("c")
+            public Builder c(@Nullable ComplexType1 c) {
+                this.$.c = c;
+                return this;
+            }
+
+            @Setter("c2List")
+            public Builder c2List(@Nullable ImmutableList<ComplexType1> c2List) {
+                this.$.c2List = c2List;
+                return this;
+            }
+
+            @Setter("c2Map")
+            public Builder c2Map(@Nullable ImmutableMap<String, ComplexType1> c2Map) {
+                this.$.c2Map = c2Map;
+                return this;
+            }
+
+            public ComplexType2 build() {
+                return this.$;
+            }
         }
     }
 
@@ -161,12 +288,13 @@ class ComplexTypeConverterTest {
                 .build()
         ).join();
         var data = converter.convertValue(
-                "ComplexTypeConverterTest", serialized, ComplexType2.class
+                "TestComplexType2", serialized, ComplexType2.class
         ).getValueNullable();
 
         assertThat(data).isNotNull();
 
         var value = data.c;
+        assertThat(value).isNotNull();
         assertThat(value.s).isEqualTo("str1");
         assertThat(value.b).isEqualTo(false);
         assertThat(value.i).isEqualTo(1);
@@ -209,11 +337,35 @@ class ComplexTypeConverterTest {
 
     @CustomType
     public static class UnexpectedNullableComplexType {
-        public final String s;
+        @Nullable
+        private String s;
 
-        @Constructor
-        public UnexpectedNullableComplexType(@Parameter("s") String s) {
-            this.s = s;
+        @Nullable
+        public String s() {
+            return s;
+        }
+
+        @CustomType.Builder
+        public static final class Builder {
+            private final UnexpectedNullableComplexType $;
+
+            public Builder() {
+                this.$ = new UnexpectedNullableComplexType();
+            }
+
+            public Builder(UnexpectedNullableComplexType defaults) {
+                this.$ = checkNotNull(defaults);
+            }
+
+            @Setter("s")
+            public Builder s(String s) {
+                this.$.s = s;
+                return this;
+            }
+
+            public UnexpectedNullableComplexType build() {
+                return this.$;
+            }
         }
     }
 
@@ -229,27 +381,50 @@ class ComplexTypeConverterTest {
         var serialized = serializeToValueAsync(map).join();
 
         var data = converter.convertValue(
-                "ComplexTypeConverterTest", serialized, UnexpectedNullableComplexType.class
+                "UnexpectedNullableComplexType", serialized, UnexpectedNullableComplexType.class
         ).getValueNullable();
 
         assertThat(data).isNotNull();
 
-        var value = data.s;
+        var value = data.s();
         assertThat(value).isNull();
 
         var messages = logger.getMessages();
         assertThat(messages).haveAtLeastOne(containsString(
-                "parameter named 's' (nr 0 starting from 0) lacks @javax.annotation.Nullable annotation, so the value is required, but there is no value to deserialize."
+                "parameter named 's' lacks @javax.annotation.Nullable annotation"
         ));
     }
 
     @CustomType
     public static class EscapedComplexType {
-        public final String $private;
+        @Nullable
+        private String $private;
 
-        @Constructor
-        public EscapedComplexType(@Parameter("$private") String $private) {
-            this.$private = $private;
+        @Nullable
+        public String $private() {
+            return $private;
+        }
+
+        @CustomType.Builder
+        public static final class Builder {
+            private final EscapedComplexType $;
+
+            public Builder() {
+                this.$ = new EscapedComplexType();
+            }
+
+            public Builder(EscapedComplexType defaults) {
+                this.$ = defaults;
+            }
+
+            @Setter("$private")
+            public void $private(@Nullable String $private) {
+                this.$.$private = $private;
+            }
+
+            public EscapedComplexType build() {
+                return this.$;
+            }
         }
     }
 
@@ -265,11 +440,12 @@ class ComplexTypeConverterTest {
         var serialized = serializeToValueAsync(map).join();
 
         assertThatThrownBy(() -> converter.convertValue(
-                "ComplexTypeConverterTest", serialized, EscapedComplexType.class
+                "EscapedComplexType", serialized, EscapedComplexType.class
         )).isInstanceOf(UnsupportedOperationException.class)
                 .hasCauseInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining(
-                        "expects parameter names of: '$private', but does not expect: 'private'. Unable to deserialize."
-                );
+                .hasMessageContaining(String.format(
+                        "to have a setter annotated with @%s(\"private\"), got: $private",
+                        Setter.class.getTypeName()
+                ));
     }
 }
