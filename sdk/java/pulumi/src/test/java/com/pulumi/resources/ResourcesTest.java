@@ -10,6 +10,7 @@ import java.util.stream.Stream;
 
 import static com.pulumi.resources.Resources.copyNullableList;
 import static com.pulumi.resources.Resources.mergeNullableList;
+import static com.pulumi.resources.Resources.orEmpty;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
@@ -47,6 +48,21 @@ class ResourcesTest {
     @MethodSource
     void testCopyNullableList(@Nullable List<String> list, @Nullable List<String> expected) {
         assertEquals(expected, copyNullableList(list));
+    }
+
+    @SuppressWarnings("unused")
+    private static Stream<Arguments> testOrEmpty() {
+        return Stream.of(
+                arguments(null, List.of()),
+                arguments(List.of(), List.of()),
+                arguments(List.of("a"), List.of("a")),
+                arguments(List.of("a", "b"), List.of("a", "b"))
+        );
+    }
+    @ParameterizedTest
+    @MethodSource
+    void testOrEmpty(@Nullable List<String> list, @Nullable List<String> expected) {
+        assertEquals(expected, orEmpty(list));
     }
 
 }
