@@ -40,14 +40,14 @@ func (maven) isMavenProject(opts JavaExecutorOptions) (bool, error) {
 
 func (maven) newMavenExecutor(cmd string) (*JavaExecutor, error) {
 	return &JavaExecutor{
-		Cmd:       cmd,
+		Cmd: cmd,
 		BuildArgs: []string{
 			/* only output warning or higher to reduce noise */
 			"-Dorg.slf4j.simpleLogger.defaultLogLevel=warn",
 			"--no-transfer-progress",
 			"compile",
 		},
-		RunArgs:   []string{
+		RunArgs: []string{
 			/* only output warning or higher to reduce noise */
 			"-Dorg.slf4j.simpleLogger.defaultLogLevel=warn",
 			"--no-transfer-progress",
