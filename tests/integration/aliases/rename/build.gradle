@@ -28,7 +28,7 @@ repositories {
     }
 }
 
-var pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.5.2"
+var pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1"
 
 dependencies {
     implementation "com.pulumi:pulumi:$pulumiJavaSdkVersion"
