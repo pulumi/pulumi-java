@@ -146,8 +146,7 @@ func (ts TypeShape) ListType(ctx *classFileContext) string {
 	return ""
 }
 
-// StringJavaTypeShape returns a Java code representation if this TypeShape
-//                     Basically rewrites itself to Java.
+// StringJavaTypeShape returns a Java code representation.
 func (ts TypeShape) StringJavaTypeShape(imports *names.Imports) string {
 	shape := fmt.Sprintf("%s.<%s>builder(%s)",
 		imports.Ref(names.TypeShape),
