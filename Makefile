@@ -82,3 +82,6 @@ borrow_schemas:: submodule_update
 # Runs `go mod tidy` on every Go project.
 tidy::
 	./scripts/tidy.sh
+
+clone_templates::
+	git clone https://github.com/pulumi/templates.git
