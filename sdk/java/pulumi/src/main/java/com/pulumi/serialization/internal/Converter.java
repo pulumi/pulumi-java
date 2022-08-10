@@ -30,6 +30,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -383,7 +384,7 @@ public class Converter {
             var builderType = targetType.getAnnotatedClass(CustomType.Builder.class);
 
             //noinspection unchecked
-            var argumentsMap = (Map<String, Object>) tryEnsureType(context, value, TypeShape.of(Map.class));
+            var argumentsMap = new HashMap<String, Object>(tryEnsureType(context, value, TypeShape.of(Map.class)));
 
             // create the builder object
             final Object builder;
@@ -398,6 +399,13 @@ public class Converter {
             }
             // call setters for all arguments
             var setters = processSetters(builderType, Function.identity());
+            setters.forEach((__, method) -> {
+                var wireName = extractSetterName(method);
+                // populate missing arguments with null to reuse error handling below
+                if (!argumentsMap.containsKey(wireName)) {
+                    argumentsMap.put(wireName, null);
+                }
+            });
             argumentsMap.forEach((name, argument) -> {
                 if (!setters.containsKey(name)) {
                     throw new IllegalArgumentException(String.format(
@@ -425,7 +433,7 @@ public class Converter {
                     ));
                 }
                 try {
-                    var convertedArgument = tryConvertObjectInner(
+                    var convertedArgument = argument == null ? null : tryConvertObjectInner(
                             String.format("%s(%s)", targetType.getTypeName(), name),
                             argument,
                             TypeShape.extract(extractSetterParameter(setters.get(name)))
