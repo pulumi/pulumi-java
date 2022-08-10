@@ -89,7 +89,10 @@ func TestIntegrations(t *testing.T) {
 		}, dir, &integration.ProgramTestOptions{})
 		require.NoError(t, err)
 		test := getJavaBase(t, integration.ProgramTestOptions{
-			Dir:                    convertedDir,
+			Dir: convertedDir,
+			Config: map[string]string{
+				"azure:location": "westus2",
+			},
 			SkipRefresh:            true,
 			SkipEmptyPreviewUpdate: true,
 			SkipExportImport:       true,
