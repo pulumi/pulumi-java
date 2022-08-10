@@ -7,7 +7,7 @@ If `settings.xml` is copied to `/.m2`, it sets up resolving artifacts
 from `https://maven.pkg.github.com/pulumi/pulumi-java`.
 
 While the repo remains private, this additionally needs username and
-token env vars set:
+token environment variables set:
 
 ```
 <username>${env.GPR_USER}</username>
