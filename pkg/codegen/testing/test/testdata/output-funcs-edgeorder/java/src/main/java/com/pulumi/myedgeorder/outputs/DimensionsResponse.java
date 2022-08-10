@@ -14,56 +14,39 @@ public final class DimensionsResponse {
      * @return Depth of the device.
      * 
      */
-    private final Double depth;
+    private Double depth;
     /**
      * @return Height of the device.
      * 
      */
-    private final Double height;
+    private Double height;
     /**
      * @return Length of the device.
      * 
      */
-    private final Double length;
+    private Double length;
     /**
      * @return Unit for the dimensions of length, height and width.
      * 
      */
-    private final String lengthHeightUnit;
+    private String lengthHeightUnit;
     /**
      * @return Weight of the device.
      * 
      */
-    private final Double weight;
+    private Double weight;
     /**
      * @return Unit for the dimensions of weight.
      * 
      */
-    private final String weightUnit;
+    private String weightUnit;
     /**
      * @return Width of the device.
      * 
      */
-    private final Double width;
+    private Double width;
 
-    @CustomType.Constructor
-    private DimensionsResponse(
-        @CustomType.Parameter("depth") Double depth,
-        @CustomType.Parameter("height") Double height,
-        @CustomType.Parameter("length") Double length,
-        @CustomType.Parameter("lengthHeightUnit") String lengthHeightUnit,
-        @CustomType.Parameter("weight") Double weight,
-        @CustomType.Parameter("weightUnit") String weightUnit,
-        @CustomType.Parameter("width") Double width) {
-        this.depth = depth;
-        this.height = height;
-        this.length = length;
-        this.lengthHeightUnit = lengthHeightUnit;
-        this.weight = weight;
-        this.weightUnit = weightUnit;
-        this.width = width;
-    }
-
+    private DimensionsResponse() {}
     /**
      * @return Depth of the device.
      * 
@@ -121,7 +104,7 @@ public final class DimensionsResponse {
     public static Builder builder(DimensionsResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private Double depth;
         private Double height;
@@ -130,11 +113,7 @@ public final class DimensionsResponse {
         private Double weight;
         private String weightUnit;
         private Double width;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(DimensionsResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.depth = defaults.depth;
@@ -146,35 +125,51 @@ public final class DimensionsResponse {
     	      this.width = defaults.width;
         }
 
+        @CustomType.Setter
         public Builder depth(Double depth) {
             this.depth = Objects.requireNonNull(depth);
             return this;
         }
+        @CustomType.Setter
         public Builder height(Double height) {
             this.height = Objects.requireNonNull(height);
             return this;
         }
+        @CustomType.Setter
         public Builder length(Double length) {
             this.length = Objects.requireNonNull(length);
             return this;
         }
+        @CustomType.Setter
         public Builder lengthHeightUnit(String lengthHeightUnit) {
             this.lengthHeightUnit = Objects.requireNonNull(lengthHeightUnit);
             return this;
         }
+        @CustomType.Setter
         public Builder weight(Double weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
+        @CustomType.Setter
         public Builder weightUnit(String weightUnit) {
             this.weightUnit = Objects.requireNonNull(weightUnit);
             return this;
         }
+        @CustomType.Setter
         public Builder width(Double width) {
             this.width = Objects.requireNonNull(width);
             return this;
-        }        public DimensionsResponse build() {
-            return new DimensionsResponse(depth, height, length, lengthHeightUnit, weight, weightUnit, width);
+        }
+        public DimensionsResponse build() {
+            final var o = new DimensionsResponse();
+            o.depth = depth;
+            o.height = height;
+            o.length = length;
+            o.lengthHeightUnit = lengthHeightUnit;
+            o.weight = weight;
+            o.weightUnit = weightUnit;
+            o.width = width;
+            return o;
         }
     }
 }

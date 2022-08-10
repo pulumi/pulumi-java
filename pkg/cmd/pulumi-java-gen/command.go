@@ -17,6 +17,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/blang/semver"
 	"github.com/spf13/cobra"
@@ -93,7 +94,12 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 		"path to a JSON file with overrides for .language.java")
 
 	cmd.Flags().StringVar(&buildArg, "build", "gradle",
-		"short-hand to override .language.java.buildFiles")
+		`flavor of build files to generate:
+ - "", "none":            do not generate any build files
+ - "gradle":              generate a Gradle project
+ - "gradle-nexus[:$VER]": generate a Gradle project with gradle-nexus/publish-plugin
+
+`)
 
 	cmd.Run = cmdutil.RunFunc(func(cmd *cobra.Command, args []string) error {
 		rootDir, err := os.Getwd()
@@ -125,26 +131,50 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 			opts.PackageInfo = opts.PackageInfo.With(overrides)
 		}
 
-		if buildArg != "" {
-			opts.PackageInfo = opts.PackageInfo.With(java.PackageInfo{
-				BuildFiles: buildArg,
-			})
+		buildArgOverrides, err := parseBuildOption(buildArg)
+		if err != nil {
+			return err
 		}
+
+		opts.PackageInfo = opts.PackageInfo.With(buildArgOverrides).
+			WithDefaultDependencies()
 
 		if javaSdkVersionArg != "" {
 			parsedVersion, err := semver.ParseTolerant(javaSdkVersionArg)
 			if err != nil {
 				return err
 			}
-			opts.PackageInfo = opts.PackageInfo.With(java.PackageInfo{
-				Packages: map[string]string{
-					"com.pulumi:pulumi": parsedVersion.String(),
-				},
-			})
+			opts.PackageInfo = opts.PackageInfo.
+				WithJavaSdkDependencyDefault(parsedVersion)
 		}
 
 		return generateJava(opts)
 	})
 
 	return cmd
+}
+
+func parseBuildOption(buildOption string) (java.PackageInfo, error) {
+	switch buildOption {
+	case "", "none":
+		return java.PackageInfo{}, nil
+	case "gradle":
+		return java.PackageInfo{BuildFiles: "gradle"}, nil
+	case "gradle-nexus":
+		return java.PackageInfo{
+			BuildFiles:                      "gradle",
+			GradleNexusPublishPluginVersion: "1.1.0",
+		}, nil
+	}
+	if strings.HasPrefix(buildOption, "gradle-nexus:") {
+		v := strings.TrimPrefix(buildOption, "gradle-nexus:")
+		return java.PackageInfo{
+			BuildFiles:                      "gradle",
+			GradleNexusPublishPluginVersion: v,
+		}, nil
+	}
+	return java.PackageInfo{},
+		fmt.Errorf(`Unrecognized value %q passed to the --build option.
+Supported values are: "", "none", "gradle", "gradle-nexus[:$VER]"`,
+			buildOption)
 }

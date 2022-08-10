@@ -138,6 +138,7 @@ type builderSetterTemplateContext struct {
 	PropertyName string
 	Assignment   string
 	ListType     string
+	Annotations  []string
 }
 
 type builderFieldTemplateContext struct {
@@ -154,15 +155,14 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ .Indent }}    return new {{ .Name }}(defaults);
 {{ .Indent }}}
 
+{{- range $annotation := .Annotations }}
+{{ $.Indent }}{{ $annotation }}
+{{- end }}
 {{ .Indent }}public static {{ if .IsFinal }}final {{ end }}class {{ .Name }} {
 {{- range $field := .Fields }}
 {{ $.Indent }}    private {{ $field.FieldType }} {{ $field.FieldName }}{{ $field.Initialization }};
 {{- end }}
-
-{{ $.Indent }}    public {{ .Name }}() {
-{{ $.Indent }}	      // Empty
-{{ $.Indent }}    }
-
+{{ $.Indent }}    public {{ .Name }}() {}
 {{ $.Indent }}    public {{ .Name }}({{ .ResultType }} defaults) {
 {{ $.Indent }}	      {{ .Objects }}.requireNonNull(defaults);
 {{- range $field := .Fields }}
@@ -170,46 +170,37 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{- end }}
 {{ $.Indent }}    }
 {{ range $setter := .Setters }}
+{{- range $annotation := $setter.Annotations }}
+{{ $.Indent }}    {{ $annotation }}
+{{- end }}
 {{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.PropertyType }} {{ $setter.PropertyName }}) {
 {{ $.Indent }}        {{ $setter.Assignment }};
 {{ $.Indent }}        return this;
 {{ $.Indent }}    }
-
 {{- if $setter.ListType }}
 {{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.ListType }}... {{ $setter.PropertyName }}) {
 {{ $.Indent }}        return {{ $setter.SetterName }}(List.of({{ $setter.PropertyName }}));
 {{ $.Indent }}    }
 {{- end -}}
-
 {{ end }}
-{{- if .IsJumbo -}}
 {{ $.Indent }}    public {{ .ResultType }} build() {
-{{ $.Indent }}        final var built = new {{ .ResultType }}();
-{{ range $i, $field := .Fields }}
-{{ $.Indent }}        built.{{ $field.FieldName }} = {{ $field.FieldName }};
+{{ $.Indent }}        final var o = new {{ .ResultType }}();
+{{- range $i, $field := .Fields }}
+{{ $.Indent }}        o.{{ $field.FieldName }} = {{ $field.FieldName }};
 {{- end }}
-{{ $.Indent }}        return built;
-{{- else -}}
-{{ $.Indent }}    public {{ .ResultType }} build() {
-{{ $.Indent }}        return new {{ .ResultType }}(
-{{- $last := (len .Fields | sub 1) -}}
-{{- range $i, $field := .Fields -}}
-{{ $field.FieldName }}{{ if not (eq $i $last) }}, {{ end }}
-{{- end -}}
-);
-{{- end }}
+{{ $.Indent }}        return o;
 {{ .Indent }}    }
 {{ .Indent }}}`
 
 var builderTemplate = Template("Builder", builderTemplateText)
 
 type builderTemplateContext struct {
-	Indent     string
-	Name       string
-	IsFinal    bool
-	IsJumbo    bool
-	Fields     []builderFieldTemplateContext
-	Setters    []builderSetterTemplateContext
-	ResultType string
-	Objects    string
+	Indent      string
+	Name        string
+	IsFinal     bool
+	Fields      []builderFieldTemplateContext
+	Setters     []builderSetterTemplateContext
+	ResultType  string
+	Objects     string
+	Annotations []string
 }

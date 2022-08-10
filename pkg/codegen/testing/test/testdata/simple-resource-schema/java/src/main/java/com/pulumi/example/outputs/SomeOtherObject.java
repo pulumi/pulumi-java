@@ -11,13 +11,9 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SomeOtherObject {
-    private final @Nullable String baz;
+    private @Nullable String baz;
 
-    @CustomType.Constructor
-    private SomeOtherObject(@CustomType.Parameter("baz") @Nullable String baz) {
-        this.baz = baz;
-    }
-
+    private SomeOtherObject() {}
     public Optional<String> baz() {
         return Optional.ofNullable(this.baz);
     }
@@ -29,24 +25,24 @@ public final class SomeOtherObject {
     public static Builder builder(SomeOtherObject defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String baz;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(SomeOtherObject defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.baz = defaults.baz;
         }
 
+        @CustomType.Setter
         public Builder baz(@Nullable String baz) {
             this.baz = baz;
             return this;
-        }        public SomeOtherObject build() {
-            return new SomeOtherObject(baz);
+        }
+        public SomeOtherObject build() {
+            final var o = new SomeOtherObject();
+            o.baz = baz;
+            return o;
         }
     }
 }

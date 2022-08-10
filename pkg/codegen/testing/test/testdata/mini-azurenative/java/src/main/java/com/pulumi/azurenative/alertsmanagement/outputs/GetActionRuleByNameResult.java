@@ -19,49 +19,34 @@ public final class GetActionRuleByNameResult {
      * @return Azure resource Id
      * 
      */
-    private final String id;
+    private String id;
     /**
      * @return Resource location
      * 
      */
-    private final String location;
+    private String location;
     /**
      * @return Azure resource name
      * 
      */
-    private final String name;
+    private String name;
     /**
      * @return action rule properties
      * 
      */
-    private final Object properties;
+    private Object properties;
     /**
      * @return Resource tags
      * 
      */
-    private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
     /**
      * @return Azure resource type
      * 
      */
-    private final String type;
+    private String type;
 
-    @CustomType.Constructor
-    private GetActionRuleByNameResult(
-        @CustomType.Parameter("id") String id,
-        @CustomType.Parameter("location") String location,
-        @CustomType.Parameter("name") String name,
-        @CustomType.Parameter("properties") Object properties,
-        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @CustomType.Parameter("type") String type) {
-        this.id = id;
-        this.location = location;
-        this.name = name;
-        this.properties = properties;
-        this.tags = tags;
-        this.type = type;
-    }
-
+    private GetActionRuleByNameResult() {}
     /**
      * @return Azure resource Id
      * 
@@ -112,7 +97,7 @@ public final class GetActionRuleByNameResult {
     public static Builder builder(GetActionRuleByNameResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String id;
         private String location;
@@ -120,11 +105,7 @@ public final class GetActionRuleByNameResult {
         private Object properties;
         private @Nullable Map<String,String> tags;
         private String type;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(GetActionRuleByNameResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.id = defaults.id;
@@ -135,31 +116,45 @@ public final class GetActionRuleByNameResult {
     	      this.type = defaults.type;
         }
 
+        @CustomType.Setter
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
+        @CustomType.Setter
         public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
+        @CustomType.Setter
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
+        @CustomType.Setter
         public Builder properties(Object properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
+        @CustomType.Setter
         public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
+        @CustomType.Setter
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }        public GetActionRuleByNameResult build() {
-            return new GetActionRuleByNameResult(id, location, name, properties, tags, type);
+        }
+        public GetActionRuleByNameResult build() {
+            final var o = new GetActionRuleByNameResult();
+            o.id = id;
+            o.location = location;
+            o.name = name;
+            o.properties = properties;
+            o.tags = tags;
+            o.type = type;
+            return o;
         }
     }
 }

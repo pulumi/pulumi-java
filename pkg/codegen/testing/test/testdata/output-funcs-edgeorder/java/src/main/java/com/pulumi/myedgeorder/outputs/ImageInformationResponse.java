@@ -13,21 +13,14 @@ public final class ImageInformationResponse {
      * @return Type of the image
      * 
      */
-    private final String imageType;
+    private String imageType;
     /**
      * @return Url of the image
      * 
      */
-    private final String imageUrl;
+    private String imageUrl;
 
-    @CustomType.Constructor
-    private ImageInformationResponse(
-        @CustomType.Parameter("imageType") String imageType,
-        @CustomType.Parameter("imageUrl") String imageUrl) {
-        this.imageType = imageType;
-        this.imageUrl = imageUrl;
-    }
-
+    private ImageInformationResponse() {}
     /**
      * @return Type of the image
      * 
@@ -50,30 +43,32 @@ public final class ImageInformationResponse {
     public static Builder builder(ImageInformationResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String imageType;
         private String imageUrl;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(ImageInformationResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.imageType = defaults.imageType;
     	      this.imageUrl = defaults.imageUrl;
         }
 
+        @CustomType.Setter
         public Builder imageType(String imageType) {
             this.imageType = Objects.requireNonNull(imageType);
             return this;
         }
+        @CustomType.Setter
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
-        }        public ImageInformationResponse build() {
-            return new ImageInformationResponse(imageType, imageUrl);
+        }
+        public ImageInformationResponse build() {
+            final var o = new ImageInformationResponse();
+            o.imageType = imageType;
+            o.imageUrl = imageUrl;
+            return o;
         }
     }
 }

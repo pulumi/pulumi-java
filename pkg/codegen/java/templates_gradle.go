@@ -38,21 +38,23 @@ var settingsGradleTemplate string
 var buildGradleTemplate string
 
 type gradleTemplateContext struct {
-	Version              string
-	GroupID              string
-	ArtifactID           string
-	ProjectName          string
-	RootProjectName      string
-	ProjectURL           string
-	ProjectGitURL        string
-	ProjectDescription   string
-	ProjectInceptionYear string
-	Dependencies         map[string]string
-	DeveloperID          string
-	DeveloperName        string
-	DeveloperEmail       string
-	LicenceName          string
-	LicenceURL           string
+	Version                         string
+	GroupID                         string
+	ArtifactID                      string
+	ProjectName                     string
+	RootProjectName                 string
+	ProjectURL                      string
+	ProjectGitURL                   string
+	ProjectDescription              string
+	ProjectInceptionYear            string
+	Dependencies                    map[string]string
+	DeveloperID                     string
+	DeveloperName                   string
+	DeveloperEmail                  string
+	LicenceName                     string
+	LicenceURL                      string
+	GradleNexusPublishPluginEnabled bool
+	GradleNexusPublishPluginVersion string
 }
 
 func newGradleTemplateContext(
@@ -65,22 +67,21 @@ func newGradleTemplateContext(
 		ProjectGitURL: formatGitURL(pkg.Repository),
 	}
 
+	if packageInfo.GradleNexusPublishPluginVersion != "" {
+		ctx.GradleNexusPublishPluginEnabled = true
+		ctx.GradleNexusPublishPluginVersion = packageInfo.GradleNexusPublishPluginVersion
+	}
+
 	if pkg.Version != nil {
 		ctx.Version = pkg.Version.String()
 	} else {
 		ctx.Version = "0.0.1"
 	}
 
-	if packageInfo.Packages != nil {
-		ctx.Dependencies = packageInfo.Packages
+	if packageInfo.Dependencies != nil {
+		ctx.Dependencies = packageInfo.Dependencies
 	} else {
 		ctx.Dependencies = map[string]string{}
-	}
-
-	// TODO do not depend on Nullable class in generated code
-	jsr305 := "com.google.code.findbugs:jsr305"
-	if _, got := ctx.Dependencies[jsr305]; !got {
-		ctx.Dependencies[jsr305] = "3.0.2"
 	}
 
 	if pkg.License == "Apache-2.0" {

@@ -9,13 +9,9 @@ import java.util.Objects;
 
 @CustomType
 public final class FuncWithDictParamResult {
-    private final String r;
+    private String r;
 
-    @CustomType.Constructor
-    private FuncWithDictParamResult(@CustomType.Parameter("r") String r) {
-        this.r = r;
-    }
-
+    private FuncWithDictParamResult() {}
     public String r() {
         return this.r;
     }
@@ -27,24 +23,24 @@ public final class FuncWithDictParamResult {
     public static Builder builder(FuncWithDictParamResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String r;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(FuncWithDictParamResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.r = defaults.r;
         }
 
+        @CustomType.Setter
         public Builder r(String r) {
             this.r = Objects.requireNonNull(r);
             return this;
-        }        public FuncWithDictParamResult build() {
-            return new FuncWithDictParamResult(r);
+        }
+        public FuncWithDictParamResult build() {
+            final var o = new FuncWithDictParamResult();
+            o.r = r;
+            return o;
         }
     }
 }

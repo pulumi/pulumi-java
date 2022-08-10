@@ -15,21 +15,14 @@ public final class CostInformationResponse {
      * @return Default url to display billing information
      * 
      */
-    private final String billingInfoUrl;
+    private String billingInfoUrl;
     /**
      * @return Details on the various billing aspects for the product system.
      * 
      */
-    private final List<BillingMeterDetailsResponse> billingMeterDetails;
+    private List<BillingMeterDetailsResponse> billingMeterDetails;
 
-    @CustomType.Constructor
-    private CostInformationResponse(
-        @CustomType.Parameter("billingInfoUrl") String billingInfoUrl,
-        @CustomType.Parameter("billingMeterDetails") List<BillingMeterDetailsResponse> billingMeterDetails) {
-        this.billingInfoUrl = billingInfoUrl;
-        this.billingMeterDetails = billingMeterDetails;
-    }
-
+    private CostInformationResponse() {}
     /**
      * @return Default url to display billing information
      * 
@@ -52,33 +45,35 @@ public final class CostInformationResponse {
     public static Builder builder(CostInformationResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String billingInfoUrl;
         private List<BillingMeterDetailsResponse> billingMeterDetails;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(CostInformationResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.billingInfoUrl = defaults.billingInfoUrl;
     	      this.billingMeterDetails = defaults.billingMeterDetails;
         }
 
+        @CustomType.Setter
         public Builder billingInfoUrl(String billingInfoUrl) {
             this.billingInfoUrl = Objects.requireNonNull(billingInfoUrl);
             return this;
         }
+        @CustomType.Setter
         public Builder billingMeterDetails(List<BillingMeterDetailsResponse> billingMeterDetails) {
             this.billingMeterDetails = Objects.requireNonNull(billingMeterDetails);
             return this;
         }
         public Builder billingMeterDetails(BillingMeterDetailsResponse... billingMeterDetails) {
             return billingMeterDetails(List.of(billingMeterDetails));
-        }        public CostInformationResponse build() {
-            return new CostInformationResponse(billingInfoUrl, billingMeterDetails);
+        }
+        public CostInformationResponse build() {
+            final var o = new CostInformationResponse();
+            o.billingInfoUrl = billingInfoUrl;
+            o.billingMeterDetails = billingMeterDetails;
+            return o;
         }
     }
 }

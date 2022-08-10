@@ -16,36 +16,25 @@ public final class SsisFolderResponse {
      * @return Metadata description.
      * 
      */
-    private final @Nullable String description;
+    private @Nullable String description;
     /**
      * @return Metadata id.
      * 
      */
-    private final @Nullable Double id;
+    private @Nullable Double id;
     /**
      * @return Metadata name.
      * 
      */
-    private final @Nullable String name;
+    private @Nullable String name;
     /**
      * @return The type of SSIS object metadata.
      * Expected value is &#39;Folder&#39;.
      * 
      */
-    private final String type;
+    private String type;
 
-    @CustomType.Constructor
-    private SsisFolderResponse(
-        @CustomType.Parameter("description") @Nullable String description,
-        @CustomType.Parameter("id") @Nullable Double id,
-        @CustomType.Parameter("name") @Nullable String name,
-        @CustomType.Parameter("type") String type) {
-        this.description = description;
-        this.id = id;
-        this.name = name;
-        this.type = type;
-    }
-
+    private SsisFolderResponse() {}
     /**
      * @return Metadata description.
      * 
@@ -83,17 +72,13 @@ public final class SsisFolderResponse {
     public static Builder builder(SsisFolderResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String description;
         private @Nullable Double id;
         private @Nullable String name;
         private String type;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(SsisFolderResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
@@ -102,23 +87,33 @@ public final class SsisFolderResponse {
     	      this.type = defaults.type;
         }
 
+        @CustomType.Setter
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
+        @CustomType.Setter
         public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
+        @CustomType.Setter
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }        public SsisFolderResponse build() {
-            return new SsisFolderResponse(description, id, name, type);
+        }
+        public SsisFolderResponse build() {
+            final var o = new SsisFolderResponse();
+            o.description = description;
+            o.id = id;
+            o.name = name;
+            o.type = type;
+            return o;
         }
     }
 }

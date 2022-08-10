@@ -13,35 +13,24 @@ public final class GetClientConfigResult {
      * @return Azure Client ID (Application Object ID).
      * 
      */
-    private final String clientId;
+    private String clientId;
     /**
      * @return Azure Object ID of the current user or service principal.
      * 
      */
-    private final String objectId;
+    private String objectId;
     /**
      * @return Azure Subscription ID
      * 
      */
-    private final String subscriptionId;
+    private String subscriptionId;
     /**
      * @return Azure Tenant ID
      * 
      */
-    private final String tenantId;
+    private String tenantId;
 
-    @CustomType.Constructor
-    private GetClientConfigResult(
-        @CustomType.Parameter("clientId") String clientId,
-        @CustomType.Parameter("objectId") String objectId,
-        @CustomType.Parameter("subscriptionId") String subscriptionId,
-        @CustomType.Parameter("tenantId") String tenantId) {
-        this.clientId = clientId;
-        this.objectId = objectId;
-        this.subscriptionId = subscriptionId;
-        this.tenantId = tenantId;
-    }
-
+    private GetClientConfigResult() {}
     /**
      * @return Azure Client ID (Application Object ID).
      * 
@@ -78,17 +67,13 @@ public final class GetClientConfigResult {
     public static Builder builder(GetClientConfigResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String clientId;
         private String objectId;
         private String subscriptionId;
         private String tenantId;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(GetClientConfigResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.clientId = defaults.clientId;
@@ -97,23 +82,33 @@ public final class GetClientConfigResult {
     	      this.tenantId = defaults.tenantId;
         }
 
+        @CustomType.Setter
         public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
+        @CustomType.Setter
         public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
+        @CustomType.Setter
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
+        @CustomType.Setter
         public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
-        }        public GetClientConfigResult build() {
-            return new GetClientConfigResult(clientId, objectId, subscriptionId, tenantId);
+        }
+        public GetClientConfigResult build() {
+            final var o = new GetClientConfigResult();
+            o.clientId = clientId;
+            o.objectId = objectId;
+            o.subscriptionId = subscriptionId;
+            o.tenantId = tenantId;
+            return o;
         }
     }
 }

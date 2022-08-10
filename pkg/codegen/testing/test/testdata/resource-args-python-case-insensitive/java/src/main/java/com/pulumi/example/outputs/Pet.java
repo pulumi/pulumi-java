@@ -11,13 +11,9 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Pet {
-    private final @Nullable String name;
+    private @Nullable String name;
 
-    @CustomType.Constructor
-    private Pet(@CustomType.Parameter("name") @Nullable String name) {
-        this.name = name;
-    }
-
+    private Pet() {}
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -29,24 +25,24 @@ public final class Pet {
     public static Builder builder(Pet defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String name;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(Pet defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.name = defaults.name;
         }
 
+        @CustomType.Setter
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
-        }        public Pet build() {
-            return new Pet(name);
+        }
+        public Pet build() {
+            final var o = new Pet();
+            o.name = name;
+            return o;
         }
     }
 }

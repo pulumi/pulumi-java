@@ -12,20 +12,11 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Toy {
-    private final @Nullable Toy associated;
-    private final @Nullable String color;
-    private final @Nullable Double wear;
+    private @Nullable Toy associated;
+    private @Nullable String color;
+    private @Nullable Double wear;
 
-    @CustomType.Constructor
-    private Toy(
-        @CustomType.Parameter("associated") @Nullable Toy associated,
-        @CustomType.Parameter("color") @Nullable String color,
-        @CustomType.Parameter("wear") @Nullable Double wear) {
-        this.associated = associated;
-        this.color = color;
-        this.wear = wear;
-    }
-
+    private Toy() {}
     public Optional<Toy> associated() {
         return Optional.ofNullable(this.associated);
     }
@@ -43,16 +34,12 @@ public final class Toy {
     public static Builder builder(Toy defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable Toy associated;
         private @Nullable String color;
         private @Nullable Double wear;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(Toy defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.associated = defaults.associated;
@@ -60,19 +47,27 @@ public final class Toy {
     	      this.wear = defaults.wear;
         }
 
+        @CustomType.Setter
         public Builder associated(@Nullable Toy associated) {
             this.associated = associated;
             return this;
         }
+        @CustomType.Setter
         public Builder color(@Nullable String color) {
             this.color = color;
             return this;
         }
+        @CustomType.Setter
         public Builder wear(@Nullable Double wear) {
             this.wear = wear;
             return this;
-        }        public Toy build() {
-            return new Toy(associated, color, wear);
+        }
+        public Toy build() {
+            final var o = new Toy();
+            o.associated = associated;
+            o.color = color;
+            o.wear = wear;
+            return o;
         }
     }
 }

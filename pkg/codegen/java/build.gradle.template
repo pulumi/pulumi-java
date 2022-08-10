@@ -5,7 +5,15 @@ plugins {
     id("signing")
     id("java-library")
     id("maven-publish")
+    {{- if .GradleNexusPublishPluginEnabled }}
+    id("io.github.gradle-nexus.publish-plugin") version "{{.GradleNexusPublishPluginVersion}}"
+    {{- end }}
 }
+
+{{- if .GroupID }}
+
+group = "{{ .GroupID }}"
+{{- end }}
 
 def resolvedVersion = System.getenv("PACKAGE_VERSION") ?:
     (project.version == "unspecified"
@@ -14,7 +22,11 @@ def resolvedVersion = System.getenv("PACKAGE_VERSION") ?:
 
 def signingKey = System.getenv("SIGNING_KEY")
 def signingPassword = System.getenv("SIGNING_PASSWORD")
+{{- if .GradleNexusPublishPluginEnabled }}
+def publishRepoURL = System.getenv("PUBLISH_REPO_URL") ?: "https://s01.oss.sonatype.org"
+{{- else }}
 def publishRepoURL = System.getenv("PUBLISH_REPO_URL")
+{{- end}}
 def publishRepoUsername = System.getenv("PUBLISH_REPO_USERNAME")
 def publishRepoPassword = System.getenv("PUBLISH_REPO_PASSWORD")
 
@@ -53,8 +65,8 @@ task javadocJar(type: Jar) {
     classifier = 'javadoc'
 }
 
-build {
-    doFirst {
+def genPulumiResources = tasks.register('genPulumiResources') {
+    doLast {
         def resourcesDir = sourceSets.main.output.resourcesDir
         def subDir = project.name.replace(".", "/")
         def outDir = file("$resourcesDir/$subDir")
@@ -67,6 +79,10 @@ build {
         def infoJson = new groovy.json.JsonBuilder(info).toPrettyString()
         new File(outDir, "plugin.json").text = infoJson
     }
+}
+
+jar.configure {
+    dependsOn genPulumiResources
 }
 
 publishing {
@@ -110,6 +126,7 @@ publishing {
             }
         }
     }
+    {{- if .GradleNexusPublishPluginEnabled -}}{{- else }}
 
     if (publishRepoURL) {
         repositories {
@@ -123,6 +140,7 @@ publishing {
             }
         }
     }
+    {{- end}}
 }
 
 javadoc {
@@ -131,6 +149,22 @@ javadoc {
     }
     options.jFlags("-Xmx2g", "-Xms512m")
 }
+
+{{- if .GradleNexusPublishPluginEnabled }}
+
+if (publishRepoUsername) {
+    nexusPublishing {
+        repositories {
+            sonatype {
+                nexusUrl.set(uri(publishRepoURL + "/service/local/"))
+                snapshotRepositoryUrl.set(uri(publishRepoURL + "/content/repositories/snapshots/"))
+                username = publishRepoUsername
+                password = publishRepoPassword
+            }
+        }
+    }
+}
+{{- end}}
 
 if (signingKey) {
     signing {

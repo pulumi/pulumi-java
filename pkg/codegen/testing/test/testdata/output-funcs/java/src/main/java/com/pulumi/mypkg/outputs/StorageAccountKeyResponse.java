@@ -13,35 +13,24 @@ public final class StorageAccountKeyResponse {
      * @return Creation time of the key, in round trip date format.
      * 
      */
-    private final String creationTime;
+    private String creationTime;
     /**
      * @return Name of the key.
      * 
      */
-    private final String keyName;
+    private String keyName;
     /**
      * @return Permissions for the key -- read-only or full permissions.
      * 
      */
-    private final String permissions;
+    private String permissions;
     /**
      * @return Base 64-encoded value of the key.
      * 
      */
-    private final String value;
+    private String value;
 
-    @CustomType.Constructor
-    private StorageAccountKeyResponse(
-        @CustomType.Parameter("creationTime") String creationTime,
-        @CustomType.Parameter("keyName") String keyName,
-        @CustomType.Parameter("permissions") String permissions,
-        @CustomType.Parameter("value") String value) {
-        this.creationTime = creationTime;
-        this.keyName = keyName;
-        this.permissions = permissions;
-        this.value = value;
-    }
-
+    private StorageAccountKeyResponse() {}
     /**
      * @return Creation time of the key, in round trip date format.
      * 
@@ -78,17 +67,13 @@ public final class StorageAccountKeyResponse {
     public static Builder builder(StorageAccountKeyResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String creationTime;
         private String keyName;
         private String permissions;
         private String value;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(StorageAccountKeyResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.creationTime = defaults.creationTime;
@@ -97,23 +82,33 @@ public final class StorageAccountKeyResponse {
     	      this.value = defaults.value;
         }
 
+        @CustomType.Setter
         public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
+        @CustomType.Setter
         public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
+        @CustomType.Setter
         public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
+        @CustomType.Setter
         public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
-        }        public StorageAccountKeyResponse build() {
-            return new StorageAccountKeyResponse(creationTime, keyName, permissions, value);
+        }
+        public StorageAccountKeyResponse build() {
+            final var o = new StorageAccountKeyResponse();
+            o.creationTime = creationTime;
+            o.keyName = keyName;
+            o.permissions = permissions;
+            o.value = value;
+            return o;
         }
     }
 }

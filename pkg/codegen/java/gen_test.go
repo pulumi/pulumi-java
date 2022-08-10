@@ -39,6 +39,10 @@ var javaSpecificTests = []*test.SDKTest{
 		Directory:   "output-funcs-edgeorder",
 		Description: "Testing EdgeOrder functions which return Output<T>",
 	},
+	{
+		Directory:   "jumbo-resources",
+		Description: "Testing resources with more than 255 properties",
+	},
 }
 
 func adaptTest(t *test.SDKTest) *test.SDKTest {
@@ -120,9 +124,8 @@ func TestGeneratePackage(t *testing.T) {
 func generatePackage(tool string, pkg *schema.Package, extraFiles map[string][]byte) (map[string][]byte, error) {
 	pkgInfo := PackageInfo{
 		BuildFiles: "gradle",
-		Packages: map[string]string{
+		Dependencies: map[string]string{
 			"com.pulumi:pulumi": "0.0.1",
-
 			// There are some sprinkled unit tests that
 			// complement testing the generated code at
 			// runtime, and this is the union of all their
@@ -139,7 +142,7 @@ func generatePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 		},
 	}
 	pkg.Language = map[string]interface{}{
-		"java": pkgInfo,
+		"java": pkgInfo.WithDefaultDependencies(),
 	}
 	return GeneratePackage(tool, pkg, extraFiles)
 }

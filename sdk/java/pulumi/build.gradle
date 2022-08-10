@@ -118,7 +118,7 @@ test {
 
 def gprUser = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
 def gprToken = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
-def ossrhRepoUrl = project.findProperty("ossrhRepoUrl") ?: System.getenv("OSSRH_REPO_URL")
+
 def ossrhUsername = project.findProperty("ossrhUsername") ?: System.getenv("OSSRH_USERNAME")
 def ossrhPassword = project.findProperty("ossrhPassword") ?: System.getenv("OSSRH_PASSWORD")
 
@@ -168,18 +168,7 @@ publishing {
         }
     }
 
-    if (ossrhUsername) {
-        repositories {
-            maven {
-                name = "OSSRH"
-                url = ossrhRepoUrl
-                credentials {
-                    username = ossrhUsername
-                    password = ossrhPassword
-                }
-            }
-       }
-    } else {
+    if (!ossrhUsername) {
         repositories {
             maven {
                 name = "GitHubPackages"

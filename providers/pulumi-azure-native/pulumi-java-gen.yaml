@@ -1,8 +1,0 @@
-artifactID: azure-native
-out: sdk/java
-overlays:
-- ../build-templates
-pluginFile: src/main/resources/com/pulumi/azure-native/plugin.json
-schema: https://raw.githubusercontent.com/pulumi/pulumi-azure-native/v1.64.0/provider/cmd/pulumi-resource-azure-native/schema.json
-version: 1.64.0
-versionFile: src/main/resources/com/pulumi/azure-native/version.txt

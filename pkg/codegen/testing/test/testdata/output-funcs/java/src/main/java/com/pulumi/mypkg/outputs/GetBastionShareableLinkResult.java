@@ -15,13 +15,9 @@ public final class GetBastionShareableLinkResult {
      * @return The URL to get the next set of results.
      * 
      */
-    private final @Nullable String nextLink;
+    private @Nullable String nextLink;
 
-    @CustomType.Constructor
-    private GetBastionShareableLinkResult(@CustomType.Parameter("nextLink") @Nullable String nextLink) {
-        this.nextLink = nextLink;
-    }
-
+    private GetBastionShareableLinkResult() {}
     /**
      * @return The URL to get the next set of results.
      * 
@@ -37,24 +33,24 @@ public final class GetBastionShareableLinkResult {
     public static Builder builder(GetBastionShareableLinkResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String nextLink;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(GetBastionShareableLinkResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.nextLink = defaults.nextLink;
         }
 
+        @CustomType.Setter
         public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
-        }        public GetBastionShareableLinkResult build() {
-            return new GetBastionShareableLinkResult(nextLink);
+        }
+        public GetBastionShareableLinkResult build() {
+            final var o = new GetBastionShareableLinkResult();
+            o.nextLink = nextLink;
+            return o;
         }
     }
 }

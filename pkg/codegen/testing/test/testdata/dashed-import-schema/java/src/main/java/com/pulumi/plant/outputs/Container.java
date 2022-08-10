@@ -13,23 +13,12 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Container {
-    private final @Nullable ContainerBrightness brightness;
-    private final @Nullable String color;
-    private final @Nullable String material;
-    private final ContainerSize size;
+    private @Nullable ContainerBrightness brightness;
+    private @Nullable String color;
+    private @Nullable String material;
+    private ContainerSize size;
 
-    @CustomType.Constructor
-    private Container(
-        @CustomType.Parameter("brightness") @Nullable ContainerBrightness brightness,
-        @CustomType.Parameter("color") @Nullable String color,
-        @CustomType.Parameter("material") @Nullable String material,
-        @CustomType.Parameter("size") ContainerSize size) {
-        this.brightness = brightness;
-        this.color = color;
-        this.material = material;
-        this.size = size;
-    }
-
+    private Container() {}
     public Optional<ContainerBrightness> brightness() {
         return Optional.ofNullable(this.brightness);
     }
@@ -50,17 +39,13 @@ public final class Container {
     public static Builder builder(Container defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable ContainerBrightness brightness;
         private @Nullable String color;
         private @Nullable String material;
         private ContainerSize size;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(Container defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.brightness = defaults.brightness;
@@ -69,23 +54,33 @@ public final class Container {
     	      this.size = defaults.size;
         }
 
+        @CustomType.Setter
         public Builder brightness(@Nullable ContainerBrightness brightness) {
             this.brightness = brightness;
             return this;
         }
+        @CustomType.Setter
         public Builder color(@Nullable String color) {
             this.color = color;
             return this;
         }
+        @CustomType.Setter
         public Builder material(@Nullable String material) {
             this.material = material;
             return this;
         }
+        @CustomType.Setter
         public Builder size(ContainerSize size) {
             this.size = Objects.requireNonNull(size);
             return this;
-        }        public Container build() {
-            return new Container(brightness, color, material, size);
+        }
+        public Container build() {
+            final var o = new Container();
+            o.brightness = brightness;
+            o.color = color;
+            o.material = material;
+            o.size = size;
+            return o;
         }
     }
 }

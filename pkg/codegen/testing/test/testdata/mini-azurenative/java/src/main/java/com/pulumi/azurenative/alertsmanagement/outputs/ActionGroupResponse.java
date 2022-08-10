@@ -15,64 +15,45 @@ public final class ActionGroupResponse {
      * @return Action group to trigger if action rule matches
      * 
      */
-    private final String actionGroupId;
+    private String actionGroupId;
     /**
      * @return Creation time of action rule. Date-Time in ISO-8601 format.
      * 
      */
-    private final String createdAt;
+    private String createdAt;
     /**
      * @return Created by user name.
      * 
      */
-    private final String createdBy;
+    private String createdBy;
     /**
      * @return Description of action rule
      * 
      */
-    private final @Nullable String description;
+    private @Nullable String description;
     /**
      * @return Last updated time of action rule. Date-Time in ISO-8601 format.
      * 
      */
-    private final String lastModifiedAt;
+    private String lastModifiedAt;
     /**
      * @return Last modified by user name.
      * 
      */
-    private final String lastModifiedBy;
+    private String lastModifiedBy;
     /**
      * @return Indicates if the given action rule is enabled or disabled
      * 
      */
-    private final @Nullable String status;
+    private @Nullable String status;
     /**
      * @return Indicates type of action rule
      * Expected value is &#39;ActionGroup&#39;.
      * 
      */
-    private final String type;
+    private String type;
 
-    @CustomType.Constructor
-    private ActionGroupResponse(
-        @CustomType.Parameter("actionGroupId") String actionGroupId,
-        @CustomType.Parameter("createdAt") String createdAt,
-        @CustomType.Parameter("createdBy") String createdBy,
-        @CustomType.Parameter("description") @Nullable String description,
-        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @CustomType.Parameter("lastModifiedBy") String lastModifiedBy,
-        @CustomType.Parameter("status") @Nullable String status,
-        @CustomType.Parameter("type") String type) {
-        this.actionGroupId = actionGroupId;
-        this.createdAt = createdAt;
-        this.createdBy = createdBy;
-        this.description = description;
-        this.lastModifiedAt = lastModifiedAt;
-        this.lastModifiedBy = lastModifiedBy;
-        this.status = status;
-        this.type = type;
-    }
-
+    private ActionGroupResponse() {}
     /**
      * @return Action group to trigger if action rule matches
      * 
@@ -138,7 +119,7 @@ public final class ActionGroupResponse {
     public static Builder builder(ActionGroupResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String actionGroupId;
         private String createdAt;
@@ -148,11 +129,7 @@ public final class ActionGroupResponse {
         private String lastModifiedBy;
         private @Nullable String status;
         private String type;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(ActionGroupResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.actionGroupId = defaults.actionGroupId;
@@ -165,39 +142,57 @@ public final class ActionGroupResponse {
     	      this.type = defaults.type;
         }
 
+        @CustomType.Setter
         public Builder actionGroupId(String actionGroupId) {
             this.actionGroupId = Objects.requireNonNull(actionGroupId);
             return this;
         }
+        @CustomType.Setter
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
+        @CustomType.Setter
         public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
+        @CustomType.Setter
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
+        @CustomType.Setter
         public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
+        @CustomType.Setter
         public Builder lastModifiedBy(String lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
+        @CustomType.Setter
         public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
+        @CustomType.Setter
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
-        }        public ActionGroupResponse build() {
-            return new ActionGroupResponse(actionGroupId, createdAt, createdBy, description, lastModifiedAt, lastModifiedBy, status, type);
+        }
+        public ActionGroupResponse build() {
+            final var o = new ActionGroupResponse();
+            o.actionGroupId = actionGroupId;
+            o.createdAt = createdAt;
+            o.createdBy = createdBy;
+            o.description = description;
+            o.lastModifiedAt = lastModifiedAt;
+            o.lastModifiedBy = lastModifiedBy;
+            o.status = status;
+            o.type = type;
+            return o;
         }
     }
 }

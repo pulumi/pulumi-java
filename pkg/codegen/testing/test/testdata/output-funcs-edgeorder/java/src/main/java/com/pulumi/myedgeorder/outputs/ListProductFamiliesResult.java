@@ -17,21 +17,14 @@ public final class ListProductFamiliesResult {
      * @return Link for the next set of product families.
      * 
      */
-    private final @Nullable String nextLink;
+    private @Nullable String nextLink;
     /**
      * @return List of product families.
      * 
      */
-    private final List<ProductFamilyResponse> value;
+    private List<ProductFamilyResponse> value;
 
-    @CustomType.Constructor
-    private ListProductFamiliesResult(
-        @CustomType.Parameter("nextLink") @Nullable String nextLink,
-        @CustomType.Parameter("value") List<ProductFamilyResponse> value) {
-        this.nextLink = nextLink;
-        this.value = value;
-    }
-
+    private ListProductFamiliesResult() {}
     /**
      * @return Link for the next set of product families.
      * 
@@ -54,33 +47,35 @@ public final class ListProductFamiliesResult {
     public static Builder builder(ListProductFamiliesResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String nextLink;
         private List<ProductFamilyResponse> value;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(ListProductFamiliesResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.nextLink = defaults.nextLink;
     	      this.value = defaults.value;
         }
 
+        @CustomType.Setter
         public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
+        @CustomType.Setter
         public Builder value(List<ProductFamilyResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
         public Builder value(ProductFamilyResponse... value) {
             return value(List.of(value));
-        }        public ListProductFamiliesResult build() {
-            return new ListProductFamiliesResult(nextLink, value);
+        }
+        public ListProductFamiliesResult build() {
+            final var o = new ListProductFamiliesResult();
+            o.nextLink = nextLink;
+            o.value = value;
+            return o;
         }
     }
 }

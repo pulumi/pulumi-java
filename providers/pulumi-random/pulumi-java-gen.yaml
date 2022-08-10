@@ -1,8 +1,0 @@
-artifactID: random
-out: sdk/java
-overlays:
-- ../build-templates
-pluginFile: src/main/resources/com/pulumi/random/plugin.json
-schema: https://raw.githubusercontent.com/pulumi/pulumi-random/v4.6.0/provider/cmd/pulumi-resource-random/schema.json
-version: 4.6.0
-versionFile: src/main/resources/com/pulumi/random/version.txt

@@ -19,64 +19,45 @@ public final class SsisProjectResponse {
      * @return Metadata description.
      * 
      */
-    private final @Nullable String description;
+    private @Nullable String description;
     /**
      * @return Environment reference in project
      * 
      */
-    private final @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs;
+    private @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs;
     /**
      * @return Folder id which contains project.
      * 
      */
-    private final @Nullable Double folderId;
+    private @Nullable Double folderId;
     /**
      * @return Metadata id.
      * 
      */
-    private final @Nullable Double id;
+    private @Nullable Double id;
     /**
      * @return Metadata name.
      * 
      */
-    private final @Nullable String name;
+    private @Nullable String name;
     /**
      * @return Parameters in project
      * 
      */
-    private final @Nullable List<SsisParameterResponse> parameters;
+    private @Nullable List<SsisParameterResponse> parameters;
     /**
      * @return The type of SSIS object metadata.
      * Expected value is &#39;Project&#39;.
      * 
      */
-    private final String type;
+    private String type;
     /**
      * @return Project version.
      * 
      */
-    private final @Nullable Double version;
+    private @Nullable Double version;
 
-    @CustomType.Constructor
-    private SsisProjectResponse(
-        @CustomType.Parameter("description") @Nullable String description,
-        @CustomType.Parameter("environmentRefs") @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs,
-        @CustomType.Parameter("folderId") @Nullable Double folderId,
-        @CustomType.Parameter("id") @Nullable Double id,
-        @CustomType.Parameter("name") @Nullable String name,
-        @CustomType.Parameter("parameters") @Nullable List<SsisParameterResponse> parameters,
-        @CustomType.Parameter("type") String type,
-        @CustomType.Parameter("version") @Nullable Double version) {
-        this.description = description;
-        this.environmentRefs = environmentRefs;
-        this.folderId = folderId;
-        this.id = id;
-        this.name = name;
-        this.parameters = parameters;
-        this.type = type;
-        this.version = version;
-    }
-
+    private SsisProjectResponse() {}
     /**
      * @return Metadata description.
      * 
@@ -142,7 +123,7 @@ public final class SsisProjectResponse {
     public static Builder builder(SsisProjectResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String description;
         private @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs;
@@ -152,11 +133,7 @@ public final class SsisProjectResponse {
         private @Nullable List<SsisParameterResponse> parameters;
         private String type;
         private @Nullable Double version;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(SsisProjectResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
@@ -169,10 +146,12 @@ public final class SsisProjectResponse {
     	      this.version = defaults.version;
         }
 
+        @CustomType.Setter
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
+        @CustomType.Setter
         public Builder environmentRefs(@Nullable List<SsisEnvironmentReferenceResponse> environmentRefs) {
             this.environmentRefs = environmentRefs;
             return this;
@@ -180,18 +159,22 @@ public final class SsisProjectResponse {
         public Builder environmentRefs(SsisEnvironmentReferenceResponse... environmentRefs) {
             return environmentRefs(List.of(environmentRefs));
         }
+        @CustomType.Setter
         public Builder folderId(@Nullable Double folderId) {
             this.folderId = folderId;
             return this;
         }
+        @CustomType.Setter
         public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
+        @CustomType.Setter
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
         public Builder parameters(@Nullable List<SsisParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
@@ -199,15 +182,27 @@ public final class SsisProjectResponse {
         public Builder parameters(SsisParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
+        @CustomType.Setter
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
+        @CustomType.Setter
         public Builder version(@Nullable Double version) {
             this.version = version;
             return this;
-        }        public SsisProjectResponse build() {
-            return new SsisProjectResponse(description, environmentRefs, folderId, id, name, parameters, type, version);
+        }
+        public SsisProjectResponse build() {
+            final var o = new SsisProjectResponse();
+            o.description = description;
+            o.environmentRefs = environmentRefs;
+            o.folderId = folderId;
+            o.id = id;
+            o.name = name;
+            o.parameters = parameters;
+            o.type = type;
+            o.version = version;
+            return o;
         }
     }
 }

@@ -11,11 +11,13 @@ import (
 	"os"
 	"os/exec"
 	"strings"
+	"time"
 
 	pbempty "github.com/golang/protobuf/ptypes/empty"
 	"github.com/pkg/errors"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/executable"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/version"
@@ -24,6 +26,7 @@ import (
 
 	"github.com/pulumi/pulumi-java/pkg/internal/executors"
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
+	"google.golang.org/protobuf/types/known/emptypb"
 )
 
 // Launches the language host RPC endpoint, which in turn fires up an RPC server implementing the
@@ -43,6 +46,7 @@ func main() {
 		"Use the given program as the executor instead of looking for one on PATH")
 
 	flag.Parse()
+	var cancelChannel chan bool
 	args := flag.Args()
 	logging.InitLogging(false, 0, false)
 	cmdutil.InitTracing("pulumi-language-java", "pulumi-language-java", tracing)
@@ -65,10 +69,16 @@ func main() {
 	var engineAddress string
 	if len(args) > 0 {
 		engineAddress = args[0]
+		var err error
+		cancelChannel, err = setupHealthChecks(engineAddress)
+
+		if err != nil {
+			cmdutil.Exit(errors.Wrapf(err, "could not start health check host RPC server"))
+		}
 	}
 
 	// Fire up a gRPC server, letting the kernel choose a free port.
-	port, done, err := rpcutil.Serve(0, nil, []func(*grpc.Server) error{
+	port, done, err := rpcutil.Serve(0, cancelChannel, []func(*grpc.Server) error{
 		func(srv *grpc.Server) error {
 			host := newLanguageHost(javaExec, engineAddress, tracing)
 			pulumirpc.RegisterLanguageRuntimeServer(srv, host)
@@ -86,6 +96,24 @@ func main() {
 	if err := <-done; err != nil {
 		cmdutil.Exit(errors.Wrapf(err, "language host RPC stopped serving"))
 	}
+}
+
+func setupHealthChecks(engineAddress string) (chan bool, error) {
+	// If we have a host cancel our cancellation context if it fails the healthcheck
+	ctx, cancel := context.WithCancel(context.Background())
+
+	// map the context Done channel to the rpcutil boolean cancel channel
+	cancelChannel := make(chan bool)
+	go func() {
+		<-ctx.Done()
+		close(cancelChannel)
+	}()
+	err := rpcutil.Healthcheck(ctx, engineAddress, 5*time.Minute, cancel)
+
+	if err != nil {
+		return nil, err
+	}
+	return cancelChannel, nil
 }
 
 // javaLanguageHost implements the LanguageRuntimeServer interface
@@ -364,4 +392,60 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 
 	logging.V(5).Infof("InstallDependencies(Directory=%s): done", req.Directory)
 	return nil
+}
+
+func (host *javaLanguageHost) GetProgramDependencies(
+	ctx context.Context, req *pulumirpc.GetProgramDependenciesRequest) (*pulumirpc.GetProgramDependenciesResponse, error) {
+	// TODO: Implement dependency fetcher for Java
+	return &pulumirpc.GetProgramDependenciesResponse{}, nil
+}
+
+func (host *javaLanguageHost) About(ctx context.Context, req *emptypb.Empty) (*pulumirpc.AboutResponse, error) {
+	getResponse := func(execString string, args ...string) (string, string, error) {
+		ex, err := executable.FindExecutable(execString)
+		if err != nil {
+			return "", "", fmt.Errorf("could not find executable '%s': %w", execString, err)
+		}
+		cmd := exec.Command(ex, args...)
+		var out []byte
+		if out, err = cmd.Output(); err != nil {
+			cmd := ex
+			if len(args) != 0 {
+				cmd += " " + strings.Join(args, " ")
+			}
+			return "", "", fmt.Errorf("failed to execute '%s'", cmd)
+		}
+		return ex, strings.TrimSpace(string(out)), nil
+	}
+
+	java, version, err := getResponse("java", "--version")
+	if err != nil {
+		return nil, err
+	}
+
+	metadata := make(map[string]string)
+	metadata["java"] = strings.Split(java, "\n")[0]
+	_, javac, err := getResponse("javac", "--version")
+	if err != nil {
+		javac = "unknown"
+	}
+	metadata["javac"] = strings.TrimPrefix(javac, "javac ")
+	if _, maven, err := getResponse("mvn", "--version"); err == nil {
+		// We add this only if there are no errors
+		metadata["maven"] = strings.Split(maven, "\n")[0]
+	}
+	if _, gradle, err := getResponse("gradle", "--version"); err == nil {
+		for _, line := range strings.Split(gradle, "\n") {
+			if strings.HasPrefix(line, "Gradle") {
+				metadata["gradle"] = strings.TrimPrefix(line, "Gradle ")
+				break
+			}
+		}
+	}
+
+	return &pulumirpc.AboutResponse{
+		Executable: java,
+		Version:    version,
+		Metadata:   metadata,
+	}, nil
 }

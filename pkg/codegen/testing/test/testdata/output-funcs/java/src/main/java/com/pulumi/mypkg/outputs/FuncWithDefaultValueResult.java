@@ -9,13 +9,9 @@ import java.util.Objects;
 
 @CustomType
 public final class FuncWithDefaultValueResult {
-    private final String r;
+    private String r;
 
-    @CustomType.Constructor
-    private FuncWithDefaultValueResult(@CustomType.Parameter("r") String r) {
-        this.r = r;
-    }
-
+    private FuncWithDefaultValueResult() {}
     public String r() {
         return this.r;
     }
@@ -27,24 +23,24 @@ public final class FuncWithDefaultValueResult {
     public static Builder builder(FuncWithDefaultValueResult defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String r;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(FuncWithDefaultValueResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.r = defaults.r;
         }
 
+        @CustomType.Setter
         public Builder r(String r) {
             this.r = Objects.requireNonNull(r);
             return this;
-        }        public FuncWithDefaultValueResult build() {
-            return new FuncWithDefaultValueResult(r);
+        }
+        public FuncWithDefaultValueResult build() {
+            final var o = new FuncWithDefaultValueResult();
+            o.r = r;
+            return o;
         }
     }
 }

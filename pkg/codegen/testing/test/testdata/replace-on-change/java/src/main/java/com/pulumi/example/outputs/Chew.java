@@ -11,13 +11,9 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Chew {
-    private final @Nullable Dog owner;
+    private @Nullable Dog owner;
 
-    @CustomType.Constructor
-    private Chew(@CustomType.Parameter("owner") @Nullable Dog owner) {
-        this.owner = owner;
-    }
-
+    private Chew() {}
     public Optional<Dog> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -29,24 +25,24 @@ public final class Chew {
     public static Builder builder(Chew defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable Dog owner;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(Chew defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.owner = defaults.owner;
         }
 
+        @CustomType.Setter
         public Builder owner(@Nullable Dog owner) {
             this.owner = owner;
             return this;
-        }        public Chew build() {
-            return new Chew(owner);
+        }
+        public Chew build() {
+            final var o = new Chew();
+            o.owner = owner;
+            return o;
         }
     }
 }

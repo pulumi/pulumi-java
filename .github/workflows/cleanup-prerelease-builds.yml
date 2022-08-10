@@ -13,31 +13,3 @@ jobs:
           package-name: 'com.pulumi.pulumi'
           min-versions-to-keep: 20
           delete-only-pre-release-versions: "true"
-
-  cleanup-provider-prerelease-builds:
-    timeout-minutes: 10
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        provider:
-        - aws
-        - aws-apigateway
-        - aws-native
-        - awsx
-        - azure
-        - azure-native
-        - azuread
-        - docker
-        - eks
-        - gcp
-        - google-native
-        - kubernetes
-        - oci
-        - random
-    steps:
-      - uses: actions/delete-package-versions@v3
-        with:
-          package-name: 'com.pulumi.${{ matrix.provider }}'
-          min-versions-to-keep: 20
-          delete-only-pre-release-versions: "true"

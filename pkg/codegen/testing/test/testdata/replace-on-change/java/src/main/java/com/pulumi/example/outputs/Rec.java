@@ -10,13 +10,9 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Rec {
-    private final @Nullable Rec rec1;
+    private @Nullable Rec rec1;
 
-    @CustomType.Constructor
-    private Rec(@CustomType.Parameter("rec1") @Nullable Rec rec1) {
-        this.rec1 = rec1;
-    }
-
+    private Rec() {}
     public Optional<Rec> rec1() {
         return Optional.ofNullable(this.rec1);
     }
@@ -28,24 +24,24 @@ public final class Rec {
     public static Builder builder(Rec defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable Rec rec1;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(Rec defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.rec1 = defaults.rec1;
         }
 
+        @CustomType.Setter
         public Builder rec1(@Nullable Rec rec1) {
             this.rec1 = rec1;
             return this;
-        }        public Rec build() {
-            return new Rec(rec1);
+        }
+        public Rec build() {
+            final var o = new Rec();
+            o.rec1 = rec1;
+            return o;
         }
     }
 }

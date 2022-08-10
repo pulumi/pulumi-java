@@ -15,21 +15,14 @@ public final class CompositePathResponse {
      * @return Sort order for composite paths.
      * 
      */
-    private final @Nullable String order;
+    private @Nullable String order;
     /**
      * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
      * 
      */
-    private final @Nullable String path;
+    private @Nullable String path;
 
-    @CustomType.Constructor
-    private CompositePathResponse(
-        @CustomType.Parameter("order") @Nullable String order,
-        @CustomType.Parameter("path") @Nullable String path) {
-        this.order = order;
-        this.path = path;
-    }
-
+    private CompositePathResponse() {}
     /**
      * @return Sort order for composite paths.
      * 
@@ -52,30 +45,32 @@ public final class CompositePathResponse {
     public static Builder builder(CompositePathResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private @Nullable String order;
         private @Nullable String path;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(CompositePathResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.order = defaults.order;
     	      this.path = defaults.path;
         }
 
+        @CustomType.Setter
         public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
+        @CustomType.Setter
         public Builder path(@Nullable String path) {
             this.path = path;
             return this;
-        }        public CompositePathResponse build() {
-            return new CompositePathResponse(order, path);
+        }
+        public CompositePathResponse build() {
+            final var o = new CompositePathResponse();
+            o.order = order;
+            o.path = path;
+            return o;
         }
     }
 }

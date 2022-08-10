@@ -15,49 +15,34 @@ public final class PurchaseMeterDetailsResponse {
      * Expected value is &#39;Purchase&#39;.
      * 
      */
-    private final String billingType;
+    private String billingType;
     /**
      * @return Charging type.
      * 
      */
-    private final String chargingType;
+    private String chargingType;
     /**
      * @return Billing unit applicable for Pav2 billing
      * 
      */
-    private final Double multiplier;
+    private Double multiplier;
     /**
      * @return Product Id
      * 
      */
-    private final String productId;
+    private String productId;
     /**
      * @return Sku Id
      * 
      */
-    private final String skuId;
+    private String skuId;
     /**
      * @return Term Id
      * 
      */
-    private final String termId;
+    private String termId;
 
-    @CustomType.Constructor
-    private PurchaseMeterDetailsResponse(
-        @CustomType.Parameter("billingType") String billingType,
-        @CustomType.Parameter("chargingType") String chargingType,
-        @CustomType.Parameter("multiplier") Double multiplier,
-        @CustomType.Parameter("productId") String productId,
-        @CustomType.Parameter("skuId") String skuId,
-        @CustomType.Parameter("termId") String termId) {
-        this.billingType = billingType;
-        this.chargingType = chargingType;
-        this.multiplier = multiplier;
-        this.productId = productId;
-        this.skuId = skuId;
-        this.termId = termId;
-    }
-
+    private PurchaseMeterDetailsResponse() {}
     /**
      * @return Represents billing type.
      * Expected value is &#39;Purchase&#39;.
@@ -109,7 +94,7 @@ public final class PurchaseMeterDetailsResponse {
     public static Builder builder(PurchaseMeterDetailsResponse defaults) {
         return new Builder(defaults);
     }
-
+    @CustomType.Builder
     public static final class Builder {
         private String billingType;
         private String chargingType;
@@ -117,11 +102,7 @@ public final class PurchaseMeterDetailsResponse {
         private String productId;
         private String skuId;
         private String termId;
-
-        public Builder() {
-    	      // Empty
-        }
-
+        public Builder() {}
         public Builder(PurchaseMeterDetailsResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.billingType = defaults.billingType;
@@ -132,31 +113,45 @@ public final class PurchaseMeterDetailsResponse {
     	      this.termId = defaults.termId;
         }
 
+        @CustomType.Setter
         public Builder billingType(String billingType) {
             this.billingType = Objects.requireNonNull(billingType);
             return this;
         }
+        @CustomType.Setter
         public Builder chargingType(String chargingType) {
             this.chargingType = Objects.requireNonNull(chargingType);
             return this;
         }
+        @CustomType.Setter
         public Builder multiplier(Double multiplier) {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
         }
+        @CustomType.Setter
         public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
+        @CustomType.Setter
         public Builder skuId(String skuId) {
             this.skuId = Objects.requireNonNull(skuId);
             return this;
         }
+        @CustomType.Setter
         public Builder termId(String termId) {
             this.termId = Objects.requireNonNull(termId);
             return this;
-        }        public PurchaseMeterDetailsResponse build() {
-            return new PurchaseMeterDetailsResponse(billingType, chargingType, multiplier, productId, skuId, termId);
+        }
+        public PurchaseMeterDetailsResponse build() {
+            final var o = new PurchaseMeterDetailsResponse();
+            o.billingType = billingType;
+            o.chargingType = chargingType;
+            o.multiplier = multiplier;
+            o.productId = productId;
+            o.skuId = skuId;
+            o.termId = termId;
+            return o;
         }
     }
 }
