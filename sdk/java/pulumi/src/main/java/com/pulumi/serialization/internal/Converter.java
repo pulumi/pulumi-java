@@ -388,7 +388,10 @@ public class Converter {
             // create the builder object
             final Object builder;
             try {
-                builder = builderType.getDeclaredConstructor().newInstance();
+                var builderConstructor = builderType.getDeclaredConstructor();
+                builderConstructor.setAccessible(true);
+                builder = builderConstructor.newInstance();
+                builderConstructor.setAccessible(false);
             } catch (InvocationTargetException | InstantiationException
                      | IllegalAccessException | NoSuchMethodException e) {
                 throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
@@ -398,11 +401,11 @@ public class Converter {
             argumentsMap.forEach((name, argument) -> {
                 if (!setters.containsKey(name)) {
                     throw new IllegalArgumentException(String.format(
-                            "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\")",
+                            "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\"), got: %s",
                             targetType.getTypeName(),
                             CustomType.class.getTypeName(),
                             CustomType.Setter.class.getTypeName(),
-                            name
+                            name, String.join(",", setters.keySet())
                     ));
                 }
                 // validate null and @Nullable presence
@@ -441,7 +444,11 @@ public class Converter {
             });
             // call .build()
             try {
-                return builderType.getDeclaredMethod("build").invoke(builder);
+                var buildMethod = builderType.getDeclaredMethod("build");
+                buildMethod.setAccessible(true);
+                var o = buildMethod.invoke(builder);
+                buildMethod.setAccessible(false);
+                return o;
             } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
                 throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
             }
