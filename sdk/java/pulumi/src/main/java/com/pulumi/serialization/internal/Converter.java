@@ -742,6 +742,16 @@ public class Converter {
                         CustomType.Builder.class.getTypeName()
                 ));
             }
+            if (!hasAnnotatedConstructor && !hasAnnotatedBuilder) {
+                throw new IllegalArgumentException(String.format(
+                        "%s; Invalid custom type '%s' while deserializing. " +
+                                "Expected a constructor annotated with %s " +
+                                "or a builder annotated with %s, but got none.",
+                        context, targetType.getTypeName(),
+                        CustomType.Constructor.class.getTypeName(),
+                        CustomType.Builder.class.getTypeName()
+                ));
+            }
             if (hasAnnotatedConstructor) {
                 var constructor = targetType.getAnnotatedConstructor(CustomType.Constructor.class);
                 Arrays.stream(constructor.getParameters()).forEach(parameter -> checkTargetType(
