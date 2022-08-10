@@ -215,7 +215,7 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 		return err
 	}
 	for _, package_ := range packages {
-		packageName := "pulumi-" + package_.Name
+		packageName := package_.Name
 		version := package_.Version
 		if version != nil {
 			dependencySection := fmt.Sprintf(
@@ -236,11 +236,11 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 				 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 			<modelVersion>4.0.0</modelVersion>
-		
+
 			<groupId>com.pulumi</groupId>
 			<artifactId>%s</artifactId>
 			<version>1.0-SNAPSHOT</version>
-		
+
 			<properties>
 				<encoding>UTF-8</encoding>
 				<maven.compiler.source>11</maven.compiler.source>
@@ -249,7 +249,7 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 				<mainClass>generated_program.App</mainClass>
 				<mainArgs/>
 			</properties>
-		
+
 			<dependencies>
 				<dependency>
 					<groupId>com.pulumi</groupId>
@@ -258,7 +258,7 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 				</dependency>
 				%s
 			</dependencies>
-	
+
 			<build>
 				<plugins>
 					<plugin>
