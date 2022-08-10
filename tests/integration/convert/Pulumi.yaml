@@ -1,18 +1,24 @@
-name: conver-test
-description: Minimal test for pulumi convert --language java
+name: test-java-convert
+description: Test pulumi convert --language java
 runtime: yaml
 template:
-  description: A minimal AWS Pulumi YAML program
-  important: true
+  description: A minimal Pulumi YAML program with the classic Azure provider
   config:
-    aws:region:
-      description: The AWS region to deploy into
-      default: us-east-1
+    azure:location:
+      description: The Azure location to use
+      default: WestUS
 
 resources:
-  # Create an AWS resource (S3 Bucket)
-  bucket:
-    type: aws:s3:Bucket
+  # Create an Azure Resource Group
+  resourceGroup:
+    type: azure:core:ResourceGroup
+  # Create an Azure resource (Storage Account)
+  account:
+    type: azure:storage:Account
+    properties:
+      resourceGroupName: ${resourceGroup.name}
+      accountTier: Standard
+      accountReplicationType: LRS
 outputs:
-  # Export the name of the bucket
-  bucketName: ${bucket.id}
+  # Export the connection string for the storage account
+  connectionString: ${account.primaryConnectionString}
