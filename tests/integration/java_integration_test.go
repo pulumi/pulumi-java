@@ -79,6 +79,8 @@ func TestIntegrations(t *testing.T) {
 	})
 
 	t.Run("convert", func(t *testing.T) {
+		t.Skip("TODO re-enable once pulumi CLI ships needed GenerateProject changes")
+
 		convertedDir := t.TempDir()
 		dir := filepath.Join(getCwd(t), "convert")
 		pulumi, err := exec.LookPath("pulumi")
