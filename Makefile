@@ -85,3 +85,6 @@ tidy::
 
 clone_templates::
 	git clone https://github.com/pulumi/templates.git
+
+clone_examples::
+	git clone https://github.com/pulumi/examples.git
