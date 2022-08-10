@@ -209,14 +209,14 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 		filesWithPackages[fileWithPackage] = fileContents
 	}
 
-	var mavenDependenciesXml bytes.Buffer
+	var mavenDependenciesXML bytes.Buffer
 	packages, err := program.PackageSnapshots()
 	if err != nil {
 		return err
 	}
-	for _, package_ := range packages {
-		packageName := package_.Name
-		version := package_.Version
+	for _, p := range packages {
+		packageName := p.Name
+		version := p.Version
 		if version != nil {
 			dependencySection := fmt.Sprintf(
 				`<dependency>
@@ -226,11 +226,11 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
         		</dependency>`,
 				packageName, version.String(),
 			)
-			mavenDependenciesXml.WriteString(dependencySection)
+			mavenDependenciesXML.WriteString(dependencySection)
 		}
 	}
 
-	mavenPomXml := bytes.NewBufferString(fmt.Sprintf(
+	mavenPomXML := bytes.NewBufferString(fmt.Sprintf(
 		`<?xml version="1.0" encoding="UTF-8"?>
 		<project xmlns="http://maven.apache.org/POM/4.0.0"
 				 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -319,9 +319,9 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 				</plugins>
 			</build>
 		</project>`,
-		project.Name.String(), mavenDependenciesXml.String(),
+		project.Name.String(), mavenDependenciesXML.String(),
 	))
-	filesWithPackages["pom.xml"] = mavenPomXml.Bytes()
+	filesWithPackages["pom.xml"] = mavenPomXML.Bytes()
 
 	for filePath, data := range filesWithPackages {
 		outPath := path.Join(directory, filePath)

@@ -122,7 +122,8 @@ type javaLanguageHost struct {
 	tracing         string
 }
 
-func newLanguageHost(execOptions executors.JavaExecutorOptions, engineAddress, tracing string) pulumirpc.LanguageRuntimeServer {
+func newLanguageHost(execOptions executors.JavaExecutorOptions,
+	engineAddress, tracing string) pulumirpc.LanguageRuntimeServer {
 	return &javaLanguageHost{
 		execOptions:   execOptions,
 		engineAddress: engineAddress,
