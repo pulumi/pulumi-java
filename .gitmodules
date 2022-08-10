@@ -1,7 +1,3 @@
 [submodule "pulumi"]
 	path = pulumi
 	url = https://github.com/pulumi/pulumi
-[submodule "examples"]
-	path = examples
-	url = https://github.com/pulumi/examples
-	branch = pulumi-java/main
