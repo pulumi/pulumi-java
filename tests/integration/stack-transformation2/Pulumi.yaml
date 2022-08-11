@@ -1,3 +1,0 @@
-name: stack-transformation2
-runtime: java
-description: A minimal Scala Pulumi program with sbt builds
