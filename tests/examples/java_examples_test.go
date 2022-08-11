@@ -167,22 +167,6 @@ func TestExamples(t *testing.T) {
 
 	t.Run("minimalsbt", func(t *testing.T) {
 		test := getJavaBase(t, "minimalsbt", integration.ProgramTestOptions{
-			PrepareProject: func(info *engine.Projinfo) error {
-				cmd := exec.Command(filepath.Join(info.Root, "sbt"),
-					"-batch", "assembly")
-				cmd.Dir = info.Root
-				var buf bytes.Buffer
-				cmd.Stdout = &buf
-				cmd.Stderr = &buf
-				err := cmd.Run()
-
-				if err != nil {
-					t.Logf("sbt -batch assembly: %v", err)
-					t.Log(buf.String())
-				}
-
-				return err
-			},
 			Config: map[string]string{
 				"name": "Pulumi",
 			},
