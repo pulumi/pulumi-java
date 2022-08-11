@@ -175,6 +175,7 @@ jobs:
         - azure-java-static-website
         - gcp-java-gke-hello-world
         - minimal
+        - minimalsbt
         - random
     steps:
       - uses: actions/checkout@v3
