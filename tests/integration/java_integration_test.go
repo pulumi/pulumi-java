@@ -77,15 +77,6 @@ func TestIntegrations(t *testing.T) {
 		})
 		integration.ProgramTest(t, &test)
 	})
-	t.Run("stack-transformation2", func(t *testing.T) {
-		dir := filepath.Join(getCwd(t), "stack-transformation2")
-		test := getJavaBase(t, integration.ProgramTestOptions{
-			Dir:                    dir,
-			Quick:                  true,
-			DebugUpdates:           false,
-			DebugLogLevel:          0,
-			ExtraRuntimeValidation: stackTransformationValidator(),
-	})
 	t.Run("convert", func(t *testing.T) {
 		t.Skip("TODO re-enable once pulumi CLI ships needed GenerateProject changes")
 
