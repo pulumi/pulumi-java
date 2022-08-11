@@ -17,3 +17,6 @@
   dependency to fix the issue that manifested as:
 
   ```UnsupportedOperationException: Convert [...]: Error```
+
+- [codegen] [#787](https://github.com/pulumi/pulumi-java/issues/787):
+  Fixes escaped methods in non-resource generated provider classes.
