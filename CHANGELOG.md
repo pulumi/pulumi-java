@@ -5,22 +5,23 @@ CHANGELOG
 
 ### Improvements
 
-- reduce verbosity of maven builds to WARN
- [#776](https://github.com/pulumi/pulumi-java/pull/776)
+- [provider] [#776](https://github.com/pulumi/pulumi-java/pull/776):
+  Reduced verbosity of Maven builds to only surface WARN and ERROR
+  logs to the Pulumi user when Pulumi invokes Maven under the hood
+
+- [codegen] [#702](https://github.com/pulumi/pulumi-java/issues/702):
+  Enabled `pulumi convert` to target Java. Now a maven configuration
+  (`pom.xml` with dependencies) is created and the generated Java
+  files are moved to a proper package.
 
 ### Bug Fixes
 
-- [sdk] [#774](https://github.com/pulumi/pulumi-java/issues/774) 
-  fixes deserialization regression in new codegen specific part of SDK, 
-  complex @CustomType's are deserializable now
-- [sdk] [782](https://github.com/pulumi/pulumi-java/pull/782)
-  fixes deserialization regression in new codegen specific part of SDK,
-  now null values will cause the expected debug log message
+- [sdk] [#782](https://github.com/pulumi/pulumi-java/pull/782): Fixed
+  a serializer regression that affected the releases of
+  `com.pulumi:kubernetes` after `3.19.1`. Upgrade `com.pulumi:pulumi`
+  dependency to fix the issue that manifested as:
 
-- [codegen] [#702](https://github.com/pulumi/pulumi-java/issues/702):
-  Fixes `pulumi convert` (when targeting Java). Now a maven
-  configuration (`pom.xml` with dependencies) is created and
-  the generated Java files are moved to a proper package. 
+  ```UnsupportedOperationException: Convert [...]: Error```
 
 ## 0.5.2 (2022-07-20)
 
