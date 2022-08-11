@@ -91,7 +91,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: java-sdk
-          path: ~/m2/repository/com/pulumi
+          path: ~/.m2/repository/com/pulumi
     strategy:
       fail-fast: true
 
@@ -159,7 +159,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-sdk
-          path: ~/m2/repository/com/pulumi
+          path: ~/.m2/repository/com/pulumi
       - run: cd pkg && go test -timeout 15m ./...
 
   examples:
@@ -220,7 +220,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-sdk
-          path: ~/m2/repository/com/pulumi
+          path: ~/.m2/repository/com/pulumi
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -312,7 +312,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-sdk
-          path: ~/m2/repository/com/pulumi
+          path: ~/.m2/repository/com/pulumi
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -378,7 +378,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-sdk
-          path: ~/m2/repository/com/pulumi
+          path: ~/.m2/repository/com/pulumi
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
