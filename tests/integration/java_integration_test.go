@@ -5,10 +5,12 @@ package integration
 import (
 	"fmt"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 
 	"github.com/pulumi/pulumi/pkg/v3/engine"
 	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
@@ -83,6 +85,28 @@ func TestIntegrations(t *testing.T) {
 			DebugUpdates:           false,
 			DebugLogLevel:          0,
 			ExtraRuntimeValidation: stackTransformationValidator(),
+	})
+	t.Run("convert", func(t *testing.T) {
+		t.Skip("TODO re-enable once pulumi CLI ships needed GenerateProject changes")
+
+		convertedDir := t.TempDir()
+		dir := filepath.Join(getCwd(t), "convert")
+		pulumi, err := exec.LookPath("pulumi")
+		require.NoError(t, err)
+		err = integration.RunCommand(t, "pulumi convert ...", []string{
+			pulumi, "convert", "--language", "java",
+			"--out", convertedDir,
+		}, dir, &integration.ProgramTestOptions{})
+		require.NoError(t, err)
+		test := getJavaBase(t, integration.ProgramTestOptions{
+			Dir: convertedDir,
+			Config: map[string]string{
+				"azure:location": "westus2",
+			},
+			SkipRefresh:            true,
+			SkipEmptyPreviewUpdate: true,
+			SkipExportImport:       true,
+			SkipUpdate:             true,
 		})
 		integration.ProgramTest(t, &test)
 	})
