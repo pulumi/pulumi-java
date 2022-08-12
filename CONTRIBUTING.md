@@ -93,12 +93,8 @@ export PATH="${PATH}:${PWD}/bin" # add bin/pulumi-language-java to PATH
 
 ### Working with published dependencies
 
-The repository publishes dev and release builds to
-[Packages](https://github.com/orgs/pulumi/packages?repo_name=pulumi-java).
-Release builds are also published to Maven Central.
-
-See `doc/packages.md` for instruction show to consume binaries from
-Packages.
+Release builds of the Java SDK are published to Maven Central as
+`com.pulumi:pulumi`.
 
 ### Adding examples and testing them locally
 
