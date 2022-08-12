@@ -989,7 +989,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 		// Add getter
 		getterType := outputParameterType
-		getterName := names.Ident(prop.Name).AsProperty().Getter()
+		getterName := names.Ident(prop.Name).AsProperty().ResourceGetter()
 
 		// Prefer to surface non-required properties as `Output<Optional<T>>` rather than
 		// `Output</* Nullable */ T>` through the getter.
@@ -1754,7 +1754,7 @@ func (mod *modContext) gen(fs fs) error {
 			}
 			return javaUtilitiesTemplate.Execute(ctx.writer, javaUtilitiesTemplateContext{
 				Name:        pkgName.String(),
-				PackagePath: strings.ReplaceAll(mod.packageName, ".", "/"),
+				VersionPath: strings.ReplaceAll(ensureEndsWithDot(defaultBasePackage)+mod.pkg.Name, ".", "/"),
 				ClassName:   "Utilities",
 				Tool:        mod.tool,
 			})
