@@ -1,6 +1,15 @@
 CHANGELOG
 =========
 
+## 0.5.4 (2022-08-12)
+
+### Improvements
+
+- [provider] [#791](https://github.com/pulumi/pulumi-java/pull/791):
+  Basic support for using [sbt](https://www.scala-sbt.org/) projects and using Scala.
+  See the example in [`tests/examples/minimalsbt`](tests/examples/minimalsbt).
+
+
 ## 0.5.3 (2022-08-11)
 
 ### Improvements
