@@ -27,6 +27,8 @@ jobs:
 
   test1:
     runs-on: ubuntu-latest
+    outputs:
+      gotcloudcreds: ${{ steps.gotcloudcreds.outputs.gotcloudcreds }}
     steps:
       - name: Check whether cloud creds for test envs are available
         id: gotcloudcreds
