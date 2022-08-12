@@ -5,8 +5,7 @@ import com.google.protobuf.Struct;
 import com.google.protobuf.util.JsonFormat;
 import com.pulumi.Log;
 import com.pulumi.core.Output;
-import com.pulumi.core.annotations.CustomType.Constructor;
-import com.pulumi.core.annotations.CustomType.Parameter;
+import com.pulumi.core.annotations.CustomType.Setter;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.deployment.internal.EngineLogger;
@@ -37,10 +36,12 @@ public class PropertiesSerializerTests {
                 .isEqualTo("{\"str\":\"x\"}");
         assertThat(showStruct(new ExampleResourceArgs().setStrJson(Output.of("x"))))
                 .isEqualTo("{\"strJson\":\"\\\"x\\\"\"}");
-        assertThat(showStruct(new ExampleResourceArgs().setHelper(Output.of(new HelperArgs(Output.of(1))))))
-                .isEqualTo("{\"helper\":{\"intProp\":1.0}}"); // 1 should work also, not 1.0 - Int in the source
-        assertThat(showStruct(new ExampleResourceArgs().setHelperJson(Output.of(new HelperArgs(Output.of(1))))))
-                .isEqualTo("{\"helperJson\":\"{\\\"intProp\\\":1.0}\"}"); // 1 should work also, not 1.0 - Int in the source
+        assertThat(showStruct(new ExampleResourceArgs().setHelper(
+                Output.of(HelperArgs.builder().intProp(Output.of(1)).build())
+        ))).isEqualTo("{\"helper\":{\"intProp\":1.0}}"); // 1 should work also, not 1.0 - Int in the source
+        assertThat(showStruct(new ExampleResourceArgs().setHelperJson(
+                Output.of(HelperArgs.builder().intProp(Output.of(1)).build())
+        ))).isEqualTo("{\"helperJson\":\"{\\\"intProp\\\":1.0}\"}"); // 1 should work also, not 1.0 - Int in the source
     }
 
     private static String showStruct(ResourceArgs resourceArgs) {
@@ -134,12 +135,32 @@ public class PropertiesSerializerTests {
 
         @Import()
         @SuppressWarnings({"FieldCanBeLocal", "unused"})
-        @Nullable
-        private final Output<Integer> intProp;
+        private @Nullable Output<Integer> intProp;
 
-        @Constructor
-        private HelperArgs(@Nullable @Parameter("intProp") Output<Integer> intProp) {
-            this.intProp = intProp;
+        private static Builder builder() {
+            return new Builder();
+        }
+
+        private static class Builder {
+            private final HelperArgs $;
+
+            private Builder() {
+                this.$ = new HelperArgs();
+            }
+
+            private Builder(HelperArgs defaults) {
+                this.$ = defaults;
+            }
+
+            @Setter("intProp")
+            private Builder intProp(@Nullable Output<Integer> intProp) {
+                this.$.intProp = intProp;
+                return this;
+            }
+
+            private HelperArgs build() {
+                return this.$;
+            }
         }
     }
 }

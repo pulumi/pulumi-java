@@ -250,3 +250,17 @@ func TestJBangUseExecutor(t *testing.T) {
 	assert.Equal(t, "/usr/bin/jbang", exec.Cmd)
 	assert.Equal(t, []string{"--quiet", "run", "src/main.java"}, exec.RunArgs)
 }
+
+func TestSBTExecutor(t *testing.T) {
+	fsys := fsys.TestFS(".",
+		map[string]string{"sbt": "/usr/bin/sbt"},
+		fstest.MapFS{
+			"build.sbt": {},
+		})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{
+		WD: fsys,
+	})
+	assert.NoError(t, err)
+	assert.Equal(t, "/usr/bin/sbt", exec.Cmd)
+	assert.Equal(t, []string{"-batch", "run"}, exec.RunArgs)
+}

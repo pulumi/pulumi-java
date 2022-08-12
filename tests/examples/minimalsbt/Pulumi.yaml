@@ -1,0 +1,4 @@
+name: minimalsbt
+description: A minimal sbt Pulumi program.
+runtime:
+  name: java

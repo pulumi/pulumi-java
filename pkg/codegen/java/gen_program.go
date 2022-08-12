@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"os"
 	"path"
 	"strings"
 
@@ -195,11 +196,140 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 	if err != nil {
 		return err
 	}
-	files["Pulumi.yaml"] = projectBytes
 
-	for filename, data := range files {
-		outPath := path.Join(directory, filename)
-		err := ioutil.WriteFile(outPath, data, 0600)
+	filesWithPackages := make(map[string][]byte)
+
+	filesWithPackages["Pulumi.yaml"] = projectBytes
+
+	for fileName, fileContents := range files {
+		if fileName == "MyStack.java" {
+			fileName = "App.java"
+		}
+		fileWithPackage := fmt.Sprintf("src/main/java/generated_program/%s", fileName)
+		filesWithPackages[fileWithPackage] = fileContents
+	}
+
+	var mavenDependenciesXML bytes.Buffer
+	packages, err := program.PackageSnapshots()
+	if err != nil {
+		return err
+	}
+	for _, p := range packages {
+		packageName := p.Name
+		version := p.Version
+		if version != nil {
+			dependencySection := fmt.Sprintf(
+				`<dependency>
+            		<groupId>com.pulumi</groupId>
+            		<artifactId>%s</artifactId>
+            		<version>%s</version>
+        		</dependency>`,
+				packageName, version.String(),
+			)
+			mavenDependenciesXML.WriteString(dependencySection)
+		}
+	}
+
+	mavenPomXML := bytes.NewBufferString(fmt.Sprintf(
+		`<?xml version="1.0" encoding="UTF-8"?>
+		<project xmlns="http://maven.apache.org/POM/4.0.0"
+				 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+			<modelVersion>4.0.0</modelVersion>
+
+			<groupId>com.pulumi</groupId>
+			<artifactId>%s</artifactId>
+			<version>1.0-SNAPSHOT</version>
+
+			<properties>
+				<encoding>UTF-8</encoding>
+				<maven.compiler.source>11</maven.compiler.source>
+				<maven.compiler.target>11</maven.compiler.target>
+				<maven.compiler.release>11</maven.compiler.release>
+				<mainClass>generated_program.App</mainClass>
+				<mainArgs/>
+			</properties>
+
+			<dependencies>
+				<dependency>
+					<groupId>com.pulumi</groupId>
+					<artifactId>pulumi</artifactId>
+					<version>(,1.0]</version>
+				</dependency>
+				%s
+			</dependencies>
+
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jar-plugin</artifactId>
+						<version>3.2.2</version>
+						<configuration>
+							<archive>
+								<manifest>
+									<addClasspath>true</addClasspath>
+									<mainClass>${mainClass}</mainClass>
+								</manifest>
+							</archive>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<version>3.4.2</version>
+						<configuration>
+							<archive>
+								<manifest>
+									<addClasspath>true</addClasspath>
+									<mainClass>${mainClass}</mainClass>
+								</manifest>
+							</archive>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+						</configuration>
+						<executions>
+							<execution>
+								<id>make-my-jar-with-dependencies</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>3.1.0</version>
+						<configuration>
+							<mainClass>${mainClass}</mainClass>
+							<commandlineArgs>${mainArgs}</commandlineArgs>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-wrapper-plugin</artifactId>
+						<version>3.1.1</version>
+						<configuration>
+							<mavenVersion>3.8.5</mavenVersion>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</project>`,
+		project.Name.String(), mavenDependenciesXML.String(),
+	))
+	filesWithPackages["pom.xml"] = mavenPomXML.Bytes()
+
+	for filePath, data := range filesWithPackages {
+		outPath := path.Join(directory, filePath)
+		err := os.MkdirAll(path.Dir(outPath), os.ModePerm)
+		if err != nil {
+			return fmt.Errorf("could not write output program: %w", err)
+		}
+		err = ioutil.WriteFile(outPath, data, 0600)
 		if err != nil {
 			return fmt.Errorf("could not write output program: %w", err)
 		}
