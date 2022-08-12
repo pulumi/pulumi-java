@@ -27,20 +27,54 @@
         </activation>
         <dependencies>
           <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-okhttp</artifactId>
+            <version>1.48.1</version>
+            <exclusions>
+              <exclusion>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+              </exclusion>
+            </exclusions>
+          </dependency>
+          <dependency>
             <groupId>com.pulumi</groupId>
             <artifactId>pulumi</artifactId>
             <version>0.0.1</version>
+            <exclusions>
+              <exclusion>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-netty-shaded</artifactId>
+              </exclusion>
+            </exclusions>
           </dependency>
         </dependencies>
       </profile>
     </profiles>
 
     <dependencies>
-        <dependency>
-            <groupId>com.pulumi</groupId>
-            <artifactId>pulumi</artifactId>
-            <version>${env.PULUMI_JAVA_SDK_VERSION}</version>
-        </dependency>
+      <dependency>
+        <groupId>io.grpc</groupId>
+        <artifactId>grpc-okhttp</artifactId>
+        <version>1.48.1</version>
+        <exclusions>
+          <exclusion>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>com.pulumi</groupId>
+        <artifactId>pulumi</artifactId>
+        <version>${env.PULUMI_JAVA_SDK_VERSION}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-netty-shaded</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
     </dependencies>
 
     <build>
