@@ -79,11 +79,11 @@ func (d DocLanguageHelper) GetEnumName(e *schema.Enum, typeName string) (string,
 //
 // For an example of a language that supports this, check out Go.
 //
-// When visiting https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/ see:
+// When visiting
+// https://www.pulumi.com/registry/packages/aws/api-docs/s3/bucket/
+// search for `func NewBucket`.
 //
-//     func NewBucket(ctx *Context, name string, args *BucketArgs, opts ...ResourceOption)
-//
-// Context, BucketARgs and ResourceOption get linked to Go API docs.
+// Context, BucketArgs and ResourceOption get linked to Go API docs.
 //
 // For Java we could link to JavaDoc when appropriate.
 func (d DocLanguageHelper) GetDocLinkForPulumiType(pkg *schema.Package, typeName string) string {
