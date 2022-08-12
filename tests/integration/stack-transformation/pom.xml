@@ -16,7 +16,6 @@
         <mainClass>${project.groupId}.${project.artifactId}.App</mainClass>
         <mainArgs/>
         <pulumiSdkVersion>0.0.1</pulumiSdkVersion>
-        <pulumiRandomVersion>4.6.0</pulumiRandomVersion>
     </properties>
 
     <profiles>
@@ -29,22 +28,26 @@
             </activation>
             <properties>
                 <pulumiSdkVersion>${env.PULUMI_JAVA_SDK_VERSION}</pulumiSdkVersion>
-                <pulumiRandomVersion>${env.PULUMI_RANDOM_PROVIDER_SDK_VERSION}</pulumiRandomVersion>
             </properties>
         </profile>
     </profiles>
 
     <dependencies>
-        <dependency>
-            <groupId>com.pulumi</groupId>
-            <artifactId>pulumi</artifactId>
-            <version>${pulumiSdkVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.pulumi</groupId>
-            <artifactId>random</artifactId>
-            <version>${pulumiRandomVersion}</version>
-        </dependency>
+      <dependency>
+        <groupId>com.pulumi</groupId>
+        <artifactId>pulumi</artifactId>
+        <version>${pulumiSdkVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.code.findbugs</groupId>
+        <artifactId>jsr305</artifactId>
+        <version>3.0.2</version>
+      </dependency>
+      <dependency>
+        <groupId>com.pulumi</groupId>
+        <artifactId>random</artifactId>
+        <version>4.8.1</version>
+      </dependency>
     </dependencies>
 
     <build>
