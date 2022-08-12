@@ -93,7 +93,7 @@ jobs:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi
       - name: Check whether cloud creds for test envs are available
-        id: cloudcreds
+        id: gotcloudcreds
         env:
             KEY: ${{ secrets.AWS_ACCESS_KEY_ID  }}
         run: |
