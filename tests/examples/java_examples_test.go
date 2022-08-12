@@ -165,6 +165,22 @@ func TestExamples(t *testing.T) {
 		integration.ProgramTest(t, &test)
 	})
 
+	t.Run("minimalsbt", func(t *testing.T) {
+		test := getJavaBase(t, "minimalsbt", integration.ProgramTestOptions{
+			Config: map[string]string{
+				"name": "Pulumi",
+			},
+			Secrets: map[string]string{
+				"secret": "this is my secret message",
+			},
+			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+				// Simple runtime validation that just ensures the checkpoint was written and read.
+				assert.NotNil(t, stackInfo.Deployment)
+			},
+		})
+		integration.ProgramTest(t, &test)
+	})
+
 	t.Run("aws-native-java-s3-folder", func(t *testing.T) {
 		test := getJavaBaseNew(t,
 			"aws-native-java-s3-folder",

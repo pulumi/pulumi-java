@@ -14,6 +14,10 @@
 
 package java
 
+import (
+	"github.com/blang/semver"
+)
+
 const defaultBasePackage = "com.pulumi."
 
 // PackageInfo defines Java-specific extensions to Pulumi Packages
@@ -25,7 +29,7 @@ const defaultBasePackage = "com.pulumi."
 // The options are typically set in the .language.java section of
 // the Schema, but can also be overridden during code generation:
 //
-//     pulumi-java-gen generate --override overrides.json
+// pulumi-java-gen generate --override overrides.json
 //
 // See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific-extensions
 type PackageInfo struct {
@@ -114,6 +118,14 @@ func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
 			result.Packages[k] = v
 		}
 	}
+	if overrides.Dependencies != nil && len(overrides.Dependencies) > 0 {
+		if result.Dependencies == nil {
+			result.Dependencies = map[string]string{}
+		}
+		for k, v := range overrides.Dependencies {
+			result.Dependencies[k] = v
+		}
+	}
 	if overrides.GradleNexusPublishPluginVersion != "" {
 		result.GradleNexusPublishPluginVersion = overrides.GradleNexusPublishPluginVersion
 	}
@@ -125,4 +137,38 @@ func (i PackageInfo) BasePackageOrDefault() string {
 		return ensureEndsWithDot(i.BasePackage)
 	}
 	return ensureEndsWithDot(defaultBasePackage)
+}
+
+// Makes sure Depdendencies contains the key if it does not already.
+// If the key is missing, uses ver as the new version to depend on.
+func (i PackageInfo) WithDependencyDefault(key string, ver semver.Version) PackageInfo {
+	if i.Dependencies != nil {
+		if _, ok := i.Dependencies[key]; ok {
+			return i
+		}
+	}
+
+	return i.With(PackageInfo{Dependencies: map[string]string{
+		key: ver.String(),
+	}})
+}
+
+// Makes sure Depdendencies contains the "com.pulumi:pulumi" key if it
+// does not already. If the key is missing, uses ver as the new
+// version to depend on.
+func (i PackageInfo) WithJavaSdkDependencyDefault(ver semver.Version) PackageInfo {
+	return i.WithDependencyDefault("com.pulumi:pulumi", ver)
+}
+
+// Makes sure dependencies are added for libraries that the generated
+// code may link against.
+func (i PackageInfo) WithDefaultDependencies() PackageInfo {
+	return i.
+		// Generated code may reference JsonElemeent class.
+		WithDependencyDefault("com.google.code.gson:gson",
+			semver.MustParse("2.8.9")).
+		// TODO consider removing this; this is needed when
+		// the generated code depends on the Nullable class
+		WithDependencyDefault("com.google.code.findbugs:jsr305",
+			semver.MustParse("3.0.2"))
 }

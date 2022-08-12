@@ -1,6 +1,50 @@
 CHANGELOG
 =========
 
+## 0.5.4 (2022-08-12)
+
+### Improvements
+
+- [provider] [#791](https://github.com/pulumi/pulumi-java/pull/791):
+  Basic support for using [sbt](https://www.scala-sbt.org/) projects and using Scala.
+  See the example in [`tests/examples/minimalsbt`](tests/examples/minimalsbt).
+
+
+## 0.5.3 (2022-08-11)
+
+### Improvements
+
+- [provider] [#776](https://github.com/pulumi/pulumi-java/pull/776):
+  Reduced verbosity of Maven builds to only surface WARN and ERROR
+  logs to the Pulumi user when Pulumi invokes Maven under the hood
+
+- [codegen] [#702](https://github.com/pulumi/pulumi-java/issues/702):
+  Enabled `pulumi convert` to target Java. Now a maven configuration
+  (`pom.xml` with dependencies) is created and the generated Java
+  files are moved to a proper package.
+
+### Bug Fixes
+
+- [sdk] [#782](https://github.com/pulumi/pulumi-java/pull/782): Fixed
+  a serializer regression that affected the releases of
+  `com.pulumi:kubernetes` after `3.19.1`. Upgrade `com.pulumi:pulumi`
+  dependency to fix the issue that manifested as:
+
+  ```UnsupportedOperationException: Convert [...]: Error```
+
+## 0.5.2 (2022-07-20)
+
+### Bug Fixes
+
+- [codegen] [#757](https://github.com/pulumi/pulumi-java/pull/757):
+  Fixes a regression introduced in 0.5.1 where
+
+      pulumi-java-gen --build gradle
+
+  stopped automatically generating "com.pulumi:pulumi" references in
+  the `build.gradle` file, making the generated project fail to
+  compile.
+
 ## 0.5.1 (2022-07-19)
 
 ### Bug Fixes

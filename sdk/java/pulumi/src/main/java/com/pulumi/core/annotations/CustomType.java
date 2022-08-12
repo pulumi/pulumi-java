@@ -30,9 +30,12 @@ public @interface CustomType {
      * <p>
      * The constructor must take parameters annotated with {@link Parameter} that map to
      * the resultant @see {@link com.google.protobuf.Struct} returned by the engine.
+     *
+     * @deprecated use {@link CustomType.Builder} and {@link CustomType.Setter}
      */
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.CONSTRUCTOR)
+    @Deprecated
     @interface Constructor {
         /* Empty */
     }
@@ -63,6 +66,7 @@ public @interface CustomType {
         /**
          * We need to know the name of a parameter expected by the deserializer,
          * and unfortunately Java compiler does not give this information through reflection (by default)
+         *
          * @return name of a parameter (defaults to the setter method name)
          */
         String value() default "";
@@ -71,13 +75,17 @@ public @interface CustomType {
     /**
      * Annotation used by a Pulumi Cloud Provider Package to marks a constructor parameter for a complex
      * property type so that it can be instantiated by the Pulumi runtime.
+     *
+     * @deprecated use {@link CustomType.Builder} and {@link CustomType.Setter}
      */
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.PARAMETER)
+    @Deprecated
     @interface Parameter {
         /**
          * We need to know the name of a constructor parameter,
          * and unfortunately Java compiler does not give this information through reflection (by default)
+         *
          * @return name of a constructor parameter
          */
         String value();
