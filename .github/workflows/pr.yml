@@ -98,7 +98,7 @@ jobs:
             KEY: ${{ secrets.AWS_ACCESS_KEY_ID  }}
         run: |
             echo "Enable testing against cloud environments: ${{ env.KEY != '' }}"
-            echo "::set-output name=gotcloudcreds::${{ env.ENABLE_KEY != '' }}"
+            echo "::set-output name=gotcloudcreds::${{ env.KEY != '' }}"
     strategy:
       fail-fast: true
 
