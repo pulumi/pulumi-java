@@ -14,8 +14,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.OutputTests;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.core.annotations.CustomType.Constructor;
-import com.pulumi.core.annotations.CustomType.Parameter;
+import com.pulumi.core.annotations.CustomType.Setter;
 import com.pulumi.core.annotations.EnumType;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Constants;
@@ -36,10 +35,10 @@ import org.junit.jupiter.params.provider.MethodSource;
 import javax.annotation.CheckReturnValue;
 import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
+import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
@@ -684,7 +683,7 @@ class ConverterTests {
         private final String value;
 
         ContainerColor(String value) {
-            this.value = Objects.requireNonNull(value);
+            this.value = requireNonNull(value);
         }
 
         @EnumType.Converter
@@ -750,33 +749,71 @@ class ConverterTests {
 
     @CustomType
     public static class RecursiveType {
-        public final String ref;
-        public final ImmutableList<RecursiveType> additionalItems;
+        private @Nullable String ref;
+        private @Nullable ImmutableList<RecursiveType> additionalItems;
 
-        @Constructor
-        public RecursiveType(
-                @Parameter("ref") String ref,
-                @Parameter("additionalItems") ImmutableList<RecursiveType> additionalItems
-        ) {
-            this.ref = ref;
-            this.additionalItems = additionalItems;
+        @CustomType.Builder
+        public static final class Builder {
+            private final RecursiveType $;
+
+            public Builder() {
+                this.$ = new RecursiveType();
+            }
+
+            public Builder(RecursiveType defaults) {
+                this.$ = requireNonNull(defaults);
+            }
+
+            @Setter("ref")
+            public Builder ref(@Nullable String ref) {
+                this.$.ref = ref;
+                return this;
+            }
+
+            @Setter("additionalItems")
+            public Builder additionalItems(@Nullable ImmutableList<RecursiveType> additionalItems) {
+                this.$.additionalItems = additionalItems;
+                return this;
+            }
+
+            public RecursiveType build() {
+                return this.$;
+            }
         }
     }
 
     @CustomType
     public static class SimpleStruct {
-        private final @Nullable
-        String myString;
+        private @Nullable String myString;
+        private @Nullable Boolean myBoolean;
 
-        private final @Nullable
-        Boolean myBoolean;
+        @CustomType.Builder
+        public static class Builder {
+            private final SimpleStruct $;
 
-        @CustomType.Constructor
-        private SimpleStruct(
-                @CustomType.Parameter("myString") @Nullable String myString,
-                @CustomType.Parameter("myBoolean") @Nullable Boolean myBoolean) {
-            this.myString = myString;
-            this.myBoolean = myBoolean;
+            public Builder() {
+                this.$ = new SimpleStruct();
+            }
+
+            public Builder(SimpleStruct defaults) {
+                this.$ = defaults;
+            }
+
+            @Setter("myString")
+            public Builder myString(@Nullable String myString) {
+                this.$.myString = myString;
+                return this;
+            }
+
+            @Setter("myBoolean")
+            public Builder myBoolean(@Nullable Boolean myBoolean) {
+                this.$.myBoolean = myBoolean;
+                return this;
+            }
+
+            public SimpleStruct build() {
+                return this.$;
+            }
         }
     }
 
