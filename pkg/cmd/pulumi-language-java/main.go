@@ -17,6 +17,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource/plugin"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/cmdutil"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/executable"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/logging"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/rpcutil"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/version"
@@ -25,6 +26,7 @@ import (
 
 	"github.com/pulumi/pulumi-java/pkg/internal/executors"
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
+	"google.golang.org/protobuf/types/known/emptypb"
 )
 
 // Launches the language host RPC endpoint, which in turn fires up an RPC server implementing the
@@ -54,13 +56,10 @@ func main() {
 		cmdutil.Exit(fmt.Errorf("could not get the working directory: %w", err))
 	}
 
-	javaExec, err := executors.NewJavaExecutor(executors.JavaExecutorOptions{
+	javaExecOptions := executors.JavaExecutorOptions{
 		Binary:      binary,
 		UseExecutor: useExecutor,
 		WD:          fsys.DirFS(wd),
-	})
-	if err != nil {
-		cmdutil.Exit(err)
 	}
 
 	// Optionally pluck out the engine so we can do logging, etc.
@@ -78,7 +77,7 @@ func main() {
 	// Fire up a gRPC server, letting the kernel choose a free port.
 	port, done, err := rpcutil.Serve(0, cancelChannel, []func(*grpc.Server) error{
 		func(srv *grpc.Server) error {
-			host := newLanguageHost(javaExec, engineAddress, tracing)
+			host := newLanguageHost(javaExecOptions, engineAddress, tracing)
 			pulumirpc.RegisterLanguageRuntimeServer(srv, host)
 			return nil
 		},
@@ -117,17 +116,30 @@ func setupHealthChecks(engineAddress string) (chan bool, error) {
 // javaLanguageHost implements the LanguageRuntimeServer interface
 // for use as an API endpoint.
 type javaLanguageHost struct {
-	exec          *executors.JavaExecutor
-	engineAddress string
-	tracing       string
+	currentExecutor *executors.JavaExecutor
+	execOptions     executors.JavaExecutorOptions
+	engineAddress   string
+	tracing         string
 }
 
-func newLanguageHost(exec *executors.JavaExecutor, engineAddress, tracing string) pulumirpc.LanguageRuntimeServer {
+func newLanguageHost(execOptions executors.JavaExecutorOptions,
+	engineAddress, tracing string) pulumirpc.LanguageRuntimeServer {
 	return &javaLanguageHost{
-		exec:          exec,
+		execOptions:   execOptions,
 		engineAddress: engineAddress,
 		tracing:       tracing,
 	}
+}
+
+func (host *javaLanguageHost) Executor() (*executors.JavaExecutor, error) {
+	if host.currentExecutor == nil {
+		executor, err := executors.NewJavaExecutor(host.execOptions)
+		if err != nil {
+			return nil, err
+		}
+		host.currentExecutor = executor
+	}
+	return host.currentExecutor, nil
 }
 
 // GetRequiredPlugins computes the complete set of anticipated plugins required by a program.
@@ -175,10 +187,15 @@ func (host *javaLanguageHost) determinePulumiPackages(
 
 	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
 
+	exec, err := host.Executor()
+	if err != nil {
+		return nil, err
+	}
+
 	// Run our classpath introspection from the SDK and parse the resulting JSON
-	cmd := host.exec.Cmd
-	args := host.exec.PluginArgs
-	output, err := host.runJavaCommand(ctx, host.exec.Dir, cmd, args)
+	cmd := exec.Cmd
+	args := exec.PluginArgs
+	output, err := host.runJavaCommand(ctx, exec.Dir, cmd, args)
 	if err != nil {
 		// Plugin determination is an advisory feature so it does not need to escalate to an error.
 		logging.V(3).Infof("language host could not run plugin discovery command successfully, "+
@@ -258,9 +275,14 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 		return nil, err
 	}
 
+	executor, err := host.Executor()
+	if err != nil {
+		return nil, err
+	}
+
 	// Run from source.
-	executable := host.exec.Cmd
-	args := host.exec.RunArgs
+	executable := executor.Cmd
+	args := executor.RunArgs
 
 	if logging.V(5) {
 		commandStr := strings.Join(args, " ")
@@ -270,8 +292,8 @@ func (host *javaLanguageHost) Run(ctx context.Context, req *pulumirpc.RunRequest
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	var errResult string
 	cmd := exec.Command(executable, args...) // nolint: gas // intentionally running dynamic program name.
-	if host.exec.Dir != "" {
-		cmd.Dir = host.exec.Dir
+	if executor.Dir != "" {
+		cmd.Dir = executor.Dir
 	}
 
 	var stdoutBuf bytes.Buffer
@@ -361,8 +383,13 @@ func (host *javaLanguageHost) GetPluginInfo(ctx context.Context, req *pbempty.Em
 func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependenciesRequest,
 	server pulumirpc.LanguageRuntime_InstallDependenciesServer) error {
 
+	executor, err := host.Executor()
+	if err != nil {
+		return err
+	}
+
 	// Executor may not support the build command (for example, jar executor).
-	if host.exec.BuildArgs == nil {
+	if executor.BuildArgs == nil {
 		logging.V(5).Infof("InstallDependencies(Directory=%s): skipping", req.Directory)
 		return nil
 	}
@@ -376,9 +403,9 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 	defer closer.Close()
 
 	// intentionally running dynamic program name.
-	cmd := exec.Command(host.exec.Cmd, host.exec.BuildArgs...) // nolint: gas
-	if host.exec.Dir != "" {
-		cmd.Dir = host.exec.Dir
+	cmd := exec.Command(executor.Cmd, executor.BuildArgs...) // nolint: gas
+	if executor.Dir != "" {
+		cmd.Dir = executor.Dir
 	}
 	cmd.Stdout = stdout
 	cmd.Stderr = stderr
@@ -390,4 +417,60 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 
 	logging.V(5).Infof("InstallDependencies(Directory=%s): done", req.Directory)
 	return nil
+}
+
+func (host *javaLanguageHost) GetProgramDependencies(
+	ctx context.Context, req *pulumirpc.GetProgramDependenciesRequest) (*pulumirpc.GetProgramDependenciesResponse, error) {
+	// TODO: Implement dependency fetcher for Java
+	return &pulumirpc.GetProgramDependenciesResponse{}, nil
+}
+
+func (host *javaLanguageHost) About(ctx context.Context, req *emptypb.Empty) (*pulumirpc.AboutResponse, error) {
+	getResponse := func(execString string, args ...string) (string, string, error) {
+		ex, err := executable.FindExecutable(execString)
+		if err != nil {
+			return "", "", fmt.Errorf("could not find executable '%s': %w", execString, err)
+		}
+		cmd := exec.Command(ex, args...)
+		var out []byte
+		if out, err = cmd.Output(); err != nil {
+			cmd := ex
+			if len(args) != 0 {
+				cmd += " " + strings.Join(args, " ")
+			}
+			return "", "", fmt.Errorf("failed to execute '%s'", cmd)
+		}
+		return ex, strings.TrimSpace(string(out)), nil
+	}
+
+	java, version, err := getResponse("java", "--version")
+	if err != nil {
+		return nil, err
+	}
+
+	metadata := make(map[string]string)
+	metadata["java"] = strings.Split(java, "\n")[0]
+	_, javac, err := getResponse("javac", "--version")
+	if err != nil {
+		javac = "unknown"
+	}
+	metadata["javac"] = strings.TrimPrefix(javac, "javac ")
+	if _, maven, err := getResponse("mvn", "--version"); err == nil {
+		// We add this only if there are no errors
+		metadata["maven"] = strings.Split(maven, "\n")[0]
+	}
+	if _, gradle, err := getResponse("gradle", "--version"); err == nil {
+		for _, line := range strings.Split(gradle, "\n") {
+			if strings.HasPrefix(line, "Gradle") {
+				metadata["gradle"] = strings.TrimPrefix(line, "Gradle ")
+				break
+			}
+		}
+	}
+
+	return &pulumirpc.AboutResponse{
+		Executable: java,
+		Version:    version,
+		Metadata:   metadata,
+	}, nil
 }
