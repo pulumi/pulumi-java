@@ -77,7 +77,6 @@ func TestIntegrations(t *testing.T) {
 		})
 		integration.ProgramTest(t, &test)
 	})
-
 	t.Run("convert", func(t *testing.T) {
 		t.Skip("TODO re-enable once pulumi CLI ships needed GenerateProject changes")
 

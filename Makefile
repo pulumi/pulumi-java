@@ -24,10 +24,6 @@ bin/pulumi-java-gen: ${PKG_FILES}
 	mkdir -p bin
 	cd pkg && go build -o ../bin -ldflags "-X github.com/pulumi/pulumi-java/pkg/version.Version=$(shell pulumictl get version --tag-pattern '^pkg')" github.com/pulumi/pulumi-java/pkg/cmd/pulumi-java-gen
 
-bin/pulumi-java-builder: ${BLD_FILES}
-	mkdir -p bin
-	cd build && go build -o ../bin github.com/pulumi/pulumi-java/build/cmd/pulumi-java-builder
-
 # Java SDK is a gradle project rooted at `sdk/java`
 
 install_sdk::
@@ -38,9 +34,6 @@ build_sdk::
 
 ensure_sdk::
 	cd sdk/java && make ensure
-
-sdk.publish:	bin/pulumi-java-builder
-	cd sdk/java && ../../bin/pulumi-java-builder publish --dir ./pulumi --pkg com.pulumi.pulumi
 
 .PHONY: lint_pkg
 lint:: lint_pkg

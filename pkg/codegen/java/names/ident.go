@@ -39,6 +39,9 @@ func isReservedMethod(s string) bool {
 	// These names conflict with methods on Object.
 	case "notify", "notifyAll", "toString", "clone", "equals", "hashCode", "getClass", "wait", "finalize":
 		return true
+	// These names conflict with methods on our builders.
+	case "builder":
+		return true
 	default:
 		return isReservedWord(s)
 	}
@@ -48,10 +51,7 @@ func isReservedMethod(s string) bool {
 func isReservedResourceMethod(s string) bool {
 	switch s {
 	// These names conflict with methods on Resource.
-	case "getResourceType", "getResourceName", "getChildResources", "getUrn":
-		return true
-	// These names conflict with methods on our builders.
-	case "builder":
+	case "getResourceType", "getResourceName", "getChildResources", "getUrn", "getId":
 		return true
 	default:
 		return isReservedMethod(s)
@@ -144,15 +144,24 @@ func (id Property) Field() string {
 
 // Getter returns a name of a Java getter for this property.
 func (id Property) Getter() string {
-	if isReservedResourceMethod(id.Field()) {
+	if isReservedMethod(id.Field()) {
 		return id.Field() + "_"
 	}
 	return id.Field()
 }
 
+// ResourceGetter returns a name of a Java Pulumi Resource getter for this property.
+func (id Property) ResourceGetter() string {
+	name := id.Getter()
+	if isReservedResourceMethod(name) {
+		return name + "_"
+	}
+	return name
+}
+
 // Setter returns a name of a Java setter for this property.
 func (id Property) Setter() string {
-	if isReservedResourceMethod(id.Field()) {
+	if isReservedMethod(id.Field()) {
 		return id.Field() + "_"
 	}
 	return id.Field()
