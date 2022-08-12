@@ -95,7 +95,7 @@ public class {{ .ClassName }} {
     }
 
     static {
-        var resourceName = "{{ .PackagePath }}/version.txt";
+        var resourceName = "{{ .VersionPath }}/version.txt";
         var versionFile = Utilities.class.getClassLoader().getResourceAsStream(resourceName);
         if (versionFile == null) {
             throw new IllegalStateException(
@@ -114,7 +114,7 @@ var javaUtilitiesTemplate = Template("JavaUtilities", javaUtilitiesTemplateText)
 
 type javaUtilitiesTemplateContext struct {
 	Name        string
-	PackagePath string
+	VersionPath string
 	ClassName   string
 	Tool        string
 }
