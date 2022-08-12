@@ -70,7 +70,7 @@ func (g *generator) GetPrecedence(expr model.Expression) int {
 		*model.TemplateJoinExpression:
 		return 20
 	case *model.AnonymousFunctionExpression, *model.LiteralValueExpression, *model.ObjectConsExpression,
-		*model.ScopeTraversalExpression, *model.TemplateExpression, *model.TupleConsExpression:
+		*model.ScopeTraversalExpression, *model.TemplateExpression, *model.TupleConsExpression, *model.CodeReferenceExpression:
 		return 22
 	default:
 		contract.Failf("unexpected expression %v of type %T", expr, expr)
@@ -819,4 +819,8 @@ func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExp
 
 func (g *generator) GenUnaryOpExpression(w io.Writer, expr *model.UnaryOpExpression) {
 	g.genNYI(w, "GenUnaryOpExpression") // TODO
+}
+
+func (g *generator) GenCodeReferenceExpression(w io.Writer, expr *model.CodeReferenceExpression) {
+	g.Fgen(w, expr.Value)
 }
