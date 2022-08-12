@@ -282,6 +282,7 @@ jobs:
       matrix:
         integration:
           - stack-reference
+          - stack-transformation
     steps:
       - uses: actions/checkout@v3
       - run: make submodule_update
