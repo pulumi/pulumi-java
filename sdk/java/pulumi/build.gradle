@@ -23,7 +23,7 @@ repositories {
 }
 
 def grpcVersion = "1.38.0"
-def protobufVersion = "3.21.1"
+def protobufVersion = "3.21.4"
 def protocVersion = protobufVersion
 
 dependencies {
@@ -36,7 +36,7 @@ dependencies {
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     implementation("net.javacrumbs.future-converter:future-converter-java8-guava:1.2.0") // TODO: remove if possible or inline
     implementation("com.google.guava:guava:31.1-jre") // make sure we don't clash with grpc deps
-    implementation("com.google.code.gson:gson:2.8.9") // make sure we don't clash with grpc deps
+    implementation("com.google.code.gson:gson:2.9.1") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java:${protobufVersion}") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java-util:${protobufVersion}") // make sure we don't clash with grpc deps
 
