@@ -30,6 +30,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -383,53 +384,79 @@ public class Converter {
             var builderType = targetType.getAnnotatedClass(CustomType.Builder.class);
 
             //noinspection unchecked
-            var argumentsMap = (Map<String, Object>) tryEnsureType(context, value, TypeShape.of(Map.class));
+            var argumentsMap = new HashMap<String, Object>(tryEnsureType(context, value, TypeShape.of(Map.class)));
 
             // create the builder object
             final Object builder;
             try {
-                builder = builderType.getDeclaredConstructor().newInstance();
+                var builderConstructor = builderType.getDeclaredConstructor();
+                builderConstructor.setAccessible(true);
+                builder = builderConstructor.newInstance();
+                builderConstructor.setAccessible(false);
             } catch (InvocationTargetException | InstantiationException
                      | IllegalAccessException | NoSuchMethodException e) {
                 throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
             }
             // call setters for all arguments
             var setters = processSetters(builderType, Function.identity());
+            setters.forEach((__, method) -> {
+                var wireName = extractSetterName(method);
+                // populate missing arguments with null to reuse error handling below
+                if (!argumentsMap.containsKey(wireName)) {
+                    argumentsMap.put(wireName, null);
+                }
+            });
             argumentsMap.forEach((name, argument) -> {
+                if (!setters.containsKey(name)) {
+                    throw new IllegalArgumentException(String.format(
+                            "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\"), got: %s",
+                            targetType.getTypeName(),
+                            CustomType.class.getTypeName(),
+                            CustomType.Setter.class.getTypeName(),
+                            name, String.join(",", setters.keySet())
+                    ));
+                }
+                // validate null and @Nullable presence
+                if (argument == null
+                        && !(extractSetterParameter(setters.get(name)).isAnnotationPresent(Nullable.class))) {
+                    log.debug(String.format(
+                            "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\"). " +
+                                    "Setter '%s' parameter named '%s' lacks @%s annotation, " +
+                                    "so the value is required, but there is no value to deserialize.",
+                            targetType.getTypeName(),
+                            CustomType.class.getTypeName(),
+                            CustomType.Setter.class.getTypeName(),
+                            name,
+                            setters.get(name),
+                            setters.get(name).getName(),
+                            Nullable.class.getTypeName()
+                    ));
+                }
                 try {
-                    if (!setters.containsKey(name)) {
-                        throw new IllegalArgumentException(String.format(
-                                "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\")",
-                                targetType.getTypeName(),
-                                CustomType.class.getTypeName(),
-                                CustomType.Setter.class.getTypeName(),
-                                name
-                        ));
-                    }
-                    // validate null and @Nullable presence
-                    if (argument == null
-                            && !(extractSetterParameter(setters.get(name)).isAnnotationPresent(Nullable.class))) {
-                        log.debug(String.format(
-                                "Expected type '%s' (annotated with '%s') to have a setter annotated with @%s(\"%s\"). " +
-                                        "Setter '%s' parameter named '%s' lacks @%s annotation, " +
-                                        "so the value is required, but there is no value to deserialize.",
-                                targetType.getTypeName(),
-                                CustomType.class.getTypeName(),
-                                CustomType.Setter.class.getTypeName(),
-                                name,
-                                setters.get(name),
-                                setters.get(name).getName(),
-                                Nullable.class.getTypeName()
-                        ));
-                    }
-                    setters.get(name).invoke(builder, argument);
+                    var convertedArgument = argument == null ? null : tryConvertObjectInner(
+                            String.format("%s(%s)", targetType.getTypeName(), name),
+                            argument,
+                            TypeShape.extract(extractSetterParameter(setters.get(name)))
+                    );
+                    setters.get(name).invoke(builder, convertedArgument);
+                } catch (IllegalArgumentException e) {
+                    throw new IllegalStateException(String.format(
+                            "Error invoking setter '%s' (on '%s'), setter parameters: '%s', argument type: '%s'",
+                            name, targetType.getTypeName(),
+                            Arrays.toString(setters.get(name).getParameterTypes()),
+                            argument == null ? "null" : argument.getClass()
+                    ), e);
                 } catch (IllegalAccessException | InvocationTargetException e) {
                     throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
                 }
             });
             // call .build()
             try {
-                return builderType.getDeclaredMethod("build").invoke(builder);
+                var buildMethod = builderType.getDeclaredMethod("build");
+                buildMethod.setAccessible(true);
+                var o = buildMethod.invoke(builder);
+                buildMethod.setAccessible(false);
+                return o;
             } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
                 throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
             }
@@ -725,6 +752,16 @@ public class Converter {
                         "%s; Invalid custom type '%s' while deserializing. " +
                                 "Expected a constructor annotated with %s " +
                                 "or a builder annotated with %s, but got both.",
+                        context, targetType.getTypeName(),
+                        CustomType.Constructor.class.getTypeName(),
+                        CustomType.Builder.class.getTypeName()
+                ));
+            }
+            if (!hasAnnotatedConstructor && !hasAnnotatedBuilder) {
+                throw new IllegalArgumentException(String.format(
+                        "%s; Invalid custom type '%s' while deserializing. " +
+                                "Expected a constructor annotated with %s " +
+                                "or a builder annotated with %s, but got none.",
                         context, targetType.getTypeName(),
                         CustomType.Constructor.class.getTypeName(),
                         CustomType.Builder.class.getTypeName()
