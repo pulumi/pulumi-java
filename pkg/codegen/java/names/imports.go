@@ -9,7 +9,7 @@ import (
 // FQN represents a fully qualified names (1+ identifiers with dots in
 // the middle). For example, `javax.annotation.Nullable`:
 //
-//     Ident("javax").FQN().Dot("annotation").Dot("Nullable")
+//	Ident("javax").FQN().Dot("annotation").Dot("Nullable")
 type FQN struct {
 	prefix []Ident
 	id     Ident
@@ -17,9 +17,9 @@ type FQN struct {
 
 // Appends a segment to the FQN. For example:
 //
-//     var JavaLang = Ident("java").FQN().Dot("lang") // java.lang
+//	var JavaLang = Ident("java").FQN().Dot("lang") // java.lang
 //
-//     JavaLang.Dot("Boolean") // java.lang.Boolean
+//	JavaLang.Dot("Boolean") // java.lang.Boolean
 func (fqn FQN) Dot(id Ident) FQN {
 	return FQN{prefix: append(fqn.prefix, fqn.id), id: id}
 }

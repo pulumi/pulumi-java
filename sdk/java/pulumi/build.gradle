@@ -115,10 +115,6 @@ test {
     systemProperty 'java.util.logging.config.file', "${projectDir}/src/test/resources/logging.properties"
 }
 
-
-def gprUser = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
-def gprToken = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
-
 def ossrhUsername = project.findProperty("ossrhUsername") ?: System.getenv("OSSRH_USERNAME")
 def ossrhPassword = project.findProperty("ossrhPassword") ?: System.getenv("OSSRH_PASSWORD")
 
@@ -163,19 +159,6 @@ publishing {
                         name = "Pulumi"
                         email = "support@pulumi.com"
                     }
-                }
-            }
-        }
-    }
-
-    if (!ossrhUsername) {
-        repositories {
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/pulumi/pulumi-java")
-                credentials {
-                    username = gprUser
-                    password = gprToken
                 }
             }
         }
