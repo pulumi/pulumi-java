@@ -43,7 +43,7 @@ jobs:
     steps:
       - name: Test
         env:
-          V: ${{ needs.build.outputs.gotcloudcreds }}
+          V: ${{ needs.test1.outputs.gotcloudcreds }}
         run: |
           echo "gotcloudcreds=$V"
 
