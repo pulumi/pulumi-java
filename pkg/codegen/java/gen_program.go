@@ -26,6 +26,10 @@ import (
 	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
+const (
+	pulumiPkg = "pulumi"
+)
+
 type generator struct {
 	// The formatter to use when generating code.
 	*format.Formatter
@@ -421,7 +425,7 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 	pkg, module, name := nameParts[0], nameParts[1], nameParts[2]
 	pkgName := pkg
 	moduleName := module
-	if pkg == "pulumi" && module == "providers" {
+	if pkg == pulumiPkg && module == "providers" {
 		pkgName = name
 		moduleName = ""
 	}

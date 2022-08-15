@@ -1,3 +1,7 @@
+resource provider "pulumi:providers:kubernetes" {
+    enableServerSideApply = true
+}
+
 resource argocd_serverDeployment "kubernetes:apps/v1:Deployment" {
 	apiVersion = "apps/v1"
 	kind = "Deployment"
