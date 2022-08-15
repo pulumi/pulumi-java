@@ -27,7 +27,8 @@ import (
 )
 
 const (
-	pulumiPkg = "pulumi"
+	pulumiToken    = "pulumi"
+	providersToken = "providers"
 )
 
 type generator struct {
@@ -425,7 +426,7 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 	pkg, module, name := nameParts[0], nameParts[1], nameParts[2]
 	pkgName := pkg
 	moduleName := module
-	if pkg == pulumiPkg && module == "providers" {
+	if pkg == pulumiToken && module == providersToken {
 		pkgName = name
 		moduleName = ""
 	}
@@ -483,7 +484,7 @@ func collectResourceImports(resource *pcl.Resource) []string {
 	pkg, module, name, _ := resource.DecomposeToken()
 	pkgName := pkg
 	moduleName := module
-	if pkg == "pulumi" && module == "providers" {
+	if pkg == pulumiToken && module == providersToken {
 		pkgName = name
 		moduleName = ""
 	}
@@ -546,7 +547,7 @@ func (g *generator) functionImportDef(tokenArg model.Expression) (string, string
 	pkg = sanitizeImport(pkg)
 	module = sanitizeImport(module)
 	member = sanitizeImport(member)
-	if pkg == "pulumi" && module == "providers" {
+	if pkg == pulumiToken && module == providersToken {
 		return pulumiImport(member, "", ""), member
 	}
 	if ignoreModule(module) {
@@ -707,7 +708,7 @@ func resourceTypeName(resource *pcl.Resource) string {
 	// Compute the resource type from the Pulumi type token.
 	pkg, module, member, diags := resource.DecomposeToken()
 	contract.Assert(len(diags) == 0)
-	if pkg == "pulumi" && module == "providers" {
+	if pkg == pulumiToken && module == providersToken {
 		member = "Provider"
 	}
 
