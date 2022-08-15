@@ -5,8 +5,7 @@ import com.google.common.collect.ImmutableMap;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.core.annotations.CustomType.Constructor;
-import com.pulumi.core.annotations.CustomType.Parameter;
+import com.pulumi.core.annotations.CustomType.Setter;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Internal;
 import com.pulumi.core.internal.OutputData;
@@ -99,11 +98,29 @@ public class DeploymentInvokeTest {
 
     @CustomType
     static class CustomResult {
-        public final ImmutableList<ImmutableMap<String, Object>> result;
+        private @Nullable ImmutableList<ImmutableMap<String, Object>> result;
 
-        @Constructor
-        private CustomResult(@Parameter("result") ImmutableList<ImmutableMap<String, Object>> result) {
-            this.result = result;
+        @CustomType.Builder
+        static final class Builder {
+            private final CustomResult $;
+
+            Builder() {
+                this.$ = new CustomResult();
+            }
+
+            Builder(CustomResult defaults) {
+                this.$ = defaults;
+            }
+
+            @Setter("result")
+            Builder result(@Nullable ImmutableList<ImmutableMap<String, Object>> result) {
+                this.$.result = result;
+                return this;
+            }
+
+            CustomResult build() {
+                return this.$;
+            }
         }
     }
 
