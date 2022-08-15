@@ -27,7 +27,7 @@ public class App {
         var provider = new Provider("provider", ProviderArgs.builder()        
             .enableServerSideApply(true)
             .build());
-			
+
         var argocd_serverDeployment = new Deployment("argocd_serverDeployment", DeploymentArgs.builder()        
             .apiVersion("apps/v1")
             .kind("Deployment")
