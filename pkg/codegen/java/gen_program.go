@@ -26,6 +26,11 @@ import (
 	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
 
+const (
+	pulumiToken    = "pulumi"
+	providersToken = "providers"
+)
+
 type generator struct {
 	// The formatter to use when generating code.
 	*format.Formatter
@@ -140,6 +145,7 @@ func containsRangeExpr(nodes []pcl.Node) bool {
 }
 
 func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, error) {
+	pcl.MapProvidersAsResources(program)
 	// Linearize the nodes into an order appropriate for procedural code generation.
 	nodes := pcl.Linearize(program)
 
@@ -396,6 +402,8 @@ func pulumiImport(pkg string, module string, member string) string {
 	module = cleanModule(module)
 	if ignoreModule(module) {
 		return "com.pulumi." + sanitizeImport(pkg) + "." + member
+	} else if module == "" {
+		return "com.pulumi." + sanitizeImport(pkg)
 	}
 	return "com.pulumi." + sanitizeImport(pkg) + "." + sanitizeImport(module) + "." + member
 }
@@ -416,8 +424,8 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 	fullyQualifiedTypeName := objectType.Token
 	nameParts := strings.Split(fullyQualifiedTypeName, ":")
 	objectTypeName := names.Title(nameParts[len(nameParts)-1])
-	pkg := nameParts[0]
-	module := nameParts[1]
+	pkg, module := nameParts[0], nameParts[1]
+
 	if objectType.IsInputShape() {
 		if !strings.HasSuffix(objectTypeName, "Args") {
 			objectTypeName = objectTypeName + "Args"
@@ -527,6 +535,7 @@ func (g *generator) functionImportDef(tokenArg model.Expression) (string, string
 	pkg, module, member, _ := pcl.DecomposeToken(token, tokenRange)
 	pkg = sanitizeImport(pkg)
 	module = sanitizeImport(module)
+	member = sanitizeImport(member)
 	if ignoreModule(module) {
 		importDef := "com.pulumi." + pkg + "." + names.Title(pkg) + "Functions"
 		return importDef, member
@@ -685,7 +694,7 @@ func resourceTypeName(resource *pcl.Resource) string {
 	// Compute the resource type from the Pulumi type token.
 	pkg, module, member, diags := resource.DecomposeToken()
 	contract.Assert(len(diags) == 0)
-	if pkg == "pulumi" && module == "providers" {
+	if pkg == pulumiToken && module == providersToken {
 		member = "Provider"
 	}
 
