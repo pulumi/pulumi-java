@@ -5,9 +5,6 @@ plugins {
 group 'com.pulumi.example'
 version '0.0.1-SNAPSHOT'
 
-var gprUser = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
-var gprToken = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
-
 repositories {
     mavenLocal()
     maven { // The google mirror is less flaky than mavenCentral()
