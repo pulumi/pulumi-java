@@ -55,7 +55,7 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Publish Pulumi Java SDK
-        uses: gradle/gradle-build-action@cd3cedc781988c804f626f4cd2dc51d0bdf02a12
+        uses: gradle/gradle-build-action@cd579d970f8aec1cf0cae5f62a8e418768970015
         with:
           arguments: pulumi:publishToSonatype closeAndReleaseSonatypeStagingRepository
           build-root-directory: sdk/java
