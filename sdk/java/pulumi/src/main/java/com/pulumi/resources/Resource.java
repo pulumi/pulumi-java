@@ -26,13 +26,10 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Collectors;
 
 import static com.pulumi.core.internal.Objects.exceptionSupplier;
 import static com.pulumi.core.internal.Objects.require;
-import static com.pulumi.resources.Resources.copyNullableList;
 import static com.pulumi.resources.Resources.mergeNullableList;
-import static com.pulumi.resources.Resources.orEmpty;
 import static com.pulumi.resources.internal.Stack.RootPulumiStackTypeName;
 import static java.util.Collections.emptyList;
 import static java.util.Objects.requireNonNull;
