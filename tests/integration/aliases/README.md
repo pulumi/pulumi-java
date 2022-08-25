@@ -1,0 +1,1 @@
+Tests in this directory were ported from [dotnet](https://github.com/pulumi/pulumi/tree/master/tests/integration/aliases/dotnet).
