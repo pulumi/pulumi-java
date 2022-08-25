@@ -367,18 +367,19 @@ public abstract class Resource {
 
     private static List<Output<String>> computeAliases(String name, String type, ResourceOptions options) {
         // Prepare aliases inherited from the parent
-        var parentAliases = Optional
-                .ofNullable(options.parent)
+        var parentAliases = Optional.ofNullable(options.parent)
                 .stream()
                 .flatMap(parent ->
-                        orEmpty(parent.aliases)
+                        Optional.ofNullable(parent.aliases)
+                                .orElse(emptyList())
                                 .stream()
                                 .map(alias -> urnInheritedChildAlias(name, parent.pulumiResourceName(), alias, type))
                 )
                 .collect(toList());
 
         // Collapse any Aliases down to URNs.
-        return orEmpty(mergeNullableList(options.aliases, parentAliases))
+        return Optional.ofNullable(mergeNullableList(options.aliases, parentAliases))
+                .orElse(emptyList())
                 .stream()
                 .map(alias -> collapseAliasToUrn(alias, name, type, options.parent))
                 .collect(toList());

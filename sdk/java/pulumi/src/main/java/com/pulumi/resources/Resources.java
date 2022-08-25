@@ -45,8 +45,4 @@ public class Resources {
         }
         return original.copy();
     }
-
-    protected static <T> List<T> orEmpty(@Nullable List<T> list) {
-        return list == null ? List.of() : list;
-    }
 }
