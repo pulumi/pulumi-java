@@ -195,7 +195,7 @@ func (host *javaLanguageHost) determinePulumiPackages(
 	// Run our classpath introspection from the SDK and parse the resulting JSON
 	cmd := exec.Cmd
 	args := exec.PluginArgs
-	output, err := host.runJavaCommand(ctx, exec.Dir, cmd, args)
+	output, err := host.runJavaCommand(ctx, exec.Dir, cmd, args, true)
 	if err != nil {
 		// Plugin determination is an advisory feature so it does not need to escalate to an error.
 		logging.V(3).Infof("language host could not run plugin discovery command successfully, "+
@@ -221,7 +221,7 @@ func (host *javaLanguageHost) determinePulumiPackages(
 }
 
 func (host *javaLanguageHost) runJavaCommand(
-	ctx context.Context, dir, name string, args []string) (string, error) {
+	ctx context.Context, dir, name string, args []string, quiet bool) (string, error) {
 
 	commandStr := strings.Join(args, " ")
 	if logging.V(5) {
@@ -248,8 +248,11 @@ func (host *javaLanguageHost) runJavaCommand(
 		// The command failed. Dump any data we collected to
 		// the actual stdout/stderr streams, so they get
 		// displayed to the user.
-		os.Stdout.Write(infoWriter.Bytes())
-		os.Stderr.Write(errorWriter.Bytes())
+		var displayEnabled = !quiet || bool(logging.V(1))
+		if displayEnabled {
+			os.Stdout.Write(infoWriter.Bytes())
+			os.Stderr.Write(errorWriter.Bytes())
+		}
 		return "", err
 	}
 
