@@ -1,0 +1,7 @@
+name: aliases-rename
+description: Integration test for Aliases (rename scenario)
+runtime:
+  name: java
+  options:
+    logtostderr: false
+    v: 0
