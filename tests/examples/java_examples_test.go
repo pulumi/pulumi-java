@@ -107,6 +107,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("aws-java-eks-minimal", func(t *testing.T) {
+		t.Skip("TODO pulumi/pulumi-java#821")
 		test := getJavaBaseNew(t,
 			"aws-java-eks-minimal",
 			[]string{"eks", "aws", "kubernetes"},
