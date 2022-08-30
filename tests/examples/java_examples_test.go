@@ -107,6 +107,7 @@ func TestExamples(t *testing.T) {
 	})
 
 	t.Run("aws-java-eks-minimal", func(t *testing.T) {
+		t.Skip("TODO pulumi/pulumi-java#821")
 		test := getJavaBaseNew(t,
 			"aws-java-eks-minimal",
 			[]string{"eks", "aws", "kubernetes"},
@@ -274,7 +275,6 @@ func getJavaBaseNew(
 	}
 	opts := integration.ProgramTestOptions{
 		Dir: filepath.Join(repoRoot, "examples", dir),
-		Env: []string{fmt.Sprintf("PULUMI_REPO_ROOT=%s", repoRoot)},
 	}
 	opts = opts.With(getBaseOptions()).
 		With(testSpecificOptions).
@@ -311,13 +311,8 @@ func combinePrepareProject(f1, f2 func(info *engine.Projinfo) error) func(info *
 }
 
 func getJavaBase(t *testing.T, dir string, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
-	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
-	if err != nil {
-		panic(err)
-	}
 	opts := integration.ProgramTestOptions{
 		Dir: filepath.Join(getCwd(t), dir),
-		Env: []string{fmt.Sprintf("PULUMI_REPO_ROOT=%s", repoRoot)},
 		PrepareProject: func(*engine.Projinfo) error {
 			return nil // needed because defaultPrepareProject does not know about java
 		},

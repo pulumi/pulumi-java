@@ -3,8 +3,6 @@
 package integration
 
 import (
-	"fmt"
-	"os"
 	"os/exec"
 	"path/filepath"
 	"testing"
@@ -12,7 +10,6 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/pulumi/pulumi/pkg/v3/engine"
 	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
@@ -101,45 +98,32 @@ func TestIntegrations(t *testing.T) {
 		})
 		integration.ProgramTest(t, &test)
 	})
+
+	runAliasTest(t, "rename")
+	runAliasTest(t, "rename-component")
+	runAliasTest(t, "rename-component-and-child")
+	runAliasTest(t, "retype-component")
+	runAliasTest(t, "retype-parents")
+	runAliasTest(t, "adopt-into-component")
 }
 
-func getJavaBase(t *testing.T, testSpecificOptions integration.ProgramTestOptions) integration.ProgramTestOptions {
-	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
-	if err != nil {
-		panic(err)
-	}
-	opts := integration.ProgramTestOptions{
-		Env: []string{fmt.Sprintf("PULUMI_REPO_ROOT=%s", repoRoot)},
-		Config: map[string]string{
-			"org": "pulumi-bot",
-		},
-		PrepareProject: func(*engine.Projinfo) error {
-			return nil // needed because defaultPrepareProject does not know about java
-		},
-	}
-	opts = opts.With(testSpecificOptions)
-
-	// local environment, to run locally offline, make sure you set:
-	// export PULUMI_BACKEND_URL=file://~
-	// export PULUMI_API=file://~
-	// pulumi login --local
-	pulumiAPI, ok := os.LookupEnv("PULUMI_API")
-	var isAPILocal = ok && pulumiAPI == "file://~"
-	pulumiBackend, ok := os.LookupEnv("PULUMI_BACKEND_URL")
-	var isBackendLocal = ok && pulumiBackend == "file://~"
-
-	var isLocal = isAPILocal || isBackendLocal
-	if isLocal {
-		t.Log("Running test locally")
-		opts = opts.With(integration.ProgramTestOptions{
-			Config: map[string]string{
-				"local": "true",
+func runAliasTest(t *testing.T, directory string) {
+	d := filepath.Join(getCwd(t), "aliases", directory)
+	t.Run(directory, func(t *testing.T) {
+		testOptions := getJavaBase(t, integration.ProgramTestOptions{
+			Dir:   d,
+			Quick: true,
+			EditDirs: []integration.EditDir{
+				{
+					Dir:             filepath.Join(d, "step1"),
+					Additive:        true,
+					ExpectNoChanges: true,
+				},
 			},
-			CloudURL: "file://~",
 		})
-	}
-	t.Logf("Running test with opts.CloudURL: %s", opts.CloudURL)
-	return opts
+
+		integration.ProgramTest(t, &testOptions)
+	})
 }
 
 func stackTransformationValidator() func(t *testing.T, stack integration.RuntimeValidationStackInfo) {
