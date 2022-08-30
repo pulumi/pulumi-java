@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io"
 	"os"
 	"os/exec"
 	"strings"
@@ -195,18 +196,21 @@ func (host *javaLanguageHost) determinePulumiPackages(
 	// Run our classpath introspection from the SDK and parse the resulting JSON
 	cmd := exec.Cmd
 	args := exec.PluginArgs
-	output, err := host.runJavaCommand(ctx, exec.Dir, cmd, args)
+	quiet := true
+	output, err := host.runJavaCommand(ctx, exec.Dir, cmd, args, quiet)
 	if err != nil {
 		// Plugin determination is an advisory feature so it does not need to escalate to an error.
 		logging.V(3).Infof("language host could not run plugin discovery command successfully, "+
 			"returning empty plugins; cause: %s", err)
+		logging.V(3).Infof("%s", output.stdout)
+		logging.V(3).Infof("%s", output.stderr)
 		return []plugin.PulumiPluginJSON{}, nil
 	}
 
 	logging.V(5).Infof("GetRequiredPlugins: bootstrap raw output=%v", output)
 
 	var plugins []plugin.PulumiPluginJSON
-	err = json.Unmarshal([]byte(output), &plugins)
+	err = json.Unmarshal([]byte(output.stdout), &plugins)
 	if err != nil {
 		if e, ok := err.(*json.SyntaxError); ok {
 			logging.V(5).Infof("JSON syntax error at byte offset %d", e.Offset)
@@ -220,20 +224,29 @@ func (host *javaLanguageHost) determinePulumiPackages(
 	return plugins, nil
 }
 
+type javaCommandResponse struct {
+	stdout string
+	stderr string
+}
+
 func (host *javaLanguageHost) runJavaCommand(
-	ctx context.Context, dir, name string, args []string) (string, error) {
+	ctx context.Context, dir, name string, args []string, quiet bool) (javaCommandResponse, error) {
 
 	commandStr := strings.Join(args, " ")
 	if logging.V(5) {
 		logging.V(5).Infoln("Language host launching process: ", name, commandStr)
 	}
 
-	// Buffer the writes we see from build tool, from its stdout and stderr streams.
-	// We will display these ephemerally to the user. If the build does fail though, we will dump
-	// messages back to our own stdout/stderr, so they get picked up and displayed to the user.
+	stdoutBuffer := &bytes.Buffer{}
+	stderrBuffer := &bytes.Buffer{}
 
-	infoWriter := &bytes.Buffer{}
-	errorWriter := &bytes.Buffer{}
+	var stdoutWriter io.Writer = stdoutBuffer
+	var stderrWriter io.Writer = stderrBuffer
+
+	if !quiet {
+		stdoutWriter = io.MultiWriter(os.Stdout, stdoutWriter)
+		stderrWriter = io.MultiWriter(os.Stderr, stderrWriter)
+	}
 
 	// Now simply spawn a process to execute the requested program, wiring up stdout/stderr directly.
 	cmd := exec.Command(name, args...) // nolint: gas // intentionally running dynamic program name.
@@ -241,23 +254,19 @@ func (host *javaLanguageHost) runJavaCommand(
 		cmd.Dir = dir
 	}
 
-	cmd.Stdout = infoWriter
-	cmd.Stderr = errorWriter
+	cmd.Stdout = stdoutWriter
+	cmd.Stderr = stderrWriter
 
-	if err := runCommand(cmd); err != nil {
-		// The command failed. Dump any data we collected to
-		// the actual stdout/stderr streams, so they get
-		// displayed to the user.
-		os.Stdout.Write(infoWriter.Bytes())
-		os.Stderr.Write(errorWriter.Bytes())
-		return "", err
-	}
+	err := runCommand(cmd)
 
-	if logging.V(5) {
+	if err == nil && logging.V(5) {
 		logging.V(5).Infof("'%v %v' completed successfully\n", name, commandStr)
 	}
 
-	return infoWriter.String(), nil
+	return javaCommandResponse{
+		stdout: stdoutBuffer.String(),
+		stderr: stderrBuffer.String(),
+	}, err
 }
 
 // Run is an RPC endpoint for LanguageRuntimeServer::Run
