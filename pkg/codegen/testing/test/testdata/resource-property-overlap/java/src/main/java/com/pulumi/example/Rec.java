@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::Rec")
 public class Rec extends com.pulumi.resources.CustomResource {
-    @Export(name="rec", type=Rec.class, parameters={})
+    @Export(name="rec", refs={Rec.class}, tree="[0]")
     private Output</* @Nullable */ Rec> rec;
 
     public Output<Optional<Rec>> rec() {

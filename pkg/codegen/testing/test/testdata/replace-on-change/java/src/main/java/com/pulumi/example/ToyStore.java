@@ -18,25 +18,25 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::ToyStore")
 public class ToyStore extends com.pulumi.resources.CustomResource {
-    @Export(name="chew", type=Chew.class, parameters={})
+    @Export(name="chew", refs={Chew.class}, tree="[0]")
     private Output</* @Nullable */ Chew> chew;
 
     public Output<Optional<Chew>> chew() {
         return Codegen.optional(this.chew);
     }
-    @Export(name="laser", type=Laser.class, parameters={})
+    @Export(name="laser", refs={Laser.class}, tree="[0]")
     private Output</* @Nullable */ Laser> laser;
 
     public Output<Optional<Laser>> laser() {
         return Codegen.optional(this.laser);
     }
-    @Export(name="stuff", type=List.class, parameters={Toy.class})
+    @Export(name="stuff", refs={List.class,Toy.class}, tree="[0,1]")
     private Output</* @Nullable */ List<Toy>> stuff;
 
     public Output<Optional<List<Toy>>> stuff() {
         return Codegen.optional(this.stuff);
     }
-    @Export(name="wanted", type=List.class, parameters={Toy.class})
+    @Export(name="wanted", refs={List.class,Toy.class}, tree="[0,1]")
     private Output</* @Nullable */ List<Toy>> wanted;
 
     public Output<Optional<List<Toy>>> wanted() {

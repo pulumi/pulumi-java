@@ -22,13 +22,13 @@ import java.util.concurrent.CompletableFuture;
  */
 public class StackReference extends CustomResource {
 
-    @Export(name = "name", type = String.class)
+    @Export(name = "name", refs = {String.class})
     private Output<String> name;
 
-    @Export(name = "outputs", type = Map.class, parameters = {String.class, Object.class})
+    @Export(name = "outputs", refs = {Map.class, String.class, Object.class}, tree = "[0,1,2]")
     private Output<Map<String, Object>> outputs;
 
-    @Export(name = "secretOutputNames", type = List.class, parameters = String.class)
+    @Export(name = "secretOutputNames", refs = {List.class, String.class}, tree = "[0,1]")
     private Output<List<String>> secretOutputNames;
 
     /**

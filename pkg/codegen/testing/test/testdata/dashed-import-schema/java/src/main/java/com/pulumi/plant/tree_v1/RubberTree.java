@@ -20,31 +20,31 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="plant:tree/v1:RubberTree")
 public class RubberTree extends com.pulumi.resources.CustomResource {
-    @Export(name="container", type=Container.class, parameters={})
+    @Export(name="container", refs={Container.class}, tree="[0]")
     private Output</* @Nullable */ Container> container;
 
     public Output<Optional<Container>> container() {
         return Codegen.optional(this.container);
     }
-    @Export(name="diameter", type=Diameter.class, parameters={})
+    @Export(name="diameter", refs={Diameter.class}, tree="[0]")
     private Output<Diameter> diameter;
 
     public Output<Diameter> diameter() {
         return this.diameter;
     }
-    @Export(name="farm", type=String.class, parameters={})
+    @Export(name="farm", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> farm;
 
     public Output<Optional<String>> farm() {
         return Codegen.optional(this.farm);
     }
-    @Export(name="size", type=TreeSize.class, parameters={})
+    @Export(name="size", refs={TreeSize.class}, tree="[0]")
     private Output</* @Nullable */ TreeSize> size;
 
     public Output<Optional<TreeSize>> size() {
         return Codegen.optional(this.size);
     }
-    @Export(name="type", type=RubberTreeVariety.class, parameters={})
+    @Export(name="type", refs={RubberTreeVariety.class}, tree="[0]")
     private Output<RubberTreeVariety> type;
 
     public Output<RubberTreeVariety> type() {

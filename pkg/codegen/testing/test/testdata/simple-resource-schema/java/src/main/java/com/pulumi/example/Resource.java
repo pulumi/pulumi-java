@@ -16,13 +16,13 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::Resource")
 public class Resource extends com.pulumi.resources.CustomResource {
-    @Export(name="bar", type=String.class, parameters={})
+    @Export(name="bar", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> bar;
 
     public Output<Optional<String>> bar() {
         return Codegen.optional(this.bar);
     }
-    @Export(name="baz", type=String.class, parameters={})
+    @Export(name="baz", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> baz;
 
     public Output<Optional<String>> baz() {

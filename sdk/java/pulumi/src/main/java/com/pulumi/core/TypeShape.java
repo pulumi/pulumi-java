@@ -4,6 +4,7 @@ import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 import com.google.common.reflect.TypeToken;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import com.google.gson.Gson;
 import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.CheckReturnValue;
@@ -19,6 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 import static com.pulumi.core.internal.PulumiCollectors.toSingleton;
+import static java.util.Objects.requireNonNullElse;
 import static java.util.stream.Collectors.joining;
 
 public final class TypeShape<T> {
@@ -131,6 +133,11 @@ public final class TypeShape<T> {
         return true;
     }
 
+    /**
+     * Create a string representations of this {@link TypeShape}.
+     *
+     * @return a string representation of this {@link TypeShape}
+     */
     public String asString() {
         var builder = new StringBuilder();
         builder.append(getTypeName());
@@ -150,17 +157,81 @@ public final class TypeShape<T> {
                 .toString();
     }
 
+    @InternalUse
     public static TypeShape<?> extract(Parameter parameter) {
         var parameterClass = parameter.getType();
         var token = TypeToken.of(parameter.getParameterizedType());
         return extract(parameterClass, token);
     }
 
+    @InternalUse
     private static TypeShape<?> extract(Class<?> type, TypeToken<?> resolverToken) {
         var builder = TypeShape.builder(type);
         for (var param : type.getTypeParameters()) {
             var token = resolverToken.resolveType(param);
             builder.addParameter(extract(token.getRawType(), token));
+        }
+        return builder.build();
+    }
+
+    /**
+     * Parse a tree representation of a Java generic type.
+     *
+     * @param refs     the class references for the generic type
+     * @param treeJson the generic type tree shape as JSON
+     * @return a {@link TypeShape} described by the tree representation
+     */
+    @InternalUse
+    public static TypeShape<?> fromTree(Class<?>[] refs, String treeJson) {
+        var gson = new Gson();
+        var tree = gson.fromJson(treeJson, List.class);
+        return fromTreeInner(refs, treeJson, requireNonNullElse(tree, List.of()));
+    }
+
+    @InternalUse
+    private static TypeShape<?> fromTreeInner(Class<?>[] refs, String treeJson, @SuppressWarnings("rawtypes") List tree) {
+        if (refs.length == 0) {
+            return TypeShape.Empty;
+        }
+        // make tree optional for simple cases
+        if (tree.isEmpty() && refs.length == 1) {
+            return TypeShape.of(refs[0]);
+        }
+        final int rootIndex;
+        var rootIndexObj = tree.get(0);
+        if (rootIndexObj instanceof Double) {
+            rootIndex = ((Double) rootIndexObj).intValue();
+        } else {
+            throw new IllegalArgumentException(String.format(
+                    "Expected type (sub) tree root to contain Double, got: '%s'",
+                    rootIndexObj == null ? "null" : rootIndexObj.getClass().getTypeName()
+            ));
+        }
+        TypeShape.Builder<?> builder = TypeShape.builder(refs[rootIndex]);
+        for (int i = 1; i < tree.size(); i++) {
+            var obj = tree.get(i);
+            if (obj instanceof List) {
+                //noinspection rawtypes
+                builder.addParameter(fromTreeInner(refs, treeJson, (List) obj));
+                continue;
+            }
+            if (obj instanceof Double) {
+                var index = ((Double) obj).intValue();
+                var maxIndex = refs.length - 1;
+                if (index > maxIndex) {
+                    throw new IllegalArgumentException(String.format(
+                            "Expected class reference with index '%d' that was referenced in the tree shape: '%s', " +
+                                    "but was not present in the refs, maxIndex was '%d'",
+                            index, treeJson, maxIndex
+                    ));
+                }
+                builder.addParameter(refs[index]);
+                continue;
+            }
+            throw new IllegalArgumentException(String.format(
+                    "Expected type shape tree to contain List or Double, got: '%s'",
+                    obj == null ? "null" : obj.getClass().getTypeName()
+            ));
         }
         return builder.build();
     }

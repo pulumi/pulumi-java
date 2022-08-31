@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::God")
 public class God extends com.pulumi.resources.CustomResource {
-    @Export(name="backwards", type=Dog.class, parameters={})
+    @Export(name="backwards", refs={Dog.class}, tree="[0]")
     private Output</* @Nullable */ Dog> backwards;
 
     public Output<Optional<Dog>> backwards() {

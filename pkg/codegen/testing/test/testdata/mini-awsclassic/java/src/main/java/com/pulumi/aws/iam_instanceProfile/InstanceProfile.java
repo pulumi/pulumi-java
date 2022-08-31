@@ -20,7 +20,7 @@ public class InstanceProfile extends com.pulumi.resources.CustomResource {
      * Name of the role to add to the profile.
      * 
      */
-    @Export(name="role", type=String.class, parameters={})
+    @Export(name="role", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> role;
 
     /**

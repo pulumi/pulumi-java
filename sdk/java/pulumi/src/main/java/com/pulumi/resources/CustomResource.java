@@ -23,7 +23,7 @@ public class CustomResource extends Resource {
 
     private CompletableFuture<Output<String>> idFuture; // effectively final, lazy init
 
-    @Export(name = Constants.IdPropertyName, type = String.class)
+    @Export(name = Constants.IdPropertyName, refs = {String.class})
     private Output<String> id; // effectively final, lazy init
 
     /**
