@@ -17,7 +17,6 @@ import static java.util.stream.Collectors.toList;
  * ResourceOptions is a bag of optional settings that control a resource's behavior.
  */
 public abstract class ResourceOptions {
-
     @Nullable
     protected Output<String> id;
     @Nullable
@@ -87,123 +86,203 @@ public abstract class ResourceOptions {
             this.options = options;
         }
 
+        /**
+         * @see #id(String)
+         */
         public B id(@Nullable Output<String> id) {
             options.id = id;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * An optional existing ID to load, rather than create.
+         */
         public B id(@Nullable String id) {
             options.id = Output.ofNullable(id);
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * An optional parent resource to which this resource belongs.
+         */
         public B parent(@Nullable Resource parent) {
             options.parent = parent;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * Optional additional explicit dependencies on other resources.
+         */
         public B dependsOn(Resource... dependsOn) {
             return this.dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @see #dependsOn(Resource...)
+         */
         public B dependsOn(@Nullable Output<List<Resource>> dependsOn) {
             options.dependsOn = dependsOn;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * @see #dependsOn(Resource...)
+         */
         public B dependsOn(@Nullable List<Resource> dependsOn) {
             options.dependsOn = Output.ofNullable(dependsOn);
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * When set to true, protect ensures this resource cannot be deleted.
+         */
         public B protect(boolean protect) {
             options.protect = protect;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * Ignore changes to any of the specified properties.
+         */
         public B ignoreChanges(String... ignoreChanges) {
             return this.ignoreChanges(List.of(ignoreChanges));
         }
 
+        /**
+         * Ignore changes to any of the specified properties.
+         */
         public B ignoreChanges(@Nullable List<String> ignoreChanges) {
             options.ignoreChanges = ignoreChanges;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * An optional version, corresponding to the version of the provider plugin that should be
+         * used when operating on this resource. This version overrides the version information
+         * inferred from the current package and should rarely be used.
+         */
         public B version(@Nullable String version) {
             options.version = version;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * An optional provider to use for this resource's CRUD operations. If no provider is
+         * supplied, the default provider for the resource's package will be used. The default
+         * provider is pulled from the parent's provider bag (@see {@link ComponentResourceOptions#getProviders()}).
+         * <p>
+         * If this is a @see {@link ComponentResourceOptions} do not provide both @see {@link #provider}
+         * and @see {@link ComponentResourceOptions#getProviders()}.
+         */
         public B provider(@Nullable ProviderResource provider) {
             options.provider = provider;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * An optional CustomTimeouts configuration.
+         */
         public B customTimeouts(@Nullable CustomTimeouts customTimeouts) {
             options.customTimeouts = customTimeouts;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * Optional list of transformations to apply to this resource during construction.
+         * The transformations are applied in order, and are applied prior to transformation
+         * applied to parent walking from the resource up to the stack.
+         */
         public B resourceTransformations(ResourceTransformation... resourceTransformations) {
             return this.resourceTransformations(List.of(resourceTransformations));
         }
 
+        /**
+         * @see #resourceTransformations(ResourceTransformation...)
+         */
         public B resourceTransformations(@Nullable List<ResourceTransformation> resourceTransformations) {
             options.resourceTransformations = resourceTransformations;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * An optional list of aliases to treat this resource as matching.
+         */
         public B aliases(Alias... aliases) {
             return this.aliases(Stream.of(aliases)
                     .map(Output::of)
                     .collect(toList()));
         }
 
+        /**
+         * @see #aliases(Alias...)
+         */
         @SafeVarargs
         public final B aliases(Output<Alias>... aliases) {
             return this.aliases(List.of(aliases));
         }
 
+        /**
+         * @see #aliases(Alias...)
+         */
         public B aliases(@Nullable List<Output<Alias>> aliases) {
             options.aliases = aliases;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * The URN of a previously-registered resource of this type to read from the engine.
+         */
         public B urn(@Nullable String urn) {
             options.urn = urn;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * Changes to any of these property paths will force a replacement.
+         * If this list includes `"*"`, changes to any properties will force a replacement.
+         * Initialization errors from previous deployments will require replacement
+         * instead of update only if `"*"` is passed.
+         */
         public B replaceOnChanges(String... replaceOnChanges) {
             return this.replaceOnChanges(List.of(replaceOnChanges));
         }
 
+        /**
+         * @see #replaceOnChanges(String...)
+         */
         public B replaceOnChanges(@Nullable List<String> replaceOnChanges) {
             options.replaceOnChanges = replaceOnChanges;
             //noinspection unchecked
             return (B) this;
         }
 
+        /**
+         * If set to True, the providers Delete method will not be called for this resource.
+         */
         public B retainOnDelete(boolean retainOnDelete) {
             //noinspection unchecked
             options.retainOnDelete = retainOnDelete;
             return (B) this;
         }
 
+        /**
+         * An optional URL, corresponding to the url from which the provider plugin that should be
+         * used when operating on this resource is downloaded from. This URL overrides the download URL
+         * inferred from the current package and should rarely be used.
+         */
         public B pluginDownloadURL(@Nullable String pluginDownloadURL) {
             //noinspection unchecked
             options.pluginDownloadURL = pluginDownloadURL;
@@ -212,112 +291,98 @@ public abstract class ResourceOptions {
     }
 
     /**
-     * An optional existing ID to load, rather than create.
+     * @see Builder#id(String)
      */
     public Optional<Output<String>> getId() {
         return Optional.ofNullable(id);
     }
 
     /**
-     * An optional parent resource to which this resource belongs.
+     * @see Builder#parent(Resource)
      */
     public Optional<Resource> getParent() {
         return Optional.ofNullable(parent);
     }
 
     /**
-     * Optional additional explicit dependencies on other resources.
+     * @see Builder#dependsOn(Resource...)
      */
     public Output<List<Resource>> getDependsOn() {
         return this.dependsOn == null ? Output.ofList() : this.dependsOn;
     }
 
     /**
-     * When set to true, protect ensures this resource cannot be deleted.
+     * @see Builder#protect(boolean)
      */
     public boolean isProtect() {
         return protect;
     }
 
     /**
-     * Ignore changes to any of the specified properties.
+     * @see Builder#ignoreChanges(String...)
      */
     public List<String> getIgnoreChanges() {
         return this.ignoreChanges == null ? List.of() : List.copyOf(this.ignoreChanges);
     }
 
     /**
-     * An optional version, corresponding to the version of the provider plugin that should be
-     * used when operating on this resource. This version overrides the version information
-     * inferred from the current package and should rarely be used.
+     * @see Builder#version(String)
      */
     public Optional<String> getVersion() {
         return Optional.ofNullable(version);
     }
 
     /**
-     * An optional provider to use for this resource's CRUD operations. If no provider is
-     * supplied, the default provider for the resource's package will be used. The default
-     * provider is pulled from the parent's provider bag (@see {@link ComponentResourceOptions#getProviders()}).
-     * <p>
-     * If this is a @see {@link ComponentResourceOptions} do not provide both @see {@link #provider}
-     * and @see {@link ComponentResourceOptions#getProviders()}.
+     * @see Builder#provider(ProviderResource)
      */
     public Optional<ProviderResource> getProvider() {
         return Optional.ofNullable(provider);
     }
 
     /**
-     * An optional CustomTimeouts configuration.
+     * @see Builder#customTimeouts(CustomTimeouts)
      */
     public Optional<CustomTimeouts> getCustomTimeouts() {
         return Optional.ofNullable(customTimeouts);
     }
 
     /**
-     * Optional list of transformations to apply to this resource during construction.
-     * The transformations are applied in order, and are applied prior to transformation
-     * applied to parent walking from the resource up to the stack.
+     * @see Builder#resourceTransformations(ResourceTransformation...)
      */
     public List<ResourceTransformation> getResourceTransformations() {
         return this.resourceTransformations == null ? List.of() : List.copyOf(this.resourceTransformations);
     }
 
     /**
-     * An optional list of aliases to treat this resource as matching.
+     * @see Builder#aliases(Alias...)
      */
     public List<Output<Alias>> getAliases() {
         return this.aliases == null ? List.of() : List.copyOf(this.aliases);
     }
 
     /**
-     * The URN of a previously-registered resource of this type to read from the engine.
+     * @see Builder#urn(String)
      */
     public Optional<String> getUrn() {
         return Optional.ofNullable(urn);
     }
 
     /**
-     * Changes to any of these property paths will force a replacement.
-     * If this list includes `"*"`, changes to any properties will force a replacement.
-     * Initialization errors from previous deployments will require replacement
-     * instead of update only if `"*"` is passed.
+     * @see Builder#replaceOnChanges(String...)
      */
     public List<String> getReplaceOnChanges() {
         return this.replaceOnChanges == null ? List.of() : List.copyOf(this.replaceOnChanges);
     }
 
     /**
-     * If set to True, the providers Delete method will not be called for this resource.
+     * @see Builder#retainOnDelete(boolean)
      */
     public boolean isRetainOnDelete() {
         return this.retainOnDelete;
     }
 
     /**
-     * An optional URL, corresponding to the url from which the provider plugin that should be
-     * used when operating on this resource is downloaded from. This URL overrides the download URL
-     * inferred from the current package and should rarely be used.
+     * @see Builder#pluginDownloadURL(String)
      */
     public Optional<String> getPluginDownloadURL() {
         return Optional.ofNullable(this.pluginDownloadURL);
