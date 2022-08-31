@@ -49,4 +49,14 @@ class ResourcesTest {
         assertEquals(expected, copyNullableList(list));
     }
 
+    @SuppressWarnings("unused")
+    private static Stream<Arguments> testOrEmpty() {
+        return Stream.of(
+                arguments(null, List.of()),
+                arguments(List.of(), List.of()),
+                arguments(List.of("a"), List.of("a")),
+                arguments(List.of("a", "b"), List.of("a", "b"))
+        );
+    }
+
 }

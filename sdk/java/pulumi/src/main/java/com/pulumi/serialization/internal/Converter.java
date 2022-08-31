@@ -437,7 +437,8 @@ public class Converter {
                             argument == null ? "null" : argument.getClass()
                     ), e);
                 } catch (IllegalAccessException | InvocationTargetException e) {
-                    throw new IllegalStateException(String.format("Unexpected exception: %s", e.getMessage()), e);
+                    var exMsg = e.getMessage() == null ? e.getClass().getSimpleName() : e.getMessage();
+                    throw new IllegalStateException(String.format("Unexpected exception: %s", exMsg), e);
                 }
             });
             // call .build()

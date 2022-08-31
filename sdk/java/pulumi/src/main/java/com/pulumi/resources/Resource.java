@@ -29,9 +29,11 @@ import java.util.concurrent.CompletableFuture;
 
 import static com.pulumi.core.internal.Objects.exceptionSupplier;
 import static com.pulumi.core.internal.Objects.require;
-import static com.pulumi.resources.Resources.copyNullableList;
+import static com.pulumi.resources.Resources.mergeNullableList;
 import static com.pulumi.resources.internal.Stack.RootPulumiStackTypeName;
+import static java.util.Collections.emptyList;
 import static java.util.Objects.requireNonNull;
+import static java.util.stream.Collectors.toList;
 
 /**
  * Resource represents a class whose CRUD operations are implemented by a provider plugin.
@@ -188,16 +190,7 @@ public abstract class Resource {
             // the 'childResources' is a Synchronized Collection, so this is safe operation
             parentResource.childResources.add(this);
 
-            options.protect = options.protect || options.parent.protect; // TODO: is this logic good?
-
-            // Make a copy of the aliases array, and add to it any implicit aliases inherited from its parent
-            options.aliases = options.aliases == null ? new ArrayList<>() : copyNullableList(options.aliases);
-            for (var parentAlias : options.parent.aliases) {
-                options.aliases.add(
-                        urnInheritedChildAlias(this.name, options.parent.pulumiResourceName(), parentAlias, this.type)
-                );
-            }
-
+            options.protect = options.protect || parentResource.protect; // TODO: is this logic good?
             thisProviders.putAll(options.parent.providers);
         }
 
@@ -236,14 +229,7 @@ public abstract class Resource {
 
         this.providers = Map.copyOf(thisProviders);
 
-        // Collapse any Aliases down to URNs. We have to wait until this point to do so
-        // because we do not know the default 'name' and 'type' to apply until we are inside the
-        // resource constructor.
-        var aliases = ImmutableList.<Output<String>>builder();
-        for (var alias : options.getAliases()) {
-            aliases.add(collapseAliasToUrn(alias, name, type, options.parent));
-        }
-        this.aliases = aliases.build();
+        this.aliases = computeAliases(name, type, options);
 
         // Finish initialisation with reflection asynchronously
         DeploymentInternal.getInstance().readOrRegisterResource(
@@ -374,6 +360,26 @@ public abstract class Resource {
         }
 
         return result.build();
+    }
+
+    private static List<Output<String>> computeAliases(String name, String type, ResourceOptions options) {
+        // Prepare aliases inherited from the parent
+        var parentAliases = Optional.ofNullable(options.parent)
+                .stream()
+                .flatMap(parent ->
+                        Optional.ofNullable(parent.aliases)
+                                .orElse(emptyList())
+                                .stream()
+                                .map(alias -> urnInheritedChildAlias(name, parent.pulumiResourceName(), alias, type))
+                )
+                .collect(toList());
+
+        // Collapse any Aliases down to URNs.
+        return Optional.ofNullable(mergeNullableList(options.aliases, parentAliases))
+                .orElse(emptyList())
+                .stream()
+                .map(alias -> collapseAliasToUrn(alias, name, type, options.parent))
+                .collect(toList());
     }
 
     private static Output<String> collapseAliasToUrn(
