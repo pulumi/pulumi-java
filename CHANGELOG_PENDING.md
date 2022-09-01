@@ -1,5 +1,8 @@
 ### Improvements
 
+- [sdk] [#829](https://github.com/pulumi/pulumi-java/pull/829)
+  Improve Javadoc comments in `CustomResourceOptions` and `ResourceOptions` classes.
+
 - [sdk][codegen] [#704](https://github.com/pulumi/pulumi-java/pull/704)
   remove prefix `get` from getters in Resource class and inherited classes
   Old getters are preserved and marked deprecated and will be deleted in the future.

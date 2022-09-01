@@ -63,20 +63,40 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             super(options);
         }
 
+        /**
+         * When set to "true", indicates that this resource should be deleted before its
+         * replacement is created when replacement is necessary.
+         */
         public Builder deleteBeforeReplace(boolean deleteBeforeReplace) {
             options.deleteBeforeReplace = deleteBeforeReplace;
             return this;
         }
 
+        /**
+         * The names of outputs for this resource that should be treated as secrets. This augments
+         * the list that the resource provider and pulumi engine already determine based on inputs
+         * to your resource. It can be used to mark certain outputs as a secrets on a per-resource
+         * basis.
+         *
+         */
         public Builder additionalSecretOutputs(String... additionalSecretOutputs) {
             return this.additionalSecretOutputs(List.of(additionalSecretOutputs));
         }
 
+        /**
+         * @see #additionalSecretOutputs(String...)
+         */
         public Builder additionalSecretOutputs(@Nullable List<String> additionalSecretOutputs) {
             options.additionalSecretOutputs = additionalSecretOutputs;
             return this;
         }
 
+        /**
+         * When provided with a resource ID, import indicates that this resource's provider should
+         * import its state from the cloud resource with the given ID.The inputs to the resource's
+         * constructor must align with the resource's current state.Once a resource has been
+         * imported, the import property must be removed from the resource's options.
+         */
         public Builder importId(@Nullable String importId) {
             options.importId = importId;
             return this;
@@ -88,28 +108,21 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
     }
 
     /**
-     * When set to "true", indicates that this resource should be deleted before its
-     * replacement is created when replacement is necessary.
+     * @see Builder#deleteBeforeReplace(boolean)
      */
     public boolean getDeleteBeforeReplace() {
         return this.deleteBeforeReplace;
     }
 
     /**
-     * The names of outputs for this resource that should be treated as secrets. This augments
-     * the list that the resource provider and pulumi engine already determine based on inputs
-     * to your resource. It can be used to mark certain outputs as a secrets on a per resource
-     * basis.
+     * @see Builder#additionalSecretOutputs(String...)
      */
     public List<String> getAdditionalSecretOutputs() {
         return this.additionalSecretOutputs == null ? List.of() : List.copyOf(this.additionalSecretOutputs);
     }
 
     /**
-     * When provided with a resource ID, import indicates that this resource's provider should
-     * import its state from the cloud resource with the given ID.The inputs to the resource's
-     * constructor must align with the resource's current state.Once a resource has been
-     * imported, the import property must be removed from the resource's options.
+     * @see Builder#importId(String)
      */
     public Optional<String> getImportId() {
         return Optional.ofNullable(importId);
