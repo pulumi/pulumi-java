@@ -133,12 +133,12 @@ func generatePackage(tool string, pkg *schema.Package, extraFiles map[string][]b
 			// move the dependencies into the schema for
 			// the individual projects that happen to need
 			// them.
-			"com.google.guava:guava":                 "30.1-jre",
-			"com.google.protobuf:protobuf-java":      "3.12.0",
-			"com.google.protobuf:protobuf-java-util": "3.12.0",
-			"org.assertj:assertj-core":               "3.20.2",
-			"org.junit.jupiter:junit-jupiter-api":    "5.7.2",
-			"org.mockito:mockito-core":               "3.12.4",
+			"com.google.guava:guava":                 "31.1-jre",
+			"com.google.protobuf:protobuf-java":      "3.21.5",
+			"com.google.protobuf:protobuf-java-util": "3.21.5",
+			"org.assertj:assertj-core":               "3.23.1",
+			"org.junit.jupiter:junit-jupiter-api":    "5.9.0",
+			"org.mockito:mockito-core":               "4.7.0",
 		},
 	}
 	pkg.Language = map[string]interface{}{
