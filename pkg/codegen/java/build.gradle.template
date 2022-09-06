@@ -53,6 +53,17 @@ dependencies {
     {{- range $k, $v := .Dependencies }}
     implementation("{{ $k }}:{{ $v }}")
     {{- end }}
+
+    def junitVersion = "5.9.0"
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+            showStandardStreams = true
+            exceptionFormat = 'full'
+    }
 }
 
 task sourcesJar(type: Jar) {
