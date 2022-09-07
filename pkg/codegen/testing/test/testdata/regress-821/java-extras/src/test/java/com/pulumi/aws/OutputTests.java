@@ -44,7 +44,7 @@ class OutputTests {
         var exceptions = result.exceptions();
         var errors = result.errors();
 
-        assertThat(resources).isEmpty();
+        assertThat(resources).hasSize(1);
         assertThat(exceptions).isEmpty();
         assertThat(errors).isEmpty();
         assertThat(extractValue(outputs.get("vpcStateOutput"))).isNull();
