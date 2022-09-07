@@ -802,15 +802,8 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			FieldName: propertyName.AsProperty().Field(),
 		})
 
-		setterName := propertyName.AsProperty().Setter()
-		assignment := func(propertyName names.Ident) string {
-			if prop.IsRequired() {
-				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
-			}
-			return fmt.Sprintf("this.%s = %s", propertyName, propertyName)
-		}
-
 		// add setter
+		setterName := propertyName.AsProperty().Setter()
 		var setterAnnotation string
 		if setterName != prop.Name {
 			setterAnnotation = fmt.Sprintf("@%s.Setter(\"%s\")", ctx.ref(names.CustomType), prop.Name)
@@ -821,7 +814,6 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 			SetterName:   setterName,
 			PropertyType: propertyType.ToCode(ctx.imports),
 			PropertyName: propertyName.String(),
-			Assignment:   assignment(propertyName),
 			ListType:     propertyType.ListType(ctx),
 			Annotations:  []string{setterAnnotation},
 		})

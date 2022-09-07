@@ -136,7 +136,6 @@ type builderSetterTemplateContext struct {
 	SetterName   string
 	PropertyType string
 	PropertyName string
-	Assignment   string
 	ListType     string
 	Annotations  []string
 }
@@ -174,7 +173,7 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{ $.Indent }}    {{ $annotation }}
 {{- end }}
 {{ $.Indent }}    public {{ $.Name }} {{ $setter.SetterName }}({{ $setter.PropertyType }} {{ $setter.PropertyName }}) {
-{{ $.Indent }}        {{ $setter.Assignment }};
+{{ $.Indent }}        this.{{ $setter.PropertyName }} = {{ $setter.PropertyName }};
 {{ $.Indent }}        return this;
 {{ $.Indent }}    }
 {{- if $setter.ListType }}
