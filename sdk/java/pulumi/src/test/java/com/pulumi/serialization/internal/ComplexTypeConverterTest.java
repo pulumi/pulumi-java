@@ -340,9 +340,15 @@ class ComplexTypeConverterTest {
         @Nullable
         private String s;
 
+        private Integer i;
+
         @Nullable
         public String s() {
             return s;
+        }
+
+        public Integer i() {
+            return i;
         }
 
         @CustomType.Builder
@@ -358,8 +364,14 @@ class ComplexTypeConverterTest {
             }
 
             @Setter("s")
-            public Builder s(String s) {
+            public Builder s(/* intentionally left out @Nullable */ String s) {
                 this.$.s = s;
+                return this;
+            }
+
+            @Setter("i")
+            public Builder i(Integer i) {
+                this.$.i = i;
                 return this;
             }
 
@@ -378,6 +390,7 @@ class ComplexTypeConverterTest {
 
         var map = new HashMap<String, Object>();
         map.put("s", null);
+        // intentionally left out the 'i'
         var serialized = serializeToValueAsync(map).join();
 
         var data = converter.convertValue(
@@ -386,12 +399,15 @@ class ComplexTypeConverterTest {
 
         assertThat(data).isNotNull();
 
-        var value = data.s();
-        assertThat(value).isNull();
+        assertThat(data.s()).isNull();
+        assertThat(data.i()).isNull();
 
         var messages = logger.getMessages();
-        assertThat(messages).haveAtLeastOne(containsString(
+        assertThat(messages).haveExactly(1, containsString(
                 "parameter named 's' lacks @javax.annotation.Nullable annotation"
+        ));
+        assertThat(messages).haveExactly(1, containsString(
+                "parameter named 'i' lacks @javax.annotation.Nullable annotation"
         ));
     }
 
