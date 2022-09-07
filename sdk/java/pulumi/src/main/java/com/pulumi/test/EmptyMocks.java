@@ -9,7 +9,7 @@ public class EmptyMocks implements Mocks {
     @Override
     public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
         throw new IllegalArgumentException(
-                "EmptyMocks have not implementation, use setMocks with a correct implementation. "
+                "EmptyMocks have not implementation, use .mocks() setter with a correct implementation. "
                         + format("Unknown resource '%s'", args.type)
         );
     }
