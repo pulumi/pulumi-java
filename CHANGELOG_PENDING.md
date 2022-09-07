@@ -40,3 +40,7 @@
 
 - [sdk] Fixes a bug that prevented user from specifying both parent
   and child aliases when refactoring component resources.
+
+- [codegen] [#821](https://github.com/pulumi/pulumi-java/issues/821):
+  Fix regression introduced with new custom type builders codegen.
+  A null-check that was not present before, had caused exceptions during preview.
