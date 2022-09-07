@@ -58,12 +58,12 @@ public final class CostInformationResponse {
 
         @CustomType.Setter
         public Builder billingInfoUrl(String billingInfoUrl) {
-            this.billingInfoUrl = Objects.requireNonNull(billingInfoUrl);
+            this.billingInfoUrl = billingInfoUrl;
             return this;
         }
         @CustomType.Setter
         public Builder billingMeterDetails(List<BillingMeterDetailsResponse> billingMeterDetails) {
-            this.billingMeterDetails = Objects.requireNonNull(billingMeterDetails);
+            this.billingMeterDetails = billingMeterDetails;
             return this;
         }
         public Builder billingMeterDetails(BillingMeterDetailsResponse... billingMeterDetails) {

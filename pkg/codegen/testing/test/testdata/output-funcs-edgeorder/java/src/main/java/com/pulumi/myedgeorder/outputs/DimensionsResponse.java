@@ -127,37 +127,37 @@ public final class DimensionsResponse {
 
         @CustomType.Setter
         public Builder depth(Double depth) {
-            this.depth = Objects.requireNonNull(depth);
+            this.depth = depth;
             return this;
         }
         @CustomType.Setter
         public Builder height(Double height) {
-            this.height = Objects.requireNonNull(height);
+            this.height = height;
             return this;
         }
         @CustomType.Setter
         public Builder length(Double length) {
-            this.length = Objects.requireNonNull(length);
+            this.length = length;
             return this;
         }
         @CustomType.Setter
         public Builder lengthHeightUnit(String lengthHeightUnit) {
-            this.lengthHeightUnit = Objects.requireNonNull(lengthHeightUnit);
+            this.lengthHeightUnit = lengthHeightUnit;
             return this;
         }
         @CustomType.Setter
         public Builder weight(Double weight) {
-            this.weight = Objects.requireNonNull(weight);
+            this.weight = weight;
             return this;
         }
         @CustomType.Setter
         public Builder weightUnit(String weightUnit) {
-            this.weightUnit = Objects.requireNonNull(weightUnit);
+            this.weightUnit = weightUnit;
             return this;
         }
         @CustomType.Setter
         public Builder width(Double width) {
-            this.width = Objects.requireNonNull(width);
+            this.width = width;
             return this;
         }
         public DimensionsResponse build() {

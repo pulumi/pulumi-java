@@ -115,32 +115,32 @@ public final class PurchaseMeterDetailsResponse {
 
         @CustomType.Setter
         public Builder billingType(String billingType) {
-            this.billingType = Objects.requireNonNull(billingType);
+            this.billingType = billingType;
             return this;
         }
         @CustomType.Setter
         public Builder chargingType(String chargingType) {
-            this.chargingType = Objects.requireNonNull(chargingType);
+            this.chargingType = chargingType;
             return this;
         }
         @CustomType.Setter
         public Builder multiplier(Double multiplier) {
-            this.multiplier = Objects.requireNonNull(multiplier);
+            this.multiplier = multiplier;
             return this;
         }
         @CustomType.Setter
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            this.productId = productId;
             return this;
         }
         @CustomType.Setter
         public Builder skuId(String skuId) {
-            this.skuId = Objects.requireNonNull(skuId);
+            this.skuId = skuId;
             return this;
         }
         @CustomType.Setter
         public Builder termId(String termId) {
-            this.termId = Objects.requireNonNull(termId);
+            this.termId = termId;
             return this;
         }
         public PurchaseMeterDetailsResponse build() {

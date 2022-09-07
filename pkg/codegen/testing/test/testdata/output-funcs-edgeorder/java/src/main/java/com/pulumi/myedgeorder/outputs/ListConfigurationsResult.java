@@ -65,7 +65,7 @@ public final class ListConfigurationsResult {
         }
         @CustomType.Setter
         public Builder value(List<ConfigurationResponse> value) {
-            this.value = Objects.requireNonNull(value);
+            this.value = value;
             return this;
         }
         public Builder value(ConfigurationResponse... value) {

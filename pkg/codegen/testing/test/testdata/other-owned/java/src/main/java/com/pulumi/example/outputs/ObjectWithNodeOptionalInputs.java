@@ -48,7 +48,7 @@ public final class ObjectWithNodeOptionalInputs {
         }
         @CustomType.Setter
         public Builder foo(String foo) {
-            this.foo = Objects.requireNonNull(foo);
+            this.foo = foo;
             return this;
         }
         public ObjectWithNodeOptionalInputs build() {

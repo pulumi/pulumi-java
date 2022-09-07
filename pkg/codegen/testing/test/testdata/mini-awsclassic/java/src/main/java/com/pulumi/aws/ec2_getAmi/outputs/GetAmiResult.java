@@ -44,7 +44,7 @@ public final class GetAmiResult {
 
         @CustomType.Setter
         public Builder kernelId(String kernelId) {
-            this.kernelId = Objects.requireNonNull(kernelId);
+            this.kernelId = kernelId;
             return this;
         }
         public GetAmiResult build() {

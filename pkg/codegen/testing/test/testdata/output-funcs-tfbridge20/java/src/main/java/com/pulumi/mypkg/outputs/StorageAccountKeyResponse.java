@@ -84,22 +84,22 @@ public final class StorageAccountKeyResponse {
 
         @CustomType.Setter
         public Builder creationTime(String creationTime) {
-            this.creationTime = Objects.requireNonNull(creationTime);
+            this.creationTime = creationTime;
             return this;
         }
         @CustomType.Setter
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            this.keyName = keyName;
             return this;
         }
         @CustomType.Setter
         public Builder permissions(String permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            this.permissions = permissions;
             return this;
         }
         @CustomType.Setter
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            this.value = value;
             return this;
         }
         public StorageAccountKeyResponse build() {

@@ -34,7 +34,7 @@ public final class FuncWithListParamResult {
 
         @CustomType.Setter
         public Builder r(String r) {
-            this.r = Objects.requireNonNull(r);
+            this.r = r;
             return this;
         }
         public FuncWithListParamResult build() {

@@ -114,7 +114,7 @@ public final class DescriptionResponse {
 
         @CustomType.Setter
         public Builder attributes(List<String> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            this.attributes = attributes;
             return this;
         }
         public Builder attributes(String... attributes) {
@@ -122,12 +122,12 @@ public final class DescriptionResponse {
         }
         @CustomType.Setter
         public Builder descriptionType(String descriptionType) {
-            this.descriptionType = Objects.requireNonNull(descriptionType);
+            this.descriptionType = descriptionType;
             return this;
         }
         @CustomType.Setter
         public Builder keywords(List<String> keywords) {
-            this.keywords = Objects.requireNonNull(keywords);
+            this.keywords = keywords;
             return this;
         }
         public Builder keywords(String... keywords) {
@@ -135,7 +135,7 @@ public final class DescriptionResponse {
         }
         @CustomType.Setter
         public Builder links(List<LinkResponse> links) {
-            this.links = Objects.requireNonNull(links);
+            this.links = links;
             return this;
         }
         public Builder links(LinkResponse... links) {
@@ -143,12 +143,12 @@ public final class DescriptionResponse {
         }
         @CustomType.Setter
         public Builder longDescription(String longDescription) {
-            this.longDescription = Objects.requireNonNull(longDescription);
+            this.longDescription = longDescription;
             return this;
         }
         @CustomType.Setter
         public Builder shortDescription(String shortDescription) {
-            this.shortDescription = Objects.requireNonNull(shortDescription);
+            this.shortDescription = shortDescription;
             return this;
         }
         public DescriptionResponse build() {

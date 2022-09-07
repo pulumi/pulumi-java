@@ -118,22 +118,22 @@ public final class GetActionRuleByNameResult {
 
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            this.location = location;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder properties(Object properties) {
-            this.properties = Objects.requireNonNull(properties);
+            this.properties = properties;
             return this;
         }
         @CustomType.Setter
@@ -143,7 +143,7 @@ public final class GetActionRuleByNameResult {
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            this.type = type;
             return this;
         }
         public GetActionRuleByNameResult build() {

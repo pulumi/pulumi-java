@@ -56,12 +56,12 @@ public final class ImageInformationResponse {
 
         @CustomType.Setter
         public Builder imageType(String imageType) {
-            this.imageType = Objects.requireNonNull(imageType);
+            this.imageType = imageType;
             return this;
         }
         @CustomType.Setter
         public Builder imageUrl(String imageUrl) {
-            this.imageUrl = Objects.requireNonNull(imageUrl);
+            this.imageUrl = imageUrl;
             return this;
         }
         public ImageInformationResponse build() {

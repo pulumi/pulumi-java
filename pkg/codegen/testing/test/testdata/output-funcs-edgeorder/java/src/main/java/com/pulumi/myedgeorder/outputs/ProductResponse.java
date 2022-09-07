@@ -148,12 +148,12 @@ public final class ProductResponse {
 
         @CustomType.Setter
         public Builder availabilityInformation(AvailabilityInformationResponse availabilityInformation) {
-            this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
+            this.availabilityInformation = availabilityInformation;
             return this;
         }
         @CustomType.Setter
         public Builder configurations(List<ConfigurationResponse> configurations) {
-            this.configurations = Objects.requireNonNull(configurations);
+            this.configurations = configurations;
             return this;
         }
         public Builder configurations(ConfigurationResponse... configurations) {
@@ -161,22 +161,22 @@ public final class ProductResponse {
         }
         @CustomType.Setter
         public Builder costInformation(CostInformationResponse costInformation) {
-            this.costInformation = Objects.requireNonNull(costInformation);
+            this.costInformation = costInformation;
             return this;
         }
         @CustomType.Setter
         public Builder description(DescriptionResponse description) {
-            this.description = Objects.requireNonNull(description);
+            this.description = description;
             return this;
         }
         @CustomType.Setter
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            this.displayName = displayName;
             return this;
         }
         @CustomType.Setter
         public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
-            this.filterableProperties = Objects.requireNonNull(filterableProperties);
+            this.filterableProperties = filterableProperties;
             return this;
         }
         public Builder filterableProperties(FilterablePropertyResponse... filterableProperties) {
@@ -184,12 +184,12 @@ public final class ProductResponse {
         }
         @CustomType.Setter
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
-            this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
+            this.hierarchyInformation = hierarchyInformation;
             return this;
         }
         @CustomType.Setter
         public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
-            this.imageInformation = Objects.requireNonNull(imageInformation);
+            this.imageInformation = imageInformation;
             return this;
         }
         public Builder imageInformation(ImageInformationResponse... imageInformation) {

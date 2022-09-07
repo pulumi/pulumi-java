@@ -184,7 +184,7 @@ public final class SsisProjectResponse {
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            this.type = type;
             return this;
         }
         @CustomType.Setter

@@ -185,7 +185,7 @@ public final class SsisPackageResponse {
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            this.type = type;
             return this;
         }
         public SsisPackageResponse build() {

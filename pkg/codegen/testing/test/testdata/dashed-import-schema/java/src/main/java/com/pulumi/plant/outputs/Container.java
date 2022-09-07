@@ -71,7 +71,7 @@ public final class Container {
         }
         @CustomType.Setter
         public Builder size(ContainerSize size) {
-            this.size = Objects.requireNonNull(size);
+            this.size = size;
             return this;
         }
         public Container build() {

@@ -144,17 +144,17 @@ public final class ActionGroupResponse {
 
         @CustomType.Setter
         public Builder actionGroupId(String actionGroupId) {
-            this.actionGroupId = Objects.requireNonNull(actionGroupId);
+            this.actionGroupId = actionGroupId;
             return this;
         }
         @CustomType.Setter
         public Builder createdAt(String createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt);
+            this.createdAt = createdAt;
             return this;
         }
         @CustomType.Setter
         public Builder createdBy(String createdBy) {
-            this.createdBy = Objects.requireNonNull(createdBy);
+            this.createdBy = createdBy;
             return this;
         }
         @CustomType.Setter
@@ -164,12 +164,12 @@ public final class ActionGroupResponse {
         }
         @CustomType.Setter
         public Builder lastModifiedAt(String lastModifiedAt) {
-            this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
+            this.lastModifiedAt = lastModifiedAt;
             return this;
         }
         @CustomType.Setter
         public Builder lastModifiedBy(String lastModifiedBy) {
-            this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+            this.lastModifiedBy = lastModifiedBy;
             return this;
         }
         @CustomType.Setter
@@ -179,7 +179,7 @@ public final class ActionGroupResponse {
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            this.type = type;
             return this;
         }
         public ActionGroupResponse build() {

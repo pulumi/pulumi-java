@@ -57,7 +57,7 @@ public final class FilterablePropertyResponse {
 
         @CustomType.Setter
         public Builder supportedValues(List<String> supportedValues) {
-            this.supportedValues = Objects.requireNonNull(supportedValues);
+            this.supportedValues = supportedValues;
             return this;
         }
         public Builder supportedValues(String... supportedValues) {
@@ -65,7 +65,7 @@ public final class FilterablePropertyResponse {
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            this.type = type;
             return this;
         }
         public FilterablePropertyResponse build() {

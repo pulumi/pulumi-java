@@ -56,12 +56,12 @@ public final class SpecificationResponse {
 
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            this.value = value;
             return this;
         }
         public SpecificationResponse build() {

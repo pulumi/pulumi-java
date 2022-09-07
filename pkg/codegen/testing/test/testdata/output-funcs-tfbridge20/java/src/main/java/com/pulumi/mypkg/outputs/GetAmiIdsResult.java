@@ -99,12 +99,12 @@ public final class GetAmiIdsResult {
         }
         @CustomType.Setter
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            this.id = id;
             return this;
         }
         @CustomType.Setter
         public Builder ids(List<String> ids) {
-            this.ids = Objects.requireNonNull(ids);
+            this.ids = ids;
             return this;
         }
         public Builder ids(String... ids) {
@@ -117,7 +117,7 @@ public final class GetAmiIdsResult {
         }
         @CustomType.Setter
         public Builder owners(List<String> owners) {
-            this.owners = Objects.requireNonNull(owners);
+            this.owners = owners;
             return this;
         }
         public Builder owners(String... owners) {

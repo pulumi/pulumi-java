@@ -43,7 +43,7 @@ public final class ListStorageAccountKeysResult {
 
         @CustomType.Setter
         public Builder keys(List<StorageAccountKeyResponse> keys) {
-            this.keys = Objects.requireNonNull(keys);
+            this.keys = keys;
             return this;
         }
         public Builder keys(StorageAccountKeyResponse... keys) {

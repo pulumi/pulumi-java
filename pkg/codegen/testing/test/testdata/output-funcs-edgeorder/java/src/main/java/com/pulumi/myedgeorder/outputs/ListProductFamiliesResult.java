@@ -65,7 +65,7 @@ public final class ListProductFamiliesResult {
         }
         @CustomType.Setter
         public Builder value(List<ProductFamilyResponse> value) {
-            this.value = Objects.requireNonNull(value);
+            this.value = value;
             return this;
         }
         public Builder value(ProductFamilyResponse... value) {

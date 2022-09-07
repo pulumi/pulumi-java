@@ -104,7 +104,7 @@ public final class SsisFolderResponse {
         }
         @CustomType.Setter
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            this.type = type;
             return this;
         }
         public SsisFolderResponse build() {

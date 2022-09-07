@@ -68,7 +68,7 @@ public final class Foo {
 
         @CustomType.Setter
         public Builder a(Boolean a) {
-            this.a = Objects.requireNonNull(a);
+            this.a = a;
             return this;
         }
         @CustomType.Setter
@@ -78,7 +78,7 @@ public final class Foo {
         }
         @CustomType.Setter
         public Builder c(Integer c) {
-            this.c = Objects.requireNonNull(c);
+            this.c = c;
             return this;
         }
         @CustomType.Setter
@@ -88,7 +88,7 @@ public final class Foo {
         }
         @CustomType.Setter
         public Builder e(String e) {
-            this.e = Objects.requireNonNull(e);
+            this.e = e;
             return this;
         }
         @CustomType.Setter

@@ -87,22 +87,22 @@ public final class BillingMeterDetailsResponse {
 
         @CustomType.Setter
         public Builder frequency(String frequency) {
-            this.frequency = Objects.requireNonNull(frequency);
+            this.frequency = frequency;
             return this;
         }
         @CustomType.Setter
         public Builder meterDetails(Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails) {
-            this.meterDetails = Objects.requireNonNull(meterDetails);
+            this.meterDetails = meterDetails;
             return this;
         }
         @CustomType.Setter
         public Builder meteringType(String meteringType) {
-            this.meteringType = Objects.requireNonNull(meteringType);
+            this.meteringType = meteringType;
             return this;
         }
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            this.name = name;
             return this;
         }
         public BillingMeterDetailsResponse build() {

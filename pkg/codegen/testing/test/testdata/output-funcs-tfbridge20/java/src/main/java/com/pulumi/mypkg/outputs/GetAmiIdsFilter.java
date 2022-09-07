@@ -41,12 +41,12 @@ public final class GetAmiIdsFilter {
 
         @CustomType.Setter
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            this.name = name;
             return this;
         }
         @CustomType.Setter
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            this.values = values;
             return this;
         }
         public Builder values(String... values) {

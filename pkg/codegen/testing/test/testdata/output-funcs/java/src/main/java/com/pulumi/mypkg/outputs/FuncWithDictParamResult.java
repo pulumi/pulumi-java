@@ -34,7 +34,7 @@ public final class FuncWithDictParamResult {
 
         @CustomType.Setter
         public Builder r(String r) {
-            this.r = Objects.requireNonNull(r);
+            this.r = r;
             return this;
         }
         public FuncWithDictParamResult build() {

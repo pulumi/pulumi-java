@@ -56,12 +56,12 @@ public final class LinkResponse {
 
         @CustomType.Setter
         public Builder linkType(String linkType) {
-            this.linkType = Objects.requireNonNull(linkType);
+            this.linkType = linkType;
             return this;
         }
         @CustomType.Setter
         public Builder linkUrl(String linkUrl) {
-            this.linkUrl = Objects.requireNonNull(linkUrl);
+            this.linkUrl = linkUrl;
             return this;
         }
         public LinkResponse build() {

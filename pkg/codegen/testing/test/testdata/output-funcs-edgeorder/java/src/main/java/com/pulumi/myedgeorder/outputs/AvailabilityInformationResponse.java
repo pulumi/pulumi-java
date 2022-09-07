@@ -70,17 +70,17 @@ public final class AvailabilityInformationResponse {
 
         @CustomType.Setter
         public Builder availabilityStage(String availabilityStage) {
-            this.availabilityStage = Objects.requireNonNull(availabilityStage);
+            this.availabilityStage = availabilityStage;
             return this;
         }
         @CustomType.Setter
         public Builder disabledReason(String disabledReason) {
-            this.disabledReason = Objects.requireNonNull(disabledReason);
+            this.disabledReason = disabledReason;
             return this;
         }
         @CustomType.Setter
         public Builder disabledReasonMessage(String disabledReasonMessage) {
-            this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage);
+            this.disabledReasonMessage = disabledReasonMessage;
             return this;
         }
         public AvailabilityInformationResponse build() {
