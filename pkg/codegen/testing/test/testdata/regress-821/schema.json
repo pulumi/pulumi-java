@@ -1,0 +1,35 @@
+{
+  "version": "0.0.1",
+  "name": "aws",
+  "meta": {
+    "moduleFormat": "(.*)(?:/[^/]*)"
+  },
+  "functions": {
+    "aws:ec2/getVpc:getVpc": {
+      "description": "`aws.ec2.Vpc` provides details about a specific VPC.\n\nThis resource can prove useful when a module accepts a vpc id as\nan input variable and needs to, for example, determine the CIDR block of that\nVPC.\n",
+      "inputs": {
+        "description": "A collection of arguments for invoking getVpc.\n",
+        "properties": {
+          "state": {
+            "type": "string",
+            "description": "The current state of the desired VPC.\nCan be either `\"pending\"` or `\"available\"`.\n"
+          }
+        },
+        "type": "object"
+      },
+      "outputs": {
+        "description": "A collection of values returned by getVpc.\n",
+        "properties": {
+          "state": {
+            "type": "string",
+            "description": "The State of the association.\n"
+          }
+        },
+        "type": "object",
+        "required": [
+          "state"
+        ]
+      }
+    }
+  }
+}

@@ -43,6 +43,10 @@ var javaSpecificTests = []*test.SDKTest{
 		Directory:   "jumbo-resources",
 		Description: "Testing resources with more than 255 properties",
 	},
+	{
+		Directory:   "regress-821",
+		Description: "Regression test for issue 821",
+	},
 }
 
 func adaptTest(t *test.SDKTest) *test.SDKTest {

@@ -1,0 +1,14 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/aws/Provider.java",
+    "src/main/java/com/pulumi/aws/ProviderArgs.java",
+    "src/main/java/com/pulumi/aws/Utilities.java",
+    "src/main/java/com/pulumi/aws/ec2/Ec2Functions.java",
+    "src/main/java/com/pulumi/aws/ec2/inputs/GetVpcArgs.java",
+    "src/main/java/com/pulumi/aws/ec2/inputs/GetVpcPlainArgs.java",
+    "src/main/java/com/pulumi/aws/ec2/outputs/GetVpcResult.java"
+  ]
+}
