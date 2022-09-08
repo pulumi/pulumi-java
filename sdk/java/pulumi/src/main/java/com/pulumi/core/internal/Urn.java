@@ -11,6 +11,7 @@ import java.util.StringJoiner;
 import static com.pulumi.core.internal.Objects.require;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static java.lang.String.format;
+import static java.util.Arrays.stream;
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -242,14 +243,16 @@ public final class Urn {
         @InternalUse
         @SuppressWarnings("ConstantConditions") // IntelliJ can't understand the custom validators
         public static Type parse(String type) {
-            var typeParts = type.split(TypeSeparator);
+            var typeParts = stream(type.split(TypeSeparator))
+                    .filter(p -> !p.isBlank())
+                    .toArray(String[]::new);
             require(tp -> tp.length == 2 || tp.length == 3, typeParts,
-                    () -> format("expected type to have 2 or 3 parts, split by '%s', got '%s'",
-                            TypeSeparator, String.join(", ", typeParts))
+                    () -> format("expected type to have 2 or 3 parts, split by '%s', got '%s', from: '%s'",
+                            TypeSeparator, String.join(", ", typeParts), type)
             );
             var package_ = typeParts[0];
             require(p -> isNonEmptyOrNull(p), package_,
-                    () -> format("expected type, package part to be not empty, got: '%s'", package_)
+                    () -> format("expected type, package part to be not empty, got: '%s', from: '%s'", package_, type)
             );
             final Optional<String> module;
             if (typeParts.length == 3) { // the middle part exists
@@ -263,7 +266,7 @@ public final class Urn {
             }
             var typeName = typeParts[typeParts.length - 1];
             require(t -> isNonEmptyOrNull(t), typeName,
-                    () -> format("expected type, type name part to be not empty, got: '%s'", typeName)
+                    () -> format("expected type, type name part to be not empty, got: '%s', from: '%s'", typeName, type)
             );
             return new Type(package_, module, typeName);
         }

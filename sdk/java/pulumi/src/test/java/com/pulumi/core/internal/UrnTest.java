@@ -110,6 +110,19 @@ class UrnTest {
         assertThat(urn).isEqualTo(expected);
     }
 
+    public static Stream<Arguments> testTypeParser() {
+        return Stream.of(
+                arguments("jumbo::ACustomResource", "jumbo:ACustomResource") // tolerate an extra ':'
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource
+    void testTypeParser(String type, String expected) {
+        var t = Urn.Type.parse(type);
+        assertThat(t.asString()).isEqualTo(expected);
+    }
+
     @Test
     void testHashCodeEqualsContract() {
         EqualsVerifier.forClass(Urn.class).verify();
