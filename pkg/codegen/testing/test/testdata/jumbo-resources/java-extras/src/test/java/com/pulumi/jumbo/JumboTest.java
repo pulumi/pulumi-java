@@ -9,6 +9,11 @@ import com.pulumi.jumbo.ACustomResource;
 import com.pulumi.jumbo.ACustomResourceArgs;
 import com.pulumi.Log;
 import com.pulumi.test.internal.PulumiTestInternal;
+import com.pulumi.test.Mocks;
+import com.pulumi.test.TestOptions;
+
+import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 
 import static com.pulumi.test.PulumiTest.extractValue;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -16,9 +21,19 @@ import static org.mockito.Mockito.mock;
 
 class JumboTest {
 
+    @AfterEach
+    void cleanup() {
+        PulumiTestInternal.cleanup();
+    }
+
     @Test
     void testJumboCustomType() {
-        var test = PulumiTestInternal.builder().build();
+        var test = PulumiTestInternal.builder()
+                .options(TestOptions.builder()
+                        .preview(true)
+                        .build())
+                .mocks(new JumboMocks())
+                .build();
 
         var result = test.runTest(ctx -> {
             var o = ACustomTypeArgs.builder()
@@ -555,8 +570,15 @@ class JumboTest {
         assertThat(foo.get().bar1()).hasValue("bar1");
     }
 
-    @AfterEach
-    void cleanup() {
-        PulumiTestInternal.cleanup();
+    public static class JumboMocks implements Mocks {
+        @Override
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
+            if ("jumbo::ACustomResource".equals(args.type)) {
+                return CompletableFuture.completedFuture(
+                        ResourceResult.of(Optional.of(args.name + "_id"), args.inputs)
+                );
+            }
+            throw new IllegalArgumentException(String.format("Unknown resource '%s'", args.type));
+        }
     }
 }
