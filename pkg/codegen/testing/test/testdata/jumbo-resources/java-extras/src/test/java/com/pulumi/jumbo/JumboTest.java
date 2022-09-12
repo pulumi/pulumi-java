@@ -27,11 +27,6 @@ class JumboTest {
     }
 
     @Test
-    void testBam() {
-        assertThat(1).isEqualTo(2);
-    }
-
-    @Test
     void testJumboCustomType() {
         var test = PulumiTestInternal.builder()
                 .options(TestOptions.builder()
