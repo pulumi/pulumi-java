@@ -226,5 +226,5 @@ func compileGeneratedPackage(t *testing.T, pwd string) {
 }
 
 func testGeneratedPackage(t *testing.T, pwd string) {
-	test.RunCommand(t, "gradle build", pwd, "gradle", "test")
+	test.RunCommand(t, "gradle test", pwd, "gradle", "test")
 }

@@ -159,6 +159,11 @@ test {
             exceptionFormat = 'full'
     }
 }
+
+test.configure {
+    dependsOn genPulumiResources
+}
+
 {{- end}}
 {{- if .GradleNexusPublishPluginEnabled }}
 
