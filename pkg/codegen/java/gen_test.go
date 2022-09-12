@@ -59,10 +59,6 @@ func javaSpecificTests() []generatePackageTestConfig {
 			Directory:   "mini-awsx",
 			Description: "Regression tests extracted from trying to codegen awsx",
 		}),
-		newGeneratePackageTestConfig(&test.SDKTest{
-			Directory:   "output-funcs-edgeorder",
-			Description: "Testing EdgeOrder functions which return Output<T>",
-		}),
 		newGeneratePackageTestConfigWithExtras(&test.SDKTest{
 			Directory:   "jumbo-resources",
 			Description: "Testing resources with more than 255 properties",
@@ -201,8 +197,10 @@ func newGeneratePackageTestConfigWithExtras(test *test.SDKTest, info *PackageInf
 	}
 	packageInfo = packageInfo.With(PackageInfo{
 		BuildFiles: "gradle",
+		GradleTest: "JUnitPlatform",
 		Dependencies: map[string]string{
-			"com.pulumi:pulumi": "0.0.1",
+			"com.pulumi:pulumi":                      "0.0.1",
+			"org.junit.jupiter:junit-jupiter-engine": "5.9.0",
 		},
 	}).WithDefaultDependencies()
 	return generatePackageTestConfig{
@@ -226,5 +224,5 @@ func compileGeneratedPackage(t *testing.T, pwd string) {
 }
 
 func testGeneratedPackage(t *testing.T, pwd string) {
-	test.RunCommand(t, "gradle build", pwd, "gradle", "build")
+	test.RunCommand(t, "gradle build", pwd, "gradle", "test")
 }

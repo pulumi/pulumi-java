@@ -150,6 +150,16 @@ javadoc {
     options.jFlags("-Xmx2g", "-Xms512m")
 }
 
+{{- if .GradleTestJUnitPlatformEnabled }}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+            showStandardStreams = true
+            exceptionFormat = 'full'
+    }
+}
+{{- end}}
 {{- if .GradleNexusPublishPluginEnabled }}
 
 if (publishRepoUsername) {
