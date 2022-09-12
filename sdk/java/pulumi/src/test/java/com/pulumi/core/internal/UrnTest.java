@@ -12,6 +12,7 @@ import java.util.stream.Stream;
 
 import static com.pulumi.test.PulumiTest.extractValue;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class UrnTest {
@@ -58,8 +59,39 @@ class UrnTest {
                         Output.of("package:type"),
                         Output.of("name"),
                         "urn:pulumi:stack::project::parentPackage:parentType$package:type::name"
+                ),
+                arguments(
+                        Output.of("stack"),
+                        Output.of("project"),
+                        Optional.empty(),
+                        Output.of("package:module:type"),
+                        Output.of("name"),
+                        "urn:pulumi:stack::project::package:module:type::name"
+                ),
+                arguments(
+                        Output.of("stack"),
+                        Output.of("project"),
+                        Optional.empty(),
+                        Output.of("package::type"), // this form of type tokens is emitted by codegen
+                        Output.of("name"),
+                        "urn:pulumi:stack::project::package:type::name"
                 )
         );
+    }
+
+    @Test
+    void testTypeParse() {
+        assertThatThrownBy(() -> Urn.Type.parse("p:m:"));
+        assertThatThrownBy(() -> Urn.Type.parse(":m:t"));
+        assertThatThrownBy(() -> Urn.Type.parse("bad-format"));
+        final var t1 = Urn.Type.parse("pkg:typ");
+        assertThat(t1.typeName).isEqualTo("typ");
+        assertThat(t1.package_).isEqualTo("pkg");
+        assertThat(t1.module).isEmpty();
+        final var t2 = Urn.Type.parse("pkg:mod:typ");
+        assertThat(t2.typeName).isEqualTo("typ");
+        assertThat(t2.package_).isEqualTo("pkg");
+        assertThat(t2.module.get()).isEqualTo("mod");
     }
 
     @ParameterizedTest
