@@ -32,6 +32,8 @@ func javaSpecificTests() []generatePackageTestConfig {
 		newGeneratePackageTestConfigWithExtras(&test.SDKTest{
 			Directory:   "mini-awsclassic",
 			Description: "Regression tests extracted from trying to codegen aws",
+			// TODO[pulumi/pulumi-java#821]
+			Skip: codegen.NewStringSet("java/test"),
 		}, &PackageInfo{
 			Dependencies: map[string]string{
 				"com.google.protobuf:protobuf-java":      "3.12.0",
