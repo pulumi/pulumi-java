@@ -148,6 +148,10 @@ test {
     }
 }
 
+test.configure {
+    dependsOn genPulumiResources
+}
+
 if (signingKey) {
     signing {
         useInMemoryPgpKeys(signingKey, signingPassword)
