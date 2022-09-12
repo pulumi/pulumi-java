@@ -17,6 +17,11 @@ import static org.mockito.Mockito.mock;
 class JumboTest {
 
     @Test
+    void testBam() {
+        assertThat(1).isEqualTo(2);
+    }
+
+    @Test
     void testJumboCustomType() {
         var test = PulumiTestInternal.builder().build();
 

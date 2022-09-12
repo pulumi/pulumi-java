@@ -44,6 +44,7 @@ dependencies {
     implementation("com.pulumi:pulumi:0.0.1")
     implementation("org.assertj:assertj-core:3.20.2")
     implementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
+    implementation("org.junit.jupiter:junit-jupiter-engine:5.9.0")
     implementation("org.mockito:mockito-core:3.12.4")
 }
 
@@ -138,6 +139,14 @@ javadoc {
         options.addBooleanOption('html5', true)
     }
     options.jFlags("-Xmx2g", "-Xms512m")
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+            showStandardStreams = true
+            exceptionFormat = 'full'
+    }
 }
 
 if (signingKey) {
