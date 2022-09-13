@@ -36,8 +36,6 @@ func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 		newGeneratePackageTestConfigWithExtras(&test.SDKTest{
 			Directory:   "mini-awsclassic",
 			Description: "Regression tests extracted from trying to codegen aws",
-			// TODO[pulumi/pulumi-java#821]
-			Skip: codegen.NewStringSet("java/test"),
 		}, &PackageInfo{
 			Dependencies: makeDeps(keyDeps,
 				"com.google.protobuf:protobuf-java",
