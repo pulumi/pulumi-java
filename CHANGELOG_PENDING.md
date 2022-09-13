@@ -40,3 +40,8 @@
 
 - [sdk] Fixes a bug that prevented user from specifying both parent
   and child aliases when refactoring component resources.
+
+- [sdk] Fixes a regression introduced after 0.5.2 when Pulumi Java SDK
+  stopped tolerating missing fields from providers that manifested as
+  InvocationTargetException caused by a NullPointerException.
+  [840](https://github.com/pulumi/pulumi-java/pull/840)
