@@ -1,21 +1,18 @@
 ### Improvements
 
-- [sdk] [#829](https://github.com/pulumi/pulumi-java/pull/829)
-  Improve Javadoc comments in `CustomResourceOptions` and `ResourceOptions` classes.
+- [sdk] [#704](https://github.com/pulumi/pulumi-java/pull/704): Remove
+  the `get` prefix from getters in `Resource` class and inherited
+  classes Old getters are preserved and marked deprecated. New
+  getters: `urn`, `id`, `pulumiResourceType`, `pulumiResourceName`,
+  `pulumiChildResources`.
 
-- [sdk][codegen] [#704](https://github.com/pulumi/pulumi-java/pull/704)
-  remove prefix `get` from getters in Resource class and inherited classes
-  Old getters are preserved and marked deprecated and will be deleted in the future.
-  New getters: urn, id, pulumiResourceType, pulumiResourceName, pulumiChildResources.
+- [sdk] [#643](https://github.com/pulumi/pulumi-java/issues/643): Do
+  not panic when the type of property in resource outputs does not
+  match the one on the wire, while deserializing. The fix proceed with
+  a null / default value and a warning in place of an error.
 
-- [sdk] [#643](https://github.com/pulumi/pulumi-java/issues/643):
-  Do not panic when the type of property in resource outputs doesn't match
-  the one on the wire, while deserializing.
-  The fix proceed with a null / default value and a warning in place of an error.
-  This makes some programs succeed.
-
-- [codegen] [#759](https://github.com/pulumi/pulumi-java/pull/759)
-  fixes code generation for exports with deeply nested generic types.
+- [codegen] [#759](https://github.com/pulumi/pulumi-java/pull/759):
+  Fix code generation for exports with deeply nested generic types.
   Previously these types would generate compiling code but throw
   exceptions at runtime when in use.
 
@@ -24,24 +21,24 @@
   upgraded Java SDK that can understand the new export annotation
   scheme and continue working without changes.
 
-- [cli] [#785](https://github.com/pulumi/pulumi-java/issues/785):
-  The Pulumi CLI will no longer display, what look like a duplicate stack traces.
-  The language host was modified to hide error messages from an optional process
-  of plugin discovery through classpath introspection.
-  Also `plugin about` will no longer display errors from plugin discovery.
-  To display errors from plugin discovery, use config option `runtime.options.v`
-  with a value of 1 or greater.
-
+- [provider] [#785](https://github.com/pulumi/pulumi-java/issues/785):
+  The Pulumi CLI will no longer display seemingly duplicate stack
+  traces. The language host was modified to hide error messages from
+  an optional process of plugin discovery through classpath
+  introspection. Also `plugin about` will no longer display errors
+  from plugin discovery. To display errors from plugin discovery, use
+  `-v=9` with a value of 1 or greater.
 
 ### Bug Fixes
 
 - [codegen] [#771](https://github.com/pulumi/pulumi-java/issues/771):
   Fix import path for provider resources on `pulumi convert`.
 
-- [sdk] Fixes a bug that prevented user from specifying both parent
-  and child aliases when refactoring component resources.
+- [sdk] [#778](https://github.com/pulumi/pulumi-java/pull/778): Fix a
+  bug that prevented user from specifying both parent and child
+  aliases when refactoring component resources.
 
-- [sdk] Fixes a regression introduced after 0.5.2 when Pulumi Java SDK
-  stopped tolerating missing fields from providers that manifested as
+- [sdk] [#840](https://github.com/pulumi/pulumi-java/pull/840): Fix a
+  regression introduced after 0.5.2 when Pulumi Java SDK stopped
+  tolerating missing fields from providers that manifested as
   InvocationTargetException caused by a NullPointerException.
-  [840](https://github.com/pulumi/pulumi-java/pull/840)
