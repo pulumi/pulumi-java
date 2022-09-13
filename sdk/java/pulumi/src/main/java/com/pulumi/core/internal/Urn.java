@@ -43,6 +43,10 @@ import static java.util.Objects.requireNonNull;
  * identifier = unicode letter { unicode letter | unicode digit | "_" } ;
  * </pre>
  * Source: <a href="https://pulumi-developer-docs.readthedocs.io/en/latest/providers/implementers-guide.html?highlight=URN#urns">https://pulumi-developer-docs.readthedocs.io/en/latest/providers/implementers-guide.html?highlight=URN#urns</a>
+ * <p>Note that type identifiers without modules are sometimes emitted by codegen using this grammar instead, and should be recognizable by the SDK:</p>
+ * <pre>
+ * package "::" type name
+ * </pre>
  */
 @InternalUse
 @ParametersAreNonnullByDefault
@@ -50,7 +54,9 @@ public final class Urn {
 
     private static final String Prefix = "urn:pulumi:";
     private static final String PartsSeparator = "::";
+    private static final String PartsSeparatorRegex = "[:][:]";
     private static final String TypeSeparator = ":";
+    private static final String TypeSeparatorRegex = "[:]";
     private static final String ParentSeparator = "$";
     private static final String ParentSeparatorRegex = "\\$";
 
@@ -99,7 +105,7 @@ public final class Urn {
                 () -> format("expected urn to start with '%s', got: '%s'", Prefix, urn)
         );
 
-        var urnParts = urn.split(PartsSeparator);
+        var urnParts = urn.split(PartsSeparatorRegex, -1); // -1 avoids dropping trailing empty strings
         require(up -> up.length == 4, urnParts,
                 () -> format("expected urn to have 4 parts, separated by '%s', got '%s' in '%s'",
                         PartsSeparator, urnParts.length, urn
@@ -174,7 +180,7 @@ public final class Urn {
         @InternalUse
         @SuppressWarnings("ConstantConditions") // IntelliJ can't understand the custom validators
         public static QualifiedTypeName parse(String qualifiedType) {
-            var qualifiedTypeParts = qualifiedType.split(ParentSeparatorRegex);
+            var qualifiedTypeParts = qualifiedType.split(ParentSeparatorRegex, -1); // -1 avoids dropping trailing empty strings
             require(qp -> qp.length == 1 || qp.length == 2, qualifiedTypeParts,
                     () -> format("expected qualified type to have 1 or 2 parts, split by '%s', got '%s'",
                             ParentSeparatorRegex, String.join(", ", qualifiedTypeParts))
@@ -242,28 +248,23 @@ public final class Urn {
         @InternalUse
         @SuppressWarnings("ConstantConditions") // IntelliJ can't understand the custom validators
         public static Type parse(String type) {
-            var typeParts = type.split(TypeSeparator);
+            final var typeParts = type.split(TypeSeparatorRegex, -1); // -1 avoids dropping trailing empty strings
             require(tp -> tp.length == 2 || tp.length == 3, typeParts,
-                    () -> format("expected type to have 2 or 3 parts, split by '%s', got '%s'",
-                            TypeSeparator, String.join(", ", typeParts))
+                    () -> format("type token '%s' does not match the expected format 'package%smodule?%stypename'",
+                                 type, TypeSeparator, TypeSeparator)
             );
-            var package_ = typeParts[0];
+            final var package_ = typeParts[0];
             require(p -> isNonEmptyOrNull(p), package_,
-                    () -> format("expected type, package part to be not empty, got: '%s'", package_)
+                    () -> format("type token '%s' does not match the expected format 'package%smodule?%stypename' because the 'package' part is empty",
+                                 type, TypeSeparator, TypeSeparator)
             );
-            final Optional<String> module;
-            if (typeParts.length == 3) { // the middle part exists
-                var mod = typeParts[1];
-                require(m -> isNonEmptyOrNull(m), mod,
-                        () -> format("expected type, module part to be not empty, got: '%s'", mod)
-                );
-                module = Optional.of(mod);
-            } else {
-                module = Optional.empty();
-            }
-            var typeName = typeParts[typeParts.length - 1];
-            require(t -> isNonEmptyOrNull(t), typeName,
-                    () -> format("expected type, type name part to be not empty, got: '%s'", typeName)
+            final Optional<String> module = typeParts.length == 3 && isNonEmptyOrNull(typeParts[1])
+                ? Optional.of(typeParts[1])
+                : Optional.empty();
+            final var typeName = typeParts[typeParts.length - 1];
+            require(p -> isNonEmptyOrNull(p), typeName,
+                    () -> format("type token '%s' does not match the expected format 'package%smodule?%stypename' because the 'typename' part is empty",
+                                 type, TypeSeparator, TypeSeparator)
             );
             return new Type(package_, module, typeName);
         }
