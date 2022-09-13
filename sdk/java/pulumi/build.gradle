@@ -25,6 +25,10 @@ repositories {
 def grpcVersion = "1.49.0"
 def protobufVersion = "3.21.5"
 def protocVersion = protobufVersion
+def guavaVersion = "31.1-jre"
+def assertjCoreVersion = "3.23.1"
+def junitVersion = "5.9.0"
+def mockitoCoreVersion = "4.8.0"
 
 dependencies {
     implementation("io.grpc:grpc-protobuf:${grpcVersion}") {
@@ -51,7 +55,7 @@ dependencies {
         exclude group: 'com.google.guava', module: 'guava'
     }
 
-    implementation("com.google.guava:guava:31.1-jre") {
+    implementation("com.google.guava:guava:${guavaVersion}") {
         exclude group: 'com.google.errorprone', module: 'error_prone_annotations'
     }
 
@@ -66,12 +70,11 @@ dependencies {
 
     testImplementation("io.grpc:grpc-testing:${grpcVersion}")
 
-    def junitVersion = "5.9.0"
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testImplementation("org.junit.jupiter:junit-jupiter-params:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
-    testImplementation("org.assertj:assertj-core:3.23.1")
-    testImplementation("org.mockito:mockito-core:4.8.0")
+    testImplementation("org.assertj:assertj-core:${assertjCoreVersion}")
+    testImplementation("org.mockito:mockito-core:${mockitoCoreVersion}")
     testImplementation("nl.jqno.equalsverifier:equalsverifier:3.10.1")
     testImplementation("org.junit-pioneer:junit-pioneer:1.7.0")
 }
@@ -216,4 +219,20 @@ if (ossrhUsername) {
         useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
         sign publishing.publications.gpr
     }
+}
+
+
+task exportKeyDependencies {
+  doLast {
+    def info = [:]
+    info["com.google.protobuf:protobuf-java"] = "${protobufVersion}"
+    info["com.google.protobuf:protobuf-java-util"] = "${protobufVersion}"
+    info["com.google.guava:guava"] = "${guavaVersion}"
+    info["org.assertj:assertj-core"] = "${assertjCoreVersion}"
+    info["org.junit.jupiter:junit-jupiter-api"] = "${junitVersion}"
+    info["org.mockito:mockito-core"] = "${mockitoCoreVersion}"
+
+    def infoJson = new groovy.json.JsonBuilder(info).toPrettyString()
+    println(infoJson)
+  }
 }

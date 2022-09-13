@@ -100,6 +100,11 @@ type PackageInfo struct {
 	// given version of io.github.gradle-nexus.publish-plugin in
 	// the generated Gradle build files.
 	GradleNexusPublishPluginVersion string `json:"gradleNexusPublishPluginVersion"`
+
+	// If non-empty and BuildFiles="gradle", generates a test
+	// section to enable `gradle test` command to run unit tests
+	// over the generated code. Supported values: "JUnitPlatform".
+	GradleTest string `json:"gradleTest"`
 }
 
 func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
@@ -128,6 +133,9 @@ func (i PackageInfo) With(overrides PackageInfo) PackageInfo {
 	}
 	if overrides.GradleNexusPublishPluginVersion != "" {
 		result.GradleNexusPublishPluginVersion = overrides.GradleNexusPublishPluginVersion
+	}
+	if overrides.GradleTest != "" {
+		result.GradleTest = overrides.GradleTest
 	}
 	return result
 }

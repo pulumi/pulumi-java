@@ -55,6 +55,7 @@ type gradleTemplateContext struct {
 	LicenceURL                      string
 	GradleNexusPublishPluginEnabled bool
 	GradleNexusPublishPluginVersion string
+	GradleTestJUnitPlatformEnabled  bool
 }
 
 func newGradleTemplateContext(
@@ -63,8 +64,9 @@ func newGradleTemplateContext(
 ) gradleTemplateContext {
 
 	ctx := gradleTemplateContext{
-		ProjectURL:    pkg.Repository,
-		ProjectGitURL: formatGitURL(pkg.Repository),
+		ProjectURL:                     pkg.Repository,
+		ProjectGitURL:                  formatGitURL(pkg.Repository),
+		GradleTestJUnitPlatformEnabled: packageInfo.GradleTest == "JUnitPlatform",
 	}
 
 	if packageInfo.GradleNexusPublishPluginVersion != "" {
