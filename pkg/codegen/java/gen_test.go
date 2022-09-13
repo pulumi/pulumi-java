@@ -3,6 +3,10 @@
 package java
 
 import (
+	"bytes"
+	"encoding/json"
+	"os/exec"
+	"path/filepath"
 	"testing"
 
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
@@ -19,7 +23,7 @@ type generatePackageTestConfig struct {
 
 // Configures tests that are maintained in the pulumi-java repository
 // specifially for Java codegen testing.
-func javaSpecificTests() []generatePackageTestConfig {
+func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 	return []generatePackageTestConfig{
 		newGeneratePackageTestConfig(&test.SDKTest{
 			Directory:   "mini-azurenative",
@@ -35,23 +39,23 @@ func javaSpecificTests() []generatePackageTestConfig {
 			// TODO[pulumi/pulumi-java#821]
 			Skip: codegen.NewStringSet("java/test"),
 		}, &PackageInfo{
-			Dependencies: map[string]string{
-				"com.google.protobuf:protobuf-java":      "3.12.0",
-				"com.google.protobuf:protobuf-java-util": "3.12.0",
-				"org.assertj:assertj-core":               "3.20.2",
-				"org.junit.jupiter:junit-jupiter-api":    "5.7.2",
-			},
+			Dependencies: makeDeps(keyDeps,
+				"com.google.protobuf:protobuf-java",
+				"com.google.protobuf:protobuf-java-util",
+				"org.assertj:assertj-core",
+				"org.junit.jupiter:junit-jupiter-api",
+			),
 		}),
 		newGeneratePackageTestConfigWithExtras(&test.SDKTest{
 			Directory:   "mini-kubernetes",
 			Description: "Regression tests extracted from trying to codegen kubernetes",
 		}, &PackageInfo{
-			Dependencies: map[string]string{
-				"com.google.guava:guava":              "30.1-jre",
-				"org.mockito:mockito-core":            "3.12.4",
-				"org.assertj:assertj-core":            "3.20.2",
-				"org.junit.jupiter:junit-jupiter-api": "5.7.2",
-			},
+			Dependencies: makeDeps(keyDeps,
+				"com.google.guava:guava",
+				"org.mockito:mockito-core",
+				"org.assertj:assertj-core",
+				"org.junit.jupiter:junit-jupiter-api",
+			),
 		}),
 		newGeneratePackageTestConfig(&test.SDKTest{
 			Directory:   "mini-azuread",
@@ -65,40 +69,40 @@ func javaSpecificTests() []generatePackageTestConfig {
 			Directory:   "jumbo-resources",
 			Description: "Testing resources with more than 255 properties",
 		}, &PackageInfo{
-			Dependencies: map[string]string{
-				"org.assertj:assertj-core":            "3.20.2",
-				"org.junit.jupiter:junit-jupiter-api": "5.7.2",
-				"org.mockito:mockito-core":            "3.12.4",
-			},
+			Dependencies: makeDeps(keyDeps,
+				"org.assertj:assertj-core",
+				"org.junit.jupiter:junit-jupiter-api",
+				"org.mockito:mockito-core",
+			),
 		}),
 	}
 }
 
 // Configures how language-agnostic test cases from pulumi/pulumi
 // repository are adapted to test Java, which tests are skipped, etc..
-func adaptTest(t *test.SDKTest) generatePackageTestConfig {
+func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestConfig {
 	hasExtras := false
 	pkgInfo := PackageInfo{}
 	switch t.Directory {
 	case "simple-plain-schema":
 		hasExtras = true
 		pkgInfo = PackageInfo{
-			Dependencies: map[string]string{
-				"com.google.guava:guava":              "30.1-jre",
-				"org.assertj:assertj-core":            "3.20.2",
-				"org.junit.jupiter:junit-jupiter-api": "5.7.2",
-				"org.mockito:mockito-core":            "3.12.4",
-			},
+			Dependencies: makeDeps(keyDeps,
+				"com.google.guava:guava",
+				"org.assertj:assertj-core",
+				"org.junit.jupiter:junit-jupiter-api",
+				"org.mockito:mockito-core",
+			),
 		}
 	case "simple-enum-schema":
 		hasExtras = true
 		pkgInfo = PackageInfo{
-			Dependencies: map[string]string{
-				"com.google.guava:guava":              "30.1-jre",
-				"org.assertj:assertj-core":            "3.20.2",
-				"org.junit.jupiter:junit-jupiter-api": "5.7.2",
-				"org.mockito:mockito-core":            "3.12.4",
-			},
+			Dependencies: makeDeps(keyDeps,
+				"com.google.guava:guava",
+				"org.assertj:assertj-core",
+				"org.junit.jupiter:junit-jupiter-api",
+				"org.mockito:mockito-core",
+			),
 		}
 	case "external-resource-schema":
 		// TODO[pulumi/pulumi-java#13]
@@ -152,7 +156,12 @@ func adaptTest(t *test.SDKTest) generatePackageTestConfig {
 }
 
 func TestGeneratePackage(t *testing.T) {
-	for _, testCase := range testCases() {
+	tcs, err := testCases()
+	if err != nil {
+		t.Error(err)
+		t.FailNow()
+	}
+	for _, testCase := range tcs {
 		testCase := testCase
 		checks := map[string]test.CodegenCheck{
 			"java/compile": compileGeneratedPackage,
@@ -212,13 +221,17 @@ func newGeneratePackageTestConfigWithExtras(test *test.SDKTest, info *PackageInf
 	}
 }
 
-func testCases() []generatePackageTestConfig {
-	var ts []generatePackageTestConfig
-	ts = append(ts, javaSpecificTests()...)
-	for _, t := range test.PulumiPulumiSDKTests {
-		ts = append(ts, adaptTest(t))
+func testCases() ([]generatePackageTestConfig, error) {
+	keyDeps, err := keyDependencies()
+	if err != nil {
+		return nil, err
 	}
-	return ts
+	var ts []generatePackageTestConfig
+	ts = append(ts, javaSpecificTests(keyDeps)...)
+	for _, t := range test.PulumiPulumiSDKTests {
+		ts = append(ts, adaptTest(t, keyDeps))
+	}
+	return ts, nil
 }
 
 func compileGeneratedPackage(t *testing.T, pwd string) {
@@ -227,4 +240,27 @@ func compileGeneratedPackage(t *testing.T, pwd string) {
 
 func testGeneratedPackage(t *testing.T, pwd string) {
 	test.RunCommand(t, "gradle test", pwd, "gradle", "test")
+}
+
+func keyDependencies() (map[string]string, error) {
+	var buf bytes.Buffer
+	cmd := exec.Command("gradle", "-q", "pulumi:exportKeyDependencies")
+	cmd.Dir = filepath.Join("..", "..", "..", "sdk", "java")
+	cmd.Stdout = &buf
+	if err := cmd.Run(); err != nil {
+		return nil, err
+	}
+	result := map[string]string{}
+	if err := json.Unmarshal(buf.Bytes(), &result); err != nil {
+		return nil, err
+	}
+	return result, nil
+}
+
+func makeDeps(deps map[string]string, packages ...string) map[string]string {
+	spec := map[string]string{}
+	for _, p := range packages {
+		spec[p] = deps[p]
+	}
+	return spec
 }
