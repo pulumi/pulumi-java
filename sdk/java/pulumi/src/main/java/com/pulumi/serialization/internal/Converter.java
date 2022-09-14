@@ -421,24 +421,25 @@ public class Converter {
                             setters.get(name).getName(),
                             Nullable.class.getTypeName()
                     ));
-                }
-                try {
-                    var convertedArgument = argument == null ? null : tryConvertObjectInner(
-                            String.format("%s(%s)", targetType.getTypeName(), name),
-                            argument,
-                            TypeShape.extract(extractSetterParameter(setters.get(name)))
-                    );
-                    setters.get(name).invoke(builder, convertedArgument);
-                } catch (IllegalArgumentException e) {
-                    throw new IllegalStateException(String.format(
-                            "Error invoking setter '%s' (on '%s'), setter parameters: '%s', argument type: '%s'",
-                            name, targetType.getTypeName(),
-                            Arrays.toString(setters.get(name).getParameterTypes()),
-                            argument == null ? "null" : argument.getClass()
-                    ), e);
-                } catch (IllegalAccessException | InvocationTargetException e) {
-                    var exMsg = e.getMessage() == null ? e.getClass().getSimpleName() : e.getMessage();
-                    throw new IllegalStateException(String.format("Unexpected exception: %s", exMsg), e);
+                } else {
+                    try {
+                        var convertedArgument = argument == null ? null : tryConvertObjectInner(
+                                String.format("%s(%s)", targetType.getTypeName(), name),
+                                argument,
+                                TypeShape.extract(extractSetterParameter(setters.get(name)))
+                        );
+                        setters.get(name).invoke(builder, convertedArgument);
+                    } catch (IllegalArgumentException e) {
+                        throw new IllegalStateException(String.format(
+                                "Error invoking setter '%s' (on '%s'), setter parameters: '%s', argument type: '%s'",
+                                name, targetType.getTypeName(),
+                                Arrays.toString(setters.get(name).getParameterTypes()),
+                                argument == null ? "null" : argument.getClass()
+                        ), e);
+                    } catch (IllegalAccessException | InvocationTargetException e) {
+                        var exMsg = e.getMessage() == null ? e.getClass().getSimpleName() : e.getMessage();
+                        throw new IllegalStateException(String.format("Unexpected exception: %s", exMsg), e);
+                    }
                 }
             });
             // call .build()
