@@ -126,7 +126,7 @@ func TestExamples(t *testing.T) {
 				Config: map[string]string{
 					// Try `gcloud projects list`
 					"gcp:project": "pulumi-ci-gcp-provider",
-					"gcp:zone":    "us-west1-a",
+					"gcp:region":  "us-west1",
 				},
 			})
 
