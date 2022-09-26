@@ -125,8 +125,8 @@ func TestExamples(t *testing.T) {
 			integration.ProgramTestOptions{
 				Config: map[string]string{
 					// Try `gcloud projects list`
-					"gcp:project": "pulumi-ci-gcp-provider",
-					"gcp:region":  "us-west1",
+					"gcp:project":  "pulumi-ci-gcp-provider",
+					"gcp:location": "us-west1",
 				},
 			})
 
