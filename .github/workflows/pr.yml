@@ -22,6 +22,10 @@ env:
   PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
   AWS_REGION: us-west-2
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GOOGLE_CI_SERVICE_ACCOUNT_EMAIL: pulumi-ci@pulumi-ci-gcp-provider.iam.gserviceaccount.com
+  GOOGLE_CI_WORKLOAD_IDENTITY_POOL: pulumi-ci
+  GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER: pulumi-ci
+  GOOGLE_PROJECT_NUMBER: 895284651812
 
 jobs:
 
@@ -70,7 +74,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@356abb47e7664b5505e25d7997a5a522a17c62d9
+        uses: gradle/gradle-build-action@c295a4096e1d2c453eaf1f65c6f96686e26bd8be
         with:
           arguments: build
           build-root-directory: sdk/java
@@ -86,7 +90,7 @@ jobs:
           name: go-binaries
           path: bin/
       - name: Publish Pulumi Java SDK to Maven Local
-        uses: gradle/gradle-build-action@356abb47e7664b5505e25d7997a5a522a17c62d9
+        uses: gradle/gradle-build-action@c295a4096e1d2c453eaf1f65c6f96686e26bd8be
         with:
           arguments: publishToMavenLocal
           build-root-directory: sdk/java
@@ -144,7 +148,7 @@ jobs:
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Publish Pulumi Java SDK to Maven Local to enable codegen tests
-        uses: gradle/gradle-build-action@356abb47e7664b5505e25d7997a5a522a17c62d9
+        uses: gradle/gradle-build-action@c295a4096e1d2c453eaf1f65c6f96686e26bd8be
         env:
           # Override to match gen_test.go
           PULUMI_JAVA_SDK_VERSION: 0.0.1
@@ -189,6 +193,9 @@ jobs:
         - minimal
         - minimalsbt
         - random
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v3
       - run: make clone_examples
@@ -241,11 +248,18 @@ jobs:
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - uses: google-github-actions/setup-gcloud@v0
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v0
         with:
-          project_id: pulumi-development
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
-          export_default_credentials: true
+          workload_identity_provider: projects/${{ env.GOOGLE_PROJECT_NUMBER
+            }}/locations/global/workloadIdentityPools/${{
+            env.GOOGLE_CI_WORKLOAD_IDENTITY_POOL }}/providers/${{
+            env.GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ env.GOOGLE_CI_SERVICE_ACCOUNT_EMAIL }}
+      - name: Setup gcloud auth
+        uses: google-github-actions/setup-gcloud@v0
+        with:
+          install_components: gke-gcloud-auth-plugin
       - name: Run ${{ matrix.example }} example
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
@@ -341,6 +355,9 @@ jobs:
     needs: prerequisites
     if: needs.prerequisites.outputs.gotcloudcreds == 'true'
     timeout-minutes: 30
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v3
       - run: make clone_templates
@@ -389,12 +406,18 @@ jobs:
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: Configure GCP Credentials
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v0
+        with:
+          workload_identity_provider: projects/${{ env.GOOGLE_PROJECT_NUMBER
+            }}/locations/global/workloadIdentityPools/${{
+            env.GOOGLE_CI_WORKLOAD_IDENTITY_POOL }}/providers/${{
+            env.GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ env.GOOGLE_CI_SERVICE_ACCOUNT_EMAIL }}
+      - name: Setup gcloud auth
         uses: google-github-actions/setup-gcloud@v0
         with:
-          project_id: pulumi-development
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
-          export_default_credentials: true
+          install_components: gke-gcloud-auth-plugin
       - env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
