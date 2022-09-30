@@ -23,7 +23,7 @@ repositories {
 }
 
 def grpcVersion = "1.49.1"
-def protobufVersion = "3.21.6"
+def protobufVersion = "3.21.7"
 def protocVersion = protobufVersion
 def guavaVersion = "31.1-jre"
 def assertjCoreVersion = "3.23.1"
