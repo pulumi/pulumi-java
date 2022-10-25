@@ -53,7 +53,7 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+        uses: gradle/wrapper-validation-action@55e685c48d84285a5b0418cd094606e199cca3b6
       - name: Publish Pulumi Java SDK
         uses: gradle/gradle-build-action@c295a4096e1d2c453eaf1f65c6f96686e26bd8be
         with:
