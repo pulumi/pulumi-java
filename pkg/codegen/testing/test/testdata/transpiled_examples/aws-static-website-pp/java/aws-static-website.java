@@ -31,14 +31,14 @@ public class App {
             .build());
 
         var indexHtml = new BucketObject("indexHtml", BucketObjectArgs.builder()        
-            .bucket(siteBucket)
+            .bucket(siteBucket.id())
             .source(new FileAsset("./www/index.html"))
             .acl("public-read")
             .contentType("text/html")
             .build());
 
         var faviconPng = new BucketObject("faviconPng", BucketObjectArgs.builder()        
-            .bucket(siteBucket)
+            .bucket(siteBucket.id())
             .source(new FileAsset("./www/favicon.png"))
             .acl("public-read")
             .contentType("image/png")
