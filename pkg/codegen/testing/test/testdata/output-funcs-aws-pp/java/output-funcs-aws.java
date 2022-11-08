@@ -8,7 +8,7 @@ import com.pulumi.aws.ec2.VpcArgs;
 import com.pulumi.aws.ec2.VpcEndpoint;
 import com.pulumi.aws.ec2.VpcEndpointArgs;
 import com.pulumi.aws.ec2.Ec2Functions;
-import com.pulumi.aws.inputs.GetPrefixListArgs;
+import com.pulumi.aws.inputs.ec2.GetPrefixListArgs;
 import com.pulumi.aws.ec2.NetworkAcl;
 import com.pulumi.aws.ec2.NetworkAclArgs;
 import com.pulumi.aws.ec2.NetworkAclRule;
