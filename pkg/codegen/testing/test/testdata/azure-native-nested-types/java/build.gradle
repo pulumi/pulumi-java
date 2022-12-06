@@ -135,7 +135,7 @@ javadoc {
     if (JavaVersion.current().isJava9Compatible()) {
         options.addBooleanOption('html5', true)
     }
-    options.jFlags("-Xmx2g", "-Xms512m")
+    options.jFlags("-Xmx8g", "-Xms512m")
 }
 
 if (signingKey) {
