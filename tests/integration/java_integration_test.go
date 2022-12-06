@@ -26,6 +26,9 @@ func TestIntegrations(t *testing.T) {
 			Env: []string{
 				"PULUMI_EXCESSIVE_DEBUG_OUTPUT=false",
 			},
+			Config: map[string]string{
+				"local": "true",
+			},
 			ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
 				rawVal := stackInfo.Outputs["val"]
 				val, isArray := rawVal.([]interface{})
