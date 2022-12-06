@@ -27,26 +27,5 @@ func getJavaBase(t *testing.T, testSpecificOptions integration.ProgramTestOption
 		},
 	}
 	opts = opts.With(testSpecificOptions)
-
-	// local environment, to run locally offline, make sure you set:
-	// export PULUMI_BACKEND_URL=file://~
-	// export PULUMI_API=file://~
-	// pulumi login --local
-	pulumiAPI, ok := os.LookupEnv("PULUMI_API")
-	var isAPILocal = ok && pulumiAPI == "file://~"
-	pulumiBackend, ok := os.LookupEnv("PULUMI_BACKEND_URL")
-	var isBackendLocal = ok && pulumiBackend == "file://~"
-
-	var isLocal = isAPILocal || isBackendLocal
-	if isLocal {
-		t.Log("Running test locally")
-		opts = opts.With(integration.ProgramTestOptions{
-			Config: map[string]string{
-				"local": "true",
-			},
-			CloudURL: "file://~",
-		})
-	}
-	t.Logf("Running test with opts.CloudURL: %s", opts.CloudURL)
 	return opts
 }
