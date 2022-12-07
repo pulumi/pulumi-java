@@ -1,8 +1,10 @@
 config sqlAdmin string {
+	__logicalName = "sqlAdmin"
 	default = "pulumi"
 }
 
 config retentionInDays int {
+	__logicalName = "retentionInDays"
 	default = 30
 }
 
@@ -33,7 +35,6 @@ resource workspace "azure-native:operationalinsights:Workspace" {
 resource kubeEnv "azure-native:web:KubeEnvironment" {
 	__logicalName = "kubeEnv"
 	resourceGroupName = resourceGroup.name
-	environmentType = "Managed"
 	appLogsConfiguration = {
 		destination = "log-analytics",
 		logAnalyticsConfiguration = {
