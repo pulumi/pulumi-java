@@ -6,6 +6,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
 	"github.com/stretchr/testify/assert"
 )
@@ -29,7 +30,8 @@ func TestGenerateJavaProgram(t *testing.T) {
 			continue
 		}
 		tests = append(tests, test.ProgramTest{
-			Directory: strings.TrimSuffix(name, "-pp"),
+			Directory:   strings.TrimSuffix(name, "-pp"),
+			BindOptions: []pcl.BindOption{pcl.SkipResourceTypechecking},
 		})
 	}
 	test.TestProgramCodegen(t, test.ProgramCodegenOptions{
@@ -39,34 +41,4 @@ func TestGenerateJavaProgram(t *testing.T) {
 		GenProgram: GenerateProgram,
 		TestCases:  tests,
 	})
-}
-
-func runSingleProgramGenTest(t *testing.T, name string) {
-	test.TestProgramCodegen(t, test.ProgramCodegenOptions{
-		Language:   "java",
-		Extension:  "java",
-		OutputFile: "MyStack.java",
-		GenProgram: GenerateProgram,
-		TestCases:  []test.ProgramTest{{Directory: name}},
-	})
-}
-
-func TestAwsStaticWebsite(t *testing.T) {
-	runSingleProgramGenTest(t, "aws-s3-folder")
-}
-
-func TestAwsFargate(t *testing.T) {
-	runSingleProgramGenTest(t, "aws-fargate")
-}
-
-func TestAwsWebserver(t *testing.T) {
-	runSingleProgramGenTest(t, "aws-webserver")
-}
-
-func TestSimpleInvokeWithRange(t *testing.T) {
-	runSingleProgramGenTest(t, "simple-invoke-with-range")
-}
-
-func TestAzureNativeExample(t *testing.T) {
-	runSingleProgramGenTest(t, "azure-native")
 }

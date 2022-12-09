@@ -1,0 +1,17 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/aws/Provider.java",
+    "src/main/java/com/pulumi/aws/ProviderArgs.java",
+    "src/main/java/com/pulumi/aws/Utilities.java",
+    "src/main/java/com/pulumi/aws/x/inputs/GetPolicyDocumentStatement.java",
+    "src/main/java/com/pulumi/aws/x/inputs/GetPolicyDocumentStatementArgs.java",
+    "src/main/java/com/pulumi/aws/x/outputs/GetPolicyDocumentStatement.java",
+    "src/main/java/com/pulumi/aws/x_iam/X_iamFunctions.java",
+    "src/main/java/com/pulumi/aws/x_iam/inputs/GetPolicyDocumentArgs.java",
+    "src/main/java/com/pulumi/aws/x_iam/inputs/GetPolicyDocumentPlainArgs.java",
+    "src/main/java/com/pulumi/aws/x_iam/outputs/GetPolicyDocumentResult.java"
+  ]
+}

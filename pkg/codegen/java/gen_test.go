@@ -144,6 +144,12 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		t.Skip = codegen.NewStringSet("java/any") // python only
 	case "go-nested-collections":
 		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "external-enum":
+		t.Skip = codegen.NewStringSet("java/any") // TODO
+	case "naming-collisions":
+		t.Skip = codegen.NewStringSet("java/any") // TODO
+	case "output-funcs-aws":
+		t.Skip = codegen.NewStringSet("java/any") // TODO: nondeterministic
 	}
 
 	if hasExtras {
