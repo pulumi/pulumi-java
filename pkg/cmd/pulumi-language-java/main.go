@@ -24,6 +24,8 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/version"
 	pulumirpc "github.com/pulumi/pulumi/sdk/v3/proto/go"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 
 	"github.com/pulumi/pulumi-java/pkg/internal/executors"
 	"github.com/pulumi/pulumi-java/pkg/internal/fsys"
@@ -407,7 +409,7 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 
 	logging.V(5).Infof("InstallDependencies(Directory=%s): starting", req.Directory)
 
-	closer, stdout, stderr, err := rpcutil.MakeStreams(server, req.IsTerminal)
+	closer, stdout, stderr, err := rpcutil.MakeInstallDependenciesStreams(server, req.IsTerminal)
 	if err != nil {
 		return err
 	}
@@ -484,4 +486,8 @@ func (host *javaLanguageHost) About(ctx context.Context, req *emptypb.Empty) (*p
 		Version:    version,
 		Metadata:   metadata,
 	}, nil
+}
+
+func (host *javaLanguageHost) RunPlugin(*pulumirpc.RunPluginRequest, pulumirpc.LanguageRuntime_RunPluginServer) error {
+	return status.Errorf(codes.Unimplemented, "method RunPlugin not implemented")
 }
