@@ -64,12 +64,13 @@ codegen_tests::
 	cd ./pkg/codegen/java && go test ./...
 
 submodule_update::
-	git submodule update --init --recursive
+	git submodule update --init --recursive --remote
 
 # Borrows test case schemas from pulumi/pulumi repo linked in via git
 # submodule as symlinks.
 borrow_schemas:: submodule_update
 	find pulumi/pkg/codegen/testing -name "schema.*" -exec ./scripts/borrow-schema.sh "{}" ";"
+	find pulumi/pkg/codegen/testing/test/testdata -depth 1 -name "*-*.json" -exec ./scripts/borrow-schema.sh "{}" ";"
 
 # Runs `go mod tidy` on every Go project.
 tidy::
