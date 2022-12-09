@@ -58,6 +58,7 @@ import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
 import pulumirpc.Resource.SupportsFeatureRequest;
+import pulumirpc.AliasOuterClass.Alias;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -68,6 +69,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -1043,7 +1045,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public final ImmutableMap<String, String> providerRefs;
         public final ImmutableSet<String> allDirectDependencyUrns;
         public final ImmutableMap<String, ImmutableSet<String>> propertyToDirectDependencyUrns;
-        public final ImmutableList<String> aliases;
+        public final ImmutableList<Alias> aliases;
 
         public PrepareResult(
                 Struct serializedProps,
@@ -1060,7 +1062,11 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.providerRefs = Objects.requireNonNull(providerRefs);
             this.allDirectDependencyUrns = Objects.requireNonNull(allDirectDependencyUrns);
             this.propertyToDirectDependencyUrns = Objects.requireNonNull(propertyToDirectDependencyUrns);
-            this.aliases = Objects.requireNonNull(aliases);
+            ImmutableList.Builder aliasBuilder = ImmutableList.builder();
+            for (var item : Objects.requireNonNull(aliases)) {
+                aliasBuilder.add(Alias.newBuilder().setUrn(item).build());
+            }
+            this.aliases = aliasBuilder.build();
         }
     }
 
