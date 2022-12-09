@@ -27,7 +27,7 @@ func packageName(packages map[string]string, name string) string {
 }
 
 type modContext struct {
-	pkg                    *schema.Package
+	pkg                    schema.PackageReference
 	mod                    string
 	propertyNames          map[*schema.Property]string
 	types                  []*schema.ObjectType
@@ -232,13 +232,15 @@ func (mod *modContext) typeStringRecHelper(
 			resourceType = pkg.Dot(names.Ident("Provider"))
 		} else {
 			namingCtx := mod
-			if t.Resource != nil && t.Resource.Package != mod.pkg {
+			if t.Resource != nil && !codegen.PkgEquals(t.Resource.PackageReference, mod.pkg) {
 				// If resource type belongs to another package, we apply naming conventions from that package,
 				// including package naming and compatibility mode.
-				extPkg := t.Resource.Package
+				extPkg := t.Resource.PackageReference
 				var info PackageInfo
-				contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"java": Importer}))
-				if v, ok := t.Resource.Package.Language["java"].(PackageInfo); ok {
+				extDef, err := extPkg.Definition()
+				contract.AssertNoError(err)
+				contract.AssertNoError(extDef.ImportLanguages(map[string]schema.Language{"java": Importer}))
+				if v, ok := extDef.Language["java"].(PackageInfo); ok {
 					info = v
 				}
 				namingCtx = &modContext{
@@ -321,16 +323,18 @@ func (mod *modContext) typeStringRecHelper(
 }
 
 func (mod *modContext) typeStringForObjectType(t *schema.ObjectType, qualifier qualifier, input bool) TypeShape {
-	foreign := t.Package != mod.pkg
+	foreign := !codegen.PkgEquals(t.PackageReference, mod.pkg)
 	namingCtx := mod
 
 	if foreign {
 		// If object type belongs to another package, we apply naming conventions from that package,
 		// including package naming and compatibility mode.
-		extPkg := t.Package
+		extPkg := t.PackageReference
 		var info PackageInfo
-		contract.AssertNoError(extPkg.ImportLanguages(map[string]schema.Language{"java": Importer}))
-		if v, ok := t.Package.Language["java"].(PackageInfo); ok {
+		extDef, err := extPkg.Definition()
+		contract.AssertNoError(err)
+		contract.AssertNoError(extDef.ImportLanguages(map[string]schema.Language{"java": Importer}))
+		if v, ok := extDef.Language["java"].(PackageInfo); ok {
 			info = v
 		}
 		namingCtx = &modContext{
@@ -1019,7 +1023,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 	tok := r.Token
 	if r.IsProvider {
-		tok = mod.pkg.Name
+		tok = mod.pkg.Name()
 	}
 
 	argsOverride := fmt.Sprintf("args == null ? %s.Empty : args", ctx.ref(argsFQN))
@@ -1178,8 +1182,8 @@ func (mod *modContext) functionsClassName() (names.Ident, error) {
 	if mod.mod != "" {
 		return names.Ident(names.Title(mod.mod) + "Functions"), nil
 	}
-	if mod.pkg.Name != "" {
-		return names.Ident(names.Title(mod.pkg.Name) + "Functions"), nil
+	if mod.pkg.Name() != "" {
+		return names.Ident(names.Title(mod.pkg.Name()) + "Functions"), nil
 	}
 	return "", fmt.Errorf("package name empty")
 }
@@ -1742,13 +1746,13 @@ func (mod *modContext) gen(fs fs) error {
 	switch mod.mod {
 	case "":
 		if err := addClass(mod.rootPackage(), names.Ident("Utilities"), func(ctx *classFileContext) error {
-			pkgName, err := parsePackageName(packageName(mod.packages, mod.pkg.Name))
+			pkgName, err := parsePackageName(packageName(mod.packages, mod.pkg.Name()))
 			if err != nil {
 				return err
 			}
 			return javaUtilitiesTemplate.Execute(ctx.writer, javaUtilitiesTemplateContext{
 				Name:        pkgName.String(),
-				VersionPath: strings.ReplaceAll(ensureEndsWithDot(defaultBasePackage)+mod.pkg.Name, ".", "/"),
+				VersionPath: strings.ReplaceAll(ensureEndsWithDot(defaultBasePackage)+mod.pkg.Name(), ".", "/"),
 				ClassName:   "Utilities",
 				Tool:        mod.tool,
 			})
@@ -1757,19 +1761,23 @@ func (mod *modContext) gen(fs fs) error {
 		}
 
 		// Ensure that the target module directory contains a README.md file.
-		readme := mod.pkg.Description
+		readme := mod.pkg.Description()
 		if readme != "" && readme[len(readme)-1] != '\n' {
 			readme += "\n"
 		}
 		fs.add("README.md", []byte(readme))
 	case "config":
-		if len(mod.pkg.Config) > 0 {
+		config, err := mod.pkg.Config()
+		if err != nil {
+			return err
+		}
+		if len(config) > 0 {
 			configPkg, err := parsePackageName(mod.configClassPackageName)
 			if err != nil {
 				return err
 			}
 			if err := addClass(configPkg, names.Ident("Config"), func(ctx *classFileContext) error {
-				return mod.genConfig(ctx, mod.pkg.Config)
+				return mod.genConfig(ctx, config)
 			}); err != nil {
 				return err
 			}
@@ -1885,10 +1893,12 @@ func computePropertyNames(props []*schema.Property, names map[*schema.Property]s
 func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*modContext, *PackageInfo, error) {
 	// Decode Java-specific info for each package as we discover them.
 	infos := map[*schema.Package]*PackageInfo{}
-	var getPackageInfo = func(p *schema.Package) *PackageInfo {
-		info, ok := infos[p]
+	var getPackageInfo = func(p schema.PackageReference) *PackageInfo {
+		def, err := p.Definition()
+		contract.AssertNoError(err)
+		info, ok := infos[def]
 		if !ok {
-			if err := p.ImportLanguages(map[string]schema.Language{"java": Importer}); err != nil {
+			if err := def.ImportLanguages(map[string]schema.Language{"java": Importer}); err != nil {
 				panic(err)
 			}
 
@@ -1900,11 +1910,11 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 				}
 			}
 			info = &javaInfo
-			infos[p] = info
+			infos[def] = info
 		}
 		return info
 	}
-	infos[pkg] = getPackageInfo(pkg)
+	infos[pkg] = getPackageInfo(pkg.Reference())
 
 	propertyNames := map[*schema.Property]string{}
 	computePropertyNames(pkg.Config, propertyNames)
@@ -1943,8 +1953,8 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 	// group resources, types, and functions into Java packages
 	modules := map[string]*modContext{}
 
-	var getMod func(modName string, p *schema.Package) *modContext
-	getMod = func(modName string, p *schema.Package) *modContext {
+	var getMod func(modName string, p schema.PackageReference) *modContext
+	getMod = func(modName string, p schema.PackageReference) *modContext {
 		mod, ok := modules[modName]
 		if !ok {
 			info := getPackageInfo(p)
@@ -1977,7 +1987,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 
 			// Save the module only if it's for the current package.
 			// This way, modules for external packages are not saved.
-			if p == pkg {
+			if codegen.PkgEquals(p, pkg.Reference()) {
 				modules[modName] = mod
 			}
 		}
@@ -1985,12 +1995,12 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 	}
 
 	getModFromToken := func(token string, p *schema.Package) *modContext {
-		return getMod(p.TokenToModule(token), p)
+		return getMod(p.TokenToModule(token), p.Reference())
 	}
 
 	// Create the config module if necessary.
 	if len(pkg.Config) > 0 {
-		cfg := getMod("config", pkg)
+		cfg := getMod("config", pkg.Reference())
 		cfg.configClassPackageName = cfg.basePackageName + packageName(infos[pkg].Packages, pkg.Name)
 	}
 

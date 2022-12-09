@@ -20,7 +20,7 @@ var _ codegen.DocLanguageHelper = DocLanguageHelper{}
 func (d DocLanguageHelper) GetLanguageTypeString(
 	pkg *schema.Package, moduleName string, t schema.Type, input bool) string {
 
-	modCtx := &modContext{pkg: pkg, mod: moduleName}
+	modCtx := &modContext{pkg: pkg.Reference(), mod: moduleName}
 	ctx := newPseudoClassFileContext()
 
 	typeShape := modCtx.typeString(
