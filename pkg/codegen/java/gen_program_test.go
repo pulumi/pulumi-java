@@ -1,7 +1,7 @@
 package java
 
 import (
-	"io/ioutil"
+	"os"
 	"path/filepath"
 	"strings"
 	"testing"
@@ -16,15 +16,46 @@ type PclTestFile struct {
 }
 
 var testdataPath = filepath.Join("..", "testing", "test", "testdata")
+var transpiledExamplesDir = "transpiled_examples"
+
+var skipGenerationTests = []string{
+	"azure-container-apps",
+	"getting-started",
+	"pulumi-variable",
+}
+
+func skipGeneration(test string) bool {
+	for _, t := range skipGenerationTests {
+		if t == test {
+			return true
+		}
+	}
+	return false
+}
 
 func TestGenerateJavaProgram(t *testing.T) {
 	t.Parallel()
 
-	files, err := ioutil.ReadDir(testdataPath)
+	files, err := os.ReadDir(testdataPath)
 	assert.NoError(t, err)
 	tests := make([]test.ProgramTest, 0, len(files))
 	for _, f := range files {
 		name := f.Name()
+		if f.IsDir() && name == transpiledExamplesDir {
+			syncDir := filepath.Join(testdataPath, transpiledExamplesDir)
+			files, err := os.ReadDir(syncDir)
+			assert.NoError(t, err)
+			for _, f := range files {
+				name := strings.TrimSuffix(f.Name(), "-pp")
+				if skipGeneration(name) {
+					continue
+				}
+				tests = append(tests, test.ProgramTest{
+					Directory: filepath.Join(transpiledExamplesDir, name),
+				})
+			}
+			continue
+		}
 		if !strings.HasSuffix(name, "-pp") {
 			continue
 		}
