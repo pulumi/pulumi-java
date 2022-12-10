@@ -117,6 +117,8 @@ func setupHealthChecks(engineAddress string) (chan bool, error) {
 // javaLanguageHost implements the LanguageRuntimeServer interface
 // for use as an API endpoint.
 type javaLanguageHost struct {
+	pulumirpc.UnimplementedLanguageRuntimeServer
+
 	currentExecutor *executors.JavaExecutor
 	execOptions     executors.JavaExecutorOptions
 	engineAddress   string
