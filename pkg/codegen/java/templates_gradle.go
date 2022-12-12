@@ -45,7 +45,7 @@ func gradleValidatePackage(pkg *schema.Package) error {
 
 	if pkg.Repository == "" {
 		v := `"repository" needs to be non-empty to satisfy POM validation rules; ` +
-			`a valid example is "https://github.com/mycorp/mypkg"`
+			`a valid example is "https://github.com/myorg/mypkg"`
 		validationErrors = append(validationErrors, v)
 	}
 
