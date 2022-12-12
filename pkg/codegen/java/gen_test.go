@@ -148,8 +148,6 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "naming-collisions":
 		t.Skip = codegen.NewStringSet("java/any") // TODO
-	case "output-funcs-aws":
-		t.Skip = codegen.NewStringSet("java/any") // TODO: nondeterministic
 	}
 
 	if hasExtras {

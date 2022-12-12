@@ -1642,7 +1642,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 	fprintf(w, "public final class Config {\n")
 	fprintf(w, "\n")
 	// Create a config bag for the variables to pull from.
-	fprintf(w, "    private static final com.pulumi.Config config = com.pulumi.Config.of(%q);", mod.pkg.Name)
+	fprintf(w, "    private static final com.pulumi.Config config = com.pulumi.Config.of(%q);", mod.pkg.Name())
 	fprintf(w, "\n")
 
 	// Emit an entry for all config variables.
