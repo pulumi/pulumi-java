@@ -192,17 +192,17 @@ func isTemplatePathString(expr model.Expression) (bool, []model.Expression) {
 	}
 }
 
-func (g *generator) functionName(tokenArg model.Expression) (string, string) {
+func (g *generator) functionName(tokenArg model.Expression) string {
 	token := tokenArg.(*model.TemplateExpression).Parts[0].(*model.LiteralValueExpression).Value.AsString()
 	tokenRange := tokenArg.SyntaxNode().Range()
 
 	// Compute the resource type from the Pulumi type token.
 	pkg, module, member, _ := pcl.DecomposeToken(token, tokenRange)
 	if module == "index" || module == "" {
-		return names.Title(pkg) + "Functions" + "." + member, names.Title(member)
+		return names.Title(pkg) + "Functions" + "." + member
 	}
 
-	return names.Title(module) + "Functions" + "." + member, names.Title(member)
+	return names.Title(module) + "Functions" + "." + member
 }
 
 func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionCallExpression) {
@@ -275,8 +275,8 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		// Assuming the existence of the following helper method
 		g.Fgenf(w, "computeFileBase64Sha256(%v)", expr.Args[0])
 	case pcl.Invoke:
-		fullyQualifiedName, schemaName := g.functionName(expr.Args[0])
-		functionSchema, foundFunction := g.findFunctionSchema(schemaName)
+		fullyQualifiedName := g.functionName(expr.Args[0])
+		functionSchema, foundFunction := g.findFunctionSchema(expr.Args[0])
 		if foundFunction {
 			g.Fprintf(w, "%s(", fullyQualifiedName)
 			invokeArgumentsExpr := expr.Args[1]
