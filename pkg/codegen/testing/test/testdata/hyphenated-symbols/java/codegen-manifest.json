@@ -1,0 +1,13 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/repro/Foo.java",
+    "src/main/java/com/pulumi/repro/FooArgs.java",
+    "src/main/java/com/pulumi/repro/Provider.java",
+    "src/main/java/com/pulumi/repro/ProviderArgs.java",
+    "src/main/java/com/pulumi/repro/Utilities.java",
+    "src/main/java/com/pulumi/repro/outputs/Bar.java"
+  ]
+}

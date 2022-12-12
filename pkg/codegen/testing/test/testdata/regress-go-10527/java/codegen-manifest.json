@@ -1,0 +1,15 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/world/Provider.java",
+    "src/main/java/com/pulumi/world/ProviderArgs.java",
+    "src/main/java/com/pulumi/world/Universe.java",
+    "src/main/java/com/pulumi/world/UniverseArgs.java",
+    "src/main/java/com/pulumi/world/Utilities.java",
+    "src/main/java/com/pulumi/world/WorldMap.java",
+    "src/main/java/com/pulumi/world/WorldMapArgs.java",
+    "src/main/java/com/pulumi/world/inputs/WorldArgs.java"
+  ]
+}

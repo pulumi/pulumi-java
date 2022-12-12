@@ -8,6 +8,8 @@
     "src/main/java/com/pulumi/foobar/Utilities.java",
     "src/main/java/com/pulumi/foobar/inputs/TopLevelArgs.java",
     "src/main/java/com/pulumi/foobar/outputs/TopLevel.java",
+    "src/main/java/com/pulumi/foobar/submodule1/FOOEncryptedBarClass.java",
+    "src/main/java/com/pulumi/foobar/submodule1/FOOEncryptedBarClassArgs.java",
     "src/main/java/com/pulumi/foobar/submodule1/ModuleResource.java",
     "src/main/java/com/pulumi/foobar/submodule1/ModuleResourceArgs.java"
   ]

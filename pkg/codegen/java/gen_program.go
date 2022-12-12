@@ -550,7 +550,7 @@ func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallE
 	case pcl.Invoke:
 		fullyQualifiedFunctionImport, funcName := g.functionImportDef(functionCall.Args[0])
 		imports = append(imports, fullyQualifiedFunctionImport)
-		functionSchema, foundFunction := g.findFunctionSchema(funcName)
+		functionSchema, foundFunction := g.findFunctionSchema(functionCall.Args[0])
 		if foundFunction {
 			invokeArgumentsExpr := functionCall.Args[1]
 			switch invokeArgumentsExpr.(type) {
@@ -714,20 +714,24 @@ func makeResourceName(baseName string, suffix string) string {
 	return fmt.Sprintf(`"%s-"`, baseName) + " + " + suffix
 }
 
-func (g *generator) findFunctionSchema(function string) (*schema.Function, bool) {
-	function = names.LowerCamelCase(function)
+func (g *generator) findFunctionSchema(token model.Expression) (*schema.Function, bool) {
+	tk := token.(*model.TemplateExpression).Parts[0].(*model.LiteralValueExpression).Value.AsString()
 	for _, pkg := range g.program.PackageReferences() {
-		for it := pkg.Functions().Range(); it.Next(); {
-			if strings.HasSuffix(it.Token(), function) {
-				fn, err := it.Function()
-				if err != nil {
-					return nil, false
-				}
-				return fn, true
-			}
+		fn, ok, err := pcl.LookupFunction(pkg, tk)
+		if !ok {
+			continue
 		}
+		if err != nil {
+			g.diagnostics = append(g.diagnostics, &hcl.Diagnostic{
+				Severity: hcl.DiagWarning,
+				Summary:  fmt.Sprintf("Could not find function schema for '%s'", token),
+				Detail:   err.Error(),
+				Subject:  token.SyntaxNode().Range().Ptr(),
+			})
+			return nil, false
+		}
+		return fn, true
 	}
-
 	return nil, false
 }
 
@@ -994,9 +998,7 @@ func (g *generator) isFunctionInvoke(localVariable *pcl.LocalVariable) (*schema.
 		call := value.(*model.FunctionCallExpression)
 		switch call.Name {
 		case pcl.Invoke:
-			args := call.Args[0]
-			_, schemaName := g.functionName(args)
-			functionSchema, foundFunction := g.findFunctionSchema(schemaName)
+			functionSchema, foundFunction := g.findFunctionSchema(call.Args[0])
 			if foundFunction {
 				return functionSchema, true
 			}
