@@ -16,6 +16,10 @@ func genGradleProject(
 	packageInfo *PackageInfo,
 	files fs,
 ) error {
+	if err := gradleValidatePackage(pkg); err != nil {
+		return err
+	}
+
 	ctx := newGradleTemplateContext(pkg, packageInfo)
 	templates := map[string]string{
 		"build.gradle":    buildGradleTemplate,
@@ -28,6 +32,28 @@ func genGradleProject(
 		}
 		files.add(fileName, buf.Bytes())
 	}
+	return nil
+}
+
+func gradleValidatePackage(pkg *schema.Package) error {
+	validationErrors := []string{}
+
+	if pkg.Description == "" {
+		v := `"description" needs to be non-empty to satisfy POM validation rules`
+		validationErrors = append(validationErrors, v)
+	}
+
+	if pkg.Repository == "" {
+		v := `"repository" needs to be non-empty to satisfy POM validation rules; ` +
+			`a valid example is "https://github.com/mycorp/mypkg"`
+		validationErrors = append(validationErrors, v)
+	}
+
+	if len(validationErrors) != 0 {
+		msg := "Pulumi Package Schema has %d issues that obstruct generating a valid Gradle project:\n- %s"
+		return fmt.Errorf(msg, len(validationErrors), strings.Join(validationErrors, "\n- "))
+	}
+
 	return nil
 }
 
