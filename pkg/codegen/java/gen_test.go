@@ -175,6 +175,8 @@ func TestGeneratePackage(t *testing.T) {
 			GenPackage: func(tool string,
 				pkg *schema.Package,
 				extraFiles map[string][]byte) (map[string][]byte, error) {
+				pkg.Description = "test description"
+				pkg.Repository = "https://github.com/pulumi/pulumi-java"
 				pkg.Language = map[string]interface{}{
 					"java": testCase.packageInfo,
 				}

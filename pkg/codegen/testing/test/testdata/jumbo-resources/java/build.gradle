@@ -93,12 +93,12 @@ publishing {
                 packaging = "jar"
                 description = ""
 
-                url = ""
+                url = "https://github.com/pulumi/pulumi-java"
 
                 scm {
-                    connection = ""
-                    developerConnection = ""
-                    url = ""
+                    connection = "git@github.com/pulumi/pulumi-java.git"
+                    developerConnection = "git@github.com/pulumi/pulumi-java.git"
+                    url = "https://github.com/pulumi/pulumi-java"
                 }
 
                 licenses {

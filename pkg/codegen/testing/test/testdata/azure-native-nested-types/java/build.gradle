@@ -89,14 +89,14 @@ publishing {
                 inceptionYear = "2022"
                 name = "pulumi-azure-native"
                 packaging = "jar"
-                description = "A native Pulumi package for creating and managing Azure resources."
+                description = "test description"
 
-                url = "https://github.com/pulumi/pulumi-azure-native"
+                url = "https://github.com/pulumi/pulumi-java"
 
                 scm {
-                    connection = "git@github.com/pulumi/pulumi-azure-native.git"
-                    developerConnection = "git@github.com/pulumi/pulumi-azure-native.git"
-                    url = "https://github.com/pulumi/pulumi-azure-native"
+                    connection = "git@github.com/pulumi/pulumi-java.git"
+                    developerConnection = "git@github.com/pulumi/pulumi-java.git"
+                    url = "https://github.com/pulumi/pulumi-java"
                 }
 
                 licenses {
