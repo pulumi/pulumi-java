@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## 0.7.0 (2022-12-13)
+
+### Improvements
+
+- [codegen] Internal engineering work.
+
 ## 0.6.0 (2022-09-13)
 
 ### Improvements
