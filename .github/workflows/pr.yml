@@ -56,10 +56,10 @@ jobs:
           cache: 'gradle'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@55e685c48d84285a5b0418cd094606e199cca3b6
-      - name: Set up Go 1.18.x
+      - name: Set up Go
         uses: actions/setup-go@v3
         with:
-          go-version: 1.18.x
+          go-version: stable
       - name: Configure Go cache
         id: go-cache-paths
         run: |
@@ -127,10 +127,10 @@ jobs:
           cache: 'gradle'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@55e685c48d84285a5b0418cd094606e199cca3b6
-      - name: Set up Go 1.18.x
+      - name: Set up Go
         uses: actions/setup-go@v3
         with:
-          go-version: 1.18.x
+          go-version: stable
       - name: Download go-binaries
         uses: actions/download-artifact@v3
         with:
@@ -208,10 +208,10 @@ jobs:
           cache: 'gradle'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@55e685c48d84285a5b0418cd094606e199cca3b6
-      - name: Set up Go 1.18.x
+      - name: Set up Go
         uses: actions/setup-go@v3
         with:
-          go-version: 1.18.x
+          go-version: stable
       - name: Configure Go cache
         id: go-cache-paths
         run: |
@@ -314,10 +314,10 @@ jobs:
           cache: 'gradle'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@55e685c48d84285a5b0418cd094606e199cca3b6
-      - name: Set up Go 1.18.x
+      - name: Set up Go
         uses: actions/setup-go@v3
         with:
-          go-version: 1.18.x
+          go-version: stable
       - name: Configure Go cache
         id: go-cache-paths
         run: |
@@ -368,10 +368,10 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: 'gradle'
-      - name: Set up Go 1.18.x
+      - name: Set up Go
         uses: actions/setup-go@v3
         with:
-          go-version: 1.18.x
+          go-version: stable
       - name: Configure Go cache
         id: go-cache-paths
         run: |
