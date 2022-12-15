@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+## 0.7.1 (2022-12-15)
+
+### Bug Fixes
+
+- [provider] [#913](https://github.com/pulumi/pulumi-java/pull/913):
+  Windows releases now release as .tar.gz to match pulumi plugin ecosystem expectations.
+
 ## 0.7.0 (2022-12-13)
 
 ### Improvements
