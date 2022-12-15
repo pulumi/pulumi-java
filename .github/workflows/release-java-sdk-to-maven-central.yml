@@ -34,7 +34,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3
-      - run: make submodule_update
+      - run: git submodule update --init --recursive
       - name: Fetch Tags
         run: git fetch --quiet --prune --unshallow --tags
       - name: Install pulumictl
