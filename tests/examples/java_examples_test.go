@@ -90,6 +90,13 @@ func TestExamples(t *testing.T) {
 					assert.True(t, strings.Contains(publicHostName, "."))
 				},
 			})
+
+		test.StackName = "awsjavawebserverstack"
+		test.ProviderTraceDir = "rr"
+		test.SkipRefresh = true
+		test.SkipEmptyPreviewUpdate = true
+		test.SkipExportImport = false
+		test.SkipUpdate = false
 		integration.ProgramTest(t, &test)
 	})
 
