@@ -84,7 +84,7 @@ func (dg *defaultsGen) builderExpr(
 		// TODO[pulumi/pulumi#9744]: Codegen for secret
 		// properties forgets the secret flag
 		if prop.Secret {
-			fmt.Printf("WARN: secret propety %s (%s) does not have an Output type\n",
+			fmt.Printf("WARN: secret property %s (%s) does not have an Output type\n",
 				prop.Name, propContext)
 		}
 		builderTransformCode = ""
