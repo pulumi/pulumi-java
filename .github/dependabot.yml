@@ -8,15 +8,21 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    labels:
+      - "impact/no-changelog-required"
 
   # Maintain dependencies for gradle
   - package-ecosystem: "gradle"
     directory: "/sdk/java"
     schedule:
       interval: "daily"
+    labels:
+      - "impact/no-changelog-required"
 
   # Maintain dependencies for gomod
   - package-ecosystem: "gomod"
     directory: "/pkg"
     schedule:
       interval: "daily"
+    labels:
+      - "impact/no-changelog-required"
