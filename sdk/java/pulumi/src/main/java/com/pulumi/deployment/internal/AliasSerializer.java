@@ -49,12 +49,19 @@ class AliasSerializer {
             .build();
     }
 
+    private static Output<String> resolveParentUrn(Alias alias) {
+        if (alias.getParent().isPresent()) {
+            return alias.getParent().get().urn();
+        }
+        return alias.getParentUrn().orElse(Output.of(""));
+    }
+
     private static Output<pulumirpc.AliasOuterClass.Alias> serializeSpecAlias(Alias alias) {
         final var nameOutput = alias.getName().orElse(Output.of(""));
         final var typeOutput = alias.getType().orElse(Output.of(""));
         final var stackOutput = alias.getStack().orElse(Output.of(""));
         final var projectOutput = alias.getProject().orElse(Output.of(""));
-        final var parentUrnOutput = alias.getParentUrn().orElse(Output.of(""));
+        final var parentUrnOutput = resolveParentUrn(alias);
         return Output.tuple(nameOutput, typeOutput, stackOutput, projectOutput, parentUrnOutput)
             .applyValue(t -> {
                     final var name = t.t1;
