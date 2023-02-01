@@ -921,16 +921,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                         allDirectDependencyUrns -> propertyToDirectDependencyUrnsFuture.thenCompose(
                                                                                                 propertyToDirectDependencyUrns -> {
 
-                                                                                                    // Wait for all aliases. Note that we use 'res.aliases' instead of 'options.aliases' as
-                                                                                                    // the former has been processed in the Resource constructor prior to calling
-                                                                                                    // 'registerResource' - both adding new inherited aliases and simplifying aliases down to URNs.
-                                                                                                    var aliasesFuture = CompletableFutures.allOf(
-                                                                                                                    Internal.from(res).getAliases().stream()
-                                                                                                                            .map(alias -> Internal.of(alias).getValueOrDefault(""))
-                                                                                                                            .collect(toSet()))
-                                                                                                            .thenApply(completed -> completed.stream()
-                                                                                                                    .filter(Strings::isNonEmptyOrNull)
-                                                                                                                    .collect(toImmutableSet())); // the Set will make sure the aliases de-duplicated
+                                                                                                    // Wait for all aliases.
+                                                                                                    var aliasesFuture = prepareAliases(options);
+
 
                                                                                                     return aliasesFuture.thenApply(aliases -> new PrepareResult(
                                                                                                             serializedProps,
@@ -939,7 +932,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                             providerRefs,
                                                                                                             allDirectDependencyUrns,
                                                                                                             propertyToDirectDependencyUrns,
-                                                                                                            aliases.asList()
+                                                                                                            aliases
                                                                                                     ));
                                                                                                 })
                                                                                 );
@@ -952,6 +945,66 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 )
                         );
                     });
+        }
+
+        private CompletableFuture<ImmutableList<Alias>> prepareAliases(ResourceOptions resourceOptions) {
+            var aliasesAsOutputs = Output.all(resourceOptions.getAliases());
+            var aliasesFuture = Internal.of(aliasesAsOutputs).getValueOrDefault(List.of());
+            return aliasesFuture.thenApply(this::mapAliases);
+        }
+
+        private String resolve(Optional<Output<String>> optionalValue) {
+            var value = optionalValue.orElse(Output.of(""));
+            return Internal.of(value).getValueOrDefault("").join();
+        }
+
+        private String resolve(Output<String> value) {
+            return Internal.of(value).getValueOrDefault("").join();
+        }
+
+        private Optional<String> resolveParentUrn(com.pulumi.core.Alias alias) {
+            if (alias.getParent().isPresent()) {
+                var parent = alias.getParent().get();
+                var parentUrn = resolve(parent.urn());
+                return Optional.of(parentUrn);
+            }
+
+            if (alias.getParentUrn().isPresent()) {
+                var parentUrn = resolve(alias.getParentUrn().get());
+                return Optional.of(parentUrn);
+            }
+
+            return Optional.empty();
+        }
+
+        private ImmutableList<Alias> mapAliases(List<com.pulumi.core.Alias> aliases) {
+            var engineAliases = new ArrayList<Alias>();
+            for (var alias : aliases) {
+                if (alias.getUrn().isPresent()) {
+                    var aliasAsUrn = alias.getUrn().get();
+                    engineAliases.add(Alias.newBuilder().setUrn(aliasAsUrn).build());
+                    continue;
+                }
+
+                var aliasSpecBuilder = Alias.Spec.newBuilder();
+                aliasSpecBuilder.setName(resolve(alias.getName()));
+                aliasSpecBuilder.setType(resolve(alias.getType()));
+                aliasSpecBuilder.setProject(resolve(alias.getProject()));
+                aliasSpecBuilder.setStack(resolve(alias.getStack()));
+                if (alias.hasNoParent()) {
+                    aliasSpecBuilder.setNoParent(true);
+                } else {
+                    var parentUrn = resolveParentUrn(alias);
+                    aliasSpecBuilder.setNoParent(false);
+                    parentUrn.ifPresent(aliasSpecBuilder::setParentUrn);
+                }
+
+                var engineAliasSpec = aliasSpecBuilder.build();
+                var engineAlias = Alias.newBuilder().setSpec(engineAliasSpec).build();
+                engineAliases.add(engineAlias);
+            }
+
+            return ImmutableList.copyOf(engineAliases);
         }
 
         private CompletableFuture<List<Resource>> gatherExplicitDependenciesAsync(Output<List<Resource>> resources) {
@@ -1054,7 +1107,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 ImmutableMap<String, String> providerRefs,
                 ImmutableSet<String> allDirectDependencyUrns,
                 ImmutableMap<String, ImmutableSet<String>> propertyToDirectDependencyUrns,
-                ImmutableList<String> aliases
+                ImmutableList<Alias> aliases
         ) {
             this.serializedProps = Objects.requireNonNull(serializedProps);
             this.parentUrn = Objects.requireNonNull(parentUrn);
@@ -1062,11 +1115,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             this.providerRefs = Objects.requireNonNull(providerRefs);
             this.allDirectDependencyUrns = Objects.requireNonNull(allDirectDependencyUrns);
             this.propertyToDirectDependencyUrns = Objects.requireNonNull(propertyToDirectDependencyUrns);
-            ImmutableList.Builder aliasBuilder = ImmutableList.builder();
-            for (var item : Objects.requireNonNull(aliases)) {
-                aliasBuilder.add(Alias.newBuilder().setUrn(item).build());
-            }
-            this.aliases = aliasBuilder.build();
+            this.aliases = Objects.requireNonNull(aliases);
         }
     }
 

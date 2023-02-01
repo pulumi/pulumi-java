@@ -56,8 +56,6 @@ public abstract class Resource {
 
     private final List<ResourceTransformation> transformations;
 
-    private final List<Output<String>> aliases;
-
     private final Map<String, ProviderResource> providers;
 
     protected final Set<Resource> childResources = Collections.synchronizedSet(new HashSet<>());
@@ -109,7 +107,6 @@ public abstract class Resource {
             this.name = "";
             this.protect = false;
             this.transformations = List.of();
-            this.aliases = List.of();
             this.providers = Map.of();
             this.provider = null;
             this.version = null;
@@ -226,10 +223,7 @@ public abstract class Resource {
         this.protect = options.protect;
         this.provider = custom ? options.provider : null;
         this.version = options.version;
-
         this.providers = Map.copyOf(thisProviders);
-
-        this.aliases = computeAliases(name, type, options);
 
         // Finish initialisation with reflection asynchronously
         DeploymentInternal.getInstance().readOrRegisterResource(
@@ -362,133 +356,6 @@ public abstract class Resource {
         return result.build();
     }
 
-    private static List<Output<String>> computeAliases(String name, String type, ResourceOptions options) {
-        // Prepare aliases inherited from the parent
-        var parentAliases = Optional.ofNullable(options.parent)
-                .stream()
-                .flatMap(parent ->
-                        Optional.ofNullable(parent.aliases)
-                                .orElse(emptyList())
-                                .stream()
-                                .map(alias -> urnInheritedChildAlias(name, parent.pulumiResourceName(), alias, type))
-                )
-                .collect(toList());
-
-        // Collapse any Aliases down to URNs.
-        return Optional.ofNullable(mergeNullableList(options.aliases, parentAliases))
-                .orElse(emptyList())
-                .stream()
-                .map(alias -> collapseAliasToUrn(alias, name, type, options.parent))
-                .collect(toList());
-    }
-
-    private static Output<String> collapseAliasToUrn(
-            Output<Alias> alias,
-            String defaultName,
-            String defaultType,
-            @Nullable Resource defaultParent
-    ) {
-        return alias.apply(a -> {
-            if (a.getUrn().isPresent()) {
-                return Output.of(a.getUrn().get());
-            }
-
-            var name = a.getName().orElse(Output.of(defaultName));
-            var type = a.getType().orElse(Output.of(defaultType));
-            var project = a.getProject().orElse(Output.of(Deployment.getInstance().getProjectName()));
-            var stack = a.getStack().orElse(Output.of(Deployment.getInstance().getStackName()));
-
-
-            var parentCount =
-                    (a.getParent().isPresent() ? 1 : 0) +
-                            (a.getParentUrn().isPresent() ? 1 : 0) +
-                            (a.hasNoParent() ? 1 : 0);
-            // TODO: we could probably move this to regression tests of Alias
-            if (parentCount >= 2) {
-                throw new IllegalArgumentException(
-                        "Only specify one of 'Alias#parent', 'Alias#parentUrn' or 'Alias#noParent' in an 'Alias'");
-            }
-
-            var parentInfo = getParentInfo(defaultParent, a);
-            var parentUrn = Optional.ofNullable(parentInfo.parent)
-                    .map(p -> p.urn())
-                    .or(() -> Optional.ofNullable(parentInfo.parentUrn));
-
-
-            return Urn.create(stack, project, parentUrn, type, name);
-        });
-    }
-
-    private static class ParentInfo {
-        @Nullable
-        public final Resource parent;
-        @Nullable
-        public final Output<String> parentUrn;
-
-        private ParentInfo(@Nullable Resource parent, @Nullable Output<String> parentUrn) {
-            this.parent = parent;
-            this.parentUrn = parentUrn;
-        }
-    }
-
-    private static ParentInfo getParentInfo(@Nullable Resource defaultParent, Alias alias) {
-        requireNonNull(alias);
-        if (alias.getParent().isPresent())
-            return new ParentInfo(alias.getParent().get(), null);
-
-        if (alias.getParentUrn().isPresent())
-            return new ParentInfo(null, alias.getParentUrn().get());
-
-        if (alias.hasNoParent())
-            return new ParentInfo(null, null);
-
-        return new ParentInfo(defaultParent, null);
-    }
-
-    /**
-     * Computes the alias that should be applied to a child
-     * based on an alias applied to its parent. This may involve changing the name of the
-     * resource in cases where the resource has a named derived from the name of the parent,
-     * and the parent name changed.
-     */
-    private static Output<Alias> urnInheritedChildAlias(
-            String childName, String parentName, Output<String> parentAlias, String childType
-    ) {
-        Objects.requireNonNull(childName);
-        Objects.requireNonNull(parentName);
-        Objects.requireNonNull(parentAlias);
-        Objects.requireNonNull(childType);
-
-        // If the child name has the parent name as a prefix, then we make the assumption that
-        // it was constructed from the convention of using '{name}-details' as the name of the
-        // child resource.  To ensure this is aliased correctly, we must then also replace the
-        // parent aliases name in the prefix of the child resource name.
-        //
-        // For example:
-        // * name: "newapp-function"
-        // * options.parent.__name: "newapp"
-        // * parentAlias: "urn:pulumi:stackname::projectname::awsx:ec2:Vpc::app"
-        // * parentAliasName: "app"
-        // * aliasName: "app-function"
-        // * childAlias: "urn:pulumi:stackname::projectname::aws:s3/bucket:Bucket::app-function"
-        var aliasName = Output.of(childName);
-        if (childName.startsWith(parentName)) {
-            aliasName = parentAlias.applyValue(
-                    (String parentAliasUrn) -> parentAliasUrn.substring(
-                            parentAliasUrn.lastIndexOf("::") + 2) + childName.substring(parentName.length()));
-        }
-
-        var urn = Urn.create(
-                Output.of(Deployment.getInstance().getStackName()),
-                Output.of(Deployment.getInstance().getProjectName()),
-                Optional.of(parentAlias),
-                Output.of(childType),
-                aliasName
-        );
-
-        return urn.applyValue(Alias::withUrn);
-    }
-
     @InternalUse
     @ParametersAreNonnullByDefault
     public static class ResourceInternal {
@@ -501,14 +368,6 @@ public abstract class Resource {
 
         public static ResourceInternal from(Resource r) {
             return new ResourceInternal(r);
-        }
-
-        /**
-         * A list of aliases applied to this resource.
-         */
-        @InternalUse
-        public List<Output<String>> getAliases() {
-            return this.resource.aliases;
         }
 
         @InternalUse
