@@ -922,8 +922,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                                                                                 propertyToDirectDependencyUrns -> {
 
                                                                                                     // Wait for all aliases.
-                                                                                                    var aliasesFuture = prepareAliases(options);
-
+                                                                                                    var aliasesFuture = AliasSerializer.serializeAliases(options.getAliases());
 
                                                                                                     return aliasesFuture.thenApply(aliases -> new PrepareResult(
                                                                                                             serializedProps,
@@ -945,66 +944,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 )
                         );
                     });
-        }
-
-        private CompletableFuture<ImmutableList<Alias>> prepareAliases(ResourceOptions resourceOptions) {
-            var aliasesAsOutputs = Output.all(resourceOptions.getAliases());
-            var aliasesFuture = Internal.of(aliasesAsOutputs).getValueOrDefault(List.of());
-            return aliasesFuture.thenApply(this::mapAliases);
-        }
-
-        private String resolve(Optional<Output<String>> optionalValue) {
-            var value = optionalValue.orElse(Output.of(""));
-            return Internal.of(value).getValueOrDefault("").join();
-        }
-
-        private String resolve(Output<String> value) {
-            return Internal.of(value).getValueOrDefault("").join();
-        }
-
-        private Optional<String> resolveParentUrn(com.pulumi.core.Alias alias) {
-            if (alias.getParent().isPresent()) {
-                var parent = alias.getParent().get();
-                var parentUrn = resolve(parent.urn());
-                return Optional.of(parentUrn);
-            }
-
-            if (alias.getParentUrn().isPresent()) {
-                var parentUrn = resolve(alias.getParentUrn().get());
-                return Optional.of(parentUrn);
-            }
-
-            return Optional.empty();
-        }
-
-        private ImmutableList<Alias> mapAliases(List<com.pulumi.core.Alias> aliases) {
-            var engineAliases = new ArrayList<Alias>();
-            for (var alias : aliases) {
-                if (alias.getUrn().isPresent()) {
-                    var aliasAsUrn = alias.getUrn().get();
-                    engineAliases.add(Alias.newBuilder().setUrn(aliasAsUrn).build());
-                    continue;
-                }
-
-                var aliasSpecBuilder = Alias.Spec.newBuilder();
-                aliasSpecBuilder.setName(resolve(alias.getName()));
-                aliasSpecBuilder.setType(resolve(alias.getType()));
-                aliasSpecBuilder.setProject(resolve(alias.getProject()));
-                aliasSpecBuilder.setStack(resolve(alias.getStack()));
-                if (alias.hasNoParent()) {
-                    aliasSpecBuilder.setNoParent(true);
-                } else {
-                    var parentUrn = resolveParentUrn(alias);
-                    aliasSpecBuilder.setNoParent(false);
-                    parentUrn.ifPresent(aliasSpecBuilder::setParentUrn);
-                }
-
-                var engineAliasSpec = aliasSpecBuilder.build();
-                var engineAlias = Alias.newBuilder().setSpec(engineAliasSpec).build();
-                engineAliases.add(engineAlias);
-            }
-
-            return ImmutableList.copyOf(engineAliases);
         }
 
         private CompletableFuture<List<Resource>> gatherExplicitDependenciesAsync(Output<List<Resource>> resources) {
