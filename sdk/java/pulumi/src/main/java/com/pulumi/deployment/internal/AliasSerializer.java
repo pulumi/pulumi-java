@@ -1,6 +1,9 @@
+// Copyright 2016-2023, Pulumi Corporation.  All rights reserved.
+
 package com.pulumi.deployment.internal;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
@@ -18,42 +21,25 @@ class AliasSerializer {
                                     .collect(Collectors.toList())))
             .applyValue(ImmutableList::copyOf);
 
-        // NOTE: any OutputData extra information like secret-ness or dependencies accumulated in the process of
-        // serializing the aliases is discarded here by only considering the value of the future; it might be a small
-        // refinement to take it into account.
+        // NOTE: following other Pulumi SDKs, any OutputData extras like dependencies accumulated in the process of
+        // serializing the aliases are discarded here by only considering the value.
         return Internal.of(o).getValueOrDefault(ImmutableList.of());
     }
 
+    // Serialize an Alias to the protobuf model. The result is an Output since some of the Alias fields are typed as
+    // Output.
+    //
+    // Protobuf model of alias definitions expects the grammar from [alias.proto]. Empty strings are treated the same as
+    // an absent value.
+    //
+    // [alias.proto]: https://github.com/pulumi/pulumi/blob/master/proto/pulumi/alias.proto
     private static Output<pulumirpc.AliasOuterClass.Alias> serializeAlias(Alias alias) {
-        // Case 1: alias was created as Alias.noParent().
-        if (alias.hasNoParent()) {
-            return Output.of(serializeNoParentAlias());
-        }
-        // Case 2: alias was created as Alias.withUrn(String urn).
+        // Case 1: alias was created as Alias.withUrn(String urn):
         if (alias.getUrn().isPresent()) {
             return Output.of(serializeUrnAlias(alias.getUrn().get()));
         }
-        // Case 3: alias is a more complex Spec.
+        // Case 2: alias was created with a builder:
         return serializeSpecAlias(alias);
-    }
-
-    private static pulumirpc.AliasOuterClass.Alias serializeNoParentAlias() {
-        return pulumirpc.AliasOuterClass.Alias.newBuilder()
-            .setSpec(pulumirpc.AliasOuterClass.Alias.Spec.newBuilder().setNoParent(true).build())
-            .build();
-    }
-
-    private static pulumirpc.AliasOuterClass.Alias serializeUrnAlias(String urn) {
-        return pulumirpc.AliasOuterClass.Alias.newBuilder()
-            .setUrn(urn)
-            .build();
-    }
-
-    private static Output<String> resolveParentUrn(Alias alias) {
-        if (alias.getParent().isPresent()) {
-            return alias.getParent().get().urn();
-        }
-        return alias.getParentUrn().orElse(Output.of(""));
     }
 
     private static Output<pulumirpc.AliasOuterClass.Alias> serializeSpecAlias(Alias alias) {
@@ -75,9 +61,27 @@ class AliasSerializer {
                                  .setType(type)
                                  .setStack(stack)
                                  .setProject(project)
-                                 .setParentUrn(parentUrn)
+                                 .setParentUrn(parentUrn.orElse(""))
+                                 .setNoParent(parentUrn.isEmpty())
                                  .build())
                         .build();
             });
+    }
+
+    private static pulumirpc.AliasOuterClass.Alias serializeUrnAlias(String urn) {
+        return pulumirpc.AliasOuterClass.Alias.newBuilder()
+            .setUrn(urn)
+            .build();
+    }
+
+    // Returns an empty optional for the noParent case, or an URN for the parentUrn case.
+    private static Output<Optional<String>> resolveParentUrn(Alias alias) {
+        if (alias.hasNoParent()) {
+            return Output.of(Optional.empty());
+        }
+        if (alias.getParent().isPresent()) {
+            return alias.getParent().get().urn().applyValue(Optional::of);
+        }
+        return alias.getParentUrn().orElse(Output.of("")).applyValue(Optional::of);
     }
 }
