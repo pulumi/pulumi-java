@@ -55,15 +55,21 @@ class AliasSerializer {
                     final var stack = t.t3;
                     final var project = t.t4;
                     final var parentUrn = t.t5;
+
+                    final var aliasSpecBuilder = pulumirpc.AliasOuterClass.Alias.Spec.newBuilder()
+                        .setName(name)
+                        .setType(type)
+                        .setStack(stack)
+                        .setProject(project);
+
+                    if (parentUrn.isEmpty()) {
+                        aliasSpecBuilder.setNoParent(true);
+                    } else {
+                        aliasSpecBuilder.setParentUrn(parentUrn.orElse(""));
+                    }
+
                     return pulumirpc.AliasOuterClass.Alias.newBuilder()
-                        .setSpec(pulumirpc.AliasOuterClass.Alias.Spec.newBuilder()
-                                 .setName(name)
-                                 .setType(type)
-                                 .setStack(stack)
-                                 .setProject(project)
-                                 .setParentUrn(parentUrn.orElse(""))
-                                 .setNoParent(parentUrn.isEmpty())
-                                 .build())
+                        .setSpec(aliasSpecBuilder.build())
                         .build();
             });
     }
