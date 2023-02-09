@@ -16,10 +16,6 @@ type classFileContext struct {
 	className names.Ident
 }
 
-func (ctx *classFileContext) classFQN() names.FQN {
-	return ctx.pkg.Dot(ctx.className)
-}
-
 func (ctx *classFileContext) ref(name names.FQN) string {
 	return ctx.imports.Ref(name)
 }
@@ -29,7 +25,6 @@ func genClassFile(
 	className names.Ident,
 	generator func(ctx *classFileContext) error,
 ) (string, error) {
-
 	imports := names.NewImports(pkg, className)
 	var buf bytes.Buffer
 	ctx := &classFileContext{&buf, imports, pkg, className}

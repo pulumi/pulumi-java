@@ -14,6 +14,11 @@ linters:
     - misspell
     - nakedret
     - unconvert
-  disable:
-    - staticcheck # Disabled due to OOM errors in golangci-lint@v1.18.0
-    - megacheck # Disabled due to OOM errors in golangci-lint@v1.18.0
+
+issues:
+  exclude:
+    # https://github.com/pulumi/pulumi/issues/9469
+    - 'Name is deprecated: Name returns the variable or declaration name of the resource'
+
+    # https://github.com/pulumi/pulumi/issues/11870
+    - 'strings.Title has been deprecated'

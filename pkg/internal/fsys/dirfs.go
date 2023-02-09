@@ -45,10 +45,7 @@ func (o osDirFS) Stat(name string) (fs.FileInfo, error) {
 
 func (o osDirFS) HasParent() bool {
 	pDir := filepath.Dir(o.dir)
-	if pDir == o.dir {
-		return false
-	}
-	return true
+	return pDir != o.dir
 }
 
 func (o osDirFS) Parent() ParentFS {
