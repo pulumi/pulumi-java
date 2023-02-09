@@ -26,6 +26,7 @@ env:
   GOOGLE_CI_WORKLOAD_IDENTITY_POOL: pulumi-ci
   GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER: pulumi-ci
   GOOGLE_PROJECT_NUMBER: 895284651812
+  GOLANGCI_LINT_VERSION: v1.51
 
 jobs:
 
@@ -275,7 +276,6 @@ jobs:
   go-lint:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    container: golangci/golangci-lint:latest
     name: Lint ${{ matrix.directory }}
     strategy:
       matrix:
@@ -286,9 +286,16 @@ jobs:
         with:
           ref: ${{ env.PR_COMMIT_SHA }}
           submodules: recursive
-      - name: Lint ${{ matrix.directory }}
-        run: |
-          cd ${{ matrix.directory }} && golangci-lint run -c ../.golangci.yml
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: stable
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v3
+        with:
+          version: ${{ env.GOLANGCI_LINT_VERSION }}
+          working-directory: ${{ matrix.directory }}
+          args: --config ../.golangci.yml ./...
 
   test_integrations:
     runs-on: ubuntu-latest
