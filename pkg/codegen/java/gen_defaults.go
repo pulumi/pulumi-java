@@ -34,7 +34,8 @@ type defaultsGen struct {
 func (dg *defaultsGen) configExpr(
 	propContext string,
 	configProp *schema.Property,
-	targetType TypeShape) (string, error) {
+	targetType TypeShape,
+) (string, error) {
 	return dg.builderExpr(propContext, configProp, targetType, "config", "")
 }
 
@@ -46,7 +47,8 @@ func (dg *defaultsGen) defaultValueExpr(
 	propContext string,
 	prop *schema.Property,
 	targetType TypeShape,
-	arg string) (string, error) {
+	arg string,
+) (string, error) {
 	return dg.builderExpr(propContext, prop, targetType, "", arg)
 }
 
@@ -65,8 +67,8 @@ func (dg *defaultsGen) builderExpr(
 	prop *schema.Property,
 	targetType TypeShape,
 	config string,
-	arg string) (string, error) {
-
+	arg string,
+) (string, error) {
 	if code, ok := dg.builderExprSpecialCase(prop, targetType, config, arg); ok {
 		return code, nil
 	}
@@ -137,8 +139,8 @@ func (dg *defaultsGen) builderExprSpecialCase(
 	prop *schema.Property,
 	targetType TypeShape,
 	config string,
-	arg string) (string, bool) {
-
+	arg string,
+) (string, bool) {
 	// No defaults, no null check, already have an argument of wanted type, simply pass it on.
 	if !prop.IsRequired() && arg != "" && prop.DefaultValue == nil && prop.ConstValue == nil {
 		return arg, true
@@ -162,11 +164,11 @@ func (dg *defaultsGen) builderExprWithSimpleType(
 	targetType TypeShape,
 	config string,
 	arg string,
-	builderTransformCode string) (string, error) {
-
+	builderTransformCode string,
+) (string, error) {
 	var buf bytes.Buffer
 
-	fmt.Fprintf(&buf, dg.ctx.ref(names.Codegen))
+	fmt.Fprint(&buf, dg.ctx.ref(names.Codegen))
 	propLiteral := dg.quoteJavaStringLiteral(prop.Name)
 
 	isObject := false
@@ -272,8 +274,8 @@ func (dg *defaultsGen) detectEnumTypes(prop *schema.Property) map[string]*schema
 func (dg *defaultsGen) enumReference(
 	ctx *classFileContext,
 	enumType *schema.EnumType,
-	dv *schema.DefaultValue) (string, error) {
-
+	dv *schema.DefaultValue,
+) (string, error) {
 	enumFQN := dg.mod.typeStringForEnumType(enumType).Type
 	enumName := enumFQN.BaseIdent().String()
 

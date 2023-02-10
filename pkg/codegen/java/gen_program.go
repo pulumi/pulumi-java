@@ -76,7 +76,6 @@ func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpre
 			} else {
 				g.Fgen(w, g.escapeString(lit.Value.AsString(), false, expressions))
 			}
-
 		} else {
 			args = append(args, expr)
 			g.Fgen(w, g.escapeString("%s", false, expressions))
@@ -128,9 +127,9 @@ func containsFunctionCall(functionName string, nodes []pcl.Node) bool {
 
 func hasIterableResources(nodes []pcl.Node) bool {
 	for _, node := range nodes {
-		switch node.(type) {
+		switch node := node.(type) {
 		case *pcl.Resource:
-			resource := node.(*pcl.Resource)
+			resource := node
 			if resource.Options != nil && resource.Options.Range != nil {
 				return true
 			}
@@ -335,7 +334,7 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 		if err != nil {
 			return fmt.Errorf("could not write output program: %w", err)
 		}
-		err = ioutil.WriteFile(outPath, data, 0600)
+		err = ioutil.WriteFile(outPath, data, 0o600)
 		if err != nil {
 			return fmt.Errorf("could not write output program: %w", err)
 		}
@@ -351,6 +350,7 @@ func (g *generator) genImport(w io.Writer, qualifiedName string) {
 func (g *generator) genIndent(w io.Writer) {
 	g.Fgenf(w, "%s", g.Indent)
 }
+
 func (g *generator) genNewline(w io.Writer) {
 	g.Fgen(w, "\n")
 }
@@ -446,13 +446,11 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 			objectProperty, found := objectType.Property(innerObjectKey)
 			if found {
 				objectPropertyType := codegen.UnwrapType(objectProperty.Type)
-				switch objectPropertyType.(type) {
+				switch objectPropertyType := objectPropertyType.(type) {
 				case *schema.ObjectType:
-					innerObjectType := objectPropertyType.(*schema.ObjectType)
+					innerObjectType := objectPropertyType
 					// recurse into nested object
-					for _, importDef := range collectObjectImports(innerObject, innerObjectType) {
-						imports = append(imports, importDef)
-					}
+					imports = append(imports, collectObjectImports(innerObject, innerObjectType)...)
 				}
 			}
 		}
@@ -464,9 +462,9 @@ func collectObjectImports(object *model.ObjectConsExpression, objectType *schema
 // reduces Array<Input<T>> to just Array<T>
 func reduceInputTypeFromArray(arrayType *schema.ArrayType) *schema.ArrayType {
 	elementType := arrayType.ElementType
-	switch elementType.(type) {
+	switch elementType := elementType.(type) {
 	case *schema.InputType:
-		inputType := elementType.(*schema.InputType)
+		inputType := elementType
 		return &schema.ArrayType{ElementType: inputType.ElementType}
 	default:
 		// return as-is
@@ -493,9 +491,7 @@ func collectResourceImports(resource *pcl.Resource) []string {
 				switch inputProperty.Value.(type) {
 				case *model.ObjectConsExpression:
 					object := inputProperty.Value.(*model.ObjectConsExpression)
-					for _, importDef := range collectObjectImports(object, objectType) {
-						imports = append(imports, importDef)
-					}
+					imports = append(imports, collectObjectImports(object, objectType)...)
 				}
 			case *schema.ArrayType:
 				arrayType := reduceInputTypeFromArray(inputType.(*schema.ArrayType))
@@ -510,12 +506,10 @@ func collectResourceImports(resource *pcl.Resource) []string {
 					case *model.TupleConsExpression:
 						objects := inputProperty.Value.(*model.TupleConsExpression)
 						for _, arrayObject := range objects.Expressions {
-							switch arrayObject.(type) {
+							switch arrayObject := arrayObject.(type) {
 							case *model.ObjectConsExpression:
-								object := arrayObject.(*model.ObjectConsExpression)
-								for _, importDef := range collectObjectImports(object, arrayInnerTypeAsObject) {
-									imports = append(imports, importDef)
-								}
+								object := arrayObject
+								imports = append(imports, collectObjectImports(object, arrayInnerTypeAsObject)...)
 							}
 						}
 					}
@@ -553,9 +547,9 @@ func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallE
 		functionSchema, foundFunction := g.findFunctionSchema(functionCall.Args[0])
 		if foundFunction {
 			invokeArgumentsExpr := functionCall.Args[1]
-			switch invokeArgumentsExpr.(type) {
+			switch invokeArgumentsExpr := invokeArgumentsExpr.(type) {
 			case *model.ObjectConsExpression:
-				argumentsExpr := invokeArgumentsExpr.(*model.ObjectConsExpression)
+				argumentsExpr := invokeArgumentsExpr
 				if functionSchema.Inputs == nil {
 					g.warnf(functionCall.Args[1].SyntaxNode().Range().Ptr(),
 						"cannot determine invoke argument type: the schema for %q has no inputs",
@@ -563,9 +557,7 @@ func (g *generator) collectFunctionCallImports(functionCall *model.FunctionCallE
 					return imports
 				}
 				argumentExprType := functionSchema.Inputs.InputShape
-				for _, importDef := range collectObjectImports(argumentsExpr, argumentExprType) {
-					imports = append(imports, importDef)
-				}
+				imports = append(imports, collectObjectImports(argumentsExpr, argumentExprType)...)
 			}
 		}
 	}
@@ -593,15 +585,13 @@ func removeDuplicates(inputs []string) []string {
 func (g *generator) collectImports(nodes []pcl.Node) []string {
 	imports := make([]string, 0)
 	for _, node := range nodes {
-		switch node.(type) {
+		switch node := node.(type) {
 		case *pcl.Resource:
 			// collect resource imports
-			resource := node.(*pcl.Resource)
-			for _, importDef := range collectResourceImports(resource) {
-				imports = append(imports, importDef)
-			}
+			resource := node
+			imports = append(imports, collectResourceImports(resource)...)
 		case *pcl.LocalVariable:
-			localVariable := node.(*pcl.LocalVariable)
+			localVariable := node
 			switch localVariable.Definition.Value.(type) {
 			case *model.FunctionCallExpression:
 				// collect function invoke imports
@@ -609,9 +599,7 @@ func (g *generator) collectImports(nodes []pcl.Node) []string {
 				functionCall := localVariable.Definition.Value.(*model.FunctionCallExpression)
 				_, isInvokeCall := g.isFunctionInvoke(localVariable)
 				if isInvokeCall {
-					for _, importDef := range g.collectFunctionCallImports(functionCall) {
-						imports = append(imports, importDef)
-					}
+					imports = append(imports, g.collectFunctionCallImports(functionCall)...)
 				}
 			}
 		}
@@ -767,9 +755,9 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 // in which case an import should be emitted
 func requiresImportingCustomResourceOptions(programNodes []pcl.Node) bool {
 	for _, node := range programNodes {
-		switch node.(type) {
+		switch node := node.(type) {
 		case *pcl.Resource:
-			resource := node.(*pcl.Resource)
+			resource := node
 			if hasCustomResourceOptions(resource) {
 				return true
 			}
@@ -909,9 +897,9 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 				switch funcCall.Name {
 				case pcl.IntrinsicConvert:
 					firstArg := funcCall.Args[0]
-					switch firstArg.(type) {
+					switch firstArg := firstArg.(type) {
 					case *model.ScopeTraversalExpression:
-						traversalExpr := firstArg.(*model.ScopeTraversalExpression)
+						traversalExpr := firstArg
 						if len(traversalExpr.Parts) == 2 {
 							// Meaning here we have {root}.{part} expression which the most common
 							// check whether {root} is actually a variable name that holds the result
@@ -993,9 +981,9 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 
 func (g *generator) isFunctionInvoke(localVariable *pcl.LocalVariable) (*schema.Function, bool) {
 	value := localVariable.Definition.Value
-	switch value.(type) {
+	switch value := value.(type) {
 	case *model.FunctionCallExpression:
-		call := value.(*model.FunctionCallExpression)
+		call := value
 		switch call.Name {
 		case pcl.Invoke:
 			functionSchema, foundFunction := g.findFunctionSchema(call.Args[0])
@@ -1015,7 +1003,7 @@ func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariab
 	if isInvokeCall {
 		g.functionInvokes[variableName] = functionSchema
 		// TODO: lowerExpression isn't what we expect: function call should extract outputs into .apply(...) calls
-		//functionDefinitionWithApplies := g.lowerExpression(functionDefinition, localVariable.Definition.Value.Type())
+		// functionDefinitionWithApplies := g.lowerExpression(functionDefinition, localVariable.Definition.Value.Type())
 		g.Fgenf(w, "final var %s = %v;\n", variableName, localVariable.Definition.Value)
 	} else {
 		variable := localVariable.Definition.Value

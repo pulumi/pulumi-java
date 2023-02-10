@@ -280,9 +280,9 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		if foundFunction {
 			g.Fprintf(w, "%s(", fullyQualifiedName)
 			invokeArgumentsExpr := expr.Args[1]
-			switch invokeArgumentsExpr.(type) {
+			switch invokeArgumentsExpr := invokeArgumentsExpr.(type) {
 			case *model.ObjectConsExpression:
-				argumentsExpr := invokeArgumentsExpr.(*model.ObjectConsExpression)
+				argumentsExpr := invokeArgumentsExpr
 				g.genObjectConsExpressionWithTypeName(w, argumentsExpr, functionSchema.Inputs)
 			}
 			g.Fprint(w, ")")
@@ -291,13 +291,13 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fprintf(w, "%s(", fullyQualifiedName)
 		isOutput, outArgs, _ := pcl.RecognizeOutputVersionedInvoke(expr)
 		if isOutput {
-			//typeName := g.argumentTypeNameWithSuffix(expr, outArgsTy, "Args")
+			// typeName := g.argumentTypeNameWithSuffix(expr, outArgsTy, "Args")
 			g.genObjectConsExpressionWithTypeName(w, outArgs, &schema.MapType{ElementType: schema.StringType})
 		} else {
 			invokeArgumentsExpr := expr.Args[1]
-			switch invokeArgumentsExpr.(type) {
+			switch invokeArgumentsExpr := invokeArgumentsExpr.(type) {
 			case *model.ObjectConsExpression:
-				argumentsExpr := invokeArgumentsExpr.(*model.ObjectConsExpression)
+				argumentsExpr := invokeArgumentsExpr
 				g.genObjectConsExpressionWithTypeName(w, argumentsExpr, &schema.MapType{ElementType: schema.StringType})
 			}
 		}
@@ -467,39 +467,6 @@ func (g *generator) GenObjectConsExpression(w io.Writer, expr *model.ObjectConsE
 	g.genObjectConsExpression(w, expr, g.currentResourcePropertyType)
 }
 
-func (g *generator) argumentTypeName(expr model.Expression, destType model.Type) string {
-	suffix := "Args"
-	return g.argumentTypeNameWithSuffix(expr, destType, suffix)
-}
-
-func (g *generator) toSchemaType(destType model.Type) (schema.Type, bool) {
-	schemaType, ok := pcl.GetSchemaForType(destType)
-	if !ok {
-		return nil, false
-	}
-	return codegen.UnwrapType(schemaType), true
-}
-
-func (g *generator) argumentTypeNameWithSuffix(expr model.Expression, destType model.Type, suffix string) string {
-	schemaType, ok := g.toSchemaType(destType)
-	if !ok {
-		// TODO: why is this always returned?
-		return ""
-	}
-
-	objType, ok := schemaType.(*schema.ObjectType)
-	if !ok {
-		return ""
-	}
-
-	token := objType.Token
-	tokenRange := expr.SyntaxNode().Range()
-	_, _, member, _ := pcl.DecomposeToken(token, tokenRange)
-	member = member + suffix
-
-	return names.Title(member)
-}
-
 func (g *generator) genObjectConsExpression(w io.Writer, expr *model.ObjectConsExpression, destType schema.Type) {
 	if len(expr.Items) == 0 {
 		return
@@ -510,9 +477,9 @@ func (g *generator) genObjectConsExpression(w io.Writer, expr *model.ObjectConsE
 
 // Returns the name of the type
 func typeName(schemaType schema.Type) string {
-	switch schemaType.(type) {
+	switch schemaType := schemaType.(type) {
 	case *schema.ObjectType:
-		objectType := schemaType.(*schema.ObjectType)
+		objectType := schemaType
 		fullyQualifiedTypeName := objectType.Token
 		nameParts := strings.Split(fullyQualifiedTypeName, ":")
 		return names.Title(nameParts[len(nameParts)-1])
@@ -554,9 +521,9 @@ func readStringAttribute(key string, expr *model.ObjectConsExpression) (bool, st
 				template := item.Value.(*model.TemplateExpression)
 				if len(template.Parts) == 1 {
 					firstPart := template.Parts[0]
-					switch firstPart.(type) {
+					switch firstPart := firstPart.(type) {
 					case *model.LiteralValueExpression:
-						return true, firstPart.(*model.LiteralValueExpression).Value.AsString()
+						return true, firstPart.Value.AsString()
 					}
 				}
 			}
@@ -581,17 +548,17 @@ func pickTypeFromUnion(union *schema.UnionType, expr *model.ObjectConsExpression
 }
 
 func (g *generator) genObjectConsExpressionWithTypeName(
-	w io.Writer, expr *model.ObjectConsExpression, destType schema.Type) {
-
+	w io.Writer, expr *model.ObjectConsExpression, destType schema.Type,
+) {
 	if len(expr.Items) == 0 {
 		return
 	}
 
 	destTypeName := typeName(destType)
-	switch destType.(type) {
+	switch destType := destType.(type) {
 	case *schema.ObjectType:
 		objectProperties := make(map[string]schema.Type)
-		for _, property := range destType.(*schema.ObjectType).Properties {
+		for _, property := range destType.Properties {
 			objectProperties[property.Name] = codegen.UnwrapType(property.Type)
 		}
 
@@ -620,14 +587,14 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 		})
 	case *schema.ArrayType:
 		// recurse into inner type
-		innerType := destType.(*schema.ArrayType).ElementType
+		innerType := destType.ElementType
 		g.genObjectConsExpressionWithTypeName(w, expr, innerType)
 	case *schema.InputType:
 		// recurse into inner type
-		innerType := destType.(*schema.InputType).ElementType
+		innerType := destType.ElementType
 		g.genObjectConsExpressionWithTypeName(w, expr, innerType)
 	case *schema.UnionType:
-		union := destType.(*schema.UnionType)
+		union := destType
 		innerType := pickTypeFromUnion(union, expr)
 		g.genObjectConsExpressionWithTypeName(w, expr, innerType)
 	default:
@@ -654,9 +621,9 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 }
 
 func (g *generator) genRelativeTraversal(w io.Writer,
-	traversal hcl.Traversal, parts []model.Traversable, objType *schema.ObjectType) {
-
-	for i, part := range traversal {
+	traversal hcl.Traversal, parts []model.Traversable, objType *schema.ObjectType,
+) {
+	for _, part := range traversal {
 		var key cty.Value
 		switch part := part.(type) {
 		case hcl.TraverseAttr:
@@ -668,9 +635,9 @@ func (g *generator) genRelativeTraversal(w io.Writer,
 		}
 
 		// TODO: what do we do with optionals in Java
-		if model.IsOptionalType(model.GetTraversableType(parts[i])) {
-			//g.Fgen(w, "?")
-		}
+		// if model.IsOptionalType(model.GetTraversableType(parts[i])) {
+		// 	g.Fgen(w, "?")
+		// }
 
 		switch key.Type() {
 		case cty.String:
