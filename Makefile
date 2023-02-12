@@ -36,8 +36,10 @@ ensure_sdk::
 
 .PHONY: lint_pkg
 lint:: lint_pkg
-lint_pkg:
+lint_pkg: lint_pkg_dependencies
 	cd pkg && golangci-lint run -c ../.golangci.yml --timeout 5m
+.PHONY: lint_pkg_dependencies
+lint_pkg_dependencies:
 	@cd pkg || exit 1; \
 	PKG=$$(grep -r '"github.com/pulumi/pulumi/pkg/v3/[^codegen]' .); \
 	if [ "$$?" -eq 0 ] ; then \
