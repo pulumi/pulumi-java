@@ -6,7 +6,6 @@ import (
 	"bytes"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 	"path"
 	"strings"
@@ -334,7 +333,7 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 		if err != nil {
 			return fmt.Errorf("could not write output program: %w", err)
 		}
-		err = ioutil.WriteFile(outPath, data, 0o600)
+		err = os.WriteFile(outPath, data, 0o600)
 		if err != nil {
 			return fmt.Errorf("could not write output program: %w", err)
 		}

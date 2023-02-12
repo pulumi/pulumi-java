@@ -16,7 +16,7 @@ package main
 
 import (
 	"io/fs"
-	"io/ioutil"
+	"os"
 	"path/filepath"
 )
 
@@ -30,7 +30,7 @@ func readOverlays(rootDir string, overlays []string) (map[string][]byte, error) 
 			}
 			if !entry.IsDir() {
 				sourcePath := filepath.Join(overlayDir, entry.Name())
-				bytes, err := ioutil.ReadFile(sourcePath)
+				bytes, err := os.ReadFile(sourcePath)
 				if err != nil {
 					return err
 				}
