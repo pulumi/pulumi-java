@@ -740,7 +740,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                         var providerReference = providerFuture.join();
 
                         // Add arg dependencies to the request.
-                        var argDependencies = CompletableFutures.allOf(
+                        CompletableFuture<Map<String, CallRequest.ArgumentDependencies>> argDependencies = CompletableFutures.allOf(
                                 serialized.propertyToDependentResources.entrySet().stream().collect(Collectors.toMap(
                                         Map.Entry::getKey,
                                         e -> {

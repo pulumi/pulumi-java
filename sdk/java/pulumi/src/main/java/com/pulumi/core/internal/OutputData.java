@@ -283,18 +283,17 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
             CompletableFuture<OutputData<T1>> data1, CompletableFuture<OutputData<T2>> data2,
             CompletableFuture<OutputData<T3>> data3, CompletableFuture<OutputData<T4>> data4,
             CompletableFuture<OutputData<T5>> data5, CompletableFuture<OutputData<T6>> data6,
-            CompletableFuture<OutputData<T7>> data7, CompletableFuture<OutputData<T8>> data8
-    ) {
+            CompletableFuture<OutputData<T7>> data7, CompletableFuture<OutputData<T8>> data8) {
         return CompletableFuture.allOf(data1, data2, data3, data4, data5, data6, data7, data8)
                 .thenApply(ignore -> builder(Tuple0.Empty)
-                        .transform(data1.join(), Tuple0::append)
-                        .transform(data2.join(), Tuple1::append)
-                        .transform(data3.join(), Tuple2::append)
-                        .transform(data4.join(), Tuple3::append)
-                        .transform(data5.join(), Tuple4::append)
-                        .transform(data6.join(), Tuple5::append)
-                        .transform(data7.join(), Tuple6::append)
-                        .transform(data8.join(), Tuple7::append)
+                        .<T1, Tuple1<T1>>transform(data1.join(), Tuple0::append)
+                        .<T2, Tuple2<T1, T2>>transform(data2.join(), Tuple1::append)
+                        .<T3, Tuple3<T1, T2, T3>>transform(data3.join(), Tuple2::append)
+                        .<T4, Tuple4<T1, T2, T3, T4>>transform(data4.join(), Tuple3::append)
+                        .<T5, Tuple5<T1, T2, T3, T4, T5>>transform(data5.join(), Tuple4::append)
+                        .<T6, Tuple6<T1, T2, T3, T4, T5, T6>>transform(data6.join(), Tuple5::append)
+                        .<T7, Tuple7<T1, T2, T3, T4, T5, T6, T7>>transform(data7.join(), Tuple6::append)
+                        .<T8, Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>>transform(data8.join(), Tuple7::append)
                         .build());
     }
 
