@@ -18,6 +18,7 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen/hcl2/model/format"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/pcl"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+	"github.com/pulumi/pulumi/pkg/v3/version"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/encoding"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/workspace"
@@ -327,6 +328,7 @@ func GenerateProject(directory string, project workspace.Project, program *pcl.P
 	))
 	filesWithPackages["pom.xml"] = mavenPomXML.Bytes()
 
+	fmt.Printf("Pu/Pu version: %s\n", version.Version)
 	for filePath, data := range filesWithPackages {
 		outPath := path.Join(directory, filePath)
 		err := os.MkdirAll(path.Dir(outPath), os.ModePerm)
