@@ -291,7 +291,7 @@ jobs:
         uses: golangci/golangci-lint-action@v3
         with:
           version: ${{ env.GOLANGCI_LINT_VERSION }}
-          working-directory: ${{ pkg }}
+          working-directory: pkg
           args: --config ../.golangci.yml ./...
       - name: Ensure no pulumi/pkg
         run: make lint_pkg_dependencies
