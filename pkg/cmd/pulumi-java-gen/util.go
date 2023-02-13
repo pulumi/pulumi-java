@@ -18,8 +18,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-
-	"io/ioutil"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -77,7 +75,7 @@ func convertPackageInfo(mapParsedFromYaml interface{}) (javagen.PackageInfo, err
 }
 
 func parsePackageInfoOverride(path string) (javagen.PackageInfo, error) {
-	bytes, err := ioutil.ReadFile(path)
+	bytes, err := os.ReadFile(path)
 	empty := javagen.PackageInfo{}
 	if err != nil {
 		return empty, fmt.Errorf("Failed to read language override from %s: %w", path, err)
@@ -97,8 +95,8 @@ func emitFile(path string, bytes []byte) error {
 	if err := os.MkdirAll(filepath.Dir(path), os.ModePerm); err != nil {
 		return fmt.Errorf("os.MkdirAll failed: %w", err)
 	}
-	if err := ioutil.WriteFile(path, bytes, 0600); err != nil {
-		return fmt.Errorf("ioutil.WriteFile failed: %w", err)
+	if err := os.WriteFile(path, bytes, 0600); err != nil {
+		return fmt.Errorf("os.WriteFile failed: %w", err)
 	}
 	return nil
 }

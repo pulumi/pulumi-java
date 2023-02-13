@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"fmt"
 	"io"
-	"io/ioutil"
 
 	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 )
@@ -43,5 +42,5 @@ func newPseudoClassFileContext() *classFileContext {
 	pkg := names.Ident("com").FQN().Dot(names.Ident("example"))
 	className := names.Ident("Pseudo")
 	imports := names.NewImports(pkg, className)
-	return &classFileContext{ioutil.Discard, imports, pkg, className}
+	return &classFileContext{io.Discard, imports, pkg, className}
 }

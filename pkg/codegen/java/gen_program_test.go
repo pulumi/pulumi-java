@@ -1,7 +1,7 @@
 package java
 
 import (
-	"io/ioutil"
+	"os"
 	"path/filepath"
 	"strings"
 	"testing"
@@ -21,7 +21,7 @@ var testdataPath = filepath.Join("..", "testing", "test", "testdata")
 func TestGenerateJavaProgram(t *testing.T) {
 	t.Parallel()
 
-	files, err := ioutil.ReadDir(testdataPath)
+	files, err := os.ReadDir(testdataPath)
 	assert.NoError(t, err)
 	tests := make([]test.ProgramTest, 0, len(files))
 	for _, f := range files {
