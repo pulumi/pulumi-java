@@ -30,7 +30,6 @@
     "src/main/java/com/pulumi/mypkg/outputs/FuncWithAllOptionalInputsResult.java",
     "src/main/java/com/pulumi/mypkg/outputs/FuncWithDefaultValueResult.java",
     "src/main/java/com/pulumi/mypkg/outputs/FuncWithDictParamResult.java",
-    "src/main/java/com/pulumi/mypkg/outputs/FuncWithEmptyOutputsResult.java",
     "src/main/java/com/pulumi/mypkg/outputs/FuncWithListParamResult.java",
     "src/main/java/com/pulumi/mypkg/outputs/GetBastionShareableLinkResult.java",
     "src/main/java/com/pulumi/mypkg/outputs/GetClientConfigResult.java",
