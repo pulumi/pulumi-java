@@ -29,7 +29,6 @@ import com.pulumi.mypkg.inputs.ListStorageAccountKeysPlainArgs;
 import com.pulumi.mypkg.outputs.FuncWithAllOptionalInputsResult;
 import com.pulumi.mypkg.outputs.FuncWithDefaultValueResult;
 import com.pulumi.mypkg.outputs.FuncWithDictParamResult;
-import com.pulumi.mypkg.outputs.FuncWithEmptyOutputsResult;
 import com.pulumi.mypkg.outputs.FuncWithListParamResult;
 import com.pulumi.mypkg.outputs.GetBastionShareableLinkResult;
 import com.pulumi.mypkg.outputs.GetClientConfigResult;
@@ -198,29 +197,29 @@ public final class MypkgFunctions {
      * n/a
      * 
      */
-    public static Output<FuncWithEmptyOutputsResult> funcWithEmptyOutputs(FuncWithEmptyOutputsArgs args) {
+    public static Output<Void> funcWithEmptyOutputs(FuncWithEmptyOutputsArgs args) {
         return funcWithEmptyOutputs(args, InvokeOptions.Empty);
     }
     /**
      * n/a
      * 
      */
-    public static CompletableFuture<FuncWithEmptyOutputsResult> funcWithEmptyOutputsPlain(FuncWithEmptyOutputsPlainArgs args) {
+    public static CompletableFuture<Void> funcWithEmptyOutputsPlain(FuncWithEmptyOutputsPlainArgs args) {
         return funcWithEmptyOutputsPlain(args, InvokeOptions.Empty);
     }
     /**
      * n/a
      * 
      */
-    public static Output<FuncWithEmptyOutputsResult> funcWithEmptyOutputs(FuncWithEmptyOutputsArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("mypkg::funcWithEmptyOutputs", TypeShape.of(FuncWithEmptyOutputsResult.class), args, Utilities.withVersion(options));
+    public static Output<Void> funcWithEmptyOutputs(FuncWithEmptyOutputsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("mypkg::funcWithEmptyOutputs", TypeShape.of(Void.class), args, Utilities.withVersion(options));
     }
     /**
      * n/a
      * 
      */
-    public static CompletableFuture<FuncWithEmptyOutputsResult> funcWithEmptyOutputsPlain(FuncWithEmptyOutputsPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("mypkg::funcWithEmptyOutputs", TypeShape.of(FuncWithEmptyOutputsResult.class), args, Utilities.withVersion(options));
+    public static CompletableFuture<Void> funcWithEmptyOutputsPlain(FuncWithEmptyOutputsPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("mypkg::funcWithEmptyOutputs", TypeShape.of(Void.class), args, Utilities.withVersion(options));
     }
     /**
      * Check codegen of functions with a List parameter.

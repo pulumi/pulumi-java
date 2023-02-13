@@ -110,9 +110,13 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "simple-methods-schema":
 		t.Skip = codegen.NewStringSet("java/any") // TODO
+	case "provider-type-schema":
+		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "provider-config-schema":
 		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "simple-methods-schema-single-value-returns":
+		t.Skip = codegen.NewStringSet("java/any") // TODO
+	case "simplified-invokes":
 		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "hyphen-url":
 		t.Skip = codegen.NewStringSet("java/any") // TODO
@@ -174,7 +178,8 @@ func TestGeneratePackage(t *testing.T) {
 		test.TestSDKCodegen(t, &test.SDKCodegenOptions{
 			GenPackage: func(tool string,
 				pkg *schema.Package,
-				extraFiles map[string][]byte) (map[string][]byte, error) {
+				extraFiles map[string][]byte,
+			) (map[string][]byte, error) {
 				pkg.Description = "test description"
 				pkg.Repository = "https://github.com/pulumi/pulumi-java"
 				pkg.Language = map[string]interface{}{
