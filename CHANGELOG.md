@@ -1,6 +1,16 @@
 CHANGELOG
 =========
 
+## 0.8.0 (2023-03-01)
+
+### Improvements
+
+  - [java/sdk] Delegate alias computation to the engine. [#966](https://github.com/pulumi/pulumi-java/pull/966)
+ 
+### Bug Fixes
+
+  - [codegen] Generate build.gradle files compatible with Gradle 8.0.
+
 ## 0.7.1 (2022-12-15)
 
 ### Bug Fixes
