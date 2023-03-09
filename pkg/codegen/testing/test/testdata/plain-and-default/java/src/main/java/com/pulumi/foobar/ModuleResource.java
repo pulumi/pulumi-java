@@ -4,14 +4,24 @@
 package com.pulumi.foobar;
 
 import com.pulumi.core.Output;
+import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.foobar.ModuleResourceArgs;
 import com.pulumi.foobar.Utilities;
+import java.lang.Boolean;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="foobar::ModuleResource")
 public class ModuleResource extends com.pulumi.resources.CustomResource {
+    @Export(name="optional_bool", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> optional_bool;
+
+    public Output<Optional<Boolean>> optional_bool() {
+        return Codegen.optional(this.optional_bool);
+    }
+
     /**
      *
      * @param name The _unique_ name of the resulting resource.
