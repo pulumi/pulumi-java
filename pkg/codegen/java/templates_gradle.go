@@ -88,7 +88,6 @@ func newGradleTemplateContext(
 	pkg *schema.Package,
 	packageInfo *PackageInfo,
 ) gradleTemplateContext {
-
 	ctx := gradleTemplateContext{
 		ProjectURL:                     pkg.Repository,
 		ProjectGitURL:                  formatGitURL(pkg.Repository),

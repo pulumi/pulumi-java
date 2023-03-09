@@ -153,7 +153,6 @@ func (mod *modContext) typeStringRecHelper(
 	requireInitializers bool,
 	insideInput bool,
 ) TypeShape {
-
 	switch t := t.(type) {
 	case *schema.InputType:
 		elem := t.ElementType
@@ -626,8 +625,8 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 // This helps to promote T to Output<T>, accept varargs for a List parameter
 // and to unroll Either<L, R> to both of its types.
 func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName,
-	fieldName string, t TypeShape, prop *schema.Property) {
-
+	fieldName string, t TypeShape, prop *schema.Property,
+) {
 	w := ctx.writer
 	const indent = "        "
 
@@ -1898,7 +1897,7 @@ func computePropertyNames(props []*schema.Property, names map[*schema.Property]s
 func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*modContext, *PackageInfo, error) {
 	// Decode Java-specific info for each package as we discover them.
 	infos := map[*schema.Package]*PackageInfo{}
-	var getPackageInfo = func(p schema.PackageReference) *PackageInfo {
+	getPackageInfo := func(p schema.PackageReference) *PackageInfo {
 		def, err := p.Definition()
 		contract.AssertNoErrorf(err, "Failed to get package definition for %q", p.Name())
 		info, ok := infos[def]

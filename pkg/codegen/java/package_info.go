@@ -33,7 +33,6 @@ const defaultBasePackage = "com.pulumi."
 //
 // See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific-extensions
 type PackageInfo struct {
-
 	// Overrides how Schema packages names translate to Java
 	// package names.
 	//
