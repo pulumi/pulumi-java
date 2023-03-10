@@ -747,6 +747,7 @@ func hasCustomResourceOptions(resource *pcl.Resource) bool {
 		resource.Options.DependsOn != nil ||
 		resource.Options.Parent != nil ||
 		resource.Options.Protect != nil ||
+		resource.Options.RetainOnDelete != nil ||
 		resource.Options.Provider != nil
 }
 
@@ -778,6 +779,11 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 		if resource.Options.Protect != nil {
 			g.genIndent(w)
 			g.Fgenf(w, ".protect(%v)", resource.Options.Protect)
+			g.genNewline(w)
+		}
+		if resource.Options.RetainOnDelete != nil {
+			g.genIndent(w)
+			g.Fgenf(w, ".retainOnDelete(%v)", resource.Options.RetainOnDelete)
 			g.genNewline(w)
 		}
 		if resource.Options.Parent != nil {
