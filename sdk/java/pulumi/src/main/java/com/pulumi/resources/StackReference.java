@@ -10,13 +10,11 @@ import com.pulumi.core.internal.Maps;
 import com.pulumi.core.internal.OutputData;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.exceptions.RunException;
-import com.pulumi.resources.StackReferenceOutputDetails.Builder;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -231,19 +229,7 @@ public class StackReference extends CustomResource {
      */
     public CompletableFuture<StackReferenceOutputDetails> outputDetailsAsync(String name) {
         return Internal.of(this.output(name)).getDataAsync()
-                .thenApply((OutputData<?> data) -> {
-                    // Extraneous map call to turn the Optional<?> into an Optional<Object>.
-                    Optional<Object> value = data.getValueOptional().map(o -> o);
-                    StackReferenceOutputDetails.Builder builder = StackReferenceOutputDetails.builder();
-                    value.ifPresent(v -> {
-                        if (data.isSecret()) {
-                            builder.secretValue(v);
-                        } else {
-                            builder.value(v);
-                        }
-                    });
-                    return builder.build();
-                });
+                .thenApply(StackReferenceOutputDetails::fromOutputData);
     }
 
     /**

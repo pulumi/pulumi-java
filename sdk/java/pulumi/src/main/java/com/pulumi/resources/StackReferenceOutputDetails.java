@@ -1,5 +1,7 @@
 package com.pulumi.resources;
 
+import com.pulumi.core.internal.OutputData;
+
 import java.util.Optional;
 
 /**
@@ -12,8 +14,35 @@ public class StackReferenceOutputDetails {
     private final Optional<Object> secretValue;
 
     protected StackReferenceOutputDetails(Optional<Object> value, Optional<Object> secretValue) {
+        if (value.isPresent() && secretValue.isPresent()) {
+            throw new IllegalArgumentException("Cannot set both value and secretValue");
+        }
+
         this.value = value;
         this.secretValue = secretValue;
+    }
+
+    /**
+     * Creates a StackReferenceOutputDetails from an OutputData.
+     * <p>
+     * If the OutputData is a secret, the secretValue will be set.
+     * Otherwise, the value will be set.
+     */
+    static StackReferenceOutputDetails fromOutputData(OutputData<?> data) {
+        Optional<Object> value = Optional.empty();
+        Optional<Object> secretValue = Optional.empty();
+
+        Optional<?> dataValue = data.getValueOptional();
+        if (dataValue.isPresent()) {
+            Object v = dataValue.get();
+            if (data.isSecret()) {
+                secretValue = Optional.of(v);
+            } else {
+                value = Optional.of(v);
+            }
+        }
+
+        return new StackReferenceOutputDetails(value, secretValue);
     }
 
     /**
@@ -79,13 +108,10 @@ public class StackReferenceOutputDetails {
         /**
          * Builds a StackReferenceOutputDetails instance.
          * <p>
-         * 
-         * @throws IllegalStateException if both value and secretValue are set
+         *
+         * @throws IllegalArgumentException if both value and secretValue are set
          */
         public StackReferenceOutputDetails build() {
-            if (value.isPresent() && secretValue.isPresent()) {
-                throw new IllegalStateException("Cannot set both value and secretValue");
-            }
             return new StackReferenceOutputDetails(value, secretValue);
         }
     }
