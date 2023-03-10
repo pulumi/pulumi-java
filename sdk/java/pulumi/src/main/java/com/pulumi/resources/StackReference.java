@@ -222,6 +222,17 @@ public class StackReference extends CustomResource {
     }
 
     /**
+     * Fetches the value of the named stack output
+     * and builds a {@link StackReferenceOutputDetails} object from it.
+     * The StackReferenceOutputDetails object has its value or secretValue set
+     * depending on whether the output is a secret or not.
+     */
+    public CompletableFuture<StackReferenceOutputDetails> outputDetailsAsync(String name) {
+        return Internal.of(this.output(name)).getDataAsync()
+                .thenApply(StackReferenceOutputDetails::fromOutputData);
+    }
+
+    /**
      * Fetches the value of the named stack output. May return null if the value is
      * not known for some reason.
      * <p>
