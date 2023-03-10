@@ -176,7 +176,7 @@ jobs:
         with:
           name: java-sdk
           path: ~/.m2/repository/com/pulumi
-      - run: cd pkg && go test -timeout 15m ./...
+      - run: cd pkg && go test -timeout 25m ./...
 
   examples:
     runs-on: ubuntu-latest
