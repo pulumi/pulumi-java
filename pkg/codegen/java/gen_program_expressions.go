@@ -31,7 +31,7 @@ func (g *generator) lowerExpression(expr model.Expression, typ model.Type) model
 	expr = pcl.RewritePropertyReferences(expr)
 	applyPromises := false
 	expr, diags := pcl.RewriteApplies(expr, nameInfo(0), applyPromises)
-	contract.Assert(len(diags) == 0)
+	contract.Assertf(len(diags) == 0, "unexpected diagnostics: %v", diags)
 	expr, diags = pcl.RewriteConversions(expr, typ)
 	g.diagnostics = append(g.diagnostics, diags...)
 	return expr

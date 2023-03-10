@@ -118,7 +118,7 @@ func containsFunctionCall(functionName string, nodes []pcl.Node) bool {
 			return x, nil
 		})
 
-		contract.Assert(len(diags) == 0)
+		contract.Assertf(len(diags) == 0, "unexpected diagnostics: %v", diags)
 	}
 
 	return foundRangeCall
@@ -680,7 +680,7 @@ func (g *generator) genPostamble(w io.Writer, nodes []pcl.Node) {
 func resourceTypeName(resource *pcl.Resource) string {
 	// Compute the resource type from the Pulumi type token.
 	pkg, module, member, diags := resource.DecomposeToken()
-	contract.Assert(len(diags) == 0)
+	contract.Assertf(len(diags) == 0, "failed to decompose resource token: %v", diags)
 	if pkg == pulumiToken && module == providersToken {
 		member = "Provider"
 	}

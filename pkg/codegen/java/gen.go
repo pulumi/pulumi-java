@@ -134,8 +134,10 @@ func (mod *modContext) typeString(
 ) TypeShape {
 	inner := mod.typeStringRecHelper(ctx, t, qualifier, input, requireInitializers, inputlessOverload)
 	if inner.Type.Equal(names.Optional) && !outerOptional {
-		contract.Assert(len(inner.Parameters) == 1)
-		contract.Assert(len(inner.Annotations) == 0)
+		contract.Assertf(len(inner.Parameters) == 1,
+			"Optional must have exactly one parameter, got %v", len(inner.Parameters))
+		contract.Assertf(len(inner.Annotations) == 0,
+			"Optional must have no annotations, got %v", len(inner.Annotations))
 		inner = inner.Parameters[0]
 		inner.Annotations = append(inner.Annotations, fmt.Sprintf("@%s", ctx.ref(names.Nullable)))
 	}
@@ -238,8 +240,9 @@ func (mod *modContext) typeStringRecHelper(
 				extPkg := t.Resource.PackageReference
 				var info PackageInfo
 				extDef, err := extPkg.Definition()
-				contract.AssertNoError(err)
-				contract.AssertNoError(extDef.ImportLanguages(map[string]schema.Language{"java": Importer}))
+				contract.AssertNoErrorf(err, "failed to load package definition for %q", extPkg.Name())
+				contract.AssertNoErrorf(extDef.ImportLanguages(map[string]schema.Language{"java": Importer}),
+					"failed to load java language plugin for %q", extPkg.Name())
 				if v, ok := extDef.Language["java"].(PackageInfo); ok {
 					info = v
 				}
@@ -332,8 +335,9 @@ func (mod *modContext) typeStringForObjectType(t *schema.ObjectType, qualifier q
 		extPkg := t.PackageReference
 		var info PackageInfo
 		extDef, err := extPkg.Definition()
-		contract.AssertNoError(err)
-		contract.AssertNoError(extDef.ImportLanguages(map[string]schema.Language{"java": Importer}))
+		contract.AssertNoErrorf(err, "failed to load package definition for %q", extPkg.Name())
+		contract.AssertNoErrorf(extDef.ImportLanguages(map[string]schema.Language{"java": Importer}),
+			"failed to load java language plugin for %q", extPkg.Name())
 		if v, ok := extDef.Language["java"].(PackageInfo); ok {
 			info = v
 		}
@@ -1398,7 +1402,8 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 					propertyTypeQualifier: outputsQualifier,
 					properties:            fun.Outputs.Properties,
 				}
-				contract.Assert(resultClass.String() == res.name)
+				contract.Assertf(resultClass.String() == res.name,
+					"expected result class name to be %v, got %v", resultClass, res.name)
 				return res.genOutputType(ctx)
 			}); err != nil {
 				return err
@@ -1895,7 +1900,7 @@ func generateModuleContextMap(tool string, pkg *schema.Package) (map[string]*mod
 	infos := map[*schema.Package]*PackageInfo{}
 	var getPackageInfo = func(p schema.PackageReference) *PackageInfo {
 		def, err := p.Definition()
-		contract.AssertNoError(err)
+		contract.AssertNoErrorf(err, "Failed to get package definition for %q", p.Name())
 		info, ok := infos[def]
 		if !ok {
 			if err := def.ImportLanguages(map[string]schema.Language{"java": Importer}); err != nil {
@@ -2121,7 +2126,7 @@ func isInputType(t schema.Type) bool {
 	}
 
 	_, stillOption := t.(*schema.OptionalType)
-	contract.Assert(!stillOption)
+	contract.Assertf(!stillOption, "optional type should have been unwrapped")
 	_, isInputType := t.(*schema.InputType)
 	return isInputType
 }

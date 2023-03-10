@@ -83,7 +83,8 @@ See https://www.pulumi.com/docs/guides/pulumi-packages/schema/#language-specific
 	cmd.Flags().StringVar(&schemaArg, "schema", "",
 		"URL or local path to a package schema")
 
-	contract.AssertNoError(cmd.MarkFlagRequired("schema"))
+	contract.AssertNoErrorf(cmd.MarkFlagRequired("schema"),
+		"could not mark flag 'schema' as required")
 
 	cmd.Flags().StringVar(&outArg, "out", "java", "output path")
 
