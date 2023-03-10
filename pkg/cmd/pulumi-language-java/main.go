@@ -107,7 +107,6 @@ func setupHealthChecks(engineAddress string) (chan bool, error) {
 		close(cancelChannel)
 	}()
 	err := rpcutil.Healthcheck(ctx, engineAddress, 5*time.Minute, cancel)
-
 	if err != nil {
 		return nil, err
 	}
@@ -126,7 +125,8 @@ type javaLanguageHost struct {
 }
 
 func newLanguageHost(execOptions executors.JavaExecutorOptions,
-	engineAddress, tracing string) pulumirpc.LanguageRuntimeServer {
+	engineAddress, tracing string,
+) pulumirpc.LanguageRuntimeServer {
 	return &javaLanguageHost{
 		execOptions:   execOptions,
 		engineAddress: engineAddress,
@@ -148,8 +148,8 @@ func (host *javaLanguageHost) Executor() (*executors.JavaExecutor, error) {
 // GetRequiredPlugins computes the complete set of anticipated plugins required by a program.
 func (host *javaLanguageHost) GetRequiredPlugins(
 	ctx context.Context,
-	req *pulumirpc.GetRequiredPluginsRequest) (*pulumirpc.GetRequiredPluginsResponse, error) {
-
+	req *pulumirpc.GetRequiredPluginsRequest,
+) (*pulumirpc.GetRequiredPluginsResponse, error) {
 	logging.V(5).Infof("GetRequiredPlugins: program=%v", req.GetProgram())
 
 	// now, introspect the user project to see which pulumi resource packages it references.
@@ -186,8 +186,8 @@ func (host *javaLanguageHost) GetRequiredPlugins(
 }
 
 func (host *javaLanguageHost) determinePulumiPackages(
-	ctx context.Context) ([]plugin.PulumiPluginJSON, error) {
-
+	ctx context.Context,
+) ([]plugin.PulumiPluginJSON, error) {
 	logging.V(3).Infof("GetRequiredPlugins: Determining Pulumi plugins")
 
 	exec, err := host.Executor()
@@ -232,8 +232,8 @@ type javaCommandResponse struct {
 }
 
 func (host *javaLanguageHost) runJavaCommand(
-	ctx context.Context, dir, name string, args []string, quiet bool) (javaCommandResponse, error) {
-
+	ctx context.Context, dir, name string, args []string, quiet bool,
+) (javaCommandResponse, error) {
 	commandStr := strings.Join(args, " ")
 	if logging.V(5) {
 		logging.V(5).Infoln("Language host launching process: ", name, commandStr)
@@ -392,8 +392,8 @@ func (host *javaLanguageHost) GetPluginInfo(ctx context.Context, req *pbempty.Em
 }
 
 func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependenciesRequest,
-	server pulumirpc.LanguageRuntime_InstallDependenciesServer) error {
-
+	server pulumirpc.LanguageRuntime_InstallDependenciesServer,
+) error {
 	executor, err := host.Executor()
 	if err != nil {
 		return err
@@ -431,7 +431,8 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 }
 
 func (host *javaLanguageHost) GetProgramDependencies(
-	ctx context.Context, req *pulumirpc.GetProgramDependenciesRequest) (*pulumirpc.GetProgramDependenciesResponse, error) {
+	ctx context.Context, req *pulumirpc.GetProgramDependenciesRequest,
+) (*pulumirpc.GetProgramDependenciesResponse, error) {
 	// TODO: Implement dependency fetcher for Java
 	return &pulumirpc.GetProgramDependenciesResponse{}, nil
 }

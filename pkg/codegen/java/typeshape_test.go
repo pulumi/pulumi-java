@@ -1,9 +1,10 @@
 package java
 
 import (
+	"testing"
+
 	"github.com/pulumi/pulumi-java/pkg/codegen/java/names"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestTypeShape_ToTree(t *testing.T) {
@@ -59,9 +60,10 @@ func TestTypeShape_ToTree(t *testing.T) {
 				Type: names.List,
 				Parameters: []TypeShape{
 					{Type: names.List, Parameters: []TypeShape{
-						{Type: names.List, Parameters: []TypeShape{
-							{Type: names.String},
-						},
+						{
+							Type: names.List, Parameters: []TypeShape{
+								{Type: names.String},
+							},
 						},
 					}},
 				},

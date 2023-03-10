@@ -18,8 +18,8 @@ type DocLanguageHelper struct{}
 var _ codegen.DocLanguageHelper = DocLanguageHelper{}
 
 func (d DocLanguageHelper) GetLanguageTypeString(
-	pkg *schema.Package, moduleName string, t schema.Type, input bool) string {
-
+	pkg *schema.Package, moduleName string, t schema.Type, input bool,
+) string {
 	modCtx := &modContext{pkg: pkg.Reference(), mod: moduleName}
 	ctx := newPseudoClassFileContext()
 
@@ -59,7 +59,8 @@ func (d DocLanguageHelper) GetMethodName(m *schema.Method) string {
 }
 
 func (d DocLanguageHelper) GetMethodResultName(
-	pkg *schema.Package, modName string, r *schema.Resource, m *schema.Method) string {
+	pkg *schema.Package, modName string, r *schema.Resource, m *schema.Method,
+) string {
 	// TODO revise when method support is built, revise when output-versioned functions are built
 	return tokenToFunctionResultClassName(nil, m.Function.Token).String()
 }
@@ -95,13 +96,14 @@ func (d DocLanguageHelper) GetDocLinkForResourceType(pkg *schema.Package, modNam
 }
 
 func (d DocLanguageHelper) GetDocLinkForResourceInputOrOutputType(
-	pkg *schema.Package, modName, typeName string, input bool) string {
+	pkg *schema.Package, modName, typeName string, input bool,
+) string {
 	panic("Not implemented")
 }
 
 func (d DocLanguageHelper) GetDocLinkForFunctionInputOrOutputType(
-	pkg *schema.Package, modName, typeName string, input bool) string {
-
+	pkg *schema.Package, modName, typeName string, input bool,
+) string {
 	panic("Not implemented")
 }
 

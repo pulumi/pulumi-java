@@ -5,7 +5,7 @@ linters:
   enable:
     - errcheck
     - goconst
-    - gofmt
+    - gofumpt
     - revive
     - gosec
     - govet

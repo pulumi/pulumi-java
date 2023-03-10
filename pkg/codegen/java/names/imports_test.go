@@ -6,9 +6,11 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var mapType = Ident("java").FQN().Dot(Ident("util")).Dot(Ident("Map"))
-var treeMapType = Ident("java").FQN().Dot(Ident("util")).Dot(Ident("TreeMap"))
-var confoundingMapType = Ident("org").FQN().Dot(Ident("confound")).Dot(Ident("Map"))
+var (
+	mapType            = Ident("java").FQN().Dot(Ident("util")).Dot(Ident("Map"))
+	treeMapType        = Ident("java").FQN().Dot(Ident("util")).Dot(Ident("TreeMap"))
+	confoundingMapType = Ident("org").FQN().Dot(Ident("confound")).Dot(Ident("Map"))
+)
 
 func TestFQN(t *testing.T) {
 	assert.True(t, mapType.Equal(mapType))
