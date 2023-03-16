@@ -11,8 +11,8 @@ require (
 	github.com/golang/protobuf v1.5.3
 	github.com/hashicorp/hcl/v2 v2.16.2
 	github.com/pkg/errors v0.9.1
-	github.com/pulumi/pulumi/pkg/v3 v3.57.1
-	github.com/pulumi/pulumi/sdk/v3 v3.57.1
+	github.com/pulumi/pulumi/pkg/v3 v3.58.0
+	github.com/pulumi/pulumi/sdk/v3 v3.58.0
 	github.com/spf13/cobra v1.6.1
 	github.com/stretchr/testify v1.8.2
 	github.com/zclconf/go-cty v1.12.1
