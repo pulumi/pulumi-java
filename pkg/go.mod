@@ -11,8 +11,8 @@ require (
 	github.com/golang/protobuf v1.5.3
 	github.com/hashicorp/hcl/v2 v2.16.2
 	github.com/pkg/errors v0.9.1
-	github.com/pulumi/pulumi/pkg/v3 v3.58.0
-	github.com/pulumi/pulumi/sdk/v3 v3.58.0
+	github.com/pulumi/pulumi/pkg/v3 v3.59.0
+	github.com/pulumi/pulumi/sdk/v3 v3.59.0
 	github.com/spf13/cobra v1.6.1
 	github.com/stretchr/testify v1.8.2
 	github.com/zclconf/go-cty v1.13.1
@@ -165,6 +165,7 @@ require (
 	github.com/segmentio/encoding v0.3.5 // indirect
 	github.com/sergi/go-diff v1.2.0 // indirect
 	github.com/skeema/knownhosts v1.1.0 // indirect
+	github.com/spf13/afero v1.9.5 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/texttheater/golang-levenshtein v1.0.1 // indirect
 	github.com/tweekmonster/luser v0.0.0-20161003172636-3fa38070dbd7 // indirect
