@@ -230,7 +230,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-examples-${{ hashFiles('**/go.sum') }}
       - name: Install Pulumi CLI
-        uses: pulumi/setup-pulumi@v2
+        uses: pulumi/actions@v4
       - name: Download versions.txt
         uses: actions/download-artifact@v3
         with:
