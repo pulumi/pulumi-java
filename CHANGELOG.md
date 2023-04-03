@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+## 0.9.0 (2023-04-03)
+
+### Improvements
+
+  - [codegen] Support the `retainOnDelete` resource option in PCL.
+
+  - [sdk] Added `StackReference.outputDetailsAsync` to retrieve output values from stack references directly.
+
 ## 0.8.0 (2023-03-01)
 
 ### Improvements
