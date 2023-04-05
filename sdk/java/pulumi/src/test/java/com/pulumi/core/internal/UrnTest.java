@@ -30,6 +30,7 @@ class UrnTest {
                 arguments("urn:pulumi:foo::countdown::aws:cloudwatch/logSubscriptionFilter:LogSubscriptionFilter::countDown_watcher"),
                 arguments("urn:pulumi:stack::project::pulumi:providers:aws::default_4_13_0"),
                 arguments("urn:pulumi:foo::todo::aws:s3/bucketObject:BucketObject::todo4c238266/index.html"),
+                arguments("urn:pulumi:dev::awsx-pulumi-issue::awsx:ec2:Vpc$aws:ec2/vpc:Vpc$aws:ec2/subnet:Subnet$aws:ec2/routeTable:RouteTable$aws:ec2/routeTableAssociation:RouteTableAssociation::example-private-vpc-public-1"),
                 arguments("urn:pulumi:dev::eks::pulumi:providers:aws::default_4_36_0")
         );
     }
@@ -75,6 +76,14 @@ class UrnTest {
                         Output.of("package::type"), // this form of type tokens is emitted by codegen
                         Output.of("name"),
                         "urn:pulumi:stack::project::package:type::name"
+                ),
+                arguments(
+                        Output.of("dev"),
+                        Output.of("awsx-pulumi-issue"),
+                        Optional.of(Output.of("urn:pulumi:dev::awsx-pulumi-issue::awsx:ec2:Vpc$aws:ec2/vpc:Vpc$aws:ec2/subnet:Subnet$aws:ec2/routeTable:RouteTable::example-private-vpc-public-1")),
+                        Output.of("aws:ec2/routeTableAssociation:RouteTableAssociation"),
+                        Output.of("example-private-vpc-public-1"),
+                        "urn:pulumi:dev::awsx-pulumi-issue::awsx:ec2:Vpc$aws:ec2/vpc:Vpc$aws:ec2/subnet:Subnet$aws:ec2/routeTable:RouteTable$aws:ec2/routeTableAssociation:RouteTableAssociation::example-private-vpc-public-1"
                 )
         );
     }
@@ -127,7 +136,7 @@ class UrnTest {
                         "stack", "project",
                         Optional.of("urn:pulumi:stack::project::parentPackage:parentType$package:type::name"),
                         "package2:type2", "name2",
-                        "urn:pulumi:stack::project::package:type$package2:type2::name2"
+                        "urn:pulumi:stack::project::parentPackage:parentType$package:type$package2:type2::name2"
                 )
         );
     }

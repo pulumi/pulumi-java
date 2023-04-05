@@ -4,9 +4,11 @@ import com.pulumi.core.Output;
 import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 import static com.pulumi.core.internal.Objects.require;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
@@ -148,10 +150,10 @@ public final class Urn {
     @ParametersAreNonnullByDefault
     @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
     public static final class QualifiedTypeName {
-        public final Optional<Type> parent;
+        public final Optional<String> parent;
         public final Type type;
 
-        public QualifiedTypeName(Optional<Type> parent, Type type) {
+        public QualifiedTypeName(Optional<String> parent, Type type) {
             this.parent = requireNonNull(parent);
             this.type = requireNonNull(type);
         }
@@ -181,7 +183,7 @@ public final class Urn {
         @SuppressWarnings("ConstantConditions") // IntelliJ can't understand the custom validators
         public static QualifiedTypeName parse(String qualifiedType) {
             var qualifiedTypeParts = qualifiedType.split(ParentSeparatorRegex, -1); // -1 avoids dropping trailing empty strings
-            require(qp -> qp.length == 1 || qp.length == 2, qualifiedTypeParts,
+            require(qp -> qp.length > 0, qualifiedTypeParts,
                     () -> format("expected qualified type to have 1 or 2 parts, split by '%s', got '%s'",
                             ParentSeparatorRegex, String.join(", ", qualifiedTypeParts))
             );
@@ -190,20 +192,29 @@ public final class Urn {
                     () -> format("expected qualified type, type part to be not empty, got: '%s'", type)
             );
             final Optional<String> parent;
-            if (qualifiedTypeParts.length == 2) {
-                var pt = qualifiedTypeParts[0];
+
+            // Handle parents. URNs can have nested parents which should be joined with a "$".
+            if (qualifiedTypeParts.length >= 2) {
+                // Remove the last qualifiedTypeParts element as it's the type.
+                String[] parentList = new String[qualifiedTypeParts.length - 1];
+                var pt = String.join(ParentSeparator, parentList);
                 require(p -> isNonEmptyOrNull(p), pt,
                         () -> format("expected qualified type, parent part to be not empty, got: '%s'", pt)
                 );
-                parent = Optional.of(pt);
+
+                // Get only the parent parts of the URN type.
+                System.arraycopy(qualifiedTypeParts, 0, parentList, 0, parentList.length);
+
+                // Create the complete parent part.
+                parent = Optional.of(Arrays.stream(parentList).collect(Collectors.joining(ParentSeparator)));
             } else {
                 parent = Optional.empty();
             }
-            return new QualifiedTypeName(parent.map(Type::parse), Type.parse(type));
+            return new QualifiedTypeName(parent, Type.parse(type));
         }
 
         public String asString() {
-            return this.parent.map(p -> p.asString()
+            return this.parent.map(p -> p
                     + ParentSeparator).orElse("")
                     + this.type.asString();
         }
@@ -312,7 +323,7 @@ public final class Urn {
         var parsedParent = parent
                 .flatMap(p -> Optionals.ofBlank(p))
                 .map(Urn::parse)
-                .map(urn -> urn.qualifiedType.type);
+                .map(urn -> urn.qualifiedType.asString());
         var typeWithOptionalParent = new QualifiedTypeName(parsedParent, parsedType);
         return new Urn(stack, project, typeWithOptionalParent, name).asString();
     }
