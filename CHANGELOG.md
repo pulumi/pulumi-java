@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## 0.9.1 (2023-04-12)
+
+### Bug Fixes
+
+  - [sdk] Fix exception in URN handling of nested parent URN types.
+
 ## 0.9.0 (2023-04-03)
 
 ### Improvements
