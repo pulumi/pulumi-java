@@ -4,6 +4,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.StringJoiner;
@@ -148,11 +150,12 @@ public final class Urn {
     @ParametersAreNonnullByDefault
     @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
     public static final class QualifiedTypeName {
-        public final Optional<String> parent;
+        // Contains the entire parent string, if exists. (i.e. parent1Type$parent2Type$...)
+        public final Optional<String> parents;
         public final Type type;
 
-        public QualifiedTypeName(Optional<String> parent, Type type) {
-            this.parent = requireNonNull(parent);
+        public QualifiedTypeName(Optional<String> parents, Type type) {
+            this.parents = requireNonNull(parents);
             this.type = requireNonNull(type);
         }
 
@@ -161,18 +164,18 @@ public final class Urn {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
             QualifiedTypeName that = (QualifiedTypeName) o;
-            return parent.equals(that.parent) && type.equals(that.type);
+            return parents.equals(that.parents) && type.equals(that.type);
         }
 
         @Override
         public int hashCode() {
-            return Objects.hash(parent, type);
+            return Objects.hash(parents, type);
         }
 
         @Override
         public String toString() {
             return new StringJoiner(", ", QualifiedTypeName.class.getSimpleName() + "[", "]")
-                    .add("parent=" + parent)
+                    .add("parent=" + parents)
                     .add("type=" + type)
                     .toString();
         }
@@ -182,7 +185,7 @@ public final class Urn {
         public static QualifiedTypeName parse(String qualifiedType) {
             var qualifiedTypeParts = qualifiedType.split(ParentSeparatorRegex, -1); // -1 avoids dropping trailing empty strings
             require(qp -> qp.length > 0, qualifiedTypeParts,
-                    () -> format("expected qualified type to have 1 or 2 parts, split by '%s', got '%s'",
+                    () -> format("expected qualified type to not be empty, split by '%s', got '%s'",
                             ParentSeparatorRegex, String.join(", ", qualifiedTypeParts))
             );
             var type = qualifiedTypeParts[qualifiedTypeParts.length - 1];
@@ -193,11 +196,8 @@ public final class Urn {
 
             // Handle parents. URNs can have nested parents which should be joined with a "$".
             if (qualifiedTypeParts.length >= 2) {
-                // Remove the last qualifiedTypeParts element as it's the type.
-                String[] parentList = new String[qualifiedTypeParts.length - 1];
-
                 // Get only the parent parts of the URN type.
-                System.arraycopy(qualifiedTypeParts, 0, parentList, 0, parentList.length);
+                List<String> parentList = Arrays.asList(qualifiedTypeParts).subList(0, qualifiedTypeParts.length - 1);
 
                 var pt = String.join(ParentSeparator, parentList);
                 require(p -> isNonEmptyOrNull(p), pt,
@@ -211,7 +211,7 @@ public final class Urn {
         }
 
         public String asString() {
-            return this.parent.map(p -> p
+            return this.parents.map(p -> p
                     + ParentSeparator).orElse("")
                     + this.type.asString();
         }
