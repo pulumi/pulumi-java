@@ -4,11 +4,9 @@ import com.pulumi.core.Output;
 import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Arrays;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.StringJoiner;
-import java.util.stream.Collectors;
 
 import static com.pulumi.core.internal.Objects.require;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
@@ -197,16 +195,15 @@ public final class Urn {
             if (qualifiedTypeParts.length >= 2) {
                 // Remove the last qualifiedTypeParts element as it's the type.
                 String[] parentList = new String[qualifiedTypeParts.length - 1];
-                var pt = String.join(ParentSeparator, parentList);
-                require(p -> isNonEmptyOrNull(p), pt,
-                        () -> format("expected qualified type, parent part to be not empty, got: '%s'", pt)
-                );
 
                 // Get only the parent parts of the URN type.
                 System.arraycopy(qualifiedTypeParts, 0, parentList, 0, parentList.length);
 
-                // Create the complete parent part.
-                parent = Optional.of(Arrays.stream(parentList).collect(Collectors.joining(ParentSeparator)));
+                var pt = String.join(ParentSeparator, parentList);
+                require(p -> isNonEmptyOrNull(p), pt,
+                        () -> format("expected qualified type, parent part to be not empty, got: '%s'", pt)
+                );
+                parent = Optional.of(pt);
             } else {
                 parent = Optional.empty();
             }
