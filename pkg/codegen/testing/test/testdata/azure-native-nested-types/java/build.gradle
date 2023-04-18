@@ -53,6 +53,7 @@ task sourcesJar(type: Jar) {
 task javadocJar(type: Jar) {
     from javadoc
     archiveClassifier.set('javadoc')
+    zip64 = true
 }
 
 def genPulumiResources = tasks.register('genPulumiResources') {
