@@ -72,6 +72,9 @@ test_integrations: bin/pulumi-language-java
 codegen_tests::
 	cd ./pkg/codegen/java && go test ./...
 
+codegen_tests_update::
+	cd ./pkg/codegen/java && PULUMI_ACCEPT=true go test ./...
+
 submodule_update::
 	git submodule update --init --recursive --remote
 

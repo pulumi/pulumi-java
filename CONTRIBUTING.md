@@ -91,6 +91,13 @@ make bin/pulumi-language-java # builds bin/pulumi-language-java language host
 export PATH="${PATH}:${PWD}/bin" # add bin/pulumi-language-java to PATH
 ```
 
+### Updating generated test code
+
+The `pkg/codegen/testing/test/testdata` directory holds generated code used in tests.
+Tests will begin failing if the code in this directory is out-of-date.
+
+Use `make codegen_tests_update` to update code it if you change any codegen logic.
+
 ### Working with published dependencies
 
 Release builds of the Java SDK are published to Maven Central as
