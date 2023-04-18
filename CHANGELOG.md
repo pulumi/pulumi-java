@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+## 0.9.2 (2023-04-18)
+
+### Bug Fixes
+
+  - [sdk] Enable Zip64 jar files for javadoc
+  - [sdk] Fix exception in URN handling of nested parent URN types.
+
 ## 0.9.1 (2023-04-12)
 
 ### Bug Fixes
