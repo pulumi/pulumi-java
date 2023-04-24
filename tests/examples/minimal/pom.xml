@@ -29,7 +29,7 @@
           <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-okhttp</artifactId>
-            <version>1.54.0</version>
+            <version>1.54.1</version>
             <exclusions>
               <exclusion>
                 <groupId>com.google.guava</groupId>
@@ -65,7 +65,7 @@
       <dependency>
         <groupId>io.grpc</groupId>
         <artifactId>grpc-okhttp</artifactId>
-        <version>1.54.0</version>
+        <version>1.54.1</version>
         <exclusions>
           <exclusion>
             <groupId>com.google.guava</groupId>
