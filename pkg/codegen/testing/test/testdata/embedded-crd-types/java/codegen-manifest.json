@@ -1,0 +1,14 @@
+{
+  "emittedFiles": [
+    "README.md",
+    "build.gradle",
+    "settings.gradle",
+    "src/main/java/com/pulumi/foo/Component.java",
+    "src/main/java/com/pulumi/foo/ComponentArgs.java",
+    "src/main/java/com/pulumi/foo/Provider.java",
+    "src/main/java/com/pulumi/foo/ProviderArgs.java",
+    "src/main/java/com/pulumi/foo/Utilities.java",
+    "src/main/java/com/pulumi/kubernetes/crd/k8s/amazonaws/com_v1alpha1/inputs/ENIConfigSpecArgs.java",
+    "src/main/java/com/pulumi/kubernetes/crd/k8s/amazonaws/com_v1alpha1/outputs/ENIConfigSpec.java"
+  ]
+}
