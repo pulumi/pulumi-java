@@ -144,7 +144,7 @@ func adaptTest(t *test.SDKTest, keyDeps map[string]string) generatePackageTestCo
 		t.Skip = codegen.NewStringSet("java/any") // go-only
 	case "go-plain-ref-repro":
 		t.Skip = codegen.NewStringSet("java/any") // go-only
-	case "enum-reference", "enum-reference-python":
+	case "enum-reference", "enum-reference-python", "embedded-crd-types":
 		t.Skip = codegen.NewStringSet("java/any") // python only
 	case "go-nested-collections":
 		t.Skip = codegen.NewStringSet("java/any") // go-only
