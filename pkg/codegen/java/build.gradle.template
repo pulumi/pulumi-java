@@ -151,6 +151,10 @@ javadoc {
     options.jFlags("-Xmx8g", "-Xms512m")
 }
 
+jar {
+    zip64 = true
+}
+
 {{- if .GradleTestJUnitPlatformEnabled }}
 
 test {
