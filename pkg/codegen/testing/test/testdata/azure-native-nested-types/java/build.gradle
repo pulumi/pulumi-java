@@ -28,7 +28,7 @@ java {
 
 compileJava {
     options.fork = true
-    options.forkOptions.jvmArgs.addAll(["-Xmx4g"])
+    options.forkOptions.jvmArgs.addAll(["-Xmx16g"])
 }
 
 repositories {
@@ -137,6 +137,10 @@ javadoc {
         options.addBooleanOption('html5', true)
     }
     options.jFlags("-Xmx8g", "-Xms512m")
+}
+
+jar {
+    zip64 = true
 }
 
 if (signingKey) {
