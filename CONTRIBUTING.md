@@ -45,6 +45,11 @@ You will want to install the following on your machine:
 - Go 1.17
 - Pulumi CLI 3.30.0 or higher
 
+### Preparing a pull request
+
+1. Ensure running `make` passes with no issues.
+2. Run `make codegen_tests_update` if anything related to codegen has been changed.
+
 ### Understanding the repo structure
 
 - `sdk/java/` is a Gradle project that hosts the core Java SDK
@@ -125,7 +130,6 @@ the automated test:
 make test_example.aws-java-webserver
 ```
 
-
 ### Testing templates locally
 
 See `templates/README.md` on how to manually test template changes
@@ -138,7 +142,6 @@ automatically test templates, for example to test
 ```
 make test_template.java-gradle
 ```
-
 
 ## Getting Help
 
