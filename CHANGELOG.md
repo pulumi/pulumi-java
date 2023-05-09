@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+## 0.9.3 (2023-05-09)
+
+  - [sdk] Enable Zip64 jar files for jar task
+  - [sdk] Increase maximum memory for compile step to 16g
+
 ## 0.9.2 (2023-04-18)
 
 ### Bug Fixes
