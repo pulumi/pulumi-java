@@ -75,7 +75,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
     testImplementation("org.assertj:assertj-core:${assertjCoreVersion}")
     testImplementation("org.mockito:mockito-core:${mockitoCoreVersion}")
-    testImplementation("nl.jqno.equalsverifier:equalsverifier:3.14.1")
+    testImplementation("nl.jqno.equalsverifier:equalsverifier:3.14.2")
     testImplementation("org.junit-pioneer:junit-pioneer:2.0.1")
 }
 
