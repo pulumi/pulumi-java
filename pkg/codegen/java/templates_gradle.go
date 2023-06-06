@@ -89,6 +89,8 @@ func newGradleTemplateContext(
 	packageInfo *PackageInfo,
 ) gradleTemplateContext {
 	ctx := gradleTemplateContext{
+		ArtifactID:                     pkg.Name,
+		ProjectDescription:             pkg.Description,
 		ProjectURL:                     pkg.Repository,
 		ProjectGitURL:                  formatGitURL(pkg.Repository),
 		GradleTestJUnitPlatformEnabled: packageInfo.GradleTest == "JUnitPlatform",
@@ -116,15 +118,19 @@ func newGradleTemplateContext(
 		ctx.LicenceURL = "http://www.apache.org/licenses/LICENSE-2.0.txt"
 	}
 
+	ctx.GroupID = packageInfo.BasePackage
+	if ctx.GroupID == "" {
+		ctx.GroupID = "com.pulumi"
+	}
+
 	if pkg.Publisher == "Pulumi" ||
 		pkg.Homepage == "https://pulumi.com" ||
 		pkg.Homepage == "https://pulumi.io" {
-		ctx.ArtifactID = pkg.Name
+
 		ctx.GroupID = "com.pulumi"
 		ctx.DeveloperID = "pulumi"
 		ctx.DeveloperName = "Pulumi"
 		ctx.DeveloperEmail = "support@pulumi.com"
-		ctx.ProjectDescription = pkg.Description
 		ctx.ProjectInceptionYear = "2022"
 		ctx.ProjectName = fmt.Sprintf("pulumi-%s", ctx.ArtifactID)
 	}

@@ -7,6 +7,8 @@ plugins {
     id("maven-publish")
 }
 
+group = "com.pulumi"
+
 def resolvedVersion = System.getenv("PACKAGE_VERSION") ?:
     (project.version == "unspecified"
          ? "0.0.1"
@@ -63,7 +65,7 @@ def genPulumiResources = tasks.register('genPulumiResources') {
         new File(outDir, "version.txt").text = resolvedVersion
         def info = new Object()
         info.metaClass.resource = true
-        info.metaClass.name = ""
+        info.metaClass.name = "world"
         info.metaClass.version = resolvedVersion
         def infoJson = new groovy.json.JsonBuilder(info).toPrettyString()
         new File(outDir, "plugin.json").text = infoJson
@@ -77,8 +79,8 @@ jar.configure {
 publishing {
     publications {
         mainPublication(MavenPublication) {
-            groupId = ""
-            artifactId = ""
+            groupId = "com.pulumi"
+            artifactId = "world"
             version = resolvedVersion
             from components.java
             artifact sourcesJar
@@ -88,7 +90,7 @@ publishing {
                 inceptionYear = ""
                 name = ""
                 packaging = "jar"
-                description = ""
+                description = "test description"
 
                 url = "https://github.com/pulumi/pulumi-java"
 
