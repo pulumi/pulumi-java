@@ -82,7 +82,8 @@ submodule_update::
 # submodule as symlinks.
 borrow_schemas:: submodule_update
 	find pulumi/pkg/codegen/testing -name "schema.*" -exec ./scripts/borrow-schema.sh "{}" ";"
-	find pulumi/pkg/codegen/testing/test/testdata -depth 1 -name "*-*.json" -exec ./scripts/borrow-schema.sh "{}" ";"
+	find pulumi/pkg/codegen/testing/test/testdata -maxdepth 1 -name "*-*.json" -exec ./scripts/borrow-schema.sh "{}" \;
+
 
 # Runs `go mod tidy` on every Go project.
 tidy::
