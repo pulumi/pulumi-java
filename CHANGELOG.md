@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+## 0.9.4 (2023-06-07)
+
+### Bug Fixes
+
+  - [codegen] Fixed missing gradle fields for 3rd-party providers.
+
 ## 0.9.3 (2023-05-09)
 
   - [sdk] Enable Zip64 jar files for jar task
