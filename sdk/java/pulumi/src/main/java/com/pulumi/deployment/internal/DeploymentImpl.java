@@ -50,6 +50,7 @@ import com.pulumi.serialization.internal.JsonFormatter;
 import com.pulumi.serialization.internal.PropertiesSerializer;
 import com.pulumi.serialization.internal.PropertiesSerializer.SerializationResult;
 import com.pulumi.serialization.internal.Structs;
+import pulumirpc.AliasOuterClass.Alias;
 import pulumirpc.EngineOuterClass;
 import pulumirpc.EngineOuterClass.LogRequest;
 import pulumirpc.EngineOuterClass.LogSeverity;
@@ -58,7 +59,6 @@ import pulumirpc.Resource.ReadResourceRequest;
 import pulumirpc.Resource.RegisterResourceOutputsRequest;
 import pulumirpc.Resource.RegisterResourceRequest;
 import pulumirpc.Resource.SupportsFeatureRequest;
-import pulumirpc.AliasOuterClass.Alias;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -69,7 +69,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -96,7 +95,6 @@ import static com.pulumi.core.internal.Exceptions.getStackTrace;
 import static com.pulumi.core.internal.Strings.isNonEmptyOrNull;
 import static com.pulumi.resources.internal.Stack.RootPulumiStackTypeName;
 import static java.util.stream.Collectors.toMap;
-import static java.util.stream.Collectors.toSet;
 
 @InternalUse
 public class DeploymentImpl extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
@@ -267,9 +265,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
          */
         private static final String ConfigSecretKeysEnvKey = "PULUMI_CONFIG_SECRET_KEYS";
 
-        private ImmutableMap<String, String> allConfig;
+        private final ImmutableMap<String, String> allConfig;
 
-        private ImmutableSet<String> configSecretKeys;
+        private final ImmutableSet<String> configSecretKeys;
 
         @VisibleForTesting
         public Config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
@@ -295,36 +293,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         @InternalUse
         private ImmutableSet<String> configSecretKeys() {
             return configSecretKeys;
-        }
-
-        /**
-         * Sets a configuration variable.
-         */
-        @InternalUse
-        @VisibleForTesting
-        void setConfig(String key, String value) { // TODO: can the setter be avoided?
-            this.allConfig = new ImmutableMap.Builder<String, String>()
-                    .putAll(this.allConfig)
-                    .put(key, value)
-                    .build();
-        }
-
-        /**
-         * Appends all provided configuration.
-         */
-        @InternalUse
-        @VisibleForTesting
-        void setAllConfig(ImmutableMap<String, String> config, @Nullable Iterable<String> secretKeys) { // TODO: can the setter be avoided?
-            this.allConfig = new ImmutableMap.Builder<String, String>()
-                    .putAll(this.allConfig)
-                    .putAll(config)
-                    .build();
-            if (secretKeys != null) {
-                this.configSecretKeys = new ImmutableSet.Builder<String>()
-                        .addAll(this.configSecretKeys)
-                        .addAll(secretKeys)
-                        .build();
-            }
         }
 
         public Optional<String> getConfig(String fullKey) {
