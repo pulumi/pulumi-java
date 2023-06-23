@@ -8,7 +8,6 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
-import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.exceptions.RunException;
 
 import javax.annotation.Nonnull;
@@ -34,14 +33,14 @@ import static java.util.Objects.requireNonNull;
 public class ConfigInternal implements Config {
 
     private final String name;
-    private final DeploymentImpl.Config internalConfig;
+    private final com.pulumi.deployment.internal.Config internalConfig;
 
     /**
      * @see com.pulumi.Context#config()
      * @see com.pulumi.Context#config(String)
      */
     @InternalUse
-    public ConfigInternal(DeploymentImpl.Config internalConfig, String name) {
+    public ConfigInternal(com.pulumi.deployment.internal.Config internalConfig, String name) {
         this.internalConfig = requireNonNull(internalConfig);
 
         requireNonNull(name);

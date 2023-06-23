@@ -6,6 +6,7 @@ import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.CallOptions;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.internal.Config;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.DeploymentInstanceHolder;
 import com.pulumi.deployment.internal.DeploymentInternal;
@@ -115,7 +116,7 @@ public class MockDeployment extends DeploymentInstanceHolder implements Deployme
     }
 
     @Override
-    public DeploymentImpl.Config getConfig() {
+    public Config getConfig() {
         return this.state.config;
     }
 

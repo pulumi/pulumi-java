@@ -15,7 +15,7 @@ import java.util.function.Function;
 @InternalUse
 public interface DeploymentInternal extends Deployment {
 
-    DeploymentImpl.Config getConfig();
+    Config getConfig();
 
     Optional<String> getConfig(String fullKey);
 

@@ -55,7 +55,7 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     }
 
     @Override
-    public DeploymentImpl.Config getConfig() {
+    public Config getConfig() {
         return deployment.getConfig();
     }
 
