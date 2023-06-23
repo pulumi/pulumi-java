@@ -57,4 +57,12 @@ public class DeploymentConfigTest {
         assertThat(extractValue(projectConfig.getSecret("secret"))).hasValue("a secret");
         assertThat(awsConfig.get("region")).hasValue("us-east-1");
     }
+
+    @Test
+    void testCodegenUsage() {
+        // just reference the Codegen version to prevent
+        // removal of the deprecated method while provider
+        // codegen still depends on it
+        com.pulumi.Config.of("aws");
+    }
 }
