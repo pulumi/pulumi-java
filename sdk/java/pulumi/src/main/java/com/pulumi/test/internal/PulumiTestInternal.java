@@ -25,6 +25,7 @@ import com.pulumi.deployment.internal.Monitor;
 import com.pulumi.deployment.internal.ReadOrRegisterResource;
 import com.pulumi.deployment.internal.RegisterResourceOutputs;
 import com.pulumi.deployment.internal.Runner;
+import com.pulumi.internal.ConfigInternal;
 import com.pulumi.internal.PulumiInternal;
 import com.pulumi.test.EmptyMocks;
 import com.pulumi.test.Mocks;
@@ -379,7 +380,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             this.runner = deployment.getRunner();
             DeploymentImpl.setInstance(new DeploymentInstanceInternal(deployment));
 
-            Function<String, Config> configFactory = (name) -> new Config(this.config, name);
+            Function<String, Config> configFactory = (name) -> new ConfigInternal(this.config, name);
             var configContext = new ConfigContextInternal(this.options.projectName(), configFactory);
             var loggingContext = new LoggingContextInternal(this.log);
             var outputFactory = new OutputFactory(this.runner);

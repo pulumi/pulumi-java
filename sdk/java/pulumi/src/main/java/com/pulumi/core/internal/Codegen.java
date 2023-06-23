@@ -9,6 +9,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.exceptions.RunException;
+import com.pulumi.internal.ConfigInternal.ConfigMissingException;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -51,6 +52,10 @@ public final class Codegen {
 
     public static <T, O extends Output<T>> Output<T> ofNullable(@Nullable O value) {
         return value == null ? Codegen.empty() : value;
+    }
+
+    public static Config config(String name) {
+        return Config.of(name);
     }
 
     /**
@@ -236,9 +241,9 @@ public final class Codegen {
             Supplier<? extends RuntimeException> exceptionSupplier = () -> {
                 if (this.config.isPresent()) {
                     if (this.envVars.size() > 0) {
-                        return new Config.ConfigMissingException(this.propertyName, this.envVars);
+                        return new ConfigMissingException(this.propertyName, this.envVars);
                     } else {
-                        return new Config.ConfigMissingException(this.propertyName);
+                        return new ConfigMissingException(this.propertyName);
                     }
                 }
                 var baseMsg = String.format("Expected parameter '%s' to be non-null", this.propertyName);

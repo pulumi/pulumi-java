@@ -1,6 +1,6 @@
 package com.pulumi.deployment.internal;
 
-import com.pulumi.deployment.internal.DeploymentImpl.Config;
+import com.pulumi.internal.ConfigInternal;
 import org.junit.jupiter.api.Test;
 
 import static com.pulumi.test.PulumiTest.extractValue;
@@ -50,8 +50,8 @@ public class DeploymentConfigTest {
         assertThat(config.isConfigSecret("project:secret")).isTrue();
         assertThat(config.getConfig("aws:region")).hasValue("us-east-1");
 
-        var projectConfig = new com.pulumi.Config(config, "project");
-        var awsConfig = new com.pulumi.Config(config, "aws");
+        var projectConfig = new ConfigInternal(config, "project");
+        var awsConfig = new ConfigInternal(config, "aws");
 
         assertThat(projectConfig.get("name")).hasValue("minimal");
         assertThat(extractValue(projectConfig.getSecret("secret"))).hasValue("a secret");
