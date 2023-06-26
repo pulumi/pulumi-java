@@ -52,7 +52,13 @@ public class ConfigInternal implements Config {
         this.name = cleanName(name);
     }
 
-    public Config withName(String name) {
+    /**
+     * Get a copy of {@code this} {@link Config} with a different name (namespace prefix)
+     *
+     * @param name the config namespace name
+     * @return a new Config with the given name
+     */
+    public ConfigInternal withName(String name) {
         return new ConfigInternal(name, allConfig, configSecretKeys);
     }
 

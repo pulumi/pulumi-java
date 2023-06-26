@@ -23,14 +23,6 @@ import java.util.Optional;
 public interface Config {
 
     /**
-     * Get a copy of {@code this} {@link Config} with a different name (namespace prefix)
-     *
-     * @param name the config namespace name
-     * @return a new Config with the given name
-     */
-    Config withName(String name);
-
-    /**
      * For internal use by providers.
      *
      * @see com.pulumi.Context#config()
