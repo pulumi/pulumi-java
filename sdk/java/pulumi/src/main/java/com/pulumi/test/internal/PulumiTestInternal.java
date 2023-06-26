@@ -36,7 +36,6 @@ import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -231,7 +230,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         @Nullable
         private DeploymentImpl.DeploymentState state;
         @Nullable
-        private BiFunction<ConfigInternal, DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory;
+        private Function<DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory;
         @Nullable
         private Function<MockMonitor, MockMonitor> monitorDecorator;
 
@@ -301,7 +300,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
          * @return this Pulumi test {@link Builder}
          */
         public Builder deploymentFactory(
-                BiFunction<ConfigInternal, DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory
+                Function<DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory
         ) {
             this.deploymentFactory = requireNonNull(deploymentFactory);
             return this;
@@ -371,14 +370,15 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
                         this.monitor
                 );
             }
+
             if (this.deploymentFactory == null) {
-                this.deploymentFactory = DeploymentImpl::new;
+                this.deploymentFactory = state -> new DeploymentImpl(state);
             }
-            var config = configFactory.apply(options.projectName());
-            var deployment = deploymentFactory.apply(config, this.state);
+            var deployment = deploymentFactory.apply(this.state);
             // FIXME: this is needed because we create runner inside DeploymentState currently
             this.runner = deployment.getRunner();
-            DeploymentImpl.setInstance(new DeploymentInstanceInternal(deployment));
+            var config = configFactory.apply(options.projectName());
+            DeploymentImpl.setInstance(new DeploymentInstanceInternal(config, deployment));
 
             var configContext = new ConfigContextInternal(config);
             var loggingContext = new LoggingContextInternal(this.log);

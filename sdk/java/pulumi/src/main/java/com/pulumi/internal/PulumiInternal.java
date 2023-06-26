@@ -36,12 +36,13 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
     @InternalUse
     public static PulumiInternal fromEnvironment(StackOptions options) {
         var deployment = DeploymentImpl.fromEnvironment();
+        var instance = DeploymentImpl.getInstance();
         var projectName = deployment.getProjectName();
         var stackName = deployment.getStackName();
         var runner = deployment.getRunner();
         var log = deployment.getLog();
 
-        var config = new ConfigContextInternal(deployment.getConfig());
+        var config = new ConfigContextInternal(instance.getConfig());
         var logging = new LoggingContextInternal(log);
         var outputFactory = new OutputFactory(runner);
         var outputs = new OutputContextInternal(outputFactory);

@@ -97,7 +97,6 @@ import static java.util.stream.Collectors.toMap;
 @InternalUse
 public class DeploymentImpl extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
 
-    private final ConfigInternal config;
     private final DeploymentState state;
     private final Log log;
     private final FeatureSupport featureSupport;
@@ -116,10 +115,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @InternalUse
     @VisibleForTesting
     public DeploymentImpl(
-            ConfigInternal config,
             DeploymentState state
     ) {
-        this.config = Objects.requireNonNull(config);
         this.state = Objects.requireNonNull(state);
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
         this.featureSupport = new FeatureSupport(state.monitor);
@@ -155,8 +152,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     public static DeploymentImpl fromEnvironment() {
         var state = DeploymentState.fromEnvironment();
         var config = ConfigInternal.fromEnvironment(state.projectName);
-        var impl = new DeploymentImpl(config, state);
-        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(impl));
+        var impl = new DeploymentImpl(state);
+        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(config, impl));
         return impl;
     }
 
@@ -185,22 +182,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     public Log getLog() {
         return this.log;
-    }
-
-    @Override
-    @InternalUse
-    public ConfigInternal getConfig() {
-        return this.config;
-    }
-
-    @Override
-    public Optional<String> getConfig(String fullKey) {
-        return this.config.get(fullKey);
-    }
-
-    @Override
-    public boolean isConfigSecret(String fullKey) {
-        return this.config.isConfigSecret(fullKey);
     }
 
     @Nullable
