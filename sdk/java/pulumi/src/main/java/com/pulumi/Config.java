@@ -17,7 +17,7 @@ import java.util.Optional;
  * <p/>
  * For example, a bag whose name is {@code pulumi:foo}, with keys
  * {@code a}, {@code b}, and {@code c}, is entirely separate from a bag whose name is
- * {@code pulumi:bar} with the same simple key names.  Each key has a fully qualified names,
+ * {@code pulumi:bar} with the same simple key names. Each key has a fully qualified names,
  * such as {@code pulumi:foo:a}, ..., and {@code pulumi:bar:a}, respectively.
  * @see com.pulumi.context.ConfigContext
  */
