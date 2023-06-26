@@ -6,11 +6,11 @@ import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.CallOptions;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
-import com.pulumi.deployment.internal.Config;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.DeploymentInstanceHolder;
 import com.pulumi.deployment.internal.DeploymentInternal;
 import com.pulumi.deployment.internal.Runner;
+import com.pulumi.internal.ConfigInternal;
 import com.pulumi.resources.CallArgs;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.Resource;
@@ -32,9 +32,14 @@ import static java.util.Objects.requireNonNull;
  */
 @InternalUse
 public class MockDeployment extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
+    public final ConfigInternal config;
     public final DeploymentImpl.DeploymentState state;
 
-    public MockDeployment(DeploymentImpl.DeploymentState state) {
+    public MockDeployment(
+            ConfigInternal config,
+            DeploymentImpl.DeploymentState state
+    ) {
+        this.config = requireNonNull(config);
         this.state = requireNonNull(state);
     }
 
@@ -116,18 +121,18 @@ public class MockDeployment extends DeploymentInstanceHolder implements Deployme
     }
 
     @Override
-    public Config getConfig() {
-        return this.state.config;
+    public ConfigInternal getConfig() {
+        return this.config;
     }
 
     @Override
     public Optional<String> getConfig(String fullKey) {
-        return this.state.config.getConfig(fullKey);
+        return this.config.get(fullKey);
     }
 
     @Override
     public boolean isConfigSecret(String fullKey) {
-        return this.state.config.isConfigSecret(fullKey);
+        return this.config.isConfigSecret(fullKey);
     }
 
     @Override

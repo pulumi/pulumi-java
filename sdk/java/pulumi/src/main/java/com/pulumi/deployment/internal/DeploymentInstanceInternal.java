@@ -6,6 +6,7 @@ import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.CallOptions;
 import com.pulumi.deployment.DeploymentInstance;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.internal.ConfigInternal;
 import com.pulumi.resources.CallArgs;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.Resource;
@@ -55,7 +56,7 @@ public final class DeploymentInstanceInternal implements DeploymentInstance {
     }
 
     @Override
-    public Config getConfig() {
+    public ConfigInternal getConfig() {
         return deployment.getConfig();
     }
 

@@ -33,7 +33,7 @@ class StackTest {
     @Test
     void testValidStackInstantiationSucceeds() {
         var test = PulumiTestInternal.builder()
-                .deploymentFactory(state -> Mockito.spy(new DeploymentImpl(state)))
+                .deploymentFactory((config, state) -> Mockito.spy(new DeploymentImpl(config, state)))
                 .standardLogger(logger(Level.OFF))
                 .build();
 
@@ -66,7 +66,7 @@ class StackTest {
     @Test
     void testStackWithNullOutputsThrows() {
         var test = PulumiTestInternal.builder()
-                .deploymentFactory(state -> Mockito.spy(new DeploymentImpl(state)))
+                .deploymentFactory((config, state) -> Mockito.spy(new DeploymentImpl(config, state)))
                 .standardLogger(logger(Level.OFF))
                 .build();
 
@@ -105,7 +105,7 @@ class StackTest {
         var monitorMocks = new RecurrentStackMocks();
         var test = PulumiTestInternal.builder()
                 .mocks(monitorMocks)
-                .deploymentFactory(state -> Mockito.spy(new DeploymentImpl(state)))
+                .deploymentFactory((config, state) -> Mockito.spy(new DeploymentImpl(config, state)))
                 .build();
 
         monitorMocks.setStack(() -> {

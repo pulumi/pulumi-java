@@ -28,6 +28,7 @@ import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.exceptions.LogException;
 import com.pulumi.exceptions.ResourceException;
 import com.pulumi.exceptions.RunException;
+import com.pulumi.internal.ConfigInternal;
 import com.pulumi.resources.CallArgs;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
@@ -96,6 +97,7 @@ import static java.util.stream.Collectors.toMap;
 @InternalUse
 public class DeploymentImpl extends DeploymentInstanceHolder implements Deployment, DeploymentInternal {
 
+    private final ConfigInternal config;
     private final DeploymentState state;
     private final Log log;
     private final FeatureSupport featureSupport;
@@ -114,8 +116,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @InternalUse
     @VisibleForTesting
     public DeploymentImpl(
+            ConfigInternal config,
             DeploymentState state
     ) {
+        this.config = Objects.requireNonNull(config);
         this.state = Objects.requireNonNull(state);
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
         this.featureSupport = new FeatureSupport(state.monitor);
@@ -150,7 +154,8 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     @VisibleForTesting
     public static DeploymentImpl fromEnvironment() {
         var state = DeploymentState.fromEnvironment();
-        var impl = new DeploymentImpl(state);
+        var config = ConfigInternal.fromEnvironment(state.projectName);
+        var impl = new DeploymentImpl(config, state);
         DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(impl));
         return impl;
     }
@@ -184,18 +189,18 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     @Override
     @InternalUse
-    public Config getConfig() {
-        return this.state.config;
+    public ConfigInternal getConfig() {
+        return this.config;
     }
 
     @Override
     public Optional<String> getConfig(String fullKey) {
-        return this.state.config.getConfig(fullKey);
+        return this.config.get(fullKey);
     }
 
     @Override
     public boolean isConfigSecret(String fullKey) {
-        return this.state.config.isConfigSecret(fullKey);
+        return this.config.isConfigSecret(fullKey);
     }
 
     @Nullable
@@ -1463,7 +1468,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         public static final boolean DisableResourceReferences = getBooleanEnvironmentVariable("PULUMI_DISABLE_RESOURCE_REFERENCES").or(false);
         public static final boolean ExcessiveDebugOutput = getBooleanEnvironmentVariable("PULUMI_EXCESSIVE_DEBUG_OUTPUT").or(false);
 
-        public final Config config;
         public final String projectName;
         public final String stackName;
         public final boolean isDryRun;
@@ -1477,14 +1481,12 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         @InternalUse
         @VisibleForTesting
         public DeploymentState(
-                Config config,
                 Logger standardLogger,
                 String projectName,
                 String stackName,
                 boolean isDryRun,
                 Engine engine,
                 Monitor monitor) {
-            this.config = Objects.requireNonNull(config);
             this.standardLogger = Objects.requireNonNull(standardLogger);
             this.projectName = Objects.requireNonNull(projectName);
             this.stackName = Objects.requireNonNull(stackName);
@@ -1515,7 +1517,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 var stack = getEnvironmentVariable("PULUMI_STACK").orThrow(startErrorSupplier);
                 var dryRun = getBooleanEnvironmentVariable("PULUMI_DRY_RUN").orThrow(startErrorSupplier);
 
-                var config = Config.parse();
                 standardLogger.setLevel(GlobalLogging.GlobalLevel);
 
                 standardLogger.log(Level.FINEST, "Creating deployment engine");
@@ -1526,7 +1527,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                 var monitor = new GrpcMonitor(monitorTarget);
                 standardLogger.log(Level.FINEST, "Created deployment monitor");
 
-                return new DeploymentState(config, standardLogger, project, stack, dryRun, engine, monitor);
+                return new DeploymentState(standardLogger, project, stack, dryRun, engine, monitor);
             } catch (NullPointerException ex) {
                 throw new IllegalStateException(
                         "Program run without the Pulumi engine available; re-run using the `pulumi` CLI", ex);

@@ -3,6 +3,7 @@ package com.pulumi.deployment.internal;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
+import com.pulumi.internal.ConfigInternal;
 import com.pulumi.resources.Resource;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.ResourceOptions;
@@ -15,7 +16,7 @@ import java.util.function.Function;
 @InternalUse
 public interface DeploymentInternal extends Deployment {
 
-    Config getConfig();
+    ConfigInternal getConfig();
 
     Optional<String> getConfig(String fullKey);
 

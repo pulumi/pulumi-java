@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
-import com.pulumi.Config;
 import com.pulumi.Context;
 import com.pulumi.Log;
 import com.pulumi.context.internal.ConfigContextInternal;
@@ -37,6 +36,7 @@ import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -227,11 +227,11 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
         @Nullable
         private EngineLogger engineLogger;
         @Nullable
-        private com.pulumi.deployment.internal.Config config;
+        private Function<String, ConfigInternal> configFactory;
         @Nullable
         private DeploymentImpl.DeploymentState state;
         @Nullable
-        private Function<DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory;
+        private BiFunction<ConfigInternal, DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory;
         @Nullable
         private Function<MockMonitor, MockMonitor> monitorDecorator;
 
@@ -272,8 +272,8 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
          * @return this {@link PulumiTestInternal.Builder}
          */
         public PulumiTestInternal.Builder config(Map<String, String> allConfig, Set<String> configSecretKeys) {
-            return internalConfig(new com.pulumi.deployment.internal.Config(
-                    ImmutableMap.copyOf(allConfig), ImmutableSet.copyOf(configSecretKeys)
+            return internalConfig(name -> new ConfigInternal(
+                    name, ImmutableMap.copyOf(allConfig), ImmutableSet.copyOf(configSecretKeys)
             ));
         }
 
@@ -284,13 +284,13 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
          * @return this {@link PulumiTestInternal.Builder}
          */
         public PulumiTestInternal.Builder config(Map<String, String> allConfig) {
-            return internalConfig(new com.pulumi.deployment.internal.Config(
-                    ImmutableMap.copyOf(allConfig), ImmutableSet.of()
+            return internalConfig(name -> new ConfigInternal(
+                    name, ImmutableMap.copyOf(allConfig), ImmutableSet.of()
             ));
         }
 
-        private PulumiTestInternal.Builder internalConfig(com.pulumi.deployment.internal.Config config) {
-            this.config = requireNonNull(config);
+        private PulumiTestInternal.Builder internalConfig(Function<String, ConfigInternal> configFactory) {
+            this.configFactory = requireNonNull(configFactory);
             return this;
         }
 
@@ -301,7 +301,7 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
          * @return this Pulumi test {@link Builder}
          */
         public Builder deploymentFactory(
-                Function<DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory
+                BiFunction<ConfigInternal, DeploymentImpl.DeploymentState, DeploymentInternal> deploymentFactory
         ) {
             this.deploymentFactory = requireNonNull(deploymentFactory);
             return this;
@@ -358,12 +358,11 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             if (this.monitor == null) {
                 this.monitor = monitorDecorator.apply(new MockMonitor(this.mocks, this.log));
             }
-            if (this.config == null) {
-                this.config = new com.pulumi.deployment.internal.Config(ImmutableMap.of(), ImmutableSet.of());
+            if (this.configFactory == null) {
+                this.configFactory = name -> new ConfigInternal(name, ImmutableMap.of(), ImmutableSet.of());
             }
             if (this.state == null) {
                 this.state = new DeploymentImpl.DeploymentState(
-                        this.config,
                         this.standardLogger,
                         this.options.projectName(),
                         this.options.stackName(),
@@ -375,13 +374,13 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
             if (this.deploymentFactory == null) {
                 this.deploymentFactory = DeploymentImpl::new;
             }
-            var deployment = deploymentFactory.apply(this.state);
+            var config = configFactory.apply(options.projectName());
+            var deployment = deploymentFactory.apply(config, this.state);
             // FIXME: this is needed because we create runner inside DeploymentState currently
             this.runner = deployment.getRunner();
             DeploymentImpl.setInstance(new DeploymentInstanceInternal(deployment));
 
-            Function<String, Config> configFactory = (name) -> new ConfigInternal(this.config, name);
-            var configContext = new ConfigContextInternal(this.options.projectName(), configFactory);
+            var configContext = new ConfigContextInternal(config);
             var loggingContext = new LoggingContextInternal(this.log);
             var outputFactory = new OutputFactory(this.runner);
             var outputsContext = new OutputContextInternal(outputFactory);
@@ -424,20 +423,5 @@ public class PulumiTestInternal extends PulumiInternal implements PulumiTest {
     @InternalUse
     public static Log mockLog(Logger logger, Supplier<Engine> engine) {
         return new Log(new DeploymentImpl.DefaultEngineLogger(logger, MockRunner::new, engine));
-    }
-
-    @InternalUse
-    public static com.pulumi.deployment.internal.Config config(ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
-        return new com.pulumi.deployment.internal.Config(allConfig, configSecretKeys);
-    }
-
-    @InternalUse
-    public static ImmutableMap<String, String> parseConfig(String configJson) {
-        return com.pulumi.deployment.internal.Config.parseConfig(configJson);
-    }
-
-    @InternalUse
-    public static ImmutableSet<String> parseConfigSecretKeys(String secretKeysJson) {
-        return com.pulumi.deployment.internal.Config.parseConfigSecretKeys(secretKeysJson);
     }
 }

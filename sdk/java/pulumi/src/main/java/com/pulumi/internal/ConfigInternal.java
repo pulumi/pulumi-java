@@ -1,118 +1,95 @@
 package com.pulumi.internal;
 
 import com.google.common.annotations.VisibleForTesting;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import com.pulumi.Config;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
+import com.pulumi.core.internal.Environment;
 import com.pulumi.core.internal.annotations.InternalUse;
-import com.pulumi.deployment.Deployment;
 import com.pulumi.exceptions.RunException;
 
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.io.Reader;
 import java.util.List;
 import java.util.Optional;
 
 import static java.util.Objects.requireNonNull;
 
-/**
- * Config is a bag of related configuration state. Each bag contains any number
- * of configuration variables, indexed by simple keys, and each has a name that uniquely
- * identifies it; two bags with different names do not share values for variables that
- * otherwise share the same key.  For example, a bag whose name is {@code pulumi:foo}, with keys
- * {@code a}, {@code b}, and {@code c}, is entirely separate from a bag whose name is
- * {@code pulumi:bar} with the same simple key names.  Each key has a fully qualified names,
- * such as {@code pulumi:foo:a}, ..., and {@code pulumi:bar:a}, respectively.
- * @see com.pulumi.context.ConfigContext
- */
 @ParametersAreNonnullByDefault
 public class ConfigInternal implements Config {
 
-    private final String name;
-    private final com.pulumi.deployment.internal.Config internalConfig;
+    /**
+     * The environment variable key that the language plugin uses to set configuration values.
+     */
+    private static final String ConfigEnvKey = "PULUMI_CONFIG";
 
     /**
+     * The environment variable key that the language plugin uses to set the list of secret configuration keys.
+     */
+    private static final String ConfigSecretKeysEnvKey = "PULUMI_CONFIG_SECRET_KEYS";
+
+    private final String name;
+    private final ImmutableMap<String, String> allConfig;
+    private final ImmutableSet<String> configSecretKeys;
+
+    /**
+     * @see com.pulumi.Config
      * @see com.pulumi.Context#config()
      * @see com.pulumi.Context#config(String)
      */
     @InternalUse
-    public ConfigInternal(com.pulumi.deployment.internal.Config internalConfig, String name) {
-        this.internalConfig = requireNonNull(internalConfig);
+    @VisibleForTesting
+    public ConfigInternal(String name, ImmutableMap<String, String> allConfig, ImmutableSet<String> configSecretKeys) {
+        this.allConfig = requireNonNull(allConfig);
+        this.configSecretKeys = requireNonNull(configSecretKeys);
 
         requireNonNull(name);
-        if (name.endsWith(":config")) {
-            name = name.replaceAll(":config$", "");
-        }
-        this.name = name;
+        this.name = cleanName(name);
+    }
+
+    public Config withName(String name) {
+        return new ConfigInternal(name, allConfig, configSecretKeys);
     }
 
     /**
-     * For internal use by providers.
-     * @see com.pulumi.Context#config()
-     * @see com.pulumi.Context#config(String)
-     * @deprecated will be removed in the future, use {@link com.pulumi.Context#config(String)}
-     */
-    // TODO: remove after refactoring the provider codegen
-    @InternalUse
-    @Deprecated
-    public static Config of(String name) {
-        return new ConfigInternal(Deployment.getInstance().getConfig(), name);
-    }
-
-    /**
-     * The configuration bag's logical name and uniquely identifies it.
-     * The default is the name of the current project.
+     * Create a {@link Config} by parsing the environment variables
+     * {@link ConfigInternal#ConfigEnvKey} and {@link ConfigInternal#ConfigSecretKeysEnvKey}
      *
-     * @return unique logical configuration bag name
+     * @param name the configuration name (namespace prefix)
+     * @return a new {@link Config} using the environment variables
      */
-    @Nonnull
+    public static ConfigInternal fromEnvironment(String name) {
+        return new ConfigInternal(name, parseConfig(), parseConfigSecretKeys());
+    }
+
     public String getName() {
         return name;
     }
 
-    /**
-     * Loads an optional configuration value by its key, or returns empty if it doesn't exist.
-     */
     public Optional<String> get(String key) {
         var fullKey = fullKey(key);
         // FIXME: due to https://github.com/pulumi/pulumi/issues/7127
         //        there is a check for key being a secret missing here
-        return this.internalConfig.getConfig(fullKey);
+        return this.getConfig(fullKey);
     }
 
-    /**
-     * Loads an optional configuration value by its key, marking it as a secret,
-     * or empty if it doesn't exist.
-     */
     public Output<Optional<String>> getSecret(String key) {
         return Output.ofSecret(get(key));
     }
 
-    /**
-     * Loads an optional configuration value, as a boolean, by its key, or null if it doesn't exist.
-     * If the configuration value isn't a legal boolean, this function will throw an error.
-     */
     public Optional<Boolean> getBoolean(String key) {
         return get(key).map(Boolean::parseBoolean);
     }
 
-    /**
-     * Loads an optional configuration value, as a boolean, by its key, making it as a secret or
-     * null if it doesn't exist. If the configuration value isn't a legal boolean, this
-     * function will throw an error.
-     */
     public Output<Optional<Boolean>> getSecretBoolean(String key) {
         return Output.ofSecret(getBoolean(key));
     }
 
-    /**
-     * Loads an optional configuration value, as a number, by its key, or null if it doesn't exist.
-     * If the configuration value isn't a legal number, this function will throw an error.
-     */
     public Optional<Integer> getInteger(String key) {
         return get(key).map(string -> {
             try {
@@ -123,10 +100,6 @@ public class ConfigInternal implements Config {
         });
     }
 
-    /**
-     * Loads an optional configuration value, as a number, by its key, or null if it doesn't exist.
-     * If the configuration value isn't a legal number, this function will throw an error.
-     */
     public Optional<Double> getDouble(String key) {
         return get(key).map(string -> {
             try {
@@ -141,21 +114,10 @@ public class ConfigInternal implements Config {
         return Output.ofSecret(getDouble(key));
     }
 
-    /**
-     * Loads an optional configuration value, as a number, by its key, marking it as a secret
-     * or null if it doesn't exist.
-     * If the configuration value isn't a legal number, this function will throw an error.
-     */
     public Output<Optional<Integer>> getSecretInteger(String key) {
         return Output.ofSecret(getInteger(key));
     }
 
-    /**
-     * Loads an optional configuration value as a JSON string and deserializes it
-     * as an object, by its key, or null if it doesn't exist.
-     * This works by taking the value associated with {@code key} and passing
-     * it to {@link Gson#fromJson(Reader, Class)}.
-     */
     public <T> Optional<T> getObject(String key, Class<T> classOfT) {
         var v = get(key);
         try {
@@ -166,19 +128,10 @@ public class ConfigInternal implements Config {
         }
     }
 
-    /**
-     * Loads an optional configuration value as a JSON string and deserializes it
-     * as an object, by its key, marking it as a secret or null (empty) if it doesn't exist.
-     * This works by taking the value associated with {@code key}
-     * and passing it to {@link Gson#fromJson(Reader, Class)}.
-     */
     public <T> Output<Optional<T>> getSecretObject(String key, Class<T> classOfT) {
         return Output.ofSecret(getObject(key, classOfT));
     }
 
-    /**
-     * @see #getObject(String, Class)
-     */
     public <T> Optional<T> getObject(String key, TypeShape<T> shapeOfT) {
         var v = get(key);
         // TODO should this be using Pulumi deserializers from protobuf Struct instead of GSON?
@@ -191,83 +144,46 @@ public class ConfigInternal implements Config {
         }
     }
 
-    /**
-     * @see #getSecretObject(String, Class)
-     */
     public <T> Output<Optional<T>> getSecretObject(String key, TypeShape<T> shapeOfT) {
         return Output.ofSecret(getObject(key, shapeOfT));
     }
 
-    /**
-     * Loads a configuration value by its given key. If it doesn't exist, an error is thrown.
-     */
     public String require(String key) {
         return get(key).orElseThrow(() -> new ConfigMissingException(fullKey(key)));
     }
 
-    /**
-     * Loads a configuration value by its given key, marking it as a secret. If it doesn't exist, an error
-     * is thrown.
-     */
     public Output<String> requireSecret(String key) {
         return Output.ofSecret(require(key));
     }
 
-    /**
-     * Loads a configuration value, as a boolean, by its given key. If it doesn't exist, or the
-     * configuration value is not a legal boolean, an error is thrown.
-     */
     public boolean requireBoolean(String key) {
         return getBoolean(key).orElseThrow(() -> new ConfigMissingException(fullKey(key)));
     }
 
-    /**
-     * Loads a configuration value, as a boolean, by its given key, marking it as a secret.
-     * If it doesn't exist, or the configuration value is not a legal boolean, an error is thrown.
-     */
     public Output<Boolean> requireSecretBoolean(String key) {
         return Output.ofSecret(requireBoolean(key));
     }
 
-    /**
-     * Loads a configuration value, as a number, by its given key. If it doesn't exist, or the
-     * configuration value is not a legal number, an error is thrown.
-     */
     public int requireInteger(String key) {
         return getInteger(key).orElseThrow(() -> new ConfigMissingException(fullKey(key)));
     }
 
-    /**
-     * Loads a configuration value, as a number, by its given key, marking it as a secret.
-     * If it doesn't exist, or the configuration value is not a legal number, an error is thrown.
-     */
     public Output<Integer> requireSecretInteger(String key) {
         return Output.ofSecret(requireInteger(key));
     }
 
     public double requireDouble(String key) {
-        return getDouble(key).orElseThrow(() -> new ConfigInternal2.ConfigMissingException(fullKey(key)));
+        return getDouble(key).orElseThrow(() -> new ConfigMissingException(fullKey(key)));
     }
 
     public Output<Double> requireSecretDouble(String key) {
         return Output.ofSecret(requireDouble(key));
     }
 
-    /**
-     * Loads a configuration value as a JSON string and deserializes it into an object.
-     * If it doesn't exist, or the configuration value cannot be converted
-     * using {@link Gson#fromJson(Reader, Class)}, an error is thrown.
-     */
     public <T> T requireObject(String key, Class<T> classOfT) {
         return getObject(key, classOfT).orElseThrow(() -> new ConfigMissingException(fullKey(key)));
     }
 
-    /**
-     * Loads a configuration value as a JSON string and deserializes it into an object,
-     * marking it as a secret.
-     * If it doesn't exist, or the configuration value cannot be converted
-     * using {@link Gson#fromJson(Reader, Class)}, an error is thrown.
-     */
     public <T> Output<T> requireSecretObject(String key, Class<T> classOfT) {
         return Output.ofSecret(requireObject(key, classOfT));
     }
@@ -277,6 +193,97 @@ public class ConfigInternal implements Config {
      */
     private String fullKey(String key) {
         return String.format("%s:%s", this.name, key);
+    }
+
+    public Optional<String> getConfig(String fullKey) {
+        return Optional.ofNullable(this.allConfig.getOrDefault(fullKey, null));
+    }
+
+    public boolean isConfigSecret(String fullKey) {
+        return this.configSecretKeys.contains(fullKey);
+    }
+
+    private static ImmutableMap<String, String> parseConfig() {
+        var envConfig = Environment.getEnvironmentVariable(ConfigEnvKey);
+        if (envConfig.isValue()) {
+            return parseConfig(envConfig.value());
+        }
+        return ImmutableMap.of();
+    }
+
+    @InternalUse
+    @VisibleForTesting
+    static ImmutableMap<String, String> parseConfig(String envConfigJson) {
+        var parsedConfig = ImmutableMap.<String, String>builder();
+
+        var gson = new Gson();
+        var envObject = gson.fromJson(envConfigJson, JsonElement.class);
+        for (var prop : envObject.getAsJsonObject().entrySet()) {
+            parsedConfig.put(cleanKey(prop.getKey()), prop.getValue().getAsString());
+        }
+
+        return parsedConfig.build();
+    }
+
+    private static ImmutableSet<String> parseConfigSecretKeys() {
+        var envConfigSecretKeys = Environment.getEnvironmentVariable(ConfigSecretKeysEnvKey);
+        if (envConfigSecretKeys.isValue()) {
+            return parseConfigSecretKeys(envConfigSecretKeys.value());
+        }
+
+        return ImmutableSet.of();
+    }
+
+    @InternalUse
+    @VisibleForTesting
+    static ImmutableSet<String> parseConfigSecretKeys(String envConfigSecretKeysJson) {
+        var parsedConfigSecretKeys = ImmutableSet.<String>builder();
+
+        var gson = new Gson();
+        var envObject = gson.fromJson(envConfigSecretKeysJson, JsonElement.class);
+        for (var element : envObject.getAsJsonArray()) {
+            parsedConfigSecretKeys.add(element.getAsString());
+        }
+
+        return parsedConfigSecretKeys.build();
+    }
+
+    /**
+     * Method takes a configuration name (namespace prefix), and if it of the form
+     * "(string):config" removes the ":config" portion. Previously, our keys always had the string ":config:" in
+     * them, and we'd like to remove it. However, the language host needs to continue to set it,
+     * so we can be compatible with older versions of our packages. Once we stop supporting
+     * older packages, we can change the language host to not add this :config: thing and
+     * remove this function.
+     *
+     * @param name to be cleaned
+     * @return a cleaned name
+     */
+    private static String cleanName(String name) {
+        if (name.endsWith(":config")) {
+            return name.replaceAll(":config$", "");
+        }
+        return name;
+    }
+
+    /**
+     * Method takes a configuration key, and if it is of the form "(string):config:(string)"
+     * removes the ":config:" portion. Previously, our keys always had the string ":config:" in
+     * them, and we'd like to remove it. However, the language host needs to continue to set it,
+     * so we can be compatible with older versions of our packages. Once we stop supporting
+     * older packages, we can change the language host to not add this :config: thing and
+     * remove this function.
+     *
+     * @param key to be cleaned
+     * @return a cleaned key
+     */
+    private static String cleanKey(String key) {
+        final var prefix = "config:";
+        var idx = key.indexOf(":");
+        if (idx > 0 && key.substring(idx + 1).startsWith(prefix)) {
+            return key.substring(0, idx) + ":" + key.substring(idx + 1 + prefix.length());
+        }
+        return key;
     }
 
     /**

@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.core.internal.annotations.InternalUse;
-import com.pulumi.internal.ConfigInternal;
+import com.pulumi.deployment.Deployment;
 
 import java.io.Reader;
 import java.util.Optional;
@@ -14,7 +14,6 @@ import java.util.Optional;
  * of configuration variables, indexed by simple keys, and each has a name that uniquely
  * identifies it; two bags with different names do not share values for variables that
  * otherwise share the same key.
- * <p/>
  * For example, a bag whose name is {@code pulumi:foo}, with keys
  * {@code a}, {@code b}, and {@code c}, is entirely separate from a bag whose name is
  * {@code pulumi:bar} with the same simple key names. Each key has a fully qualified names,
@@ -22,6 +21,14 @@ import java.util.Optional;
  * @see com.pulumi.context.ConfigContext
  */
 public interface Config {
+
+    /**
+     * Get a copy of {@code this} {@link Config} with a different name (namespace prefix)
+     *
+     * @param name the config namespace name
+     * @return a new Config with the given name
+     */
+    Config withName(String name);
 
     /**
      * For internal use by providers.
@@ -34,7 +41,7 @@ public interface Config {
     @InternalUse
     @Deprecated
     static Config of(String name) {
-        return ConfigInternal.of(name);
+        return Deployment.getInstance().getConfig().withName(name);
     }
 
     /**

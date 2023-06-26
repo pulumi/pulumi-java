@@ -1,6 +1,5 @@
 package com.pulumi.internal;
 
-import com.pulumi.Config;
 import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.context.internal.ConfigContextInternal;
@@ -9,7 +8,6 @@ import com.pulumi.context.internal.LoggingContextInternal;
 import com.pulumi.context.internal.OutputContextInternal;
 import com.pulumi.core.internal.OutputFactory;
 import com.pulumi.core.internal.annotations.InternalUse;
-import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.deployment.internal.Runner.Result;
@@ -19,7 +17,6 @@ import com.pulumi.resources.internal.Stack;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
-import java.util.function.Function;
 
 import static java.util.Objects.requireNonNull;
 
@@ -39,14 +36,12 @@ public class PulumiInternal implements Pulumi, Pulumi.API {
     @InternalUse
     public static PulumiInternal fromEnvironment(StackOptions options) {
         var deployment = DeploymentImpl.fromEnvironment();
-        var instance = Deployment.getInstance();
         var projectName = deployment.getProjectName();
         var stackName = deployment.getStackName();
         var runner = deployment.getRunner();
         var log = deployment.getLog();
 
-        Function<String, Config> configFactory = (name) -> new ConfigInternal(instance.getConfig(), name);
-        var config = new ConfigContextInternal(projectName, configFactory);
+        var config = new ConfigContextInternal(deployment.getConfig());
         var logging = new LoggingContextInternal(log);
         var outputFactory = new OutputFactory(runner);
         var outputs = new OutputContextInternal(outputFactory);
