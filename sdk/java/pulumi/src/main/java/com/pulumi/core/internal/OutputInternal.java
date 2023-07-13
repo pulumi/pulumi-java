@@ -146,7 +146,7 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
                 "1: applyValue(v -> String.format(\"prefix%ssuffix\", v))",
                 "2: Output.format(\"prefix%ssuffix\", o)",
                 "",
-                "See https://pulumi.io/help/outputs for more details.",
+                "See https://www.pulumi.com/docs/concepts/inputs-outputs for more details.",
                 "This function may throw in a future version of Pulumi."
         );
     }
