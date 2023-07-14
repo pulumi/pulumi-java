@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+## 0.9.5 (2023-07-14)
+
+### Bug Fixes
+
+  - [sdk] Fix links to output docs.
+  - [codegen] Remove a TODO from codegen output.
+
 ## 0.9.4 (2023-06-07)
 
 ### Bug Fixes

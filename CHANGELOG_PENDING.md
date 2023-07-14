@@ -2,4 +2,5 @@
 
 ### Bug Fixes
 
-  - [codegen] Fixed missing gradle fields for 3rd-party providers.
+  - [sdk] Fix links to output docs.
+  - [codegen] Remove a TODO from codegen output.
