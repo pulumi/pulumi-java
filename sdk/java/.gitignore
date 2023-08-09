@@ -1,3 +1,5 @@
 # Ignore Gradle build output directory
 build
 .gradle
+/pulumi/.pulumi/
+/pulumi/Pulumi.json
