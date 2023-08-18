@@ -23,7 +23,7 @@ public class ProjectSettings {
      *
      * @param name    the project name
      * @param runtime the language runtime
-     * @param backend
+     * @param backend the optional {@link ProjectBackend} setting
      */
     public ProjectSettings(String name, String runtime, @Nullable ProjectBackend backend) {
         this.name = requireNonNull(name);

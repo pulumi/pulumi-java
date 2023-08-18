@@ -67,7 +67,7 @@ public class LocalWorkspaceTests {
         var workspace = PulumiAuto
                 .withProjectSettings(ProjectSettings.builder() // FIXME
                         .name(projectName)
-                        .backend("file://~") // FIXME
+                        .backend("file://~")
                         .build()
                 )
                 .withEnvironmentVariables(Map.of(

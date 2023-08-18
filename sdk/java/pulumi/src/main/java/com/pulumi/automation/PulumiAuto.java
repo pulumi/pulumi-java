@@ -25,6 +25,7 @@ public interface PulumiAuto extends Pulumi {
          * The {@link ProjectSettings} object for the current project.
          *
          * @param projectSettings the project setting
+         * @return the {@link API} instance
          */
         API withProjectSettings(ProjectSettings projectSettings);
 

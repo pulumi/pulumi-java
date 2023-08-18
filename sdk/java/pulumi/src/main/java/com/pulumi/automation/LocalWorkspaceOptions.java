@@ -54,6 +54,9 @@ public class LocalWorkspaceOptions {
 
         /**
          * The inline Pulumi program to be used for Preview/Update operations if any.
+         * @see Workspace#program()
+         * @param program the inline Pulumi program to use
+         * @return the {@link Builder} instance
          */
         public Builder program(@Nullable Consumer<Context> program) {
             this.program = program;

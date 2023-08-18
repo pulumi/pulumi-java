@@ -31,7 +31,7 @@ public class GlobalOptions {
     }
 
     /**
-     * Enable verbose logging (e.g., v=3); anything >3 is very verbose
+     * Enable verbose logging (e.g., v=3); anything greater than 3 is very verbose
      *
      * @return the verbosity level
      */
@@ -130,7 +130,9 @@ public class GlobalOptions {
         }
 
         /**
-         * @see {@link #json(boolean)}
+         * @see GlobalOptions#json()
+         * @param json if true JSON output is active
+         * @return the {@link Builder} instance
          */
         public B json(boolean json) {
             this.options.json = json;
