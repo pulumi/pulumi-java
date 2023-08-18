@@ -38,9 +38,6 @@ public class PulumiInternal implements Pulumi {
         this.stackContext = requireNonNull(stackContext);
     }
 
-//    @InternalUse
-//    public static
-
     protected CompletableFuture<Integer> runAsync(Consumer<Context> stackCallback) {
         return runAsyncResult(stackCallback).thenApply(r -> r.exitCode());
     }
@@ -61,7 +58,7 @@ public class PulumiInternal implements Pulumi {
         );
     }
 
-    protected static ContextInternal contextInternal(
+    private static ContextInternal contextInternal(
             StackOptions options,
             DeploymentInstance instance,
             String projectName,

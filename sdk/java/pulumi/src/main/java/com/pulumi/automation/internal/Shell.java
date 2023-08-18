@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.UncheckedIOException;
+import java.nio.file.Path;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
@@ -24,32 +25,25 @@ public class Shell {
     private final Consumer<String> stdout;
     private final Consumer<String> stderr;
     private final Map<String, String> environmentVariables;
-
-    public Shell() {
-        this(
-                () -> null,
-                line -> System.out.println(line),
-                line -> System.err.println(line),
-                ImmutableMap.of(
-                        "PULUMI_CONFIG_PASSPHRASE", ""
-                )
-        );
-    }
+    private final Path workDir;
 
     public Shell(
             Supplier<String> stdin,
             Consumer<String> stdout,
             Consumer<String> stderr,
-            Map<String, String> environmentVariables) {
+            Map<String, String> environmentVariables,
+            Path workDir) {
         this.stdin = requireNonNull(stdin);
         this.stdout = requireNonNull(stdout);
         this.stderr = requireNonNull(stderr);
         this.environmentVariables = ImmutableMap.copyOf(environmentVariables);
+        this.workDir = requireNonNull(workDir);
     }
 
     public CompletableFuture<Integer> run(String... command) {
         return CompletableFuture.supplyAsync(() -> {
             ProcessBuilder builder = new ProcessBuilder();
+            builder.directory(workDir.toFile());
             builder.environment().putAll(this.environmentVariables);
             builder.command(command);
             try {

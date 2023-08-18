@@ -1,5 +1,6 @@
 package com.pulumi.automation.internal;
 
+import com.google.common.collect.ImmutableMap;
 import com.pulumi.Config;
 import com.pulumi.Context;
 import com.pulumi.automation.LocalWorkspace;
@@ -16,9 +17,10 @@ import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.DeploymentInstanceHolder;
 import com.pulumi.deployment.internal.DeploymentInstanceInternal;
+import com.pulumi.deployment.internal.GrpcEngine;
+import com.pulumi.deployment.internal.GrpcMonitor;
 import com.pulumi.deployment.internal.Runner;
 import com.pulumi.internal.PulumiInternal;
-import com.pulumi.test.internal.PulumiTestInternal;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.Closeable;
@@ -27,6 +29,9 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.logging.Logger;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * Provides an internal Pulumi Automation entrypoint and exposes various internals for the testing purposes.
@@ -40,6 +45,38 @@ public class PulumiAutoInternal extends PulumiInternal implements PulumiAuto, Cl
             ContextInternal stackContext
     ) {
         super(runner, stackContext);
+    }
+
+    public static PulumiAutoInternal from(Logger logger, RunRequestContext requestContext) {
+        var engine = new GrpcEngine(requestContext.engineAddress());
+        var monitor = new GrpcMonitor(requestContext.monitorAddress());
+
+        var conf = new DeploymentImpl.Config(
+                requestContext.configMap(),
+                requestContext.configSecretKeys()
+        );
+
+        var projectName = requestContext.project();
+        var stackName = requestContext.stack();
+        var dryRun = requestContext.dryRun();
+
+        var state = new DeploymentImpl.DeploymentState(conf, logger, projectName, stackName, dryRun, engine, monitor);
+        var deployment = new DeploymentImpl(state);
+        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(deployment));
+
+        var instance = Deployment.getInstance();
+        var runner = deployment.getRunner();
+        var log = deployment.getLog();
+
+        Function<String, Config> configFactory = (name) -> new Config(instance.getConfig(), name);
+        var config = new ConfigContextInternal(projectName, configFactory);
+        var logging = new LoggingContextInternal(log);
+        var outputFactory = new OutputFactory(runner);
+        var outputs = new OutputContextInternal(outputFactory);
+        var ctx = new ContextInternal(
+                projectName, stackName, logging, config, outputs, List.of()
+        );
+        return new PulumiAutoInternal(runner, ctx);
     }
 
     @InternalUse
@@ -63,68 +100,31 @@ public class PulumiAutoInternal extends PulumiInternal implements PulumiAuto, Cl
     @ParametersAreNonnullByDefault
     public static final class APIInternal implements PulumiAuto.API {
 
-        private final PulumiAutoInternal.Builder builder = new PulumiAutoInternal.Builder();
+        private final Logger standardLogger = Logger.getLogger(PulumiAuto.API.class.getName());
+
+        private ProjectSettings projectSettings;
+        private ImmutableMap<String, String> environmentVariables;
 
         @Override
         public PulumiAuto.API withProjectSettings(ProjectSettings projectSettings) {
-            builder.projectSettings(projectSettings);
+            this.projectSettings = requireNonNull(projectSettings);
             return this;
         }
 
         @Override
         public PulumiAuto.API withEnvironmentVariables(Map<String, String> environmentVariables) {
-
-            return this;
-        }
-
-        @Override
-        public PulumiAuto.API withInlineProgram(Consumer<Context> program) {
-
+            this.environmentVariables = ImmutableMap.copyOf(environmentVariables);
             return this;
         }
 
         @Override
         public LocalWorkspace localWorkspace(LocalWorkspaceOptions options) {
-            return new LocalWorkspace();
-        }
-    }
-
-    /**
-     * @return a new {@link PulumiAutoInternal.Builder} for {@link PulumiAutoInternal}
-     */
-    @InternalUse
-    public static PulumiAutoInternal.Builder builder() {
-        return new PulumiAutoInternal.Builder();
-    }
-
-    /**
-     * The {@link PulumiAutoInternal} builder.
-     */
-    @InternalUse
-    @ParametersAreNonnullByDefault
-    public static final class Builder {
-
-        /**
-         * @return a {@link PulumiTestInternal} instance created from this {@link PulumiTestInternal.Builder}
-         */
-        public PulumiAutoInternal build() {
-            var state = new DeploymentImpl.DeploymentState(conf, logger, projectName, stackName, dryRun, engine, monitor);
-            var deployment = new DeploymentImpl(state);
-            DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(deployment));
-
-            var instance = Deployment.getInstance();
-            var runner = deployment.getRunner();
-            var log = deployment.getLog();
-
-            Function<String, Config> configFactory = (name) -> new Config(instance.getConfig(), name);
-            var config = new ConfigContextInternal(projectName, configFactory);
-            var logging = new LoggingContextInternal(log);
-            var outputFactory = new OutputFactory(runner);
-            var outputs = new OutputContextInternal(outputFactory);
-            var ctx = new ContextInternal(
-                    projectName, stackName, logging, config, outputs, List.of()
+            return new LocalWorkspace(
+                    this.standardLogger,
+                    this.projectSettings,
+                    this.environmentVariables,
+                    options
             );
-            return new PulumiAutoInternal(runner, ctx);
         }
     }
 }

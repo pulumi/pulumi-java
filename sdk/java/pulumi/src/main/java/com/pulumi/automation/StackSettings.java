@@ -4,12 +4,20 @@ import com.google.common.collect.ImmutableMap;
 
 import java.util.Map;
 
+import static java.util.Objects.requireNonNull;
+
 public class StackSettings {
 
+    private final String name;
     private final ImmutableMap<String, ValueOrSecret> config;
 
-    public StackSettings(Map<String, ValueOrSecret> config) {
+    public StackSettings(String name, Map<String, ValueOrSecret> config) {
+        this.name = requireNonNull(name);
         this.config = ImmutableMap.copyOf(config);
+    }
+
+    public String name() {
+        return name;
     }
 
     /**
@@ -27,7 +35,7 @@ public class StackSettings {
     public static class Builder {
 
         private String name;
-        private Map<String, ValueOrSecret> config;
+        private Map<String, ValueOrSecret> config = Map.of();
 
         public Builder config(Map<String, ValueOrSecret> config) {
             this.config = config;
@@ -40,9 +48,7 @@ public class StackSettings {
         }
 
         public StackSettings build() {
-            return new StackSettings(
-                    this.config
-            );
+            return new StackSettings(this.name, this.config);
         }
     }
 }

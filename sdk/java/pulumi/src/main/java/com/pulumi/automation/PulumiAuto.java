@@ -1,22 +1,21 @@
 package com.pulumi.automation;
 
-import com.pulumi.Context;
 import com.pulumi.Pulumi;
+import com.pulumi.automation.internal.PulumiAutoInternal;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Map;
-import java.util.function.Consumer;
 
 @ParametersAreNonnullByDefault
 public interface PulumiAuto extends Pulumi {
 
     static API withProjectSettings(ProjectSettings projectSettings) {
-        return 
+        return new PulumiAutoInternal.APIInternal().withProjectSettings(projectSettings);
     }
 
-    static API withEnvironmentVariables(Map<String, String> environmentVariables);
-
-    static API withInlineProgram(Consumer<Context> program);
+    static API withEnvironmentVariables(Map<String, String> environmentVariables) {
+        return new PulumiAutoInternal.APIInternal().withEnvironmentVariables(environmentVariables);
+    }
 
     /**
      * Pulumi Automation entrypoint operations.
@@ -30,8 +29,6 @@ public interface PulumiAuto extends Pulumi {
         API withProjectSettings(ProjectSettings projectSettings);
 
         API withEnvironmentVariables(Map<String, String> environmentVariables);
-
-        API withInlineProgram(Consumer<Context> program);
 
         LocalWorkspace localWorkspace(LocalWorkspaceOptions options);
     }
