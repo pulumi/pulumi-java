@@ -34,7 +34,10 @@ public class LocalWorkspaceTests {
         var projectConfig = ImmutableMap.of(
                 "name", projectName,
                 "runtime", "java",
-                "description", "test"
+                "description", "test",
+                "backend", ImmutableMap.of(
+                        "url", "file://~"
+                )
         );
         var projectFile = Path.of(tempDir.toString(), "Pulumi.json").toFile();
         projectFile.deleteOnExit();
@@ -44,7 +47,6 @@ public class LocalWorkspaceTests {
         }
         var stackConfig = ImmutableMap.of(
                 "config", ImmutableMap.of(
-                        "local", "true",
                         projectName + ":bar", value("abc"),
                         projectName + ":buzz", secret("secret")
                 )
@@ -63,12 +65,13 @@ public class LocalWorkspaceTests {
         };
 
         var workspace = PulumiAuto
-                .withProjectSettings(ProjectSettings.builder()
+                .withProjectSettings(ProjectSettings.builder() // FIXME
                         .name(projectName)
+                        .backend("file://~") // FIXME
                         .build()
                 )
                 .withEnvironmentVariables(Map.of(
-                        "PULUMI_CONFIG_PASSPHRASE", ""
+                        "PULUMI_CONFIG_PASSPHRASE", "test"
                 ))
                 .localWorkspace(LocalWorkspaceOptions.builder()
                         .workDir(tempDir)
@@ -78,6 +81,10 @@ public class LocalWorkspaceTests {
 
         var stack = workspace.upsertStack(StackSettings.builder()
                 .name(stackName)
+                .config(ImmutableMap.of( // FIXME
+                        "bar", value("abc"),
+                        "buzz", secret("secret")
+                ))
                 .build()
         );
 //        var result = stack.previewAsync();

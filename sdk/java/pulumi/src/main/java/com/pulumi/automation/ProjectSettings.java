@@ -1,6 +1,8 @@
 package com.pulumi.automation;
 
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Optional;
 
 import static java.util.Objects.requireNonNull;
 
@@ -13,15 +15,20 @@ public class ProjectSettings {
 
     private final String name;
     private final String runtime;
+    @Nullable
+    private final ProjectBackend backend;
 
     /**
      * A new {@link ProjectSettings} with the given values
-     * @param name the project name
+     *
+     * @param name    the project name
      * @param runtime the language runtime
+     * @param backend
      */
-    public ProjectSettings(String name, String runtime) {
+    public ProjectSettings(String name, String runtime, @Nullable ProjectBackend backend) {
         this.name = requireNonNull(name);
         this.runtime = requireNonNull(runtime);
+        this.backend = backend;
     }
 
     /**
@@ -44,10 +51,16 @@ public class ProjectSettings {
         return new ProjectSettings.Builder();
     }
 
+    public Optional<ProjectBackend> backend() {
+        return Optional.ofNullable(backend);
+    }
+
     public static class Builder {
 
         private String name;
         private String runtime;
+        @Nullable
+        private ProjectBackend backend;
 
         public Builder name(String name) {
             this.name = name;
@@ -59,13 +72,19 @@ public class ProjectSettings {
             return this;
         }
 
+        public Builder backend(String url) {
+            this.backend = new ProjectBackend(url);
+            return this;
+        }
+
         public ProjectSettings build() {
             if (runtime == null) {
                 runtime = "java";
             }
             return new ProjectSettings(
                     this.name,
-                    this.runtime
+                    this.runtime,
+                    this.backend
             );
         }
     }
