@@ -42,7 +42,7 @@ repositories {
 dependencies {
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     implementation("com.google.code.gson:gson:2.8.9")
-    implementation("com.google.guava:guava:31.1-jre")
+    implementation("com.google.guava:guava:32.1.2-jre")
     implementation("com.pulumi:pulumi:0.0.1")
     implementation("org.assertj:assertj-core:3.23.1")
     implementation("org.junit.jupiter:junit-jupiter-api:5.9.3")
