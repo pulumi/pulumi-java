@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+## 0.9.6 (2023-08-23)
+
+### Improvements
+
+ - [sdk] Bumps com.google.guava:guava from 31.1-jre to 32.1.2-jre. 
+   [#1188](https://github.com/pulumi/pulumi-java/pull/1188)
+
+
 ## 0.9.5 (2023-07-14)
 
 ### Bug Fixes
