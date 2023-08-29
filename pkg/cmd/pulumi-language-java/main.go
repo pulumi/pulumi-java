@@ -11,6 +11,7 @@ import (
 	"io"
 	"os"
 	"os/exec"
+	"os/signal"
 	"strings"
 	"time"
 
@@ -97,13 +98,18 @@ func main() {
 }
 
 func setupHealthChecks(engineAddress string) (chan bool, error) {
-	// If we have a host cancel our cancellation context if it fails the healthcheck
-	ctx, cancel := context.WithCancel(context.Background())
+	// If the health check begins failing or we receive a SIGINT,
+	// we'll cancel the context.
+	//
+	// The returned channel is used to notify the server that it should
+	// stop serving and exit.
+	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt)
 
 	// map the context Done channel to the rpcutil boolean cancel channel
 	cancelChannel := make(chan bool)
 	go func() {
 		<-ctx.Done()
+		cancel() // deregister the interrupt handler
 		close(cancelChannel)
 	}()
 	err := rpcutil.Healthcheck(ctx, engineAddress, 5*time.Minute, cancel)
