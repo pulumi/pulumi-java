@@ -76,7 +76,7 @@ jobs:
               ${{ steps.go-cache-paths.outputs.go-mod }}
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
+        uses: gradle/gradle-build-action@842c587ad8aa4c68eeba24c396e15af4c2e9f30a
         with:
           arguments: build
           build-root-directory: sdk/java
@@ -92,7 +92,7 @@ jobs:
           name: go-binaries
           path: bin/
       - name: Publish Pulumi Java SDK to Maven Local
-        uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
+        uses: gradle/gradle-build-action@842c587ad8aa4c68eeba24c396e15af4c2e9f30a
         with:
           arguments: publishToMavenLocal
           build-root-directory: sdk/java
@@ -151,7 +151,7 @@ jobs:
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
       - name: Publish Pulumi Java SDK to Maven Local to enable codegen tests
-        uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
+        uses: gradle/gradle-build-action@842c587ad8aa4c68eeba24c396e15af4c2e9f30a
         env:
           # Override to match gen_test.go
           PULUMI_JAVA_SDK_VERSION: 0.0.1
