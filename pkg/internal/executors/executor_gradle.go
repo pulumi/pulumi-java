@@ -89,6 +89,7 @@ func (gradle) isGradleProject(dir fs.FS, opts JavaExecutorOptions) (bool, error)
 		"settings.gradle",
 		"settings.gradle.kts",
 		"build.gradle",
+		"build.gradle.kts",
 	}
 	for _, p := range gradleMarkers {
 		isGradle, err := fsys.FileExists(dir, p)
