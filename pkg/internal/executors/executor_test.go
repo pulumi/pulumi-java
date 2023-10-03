@@ -47,8 +47,8 @@ func TestGradleKTS(t *testing.T) {
 	fsys := fsys.TestFS("app",
 		map[string]string{"gradle": "/usr/bin/gradle"},
 		fstest.MapFS{
-			"settings.gradle.kts": {},
-			"app/build.gradle":    {},
+			"settings.gradle.kts":  {},
+			"app/build.gradle.kts": {},
 		})
 	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys})
 	assert.NoError(t, err)
