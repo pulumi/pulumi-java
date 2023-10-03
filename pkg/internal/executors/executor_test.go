@@ -86,6 +86,24 @@ func TestGradleMultiProject(t *testing.T) {
 		exec.RunArgs)
 }
 
+func TestGradleKTSMultiProject(t *testing.T) {
+	fsys := fsys.TestFS("services/app-cluster",
+		map[string]string{"gradle": "/usr/bin/gradle"},
+		fstest.MapFS{
+			"services/app-cluster/build.gradle.kts":  {},
+			"services/mgmt-cluster/build.gradle.kts": {},
+			"gradlew":                                {},
+			"settings.gradle.kts":                    {},
+		})
+	exec, err := NewJavaExecutor(JavaExecutorOptions{WD: fsys})
+	assert.NoError(t, err)
+	assert.Equal(t, "./gradlew", exec.Cmd)
+	assert.Equal(t, ".", exec.Dir)
+	assert.Equal(t,
+		[]string{":services:app-cluster:run", "--console=plain"},
+		exec.RunArgs)
+}
+
 func TestGradleUseExecutor(t *testing.T) {
 	fs := fsys.TestFS("app",
 		map[string]string{
