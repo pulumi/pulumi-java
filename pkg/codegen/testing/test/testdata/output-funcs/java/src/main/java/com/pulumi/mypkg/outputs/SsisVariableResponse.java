@@ -164,15 +164,15 @@ public final class SsisVariableResponse {
             return this;
         }
         public SsisVariableResponse build() {
-            final var o = new SsisVariableResponse();
-            o.dataType = dataType;
-            o.description = description;
-            o.id = id;
-            o.name = name;
-            o.sensitive = sensitive;
-            o.sensitiveValue = sensitiveValue;
-            o.value = value;
-            return o;
+            final var _resultValue = new SsisVariableResponse();
+            _resultValue.dataType = dataType;
+            _resultValue.description = description;
+            _resultValue.id = id;
+            _resultValue.name = name;
+            _resultValue.sensitive = sensitive;
+            _resultValue.sensitiveValue = sensitiveValue;
+            _resultValue.value = value;
+            return _resultValue;
         }
     }
 }

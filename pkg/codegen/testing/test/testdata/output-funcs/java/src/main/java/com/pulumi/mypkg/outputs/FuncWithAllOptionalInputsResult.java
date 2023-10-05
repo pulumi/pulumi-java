@@ -38,9 +38,9 @@ public final class FuncWithAllOptionalInputsResult {
             return this;
         }
         public FuncWithAllOptionalInputsResult build() {
-            final var o = new FuncWithAllOptionalInputsResult();
-            o.r = r;
-            return o;
+            final var _resultValue = new FuncWithAllOptionalInputsResult();
+            _resultValue.r = r;
+            return _resultValue;
         }
     }
 }

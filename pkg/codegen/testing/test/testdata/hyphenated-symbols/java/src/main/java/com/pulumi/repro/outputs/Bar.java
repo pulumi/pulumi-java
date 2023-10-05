@@ -40,9 +40,9 @@ public final class Bar {
             return this;
         }
         public Bar build() {
-            final var o = new Bar();
-            o.hasahyphen = hasahyphen;
-            return o;
+            final var _resultValue = new Bar();
+            _resultValue.hasahyphen = hasahyphen;
+            return _resultValue;
         }
     }
 }

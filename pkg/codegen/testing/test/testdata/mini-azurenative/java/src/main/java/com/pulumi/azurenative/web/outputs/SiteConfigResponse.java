@@ -48,9 +48,9 @@ public final class SiteConfigResponse {
             return this;
         }
         public SiteConfigResponse build() {
-            final var o = new SiteConfigResponse();
-            o.netFrameworkVersion = netFrameworkVersion;
-            return o;
+            final var _resultValue = new SiteConfigResponse();
+            _resultValue.netFrameworkVersion = netFrameworkVersion;
+            return _resultValue;
         }
     }
 }

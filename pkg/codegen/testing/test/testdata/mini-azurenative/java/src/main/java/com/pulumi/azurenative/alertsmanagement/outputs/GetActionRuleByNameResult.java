@@ -147,14 +147,14 @@ public final class GetActionRuleByNameResult {
             return this;
         }
         public GetActionRuleByNameResult build() {
-            final var o = new GetActionRuleByNameResult();
-            o.id = id;
-            o.location = location;
-            o.name = name;
-            o.properties = properties;
-            o.tags = tags;
-            o.type = type;
-            return o;
+            final var _resultValue = new GetActionRuleByNameResult();
+            _resultValue.id = id;
+            _resultValue.location = location;
+            _resultValue.name = name;
+            _resultValue.properties = properties;
+            _resultValue.tags = tags;
+            _resultValue.type = type;
+            return _resultValue;
         }
     }
 }

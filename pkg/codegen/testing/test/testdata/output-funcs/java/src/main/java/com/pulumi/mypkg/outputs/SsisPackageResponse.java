@@ -189,16 +189,16 @@ public final class SsisPackageResponse {
             return this;
         }
         public SsisPackageResponse build() {
-            final var o = new SsisPackageResponse();
-            o.description = description;
-            o.folderId = folderId;
-            o.id = id;
-            o.name = name;
-            o.parameters = parameters;
-            o.projectId = projectId;
-            o.projectVersion = projectVersion;
-            o.type = type;
-            return o;
+            final var _resultValue = new SsisPackageResponse();
+            _resultValue.description = description;
+            _resultValue.folderId = folderId;
+            _resultValue.id = id;
+            _resultValue.name = name;
+            _resultValue.parameters = parameters;
+            _resultValue.projectId = projectId;
+            _resultValue.projectVersion = projectVersion;
+            _resultValue.type = type;
+            return _resultValue;
         }
     }
 }

@@ -38,9 +38,9 @@ public final class FuncWithDefaultValueResult {
             return this;
         }
         public FuncWithDefaultValueResult build() {
-            final var o = new FuncWithDefaultValueResult();
-            o.r = r;
-            return o;
+            final var _resultValue = new FuncWithDefaultValueResult();
+            _resultValue.r = r;
+            return _resultValue;
         }
     }
 }

@@ -43,9 +43,9 @@ public final class GetPolicyDocumentStatement {
             return actions(List.of(actions));
         }
         public GetPolicyDocumentStatement build() {
-            final var o = new GetPolicyDocumentStatement();
-            o.actions = actions;
-            return o;
+            final var _resultValue = new GetPolicyDocumentStatement();
+            _resultValue.actions = actions;
+            return _resultValue;
         }
     }
 }

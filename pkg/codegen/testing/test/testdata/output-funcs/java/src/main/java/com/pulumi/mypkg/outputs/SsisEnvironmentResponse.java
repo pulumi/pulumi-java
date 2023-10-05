@@ -151,14 +151,14 @@ public final class SsisEnvironmentResponse {
             return variables(List.of(variables));
         }
         public SsisEnvironmentResponse build() {
-            final var o = new SsisEnvironmentResponse();
-            o.description = description;
-            o.folderId = folderId;
-            o.id = id;
-            o.name = name;
-            o.type = type;
-            o.variables = variables;
-            return o;
+            final var _resultValue = new SsisEnvironmentResponse();
+            _resultValue.description = description;
+            _resultValue.folderId = folderId;
+            _resultValue.id = id;
+            _resultValue.name = name;
+            _resultValue.type = type;
+            _resultValue.variables = variables;
+            return _resultValue;
         }
     }
 }

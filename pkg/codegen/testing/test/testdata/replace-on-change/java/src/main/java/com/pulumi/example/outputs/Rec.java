@@ -39,9 +39,9 @@ public final class Rec {
             return this;
         }
         public Rec build() {
-            final var o = new Rec();
-            o.rec1 = rec1;
-            return o;
+            final var _resultValue = new Rec();
+            _resultValue.rec1 = rec1;
+            return _resultValue;
         }
     }
 }

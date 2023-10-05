@@ -259,20 +259,20 @@ public final class SsisParameterResponse {
             return this;
         }
         public SsisParameterResponse build() {
-            final var o = new SsisParameterResponse();
-            o.dataType = dataType;
-            o.defaultValue = defaultValue;
-            o.description = description;
-            o.designDefaultValue = designDefaultValue;
-            o.id = id;
-            o.name = name;
-            o.required = required;
-            o.sensitive = sensitive;
-            o.sensitiveDefaultValue = sensitiveDefaultValue;
-            o.valueSet = valueSet;
-            o.valueType = valueType;
-            o.variable = variable;
-            return o;
+            final var _resultValue = new SsisParameterResponse();
+            _resultValue.dataType = dataType;
+            _resultValue.defaultValue = defaultValue;
+            _resultValue.description = description;
+            _resultValue.designDefaultValue = designDefaultValue;
+            _resultValue.id = id;
+            _resultValue.name = name;
+            _resultValue.required = required;
+            _resultValue.sensitive = sensitive;
+            _resultValue.sensitiveDefaultValue = sensitiveDefaultValue;
+            _resultValue.valueSet = valueSet;
+            _resultValue.valueType = valueType;
+            _resultValue.variable = variable;
+            return _resultValue;
         }
     }
 }

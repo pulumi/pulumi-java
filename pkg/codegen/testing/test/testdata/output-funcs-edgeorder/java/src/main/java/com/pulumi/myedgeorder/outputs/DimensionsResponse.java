@@ -161,15 +161,15 @@ public final class DimensionsResponse {
             return this;
         }
         public DimensionsResponse build() {
-            final var o = new DimensionsResponse();
-            o.depth = depth;
-            o.height = height;
-            o.length = length;
-            o.lengthHeightUnit = lengthHeightUnit;
-            o.weight = weight;
-            o.weightUnit = weightUnit;
-            o.width = width;
-            return o;
+            final var _resultValue = new DimensionsResponse();
+            _resultValue.depth = depth;
+            _resultValue.height = height;
+            _resultValue.length = length;
+            _resultValue.lengthHeightUnit = lengthHeightUnit;
+            _resultValue.weight = weight;
+            _resultValue.weightUnit = weightUnit;
+            _resultValue.width = width;
+            return _resultValue;
         }
     }
 }

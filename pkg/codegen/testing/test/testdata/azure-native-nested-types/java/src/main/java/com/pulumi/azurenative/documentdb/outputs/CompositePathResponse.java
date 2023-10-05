@@ -67,10 +67,10 @@ public final class CompositePathResponse {
             return this;
         }
         public CompositePathResponse build() {
-            final var o = new CompositePathResponse();
-            o.order = order;
-            o.path = path;
-            return o;
+            final var _resultValue = new CompositePathResponse();
+            _resultValue.order = order;
+            _resultValue.path = path;
+            return _resultValue;
         }
     }
 }

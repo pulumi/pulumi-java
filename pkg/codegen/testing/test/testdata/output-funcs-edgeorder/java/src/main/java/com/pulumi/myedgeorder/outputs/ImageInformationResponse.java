@@ -65,10 +65,10 @@ public final class ImageInformationResponse {
             return this;
         }
         public ImageInformationResponse build() {
-            final var o = new ImageInformationResponse();
-            o.imageType = imageType;
-            o.imageUrl = imageUrl;
-            return o;
+            final var _resultValue = new ImageInformationResponse();
+            _resultValue.imageType = imageType;
+            _resultValue.imageUrl = imageUrl;
+            return _resultValue;
         }
     }
 }

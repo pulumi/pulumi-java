@@ -48,9 +48,9 @@ public final class GetBastionShareableLinkResult {
             return this;
         }
         public GetBastionShareableLinkResult build() {
-            final var o = new GetBastionShareableLinkResult();
-            o.nextLink = nextLink;
-            return o;
+            final var _resultValue = new GetBastionShareableLinkResult();
+            _resultValue.nextLink = nextLink;
+            return _resultValue;
         }
     }
 }

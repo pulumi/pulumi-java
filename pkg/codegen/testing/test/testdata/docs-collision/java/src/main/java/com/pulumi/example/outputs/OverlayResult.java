@@ -40,9 +40,9 @@ public final class OverlayResult {
             return this;
         }
         public OverlayResult build() {
-            final var o = new OverlayResult();
-            o.result = result;
-            return o;
+            final var _resultValue = new OverlayResult();
+            _resultValue.result = result;
+            return _resultValue;
         }
     }
 }

@@ -193,16 +193,16 @@ public final class SsisProjectResponse {
             return this;
         }
         public SsisProjectResponse build() {
-            final var o = new SsisProjectResponse();
-            o.description = description;
-            o.environmentRefs = environmentRefs;
-            o.folderId = folderId;
-            o.id = id;
-            o.name = name;
-            o.parameters = parameters;
-            o.type = type;
-            o.version = version;
-            return o;
+            final var _resultValue = new SsisProjectResponse();
+            _resultValue.description = description;
+            _resultValue.environmentRefs = environmentRefs;
+            _resultValue.folderId = folderId;
+            _resultValue.id = id;
+            _resultValue.name = name;
+            _resultValue.parameters = parameters;
+            _resultValue.type = type;
+            _resultValue.version = version;
+            return _resultValue;
         }
     }
 }

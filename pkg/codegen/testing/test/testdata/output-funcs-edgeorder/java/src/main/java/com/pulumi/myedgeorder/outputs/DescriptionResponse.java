@@ -152,14 +152,14 @@ public final class DescriptionResponse {
             return this;
         }
         public DescriptionResponse build() {
-            final var o = new DescriptionResponse();
-            o.attributes = attributes;
-            o.descriptionType = descriptionType;
-            o.keywords = keywords;
-            o.links = links;
-            o.longDescription = longDescription;
-            o.shortDescription = shortDescription;
-            return o;
+            final var _resultValue = new DescriptionResponse();
+            _resultValue.attributes = attributes;
+            _resultValue.descriptionType = descriptionType;
+            _resultValue.keywords = keywords;
+            _resultValue.links = links;
+            _resultValue.longDescription = longDescription;
+            _resultValue.shortDescription = shortDescription;
+            return _resultValue;
         }
     }
 }

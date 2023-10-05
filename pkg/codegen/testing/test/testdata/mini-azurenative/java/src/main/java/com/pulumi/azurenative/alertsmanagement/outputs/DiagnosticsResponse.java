@@ -25,8 +25,8 @@ public final class DiagnosticsResponse {
         }
 
         public DiagnosticsResponse build() {
-            final var o = new DiagnosticsResponse();
-            return o;
+            final var _resultValue = new DiagnosticsResponse();
+            return _resultValue;
         }
     }
 }

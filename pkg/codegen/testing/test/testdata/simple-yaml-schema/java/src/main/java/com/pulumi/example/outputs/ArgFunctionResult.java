@@ -40,9 +40,9 @@ public final class ArgFunctionResult {
             return this;
         }
         public ArgFunctionResult build() {
-            final var o = new ArgFunctionResult();
-            o.result = result;
-            return o;
+            final var _resultValue = new ArgFunctionResult();
+            _resultValue.result = result;
+            return _resultValue;
         }
     }
 }

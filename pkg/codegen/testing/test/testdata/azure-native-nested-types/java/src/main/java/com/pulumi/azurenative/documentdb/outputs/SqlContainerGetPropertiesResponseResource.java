@@ -48,9 +48,9 @@ public final class SqlContainerGetPropertiesResponseResource {
             return this;
         }
         public SqlContainerGetPropertiesResponseResource build() {
-            final var o = new SqlContainerGetPropertiesResponseResource();
-            o.indexingPolicy = indexingPolicy;
-            return o;
+            final var _resultValue = new SqlContainerGetPropertiesResponseResource();
+            _resultValue.indexingPolicy = indexingPolicy;
+            return _resultValue;
         }
     }
 }

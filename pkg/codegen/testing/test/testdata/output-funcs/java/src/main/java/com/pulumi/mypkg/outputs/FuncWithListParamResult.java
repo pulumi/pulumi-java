@@ -38,9 +38,9 @@ public final class FuncWithListParamResult {
             return this;
         }
         public FuncWithListParamResult build() {
-            final var o = new FuncWithListParamResult();
-            o.r = r;
-            return o;
+            final var _resultValue = new FuncWithListParamResult();
+            _resultValue.r = r;
+            return _resultValue;
         }
     }
 }

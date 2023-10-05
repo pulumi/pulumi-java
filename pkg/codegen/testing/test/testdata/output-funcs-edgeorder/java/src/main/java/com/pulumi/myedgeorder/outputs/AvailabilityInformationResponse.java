@@ -84,11 +84,11 @@ public final class AvailabilityInformationResponse {
             return this;
         }
         public AvailabilityInformationResponse build() {
-            final var o = new AvailabilityInformationResponse();
-            o.availabilityStage = availabilityStage;
-            o.disabledReason = disabledReason;
-            o.disabledReasonMessage = disabledReasonMessage;
-            return o;
+            final var _resultValue = new AvailabilityInformationResponse();
+            _resultValue.availabilityStage = availabilityStage;
+            _resultValue.disabledReason = disabledReason;
+            _resultValue.disabledReasonMessage = disabledReasonMessage;
+            return _resultValue;
         }
     }
 }

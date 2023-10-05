@@ -75,12 +75,12 @@ public final class Container {
             return this;
         }
         public Container build() {
-            final var o = new Container();
-            o.brightness = brightness;
-            o.color = color;
-            o.material = material;
-            o.size = size;
-            return o;
+            final var _resultValue = new Container();
+            _resultValue.brightness = brightness;
+            _resultValue.color = color;
+            _resultValue.material = material;
+            _resultValue.size = size;
+            return _resultValue;
         }
     }
 }

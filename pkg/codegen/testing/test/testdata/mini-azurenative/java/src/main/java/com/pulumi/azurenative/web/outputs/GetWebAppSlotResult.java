@@ -48,9 +48,9 @@ public final class GetWebAppSlotResult {
             return this;
         }
         public GetWebAppSlotResult build() {
-            final var o = new GetWebAppSlotResult();
-            o.siteConfig = siteConfig;
-            return o;
+            final var _resultValue = new GetWebAppSlotResult();
+            _resultValue.siteConfig = siteConfig;
+            return _resultValue;
         }
     }
 }

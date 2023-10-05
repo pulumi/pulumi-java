@@ -40,9 +40,9 @@ public final class Pet {
             return this;
         }
         public Pet build() {
-            final var o = new Pet();
-            o.name = name;
-            return o;
+            final var _resultValue = new Pet();
+            _resultValue.name = name;
+            return _resultValue;
         }
     }
 }

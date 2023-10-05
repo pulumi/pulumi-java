@@ -108,12 +108,12 @@ public final class SsisFolderResponse {
             return this;
         }
         public SsisFolderResponse build() {
-            final var o = new SsisFolderResponse();
-            o.description = description;
-            o.id = id;
-            o.name = name;
-            o.type = type;
-            return o;
+            final var _resultValue = new SsisFolderResponse();
+            _resultValue.description = description;
+            _resultValue.id = id;
+            _resultValue.name = name;
+            _resultValue.type = type;
+            return _resultValue;
         }
     }
 }

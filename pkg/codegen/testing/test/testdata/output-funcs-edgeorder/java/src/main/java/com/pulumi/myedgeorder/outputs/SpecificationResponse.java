@@ -65,10 +65,10 @@ public final class SpecificationResponse {
             return this;
         }
         public SpecificationResponse build() {
-            final var o = new SpecificationResponse();
-            o.name = name;
-            o.value = value;
-            return o;
+            final var _resultValue = new SpecificationResponse();
+            _resultValue.name = name;
+            _resultValue.value = value;
+            return _resultValue;
         }
     }
 }

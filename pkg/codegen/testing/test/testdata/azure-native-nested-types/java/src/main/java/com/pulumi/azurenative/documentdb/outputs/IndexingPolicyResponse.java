@@ -48,9 +48,9 @@ public final class IndexingPolicyResponse {
             return this;
         }
         public IndexingPolicyResponse build() {
-            final var o = new IndexingPolicyResponse();
-            o.compositeIndexes = compositeIndexes;
-            return o;
+            final var _resultValue = new IndexingPolicyResponse();
+            _resultValue.compositeIndexes = compositeIndexes;
+            return _resultValue;
         }
     }
 }

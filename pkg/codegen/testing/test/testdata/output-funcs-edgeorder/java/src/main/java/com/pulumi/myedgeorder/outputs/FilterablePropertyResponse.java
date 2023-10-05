@@ -69,10 +69,10 @@ public final class FilterablePropertyResponse {
             return this;
         }
         public FilterablePropertyResponse build() {
-            final var o = new FilterablePropertyResponse();
-            o.supportedValues = supportedValues;
-            o.type = type;
-            return o;
+            final var _resultValue = new FilterablePropertyResponse();
+            _resultValue.supportedValues = supportedValues;
+            _resultValue.type = type;
+            return _resultValue;
         }
     }
 }

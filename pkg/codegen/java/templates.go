@@ -183,11 +183,11 @@ const builderTemplateText = `{{ .Indent }}public static {{ .Name }} builder() {
 {{- end -}}
 {{ end }}
 {{ $.Indent }}    public {{ .ResultType }} build() {
-{{ $.Indent }}        final var o = new {{ .ResultType }}();
+{{ $.Indent }}        final var _resultValue = new {{ .ResultType }}();
 {{- range $i, $field := .Fields }}
-{{ $.Indent }}        o.{{ $field.FieldName }} = {{ $field.FieldName }};
+{{ $.Indent }}        _resultValue.{{ $field.FieldName }} = {{ $field.FieldName }};
 {{- end }}
-{{ $.Indent }}        return o;
+{{ $.Indent }}        return _resultValue;
 {{ .Indent }}    }
 {{ .Indent }}}`
 
