@@ -216,17 +216,17 @@ public final class ConfigurationResponse {
             return specifications(List.of(specifications));
         }
         public ConfigurationResponse build() {
-            final var o = new ConfigurationResponse();
-            o.availabilityInformation = availabilityInformation;
-            o.costInformation = costInformation;
-            o.description = description;
-            o.dimensions = dimensions;
-            o.displayName = displayName;
-            o.filterableProperties = filterableProperties;
-            o.hierarchyInformation = hierarchyInformation;
-            o.imageInformation = imageInformation;
-            o.specifications = specifications;
-            return o;
+            final var _resultValue = new ConfigurationResponse();
+            _resultValue.availabilityInformation = availabilityInformation;
+            _resultValue.costInformation = costInformation;
+            _resultValue.description = description;
+            _resultValue.dimensions = dimensions;
+            _resultValue.displayName = displayName;
+            _resultValue.filterableProperties = filterableProperties;
+            _resultValue.hierarchyInformation = hierarchyInformation;
+            _resultValue.imageInformation = imageInformation;
+            _resultValue.specifications = specifications;
+            return _resultValue;
         }
     }
 }

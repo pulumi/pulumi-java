@@ -106,12 +106,12 @@ public final class Pav2MeterDetailsResponse {
             return this;
         }
         public Pav2MeterDetailsResponse build() {
-            final var o = new Pav2MeterDetailsResponse();
-            o.billingType = billingType;
-            o.chargingType = chargingType;
-            o.meterGuid = meterGuid;
-            o.multiplier = multiplier;
-            return o;
+            final var _resultValue = new Pav2MeterDetailsResponse();
+            _resultValue.billingType = billingType;
+            _resultValue.chargingType = chargingType;
+            _resultValue.meterGuid = meterGuid;
+            _resultValue.multiplier = multiplier;
+            return _resultValue;
         }
     }
 }

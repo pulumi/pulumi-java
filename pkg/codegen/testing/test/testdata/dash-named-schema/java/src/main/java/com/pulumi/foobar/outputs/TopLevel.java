@@ -40,9 +40,9 @@ public final class TopLevel {
             return this;
         }
         public TopLevel build() {
-            final var o = new TopLevel();
-            o.buzz = buzz;
-            return o;
+            final var _resultValue = new TopLevel();
+            _resultValue.buzz = buzz;
+            return _resultValue;
         }
     }
 }

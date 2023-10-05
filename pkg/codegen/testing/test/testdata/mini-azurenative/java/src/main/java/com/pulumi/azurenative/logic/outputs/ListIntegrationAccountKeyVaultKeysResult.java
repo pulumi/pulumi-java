@@ -48,9 +48,9 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
             return this;
         }
         public ListIntegrationAccountKeyVaultKeysResult build() {
-            final var o = new ListIntegrationAccountKeyVaultKeysResult();
-            o.skipToken = skipToken;
-            return o;
+            final var _resultValue = new ListIntegrationAccountKeyVaultKeysResult();
+            _resultValue.skipToken = skipToken;
+            return _resultValue;
         }
     }
 }

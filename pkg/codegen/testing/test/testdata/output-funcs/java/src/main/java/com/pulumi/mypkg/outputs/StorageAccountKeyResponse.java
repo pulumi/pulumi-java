@@ -103,12 +103,12 @@ public final class StorageAccountKeyResponse {
             return this;
         }
         public StorageAccountKeyResponse build() {
-            final var o = new StorageAccountKeyResponse();
-            o.creationTime = creationTime;
-            o.keyName = keyName;
-            o.permissions = permissions;
-            o.value = value;
-            return o;
+            final var _resultValue = new StorageAccountKeyResponse();
+            _resultValue.creationTime = creationTime;
+            _resultValue.keyName = keyName;
+            _resultValue.permissions = permissions;
+            _resultValue.value = value;
+            return _resultValue;
         }
     }
 }

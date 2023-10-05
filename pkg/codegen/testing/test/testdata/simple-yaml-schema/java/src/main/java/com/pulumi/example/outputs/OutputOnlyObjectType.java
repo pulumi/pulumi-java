@@ -40,9 +40,9 @@ public final class OutputOnlyObjectType {
             return this;
         }
         public OutputOnlyObjectType build() {
-            final var o = new OutputOnlyObjectType();
-            o.foo = foo;
-            return o;
+            final var _resultValue = new OutputOnlyObjectType();
+            _resultValue.foo = foo;
+            return _resultValue;
         }
     }
 }

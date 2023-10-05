@@ -196,16 +196,16 @@ public final class ProductResponse {
             return imageInformation(List.of(imageInformation));
         }
         public ProductResponse build() {
-            final var o = new ProductResponse();
-            o.availabilityInformation = availabilityInformation;
-            o.configurations = configurations;
-            o.costInformation = costInformation;
-            o.description = description;
-            o.displayName = displayName;
-            o.filterableProperties = filterableProperties;
-            o.hierarchyInformation = hierarchyInformation;
-            o.imageInformation = imageInformation;
-            return o;
+            final var _resultValue = new ProductResponse();
+            _resultValue.availabilityInformation = availabilityInformation;
+            _resultValue.configurations = configurations;
+            _resultValue.costInformation = costInformation;
+            _resultValue.description = description;
+            _resultValue.displayName = displayName;
+            _resultValue.filterableProperties = filterableProperties;
+            _resultValue.hierarchyInformation = hierarchyInformation;
+            _resultValue.imageInformation = imageInformation;
+            return _resultValue;
         }
     }
 }

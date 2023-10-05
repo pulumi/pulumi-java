@@ -76,10 +76,10 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
             return value(List.of(value));
         }
         public GetIntegrationRuntimeObjectMetadatumResult build() {
-            final var o = new GetIntegrationRuntimeObjectMetadatumResult();
-            o.nextLink = nextLink;
-            o.value = value;
-            return o;
+            final var _resultValue = new GetIntegrationRuntimeObjectMetadatumResult();
+            _resultValue.nextLink = nextLink;
+            _resultValue.value = value;
+            return _resultValue;
         }
     }
 }

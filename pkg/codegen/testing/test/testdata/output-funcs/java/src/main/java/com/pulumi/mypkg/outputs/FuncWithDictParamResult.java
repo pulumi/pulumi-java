@@ -38,9 +38,9 @@ public final class FuncWithDictParamResult {
             return this;
         }
         public FuncWithDictParamResult build() {
-            final var o = new FuncWithDictParamResult();
-            o.r = r;
-            return o;
+            final var _resultValue = new FuncWithDictParamResult();
+            _resultValue.r = r;
+            return _resultValue;
         }
     }
 }

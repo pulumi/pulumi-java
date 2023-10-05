@@ -97,14 +97,14 @@ public final class Foo {
             return this;
         }
         public Foo build() {
-            final var o = new Foo();
-            o.a = a;
-            o.b = b;
-            o.c = c;
-            o.d = d;
-            o.e = e;
-            o.f = f;
-            return o;
+            final var _resultValue = new Foo();
+            _resultValue.a = a;
+            _resultValue.b = b;
+            _resultValue.c = c;
+            _resultValue.d = d;
+            _resultValue.e = e;
+            _resultValue.f = f;
+            return _resultValue;
         }
     }
 }

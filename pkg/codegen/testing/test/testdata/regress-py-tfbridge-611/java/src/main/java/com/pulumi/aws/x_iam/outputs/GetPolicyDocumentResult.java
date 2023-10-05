@@ -66,11 +66,11 @@ public final class GetPolicyDocumentResult {
             return statements(List.of(statements));
         }
         public GetPolicyDocumentResult build() {
-            final var o = new GetPolicyDocumentResult();
-            o.id = id;
-            o.json = json;
-            o.statements = statements;
-            return o;
+            final var _resultValue = new GetPolicyDocumentResult();
+            _resultValue.id = id;
+            _resultValue.json = json;
+            _resultValue.statements = statements;
+            return _resultValue;
         }
     }
 }

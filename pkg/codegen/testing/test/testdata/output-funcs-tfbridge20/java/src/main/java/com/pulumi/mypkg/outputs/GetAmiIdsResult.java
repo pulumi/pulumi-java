@@ -129,15 +129,15 @@ public final class GetAmiIdsResult {
             return this;
         }
         public GetAmiIdsResult build() {
-            final var o = new GetAmiIdsResult();
-            o.executableUsers = executableUsers;
-            o.filters = filters;
-            o.id = id;
-            o.ids = ids;
-            o.nameRegex = nameRegex;
-            o.owners = owners;
-            o.sortAscending = sortAscending;
-            return o;
+            final var _resultValue = new GetAmiIdsResult();
+            _resultValue.executableUsers = executableUsers;
+            _resultValue.filters = filters;
+            _resultValue.id = id;
+            _resultValue.ids = ids;
+            _resultValue.nameRegex = nameRegex;
+            _resultValue.owners = owners;
+            _resultValue.sortAscending = sortAscending;
+            return _resultValue;
         }
     }
 }

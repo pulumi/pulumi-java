@@ -106,12 +106,12 @@ public final class SsisEnvironmentReferenceResponse {
             return this;
         }
         public SsisEnvironmentReferenceResponse build() {
-            final var o = new SsisEnvironmentReferenceResponse();
-            o.environmentFolderName = environmentFolderName;
-            o.environmentName = environmentName;
-            o.id = id;
-            o.referenceType = referenceType;
-            return o;
+            final var _resultValue = new SsisEnvironmentReferenceResponse();
+            _resultValue.environmentFolderName = environmentFolderName;
+            _resultValue.environmentName = environmentName;
+            _resultValue.id = id;
+            _resultValue.referenceType = referenceType;
+            return _resultValue;
         }
     }
 }

@@ -105,12 +105,12 @@ public final class HierarchyInformationResponse {
             return this;
         }
         public HierarchyInformationResponse build() {
-            final var o = new HierarchyInformationResponse();
-            o.configurationName = configurationName;
-            o.productFamilyName = productFamilyName;
-            o.productLineName = productLineName;
-            o.productName = productName;
-            return o;
+            final var _resultValue = new HierarchyInformationResponse();
+            _resultValue.configurationName = configurationName;
+            _resultValue.productFamilyName = productFamilyName;
+            _resultValue.productLineName = productLineName;
+            _resultValue.productName = productName;
+            return _resultValue;
         }
     }
 }

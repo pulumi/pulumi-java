@@ -183,16 +183,16 @@ public final class ActionGroupResponse {
             return this;
         }
         public ActionGroupResponse build() {
-            final var o = new ActionGroupResponse();
-            o.actionGroupId = actionGroupId;
-            o.createdAt = createdAt;
-            o.createdBy = createdBy;
-            o.description = description;
-            o.lastModifiedAt = lastModifiedAt;
-            o.lastModifiedBy = lastModifiedBy;
-            o.status = status;
-            o.type = type;
-            return o;
+            final var _resultValue = new ActionGroupResponse();
+            _resultValue.actionGroupId = actionGroupId;
+            _resultValue.createdAt = createdAt;
+            _resultValue.createdBy = createdBy;
+            _resultValue.description = description;
+            _resultValue.lastModifiedAt = lastModifiedAt;
+            _resultValue.lastModifiedBy = lastModifiedBy;
+            _resultValue.status = status;
+            _resultValue.type = type;
+            return _resultValue;
         }
     }
 }

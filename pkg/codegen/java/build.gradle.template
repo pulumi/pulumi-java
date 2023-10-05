@@ -39,6 +39,7 @@ java {
 compileJava {
     options.fork = true
     options.forkOptions.jvmArgs.addAll(["-Xmx16g"])
+    options.encoding = "UTF-8"
 }
 
 repositories {

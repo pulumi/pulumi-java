@@ -65,10 +65,10 @@ public final class LinkResponse {
             return this;
         }
         public LinkResponse build() {
-            final var o = new LinkResponse();
-            o.linkType = linkType;
-            o.linkUrl = linkUrl;
-            return o;
+            final var _resultValue = new LinkResponse();
+            _resultValue.linkType = linkType;
+            _resultValue.linkUrl = linkUrl;
+            return _resultValue;
         }
     }
 }

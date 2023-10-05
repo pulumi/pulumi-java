@@ -48,9 +48,9 @@ public final class GetAmiResult {
             return this;
         }
         public GetAmiResult build() {
-            final var o = new GetAmiResult();
-            o.kernelId = kernelId;
-            return o;
+            final var _resultValue = new GetAmiResult();
+            _resultValue.kernelId = kernelId;
+            return _resultValue;
         }
     }
 }

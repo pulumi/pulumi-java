@@ -72,10 +72,10 @@ public final class ListProductFamiliesResult {
             return value(List.of(value));
         }
         public ListProductFamiliesResult build() {
-            final var o = new ListProductFamiliesResult();
-            o.nextLink = nextLink;
-            o.value = value;
-            return o;
+            final var _resultValue = new ListProductFamiliesResult();
+            _resultValue.nextLink = nextLink;
+            _resultValue.value = value;
+            return _resultValue;
         }
     }
 }

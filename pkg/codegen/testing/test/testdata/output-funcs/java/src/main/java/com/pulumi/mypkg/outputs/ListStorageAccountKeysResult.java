@@ -50,9 +50,9 @@ public final class ListStorageAccountKeysResult {
             return keys(List.of(keys));
         }
         public ListStorageAccountKeysResult build() {
-            final var o = new ListStorageAccountKeysResult();
-            o.keys = keys;
-            return o;
+            final var _resultValue = new ListStorageAccountKeysResult();
+            _resultValue.keys = keys;
+            return _resultValue;
         }
     }
 }

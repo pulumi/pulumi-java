@@ -71,12 +71,12 @@ public final class FuncWithSecretsResult {
             return this;
         }
         public FuncWithSecretsResult build() {
-            final var o = new FuncWithSecretsResult();
-            o.ciphertext = ciphertext;
-            o.cryptoKey = cryptoKey;
-            o.id = id;
-            o.plaintext = plaintext;
-            return o;
+            final var _resultValue = new FuncWithSecretsResult();
+            _resultValue.ciphertext = ciphertext;
+            _resultValue.cryptoKey = cryptoKey;
+            _resultValue.id = id;
+            _resultValue.plaintext = plaintext;
+            return _resultValue;
         }
     }
 }

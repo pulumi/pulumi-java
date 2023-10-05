@@ -64,11 +64,11 @@ public final class Laser {
             return this;
         }
         public Laser build() {
-            final var o = new Laser();
-            o.animal = animal;
-            o.batteries = batteries;
-            o.light = light;
-            return o;
+            final var _resultValue = new Laser();
+            _resultValue.animal = animal;
+            _resultValue.batteries = batteries;
+            _resultValue.light = light;
+            return _resultValue;
         }
     }
 }

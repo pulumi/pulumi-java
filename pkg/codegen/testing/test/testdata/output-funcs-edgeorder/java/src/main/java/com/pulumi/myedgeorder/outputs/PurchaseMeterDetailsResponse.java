@@ -144,14 +144,14 @@ public final class PurchaseMeterDetailsResponse {
             return this;
         }
         public PurchaseMeterDetailsResponse build() {
-            final var o = new PurchaseMeterDetailsResponse();
-            o.billingType = billingType;
-            o.chargingType = chargingType;
-            o.multiplier = multiplier;
-            o.productId = productId;
-            o.skuId = skuId;
-            o.termId = termId;
-            return o;
+            final var _resultValue = new PurchaseMeterDetailsResponse();
+            _resultValue.billingType = billingType;
+            _resultValue.chargingType = chargingType;
+            _resultValue.multiplier = multiplier;
+            _resultValue.productId = productId;
+            _resultValue.skuId = skuId;
+            _resultValue.termId = termId;
+            return _resultValue;
         }
     }
 }

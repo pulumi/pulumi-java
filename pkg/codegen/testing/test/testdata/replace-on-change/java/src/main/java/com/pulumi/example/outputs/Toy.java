@@ -63,11 +63,11 @@ public final class Toy {
             return this;
         }
         public Toy build() {
-            final var o = new Toy();
-            o.associated = associated;
-            o.color = color;
-            o.wear = wear;
-            return o;
+            final var _resultValue = new Toy();
+            _resultValue.associated = associated;
+            _resultValue.color = color;
+            _resultValue.wear = wear;
+            return _resultValue;
         }
     }
 }

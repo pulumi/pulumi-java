@@ -106,12 +106,12 @@ public final class BillingMeterDetailsResponse {
             return this;
         }
         public BillingMeterDetailsResponse build() {
-            final var o = new BillingMeterDetailsResponse();
-            o.frequency = frequency;
-            o.meterDetails = meterDetails;
-            o.meteringType = meteringType;
-            o.name = name;
-            return o;
+            final var _resultValue = new BillingMeterDetailsResponse();
+            _resultValue.frequency = frequency;
+            _resultValue.meterDetails = meterDetails;
+            _resultValue.meteringType = meteringType;
+            _resultValue.name = name;
+            return _resultValue;
         }
     }
 }

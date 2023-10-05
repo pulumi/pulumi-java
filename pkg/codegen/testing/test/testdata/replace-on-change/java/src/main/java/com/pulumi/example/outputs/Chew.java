@@ -40,9 +40,9 @@ public final class Chew {
             return this;
         }
         public Chew build() {
-            final var o = new Chew();
-            o.owner = owner;
-            return o;
+            final var _resultValue = new Chew();
+            _resultValue.owner = owner;
+            return _resultValue;
         }
     }
 }

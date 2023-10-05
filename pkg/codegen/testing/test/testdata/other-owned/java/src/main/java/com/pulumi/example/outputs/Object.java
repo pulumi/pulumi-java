@@ -108,13 +108,13 @@ public final class Object {
             return this;
         }
         public Object build() {
-            final var o = new Object();
-            o.bar = bar;
-            o.configs = configs;
-            o.foo = foo;
-            o.others = others;
-            o.stillOthers = stillOthers;
-            return o;
+            final var _resultValue = new Object();
+            _resultValue.bar = bar;
+            _resultValue.configs = configs;
+            _resultValue.foo = foo;
+            _resultValue.others = others;
+            _resultValue.stillOthers = stillOthers;
+            return _resultValue;
         }
     }
 }

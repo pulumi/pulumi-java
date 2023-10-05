@@ -70,10 +70,10 @@ public final class CostInformationResponse {
             return billingMeterDetails(List.of(billingMeterDetails));
         }
         public CostInformationResponse build() {
-            final var o = new CostInformationResponse();
-            o.billingInfoUrl = billingInfoUrl;
-            o.billingMeterDetails = billingMeterDetails;
-            return o;
+            final var _resultValue = new CostInformationResponse();
+            _resultValue.billingInfoUrl = billingInfoUrl;
+            _resultValue.billingMeterDetails = billingMeterDetails;
+            return _resultValue;
         }
     }
 }

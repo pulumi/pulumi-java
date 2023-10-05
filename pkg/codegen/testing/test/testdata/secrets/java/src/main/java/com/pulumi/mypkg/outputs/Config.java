@@ -40,9 +40,9 @@ public final class Config {
             return this;
         }
         public Config build() {
-            final var o = new Config();
-            o.foo = foo;
-            return o;
+            final var _resultValue = new Config();
+            _resultValue.foo = foo;
+            return _resultValue;
         }
     }
 }

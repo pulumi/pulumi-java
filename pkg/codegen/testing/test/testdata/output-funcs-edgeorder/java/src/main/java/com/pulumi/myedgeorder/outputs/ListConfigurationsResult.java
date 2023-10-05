@@ -72,10 +72,10 @@ public final class ListConfigurationsResult {
             return value(List.of(value));
         }
         public ListConfigurationsResult build() {
-            final var o = new ListConfigurationsResult();
-            o.nextLink = nextLink;
-            o.value = value;
-            return o;
+            final var _resultValue = new ListConfigurationsResult();
+            _resultValue.nextLink = nextLink;
+            _resultValue.value = value;
+            return _resultValue;
         }
     }
 }

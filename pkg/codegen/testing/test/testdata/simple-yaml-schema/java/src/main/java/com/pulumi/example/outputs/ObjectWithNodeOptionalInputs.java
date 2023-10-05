@@ -52,10 +52,10 @@ public final class ObjectWithNodeOptionalInputs {
             return this;
         }
         public ObjectWithNodeOptionalInputs build() {
-            final var o = new ObjectWithNodeOptionalInputs();
-            o.bar = bar;
-            o.foo = foo;
-            return o;
+            final var _resultValue = new ObjectWithNodeOptionalInputs();
+            _resultValue.bar = bar;
+            _resultValue.foo = foo;
+            return _resultValue;
         }
     }
 }

@@ -196,16 +196,16 @@ public final class ProductFamilyResponse {
             return productLines(List.of(productLines));
         }
         public ProductFamilyResponse build() {
-            final var o = new ProductFamilyResponse();
-            o.availabilityInformation = availabilityInformation;
-            o.costInformation = costInformation;
-            o.description = description;
-            o.displayName = displayName;
-            o.filterableProperties = filterableProperties;
-            o.hierarchyInformation = hierarchyInformation;
-            o.imageInformation = imageInformation;
-            o.productLines = productLines;
-            return o;
+            final var _resultValue = new ProductFamilyResponse();
+            _resultValue.availabilityInformation = availabilityInformation;
+            _resultValue.costInformation = costInformation;
+            _resultValue.description = description;
+            _resultValue.displayName = displayName;
+            _resultValue.filterableProperties = filterableProperties;
+            _resultValue.hierarchyInformation = hierarchyInformation;
+            _resultValue.imageInformation = imageInformation;
+            _resultValue.productLines = productLines;
+            return _resultValue;
         }
     }
 }

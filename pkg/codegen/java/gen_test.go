@@ -22,7 +22,7 @@ type generatePackageTestConfig struct {
 }
 
 // Configures tests that are maintained in the pulumi-java repository
-// specifially for Java codegen testing.
+// specifically for Java codegen testing.
 func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 	return []generatePackageTestConfig{
 		newGeneratePackageTestConfig(&test.SDKTest{
@@ -62,6 +62,10 @@ func javaSpecificTests(keyDeps map[string]string) []generatePackageTestConfig {
 		newGeneratePackageTestConfig(&test.SDKTest{
 			Directory:   "mini-awsx",
 			Description: "Regression tests extracted from trying to codegen awsx",
+		}),
+		newGeneratePackageTestConfig(&test.SDKTest{
+			Directory:   "akamai",
+			Description: "Regression tests extracted from trying to codegen akamai",
 		}),
 		newGeneratePackageTestConfigWithExtras(&test.SDKTest{
 			Directory:   "jumbo-resources",
